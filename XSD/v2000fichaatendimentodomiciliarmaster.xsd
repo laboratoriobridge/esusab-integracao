@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fichaAtendimentoDomiciliarChild="http://esus.ufsc.br/v2000/fichaatendimentodomiciliarchild" xmlns:fichaAtendimentoDomiciliarMaster="http://esus.ufsc.br/v2000/fichaatendimentodomiciliarmaster" xmlns:unicaLotacaoHeader="http://esus.ufsc.br/v2000/unicalotacaoheader" targetNamespace="http://esus.ufsc.br/v2000/fichaatendimentodomiciliarmaster" version="1.0">
+
+  <xs:import namespace="http://esus.ufsc.br/v2000/unicalotacaoheader" schemaLocation="v2000unicalotacaoheader.xsd"/>
+
+  <xs:import namespace="http://esus.ufsc.br/v2000/fichaatendimentodomiciliarchild" schemaLocation="v2000fichaatendimentodomiciliarchild.xsd"/>
+
+  <xs:element name="fichaAtendimentoDomiciliarMasterTransport" type="fichaAtendimentoDomiciliarMaster:fichaAtendimentoDomiciliarMasterTransport"/>
+
+  <xs:complexType name="fichaAtendimentoDomiciliarMasterTransport">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="headerTransport" type="unicaLotacaoHeader:unicaLotacaoHeaderTransport"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="atendimentosDomiciliares" nillable="true" type="fichaAtendimentoDomiciliarChild:fichaAtendimentoDomiciliarChildTransport"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="tpCdsOrigem" type="xs:int"/>
+      <xs:element maxOccurs="1" name="uuidFicha" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

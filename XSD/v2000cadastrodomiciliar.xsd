@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:cadastroDomiciliar="http://esus.ufsc.br/v2000/cadastrodomiciliar" xmlns:condicaoMoradia="http://esus.ufsc.br/v2000/condicaomoradia" xmlns:enderecoLocalPermanencia="http://esus.ufsc.br/v2000/enderecolocalpermanencia" xmlns:familiaRow="http://esus.ufsc.br/v2000/familiarow" xmlns:headerCdsCadastro="http://esus.ufsc.br/v2000/headercdscadastro" targetNamespace="http://esus.ufsc.br/v2000/cadastrodomiciliar" version="1.0">
+
+  <xs:import namespace="http://esus.ufsc.br/v2000/headercdscadastro" schemaLocation="v2000headercdscadastro.xsd"/>
+
+  <xs:import namespace="http://esus.ufsc.br/v2000/enderecolocalpermanencia" schemaLocation="v2000enderecolocalpermanencia.xsd"/>
+
+  <xs:import namespace="http://esus.ufsc.br/v2000/condicaomoradia" schemaLocation="v2000condicaomoradia.xsd"/>
+
+  <xs:import namespace="http://esus.ufsc.br/v2000/familiarow" schemaLocation="v2000familiarow.xsd"/>
+
+  <xs:element name="cadastroDomiciliarTransport" type="cadastroDomiciliar:cadastroDomiciliarTransport"/>
+
+  <xs:complexType name="cadastroDomiciliarTransport">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="dadosGerais" type="headerCdsCadastro:headerCdsCadastroTransport"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="enderecoLocalPermanencia" type="enderecoLocalPermanencia:enderecoLocalPermanenciaTransport"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="condicaoMoradia" type="condicaoMoradia:condicaoMoradiaTransport"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="stAnimaisNoDomicilio" type="xs:boolean"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="animaisNoDomicilio" type="xs:long"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="quantosAnimaisNoDomicilio" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="familias" type="familiaRow:familiaRowTransport"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="tpCdsOrigem" type="xs:int"/>
+      <xs:element maxOccurs="1" name="uuid" type="xs:string"/>
+      <xs:element maxOccurs="1" name="uuidFichaOriginadora" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="fichaAtualizada" type="xs:boolean"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="statusTermoRecusaCadastroDomiciliarAtencaoBasica" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

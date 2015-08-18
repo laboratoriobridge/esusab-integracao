@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fichaConsumoAlimentar="http://esus.ufsc.br/v2000/fichaconsumoalimentar" xmlns:perguntaCriancasComMaisDoisAnosEnum="http://esus.ufsc.br/v2000/perguntacriancascommaisdoisanosenum" xmlns:perguntaCriancasDeSeisVinteTresMesesEnum="http://esus.ufsc.br/v2000/perguntacriancasdeseisvintetresmesesenum" xmlns:perguntaCriancasMenoresSeisMesesEnum="http://esus.ufsc.br/v2000/perguntacriancasmenoresseismesesenum" xmlns:perguntaQuestionarioCriancasComMaisDoisAnos="http://esus.ufsc.br/v2000/perguntaquestionariocriancascommaisdoisanos" xmlns:perguntaQuestionarioCriancasDeSeisVinteTresMeses="http://esus.ufsc.br/v2000/perguntaquestionariocriancasdeseisvintetresmeses" xmlns:perguntaQuestionarioCriancasMenoresSeisMeses="http://esus.ufsc.br/v2000/perguntaquestionariocriancasmenoresseismeses" xmlns:respostaMultiplaEscolhaEnum="http://esus.ufsc.br/v2000/respostamultiplaescolhaenum" xmlns:respostaUnicaEscolhaEnum="http://esus.ufsc.br/v2000/respostaunicaescolhaenum" xmlns:unicaLotacaoHeader="http://esus.ufsc.br/v2000/unicalotacaoheader" targetNamespace="http://esus.ufsc.br/v2000/fichaconsumoalimentar" version="1.0">
+
+  <xs:import namespace="http://esus.ufsc.br/v2000/unicalotacaoheader" schemaLocation="v2000unicalotacaoheader.xsd"/>
+
+  <xs:import namespace="http://esus.ufsc.br/v2000/perguntacriancasmenoresseismesesenum" schemaLocation="v2000perguntacriancasmenoresseismesesenum.xsd"/>
+
+  <xs:import namespace="http://esus.ufsc.br/v2000/respostaunicaescolhaenum" schemaLocation="v2000respostaunicaescolhaenum.xsd"/>
+
+  <xs:import namespace="http://esus.ufsc.br/v2000/perguntaquestionariocriancasmenoresseismeses" schemaLocation="v2000perguntaquestionariocriancasmenoresseismeses.xsd"/>
+
+  <xs:import namespace="http://esus.ufsc.br/v2000/perguntacriancasdeseisvintetresmesesenum" schemaLocation="v2000perguntacriancasdeseisvintetresmesesenum.xsd"/>
+
+  <xs:import namespace="http://esus.ufsc.br/v2000/perguntaquestionariocriancasdeseisvintetresmeses" schemaLocation="v2000perguntaquestionariocriancasdeseisvintetresmeses.xsd"/>
+
+  <xs:import namespace="http://esus.ufsc.br/v2000/perguntacriancascommaisdoisanosenum" schemaLocation="v2000perguntacriancascommaisdoisanosenum.xsd"/>
+
+  <xs:import namespace="http://esus.ufsc.br/v2000/respostamultiplaescolhaenum" schemaLocation="v2000respostamultiplaescolhaenum.xsd"/>
+
+  <xs:import namespace="http://esus.ufsc.br/v2000/perguntaquestionariocriancascommaisdoisanos" schemaLocation="v2000perguntaquestionariocriancascommaisdoisanos.xsd"/>
+
+  <xs:element name="fichaConsumoAlimentarTransport" type="fichaConsumoAlimentar:fichaConsumoAlimentarTransport"/>
+
+  <xs:complexType name="fichaConsumoAlimentarTransport">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="headerTransport" type="unicaLotacaoHeader:unicaLotacaoHeaderTransport"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="numeroCartaoSus" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="identificacaoUsuario" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="dataNascimento" type="xs:long"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="sexo" type="xs:long"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="localAtendimento" type="xs:long"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="perguntasQuestionarioCriancasMenoresSeisMeses" type="perguntaQuestionarioCriancasMenoresSeisMeses:perguntaQuestionarioCriancasMenoresSeisMesesTransport"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="perguntasQuestionarioCriancasDeSeisVinteTresMeses" type="perguntaQuestionarioCriancasDeSeisVinteTresMeses:perguntaQuestionarioCriancasDeSeisVinteTresMesesTransport"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="perguntasQuestionarioCriancasComMaisDoisAnos" type="perguntaQuestionarioCriancasComMaisDoisAnos:perguntaQuestionarioCriancasComMaisDoisAnosTransport"/>
+      <xs:element maxOccurs="1" name="uuidFicha" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="tpCdsOrigem" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

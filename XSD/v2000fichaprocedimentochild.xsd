@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://esus.ufsc.br/v2000/fichaprocedimentochild" version="1.0">
+
+  <xs:complexType name="fichaProcedimentoChildTransport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="numProntuario" type="xs:string"/>
+      <xs:element minOccurs="0" name="numCartaoSus" type="xs:string"/>
+      <xs:element minOccurs="0" name="dtNascimento" type="xs:long"/>
+      <xs:element minOccurs="0" name="sexo" type="xs:long"/>
+      <xs:element minOccurs="0" name="localAtendimento" type="xs:long"/>
+      <xs:element minOccurs="0" name="turno" type="xs:long"/>
+      <xs:element minOccurs="0" name="statusEscutaInicialOrientacao" type="xs:boolean"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="procedimentos" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="outrosSiaProcedimentos" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

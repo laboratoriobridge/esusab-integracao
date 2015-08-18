@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fichaAtendimentoIndividualChild="http://esus.ufsc.br/v2000/fichaatendimentoindividualchild" xmlns:fichaAtendimentoIndividualMaster="http://esus.ufsc.br/v2000/fichaatendimentoindividualmaster" xmlns:outrosSia="http://esus.ufsc.br/v2000/outrossia" xmlns:problemaCondicaoAvaliacaoAI="http://esus.ufsc.br/v2000/problemacondicaoavaliacaoai" xmlns:unicaLotacaoHeader="http://esus.ufsc.br/v2000/unicalotacaoheader" xmlns:variasLotacoesHeader="http://esus.ufsc.br/v2000/variaslotacoesheader" targetNamespace="http://esus.ufsc.br/v2000/fichaatendimentoindividualmaster" version="1.0">
+
+  <xs:import namespace="http://esus.ufsc.br/v2000/unicalotacaoheader" schemaLocation="v2000unicalotacaoheader.xsd"/>
+
+  <xs:import namespace="http://esus.ufsc.br/v2000/variaslotacoesheader" schemaLocation="v2000variaslotacoesheader.xsd"/>
+
+  <xs:import namespace="http://esus.ufsc.br/v2000/problemacondicaoavaliacaoai" schemaLocation="v2000problemacondicaoavaliacaoai.xsd"/>
+
+  <xs:import namespace="http://esus.ufsc.br/v2000/outrossia" schemaLocation="v2000outrossia.xsd"/>
+
+  <xs:import namespace="http://esus.ufsc.br/v2000/fichaatendimentoindividualchild" schemaLocation="v2000fichaatendimentoindividualchild.xsd"/>
+
+  <xs:element name="fichaAtendimentoIndividualMasterTransport" type="fichaAtendimentoIndividualMaster:fichaAtendimentoIndividualMasterTransport"/>
+
+  <xs:complexType name="fichaAtendimentoIndividualMasterTransport">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="headerTransport" type="variasLotacoesHeader:variasLotacoesHeaderTransport"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="atendimentosIndividuais" nillable="true" type="fichaAtendimentoIndividualChild:fichaAtendimentoIndividualChildTransport"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="tpCdsOrigem" type="xs:int"/>
+      <xs:element maxOccurs="1" name="uuidFicha" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

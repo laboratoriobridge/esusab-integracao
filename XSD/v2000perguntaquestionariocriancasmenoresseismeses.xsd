@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:perguntaCriancasMenoresSeisMesesEnum="http://esus.ufsc.br/v2000/perguntacriancasmenoresseismesesenum" xmlns:respostaUnicaEscolhaEnum="http://esus.ufsc.br/v2000/respostaunicaescolhaenum" targetNamespace="http://esus.ufsc.br/v2000/perguntaquestionariocriancasmenoresseismeses" version="1.0">
+
+  <xs:import namespace="http://esus.ufsc.br/v2000/perguntacriancasmenoresseismesesenum" schemaLocation="v2000perguntacriancasmenoresseismesesenum.xsd"/>
+
+  <xs:import namespace="http://esus.ufsc.br/v2000/respostaunicaescolhaenum" schemaLocation="v2000respostaunicaescolhaenum.xsd"/>
+
+  <xs:complexType name="perguntaQuestionarioCriancasMenoresSeisMesesTransport">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="pergunta" type="perguntaCriancasMenoresSeisMesesEnum:perguntaCriancasMenoresSeisMesesEnumTransport"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="respostaUnicaEscolha" type="respostaUnicaEscolhaEnum:respostaUnicaEscolhaEnumTransport"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

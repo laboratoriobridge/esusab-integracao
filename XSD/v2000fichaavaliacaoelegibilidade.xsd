@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:enderecoLocalPermanencia="http://esus.ufsc.br/v2000/enderecolocalpermanencia" xmlns:fichaAvaliacaoElegibilidade="http://esus.ufsc.br/v2000/fichaavaliacaoelegibilidade" xmlns:unicaLotacaoHeader="http://esus.ufsc.br/v2000/unicalotacaoheader" targetNamespace="http://esus.ufsc.br/v2000/fichaavaliacaoelegibilidade" version="1.0">
+
+  <xs:import namespace="http://esus.ufsc.br/v2000/unicalotacaoheader" schemaLocation="v2000unicalotacaoheader.xsd"/>
+
+  <xs:import namespace="http://esus.ufsc.br/v2000/enderecolocalpermanencia" schemaLocation="v2000enderecolocalpermanencia.xsd"/>
+
+  <xs:element name="fichaAvaliacaoElegibilidadeTransport" type="fichaAvaliacaoElegibilidade:fichaAvaliacaoElegibilidadeTransport"/>
+
+  <xs:complexType name="fichaAvaliacaoElegibilidadeTransport">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="headerTransport" type="unicaLotacaoHeader:unicaLotacaoHeaderTransport"/>
+      <xs:element maxOccurs="1" name="uuidFicha" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="tpCdsOrigem" type="xs:int"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="numeroCartaoSus" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="dataNascimentoCidadao" type="xs:long"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="sexoCidadao" type="xs:long"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="nomeCidadao" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="racaCorCidadao" type="xs:long"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="nomeSocialCidadao" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="nomeMaeCidadao" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="desconheceNomeMae" type="xs:boolean"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="codigoIbgeMunicipioNascimento" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="codigoNacionalidade" type="xs:long"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="emailCidadao" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="cuidadorCidadao" type="xs:long"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="numeroNisPisPasep" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="atencaoDomiciliarOrigem" type="xs:long"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="atencaoDomiciliarModalidade" type="xs:long"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="situacoesPresentes" type="xs:long"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="cid10Principal" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="cid10Segundo" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="cid10Terceiro" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="conclusaoDestinoElegivel" type="xs:long"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="conclusaoDestinoInelegivel" type="xs:long"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="endereco" type="enderecoLocalPermanencia:enderecoLocalPermanenciaTransport"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

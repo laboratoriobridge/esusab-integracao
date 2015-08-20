@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://esus.ufsc.br/v2000/emsituacaoderua" version="1.0">
+
+  <xs:complexType name="emSituacaoDeRuaTransport">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="quantidadeAlimentacoesAoDiaSituacaoRua" type="xs:long"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="origemAlimentoSituacaoRua" type="xs:long"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="statusTemAcessoHigienePessoalSituacaoRua" type="xs:boolean"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="higienePessoalSituacaoRua" type="xs:long"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="statusSituacaoRua" type="xs:boolean"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="tempoSituacaoRua" type="xs:long"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="statusAcompanhadoPorOutraInstituicao" type="xs:boolean"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="outraInstituicaoQueAcompanha" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="statusRecebeBeneficio" type="xs:boolean"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="statusPossuiReferenciaFamiliar" type="xs:boolean"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="statusVisitaFamiliarFrequentemente" type="xs:boolean"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="grauParentescoFamiliarFrequentado" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

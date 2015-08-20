@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://esus.ufsc.br/v2000/perguntacriancasmenoresseismesesenum" version="1.0">
+
+  <xs:simpleType name="perguntaCriancasMenoresSeisMesesEnumTransport">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="FRUTA"/>
+      <xs:enumeration value="FORMULA_INFANTIL"/>
+      <xs:enumeration value="MINGAU"/>
+      <xs:enumeration value="OUTROS_ALIMENTOS_BEBIDAS"/>
+      <xs:enumeration value="LEITE_VACA"/>
+      <xs:enumeration value="AGUA_CHA"/>
+      <xs:enumeration value="SUCO_FRUTA"/>
+      <xs:enumeration value="COMIDA_DE_SAL"/>
+      <xs:enumeration value="A_CRIANCA_ONTEM_TOMOU_LEITE_DO_PEITO"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:outrosSia="http://esus.ufsc.br/v2000/outrossia" xmlns:problemaCondicaoAvaliacaoAI="http://esus.ufsc.br/v2000/problemacondicaoavaliacaoai" targetNamespace="http://esus.ufsc.br/v2000/fichaatendimentoindividualchild" version="1.0">
+
+  <xs:import namespace="http://esus.ufsc.br/v2000/problemacondicaoavaliacaoai" schemaLocation="v2000problemacondicaoavaliacaoai.xsd"/>
+
+  <xs:import namespace="http://esus.ufsc.br/v2000/outrossia" schemaLocation="v2000outrossia.xsd"/>
+
+  <xs:complexType name="fichaAtendimentoIndividualChildTransport">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="numeroProntuario" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="cns" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="dataNascimento" type="xs:long"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="localDeAtendimento" type="xs:long"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="sexo" type="xs:long"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="turno" type="xs:long"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="tipoAtendimento" type="xs:long"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="pesoAcompanhamentoNutricional" type="xs:double"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="alturaAcompanhamentoNutricional" type="xs:double"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="aleitamentoMaterno" type="xs:long"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="dumDaGestante" type="xs:long"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="stGravidezPlanejada" type="xs:boolean"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="idadeGestacional" type="xs:int"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="nuGestasPrevias" type="xs:int"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="nuPartos" type="xs:int"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="atencaoDomiciliarModalidade" type="xs:long"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="problemaCondicaoAvaliada" type="problemaCondicaoAvaliacaoAI:problemaCondicaoAvaliacaoAITransport"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="examesSolicitados" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="examesAvaliados" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="outrosSia" type="outrosSia:outrosSiaTransport"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="vacinaEmDia" type="xs:boolean"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="pic" type="xs:long"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="ficouEmObservacao" type="xs:boolean"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="nasfs" type="xs:long"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="condutas" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

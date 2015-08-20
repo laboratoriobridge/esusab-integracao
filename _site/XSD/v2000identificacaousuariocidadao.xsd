@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://esus.ufsc.br/v2000/identificacaousuariocidadao" version="1.0">
+
+  <xs:complexType name="identificacaoUsuarioCidadaoTransport">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="numeroCartaoSusResponsavel" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="dataNascimentoResponsavel" type="xs:long"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="numeroCartaoSus" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="statusEhResponsavel" type="xs:boolean"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="nomeCidadao" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="nomeSocialCidadao" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="dataNascimentoCidadao" type="xs:long"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="racaCorCidadao" type="xs:long"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="sexoCidadao" type="xs:long"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="numeroNisPisPasep" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="nomeMaeCidadao" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="desconheceNomeMae" type="xs:boolean"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="nacionalidadeCidadao" type="xs:long"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="codigoIbgeMunicipioNascimento" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="paisNascimento" type="xs:long"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="numeroCelularCidadao" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="emailCidadao" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

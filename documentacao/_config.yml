@@ -6,7 +6,7 @@ description: Dicionário de dados e-SUS AB
 version: 2.0.0
 
 # the subpath of your site, e.g. /blog/
-baseurl: ""
+baseurl: "/integracao"
 
 # Repositório onde está hospedado os fontes deste site
 github_repo: https://github.com/esusab/integracao/html

@@ -1,0 +1,20 @@
+{% if include.nav != empty %}
+  <ul>
+    {% for item in include.nav %}
+
+      <li id="item-{{ item.id }}">
+        <label>
+          <input type="checkbox" value="{{ item.id }}" checked="checked"> {{ item.title }}
+          <small>
+            <a onclick="checkById('{{ item.id }}', true); return false;">Marcar todos</a> |
+            <a onclick="checkById('{{ item.id }}', false); return false;">Desmarcar todos</a>
+          </small>
+        </label>
+
+        {% if item.subitems %}
+          {% include pdf-select-list.html nav=item.subitems %}
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+{% endif %}

@@ -1,0 +1,26 @@
+# Site settings
+title: Dicionário de dados e-SUS AB
+description: Dicionário de dados e-SUS AB
+
+# Versão atual da documentação
+version: 2.0.0
+
+# the subpath of your site, e.g. /blog/
+baseurl: ""
+
+# Repositório onde está hospedado os fontes deste site
+github_repo: https://github.com/esusab/integracao/html
+
+# Build settings
+encoding: utf-8
+timezone: America/Sao_Paulo
+markdown: redcarpet
+redcarpet:
+  extensions:
+    - with_toc_data
+    - html_toc
+    - tables
+
+collections:
+  docs:
+    output: true

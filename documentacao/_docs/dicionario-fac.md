@@ -75,7 +75,7 @@ Hora de fim de realização da atividade coletiva.
 |---| --- |---  | --- |
 |Long|	Opcional|	-|	-|
 
-**Regras**:Deve ser posterior a horaInicio.
+**Regras**: Deve ser posterior a horaInicio.
 
 **Referência** - [Wikipedia Epoch](https://en.wikipedia.org/wiki/Epoch)
 
@@ -97,10 +97,10 @@ CNS do responsável pela atividade coletiva.
 |---| --- |---  | --- |
 |String|	Requerido|	15|	15|
 
-**Regras**:"
+**Regras**:
 
-• CNS válido de acordo com o algoritmo.
-• O profissional responsável deve ser um registro da lista de profissionais."
+- CNS válido de acordo com o algoritmo.
+- O profissional responsável deve ser um registro da lista de profissionais."
 
 **Referência**: Para ver o algoritmo utilizado, acesse: http://cartaonet.datasus.gov.br/, em "Downloads" baixe o arquivo de rotina de validação Java.  	-
 
@@ -178,8 +178,9 @@ Temas para reunião.
 |	List<Long>|	Condicional |- |	-|
 
 **Regras**:
-• É Requerido se tipoAtividadeColetiva for ""1L"", ""2L"" ou ""3L"".
-• Não pode ser preenchido se tipoAtividade for ""4L"", ""5L, ""6L"" ou ""7L""."
+
+- É Requerido se tipoAtividadeColetiva for ""1L"", ""2L"" ou ""3L"".
+- Não pode ser preenchido se tipoAtividade for ""4L"", ""5L, ""6L"" ou ""7L""."
 
 **Referência**: Ver TemasParaReuniao
 
@@ -193,8 +194,9 @@ Público alvo da atividade.
 |List<Long>|	Condicional |	-|	-|
 
 **Regras**:
-• É Requerido se tipoAtividadeColetiva for ""4L"", ""5L, ""6L"" ou ""7L"".
-• Não pode ser preenchido se tipoAtividade for ""1L"", ""2L"" ou ""3L""."
+
+- É Requerido se tipoAtividadeColetiva for ""4L"", ""5L, ""6L"" ou ""7L"".
+- Não pode ser preenchido se tipoAtividade for ""1L"", ""2L"" ou ""3L""."
 
 **Referência**: Ver PublicoAlvo
 
@@ -208,8 +210,9 @@ Práticas ou temas abordados na atividade.
 |List<Long>|	Condicional| 	-|	-|
 
 **Regras**:
-• É Requerido se tipoAtividadeColetiva for ""4L"", ""5L, ""6L"" ou ""7L"".
-• Não pode ser preenchido se tipoAtividade for ""1L"", ""2L"" ou ""3L""."
+
+- É Requerido se tipoAtividadeColetiva for ""4L"", ""5L, ""6L"" ou ""7L"".
+- Não pode ser preenchido se tipoAtividade for ""1L"", ""2L"" ou ""3L""."
 
 **Referências**:	Ver PraticasTemasParaSaude
 
@@ -288,15 +291,17 @@ Marcador que indica que a avaliação do cidadão teve um valor diferente dos co
 ### \#4	peso
 
 Peso do cidadão em Kg.
+
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |	Double|	Opcional|	1|	6|
 
 **Regras**:
-• Apenas números e vírgula ("" , "").
-• Máximo de 3 números após a vírgula.
-• * Se tiver vírgula, tamanho máximo = 7.
-• Valor mínimo = 0,5 e máximo = 500;"	-	-
+
+- Apenas números e vírgula ("" , "").
+- Máximo de 3 números após a vírgula.
+- Se tiver vírgula, tamanho máximo = 7.
+- Valor mínimo = 0,5 e máximo = 500.
 
 
 ### \#5	altura
@@ -308,10 +313,11 @@ Altura do cidadão em cm.
 |Double|	Opcional| 	2|	4|
 
 **Regras**:
-• Apenas números e vírgula ("" , "").
-• Máximo de 3 números após a vírgula.
-• * Se tiver vírgula, tamanho máximo = 5.
-• Valor mínimo 20 e máximo 250.
+
+- Apenas números e vírgula ("" , "").
+- Máximo de 3 números após a vírgula.
+- Se tiver vírgula, tamanho máximo = 5.
+- Valor mínimo 20 e máximo 250.
 
 
 ### \#6	cessouHabitoFumar

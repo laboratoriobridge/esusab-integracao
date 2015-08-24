@@ -5,7 +5,7 @@
   <ul>
     {% for item in site.data.navigation %}
       <li>
-        <a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
+        <a href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a>
       </li>
     {% endfor %}
   </ul>
@@ -20,14 +20,14 @@
   <ul>
     {% if item.parent %}
       <li>
-        <a title="Voltar para {{ item.parent.title }}" href="{{ item.parent.url }}" class="back-link">
+        <a title="Voltar para {{ item.parent.title }}" href="{{ item.parent.url | prepend: site.baseurl }}" class="back-link">
           <i class="icon icon-back"></i> Voltar
           <small>({{ item.parent.title }})</small>
         </a>
       </li>
     {% else %}
       <li>
-        <a title="Voltar para Home" href="/" class="back-link">
+        <a title="Voltar para Home" href="{{ site.baseurl }}/" class="back-link">
           <i class="icon icon-back"></i> Voltar
           <small>(Home)</small>
         </a>
@@ -35,13 +35,13 @@
     {% endif %}
 
     <li>
-      <a class="open" title="{{ item.title }}" href="{{ item.url }}">{{ item.title }}</a>
+      <a class="open" title="{{ item.title }}" href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a>
       <ul>
         {% for subitem in item.subitems %}
           {% if subitem.url == navurl %}<li class="active">
           {% else %}<li {% if subitem.subitems != empty %} class="has-subitems"{% endif %}>
           {% endif %}
-            <a title="{{ subitem.title }}" href="{{ site.baseurl }}{{ subitem.url }}">
+            <a title="{{ subitem.title }}" href="{{ subitem.url | prepend: site.baseurl }}">
               {{ subitem.title }}
             </a>
           </li>

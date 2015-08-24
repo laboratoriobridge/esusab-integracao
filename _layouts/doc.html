@@ -7,7 +7,7 @@ layout: default
     <h1 class="post-title">{{ page.title }}</h1>
     <p class="post-meta">
       {% include github_edit.html %}
-      <a class="btn" href="/pdf.html?include={{ page.id }}"><i class="icon-pdf"></i> Gerar PDF desta página</a>
+      <a class="btn" href="{{ site.baseurl }}/pdf.html?include={{ page.id }}"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       {% if page.last_modified_at != null %}
         <span class="label" title="Data da última modificação">Alterado em {{ page.last_modified_at  | date: '%d/%m/%Y' }}</span>
       {% endif %}

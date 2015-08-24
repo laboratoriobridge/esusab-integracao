@@ -5,8 +5,8 @@ description: Documentação e-SUS
 # Versão atual da documentação
 version: 2.0.0
 
-# the subpath of your site, e.g. /blog/
-baseurl: ""
+# the subpath of your site, e.g. /blog
+baseurl: "/docs"
 
 # Repositório onde está hospedado os fontes deste site
 github_repo: https://github.com/sismob/jekyll

@@ -114,3 +114,60 @@ Identifica a versão do E-SUS AB	Versao
 
 
 **Referência**: Ver Versão
+
+## DadoInstalacao
+
+
+### \#1	contraChave
+
+Identifica o software que gerou o dado(pec/cds, cdsOff ou software de terceiros)
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|---| --- |---  | --- |
+|String|	Requerido|	-|	-	|
+
+Exemplo:  <Nome do software do município> - Versão 2015 - 	-	Dados para identificar a instalação que cadastrou / gerou os dados e / ou enviou.
+
+### \#2	uuidInstalacao
+
+É um identificador da instalação do software que gerou o dado. Seja ele o e-SUS ou software de terceiro. Cada e-SUS possui um UUID
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|---| --- |---  | --- |
+|String|	Requerido|	-|	-|
+
+### \#3	cpfOuCnpj
+
+Cpf do responsável ou CNPJ da empresa responsável
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|---| --- |---  | --- |
+|String|	Requerido|	11|	15|
+
+Observações: Apenas CPFs e CNPJs válidos.	Rever validação.
+
+### \#4	nomeOuRazaoSocial
+
+Nome do responsável ou Razão Social da empresa responsável
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|---| --- |---  | --- |
+|String|	Requerido|	-|	-|
+
+### \#5	fone
+
+Telefone da pessoa ou empresa responsável
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|---| --- |---  | --- |
+|String|	Opcional|	10|	11|
+
+### \#6	email
+
+Email da pessoa ou empresa responsável
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|---| --- |---  | --- |
+|String|	Opcional|	6|	255|
+
+Requerido seguir o padrão "nome@domínio.extensão"	-

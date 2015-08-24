@@ -1,0 +1,97 @@
+$print-font-size: 9pt !important;
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+        font-size: $print-font-size;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    table { page-break-inside:auto }
+    tr    { page-break-inside:avoid; page-break-after:auto }
+    thead { display:table-header-group }
+    tfoot { display:table-footer-group }
+
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h1,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h1,
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+
+    .post-title {
+        font-size: 22pt !important;
+    }
+
+    h1 {
+        font-size: 20pt !important;
+    }
+
+    h2 {
+        font-size: 17pt !important;
+    }
+
+    h3 {
+        font-size: 14pt !important;
+    }
+
+    h4, h5, h6 {
+        font-size: 12pt !important;
+    }
+
+    /* Remove unecessary elements */
+    footer,
+    .site-header,
+    .post-meta,
+    .sidebar,
+    .breadcrumb {
+        display: none;
+    }
+
+    .content {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        float: none;
+    }
+}

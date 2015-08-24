@@ -1,0 +1,107 @@
+---
+layout: default
+title: Gerar PDF
+icon: icon-pdf
+---
+
+<div class="pdf-select">
+  <a class="pull-right btn" href="javascript: window.print()">Imprimir / Gerar PDF</a>
+  <h2>Selecione as páginas que deseja incluir</h2>
+
+  {% include pdf-select-list.html nav=site.data.navigation %}
+
+  <br>
+  <a class="btn primary block large" href="javascript: window.print()">Imprimir / Gerar PDF</a>
+</div>
+
+{% include pdf-content.html nav=site.data.navigation %}
+
+<script type="text/javascript">
+
+  /**
+   * Percorre todos os checkboxes a partir do seletor especificado, executando
+   * a callback function para cada checkbox
+   * @param callback(element, index):
+   *    element - O NodeElement do checkbox atual
+   *    index   - O índice atual
+   */
+  function traverse(selector, callback) {
+    if (selector.startsWith('#')) {
+      // Caso o seletor seja um id, adiciona caracter de escape em '.', para
+      // que este não seja considerado como parte de um seletor de classe
+      // Exemplo: #item-rf-cds.06_edicao_exclusao => #item-rf-cds\.06_edicao_exclusao
+      selector = selector.replace(/\./g, "\\\.");
+    }
+    var el = document.querySelector(selector);
+    var chbxs = el.querySelectorAll("input");
+    for(var i = 0; i < chbxs.length; i++) {
+      callback(chbxs[i], i);
+    }
+  }
+
+  /**
+   * Percorre todos os checkboxes a partir da raiz
+   */
+  function traverseRoot(callback) {
+    traverse(".pdf-select", callback);
+  }
+
+  /**
+   * Lança um 'change' event no elemento especificado
+   */
+  function triggerChange(el) {
+    var event = document.createEvent('HTMLEvents');
+    event.initEvent('change', true, false);
+    el.dispatchEvent(event);
+  }
+
+  /**
+   * Desmarca todos os checkboxes
+   */
+  function dismarkAll() {
+    traverseRoot(function(el, index) {
+      el.checked = false;
+      triggerChange(el);
+    });
+  }
+
+  /**
+   * Marca/Desmarca o checkbox do item com id especificado e todos os seus filhos
+   */
+  function checkById(id, check) {
+    if (check === undefined) {
+      check = true;
+    }
+
+    traverse("#item-" + id, function(el, index) {
+      el.checked = check;
+      triggerChange(el);
+    });
+  }
+
+  /**
+   * Adicionamos o evento para mostrar/ocultar o conteúdo
+   * ao marcar/desmarcar o checkbox correspondente
+   */
+  traverseRoot(function(el, index) {
+    el.addEventListener("change", function() {
+      var pdfId = el.value;
+      if (el.checked) {
+        document.getElementById(pdfId).style.display = '';
+      } else {
+        document.getElementById(pdfId).style.display = 'none';
+      }
+    });
+  });
+
+  // Aplicamos o filtro de checkboxes caso venha de uma URL: pdf.html?include={id}
+  var search = window.location.search;
+  var include = search.split('include')[1];
+
+  if (include != undefined) {
+    include = include.split('=')[1];
+    dismarkAll();
+    checkById(include);
+  }
+
+</script>

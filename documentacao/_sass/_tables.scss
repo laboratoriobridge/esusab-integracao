@@ -1,0 +1,25 @@
+table td {
+  padding: 5px 10px;
+}
+
+table {
+  border-collapse: collapse;
+  width:100%;
+  margin-bottom: 20px;
+}
+
+table tr, table th, * + table td {
+  border: 1px solid #bbb;
+}
+
+table th {
+  background-color: #dfdfdf;
+  padding: 8px 10px;
+  text-align: left;
+  font-size: 0.9em;
+  font-weight: $font-weight-medium;
+}
+
+table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}

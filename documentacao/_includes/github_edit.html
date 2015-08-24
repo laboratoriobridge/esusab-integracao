@@ -1,9 +1,0 @@
-{% if page.relative_path %}
-  {% assign rel_path = page.relative_path %}
-{% else %}
-  {% assign rel_path = page.path %}
-{% endif %}
-
-<a class="btn" href="{{ site.github_repo }}/blob/master/{{ rel_path }}">
-  <i class="icon-git"></i> Código fonte desta página
-</a>

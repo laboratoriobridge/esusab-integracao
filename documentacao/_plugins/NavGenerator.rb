@@ -99,6 +99,7 @@ module NavGenerator
       hash['parent'] = parent
       hash['root'] = root?
       hash['leaf'] = leaf?
+      hash['single'] = single?
       hash['breadcrumb'] = breadcrumb
       hash['top_parent'] = top_parent
       return hash
@@ -112,6 +113,11 @@ module NavGenerator
     # Checa se o item é folha (não possui filhos)
     def leaf?
       return subitems == nil || subitems.empty?
+    end
+
+    # Checa se o item é folha e raiz ao mesmo tempo
+    def single?
+      return root? && leaf?
     end
 
     # Retorna o breadcrumb list para este item de menu

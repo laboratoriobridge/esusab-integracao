@@ -11,11 +11,11 @@ O pacote que encapsula os dados transmissíveis, cada ficha deve conter as infor
 
 No caso do software de terceiro o campo remetente será igual ao originadora, que indica qual instalação gerou/enviou o dado.
 
-## DadoTran
+## DadoTransporte
 
 ### \#1 uuidDadoSerializado
 
-UUID do dado (identificador "universal" gerado na criação do registro)
+UUID do dado (identificador "universal" gerado na criação do registro).
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -27,7 +27,7 @@ UUID do dado (identificador "universal" gerado na criação do registro)
 
 ### \#2 tipoDadoSerializado
 
-Tipo/classe do objeto serializado
+Tipo/classe do objeto serializado.
 
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -38,7 +38,7 @@ Tipo/classe do objeto serializado
 
 ### \#3 cnesDadoSerializado
 
-CNES da unidade de saúde
+CNES da unidade de saúde.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -47,8 +47,7 @@ CNES da unidade de saúde
 
 ### \#4 codIbge
 
-Código IBGE do dado serializado
-
+Código IBGE do dado serializado.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -56,26 +55,28 @@ Código IBGE do dado serializado
 
 **Referência**: IBGE -> link
 
+
 ### \#5	ineDadoSerializado
 
-
-INE da equipe que gerou a ficha	String
+INE da equipe que gerou a ficha	String.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 | String | Opcional |	10|	10|
 
+
 ### \#6	numLote
 
-Numero do lote para controle interno dos arquivos enviados
+Numero do lote para controle interno dos arquivos enviados.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |Long|	Opcional	|0	|	-	|
 
+
 ### \#7	dadoSerializado
 
-Dado serializado a partir de um  de uma ficha
+Dado serializado a partir de um  de uma ficha.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -83,9 +84,10 @@ Dado serializado a partir de um  de uma ficha
 
 Observações: TBinary THRIFT
 
+
 ### \#8	remetente
 
-Identifica a instalação que enviou o dado
+Identifica a instalação que enviou o dado.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -94,9 +96,10 @@ Identifica a instalação que enviou o dado
 
 **Referência**: Ver DadoInstalacao
 
+
 ### \#9	originadora
 
-Identifica a instalação que cadastrou/digitou
+Identifica a instalação que cadastrou/digitou.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -104,9 +107,10 @@ Identifica a instalação que cadastrou/digitou
 
 **Referência**: Ver DadoInstalacao
 
+
 ### \#10	versao
 
-Identifica a versão do E-SUS AB	Versao
+Identifica a versão do E-SUS AB	Versao.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -120,7 +124,7 @@ Identifica a versão do E-SUS AB	Versao
 
 ### \#1	contraChave
 
-Identifica o software que gerou o dado(pec/cds, cdsOff ou software de terceiros)
+Identifica o software que gerou o dado(pec/cds, cdsOff ou software de terceiros).
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -128,17 +132,19 @@ Identifica o software que gerou o dado(pec/cds, cdsOff ou software de terceiros)
 
 Exemplo:  <Nome do software do município> - Versão 2015 - 	-	Dados para identificar a instalação que cadastrou / gerou os dados e / ou enviou.
 
+
 ### \#2	uuidInstalacao
 
-É um identificador da instalação do software que gerou o dado. Seja ele o e-SUS ou software de terceiro. Cada e-SUS possui um UUID
+É um identificador da instalação do software que gerou o dado. Seja ele o e-SUS ou software de terceiro. Cada e-SUS possui um UUID.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |String|	Requerido|	-|	-|
 
+
 ### \#3	cpfOuCnpj
 
-Cpf do responsável ou CNPJ da empresa responsável
+Cpf do responsável ou CNPJ da empresa responsável.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -146,13 +152,15 @@ Cpf do responsável ou CNPJ da empresa responsável
 
 Observações: Apenas CPFs e CNPJs válidos.	Rever validação.
 
+
 ### \#4	nomeOuRazaoSocial
 
-Nome do responsável ou Razão Social da empresa responsável
+Nome do responsável ou Razão Social da empresa responsável.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |String|	Requerido|	-|	-|
+
 
 ### \#5	fone
 
@@ -162,6 +170,7 @@ Telefone da pessoa ou empresa responsável
 |---| --- |---  | --- |
 |String|	Opcional|	10|	11|
 
+
 ### \#6	email
 
 Email da pessoa ou empresa responsável
@@ -170,4 +179,4 @@ Email da pessoa ou empresa responsável
 |---| --- |---  | --- |
 |String|	Opcional|	6|	255|
 
-Requerido seguir o padrão "nome@domínio.extensão"	-
+Requerido seguir o padrão "nome@domínio.extensão".

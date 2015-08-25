@@ -63,12 +63,17 @@ Turno onde aconteceu o atendimento.
 ### \#2	cns
 
 CNS do cidadão que participou da atividade.
+
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |String|	Opcional|	15|	15|
 
-CNS valido de acordo com o algoritmo.	Para ver o algoritmo utilizado, acesse: http://cartaonet.datasus.gov.br/, em "Downloads" baixe o arquivo de rotina de validação Java.  	-
-3	dataNascimento	Data de nascimento do cidadão.
+CNS valido de acordo com o algoritmo.	Para ver o algoritmo utilizado, acesse: http://cartaonet.datasus.gov.br/, em "Downloads" baixe o arquivo de rotina de validação Java.
+
+
+### \#3	dataNascimento
+
+Data de nascimento do cidadão.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -76,7 +81,7 @@ CNS valido de acordo com o algoritmo.	Para ver o algoritmo utilizado, acesse: ht
 
 Não pode ser posterior a dataAtendimento e anterior a 130 anos a partir da dataAtendimento.	Para ver a referência sobre o formato epoch, acesse: https://en.wikipedia.org/wiki/Epoch_(reference_date)	-
 
-4	sexo
+### \#4	sexo
 
 Sexo do cidadão.
 
@@ -191,6 +196,7 @@ Marcador que indica se a família irá receber acompanhamento pós-óbito.
 
 
 ## Questionário de Situações Presentes
+
 |Nome|	Código|
 |--- |---|
 |Acamado	|1 L|

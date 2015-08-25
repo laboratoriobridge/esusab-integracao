@@ -1,7 +1,7 @@
 {% assign navurl = page.url | remove: 'index.html' %}
 {% assign item = page.nav_item %}
 
-{% if navurl == "/" or item == nil %}
+{% if navurl == "/" or item == nil or item.single %}
   <ul>
     {% for item in site.data.navigation %}
       <li>
@@ -10,10 +10,7 @@
     {% endfor %}
   </ul>
 {% else %}
-  {% if item.leaf %}
-    {% comment %}
-      Se for nodo folha, renderiza o nó pai e os irmãos
-    {% endcomment %}
+  {% if item.leaf and item.root == false %}
     {% assign item = item.parent %}
   {% endif %}
 

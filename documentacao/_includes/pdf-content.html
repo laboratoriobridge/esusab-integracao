@@ -5,7 +5,7 @@
       </header>
 
       <article class="post-content">
-        {{ item.page['content'] }}
+        {{ item.page['content'] | relative_src_filter: item.page.url }}
       </article>
 
       <div class="pdf-separator"></div>

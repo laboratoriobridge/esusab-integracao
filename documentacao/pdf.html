@@ -26,6 +26,12 @@ icon: icon-pdf
    *    index   - O índice atual
    */
   function traverse(selector, callback) {
+    if (selector.startsWith('#')) {
+      // Caso o seletor seja um id, adiciona caracter de escape em '.', para
+      // que este não seja considerado como parte de um seletor de classe
+      // Exemplo: #item-rf-cds.06_edicao_exclusao => #item-rf-cds\.06_edicao_exclusao
+      selector = selector.replace(/\./g, "\\\.");
+    }
     var el = document.querySelector(selector);
     var chbxs = el.querySelectorAll("input");
     for(var i = 0; i < chbxs.length; i++) {
@@ -89,12 +95,13 @@ icon: icon-pdf
   });
 
   // Aplicamos o filtro de checkboxes caso venha de uma URL: pdf.html?include={id}
-  // Search url: ?include=cds
   var search = window.location.search;
   var include = search.split('include')[1];
-  include = include ? include.split('=')[1] : undefined;
-  if (include) {
+
+  if (include != undefined) {
+    include = include.split('=')[1];
     dismarkAll();
     checkById(include);
   }
+
 </script>

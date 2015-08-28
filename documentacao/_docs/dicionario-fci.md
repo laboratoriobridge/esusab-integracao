@@ -52,7 +52,7 @@ Dados que identificam o cidadão.
 |--- |--- |--- |--- |
 |IdentificacaoUsuarioCidadao |Condicional |- |- |
 
-**Referência**: [Ver IdentificacaoUsuarioCidadao]()
+**Referência**: [Ver IdentificacaoUsuarioCidadao](#identificacaousuariocidadao)
 
 Observação: Opcional se o campo [statusTermoRecusaCadastroIndividualAtencaoBasica]() = true.
 
@@ -629,3 +629,143 @@ Marcador que indica se o cidadão é responsável familiar.
 | Tipo | Obrigatório | Mínimo | Máximo |
 |--- |--- |--- |--- |
 |Boolean |Opcional |- |- |
+
+## InformacoesSocioDemograficas
+
+### \#1 deficienciasCidadao
+Lista de deficiências que o cidadão possui.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|--- |--- |--- |--- |
+|List<Long> |Condicional |1 |5 |
+
+**Referência:** [Ver DeficienciaCidadao]().
+
+Observação:
+• Requerido preenchimento de pelo menos um item se o campo [statusTemAlgumaDeficiencias]() = true.  
+• Não deve ser preenchido se o campo [statusTemAlgumaDeficiencia]() = false.
+
+### \#2 grauInstrucaoCidadao
+Curso mais elevado que o cidadão frequenta ou frequentou.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|--- |--- |--- |--- |
+|Long |Opicional |- |- |
+
+**Referência:** [Ver CursoMaisElevado]().
+
+### \#3 motivoSaidaCidadao
+Motivo da saída do cidadão do cadastro.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|--- |--- |--- |--- |
+|Long |Opicional |- |- |
+
+**Referência:** [Ver MotivoSaida]().
+
+### \#4 ocupacaoCodigoCbo2002
+Ocupaçao do cidadão.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|--- |--- |--- |--- |
+|String |Opicional |6 |6 |
+
+**Regras:** Deve ser um CBO válido.
+
+**Referência:** [Ver CBO]().
+
+Observação: Não deve ser preenchido se o campo [statusDesejaInformarOrientacaoSexual]() = false.
+
+### \#5 orientacaoSexualCidadao
+Orientação sexual informada pelo cidadão.  
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|--- |--- |--- |--- |
+|Long |Opicional |- |- |
+
+**Referência:** [Ver OrientacaoSexual]().
+
+### \#6 povoComunidadeTradicional
+Nome da comunidade tradicional que o cidadão frequenta.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|--- |--- |--- |--- |
+|String |Opicional |0 |100 |
+
+Observação: Não deve ser preenchido se o campo [statusMembroPovoComunidadeTradicional]() = false.
+
+### \#7 relacaoParentescoCidadao
+Relação de parentesco com o responsável familiar.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|--- |--- |--- |--- |
+|Long |Opicional |- |- |
+
+**Referência:** [Ver RelacaoParentesco]().
+
+### \#8 responsavelPorCrianca
+Responsável por criancas de até 9 anos.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|--- |--- |--- |--- |
+|Long |Opicional |- |- |
+
+**Referência:** [Ver ResponsavelCrianca]().
+
+### \#9 situacaoMercadoTrabalhoCidadao
+Situação do cidadão no mercdo de trabalho.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|--- |--- |--- |--- |
+|Long |Opicional |- |- |
+
+**Referência:** [Ver SituacaoMercadoDeTrabalho]().
+
+### \#10 statusDesejaInformarOrientacaoSexual
+Marcador que indica se o cidadão deseja informar sua orientação sexual.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|--- |--- |--- |--- |
+|Boolean |Opicional |- |- |
+
+### \#11 statusFrequentaBenzedeira
+Marcador que indica se o cidadão frequenta cuidador tradicional.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|--- |--- |--- |--- |
+|Boolean |Opicional |- |- |
+
+### \#12 statusFrequentaEscola
+Marcador que indica se o cidadão frequenta escola ou creche.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|--- |--- |--- |--- |
+|Boolean |Sim |- |- |
+
+### \#13 statusMembroPovoComunidadeTradicional
+Marcador que indica se o cidadão é membro de um povo ou comunidade tradicional.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|--- |--- |--- |--- |
+|Boolean |Opicional |- |- |
+
+### \#14 statusParticipaGrupoComunitario
+Marcador que indica se o cidadão participa de algum grupo comunitário.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|--- |--- |--- |--- |
+|Boolean |Opicional |- |- |
+
+### \#15 statusPossuiPlanoSaudePrivado
+Marcador que indica se o cidadão possui plano de saúde privado.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|--- |--- |--- |--- |
+|Boolean |Opicional |- |- |
+
+### \#16 statusTemAlgumaDeficiencia
+Marcador que indica se cidadão tem alguma dificiência.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|--- |--- |--- |--- |
+|Boolean |Sim |- |- |

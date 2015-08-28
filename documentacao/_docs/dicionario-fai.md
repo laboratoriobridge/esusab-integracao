@@ -162,10 +162,10 @@ Altura do cidadão em cm.
 
 **Regras**:
 
-• Apenas números e vírgula ("" , "").
-• Máximo de números após a vírgula.
-• Se tiver vírgula, tamanho máximo = 5.
-• Valor mínimo 20 e máximo 250.
+- Apenas números e vírgula ("" , "").
+- Máximo de números após a vírgula.
+- Se tiver vírgula, tamanho máximo = 5.
+- Valor mínimo 20 e máximo 250.
 
 
 ### \#10	aleitamentoMaterno

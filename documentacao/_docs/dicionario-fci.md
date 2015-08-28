@@ -102,3 +102,245 @@ Código UUID para identificar a ficha que deu origem ao cadastro do registro.
 **Regras:** Se for uma ficha de atualização, deve ser preenchido com o UUID da ficha que deu origem ao registro. Se for a ficha de cadastro, este campo deve ser igual ao campo uuid.
 
 **Referência**: Para ver a referência sobre o UUID, acesse: [UUID Wikipedia](https://en.wikipedia.org/wiki/Universally_unique_identifier)
+
+## CondicoesDeSaude
+
+### \#1 descricaoCausaInternacaoEm12Meses
+Descrição da causa de internação do cidadão.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|--- |--- |--- |--- |
+|String |Condicional |0 |100 |
+
+Observação: Não deve ser preenchido se o campo [statusTeveInternadoem12Meses]() = false.
+
+### \#2 ddescricaoOutraCondicao1
+Condição de saúde informada pelo cidadão.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|--- |--- |--- |--- |
+|String |Opcional |0 |100 |
+
+### \#3 descricaoOutraCondicao2
+Condição de saúde informada pelo cidadão.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|--- |--- |--- |--- |
+|String |Opcional |0 |100 |
+
+### \#4 descricaoOutraCondicao3
+Condição de saúde informada pelo cidadão.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|--- |--- |--- |--- |
+|String |Opcional |0 |100 |
+
+### \#5 descricaoPlantasMedicinaisUsadas
+Descricao das plantas medicinais utilizadas.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|--- |--- |--- |--- |
+|String |Opcional |0 |100 |
+
+Observação: Não deve ser preenchido se o campo [statusUsaPlantasMedicinais]() = false.
+
+### \#6 doencaCardiaca
+Doenças cardíacas que o cidadão informou.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|--- |--- |--- |--- |
+|List<Long> |Condicional |0 |3 |
+
+**Referência:** [Ver DoencaCardiaca]().
+
+Observação:
+• Requerido preenchimento de pelo menos um item se o campo [statusTeveDoencaCardiaca]() = true
+• Não deve ser preenchido preenchido se o campo "[statusTeveDoencaCardiaca]() = false.
+
+
+### \#7 doencaRespiratoria
+Doenças respiratórias que o cidadão informou.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|--- |--- |--- |--- |
+|List<Long> |Condicional |0 |4 |
+
+**Referência:** [Ver DoencaRespiratoria]().
+
+Observação:
+• Requerido preenchimento de pelo menos um item se o campo [statusTemDoencaRespiratorio]() = true.
+•  Não deve ser preenchido o campo [statusTemDoencaRespiratorio]() = false.
+
+
+### \#8 doencaRins
+Doenças renais que o cidadão informou.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|--- |--- |--- |--- |
+|List<Long> |Condicional |0 3 |
+
+**Referência:** [Ver ConsideracaoPeso]().
+
+Observação:
+•Requerido preenchimento de pelo menos um item se o campo [statusTemTeveDoencasRins]() = true
+• Nãodeve ser preenchido se o campo [statusTemTeveDoencasRins]() = false.
+
+### \#9 maternidadeDeReferencia
+Nome da maternindade de referência.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|--- |--- |--- |--- |
+|String |Opcional |0 |100 |
+
+Observação: Não pode ser preenchido se o campo [statusEhGestante]() = false.
+
+### \#10 situacaoPeso
+Situação referente ao peso corporal.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|--- |--- |--- |--- |
+|Long |Opcional |- |- |
+
+**Referência:** [Ver ConsideracaoPeso]().
+
+### \#11 statusEhDependenteAlcool
+Marcador se o cidadão é dependente de alcool.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|--- |--- |--- |--- |
+|Boolean |Opcional |- |- |
+
+### \#12 statusEhDependenteOutrasDrogas
+Marcador se o cidadão é dependente de outras drogas.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|--- |--- |--- |--- |
+|Boolean |Opcional |- |- |
+
+### \#13 statusEhFumante
+Marcador se o cidadão é fumante.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|--- |--- |--- |--- |
+|Boolean |Opcional |- |- |
+
+### \#14 statusEhGestante
+Marcador se o cidadão está gestante.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|--- |--- |--- |--- |
+|Boolean |Opcional |- |- |
+
+Observação: Só pode ser preenchido se o campo [sexoCidadao]() = feminino e o campo [dataNascimentoCidadao]() for anterior ou igual à 12 anos a partir da data atual.
+
+### \#15 statusEstaAcamado
+Marcador se o cidadão está acamado.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|--- |--- |--- |--- |
+|Boolean |Opcional |- |- |
+
+### \#16 statusEstaDomiciliado
+Marcador se o cidadão está domiciliado.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|--- |--- |--- |--- |
+|Boolean |Opcional |- |- |
+
+### \#17 statusTemDiabetes
+Marcador se o cidadão tem diabetes.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|--- |--- |--- |--- |
+|Boolean |Opcional |- |- |
+
+### \#18 statusTemDoencaRespiratorio
+Marcador se o cidadão tem doença respiratória.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|--- |--- |--- |--- |
+|Boolean |Opcional |- |- |
+
+### \#19 statusTemHanseniase
+Marcador se o cidadão tem hanseníase.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|--- |--- |--- |--- |
+|Boolean |Opcional |- |- |
+
+### \#20 statusTemHipertensaoArterial
+Marcador se o cidadão tem hipertensão arterial.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|--- |--- |--- |--- |
+|Boolean |Opcional |- |- |
+
+### \#21 statusTemTeveCancer
+Marcador se o cidadão tem ou teve câncer.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|--- |--- |--- |--- |
+|Boolean |Opcional |- |- |
+
+### \#22 statusTemTeveDoencasRins
+Marcador se o cidadão tem ou teve doenças nos rins.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|--- |--- |--- |--- |
+|Boolean |Opcional |- |- |
+
+### \#23 statusTemTuberculose
+Marcador se o cidadão tem tuberculose.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|--- |--- |--- |--- |
+|Boolean |Opcional |- |- |
+
+### \#24 statusTeveAvcDerrame
+Marcador se o cidadão teve AVC.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|--- |--- |--- |--- |
+|Boolean |Opcional |- |- |
+
+### \#25 statusTeveDoencaCardiaca
+Marcador se o cidadão teve doença cardíaca.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|--- |--- |--- |--- |
+|Boolean |Opcional |- |- |
+
+### \#26 statusTeveInfarto
+Marcador se o cidadão teve infarto.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|--- |--- |--- |--- |
+|Boolean |Opcional |- |- |
+
+### \#27 statusTeveInternadoem12Meses
+Marcador se o cidadão esteve internado nos últimos 12 meses.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|--- |--- |--- |--- |
+|Boolean |Opcional |- |- |
+
+### \#28 statusTratamentoPsiquicoOuProblemaMental
+Marcador se o cidadão está em tratamento psiquico ou tem problema mental.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|--- |--- |--- |--- |
+|Boolean |Opcional |- |- |
+
+### \#29 statusUsaOutrasPraticasIntegrativasOuComplementares
+Marcador se o cidadão utiliza outras práticas integrativas complementares.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|--- |--- |--- |--- |
+|Boolean |Opcional |- |- |
+
+### \#30 statusUsaPlantasMedicinais
+Marcador se o cidadão utiliza plantas medicinais.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|--- |--- |--- |--- |
+|Boolean |Opcional |- |- |

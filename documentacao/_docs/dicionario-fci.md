@@ -344,3 +344,125 @@ Marcador se o cidadão utiliza plantas medicinais.
 | Tipo | Obrigatório | Mínimo | Máximo |
 |--- |--- |--- |--- |
 |Boolean |Opcional |- |- |
+
+## EmSituacaoDeRua
+
+### \#1 grauParentescoFamiliarFrequentado
+Grau de parentesco do familiar que frequenta.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|--- |--- |--- |--- |
+|String |Condicional |0 |100 |
+
+**Regras:** Não podem ser preechidos se o campo [statusSituacaoRua]() = false.
+
+Observação: Não deve ser preenchido se o campo [statusVisitaFamiliarFrequentemente]() = false.
+
+### \#2 higienePessoalSituacaoRua
+Condições de higiene que o cidadão tem acesso.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|--- |--- |--- |--- |
+|List<Long> |Condicional |0 |4 |
+
+**Regras:** Não podem ser preechidos se o campo [statusSituacaoRua]() = false.
+
+**Referência:** [Ver AcessoHigiene]().
+
+Observação: Requerido preenchimento de pelo menos um item se o campo [statusTemAcessoHigienePessoalSituacaoRua]() = true.
+
+### \#3 origemAlimentoSituacaoRua
+Origem da alimentação do cidadão em situação de rua.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|--- |--- |--- |--- |
+|List<Long> |Opcional |0 |5 |
+
+**Regras:** Não podem ser preechidos se o campo [statusSituacaoRua]() = false.
+
+**Referência:** [Ver OrigemAlimentacao]().
+
+### \#4 outraInstituicaoQueAcompanha
+Nome de outra instituição que acompanha o cidadão.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|--- |--- |--- |--- |
+|String |Opcional |0 |100 |
+
+**Regras:** Não podem ser preechidos se o campo [statusSituacaoRua]() = false.
+
+Observação: Não deve ser preenchido se o campo [statusAcompanhadoPorOutraInstituição]() = false.
+
+### \#5 quantidadeAlimentacoesAoDiaSituacaoRua
+Quantas vezes o cidadão se alimenta ao dia.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|--- |--- |--- |--- |
+|Long |Opcional |- |- |
+
+**Regras:** Não podem ser preechidos se o campo [statusSituacaoRua]() = false.
+
+**Referência:** [Ver QuantasVezesAlimentacao]().
+
+### \#6 statusAcompanhadoPorOutraInstituicao
+Marcador que indica se o cidadão é acompanhado por outra instituição.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|--- |--- |--- |--- |
+|Boolean |Opcional |- |- |
+
+**Regras:** Não podem ser preechidos se o campo [statusSituacaoRua]() = false.
+
+### \#7 statusPossuiReferenciaFamiliar
+Marcador que indica se o cidadão possuiu alguma referência familiar.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|--- |--- |--- |--- |
+|Boolean |Opcional |- |- |
+
+**Regras:** Não podem ser preechidos se o campo [statusSituacaoRua]() = false.
+
+### \#8 statusRecebeBeneficio
+Marcador que indica se o cidadão recebe algum benefício.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|--- |--- |--- |--- |
+|Boolean |Opcional |- |- |
+
+**Regras:** Não podem ser preechidos se o campo [statusSituacaoRua]() = false.
+
+### \#9 statusSituacaoRua
+Marcador que indica se o cidadão está em situação de rua.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|--- |--- |--- |--- |
+|Boolean |Sim |- |- |
+
+### \#10 statusTemAcessoHigienePessoalSituacaoRua
+Marcador que indica se o cidadão tem acesso a higiene pessoal.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|--- |--- |--- |--- |
+|Boolean |Opcional |- |- |
+
+**Regras:** Não podem ser preechidos se o campo [statusSituacaoRua]() = false.
+
+### \#11 statusVisitaFamiliarFrequentemente
+Marcador que indica se o cidadão visita algum familiar frequentemente.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|--- |--- |--- |--- |
+|Boolean |Opcional |- |- |
+
+**Regras:** Não podem ser preechidos se o campo [statusSituacaoRua]() = false.
+
+### \#12 tempoSituacaoRua
+Tempo que o cidadão está em situação de rua.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|--- |--- |--- |--- |
+|Long |Opcional |- |- |
+
+**Regras:** Não podem ser preechidos se o campo [statusSituacaoRua]() = false.
+
+**Referência:** [Ver TempoSituacaoDeRua]().

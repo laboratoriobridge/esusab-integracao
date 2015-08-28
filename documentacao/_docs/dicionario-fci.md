@@ -466,3 +466,166 @@ Tempo que o cidadão está em situação de rua.
 **Regras:** Não podem ser preechidos se o campo [statusSituacaoRua]() = false.
 
 **Referência:** [Ver TempoSituacaoDeRua]().
+
+## IdentificacaoUsuarioCidadao
+
+### \#1 nomeSocialCidadao
+Nome social do cidadão.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|--- |--- |--- |--- |
+|String |Opcional |0 |100 |
+
+### \#2 codigoIbgeMunicipioNascimento
+Código IBGE do município.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|--- |--- |--- |--- |
+|String |Sim |7 |7 |
+
+**Referência:** [Ver Municipios]().
+
+Observação: Requerido se o campo [nacionalidadeCidadao]() = 1L (Brasileiro) e não deve ser preenchido se for outra nacionalidade.
+
+### \#3 dataNascimentoCidadao
+Data de nascimento do cidadão no formato epoch time.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|--- |--- |--- |--- |
+|Long |Sim |- |- |
+
+**Regras:** Não pode ser posterior a [dataAtendimento]() e anterior a 130 anos a partir da [dataAtendimento]().
+
+**Referência:** Para ver a referência sobre o formato epoch, acesse: [Epoch Wikipedia](https://en.wikipedia.org/wiki/Epoch_(reference_date)).
+
+### \#4 dataNascimentoResponsavel
+Data de nascimento do responsável pelo cidadão no formato epoch time.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|--- |--- |--- |--- |
+|Long |Opcional |- |- |
+
+**Regras:** Não pode ser posterior a [dataAtendimento]() e anterior a 130 anos a partir da [dataAtendimento]().
+
+**Referência:** Para ver a referência sobre o formato epoch, acesse: [Epoch Wikipedia](https://en.wikipedia.org/wiki/Epoch_(reference_date)).
+
+### \#5 desconheceNomeMae
+Marcador que indica que o cidadão desconhece o nome da mãe
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|--- |--- |--- |--- |
+|Boolean |Opcional |- |- |
+
+### \#6 emailCidadao
+Email do cidadão.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|--- |--- |--- |--- |
+|String |Opcional |6 |100 |
+
+**Regras:** Requerido seguir o padrão "nome@domínio.extensão".
+
+### \#7 nacionalidadeCidadao
+Marcador que indica se o cidadão é brasileiro, naturalizado ou estrangeiro.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|--- |--- |--- |--- |
+|Long |Sim |- |- |
+
+**Referência:** [Ver Nacionalidade]().
+
+### \#8 nomeCidadao
+Nome completo do cidadão.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|--- |--- |--- |--- |
+|String |Sim |5 |100 |
+
+**Regras:** Necessita espaço em branco para indicar o sobrenome.
+
+### \#9 nomeMaeCidadao
+Nome da mãe do cidadão.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|--- |--- |--- |--- |
+|String |Condicional |5 |100 |
+
+**Regras:** Necessita espaço em branco para indicar o sobrenome.
+
+Observação: Não deve ser preenchido se o campo [desconheceNomeMae]() = true.
+
+### \#10 numeroCartaoSus
+CNS do cidadão.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|--- |--- |--- |--- |
+|String |Opcional |15 |15 |
+
+**Regras:** Validado por algoritmo.
+
+**Referência:** Para ver o algoritmo utilizado, acesse: [Cartão Net Datasus](http://cartaonet.datasus.gov.br/), em "Downloads" baixe o arquivo de rotina de validação Java.
+
+### \#11 numeroCartaoSusResponsavel
+CNS do responsável do cidadão.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|--- |--- |--- |--- |
+|String |Opcional |15 |15 |
+
+**Regras:** Validado por algoritmo.
+
+**Referência:** Para ver o algoritmo utilizado, acesse: [Cartão Net Datasus](http://cartaonet.datasus.gov.br/), em "Downloads" baixe o arquivo de rotina de validação Java.
+
+Observação: Só pode ser preenchido se o campo [statusEhResponsavel]() = true.
+
+### \#12 numeroCelularCidadao
+Número de celular do cidadão.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|--- |--- |--- |--- |
+|String |Opcional |10 |11 |
+
+**Regras:** Apenas números.
+
+### \#13 paisNacimento
+País de nascimento do cidadão.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|--- |--- |--- |--- |
+|String |Opcional |11 |11 |
+
+### \#14 paisNacimento
+País de nascimento do cidadão.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|--- |--- |--- |--- |
+|Long |Opcional |- |- |
+
+**Referência:** [Ver Pais]().
+
+Observação: Só pode ser preenchido se o campo [nacionalidadeCidadao]() = 1L (Brasileiro).
+
+### \#15 racaCorCidadao
+Raça/Cor do cidadão.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|--- |--- |--- |--- |
+|Long |Sim |- |- |
+
+**Referência:** [Ver RacaCor]().
+
+### \#16 sexoCidadao
+Sexo do cidadão.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|--- |--- |--- |--- |
+|Long |Sim |- |- |
+
+**Referência:** [Ver Sexo]().
+
+### \#17 statusEhResponsavel
+Marcador que indica se o cidadão é responsável familiar.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+|--- |--- |--- |--- |
+|Boolean |Opcional |- |- |

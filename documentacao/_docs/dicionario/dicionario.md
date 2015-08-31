@@ -2,7 +2,7 @@
 layout: doc
 title: Dicionário de dados
 id: dicionario
-order: 1
+order: 0
 ---
 
 ## AbastecimentoDeAgua

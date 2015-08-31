@@ -17,7 +17,7 @@ Profissional que realizou a visita.
 |--- |--- |--- |--- |
 |UnicaLotacaoHeader |Sim |- |- |
 
-**Referência**: [Ver Profissional]().
+**Referência**: [Ver Profissional](dicionario/dicionario.html#profissional).
 
 ### \#2 numeroCartaoSus
 
@@ -99,7 +99,7 @@ Marcadores referente a cidadãos que tem entre seis e vinte e três meses de ida
 
 **Regras:** Requerido se dataNascimento >= 6 meses e <= 23 meses a partir da dataAtendimento.
 
-**Referêcia**: [Ver PerguntaQuestionarioCriancasDeSeisVinteTresMeses]().
+**Referêcia**: [Ver PerguntaQuestionarioCriancasDeSeisVinteTresMeses](#perguntaquestionariocriancasmenoresseismeses).
 
 Observações: Os campos `#7`, `#8` e `#9` são mutualmente exclusivos, isto é, um e apenas um deles deve não ser nulo.
 
@@ -188,7 +188,6 @@ Resposta referente a pergunta.
 **Regras:** Deve respeitar as regras das respostas referente a pergunta.
 
 **Referências:** [Ver RespostaUnicaEscolhaEnum]().
-
 
 ## PerguntaQuestionarioCriancasComMaisDoisAnos
 

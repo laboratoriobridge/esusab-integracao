@@ -13,13 +13,13 @@ table tr, table th, * + table td {
 }
 
 table th {
-  background-color: #eee;
+  background-color: #dfdfdf;
   padding: 8px 10px;
   text-align: left;
   font-size: 0.9em;
   font-weight: $font-weight-medium;
 }
 
-table tr:hover {
+table tr:nth-child(even) {
   background-color: #f9f9f9;
 }

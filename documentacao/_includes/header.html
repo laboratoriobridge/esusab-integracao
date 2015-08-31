@@ -20,7 +20,7 @@
       <div class="trigger">
         {% for page in site.pages %}
           {% if page.icon %}
-            <a href="{{ page.url }}"><i class="{{ page.icon }}"></i> {{ page.title }}</a>
+            <a href="{{ page.url | prepend: site.baseurl }}"><i class="{{ page.icon }}"></i> {{ page.title }}</a>
           {% endif %}
         {% endfor %}
       </div>

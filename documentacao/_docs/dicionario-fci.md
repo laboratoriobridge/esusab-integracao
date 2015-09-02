@@ -7,6 +7,8 @@ order: 1
 
 # Ficha de Cadastro Individual
 
+## CadastroIndividual
+
 ### \#1 condicoesDeSaude
 Formulário referente as condições de saúde do cidadão.
 

@@ -136,7 +136,7 @@ CBO do profissional2.
 
 Observação: Esta entidade é utilizada para representar o profissional responsável pela ficha e os outros que o auxiliaram na atividade
 
-# ProfissionalCboRowItem
+## ProfissionalCboRowItem
 
 ### \#1 cns
 CNS do profissional.
@@ -162,7 +162,7 @@ CBO do profissional.
 
 Observação: Esta entidade é utilizada para representar os profissionais que participaram da atividade coletiva
 
-# HeaderCdsCadastro
+## HeaderCdsCadastro
 
 ### \#1 cnesUnidadeSaude
 CNES da unidade de saúde que o profissional está lotado.

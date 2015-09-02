@@ -17,7 +17,7 @@ Profissional que realizou a visita.
 |--- |--- |--- |--- |
 |UnicaLotacaoHeader |Sim |- |- |
 
-**Referência**: [Ver Profissional](dicionario/dicionario.html#profissional).
+**Referência**: {% link profissional %}
 
 ### \#2 numeroCartaoSus
 
@@ -63,7 +63,7 @@ Sexo do cidadão.
 |--- |--- |--- |--- |
 |Long |Sim |- |- |
 
-**Referêcia**: [Ver Sexo]().
+**Referêcia**: [Sexo]({% url dicionario#sexo %})
 
 ### \#6 localAtendimento
 
@@ -73,7 +73,7 @@ Local onde o atendimento foi realizado.
 |--- |--- |--- |--- |
 |Long |Sim |- |- |
 
-**Referêcia**: [Ver LocalDeAtendimento]().
+**Referêcia**: [LocalDeAtendimento]({% url dicionario#localdeatendimento %})
 
 ### \#7 perguntasQuestionarioCriancasMenoresSeisMeses
 
@@ -85,7 +85,7 @@ Marcadores referente a cidadãos menores de seis meses de idade.
 
 **Regras:** Requerido se dataNascimento < 6 meses a partir da dataAtendimento.
 
-**Referêcia**: [Ver PerguntaQuestionarioCriancasMenoresSeisMeses]().
+**Referêcia**: [PerguntaQuestionarioCriancasMenoresSeisMeses](#perguntaquestionariocriancasmenoresseismeses).
 
 Observações: Os campos `#7`, `#8` e `#9` são mutualmente exclusivos, isto é, um e apenas um deles deve não ser nulo.
 
@@ -99,7 +99,7 @@ Marcadores referente a cidadãos que tem entre seis e vinte e três meses de ida
 
 **Regras:** Requerido se dataNascimento >= 6 meses e <= 23 meses a partir da dataAtendimento.
 
-**Referêcia**: [Ver PerguntaQuestionarioCriancasDeSeisVinteTresMeses](#perguntaquestionariocriancasmenoresseismeses).
+**Referêcia**: [PerguntaQuestionarioCriancasDeSeisVinteTresMeses](#perguntaquestionariocriancasdeseisvintetresmeses).
 
 Observações: Os campos `#7`, `#8` e `#9` são mutualmente exclusivos, isto é, um e apenas um deles deve não ser nulo.
 
@@ -113,7 +113,7 @@ Marcadores referente a cidadãos que tem vinte e quatro meses ou mais.
 
 **Regras:** Requerido se dataNacimento >= 24 meses a partir da dataAtendimento.
 
-**Referêcia**: [Ver PerguntaQuestionarioCriancasComMaisDoisAnos]().
+**Referêcia**: [PerguntaQuestionarioCriancasComMaisDoisAnos](#perguntaquestionariocriancascommaisdoisanos).
 
 Observações: Os campos `#7`, `#8` e `#9` são mutualmente exclusivos, isto é, um e apenas um deles deve não ser nulo.
 
@@ -139,7 +139,6 @@ Tipo de origem dos dados do registro.
 
 **Regras:** Utilizar valor 3 (sistemas terceiros).
 
-
 ## PerguntaQuestionarioCriancasMenoresSeisMeses
 
 ### \#1	pergunta
@@ -150,7 +149,7 @@ Identificador da pergunta referente ao questionário para cidadãos menores de s
 |--- |--- |--- |--- |
 |PerguntaCriancasMenoresSeisMesesEnum |Sim |- |- |
 
-**Referência:** [Ver PerguntaCriancasMenoresSeisMesesEnum]().
+**Referência:** [PerguntaCriancasMenoresSeisMesesEnum](#perguntacriancasmenoresseismesesenum).
 
 ### \#2	respostaUnicaEscolha
 
@@ -162,8 +161,7 @@ Resposta referente a pergunta.
 
 **Regras:** Deve respeitar as regras das respostas referente a pergunta.
 
-**Referência:** [Ver RespostaUnicaEscolhaEnum]().
-
+**Referência:** [RespostaUnicaEscolhaEnum](#respostaunicaescolhaenum).
 
 ## PerguntaQuestionarioCriancasDeSeisVinteTresMeses
 
@@ -175,7 +173,7 @@ Identificador da pergunta referente ao questionário para cidadãos menores de s
 |--- |--- |--- |--- |
 |PerguntaCriancasDeSeisVinteTresMesesEnum |Sim |- |- |
 
-**Referências:** [Ver PerguntaCriancasDeSeisVinteTresMesesEnum]().
+**Referências:** [PerguntaCriancasDeSeisVinteTresMesesEnum](#perguntacriancasdeseisvintetresmesesenum).
 
 ### \#2	respostaUnicaEscolha
 
@@ -187,7 +185,7 @@ Resposta referente a pergunta.
 
 **Regras:** Deve respeitar as regras das respostas referente a pergunta.
 
-**Referências:** [Ver RespostaUnicaEscolhaEnum]().
+**Referências:** [RespostaUnicaEscolhaEnum](#respostaunicaescolhaenum).
 
 ## PerguntaQuestionarioCriancasComMaisDoisAnos
 
@@ -199,7 +197,7 @@ Pergunta do questionário de cidadãos que tem vinte e quatro meses ou mais.
 |--- |--- |--- |--- |
 |p | Requerido |- |- |
 
-**Referência:** [Ver PerguntaCriancasComMaisDoisAnosEnum]().
+**Referência:** [PerguntaCriancasComMaisDoisAnosEnum](#perguntacriancascommaisdoisanosenum).
 
 ### \#2	respostaUnicaEscolha
 
@@ -211,7 +209,7 @@ Resposta referente a pergunta do registro.
 
 **Regras:** Deve respeitar as regras das respostas referente a pergunta.
 
-**Referência:**[Ver RespostaUnicaEscolhaEnum]().
+**Referência:** [RespostaUnicaEscolhaEnum](#respostaunicaescolhaenum).
 
 Observações: Os campos `#2` e `#3` são mutualmente exclusivos, isto é, um e apenas um deles deve não ser nulo.
 
@@ -227,11 +225,9 @@ Resposta referente a pergunta do registro acima.
 • Deve respeitar as regras das respostas referente a pergunta .
 • Pode ser preenchido somente se a pergunta for 12L.
 
-**Referência:**[Ver RespostaMultiplaEscolhaEnum]().
+**Referência:** [RespostaMultiplaEscolhaEnum](#respostamultiplaescolhaenum).
 
 Observações: Os campos `#2` e `#3` são mutualmente exclusivos, isto é, um e apenas um deles deve não ser nulo.
-
----
 
 ## PerguntaCriancasMenoresSeisMesesEnum
 

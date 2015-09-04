@@ -9,36 +9,36 @@ order: 1
 
 ## FichaAtendimentoDomiciliarMaster
 
-### \#1	uuidFicha	Código UUID para identificar a ficha na base de dados nacional.
+### \#1	uuidFicha	Código
+UUID para identificar a ficha na base de dados nacional.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |String|	Sim|	36|	44|
 
-É recomendado concatenar o CNES na frente do UUID, de modo que os 7 digitos (CNES) + 1 de hífen somados aos 36 (32 caracteres + 4 hífen) do UUID são a limitação de 44 bytes do campo. Formato canônico.	Para ver a referência sobre o UUID, acesse: https://en.wikipedia.org/wiki/Universally_unique_identifier	-
+**Regras:** É recomendado concatenar o CNES na frente do UUID, de modo que os 7 digitos (CNES) + 1 de hífen somados aos 36 (32 caracteres + 4 hífen) do UUID são a limitação de 44 bytes do campo.
+
+**Referência:** Formato canônico.	Para ver a referência sobre o UUID, acesse: [UUID Wikipedia](https://en.wikipedia.org/wiki/Universally_unique_identifier).
 
 ### \#2	tpCdsOrigem
-
 Tipo de origem dos dados do registro.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |Integer|	Sim|	1|	1|
 
-**Observações**: Utilizar valor 3 (sistemas terceiros).
+Observações: Utilizar valor 3 (sistemas terceiros).
 
 ### \#3	headerTransport
-
 Profissional que realizou a visita.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |UnicaLotacaoHeader|	Sim|	-|	-|
 
-**Referências**	Ver Profissional
+**Referências**	{% link profissional %}
 
 ### \#4	atendimentosDomiciliares
-
 Lista dos atendimentos realizados pelo profissional.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -48,55 +48,53 @@ Lista dos atendimentos realizados pelo profissional.
 ## FichaAtendimentoDomiciliarChild
 
 ### \#1	turno
-
 Turno onde aconteceu o atendimento.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |Long|	Sim|	-|	-|
 
-**Referência**: Ver Turno
+**Referência**: [Turno]({% url dicionario %}#turno)
 
 ### \#2	cns
-
 CNS do cidadão que participou da atividade.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |String|	Opcional|	15|	15|
 
-CNS valido de acordo com o algoritmo.	Para ver o algoritmo utilizado, acesse: http://cartaonet.datasus.gov.br/, em "Downloads" baixe o arquivo de rotina de validação Java.
+**Regras:** Validado pelo algoritmo.
 
+**Referência**: Para ver o algoritmo utilizado, acesse: [Cartão Net Datasus](http://cartaonet.datasus.gov.br/), em "Downloads" baixe o arquivo de rotina de validação Java.  
 
 ### \#3	dataNascimento
-
 Data de nascimento do cidadão.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |Long|	Sim|	-|	-|
 
-Não pode ser posterior a dataAtendimento e anterior a 130 anos a partir da dataAtendimento.	Para ver a referência sobre o formato epoch, acesse: https://en.wikipedia.org/wiki/Epoch_(reference_date)	-
+**Regras:** Não pode ser posterior a [dataAtendimento]({% url profissional%}#dataatendimento) e anterior a 130 anos a partir da [dataAtendimento]({% url profissional%}#dataatendimento).
+
+**Referencias:** Para ver a referência sobre o formato epoch, acesse: [Epoch Wikipedia](https://en.wikipedia.org/wiki/Epoch_(reference_date))
 
 ### \#4	sexo
-
 Sexo do cidadão.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |Long|	Sim|	-|	-|
 
-**Referência**:	-	Ver Sexo	-
+**Referência**:	[Sexo]({% url dicionario%}#sexo)
 
 ### \#5	localDeAtendimento
-
 Local onde o atendimento foi realizado.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |Long|	Sim|	-|	-|
 
-**Referência** Ver LocalDeAtendimento
+**Referência** [LocalDeAtendimento]({% url dicionario%}#localdeatendimento)
 
 ### \#6	atencaoDomiciliarModalidade
 
@@ -106,34 +104,31 @@ Modalidade AD do cidadão atendido.
 |---| --- |---  | --- |
 |Long|	Sim|	-|	-|
 
-**Regras**: Apenas as opções "1L", "2L" e "3L" são aceitas.
+**Regras**: Apenas as opções `1L`, `2L` e `3L` são aceitas.
 
-**Referência**: Ver ModalidadeAD
+**Referência**: [ModalidadeAD]({% url dicionario %}#modalidadead)
 
-7	tipoAtendimento
-
+### \#7	tipoAtendimento
 Tipo de atendimento.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |Long|	Sim|	-|	-|
 
-**Regras**: Apenas as opções "7L" e "8L" são aceitas.
+**Regras**: Apenas as opções `7L` e `8L` são aceitas.
 
-**Referências**: Ver TipoDeAtendimento
+**Referências**: [TipoDeAtendimento]({% url dicionario %}#tipodeatendimento)
 
 ### \#8	situacoesPresentes
-
 Marcadores das situações presentes.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |List<Long>|	Opcional|	0|	24|
 
-**Referências**: Ver SituacoesPresentes
+**Referências**: [SituacoesPresentes](#situacoespresentes)
 
 ### \#9	cid
-
 CID registrado no atendimento.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -141,7 +136,6 @@ CID registrado no atendimento.
 |String|	Opcional|	-|	-|
 
 ### \#10	ciap
-
 CIAP registrado no atendimento.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -149,17 +143,15 @@ CIAP registrado no atendimento.
 |String|	Opcional|	-	|-|
 
 ### \#11	procedimentos
-
 Procedimentos registrados no atendimento disponíveis na ficha.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |List<String>|	Opcional|	0|	21|
 
-**Referência**: Ver ProcedimentosAtençãoDomiciliar
+**Referência**: [ProcedimentosAtençãoDomiciliar](#procedimentosatencaodomiciliar)
 
 ### \#12	outrosProcedimentos
-
 Procedimentos SIGTAP registrados no atendimento.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -167,30 +159,26 @@ Procedimentos SIGTAP registrados no atendimento.
 |List<String>|	Opcional	|0|	4|
 
 **Regras**:
-
 - Não podem ser iguais aos procedimentos a cima.
 - Não podem conter procedimentos repetidos.
 
 ### \#13	condutaDesfecho
-
 Desfecho do atendimento do cidadão.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |Long|	Opcional|	-|	-|
 
-**Regras**:	Não podem conter as opções "7L" ou "8L".
+**Regras**:	Não podem conter as opções `7L` ou `8L`.
 
-**Referência**:	Ver CondutaDesfecho
+**Referência**:	[CondutaDesfecho]({% url dicionario %}#condutadesfecho)
 
 ### \#14	statusInicioAcompanhamentoPosObito
-
 Marcador que indica se a família irá receber acompanhamento pós-óbito.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |Boolean|	Opcional|	-|	-|
-
 
 ## Questionário de Situações Presentes
 

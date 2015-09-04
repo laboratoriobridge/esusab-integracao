@@ -36,7 +36,7 @@ Profissional que realizou os procedimentos.
 |--- |--- |--- |--- |
 |UnicaLotacaoHeader |Sim |- |- |
 
-**Referência**: [Ver Profissional]().
+**Referência**: {% link profissional %}
 
 ### \#4 atendProcedimentos
 Registro dos procedimentos realizados.
@@ -45,7 +45,7 @@ Registro dos procedimentos realizados.
 |--- |--- |--- |--- |
 |List<FichaProcedimentoChild> |Condicional |1 |23 |
 
-**Referência**: [Ver FichaProcedimentoChild]().
+**Referência**: [FichaProcedimentoChild](#fichaprocedimentochild).
 
 Observação: É requerido apenas um dentre os itens `#4` a `#11`.
 
@@ -135,7 +135,7 @@ Data de nascimento do cidadão no formato epoch time.
 |--- |--- |--- |--- |
 |Long |Sim |- |- |
 
-**Regras:** Não pode ser posterior a [dataAtendimento]() e anterior a 130 anos a partir da [dataAtendimento]().
+**Regras:** Não pode ser posterior a [dataAtendimento]({% url profissional##5-dataatendimento %}) e anterior a 130 anos a partir da [dataAtendimento]({% url profissional##5-dataatendimento %}).
 
 **Referência:** Para ver a referência sobre o formato epoch, acesse: [Epoch Wikipedia](https://en.wikipedia.org/wiki/Epoch_(reference_date))
 
@@ -146,7 +146,7 @@ Sexo do cidadão.
 |--- |--- |--- |--- |
 |Long |Sim |- |- |
 
-**Referência**: [Ver Sexo]().
+**Referência**: [Sexo]({% url dicionario#sexo %}).
 
 ### \#5 localAtendimento
 Local onde o atendimento foi realizado.
@@ -155,7 +155,7 @@ Local onde o atendimento foi realizado.
 |--- |--- |--- |--- |
 |Long |Sim |- |- |
 
-**Referência**: [Ver LocalDeAtendimento]().
+**Referência**: [LocalDeAtendimento]({% url dicionario#localdeatendimento %}).
 
 ### \#6 turno
 Turno onde aconteceu o atendimento.
@@ -164,7 +164,7 @@ Turno onde aconteceu o atendimento.
 |--- |--- |--- |--- |
 |Long |Opcional |- |- |
 
-**Referência**: [Ver Turno]().
+**Referência**: [Turno]({% url dicionario#turno %}).
 
 ### \#7 statusEscutaInicialOrientacao
 Indica a realização da escuta inicial.
@@ -182,7 +182,7 @@ Lista dos procedimentos que são registrados na ficha de procedimentos.
 
 **Regras:** Caracteres maiúsculos e sem espaço em branco.
 
-**Referência**: [Ver listaDeProcedimento]().
+**Referência**: [ListaDeProcedimento](#listadeprocedimento).
 
 Observação: É requerido apenas um dentre os itens `#8` e `#9`.
 

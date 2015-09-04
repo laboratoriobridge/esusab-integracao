@@ -36,7 +36,7 @@ Profissional que realizou a visita.
 |--- |--- |--- |--- |
 |UnicaLotacaoHeader |Sim |- |- |
 
-**Referência**: [Ver Profissional]().
+**Referência**: {% link profissional %}
 
 ### \#4 visitasDomiciliares
 Pelo menos 1 item na lista, no máximo 23.
@@ -45,7 +45,7 @@ Pelo menos 1 item na lista, no máximo 23.
 |--- |--- |--- |--- |
 |List<FichaVisitaDomiciliarChild> |Sim |- |- |
 
-**Referência**: [Ver FichaVisitaDomiciliarChild]().
+**Referência**: [FichaVisitaDomiciliarChild](#fichavisitadomiciliarchild).
 
 ## FichaVisitaDomiciliarChild
 
@@ -56,7 +56,7 @@ Turno onde aconteceu o atendimento.
 |--- |--- |--- |--- |
 |Long |Não |- |- |
 
-**Referência**: [Ver Turno]().
+**Referência**: [Turno]({% url dicionario#turno %}).
 
 ### \#2 numProntuario
 Número do prontuário do cidadão na UBS.
@@ -85,7 +85,7 @@ Data de nascimento do cidadão.
 |--- |--- |--- |--- |
 |Long |Sim |- |- |
 
-**Regras:** Não pode ser posterior a [dataAtendimento]() e anterior a 130 anos a partir da [dataAtendimento]().
+**Regras:** Não pode ser posterior a [dataAtendimento]({% url profissional##5-dataatendimento %}) e anterior a 130 anos a partir da [dataAtendimento]({% url profissional##5-dataatendimento %}d).
 
 **Referência**: Para ver a referência sobre o formato epoch, acesse: [Epoch Wikipedia](https://en.wikipedia.org/wiki/Epoch_(reference_date)).
 
@@ -96,7 +96,7 @@ Sexo do cidadão.
 |--- |--- |--- |--- |
 |Long |Sim |- |- |
 
-**Referência**: [Ver Sexo]().
+**Referência**: [Sexo]({% url dicionario#sexo %}).
 
 ### \#6 statusVisitaCompartilhadaOutroProfissional
 Marcador que indica se a visita foi compartilhada com outro profissional.
@@ -112,9 +112,9 @@ Motivos da visita.
 |--- |--- |--- |--- |
 |List<Long> |Condicional |- |- |
 
-**Regras:** Não é Obrigatório se [Desfecho]() é AUSENTE ou VISITA_RECUSADA.
+**Regras:** Não é Obrigatório se [Desfecho]({% url dicionario#desfecho %}) é AUSENTE ou VISITA_RECUSADA.
 
-**Referência**: [Ver MotivoVisita]().
+**Referência**: [MotivoVisita]({% url dicionario#motivovisita %}).
 
 ### \#8 desfecho
 Resultado da ação de visita.
@@ -123,4 +123,4 @@ Resultado da ação de visita.
 |--- |--- |--- |--- |
 |Long |Requerido |- |- |
 
-**Referência**: [Ver Desfecho]().
+**Referência**: [Desfecho]({% url dicionario#desfecho %}).

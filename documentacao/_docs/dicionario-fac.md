@@ -21,7 +21,6 @@ Código UUID para identificar a ficha na base de dados nacional.
 
 **Referência**: [Wikipedia UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier)
 
-
 ### \#2	dtAtividadeColetiva
 
 Data de realização da atividade coletiva.
@@ -30,10 +29,9 @@ Data de realização da atividade coletiva.
 |---| --- |---  | --- |
 |Long|	Requerido|	-|-|
 
-**Regras** -Não pode ser posterior a data atual.
+**Regras** Não pode ser posterior a data atual.
 
-**Referência** - [Wikipedia Epoch](https://en.wikipedia.org/wiki/Epoch)
-
+**Referência** [Wikipedia Epoch](https://en.wikipedia.org/wiki/Epoch)
 
 ### \#3	numParticipantesProgramados
 
@@ -45,7 +43,6 @@ Previsão da quantidade de participantes para a atividade coletiva.
 
 **Regras**:	Valores entre 0 e 999.
 
-
 ### \#4	localAtividade
 
 Descrição do local onde é realizada a atividade coletiva.
@@ -53,7 +50,6 @@ Descrição do local onde é realizada a atividade coletiva.
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |String|	Opcional|	0|	250|
-
 
 ### \#5	horaInicio
 
@@ -63,10 +59,9 @@ Hora de incício de realização da atividade coletiva.
 |---| --- |---  | --- |
 |Long|	Opcional|	-|	-|
 
-**Regras**:	-	Verificar validações
+**Regras**:	# Verificar validações
 
-**Referência** - [Wikipedia Epoch](https://en.wikipedia.org/wiki/Epoch)
-
+**Referência** [Epoch Wikipedia](https://en.wikipedia.org/wiki/Epoch)
 
 ### \#6	horaFim
 
@@ -76,10 +71,9 @@ Hora de fim de realização da atividade coletiva.
 |---| --- |---  | --- |
 |Long|	Opcional|	-|	-|
 
-**Regras**: Deve ser posterior a horaInicio.
+**Regras**: Deve ser posterior a [horaInicio](##5-horainicio).
 
-**Referência** - [Wikipedia Epoch](https://en.wikipedia.org/wiki/Epoch)
-
+**Referência** [Epoch Wikipedia](https://en.wikipedia.org/wiki/Epoch)
 
 ### \#7	inep
 
@@ -88,7 +82,6 @@ Número INEP da instituição.
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |Long|	Opcional|	0|	8|
-
 
 ### \#8	responsavelCns
 
@@ -99,12 +92,10 @@ CNS do responsável pela atividade coletiva.
 |String|	Requerido|	15|	15|
 
 **Regras**:
+<br/> • CNS válido de acordo com o algoritmo.
+<br/> • O profissional responsável deve ser um registro da lista de profissionais.
 
-- CNS válido de acordo com o algoritmo.
-- O profissional responsável deve ser um registro da lista de profissionais."
-
-**Referência**: Para ver o algoritmo utilizado, acesse: http://cartaonet.datasus.gov.br/, em "Downloads" baixe o arquivo de rotina de validação Java.  	-
-
+**Referência**: Para ver o algoritmo utilizado, acesse: [Catão NET Datasus](http://cartaonet.datasus.gov.br/), em "Downloads" baixe o arquivo de rotina de validação Java.
 
 ### \#9	responsavelCnesUnidade
 
@@ -114,7 +105,6 @@ CNES do responsável pela atividade coletiva.
 |---| --- |---  | --- |
 |String|	Requerido	|7|	7|
 
-
 ### \#10	responsavelNumIne
 
 INE do responsável pela atividade coletiva.
@@ -122,7 +112,6 @@ INE do responsável pela atividade coletiva.
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |String|	Opcional|	10|	10|
-
 
 ### \#11	numParticipantes
 
@@ -134,7 +123,6 @@ Número de participantes da atividade.
 
 **Regras**: Valores entre 0 e 999.
 
-
 ### \#12	numAvaliacoesAlteradas
 
 Número das avaliações alteradas.
@@ -143,8 +131,7 @@ Número das avaliações alteradas.
 |---| --- |---  | --- |
 |Integer|	Opcional|	0|	3|
 
-**Regras**:	Valores entre 0 e 999.	-	-
-
+**Regras**:	Valores entre 0 e 999.
 
 ### \#13	profissionais
 
@@ -152,12 +139,11 @@ Lista dos profissionais que participaram da atividade.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
-|	List<ProfissionalCboRowItem>|	Sim|	1	|99|
+|List<ProfissionalCboRowItem> |Sim |1	|99 |
 
 **Regras**: Entre 1 e 99 registros.
 
-**Referência**:	Ver ProfissionalCboRowItem
-
+**Referência**:	[ProfissionalCboRowItem]({% url profissional %}#profissionalcborowitem)
 
 ### \#14	atividadeTipo
 
@@ -167,8 +153,7 @@ Tipo da atividade que será realizada.
 |---| --- |---  | --- |
 |Long|	Sim |	-|	-|
 
-**Referências**:	Ver TipoAtividadeColetiva
-
+**Referências**: [TipoAtividadeColetiva]({% url dicionario %}#tipoatividadecoletiva)
 
 ### \#15	temasParaReuniao
 
@@ -179,12 +164,10 @@ Temas para reunião.
 |	List<Long>|	Condicional |- |	-|
 
 **Regras**:
+- É Requerido se tipoAtividadeColetiva for `1L`, `2L` ou `3L`.
+- Não pode ser preenchido se tipoAtividade for `4L`, `5L`, `6L` ou `7L`.
 
-- É Requerido se tipoAtividadeColetiva for ""1L"", ""2L"" ou ""3L"".
-- Não pode ser preenchido se tipoAtividade for ""4L"", ""5L, ""6L"" ou ""7L""."
-
-**Referência**: Ver TemasParaReuniao
-
+**Referência**: [TemasParaReuniao]({% url dicionario %}#temasparareuniao)
 
 ### \#16	publicoAlvo
 
@@ -195,12 +178,10 @@ Público alvo da atividade.
 |List<Long>|	Condicional |	-|	-|
 
 **Regras**:
+- É Requerido se tipoAtividadeColetiva for `4L`, `5L`, `6L` ou `7L`.
+- Não pode ser preenchido se tipoAtividade for `1L`, `2L` ou `3L`.
 
-- É Requerido se tipoAtividadeColetiva for ""4L"", ""5L, ""6L"" ou ""7L"".
-- Não pode ser preenchido se tipoAtividade for ""1L"", ""2L"" ou ""3L""."
-
-**Referência**: Ver PublicoAlvo
-
+**Referência**: [PublicoAlvo]({% url dicionario %}#publicoalvo)
 
 ### \#17	praticasTemasParaSaude
 
@@ -211,12 +192,10 @@ Práticas ou temas abordados na atividade.
 |List<Long>|	Condicional| 	-|	-|
 
 **Regras**:
+- É Requerido se tipoAtividadeColetiva for `4L`, `5L`, `6L` ou `7L`.
+- Não pode ser preenchido se tipoAtividade for `1L`, `2L` ou `3L`.
 
-- É Requerido se tipoAtividadeColetiva for ""4L"", ""5L, ""6L"" ou ""7L"".
-- Não pode ser preenchido se tipoAtividade for ""1L"", ""2L"" ou ""3L""."
-
-**Referências**:	Ver PraticasTemasParaSaude
-
+**Referências**:	[PraticasTemasParaSaude]({% url dicionario %}#praticastemasparasaude)
 
 ### \#18	participantes
 
@@ -226,8 +205,7 @@ Cidadãos que participaram da atividade coletiva.
 |---| --- |---  | --- |
 |List<ParticipanteRowItem>|	Opcional|	0|33|
 
-**Referência**:	Ver [ParticipanteRowItem](#participanterowitem)
-
+**Referência**: [ParticipanteRowItem](#participanterowitem)
 
 ### \#19	tbCdsOrigem
 
@@ -239,7 +217,6 @@ Tipo de origem dos dados do registro.
 
 **Observações**: Utilizar valor 3 (sistemas terceiros).
 
-
 ### \#20	codigoIbgeMunicipio
 
 Código IBGE do município.
@@ -248,11 +225,9 @@ Código IBGE do município.
 |---| --- |---  | --- |
 |String|	Sim|	-|	-|
 
-**Referências**: Ver Municipios
-
+**Referências**: {% link municipios %}
 
 ## ParticipanteRowItem
-
 
 ### \#1	cns
 
@@ -264,33 +239,27 @@ CNS do cidadão que participou da atividade.
 
 **Regras**: 	CNS válido de acordo com o algoritmo.
 
-**Referência**: Para ver o algoritmo utilizado, acesse: http://cartaonet.datasus.gov.br/, em "Downloads" baixe o arquivo de rotina de validação Java.  	-
-
+**Referência**: Para ver o algoritmo utilizado, acesse: [Cartão NET Datasus](http://cartaonet.datasus.gov.br/), em "Downloads" baixe o arquivo de rotina de validação Java.
 
 ### \#2	dataNascimento
-
 Data de nascimento do cidadão.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |	Long|	Opcional|	-|	-|
 
-**Regras**: 	Não pode ser posterior a dataAtendimento e anterior a 130 anos a partir da dataAtendimento.
+**Regras**: 	Não pode ser posterior a [dataAtendimento]({% url profissional %}##5-dataatendimento) e anterior a 130 anos a partir da [dataAtendimento]({% url profissional %}##5-dataatendimento).
 
-**Referências**: 	Para ver a referência sobre o formato epoch, acesse: https://en.wikipedia.org/wiki/Epoch_(reference_date)	-
-
+**Referências**: 	Para ver a referência sobre o formato epoch, acesse: [Epoch Wikipedia](https://en.wikipedia.org/wiki/Epoch_(reference_date))
 
 ### \#3	avaliacaoAlterada
-
 Marcador que indica que a avaliação do cidadão teve um valor diferente dos considerados normais.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |Boolean|	Opcional|	-|	-|
 
-
 ### \#4	peso
-
 Peso do cidadão em Kg.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -298,15 +267,12 @@ Peso do cidadão em Kg.
 |	Double|	Opcional|	1|	6|
 
 **Regras**:
-
-- Apenas números e vírgula ("" , "").
-- Máximo de 3 números após a vírgula.
-- Se tiver vírgula, tamanho máximo = 7.
-- Valor mínimo = 0,5 e máximo = 500.
-
+<br/> • Apenas números e vírgula (`,`).
+<br/> • Máximo de 3 números após a vírgula.
+<br/> • Se tiver vírgula, tamanho máximo = 7.
+<br/> • Valor mínimo = 0,5 e máximo = 500.
 
 ### \#5	altura
-
 Altura do cidadão em cm.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -314,12 +280,10 @@ Altura do cidadão em cm.
 |Double|	Opcional| 	2|	4|
 
 **Regras**:
-
-- Apenas números e vírgula ("" , "").
-- Máximo de 3 números após a vírgula.
-- Se tiver vírgula, tamanho máximo = 5.
-- Valor mínimo 20 e máximo 250.
-
+<br/> • Apenas números e vírgula (`,`).
+<br/> • Máximo de 3 números após a vírgula.
+<br/> • Se tiver vírgula, tamanho máximo = 5.
+<br/> • Valor mínimo 20 e máximo 250.
 
 ### \#6	cessouHabitoFumar
 
@@ -329,8 +293,7 @@ Marcação se o cidadão cessou o hábito de fumar.
 |---| --- |---  | --- |
 |Boolean|	Opcional|	-|	-|
 
-**Regras**: Não deve ser preenchido se o praticasTemasParaSaude não for 25, 26, 27 ou 28 (referentes ao PNCT).
-
+**Regras**: Não deve ser preenchido se o [praticasTemasParaSaude]({% url dicionario %}#praticastemasparasaude) não for 25, 26, 27 ou 28 (referentes ao PNCT).
 
 ### \#7	abadonouGrupo
 
@@ -340,4 +303,4 @@ Marcação se o cidadão abandonou o grupo de tabagismo.
 |---| --- |---  | --- |
 |Boolean|	Opcional|	-|	-|
 
-**Regras**: Não deve ser preenchido se o praticasTemasParaSaude não for 25, 26, 27 ou 28 (referentes ao PNCT).
+**Regras**: Não deve ser preenchido se o [praticasTemasParaSaude]({% url dicionario %}#praticastemasparasaude) não for 25, 26, 27 ou 28 (referentes ao PNCT).

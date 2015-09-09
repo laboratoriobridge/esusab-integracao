@@ -11,6 +11,8 @@ baseurl: "/docs"
 # Repositório onde está hospedado os fontes deste site
 github_repo: https://github.com/sismob/jekyll
 
+exclude: [README.md, Gemfile*, Guardfile]
+
 # Build settings
 encoding: utf-8
 timezone: America/Sao_Paulo

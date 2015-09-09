@@ -4,8 +4,12 @@
         <h1 class="post-title">{{ item.page['title'] }}</h1>
       </header>
 
+      {% capture namespace %}
+        {{ site.baseurl }}{{ item.page.url }}
+      {% endcapture %}
+
       <article class="post-content">
-        {{ item.page['content'] | relative_src_filter: item.page.url }}
+        {{ item.page['content'] | relative_src_filter: namespace }}
       </article>
 
       <div class="pdf-separator"></div>

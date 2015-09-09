@@ -56,7 +56,7 @@ Turno onde aconteceu o atendimento.
 |--- |--- |--- |--- |
 |Long |Não |- |- |
 
-**Referência**: [Turno]({% url dicionario#turno %}).
+**Referência**: [Turno]({% url dicionario %}#turno).
 
 ### \#2 numProntuario
 Número do prontuário do cidadão na UBS.
@@ -85,7 +85,7 @@ Data de nascimento do cidadão.
 |--- |--- |--- |--- |
 |Long |Sim |- |- |
 
-**Regras:** Não pode ser posterior a [dataAtendimento]({% url profissional##5-dataatendimento %}) e anterior a 130 anos a partir da [dataAtendimento]({% url profissional##5-dataatendimento %}d).
+**Regras:** Não pode ser posterior a [dataAtendimento]({% url profissional %}##5-dataatendimento) e anterior a 130 anos a partir da [dataAtendimento]({% url profissional %}##5-dataatendimento).
 
 **Referência**: Para ver a referência sobre o formato epoch, acesse: [Epoch Wikipedia](https://en.wikipedia.org/wiki/Epoch_(reference_date)).
 
@@ -96,7 +96,7 @@ Sexo do cidadão.
 |--- |--- |--- |--- |
 |Long |Sim |- |- |
 
-**Referência**: [Sexo]({% url dicionario#sexo %}).
+**Referência**: [Sexo]({% url dicionario %}#sexo).
 
 ### \#6 statusVisitaCompartilhadaOutroProfissional
 Marcador que indica se a visita foi compartilhada com outro profissional.
@@ -112,9 +112,9 @@ Motivos da visita.
 |--- |--- |--- |--- |
 |List<Long> |Condicional |- |- |
 
-**Regras:** Não é Obrigatório se [Desfecho]({% url dicionario#desfecho %}) é AUSENTE ou VISITA_RECUSADA.
+**Regras:** Não é Obrigatório se [Desfecho]({% url dicionario %}#desfecho) é `AUSENTE` ou `VISITA_RECUSADA`.
 
-**Referência**: [MotivoVisita]({% url dicionario#motivovisita %}).
+**Referência**: [MotivoVisita]({% url dicionario %}#motivovisita).
 
 ### \#8 desfecho
 Resultado da ação de visita.

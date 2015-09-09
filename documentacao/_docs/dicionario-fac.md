@@ -19,7 +19,7 @@ Código UUID para identificar a ficha na base de dados nacional.
 
 **Regras**: É recomendado concatenar o CNES na frente do UUID, de modo que os 7 digitos (CNES) + 1 de hífen somados aos 36 (32 caracteres + 4 hífen) do UUID são a limitação de 44 bytes do campo. Formato canônico.
 
-**Referência**: [Wikipedia UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier)
+**Referência**: [UUID Wikipedia](https://en.wikipedia.org/wiki/Universally_unique_identifier)
 
 ### \#2	dtAtividadeColetiva
 
@@ -31,7 +31,7 @@ Data de realização da atividade coletiva.
 
 **Regras** Não pode ser posterior a data atual.
 
-**Referência** [Wikipedia Epoch](https://en.wikipedia.org/wiki/Epoch)
+**Referência** [Epoch Wikipedia](https://en.wikipedia.org/wiki/Epoch)
 
 ### \#3	numParticipantesProgramados
 
@@ -59,7 +59,7 @@ Hora de incício de realização da atividade coletiva.
 |---| --- |---  | --- |
 |Long|	Opcional|	-|	-|
 
-**Regras**:	# Verificar validações
+**Regras**: Verificar validações
 
 **Referência** [Epoch Wikipedia](https://en.wikipedia.org/wiki/Epoch)
 
@@ -145,7 +145,7 @@ Lista dos profissionais que participaram da atividade.
 
 **Referência**:	[ProfissionalCboRowItem]({% url profissional %}#profissionalcborowitem)
 
-### \#14	atividadeTipo
+### \#14 atividadeTipo
 
 Tipo da atividade que será realizada.
 
@@ -155,7 +155,7 @@ Tipo da atividade que será realizada.
 
 **Referências**: [TipoAtividadeColetiva]({% url dicionario %}#tipoatividadecoletiva)
 
-### \#15	temasParaReuniao
+### \#15 temasParaReuniao
 
 Temas para reunião.
 
@@ -164,8 +164,8 @@ Temas para reunião.
 |	List<Long>|	Condicional |- |	-|
 
 **Regras**:
-- É Requerido se tipoAtividadeColetiva for `1L`, `2L` ou `3L`.
-- Não pode ser preenchido se tipoAtividade for `4L`, `5L`, `6L` ou `7L`.
+<br> • É Requerido se [TipoAtividadeColetiva]({% url dicionario %}#tipoatividadecoletiva) for `1L`, `2L` ou `3L`.
+<br> • Não pode ser preenchido se [TipoAtividadeColetiva]({% url dicionario %}#tipoatividadecoletiva) for `4L`, `5L`, `6L` ou `7L`.
 
 **Referência**: [TemasParaReuniao]({% url dicionario %}#temasparareuniao)
 
@@ -178,8 +178,8 @@ Público alvo da atividade.
 |List<Long>|	Condicional |	-|	-|
 
 **Regras**:
-- É Requerido se tipoAtividadeColetiva for `4L`, `5L`, `6L` ou `7L`.
-- Não pode ser preenchido se tipoAtividade for `1L`, `2L` ou `3L`.
+<br> • É Requerido se [TipoAtividadeColetiva]({% url dicionario %}#tipoatividadecoletiva) for `4L`, `5L`, `6L` ou `7L`.
+<br> • Não pode ser preenchido se [TipoAtividadeColetiva]({% url dicionario %}#tipoatividadecoletiva) for `1L`, `2L` ou `3L`.
 
 **Referência**: [PublicoAlvo]({% url dicionario %}#publicoalvo)
 
@@ -192,8 +192,8 @@ Práticas ou temas abordados na atividade.
 |List<Long>|	Condicional| 	-|	-|
 
 **Regras**:
-- É Requerido se tipoAtividadeColetiva for `4L`, `5L`, `6L` ou `7L`.
-- Não pode ser preenchido se tipoAtividade for `1L`, `2L` ou `3L`.
+<br> • É Requerido se [TipoAtividadeColetiva]({% url dicionario %}#tipoatividadecoletiva) for `4L`, `5L`, `6L` ou `7L`.
+<br> • Não pode ser preenchido se [TipoAtividadeColetiva]({% url dicionario %}#tipoatividadecoletiva) for `1L`, `2L` ou `3L`.
 
 **Referências**:	[PraticasTemasParaSaude]({% url dicionario %}#praticastemasparasaude)
 

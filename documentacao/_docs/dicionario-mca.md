@@ -40,8 +40,8 @@ Nome do cidadão.
 |String |Sim |5 |100 |
 
 **Regras**:
-• Ter ao menos duas palavras.
-• Somente texto e apóstrofo ( ' ).
+<br> • Ter ao menos duas palavras.
+<br> • Somente texto e apóstrofo (`'`).
 
 ### \#4 dataNascimento
 
@@ -51,9 +51,9 @@ Data de nascimento do cidadão no formato epoch time.
 |--- |--- |--- |--- |
 |Long |Sim |- |- |
 
-**Regras**: Não pode ser posterior a dataAtendimento e anterior a 130 anos a partir da dataAtendimento.
+**Regras**: Não pode ser posterior a [dataAtendimento]({% url profissional %}##5-dataatendimento) e anterior a 130 anos a partir da [dataAtendimento]({% url profissional %}##5-dataatendimento).
 
-**Referêcia**: Para ver a referência sobre o formato epoch, acesse: [Wikipedia Epoch](https://en.wikipedia.org/wiki/Epoch\_(reference\_date)).
+**Referêcia**: Para ver a referência sobre o formato epoch, acesse: [Epoch Wikipedia](https://en.wikipedia.org/wiki/Epoch\_(reference\_date)).
 
 ### \#5 sexo
 
@@ -83,7 +83,7 @@ Marcadores referente a cidadãos menores de seis meses de idade.
 |--- |--- |--- |--- |
 |List\<PerguntaQuestionarioCriancasMenoresSeisMeses\> |Condicional |- |- |
 
-**Regras:** Requerido se dataNascimento < 6 meses a partir da dataAtendimento.
+**Regras:** Requerido se [dataNascimento](##4-datanascimento) < 6 meses a partir da [dataAtendimento]({% url profissional %}##5-dataatendimento).
 
 **Referêcia**: [PerguntaQuestionarioCriancasMenoresSeisMeses](#perguntaquestionariocriancasmenoresseismeses).
 
@@ -97,7 +97,7 @@ Marcadores referente a cidadãos que tem entre seis e vinte e três meses de ida
 |--- |--- |--- |--- |
 |List\<PerguntaQuestionarioCriancasDeSeisVinteTresMeses\> |Condicional |- |- |
 
-**Regras:** Requerido se dataNascimento >= 6 meses e <= 23 meses a partir da dataAtendimento.
+**Regras:** Requerido se [dataNascimento](##4-datanascimento) >= 6 meses e <= 23 meses a partir da [dataAtendimento]({% url profissional %}##5-dataatendimento).
 
 **Referêcia**: [PerguntaQuestionarioCriancasDeSeisVinteTresMeses](#perguntaquestionariocriancasdeseisvintetresmeses).
 
@@ -111,7 +111,7 @@ Marcadores referente a cidadãos que tem vinte e quatro meses ou mais.
 |--- |--- |--- |--- |
 |List\<PerguntaQuestionarioCriancasComMaisDoisAnos\> |Condicional |- |- |
 
-**Regras:** Requerido se dataNacimento >= 24 meses a partir da dataAtendimento.
+**Regras:** Requerido se [dataNascimento](##4-datanascimento) >= 24 meses a partir da [dataAtendimento]({% url profissional %}##5-dataatendimento).
 
 **Referêcia**: [PerguntaQuestionarioCriancasComMaisDoisAnos](#perguntaquestionariocriancascommaisdoisanos).
 
@@ -127,7 +127,7 @@ Código UUID para identificar a ficha na base de dados nacional.
 
 **Regras:** É recomendado concatenar o CNES na frente do UUID, de modo que os 7 digitos (CNES) + 1 de hífen somados aos 36 (32 caracteres + 4 hífen) do UUID são a limitação de 44 bytes do campo. Formato canônico.
 
-**Referêcia**: Para ver a referência sobre o UUID, acesse: [Wikipedia UUID](https://en.wikipedia.org/wiki/Universally\_unique\_identifier).
+**Referêcia**: Para ver a referência sobre o UUID, acesse: [UUID Wikipedia](https://en.wikipedia.org/wiki/Universally\_unique\_identifier).
 
 ### \#11 tpCdsOrigem
 
@@ -222,8 +222,8 @@ Resposta referente a pergunta do registro acima.
 |List\<RespostaMultiplaEscolhaEnum\> |Condicional |- |- |
 
 **Regras:**
-• Deve respeitar as regras das respostas referente a pergunta .
-• Pode ser preenchido somente se a pergunta for 12L.
+<br> • Deve respeitar as regras das respostas referente a pergunta .
+<br> • Pode ser preenchido somente se a pergunta for 12L.
 
 **Referência:** [RespostaMultiplaEscolhaEnum](#respostamultiplaescolhaenum).
 

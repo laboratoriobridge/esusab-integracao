@@ -16,9 +16,9 @@ Formulário referente as condições de saúde do cidadão.
 |--- |--- |--- |--- |
 |CondicoesDeSaude |Condicional |- |- |
 
-**Referência**: [Ver CondicoesDeSaude]()
+**Referência**: [CondicoesDeSaude](#condicoesdesaude)
 
-Observação: Não deve ser preenchido se o campo [statusTermoRecusaCadastroIndividualAtencaoBasica]() = true.
+Observação: Não deve ser preenchido se o campo [statusTermoRecusaCadastroIndividualAtencaoBasica](##7-statustermorecusacadastroindividualatencaobasica) = `true`.
 
 ### \#2 dadosGerais	Dados
 referentes ao profissional e a data do cadastro.
@@ -27,7 +27,7 @@ referentes ao profissional e a data do cadastro.
 |--- |--- |--- |--- |
 |HeaderCdsCadastro |Sim |- |- |
 
-**Referência**: [Ver HeaderCdsCadastro]().
+**Referência**: [HeaderCdsCadastro]({% url profissional %}#headercdscadastro).
 
 ### \#3 emSituacaoDeRua
 Formulário referente a informações de situação de rua (se o cidadão se encontrar nessa situação).
@@ -36,9 +36,9 @@ Formulário referente a informações de situação de rua (se o cidadão se enc
 |--- |--- |--- |--- |
 |EmSituacaoDeRua |Condicional |- |- |
 
-**Referência**: [Ver EmSituacaoDeRua]().
+**Referência**: [EmSituacaoDeRua](#emsituacaoderua).
 
-Observação: Não deve ser preenchido se o campo [statusTermoRecusaCadastroIndividualAtencaoBasica]() = true.
+Observação: Não deve ser preenchido se o campo [statusTermoRecusaCadastroIndividualAtencaoBasica](##7-statustermorecusacadastroindividualatencaobasica) = `true`.
 
 ### \#4 fichaAtualizada
 Marcador que indica se a ficha é uma atualização.
@@ -54,9 +54,9 @@ Dados que identificam o cidadão.
 |--- |--- |--- |--- |
 |IdentificacaoUsuarioCidadao |Condicional |- |- |
 
-**Referência**: [Ver IdentificacaoUsuarioCidadao](#identificacaousuariocidadao)
+**Referência**: [IdentificacaoUsuarioCidadao](#identificacaousuariocidadao)
 
-Observação: Opcional se o campo [statusTermoRecusaCadastroIndividualAtencaoBasica]() = true.
+Observação: Opcional se o campo [statusTermoRecusaCadastroIndividualAtencaoBasica](##7-statustermorecusacadastroindividualatencaobasica) = `true`.
 
 ### \#6 informacoesSocioDemograficas
 Informações sócio-demográficas fornecidas pelo cidadão.
@@ -65,7 +65,7 @@ Informações sócio-demográficas fornecidas pelo cidadão.
 |--- |--- |--- |--- |
 |InformacoesSocioDemograficas |Condicional |- |- |
 
-Observação: Não deve ser preenchido se o campo [statusTermoRecusaCadastroIndividualAtencaoBasica]() = true.
+Observação: Não deve ser preenchido se o campo [statusTermoRecusaCadastroIndividualAtencaoBasica](##7-statustermorecusacadastroindividualatencaobasica) = `true`.
 
 ### \#7 statusTermoRecusaCadastroIndividualAtencaoBasica
 Marcador que indica se o termo de recusa foi assinalado.
@@ -114,7 +114,7 @@ Descrição da causa de internação do cidadão.
 |--- |--- |--- |--- |
 |String |Condicional |0 |100 |
 
-Observação: Não deve ser preenchido se o campo [statusTeveInternadoem12Meses]() = false.
+Observação: Não deve ser preenchido se o campo [statusTeveInternadoem12Meses](##27-statusteveinternadoem12meses) = `false`.
 
 ### \#2 ddescricaoOutraCondicao1
 Condição de saúde informada pelo cidadão.
@@ -144,7 +144,7 @@ Descricao das plantas medicinais utilizadas.
 |--- |--- |--- |--- |
 |String |Opcional |0 |100 |
 
-Observação: Não deve ser preenchido se o campo [statusUsaPlantasMedicinais]() = false.
+Observação: Não deve ser preenchido se o campo [statusUsaPlantasMedicinais](##30-statususaplantasmedicinais) = `false`.
 
 ### \#6 doencaCardiaca
 Doenças cardíacas que o cidadão informou.
@@ -153,12 +153,11 @@ Doenças cardíacas que o cidadão informou.
 |--- |--- |--- |--- |
 |List<Long> |Condicional |0 |3 |
 
-**Referência:** [Ver DoencaCardiaca]().
+**Referência:** [DoencaCardiaca]({% url dicionario %}#doencacardiaca).
 
 Observação:
-• Requerido preenchimento de pelo menos um item se o campo [statusTeveDoencaCardiaca]() = true
-• Não deve ser preenchido preenchido se o campo "[statusTeveDoencaCardiaca]() = false.
-
+<br> • Requerido preenchimento de pelo menos um item se o campo [statusTeveDoencaCardiaca](##25-statustevedoencacardiaca) = `true`.
+<br> • Não deve ser preenchido preenchido se o campo [statusTeveDoencaCardiaca](##25-statustevedoencacardiaca) = `false`.
 
 ### \#7 doencaRespiratoria
 Doenças respiratórias que o cidadão informou.
@@ -167,12 +166,12 @@ Doenças respiratórias que o cidadão informou.
 |--- |--- |--- |--- |
 |List<Long> |Condicional |0 |4 |
 
-**Referência:** [Ver DoencaRespiratoria]().
+**Referência:** [DoencaRespiratoria]({% url dicionario %}#doencarespiratoria).
 
 Observação:
-• Requerido preenchimento de pelo menos um item se o campo [statusTemDoencaRespiratorio]() = true.
-•  Não deve ser preenchido o campo [statusTemDoencaRespiratorio]() = false.
-
+<br> • Requerido preenchimento de pelo menos um item se o campo [statusTemDoencaRespiratorio](##18-statustemdoencarespiratorio) = `true`.
+<br> •  Não deve ser preenchido o campo [stcampoatusTemDoencaRespiratorio](##18-statustemdoencarespiratorio) = `false`.
+campocampo
 
 ### \#8 doencaRins
 Doenças renais que o cidadão informou.
@@ -181,11 +180,11 @@ Doenças renais que o cidadão informou.
 |--- |--- |--- |--- |
 |List<Long> |Condicional |0 3 |
 
-**Referência:** [Ver ConsideracaoPeso]().
+**Referência:** [ConsideracaoPeso]({% url dicionario %}#consideracaopeso).
 
 Observação:
-•Requerido preenchimento de pelo menos um item se o campo [statusTemTeveDoencasRins]() = true
-• Nãodeve ser preenchido se o campo [statusTemTeveDoencasRins]() = false.
+<br> • Requerido preenchimento de pelo menos um item se o campo [statusTemTeveDoencasRins](##22-statustemtevedoencasrins) = `true`.
+<br> • Não deve ser preenchido se o campo [statusTemTeveDoencasRins](##22-statustemtevedoencasrins) = `false`.
 
 ### \#9 maternidadeDeReferencia
 Nome da maternindade de referência.
@@ -194,7 +193,7 @@ Nome da maternindade de referência.
 |--- |--- |--- |--- |
 |String |Opcional |0 |100 |
 
-Observação: Não pode ser preenchido se o campo [statusEhGestante]() = false.
+Observação: Não pode ser preenchido se o campo [statusEhGestante](##14-statusehgestante) = `false`.
 
 ### \#10 situacaoPeso
 Situação referente ao peso corporal.
@@ -203,7 +202,7 @@ Situação referente ao peso corporal.
 |--- |--- |--- |--- |
 |Long |Opcional |- |- |
 
-**Referência:** [Ver ConsideracaoPeso]().
+**Referência:** [ConsideracaoPeso]({% url dicionario %}#consideracaopeso).
 
 ### \#11 statusEhDependenteAlcool
 Marcador se o cidadão é dependente de alcool.
@@ -233,7 +232,7 @@ Marcador se o cidadão está gestante.
 |--- |--- |--- |--- |
 |Boolean |Opcional |- |- |
 
-Observação: Só pode ser preenchido se o campo [sexoCidadao]() = feminino e o campo [dataNascimentoCidadao]() for anterior ou igual à 12 anos a partir da data atual.
+**Regras**: Só pode ser preenchido se o campo [sexoCidadao](##16-sexocidadao) = `feminino` e o campo [dataNascimentoCidadao](##3-datanascimentocidadao) for anterior ou igual à 12 anos a partir da data atual.
 
 ### \#15 statusEstaAcamado
 Marcador se o cidadão está acamado.
@@ -356,9 +355,9 @@ Grau de parentesco do familiar que frequenta.
 |--- |--- |--- |--- |
 |String |Condicional |0 |100 |
 
-**Regras:** Não podem ser preechidos se o campo [statusSituacaoRua]() = false.
-
-Observação: Não deve ser preenchido se o campo [statusVisitaFamiliarFrequentemente]() = false.
+**Regras:**
+<br> • Não pode ser preechido se o campo [statusSituacaoRua](##9-statussituacaorua) = `false`.
+<br> • Não pode ser preenchido se o campo [statusVisitaFamiliarFrequentemente](##11-statusvisitafamiliarfrequentemente) = `false`.
 
 ### \#2 higienePessoalSituacaoRua
 Condições de higiene que o cidadão tem acesso.
@@ -367,11 +366,11 @@ Condições de higiene que o cidadão tem acesso.
 |--- |--- |--- |--- |
 |List<Long> |Condicional |0 |4 |
 
-**Regras:** Não podem ser preechidos se o campo [statusSituacaoRua]() = false.
+**Regras:**
+<br> • Não pode ser preechido se o campo [statusSituacaoRua](##9-statussituacaorua) = `false`.
+<br> • Requerido preenchimento de pelo menos um item se o campo [statusTemAcessoHigienePessoalSituacaoRua](##10-statustemacessohigienepessoalsituacaorua) = `true`.
 
-**Referência:** [Ver AcessoHigiene]().
-
-Observação: Requerido preenchimento de pelo menos um item se o campo [statusTemAcessoHigienePessoalSituacaoRua]() = true.
+**Referência:** [AcessoHigiene]({% url dicionario %}#acessohigiene).
 
 ### \#3 origemAlimentoSituacaoRua
 Origem da alimentação do cidadão em situação de rua.
@@ -380,9 +379,9 @@ Origem da alimentação do cidadão em situação de rua.
 |--- |--- |--- |--- |
 |List<Long> |Opcional |0 |5 |
 
-**Regras:** Não podem ser preechidos se o campo [statusSituacaoRua]() = false.
+**Regras:** Não pode ser preechido se o campo [statusSituacaoRua](##9-statussituacaorua) = `false`.
 
-**Referência:** [Ver OrigemAlimentacao]().
+**Referência:** [OrigemAlimentacao]({% url dicionario %}#origemalimentacao).
 
 ### \#4 outraInstituicaoQueAcompanha
 Nome de outra instituição que acompanha o cidadão.
@@ -391,9 +390,9 @@ Nome de outra instituição que acompanha o cidadão.
 |--- |--- |--- |--- |
 |String |Opcional |0 |100 |
 
-**Regras:** Não podem ser preechidos se o campo [statusSituacaoRua]() = false.
-
-Observação: Não deve ser preenchido se o campo [statusAcompanhadoPorOutraInstituição]() = false.
+**Regras:**
+<br> • Não pode ser preechido se o campo [statusSituacaoRua](##9-statussituacaorua) = `false`.
+<br> • Não pode ser preenchido se o campo [statusAcompanhadoPorOutraInstituição](##6-statusacompanhadoporoutrainstituicao) = `false`.
 
 ### \#5 quantidadeAlimentacoesAoDiaSituacaoRua
 Quantas vezes o cidadão se alimenta ao dia.
@@ -402,9 +401,9 @@ Quantas vezes o cidadão se alimenta ao dia.
 |--- |--- |--- |--- |
 |Long |Opcional |- |- |
 
-**Regras:** Não podem ser preechidos se o campo [statusSituacaoRua]() = false.
+**Regras:** Não pode ser preechido se o campo [statusSituacaoRua](##9-statussituacaorua) = `false`.
 
-**Referência:** [Ver QuantasVezesAlimentacao]().
+**Referência:** [QuantasVezesAlimentacao]({% url dicionario %}#quantasvezesalimentacao).
 
 ### \#6 statusAcompanhadoPorOutraInstituicao
 Marcador que indica se o cidadão é acompanhado por outra instituição.
@@ -413,7 +412,7 @@ Marcador que indica se o cidadão é acompanhado por outra instituição.
 |--- |--- |--- |--- |
 |Boolean |Opcional |- |- |
 
-**Regras:** Não podem ser preechidos se o campo [statusSituacaoRua]() = false.
+**Regras:** Não pode ser preechido se o campo [statusSituacaoRua](##9-statussituacaorua) = `false`.
 
 ### \#7 statusPossuiReferenciaFamiliar
 Marcador que indica se o cidadão possuiu alguma referência familiar.
@@ -422,7 +421,7 @@ Marcador que indica se o cidadão possuiu alguma referência familiar.
 |--- |--- |--- |--- |
 |Boolean |Opcional |- |- |
 
-**Regras:** Não podem ser preechidos se o campo [statusSituacaoRua]() = false.
+**Regras:** Não pode ser preechido se o campo [statusSituacaoRua](##9-statussituacaorua) = `false`.
 
 ### \#8 statusRecebeBeneficio
 Marcador que indica se o cidadão recebe algum benefício.
@@ -431,7 +430,7 @@ Marcador que indica se o cidadão recebe algum benefício.
 |--- |--- |--- |--- |
 |Boolean |Opcional |- |- |
 
-**Regras:** Não podem ser preechidos se o campo [statusSituacaoRua]() = false.
+**Regras:** Não pode ser preechido se o campo [statusSituacaoRua](##9-statussituacaorua) = `false`.
 
 ### \#9 statusSituacaoRua
 Marcador que indica se o cidadão está em situação de rua.
@@ -447,7 +446,7 @@ Marcador que indica se o cidadão tem acesso a higiene pessoal.
 |--- |--- |--- |--- |
 |Boolean |Opcional |- |- |
 
-**Regras:** Não podem ser preechidos se o campo [statusSituacaoRua]() = false.
+**Regras:** Não pode ser preechido se o campo [statusSituacaoRua](##9-statussituacaorua) = `false`.
 
 ### \#11 statusVisitaFamiliarFrequentemente
 Marcador que indica se o cidadão visita algum familiar frequentemente.
@@ -456,7 +455,7 @@ Marcador que indica se o cidadão visita algum familiar frequentemente.
 |--- |--- |--- |--- |
 |Boolean |Opcional |- |- |
 
-**Regras:** Não podem ser preechidos se o campo [statusSituacaoRua]() = false.
+**Regras:** Não pode ser preechido se o campo [statusSituacaoRua](##9-statussituacaorua) = `false`.
 
 ### \#12 tempoSituacaoRua
 Tempo que o cidadão está em situação de rua.
@@ -465,9 +464,9 @@ Tempo que o cidadão está em situação de rua.
 |--- |--- |--- |--- |
 |Long |Opcional |- |- |
 
-**Regras:** Não podem ser preechidos se o campo [statusSituacaoRua]() = false.
+**Regras:** Não pode ser preechido se o campo [statusSituacaoRua](##9-statussituacaorua) = `false`.
 
-**Referência:** [Ver TempoSituacaoDeRua]().
+**Referência:** [TempoSituacaoDeRua]({% url dicionario %}#temposituacaoderua).
 
 ## IdentificacaoUsuarioCidadao
 
@@ -483,11 +482,11 @@ Código IBGE do município.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |--- |--- |--- |--- |
-|String |Sim |7 |7 |
+|String |Condicional |7 |7 |
 
-**Referência:** [Ver Municipios]().
+**Regras:** Requerido se o campo [nacionalidadeCidadao](##7-nacionalidadecidadao) = `1L (Brasileiro)` e não pode ser preenchido se for outra nacionalidade.
 
-Observação: Requerido se o campo [nacionalidadeCidadao]() = 1L (Brasileiro) e não deve ser preenchido se for outra nacionalidade.
+**Referência:** [Municipios]({% url municipios %}).
 
 ### \#3 dataNascimentoCidadao
 Data de nascimento do cidadão no formato epoch time.
@@ -496,7 +495,7 @@ Data de nascimento do cidadão no formato epoch time.
 |--- |--- |--- |--- |
 |Long |Sim |- |- |
 
-**Regras:** Não pode ser posterior a [dataAtendimento]() e anterior a 130 anos a partir da [dataAtendimento]().
+**Regras:** Não pode ser posterior a [dataAtendimento]({% url profissional %}##5-dataatendimento) e anterior a 130 anos a partir da [dataAtendimento]({% url profissional %}##5-dataatendimento).
 
 **Referência:** Para ver a referência sobre o formato epoch, acesse: [Epoch Wikipedia](https://en.wikipedia.org/wiki/Epoch_(reference_date)).
 
@@ -507,7 +506,7 @@ Data de nascimento do responsável pelo cidadão no formato epoch time.
 |--- |--- |--- |--- |
 |Long |Opcional |- |- |
 
-**Regras:** Não pode ser posterior a [dataAtendimento]() e anterior a 130 anos a partir da [dataAtendimento]().
+**Regras:** Não pode ser posterior a [dataAtendimento]({% url profissional %}##5-dataatendimento) ou anterior a 130 anos a partir da [dataAtendimento]({% url profissional %}##5-dataatendimento).
 
 **Referência:** Para ver a referência sobre o formato epoch, acesse: [Epoch Wikipedia](https://en.wikipedia.org/wiki/Epoch_(reference_date)).
 
@@ -525,7 +524,7 @@ Email do cidadão.
 |--- |--- |--- |--- |
 |String |Opcional |6 |100 |
 
-**Regras:** Requerido seguir o padrão "nome@domínio.extensão".
+**Regras:** Requerido seguir o padrão `endereco@domínio.extensao`.
 
 ### \#7 nacionalidadeCidadao
 Marcador que indica se o cidadão é brasileiro, naturalizado ou estrangeiro.
@@ -534,7 +533,7 @@ Marcador que indica se o cidadão é brasileiro, naturalizado ou estrangeiro.
 |--- |--- |--- |--- |
 |Long |Sim |- |- |
 
-**Referência:** [Ver Nacionalidade]().
+**Referência:** [Nacionalidade]({% url dicionario %}#nacionalidade).
 
 ### \#8 nomeCidadao
 Nome completo do cidadão.
@@ -543,7 +542,7 @@ Nome completo do cidadão.
 |--- |--- |--- |--- |
 |String |Sim |5 |100 |
 
-**Regras:** Necessita espaço em branco para indicar o sobrenome.
+**Regras:** Requerido espaço em branco para indicar o sobrenome.
 
 ### \#9 nomeMaeCidadao
 Nome da mãe do cidadão.
@@ -552,9 +551,9 @@ Nome da mãe do cidadão.
 |--- |--- |--- |--- |
 |String |Condicional |5 |100 |
 
-**Regras:** Necessita espaço em branco para indicar o sobrenome.
-
-Observação: Não deve ser preenchido se o campo [desconheceNomeMae]() = true.
+**Regras:**
+<br> • Requerido espaço em branco para indicar o sobrenome.
+<br> • Não deve ser preenchido se o campo [desconheceNomeMae](##5-desconhecenomedamae) = `true`.
 
 ### \#10 numeroCartaoSus
 CNS do cidadão.
@@ -574,11 +573,11 @@ CNS do responsável do cidadão.
 |--- |--- |--- |--- |
 |String |Opcional |15 |15 |
 
-**Regras:** Validado por algoritmo.
+**Regras:**
+<br> • Validado por algoritmo.
+<br> • Só pode ser preenchido se o campo [statusEhResponsavel](##17-statusehresponsavel) = `true`.
 
 **Referência:** Para ver o algoritmo utilizado, acesse: [Cartão Net Datasus](http://cartaonet.datasus.gov.br/), em "Downloads" baixe o arquivo de rotina de validação Java.
-
-Observação: Só pode ser preenchido se o campo [statusEhResponsavel]() = true.
 
 ### \#12 numeroCelularCidadao
 Número de celular do cidadão.
@@ -603,9 +602,9 @@ País de nascimento do cidadão.
 |--- |--- |--- |--- |
 |Long |Opcional |- |- |
 
-**Referência:** [Ver Pais]().
+**Regras**: Só pode ser preenchido se o campo [nacionalidadeCidadao](##7-nacionalidadecidadao) = `1L (Brasileiro)`.
 
-Observação: Só pode ser preenchido se o campo [nacionalidadeCidadao]() = 1L (Brasileiro).
+**Referência:** [País]({% url referencias %}#país).
 
 ### \#15 racaCorCidadao
 Raça/Cor do cidadão.
@@ -614,7 +613,7 @@ Raça/Cor do cidadão.
 |--- |--- |--- |--- |
 |Long |Sim |- |- |
 
-**Referência:** [Ver RacaCor]().
+**Referência:** [RacaCor]({% url dicionario %}#racacor).
 
 ### \#16 sexoCidadao
 Sexo do cidadão.
@@ -623,7 +622,7 @@ Sexo do cidadão.
 |--- |--- |--- |--- |
 |Long |Sim |- |- |
 
-**Referência:** [Ver Sexo]().
+**Referência:** [Sexo]({% url dicionario %}#sexo).
 
 ### \#17 statusEhResponsavel
 Marcador que indica se o cidadão é responsável familiar.
@@ -641,11 +640,11 @@ Lista de deficiências que o cidadão possui.
 |--- |--- |--- |--- |
 |List<Long> |Condicional |1 |5 |
 
-**Referência:** [Ver DeficienciaCidadao]().
+**Referência:** [DeficienciaCidadao]({% url dicionario %}#deficienciacidadao).
 
-Observação:
-• Requerido preenchimento de pelo menos um item se o campo [statusTemAlgumaDeficiencias]() = true.  
-• Não deve ser preenchido se o campo [statusTemAlgumaDeficiencia]() = false.
+**Regras:**
+<br> • Requerido preenchimento de pelo menos um item se o campo [statusTemAlgumaDeficiencia](##16-statustemalgumadeficiencia) = `true`.
+<br> • Não deve ser preenchido se o campo [statusTemAlgumaDeficiencia](##16-statustemalgumadeficiencia) = `false`.
 
 ### \#2 grauInstrucaoCidadao
 Curso mais elevado que o cidadão frequenta ou frequentou.
@@ -654,7 +653,7 @@ Curso mais elevado que o cidadão frequenta ou frequentou.
 |--- |--- |--- |--- |
 |Long |Opicional |- |- |
 
-**Referência:** [Ver CursoMaisElevado]().
+**Referência:** [CursoMaisElevado]({% url dicionario %}#cursomaiselevado).
 
 ### \#3 motivoSaidaCidadao
 Motivo da saída do cidadão do cadastro.
@@ -663,7 +662,7 @@ Motivo da saída do cidadão do cadastro.
 |--- |--- |--- |--- |
 |Long |Opicional |- |- |
 
-**Referência:** [Ver MotivoSaida]().
+**Referência:** [MotivoSaida]({% url dicionario %}#motivosaida).
 
 ### \#4 ocupacaoCodigoCbo2002
 Ocupaçao do cidadão.
@@ -672,11 +671,11 @@ Ocupaçao do cidadão.
 |--- |--- |--- |--- |
 |String |Opicional |6 |6 |
 
-**Regras:** Deve ser um CBO válido.
+**Regras:**
+<br> • Deve ser um CBO válido.
+<br> • Não pode ser preenchido se o campo [statusDesejaInformarOrientacaoSexual](##10-statusdesejainformarorientacaosexual) = `false`.
 
-**Referência:** [Ver CBO]().
-
-Observação: Não deve ser preenchido se o campo [statusDesejaInformarOrientacaoSexual]() = false.
+**Referência:** [CBO]({% url cbo %}).
 
 ### \#5 orientacaoSexualCidadao
 Orientação sexual informada pelo cidadão.  
@@ -685,7 +684,7 @@ Orientação sexual informada pelo cidadão.
 |--- |--- |--- |--- |
 |Long |Opicional |- |- |
 
-**Referência:** [Ver OrientacaoSexual]().
+**Referência:** [OrientacaoSexual]({% url dicionario %}#orientacaosexual).
 
 ### \#6 povoComunidadeTradicional
 Nome da comunidade tradicional que o cidadão frequenta.
@@ -694,7 +693,7 @@ Nome da comunidade tradicional que o cidadão frequenta.
 |--- |--- |--- |--- |
 |String |Opicional |0 |100 |
 
-Observação: Não deve ser preenchido se o campo [statusMembroPovoComunidadeTradicional]() = false.
+**Regras:** Não deve ser preenchido se o campo [statusMembroPovoComunidadeTradicional](##13-statusmembropovocomunidadetradicional) = `false`.
 
 ### \#7 relacaoParentescoCidadao
 Relação de parentesco com o responsável familiar.
@@ -703,7 +702,7 @@ Relação de parentesco com o responsável familiar.
 |--- |--- |--- |--- |
 |Long |Opicional |- |- |
 
-**Referência:** [Ver RelacaoParentesco]().
+**Referência:** [RelacaoParentesco]({% url dicionario %}#relacaoparentesco).
 
 ### \#8 responsavelPorCrianca
 Responsável por criancas de até 9 anos.
@@ -712,7 +711,7 @@ Responsável por criancas de até 9 anos.
 |--- |--- |--- |--- |
 |Long |Opicional |- |- |
 
-**Referência:** [Ver ResponsavelCrianca]().
+**Referência:** [ResponsavelCrianca]({% url dicionario %}#responsavelcrianca).
 
 ### \#9 situacaoMercadoTrabalhoCidadao
 Situação do cidadão no mercdo de trabalho.
@@ -721,9 +720,10 @@ Situação do cidadão no mercdo de trabalho.
 |--- |--- |--- |--- |
 |Long |Opicional |- |- |
 
-**Referência:** [Ver SituacaoMercadoDeTrabalho]().
+**Referência:** [SituacaoMercadoDeTrabalho]({% url dicionario %}#situacaomercadodetrabalho).
 
 ### \#10 statusDesejaInformarOrientacaoSexual
+
 Marcador que indica se o cidadão deseja informar sua orientação sexual.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -731,6 +731,7 @@ Marcador que indica se o cidadão deseja informar sua orientação sexual.
 |Boolean |Opicional |- |- |
 
 ### \#11 statusFrequentaBenzedeira
+
 Marcador que indica se o cidadão frequenta cuidador tradicional.
 
 | Tipo | Obrigatório | Mínimo | Máximo |

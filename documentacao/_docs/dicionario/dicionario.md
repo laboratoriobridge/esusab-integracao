@@ -512,7 +512,6 @@ order: 0
 |6 L|	EDUCACAO\_PERMANENTE|	-|
 |7 L|	OUTROS|	-|
 
-
 ## TempoSituacaoDeRua
 |Código|	Descrição|	-|
 |---|---|---|

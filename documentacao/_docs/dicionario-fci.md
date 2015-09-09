@@ -720,7 +720,7 @@ Situação do cidadão no mercdo de trabalho.
 |--- |--- |--- |--- |
 |Long |Opicional |- |- |
 
-**Referência:** [SituacaoMercadoDeTrabalho]({% url dicionario %}#situacaomercadodetrabalho).
+**Referência:** [SituacaoMercadoTrabalho]({% url dicionario %}#situacaomercadotrabalho).
 
 ### \#10 statusDesejaInformarOrientacaoSexual
 

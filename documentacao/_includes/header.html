@@ -5,7 +5,9 @@
     <a class="site-title" href="{{ site.baseurl }}/">
       <img src="{{ site.baseurl }}/img/logo-esus.png">
       <span class="title-text">{{ site.title }}</span>
-      <span class="label">versão {{ site.version }}</span>
+      {% if site.version %}
+        <span class="label">versão {{ site.version }}</span>
+      {% endif %}
     </a>
 
     <nav class="site-nav">

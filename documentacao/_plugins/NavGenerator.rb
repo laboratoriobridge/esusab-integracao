@@ -51,7 +51,7 @@ module NavGenerator
       item.title = doc.data['title'] or raise NavError, "title must be specified for file " + doc.path
       item.url = doc.url
       begin
-        item.order = Integer(doc.data[ORDER_KEY]) if doc.data[ORDER_KEY]
+        item.order = Integer(doc.data[ORDER_KEY]) || 1
       rescue ArgumentError
         raise NavError, ORDER_KEY + ' must be integer, defined at page ' + doc.path
       end
@@ -77,8 +77,12 @@ module NavGenerator
     end
 
     def sort!(items)
-      items.sort_by! { |item|
-        item.order || 9999
+      items.sort! { |a, b|
+        if a.order == b.order then
+          a.title <=> b.title
+        else
+          a.order <=> b.order
+        end
       }
     end
 

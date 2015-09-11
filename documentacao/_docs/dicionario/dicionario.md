@@ -482,7 +482,7 @@ order: 0
 |81 L|	SITUACAO\_DE\_RUA|	-|
 |82 L|	OUTRA|	-|
 
-## SitatuacaoExame
+## SituacaoExame
 |Código|	Descrição|	Observações|
 |---|---|---|
 |"S"|	SOLICITADO|	-|

@@ -10,16 +10,15 @@ order: 1
 ## FichaAvaliacaoElegibilidade
 
 ### \#1	uuidFicha
-
 Código UUID para identificar a ficha na base de dados nacional.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |String|	Sim| 36|	44|
 
-**Regra**: É recomendado concatenar o CNES na frente do UUID, de modo que os 7 digitos (CNES) + 1 de hífen somados aos 36 (32 caracteres + 4 hífen) do UUID são a limitação de 44 bytes do campo. Formato canônico.
+**Regras:** É recomendado concatenar o CNES na frente do UUID, de modo que os 7 digitos (CNES) + 1 de hífen somados aos 36 (32 caracteres + 4 hífen) do UUID são a limitação de 44 bytes do campo. Formato canônico.
 
-**Referência**:  [Wikipedia UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier)
+**Referências:**  [Wikipedia UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier)
 
 
 ### \#2	tpCdsOrigem
@@ -41,23 +40,18 @@ Profissional que realizou a visita.
 |---| --- |---  | --- |
 |UnicaLotacaoHeader|	Requerido|	-|	-|
 
-**Referência**:	Ver Profissional
-
+**Referências:**	[Profissional]({% url profissional %})
 
 ### \#4	numeroCartaoSus	CNS do cidadão.
-
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 String	Requerido	15	15
 
 CNS valido de acordo com o algoritmo.
 
-**Referência**: Para ver o algoritmo utilizado, acesse [Cartão SUS](http://cartaonet.datasus.gov.br/), em "Downloads" baixe o arquivo de rotina de validação
-Java.
-
+**Referências:** Para ver o algoritmo utilizado, acesse [Cartão Net Datasus](http://cartaonet.datasus.gov.br/), em "Downloads" baixe o arquivo de rotina de validação Java.
 
 ### \#5	nomeCidadao
-
 Nome do cidadão.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -65,11 +59,9 @@ Nome do cidadão.
 |String |	Requerido*	|5|	100|
 
 **Regras**:
-
-- Ter ao menos duas palavras.
-- Somente texto e apóstrofo ( ' ).
--	Não é Requerido caso conclusaoDestinoElegivel for diferente de 1L.
-
+<br> • Ter ao menos duas palavras.
+<br> • Somente texto e apóstrofo (`'`).
+<br> •	Opcional caso [conclusaoDestinoElegivel](##23-conclusaodestinoelegivel) for diferente de `1L (admissao propria emad)`.
 
 ### \#6	nomeSocialCidadao
 
@@ -79,52 +71,42 @@ Nome social do cidadão.
 |---| --- |---  | --- |
 |String|	Opcional|	0|	100|
 
-**Regra**:
-
-- Somente texto e apóstrofo ( ' ).
-
+**Regras:**
+<br> • Somente texto e apóstrofo (`'`).
 
 ### \#7	dataNascimentoCidadao
-
 Data de nascimento do cidadão no formato epoch time.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |Long|	Requerido|	-|	-|
 
-**Regra**: Não pode ser posterior a dataAtendimento e anterior a 130 anos a partir da dataAtendimento.
+**Regras**: Não pode ser posterior a [dataAtendimento]({% url profissional %}##5-dataatendimento) e anterior a 130 anos a partir da [dataAtendimento]({% url profissional %}##5-dataatendimento).
 
-**Referência**: [EPOCH](https://en.wikipedia.org/wiki/Epoch_\(reference_date\))
-
+**Refererência**: Para ver a referência sobre o formato epoch, acesse: [Epoch Wikipedia](https://en.wikipedia.org/wiki/Epoch_(reference_date)).
 
 ### \#8	sexoCidadao
-
 Sexo do cidadão.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |Long|	Requerido|	-|	-|
 
-**Referência**: Ver Sexo
-
+**Referências:** [Sexo]({% url dicionario %}#sexo)
 
 ### \#9	racaCorCidadao
-
 Raça / Cor do cidadão
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |Long|	Condicional	|-|	-|
 
-**Regra**:
+**Regras:**
+<br> •	Opcional caso [conclusaoDestinoElegivel](##23-conclusaodestinoelegivel) for diferente de `1L (admissao propria emad)`.
 
-- Não é Requerido caso conclusaoDestinoElegivel for diferente de 1L.
-
-**Referência**: Ver RacaCor
-
+**Referências:** [RacaCor]({% url dicionario %}#racacor)
 
 ### \#10	nomeMaeCidadao
-
 Nome da mãe do cidadão.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -132,73 +114,59 @@ Nome da mãe do cidadão.
 |String|	Condicional |	5|	100|
 
 **Regras**:
-
-- Ter ao menos duas palavras.
-- Somente texto e apóstrofo ( ' ).
-- Não pode ser preenchido se o campo desconheceNomeMae for marcado como true.
-
+<br> • Ter ao menos duas palavras.
+<br> • Somente texto e apóstrofo (`'`).
+<br> • Não pode ser preenchido se o campo [desconheceNomeMae](##11-desconhecenomemae) = `true`.
 
 ### \#11	desconheceNomeMae
-
 Marcador que indica que o cidadão desconhece o nome da mãe.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |Boolean|	Opcional|	-|	-|
 
-
 ### \#12	codigoIbgeMunicipioNascimento
-
 Código IBGE do município.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |String|	Opcional|	-|	-|
 
-**Regra**: Não pode ser preenchido se codigoNacionalidade for diferente de "1L - Brasileiro".
+**Regras:** Não pode ser preenchido se [codigoNacionalidade](##13-codigonacionalidade) for diferente de `1L (brasileiro)`.
 
-**Referência**:	Ver Municípios.
-
+**Referências:**	[Municípios]({% url municipios %})
 
 ### \#13	codigoNacionalidade
-
 Marcador que indica se o cidadão é brasileiro, naturalizado ou estrangeiro.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |Long|	Condicional| 	-|	-|
 
-**Regra**:
+**Regras:**
+<br> •	Opcional caso [conclusaoDestinoElegivel](##23-conclusaodestinoelegivel) for diferente de `1L (admissao propria emad)`.
 
-- Não é Requerido caso conclusaoDestinoElegivel for diferente de 1L.
-
-**Referência**: Ver Nacionalidade
-
+**Referências:** [Nacionalidade]({% url dicionario %}#nacionalidade)
 
 ### \#14	emailCidadao
-
 Email do cidadão.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |String|	Opcional|	6|	255	|
 
-**Regra**: Requerido seguir o padrão "nome@domínio.extensão".
-
+**Regras:** Requerido seguir o padrão `endereco@domínio.extensão`.
 
 ### \#15	numeroNisPisPasep
-
 Número do PIS/PASEP do cidadão.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |String|	Opcional|	11|	11|
 
-**Regras**: Apenas numérico.
-
+**Regras**: Apenas números.
 
 ### \#16	endereco
-
 Informações sobre o endereço do domicílio
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -206,173 +174,143 @@ Informações sobre o endereço do domicílio
 |EnderecoLocalPermanencia|	Condicional |	-|	-|
 
 **Regras**:
+<br> •	Opcional caso [conclusaoDestinoElegivel](##23-conclusaodestinoelegivel) for diferente de `1L (admissao propria emad)`.
 
-- Não é Requerido caso conclusaoDestinoElegivel for diferente de 1L.
-
-**Referência**:	Ver EnderecoLocalPermanencia
-
+**Referências:**	[EnderecoLocalPermanencia](#enderecolocalpermanencia)
 
 ### \#17	atencaoDomiciliarOrigem
-
 Local de atendimento de origem do cidadão.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |Long|	Requerido|	-|	-|
 
-**Referência**: Ver AtencaoDomiciliarOrigem
-
+**Referências:** [AtencaoDomiciliarOrigem]({% url dicionario %}#atencaodomiciliarorigem)
 
 ### \#18	atencaoDomiciliarModalidade
-
 Opções de modalidade, indica se o cidadão é elegível ou inelegível.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |Long|	Sim |	-|	-|
 
-**Referência**: Ver ModalidadeAD
-
+**Referências:** [ModalidadeAD]({% url dicionario %}#modalidadead)
 
 ### \#19	situacoesPresentes
-
 Marcadores de situações presentes
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |List\<Long>|	Opcional|	1|	24|
 
-**Referência**: Ver [QuestionárioDeSituaçõesPresentes](#questionáriodesituaçõespresentes)
-
+**Referências:** [QuestionárioDeSituaçõesPresentes](#questionáriodesituaçõespresentes)
 
 ### \#20	cid10Principal
-
 CID10 principal registrado na avaliação.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |String|	Requerido|	-|	-|
 
-**Regra**: Não pode ser igual ao CID10Segundo nem CID10Terceiro.
-
+**Regras:** Não pode ser igual ao [CID10Segundo](##21-cid10segundo) nem [CID10Terceiro](##22-cid10terceiro).
 
 ### \#21	cid10Segundo
-
 CID10 registrado na avaliação.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |String|	Opcional|	-|	-|
 
-**Regra**: Não pode ser igual ao CID10Principal nem CID10Terceiro.
-
+**Regras:** Não pode ser igual ao [CID10Principal](##20-cid10principal) nem [CID10Terceiro](##22-cid10terceiro).
 
 ### \#22	cid10Terceiro
-
 CID10 registrado na avaliação
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |String|	Opcional|	-|	-|
 
-**Regra**: Não pode ser igual ao CID10Principal nem CID10Segundo.
-
+**Regras:** Não pode ser igual ao [CID10Principal](##20-cid10principal) nem [CID10Segundo](##21-cid10segundo).
 
 ### \#23	conclusaoDestinoElegivel
-
-Conduta adotada caso cidadão seja "Elegível".
+Conduta adotada caso cidadão seja `Elegível`.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |Long|	Condicional| -|-|
 
-**Regra**:
+**Regras:**
+<br> • Só pode ser preenchido se [atencaoDomiciliarModalidade](##18-atencaodomiciliarmodalidade) for diferente de `4L (inelegível)`.
 
-- Só pode ser preenchido se atencaoDomiciliarModalidade for diferente de "4L -  Inelegível".
+**Referências:** [ConclusaoDestinoElegivel]({% url dicionario %}#conclusaodestinoelegivel)
 
-- Os campos são mutuamente exclusivos.
-
-**Referência**: Ver ConclusaoDestinoElegivel
-
+Observacões: Os campos `#23` e `#24` são mutuamente exclusivos.
 
 ### \#24	conclusaoDestinoInelegivel
-
-Conduta adotada caso cidadão seja "Inelegível".
+Conduta adotada caso cidadão seja `Inelegível`.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |List\<Long>|	Condicional| 	0|	5|
 
-**Regras**: Só pode ser preenchido se atencaoDomiciliarModalidade for igual a de "4L -  Inelegível".
+**Regras**:
+<br> • Só pode ser preenchido se atencaoDomiciliarModalidade for igual a de `4L (inelegível)`.
 
-**Referência**: Ver ConclusaoDestinoInelegivel
+**Referências:** [ConclusaoDestinoInelegivel]({% url dicionario %}#conclusaodestinoinelegivel)
 
+Observacões: Os campos `#23` e `#24` são mutuamente exclusivos.
 
 ### \#25	cuidadorCidadao
-
 Relação de parentesco do cuidador com o cidadão em atenção domiciliar.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |Long|	Opcional|	-|	-|
 
-**Referência**: Ver CuidadorCidadao
-
+**Referências:** [CuidadorCidadao]({% url dicionario %}#cuidadorcidadao)
 
 ## EnderecoLocalPermanencia
 
-
 ### \#1	bairro
-
 Bairro onde está localizado o domicílio.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |String|	Requerido|	1|	256|
 
-
 ### \#2	cep
-
 CEP do logradouro do domicílio.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |String|	Opcional|	8|	8|
 
-**Regras**:	Apenas numérico.
-
+**Regras**:	Apenas números.
 
 ### \#3	codigoIbgeMunicipio
-
 Código IBGE do município.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |String|	Sim|	-|	-|
 
-**Referência**: Ver Municipios
-
+**Referências:** [Municipios]({% url municipios %})
 
 ### \#4	complemento
-
 Complemento do endereço do domicílio.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |String|	Opcional|	1|	256|
 
-
 ### \#5	nomeLogradouro
-
 Nome do logradouro.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |String|	Requerido|	1|	256|
 
-
 ### \#6	numero
-
 Número do domicílio.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -380,63 +318,53 @@ Número do domicílio.
 |String|	Requerido|	1|	10|
 
 **Regras**:
-
-- Apenas letras e números.
-- Não pode ser preenchido caso stSemNumero seja verdadeiro.
-
+<br> • Apenas letras e números.
+<br> • Não pode ser preenchido caso [stSemNumero](##11-stsemnumero) = `true`.
 
 ### \#7	numeroDneUf
-
 Indexador referente a Unidade Federativa
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |String|	Requerido|	-|	-|
 
-**Referência**:	Ver Estados
-
+**Referências:**	[Estados]({% url referencias %}#uf)
 
 ### \#8	telReferencial
-
-Telefone de referência, minimo 10 digitos, máximo 11 (DDD + 8 ou 9)
+Telefone de referência
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |String|	Opcional|	10|	11|
 
-Telefone de referência, minimo 10 digitos, máximo 11 (DDD + 8 ou 9)	-	-
-
+Observações: minimo 10 digitos, máximo 11 (DDD + 8 ou 9)
 
 ### \#9	telResidencial
-
-Telefone residencial, minimo 10 digitos, máximo 11 (DDD + 8 ou 9)
+Telefone residencial
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |String| Opcional|	10|	11|
 
-Telefone residencial, minimo 10 digitos, máximo 11 (DDD + 8 ou 9)	-	-
-
+Observações: minimo 10 digitos, máximo 11 (DDD + 8 ou 9)
 
 ### \#10	tipoLogradouroNumeroDne
-
 Tipo do logradouro onde está o domicílio.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |String|	Requerido|	-|	-|
 
-**Referência**: Deve ser informado o código DNE, 	Ver TipoLogradouro
+**Regras:** Deve ser informado o código DNE
 
+**Referências:** [TipoLogradouro]({% url referencias %}#tipo-de-logradouro)
 
 ### \#11	stSemNumero
-
 Marcador que indica que o domicílio não possui número.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |Boolean|	Opcional|	-|	-|
-
 
 ## QuestionárioDeSituaçõesPresentes
 |Descrição | Código|

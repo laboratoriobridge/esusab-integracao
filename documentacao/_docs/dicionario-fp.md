@@ -27,7 +27,7 @@ Tipo de origem dos dados do registro.
 |--- |--- |--- |--- |
 |Integer |Sim |1 |1 |
 
-**Regras:** Utilizar valor 3 (sistemas terceiros).
+**Regras:** Utilizar valor `3 (sistemas terceiros)`.
 
 ### \#3 headerTransport
 Profissional que realizou os procedimentos.
@@ -36,7 +36,7 @@ Profissional que realizou os procedimentos.
 |--- |--- |--- |--- |
 |UnicaLotacaoHeader |Sim |- |- |
 
-**Referência**: {% link profissional %}
+**Referência**: [Profissional]({% url profissional %})
 
 ### \#4 atendProcedimentos
 Registro dos procedimentos realizados.
@@ -135,7 +135,7 @@ Data de nascimento do cidadão no formato epoch time.
 |--- |--- |--- |--- |
 |Long |Sim |- |- |
 
-**Regras:** Não pode ser posterior a [dataAtendimento]({% url profissional##5-dataatendimento %}) e anterior a 130 anos a partir da [dataAtendimento]({% url profissional##5-dataatendimento %}).
+**Regras:** Não pode ser posterior a [dataAtendimento]({% url profissional %}##5-dataatendimento) e anterior a 130 anos a partir da [dataAtendimento]({% url profissional %}##5-dataatendimento).
 
 **Referência:** Para ver a referência sobre o formato epoch, acesse: [Epoch Wikipedia](https://en.wikipedia.org/wiki/Epoch_(reference_date))
 
@@ -146,7 +146,7 @@ Sexo do cidadão.
 |--- |--- |--- |--- |
 |Long |Sim |- |- |
 
-**Referência**: [Sexo]({% url dicionario#sexo %}).
+**Referência**: [Sexo]({% url dicionario %}#sexo).
 
 ### \#5 localAtendimento
 Local onde o atendimento foi realizado.
@@ -155,7 +155,7 @@ Local onde o atendimento foi realizado.
 |--- |--- |--- |--- |
 |Long |Sim |- |- |
 
-**Referência**: [LocalDeAtendimento]({% url dicionario#localdeatendimento %}).
+**Referência**: [LocalDeAtendimento]({% url dicionario %}#localdeatendimento).
 
 ### \#6 turno
 Turno onde aconteceu o atendimento.
@@ -164,7 +164,7 @@ Turno onde aconteceu o atendimento.
 |--- |--- |--- |--- |
 |Long |Opcional |- |- |
 
-**Referência**: [Turno]({% url dicionario#turno %}).
+**Referência**: [Turno]({% url dicionario %}#turno).
 
 ### \#7 statusEscutaInicialOrientacao
 Indica a realização da escuta inicial.

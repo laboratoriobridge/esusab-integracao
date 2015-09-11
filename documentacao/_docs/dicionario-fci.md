@@ -16,9 +16,9 @@ Formulário referente as condições de saúde do cidadão.
 |--- |--- |--- |--- |
 |CondicoesDeSaude |Condicional |- |- |
 
-**Referência**: [CondicoesDeSaude](#condicoesdesaude)
+**Regras:**: Não deve ser preenchido se o campo [statusTermoRecusaCadastroIndividualAtencaoBasica](##7-statustermorecusacadastroindividualatencaobasica) = `true`.
 
-Observação: Não deve ser preenchido se o campo [statusTermoRecusaCadastroIndividualAtencaoBasica](##7-statustermorecusacadastroindividualatencaobasica) = `true`.
+**Referência**: [CondicoesDeSaude](#condicoesdesaude)
 
 ### \#2 dadosGerais	Dados
 referentes ao profissional e a data do cadastro.
@@ -36,9 +36,9 @@ Formulário referente a informações de situação de rua (se o cidadão se enc
 |--- |--- |--- |--- |
 |EmSituacaoDeRua |Condicional |- |- |
 
-**Referência**: [EmSituacaoDeRua](#emsituacaoderua).
+**Regras:**: Não deve ser preenchido se o campo [statusTermoRecusaCadastroIndividualAtencaoBasica](##7-statustermorecusacadastroindividualatencaobasica) = `true`.
 
-Observação: Não deve ser preenchido se o campo [statusTermoRecusaCadastroIndividualAtencaoBasica](##7-statustermorecusacadastroindividualatencaobasica) = `true`.
+**Referência**: [EmSituacaoDeRua](#emsituacaoderua).
 
 ### \#4 fichaAtualizada
 Marcador que indica se a ficha é uma atualização.
@@ -54,9 +54,9 @@ Dados que identificam o cidadão.
 |--- |--- |--- |--- |
 |IdentificacaoUsuarioCidadao |Condicional |- |- |
 
-**Referência**: [IdentificacaoUsuarioCidadao](#identificacaousuariocidadao)
+**Regras:** Opcional se o campo [statusTermoRecusaCadastroIndividualAtencaoBasica](##7-statustermorecusacadastroindividualatencaobasica) = `true`.
 
-Observação: Opcional se o campo [statusTermoRecusaCadastroIndividualAtencaoBasica](##7-statustermorecusacadastroindividualatencaobasica) = `true`.
+**Referência**: [IdentificacaoUsuarioCidadao](#identificacaousuariocidadao)
 
 ### \#6 informacoesSocioDemograficas
 Informações sócio-demográficas fornecidas pelo cidadão.
@@ -65,7 +65,7 @@ Informações sócio-demográficas fornecidas pelo cidadão.
 |--- |--- |--- |--- |
 |InformacoesSocioDemograficas |Condicional |- |- |
 
-Observação: Não deve ser preenchido se o campo [statusTermoRecusaCadastroIndividualAtencaoBasica](##7-statustermorecusacadastroindividualatencaobasica) = `true`.
+**Regras:** Não deve ser preenchido se o campo [statusTermoRecusaCadastroIndividualAtencaoBasica](##7-statustermorecusacadastroindividualatencaobasica) = `true`.
 
 ### \#7 statusTermoRecusaCadastroIndividualAtencaoBasica
 Marcador que indica se o termo de recusa foi assinalado.
@@ -144,7 +144,7 @@ Descricao das plantas medicinais utilizadas.
 |--- |--- |--- |--- |
 |String |Opcional |0 |100 |
 
-Observação: Não deve ser preenchido se o campo [statusUsaPlantasMedicinais](##30-statususaplantasmedicinais) = `false`.
+**Regras:** Não deve ser preenchido se o campo [statusUsaPlantasMedicinais](##30-statususaplantasmedicinais) = `false`.
 
 ### \#6 doencaCardiaca
 Doenças cardíacas que o cidadão informou.
@@ -153,11 +153,11 @@ Doenças cardíacas que o cidadão informou.
 |--- |--- |--- |--- |
 |List<Long> |Condicional |0 |3 |
 
-**Referência:** [DoencaCardiaca]({% url dicionario %}#doencacardiaca).
-
-Observação:
+**Regras:**
 <br> • Requerido preenchimento de pelo menos um item se o campo [statusTeveDoencaCardiaca](##25-statustevedoencacardiaca) = `true`.
 <br> • Não deve ser preenchido preenchido se o campo [statusTeveDoencaCardiaca](##25-statustevedoencacardiaca) = `false`.
+
+**Referência:** [DoencaCardiaca]({% url dicionario %}#doencacardiaca).
 
 ### \#7 doencaRespiratoria
 Doenças respiratórias que o cidadão informou.
@@ -166,12 +166,11 @@ Doenças respiratórias que o cidadão informou.
 |--- |--- |--- |--- |
 |List<Long> |Condicional |0 |4 |
 
-**Referência:** [DoencaRespiratoria]({% url dicionario %}#doencarespiratoria).
-
-Observação:
+**Regras:**
 <br> • Requerido preenchimento de pelo menos um item se o campo [statusTemDoencaRespiratorio](##18-statustemdoencarespiratorio) = `true`.
 <br> •  Não deve ser preenchido o campo [stcampoatusTemDoencaRespiratorio](##18-statustemdoencarespiratorio) = `false`.
-campocampo
+
+**Referência:** [DoencaRespiratoria]({% url dicionario %}#doencarespiratoria).
 
 ### \#8 doencaRins
 Doenças renais que o cidadão informou.
@@ -180,11 +179,11 @@ Doenças renais que o cidadão informou.
 |--- |--- |--- |--- |
 |List<Long> |Condicional |0 3 |
 
-**Referência:** [ConsideracaoPeso]({% url dicionario %}#consideracaopeso).
-
-Observação:
+**Regras:**
 <br> • Requerido preenchimento de pelo menos um item se o campo [statusTemTeveDoencasRins](##22-statustemtevedoencasrins) = `true`.
 <br> • Não deve ser preenchido se o campo [statusTemTeveDoencasRins](##22-statustemtevedoencasrins) = `false`.
+
+**Referência:** [ConsideracaoPeso]({% url dicionario %}#consideracaopeso).
 
 ### \#9 maternidadeDeReferencia
 Nome da maternindade de referência.
@@ -193,7 +192,7 @@ Nome da maternindade de referência.
 |--- |--- |--- |--- |
 |String |Opcional |0 |100 |
 
-Observação: Não pode ser preenchido se o campo [statusEhGestante](##14-statusehgestante) = `false`.
+**Regras:** Não pode ser preenchido se o campo [statusEhGestante](##14-statusehgestante) = `false`.
 
 ### \#10 situacaoPeso
 Situação referente ao peso corporal.

@@ -16,7 +16,7 @@ Lista de animais no domicílio.
 |---| --- |---  | --- |
 |List\<Long>|	Condicional|	0|	5|
 
-**Regra:**
+**Regras:**
 <br> • Não pode ser preenchido se o campo [statusTermoRecusaCadastroDomiciliarAtencaoBasica](##9-statustermorecusacadatrodomiciliaratencaobasica) = `true`.
 
 **Referências:** [AnimalNoDomicilio]({% url dicionario %}#animalnodomicilio)
@@ -28,7 +28,7 @@ Condições de moradia do domicílio.
 |---| --- |---  | --- |
 |CondicaoMoradia	|Condicional	|-|	-	|
 
-**Regra:**
+**Regras:**
 <br> • Não devem ser preenchidos se o campo [statusTermoRecusaCadastroDomiciliarAtencaoBasica](##9-statustermorecusacadatrodomiciliaratencaobasica) = `true`.
 
 **Referências:** [CondicaoMoradia](#condicaomoradia)
@@ -49,7 +49,7 @@ Informações sobre o endereço do domicílio.
 |---| --- |---  | --- |
 |EnderecoLocalPermanencia|	Condicional |  - | -|
 
-**Regra:** Preencimento opcional se o campo [statusTermoRecusaCadastroDomiciliarAtencaoBasica](##9-statustermorecusacadatrodomiciliaratencaobasica) = `true`.
+**Regras:** Preencimento opcional se o campo [statusTermoRecusaCadastroDomiciliarAtencaoBasica](##9-statustermorecusacadatrodomiciliaratencaobasica) = `true`.
 
 **Referências:** [EnderecoLocalPermanencia](#enderecolocalpermanencia)
 
@@ -60,7 +60,7 @@ Lista das famílias que residem no domicílio.
 |---| --- |---  | --- |
 |List\<FamiliaRow>| Condicional| 	0|	4|
 
-**Regra:**
+**Regras:**
 <br> • Não pode ser preenchidos se o campo [statusTermoRecusaCadastroDomiciliarAtencaoBasica](##9-statustermorecusacadatrodomiciliaratencaobasica) = `true`.
 
 ### \#6	fichaAtualizada

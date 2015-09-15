@@ -513,14 +513,15 @@ order: 0
 |7 L|	OUTROS|	-|
 
 ## TempoSituacaoDeRua
-|Código|	Descrição|	-|
-|---|---|---|
-|17 L|	MENOS\_6\_MESES	|-|
-|18 L|	SEIS\_A\_12\_MESES	|-|
-|19 L|	UM\_A\_5\_ANOS	|-|
-|20 L|	MAIS\_DE\_5\_ANOS	|-|
+|Código|	Descrição| Observações|
+|---|---|--- |
+|17 L|	MENOS\_6\_MESES| -|
+|18 L|	SEIS\_A\_12\_MESES| -|
+|19 L|	UM\_A\_5\_ANOS| -|
+|20 L|	MAIS\_DE\_5\_ANOS| -|
 
 ## TipoAtividadeColetiva
+
 |Código|	Descrição|	Observações|
 |---|---|---|
 |1 L|	REUNIAO\_DE\_EQUIPE	|-|

@@ -12,6 +12,7 @@ O pacote que encapsula os dados transmissíveis, cada ficha deve conter as infor
 No caso do software de terceiro o campo remetente será igual ao originadora, que indica qual instalação gerou/enviou o dado.
 
 ## DadoTransporte
+Os atributos do registro transportado devem seguir as regras aqui descritas. Qualquer inconsistencia nos dados transportados resultará no descarte da entidade [DadoTransporte](#dadotransporte).
 
 ### \#1 uuidDadoSerializado
 UUID do dado (identificador "universal" gerado na criação do registro).

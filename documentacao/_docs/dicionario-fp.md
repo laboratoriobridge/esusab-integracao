@@ -47,7 +47,7 @@ Registro dos procedimentos realizados.
 
 **Referência**: [FichaProcedimentoChild](#fichaprocedimentochild).
 
-Observação: É requerido apenas um dentre os itens `#4` a `#11`.
+Observação: É requerido pelo menos um dentre os itens `#4` a `#11`.
 
 ### \#5 numTotalAfericaoPa
 Quantidade de aferições de pressão realizadas.
@@ -56,7 +56,7 @@ Quantidade de aferições de pressão realizadas.
 |--- |--- |--- |--- |
 |Long |Condicional |0 |3 |
 
-Observação: É requerido apenas um dentre os itens `#4` a `#11`.
+Observação: É requerido pelo menos um dentre os itens `#4` a `#11`.
 
 ### \#6 numTotalGlicemiaCapilar
 Quantidade de aferições de glicemia capilar.
@@ -65,7 +65,7 @@ Quantidade de aferições de glicemia capilar.
 |--- |--- |--- |--- |
 |Long |Condicional |0 |3 |
 
-Observação: É requerido apenas um dentre os itens `#4` a `#11`.
+Observação: É requerido pelo menos um dentre os itens `#4` a `#11`.
 
 ### \#7 numTotalAfericaoTemperatura
 Quantidade de aferições de temperatura realizadas.
@@ -74,7 +74,7 @@ Quantidade de aferições de temperatura realizadas.
 |--- |--- |--- |--- |
 |Long |Condicional |0 |3 |
 
-Observação: É requerido apenas um dentre os itens `#4` a `#11`.
+Observação: É requerido pelo menos um dentre os itens `#4` a `#11`.
 
 ### \#8 numTotalMedicaoAltura
 Quantidade de aferições de altura.
@@ -83,7 +83,7 @@ Quantidade de aferições de altura.
 |--- |--- |--- |--- |
 |Long |Condicional |0 |3 |
 
-Observação: É requerido apenas um dentre os itens `#4` a `#11`.
+Observação: É requerido pelo menos um dentre os itens `#4` a `#11`.
 
 ### \#9 numTotalCurativoSimples
 Quantidade de curativos simples realizados.
@@ -92,7 +92,7 @@ Quantidade de curativos simples realizados.
 |--- |--- |--- |--- |
 |Long |Condicional |0 |3 |
 
-Observação: É requerido apenas um dentre os itens `#4` a `#11`.
+Observação: É requerido pelo menos um dentre os itens `#4` a `#11`.
 
 ### \#10 numTotalMedicaoPeso
 Quantidade de aferições de peso.
@@ -101,7 +101,7 @@ Quantidade de aferições de peso.
 |--- |--- |--- |--- |
 |Long |Condicional |0 |3 |
 
-Observação: É requerido apenas um dentre os itens `#4` a `#11`.
+Observação: É requerido pelo menos um dentre os itens `#4` a `#11`.
 
 ### \#11 numTotalColetaMaterialParaExameLaboratorial
 Quantidade de coletas para exame laboratorial.
@@ -110,7 +110,7 @@ Quantidade de coletas para exame laboratorial.
 |--- |--- |--- |--- |
 |Long |Condicional |0 |3 |
 
-Observação: É requerido apenas um dentre os itens `#4` a `#11`.
+Observação: É requerido pelo menos um dentre os itens `#4` a `#11`.
 
 ## FichaProcedimentoChild
 
@@ -184,7 +184,7 @@ Lista dos procedimentos que são registrados na ficha de procedimentos.
 
 **Referência**: [ListaDeProcedimento](#listadeprocedimento).
 
-Observação: É requerido apenas um dentre os itens `#8` e `#9`.
+Observação: É requerido pelo menos um dentre os itens `#8` e `#9`.
 
 ### \#9 outrosSiaProcedimentos
 Outros procedimentos do SIGTAP ou SISAB.
@@ -195,11 +195,11 @@ Outros procedimentos do SIGTAP ou SISAB.
 
 **Regras:**
 <br> • Caracteres maiúsculos e sem espaço em branco.
-<br> • Não repetir procedimentos
+<br> • Não repetir procedimentos.
 
 **Referência**: Para ver a referência da tabela do SIGTAP acesse: [Tabela unificada SIGTAP](http://sigtap.datasus.gov.br/tabela-unificada/app/sec/procedimento/publicados/consultar)
 
-Observação: É requerido apenas um dentre os itens `#8` e `#9`.
+Observação: É requerido pelo menos um dentre os itens `#8` e `#9`.
 
 ## Procedimentos da Ficha
 

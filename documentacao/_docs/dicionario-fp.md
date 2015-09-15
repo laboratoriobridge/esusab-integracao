@@ -191,9 +191,11 @@ Outros procedimentos do SIGTAP ou SISAB.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |--- |--- |--- |--- |
-|List<String> |Condicional |0 |6 |
+|List<String> |Condicional |- |- |
 
-**Regras:** Caracteres maiúsculos e sem espaço em branco.
+**Regras:**
+<br> • Caracteres maiúsculos e sem espaço em branco.
+<br> • Não repetir procedimentos
 
 **Referência**: Para ver a referência da tabela do SIGTAP acesse: [Tabela unificada SIGTAP](http://sigtap.datasus.gov.br/tabela-unificada/app/sec/procedimento/publicados/consultar)
 

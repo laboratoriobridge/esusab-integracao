@@ -20,7 +20,7 @@ CNS do profissional.
 
 **Referência:** Para ver o algoritmo utilizado, acesse: [Cartão Net Datasus](http://cartaonet.datasus.gov.br/), em "Downloads" baixe o arquivo de rotina de validação Java.
 
-Observação: Esta entidade é utilizada para representar o profissional responsável pelas fichas
+Observação: Esta entidade é utilizada para representar o profissional responsável pelas fichas.
 
 ### \#2	cboCodigo_2002
 CBO do profissional.
@@ -31,7 +31,7 @@ CBO do profissional.
 
 **Referência:** {% link cbo %}
 
-Observação: Esta entidade é utilizada para representar o profissional responsável pelas fichas
+Observação: Esta entidade é utilizada para representar o profissional responsável pelas fichas.
 
 ### \#3 cnes
 CNES da unidade de saúde que o profissional está lotado.
@@ -40,7 +40,7 @@ CNES da unidade de saúde que o profissional está lotado.
 |--- |--- |--- |--- |
 |String |Sim |7 |7 |
 
-Observação: Esta entidade é utilizada para representar o profissional responsável pelas fichas
+Observação: Esta entidade é utilizada para representar o profissional responsável pelas fichas.
 
 ### \#4 ine
 INE da equipe do profissional.
@@ -49,7 +49,7 @@ INE da equipe do profissional.
 |--- |--- |--- |--- |
 |String |Opcional |10 |10 |
 
-Observação: Esta entidade é utilizada para representar o profissional responsável pelas fichas
+Observação: Esta entidade é utilizada para representar o profissional responsável pelas fichas.
 
 ### \#5 dataAtendimento
 Data em que está sendo realizada a ação.
@@ -60,7 +60,7 @@ Data em que está sendo realizada a ação.
 
 **Referência:** Para ver a referência sobre o formato epoch, acesse: [Epoch Wikipedia](https://en.wikipedia.org/wiki/Epoch_(reference_date))
 
-Observação: Esta entidade é utilizada para representar o profissional responsável pelas fichas
+Observação: Esta entidade é utilizada para representar o profissional responsável pelas fichas.
 
 ### \#6 codigoIbgeMunicipio
 Código IBGE do município.
@@ -71,7 +71,7 @@ Código IBGE do município.
 
 **Referência:** {% link municipios %}
 
-Observação: Esta entidade é utilizada para representar o profissional responsável pelas fichas
+Observação: Esta entidade é utilizada para representar o profissional responsável pelas fichas.
 
 ## VariasLotacoesHeader
 
@@ -82,7 +82,7 @@ Profissional responsável pela ação.
 |--- |--- |--- |--- |
 |UnicaLotacaoHeader |Sim |- |- |
 
-Observação: Esta entidade é utilizada para representar o profissional responsável pela ficha e os outros que o auxiliaram na atividade
+Observação: Esta entidade é utilizada para representar o profissional responsável pela ficha e os outros que o auxiliaram na atividade.
 
 ### \#2 profissionalCNS1
 CNS do profissional1.
@@ -95,7 +95,7 @@ CNS do profissional1.
 
 **Referência:** Para ver o algoritmo utilizado, acesse: [Cartão Net Datasus](http://cartaonet.datasus.gov.br/), em "Downloads" baixe o arquivo de rotina de validação Java.
 
-Observação: Esta entidade é utilizada para representar o profissional responsável pela ficha e os outros que o auxiliaram na atividade
+Observação: Esta entidade é utilizada para representar o profissional responsável pela ficha e os outros que o auxiliaram na atividade.
 
 ### \#3 cboCodigo\_2002\_1
 CBO do profissional1.
@@ -108,7 +108,7 @@ CBO do profissional1.
 
 **Referência:** {% link cbo %}
 
-Observação: Esta entidade é utilizada para representar o profissional responsável pela ficha e os outros que o auxiliaram na atividade
+Observação: Esta entidade é utilizada para representar o profissional responsável pela ficha e os outros que o auxiliaram na atividade.
 
 ### \#4 profissionalCNS2
 CNS do profissional2.
@@ -121,7 +121,7 @@ CNS do profissional2.
 
 **Referência:** Para ver o algoritmo utilizado, acesse: [Cartão Net Datasus](http://cartaonet.datasus.gov.br/), em "Downloads" baixe o arquivo de rotina de validação Java.
 
-Observação: Esta entidade é utilizada para representar o profissional responsável pela ficha e os outros que o auxiliaram na atividade
+Observação: Esta entidade é utilizada para representar o profissional responsável pela ficha e os outros que o auxiliaram na atividade.
 
 ### \#5 cboCodigo\_2002\_2
 CBO do profissional2.
@@ -134,7 +134,7 @@ CBO do profissional2.
 
 **Referência:** {% link cbo %}
 
-Observação: Esta entidade é utilizada para representar o profissional responsável pela ficha e os outros que o auxiliaram na atividade
+Observação: Esta entidade é utilizada para representar o profissional responsável pela ficha e os outros que o auxiliaram na atividade.
 
 ## ProfissionalCboRowItem
 
@@ -160,7 +160,7 @@ CBO do profissional.
 
 **Referência:** {% link cbo %}
 
-Observação: Esta entidade é utilizada para representar os profissionais que participaram da atividade coletiva
+Observação: Esta entidade é utilizada para representar os profissionais que participaram da atividade coletiva.
 
 ## HeaderCdsCadastro
 

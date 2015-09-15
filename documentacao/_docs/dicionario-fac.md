@@ -10,7 +10,6 @@ order: 1
 # FichaAtividadeColetiva
 
 ### \#1	uuidFicha
-
 Código UUID para identificar a ficha na base de dados nacional.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -22,7 +21,6 @@ Código UUID para identificar a ficha na base de dados nacional.
 **Referência**: [UUID Wikipedia](https://en.wikipedia.org/wiki/Universally_unique_identifier)
 
 ### \#2	dtAtividadeColetiva
-
 Data de realização da atividade coletiva.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -34,7 +32,6 @@ Data de realização da atividade coletiva.
 **Referência** [Epoch Wikipedia](https://en.wikipedia.org/wiki/Epoch)
 
 ### \#3	numParticipantesProgramados
-
 Previsão da quantidade de participantes para a atividade coletiva.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -44,7 +41,6 @@ Previsão da quantidade de participantes para a atividade coletiva.
 **Regras**:	Valores entre 0 e 999.
 
 ### \#4	localAtividade
-
 Descrição do local onde é realizada a atividade coletiva.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -52,7 +48,6 @@ Descrição do local onde é realizada a atividade coletiva.
 |String|	Opcional|	0|	250|
 
 ### \#5	horaInicio
-
 Hora de incício de realização da atividade coletiva.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -64,7 +59,6 @@ Hora de incício de realização da atividade coletiva.
 **Referência** [Epoch Wikipedia](https://en.wikipedia.org/wiki/Epoch)
 
 ### \#6	horaFim
-
 Hora de fim de realização da atividade coletiva.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -76,7 +70,6 @@ Hora de fim de realização da atividade coletiva.
 **Referência** [Epoch Wikipedia](https://en.wikipedia.org/wiki/Epoch)
 
 ### \#7	inep
-
 Número INEP da instituição.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -84,7 +77,6 @@ Número INEP da instituição.
 |Long|	Opcional|	0|	8|
 
 ### \#8	responsavelCns
-
 CNS do responsável pela atividade coletiva.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -98,7 +90,6 @@ CNS do responsável pela atividade coletiva.
 **Referência**: Para ver o algoritmo utilizado, acesse: [Catão NET Datasus](http://cartaonet.datasus.gov.br/), em "Downloads" baixe o arquivo de rotina de validação Java.
 
 ### \#9	responsavelCnesUnidade
-
 CNES do responsável pela atividade coletiva.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -106,7 +97,6 @@ CNES do responsável pela atividade coletiva.
 |String|	Requerido	|7|	7|
 
 ### \#10	responsavelNumIne
-
 INE do responsável pela atividade coletiva.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -114,7 +104,6 @@ INE do responsável pela atividade coletiva.
 |String|	Opcional|	10|	10|
 
 ### \#11	numParticipantes
-
 Número de participantes da atividade.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -124,7 +113,6 @@ Número de participantes da atividade.
 **Regras**: Valores entre 0 e 999.
 
 ### \#12	numAvaliacoesAlteradas
-
 Número das avaliações alteradas.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -134,7 +122,6 @@ Número das avaliações alteradas.
 **Regras**:	Valores entre 0 e 999.
 
 ### \#13	profissionais
-
 Lista dos profissionais que participaram da atividade.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -146,7 +133,6 @@ Lista dos profissionais que participaram da atividade.
 **Referência**:	[ProfissionalCboRowItem]({% url profissional %}#profissionalcborowitem)
 
 ### \#14 atividadeTipo
-
 Tipo da atividade que será realizada.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -154,7 +140,6 @@ Tipo da atividade que será realizada.
 |Long|	Sim |	-|	-|
 
 **Referências**: [TipoAtividadeColetiva]({% url dicionario %}#tipoatividadecoletiva)
-
 ### \#15 temasParaReuniao
 
 Temas para reunião.
@@ -170,7 +155,6 @@ Temas para reunião.
 **Referência**: [TemasParaReuniao]({% url dicionario %}#temasparareuniao)
 
 ### \#16	publicoAlvo
-
 Público alvo da atividade.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -184,7 +168,6 @@ Público alvo da atividade.
 **Referência**: [PublicoAlvo]({% url dicionario %}#publicoalvo)
 
 ### \#17	praticasTemasParaSaude
-
 Práticas ou temas abordados na atividade.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -198,7 +181,6 @@ Práticas ou temas abordados na atividade.
 **Referências**:	[PraticasTemasParaSaude]({% url dicionario %}#praticastemasparasaude)
 
 ### \#18	participantes
-
 Cidadãos que participaram da atividade coletiva.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -208,7 +190,6 @@ Cidadãos que participaram da atividade coletiva.
 **Referência**: [ParticipanteRowItem](#participanterowitem)
 
 ### \#19	tbCdsOrigem
-
 Tipo de origem dos dados do registro.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -218,7 +199,6 @@ Tipo de origem dos dados do registro.
 **Observações**: Utilizar valor 3 (sistemas terceiros).
 
 ### \#20	codigoIbgeMunicipio
-
 Código IBGE do município.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -228,7 +208,6 @@ Código IBGE do município.
 **Referências**: {% link municipios %}
 
 ## ParticipanteRowItem
-
 ### \#1	cns
 
 CNS do cidadão que participou da atividade.
@@ -286,7 +265,6 @@ Altura do cidadão em cm.
 <br/> • Valor mínimo 20 e máximo 250.
 
 ### \#6	cessouHabitoFumar
-
 Marcação se o cidadão cessou o hábito de fumar.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -296,7 +274,6 @@ Marcação se o cidadão cessou o hábito de fumar.
 **Regras**: Não deve ser preenchido se o [praticasTemasParaSaude]({% url dicionario %}#praticastemasparasaude) não for 25, 26, 27 ou 28 (referentes ao PNCT).
 
 ### \#7	abadonouGrupo
-
 Marcação se o cidadão abandonou o grupo de tabagismo.
 
 | Tipo | Obrigatório | Mínimo | Máximo |

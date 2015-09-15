@@ -36,7 +36,7 @@ Profissional que realizou a visita.
 |---| --- |---  | --- |
 |UnicaLotacaoHeader|	Sim|	-|	-|
 
-**Referências**	{% link profissional %}
+**Referências**	[UnicaLotacaoHeader]({% url profissional %}#unicalotacaoheader)
 
 ### \#4	atendimentosDomiciliares
 Lista dos atendimentos realizados pelo profissional.
@@ -74,7 +74,7 @@ Data de nascimento do cidadão.
 |---| --- |---  | --- |
 |Long|	Sim|	-|	-|
 
-**Regras:** Não pode ser posterior a [dataAtendimento]({% url profissional%}#dataatendimento) e anterior a 130 anos a partir da [dataAtendimento]({% url profissional%}#dataatendimento).
+**Regras:** Não pode ser posterior a [dataAtendimento]({% url profissional%}##5-dataatendimento) e anterior a 130 anos a partir da [dataAtendimento]({% url profissional%}##5-dataatendimento).
 
 **Referencias:** Para ver a referência sobre o formato epoch, acesse: [Epoch Wikipedia](https://en.wikipedia.org/wiki/Epoch_(reference_date))
 
@@ -126,7 +126,7 @@ Marcadores das situações presentes.
 |---| --- |---  | --- |
 |List<Long>|	Opcional|	0|	24|
 
-**Referências**: [SituacoesPresentes](#situacoespresentes)
+**Referências**: [SituacoesPresentes](##8-situacoespresentes)
 
 ### \#9	cid
 CID registrado no atendimento.
@@ -149,7 +149,7 @@ Procedimentos registrados no atendimento disponíveis na ficha.
 |---| --- |---  | --- |
 |List<String>|	Opcional|	0|	21|
 
-**Referência**: [ProcedimentosAtençãoDomiciliar](#procedimentosatencaodomiciliar)
+**Referência**: [ProcedimentosDaAtençãoDomiciliar](#procedimentos-da-atenção-domiciliar)
 
 ### \#12	outrosProcedimentos
 Procedimentos SIGTAP registrados no atendimento.
@@ -159,8 +159,8 @@ Procedimentos SIGTAP registrados no atendimento.
 |List<String>|	Opcional	|0|	4|
 
 **Regras**:
-- Não podem ser iguais aos procedimentos a cima.
-- Não podem conter procedimentos repetidos.
+<br> • Não podem ser iguais aos procedimentos a cima.
+<br> • Não podem conter procedimentos repetidos.
 
 ### \#13	condutaDesfecho
 Desfecho do atendimento do cidadão.
@@ -209,7 +209,7 @@ Marcador que indica se a família irá receber acompanhamento pós-óbito.
 |Paracentese | 23 L |
 |Medicação  parenteral	|24 L |
 
-## Procedimentos da AtençãoDomiciliar
+## Procedimentos da Atenção Domiciliar
 
 |Nome			|Código|
 |--- |---|

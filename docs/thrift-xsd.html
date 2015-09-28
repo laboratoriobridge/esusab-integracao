@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Thrift x XSD</title>
+  <meta name="description" content="Dicionário de dados e-SUS AB">
+
+  <link rel="stylesheet" href="/integracao/css/main.css">
+  <link rel="canonical" href="/integracao/docs/thrift-xsd.html">
+  <link rel="icon" type="image/png" href="/img/logo-esus.png">
+
+  <script src="/integracao/js/search.js" type="text/javascript"></script>
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/integracao/">
+      <img src="/integracao/img/logo-esus.png">
+      <span class="title-text">Dicionário de dados e-SUS AB</span>
+      
+        <span class="label">versão 2.0.0</span>
+      
+    </a>
+
+    <nav class="site-nav">
+      <a href="javascript: void" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+        
+          
+        
+          
+            <a href="/integracao/pdf.html"><i class="icon-pdf"></i> Gerar PDF</a>
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="breadcrumb-placeholder">
+  <div class="wrapper breadcrumb-wrapper">
+    <ol class="breadcrumb">
+      <img src="/integracao/img/logo-esus.png">
+      <li><a href="/integracao/">Home</a></li>
+
+      
+        
+          
+            <li title="Thrift x XSD">Thrift x XSD</li>
+          
+        
+
+      
+    </ol>
+  </div>
+</div>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+
+        <div class="sidebar">
+          <div class="sidebar-content">
+            <form action="/search.html">
+  <input type="search" placeholder="Pesquisar..." name="q" id="search-input" autocomplete="off">
+</form>
+
+<ul id="search-results"></ul>
+
+<script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('search-results'),
+    json: '/integracao/search.json',
+    noResultsText: 'Nenhum resultado encontrado'
+  });
+</script>
+
+<div class="menu">
+  
+
+
+
+  <ul>
+    
+      <li>
+        <a href="/integracao/docs/camada-transporte.html">Camada de Transporte de Dados</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/dicionario/dicionario.html">Dicionário de dados</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/cbo.html">CBO</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/dicionario-fad.html">Ficha de Atendimento Domiciliar</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/dicionario-fai.html">Ficha de Atendimento Individual</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/dicionario-fao.html">Ficha de Atendimento Odontológico</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/dicionario-fac.html">Ficha de Atividade Coletiva</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/dicionario-fae.html">Ficha de Avaliação de Elegibilidade</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/dicionario-fcd.html">Ficha de Cadastro Domiciliar</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/dicionario-fci.html">Ficha de Cadastro Individual</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/dicionario-fp.html">Ficha de Procedimentos</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/dicionario-fvd.html">Ficha de Visita Domiciliar</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/dicionario-mca.html">Marcadores de Consumo Alimentar</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/municipios.html">Municípios</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/profissional.html">Profissional</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/referencias.html">Referências</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/thrift-xsd.html">Thrift x XSD</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/versao.html">Versão</a>
+      </li>
+    
+  </ul>
+
+
+</div>
+
+          </div>
+        </div>
+
+        <div class="content">
+          <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Thrift x XSD</h1>
+    <p class="post-meta">
+      <a class="btn" href="/integracao/pdf.html?include=thrift-xsd"><i class="icon-pdf"></i> Gerar PDF desta página</a>
+      
+        <span class="label" title="Data da última modificação">Alterado em 02/09/2015</span>
+      
+    </p>
+  </header>
+
+  <article class="post-content">
+    <h1 id="thrift-x-xsd">Thrift x XSD</h1>
+
+<h2 id="ficha-de-cadastro-individual">Ficha de Cadastro Individual</h2>
+
+<table><thead>
+<tr>
+<th>Dicionário de dados</th>
+<th>Thrift</th>
+<th>XSD</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><a href="/integracao/docs/dicionario-fci.html#cadastroindividual">CadastroIndividual</a></td>
+<td>CadastroIndividualThrift</td>
+<td>v2000cadastroindividual.xsd</td>
+</tr>
+<tr>
+<td><a href="/integracao/docs/dicionario-fci.html#informacoessociodemograficas">InformacoesSocioDemograficas</a></td>
+<td>InformacoesSocioDemograficasThrift</td>
+<td>v2000informacoessociodemograficas.xsd</td>
+</tr>
+<tr>
+<td><a href="/integracao/docs/dicionario-fci.html#identificacaousuariocidadao">IdentificacaoUsuarioCidadao</a></td>
+<td>IdentificacaoUsuarioCidadaoThrift</td>
+<td>v2000identificacaousuariocidadao.xsd</td>
+</tr>
+<tr>
+<td><a href="/integracao/docs/dicionario-fci.html#emsituacaoderua">EmSituacaoDeRua</a></td>
+<td>EmSituacaoDeRuaThrift</td>
+<td>v2000emsituacaoderua.xsd</td>
+</tr>
+<tr>
+<td><a href="/integracao/docs/dicionario-fci.html#condicoesdesaude">CondicoesDeSaude</a></td>
+<td>CondicoesDeSaudeThrift</td>
+<td>v2000condicoesdesaude.xsd</td>
+</tr>
+</tbody></table>
+
+<h2 id="ficha-de-cadastro-domiciliar">Ficha de Cadastro Domiciliar</h2>
+
+<table><thead>
+<tr>
+<th>Dicionário de dados</th>
+<th>Thrift</th>
+<th>XSD</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><a href="/integracao/docs/dicionario-fcd.html#cadastrodomiciliar">CadastroDomiciliar</a></td>
+<td>CadastroDomiciliarThrift</td>
+<td>v2000cadastrodomiciliar.xsd</td>
+</tr>
+<tr>
+<td><a href="/integracao/docs/dicionario-fcd.html#familiarow">FamiliaRow</a></td>
+<td>FamiliaRowThrift</td>
+<td>v2000familiarow.xsd</td>
+</tr>
+<tr>
+<td><a href="/integracao/docs/dicionario-fcd.html#condicaomoradia">CondicaoMoradia</a></td>
+<td>CondicaoMoradiaThrift</td>
+<td>v2000condicaomoradia.xsd</td>
+</tr>
+<tr>
+<td><a href="/integracao/docs/dicionario-fcd.html#enderecolocalpermanencia">EnderecoLocalPermanencia</a></td>
+<td>EnderecoLocalPermanenciaThrift</td>
+<td>v2000enderecolocalpermanencia.xsd</td>
+</tr>
+</tbody></table>
+
+<h2 id="ficha-de-atendimento-individual">Ficha de Atendimento Individual</h2>
+
+<table><thead>
+<tr>
+<th>Dicionário de dados</th>
+<th>Thrift</th>
+<th>XSD</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><a href="/integracao/docs/dicionario-fai.html#fichaatendimentoindividualmaster">FichaAtendimentoIndividualMaster</a></td>
+<td>FichaAtendimentoIndividualMasterThrift</td>
+<td>v2000fichaatendimentoindividualmaster.xsd</td>
+</tr>
+<tr>
+<td><a href="/integracao/docs/dicionario-fai.html#fichaatendimentoindividualchild">FichaAtendimentoIndividualChild</a></td>
+<td>FichaAtendimentoIndividualChildThrift</td>
+<td>v2000fichaatendimentoindividualchild.xsd</td>
+</tr>
+<tr>
+<td><a href="/integracao/docs/dicionario-fai.html#problemacondicaoavaliacaoai">ProblemaCondicaoAvaliacaoAI</a></td>
+<td>ProblemaCondicaoAvaliacaoAIThrift</td>
+<td>v2000problemacondicaoavaliacaoai.xsd</td>
+</tr>
+<tr>
+<td><a href="/integracao/docs/dicionario-fai.html#outrossia">OutrosSia</a></td>
+<td>OutrosSiaThrift</td>
+<td>v2000outrossia.xsd</td>
+</tr>
+</tbody></table>
+
+<h2 id="ficha-de-atendimento-odontológico">Ficha de Atendimento Odontológico</h2>
+
+<table><thead>
+<tr>
+<th>Dicionário de dados</th>
+<th>Thrift</th>
+<th>XSD</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><a href="/integracao/docs/dicionario-fao.html#fichaatendimentoodontologicomaster">FichaAtendimentoOdontologicoMaster</a></td>
+<td>FichaAtendimentoOdontologicoMasterThrift</td>
+<td>v2000fichaatendimentoodontologicomaster.xsd</td>
+</tr>
+<tr>
+<td><a href="/integracao/docs/dicionario-fao.html#fichaatendimentoodontologicochild">FichaAtendimentoOdontologicoChild</a></td>
+<td>FichaAtendimentoOdontologicoChildThrift</td>
+<td>v2000fichaatendimentoodontologicochild.xsd</td>
+</tr>
+<tr>
+<td><a href="/integracao/docs/dicionario-fao.html#procedimentoquantidade">ProcedimentoQuantidade</a></td>
+<td>ProcedimentoQuantidadeThrift</td>
+<td>v2000procedimentoquantidade.xsd</td>
+</tr>
+</tbody></table>
+
+<h2 id="ficha-de-atividade-coletiva">Ficha de Atividade Coletiva</h2>
+
+<table><thead>
+<tr>
+<th>Dicionário de dados</th>
+<th>Thrift</th>
+<th>XSD</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><a href="/integracao/docs/dicionario-fac.html#fichaatividadecoletiva">FichaAtividadeColetiva</a></td>
+<td>FichaAtividadeColetivaThrift</td>
+<td>v2000fichaatividadecoletiva.xsd</td>
+</tr>
+<tr>
+<td><a href="/integracao/docs/dicionario-fac.html#participanterowitem">ParticipanteRowItem</a></td>
+<td>ParticipanteRowItemThrift</td>
+<td>v2000participanterowitem.xsd</td>
+</tr>
+</tbody></table>
+
+<h2 id="ficha-de-procedimentos">Ficha de Procedimentos</h2>
+
+<table><thead>
+<tr>
+<th>Dicionário de dados</th>
+<th>Thrift</th>
+<th>XSD</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><a href="/integracao/docs/dicionario-fp.html#fichaprocedimentomaster">FichaProcedimentoMaster</a></td>
+<td>FichaProcedimentoMasterThrift</td>
+<td>v2000fichaprocedimentomaster.xsd</td>
+</tr>
+<tr>
+<td><a href="/integracao/docs/dicionario-fp.html#fichaprocedimentochild">FichaProcedimentoChild</a></td>
+<td>FichaProcedimentoChildThrift</td>
+<td>v2000fichaprocedimentochild.xsd</td>
+</tr>
+</tbody></table>
+
+<h2 id="ficha-de-visita-domiciliar">Ficha de Visita Domiciliar</h2>
+
+<table><thead>
+<tr>
+<th>Dicionário de dados</th>
+<th>Thrift</th>
+<th>XSD</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><a href="/integracao/docs/dicionario-fvd.html#fichavisitadomiciliarmaster">FichaVisitaDomiciliarMaster</a></td>
+<td>FichaVisitaDomiciliarMasterThrift</td>
+<td>v2000fichavisitadomiciliarmaster.xsd</td>
+</tr>
+<tr>
+<td><a href="/integracao/docs/dicionario-fvd.html#fichavisitadomiciliarchild">FichaVisitaDomiciliarChild</a></td>
+<td>FichaVisitaDomiciliarChildThrift</td>
+<td>v2000fichavisitadomiciliarchild.xsd</td>
+</tr>
+</tbody></table>
+
+<h2 id="marcadores-de-consumo-alimentar">Marcadores de Consumo Alimentar</h2>
+
+<table><thead>
+<tr>
+<th>Dicionário de dados</th>
+<th>Thrift</th>
+<th>XSD</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><a href="/integracao/docs/dicionario-mca.html#fichaconsumoalimentar">FichaConsumoAlimentar</a></td>
+<td>FichaConsumoAlimentarThrift</td>
+<td>v2000fichaconsumoalimentar.xsd</td>
+</tr>
+<tr>
+<td><a href="/integracao/docs/dicionario-mca.html#perguntaquestionariocriancascommaisdoisanos">PerguntaQuestionarioCriancasComMaisDoisAnos</a></td>
+<td>PerguntaQuestionarioCriancasComMaisDoisAnosThrift</td>
+<td>v2000perguntaquestionariocriancascommaisdoisanos.xsd</td>
+</tr>
+<tr>
+<td><a href="/integracao/docs/dicionario-mca.html#perguntaquestionariocriancasdeseisvintetresmeses">PerguntaQuestionarioCriancasDeSeisVinteTresMeses</a></td>
+<td>PerguntaQuestionarioCriancasDeSeisVinteTresMesesThrift</td>
+<td>v2000perguntaquestionariocriancasdeseisvintetresmeses.xsd</td>
+</tr>
+<tr>
+<td><a href="/integracao/docs/dicionario-mca.html#perguntaquestionariocriancasmenoresseismeses">PerguntaQuestionarioCriancasMenoresSeisMeses</a></td>
+<td>PerguntaQuestionarioCriancasMenoresSeisMesesThrift</td>
+<td>v2000perguntaquestionariocriancasmenoresseismeses.xsd</td>
+</tr>
+<tr>
+<td><a href="/integracao/docs/dicionario-mca.html#respostamultiplaescolhaenum">RespostaMultiplaEscolhaEnum</a></td>
+<td>RespostaMultiplaEscolhaEnumThrift</td>
+<td>v2000respostamultiplaescolhaenum.xsd</td>
+</tr>
+<tr>
+<td><a href="/integracao/docs/dicionario-mca.html#respostaunicaescolhaenum">RespostaUnicaEscolhaEnum</a></td>
+<td>RespostaUnicaEscolhaEnumThrift</td>
+<td>v2000respostaunicaescolhaenum.xsd</td>
+</tr>
+<tr>
+<td><a href="/integracao/docs/dicionario-mca.html#perguntacriancascommaisdoisanosenum">PerguntaCriancasComMaisDoisAnosEnum</a></td>
+<td>PerguntaCriancasComMaisDoisAnosEnumThrift</td>
+<td>v2000perguntacriancascommaisdoisanosenum.xsd</td>
+</tr>
+<tr>
+<td><a href="/integracao/docs/dicionario-mca.html#perguntacriancasdeseisvintetresmesesenum">PerguntaCriancasDeSeisVinteTresMesesEnum</a></td>
+<td>PerguntaCriancasDeSeisVinteTresMesesEnumThrift</td>
+<td>v2000perguntacriancasdeseisvintetresmesesenum.xsd</td>
+</tr>
+<tr>
+<td><a href="/integracao/docs/dicionario-mca.html#perguntacriancasmenoresseismesesenum">PerguntaCriancasMenoresSeisMesesEnum</a></td>
+<td>PerguntaCriancasMenoresSeisMesesEnumThrift</td>
+<td>v2000perguntacriancasmenoresseismesesenum.xsd</td>
+</tr>
+</tbody></table>
+
+<h2 id="ficha-de-avaliação-de-elegibilidade">Ficha de Avaliação de Elegibilidade</h2>
+
+<table><thead>
+<tr>
+<th>Dicionário de dados</th>
+<th>Thrift</th>
+<th>XSD</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><a href="/integracao/docs/dicionario-fae.html#fichaavaliacaoelegibilidade">FichaAvaliacaoElegibilidade</a></td>
+<td>FichaAvaliacaoElegibilidadeThrift</td>
+<td>v2000fichaavaliacaoelegibilidade.xsd</td>
+</tr>
+</tbody></table>
+
+<h2 id="ficha-de-atendimento-domiciliar">Ficha de Atendimento Domiciliar</h2>
+
+<table><thead>
+<tr>
+<th>Dicionário de dados</th>
+<th>Thrift</th>
+<th>XSD</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><a href="/integracao/docs/dicionario-fad.html#fichaatendimentodomiciliarmaster">FichaAtendimentoDomiciliarMaster</a></td>
+<td>FichaAtendimentoDomiciliarMasterThrift</td>
+<td>v2000fichaatendimentodomiciliarmaster.xsd</td>
+</tr>
+<tr>
+<td><a href="/integracao/docs/dicionario-fad.html#fichaatendimentodomiciliarchild">FichaAtendimentoDomiciliarChild</a></td>
+<td>FichaAtendimentoDomiciliarChildThrift</td>
+<td>v2000fichaatendimentodomiciliarchild.xsd</td>
+</tr>
+</tbody></table>
+
+<h2 id="profissional">Profissional</h2>
+
+<table><thead>
+<tr>
+<th>Dicionário de dados</th>
+<th>Thrift</th>
+<th>XSD</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><a href="/integracao/docs/profissional.html#profissionalcborowitem">ProfissionalCboRowItem</a></td>
+<td>ProfissionalCboRowItemThrift</td>
+<td>v2000profissionalcborowitem.xsd</td>
+</tr>
+<tr>
+<td><a href="/integracao/docs/profissional.html#variaslotacoesheader">VariasLotacoesHeader</a></td>
+<td>VariasLotacoesHeaderThrift</td>
+<td>v2000variaslotacoesheader.xsd</td>
+</tr>
+<tr>
+<td><a href="/integracao/docs/profissional.html#unicalotacaoheader">UnicaLotacaoHeader</a></td>
+<td>UnicaLotacaoHeaderThrift</td>
+<td>v2000unicalotacaoheader.xsd</td>
+</tr>
+<tr>
+<td><a href="/integracao/docs/profissional.html#headercdscadastro">HeaderCdsCadastro</a></td>
+<td>HeaderCdsCadastroThrift</td>
+<td>v2000headercdscadastro.xsd</td>
+</tr>
+</tbody></table>
+
+<h2 id="versão">Versão</h2>
+
+<table><thead>
+<tr>
+<th>Dicionário de dados</th>
+<th>Thrift</th>
+<th>XSD</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><a href="/integracao/docs/versao.html#versao">Versao</a></td>
+<td>VersaoThrift</td>
+<td>v2000versao.xsd</td>
+</tr>
+</tbody></table>
+
+<h2 id="camada-de-transporte">Camada de Transporte</h2>
+
+<table><thead>
+<tr>
+<th>Dicionário de dados</th>
+<th>Thrift</th>
+<th>XSD</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><a href="/integracao/docs/camada-transporte.html#dadotransporte">DadoTransporte</a></td>
+<td>DadoTransporteThrift</td>
+<td>v2000dadotransporte.xsd</td>
+</tr>
+<tr>
+<td><a href="/integracao/docs/camada-transporte.html#dadoinstalacao">DadoInstalacao</a></td>
+<td>DadoInstalacaoThrift</td>
+<td>v2000dadoinstalacao.xsd</td>
+</tr>
+</tbody></table>
+
+  </article>
+
+</div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <script src="/integracao/js/site.js" type="text/javascript"></script>
+  </body>
+</html>

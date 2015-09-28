@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Ficha de Atendimento Odontológico</title>
+  <meta name="description" content="Dicionário de dados e-SUS AB">
+
+  <link rel="stylesheet" href="/integracao/css/main.css">
+  <link rel="canonical" href="/integracao/docs/dicionario-fao.html">
+  <link rel="icon" type="image/png" href="/img/logo-esus.png">
+
+  <script src="/integracao/js/search.js" type="text/javascript"></script>
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/integracao/">
+      <img src="/integracao/img/logo-esus.png">
+      <span class="title-text">Dicionário de dados e-SUS AB</span>
+      
+        <span class="label">versão 2.0.0</span>
+      
+    </a>
+
+    <nav class="site-nav">
+      <a href="javascript: void" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+        
+          
+        
+          
+            <a href="/integracao/pdf.html"><i class="icon-pdf"></i> Gerar PDF</a>
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="breadcrumb-placeholder">
+  <div class="wrapper breadcrumb-wrapper">
+    <ol class="breadcrumb">
+      <img src="/integracao/img/logo-esus.png">
+      <li><a href="/integracao/">Home</a></li>
+
+      
+        
+          
+            <li title="Ficha de Atendimento Odontológico">Ficha de Atendimento Odontológico</li>
+          
+        
+
+      
+    </ol>
+  </div>
+</div>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+
+        <div class="sidebar">
+          <div class="sidebar-content">
+            <form action="/search.html">
+  <input type="search" placeholder="Pesquisar..." name="q" id="search-input" autocomplete="off">
+</form>
+
+<ul id="search-results"></ul>
+
+<script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('search-results'),
+    json: '/integracao/search.json',
+    noResultsText: 'Nenhum resultado encontrado'
+  });
+</script>
+
+<div class="menu">
+  
+
+
+
+  <ul>
+    
+      <li>
+        <a href="/integracao/docs/camada-transporte.html">Camada de Transporte de Dados</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/dicionario/dicionario.html">Dicionário de dados</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/cbo.html">CBO</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/dicionario-fad.html">Ficha de Atendimento Domiciliar</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/dicionario-fai.html">Ficha de Atendimento Individual</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/dicionario-fao.html">Ficha de Atendimento Odontológico</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/dicionario-fac.html">Ficha de Atividade Coletiva</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/dicionario-fae.html">Ficha de Avaliação de Elegibilidade</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/dicionario-fcd.html">Ficha de Cadastro Domiciliar</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/dicionario-fci.html">Ficha de Cadastro Individual</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/dicionario-fp.html">Ficha de Procedimentos</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/dicionario-fvd.html">Ficha de Visita Domiciliar</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/dicionario-mca.html">Marcadores de Consumo Alimentar</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/municipios.html">Municípios</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/profissional.html">Profissional</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/referencias.html">Referências</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/thrift-xsd.html">Thrift x XSD</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/versao.html">Versão</a>
+      </li>
+    
+  </ul>
+
+
+</div>
+
+          </div>
+        </div>
+
+        <div class="content">
+          <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Ficha de Atendimento Odontológico</h1>
+    <p class="post-meta">
+      <a class="btn" href="/integracao/pdf.html?include=dicionario-fao"><i class="icon-pdf"></i> Gerar PDF desta página</a>
+      
+        <span class="label" title="Data da última modificação">Alterado em 11/09/2015</span>
+      
+    </p>
+  </header>
+
+  <article class="post-content">
+    <h1 id="ficha-de-atendimento-odontológico">Ficha de Atendimento Odontológico</h1>
+
+<h2 id="fichaatendimentoodontologicomaster">FichaAtendimentoOdontologicoMaster</h2>
+
+<h3 id="1-uuidficha">#1 uuidFicha</h3>
+
+<p>Código UUID para identificar a ficha na base de dados nacional.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Requerido</td>
+<td>36</td>
+<td>44</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> É recomendado concatenar o CNES na frente do UUID, de modo que os 7 digitos (CNES) + 1 de hífen somados aos 36 (32 caracteres + 4 hífen) do UUID são a limitação de 44 bytes do campo. Formato canônico.</p>
+
+<p><strong>Referências:</strong> Para ver a referência sobre o UUID, acesse: <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">UUID Wikipedia</a>.</p>
+
+<h3 id="2-headertransport">#2 headerTransport</h3>
+
+<p>Profissionais que realizaram o atendimento.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>VariasLotacoesHeader</td>
+<td>Requerido</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Referências:</strong> <a href="/integracao/docs/profissional.html">Profissional</a></p>
+
+<h3 id="3-atendimentosodontologicos">#3 atendimentosOdontologicos</h3>
+
+<p>Registro individualizado dos atendimentos.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>List&lt;FichaAtendimentoOdontologicoChild&gt;</td>
+<td>Requerido</td>
+<td>1</td>
+<td>13</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> No máximo 13 atendimentos podem ser registrados.</p>
+
+<p><strong>Referências:</strong> <a href="#fichaatendimentoodontologicochild">FichaAtendimentoOdontologicoChild</a></p>
+
+<h3 id="4-tpcdsorigem">#4 tpCdsOrigem</h3>
+
+<p>Tipo de origem dos dados do registro.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Integer</td>
+<td>Requerido</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> Utilizar valor 3 (sistemas terceiros).</p>
+
+<h2 id="fichaatendimentoodontologicochild">FichaAtendimentoOdontologicoChild</h2>
+
+<h3 id="1-dtnascimento">#1 dtNascimento</h3>
+
+<p>Data de nascimento do cidadão.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Requerido</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras</strong>: Não pode ser posterior a <a href="/integracao/docs/profissional.html##5-dataatendimento">dataAtendimento</a> e anterior a 130 anos a partir da <a href="/integracao/docs/profissional.html##5-dataatendimento">dataAtendimento</a>.</p>
+
+<p><strong>Referências:</strong> Para ver a referência sobre o formato epoch, acesse: <a href="https://en.wikipedia.org/wiki/Epoch_(reference_date)">Epoch Wikipedia</a></p>
+
+<h3 id="2-numcartaosus">#2 numCartaoSus</h3>
+
+<p>CNS do cidadão.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Opcional</td>
+<td>15</td>
+<td>15</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> CNS válido de acordo com o algoritmo.</p>
+
+<p><strong>Referências:</strong> Para ver o algoritmo utilizado, acesse: <a href="http://cartaonet.datasus.gov.br/">Cartão Net Datasus</a>, em &quot;Downloads&quot; baixe o arquivo de rotina de validação Java.</p>
+
+<h3 id="3-numprontuario">#3 numProntuario</h3>
+
+<p>Número do prontuário do cidadão.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Opcional</td>
+<td>0</td>
+<td>30</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras</strong>: Apenas letras e números são aceitos.</p>
+
+<h3 id="4-gestante">#4 gestante</h3>
+
+<p>Marcador que indica se o cidadão esta gestante.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Opcional</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> <a href="##14-sexo">Sexo</a> = <code>1L (feminino)</code>.</p>
+
+<h3 id="5-necessidadesespeciais">#5 necessidadesEspeciais</h3>
+
+<p>Marcador que indica se o cidadão é portador de necessidades especiais,</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Opcional</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h3 id="6-localatendimento">#6 localAtendimento</h3>
+
+<p>Local onde o atendimento foi realizado.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Requerido</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> Apenas valores de <code>1L</code> a <code>10L</code>.</p>
+
+<p><strong>Referências:</strong> <a href="/integracao/docs/dicionario/dicionario.html#localdeatendimento">LocalDeAtendimento</a></p>
+
+<h3 id="7-tipoatendimento">#7 tipoAtendimento</h3>
+
+<p>Tipo de atendimento realizado.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Requerido</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> Apenas valores de <code>2L</code> a <code>6L</code>.</p>
+
+<p><strong>Referências:</strong>   <a href="/integracao/docs/dicionario/dicionario.html#tipodeatendimento">TipoDeAtendimento</a></p>
+
+<h3 id="8-tiposencamodonto">#8 tiposEncamOdonto</h3>
+
+<p>Condutas adotadas e possíveis encaminhamentos.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>List&lt;Long&gt;</td>
+<td>Requerido</td>
+<td>1</td>
+<td>16</td>
+</tr>
+</tbody></table>
+
+<p><strong>Referências:</strong> <a href="/integracao/docs/dicionario/dicionario.html#condutaencaminhamentoodonto">CondutaEncaminhamentoOdonto</a></p>
+
+<h3 id="9-tiposfornecimodonto">#9 tiposFornecimOdonto</h3>
+
+<p>Materias fornecidos durante o atendimento.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>List&lt;Long&gt;</td>
+<td>Opcional</td>
+<td>0</td>
+<td>3</td>
+</tr>
+</tbody></table>
+
+<p><strong>Referências:</strong> <a href="/integracao/docs/dicionario/dicionario.html#fornecimentoodonto">FornecimentoOdonto</a></p>
+
+<h3 id="10-tiposvigilanciasaudebucal">#10    tiposVigilanciaSaudeBucal</h3>
+
+<p>Marcadores referentes a situação de vigilância em saúde bucal.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>List&lt;Long&gt;</td>
+<td>Requerido</td>
+<td>1</td>
+<td>7</td>
+</tr>
+</tbody></table>
+
+<p><strong>Referências:</strong> <a href="/integracao/docs/dicionario/dicionario.html#vigilanciaemsaudebucal">VigilanciaEmSaudeBucal</a></p>
+
+<h3 id="11-tiposconsultaodonto">#11    tiposConsultaOdonto</h3>
+
+<p>Tipo de consulta odontológica realizada.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>List&lt;Long&gt;</td>
+<td>Condicional</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras</strong>:
+<br> • É Requerido se o <a href="/integracao/docs/dicionario/dicionario.html#tipodeatendimento">TipoDeAtendimento</a> = <code>2L (consulta agendada)</code>.
+<br> • Não pode ser preenchido se o <a href="/integracao/docs/dicionario/dicionario.html#tipodeatendimento">TipoDeAtendimento</a> = <code>4L (escuta inicial ou orientação)</code>.
+<br> • Se o <a href="/integracao/docs/dicionario/dicionario.html#tipodeatendimento">TipoDeAtendimento</a> = <code>6L (atendimento de urgência)</code>, a opção de <code>2L (consulta de retorno)</code> não pode ser marcada.
+<br> • Se <a href="/integracao/docs/dicionario/dicionario.html#tipodeatendimento">TipoDeAtendimento</a> = <code>5L (consulta no dia)</code>, o campo é opcional.
+<br> • Aceita apenas um registro.</p>
+
+<p><strong>Referências:</strong> <a href="/integracao/docs/dicionario/dicionario.html#tipodeconsultaodonto">TipoDeConsultaOdonto</a></p>
+
+<h3 id="12-procedimentosrealizados">#12    procedimentosRealizados</h3>
+
+<p>Procedimentos que são apresentados na ficha.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>List&lt;ProcedimentoQuantidade&gt;</td>
+<td>Opcional</td>
+<td>0</td>
+<td>27</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong>
+<br> • Não pode haver procedimentos com o mesmo código.</p>
+
+<p><strong>Referências:</strong>   <a href="#listaprocedimentosrealizados">ListaProcedimentosRealizados</a></p>
+
+<h3 id="13-outrossiaprocedimentos">#13    outrosSiaProcedimentos</h3>
+
+<p>Lista de outros procedimentos.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>List&lt;ProcedimentoQuantidade&gt;</td>
+<td>Opcional</td>
+<td>0</td>
+<td>24</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong>
+<br> • Não pode conter procedimentos da <a href="#listaprocedimentosrealizados">ListaProcedimentosRealizados</a>.
+<br> • Não pode haver procedimentos com o mesmo código.</p>
+
+<p><strong>Referências:</strong> <a href="#procedimentoquantidade">ProcedimentoQuantidade</a></p>
+
+<h3 id="14-sexo">#14    sexo</h3>
+
+<p>Sexo do cidadão.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Requerido</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Referências:</strong> <a href="/integracao/docs/dicionario/dicionario.html#sexo">Sexo</a></p>
+
+<h3 id="15-turno">#15    turno</h3>
+
+<p>Turno em que o atendimento foi realizado.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Opcional</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Referências:</strong> <a href="/integracao/docs/dicionario/dicionario.html#turno">Turno</a></p>
+
+<h2 id="procedimentoquantidade">ProcedimentoQuantidade</h2>
+
+<h3 id="1-comsprocedimento">#1 coMsProcedimento</h3>
+
+<p>Código do procedimento no MS.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Requerido</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> Deve ser um procedimento com um código válido.</p>
+
+<p><strong>Referências:</strong> Para ver a referência da tabela do SIGTAP acesse: <a href="http://sigtap.datasus.gov.br/tabela-unificada/app/sec/procedimento/publicados/consultar">Tabela Unificada SIGTAP</a>.</p>
+
+<h3 id="2-quantidade">#2 quantidade</h3>
+
+<p>Quantidade de procedimentos realizados.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Integer</td>
+<td>Requerido</td>
+<td>0</td>
+<td>2</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong>
+<br> • Valor máximo que pode ser registrado é 99.</p>
+
+<h2 id="listaprocedimentosrealizados">ListaProcedimentosRealizados</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ABPO001</td>
+<td>Acesso a polpa dentária e medicação (por dente)</td>
+</tr>
+<tr>
+<td>ABPO002</td>
+<td>Adaptação de Prótese Dentária</td>
+</tr>
+<tr>
+<td>ABPO003</td>
+<td>Aplicação de cariostático (por dente)</td>
+</tr>
+<tr>
+<td>ABPO004</td>
+<td>Aplicação de selante (por dente)</td>
+</tr>
+<tr>
+<td>ABPO005</td>
+<td>Aplicação tópica de flúor (individual por sessão)</td>
+</tr>
+<tr>
+<td>ABPO006</td>
+<td>Capeamento pulpar</td>
+</tr>
+<tr>
+<td>ABPO007</td>
+<td>Cimentação de prótese</td>
+</tr>
+<tr>
+<td>ABPO008</td>
+<td>Curativo de demora c/ ou s/ preparo biomecânico</td>
+</tr>
+<tr>
+<td>ABPG008</td>
+<td>Drenagem de abscesso</td>
+</tr>
+<tr>
+<td>ABPO010</td>
+<td>Evidenciação de placa bacteriana</td>
+</tr>
+<tr>
+<td>ABPO011</td>
+<td>Exodontia de dente decíduo</td>
+</tr>
+<tr>
+<td>ABPO012</td>
+<td>Exodontia de dente permanente</td>
+</tr>
+<tr>
+<td>ABPO013</td>
+<td>Instalação de prótese dentária</td>
+</tr>
+<tr>
+<td>ABPO014</td>
+<td>Moldagem dento-gengival p/ construção de prótese dentária</td>
+</tr>
+<tr>
+<td>ABPO015</td>
+<td>Orientação de Higiene Bucal</td>
+</tr>
+<tr>
+<td>ABPO016</td>
+<td>Profilaxia / Remoção de placa bacteriana</td>
+</tr>
+<tr>
+<td>ABPO017</td>
+<td>Pulpotomia dentária</td>
+</tr>
+<tr>
+<td>ABPO018</td>
+<td>Radiografia Periapical / Interproximal</td>
+</tr>
+<tr>
+<td>ABPO019</td>
+<td>Raspagem alisamento e polimento supragengivais (por sextante)</td>
+</tr>
+<tr>
+<td>ABPO020</td>
+<td>Raspagem alisamento subgengivais (por sextante)</td>
+</tr>
+<tr>
+<td>ABPO021</td>
+<td>Restauração de dente decíduo</td>
+</tr>
+<tr>
+<td>ABPO022</td>
+<td>Restauração de dente permanente anterior</td>
+</tr>
+<tr>
+<td>ABPO023</td>
+<td>Restauração de dente permanente posterior</td>
+</tr>
+<tr>
+<td>ABPG018</td>
+<td>Retirada de pontos de cirurgias básicas (por paciente)</td>
+</tr>
+<tr>
+<td>ABPO025</td>
+<td>Selamento provisório de cavidade dentária</td>
+</tr>
+<tr>
+<td>ABPO026</td>
+<td>Tratamento de alveolite</td>
+</tr>
+<tr>
+<td>ABPO027</td>
+<td>Ulotomia / Ulectomia</td>
+</tr>
+</tbody></table>
+
+  </article>
+
+</div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <script src="/integracao/js/site.js" type="text/javascript"></script>
+  </body>
+</html>

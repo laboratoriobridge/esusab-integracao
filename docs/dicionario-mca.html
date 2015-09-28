@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Marcadores de Consumo Alimentar</title>
+  <meta name="description" content="Dicionário de dados e-SUS AB">
+
+  <link rel="stylesheet" href="/integracao/css/main.css">
+  <link rel="canonical" href="/integracao/docs/dicionario-mca.html">
+  <link rel="icon" type="image/png" href="/img/logo-esus.png">
+
+  <script src="/integracao/js/search.js" type="text/javascript"></script>
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/integracao/">
+      <img src="/integracao/img/logo-esus.png">
+      <span class="title-text">Dicionário de dados e-SUS AB</span>
+      
+        <span class="label">versão 2.0.0</span>
+      
+    </a>
+
+    <nav class="site-nav">
+      <a href="javascript: void" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+        
+          
+        
+          
+            <a href="/integracao/pdf.html"><i class="icon-pdf"></i> Gerar PDF</a>
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="breadcrumb-placeholder">
+  <div class="wrapper breadcrumb-wrapper">
+    <ol class="breadcrumb">
+      <img src="/integracao/img/logo-esus.png">
+      <li><a href="/integracao/">Home</a></li>
+
+      
+        
+          
+            <li title="Marcadores de Consumo Alimentar">Marcadores de Consumo Alimentar</li>
+          
+        
+
+      
+    </ol>
+  </div>
+</div>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+
+        <div class="sidebar">
+          <div class="sidebar-content">
+            <form action="/search.html">
+  <input type="search" placeholder="Pesquisar..." name="q" id="search-input" autocomplete="off">
+</form>
+
+<ul id="search-results"></ul>
+
+<script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('search-results'),
+    json: '/integracao/search.json',
+    noResultsText: 'Nenhum resultado encontrado'
+  });
+</script>
+
+<div class="menu">
+  
+
+
+
+  <ul>
+    
+      <li>
+        <a href="/integracao/docs/camada-transporte.html">Camada de Transporte de Dados</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/dicionario/dicionario.html">Dicionário de dados</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/cbo.html">CBO</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/dicionario-fad.html">Ficha de Atendimento Domiciliar</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/dicionario-fai.html">Ficha de Atendimento Individual</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/dicionario-fao.html">Ficha de Atendimento Odontológico</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/dicionario-fac.html">Ficha de Atividade Coletiva</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/dicionario-fae.html">Ficha de Avaliação de Elegibilidade</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/dicionario-fcd.html">Ficha de Cadastro Domiciliar</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/dicionario-fci.html">Ficha de Cadastro Individual</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/dicionario-fp.html">Ficha de Procedimentos</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/dicionario-fvd.html">Ficha de Visita Domiciliar</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/dicionario-mca.html">Marcadores de Consumo Alimentar</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/municipios.html">Municípios</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/profissional.html">Profissional</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/referencias.html">Referências</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/thrift-xsd.html">Thrift x XSD</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/versao.html">Versão</a>
+      </li>
+    
+  </ul>
+
+
+</div>
+
+          </div>
+        </div>
+
+        <div class="content">
+          <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Marcadores de Consumo Alimentar</h1>
+    <p class="post-meta">
+      <a class="btn" href="/integracao/pdf.html?include=dicionario-mca"><i class="icon-pdf"></i> Gerar PDF desta página</a>
+      
+        <span class="label" title="Data da última modificação">Alterado em 09/09/2015</span>
+      
+    </p>
+  </header>
+
+  <article class="post-content">
+    <h1 id="marcadores-de-consumo-alimentar">Marcadores de Consumo Alimentar</h1>
+
+<h2 id="fichaconsumoalimentar">FichaConsumoAlimentar</h2>
+
+<h3 id="1-headertransport">#1 headerTransport</h3>
+
+<p>Profissional que realizou a visita.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>UnicaLotacaoHeader</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Referência</strong>: <a href="/integracao/docs/profissional.html">Profissional</a></p>
+
+<h3 id="2-numerocartaosus">#2 numeroCartaoSus</h3>
+
+<p>CNS do cidadão.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Opcional</td>
+<td>15</td>
+<td>15</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras</strong>: CNS valido de acordo com o algoritmo.</p>
+
+<p><strong>Referência</strong>: Para ver o algoritmo utilizado, acesse: <a href="http://cartaonet.datasus.gov.br/">Cartao Net Datasus</a>. Em &quot;Downloads&quot; baixe o arquivo de rotina de validação Java.  </p>
+
+<h3 id="3-identificacaousuario">#3 identificacaoUsuario</h3>
+
+<p>Nome do cidadão.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Sim</td>
+<td>5</td>
+<td>100</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras</strong>:
+<br> • Ter ao menos duas palavras.
+<br> • Somente texto e apóstrofo (<code>&#39;</code>).</p>
+
+<h3 id="4-datanascimento">#4 dataNascimento</h3>
+
+<p>Data de nascimento do cidadão no formato epoch time.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras</strong>: Não pode ser posterior a <a href="/integracao/docs/profissional.html##5-dataatendimento">dataAtendimento</a> e anterior a 130 anos a partir da <a href="/integracao/docs/profissional.html##5-dataatendimento">dataAtendimento</a>.</p>
+
+<p><strong>Referêcia</strong>: Para ver a referência sobre o formato epoch, acesse: <a href="https://en.wikipedia.org/wiki/Epoch_(reference_date)">Epoch Wikipedia</a>.</p>
+
+<h3 id="5-sexo">#5 sexo</h3>
+
+<p>Sexo do cidadão.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Referêcia</strong>: <a href="/integracao/docs/dicionario/dicionario.html#sexo">Sexo</a></p>
+
+<h3 id="6-localatendimento">#6 localAtendimento</h3>
+
+<p>Local onde o atendimento foi realizado.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Referêcia</strong>: <a href="/integracao/docs/dicionario/dicionario.html#localdeatendimento">LocalDeAtendimento</a></p>
+
+<h3 id="7-perguntasquestionariocriancasmenoresseismeses">#7 perguntasQuestionarioCriancasMenoresSeisMeses</h3>
+
+<p>Marcadores referente a cidadãos menores de seis meses de idade.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>List&lt;PerguntaQuestionarioCriancasMenoresSeisMeses&gt;</td>
+<td>Condicional</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> Requerido se <a href="##4-datanascimento">dataNascimento</a> &lt; 6 meses a partir da <a href="/integracao/docs/profissional.html##5-dataatendimento">dataAtendimento</a>.</p>
+
+<p><strong>Referêcia</strong>: <a href="#perguntaquestionariocriancasmenoresseismeses">PerguntaQuestionarioCriancasMenoresSeisMeses</a>.</p>
+
+<p>Observações: Os campos <code>#7</code>, <code>#8</code> e <code>#9</code> são mutualmente exclusivos, isto é, um e apenas um deles deve não ser nulo.</p>
+
+<h3 id="8-perguntasquestionariocriancasdeseisvintetresmeses">#8 perguntasQuestionarioCriancasDeSeisVinteTresMeses</h3>
+
+<p>Marcadores referente a cidadãos que tem entre seis e vinte e três meses de idade.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>List&lt;PerguntaQuestionarioCriancasDeSeisVinteTresMeses&gt;</td>
+<td>Condicional</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> Requerido se <a href="##4-datanascimento">dataNascimento</a> &gt;= 6 meses e &lt;= 23 meses a partir da <a href="/integracao/docs/profissional.html##5-dataatendimento">dataAtendimento</a>.</p>
+
+<p><strong>Referêcia</strong>: <a href="#perguntaquestionariocriancasdeseisvintetresmeses">PerguntaQuestionarioCriancasDeSeisVinteTresMeses</a>.</p>
+
+<p>Observações: Os campos <code>#7</code>, <code>#8</code> e <code>#9</code> são mutualmente exclusivos, isto é, um e apenas um deles deve não ser nulo.</p>
+
+<h3 id="9-perguntasquestionariocriancascommaisdoisanos">#9 perguntasQuestionarioCriancasComMaisDoisAnos</h3>
+
+<p>Marcadores referente a cidadãos que tem vinte e quatro meses ou mais.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>List&lt;PerguntaQuestionarioCriancasComMaisDoisAnos&gt;</td>
+<td>Condicional</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> Requerido se <a href="##4-datanascimento">dataNascimento</a> &gt;= 24 meses a partir da <a href="/integracao/docs/profissional.html##5-dataatendimento">dataAtendimento</a>.</p>
+
+<p><strong>Referêcia</strong>: <a href="#perguntaquestionariocriancascommaisdoisanos">PerguntaQuestionarioCriancasComMaisDoisAnos</a>.</p>
+
+<p>Observações: Os campos <code>#7</code>, <code>#8</code> e <code>#9</code> são mutualmente exclusivos, isto é, um e apenas um deles deve não ser nulo.</p>
+
+<h3 id="10-uuidficha">#10 uuidFicha</h3>
+
+<p>Código UUID para identificar a ficha na base de dados nacional.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Sim</td>
+<td>36</td>
+<td>44</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> É recomendado concatenar o CNES na frente do UUID, de modo que os 7 digitos (CNES) + 1 de hífen somados aos 36 (32 caracteres + 4 hífen) do UUID são a limitação de 44 bytes do campo. Formato canônico.</p>
+
+<p><strong>Referêcia</strong>: Para ver a referência sobre o UUID, acesse: <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">UUID Wikipedia</a>.</p>
+
+<h3 id="11-tpcdsorigem">#11 tpCdsOrigem</h3>
+
+<p>Tipo de origem dos dados do registro.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Integer</td>
+<td>Sim</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> Utilizar valor 3 (sistemas terceiros).</p>
+
+<h2 id="perguntaquestionariocriancasmenoresseismeses">PerguntaQuestionarioCriancasMenoresSeisMeses</h2>
+
+<h3 id="1-pergunta">#1 pergunta</h3>
+
+<p>Identificador da pergunta referente ao questionário para cidadãos menores de seis meses.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>PerguntaCriancasMenoresSeisMesesEnum</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Referência:</strong> <a href="#perguntacriancasmenoresseismesesenum">PerguntaCriancasMenoresSeisMesesEnum</a>.</p>
+
+<h3 id="2-respostaunicaescolha">#2 respostaUnicaEscolha</h3>
+
+<p>Resposta referente a pergunta.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>RespostaUnicaEscolhaEnum</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> Deve respeitar as regras das respostas referente a pergunta.</p>
+
+<p><strong>Referência:</strong> <a href="#respostaunicaescolhaenum">RespostaUnicaEscolhaEnum</a>.</p>
+
+<h2 id="perguntaquestionariocriancasdeseisvintetresmeses">PerguntaQuestionarioCriancasDeSeisVinteTresMeses</h2>
+
+<h3 id="1-pergunta">#1 pergunta</h3>
+
+<p>Identificador da pergunta referente ao questionário para cidadãos menores de seis meses.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>PerguntaCriancasDeSeisVinteTresMesesEnum</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Referências:</strong> <a href="#perguntacriancasdeseisvintetresmesesenum">PerguntaCriancasDeSeisVinteTresMesesEnum</a>.</p>
+
+<h3 id="2-respostaunicaescolha">#2 respostaUnicaEscolha</h3>
+
+<p>Resposta referente a pergunta.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>RespostaUnicaEscolhaEnum</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> Deve respeitar as regras das respostas referente a pergunta.</p>
+
+<p><strong>Referências:</strong> <a href="#respostaunicaescolhaenum">RespostaUnicaEscolhaEnum</a>.</p>
+
+<h2 id="perguntaquestionariocriancascommaisdoisanos">PerguntaQuestionarioCriancasComMaisDoisAnos</h2>
+
+<h3 id="1-pergunta">#1 pergunta</h3>
+
+<p>Pergunta do questionário de cidadãos que tem vinte e quatro meses ou mais.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>p</td>
+<td>Requerido</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Referência:</strong> <a href="#perguntacriancascommaisdoisanosenum">PerguntaCriancasComMaisDoisAnosEnum</a>.</p>
+
+<h3 id="2-respostaunicaescolha">#2 respostaUnicaEscolha</h3>
+
+<p>Resposta referente a pergunta do registro.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>RespostaUnicaEscolhaEnum</td>
+<td>Condicional</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> Deve respeitar as regras das respostas referente a pergunta.</p>
+
+<p><strong>Referência:</strong> <a href="#respostaunicaescolhaenum">RespostaUnicaEscolhaEnum</a>.</p>
+
+<p>Observações: Os campos <code>#2</code> e <code>#3</code> são mutualmente exclusivos, isto é, um e apenas um deles deve não ser nulo.</p>
+
+<h3 id="3-respostamultiplaescolha">#3 respostaMultiplaEscolha</h3>
+
+<p>Resposta referente a pergunta do registro acima.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>List&lt;RespostaMultiplaEscolhaEnum&gt;</td>
+<td>Condicional</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong>
+<br> • Deve respeitar as regras das respostas referente a pergunta .
+<br> • Pode ser preenchido somente se a pergunta for 12L.</p>
+
+<p><strong>Referência:</strong> <a href="#respostamultiplaescolhaenum">RespostaMultiplaEscolhaEnum</a>.</p>
+
+<p>Observações: Os campos <code>#2</code> e <code>#3</code> são mutualmente exclusivos, isto é, um e apenas um deles deve não ser nulo.</p>
+
+<h2 id="perguntacriancasmenoresseismesesenum">PerguntaCriancasMenoresSeisMesesEnum</h2>
+
+<table><thead>
+<tr>
+<th>Descrição</th>
+<th>Código</th>
+<th>Respostas aceitas</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>A_CRIANCA_ONTEM_TOMOU_LEITE_DO_PEITO</td>
+<td>1L</td>
+<td>• 1L - SIM <br> • 2L - NÃO <br> • 3L - NÃO_SABE</td>
+</tr>
+<tr>
+<td>MINGAU</td>
+<td>3L</td>
+<td>• 1L - SIM <br> • 2L - NÃO <br> • 3L - NÃO_SABE</td>
+</tr>
+<tr>
+<td>AGUA_CHA</td>
+<td>4L</td>
+<td>• 1L - SIM <br> • 2L - NÃO <br> • 3L - NÃO_SABE</td>
+</tr>
+<tr>
+<td>LEITE_VACA</td>
+<td>5L</td>
+<td>• 1L - SIM <br> • 2L - NÃO <br> • 3L - NÃO_SABE</td>
+</tr>
+<tr>
+<td>FORMULA_INFANTIL</td>
+<td>6L</td>
+<td>• 1L - SIM <br> • 2L - NÃO <br> • 3L - NÃO_SABE</td>
+</tr>
+<tr>
+<td>SUCO_FRUTA</td>
+<td>7L</td>
+<td>• 1L - SIM <br> • 2L - NÃO <br> • 3L - NÃO_SABE</td>
+</tr>
+<tr>
+<td>FRUTA</td>
+<td>8L</td>
+<td>• 1L - SIM <br> • 2L - NÃO <br> • 3L - NÃO_SABE</td>
+</tr>
+<tr>
+<td>COMIDA_DE_SAL</td>
+<td>9L</td>
+<td>• 1L - SIM <br> • 2L - NÃO <br> • 3L - NÃO_SABE</td>
+</tr>
+<tr>
+<td>OUTROS_ALIMENTOS_BEBIDAS</td>
+<td>10L</td>
+<td>• 1L - SIM <br> • 2L - NÃO <br> • 3L - NÃO_SABE</td>
+</tr>
+</tbody></table>
+
+<h2 id="perguntacriancasdeseisvintetresmesesenum">PerguntaCriancasDeSeisVinteTresMesesEnum</h2>
+
+<table><thead>
+<tr>
+<th>Descrição</th>
+<th>Código</th>
+<th>Respostas aceitas</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>A_CRIANCA_ONTEM_TOMOU_LEITE_PEITO</td>
+<td>21L</td>
+<td>• 1L - SIM <br> • 2L - NÃO <br> • 3L - NÃO_SABE</td>
+</tr>
+<tr>
+<td>ONTEM_A_CRIANCA_COMEU_FRUTA_INTEIRA_PEDACO_AMASSADO</td>
+<td>22L</td>
+<td>• 1L - SIM <br> • 2L - NÃO <br> • 3L - NÃO_SABE</td>
+</tr>
+<tr>
+<td>SE_COMEU_FRUTA_QUANTAS_VEZES</td>
+<td>23L</td>
+<td>• 3L - NÃO_SABE <br> • 4L - UMA_VEZ <br> • 5L - DUAS_VEZES <br> • 6L - TRES_VEZES_OU_MAIS</td>
+</tr>
+<tr>
+<td>ONTEM_A_CRIANCA_COMEU_COMIDA_DE_SAL</td>
+<td>24L</td>
+<td>• 1L - SIM <br> • 2L - NÃO <br> • 3L - NÃO_SABE</td>
+</tr>
+<tr>
+<td>SE_COMEU_COMIDA_DE_SAL_QUANTAS_VEZES</td>
+<td>25L</td>
+<td>• 3L - NÃO_SABE <br> • 4L - UMA_VEZ <br> • 5L - DUAS_VEZES <br> • 6L - TRES_VEZES_OU_MAIS</td>
+</tr>
+<tr>
+<td>SE_SIM_ESSA_COMIDA_FOI_OFERECIDA</td>
+<td>26L</td>
+<td>• 3L - NÃO_SABE <br> • 7L - EM_PEDACOS <br> • 8L - AMASSADA <br> • 9L - PASSADA_NA_PENEIRA <br> • 10L - LIQUIDIFICADA <br> • 11L - SO_O_CALDO</td>
+</tr>
+<tr>
+<td>OUTRO_LEITE_QUE_NAO_LEITE_DO_PEITO</td>
+<td>28L</td>
+<td>• 1L - SIM <br>• 2L - NÃO <br> • 3L - NÃO_SABE</td>
+</tr>
+<tr>
+<td>MINGAU_COM_LEITE</td>
+<td>29L</td>
+<td>• 1L - SIM <br>• 2L - NÃO <br> • 3L - NÃO_SABE</td>
+</tr>
+<tr>
+<td>IOGURTE</td>
+<td>30L</td>
+<td>• 1L - SIM <br>• 2L - NÃO <br> • 3L - NÃO_SABE</td>
+</tr>
+<tr>
+<td>LEGUMES</td>
+<td>31L</td>
+<td>• 1L - SIM <br>• 2L - NÃO <br> • 3L - NÃO_SABE</td>
+</tr>
+<tr>
+<td>VEGETAL_OU_FRUTAS_COR_ALARANJADA_OU_FOLHAS_ESCURAS</td>
+<td>32L</td>
+<td>• 1L - SIM <br>• 2L - NÃO <br> • 3L - NÃO_SABE</td>
+</tr>
+<tr>
+<td>VERDURA_DE_FOLHA</td>
+<td>33L</td>
+<td>• 1L - SIM <br>• 2L - NÃO <br> • 3L - NÃO_SABE</td>
+</tr>
+<tr>
+<td>CARNE</td>
+<td>34L</td>
+<td>• 1L - SIM <br>• 2L - NÃO <br> • 3L - NÃO_SABE</td>
+</tr>
+<tr>
+<td>FIGADO</td>
+<td>35L</td>
+<td>• 1L - SIM <br>• 2L - NÃO <br> • 3L - NÃO_SABE</td>
+</tr>
+<tr>
+<td>FEIJAO</td>
+<td>36L</td>
+<td>• 1L - SIM <br>• 2L - NÃO <br> • 3L - NÃO_SABE</td>
+</tr>
+<tr>
+<td>ARROZ_BATATA_INHAME_MANDIOCA_FARINHA_MACARRAO</td>
+<td>37L</td>
+<td>• 1L - SIM <br>• 2L - NÃO <br> • 3L - NÃO_SABE</td>
+</tr>
+<tr>
+<td>HAMBURGUER_E_OU_EMBUTIDOS</td>
+<td>38L</td>
+<td>• 1L - SIM <br>• 2L - NÃO <br> • 3L - NÃO_SABE</td>
+</tr>
+<tr>
+<td>BEBIDAS_ADOCADAS</td>
+<td>39L</td>
+<td>• 1L - SIM <br>• 2L - NÃO <br> • 3L - NÃO_SABE</td>
+</tr>
+<tr>
+<td>MACARRAO_INSTANTANEO_SALGADINHOS_BISCOITOS</td>
+<td>40L</td>
+<td>• 1L - SIM <br>• 2L - NÃO <br> • 3L - NÃO_SABE</td>
+</tr>
+<tr>
+<td>BISCOITO_RECHEADO_DOCES_OU_GULOSEIMAS</td>
+<td>41L</td>
+<td>• 1L - SIM <br>• 2L - NÃO <br> • 3L - NÃO_SABE</td>
+</tr>
+</tbody></table>
+
+<h2 id="perguntacriancascommaisdoisanosenum">PerguntaCriancasComMaisDoisAnosEnum</h2>
+
+<table><thead>
+<tr>
+<th>Descrição</th>
+<th>Código</th>
+<th>Respostas aceitas</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>VOCE_TEM_COSTUME_DE_REALIZAR_AS_REFEICOES_ASSISTINDO_TV_MEXENDO_NO_COMPUTADOR_E_OU_CELULAR</td>
+<td>11</td>
+<td>• 1L - SIM <br>• 2L - NÃO <br> • 3L - NÃO_SABE</td>
+</tr>
+<tr>
+<td>QUAIS_REFEICOES_VOCE_FAZ_AO_LONGO_DO_DIA</td>
+<td>12</td>
+<td><a href="">RespostaMultiplaEscolhaEnum</a></td>
+</tr>
+<tr>
+<td>FEIJAO</td>
+<td>14</td>
+<td>• 1L - SIM <br>• 2L - NÃO <br> • 3L - NÃO_SABE</td>
+</tr>
+<tr>
+<td>FRUTAS_FRESCAS</td>
+<td>15</td>
+<td>• 1L - SIM <br>• 2L - NÃO <br> • 3L - NÃO_SABE</td>
+</tr>
+<tr>
+<td>VERDURAS_E_OU_LEGUMES</td>
+<td>16</td>
+<td>• 1L - SIM <br>• 2L - NÃO <br> • 3L - NÃO_SABE</td>
+</tr>
+<tr>
+<td>HAMBURGUER_E_OU_EMBUTIDOS</td>
+<td>17</td>
+<td>• 1L - SIM <br>• 2L - NÃO <br> • 3L - NÃO_SABE</td>
+</tr>
+<tr>
+<td>BEBIDAS_ADOCADAS</td>
+<td>18</td>
+<td>• 1L - SIM <br>• 2L - NÃO <br> • 3L - NÃO_SABE</td>
+</tr>
+<tr>
+<td>MACARRAO_INSTANTANEO_SALGADINHOS_BISCOITOS</td>
+<td>19</td>
+<td>• 1L - SIM <br>• 2L - NÃO <br> • 3L - NÃO_SABE</td>
+</tr>
+<tr>
+<td>BISCOITO_RECHEADO_DOCES_OU_GULOSEIMAS</td>
+<td>20</td>
+<td>• 1L - SIM <br>• 2L - NÃO <br> • 3L - NÃO_SABE</td>
+</tr>
+</tbody></table>
+
+<h2 id="respostaunicaescolhaenum">RespostaUnicaEscolhaEnum</h2>
+
+<table><thead>
+<tr>
+<th>Descrição</th>
+<th>Código</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>SIM</td>
+<td>1L</td>
+</tr>
+<tr>
+<td>NÃO</td>
+<td>2L</td>
+</tr>
+<tr>
+<td>NAO_SABE</td>
+<td>3L</td>
+</tr>
+<tr>
+<td>UMA_VEZ</td>
+<td>4L</td>
+</tr>
+<tr>
+<td>DUAS_VEZES</td>
+<td>5L</td>
+</tr>
+<tr>
+<td>TRES<em>VEZES</em>OU_MAIS</td>
+<td>6L</td>
+</tr>
+<tr>
+<td>EM_PEDACOS</td>
+<td>7L</td>
+</tr>
+<tr>
+<td>AMASSADA</td>
+<td>8L</td>
+</tr>
+<tr>
+<td>PASSADA<em>NA</em>PENEIRA</td>
+<td>9L</td>
+</tr>
+<tr>
+<td>LIQUIDIFICADA</td>
+<td>10L</td>
+</tr>
+<tr>
+<td>SO<em>O</em>CALDO</td>
+<td>11L</td>
+</tr>
+</tbody></table>
+
+<h2 id="respostamultiplaescolhaenum">RespostaMultiplaEscolhaEnum</h2>
+
+<table><thead>
+<tr>
+<th>Descrição</th>
+<th>Código</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>CAFE<em>DA</em>MANHA</td>
+<td>12L</td>
+</tr>
+<tr>
+<td>LANCHE<em>DA</em>MANHA</td>
+<td>13L</td>
+</tr>
+<tr>
+<td>ALMOCO</td>
+<td>14L</td>
+</tr>
+<tr>
+<td>LANCHE<em>DA</em>TARDE</td>
+<td>15L</td>
+</tr>
+<tr>
+<td>JANTAR</td>
+<td>16L</td>
+</tr>
+<tr>
+<td>CEIA</td>
+<td>17L</td>
+</tr>
+</tbody></table>
+
+  </article>
+
+</div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <script src="/integracao/js/site.js" type="text/javascript"></script>
+  </body>
+</html>

@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Ficha de Procedimentos</title>
+  <meta name="description" content="Dicionário de dados e-SUS AB">
+
+  <link rel="stylesheet" href="/integracao/css/main.css">
+  <link rel="canonical" href="/integracao/docs/dicionario-fp.html">
+  <link rel="icon" type="image/png" href="/img/logo-esus.png">
+
+  <script src="/integracao/js/search.js" type="text/javascript"></script>
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/integracao/">
+      <img src="/integracao/img/logo-esus.png">
+      <span class="title-text">Dicionário de dados e-SUS AB</span>
+      
+        <span class="label">versão 2.0.0</span>
+      
+    </a>
+
+    <nav class="site-nav">
+      <a href="javascript: void" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+        
+          
+        
+          
+            <a href="/integracao/pdf.html"><i class="icon-pdf"></i> Gerar PDF</a>
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="breadcrumb-placeholder">
+  <div class="wrapper breadcrumb-wrapper">
+    <ol class="breadcrumb">
+      <img src="/integracao/img/logo-esus.png">
+      <li><a href="/integracao/">Home</a></li>
+
+      
+        
+          
+            <li title="Ficha de Procedimentos">Ficha de Procedimentos</li>
+          
+        
+
+      
+    </ol>
+  </div>
+</div>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+
+        <div class="sidebar">
+          <div class="sidebar-content">
+            <form action="/search.html">
+  <input type="search" placeholder="Pesquisar..." name="q" id="search-input" autocomplete="off">
+</form>
+
+<ul id="search-results"></ul>
+
+<script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('search-results'),
+    json: '/integracao/search.json',
+    noResultsText: 'Nenhum resultado encontrado'
+  });
+</script>
+
+<div class="menu">
+  
+
+
+
+  <ul>
+    
+      <li>
+        <a href="/integracao/docs/camada-transporte.html">Camada de Transporte de Dados</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/dicionario/dicionario.html">Dicionário de dados</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/cbo.html">CBO</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/dicionario-fad.html">Ficha de Atendimento Domiciliar</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/dicionario-fai.html">Ficha de Atendimento Individual</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/dicionario-fao.html">Ficha de Atendimento Odontológico</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/dicionario-fac.html">Ficha de Atividade Coletiva</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/dicionario-fae.html">Ficha de Avaliação de Elegibilidade</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/dicionario-fcd.html">Ficha de Cadastro Domiciliar</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/dicionario-fci.html">Ficha de Cadastro Individual</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/dicionario-fp.html">Ficha de Procedimentos</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/dicionario-fvd.html">Ficha de Visita Domiciliar</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/dicionario-mca.html">Marcadores de Consumo Alimentar</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/municipios.html">Municípios</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/profissional.html">Profissional</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/referencias.html">Referências</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/thrift-xsd.html">Thrift x XSD</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/versao.html">Versão</a>
+      </li>
+    
+  </ul>
+
+
+</div>
+
+          </div>
+        </div>
+
+        <div class="content">
+          <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Ficha de Procedimentos</h1>
+    <p class="post-meta">
+      <a class="btn" href="/integracao/pdf.html?include=dicionario-fp"><i class="icon-pdf"></i> Gerar PDF desta página</a>
+      
+        <span class="label" title="Data da última modificação">Alterado em 15/09/2015</span>
+      
+    </p>
+  </header>
+
+  <article class="post-content">
+    <h1 id="ficha-de-procedimentos">Ficha de Procedimentos</h1>
+
+<h2 id="fichaprocedimentomaster">FichaProcedimentoMaster</h2>
+
+<h3 id="1-uuidficha">#1 uuidFicha</h3>
+
+<p>Código UUID para identificar a ficha na base de dados nacional.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Sim</td>
+<td>36</td>
+<td>44</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> É recomendado concatenar o CNES na frente do UUID, de modo que os 7 digitos (CNES) + 1 de hífen somados aos 36 (32 caracteres + 4 hífen) do UUID são a limitação de 44 bytes do campo. Formato canônico.</p>
+
+<p><strong>Referência</strong>: Para ver a referência sobre o UUID, acesse <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">UUID Wikipedia</a>.</p>
+
+<h3 id="2-tpcdsorigem">#2 tpCdsOrigem</h3>
+
+<p>Tipo de origem dos dados do registro.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Integer</td>
+<td>Sim</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> Utilizar valor <code>3 (sistemas terceiros)</code>.</p>
+
+<h3 id="3-headertransport">#3 headerTransport</h3>
+
+<p>Profissional que realizou os procedimentos.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>UnicaLotacaoHeader</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Referência</strong>: <a href="/integracao/docs/profissional.html">Profissional</a></p>
+
+<h3 id="4-atendprocedimentos">#4 atendProcedimentos</h3>
+
+<p>Registro dos procedimentos realizados.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>List<FichaProcedimentoChild></td>
+<td>Condicional</td>
+<td>1</td>
+<td>23</td>
+</tr>
+</tbody></table>
+
+<p><strong>Referência</strong>: <a href="#fichaprocedimentochild">FichaProcedimentoChild</a>.</p>
+
+<p>Observação: É requerido pelo menos um dentre os itens <code>#4</code> a <code>#11</code>.</p>
+
+<h3 id="5-numtotalafericaopa">#5 numTotalAfericaoPa</h3>
+
+<p>Quantidade de aferições de pressão realizadas.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Condicional</td>
+<td>0</td>
+<td>3</td>
+</tr>
+</tbody></table>
+
+<p>Observação: É requerido pelo menos um dentre os itens <code>#4</code> a <code>#11</code>.</p>
+
+<h3 id="6-numtotalglicemiacapilar">#6 numTotalGlicemiaCapilar</h3>
+
+<p>Quantidade de aferições de glicemia capilar.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Condicional</td>
+<td>0</td>
+<td>3</td>
+</tr>
+</tbody></table>
+
+<p>Observação: É requerido pelo menos um dentre os itens <code>#4</code> a <code>#11</code>.</p>
+
+<h3 id="7-numtotalafericaotemperatura">#7 numTotalAfericaoTemperatura</h3>
+
+<p>Quantidade de aferições de temperatura realizadas.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Condicional</td>
+<td>0</td>
+<td>3</td>
+</tr>
+</tbody></table>
+
+<p>Observação: É requerido pelo menos um dentre os itens <code>#4</code> a <code>#11</code>.</p>
+
+<h3 id="8-numtotalmedicaoaltura">#8 numTotalMedicaoAltura</h3>
+
+<p>Quantidade de aferições de altura.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Condicional</td>
+<td>0</td>
+<td>3</td>
+</tr>
+</tbody></table>
+
+<p>Observação: É requerido pelo menos um dentre os itens <code>#4</code> a <code>#11</code>.</p>
+
+<h3 id="9-numtotalcurativosimples">#9 numTotalCurativoSimples</h3>
+
+<p>Quantidade de curativos simples realizados.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Condicional</td>
+<td>0</td>
+<td>3</td>
+</tr>
+</tbody></table>
+
+<p>Observação: É requerido pelo menos um dentre os itens <code>#4</code> a <code>#11</code>.</p>
+
+<h3 id="10-numtotalmedicaopeso">#10 numTotalMedicaoPeso</h3>
+
+<p>Quantidade de aferições de peso.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Condicional</td>
+<td>0</td>
+<td>3</td>
+</tr>
+</tbody></table>
+
+<p>Observação: É requerido pelo menos um dentre os itens <code>#4</code> a <code>#11</code>.</p>
+
+<h3 id="11-numtotalcoletamaterialparaexamelaboratorial">#11 numTotalColetaMaterialParaExameLaboratorial</h3>
+
+<p>Quantidade de coletas para exame laboratorial.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Condicional</td>
+<td>0</td>
+<td>3</td>
+</tr>
+</tbody></table>
+
+<p>Observação: É requerido pelo menos um dentre os itens <code>#4</code> a <code>#11</code>.</p>
+
+<h2 id="fichaprocedimentochild">FichaProcedimentoChild</h2>
+
+<h3 id="1-numprontuario">#1 numProntuario</h3>
+
+<p>Número do prontuário do cidadão na UBS.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Opcional</td>
+<td>0</td>
+<td>30</td>
+</tr>
+</tbody></table>
+
+<h3 id="2-numcartaosus">#2 numCartaoSus</h3>
+
+<p>Numero do cartão SUS do cidadão.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Opcional</td>
+<td>15</td>
+<td>15</td>
+</tr>
+</tbody></table>
+
+<h3 id="3-dtnascimento">#3 dtNascimento</h3>
+
+<p>Data de nascimento do cidadão no formato epoch time.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> Não pode ser posterior a <a href="/integracao/docs/profissional.html##5-dataatendimento">dataAtendimento</a> e anterior a 130 anos a partir da <a href="/integracao/docs/profissional.html##5-dataatendimento">dataAtendimento</a>.</p>
+
+<p><strong>Referência:</strong> Para ver a referência sobre o formato epoch, acesse: <a href="https://en.wikipedia.org/wiki/Epoch_(reference_date)">Epoch Wikipedia</a></p>
+
+<h3 id="4-sexo">#4 sexo</h3>
+
+<p>Sexo do cidadão.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Referência</strong>: <a href="/integracao/docs/dicionario/dicionario.html#sexo">Sexo</a>.</p>
+
+<h3 id="5-localatendimento">#5 localAtendimento</h3>
+
+<p>Local onde o atendimento foi realizado.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Referência</strong>: <a href="/integracao/docs/dicionario/dicionario.html#localdeatendimento">LocalDeAtendimento</a>.</p>
+
+<h3 id="6-turno">#6 turno</h3>
+
+<p>Turno onde aconteceu o atendimento.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Opcional</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Referência</strong>: <a href="/integracao/docs/dicionario/dicionario.html#turno">Turno</a>.</p>
+
+<h3 id="7-statusescutainicialorientacao">#7 statusEscutaInicialOrientacao</h3>
+
+<p>Indica a realização da escuta inicial.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Opcional</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h3 id="8-procedimentos">#8 procedimentos</h3>
+
+<p>Lista dos procedimentos que são registrados na ficha de procedimentos.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>List<String></td>
+<td>Condicional</td>
+<td>0</td>
+<td>32</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> Caracteres maiúsculos e sem espaço em branco.</p>
+
+<p><strong>Referência</strong>: <a href="#listadeprocedimento">ListaDeProcedimento</a>.</p>
+
+<p>Observação: É requerido pelo menos um dentre os itens <code>#8</code> e <code>#9</code>.</p>
+
+<h3 id="9-outrossiaprocedimentos">#9 outrosSiaProcedimentos</h3>
+
+<p>Outros procedimentos do SIGTAP ou SISAB.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>List<String></td>
+<td>Condicional</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong>
+<br> • Caracteres maiúsculos e sem espaço em branco.
+<br> • Não repetir procedimentos.</p>
+
+<p><strong>Referência</strong>: Para ver a referência da tabela do SIGTAP acesse: <a href="http://sigtap.datasus.gov.br/tabela-unificada/app/sec/procedimento/publicados/consultar">Tabela unificada SIGTAP</a></p>
+
+<p>Observação: É requerido pelo menos um dentre os itens <code>#8</code> e <code>#9</code>.</p>
+
+<h2 id="procedimentos-da-ficha">Procedimentos da Ficha</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ABPG001</td>
+<td>Acupuntura com inserção de agulhas</td>
+</tr>
+<tr>
+<td>ABPG002</td>
+<td>Administração de vitamina A</td>
+</tr>
+<tr>
+<td>ABPG003</td>
+<td>Cateterismo vesical de alívio</td>
+</tr>
+<tr>
+<td>ABPG004</td>
+<td>Cauterização química de pequenas lesões</td>
+</tr>
+<tr>
+<td>ABPG005</td>
+<td>Cirurgia de unha (cantoplastia)</td>
+</tr>
+<tr>
+<td>ABPG006</td>
+<td>Cuidado de estomas</td>
+</tr>
+<tr>
+<td>ABPG007</td>
+<td>Curativo especial</td>
+</tr>
+<tr>
+<td>ABPG008</td>
+<td>Drenagem de abscesso</td>
+</tr>
+<tr>
+<td>ABEX004</td>
+<td>Eletrocardiograma</td>
+</tr>
+<tr>
+<td>ABPG010</td>
+<td>Coleta de citopatológico de colo uterino</td>
+</tr>
+<tr>
+<td>ABPG011</td>
+<td>Exame do pé diabético</td>
+</tr>
+<tr>
+<td>ABPG012</td>
+<td>Exérese / Biópsia / Punção de tumores superficiais de pele</td>
+</tr>
+<tr>
+<td>ABPG013</td>
+<td>Fundoscopia (exame de fundo de olho)</td>
+</tr>
+<tr>
+<td>ABPG014</td>
+<td>Infiltração em cavidade sinovial</td>
+</tr>
+<tr>
+<td>ABPG015</td>
+<td>Remoção de corpo estranho da cavidade auditiva e nasal</td>
+</tr>
+<tr>
+<td>ABPG016</td>
+<td>Remoção de corpo estranho subcutâneo</td>
+</tr>
+<tr>
+<td>ABPG017</td>
+<td>Retirada de cerume</td>
+</tr>
+<tr>
+<td>ABPG018</td>
+<td>Retirada de pontos de cirurgias</td>
+</tr>
+<tr>
+<td>ABPG019</td>
+<td>Sutura simples</td>
+</tr>
+<tr>
+<td>ABPG020</td>
+<td>Triagem oftalmológica</td>
+</tr>
+<tr>
+<td>ABPG021</td>
+<td>Tamponamento de epistaxe</td>
+</tr>
+<tr>
+<td>ABPG022</td>
+<td>Teste rápido de gravidez</td>
+</tr>
+<tr>
+<td>ABPG040</td>
+<td>Teste rápido para dosagem de proteinúria</td>
+</tr>
+<tr>
+<td>ABPG024</td>
+<td>Teste rápido para HIV</td>
+</tr>
+<tr>
+<td>ABPG025</td>
+<td>Teste rápido para hepatite C</td>
+</tr>
+<tr>
+<td>ABPG026</td>
+<td>Teste rápido para sífilis</td>
+</tr>
+<tr>
+<td>ABPG027</td>
+<td>Administração de medicamentos via oral</td>
+</tr>
+<tr>
+<td>ABPG028</td>
+<td>Administração de medicamentos via intramuscular</td>
+</tr>
+<tr>
+<td>ABPG029</td>
+<td>Administração de medicamentos via endovenosa</td>
+</tr>
+<tr>
+<td>ABPG030</td>
+<td>Administração de medicamentos via inalação / nebulização</td>
+</tr>
+<tr>
+<td>ABPG031</td>
+<td>Administração de medicamentos via tópica</td>
+</tr>
+<tr>
+<td>ABPG032</td>
+<td>Administração de penincilina para tratamento de sífilis</td>
+</tr>
+</tbody></table>
+
+  </article>
+
+</div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <script src="/integracao/js/site.js" type="text/javascript"></script>
+  </body>
+</html>

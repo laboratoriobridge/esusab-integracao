@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Ficha de Atividade Coletiva</title>
+  <meta name="description" content="Dicionário de dados e-SUS AB">
+
+  <link rel="stylesheet" href="/integracao/css/main.css">
+  <link rel="canonical" href="/integracao/docs/dicionario-fac.html">
+  <link rel="icon" type="image/png" href="/img/logo-esus.png">
+
+  <script src="/integracao/js/search.js" type="text/javascript"></script>
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/integracao/">
+      <img src="/integracao/img/logo-esus.png">
+      <span class="title-text">Dicionário de dados e-SUS AB</span>
+      
+        <span class="label">versão 2.0.0</span>
+      
+    </a>
+
+    <nav class="site-nav">
+      <a href="javascript: void" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+        
+          
+        
+          
+            <a href="/integracao/pdf.html"><i class="icon-pdf"></i> Gerar PDF</a>
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="breadcrumb-placeholder">
+  <div class="wrapper breadcrumb-wrapper">
+    <ol class="breadcrumb">
+      <img src="/integracao/img/logo-esus.png">
+      <li><a href="/integracao/">Home</a></li>
+
+      
+        
+          
+            <li title="Ficha de Atividade Coletiva">Ficha de Atividade Coletiva</li>
+          
+        
+
+      
+    </ol>
+  </div>
+</div>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+
+        <div class="sidebar">
+          <div class="sidebar-content">
+            <form action="/search.html">
+  <input type="search" placeholder="Pesquisar..." name="q" id="search-input" autocomplete="off">
+</form>
+
+<ul id="search-results"></ul>
+
+<script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('search-results'),
+    json: '/integracao/search.json',
+    noResultsText: 'Nenhum resultado encontrado'
+  });
+</script>
+
+<div class="menu">
+  
+
+
+
+  <ul>
+    
+      <li>
+        <a href="/integracao/docs/camada-transporte.html">Camada de Transporte de Dados</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/dicionario/dicionario.html">Dicionário de dados</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/cbo.html">CBO</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/dicionario-fad.html">Ficha de Atendimento Domiciliar</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/dicionario-fai.html">Ficha de Atendimento Individual</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/dicionario-fao.html">Ficha de Atendimento Odontológico</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/dicionario-fac.html">Ficha de Atividade Coletiva</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/dicionario-fae.html">Ficha de Avaliação de Elegibilidade</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/dicionario-fcd.html">Ficha de Cadastro Domiciliar</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/dicionario-fci.html">Ficha de Cadastro Individual</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/dicionario-fp.html">Ficha de Procedimentos</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/dicionario-fvd.html">Ficha de Visita Domiciliar</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/dicionario-mca.html">Marcadores de Consumo Alimentar</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/municipios.html">Municípios</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/profissional.html">Profissional</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/referencias.html">Referências</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/thrift-xsd.html">Thrift x XSD</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/versao.html">Versão</a>
+      </li>
+    
+  </ul>
+
+
+</div>
+
+          </div>
+        </div>
+
+        <div class="content">
+          <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Ficha de Atividade Coletiva</h1>
+    <p class="post-meta">
+      <a class="btn" href="/integracao/pdf.html?include=dicionario-fac"><i class="icon-pdf"></i> Gerar PDF desta página</a>
+      
+        <span class="label" title="Data da última modificação">Alterado em 15/09/2015</span>
+      
+    </p>
+  </header>
+
+  <article class="post-content">
+    <h1 id="ficha-de-atividade-coletiva">Ficha de Atividade Coletiva</h1>
+
+<h1 id="fichaatividadecoletiva">FichaAtividadeColetiva</h1>
+
+<h3 id="1-uuidficha">#1 uuidFicha</h3>
+
+<p>Código UUID para identificar a ficha na base de dados nacional.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Requerido</td>
+<td>36</td>
+<td>44</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras</strong>: É recomendado concatenar o CNES na frente do UUID, de modo que os 7 digitos (CNES) + 1 de hífen somados aos 36 (32 caracteres + 4 hífen) do UUID são a limitação de 44 bytes do campo. Formato canônico.</p>
+
+<p><strong>Referência</strong>: <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">UUID Wikipedia</a></p>
+
+<h3 id="2-dtatividadecoletiva">#2 dtAtividadeColetiva</h3>
+
+<p>Data de realização da atividade coletiva.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Requerido</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras</strong> Não pode ser posterior a data atual.</p>
+
+<p><strong>Referência</strong> <a href="https://en.wikipedia.org/wiki/Epoch">Epoch Wikipedia</a></p>
+
+<h3 id="3-numparticipantesprogramados">#3 numParticipantesProgramados</h3>
+
+<p>Previsão da quantidade de participantes para a atividade coletiva.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Integer</td>
+<td>Opcional</td>
+<td>0</td>
+<td>3</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras</strong>: Valores entre 0 e 999.</p>
+
+<h3 id="4-localatividade">#4 localAtividade</h3>
+
+<p>Descrição do local onde é realizada a atividade coletiva.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Opcional</td>
+<td>0</td>
+<td>250</td>
+</tr>
+</tbody></table>
+
+<h3 id="5-horainicio">#5 horaInicio</h3>
+
+<p>Hora de incício de realização da atividade coletiva.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Opcional</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras</strong>: Verificar validações</p>
+
+<p><strong>Referência</strong> <a href="https://en.wikipedia.org/wiki/Epoch">Epoch Wikipedia</a></p>
+
+<h3 id="6-horafim">#6 horaFim</h3>
+
+<p>Hora de fim de realização da atividade coletiva.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Opcional</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras</strong>: Deve ser posterior a <a href="##5-horainicio">horaInicio</a>.</p>
+
+<p><strong>Referência</strong> <a href="https://en.wikipedia.org/wiki/Epoch">Epoch Wikipedia</a></p>
+
+<h3 id="7-inep">#7 inep</h3>
+
+<p>Número INEP da instituição.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Opcional</td>
+<td>0</td>
+<td>8</td>
+</tr>
+</tbody></table>
+
+<h3 id="8-responsavelcns">#8 responsavelCns</h3>
+
+<p>CNS do responsável pela atividade coletiva.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Requerido</td>
+<td>15</td>
+<td>15</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras</strong>:
+<br/> • CNS válido de acordo com o algoritmo.
+<br/> • O profissional responsável deve ser um registro da lista de profissionais.</p>
+
+<p><strong>Referência</strong>: Para ver o algoritmo utilizado, acesse: <a href="http://cartaonet.datasus.gov.br/">Catão NET Datasus</a>, em &quot;Downloads&quot; baixe o arquivo de rotina de validação Java.</p>
+
+<h3 id="9-responsavelcnesunidade">#9 responsavelCnesUnidade</h3>
+
+<p>CNES do responsável pela atividade coletiva.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Requerido</td>
+<td>7</td>
+<td>7</td>
+</tr>
+</tbody></table>
+
+<h3 id="10-responsavelnumine">#10    responsavelNumIne</h3>
+
+<p>INE do responsável pela atividade coletiva.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Opcional</td>
+<td>10</td>
+<td>10</td>
+</tr>
+</tbody></table>
+
+<h3 id="11-numparticipantes">#11    numParticipantes</h3>
+
+<p>Número de participantes da atividade.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Integer</td>
+<td>Opcional</td>
+<td>0</td>
+<td>3</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras</strong>: Valores entre 0 e 999.</p>
+
+<h3 id="12-numavaliacoesalteradas">#12    numAvaliacoesAlteradas</h3>
+
+<p>Número das avaliações alteradas.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Integer</td>
+<td>Opcional</td>
+<td>0</td>
+<td>3</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras</strong>: Valores entre 0 e 999.</p>
+
+<h3 id="13-profissionais">#13    profissionais</h3>
+
+<p>Lista dos profissionais que participaram da atividade.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>List<ProfissionalCboRowItem></td>
+<td>Sim</td>
+<td>1</td>
+<td>99</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras</strong>: Entre 1 e 99 registros.</p>
+
+<p><strong>Referência</strong>:    <a href="/integracao/docs/profissional.html#profissionalcborowitem">ProfissionalCboRowItem</a></p>
+
+<h3 id="14-atividadetipo">#14 atividadeTipo</h3>
+
+<p>Tipo da atividade que será realizada.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Referências</strong>: <a href="/integracao/docs/dicionario/dicionario.html#tipoatividadecoletiva">TipoAtividadeColetiva</a></p>
+
+<h3 id="15-temasparareuniao">#15 temasParaReuniao</h3>
+
+<p>Temas para reunião.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>List<Long></td>
+<td>Condicional</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras</strong>:
+<br> • É Requerido se <a href="/integracao/docs/dicionario/dicionario.html#tipoatividadecoletiva">TipoAtividadeColetiva</a> for <code>1L</code>, <code>2L</code> ou <code>3L</code>.
+<br> • Não pode ser preenchido se <a href="/integracao/docs/dicionario/dicionario.html#tipoatividadecoletiva">TipoAtividadeColetiva</a> for <code>4L</code>, <code>5L</code>, <code>6L</code> ou <code>7L</code>.</p>
+
+<p><strong>Referência</strong>: <a href="/integracao/docs/dicionario/dicionario.html#temasparareuniao">TemasParaReuniao</a></p>
+
+<h3 id="16-publicoalvo">#16    publicoAlvo</h3>
+
+<p>Público alvo da atividade.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>List<Long></td>
+<td>Condicional</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras</strong>:
+<br> • É Requerido se <a href="/integracao/docs/dicionario/dicionario.html#tipoatividadecoletiva">TipoAtividadeColetiva</a> for <code>4L</code>, <code>5L</code>, <code>6L</code> ou <code>7L</code>.
+<br> • Não pode ser preenchido se <a href="/integracao/docs/dicionario/dicionario.html#tipoatividadecoletiva">TipoAtividadeColetiva</a> for <code>1L</code>, <code>2L</code> ou <code>3L</code>.</p>
+
+<p><strong>Referência</strong>: <a href="/integracao/docs/dicionario/dicionario.html#publicoalvo">PublicoAlvo</a></p>
+
+<h3 id="17-praticastemasparasaude">#17    praticasTemasParaSaude</h3>
+
+<p>Práticas ou temas abordados na atividade.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>List<Long></td>
+<td>Condicional</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras</strong>:
+<br> • É Requerido se <a href="/integracao/docs/dicionario/dicionario.html#tipoatividadecoletiva">TipoAtividadeColetiva</a> for <code>4L</code>, <code>5L</code>, <code>6L</code> ou <code>7L</code>.
+<br> • Não pode ser preenchido se <a href="/integracao/docs/dicionario/dicionario.html#tipoatividadecoletiva">TipoAtividadeColetiva</a> for <code>1L</code>, <code>2L</code> ou <code>3L</code>.</p>
+
+<p><strong>Referências</strong>:   <a href="/integracao/docs/dicionario/dicionario.html#praticastemasparasaude">PraticasTemasParaSaude</a></p>
+
+<h3 id="18-participantes">#18    participantes</h3>
+
+<p>Cidadãos que participaram da atividade coletiva.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>List<ParticipanteRowItem></td>
+<td>Opcional</td>
+<td>0</td>
+<td>33</td>
+</tr>
+</tbody></table>
+
+<p><strong>Referência</strong>: <a href="#participanterowitem">ParticipanteRowItem</a></p>
+
+<h3 id="19-tbcdsorigem">#19    tbCdsOrigem</h3>
+
+<p>Tipo de origem dos dados do registro.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Integer</td>
+<td>Requerido</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody></table>
+
+<p><strong>Observações</strong>: Utilizar valor 3 (sistemas terceiros).</p>
+
+<h3 id="20-codigoibgemunicipio">#20    codigoIbgeMunicipio</h3>
+
+<p>Código IBGE do município.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Referências</strong>: <a href="/integracao/docs/municipios.html">Municípios</a></p>
+
+<h2 id="participanterowitem">ParticipanteRowItem</h2>
+
+<h3 id="1-cns">#1 cns</h3>
+
+<p>CNS do cidadão que participou da atividade.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Sim</td>
+<td>15</td>
+<td>15</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras</strong>:     CNS válido de acordo com o algoritmo.</p>
+
+<p><strong>Referência</strong>: Para ver o algoritmo utilizado, acesse: <a href="http://cartaonet.datasus.gov.br/">Cartão NET Datasus</a>, em &quot;Downloads&quot; baixe o arquivo de rotina de validação Java.</p>
+
+<h3 id="2-datanascimento">#2 dataNascimento</h3>
+
+<p>Data de nascimento do cidadão.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Opcional</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras</strong>:     Não pode ser posterior a <a href="/integracao/docs/profissional.html##5-dataatendimento">dataAtendimento</a> e anterior a 130 anos a partir da <a href="/integracao/docs/profissional.html##5-dataatendimento">dataAtendimento</a>.</p>
+
+<p><strong>Referências</strong>:   Para ver a referência sobre o formato epoch, acesse: <a href="https://en.wikipedia.org/wiki/Epoch_(reference_date)">Epoch Wikipedia</a></p>
+
+<h3 id="3-avaliacaoalterada">#3 avaliacaoAlterada</h3>
+
+<p>Marcador que indica que a avaliação do cidadão teve um valor diferente dos considerados normais.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Opcional</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h3 id="4-peso">#4 peso</h3>
+
+<p>Peso do cidadão em Kg.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Double</td>
+<td>Opcional</td>
+<td>1</td>
+<td>6</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras</strong>:
+<br/> • Apenas números e vírgula (<code>,</code>).
+<br/> • Máximo de 3 números após a vírgula.
+<br/> • Se tiver vírgula, tamanho máximo = 7.
+<br/> • Valor mínimo = 0,5 e máximo = 500.</p>
+
+<h3 id="5-altura">#5 altura</h3>
+
+<p>Altura do cidadão em cm.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Double</td>
+<td>Opcional</td>
+<td>2</td>
+<td>4</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras</strong>:
+<br/> • Apenas números e vírgula (<code>,</code>).
+<br/> • Máximo de 3 números após a vírgula.
+<br/> • Se tiver vírgula, tamanho máximo = 5.
+<br/> • Valor mínimo 20 e máximo 250.</p>
+
+<h3 id="6-cessouhabitofumar">#6 cessouHabitoFumar</h3>
+
+<p>Marcação se o cidadão cessou o hábito de fumar.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Opcional</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras</strong>: Não deve ser preenchido se o <a href="/integracao/docs/dicionario/dicionario.html#praticastemasparasaude">praticasTemasParaSaude</a> não for 25, 26, 27 ou 28 (referentes ao PNCT).</p>
+
+<h3 id="7-abadonougrupo">#7 abadonouGrupo</h3>
+
+<p>Marcação se o cidadão abandonou o grupo de tabagismo.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Opcional</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras</strong>: Não deve ser preenchido se o <a href="/integracao/docs/dicionario/dicionario.html#praticastemasparasaude">praticasTemasParaSaude</a> não for 25, 26, 27 ou 28 (referentes ao PNCT).</p>
+
+  </article>
+
+</div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <script src="/integracao/js/site.js" type="text/javascript"></script>
+  </body>
+</html>

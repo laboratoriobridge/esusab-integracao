@@ -1,0 +1,2726 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Dicionário de dados</title>
+  <meta name="description" content="Dicionário de dados e-SUS AB">
+
+  <link rel="stylesheet" href="/integracao/css/main.css">
+  <link rel="canonical" href="/integracao/docs/dicionario/dicionario.html">
+  <link rel="icon" type="image/png" href="/img/logo-esus.png">
+
+  <script src="/integracao/js/search.js" type="text/javascript"></script>
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/integracao/">
+      <img src="/integracao/img/logo-esus.png">
+      <span class="title-text">Dicionário de dados e-SUS AB</span>
+      
+        <span class="label">versão 2.0.0</span>
+      
+    </a>
+
+    <nav class="site-nav">
+      <a href="javascript: void" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+        
+          
+        
+          
+            <a href="/integracao/pdf.html"><i class="icon-pdf"></i> Gerar PDF</a>
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="breadcrumb-placeholder">
+  <div class="wrapper breadcrumb-wrapper">
+    <ol class="breadcrumb">
+      <img src="/integracao/img/logo-esus.png">
+      <li><a href="/integracao/">Home</a></li>
+
+      
+        
+          
+            <li title="Dicionário de dados">Dicionário de dados</li>
+          
+        
+
+      
+    </ol>
+  </div>
+</div>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+
+        <div class="sidebar">
+          <div class="sidebar-content">
+            <form action="/search.html">
+  <input type="search" placeholder="Pesquisar..." name="q" id="search-input" autocomplete="off">
+</form>
+
+<ul id="search-results"></ul>
+
+<script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('search-results'),
+    json: '/integracao/search.json',
+    noResultsText: 'Nenhum resultado encontrado'
+  });
+</script>
+
+<div class="menu">
+  
+
+
+
+  <ul>
+    
+      <li>
+        <a href="/integracao/docs/camada-transporte.html">Camada de Transporte de Dados</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/dicionario/dicionario.html">Dicionário de dados</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/cbo.html">CBO</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/dicionario-fad.html">Ficha de Atendimento Domiciliar</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/dicionario-fai.html">Ficha de Atendimento Individual</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/dicionario-fao.html">Ficha de Atendimento Odontológico</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/dicionario-fac.html">Ficha de Atividade Coletiva</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/dicionario-fae.html">Ficha de Avaliação de Elegibilidade</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/dicionario-fcd.html">Ficha de Cadastro Domiciliar</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/dicionario-fci.html">Ficha de Cadastro Individual</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/dicionario-fp.html">Ficha de Procedimentos</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/dicionario-fvd.html">Ficha de Visita Domiciliar</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/dicionario-mca.html">Marcadores de Consumo Alimentar</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/municipios.html">Municípios</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/profissional.html">Profissional</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/referencias.html">Referências</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/thrift-xsd.html">Thrift x XSD</a>
+      </li>
+    
+      <li>
+        <a href="/integracao/docs/versao.html">Versão</a>
+      </li>
+    
+  </ul>
+
+
+</div>
+
+          </div>
+        </div>
+
+        <div class="content">
+          <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Dicionário de dados</h1>
+    <p class="post-meta">
+      <a class="btn" href="/integracao/pdf.html?include=dicionario"><i class="icon-pdf"></i> Gerar PDF desta página</a>
+      
+        <span class="label" title="Data da última modificação">Alterado em 15/09/2015</span>
+      
+    </p>
+  </header>
+
+  <article class="post-content">
+    <h2 id="abastecimentodeagua">AbastecimentoDeAgua</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>117 L</td>
+<td>REDE_ENCANADA_ATE_O_DOMICILIO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>118 L</td>
+<td>POCO_NASCENTE_NO_DOMICILIO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>119 L</td>
+<td>CISTERNA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>120 L</td>
+<td>CARRO_PIPA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>121 L</td>
+<td>OUTRO</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="acessohigiene">AcessoHigiene</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>42 L</td>
+<td>BANHO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>43 L</td>
+<td>ACESSO_AO_SANITARIO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>44 L</td>
+<td>HIGIENE_BUCAL</td>
+<td>-</td>
+</tr>
+<tr>
+<td>45 L</td>
+<td>OUTROS</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="aleitamentomaterno">AleitamentoMaterno</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1 L</td>
+<td>EXCLUSIVO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>2 L</td>
+<td>PREDOMINANTE</td>
+<td>-</td>
+</tr>
+<tr>
+<td>3 L</td>
+<td>COMPLEMENTADO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>4 L</td>
+<td>INEXISTENTE</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="animalnodomicilio">AnimalNoDomicilio</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>128 L</td>
+<td>GATO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>129 L</td>
+<td>CACHORRO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>130 L</td>
+<td>PASSARO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>131 L</td>
+<td>DE_CRIACAO_PORCO_GALINHA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>132 L</td>
+<td>OUTROS</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="atencaodomiciliarorigem">AtencaoDomiciliarOrigem</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1 L</td>
+<td>UBS</td>
+<td>-</td>
+</tr>
+<tr>
+<td>6 L</td>
+<td>OUTROS</td>
+<td>-</td>
+</tr>
+<tr>
+<td>11 L</td>
+<td>HOSPITAL</td>
+<td>-</td>
+</tr>
+<tr>
+<td>12 L</td>
+<td>UNIDADE_PRONTO_ATENDIMENTO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>13 L</td>
+<td>CACON_UNACON</td>
+<td>-</td>
+</tr>
+<tr>
+<td>14 L</td>
+<td>URGENCIA_EMERGENCIA_HOSPITAL_SOS</td>
+<td>-</td>
+</tr>
+<tr>
+<td>15 L</td>
+<td>HOSPITAL_SOS_DEMAIS_SETORES</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="conclusaodestinoelegivel">ConclusaoDestinoElegivel</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1 L</td>
+<td>ADMISSAO_PROPRIA_EMAD</td>
+<td>-</td>
+</tr>
+<tr>
+<td>2 L</td>
+<td>ENCAMINHADO_OUTRO_EMAD</td>
+<td>-</td>
+</tr>
+<tr>
+<td>3 L</td>
+<td>ENCAMINHADO_ATENCAO_BASICA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>4 L</td>
+<td>OUTRO_ENCAMINHAMENTO</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="conclusaodestinoinelegivel">ConclusaoDestinoInelegivel</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1 L</td>
+<td>INSTABILIDADE_CLINICA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>2 L</td>
+<td>NECESSIDADE_PROPEDEUTICA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>3 L</td>
+<td>OUTRO_MOTIVO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>4 L</td>
+<td>AUSENCIA_CUIDADOR</td>
+<td>-</td>
+</tr>
+<tr>
+<td>5 L</td>
+<td>OUTRAS_CONDICOES_SOCIAIS</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="condicaodeposseeusodaterra">CondicaoDePosseEUsoDaTerra</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>101 L</td>
+<td>PROPRIETARIO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>102 L</td>
+<td>PARCEIRO_MEEIRO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>103 L</td>
+<td>ASSENTADO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>104 L</td>
+<td>POSSEIRO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>105 L</td>
+<td>ARRENDATARIO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>106 L</td>
+<td>COMODATARIO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>107 L</td>
+<td>BENEFICIARIO_DO_BANCO_DA_TERRA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>108 L</td>
+<td>NAO_SE_APLICA</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="condutadesfecho">CondutaDesfecho</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>3 L</td>
+<td>ALTA_ADMINISTRATIVA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>1 L</td>
+<td>ALTA_CLINICA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>2 L</td>
+<td>ENCAMINHAMENTO_PARA_AD</td>
+<td>-</td>
+</tr>
+<tr>
+<td>4 L</td>
+<td>URGENCIA_EMERGENCIA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>5 L</td>
+<td>INTERNACAO_HOSPITALAR</td>
+<td>-</td>
+</tr>
+<tr>
+<td>6 L</td>
+<td>SAIDA_POR_OBITO</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="condutaencaminhamento">CondutaEncaminhamento</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1 L</td>
+<td>RETORNO_PARA_CONSULTA_AGENDADA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>2 L</td>
+<td>RETORNO_PARA_CUIDADO_CONTINUADO_OU_PROGRAMADO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>12 L</td>
+<td>AGENDAMENTO_PARA_GRUPOS</td>
+<td>-</td>
+</tr>
+<tr>
+<td>3 L</td>
+<td>AGENDAMENTO_PARA_NASF</td>
+<td>-</td>
+</tr>
+<tr>
+<td>9 L</td>
+<td>ALTA_DO_EPISODIO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>11 L</td>
+<td>ENCAMINHAMENTO_INTERNO_NO_DIA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>4 L</td>
+<td>ENCAMINHAMENTO_PARA_SERVICO_ESPECIALIZADO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>5 L</td>
+<td>ENCAMINHAMENTO_PARA_CAPS</td>
+<td>-</td>
+</tr>
+<tr>
+<td>6 L</td>
+<td>ENCAMINHAMENTO_PARA_INTERNACAO_HOSPITALAR</td>
+<td>-</td>
+</tr>
+<tr>
+<td>7 L</td>
+<td>ENCAMINHAMENTO_PARA_URGENCIA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>8 L</td>
+<td>ENCAMINHAMENTO_PARA_SERVICAO_ATENCAO_DOMICILIAR123</td>
+<td>-</td>
+</tr>
+<tr>
+<td>10 L</td>
+<td>ENCAMINHAMENTO_INTERSETORIAL</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="condutaencaminhamentoodonto">CondutaEncaminhamentoOdonto</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>16 L</td>
+<td>RETORNO_PARA_CONSULTA_AGENDADA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>12 L</td>
+<td>AGENDAMENTO_PARA_OUTROS_PROFISSIONAIS_AB</td>
+<td>-</td>
+</tr>
+<tr>
+<td>13 L</td>
+<td>AGENDAMENTO_PARA_NASF</td>
+<td>-</td>
+</tr>
+<tr>
+<td>14 L</td>
+<td>AGENDAMENTO_PARA_GRUPOS</td>
+<td>-</td>
+</tr>
+<tr>
+<td>15 L</td>
+<td>TRATAMENTO_CONCLUIDO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>1 L</td>
+<td>ATENDIMENTO_A_PACIENTES_COM_NECESSIDADES_ESPECIAIS</td>
+<td>-</td>
+</tr>
+<tr>
+<td>2 L</td>
+<td>CIRURGIA_BMF</td>
+<td>-</td>
+</tr>
+<tr>
+<td>3 L</td>
+<td>ENDODONTIA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>4 L</td>
+<td>ESTOMATOLOGIA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>5 L</td>
+<td>IMPLANTODONTIA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>6 L</td>
+<td>ODONTOPEDIATRIA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>7 L</td>
+<td>ORTODONTIA_ORTOPEDIA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>8 L</td>
+<td>PERIODONTIA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>9 L</td>
+<td>PROTESE_DENTARIA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>10 L</td>
+<td>RADIOLOGIA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>11 L</td>
+<td>OUTROS</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="consideracaopeso">ConsideracaoPeso</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>21 L</td>
+<td>ABAIXO_DO_PESO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>22 L</td>
+<td>PESO_ADEQUADO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>23 L</td>
+<td>ACIMA_DO_PESO</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="cuidadorcidadao">CuidadorCidadao</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1 L</td>
+<td>NAO_POSSUI</td>
+<td>-</td>
+</tr>
+<tr>
+<td>2 L</td>
+<td>CONJUGE_COMPANHEIRO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>3 L</td>
+<td>FILHO_ENTEADO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>4 L</td>
+<td>PAI_MAE</td>
+<td>-</td>
+</tr>
+<tr>
+<td>5 L</td>
+<td>AVO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>6 L</td>
+<td>NETO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>7 L</td>
+<td>IRMAO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>8 L</td>
+<td>OUTRO</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="cursomaiselevado">CursoMaisElevado</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>51 L</td>
+<td>CRECHE</td>
+<td>-</td>
+</tr>
+<tr>
+<td>52 L</td>
+<td>PRE_ESCOLA_EXCETO_CA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>53 L</td>
+<td>CLASSE_ALFABETIZADA_CA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>54 L</td>
+<td>ENSINO_FUNDAMENTAL_1_4_SERIES</td>
+<td>-</td>
+</tr>
+<tr>
+<td>55 L</td>
+<td>ENSINO_FUNDAMENTAL_5_8_SERIES</td>
+<td>-</td>
+</tr>
+<tr>
+<td>56 L</td>
+<td>ENSINO_FUNDAMENTAL_COMPLETO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>61 L</td>
+<td>ENSINO_FUNDAMENTAL_ESPECIAL</td>
+<td>-</td>
+</tr>
+<tr>
+<td>58 L</td>
+<td>ENSINO_FUNDAMENTAL_EJA_SERIES_INICIAIS_SUPLETIVO_1_4</td>
+<td>-</td>
+</tr>
+<tr>
+<td>59 L</td>
+<td>ENSINO_FUNDAMENTAL_EJA_SERIES_INICIAIS_SUPLETIVO_5_8</td>
+<td>-</td>
+</tr>
+<tr>
+<td>60 L</td>
+<td>ENSINO_MEDIO_MEDIO_2_CICLO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>57 L</td>
+<td>ENSINO_MEDIO_ESPECIAL</td>
+<td>-</td>
+</tr>
+<tr>
+<td>62 L</td>
+<td>ENSINO_MEDIO_EJA_SUPLETIVO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>63 L</td>
+<td>SUPERIOR_APERFEICOAMENTO_ESPECIALIZACAO_MESTRADO_DOUTORADO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>64 L</td>
+<td>ALFABETIZACAO_PARA_ADULTROS_MOBRAL_ETC</td>
+<td>-</td>
+</tr>
+<tr>
+<td>65 L</td>
+<td>NENHUM</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="deficienciacidadao">DeficienciaCidadao</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>12 L</td>
+<td>AUDITIVA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>13 L</td>
+<td>VISUAL</td>
+<td>-</td>
+</tr>
+<tr>
+<td>14 L</td>
+<td>INTELECTUAL_OU_COGNITIVA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>15 L</td>
+<td>FISICA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>16 L</td>
+<td>OUTRA</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="desfecho">Desfecho</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1 L</td>
+<td>VISITA_REALIZADA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>2 L</td>
+<td>VISITA_RECUSADA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>3 L</td>
+<td>AUSENTE</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="destinodolixo">DestinoDoLixo</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>93 L</td>
+<td>COLETADO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>94 L</td>
+<td>QUEIMADO_OU_ENTERRADO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>95 L</td>
+<td>CEU_ABERTO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>96 L</td>
+<td>OUTRO</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="doencacardiaca">DoencaCardiaca</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>24 L</td>
+<td>INSUFICIENCIA_CARDIACA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>25 L</td>
+<td>OUTRO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>26 L</td>
+<td>NAO_SABE</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="doencarespiratoria">DoencaRespiratoria</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>30 L</td>
+<td>ASMA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>31 L</td>
+<td>DPOC_ENFISEMA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>32 L</td>
+<td>OUTRO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>33 L</td>
+<td>NAO_SABE</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="formadeescoamentodobanheiroousanitario">FormaDeEscoamentoDoBanheiroOuSanitario</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>122 L</td>
+<td>REDE_COLETORA_DE_ESGOTO_OU_PLUVIAL</td>
+<td>-</td>
+</tr>
+<tr>
+<td>123 L</td>
+<td>FOSSA_SEPTICA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>124 L</td>
+<td>FOSSA_RUDIMENTAR</td>
+<td>-</td>
+</tr>
+<tr>
+<td>125 L</td>
+<td>DIRETO_PARA_UM_RIO_LAGO_OU_MAR</td>
+<td>-</td>
+</tr>
+<tr>
+<td>126 L</td>
+<td>CEU_ABERTO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>127 L</td>
+<td>OUTRA_FORMA</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="fornecimentoodonto">FornecimentoOdonto</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1 L</td>
+<td>ESCOVA_DENTAL</td>
+<td>-</td>
+</tr>
+<tr>
+<td>2 L</td>
+<td>CREME_DENTAL</td>
+<td>-</td>
+</tr>
+<tr>
+<td>3 L</td>
+<td>FIO_DENTAL</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="localdeatendimento">LocalDeAtendimento</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1 L</td>
+<td>UBS</td>
+<td>-</td>
+</tr>
+<tr>
+<td>2 L</td>
+<td>UNIDADE MÓVEL</td>
+<td>-</td>
+</tr>
+<tr>
+<td>3 L</td>
+<td>RUA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>4 L</td>
+<td>DOMICÍLIO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>5 L</td>
+<td>ESCOLA/CRECHE</td>
+<td>-</td>
+</tr>
+<tr>
+<td>6 L</td>
+<td>OUTROS</td>
+<td>-</td>
+</tr>
+<tr>
+<td>7 L</td>
+<td>POLO(ACADEMIA DA SAÚDE)</td>
+<td>-</td>
+</tr>
+<tr>
+<td>8 L</td>
+<td>INSTITUIÇÃO/ABRIGO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>9 L</td>
+<td>UNIDADE PRISIONAL OU CONGÊNERES</td>
+<td>-</td>
+</tr>
+<tr>
+<td>10 L</td>
+<td>UNIDADE SOCIOEDUCATIVA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>11 L</td>
+<td>HOSPITAL</td>
+<td>Utilizado apenas na ficha de atendimento domiciliar</td>
+</tr>
+<tr>
+<td>12 L</td>
+<td>UNIDADE_DE_PRONTO_ATENDIMENTO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>13 L</td>
+<td>CACON/UNACON</td>
+<td>-</td>
+</tr>
+<tr>
+<td>14 L</td>
+<td>HOSPITAL_SOS_URGENCIA/EMERGENCIA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>15 L</td>
+<td>HOSPITAL_SOS_DEMAIS_SETORES</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="localizacaodamoradia">LocalizacaoDaMoradia</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>83 L</td>
+<td>URBANA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>84 L</td>
+<td>RURAL</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="materialpredominantenaconstrucao">MaterialPredominanteNaConstrucao</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>109 L</td>
+<td>ALVENARIA_COM_REVESTIMENTO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>110 L</td>
+<td>ALVENARIA_SEM_REVESTIMENTO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>111 L</td>
+<td>TAIPA_COM_REVESTIMENTO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>112 L</td>
+<td>TAIPA_SEM_REVESTIMENTO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>113 L</td>
+<td>MADEIRA_EMPARELHADA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>114 L</td>
+<td>MATERIAL_APROVEITADO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>115 L</td>
+<td>PALHA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>116 L</td>
+<td>OUTRO_MATERIAL</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="modalidadead">ModalidadeAD</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1 L</td>
+<td>AD_1</td>
+<td>-</td>
+</tr>
+<tr>
+<td>2 L</td>
+<td>AD_2</td>
+<td>-</td>
+</tr>
+<tr>
+<td>3 L</td>
+<td>AD_3</td>
+<td>-</td>
+</tr>
+<tr>
+<td>4 L</td>
+<td>INELEGIVEL</td>
+<td>Utilizado apenas na ficha de avaliação de elegibilidade</td>
+</tr>
+</tbody></table>
+
+<h2 id="motivosaida">MotivoSaida</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>135 L</td>
+<td>SAIDA_CIDADAO_OBITO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>136 L</td>
+<td>SAIDA_CIDADAO_MUDANCA_TERRITORIO</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="motivovisita">MotivoVisita</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1 L</td>
+<td>CADASTRAMENTO_OU_ATUALIZACAO</td>
+<td>#TIPO_VISITA</td>
+</tr>
+<tr>
+<td>29 L</td>
+<td>VISITA_PERIODICA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>2 L</td>
+<td>CONSULTA</td>
+<td>#BUSCA_ATIVA</td>
+</tr>
+<tr>
+<td>3 L</td>
+<td>EXAME</td>
+<td>-</td>
+</tr>
+<tr>
+<td>4 L</td>
+<td>VACINA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>30 L</td>
+<td>CONDICIONALIDADES_BOLSA_FAMILIA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>5 L</td>
+<td>GESTANTE</td>
+<td>#ACOMPANHAMENTO</td>
+</tr>
+<tr>
+<td>6 L</td>
+<td>PUERPERA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>7 L</td>
+<td>RECEM_NASCIDO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>8 L</td>
+<td>CRIANCA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>9 L</td>
+<td>PESSOA_COM_DESNUTRICAO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>10 L</td>
+<td>PESSOA_EM_REABILITACAO_OU_COM_DEFICIENCIA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>11 L</td>
+<td>PESSOA_COM_HIPERTENSAO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>12 L</td>
+<td>PESSOA_COM_DIABETES</td>
+<td>-</td>
+</tr>
+<tr>
+<td>13 L</td>
+<td>PESSOA_COM_ASMA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>14 L</td>
+<td>PESSOA_COM_DPOC_OU_ENFISEMA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>15 L</td>
+<td>PESSOA_COM_CANCER</td>
+<td>-</td>
+</tr>
+<tr>
+<td>16 L</td>
+<td>PESSOA_COM_OUTRAS_DOENCAS_CRONICAS</td>
+<td>-</td>
+</tr>
+<tr>
+<td>17 L</td>
+<td>PESSOA_COM_HANSENIASE</td>
+<td>-</td>
+</tr>
+<tr>
+<td>18 L</td>
+<td>PESSOA_COM_TUBERCULOSE</td>
+<td>-</td>
+</tr>
+<tr>
+<td>32 L</td>
+<td>SINTOMATICOS_RESPORATORIOS</td>
+<td>-</td>
+</tr>
+<tr>
+<td>33 L</td>
+<td>TABAGISTA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>19 L</td>
+<td>DOMICILIADOS_OU_ACAMADOS</td>
+<td>-</td>
+</tr>
+<tr>
+<td>20 L</td>
+<td>CONDICOES_DE_VULNERABILIDADE_SOCIAL</td>
+<td>-</td>
+</tr>
+<tr>
+<td>21 L</td>
+<td>CONDICIONALIDADES_BOLSA_FAMILIA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>22 L</td>
+<td>SAUDE_MENTAL</td>
+<td>-</td>
+</tr>
+<tr>
+<td>23 L</td>
+<td>USUARIO_DE_ALCOOL</td>
+<td>-</td>
+</tr>
+<tr>
+<td>24 L</td>
+<td>USUARIO_DE_OUTRAS_DROGAS</td>
+<td>-</td>
+</tr>
+<tr>
+<td>25 L</td>
+<td>EGRESSO_DE_INTERNACAO</td>
+<td>#OUTROS</td>
+</tr>
+<tr>
+<td>26 L</td>
+<td>CONTROLE_DE_AMBIENTES_OU_VETORES</td>
+<td>-</td>
+</tr>
+<tr>
+<td>27 L</td>
+<td>CONVITE_PARA_ATIVIDADES_COLETIVAS_OU_CAMPANHA_DE_SAUDE</td>
+<td>-</td>
+</tr>
+<tr>
+<td>31 L</td>
+<td>ORIENTACAO_OU_PREVENCAO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>28 L</td>
+<td>OUTROS</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="nacionalidade">Nacionalidade</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1 L</td>
+<td>BRASILEIRA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>2 L</td>
+<td>NATURALIZADO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>3 L</td>
+<td>ESTRANGEIRO</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="nasf">NASF</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1 L</td>
+<td>AVALIACAO_DIAGNOSTICO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>2 L</td>
+<td>PROCEDIMENTOS_CLINICOS_TERAPEUTICO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>3 L</td>
+<td>PRESCRICAO_TERAPEUTICA</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="orientacaosexual">OrientacaoSexual</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>5 L</td>
+<td>HETEROSSEXUAL</td>
+<td>-</td>
+</tr>
+<tr>
+<td>6 L</td>
+<td>GAY</td>
+<td>-</td>
+</tr>
+<tr>
+<td>7 L</td>
+<td>LESBICA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>8 L</td>
+<td>BISSEXUAL</td>
+<td>-</td>
+</tr>
+<tr>
+<td>9 L</td>
+<td>TRAVESTI</td>
+<td>-</td>
+</tr>
+<tr>
+<td>10 L</td>
+<td>TRANSSEXUAL</td>
+<td>-</td>
+</tr>
+<tr>
+<td>11 L</td>
+<td>OUTRO</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="origemalimentacao">OrigemAlimentacao</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>37 L</td>
+<td>RESTAURANTE_POPULAR</td>
+<td>-</td>
+</tr>
+<tr>
+<td>38 L</td>
+<td>DOACAO_GRUPO_RELIGIOSO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>39 L</td>
+<td>DOACAO_RESTAURANTE</td>
+<td>-</td>
+</tr>
+<tr>
+<td>40 L</td>
+<td>DOACAO_DE_POPULAR</td>
+<td>-</td>
+</tr>
+<tr>
+<td>41 L</td>
+<td>OUTROS</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="praticasintegrativascomplementares">PraticasIntegrativasComplementares</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1 L</td>
+<td>MEDICINA_TRADICIONAL_CHINESA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>2 L</td>
+<td>ANTROPOSOFIA_APLICADO_A_SAUDE</td>
+<td>-</td>
+</tr>
+<tr>
+<td>3 L</td>
+<td>HOMEOPATIA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>4 L</td>
+<td>FITOTERAPIA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>5 L</td>
+<td>TERMALISMO_OU_CRENOTERAPIA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>6 L</td>
+<td>PRATICAS_CORPORAIS_E_MENTAIS_EM_PICS</td>
+<td>-</td>
+</tr>
+<tr>
+<td>7 L</td>
+<td>TECNICAS_MANUAIS_EM_PICS</td>
+<td>-</td>
+</tr>
+<tr>
+<td>8 L</td>
+<td>OUTROS</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="praticastemasparasaude">PraticasTemasParaSaude</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1 L</td>
+<td>ALIMENTACAO_SAUDAVEL</td>
+<td>-</td>
+</tr>
+<tr>
+<td>2 L</td>
+<td>APLICACAO_TOPICA_DE_FLUOR</td>
+<td>-</td>
+</tr>
+<tr>
+<td>3 L</td>
+<td>SAUDE_OCULAR</td>
+<td>-</td>
+</tr>
+<tr>
+<td>4 L</td>
+<td>AUTOCUIDADO_DE_PESSOAS_COM_DOENCAS_CRONICAS</td>
+<td>-</td>
+</tr>
+<tr>
+<td>5 L</td>
+<td>CIDADANIA_E_DIREITOS_HUMANOS</td>
+<td>-</td>
+</tr>
+<tr>
+<td>6 L</td>
+<td>SAUDE_DO_TRABALHADOR</td>
+<td>-</td>
+</tr>
+<tr>
+<td>7 L</td>
+<td>DEPENDENCIA_QUIMICA_TABACO_ALCOOL_E_OUTRAS_DROGAS</td>
+<td>-</td>
+</tr>
+<tr>
+<td>8 L</td>
+<td>ENVELHECIMENTO_CLIMATERIO_ANDROPAUSA_ETC</td>
+<td>-</td>
+</tr>
+<tr>
+<td>9 L</td>
+<td>ESCOVACAO_DENTAL_SUPERVISIONADA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>10 L</td>
+<td>PLANTAS_MEDICINAIS_FITOTERAPIA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>11 L</td>
+<td>PRATICAS_CORPORAIS_OU_ATIVIDADE_FISICA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>12 L</td>
+<td>PRATICAS_CORPORAIS_E_MENTAIS_EM_PIC</td>
+<td>-</td>
+</tr>
+<tr>
+<td>13 L</td>
+<td>PREVENCAO_DA_VIOLENCIA_E_PROMOCAO_DA_CULTURA_DA_PAZ</td>
+<td>-</td>
+</tr>
+<tr>
+<td>14 L</td>
+<td>SAUDE_AMBIENTAL</td>
+<td>-</td>
+</tr>
+<tr>
+<td>15 L</td>
+<td>SAUDE_BUCAL</td>
+<td>-</td>
+</tr>
+<tr>
+<td>16 L</td>
+<td>SAUDE_MENTAL</td>
+<td>-</td>
+</tr>
+<tr>
+<td>17 L</td>
+<td>SAUDE_SEXUAL_E_REPRODUTIVA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>18 L</td>
+<td>SEMANA_SAUDE_NA_ESCOLA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>19 L</td>
+<td>AGRAVOS_NEGLIGENCIADOS</td>
+<td>-</td>
+</tr>
+<tr>
+<td>20 L</td>
+<td>ANTROPOMETRIA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>21 L</td>
+<td>OUTROS</td>
+<td>-</td>
+</tr>
+<tr>
+<td>22 L</td>
+<td>SAUDE_AUDITIVA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>23 L</td>
+<td>DESENVOLVIMENTO_DA_LINGUAGEM</td>
+<td>-</td>
+</tr>
+<tr>
+<td>24 L</td>
+<td>VERIFICACAO_DA_SITUACAO_VACINAL</td>
+<td>-</td>
+</tr>
+<tr>
+<td>25 L</td>
+<td>PNCT_SESSAO_1</td>
+<td>-</td>
+</tr>
+<tr>
+<td>26 L</td>
+<td>PNCT_SESSAO_2</td>
+<td>-</td>
+</tr>
+<tr>
+<td>27 L</td>
+<td>PNCT_SESSAO_3</td>
+<td>-</td>
+</tr>
+<tr>
+<td>28 L</td>
+<td>PNCT_SESSAO_4</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="problemarins">ProblemaRins</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>27 L</td>
+<td>INSUFICIENCIA_RENAL</td>
+<td>-</td>
+</tr>
+<tr>
+<td>28 L</td>
+<td>OUTRO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>29 L</td>
+<td>NAO_SABE</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="publicoalvo">PublicoAlvo</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1 L</td>
+<td>COMUNIDADE_EM_GERAL</td>
+<td>-</td>
+</tr>
+<tr>
+<td>2 L</td>
+<td>CRIANCA_0_A_3_ANOS</td>
+<td>-</td>
+</tr>
+<tr>
+<td>3 L</td>
+<td>CRIANCA_4_A_5_ANOS</td>
+<td>-</td>
+</tr>
+<tr>
+<td>4 L</td>
+<td>CRIANCA_6_A_11_ANOS</td>
+<td>-</td>
+</tr>
+<tr>
+<td>5 L</td>
+<td>ADOLESCENTE</td>
+<td>-</td>
+</tr>
+<tr>
+<td>6 L</td>
+<td>MULHER</td>
+<td>-</td>
+</tr>
+<tr>
+<td>7 L</td>
+<td>GESTANTE</td>
+<td>-</td>
+</tr>
+<tr>
+<td>8 L</td>
+<td>HOMEM</td>
+<td>-</td>
+</tr>
+<tr>
+<td>9 L</td>
+<td>FAMILIARES</td>
+<td>-</td>
+</tr>
+<tr>
+<td>10 L</td>
+<td>IDOSO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>12 L</td>
+<td>PESSOAS_COM_DOENCAS_CRONICAS</td>
+<td>-</td>
+</tr>
+<tr>
+<td>13 L</td>
+<td>USUARIO_DE_TABACO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>14 L</td>
+<td>USUARIO_DE_ALCOOL</td>
+<td>-</td>
+</tr>
+<tr>
+<td>15 L</td>
+<td>USUARIO_DE_OUTRAS_DROGAS</td>
+<td>-</td>
+</tr>
+<tr>
+<td>16 L</td>
+<td>PORTADOR_COM_SOFRIMENTO_OU_TRANSTORNO_MENTAL</td>
+<td>-</td>
+</tr>
+<tr>
+<td>17 L</td>
+<td>PROFISSIONAL_DE_EDUCACAO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>18 L</td>
+<td>OUTROS</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="quantasvezesalimentacao">QuantasVezesAlimentacao</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>34 L</td>
+<td>UMA_POR_DIA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>35 L</td>
+<td>DUAS_A_3_POR_DIA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>36 L</td>
+<td>MAIS_DE_3</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="racacor">RacaCor</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1 L</td>
+<td>BRANCA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>2 L</td>
+<td>PRETA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>4 L</td>
+<td>PARDA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>3 L</td>
+<td>AMARELA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>5 L</td>
+<td>INDIGENA</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="relacaoparentesco">RelacaoParentesco</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>137 L</td>
+<td>CONJUGE_OU_COMPANHEIRO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>138 L</td>
+<td>FILHO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>139 L</td>
+<td>ENTEADO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>140 L</td>
+<td>NETO_OU_BISNETO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>141 L</td>
+<td>PAI_OU_MAE</td>
+<td>-</td>
+</tr>
+<tr>
+<td>142 L</td>
+<td>SOGRO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>143 L</td>
+<td>IRMAO_OU_IRMA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>144 L</td>
+<td>GENRO_OU_NORA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>145 L</td>
+<td>OUTRO_PARENTE</td>
+<td>-</td>
+</tr>
+<tr>
+<td>146 L</td>
+<td>NAO_PARENTE</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="rendafamiliar">RendaFamiliar</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1 L</td>
+<td>UM_QUARTO_DE_SALARIO_MINIMO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>2 L</td>
+<td>MEIO_SALARIO_MINIMO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>3 L</td>
+<td>UM_SALARIO_MINIMO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>4 L</td>
+<td>DOIS_SALARIOS_MINIMOS</td>
+<td>-</td>
+</tr>
+<tr>
+<td>7 L</td>
+<td>TRES_SALARIOS_MINIMOS</td>
+<td>-</td>
+</tr>
+<tr>
+<td>5 L</td>
+<td>QUATRO_SALARIOS_MINIMOS</td>
+<td>-</td>
+</tr>
+<tr>
+<td>6 L</td>
+<td>ACIMA_DE_QUATRO_SALARIOS_MINIMOS</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="responsavelcrianca">ResponsavelCrianca</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1 L</td>
+<td>ADULTO_RESPONSAVEL</td>
+<td>-</td>
+</tr>
+<tr>
+<td>2 L</td>
+<td>OUTRAS_CRIANCAS</td>
+<td>-</td>
+</tr>
+<tr>
+<td>133 L</td>
+<td>ADOLESCENTE</td>
+<td>-</td>
+</tr>
+<tr>
+<td>3 L</td>
+<td>SOZINHA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>134 L</td>
+<td>CRECHE</td>
+<td>-</td>
+</tr>
+<tr>
+<td>4 L</td>
+<td>OUTRO</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="sexo">Sexo</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>0 L</td>
+<td>MASCULINO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>1 L</td>
+<td>FEMININO</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="situacaodemoradia">SituacaoDeMoradia</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>75 L</td>
+<td>PROPRIO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>76 L</td>
+<td>FINANCIADO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>77 L</td>
+<td>ALUGADO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>78 L</td>
+<td>ARRENDADO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>79 L</td>
+<td>CEDIDO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>80 L</td>
+<td>OCUPACAO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>81 L</td>
+<td>SITUACAO_DE_RUA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>82 L</td>
+<td>OUTRA</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="situacaoexame">SituacaoExame</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>&quot;S&quot;</td>
+<td>SOLICITADO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>&quot;A&quot;</td>
+<td>AVALIADO</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="situacaomercadotrabalho">SituacaoMercadoTrabalho</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>66 L</td>
+<td>EMPREGADOR</td>
+<td>-</td>
+</tr>
+<tr>
+<td>67 L</td>
+<td>ASSALARIADO_COM_CARTEIRA_TRABALHO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>68 L</td>
+<td>ASSALARIADO_SEM_CARTEIRA_TRABALHO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>69 L</td>
+<td>AUTONOMO_COM_PREVIDENCIA_SOCIAL</td>
+<td>-</td>
+</tr>
+<tr>
+<td>70 L</td>
+<td>AUTONOMO_SEM_PREVIDENCIA_SOCIAL</td>
+<td>-</td>
+</tr>
+<tr>
+<td>71 L</td>
+<td>APOSENTADO_OU_PENSIONISTA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>72 L</td>
+<td>DESEMPREGADO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>73 L</td>
+<td>NAO_TRABALHA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>74 L</td>
+<td>OUTRO</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="temasparareuniao">TemasParaReuniao</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1 L</td>
+<td>QUESTOES_ADMINISTRATIVAS_OU_FUNCIONAMENTO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>2 L</td>
+<td>PROCESSOS_DE_TRABALHO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>3 L</td>
+<td>DIAGNOSTICO_DO_TERRITORIO_OU_MONITORAMENTO_DO_TERRITORIO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>4 L</td>
+<td>PLANEJAMENTO_OU_MONITORAMENTO_DAS_ACOES_DA_EQUIPE</td>
+<td>-</td>
+</tr>
+<tr>
+<td>5 L</td>
+<td>DISCUSSAO_DE_CASO_OU_PROJETO_TERAPEUTICO_SINGULAR</td>
+<td>-</td>
+</tr>
+<tr>
+<td>6 L</td>
+<td>EDUCACAO_PERMANENTE</td>
+<td>-</td>
+</tr>
+<tr>
+<td>7 L</td>
+<td>OUTROS</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="temposituacaoderua">TempoSituacaoDeRua</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>17 L</td>
+<td>MENOS_6_MESES</td>
+<td>-</td>
+</tr>
+<tr>
+<td>18 L</td>
+<td>SEIS_A_12_MESES</td>
+<td>-</td>
+</tr>
+<tr>
+<td>19 L</td>
+<td>UM_A_5_ANOS</td>
+<td>-</td>
+</tr>
+<tr>
+<td>20 L</td>
+<td>MAIS_DE_5_ANOS</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="tipoatividadecoletiva">TipoAtividadeColetiva</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1 L</td>
+<td>REUNIAO_DE_EQUIPE</td>
+<td>-</td>
+</tr>
+<tr>
+<td>2 L</td>
+<td>REUNIAO_COM_OUTRAS_EQUIPES_DE_SAUDE</td>
+<td>-</td>
+</tr>
+<tr>
+<td>3 L</td>
+<td>REUNIAO_INTERSETORIAL_OU_CONSELHO_LOCAL_DE_SAUDE_OU_CONTROLE_SOCIAL</td>
+<td>-</td>
+</tr>
+<tr>
+<td>4 L</td>
+<td>EDUCACAO_EM_SAUDE</td>
+<td>-</td>
+</tr>
+<tr>
+<td>5 L</td>
+<td>ATENDIMENTO_EM_GRUPO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>6 L</td>
+<td>AVALIACAO_OU_PROCEDIMENTO_COLETIVO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>7 L</td>
+<td>MOBILIZACAO_SOCIAL</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="tipodadoserializado">TipoDadoSerializado</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>2 L</td>
+<td>Ficha de Cadastro Individual</td>
+<td>-</td>
+</tr>
+<tr>
+<td>3 L</td>
+<td>Ficha de Cadastro Domiciliar</td>
+<td>-</td>
+</tr>
+<tr>
+<td>4 L</td>
+<td>Ficha de Atendimento Individual</td>
+<td>-</td>
+</tr>
+<tr>
+<td>5 L</td>
+<td>Ficha de Atendimento Odontológico</td>
+<td>-</td>
+</tr>
+<tr>
+<td>6 L</td>
+<td>Ficha de Atividade Coletiva</td>
+<td>-</td>
+</tr>
+<tr>
+<td>7 L</td>
+<td>Ficha de Procedimentos</td>
+<td>-</td>
+</tr>
+<tr>
+<td>8 L</td>
+<td>Ficha de Visita Domiciliar</td>
+<td>-</td>
+</tr>
+<tr>
+<td>9 L</td>
+<td>Atendimento realizado pelo software de prontuário</td>
+<td>-</td>
+</tr>
+<tr>
+<td>10 L</td>
+<td>Ficha de Atendimento Domiciliar</td>
+<td>-</td>
+</tr>
+<tr>
+<td>11 L</td>
+<td>Ficha de Avaliação de Elegibilidade</td>
+<td>-</td>
+</tr>
+<tr>
+<td>12 L</td>
+<td>Marcadores de Consumo Alimentar</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="tipodeacessoaodomicilio">TipoDeAcessoAoDomicilio</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>89 L</td>
+<td>PAVIMENTO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>90 L</td>
+<td>CHAO_BATIDO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>91 L</td>
+<td>FLUVIAL</td>
+<td>-</td>
+</tr>
+<tr>
+<td>92 L</td>
+<td>OUTRO</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="tipodeatendimento">TipoDeAtendimento</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1 L</td>
+<td>CONSULTA_AGENDADA_PROGRAMADA_CUIDADO_CONTINUADO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>2 L</td>
+<td>CONSULTA_AGENDADA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>4 L</td>
+<td>ESCUTA_INICIAL_OU_ORIENTACAO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>5 L</td>
+<td>CONSULTA_NO_DIA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>6 L</td>
+<td>ATENDIMENTO_DE_URGENCIA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>7 L</td>
+<td>ATENDIMENTO_PROGRAMADO</td>
+<td>Utilizados apenas nas fichas de atendimento domiciliar</td>
+</tr>
+<tr>
+<td>8 L</td>
+<td>ATENDIMENTO NÃO PROGRAMADO</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="tipodeconsultaodonto">TipoDeConsultaOdonto</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1 L</td>
+<td>PRIMEIRA_CONSULTA_ODONTOLOGICA_PROGRAMATICA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>2 L</td>
+<td>CONSULTA_DE_RETORNO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>4 L</td>
+<td>CONSULTA_DE_MANUTENCAO</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="tipodedomicilio">TipoDeDomicilio</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>85 L</td>
+<td>CASA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>86 L</td>
+<td>APARTAMENTO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>87 L</td>
+<td>COMODO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>88 L</td>
+<td>OUTRO</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="tratamentodeaguanodomicilio">TratamentoDeAguaNoDomicilio</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>97 L</td>
+<td>FILTRACAO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>98 L</td>
+<td>FERVURA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>99 L</td>
+<td>CLORACAO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>100 L</td>
+<td>SEM_TRATAMENTO</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="turno">Turno</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1 L</td>
+<td>MATUTINO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>2 L</td>
+<td>VESPERTINO</td>
+<td>-</td>
+</tr>
+<tr>
+<td>3 L</td>
+<td>NOTURNO</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="vigilanciaemsaudebucal">VigilanciaEmSaudeBucal</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1 L</td>
+<td>ABSCESSO_DENTO_ALVEOLAR</td>
+<td>-</td>
+</tr>
+<tr>
+<td>2 L</td>
+<td>ALTERACAO_EM_TECIDOS_MOLES</td>
+<td>-</td>
+</tr>
+<tr>
+<td>3 L</td>
+<td>DOR_DE_DENTE</td>
+<td>-</td>
+</tr>
+<tr>
+<td>4 L</td>
+<td>FENDAS_OU_FISSURAS_LABIO_PALATAIS</td>
+<td>-</td>
+</tr>
+<tr>
+<td>5 L</td>
+<td>FLUOROSE_DENTARIA_MODERADA_OU_SEVERA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>6 L</td>
+<td>TRAUMATISMO_DENTO_ALVEOLAR</td>
+<td>-</td>
+</tr>
+<tr>
+<td>99 L</td>
+<td>NAO_IDENTIFICADO</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+  </article>
+
+</div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <script src="/integracao/js/site.js" type="text/javascript"></script>
+  </body>
+</html>

@@ -126,7 +126,7 @@ Lista dos profissionais que participaram da atividade.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
-|List<ProfissionalCboRowItem> |Sim |1	|99 |
+|List\<ProfissionalCboRowItem\> |Sim |1	|99 |
 
 **Regras**: Entre 1 e 99 registros.
 
@@ -146,7 +146,7 @@ Temas para reunião.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
-|	List<Long>|	Condicional |- |	-|
+|	List\<Long\>|	Condicional |- |	-|
 
 **Regras**:
 <br> • É Requerido se [TipoAtividadeColetiva]({% url dicionario %}#tipoatividadecoletiva) for `1L`, `2L` ou `3L`.
@@ -159,7 +159,7 @@ Público alvo da atividade.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
-|List<Long>|	Condicional |	-|	-|
+|List\<Long\>|	Condicional |	-|	-|
 
 **Regras**:
 <br> • É Requerido se [TipoAtividadeColetiva]({% url dicionario %}#tipoatividadecoletiva) for `4L`, `5L`, `6L` ou `7L`.
@@ -172,7 +172,7 @@ Práticas ou temas abordados na atividade.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
-|List<Long>|	Condicional| 	-|	-|
+|List\<Long\>|	Condicional| 	-|	-|
 
 **Regras**:
 <br> • É Requerido se [TipoAtividadeColetiva]({% url dicionario %}#tipoatividadecoletiva) for `4L`, `5L`, `6L` ou `7L`.
@@ -185,7 +185,7 @@ Cidadãos que participaram da atividade coletiva.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
-|List<ParticipanteRowItem>|	Opcional|	0|33|
+|List\<ParticipanteRowItem\>|	Opcional|	0|33|
 
 **Referência**: [ParticipanteRowItem](#participanterowitem)
 

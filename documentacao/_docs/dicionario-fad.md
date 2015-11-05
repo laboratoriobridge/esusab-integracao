@@ -43,7 +43,7 @@ Lista dos atendimentos realizados pelo profissional.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
-|List<FichaAtendimentoDomiciliarChild>|	Sim|	1|	13|
+|List\<FichaAtendimentoDomiciliarChild\>|	Sim|	1|	13|
 
 ## FichaAtendimentoDomiciliarChild
 
@@ -124,7 +124,7 @@ Marcadores das situações presentes.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
-|List<Long>|	Opcional|	0|	24|
+|List\<Long\>|	Opcional|	0|	24|
 
 **Referências**: [SituacoesPresentes](##8-situacoespresentes)
 
@@ -147,7 +147,7 @@ Procedimentos registrados no atendimento disponíveis na ficha.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
-|List<String>|	Opcional|	0|	21|
+|List\<String\>|	Opcional|	0|	21|
 
 **Referência**: [ProcedimentosDaAtençãoDomiciliar](#procedimentos-da-atenção-domiciliar)
 
@@ -156,7 +156,7 @@ Procedimentos SIGTAP registrados no atendimento.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
-|List<String>|	Opcional	|0|	4|
+|List\<String\>|	Opcional	|0|	4|
 
 **Regras**:
 <br> • Não podem ser iguais aos procedimentos a cima.

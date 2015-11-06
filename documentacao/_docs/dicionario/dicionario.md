@@ -232,11 +232,11 @@ order: 0
 |8 L|	INSTITUIÇÃO/ABRIGO	|-|
 |9 L|	UNIDADE PRISIONAL OU CONGÊNERES	|-|
 |10 L|	UNIDADE SOCIOEDUCATIVA	|-|
-|11 L|	HOSPITAL |	Utilizado apenas na ficha de atendimento domiciliar
-|12 L|	UNIDADE\_DE\_PRONTO\_ATENDIMENTO| - |
-|13 L|	CACON/UNACON| - |
-|14 L|	HOSPITAL\_SOS\_URGENCIA/EMERGENCIA| - |
-|15 L|	HOSPITAL\_SOS\_DEMAIS\_SETORES| - |
+|11 L|	HOSPITAL |	Utilizado apenas na ficha de atendimento domiciliar |
+|12 L|	UNIDADE\_DE\_PRONTO\_ATENDIMENTO| Utilizado apenas na ficha de atendimento domiciliar |
+|13 L|	CACON/UNACON| Utilizado apenas na ficha de atendimento domiciliar |
+|14 L|	HOSPITAL\_SOS\_URGENCIA/EMERGENCIA| Utilizado apenas na ficha de atendimento domiciliar |
+|15 L|	HOSPITAL\_SOS\_DEMAIS\_SETORES| Utilizado apenas na ficha de atendimento domiciliar |
 
 ## LocalizacaoDaMoradia
 |Código|	Descrição|	Observações|
@@ -563,8 +563,8 @@ order: 0
 |4 L|	ESCUTA\_INICIAL\_OU\_ORIENTACAO| 	-|
 |5 L|	CONSULTA\_NO\_DIA|	-|
 |6 L|	ATENDIMENTO\_DE\_URGENCIA|	-|
-|7 L|	ATENDIMENTO\_PROGRAMADO|	Utilizados apenas nas fichas de atendimento domiciliar
-|8 L|	ATENDIMENTO NÃO PROGRAMADO| - |
+|7 L|	ATENDIMENTO\_PROGRAMADO|	Utilizados apenas nas fichas de atendimento domiciliar |
+|8 L|	ATENDIMENTO NÃO PROGRAMADO| Utilizados apenas nas fichas de atendimento domiciliar |
 
 ## TipoDeConsultaOdonto
 |Código|	Descrição|	Observações|

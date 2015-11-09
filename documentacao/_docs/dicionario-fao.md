@@ -84,7 +84,7 @@ Número do prontuário do cidadão.
 **Regras**: Apenas letras e números são aceitos.
 
 ### \#4	gestante
-Marcador que indica se o cidadão esta gestante.
+Marcador que indica se o cidadão está gestante.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -93,7 +93,7 @@ Marcador que indica se o cidadão esta gestante.
 **Regras:** [Sexo](##14-sexo) = `1L (feminino)`.
 
 ### \#5	necessidadesEspeciais
-Marcador que indica se o cidadão é portador de necessidades especiais,
+Marcador que indica se o cidadão é portador de necessidades especiais.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -131,7 +131,7 @@ Condutas adotadas e possíveis encaminhamentos.
 **Referências:** [CondutaEncaminhamentoOdonto]({% url dicionario %}#condutaencaminhamentoodonto)
 
 ### \#9	tiposFornecimOdonto
-Materias fornecidos durante o atendimento.
+Materiais fornecidos durante o atendimento.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -156,11 +156,12 @@ Tipo de consulta odontológica realizada.
 |List\<Long>|	Condicional |	-	|-|
 
 **Regras**:
-<br> • É Requerido se o [TipoDeAtendimento]({% url dicionario %}#tipodeatendimento) = `2L (consulta agendada)`.
-<br> • Não pode ser preenchido se o [TipoDeAtendimento]({% url dicionario %}#tipodeatendimento) = `4L (escuta inicial ou orientação)`.
-<br> • Se o [TipoDeAtendimento]({% url dicionario %}#tipodeatendimento) = `6L (atendimento de urgência)`, a opção de `2L (consulta de retorno)` não pode ser marcada.
-<br> • Se [TipoDeAtendimento]({% url dicionario %}#tipodeatendimento) = `5L (consulta no dia)`, o campo é opcional.
-<br> • Aceita apenas um registro.
+
+* É Requerido se o [TipoDeAtendimento]({% url dicionario %}#tipodeatendimento) = `2L (consulta agendada)`.
+* Não pode ser preenchido se o [TipoDeAtendimento]({% url dicionario %}#tipodeatendimento) = `4L (escuta inicial ou orientação)`.
+* Se o [TipoDeAtendimento]({% url dicionario %}#tipodeatendimento) = `6L (atendimento de urgência)`, a opção de `2L (consulta de retorno)` não pode ser marcada.
+* Se [TipoDeAtendimento]({% url dicionario %}#tipodeatendimento) = `5L (consulta no dia)`, o campo é opcional.
+* Aceita apenas um registro.
 
 **Referências:** [TipoDeConsultaOdonto]({% url dicionario %}#tipodeconsultaodonto)
 
@@ -172,7 +173,8 @@ Procedimentos que são apresentados na ficha.
 |List\<ProcedimentoQuantidade>|	Opcional|	0|	27|
 
 **Regras:**
-<br> • Não pode haver procedimentos com o mesmo código.
+
+* Não pode haver procedimentos com o mesmo código.
 
 **Referências:**	[ListaProcedimentosRealizados](#listaprocedimentosrealizados)
 
@@ -184,8 +186,9 @@ Lista de outros procedimentos.
 |List\<ProcedimentoQuantidade>|	Opcional|	0|	24|
 
 **Regras:**
-<br> • Não pode conter procedimentos da [ListaProcedimentosRealizados](#listaprocedimentosrealizados).
-<br> • Não pode haver procedimentos com o mesmo código.
+
+* Não pode conter procedimentos da [ListaProcedimentosRealizados](#listaprocedimentosrealizados).
+* Não pode haver procedimentos com o mesmo código.
 
 **Referências:** [ProcedimentoQuantidade](#procedimentoquantidade)
 
@@ -228,7 +231,8 @@ Quantidade de procedimentos realizados.
 |Integer|	Requerido|	0|	2|
 
 **Regras:**
-<br> • Valor máximo que pode ser registrado é 99.
+
+* Valor máximo que pode ser registrado é 99.
 
 ## ListaProcedimentosRealizados
 |Código | Descrição |

@@ -29,7 +29,7 @@ CNS do cidadão.
 
 **Regras**: CNS valido de acordo com o algoritmo.
 
-**Referência**: Para ver o algoritmo utilizado, acesse: [Cartao Net Datasus](http://cartaonet.datasus.gov.br/). Em "Downloads" baixe o arquivo de rotina de validação Java.  
+**Referência**: Para ver o algoritmo utilizado, acesse: [Cartão Net Datasus](http://cartaonet.datasus.gov.br/). Em "Downloads" baixe o arquivo de rotina de validação Java.  
 
 ### \#3 identificacaoUsuario
 
@@ -40,8 +40,9 @@ Nome do cidadão.
 |String |Sim |5 |100 |
 
 **Regras**:
-<br> • Ter ao menos duas palavras.
-<br> • Somente texto e apóstrofo (`'`).
+
+* Ter ao menos duas palavras.
+* Somente texto e apóstrofo (`'`).
 
 ### \#4 dataNascimento
 
@@ -222,8 +223,9 @@ Resposta referente a pergunta do registro acima.
 |List\<RespostaMultiplaEscolhaEnum\> |Condicional |- |- |
 
 **Regras:**
-<br> • Deve respeitar as regras das respostas referente a pergunta .
-<br> • Pode ser preenchido somente se a pergunta for 12L.
+
+* Deve respeitar as regras das respostas referente a pergunta .
+* Pode ser preenchido somente se a pergunta for 12L.
 
 **Referência:** [RespostaMultiplaEscolhaEnum](#respostamultiplaescolhaenum).
 
@@ -272,7 +274,7 @@ Observações: Os campos `#2` e `#3` são mutualmente exclusivos, isto é, um e 
 |Descrição	|Código	|Respostas aceitas|
 |--- |--- |--- |
 |VOCE\_TEM\_COSTUME\_DE\_REALIZAR\_AS\_REFEICOES\_ASSISTINDO\_TV\_MEXENDO\_NO\_COMPUTADOR\_E\_OU\_CELULAR |11 |• 1L - SIM <br>• 2L - NÃO <br> • 3L - NÃO\_SABE |
-|QUAIS\_REFEICOES\_VOCE\_FAZ\_AO\_LONGO\_DO\_DIA |12 | [RespostaMultiplaEscolhaEnum]() |
+|QUAIS\_REFEICOES\_VOCE\_FAZ\_AO\_LONGO\_DO\_DIA |12 | [RespostaMultiplaEscolhaEnum](#respostamultiplaescolhaenum) |
 |FEIJAO	|14	|• 1L - SIM <br>• 2L - NÃO <br> • 3L - NÃO\_SABE |
 |FRUTAS\_FRESCAS	|15	|• 1L - SIM <br>• 2L - NÃO <br> • 3L - NÃO\_SABE |
 |VERDURAS\_E\_OU\_LEGUMES |16 |• 1L - SIM <br>• 2L - NÃO <br> • 3L - NÃO\_SABE |
@@ -286,22 +288,22 @@ Observações: Os campos `#2` e `#3` são mutualmente exclusivos, isto é, um e 
 |--- |--- |
 |SIM |1L |
 |NÃO |2L |
-|NAO_SABE |3L |
-|UMA_VEZ |4L |
-|DUAS_VEZES |5L |
-|TRES_VEZES_OU_MAIS |6L |
-|EM_PEDACOS |7L |
+|NAO\_SABE |3L |
+|UMA\_VEZ |4L |
+|DUAS\_VEZES |5L |
+|TRES\_VEZES\_OU\_MAIS |6L |
+|EM\_PEDACOS |7L |
 |AMASSADA |8L |
-|PASSADA_NA_PENEIRA |9L |
+|PASSADA\_NA\_PENEIRA |9L |
 |LIQUIDIFICADA	 |10L |
-|SO_O_CALDO	 |11L |
+|SO\_O\_CALDO	 |11L |
 
 ## RespostaMultiplaEscolhaEnum
 |Descrição |Código |
 |--- |--- |
-|CAFE_DA_MANHA |12L |
-|LANCHE_DA_MANHA |13L |
+|CAFE\_DA\_MANHA |12L |
+|LANCHE\_DA\_MANHA |13L |
 |ALMOCO |14L |
-|LANCHE_DA_TARDE |15L |
+|LANCHE\_DA\_TARDE |15L |
 |JANTAR |16L |
 |CEIA |17L |

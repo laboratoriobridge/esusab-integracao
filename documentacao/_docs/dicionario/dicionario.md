@@ -542,7 +542,7 @@ order: 0
 |6 L|	Ficha de Atividade Coletiva	|-|
 |7 L|	Ficha de Procedimentos	|-|
 |8 L|	Ficha de Visita Domiciliar	|-|
-|9 L|	Atendimento realizado pelo software de prontuário	|-|
+| - |	-	| - |
 |10 L|	Ficha de Atendimento Domiciliar	|-|
 |11 L|	Ficha de Avaliação de Elegibilidade|	-|
 |12 L|	Marcadores de Consumo Alimentar	|-|

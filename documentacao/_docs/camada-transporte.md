@@ -5,7 +5,7 @@ id: camada-transporte
 order: 0
 ---
 
-Cada ficha dentro do arquivo compactado representa um DadoTransport serializado, sendo necessário que a extensão da ficha esteja definida como ".esus".
+Cada ficha dentro do arquivo compactado representa um DadoTransport serializado através do [TBinaryProtocol](https://github.com/apache/thrift/blob/0.9.2/lib/java/src/org/apache/thrift/protocol/TBinaryProtocol.java), sendo necessário que a extensão da ficha esteja definida como ".esus".
 
 O pacote que encapsula os dados transmissíveis, cada ficha deve conter as informações de indentificação deste cabeçalho, incluindo o dadoSerializado(conteúdo da ficha).
 
@@ -26,7 +26,7 @@ UUID do dado (identificador "universal" gerado na criação do registro).
 **Referência**: [UUID Wikipedia](https://en.wikipedia.org/wiki/Universally_unique_identifier)
 
 ### \#2 tipoDadoSerializado
-Tipo/classe do objeto serializado.
+Tipo/classe do objeto serializado através do [TBinaryProtocol](https://github.com/apache/thrift/blob/0.9.2/lib/java/src/org/apache/thrift/protocol/TBinaryProtocol.java).
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -42,7 +42,7 @@ CNES da unidade de saúde.
 | String | Sim | 7 | 7 |
 
 ### \#4 codIbge
-Código IBGE do dado serializado.
+Código IBGE do dado serializado através do [TBinaryProtocol](https://github.com/apache/thrift/blob/0.9.2/lib/java/src/org/apache/thrift/protocol/TBinaryProtocol.java).
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -51,21 +51,21 @@ Código IBGE do dado serializado.
 **Referência**: [Municípios]({% url municipios %})
 
 ### \#5	ineDadoSerializado
-INE da equipe que gerou a ficha	String.
+INE da equipe que gerou a ficha.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 | String | Opcional |	10|	10|
 
 ### \#6	numLote
-Numero do lote para controle interno dos arquivos enviados.
+Número do lote para controle interno dos arquivos enviados.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |Long|	Opcional	|0	|	-	|
 
 ### \#7	dadoSerializado
-Dado serializado a partir de um  de uma ficha.
+Dado serializado através do [TBinaryProtocol](https://github.com/apache/thrift/blob/0.9.2/lib/java/src/org/apache/thrift/protocol/TBinaryProtocol.java) a partir de uma ficha.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -90,24 +90,24 @@ Identifica a instalação que cadastrou/digitou.
 **Referência**: [DadoInstalacao](#DadoInstalacao)
 
 ### \#10	versao
-Identifica a versão do E-SUS AB	Versao.
+Identifica a versão do E-SUS AB.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
-| Versão| Requerido	|-|	-|
+| Versao| Requerido	|-|	-|
 
 **Referência**: [Versão]({%url versao %})
 
 ## DadoInstalacao
 
 ### \#1	contraChave
-Identifica o software que gerou o dado(pec/cds, cdsOff ou software de terceiros).
+Identifica o software que gerou o dado (pec/cds, cdsOff ou software de terceiros).
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |String|	Requerido|	-|	-	|
 
-Exemplo:  `<Nome do software do município> - Versão 2015` -	Dados para identificar a instalação que cadastrou / gerou os dados e / ou enviou.
+**Regras:** Seguir o padrão `<Nome do software do município> - Versão 2015`
 
 ### \#2	uuidInstalacao
 É um identificador da instalação do software que gerou o dado. Seja ele o e-SUS ou software de terceiro. Cada e-SUS possui um UUID.

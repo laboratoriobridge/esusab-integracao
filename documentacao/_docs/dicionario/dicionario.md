@@ -8,55 +8,55 @@ order: 0
 ## AbastecimentoDeAgua
 |Código|	Descrição	|Observações|
 |---|---|---|
-|117 L|	REDE\_ENCANADA\_ATE\_O\_DOMICILIO|	-|
-|118 L|	POCO\_NASCENTE\_NO\_DOMICILIO	|-|
-|119 L|	CISTERNA	|-|
-|120 L|	CARRO\_PIPA	|-|
-|121 L|	OUTRO	|-|
+|117 L|	Rede encanada até o domicílio|	-|
+|118 L|	Poço / Nascente no domicílio	|-|
+|119 L|	Cisterna	|-|
+|120 L|	Carro pipa |-|
+|121 L|	Outro	|-|
 
 ## AcessoHigiene
 |Código |	Descrição|	Observações|
 |---|---|---|
-|42 L|	BANHO	|-|
-|43 L|	ACESSO\_AO\_SANITARIO	|-|
-|44 L|	HIGIENE\_BUCAL	|-|
-|45 L|	OUTROS	|-|
+|42 L|	Banho	|-|
+|43 L|	Acesso a sanitário	|-|
+|44 L|	Higiene bucal	|-|
+|45 L|	Outros	|-|
 
 ## AleitamentoMaterno
 |Código|	Descrição|	Observações|
 |---|---|---|
-|1 L|	EXCLUSIVO	|-|
-|2 L|	PREDOMINANTE |-|
-|3 L|	COMPLEMENTADO	|-|
-|4 L|	INEXISTENTE	|-|
+|1 L|	Exclusivo	|-|
+|2 L|	Predominante |-|
+|3 L|	Complementado	|-|
+|4 L|	Inexistente	|-|
 
 ## AnimalNoDomicilio
 |Código	|Descrição|	Observações|
 |---|---|---|
-|128 L|	GATO	|-|
-|129 L|	CACHORRO	|-|
-|130 L|	PASSARO	|-|
-|131 L|	DE\_CRIACAO\_PORCO\_GALINHA	|-|
-|132 L|	OUTROS|	-|
+|128 L|	Gato	|-|
+|129 L|	Cachorro	|-|
+|130 L|	Passaro	|-|
+|131 L|	De criação (porco, galinha...) |-|
+|132 L|	Outros|	-|
 
 ## AtencaoDomiciliarOrigem
 |Código|	Descrição|	Observações|
 |---|---|---|
-|1 L	|UBS	|-|
-|6 L	|OUTROS	|-|
-|11 L|	HOSPITAL|	-|
-|12 L|	UNIDADE\_PRONTO\_ATENDIMENTO	|-|
-|13 L|	CACON\_UNACON	|-|
-|14 L|	URGENCIA\_EMERGENCIA\_HOSPITAL\_SOS	|-|
-|15 L|	HOSPITAL\_SOS\_DEMAIS\_SETORES	|-|
+|1 L| UBS	|-|
+|6 L| Outros	|-|
+|11 L|	Hospital|	-|
+|12 L|	Unidade pronto atendimento	|-|
+|13 L|	CACON / UNACON	|-|
+|14 L|	Urgência / Emergência hospital SOS	|-|
+|15 L|	Hospital SOS demais setores	|-|
 
 ## ConclusaoDestinoElegivel
 |Código|	Descrição|	Observações|
 |---|---|---|
-|1 L|	ADMISSAO\_PROPRIA\_EMAD	|-|
-|2 L|	ENCAMINHADO\_OUTRO\_EMAD	|-|
-|3 L|	ENCAMINHADO\_ATENCAO\_BASICA	|-|
-|4 L|	OUTRO\_ENCAMINHAMENTO	|-|
+|1 L|	Admissão própria EMAD	|-|
+|2 L|	Encaminhado para outra EMAD	|-|
+|3 L|	Encaminhado para atenção básica	|-|
+|4 L|	Outro encaminhamento	|-|
 
 ## ConclusaoDestinoInelegivel
 |Código|	Descrição|	Observações|
@@ -70,327 +70,327 @@ order: 0
 ## CondicaoDePosseEUsoDaTerra
 |Código|	Descrição|	Observações|
 |---|---|---|
-|101 L|	PROPRIETARIO|	-|
-|102 L|	PARCEIRO\_MEEIRO	|-|
-|103 L|	ASSENTADO	|-|
-|104 L|	POSSEIRO	|-|
-|105 L|	ARRENDATARIO	|-|
-|106 L|	COMODATARIO	|-|
-|107 L|	BENEFICIARIO\_DO\_BANCO\_DA\_TERRA	|-|
-|108 L|	NAO\_SE\_APLICA	|-|
+|101 L|	Proprietário|	-|
+|102 L|	Parceiro(a) / Meeiro(a)	|-|
+|103 L|	Assentado(a)	|-|
+|104 L|	Posseiro	|-|
+|105 L|	Arrendatário(a)	|-|
+|106 L|	Comodatário(a)	|-|
+|107 L| Beneficiário(a) do banco da terra	|-|
+|108 L|	Não se aplica	|-|
 
 ## CondutaDesfecho
 |Código|	Descrição|	Observações|
 |---|---|---|
-|3 L|	ALTA\_ADMINISTRATIVA|	-|
-|1 L|	ALTA\_CLINICA|	-|
-|2 L|	ENCAMINHAMENTO\_PARA\_AD|	-|
-|4 L|	URGENCIA\_EMERGENCIA|	-|
-|5 L|	INTERNACAO\_HOSPITALAR|	-|
-|6 L|	SAIDA\_POR\_OBITO|	-|
+|3 L|	Alta administrativa da AD|	-|
+|1 L|	Alta clínica da AD|	-|
+|2 L|	Encaminhamento para Atenção Básica (AD1)|	-|
+|4 L|	Urgência / Emergência|	-|
+|5 L|	Internação hospitalar|	-|
+|6 L|	Saída por óbito / final de acompanhamento pós-óbito|	-|
 
 ## CondutaEncaminhamento
 |Código|	Descrição|	Observações|
 |---|---|---|
-|1 L|	RETORNO\_PARA\_CONSULTA\_AGENDADA|	-|
-|2 L|	RETORNO\_PARA\_CUIDADO\_CONTINUADO\_OU\_PROGRAMADO|	-|
-|12 L|	AGENDAMENTO\_PARA\_GRUPOS|	-|
-|3 L|	AGENDAMENTO\_PARA\_NASF|	-|
-|9 L|	ALTA\_DO\_EPISODIO|	-|
-|11 L|	ENCAMINHAMENTO\_INTERNO\_NO\_DIA|	-|
-|4 L|	ENCAMINHAMENTO\_PARA\_SERVICO\_ESPECIALIZADO|	-|
-|5 L|	ENCAMINHAMENTO\_PARA\_CAPS|	-|
-|6 L|	ENCAMINHAMENTO\_PARA\_INTERNACAO\_HOSPITALAR|	-|
-|7 L|	ENCAMINHAMENTO\_PARA\_URGENCIA|	-|
-|8 L|	ENCAMINHAMENTO\_PARA\_SERVICAO\_ATENCAO\_DOMICILIAR123|	-|
-|10 L|	ENCAMINHAMENTO\_INTERSETORIAL|	-|
+|1 L|	Retorno para consulta agendada |	-|
+|2 L|	Retorno para cuidado continuado / programado |	-|
+|12 L| Agendamento para grupos |	-|
+|3 L|	Agendamento para NASF |	-|
+|9 L|	Alta do episódio |	-|
+|11 L| Encaminhamento interno no dia |	-|
+|4 L|	Encaminhamento para serviço especializado |	-|
+|5 L|	Encaminhamento para CAPS |	-|
+|6 L|	Encaminhamento para internação hospitalar |	-|
+|7 L|	Encaminhamento para urgência |	-|
+|8 L|	Encaminhamento para serviço de atenção domiciliar |	-|
+|10 L| Encaminhamento intersetorial |	-|
 
 ## CondutaEncaminhamentoOdonto
 |Código|	Descrição|	Observações|
 |---|---|---|
-|16 L|	RETORNO\_PARA\_CONSULTA\_AGENDADA|	-|
-|12 L|	AGENDAMENTO\_PARA\_OUTROS\_PROFISSIONAIS\_AB|	-|
-|13 L|	AGENDAMENTO\_PARA\_NASF|	-|
-|14 L|	AGENDAMENTO\_PARA\_GRUPOS|	-|
-|15 L|	TRATAMENTO\_CONCLUIDO|	-|
-|1 L|	ATENDIMENTO\_A\_PACIENTES\_COM\_NECESSIDADES\_ESPECIAIS|	-|
-|2 L|	CIRURGIA\_BMF|	-|
-|3 L|	ENDODONTIA|	-|
-|4 L|	ESTOMATOLOGIA|	-|
-|5 L|	IMPLANTODONTIA|	-|
-|6 L|	ODONTOPEDIATRIA|	-|
-|7 L|	ORTODONTIA\_ORTOPEDIA|	-|
-|8 L|	PERIODONTIA|	-|
-|9 L|	PROTESE\_DENTARIA|	-|
-|10 L|	RADIOLOGIA|	-|
-|11 L|	OUTROS|	-|
+|16 L|	Retorno para consulta agendada|	-|
+|12 L|	Agendamento para outros profissionais AB|	-|
+|13 L|	Agendamento para NASF|	-|
+|14 L|	Agendamento para grupos|	-|
+|15 L|	Tratamento concluído|	-|
+|1 L|	Atendimento à pacientes com necessidades especiais|	-|
+|2 L|	Cirurgia BMF|	-|
+|3 L|	Endodontia|	-|
+|4 L|	Estomatologia|	-|
+|5 L|	Implantodontia|	-|
+|6 L|	Odontopediatria|	-|
+|7 L|	Ortodontia / Ortopedia|	-|
+|8 L|	Periodontia|	-|
+|9 L|	Prótese dentária|	-|
+|10 L|	Radiologia|	-|
+|11 L|	Outros|	-|
 
 ## ConsideracaoPeso
 |Código|	Descrição|	Observações|
 |---|---|---|
-|21 L|	ABAIXO\_DO\_PESO|	-|
-|22 L|	PESO\_ADEQUADO|	-|
-|23 L|	ACIMA\_DO\_PESO|	-|
+|21 L|	Abaixo do peso|	-|
+|22 L|	Peso adequado|	-|
+|23 L|	Acima do peso|	-|
 
 ## CuidadorCidadao
 |Código|	Descrição|	Observações|
 |---|---|---|
-|1 L|	NAO\_POSSUI|	-|
-|2 L|	CONJUGE\_COMPANHEIRO|	-|
-|3 L|	FILHO\_ENTEADO|	-|
-|4 L|	PAI\_MAE|	-|
-|5 L|	AVO|	-|
-|6 L|	NETO|	-|
-|7 L|	IRMAO|	-|
-|8 L|	OUTRO|	-|
+|1 L|	Não possui |	-|
+|2 L|	Conjuge / Companheiro|	-|
+|3 L|	Filho / Enteado|	-|
+|4 L|	Pai / Mãe|	-|
+|5 L|	Avô(ó)|	-|
+|6 L|	Neto|	-|
+|7 L|	Irmão|	-|
+|8 L|	Outro|	-|
 
 ## CursoMaisElevado
 |Código|	Descrição|	Observações|
 |---|---|---|
-|51 L|	CRECHE|	-|
-|52 L|	PRE\_ESCOLA\_EXCETO\_CA|	-|
-|53 L|	CLASSE\_ALFABETIZADA\_CA|	-|
-|54 L|	ENSINO\_FUNDAMENTAL\_1\_4\_SERIES|	-|
-|55 L|	ENSINO\_FUNDAMENTAL\_5\_8\_SERIES|	-|
-|56 L|	ENSINO\_FUNDAMENTAL\_COMPLETO|	-|
-|61 L|	ENSINO\_FUNDAMENTAL\_ESPECIAL|	-|
-|58 L|	ENSINO\_FUNDAMENTAL\_EJA\_SERIES\_INICIAIS\_SUPLETIVO\_1\_4|	-|
-|59 L|	ENSINO\_FUNDAMENTAL\_EJA\_SERIES\_INICIAIS\_SUPLETIVO\_5\_8|	-|
-|60 L|	ENSINO\_MEDIO\_MEDIO\_2\_CICLO|	-|
-|57 L|	ENSINO\_MEDIO\_ESPECIAL|	-|
-|62 L|	ENSINO\_MEDIO\_EJA\_SUPLETIVO|	-|
-|63 L|	SUPERIOR\_APERFEICOAMENTO\_ESPECIALIZACAO\_MESTRADO\_DOUTORADO|	-|
-|64 L|	ALFABETIZACAO\_PARA\_ADULTROS\_MOBRAL\_ETC|	-|
-|65 L|	NENHUM|	-|
+|51 L|	Creche|	-|
+|52 L|	Pré-escola (exceto CA)|	-|
+|53 L|	Classe alfabetizada - CA|	-|
+|54 L|	Ensino fundamental 1ª a 4ª séries|	-|
+|55 L|	Ensino fundamental 5ª a 8ª séries|	-|
+|56 L|	Ensino fundamental completo|	-|
+|61 L|	Ensino fundamental especial|	-|
+|58 L|	Ensino fundamental EJA - séries iniciais (supletivo 1ª a 4ª)|	-|
+|59 L|	Ensino fundamental EJA - séries finais (supletivo 5ª a 8ª)|	-|
+|60 L|	Ensino médio, médio 2º ciclo (científico, técnico e etc)|	-|
+|57 L|	Ensino médio especial|	-|
+|62 L|	Ensino médio EJA (supletivo)|	-|
+|63 L|	Superior, aperfeiçoamento, especialização, mestrado, doutorado|	-|
+|64 L|	Alfabetização para adultos (Mobral, etc)|	-|
+|65 L|	Nenhum|	-|
 
 ## DeficienciaCidadao
 |Código|	Descrição|	Observações|
 |---|---|---|
-|12 L|	AUDITIVA|	-|
-|13 L|	VISUAL|	-|
-|14 L|	INTELECTUAL\_OU\_COGNITIVA|	-|
-|15 L|	FISICA|	-|
-|16 L|	OUTRA|	-|
+|12 L|	Auditiva|	-|
+|13 L|	Visual|	-|
+|14 L|	Intelectual / Cognitiva|	-|
+|15 L|	Física|	-|
+|16 L|	Outra|	-|
 
 ## Desfecho
 |Código	|Descrição|	Observações|
 |---|---|---|
-|1 L|	VISITA\_REALIZADA|	-|
-|2 L|	VISITA\_RECUSADA|	-|
-|3 L|	AUSENTE|	-|
+|1 L|	Visita realizada|	-|
+|2 L|	Visita recusada|	-|
+|3 L|	Ausente|	-|
 
 ## DestinoDoLixo
 |Código|	Descrição|	Observações|
 |---|---|---|
-|93 L|	COLETADO|	-|
-|94 L|	QUEIMADO\_OU\_ENTERRADO|	-|
-|95 L|	CEU\_ABERTO|	-|
-|96 L|	OUTRO|	-|
+|93 L|	Coletado|	-|
+|94 L|	Queimado / Enterrado|	-|
+|95 L|	Céu aberto|	-|
+|96 L|	Outro|	-|
 
 ## DoencaCardiaca
 |Código|	Descrição|	Observações|
 |---|---|---|
-|24 L|	INSUFICIENCIA\_CARDIACA|	-|
-|25 L|	OUTRO|	-|
-|26 L|	NAO\_SABE|	-|
+|24 L|	Insuficiência cardíaca|	-|
+|25 L|	Outro|	-|
+|26 L|	Não sabe|	-|
 
 ## DoencaRespiratoria
 |Código|	Descrição|	Observações|
 |---|---|---|
-|30 L|	ASMA|	-|
-|31 L|	DPOC\_ENFISEMA|	-|
-|32 L|	OUTRO|	-|
-|33 L|	NAO\_SABE|	-|
+|30 L|	Asma|	-|
+|31 L|	DPOC / Enfisema|	-|
+|32 L|	Outro|	-|
+|33 L|	Não sabe|	-|
 
 ## FormaDeEscoamentoDoBanheiroOuSanitario
 |Código|	Descrição|	Observações|
 |---|---|---|
-|122 L|	REDE\_COLETORA\_DE\_ESGOTO\_OU\_PLUVIAL|	-|
-|123 L|	FOSSA\_SEPTICA|	-|
-|124 L|	FOSSA\_RUDIMENTAR|	-|
-|125 L|	DIRETO\_PARA\_UM\_RIO\_LAGO\_OU\_MAR|	-|
-|126 L|	CEU\_ABERTO|	-|
-|127 L|	OUTRA\_FORMA|	-|
+|122 L|	Rede coletora de esgoto / pluvial|	-|
+|123 L|	Fossa séptica|	-|
+|124 L|	Fossa rudimentar|	-|
+|125 L|	Direto para um rio / lago / mar|	-|
+|126 L|	Céu aberto|	-|
+|127 L|	Outra forma|	-|
 
 ## FornecimentoOdonto
 |Código|	Descrição|	Observações|
 |---|---|---|
-|1 L|	ESCOVA\_DENTAL|	-|
-|2 L|	CREME\_DENTAL|	-|
-|3 L|	FIO\_DENTAL|	-|
+|1 L|	Escova dental|	-|
+|2 L|	Creme dental|	-|
+|3 L|	Fio dental|	-|
 
 ## LocalDeAtendimento
 |Código|	Descrição|	Observações|
 |---|---|---|
 |1 L|	UBS	|-|
-|2 L|	UNIDADE MÓVEL	|-|
-|3 L|	RUA	|-|
-|4 L|	DOMICÍLIO	|-|
-|5 L|	ESCOLA/CRECHE	|-|
-|6 L|	OUTROS	|-|
-|7 L|	POLO(ACADEMIA DA SAÚDE)	|-|
-|8 L|	INSTITUIÇÃO/ABRIGO	|-|
-|9 L|	UNIDADE PRISIONAL OU CONGÊNERES	|-|
-|10 L|	UNIDADE SOCIOEDUCATIVA	|-|
-|11 L|	HOSPITAL |	Utilizado apenas na ficha de atendimento domiciliar |
-|12 L|	UNIDADE\_DE\_PRONTO\_ATENDIMENTO| Utilizado apenas na ficha de atendimento domiciliar |
-|13 L|	CACON/UNACON| Utilizado apenas na ficha de atendimento domiciliar |
-|14 L|	HOSPITAL\_SOS\_URGENCIA/EMERGENCIA| Utilizado apenas na ficha de atendimento domiciliar |
-|15 L|	HOSPITAL\_SOS\_DEMAIS\_SETORES| Utilizado apenas na ficha de atendimento domiciliar |
+|2 L|	Unidade móvel|-|
+|3 L|	Rua	|-|
+|4 L|	Domicílio	|-|
+|5 L|	Escola / Creche	|-|
+|6 L|	Outros	|-|
+|7 L|	Polo (academia da saúde)	|-|
+|8 L|	Instituição / Abrigo	|-|
+|9 L|	Unidade prisional ou congêneres	|-|
+|10 L| Unidade socioeducativa	|-|
+|11 L| Hospital |	Utilizado apenas na ficha de atendimento domiciliar |
+|12 L|	Unidade de pronto atendimento | Utilizado apenas na ficha de atendimento domiciliar |
+|13 L|	CACON / UNACON| Utilizado apenas na ficha de atendimento domiciliar |
+|14 L|	Hospital SOS Urgência / Emergência| Utilizado apenas na ficha de atendimento domiciliar |
+|15 L|	Hospital SOS demais setores| Utilizado apenas na ficha de atendimento domiciliar |
 
 ## LocalizacaoDaMoradia
 |Código|	Descrição|	Observações|
 |---|---|---|
-|83 L|	URBANA|	-|
-|84 L|	RURAL|	-|
+|83 L|	Urbana|	-|
+|84 L|	Rural|	-|
 
 ## MaterialPredominanteNaConstrucao
 |Código|	Descrição|	Observações|
 |---|---|---|
-|109 L|	ALVENARIA\_COM\_REVESTIMENTO|	-|
-|110 L|	ALVENARIA\_SEM\_REVESTIMENTO|	-|
-|111 L|	TAIPA\_COM\_REVESTIMENTO|	-|
-|112 L|	TAIPA\_SEM\_REVESTIMENTO|	-|
-|113 L|	MADEIRA\_EMPARELHADA|	-|
-|114 L|	MATERIAL\_APROVEITADO|	-|
-|115 L|	PALHA|	-|
-|116 L|	OUTRO\_MATERIAL|	-|
+|109 L|	Alvenaria com revestimento|	-|
+|110 L|	Alvenaria sem revestimento|	-|
+|111 L|	Taipa com revestimento|	-|
+|112 L|	Taipa sem revestimento|	-|
+|113 L|	Madeira emparelhada|	-|
+|114 L|	Material aproveitado|	-|
+|115 L|	Palha|	-|
+|116 L|	Outro material|	-|
 
 ## ModalidadeAD
 |Código|	Descrição|	Observações|
 |---|---|---|
-|1 L|	AD\_1|	-|
-|2 L|	AD\_2|	-|
-|3 L|	AD\_3|	-|
-|4 L|	INELEGIVEL|	Utilizado apenas na ficha de avaliação de elegibilidade|
+|1 L|	AD 1|	-|
+|2 L|	AD 2|	-|
+|3 L|	AD 3|	-|
+|4 L|	Ielegível |	Utilizado apenas na ficha de avaliação de elegibilidade|
 
 ## MotivoSaida
 |Código|	Descrição|	Observações|
 |---|---|---|
-|135 L|	SAIDA\_CIDADAO\_OBITO|	-|
-|136 L|	SAIDA\_CIDADAO\_MUDANCA\_TERRITORIO|	-|
+|135 L|	Óbito |	-|
+|136 L|	Mudança de território |	-|
 
 ## MotivoVisita
 |Código|	Descrição|	Observações|
 |---|---|---|
-|1 L|	CADASTRAMENTO\_OU\_ATUALIZACAO|	#TIPO\_VISITA |
-|29 L|	VISITA\_PERIODICA| - |
-|2 L|	CONSULTA|	#BUSCA\_ATIVA|
-|3 L|	EXAME| - |
-|4 L|	VACINA| - |
-|30 L|	CONDICIONALIDADES\_BOLSA\_FAMILIA| - |
-|5 L|	GESTANTE|	#ACOMPANHAMENTO |
-|6 L|	PUERPERA| - |
-|7 L|	RECEM\_NASCIDO| - |
-|8 L|	CRIANCA| - |
-|9 L|	PESSOA\_COM\_DESNUTRICAO| - |
-|10 L|	PESSOA\_EM\_REABILITACAO\_OU\_COM\_DEFICIENCIA| - |
-|11 L|	PESSOA\_COM\_HIPERTENSAO| - |
-|12 L|	PESSOA\_COM\_DIABETES| - |
-|13 L|	PESSOA\_COM\_ASMA| - |
-|14 L|	PESSOA\_COM\_DPOC\_OU\_ENFISEMA| -|
-|15 L|	PESSOA\_COM\_CANCER| - |
-|16 L|	PESSOA\_COM\_OUTRAS\_DOENCAS\_CRONICAS| - |
-|17 L|	PESSOA\_COM\_HANSENIASE| - |
-|18 L|	PESSOA\_COM\_TUBERCULOSE| - |
-|32 L|	SINTOMATICOS\_RESPORATORIOS| - |
-|33 L|	TABAGISTA| - |
-|19 L|	DOMICILIADOS\_OU\_ACAMADOS| - |
-|20 L|	CONDICOES\_DE\_VULNERABILIDADE\_SOCIAL| -|
-|21 L|	CONDICIONALIDADES\_BOLSA\_FAMILIA| - |
-|22 L|	SAUDE\_MENTAL| - |
-|23 L|	USUARIO\_DE\_ALCOOL| - |
-|24 L|	USUARIO\_DE\_OUTRAS\_DROGAS| - |
-|25 L|	EGRESSO\_DE\_INTERNACAO|	#OUTROS |
-|26 L|	CONTROLE\_DE\_AMBIENTES\_OU\_VETORES| - |
-|27 L|	CONVITE\_PARA\_ATIVIDADES\_COLETIVAS\_OU\_CAMPANHA\_DE\_SAUDE| - |
-|31 L|	ORIENTACAO\_OU\_PREVENCAO| - |
-|28 L|	OUTROS| - |
+|1 L|	Cadastramento / Atualização|	#TIPO\_VISITA |
+|29 L|	Visita periódica| - |
+|2 L|	Consulta|	#BUSCA\_ATIVA|
+|3 L|	Exame| - |
+|4 L|	Vacina| - |
+|30 L|	Condicionalidades do bolsa família| - |
+|5 L|	Gestante|	#ACOMPANHAMENTO |
+|6 L|	Puérpera| - |
+|7 L|	Recém-nascido| - |
+|8 L|	Criança| - |
+|9 L|	Pessoa com desnutrição| - |
+|10 L| Pessoa em reabilitação ou com deficiência| - |
+|11 L| Pessoa com hipertensão| - |
+|12 L| Pessoa com diabetes| - |
+|13 L|	Pessoa com asma| - |
+|14 L|	Pessoa com DPOC / enfisema| -|
+|15 L| Pessoa com câncer| - |
+|16 L|	Pessoa com outras doenças crônicas| - |
+|17 L|	Pessoa com hanseníase| - |
+|18 L|	Pessoa com tuberculose| - |
+|32 L|	Sintomáticos respiratórios| - |
+|33 L|	Tabagista| - |
+|19 L|	Domiciliados / Acamados| - |
+|20 L|	Condições de vulnerabilidade social| -|
+|21 L|	Condicionalidades do bolsa família| - |
+|22 L|	Saúde mental| - |
+|23 L|	Usuário de álcool| - |
+|24 L|	Usuário de outras drogas| - |
+|25 L|	Egresso de internação |	#OUTROS |
+|26 L|	Controle de ambientes / vetores| - |
+|27 L|	Convite para atividades coletivas / campanha de saúde| - |
+|31 L|	Orientação / Prevenção| - |
+|28 L|	Outros| - |
 
 ## Nacionalidade
 |Código|	Descrição|	Observações|
 |---|---|---|
-|1 L|	BRASILEIRA|	-|
-|2 L|	NATURALIZADO|	-|
-|3 L|	ESTRANGEIRO|	-|
+|1 L|	Brasileira|	-|
+|2 L|	Naturalizado|	-|
+|3 L|	Estrangeiro|	-|
 
 ## NASF
 |Código|	Descrição|	Observações|
 |---|---|---|
-|1 L|	AVALIACAO\_DIAGNOSTICO| 	-|
-|2 L|	PROCEDIMENTOS\_CLINICOS\_TERAPEUTICO| 	-|
-|3 L|	PRESCRICAO\_TERAPEUTICA| 	-|
+|1 L|	Avaliação / Diagnóstico| 	-|
+|2 L|	Procedimentos clinicos terapeuticos| 	-|
+|3 L|	Prescreição terapeutica| 	-|
 
 ## OrientacaoSexual
 |Código| Descrição|	Observações|
 |---|---|---|
-|5 L|	HETEROSSEXUAL|	-|
-|6 L|	GAY|	-|
-|7 L|	LESBICA|	-|
-|8 L|	BISSEXUAL|	-|
-|9 L|	TRAVESTI|	-|
-|10 L|	TRANSSEXUAL|	-|
-|11 L|	OUTRO|	-|
+|5 L|	Heterossexual|	-|
+|6 L|	Gay|	-|
+|7 L|	Lésbica|	-|
+|8 L|	Bissexual|	-|
+|9 L|	Travesti|	-|
+|10 L|	Transsexual|	-|
+|11 L|	Outro|	-|
 
 ## OrigemAlimentacao
 |Código|	Descrição|	Observações|
 |---|---|---|
-|37 L|	RESTAURANTE\_POPULAR|	-|
-|38 L|	DOACAO\_GRUPO\_RELIGIOSO|	-|
-|39 L|	DOACAO\_RESTAURANTE|	-|
-|40 L|	DOACAO\_DE\_POPULAR|	-|
-|41 L|	OUTROS|	-|
+|37 L|	Restaurante popular|	-|
+|38 L|	Doação grupo religioso|	-|
+|39 L|	Doação restaurante|	-|
+|40 L|	Doação popular|	-|
+|41 L|	Outros|	-|
 
 ## PraticasIntegrativasComplementares
 |Código|	Descrição|	Observações|
 |---|---|---|
-|1 L|	MEDICINA\_TRADICIONAL\_CHINESA|	-|
-|2 L|	ANTROPOSOFIA\_APLICADO\_A\_SAUDE|	-|
-|3 L|	HOMEOPATIA|	-|
-|4 L|	FITOTERAPIA|	-|
-|5 L|	TERMALISMO\_OU\_CRENOTERAPIA|	-|
-|6 L|	PRATICAS\_CORPORAIS\_E\_MENTAIS\_EM\_PICS|	-|
-|7 L|	TECNICAS\_MANUAIS\_EM\_PICS|	-|
-|8 L|	OUTROS|	-|
+|1 L|	Medicina tradicional chinesa|	-|
+|2 L|	Antroposofia aplicado a saúde|	-|
+|3 L|	Homeopatia|	-|
+|4 L|	Fitoterapia|	-|
+|5 L|	Termalismo / Crenoterapia|	-|
+|6 L|	Práticas corporais e mentais em PICS|	-|
+|7 L|	Técnicas manuais em PICS|	-|
+|8 L|	Outros|	-|
 
 ## PraticasTemasParaSaude
 |Código|	Descrição|	Observações|
 |---|---|---|
-|1 L|	ALIMENTACAO\_SAUDAVEL|	-|
-|2 L|	APLICACAO\_TOPICA\_DE\_FLUOR|	-|
-|3 L|	SAUDE\_OCULAR|	-|
-|4 L|	AUTOCUIDADO\_DE\_PESSOAS\_COM\_DOENCAS\_CRONICAS|	-|
-|5 L|	CIDADANIA\_E\_DIREITOS\_HUMANOS|	-|
-|6 L|	SAUDE\_DO\_TRABALHADOR|	-|
-|7 L|	DEPENDENCIA\_QUIMICA\_TABACO\_ALCOOL\_E\_OUTRAS\_DROGAS|	-|
-|8 L|	ENVELHECIMENTO\_CLIMATERIO\_ANDROPAUSA\_ETC|	-|
-|9 L|	ESCOVACAO\_DENTAL\_SUPERVISIONADA|	-|
-|10 L|	PLANTAS\_MEDICINAIS\_FITOTERAPIA|	-|
-|11 L|	PRATICAS\_CORPORAIS\_OU\_ATIVIDADE\_FISICA|	-|
-|12 L|	PRATICAS\_CORPORAIS\_E\_MENTAIS\_EM\_PIC|	-|
-|13 L|	PREVENCAO\_DA\_VIOLENCIA\_E\_PROMOCAO\_DA\_CULTURA\_DA\_PAZ|	-|
-|14 L|	SAUDE\_AMBIENTAL|	-|
-|15 L|	SAUDE\_BUCAL|	-|
-|16 L|	SAUDE\_MENTAL|	-|
-|17 L|	SAUDE\_SEXUAL\_E\_REPRODUTIVA|	-|
-|18 L|	SEMANA\_SAUDE\_NA\_ESCOLA|	-|
-|19 L|	AGRAVOS\_NEGLIGENCIADOS|	-|
-|20 L|	ANTROPOMETRIA|	-|
-|21 L|	OUTROS|	-|
-|22 L|	SAUDE\_AUDITIVA|	-|
-|23 L|	DESENVOLVIMENTO\_DA\_LINGUAGEM|	-|
-|24 L|	VERIFICACAO\_DA\_SITUACAO\_VACINAL|	-|
-|25 L|	PNCT\_SESSAO\_1|	-|
-|26 L|	PNCT\_SESSAO\_2|	-|
-|27 L|	PNCT\_SESSAO\_3|	-|
-|28 L|	PNCT\_SESSAO\_4|	-|
+|1 L|	Alimentação saldavel|	-|
+|2 L|	Aplicação tópica de fluor|	-|
+|3 L|	Saúde ocular|	-|
+|4 L|	Autocuidado de pessoas com doenças crônicas |	-|
+|5 L|	Cidadania e direitos homanos|	-|
+|6 L|	Saúde do trabalhador|	-|
+|7 L|	Dependência química / tabaco / álcool / outras drogas |	-|
+|8 L|	Envelhecimento / Climatério / Andropausa  / Etc|	-|
+|9 L|	Escovação dentária supervisionada |	-|
+|10 L|	Plantas medicinais / Fitoterapia|	-|
+|11 L|	Práticvas corporais / Atividade física|	-|
+|12 L|	Práticvas corporais e mentais em PIC |	-|
+|13 L|	Prevenção da violencia e promoção da cultura da paz|	-|
+|14 L|	Saúde ambiental|	-|
+|15 L|	Saúde bucal|	-|
+|16 L|	Saúde mental|	-|
+|17 L|	Saúde sexual e reprodutiva|	-|
+|18 L|	Semana saúde na escola|	-|
+|19 L|	Agravos nigligenciados|	-|
+|20 L|	Antropometria|	-|
+|21 L|	Outros|	-|
+|22 L|	Saúde auditiva |	-|
+|23 L|	Desenvolvimento da linguagem |	-|
+|24 L|	Verificação da situação vacinal|	-|
+|25 L|	PNCT 1|	-|
+|26 L|	PNCT 2|	-|
+|27 L|	PNCT 3|	-|
+|28 L|	PNCT 4|	-|
 
 ## ProblemaRins
 |Código|	Descrição|	Observações|
 |---|---|---|
-|27 L|	INSUFICIENCIA\_RENAL|	-|
-|28 L|	OUTRO|	-|
-|29 L|	NAO\_SABE|	-|
+|27 L|	Insuficiência renal|	-|
+|28 L|	Outro|	-|
+|29 L|	Não sabe|	-|
 
 ## PublicoAlvo
 |Código|	Descrição|	Observações|
@@ -416,9 +416,9 @@ order: 0
 ## QuantasVezesAlimentacao
 |Código|	Descrição|	Observações|
 |---|---|---|
-|34 L|	UMA\_POR\_DIA	|-|
-|35 L|	DUAS\_A\_3\_POR\_DIA	|-|
-|36 L|	MAIS\_DE\_3	|-|
+|34 L|	1 vez	|-|
+|35 L|	2 ou 3 vezes	|-|
+|36 L|	mais de 3 vezes	|-|
 
 ## RacaCor
 |Código|	Descrição|	Observações|
@@ -432,16 +432,16 @@ order: 0
 ## RelacaoParentesco
 |Código|	Descrição|	Observações|
 |---|---|---|
-|137 L|	CONJUGE\_OU\_COMPANHEIRO|	-|
-|138 L|	FILHO|	-|
-|139 L|	ENTEADO|	-|
-|140 L|	NETO\_OU\_BISNETO|	-|
-|141 L|	PAI\_OU\_MAE|	-|
-|142 L|	SOGRO|	-|
-|143 L|	IRMAO\_OU\_IRMA|	-|
-|144 L|	GENRO\_OU\_NORA|	-|
-|145 L|	OUTRO\_PARENTE|	-|
-|146 L|	NAO\_PARENTE|	-|
+|137 L|	Cônjuge / Companheiro(a)|	-|
+|138 L|	Filho(a) |	-|
+|139 L|	Enteado(a) |	-|
+|140 L|	Neto(a) / Bisneto(a) |	-|
+|141 L|	Pai / Mãe |	-|
+|142 L|	Sogro(a) |	-|
+|143 L|	Irmão / Irmã |	-|
+|144 L| Genro / Nora |	-|
+|145 L|	Outro parente |	-|
+|146 L|	Não parente|	-|
 
 ## RendaFamiliar
 |Código|	Descrição|	Observações|
@@ -457,12 +457,12 @@ order: 0
 ## ResponsavelCrianca
 |Código|	Descrição|	Observações|
 |---|---|---|
-|1 L|	ADULTO\_RESPONSAVEL|	-|
-|2 L|	OUTRAS\_CRIANCAS|	-|
-|133 L|	ADOLESCENTE|	-|
-|3 L|	SOZINHA|	-|
-|134 L|	CRECHE|	-|
-|4 L|	OUTRO|	-|
+|1 L|	Adulto responsável|	-|
+|2 L|	Outra(s) criança(s)|	-|
+|133 L|	Adolecente|	-|
+|3 L|	Sozinha|	-|
+|134 L|	Creche|	-|
+|4 L|	Outro|	-|
 
 ## Sexo
 |Código|	Descrição|	Observações|
@@ -473,14 +473,14 @@ order: 0
 ## SituacaoDeMoradia
 |Código|	Descrição|	Observações|
 |---|---|---|
-|75 L|	PROPRIO|	-|
-|76 L|	FINANCIADO|	-|
-|77 L|	ALUGADO|	-|
-|78 L|	ARRENDADO|	-|
-|79 L|	CEDIDO|	-|
-|80 L|	OCUPACAO|	-|
-|81 L|	SITUACAO\_DE\_RUA|	-|
-|82 L|	OUTRA|	-|
+|75 L|	Próprio|	-|
+|76 L|	Financiado|	-|
+|77 L|	Alugado|	-|
+|78 L|	Arrendado|	-|
+|79 L|	Cedido|	-|
+|80 L|	Ocupacao|	-|
+|81 L|	Situacao de rua|	-|
+|82 L|	Outra|	-|
 
 ## SituacaoExame
 |Código|	Descrição|	Observações|
@@ -491,15 +491,15 @@ order: 0
 ## SituacaoMercadoTrabalho
 |Código|	Descrição|	Observações|
 |---|---|---|
-|66 L|	EMPREGADOR	|-|
-|67 L|	ASSALARIADO\_COM\_CARTEIRA\_TRABALHO	|-|
-|68 L|	ASSALARIADO\_SEM\_CARTEIRA\_TRABALHO	|-|
-|69 L|	AUTONOMO\_COM\_PREVIDENCIA\_SOCIAL	|-|
-|70 L|	AUTONOMO\_SEM\_PREVIDENCIA\_SOCIAL	|-|
-|71 L|	APOSENTADO\_OU\_PENSIONISTA	|-|
-|72 L|	DESEMPREGADO	|-|
-|73 L|	NAO\_TRABALHA	|-|
-|74 L|	OUTRO	|-|
+|66 L|	Empregador	|-|
+|67 L|	Assalariado com carteira de trabalho	|-|
+|68 L|	Assalariado sem carteira de trabalho	|-|
+|69 L|	Autônomo com previdência social	|-|
+|70 L|	Autônomo sem previdência social	|-|
+|71 L|	Aposentado / Pensionista	|-|
+|72 L|	Desempregado	|-|
+|73 L|	Não trabalha	|-|
+|74 L|	Outro	|-|
 
 ## TemasParaReuniao
 |Código|	Descrição|	Observações|
@@ -515,10 +515,10 @@ order: 0
 ## TempoSituacaoDeRua
 |Código|	Descrição| Observações|
 |---|---|--- |
-|17 L|	MENOS\_6\_MESES| -|
-|18 L|	SEIS\_A\_12\_MESES| -|
-|19 L|	UM\_A\_5\_ANOS| -|
-|20 L|	MAIS\_DE\_5\_ANOS| -|
+|17 L|	Menos de 6 meses| -|
+|18 L|	6 a 12 meses| -|
+|19 L|	1 a 5 anos| -|
+|20 L|	Mais de 5 anos| -|
 
 ## TipoAtividadeColetiva
 
@@ -550,10 +550,10 @@ order: 0
 ## TipoDeAcessoAoDomicilio
 |Código|	Descrição|	Observações|
 |---|---|---|
-|89 L|	PAVIMENTO|	-|
-|90 L|	CHAO\_BATIDO|	-|
-|91 L|	FLUVIAL|	-|
-|92 L|	OUTRO|	-|
+|89 L|	Pavimento|	-|
+|90 L|	Chão batido|	-|
+|91 L|	Fluvial|	-|
+|92 L|	Outro|	-|
 
 ## TipoDeAtendimento
 |Código|	Descrição	|Observações|
@@ -576,18 +576,18 @@ order: 0
 ## TipoDeDomicilio
 |Código|	Descrição|	Observações|
 |---|---|---|
-|85 L|	CASA|	-|
-|86 L|	APARTAMENTO|	-|
-|87 L|	COMODO|	-|
-|88 L|	OUTRO|	-|
+|85 L|	Casa|	-|
+|86 L|	Apartamento|	-|
+|87 L|	Cômodo|	-|
+|88 L|	Outro|	-|
 
 ## TratamentoDeAguaNoDomicilio
 |Código|	Descrição|	Observações|
 |---|---|---|
-|97 L|	FILTRACAO	|-|
-|98 L|	FERVURA	|-|
-|99 L|	CLORACAO	|-|
-|100 L|	SEM\_TRATAMENTO	|-|
+|97 L|	Filtração	|-|
+|98 L|	Fervura |-|
+|99 L|	Cloração	|-|
+|100 L|	Sem tratamento	|-|
 
 ## Turno
 |Código|	Descrição|	Observações|

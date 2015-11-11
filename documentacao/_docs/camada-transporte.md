@@ -133,14 +133,14 @@ Nome do responsável ou Razão Social da empresa responsável.
 |String|	Requerido|	-|	-|
 
 ### \#5	fone
-Telefone da pessoa ou empresa responsável
+Telefone da pessoa ou empresa responsável.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |String|	Opcional|	10|	11|
 
 ### \#6	email
-Email da pessoa ou empresa responsável
+Email da pessoa ou empresa responsável.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |

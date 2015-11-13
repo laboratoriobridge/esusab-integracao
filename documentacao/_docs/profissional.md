@@ -58,7 +58,7 @@ Data em que está sendo realizada a ação.
 |--- |--- |--- |--- |
 |Long |Sim |- |- |
 
-**Referência:** Para ver a referência sobre o formato epoch, acesse: [Epoch Wikipedia](https://en.wikipedia.org/wiki/Epoch_(reference_date))
+**Referência:** [Epoch Wikipedia](https://en.wikipedia.org/wiki/Epoch_(reference_date))
 
 Observação: Esta entidade é utilizada para representar o profissional responsável pelas fichas.
 
@@ -204,7 +204,7 @@ Data em que está sendo realizada a ação.
 |--- |--- |--- |--- |
 |Long |Sim |- |- |
 
-**Referência:** Para ver a referência sobre o formato epoch, acesse: [Epoch Wikipedia](https://en.wikipedia.org/wiki/Epoch_(reference_date))
+**Referência:** [Epoch Wikipedia](https://en.wikipedia.org/wiki/Epoch_(reference_date))
 
 Observação: Esta entidade é utilizada para representar o profissional que realizou uma ação (Cadastro Individual e Cadastro Domiciliar) e a respectiva data.
 

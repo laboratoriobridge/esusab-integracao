@@ -63,7 +63,7 @@ Lista das famílias que residem no domicílio.
 |List\<FamiliaRow>| Condicional| 	0|	4|
 
 **Regras:**
-* Não pode ser preenchidos caso o campo [statusTermoRecusaCadastroDomiciliarAtencaoBasica](##9-statustermorecusacadatrodomiciliaratencaobasica) = `true`.
+* Não pode ser preenchido caso o campo [statusTermoRecusaCadastroDomiciliarAtencaoBasica](##9-statustermorecusacadatrodomiciliaratencaobasica) = `true`.
 
 ### \#6	fichaAtualizada
 Marcador que indica se a ficha é uma atualização.
@@ -93,7 +93,7 @@ Marcador que indica se existem animais no domicílio.
 
 **Regras:**
 
-* Não pode ser preenchidos se o campo [statusTermoRecusaCadastroDomiciliarAtencaoBasica](##9-statustermorecusacadatrodomiciliaratencaobasica) = `true`.
+* Não pode ser preenchido se o campo [statusTermoRecusaCadastroDomiciliarAtencaoBasica](##9-statustermorecusacadatrodomiciliaratencaobasica) = `true`.
 
 ### \#9	statusTermoRecusaCadatroDomiciliarAtencaoBasica
 Marcador que indica se o cadastro foi utilizado o termo de recusa de cadastro do domicílio.
@@ -142,7 +142,7 @@ Data de nascimento, no formato epoch time, do cidadão responsável pela famíli
 |---| --- |---  | --- |
 |Long|	Opcional|	-|	-|
 
-**Referências:** Para ver a referência sobre o formato epoch, acesse: [Epoch Wikipedia](https://en.wikipedia.org/wiki/Epoch_(reference_date)).
+**Referências:** [Epoch Wikipedia](https://en.wikipedia.org/wiki/Epoch_(reference_date)).
 
 ### \#2	numeroCnsResponsavel
 CNS do responsável familiar.
@@ -185,7 +185,7 @@ Mês e ano que a família começou a residir no domicílio, no formato epoch tim
 |---| --- |---  | --- |
 |Long|	Opcional|	-|	-|
 
-**Referências:** Para ver a referência sobre o formato epoch, acesse: [Epoch Wikipedia](https://en.wikipedia.org/wiki/Epoch_(reference_date)).
+**Referências:** [Epoch Wikipedia](https://en.wikipedia.org/wiki/Epoch_(reference_date)).
 
 ### \#7	stMudanca
 Marcador que indica se a familia mudou-se.

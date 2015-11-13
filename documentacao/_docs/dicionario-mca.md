@@ -27,7 +27,7 @@ CNS do cidadão.
 |--- |--- |--- |--- |
 |String |Opcional |15 |15 |
 
-**Regras**: CNS valido de acordo com o algoritmo.
+**Regras**: CNS válido de acordo com o algoritmo.
 
 **Referência**: Para ver o algoritmo utilizado, acesse: [Cartão Net Datasus](http://cartaonet.datasus.gov.br/). Em "Downloads" baixe o arquivo de rotina de validação Java.  
 
@@ -54,7 +54,7 @@ Data de nascimento do cidadão no formato epoch time.
 
 **Regras**: Não pode ser posterior a [dataAtendimento]({% url profissional %}##5-dataatendimento) e anterior a 130 anos a partir da [dataAtendimento]({% url profissional %}##5-dataatendimento).
 
-**Referêcia**: Para ver a referência sobre o formato epoch, acesse: [Epoch Wikipedia](https://en.wikipedia.org/wiki/Epoch\_(reference\_date)).
+**Referêcia**: [Epoch Wikipedia](https://en.wikipedia.org/wiki/Epoch\_(reference\_date)).
 
 ### \#5 sexo
 
@@ -78,7 +78,7 @@ Local onde o atendimento foi realizado.
 
 ### \#7 perguntasQuestionarioCriancasMenoresSeisMeses
 
-Marcadores referente a cidadãos menores de seis meses de idade.
+Marcadores referentes aos cidadãos menores de seis meses de idade.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |--- |--- |--- |--- |
@@ -88,11 +88,11 @@ Marcadores referente a cidadãos menores de seis meses de idade.
 
 **Referêcia**: [PerguntaQuestionarioCriancasMenoresSeisMeses](#perguntaquestionariocriancasmenoresseismeses).
 
-Observações: Os campos `#7`, `#8` e `#9` são mutualmente exclusivos, isto é, um e apenas um deles deve não ser nulo.
+Observações: Os campos `#7`, `#8` e `#9` são mutuamente exclusivos, isto é, um e apenas um deles deve não ser nulo.
 
 ### \#8 perguntasQuestionarioCriancasDeSeisVinteTresMeses
 
-Marcadores referente a cidadãos que tem entre seis e vinte e três meses de idade.
+Marcadores referentes aos cidadãos que tem entre seis e vinte e três meses de idade.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |--- |--- |--- |--- |
@@ -102,11 +102,11 @@ Marcadores referente a cidadãos que tem entre seis e vinte e três meses de ida
 
 **Referêcia**: [PerguntaQuestionarioCriancasDeSeisVinteTresMeses](#perguntaquestionariocriancasdeseisvintetresmeses).
 
-Observações: Os campos `#7`, `#8` e `#9` são mutualmente exclusivos, isto é, um e apenas um deles deve não ser nulo.
+Observações: Os campos `#7`, `#8` e `#9` são mutuamente exclusivos, isto é, um e apenas um deles deve não ser nulo.
 
 ### \#9 perguntasQuestionarioCriancasComMaisDoisAnos
 
-Marcadores referente a cidadãos que tem vinte e quatro meses ou mais.
+Marcadores referentes aos cidadãos que tem vinte e quatro meses ou mais.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |--- |--- |--- |--- |
@@ -116,7 +116,7 @@ Marcadores referente a cidadãos que tem vinte e quatro meses ou mais.
 
 **Referêcia**: [PerguntaQuestionarioCriancasComMaisDoisAnos](#perguntaquestionariocriancascommaisdoisanos).
 
-Observações: Os campos `#7`, `#8` e `#9` são mutualmente exclusivos, isto é, um e apenas um deles deve não ser nulo.
+Observações: Os campos `#7`, `#8` e `#9` são mutuamente exclusivos, isto é, um e apenas um deles deve não ser nulo.
 
 ### \#10 uuidFicha
 
@@ -154,13 +154,13 @@ Identificador da pergunta referente ao questionário para cidadãos menores de s
 
 ### \#2	respostaUnicaEscolha
 
-Resposta referente a pergunta.
+Resposta referente à pergunta.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |--- |--- |--- |--- |
 |RespostaUnicaEscolhaEnum |Sim |- |- |
 
-**Regras:** Deve respeitar as regras das respostas referente a pergunta.
+**Regras:** Deve respeitar as regras das respostas referentes à pergunta.
 
 **Referência:** [RespostaUnicaEscolhaEnum](#respostaunicaescolhaenum).
 
@@ -212,11 +212,11 @@ Resposta referente a pergunta do registro.
 
 **Referência:** [RespostaUnicaEscolhaEnum](#respostaunicaescolhaenum).
 
-Observações: Os campos `#2` e `#3` são mutualmente exclusivos, isto é, um e apenas um deles deve não ser nulo.
+Observações: Os campos `#2` e `#3` são mutuamente exclusivos, isto é, um e apenas um deles deve não ser nulo.
 
 ### \#3	respostaMultiplaEscolha
 
-Resposta referente a pergunta do registro acima.
+Resposta referente à pergunta do registro acima.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |--- |--- |--- |--- |
@@ -224,12 +224,12 @@ Resposta referente a pergunta do registro acima.
 
 **Regras:**
 
-* Deve respeitar as regras das respostas referente a pergunta .
+* Deve respeitar as regras das respostas referentes à pergunta .
 * Pode ser preenchido somente se a pergunta for 12L.
 
 **Referência:** [RespostaMultiplaEscolhaEnum](#respostamultiplaescolhaenum).
 
-Observações: Os campos `#2` e `#3` são mutualmente exclusivos, isto é, um e apenas um deles deve não ser nulo.
+Observações: Os campos `#2` e `#3` são mutuamente exclusivos, isto é, um e apenas um deles deve não ser nulo.
 
 ## PerguntaCriancasMenoresSeisMesesEnum
 

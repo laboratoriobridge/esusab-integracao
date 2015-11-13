@@ -50,22 +50,21 @@ CNS do cidadão.
 |---| --- |---  | --- |
 |String	|Requerido	|15	|15 |
 
-CNS valido de acordo com o algoritmo.
+**Regras**: CNS valido de acordo com o algoritmo.
 
-**Referências:** Para ver o algoritmo utilizado, acesse [Cartão Net Datasus](http://cartaonet.datasus.gov.br/), em "Downloads" baixe o arquivo de rotina de validação Java.
+**Referências**: Para ver o algoritmo utilizado, acesse [Cartão Net Datasus](http://cartaonet.datasus.gov.br/), em "Downloads" baixe o arquivo de rotina de validação Java.
 
 ### \#5	nomeCidadao
 Nome do cidadão.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
-|String |	Requerido*	|5|	100|
+|String |	Condicional	|5|	100|
 
 **Regras**:
-
 * Ter ao menos duas palavras.
 * Somente texto e apóstrofo (`'`).
-*	Opcional caso [conclusaoDestinoElegivel](##23-conclusaodestinoelegivel) for diferente de `1L (admissao propria emad)`.
+*	Opcional caso [conclusaoDestinoElegivel](##23-conclusaodestinoelegivel) for diferente de `1L (admissao própria emad)`.
 
 ### \#6	nomeSocialCidadao
 
@@ -88,7 +87,7 @@ Data de nascimento do cidadão no formato epoch time.
 
 **Regras**: Não pode ser posterior a [dataAtendimento]({% url profissional %}##5-dataatendimento) e anterior a 130 anos a partir da [dataAtendimento]({% url profissional %}##5-dataatendimento).
 
-**Refererência**: Para ver a referência sobre o formato epoch, acesse: [Epoch Wikipedia](https://en.wikipedia.org/wiki/Epoch_(reference_date)).
+**Refererência**: [Epoch Wikipedia](https://en.wikipedia.org/wiki/Epoch_(reference_date)).
 
 ### \#8	sexoCidadao
 Sexo do cidadão.
@@ -108,7 +107,7 @@ Raça / Cor do cidadão.
 
 **Regras:**
 
-*	Opcional caso [conclusaoDestinoElegivel](##23-conclusaodestinoelegivel) for diferente de `1L (admissao propria emad)`.
+*	Opcional caso [conclusaoDestinoElegivel](##23-conclusaodestinoelegivel) for diferente de `1L (admissao própria emad)`.
 
 **Referências:** [RacaCor]({% url dicionario %}#racacor)
 
@@ -152,7 +151,7 @@ Marcador que indica se o cidadão é brasileiro, naturalizado ou estrangeiro.
 
 **Regras:**
 
-*	Opcional caso [conclusaoDestinoElegivel](##23-conclusaodestinoelegivel) for diferente de `1L (admissao propria emad)`.
+*	Opcional caso [conclusaoDestinoElegivel](##23-conclusaodestinoelegivel) for diferente de `1L (admissao própria emad)`.
 
 **Referências:** [Nacionalidade]({% url dicionario %}#nacionalidade)
 
@@ -183,7 +182,7 @@ Informações sobre o endereço do domicílio
 
 **Regras**:
 
-*	Opcional caso [conclusaoDestinoElegivel](##23-conclusaodestinoelegivel) for diferente de `1L (admissao propria emad)`.
+*	Opcional caso [conclusaoDestinoElegivel](##23-conclusaodestinoelegivel) for diferente de `1L (admissao própria emad)`.
 
 **Referências:**	[EnderecoLocalPermanencia](#enderecolocalpermanencia)
 
@@ -254,7 +253,7 @@ Conduta adotada caso cidadão seja `Elegível`.
 
 **Referências:** [ConclusaoDestinoElegivel]({% url dicionario %}#conclusaodestinoelegivel)
 
-Observacões: Os campos `#23` e `#24` são mutuamente exclusivos.
+Observações: Os campos `#23` e `#24` são mutuamente exclusivos.
 
 ### \#24	conclusaoDestinoInelegivel
 Conduta adotada caso cidadão seja `Inelegível`.
@@ -269,7 +268,7 @@ Conduta adotada caso cidadão seja `Inelegível`.
 
 **Referências:** [ConclusaoDestinoInelegivel]({% url dicionario %}#conclusaodestinoinelegivel)
 
-Observacões: Os campos `#23` e `#24` são mutuamente exclusivos.
+Observações: Os campos `#23` e `#24` são mutuamente exclusivos.
 
 ### \#25	cuidadorCidadao
 Relação de parentesco do cuidador com o cidadão em atenção domiciliar.
@@ -334,7 +333,7 @@ Número do domicílio.
 * Não pode ser preenchido caso [stSemNumero](##11-stsemnumero) = `true`.
 
 ### \#7	numeroDneUf
-Indexador referente a Unidade Federativa
+Indexador referente a Unidade Federativa.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -343,22 +342,22 @@ Indexador referente a Unidade Federativa
 **Referências:**	[Estados]({% url referencias %}#uf)
 
 ### \#8	telReferencial
-Telefone de referência
+Telefone de referência.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |String|	Opcional|	10|	11|
 
-Observações: minimo 10 digitos, máximo 11 (DDD + 8 ou 9)
+Observações: Mínimo 10 digitos, máximo 11 (DDD + 8 ou 9)
 
 ### \#9	telResidencial
-Telefone residencial
+Telefone residencial.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |String| Opcional|	10|	11|
 
-Observações: minimo 10 digitos, máximo 11 (DDD + 8 ou 9)
+Observações: Mínimo 10 digitos, máximo 11 (DDD + 8 ou 9)
 
 ### \#10	tipoLogradouroNumeroDne
 Tipo do logradouro onde está o domicílio.

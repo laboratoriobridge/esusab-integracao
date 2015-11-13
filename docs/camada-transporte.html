@@ -196,7 +196,7 @@
     <p class="post-meta">
       <a class="btn" href="/integracao/pdf.html?include=camada-transporte"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 11/11/2015</span>
+        <span class="label" title="Data da última modificação">Alterado em 13/11/2015</span>
       
     </p>
   </header>
@@ -335,7 +335,7 @@
 <tr>
 <td>Long</td>
 <td>Opcional</td>
-<td>0</td>
+<td>-</td>
 <td>-</td>
 </tr>
 </tbody></table>
@@ -406,7 +406,7 @@
 
 <h3 id="10-versao">#10    versao</h3>
 
-<p>Identifica a versão do E-SUS AB.</p>
+<p>Identifica a versão do e-SUS AB.</p>
 
 <table><thead>
 <tr>
@@ -450,6 +450,8 @@
 
 <p><strong>Regras:</strong> Seguir o padrão <code>&lt;Nome do software do município&gt; - Versão 2015</code></p>
 
+<p>Observações: Campo serve para a identificar a instalação que gerou / cadastrou / enviou os dados.</p>
+
 <h3 id="2-uuidinstalacao">#2 uuidInstalacao</h3>
 
 <p>É um identificador da instalação do software que gerou o dado. Seja ele o e-SUS ou software de terceiro. Cada e-SUS possui um UUID.</p>
@@ -470,9 +472,11 @@
 </tr>
 </tbody></table>
 
+<p>Observações: Campo serve para a identificar a instalação que gerou / cadastrou / enviou os dados.</p>
+
 <h3 id="3-cpfoucnpj">#3 cpfOuCnpj</h3>
 
-<p>Cpf do responsável ou CNPJ da empresa responsável.</p>
+<p>CPF do responsável ou CNPJ da empresa responsável.</p>
 
 <table><thead>
 <tr>
@@ -490,11 +494,16 @@
 </tr>
 </tbody></table>
 
-<p>Observações: Apenas CPFs e CNPJs válidos.    Rever validação.</p>
+<p>Observações:</p>
+
+<ul>
+<li>Apenas CPFs e CNPJs válidos. Rever validação.</li>
+<li>Campo serve para a identificar a instalação que gerou / cadastrou / enviou os dados.</li>
+</ul>
 
 <h3 id="4-nomeourazaosocial">#4 nomeOuRazaoSocial</h3>
 
-<p>Nome do responsável ou Razão Social da empresa responsável.</p>
+<p>Nome do responsável ou razão social da empresa responsável.</p>
 
 <table><thead>
 <tr>
@@ -511,6 +520,8 @@
 <td>-</td>
 </tr>
 </tbody></table>
+
+<p>Observações: Campo serve para a identificar a instalação que gerou / cadastrou / enviou os dados.</p>
 
 <h3 id="5-fone">#5 fone</h3>
 
@@ -532,6 +543,8 @@
 </tr>
 </tbody></table>
 
+<p>Observações: Campo serve para a identificar a instalação que gerou / cadastrou / enviou os dados.</p>
+
 <h3 id="6-email">#6 email</h3>
 
 <p>Email da pessoa ou empresa responsável.</p>
@@ -552,7 +565,9 @@
 </tr>
 </tbody></table>
 
-<p>Requerido seguir o padrão <code>endereco@domínio.extensão</code>.</p>
+<p><strong>Regras:</strong> Requerido seguir o padrão <code>endereco@domínio.extensão</code>.</p>
+
+<p>Observações: Campo serve para a identificar a instalação que gerou / cadastrou / enviou os dados.</p>
 
   </article>
 

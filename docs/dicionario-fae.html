@@ -196,7 +196,7 @@
     <p class="post-meta">
       <a class="btn" href="/integracao/pdf.html?include=dicionario-fae"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 09/11/2015</span>
+        <span class="label" title="Data da última modificação">Alterado em 13/11/2015</span>
       
     </p>
   </header>
@@ -294,9 +294,9 @@
 </tr>
 </tbody></table>
 
-<p>CNS valido de acordo com o algoritmo.</p>
+<p><strong>Regras</strong>: CNS valido de acordo com o algoritmo.</p>
 
-<p><strong>Referências:</strong> Para ver o algoritmo utilizado, acesse <a href="http://cartaonet.datasus.gov.br/">Cartão Net Datasus</a>, em &quot;Downloads&quot; baixe o arquivo de rotina de validação Java.</p>
+<p><strong>Referências</strong>: Para ver o algoritmo utilizado, acesse <a href="http://cartaonet.datasus.gov.br/">Cartão Net Datasus</a>, em &quot;Downloads&quot; baixe o arquivo de rotina de validação Java.</p>
 
 <h3 id="5-nomecidadao">#5 nomeCidadao</h3>
 
@@ -312,19 +312,16 @@
 </thead><tbody>
 <tr>
 <td>String</td>
-<td>Requerido*</td>
+<td>Condicional</td>
 <td>5</td>
 <td>100</td>
 </tr>
 </tbody></table>
 
-<p><strong>Regras</strong>:</p>
-
-<ul>
-<li>Ter ao menos duas palavras.</li>
-<li>Somente texto e apóstrofo (<code>&#39;</code>).</li>
-<li>  Opcional caso <a href="##23-conclusaodestinoelegivel">conclusaoDestinoElegivel</a> for diferente de <code>1L (admissao propria emad)</code>.</li>
-</ul>
+<p><strong>Regras</strong>:
+* Ter ao menos duas palavras.
+* Somente texto e apóstrofo (<code>&#39;</code>).
+*   Opcional caso <a href="##23-conclusaodestinoelegivel">conclusaoDestinoElegivel</a> for diferente de <code>1L (admissao própria emad)</code>.</p>
 
 <h3 id="6-nomesocialcidadao">#6 nomeSocialCidadao</h3>
 
@@ -374,7 +371,7 @@
 
 <p><strong>Regras</strong>: Não pode ser posterior a <a href="/integracao/docs/profissional.html##5-dataatendimento">dataAtendimento</a> e anterior a 130 anos a partir da <a href="/integracao/docs/profissional.html##5-dataatendimento">dataAtendimento</a>.</p>
 
-<p><strong>Refererência</strong>: Para ver a referência sobre o formato epoch, acesse: <a href="https://en.wikipedia.org/wiki/Epoch_(reference_date)">Epoch Wikipedia</a>.</p>
+<p><strong>Refererência</strong>: <a href="https://en.wikipedia.org/wiki/Epoch_(reference_date)">Epoch Wikipedia</a>.</p>
 
 <h3 id="8-sexocidadao">#8 sexoCidadao</h3>
 
@@ -421,7 +418,7 @@
 <p><strong>Regras:</strong></p>
 
 <ul>
-<li>  Opcional caso <a href="##23-conclusaodestinoelegivel">conclusaoDestinoElegivel</a> for diferente de <code>1L (admissao propria emad)</code>.</li>
+<li>  Opcional caso <a href="##23-conclusaodestinoelegivel">conclusaoDestinoElegivel</a> for diferente de <code>1L (admissao própria emad)</code>.</li>
 </ul>
 
 <p><strong>Referências:</strong> <a href="/integracao/docs/dicionario/dicionario.html#racacor">RacaCor</a></p>
@@ -521,7 +518,7 @@
 <p><strong>Regras:</strong></p>
 
 <ul>
-<li>  Opcional caso <a href="##23-conclusaodestinoelegivel">conclusaoDestinoElegivel</a> for diferente de <code>1L (admissao propria emad)</code>.</li>
+<li>  Opcional caso <a href="##23-conclusaodestinoelegivel">conclusaoDestinoElegivel</a> for diferente de <code>1L (admissao própria emad)</code>.</li>
 </ul>
 
 <p><strong>Referências:</strong> <a href="/integracao/docs/dicionario/dicionario.html#nacionalidade">Nacionalidade</a></p>
@@ -593,7 +590,7 @@
 <p><strong>Regras</strong>:</p>
 
 <ul>
-<li>  Opcional caso <a href="##23-conclusaodestinoelegivel">conclusaoDestinoElegivel</a> for diferente de <code>1L (admissao propria emad)</code>.</li>
+<li>  Opcional caso <a href="##23-conclusaodestinoelegivel">conclusaoDestinoElegivel</a> for diferente de <code>1L (admissao própria emad)</code>.</li>
 </ul>
 
 <p><strong>Referências:</strong>   <a href="#enderecolocalpermanencia">EnderecoLocalPermanencia</a></p>
@@ -758,7 +755,7 @@
 
 <p><strong>Referências:</strong> <a href="/integracao/docs/dicionario/dicionario.html#conclusaodestinoelegivel">ConclusaoDestinoElegivel</a></p>
 
-<p>Observacões: Os campos <code>#23</code> e <code>#24</code> são mutuamente exclusivos.</p>
+<p>Observações: Os campos <code>#23</code> e <code>#24</code> são mutuamente exclusivos.</p>
 
 <h3 id="24-conclusaodestinoinelegivel">#24    conclusaoDestinoInelegivel</h3>
 
@@ -788,7 +785,7 @@
 
 <p><strong>Referências:</strong> <a href="/integracao/docs/dicionario/dicionario.html#conclusaodestinoinelegivel">ConclusaoDestinoInelegivel</a></p>
 
-<p>Observacões: Os campos <code>#23</code> e <code>#24</code> são mutuamente exclusivos.</p>
+<p>Observações: Os campos <code>#23</code> e <code>#24</code> são mutuamente exclusivos.</p>
 
 <h3 id="25-cuidadorcidadao">#25    cuidadorCidadao</h3>
 
@@ -947,7 +944,7 @@
 
 <h3 id="7-numerodneuf">#7 numeroDneUf</h3>
 
-<p>Indexador referente a Unidade Federativa</p>
+<p>Indexador referente a Unidade Federativa.</p>
 
 <table><thead>
 <tr>
@@ -969,7 +966,7 @@
 
 <h3 id="8-telreferencial">#8 telReferencial</h3>
 
-<p>Telefone de referência</p>
+<p>Telefone de referência.</p>
 
 <table><thead>
 <tr>
@@ -987,11 +984,11 @@
 </tr>
 </tbody></table>
 
-<p>Observações: minimo 10 digitos, máximo 11 (DDD + 8 ou 9)</p>
+<p>Observações: Mínimo 10 digitos, máximo 11 (DDD + 8 ou 9)</p>
 
 <h3 id="9-telresidencial">#9 telResidencial</h3>
 
-<p>Telefone residencial</p>
+<p>Telefone residencial.</p>
 
 <table><thead>
 <tr>
@@ -1009,7 +1006,7 @@
 </tr>
 </tbody></table>
 
-<p>Observações: minimo 10 digitos, máximo 11 (DDD + 8 ou 9)</p>
+<p>Observações: Mínimo 10 digitos, máximo 11 (DDD + 8 ou 9)</p>
 
 <h3 id="10-tipologradouronumerodne">#10    tipoLogradouroNumeroDne</h3>
 

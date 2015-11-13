@@ -634,7 +634,7 @@
 <tr>
 <td>Long</td>
 <td>Opcional</td>
-<td>0</td>
+<td>-</td>
 <td>-</td>
 </tr>
 </tbody></table>
@@ -708,7 +708,7 @@
 
 <h3 id="10-versao">#10    versao</h3>
 
-<p>Identifica a versão do E-SUS AB.</p>
+<p>Identifica a versão do e-SUS AB.</p>
 
 <table><thead>
 <tr>
@@ -752,6 +752,8 @@
 
 <p><strong>Regras:</strong> Seguir o padrão <code>&lt;Nome do software do município&gt; - Versão 2015</code></p>
 
+<p>Observações: Campo serve para a identificar a instalação que gerou / cadastrou / enviou os dados.</p>
+
 <h3 id="2-uuidinstalacao">#2 uuidInstalacao</h3>
 
 <p>É um identificador da instalação do software que gerou o dado. Seja ele o e-SUS ou software de terceiro. Cada e-SUS possui um UUID.</p>
@@ -772,9 +774,11 @@
 </tr>
 </tbody></table>
 
+<p>Observações: Campo serve para a identificar a instalação que gerou / cadastrou / enviou os dados.</p>
+
 <h3 id="3-cpfoucnpj">#3 cpfOuCnpj</h3>
 
-<p>Cpf do responsável ou CNPJ da empresa responsável.</p>
+<p>CPF do responsável ou CNPJ da empresa responsável.</p>
 
 <table><thead>
 <tr>
@@ -792,11 +796,16 @@
 </tr>
 </tbody></table>
 
-<p>Observações: Apenas CPFs e CNPJs válidos.    Rever validação.</p>
+<p>Observações:</p>
+
+<ul>
+<li>Apenas CPFs e CNPJs válidos. Rever validação.</li>
+<li>Campo serve para a identificar a instalação que gerou / cadastrou / enviou os dados.</li>
+</ul>
 
 <h3 id="4-nomeourazaosocial">#4 nomeOuRazaoSocial</h3>
 
-<p>Nome do responsável ou Razão Social da empresa responsável.</p>
+<p>Nome do responsável ou razão social da empresa responsável.</p>
 
 <table><thead>
 <tr>
@@ -813,6 +822,8 @@
 <td>-</td>
 </tr>
 </tbody></table>
+
+<p>Observações: Campo serve para a identificar a instalação que gerou / cadastrou / enviou os dados.</p>
 
 <h3 id="5-fone">#5 fone</h3>
 
@@ -834,6 +845,8 @@
 </tr>
 </tbody></table>
 
+<p>Observações: Campo serve para a identificar a instalação que gerou / cadastrou / enviou os dados.</p>
+
 <h3 id="6-email">#6 email</h3>
 
 <p>Email da pessoa ou empresa responsável.</p>
@@ -854,7 +867,9 @@
 </tr>
 </tbody></table>
 
-<p>Requerido seguir o padrão <code>endereco@domínio.extensão</code>.</p>
+<p><strong>Regras:</strong> Requerido seguir o padrão <code>endereco@domínio.extensão</code>.</p>
+
+<p>Observações: Campo serve para a identificar a instalação que gerou / cadastrou / enviou os dados.</p>
 
       </article>
 
@@ -2514,87 +2529,87 @@
 </thead><tbody>
 <tr>
 <td>1 L</td>
-<td>COMUNIDADE_EM_GERAL</td>
+<td>Comunidade em geral</td>
 <td>-</td>
 </tr>
 <tr>
 <td>2 L</td>
-<td>CRIANCA_0_A_3_ANOS</td>
+<td>Criança de 0 a 3 anos</td>
 <td>-</td>
 </tr>
 <tr>
 <td>3 L</td>
-<td>CRIANCA_4_A_5_ANOS</td>
+<td>Criança de 4 a 5 anos</td>
 <td>-</td>
 </tr>
 <tr>
 <td>4 L</td>
-<td>CRIANCA_6_A_11_ANOS</td>
+<td>Criança de 6 a 11 anos</td>
 <td>-</td>
 </tr>
 <tr>
 <td>5 L</td>
-<td>ADOLESCENTE</td>
+<td>Adolecente</td>
 <td>-</td>
 </tr>
 <tr>
 <td>6 L</td>
-<td>MULHER</td>
+<td>Mulher</td>
 <td>-</td>
 </tr>
 <tr>
 <td>7 L</td>
-<td>GESTANTE</td>
+<td>Gestante</td>
 <td>-</td>
 </tr>
 <tr>
 <td>8 L</td>
-<td>HOMEM</td>
+<td>Homem</td>
 <td>-</td>
 </tr>
 <tr>
 <td>9 L</td>
-<td>FAMILIARES</td>
+<td>Familiares</td>
 <td>-</td>
 </tr>
 <tr>
 <td>10 L</td>
-<td>IDOSO</td>
+<td>Idoso</td>
 <td>-</td>
 </tr>
 <tr>
 <td>12 L</td>
-<td>PESSOAS_COM_DOENCAS_CRONICAS</td>
+<td>Pessoas com doenças crônicas</td>
 <td>-</td>
 </tr>
 <tr>
 <td>13 L</td>
-<td>USUARIO_DE_TABACO</td>
+<td>Usuário de tabaco</td>
 <td>-</td>
 </tr>
 <tr>
 <td>14 L</td>
-<td>USUARIO_DE_ALCOOL</td>
+<td>Usuário de álcool</td>
 <td>-</td>
 </tr>
 <tr>
 <td>15 L</td>
-<td>USUARIO_DE_OUTRAS_DROGAS</td>
+<td>Usuário de outras drogas</td>
 <td>-</td>
 </tr>
 <tr>
 <td>16 L</td>
-<td>PORTADOR_COM_SOFRIMENTO_OU_TRANSTORNO_MENTAL</td>
+<td>Portador com sofrimento ou transtorno mental</td>
 <td>-</td>
 </tr>
 <tr>
 <td>17 L</td>
-<td>PROFISSIONAL_DE_EDUCACAO</td>
+<td>Profissional da educação</td>
 <td>-</td>
 </tr>
 <tr>
 <td>18 L</td>
-<td>OUTROS</td>
+<td>Outros</td>
 <td>-</td>
 </tr>
 </tbody></table>
@@ -2636,27 +2651,27 @@
 </thead><tbody>
 <tr>
 <td>1 L</td>
-<td>BRANCA</td>
+<td>Branca</td>
 <td>-</td>
 </tr>
 <tr>
 <td>2 L</td>
-<td>PRETA</td>
+<td>Preta</td>
 <td>-</td>
 </tr>
 <tr>
 <td>4 L</td>
-<td>PARDA</td>
+<td>Parda</td>
 <td>-</td>
 </tr>
 <tr>
 <td>3 L</td>
-<td>AMARELA</td>
+<td>Amarela</td>
 <td>-</td>
 </tr>
 <tr>
 <td>5 L</td>
-<td>INDIGENA</td>
+<td>Indigena</td>
 <td>-</td>
 </tr>
 </tbody></table>
@@ -2733,37 +2748,37 @@
 </thead><tbody>
 <tr>
 <td>1 L</td>
-<td>UM_QUARTO_DE_SALARIO_MINIMO</td>
+<td>1/4 de salário mínimo</td>
 <td>-</td>
 </tr>
 <tr>
 <td>2 L</td>
-<td>MEIO_SALARIO_MINIMO</td>
+<td>Meio salário mínimo</td>
 <td>-</td>
 </tr>
 <tr>
 <td>3 L</td>
-<td>UM_SALARIO_MINIMO</td>
+<td>Um salário mínimo</td>
 <td>-</td>
 </tr>
 <tr>
 <td>4 L</td>
-<td>DOIS_SALARIOS_MINIMOS</td>
+<td>Dois salários mínimos</td>
 <td>-</td>
 </tr>
 <tr>
 <td>7 L</td>
-<td>TRES_SALARIOS_MINIMOS</td>
+<td>Três salários mínimos</td>
 <td>-</td>
 </tr>
 <tr>
 <td>5 L</td>
-<td>QUATRO_SALARIOS_MINIMOS</td>
+<td>Quatro salários mínimos</td>
 <td>-</td>
 </tr>
 <tr>
 <td>6 L</td>
-<td>ACIMA_DE_QUATRO_SALARIOS_MINIMOS</td>
+<td>Acima de quatro salários mínimos</td>
 <td>-</td>
 </tr>
 </tbody></table>
@@ -2820,12 +2835,12 @@
 </thead><tbody>
 <tr>
 <td>0 L</td>
-<td>MASCULINO</td>
+<td>Masculino</td>
 <td>-</td>
 </tr>
 <tr>
 <td>1 L</td>
-<td>FEMININO</td>
+<td>Feminino</td>
 <td>-</td>
 </tr>
 </tbody></table>
@@ -2892,12 +2907,12 @@
 </thead><tbody>
 <tr>
 <td>&quot;S&quot;</td>
-<td>SOLICITADO</td>
+<td>Solicitado</td>
 <td>-</td>
 </tr>
 <tr>
 <td>&quot;A&quot;</td>
-<td>AVALIADO</td>
+<td>Avaliado</td>
 <td>-</td>
 </tr>
 </tbody></table>
@@ -2969,37 +2984,37 @@
 </thead><tbody>
 <tr>
 <td>1 L</td>
-<td>QUESTOES_ADMINISTRATIVAS_OU_FUNCIONAMENTO</td>
+<td>Questões administrativas / funcionamento</td>
 <td>-</td>
 </tr>
 <tr>
 <td>2 L</td>
-<td>PROCESSOS_DE_TRABALHO</td>
+<td>Processo de trabalho</td>
 <td>-</td>
 </tr>
 <tr>
 <td>3 L</td>
-<td>DIAGNOSTICO_DO_TERRITORIO_OU_MONITORAMENTO_DO_TERRITORIO</td>
+<td>Diagnóstico / Monitoramento do território</td>
 <td>-</td>
 </tr>
 <tr>
 <td>4 L</td>
-<td>PLANEJAMENTO_OU_MONITORAMENTO_DAS_ACOES_DA_EQUIPE</td>
+<td>Planejamento / Monitoramento das ações da equipe</td>
 <td>-</td>
 </tr>
 <tr>
 <td>5 L</td>
-<td>DISCUSSAO_DE_CASO_OU_PROJETO_TERAPEUTICO_SINGULAR</td>
+<td>Discussão de caso ou projeto terapêutico singular</td>
 <td>-</td>
 </tr>
 <tr>
 <td>6 L</td>
-<td>EDUCACAO_PERMANENTE</td>
+<td>Educação permanente</td>
 <td>-</td>
 </tr>
 <tr>
 <td>7 L</td>
-<td>OUTROS</td>
+<td>Outros</td>
 <td>-</td>
 </tr>
 </tbody></table>
@@ -3046,37 +3061,37 @@
 </thead><tbody>
 <tr>
 <td>1 L</td>
-<td>REUNIAO_DE_EQUIPE</td>
+<td>Reunião de equipe</td>
 <td>-</td>
 </tr>
 <tr>
 <td>2 L</td>
-<td>REUNIAO_COM_OUTRAS_EQUIPES_DE_SAUDE</td>
+<td>Reunião com outras equipes de saúde</td>
 <td>-</td>
 </tr>
 <tr>
 <td>3 L</td>
-<td>REUNIAO_INTERSETORIAL_OU_CONSELHO_LOCAL_DE_SAUDE_OU_CONTROLE_SOCIAL</td>
-<td>-</td>
+<td>Reunião intersetorial  / Conselho local de saúde  / Controle social -</td>
+<td></td>
 </tr>
 <tr>
 <td>4 L</td>
-<td>EDUCACAO_EM_SAUDE</td>
+<td>Educação em saúde</td>
 <td>-</td>
 </tr>
 <tr>
 <td>5 L</td>
-<td>ATENDIMENTO_EM_GRUPO</td>
+<td>Atendimento em grupo</td>
 <td>-</td>
 </tr>
 <tr>
 <td>6 L</td>
-<td>AVALIACAO_OU_PROCEDIMENTO_COLETIVO</td>
+<td>Avaliação / Procedimento coletivo</td>
 <td>-</td>
 </tr>
 <tr>
 <td>7 L</td>
-<td>MOBILIZACAO_SOCIAL</td>
+<td>Mobilização social</td>
 <td>-</td>
 </tr>
 </tbody></table>
@@ -3189,37 +3204,37 @@
 </thead><tbody>
 <tr>
 <td>1 L</td>
-<td>CONSULTA_AGENDADA_PROGRAMADA_CUIDADO_CONTINUADO</td>
+<td>Consulta agendada programada / Cuidado continuado</td>
 <td>-</td>
 </tr>
 <tr>
 <td>2 L</td>
-<td>CONSULTA_AGENDADA</td>
+<td>Consulta agendada</td>
 <td>-</td>
 </tr>
 <tr>
 <td>4 L</td>
-<td>ESCUTA_INICIAL_OU_ORIENTACAO</td>
+<td>Escuta inicial / Orientação</td>
 <td>-</td>
 </tr>
 <tr>
 <td>5 L</td>
-<td>CONSULTA_NO_DIA</td>
+<td>Consulta no dia</td>
 <td>-</td>
 </tr>
 <tr>
 <td>6 L</td>
-<td>ATENDIMENTO_DE_URGENCIA</td>
+<td>Atendimento de urgência</td>
 <td>-</td>
 </tr>
 <tr>
 <td>7 L</td>
-<td>ATENDIMENTO_PROGRAMADO</td>
+<td>Atendimento programado</td>
 <td>Utilizados apenas nas fichas de atendimento domiciliar</td>
 </tr>
 <tr>
 <td>8 L</td>
-<td>ATENDIMENTO NÃO PROGRAMADO</td>
+<td>Atendimento não programado</td>
 <td>Utilizados apenas nas fichas de atendimento domiciliar</td>
 </tr>
 </tbody></table>
@@ -3235,17 +3250,17 @@
 </thead><tbody>
 <tr>
 <td>1 L</td>
-<td>PRIMEIRA_CONSULTA_ODONTOLOGICA_PROGRAMATICA</td>
+<td>Primeira consulta odontológica programática</td>
 <td>-</td>
 </tr>
 <tr>
 <td>2 L</td>
-<td>CONSULTA_DE_RETORNO</td>
+<td>Consulta de retorno</td>
 <td>-</td>
 </tr>
 <tr>
 <td>4 L</td>
-<td>CONSULTA_DE_MANUTENCAO</td>
+<td>Consulta de manutenção</td>
 <td>-</td>
 </tr>
 </tbody></table>
@@ -3323,17 +3338,17 @@
 </thead><tbody>
 <tr>
 <td>1 L</td>
-<td>MATUTINO</td>
+<td>Matutino</td>
 <td>-</td>
 </tr>
 <tr>
 <td>2 L</td>
-<td>VESPERTINO</td>
+<td>Vespertino</td>
 <td>-</td>
 </tr>
 <tr>
 <td>3 L</td>
-<td>NOTURNO</td>
+<td>Noturno</td>
 <td>-</td>
 </tr>
 </tbody></table>
@@ -3349,37 +3364,37 @@
 </thead><tbody>
 <tr>
 <td>1 L</td>
-<td>ABSCESSO_DENTO_ALVEOLAR</td>
+<td>Abscesso dento alveolar</td>
 <td>-</td>
 </tr>
 <tr>
 <td>2 L</td>
-<td>ALTERACAO_EM_TECIDOS_MOLES</td>
+<td>Alteração em tecidos moles</td>
 <td>-</td>
 </tr>
 <tr>
 <td>3 L</td>
-<td>DOR_DE_DENTE</td>
+<td>Dor de dente</td>
 <td>-</td>
 </tr>
 <tr>
 <td>4 L</td>
-<td>FENDAS_OU_FISSURAS_LABIO_PALATAIS</td>
+<td>Fendas / Fissuras labio palatais</td>
 <td>-</td>
 </tr>
 <tr>
 <td>5 L</td>
-<td>FLUOROSE_DENTARIA_MODERADA_OU_SEVERA</td>
+<td>Fluorose dentária moderada / severa</td>
 <td>-</td>
 </tr>
 <tr>
 <td>6 L</td>
-<td>TRAUMATISMO_DENTO_ALVEOLAR</td>
+<td>Traumatismo dento alveolar</td>
 <td>-</td>
 </tr>
 <tr>
 <td>99 L</td>
-<td>NAO_IDENTIFICADO</td>
+<td>Não identificado</td>
 <td>-</td>
 </tr>
 </tbody></table>
@@ -13872,7 +13887,7 @@
 
 <p><strong>Regras:</strong> Não pode ser posterior a <a href="/integracao/docs/profissional.html##5-dataatendimento">dataAtendimento</a> e anterior a 130 anos a partir da <a href="/integracao/docs/profissional.html##5-dataatendimento">dataAtendimento</a>.</p>
 
-<p><strong>Referencias:</strong> Para ver a referência sobre o formato epoch, acesse: <a href="
+<p><strong>Referencias:</strong> <a href="
         /integracao/docs/https://en.wikipedia.org/wiki/Epoch_(reference_date)">Epoch Wikipedia</a></p>
 
 <h3 id="4-sexo">#4 sexo</h3>
@@ -14508,7 +14523,7 @@
 
 <p><strong>Regras</strong>: Não pode ser posterior a <a href="/integracao/docs/profissional.html##5-dataatendimento">dataAtendimento</a> e anterior a 130 anos a partir da <a href="/integracao/docs/profissional.html##5-dataatendimento">dataAtendimento</a>.</p>
 
-<p><strong>Refererência</strong>: Para ver a referência sobre o formato epoch, acesse: <a href="
+<p><strong>Refererência</strong>:<a href="
         /integracao/docs/https://en.wikipedia.org/wiki/Epoch_(reference_date)">Epoch Wikipedia</a>.</p>
 
 <h3 id="4-localdeatendimento">#4 localDeAtendimento</h3>
@@ -14702,7 +14717,7 @@
 <br> • Não pode ser preenchido quando <a href="
         /integracao/docs/##5-sexo">Sexo</a> = <code>0L (masculino)</code>.</p>
 
-<p><strong>Referências:</strong> Para ver a referência sobre o formato epoch, acesse: <a href="
+<p><strong>Referências:</strong> <a href="
         /integracao/docs/https://en.wikipedia.org/wiki/Epoch_(reference_date)">Epoch Wikipedia</a></p>
 
 <h3 id="12-idadegestacional">#12    idadeGestacional</h3>
@@ -15515,7 +15530,7 @@
 
 <p><strong>Regras</strong>: Não pode ser posterior a <a href="/integracao/docs/profissional.html##5-dataatendimento">dataAtendimento</a> e anterior a 130 anos a partir da <a href="/integracao/docs/profissional.html##5-dataatendimento">dataAtendimento</a>.</p>
 
-<p><strong>Referências:</strong> Para ver a referência sobre o formato epoch, acesse: <a href="
+<p><strong>Referências:</strong> <a href="
         /integracao/docs/https://en.wikipedia.org/wiki/Epoch_(reference_date)">Epoch Wikipedia</a></p>
 
 <h3 id="2-numcartaosus">#2 numCartaoSus</h3>
@@ -16096,9 +16111,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras</strong> Não pode ser posterior a data atual.</p>
+<p><strong>Regras</strong>: Não pode ser posterior a data atual.</p>
 
-<p><strong>Referência</strong> <a href="
+<p><strong>Referência</strong>: <a href="
         /integracao/docs/https://en.wikipedia.org/wiki/Epoch">Epoch Wikipedia</a></p>
 
 <h3 id="3-numparticipantesprogramados">#3 numParticipantesProgramados</h3>
@@ -16165,7 +16180,7 @@
 
 <p><strong>Regras</strong>: Verificar validações</p>
 
-<p><strong>Referência</strong> <a href="
+<p><strong>Referência</strong>: <a href="
         /integracao/docs/https://en.wikipedia.org/wiki/Epoch">Epoch Wikipedia</a></p>
 
 <h3 id="6-horafim">#6 horaFim</h3>
@@ -16191,7 +16206,7 @@
 <p><strong>Regras</strong>: Deve ser posterior a <a href="
         /integracao/docs/##5-horainicio">horaInicio</a>.</p>
 
-<p><strong>Referência</strong> <a href="
+<p><strong>Referência</strong>: <a href="
         /integracao/docs/https://en.wikipedia.org/wiki/Epoch">Epoch Wikipedia</a></p>
 
 <h3 id="7-inep">#7 inep</h3>
@@ -16577,7 +16592,7 @@
 
 <p><strong>Regras</strong>:     Não pode ser posterior a <a href="/integracao/docs/profissional.html##5-dataatendimento">dataAtendimento</a> e anterior a 130 anos a partir da <a href="/integracao/docs/profissional.html##5-dataatendimento">dataAtendimento</a>.</p>
 
-<p><strong>Referências</strong>:   Para ver a referência sobre o formato epoch, acesse: <a href="
+<p><strong>Referências</strong>: <a href="
         /integracao/docs/https://en.wikipedia.org/wiki/Epoch_(reference_date)">Epoch Wikipedia</a></p>
 
 <h3 id="3-avaliacaoalterada">#3 avaliacaoAlterada</h3>
@@ -16813,9 +16828,9 @@
 </tr>
 </tbody></table>
 
-<p>CNS valido de acordo com o algoritmo.</p>
+<p><strong>Regras</strong>: CNS valido de acordo com o algoritmo.</p>
 
-<p><strong>Referências:</strong> Para ver o algoritmo utilizado, acesse <a href="
+<p><strong>Referências</strong>: Para ver o algoritmo utilizado, acesse <a href="
         /integracao/docs/http://cartaonet.datasus.gov.br/">Cartão Net Datasus</a>, em &quot;Downloads&quot; baixe o arquivo de rotina de validação Java.</p>
 
 <h3 id="5-nomecidadao">#5 nomeCidadao</h3>
@@ -16832,20 +16847,17 @@
 </thead><tbody>
 <tr>
 <td>String</td>
-<td>Requerido*</td>
+<td>Condicional</td>
 <td>5</td>
 <td>100</td>
 </tr>
 </tbody></table>
 
-<p><strong>Regras</strong>:</p>
-
-<ul>
-<li>Ter ao menos duas palavras.</li>
-<li>Somente texto e apóstrofo (<code>&#39;</code>).</li>
-<li>  Opcional caso <a href="
-        /integracao/docs/##23-conclusaodestinoelegivel">conclusaoDestinoElegivel</a> for diferente de <code>1L (admissao propria emad)</code>.</li>
-</ul>
+<p><strong>Regras</strong>:
+* Ter ao menos duas palavras.
+* Somente texto e apóstrofo (<code>&#39;</code>).
+*   Opcional caso <a href="
+        /integracao/docs/##23-conclusaodestinoelegivel">conclusaoDestinoElegivel</a> for diferente de <code>1L (admissao própria emad)</code>.</p>
 
 <h3 id="6-nomesocialcidadao">#6 nomeSocialCidadao</h3>
 
@@ -16895,7 +16907,7 @@
 
 <p><strong>Regras</strong>: Não pode ser posterior a <a href="/integracao/docs/profissional.html##5-dataatendimento">dataAtendimento</a> e anterior a 130 anos a partir da <a href="/integracao/docs/profissional.html##5-dataatendimento">dataAtendimento</a>.</p>
 
-<p><strong>Refererência</strong>: Para ver a referência sobre o formato epoch, acesse: <a href="
+<p><strong>Refererência</strong>: <a href="
         /integracao/docs/https://en.wikipedia.org/wiki/Epoch_(reference_date)">Epoch Wikipedia</a>.</p>
 
 <h3 id="8-sexocidadao">#8 sexoCidadao</h3>
@@ -16944,7 +16956,7 @@
 
 <ul>
 <li>  Opcional caso <a href="
-        /integracao/docs/##23-conclusaodestinoelegivel">conclusaoDestinoElegivel</a> for diferente de <code>1L (admissao propria emad)</code>.</li>
+        /integracao/docs/##23-conclusaodestinoelegivel">conclusaoDestinoElegivel</a> for diferente de <code>1L (admissao própria emad)</code>.</li>
 </ul>
 
 <p><strong>Referências:</strong> <a href="/integracao/docs/dicionario/dicionario.html#racacor">RacaCor</a></p>
@@ -17047,7 +17059,7 @@
 
 <ul>
 <li>  Opcional caso <a href="
-        /integracao/docs/##23-conclusaodestinoelegivel">conclusaoDestinoElegivel</a> for diferente de <code>1L (admissao propria emad)</code>.</li>
+        /integracao/docs/##23-conclusaodestinoelegivel">conclusaoDestinoElegivel</a> for diferente de <code>1L (admissao própria emad)</code>.</li>
 </ul>
 
 <p><strong>Referências:</strong> <a href="/integracao/docs/dicionario/dicionario.html#nacionalidade">Nacionalidade</a></p>
@@ -17120,7 +17132,7 @@
 
 <ul>
 <li>  Opcional caso <a href="
-        /integracao/docs/##23-conclusaodestinoelegivel">conclusaoDestinoElegivel</a> for diferente de <code>1L (admissao propria emad)</code>.</li>
+        /integracao/docs/##23-conclusaodestinoelegivel">conclusaoDestinoElegivel</a> for diferente de <code>1L (admissao própria emad)</code>.</li>
 </ul>
 
 <p><strong>Referências:</strong>   <a href="
@@ -17294,7 +17306,7 @@
 
 <p><strong>Referências:</strong> <a href="/integracao/docs/dicionario/dicionario.html#conclusaodestinoelegivel">ConclusaoDestinoElegivel</a></p>
 
-<p>Observacões: Os campos <code>#23</code> e <code>#24</code> são mutuamente exclusivos.</p>
+<p>Observações: Os campos <code>#23</code> e <code>#24</code> são mutuamente exclusivos.</p>
 
 <h3 id="24-conclusaodestinoinelegivel">#24    conclusaoDestinoInelegivel</h3>
 
@@ -17324,7 +17336,7 @@
 
 <p><strong>Referências:</strong> <a href="/integracao/docs/dicionario/dicionario.html#conclusaodestinoinelegivel">ConclusaoDestinoInelegivel</a></p>
 
-<p>Observacões: Os campos <code>#23</code> e <code>#24</code> são mutuamente exclusivos.</p>
+<p>Observações: Os campos <code>#23</code> e <code>#24</code> são mutuamente exclusivos.</p>
 
 <h3 id="25-cuidadorcidadao">#25    cuidadorCidadao</h3>
 
@@ -17484,7 +17496,7 @@
 
 <h3 id="7-numerodneuf">#7 numeroDneUf</h3>
 
-<p>Indexador referente a Unidade Federativa</p>
+<p>Indexador referente a Unidade Federativa.</p>
 
 <table><thead>
 <tr>
@@ -17506,7 +17518,7 @@
 
 <h3 id="8-telreferencial">#8 telReferencial</h3>
 
-<p>Telefone de referência</p>
+<p>Telefone de referência.</p>
 
 <table><thead>
 <tr>
@@ -17524,11 +17536,11 @@
 </tr>
 </tbody></table>
 
-<p>Observações: minimo 10 digitos, máximo 11 (DDD + 8 ou 9)</p>
+<p>Observações: Mínimo 10 digitos, máximo 11 (DDD + 8 ou 9)</p>
 
 <h3 id="9-telresidencial">#9 telResidencial</h3>
 
-<p>Telefone residencial</p>
+<p>Telefone residencial.</p>
 
 <table><thead>
 <tr>
@@ -17546,7 +17558,7 @@
 </tr>
 </tbody></table>
 
-<p>Observações: minimo 10 digitos, máximo 11 (DDD + 8 ou 9)</p>
+<p>Observações: Mínimo 10 digitos, máximo 11 (DDD + 8 ou 9)</p>
 
 <h3 id="10-tipologradouronumerodne">#10    tipoLogradouroNumeroDne</h3>
 
@@ -17848,7 +17860,7 @@
 </tbody></table>
 
 <p><strong>Regras:</strong>
-* Não pode ser preenchidos caso o campo <a href="
+* Não pode ser preenchido caso o campo <a href="
         /integracao/docs/##9-statustermorecusacadatrodomiciliaratencaobasica">statusTermoRecusaCadastroDomiciliarAtencaoBasica</a> = <code>true</code>.</p>
 
 <h3 id="6-fichaatualizada">#6 fichaAtualizada</h3>
@@ -17923,7 +17935,7 @@
 <p><strong>Regras:</strong></p>
 
 <ul>
-<li>Não pode ser preenchidos se o campo <a href="
+<li>Não pode ser preenchido se o campo <a href="
         /integracao/docs/##9-statustermorecusacadatrodomiciliaratencaobasica">statusTermoRecusaCadastroDomiciliarAtencaoBasica</a> = <code>true</code>.</li>
 </ul>
 
@@ -18042,7 +18054,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Referências:</strong> Para ver a referência sobre o formato epoch, acesse: <a href="
+<p><strong>Referências:</strong> <a href="
         /integracao/docs/https://en.wikipedia.org/wiki/Epoch_(reference_date)">Epoch Wikipedia</a>.</p>
 
 <h3 id="2-numerocnsresponsavel">#2 numeroCnsResponsavel</h3>
@@ -18152,7 +18164,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Referências:</strong> Para ver a referência sobre o formato epoch, acesse: <a href="
+<p><strong>Referências:</strong> <a href="
         /integracao/docs/https://en.wikipedia.org/wiki/Epoch_(reference_date)">Epoch Wikipedia</a>.</p>
 
 <h3 id="7-stmudanca">#7 stMudanca</h3>
@@ -19971,7 +19983,7 @@
 
 <p><strong>Regras:</strong> Não pode ser posterior a <a href="/integracao/docs/profissional.html##5-dataatendimento">dataAtendimento</a> ou mais anterior que 130 anos a partir da <a href="/integracao/docs/profissional.html##5-dataatendimento">dataAtendimento</a>.</p>
 
-<p><strong>Referência:</strong> Para ver a referência sobre o formato epoch, acesse: <a href="
+<p><strong>Referência:</strong> <a href="
         /integracao/docs/https://en.wikipedia.org/wiki/Epoch_(reference_date)">Epoch Wikipedia</a>.</p>
 
 <h3 id="4-datanascimentoresponsavel">#4 dataNascimentoResponsavel</h3>
@@ -19996,7 +20008,7 @@
 
 <p><strong>Regras:</strong> Não pode ser posterior a <a href="/integracao/docs/profissional.html##5-dataatendimento">dataAtendimento</a> ou mais anterior que 130 anos a partir da <a href="/integracao/docs/profissional.html##5-dataatendimento">dataAtendimento</a>.</p>
 
-<p><strong>Referência:</strong> Para ver a referência sobre o formato epoch, acesse: <a href="
+<p><strong>Referência:</strong> <a href="
         /integracao/docs/https://en.wikipedia.org/wiki/Epoch_(reference_date)">Epoch Wikipedia</a>.</p>
 
 <h3 id="5-desconhecenomemae">#5 desconheceNomeMae</h3>
@@ -20983,7 +20995,7 @@
 
 <p><strong>Regras:</strong> Não pode ser posterior a <a href="/integracao/docs/profissional.html##5-dataatendimento">dataAtendimento</a> e anterior a 130 anos a partir da <a href="/integracao/docs/profissional.html##5-dataatendimento">dataAtendimento</a>.</p>
 
-<p><strong>Referência:</strong> Para ver a referência sobre o formato epoch, acesse: <a href="
+<p><strong>Referência:</strong> <a href="
         /integracao/docs/https://en.wikipedia.org/wiki/Epoch_(reference_date)">Epoch Wikipedia</a></p>
 
 <h3 id="4-sexo">#4 sexo</h3>
@@ -21476,7 +21488,7 @@
 
 <p><strong>Regras:</strong> Não pode ser posterior a <a href="/integracao/docs/profissional.html##5-dataatendimento">dataAtendimento</a> e anterior a 130 anos a partir da <a href="/integracao/docs/profissional.html##5-dataatendimento">dataAtendimento</a>.</p>
 
-<p><strong>Referência</strong>: Para ver a referência sobre o formato epoch, acesse: <a href="
+<p><strong>Referência</strong>: <a href="
         /integracao/docs/https://en.wikipedia.org/wiki/Epoch_(reference_date)">Epoch Wikipedia</a>.</p>
 
 <h3 id="5-sexo">#5 sexo</h3>
@@ -21631,7 +21643,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras</strong>: CNS valido de acordo com o algoritmo.</p>
+<p><strong>Regras</strong>: CNS válido de acordo com o algoritmo.</p>
 
 <p><strong>Referência</strong>: Para ver o algoritmo utilizado, acesse: <a href="
         /integracao/docs/http://cartaonet.datasus.gov.br/">Cartão Net Datasus</a>. Em &quot;Downloads&quot; baixe o arquivo de rotina de validação Java.  </p>
@@ -21685,7 +21697,7 @@
 
 <p><strong>Regras</strong>: Não pode ser posterior a <a href="/integracao/docs/profissional.html##5-dataatendimento">dataAtendimento</a> e anterior a 130 anos a partir da <a href="/integracao/docs/profissional.html##5-dataatendimento">dataAtendimento</a>.</p>
 
-<p><strong>Referêcia</strong>: Para ver a referência sobre o formato epoch, acesse: <a href="
+<p><strong>Referêcia</strong>: <a href="
         /integracao/docs/https://en.wikipedia.org/wiki/Epoch_(reference_date)">Epoch Wikipedia</a>.</p>
 
 <h3 id="5-sexo">#5 sexo</h3>
@@ -21734,7 +21746,7 @@
 
 <h3 id="7-perguntasquestionariocriancasmenoresseismeses">#7 perguntasQuestionarioCriancasMenoresSeisMeses</h3>
 
-<p>Marcadores referente a cidadãos menores de seis meses de idade.</p>
+<p>Marcadores referentes aos cidadãos menores de seis meses de idade.</p>
 
 <table><thead>
 <tr>
@@ -21758,11 +21770,11 @@
 <p><strong>Referêcia</strong>: <a href="
         /integracao/docs/#perguntaquestionariocriancasmenoresseismeses">PerguntaQuestionarioCriancasMenoresSeisMeses</a>.</p>
 
-<p>Observações: Os campos <code>#7</code>, <code>#8</code> e <code>#9</code> são mutualmente exclusivos, isto é, um e apenas um deles deve não ser nulo.</p>
+<p>Observações: Os campos <code>#7</code>, <code>#8</code> e <code>#9</code> são mutuamente exclusivos, isto é, um e apenas um deles deve não ser nulo.</p>
 
 <h3 id="8-perguntasquestionariocriancasdeseisvintetresmeses">#8 perguntasQuestionarioCriancasDeSeisVinteTresMeses</h3>
 
-<p>Marcadores referente a cidadãos que tem entre seis e vinte e três meses de idade.</p>
+<p>Marcadores referentes aos cidadãos que tem entre seis e vinte e três meses de idade.</p>
 
 <table><thead>
 <tr>
@@ -21786,11 +21798,11 @@
 <p><strong>Referêcia</strong>: <a href="
         /integracao/docs/#perguntaquestionariocriancasdeseisvintetresmeses">PerguntaQuestionarioCriancasDeSeisVinteTresMeses</a>.</p>
 
-<p>Observações: Os campos <code>#7</code>, <code>#8</code> e <code>#9</code> são mutualmente exclusivos, isto é, um e apenas um deles deve não ser nulo.</p>
+<p>Observações: Os campos <code>#7</code>, <code>#8</code> e <code>#9</code> são mutuamente exclusivos, isto é, um e apenas um deles deve não ser nulo.</p>
 
 <h3 id="9-perguntasquestionariocriancascommaisdoisanos">#9 perguntasQuestionarioCriancasComMaisDoisAnos</h3>
 
-<p>Marcadores referente a cidadãos que tem vinte e quatro meses ou mais.</p>
+<p>Marcadores referentes aos cidadãos que tem vinte e quatro meses ou mais.</p>
 
 <table><thead>
 <tr>
@@ -21814,7 +21826,7 @@
 <p><strong>Referêcia</strong>: <a href="
         /integracao/docs/#perguntaquestionariocriancascommaisdoisanos">PerguntaQuestionarioCriancasComMaisDoisAnos</a>.</p>
 
-<p>Observações: Os campos <code>#7</code>, <code>#8</code> e <code>#9</code> são mutualmente exclusivos, isto é, um e apenas um deles deve não ser nulo.</p>
+<p>Observações: Os campos <code>#7</code>, <code>#8</code> e <code>#9</code> são mutuamente exclusivos, isto é, um e apenas um deles deve não ser nulo.</p>
 
 <h3 id="10-uuidficha">#10 uuidFicha</h3>
 
@@ -21890,7 +21902,7 @@
 
 <h3 id="2-respostaunicaescolha">#2 respostaUnicaEscolha</h3>
 
-<p>Resposta referente a pergunta.</p>
+<p>Resposta referente à pergunta.</p>
 
 <table><thead>
 <tr>
@@ -21908,7 +21920,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Deve respeitar as regras das respostas referente a pergunta.</p>
+<p><strong>Regras:</strong> Deve respeitar as regras das respostas referentes à pergunta.</p>
 
 <p><strong>Referência:</strong> <a href="
         /integracao/docs/#respostaunicaescolhaenum">RespostaUnicaEscolhaEnum</a>.</p>
@@ -22013,11 +22025,11 @@
 <p><strong>Referência:</strong> <a href="
         /integracao/docs/#respostaunicaescolhaenum">RespostaUnicaEscolhaEnum</a>.</p>
 
-<p>Observações: Os campos <code>#2</code> e <code>#3</code> são mutualmente exclusivos, isto é, um e apenas um deles deve não ser nulo.</p>
+<p>Observações: Os campos <code>#2</code> e <code>#3</code> são mutuamente exclusivos, isto é, um e apenas um deles deve não ser nulo.</p>
 
 <h3 id="3-respostamultiplaescolha">#3 respostaMultiplaEscolha</h3>
 
-<p>Resposta referente a pergunta do registro acima.</p>
+<p>Resposta referente à pergunta do registro acima.</p>
 
 <table><thead>
 <tr>
@@ -22038,14 +22050,14 @@
 <p><strong>Regras:</strong></p>
 
 <ul>
-<li>Deve respeitar as regras das respostas referente a pergunta .</li>
+<li>Deve respeitar as regras das respostas referentes à pergunta .</li>
 <li>Pode ser preenchido somente se a pergunta for 12L.</li>
 </ul>
 
 <p><strong>Referência:</strong> <a href="
         /integracao/docs/#respostamultiplaescolhaenum">RespostaMultiplaEscolhaEnum</a>.</p>
 
-<p>Observações: Os campos <code>#2</code> e <code>#3</code> são mutualmente exclusivos, isto é, um e apenas um deles deve não ser nulo.</p>
+<p>Observações: Os campos <code>#2</code> e <code>#3</code> são mutuamente exclusivos, isto é, um e apenas um deles deve não ser nulo.</p>
 
 <h2 id="perguntacriancasmenoresseismesesenum">PerguntaCriancasMenoresSeisMesesEnum</h2>
 
@@ -50375,7 +50387,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Referência:</strong> Para ver a referência sobre o formato epoch, acesse: <a href="
+<p><strong>Referência:</strong> <a href="
         /integracao/docs/https://en.wikipedia.org/wiki/Epoch_(reference_date)">Epoch Wikipedia</a></p>
 
 <p>Observação: Esta entidade é utilizada para representar o profissional responsável pelas fichas.</p>
@@ -50682,7 +50694,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Referência:</strong> Para ver a referência sobre o formato epoch, acesse: <a href="
+<p><strong>Referência:</strong> <a href="
         /integracao/docs/https://en.wikipedia.org/wiki/Epoch_(reference_date)">Epoch Wikipedia</a></p>
 
 <p>Observação: Esta entidade é utilizada para representar o profissional que realizou uma ação (Cadastro Individual e Cadastro Domiciliar) e a respectiva data.</p>

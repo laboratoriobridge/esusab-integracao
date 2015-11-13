@@ -62,7 +62,7 @@ Número do lote para controle interno dos arquivos enviados.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
-|Long|	Opcional	|0	|	-	|
+|Long|	Opcional	|-	|	-	|
 
 ### \#7	dadoSerializado
 Dado serializado através do [TBinaryProtocol](https://github.com/apache/thrift/blob/0.9.2/lib/java/src/org/apache/thrift/protocol/TBinaryProtocol.java) a partir de uma ficha.
@@ -90,7 +90,7 @@ Identifica a instalação que cadastrou/digitou.
 **Referência**: [DadoInstalacao](#DadoInstalacao)
 
 ### \#10	versao
-Identifica a versão do E-SUS AB.
+Identifica a versão do e-SUS AB.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -109,6 +109,8 @@ Identifica o software que gerou o dado (pec/cds, cdsOff ou software de terceiros
 
 **Regras:** Seguir o padrão `<Nome do software do município> - Versão 2015`
 
+Observações: Campo serve para a identificar a instalação que gerou / cadastrou / enviou os dados.
+
 ### \#2	uuidInstalacao
 É um identificador da instalação do software que gerou o dado. Seja ele o e-SUS ou software de terceiro. Cada e-SUS possui um UUID.
 
@@ -116,21 +118,28 @@ Identifica o software que gerou o dado (pec/cds, cdsOff ou software de terceiros
 |---| --- |---  | --- |
 |String|	Requerido|	-|	-|
 
+Observações: Campo serve para a identificar a instalação que gerou / cadastrou / enviou os dados.
+
 ### \#3	cpfOuCnpj
-Cpf do responsável ou CNPJ da empresa responsável.
+CPF do responsável ou CNPJ da empresa responsável.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |String|	Requerido|	11|	15|
 
-Observações: Apenas CPFs e CNPJs válidos.	Rever validação.
+Observações:
+
+* Apenas CPFs e CNPJs válidos.	Rever validação.
+* Campo serve para a identificar a instalação que gerou / cadastrou / enviou os dados.
 
 ### \#4	nomeOuRazaoSocial
-Nome do responsável ou Razão Social da empresa responsável.
+Nome do responsável ou razão social da empresa responsável.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |String|	Requerido|	-|	-|
+
+Observações: Campo serve para a identificar a instalação que gerou / cadastrou / enviou os dados.
 
 ### \#5	fone
 Telefone da pessoa ou empresa responsável.
@@ -139,6 +148,8 @@ Telefone da pessoa ou empresa responsável.
 |---| --- |---  | --- |
 |String|	Opcional|	10|	11|
 
+Observações: Campo serve para a identificar a instalação que gerou / cadastrou / enviou os dados.
+
 ### \#6	email
 Email da pessoa ou empresa responsável.
 
@@ -146,4 +157,6 @@ Email da pessoa ou empresa responsável.
 |---| --- |---  | --- |
 |String|	Opcional|	6|	255|
 
-Requerido seguir o padrão `endereco@domínio.extensão`.
+**Regras:** Requerido seguir o padrão `endereco@domínio.extensão`.
+
+Observações: Campo serve para a identificar a instalação que gerou / cadastrou / enviou os dados.

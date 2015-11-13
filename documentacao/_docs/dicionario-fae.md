@@ -42,10 +42,13 @@ Profissional que realizou a visita.
 
 **Referências:**	[Profissional]({% url profissional %})
 
-### \#4	numeroCartaoSus	CNS do cidadão.
+### \#4	numeroCartaoSus
+
+CNS do cidadão.
+
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
-String	Requerido	15	15
+|String	|Requerido	|15	|15 |
 
 CNS valido de acordo com o algoritmo.
 
@@ -59,9 +62,10 @@ Nome do cidadão.
 |String |	Requerido*	|5|	100|
 
 **Regras**:
-<br> • Ter ao menos duas palavras.
-<br> • Somente texto e apóstrofo (`'`).
-<br> •	Opcional caso [conclusaoDestinoElegivel](##23-conclusaodestinoelegivel) for diferente de `1L (admissao propria emad)`.
+
+* Ter ao menos duas palavras.
+* Somente texto e apóstrofo (`'`).
+*	Opcional caso [conclusaoDestinoElegivel](##23-conclusaodestinoelegivel) for diferente de `1L (admissao propria emad)`.
 
 ### \#6	nomeSocialCidadao
 
@@ -72,7 +76,8 @@ Nome social do cidadão.
 |String|	Opcional|	0|	100|
 
 **Regras:**
-<br> • Somente texto e apóstrofo (`'`).
+
+* Somente texto e apóstrofo (`'`).
 
 ### \#7	dataNascimentoCidadao
 Data de nascimento do cidadão no formato epoch time.
@@ -95,14 +100,15 @@ Sexo do cidadão.
 **Referências:** [Sexo]({% url dicionario %}#sexo)
 
 ### \#9	racaCorCidadao
-Raça / Cor do cidadão
+Raça / Cor do cidadão.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |Long|	Condicional	|-|	-|
 
 **Regras:**
-<br> •	Opcional caso [conclusaoDestinoElegivel](##23-conclusaodestinoelegivel) for diferente de `1L (admissao propria emad)`.
+
+*	Opcional caso [conclusaoDestinoElegivel](##23-conclusaodestinoelegivel) for diferente de `1L (admissao propria emad)`.
 
 **Referências:** [RacaCor]({% url dicionario %}#racacor)
 
@@ -114,9 +120,10 @@ Nome da mãe do cidadão.
 |String|	Condicional |	5|	100|
 
 **Regras**:
-<br> • Ter ao menos duas palavras.
-<br> • Somente texto e apóstrofo (`'`).
-<br> • Não pode ser preenchido se o campo [desconheceNomeMae](##11-desconhecenomemae) = `true`.
+
+* Ter ao menos duas palavras.
+* Somente texto e apóstrofo (`'`).
+* Não pode ser preenchido se o campo [desconheceNomeMae](##11-desconhecenomemae) = `true`.
 
 ### \#11	desconheceNomeMae
 Marcador que indica que o cidadão desconhece o nome da mãe.
@@ -144,7 +151,8 @@ Marcador que indica se o cidadão é brasileiro, naturalizado ou estrangeiro.
 |Long|	Condicional| 	-|	-|
 
 **Regras:**
-<br> •	Opcional caso [conclusaoDestinoElegivel](##23-conclusaodestinoelegivel) for diferente de `1L (admissao propria emad)`.
+
+*	Opcional caso [conclusaoDestinoElegivel](##23-conclusaodestinoelegivel) for diferente de `1L (admissao propria emad)`.
 
 **Referências:** [Nacionalidade]({% url dicionario %}#nacionalidade)
 
@@ -174,7 +182,8 @@ Informações sobre o endereço do domicílio
 |EnderecoLocalPermanencia|	Condicional |	-|	-|
 
 **Regras**:
-<br> •	Opcional caso [conclusaoDestinoElegivel](##23-conclusaodestinoelegivel) for diferente de `1L (admissao propria emad)`.
+
+*	Opcional caso [conclusaoDestinoElegivel](##23-conclusaodestinoelegivel) for diferente de `1L (admissao propria emad)`.
 
 **Referências:**	[EnderecoLocalPermanencia](#enderecolocalpermanencia)
 
@@ -197,7 +206,7 @@ Opções de modalidade, indica se o cidadão é elegível ou inelegível.
 **Referências:** [ModalidadeAD]({% url dicionario %}#modalidadead)
 
 ### \#19	situacoesPresentes
-Marcadores de situações presentes
+Marcadores de situações presentes.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -224,7 +233,7 @@ CID10 registrado na avaliação.
 **Regras:** Não pode ser igual ao [CID10Principal](##20-cid10principal) nem [CID10Terceiro](##22-cid10terceiro).
 
 ### \#22	cid10Terceiro
-CID10 registrado na avaliação
+CID10 registrado na avaliação.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -240,7 +249,8 @@ Conduta adotada caso cidadão seja `Elegível`.
 |Long|	Condicional| -|-|
 
 **Regras:**
-<br> • Só pode ser preenchido se [atencaoDomiciliarModalidade](##18-atencaodomiciliarmodalidade) for diferente de `4L (inelegível)`.
+
+* Só pode ser preenchido se [atencaoDomiciliarModalidade](##18-atencaodomiciliarmodalidade) for diferente de `4L (inelegível)`.
 
 **Referências:** [ConclusaoDestinoElegivel]({% url dicionario %}#conclusaodestinoelegivel)
 
@@ -254,7 +264,8 @@ Conduta adotada caso cidadão seja `Inelegível`.
 |List\<Long>|	Condicional| 	0|	5|
 
 **Regras**:
-<br> • Só pode ser preenchido se atencaoDomiciliarModalidade for igual a de `4L (inelegível)`.
+
+* Só pode ser preenchido se atencaoDomiciliarModalidade for igual a de `4L (inelegível)`.
 
 **Referências:** [ConclusaoDestinoInelegivel]({% url dicionario %}#conclusaodestinoinelegivel)
 
@@ -318,8 +329,9 @@ Número do domicílio.
 |String|	Requerido|	1|	10|
 
 **Regras**:
-<br> • Apenas letras e números.
-<br> • Não pode ser preenchido caso [stSemNumero](##11-stsemnumero) = `true`.
+
+* Apenas letras e números.
+* Não pode ser preenchido caso [stSemNumero](##11-stsemnumero) = `true`.
 
 ### \#7	numeroDneUf
 Indexador referente a Unidade Federativa
@@ -355,7 +367,7 @@ Tipo do logradouro onde está o domicílio.
 |---| --- |---  | --- |
 |String|	Requerido|	-|	-|
 
-**Regras:** Deve ser informado o código DNE
+**Regras:** Deve ser informado o código DNE.
 
 **Referências:** [TipoLogradouro]({% url referencias %}#tipo-de-logradouro)
 

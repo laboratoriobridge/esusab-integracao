@@ -48,7 +48,7 @@ Descrição do local onde é realizada a atividade coletiva.
 |String|	Opcional|	0|	250|
 
 ### \#5	horaInicio
-Hora de incício de realização da atividade coletiva.
+Hora de início da realização da atividade coletiva.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -84,10 +84,11 @@ CNS do responsável pela atividade coletiva.
 |String|	Requerido|	15|	15|
 
 **Regras**:
-<br/> • CNS válido de acordo com o algoritmo.
-<br/> • O profissional responsável deve ser um registro da lista de profissionais.
 
-**Referência**: Para ver o algoritmo utilizado, acesse: [Catão NET Datasus](http://cartaonet.datasus.gov.br/), em "Downloads" baixe o arquivo de rotina de validação Java.
+* CNS válido de acordo com o algoritmo.
+* O profissional responsável deve ser um registro da lista de profissionais.
+
+**Referência**: Para ver o algorítmo utilizado, acesse: [Cartão NET Datasus](http://cartaonet.datasus.gov.br/), em "Downloads" baixe o arquivo de rotina de validação Java.
 
 ### \#9	responsavelCnesUnidade
 CNES do responsável pela atividade coletiva.
@@ -126,7 +127,7 @@ Lista dos profissionais que participaram da atividade.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
-|List<ProfissionalCboRowItem> |Sim |1	|99 |
+|List\<ProfissionalCboRowItem\> |Sim |1	|99 |
 
 **Regras**: Entre 1 e 99 registros.
 
@@ -146,11 +147,12 @@ Temas para reunião.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
-|	List<Long>|	Condicional |- |	-|
+|	List\<Long\>|	Condicional |- |	-|
 
 **Regras**:
-<br> • É Requerido se [TipoAtividadeColetiva]({% url dicionario %}#tipoatividadecoletiva) for `1L`, `2L` ou `3L`.
-<br> • Não pode ser preenchido se [TipoAtividadeColetiva]({% url dicionario %}#tipoatividadecoletiva) for `4L`, `5L`, `6L` ou `7L`.
+
+* É Requerido se [TipoAtividadeColetiva]({% url dicionario %}#tipoatividadecoletiva) for `1L`, `2L` ou `3L`.
+* Não pode ser preenchido se [TipoAtividadeColetiva]({% url dicionario %}#tipoatividadecoletiva) for `4L`, `5L`, `6L` ou `7L`.
 
 **Referência**: [TemasParaReuniao]({% url dicionario %}#temasparareuniao)
 
@@ -159,11 +161,12 @@ Público alvo da atividade.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
-|List<Long>|	Condicional |	-|	-|
+|List\<Long\>|	Condicional |	-|	-|
 
 **Regras**:
-<br> • É Requerido se [TipoAtividadeColetiva]({% url dicionario %}#tipoatividadecoletiva) for `4L`, `5L`, `6L` ou `7L`.
-<br> • Não pode ser preenchido se [TipoAtividadeColetiva]({% url dicionario %}#tipoatividadecoletiva) for `1L`, `2L` ou `3L`.
+
+* É Requerido se [TipoAtividadeColetiva]({% url dicionario %}#tipoatividadecoletiva) for `4L`, `5L`, `6L` ou `7L`.
+* Não pode ser preenchido se [TipoAtividadeColetiva]({% url dicionario %}#tipoatividadecoletiva) for `1L`, `2L` ou `3L`.
 
 **Referência**: [PublicoAlvo]({% url dicionario %}#publicoalvo)
 
@@ -172,11 +175,12 @@ Práticas ou temas abordados na atividade.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
-|List<Long>|	Condicional| 	-|	-|
+|List\<Long\>|	Condicional| 	-|	-|
 
 **Regras**:
-<br> • É Requerido se [TipoAtividadeColetiva]({% url dicionario %}#tipoatividadecoletiva) for `4L`, `5L`, `6L` ou `7L`.
-<br> • Não pode ser preenchido se [TipoAtividadeColetiva]({% url dicionario %}#tipoatividadecoletiva) for `1L`, `2L` ou `3L`.
+
+* É Requerido se [TipoAtividadeColetiva]({% url dicionario %}#tipoatividadecoletiva) for `4L`, `5L`, `6L` ou `7L`.
+* Não pode ser preenchido se [TipoAtividadeColetiva]({% url dicionario %}#tipoatividadecoletiva) for `1L`, `2L` ou `3L`.
 
 **Referências**:	[PraticasTemasParaSaude]({% url dicionario %}#praticastemasparasaude)
 
@@ -185,7 +189,7 @@ Cidadãos que participaram da atividade coletiva.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
-|List<ParticipanteRowItem>|	Opcional|	0|33|
+|List\<ParticipanteRowItem\>|	Opcional|	0|33|
 
 **Referência**: [ParticipanteRowItem](#participanterowitem)
 
@@ -246,10 +250,11 @@ Peso do cidadão em Kg.
 |	Double|	Opcional|	1|	6|
 
 **Regras**:
-<br/> • Apenas números e vírgula (`,`).
-<br/> • Máximo de 3 números após a vírgula.
-<br/> • Se tiver vírgula, tamanho máximo = 7.
-<br/> • Valor mínimo = 0,5 e máximo = 500.
+
+* Apenas números e vírgula (`,`).
+* Máximo de 3 números após a vírgula.
+* Se tiver vírgula, tamanho máximo = 7.
+* Valor mínimo = 0,5 e máximo = 500.
 
 ### \#5	altura
 Altura do cidadão em cm.
@@ -259,10 +264,11 @@ Altura do cidadão em cm.
 |Double|	Opcional| 	2|	4|
 
 **Regras**:
-<br/> • Apenas números e vírgula (`,`).
-<br/> • Máximo de 3 números após a vírgula.
-<br/> • Se tiver vírgula, tamanho máximo = 5.
-<br/> • Valor mínimo 20 e máximo 250.
+
+* Apenas números e vírgula (`,`).
+* Máximo de 3 números após a vírgula.
+* Se tiver vírgula, tamanho máximo = 5.
+* Valor mínimo 20 e máximo 250.
 
 ### \#6	cessouHabitoFumar
 Marcação se o cidadão cessou o hábito de fumar.

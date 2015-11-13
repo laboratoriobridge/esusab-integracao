@@ -43,7 +43,7 @@ Registro dos procedimentos realizados.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |--- |--- |--- |--- |
-|List<FichaProcedimentoChild> |Condicional |1 |23 |
+|List\<FichaProcedimentoChild\> |Condicional |1 |23 |
 
 **Referência**: [FichaProcedimentoChild](#fichaprocedimentochild).
 
@@ -178,7 +178,7 @@ Lista dos procedimentos que são registrados na ficha de procedimentos.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |--- |--- |--- |--- |
-|List<String> |Condicional |0 |32 |
+|List\<String\> |Condicional |0 |32 |
 
 **Regras:** Caracteres maiúsculos e sem espaço em branco.
 
@@ -191,11 +191,12 @@ Outros procedimentos do SIGTAP ou SISAB.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |--- |--- |--- |--- |
-|List<String> |Condicional |- |- |
+|List\<String\> |Condicional | 0 | 6 |
 
 **Regras:**
-<br> • Caracteres maiúsculos e sem espaço em branco.
-<br> • Não repetir procedimentos.
+
+* Caracteres maiúsculos e sem espaço em branco.
+* Não repetir procedimentos.
 
 **Referência**: Para ver a referência da tabela do SIGTAP acesse: [Tabela unificada SIGTAP](http://sigtap.datasus.gov.br/tabela-unificada/app/sec/procedimento/publicados/consultar)
 

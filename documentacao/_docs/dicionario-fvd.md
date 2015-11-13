@@ -43,7 +43,7 @@ Pelo menos 1 item na lista, no máximo 23.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |--- |--- |--- |--- |
-|List<FichaVisitaDomiciliarChild> |Sim |- |- |
+|List\<FichaVisitaDomiciliarChild\> |Sim |- |- |
 
 **Referência**: [FichaVisitaDomiciliarChild](#fichavisitadomiciliarchild).
 
@@ -110,7 +110,7 @@ Motivos da visita.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |--- |--- |--- |--- |
-|List<Long> |Condicional |- |- |
+|List\<Long\> |Condicional |- |- |
 
 **Regras:** Não é Obrigatório se [Desfecho]({% url dicionario %}#desfecho) é `AUSENTE` ou `VISITA_RECUSADA`.
 

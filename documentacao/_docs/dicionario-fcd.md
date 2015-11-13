@@ -14,10 +14,11 @@ Lista de animais no domicílio.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
-|List\<Long>|	Condicional|	0|	5|
+|List\<Long\>|	Condicional|	0|	5|
 
 **Regras:**
-<br> • Não pode ser preenchido se o campo [statusTermoRecusaCadastroDomiciliarAtencaoBasica](##9-statustermorecusacadatrodomiciliaratencaobasica) = `true`.
+
+* Não pode ser preenchido se o campo [statusTermoRecusaCadastroDomiciliarAtencaoBasica](##9-statustermorecusacadatrodomiciliaratencaobasica) = `true`.
 
 **Referências:** [AnimalNoDomicilio]({% url dicionario %}#animalnodomicilio)
 
@@ -25,20 +26,21 @@ Lista de animais no domicílio.
 Condições de moradia do domicílio.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
-|---| --- |---  | --- |
-|CondicaoMoradia	|Condicional	|-|	-	|
+| ---| --- |---  | --- |
+| CondicaoMoradia	| Condicional	| - |	-	|
 
 **Regras:**
-<br> • Não devem ser preenchidos se o campo [statusTermoRecusaCadastroDomiciliarAtencaoBasica](##9-statustermorecusacadatrodomiciliaratencaobasica) = `true`.
+
+* Não devem ser preenchidos se o campo [statusTermoRecusaCadastroDomiciliarAtencaoBasica](##9-statustermorecusacadatrodomiciliaratencaobasica) = `true`.
 
 **Referências:** [CondicaoMoradia](#condicaomoradia)
 
 ### \#3	dadosGerais
-Informações sobre o profissionale a data do cadastro.
+Informações sobre o profissional e a data do cadastro.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
-|---| --- |---  | --- |
-|HeaderCdsCadastro|	Requerido|	-|	-|
+| ---| --- |---  | --- |
+| HeaderCdsCadastro|	Requerido|	-|	-|
 
 **Referências:**	[HeaderCdsCadastro]({% url profissional %}#headercdscadastro)
 
@@ -46,10 +48,10 @@ Informações sobre o profissionale a data do cadastro.
 Informações sobre o endereço do domicílio.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
-|---| --- |---  | --- |
-|EnderecoLocalPermanencia|	Condicional |  - | -|
+| ---| --- |---  | --- |
+| EnderecoLocalPermanencia|	Condicional |  - | -|
 
-**Regras:** Preencimento opcional se o campo [statusTermoRecusaCadastroDomiciliarAtencaoBasica](##9-statustermorecusacadatrodomiciliaratencaobasica) = `true`.
+**Regras:** Preencimento obrigatório caso o campo [statusTermoRecusaCadastroDomiciliarAtencaoBasica](##9-statustermorecusacadatrodomiciliaratencaobasica) = `false`.
 
 **Referências:** [EnderecoLocalPermanencia](#enderecolocalpermanencia)
 
@@ -61,7 +63,7 @@ Lista das famílias que residem no domicílio.
 |List\<FamiliaRow>| Condicional| 	0|	4|
 
 **Regras:**
-<br> • Não pode ser preenchidos se o campo [statusTermoRecusaCadastroDomiciliarAtencaoBasica](##9-statustermorecusacadatrodomiciliaratencaobasica) = `true`.
+* Não pode ser preenchidos caso o campo [statusTermoRecusaCadastroDomiciliarAtencaoBasica](##9-statustermorecusacadatrodomiciliaratencaobasica) = `true`.
 
 ### \#6	fichaAtualizada
 Marcador que indica se a ficha é uma atualização.
@@ -78,8 +80,9 @@ Número de animais no domicílio.
 |String	|Condicional| 	0|	2|
 
 **Regras:**
-<br> • Não pode ser preenchido se o campo [stAnimaisNoDomicilio](##8-stanimaisnodomicilio) = `false`.
-<br> • Não pode ser preenchido se o campo [statusTermoRecusaCadastroDomiciliarAtencaoBasica](##9-statustermorecusacadatrodomiciliaratencaobasica) = `true`.
+
+* Não pode ser preenchido se o campo [stAnimaisNoDomicilio](##8-stanimaisnodomicilio) = `false`.
+* Não pode ser preenchido se o campo [statusTermoRecusaCadastroDomiciliarAtencaoBasica](##9-statustermorecusacadatrodomiciliaratencaobasica) = `true`.
 
 ### \#8	stAnimaisNoDomicilio
 Marcador que indica se existem animais no domicílio.
@@ -89,7 +92,8 @@ Marcador que indica se existem animais no domicílio.
 |Boolean|	Condicional| 	-	| - |
 
 **Regras:**
-<br> • Não pode ser preenchidos se o campo [statusTermoRecusaCadastroDomiciliarAtencaoBasica](##9-statustermorecusacadatrodomiciliaratencaobasica) = `true`.
+
+* Não pode ser preenchidos se o campo [statusTermoRecusaCadastroDomiciliarAtencaoBasica](##9-statustermorecusacadatrodomiciliaratencaobasica) = `true`.
 
 ### \#9	statusTermoRecusaCadatroDomiciliarAtencaoBasica
 Marcador que indica se o cadastro foi utilizado o termo de recusa de cadastro do domicílio.
@@ -204,7 +208,7 @@ CEP do logradouro do domicílio.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
-|String|	Opcional|	8|	8|
+| String|	Opcional|	8|	8|
 
 **Regras:**	Apenas números.
 
@@ -239,8 +243,9 @@ Número do domicílio.
 |String|	Requerido|	1|	10|
 
 **Regras:**
-<br> • Apenas letras e números.
-<br> • Não pode ser preenchido caso [stSemNumero](##11-stsemnumero) = `true`.
+
+* Apenas letras e números.
+* Não pode ser preenchido caso [stSemNumero](##11-stsemnumero) = `true`.
 
 ### \#7	numeroDneUf
 Indexador referente a Unidade Federativa.
@@ -258,7 +263,7 @@ Telefone de referência.
 |---| --- |---  | --- |
 |String|	Opcional|	10|	11|
 
-**Regras:** mínimo 10 dígitos, máximo 11 (DDD + 8 ou 9).
+**Regras:** Mínimo 10 dígitos, máximo 11 (DDD + 8 ou 9).
 
 ### \#9	telResidencial
 Telefone residencial.
@@ -270,7 +275,6 @@ Telefone residencial.
 **Regras:** Mínimo 10 dígitos, máximo 11 (DDD + 8 ou 9).
 
 ### \#10	tipoLogradouroNumeroDne
-
 Tipo do logradouro onde está o domicílio.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -306,7 +310,7 @@ Condição de posse e uso da terra.
 |---| --- |---  | --- |
 |Long|	Condicional | 	-|	-|
 
-**Regras:** Preenchimento obrigatório se o campo [Localização](##5-localizacao) = `84L (rural)`.
+**Regras:** Preenchimento obrigatório caso o campo [Localização](##5-localizacao) = `84L (rural)`.
 
 **Referências:** [CondicaoDePosseEUsoDaTerra]({% url dicionario %}#condicaodeposseeusodaterra)
 

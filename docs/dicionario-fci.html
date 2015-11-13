@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Ficha de Cadastro Individual</title>
-  <meta name="description" content="Dicionário de dados e-SUS AB">
+  <meta name="description" content="Ficha de Cadastro Individual">
 
   <link rel="stylesheet" href="/integracao/css/main.css">
   <link rel="canonical" href="/integracao/docs/dicionario-fci.html">
@@ -196,7 +196,7 @@
     <p class="post-meta">
       <a class="btn" href="/integracao/pdf.html?include=dicionario-fci"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 11/09/2015</span>
+        <span class="label" title="Data da última modificação">Alterado em 05/11/2015</span>
       
     </p>
   </header>
@@ -230,9 +230,9 @@
 
 <p><strong>Referência</strong>: <a href="#condicoesdesaude">CondicoesDeSaude</a></p>
 
-<h3 id="2-dadosgerais-dados">#2 dadosGerais Dados</h3>
+<h3 id="2-dadosgerais">#2 dadosGerais</h3>
 
-<p>referentes ao profissional e a data do cadastro.</p>
+<p>Dados referentes ao profissional e a data do cadastro.</p>
 
 <table><thead>
 <tr>
@@ -289,7 +289,7 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>boolean</td>
+<td>Boolean</td>
 <td>Sim</td>
 <td>-</td>
 <td>-</td>
@@ -456,7 +456,7 @@
 
 <p>Observação: Não deve ser preenchido se o campo <a href="##27-statusteveinternadoem12meses">statusTeveInternadoem12Meses</a> = <code>false</code>.</p>
 
-<h3 id="2-ddescricaooutracondicao1">#2 ddescricaoOutraCondicao1</h3>
+<h3 id="2-descricaooutracondicao1">#2 descricaoOutraCondicao1</h3>
 
 <p>Condição de saúde informada pelo cidadão.</p>
 
@@ -518,7 +518,7 @@
 
 <h3 id="5-descricaoplantasmedicinaisusadas">#5 descricaoPlantasMedicinaisUsadas</h3>
 
-<p>Descricao das plantas medicinais utilizadas.</p>
+<p>Descrição das plantas medicinais utilizadas.</p>
 
 <table><thead>
 <tr>
@@ -551,7 +551,7 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>List<Long></td>
+<td>List&lt;Long&gt;</td>
 <td>Condicional</td>
 <td>0</td>
 <td>3</td>
@@ -560,7 +560,7 @@
 
 <p><strong>Regras:</strong>
 <br> • Requerido preenchimento de pelo menos um item se o campo <a href="##25-statustevedoencacardiaca">statusTeveDoencaCardiaca</a> = <code>true</code>.
-<br> • Não deve ser preenchido preenchido se o campo <a href="##25-statustevedoencacardiaca">statusTeveDoencaCardiaca</a> = <code>false</code>.</p>
+<br> • Não deve ser preenchido se o campo <a href="##25-statustevedoencacardiaca">statusTeveDoencaCardiaca</a> = <code>false</code>.</p>
 
 <p><strong>Referência:</strong> <a href="/integracao/docs/dicionario/dicionario.html#doencacardiaca">DoencaCardiaca</a>.</p>
 
@@ -577,7 +577,7 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>List<Long></td>
+<td>List&lt;Long&gt;</td>
 <td>Condicional</td>
 <td>0</td>
 <td>4</td>
@@ -603,10 +603,10 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>List<Long></td>
+<td>List&lt;Long&gt;</td>
 <td>Condicional</td>
-<td>0 3</td>
-<td></td>
+<td>0</td>
+<td>3</td>
 </tr>
 </tbody></table>
 
@@ -662,7 +662,7 @@
 
 <h3 id="11-statusehdependentealcool">#11 statusEhDependenteAlcool</h3>
 
-<p>Marcador se o cidadão é dependente de alcool.</p>
+<p>Marcador se o cidadão é dependente de álcool.</p>
 
 <table><thead>
 <tr>
@@ -740,7 +740,12 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras</strong>: Só pode ser preenchido se o campo <a href="##16-sexocidadao">sexoCidadao</a> = <code>feminino</code> e o campo <a href="##3-datanascimentocidadao">dataNascimentoCidadao</a> for anterior ou igual à 12 anos a partir da data atual.</p>
+<p><strong>Regras</strong>: Só pode ser preenchido se:</p>
+
+<ul>
+<li>O campo <a href="##16-sexocidadao">sexoCidadao</a> = <code>feminino</code></li>
+<li>O campo <a href="##3-datanascimentocidadao">dataNascimentoCidadao</a> for mais anterior que 12 anos a partir da <a href="/integracao/docs/profissional.html##5-dataatendimento">dataAtendimento</a>.</li>
+</ul>
 
 <h3 id="15-statusestaacamado">#15 statusEstaAcamado</h3>
 
@@ -1085,8 +1090,8 @@
 </tbody></table>
 
 <p><strong>Regras:</strong>
-<br> • Não pode ser preechido se o campo <a href="##9-statussituacaorua">statusSituacaoRua</a> = <code>false</code>.
-<br> • Não pode ser preenchido se o campo <a href="##11-statusvisitafamiliarfrequentemente">statusVisitaFamiliarFrequentemente</a> = <code>false</code>.</p>
+* Não pode ser preechido se o campo <a href="##9-statussituacaorua">statusSituacaoRua</a> = <code>false</code>.
+* Não pode ser preenchido se o campo <a href="##11-statusvisitafamiliarfrequentemente">statusVisitaFamiliarFrequentemente</a> = <code>false</code>.</p>
 
 <h3 id="2-higienepessoalsituacaorua">#2 higienePessoalSituacaoRua</h3>
 
@@ -1101,16 +1106,19 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>List<Long></td>
+<td>List&lt;Long&gt;</td>
 <td>Condicional</td>
 <td>0</td>
 <td>4</td>
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong>
-<br> • Não pode ser preechido se o campo <a href="##9-statussituacaorua">statusSituacaoRua</a> = <code>false</code>.
-<br> • Requerido preenchimento de pelo menos um item se o campo <a href="##10-statustemacessohigienepessoalsituacaorua">statusTemAcessoHigienePessoalSituacaoRua</a> = <code>true</code>.</p>
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Não pode ser preechido se o campo <a href="##9-statussituacaorua">statusSituacaoRua</a> = <code>false</code>.</li>
+<li>Requerido preenchimento de pelo menos um item se o campo <a href="##10-statustemacessohigienepessoalsituacaorua">statusTemAcessoHigienePessoalSituacaoRua</a> = <code>true</code>.</li>
+</ul>
 
 <p><strong>Referência:</strong> <a href="/integracao/docs/dicionario/dicionario.html#acessohigiene">AcessoHigiene</a>.</p>
 
@@ -1127,7 +1135,7 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>List<Long></td>
+<td>List&lt;Long&gt;</td>
 <td>Opcional</td>
 <td>0</td>
 <td>5</td>
@@ -1406,7 +1414,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Não pode ser posterior a <a href="/integracao/docs/profissional.html##5-dataatendimento">dataAtendimento</a> e anterior a 130 anos a partir da <a href="/integracao/docs/profissional.html##5-dataatendimento">dataAtendimento</a>.</p>
+<p><strong>Regras:</strong> Não pode ser posterior a <a href="/integracao/docs/profissional.html##5-dataatendimento">dataAtendimento</a> ou mais anterior que 130 anos a partir da <a href="/integracao/docs/profissional.html##5-dataatendimento">dataAtendimento</a>.</p>
 
 <p><strong>Referência:</strong> Para ver a referência sobre o formato epoch, acesse: <a href="https://en.wikipedia.org/wiki/Epoch_(reference_date)">Epoch Wikipedia</a>.</p>
 
@@ -1430,7 +1438,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Não pode ser posterior a <a href="/integracao/docs/profissional.html##5-dataatendimento">dataAtendimento</a> ou anterior a 130 anos a partir da <a href="/integracao/docs/profissional.html##5-dataatendimento">dataAtendimento</a>.</p>
+<p><strong>Regras:</strong> Não pode ser posterior a <a href="/integracao/docs/profissional.html##5-dataatendimento">dataAtendimento</a> ou mais anterior que 130 anos a partir da <a href="/integracao/docs/profissional.html##5-dataatendimento">dataAtendimento</a>.</p>
 
 <p><strong>Referência:</strong> Para ver a referência sobre o formato epoch, acesse: <a href="https://en.wikipedia.org/wiki/Epoch_(reference_date)">Epoch Wikipedia</a>.</p>
 
@@ -1540,9 +1548,12 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong>
-<br> • Requerido espaço em branco para indicar o sobrenome.
-<br> • Não deve ser preenchido se o campo <a href="##5-desconhecenomedamae">desconheceNomeMae</a> = <code>true</code>.</p>
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Requerido espaço em branco para indicar o sobrenome.</li>
+<li>Não deve ser preenchido se o campo <a href="##5-desconhecenomedamae">desconheceNomeMae</a> = <code>true</code>.</li>
+</ul>
 
 <h3 id="10-numerocartaosus">#10 numeroCartaoSus</h3>
 
@@ -1616,9 +1627,9 @@
 
 <p><strong>Regras:</strong> Apenas números.</p>
 
-<h3 id="13-paisnacimento">#13 paisNacimento</h3>
+<h3 id="13-numeronispispasep">#13 numeroNisPisPasep</h3>
 
-<p>País de nascimento do cidadão.</p>
+<p>Número do PIS/PASEP do cidadão.</p>
 
 <table><thead>
 <tr>
@@ -1656,7 +1667,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras</strong>: Só pode ser preenchido se o campo <a href="##7-nacionalidadecidadao">nacionalidadeCidadao</a> = <code>1L (Brasileiro)</code>.</p>
+<p><strong>Regras</strong>: Só pode ser preenchido se o campo <a href="##7-nacionalidadecidadao">nacionalidadeCidadao</a> = <code>1L (Brasileira)</code>.</p>
 
 <p><strong>Referência:</strong> <a href="/integracao/docs/referencias.html#pa%C3%ADs">País</a>.</p>
 
@@ -1739,7 +1750,7 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>List<Long></td>
+<td>List&lt;Long&gt;</td>
 <td>Condicional</td>
 <td>1</td>
 <td>5</td>
@@ -1766,7 +1777,7 @@
 </thead><tbody>
 <tr>
 <td>Long</td>
-<td>Opicional</td>
+<td>opcional</td>
 <td>-</td>
 <td>-</td>
 </tr>
@@ -1788,7 +1799,7 @@
 </thead><tbody>
 <tr>
 <td>Long</td>
-<td>Opicional</td>
+<td>opcional</td>
 <td>-</td>
 <td>-</td>
 </tr>
@@ -1810,7 +1821,7 @@
 </thead><tbody>
 <tr>
 <td>String</td>
-<td>Opicional</td>
+<td>opcional</td>
 <td>6</td>
 <td>6</td>
 </tr>
@@ -1836,7 +1847,7 @@
 </thead><tbody>
 <tr>
 <td>Long</td>
-<td>Opicional</td>
+<td>opcional</td>
 <td>-</td>
 <td>-</td>
 </tr>
@@ -1858,7 +1869,7 @@
 </thead><tbody>
 <tr>
 <td>String</td>
-<td>Opicional</td>
+<td>opcional</td>
 <td>0</td>
 <td>100</td>
 </tr>
@@ -1880,7 +1891,7 @@
 </thead><tbody>
 <tr>
 <td>Long</td>
-<td>Opicional</td>
+<td>opcional</td>
 <td>-</td>
 <td>-</td>
 </tr>
@@ -1890,7 +1901,7 @@
 
 <h3 id="8-responsavelporcrianca">#8 responsavelPorCrianca</h3>
 
-<p>Responsável por criancas de até 9 anos.</p>
+<p>Responsável por crianças de até 9 anos.</p>
 
 <table><thead>
 <tr>
@@ -1902,7 +1913,7 @@
 </thead><tbody>
 <tr>
 <td>Long</td>
-<td>Opicional</td>
+<td>opcional</td>
 <td>-</td>
 <td>-</td>
 </tr>
@@ -1912,7 +1923,7 @@
 
 <h3 id="9-situacaomercadotrabalhocidadao">#9 situacaoMercadoTrabalhoCidadao</h3>
 
-<p>Situação do cidadão no mercdo de trabalho.</p>
+<p>Situação do cidadão no mercado de trabalho.</p>
 
 <table><thead>
 <tr>
@@ -1924,7 +1935,7 @@
 </thead><tbody>
 <tr>
 <td>Long</td>
-<td>Opicional</td>
+<td>opcional</td>
 <td>-</td>
 <td>-</td>
 </tr>
@@ -1946,7 +1957,7 @@
 </thead><tbody>
 <tr>
 <td>Boolean</td>
-<td>Opicional</td>
+<td>opcional</td>
 <td>-</td>
 <td>-</td>
 </tr>
@@ -1966,7 +1977,7 @@
 </thead><tbody>
 <tr>
 <td>Boolean</td>
-<td>Opicional</td>
+<td>opcional</td>
 <td>-</td>
 <td>-</td>
 </tr>
@@ -2006,7 +2017,7 @@
 </thead><tbody>
 <tr>
 <td>Boolean</td>
-<td>Opicional</td>
+<td>opcional</td>
 <td>-</td>
 <td>-</td>
 </tr>
@@ -2026,7 +2037,7 @@
 </thead><tbody>
 <tr>
 <td>Boolean</td>
-<td>Opicional</td>
+<td>opcional</td>
 <td>-</td>
 <td>-</td>
 </tr>
@@ -2046,7 +2057,7 @@
 </thead><tbody>
 <tr>
 <td>Boolean</td>
-<td>Opicional</td>
+<td>opcional</td>
 <td>-</td>
 <td>-</td>
 </tr>

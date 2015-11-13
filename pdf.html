@@ -496,7 +496,8 @@
       
 
       <article class="post-content">
-        <p>Cada ficha dentro do arquivo compactado representa um DadoTransport serializado, sendo necessário que a extensão da ficha esteja definida como &quot;.esus&quot;.</p>
+        <p>Cada ficha dentro do arquivo compactado representa um DadoTransport serializado através do <a href="
+        /integracao/docs/https://github.com/apache/thrift/blob/0.9.2/lib/java/src/org/apache/thrift/protocol/TBinaryProtocol.java">TBinaryProtocol</a>, sendo necessário que a extensão da ficha esteja definida como &quot;.esus&quot;.</p>
 
 <p>O pacote que encapsula os dados transmissíveis, cada ficha deve conter as informações de indentificação deste cabeçalho, incluindo o dadoSerializado(conteúdo da ficha).</p>
 
@@ -534,7 +535,8 @@
 
 <h3 id="2-tipodadoserializado">#2 tipoDadoSerializado</h3>
 
-<p>Tipo/classe do objeto serializado.</p>
+<p>Tipo/classe do objeto serializado através do <a href="
+        /integracao/docs/https://github.com/apache/thrift/blob/0.9.2/lib/java/src/org/apache/thrift/protocol/TBinaryProtocol.java">TBinaryProtocol</a>.</p>
 
 <table><thead>
 <tr>
@@ -576,7 +578,8 @@
 
 <h3 id="4-codibge">#4 codIbge</h3>
 
-<p>Código IBGE do dado serializado.</p>
+<p>Código IBGE do dado serializado através do <a href="
+        /integracao/docs/https://github.com/apache/thrift/blob/0.9.2/lib/java/src/org/apache/thrift/protocol/TBinaryProtocol.java">TBinaryProtocol</a>.</p>
 
 <table><thead>
 <tr>
@@ -598,7 +601,7 @@
 
 <h3 id="5-inedadoserializado">#5 ineDadoSerializado</h3>
 
-<p>INE da equipe que gerou a ficha String.</p>
+<p>INE da equipe que gerou a ficha.</p>
 
 <table><thead>
 <tr>
@@ -618,7 +621,7 @@
 
 <h3 id="6-numlote">#6 numLote</h3>
 
-<p>Numero do lote para controle interno dos arquivos enviados.</p>
+<p>Número do lote para controle interno dos arquivos enviados.</p>
 
 <table><thead>
 <tr>
@@ -638,7 +641,8 @@
 
 <h3 id="7-dadoserializado">#7 dadoSerializado</h3>
 
-<p>Dado serializado a partir de um  de uma ficha.</p>
+<p>Dado serializado através do <a href="
+        /integracao/docs/https://github.com/apache/thrift/blob/0.9.2/lib/java/src/org/apache/thrift/protocol/TBinaryProtocol.java">TBinaryProtocol</a> a partir de uma ficha.</p>
 
 <table><thead>
 <tr>
@@ -704,7 +708,7 @@
 
 <h3 id="10-versao">#10    versao</h3>
 
-<p>Identifica a versão do E-SUS AB    Versao.</p>
+<p>Identifica a versão do E-SUS AB.</p>
 
 <table><thead>
 <tr>
@@ -715,7 +719,7 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>Versão</td>
+<td>Versao</td>
 <td>Requerido</td>
 <td>-</td>
 <td>-</td>
@@ -728,7 +732,7 @@
 
 <h3 id="1-contrachave">#1 contraChave</h3>
 
-<p>Identifica o software que gerou o dado(pec/cds, cdsOff ou software de terceiros).</p>
+<p>Identifica o software que gerou o dado (pec/cds, cdsOff ou software de terceiros).</p>
 
 <table><thead>
 <tr>
@@ -746,7 +750,7 @@
 </tr>
 </tbody></table>
 
-<p>Exemplo:  <code>&lt;Nome do software do município&gt; - Versão 2015</code> -   Dados para identificar a instalação que cadastrou / gerou os dados e / ou enviou.</p>
+<p><strong>Regras:</strong> Seguir o padrão <code>&lt;Nome do software do município&gt; - Versão 2015</code></p>
 
 <h3 id="2-uuidinstalacao">#2 uuidInstalacao</h3>
 
@@ -812,7 +816,7 @@
 
 <h3 id="5-fone">#5 fone</h3>
 
-<p>Telefone da pessoa ou empresa responsável</p>
+<p>Telefone da pessoa ou empresa responsável.</p>
 
 <table><thead>
 <tr>
@@ -832,7 +836,7 @@
 
 <h3 id="6-email">#6 email</h3>
 
-<p>Email da pessoa ou empresa responsável</p>
+<p>Email da pessoa ou empresa responsável.</p>
 
 <table><thead>
 <tr>
@@ -881,27 +885,27 @@
 </thead><tbody>
 <tr>
 <td>117 L</td>
-<td>REDE_ENCANADA_ATE_O_DOMICILIO</td>
+<td>Rede encanada até o domicílio</td>
 <td>-</td>
 </tr>
 <tr>
 <td>118 L</td>
-<td>POCO_NASCENTE_NO_DOMICILIO</td>
+<td>Poço / Nascente no domicílio</td>
 <td>-</td>
 </tr>
 <tr>
 <td>119 L</td>
-<td>CISTERNA</td>
+<td>Cisterna</td>
 <td>-</td>
 </tr>
 <tr>
 <td>120 L</td>
-<td>CARRO_PIPA</td>
+<td>Carro pipa</td>
 <td>-</td>
 </tr>
 <tr>
 <td>121 L</td>
-<td>OUTRO</td>
+<td>Outro</td>
 <td>-</td>
 </tr>
 </tbody></table>
@@ -917,22 +921,22 @@
 </thead><tbody>
 <tr>
 <td>42 L</td>
-<td>BANHO</td>
+<td>Banho</td>
 <td>-</td>
 </tr>
 <tr>
 <td>43 L</td>
-<td>ACESSO_AO_SANITARIO</td>
+<td>Acesso a sanitário</td>
 <td>-</td>
 </tr>
 <tr>
 <td>44 L</td>
-<td>HIGIENE_BUCAL</td>
+<td>Higiene bucal</td>
 <td>-</td>
 </tr>
 <tr>
 <td>45 L</td>
-<td>OUTROS</td>
+<td>Outros</td>
 <td>-</td>
 </tr>
 </tbody></table>
@@ -948,22 +952,22 @@
 </thead><tbody>
 <tr>
 <td>1 L</td>
-<td>EXCLUSIVO</td>
+<td>Exclusivo</td>
 <td>-</td>
 </tr>
 <tr>
 <td>2 L</td>
-<td>PREDOMINANTE</td>
+<td>Predominante</td>
 <td>-</td>
 </tr>
 <tr>
 <td>3 L</td>
-<td>COMPLEMENTADO</td>
+<td>Complementado</td>
 <td>-</td>
 </tr>
 <tr>
 <td>4 L</td>
-<td>INEXISTENTE</td>
+<td>Inexistente</td>
 <td>-</td>
 </tr>
 </tbody></table>
@@ -979,27 +983,27 @@
 </thead><tbody>
 <tr>
 <td>128 L</td>
-<td>GATO</td>
+<td>Gato</td>
 <td>-</td>
 </tr>
 <tr>
 <td>129 L</td>
-<td>CACHORRO</td>
+<td>Cachorro</td>
 <td>-</td>
 </tr>
 <tr>
 <td>130 L</td>
-<td>PASSARO</td>
+<td>Passaro</td>
 <td>-</td>
 </tr>
 <tr>
 <td>131 L</td>
-<td>DE_CRIACAO_PORCO_GALINHA</td>
+<td>De criação (porco, galinha...)</td>
 <td>-</td>
 </tr>
 <tr>
 <td>132 L</td>
-<td>OUTROS</td>
+<td>Outros</td>
 <td>-</td>
 </tr>
 </tbody></table>
@@ -1020,32 +1024,32 @@
 </tr>
 <tr>
 <td>6 L</td>
-<td>OUTROS</td>
+<td>Outros</td>
 <td>-</td>
 </tr>
 <tr>
 <td>11 L</td>
-<td>HOSPITAL</td>
+<td>Hospital</td>
 <td>-</td>
 </tr>
 <tr>
 <td>12 L</td>
-<td>UNIDADE_PRONTO_ATENDIMENTO</td>
+<td>Unidade pronto atendimento</td>
 <td>-</td>
 </tr>
 <tr>
 <td>13 L</td>
-<td>CACON_UNACON</td>
+<td>CACON / UNACON</td>
 <td>-</td>
 </tr>
 <tr>
 <td>14 L</td>
-<td>URGENCIA_EMERGENCIA_HOSPITAL_SOS</td>
+<td>Urgência / Emergência hospital SOS</td>
 <td>-</td>
 </tr>
 <tr>
 <td>15 L</td>
-<td>HOSPITAL_SOS_DEMAIS_SETORES</td>
+<td>Hospital SOS demais setores</td>
 <td>-</td>
 </tr>
 </tbody></table>
@@ -1061,22 +1065,22 @@
 </thead><tbody>
 <tr>
 <td>1 L</td>
-<td>ADMISSAO_PROPRIA_EMAD</td>
+<td>Admissão própria EMAD</td>
 <td>-</td>
 </tr>
 <tr>
 <td>2 L</td>
-<td>ENCAMINHADO_OUTRO_EMAD</td>
+<td>Encaminhado para outra EMAD</td>
 <td>-</td>
 </tr>
 <tr>
 <td>3 L</td>
-<td>ENCAMINHADO_ATENCAO_BASICA</td>
+<td>Encaminhado para atenção básica</td>
 <td>-</td>
 </tr>
 <tr>
 <td>4 L</td>
-<td>OUTRO_ENCAMINHAMENTO</td>
+<td>Outro encaminhamento</td>
 <td>-</td>
 </tr>
 </tbody></table>
@@ -1128,42 +1132,42 @@
 </thead><tbody>
 <tr>
 <td>101 L</td>
-<td>PROPRIETARIO</td>
+<td>Proprietário</td>
 <td>-</td>
 </tr>
 <tr>
 <td>102 L</td>
-<td>PARCEIRO_MEEIRO</td>
+<td>Parceiro(a) / Meeiro(a)</td>
 <td>-</td>
 </tr>
 <tr>
 <td>103 L</td>
-<td>ASSENTADO</td>
+<td>Assentado(a)</td>
 <td>-</td>
 </tr>
 <tr>
 <td>104 L</td>
-<td>POSSEIRO</td>
+<td>Posseiro</td>
 <td>-</td>
 </tr>
 <tr>
 <td>105 L</td>
-<td>ARRENDATARIO</td>
+<td>Arrendatário(a)</td>
 <td>-</td>
 </tr>
 <tr>
 <td>106 L</td>
-<td>COMODATARIO</td>
+<td>Comodatário(a)</td>
 <td>-</td>
 </tr>
 <tr>
 <td>107 L</td>
-<td>BENEFICIARIO_DO_BANCO_DA_TERRA</td>
+<td>Beneficiário(a) do banco da terra</td>
 <td>-</td>
 </tr>
 <tr>
 <td>108 L</td>
-<td>NAO_SE_APLICA</td>
+<td>Não se aplica</td>
 <td>-</td>
 </tr>
 </tbody></table>
@@ -1179,32 +1183,32 @@
 </thead><tbody>
 <tr>
 <td>3 L</td>
-<td>ALTA_ADMINISTRATIVA</td>
+<td>Alta administrativa da AD</td>
 <td>-</td>
 </tr>
 <tr>
 <td>1 L</td>
-<td>ALTA_CLINICA</td>
+<td>Alta clínica da AD</td>
 <td>-</td>
 </tr>
 <tr>
 <td>2 L</td>
-<td>ENCAMINHAMENTO_PARA_AD</td>
+<td>Encaminhamento para Atenção Básica (AD1)</td>
 <td>-</td>
 </tr>
 <tr>
 <td>4 L</td>
-<td>URGENCIA_EMERGENCIA</td>
+<td>Urgência / Emergência</td>
 <td>-</td>
 </tr>
 <tr>
 <td>5 L</td>
-<td>INTERNACAO_HOSPITALAR</td>
+<td>Internação hospitalar</td>
 <td>-</td>
 </tr>
 <tr>
 <td>6 L</td>
-<td>SAIDA_POR_OBITO</td>
+<td>Saída por óbito / final de acompanhamento pós-óbito</td>
 <td>-</td>
 </tr>
 </tbody></table>
@@ -1220,62 +1224,62 @@
 </thead><tbody>
 <tr>
 <td>1 L</td>
-<td>RETORNO_PARA_CONSULTA_AGENDADA</td>
+<td>Retorno para consulta agendada</td>
 <td>-</td>
 </tr>
 <tr>
 <td>2 L</td>
-<td>RETORNO_PARA_CUIDADO_CONTINUADO_OU_PROGRAMADO</td>
+<td>Retorno para cuidado continuado / programado</td>
 <td>-</td>
 </tr>
 <tr>
 <td>12 L</td>
-<td>AGENDAMENTO_PARA_GRUPOS</td>
+<td>Agendamento para grupos</td>
 <td>-</td>
 </tr>
 <tr>
 <td>3 L</td>
-<td>AGENDAMENTO_PARA_NASF</td>
+<td>Agendamento para NASF</td>
 <td>-</td>
 </tr>
 <tr>
 <td>9 L</td>
-<td>ALTA_DO_EPISODIO</td>
+<td>Alta do episódio</td>
 <td>-</td>
 </tr>
 <tr>
 <td>11 L</td>
-<td>ENCAMINHAMENTO_INTERNO_NO_DIA</td>
+<td>Encaminhamento interno no dia</td>
 <td>-</td>
 </tr>
 <tr>
 <td>4 L</td>
-<td>ENCAMINHAMENTO_PARA_SERVICO_ESPECIALIZADO</td>
+<td>Encaminhamento para serviço especializado</td>
 <td>-</td>
 </tr>
 <tr>
 <td>5 L</td>
-<td>ENCAMINHAMENTO_PARA_CAPS</td>
+<td>Encaminhamento para CAPS</td>
 <td>-</td>
 </tr>
 <tr>
 <td>6 L</td>
-<td>ENCAMINHAMENTO_PARA_INTERNACAO_HOSPITALAR</td>
+<td>Encaminhamento para internação hospitalar</td>
 <td>-</td>
 </tr>
 <tr>
 <td>7 L</td>
-<td>ENCAMINHAMENTO_PARA_URGENCIA</td>
+<td>Encaminhamento para urgência</td>
 <td>-</td>
 </tr>
 <tr>
 <td>8 L</td>
-<td>ENCAMINHAMENTO_PARA_SERVICAO_ATENCAO_DOMICILIAR123</td>
+<td>Encaminhamento para serviço de atenção domiciliar</td>
 <td>-</td>
 </tr>
 <tr>
 <td>10 L</td>
-<td>ENCAMINHAMENTO_INTERSETORIAL</td>
+<td>Encaminhamento intersetorial</td>
 <td>-</td>
 </tr>
 </tbody></table>
@@ -1291,82 +1295,82 @@
 </thead><tbody>
 <tr>
 <td>16 L</td>
-<td>RETORNO_PARA_CONSULTA_AGENDADA</td>
+<td>Retorno para consulta agendada</td>
 <td>-</td>
 </tr>
 <tr>
 <td>12 L</td>
-<td>AGENDAMENTO_PARA_OUTROS_PROFISSIONAIS_AB</td>
+<td>Agendamento para outros profissionais AB</td>
 <td>-</td>
 </tr>
 <tr>
 <td>13 L</td>
-<td>AGENDAMENTO_PARA_NASF</td>
+<td>Agendamento para NASF</td>
 <td>-</td>
 </tr>
 <tr>
 <td>14 L</td>
-<td>AGENDAMENTO_PARA_GRUPOS</td>
+<td>Agendamento para grupos</td>
 <td>-</td>
 </tr>
 <tr>
 <td>15 L</td>
-<td>TRATAMENTO_CONCLUIDO</td>
+<td>Tratamento concluído</td>
 <td>-</td>
 </tr>
 <tr>
 <td>1 L</td>
-<td>ATENDIMENTO_A_PACIENTES_COM_NECESSIDADES_ESPECIAIS</td>
+<td>Atendimento à pacientes com necessidades especiais</td>
 <td>-</td>
 </tr>
 <tr>
 <td>2 L</td>
-<td>CIRURGIA_BMF</td>
+<td>Cirurgia BMF</td>
 <td>-</td>
 </tr>
 <tr>
 <td>3 L</td>
-<td>ENDODONTIA</td>
+<td>Endodontia</td>
 <td>-</td>
 </tr>
 <tr>
 <td>4 L</td>
-<td>ESTOMATOLOGIA</td>
+<td>Estomatologia</td>
 <td>-</td>
 </tr>
 <tr>
 <td>5 L</td>
-<td>IMPLANTODONTIA</td>
+<td>Implantodontia</td>
 <td>-</td>
 </tr>
 <tr>
 <td>6 L</td>
-<td>ODONTOPEDIATRIA</td>
+<td>Odontopediatria</td>
 <td>-</td>
 </tr>
 <tr>
 <td>7 L</td>
-<td>ORTODONTIA_ORTOPEDIA</td>
+<td>Ortodontia / Ortopedia</td>
 <td>-</td>
 </tr>
 <tr>
 <td>8 L</td>
-<td>PERIODONTIA</td>
+<td>Periodontia</td>
 <td>-</td>
 </tr>
 <tr>
 <td>9 L</td>
-<td>PROTESE_DENTARIA</td>
+<td>Prótese dentária</td>
 <td>-</td>
 </tr>
 <tr>
 <td>10 L</td>
-<td>RADIOLOGIA</td>
+<td>Radiologia</td>
 <td>-</td>
 </tr>
 <tr>
 <td>11 L</td>
-<td>OUTROS</td>
+<td>Outros</td>
 <td>-</td>
 </tr>
 </tbody></table>
@@ -1382,17 +1386,17 @@
 </thead><tbody>
 <tr>
 <td>21 L</td>
-<td>ABAIXO_DO_PESO</td>
+<td>Abaixo do peso</td>
 <td>-</td>
 </tr>
 <tr>
 <td>22 L</td>
-<td>PESO_ADEQUADO</td>
+<td>Peso adequado</td>
 <td>-</td>
 </tr>
 <tr>
 <td>23 L</td>
-<td>ACIMA_DO_PESO</td>
+<td>Acima do peso</td>
 <td>-</td>
 </tr>
 </tbody></table>
@@ -1408,42 +1412,42 @@
 </thead><tbody>
 <tr>
 <td>1 L</td>
-<td>NAO_POSSUI</td>
+<td>Não possui</td>
 <td>-</td>
 </tr>
 <tr>
 <td>2 L</td>
-<td>CONJUGE_COMPANHEIRO</td>
+<td>Conjuge / Companheiro</td>
 <td>-</td>
 </tr>
 <tr>
 <td>3 L</td>
-<td>FILHO_ENTEADO</td>
+<td>Filho / Enteado</td>
 <td>-</td>
 </tr>
 <tr>
 <td>4 L</td>
-<td>PAI_MAE</td>
+<td>Pai / Mãe</td>
 <td>-</td>
 </tr>
 <tr>
 <td>5 L</td>
-<td>AVO</td>
+<td>Avô(ó)</td>
 <td>-</td>
 </tr>
 <tr>
 <td>6 L</td>
-<td>NETO</td>
+<td>Neto</td>
 <td>-</td>
 </tr>
 <tr>
 <td>7 L</td>
-<td>IRMAO</td>
+<td>Irmão</td>
 <td>-</td>
 </tr>
 <tr>
 <td>8 L</td>
-<td>OUTRO</td>
+<td>Outro</td>
 <td>-</td>
 </tr>
 </tbody></table>
@@ -1459,77 +1463,77 @@
 </thead><tbody>
 <tr>
 <td>51 L</td>
-<td>CRECHE</td>
+<td>Creche</td>
 <td>-</td>
 </tr>
 <tr>
 <td>52 L</td>
-<td>PRE_ESCOLA_EXCETO_CA</td>
+<td>Pré-escola (exceto CA)</td>
 <td>-</td>
 </tr>
 <tr>
 <td>53 L</td>
-<td>CLASSE_ALFABETIZADA_CA</td>
+<td>Classe alfabetizada - CA</td>
 <td>-</td>
 </tr>
 <tr>
 <td>54 L</td>
-<td>ENSINO_FUNDAMENTAL_1_4_SERIES</td>
+<td>Ensino fundamental 1ª a 4ª séries</td>
 <td>-</td>
 </tr>
 <tr>
 <td>55 L</td>
-<td>ENSINO_FUNDAMENTAL_5_8_SERIES</td>
+<td>Ensino fundamental 5ª a 8ª séries</td>
 <td>-</td>
 </tr>
 <tr>
 <td>56 L</td>
-<td>ENSINO_FUNDAMENTAL_COMPLETO</td>
+<td>Ensino fundamental completo</td>
 <td>-</td>
 </tr>
 <tr>
 <td>61 L</td>
-<td>ENSINO_FUNDAMENTAL_ESPECIAL</td>
+<td>Ensino fundamental especial</td>
 <td>-</td>
 </tr>
 <tr>
 <td>58 L</td>
-<td>ENSINO_FUNDAMENTAL_EJA_SERIES_INICIAIS_SUPLETIVO_1_4</td>
+<td>Ensino fundamental EJA - séries iniciais (supletivo 1ª a 4ª)</td>
 <td>-</td>
 </tr>
 <tr>
 <td>59 L</td>
-<td>ENSINO_FUNDAMENTAL_EJA_SERIES_INICIAIS_SUPLETIVO_5_8</td>
+<td>Ensino fundamental EJA - séries finais (supletivo 5ª a 8ª)</td>
 <td>-</td>
 </tr>
 <tr>
 <td>60 L</td>
-<td>ENSINO_MEDIO_MEDIO_2_CICLO</td>
+<td>Ensino médio, médio 2º ciclo (científico, técnico e etc)</td>
 <td>-</td>
 </tr>
 <tr>
 <td>57 L</td>
-<td>ENSINO_MEDIO_ESPECIAL</td>
+<td>Ensino médio especial</td>
 <td>-</td>
 </tr>
 <tr>
 <td>62 L</td>
-<td>ENSINO_MEDIO_EJA_SUPLETIVO</td>
+<td>Ensino médio EJA (supletivo)</td>
 <td>-</td>
 </tr>
 <tr>
 <td>63 L</td>
-<td>SUPERIOR_APERFEICOAMENTO_ESPECIALIZACAO_MESTRADO_DOUTORADO</td>
+<td>Superior, aperfeiçoamento, especialização, mestrado, doutorado</td>
 <td>-</td>
 </tr>
 <tr>
 <td>64 L</td>
-<td>ALFABETIZACAO_PARA_ADULTROS_MOBRAL_ETC</td>
+<td>Alfabetização para adultos (Mobral, etc)</td>
 <td>-</td>
 </tr>
 <tr>
 <td>65 L</td>
-<td>NENHUM</td>
+<td>Nenhum</td>
 <td>-</td>
 </tr>
 </tbody></table>
@@ -1545,27 +1549,27 @@
 </thead><tbody>
 <tr>
 <td>12 L</td>
-<td>AUDITIVA</td>
+<td>Auditiva</td>
 <td>-</td>
 </tr>
 <tr>
 <td>13 L</td>
-<td>VISUAL</td>
+<td>Visual</td>
 <td>-</td>
 </tr>
 <tr>
 <td>14 L</td>
-<td>INTELECTUAL_OU_COGNITIVA</td>
+<td>Intelectual / Cognitiva</td>
 <td>-</td>
 </tr>
 <tr>
 <td>15 L</td>
-<td>FISICA</td>
+<td>Física</td>
 <td>-</td>
 </tr>
 <tr>
 <td>16 L</td>
-<td>OUTRA</td>
+<td>Outra</td>
 <td>-</td>
 </tr>
 </tbody></table>
@@ -1581,17 +1585,17 @@
 </thead><tbody>
 <tr>
 <td>1 L</td>
-<td>VISITA_REALIZADA</td>
+<td>Visita realizada</td>
 <td>-</td>
 </tr>
 <tr>
 <td>2 L</td>
-<td>VISITA_RECUSADA</td>
+<td>Visita recusada</td>
 <td>-</td>
 </tr>
 <tr>
 <td>3 L</td>
-<td>AUSENTE</td>
+<td>Ausente</td>
 <td>-</td>
 </tr>
 </tbody></table>
@@ -1607,22 +1611,22 @@
 </thead><tbody>
 <tr>
 <td>93 L</td>
-<td>COLETADO</td>
+<td>Coletado</td>
 <td>-</td>
 </tr>
 <tr>
 <td>94 L</td>
-<td>QUEIMADO_OU_ENTERRADO</td>
+<td>Queimado / Enterrado</td>
 <td>-</td>
 </tr>
 <tr>
 <td>95 L</td>
-<td>CEU_ABERTO</td>
+<td>Céu aberto</td>
 <td>-</td>
 </tr>
 <tr>
 <td>96 L</td>
-<td>OUTRO</td>
+<td>Outro</td>
 <td>-</td>
 </tr>
 </tbody></table>
@@ -1638,17 +1642,17 @@
 </thead><tbody>
 <tr>
 <td>24 L</td>
-<td>INSUFICIENCIA_CARDIACA</td>
+<td>Insuficiência cardíaca</td>
 <td>-</td>
 </tr>
 <tr>
 <td>25 L</td>
-<td>OUTRO</td>
+<td>Outro</td>
 <td>-</td>
 </tr>
 <tr>
 <td>26 L</td>
-<td>NAO_SABE</td>
+<td>Não sabe</td>
 <td>-</td>
 </tr>
 </tbody></table>
@@ -1664,22 +1668,22 @@
 </thead><tbody>
 <tr>
 <td>30 L</td>
-<td>ASMA</td>
+<td>Asma</td>
 <td>-</td>
 </tr>
 <tr>
 <td>31 L</td>
-<td>DPOC_ENFISEMA</td>
+<td>DPOC / Enfisema</td>
 <td>-</td>
 </tr>
 <tr>
 <td>32 L</td>
-<td>OUTRO</td>
+<td>Outro</td>
 <td>-</td>
 </tr>
 <tr>
 <td>33 L</td>
-<td>NAO_SABE</td>
+<td>Não sabe</td>
 <td>-</td>
 </tr>
 </tbody></table>
@@ -1695,32 +1699,32 @@
 </thead><tbody>
 <tr>
 <td>122 L</td>
-<td>REDE_COLETORA_DE_ESGOTO_OU_PLUVIAL</td>
+<td>Rede coletora de esgoto / pluvial</td>
 <td>-</td>
 </tr>
 <tr>
 <td>123 L</td>
-<td>FOSSA_SEPTICA</td>
+<td>Fossa séptica</td>
 <td>-</td>
 </tr>
 <tr>
 <td>124 L</td>
-<td>FOSSA_RUDIMENTAR</td>
+<td>Fossa rudimentar</td>
 <td>-</td>
 </tr>
 <tr>
 <td>125 L</td>
-<td>DIRETO_PARA_UM_RIO_LAGO_OU_MAR</td>
+<td>Direto para um rio / lago / mar</td>
 <td>-</td>
 </tr>
 <tr>
 <td>126 L</td>
-<td>CEU_ABERTO</td>
+<td>Céu aberto</td>
 <td>-</td>
 </tr>
 <tr>
 <td>127 L</td>
-<td>OUTRA_FORMA</td>
+<td>Outra forma</td>
 <td>-</td>
 </tr>
 </tbody></table>
@@ -1736,17 +1740,17 @@
 </thead><tbody>
 <tr>
 <td>1 L</td>
-<td>ESCOVA_DENTAL</td>
+<td>Escova dental</td>
 <td>-</td>
 </tr>
 <tr>
 <td>2 L</td>
-<td>CREME_DENTAL</td>
+<td>Creme dental</td>
 <td>-</td>
 </tr>
 <tr>
 <td>3 L</td>
-<td>FIO_DENTAL</td>
+<td>Fio dental</td>
 <td>-</td>
 </tr>
 </tbody></table>
@@ -1767,73 +1771,73 @@
 </tr>
 <tr>
 <td>2 L</td>
-<td>UNIDADE MÓVEL</td>
+<td>Unidade móvel</td>
 <td>-</td>
 </tr>
 <tr>
 <td>3 L</td>
-<td>RUA</td>
+<td>Rua</td>
 <td>-</td>
 </tr>
 <tr>
 <td>4 L</td>
-<td>DOMICÍLIO</td>
+<td>Domicílio</td>
 <td>-</td>
 </tr>
 <tr>
 <td>5 L</td>
-<td>ESCOLA/CRECHE</td>
+<td>Escola / Creche</td>
 <td>-</td>
 </tr>
 <tr>
 <td>6 L</td>
-<td>OUTROS</td>
+<td>Outros</td>
 <td>-</td>
 </tr>
 <tr>
 <td>7 L</td>
-<td>POLO(ACADEMIA DA SAÚDE)</td>
+<td>Polo (academia da saúde)</td>
 <td>-</td>
 </tr>
 <tr>
 <td>8 L</td>
-<td>INSTITUIÇÃO/ABRIGO</td>
+<td>Instituição / Abrigo</td>
 <td>-</td>
 </tr>
 <tr>
 <td>9 L</td>
-<td>UNIDADE PRISIONAL OU CONGÊNERES</td>
+<td>Unidade prisional ou congêneres</td>
 <td>-</td>
 </tr>
 <tr>
 <td>10 L</td>
-<td>UNIDADE SOCIOEDUCATIVA</td>
+<td>Unidade socioeducativa</td>
 <td>-</td>
 </tr>
 <tr>
 <td>11 L</td>
-<td>HOSPITAL</td>
+<td>Hospital</td>
 <td>Utilizado apenas na ficha de atendimento domiciliar</td>
 </tr>
 <tr>
 <td>12 L</td>
-<td>UNIDADE_DE_PRONTO_ATENDIMENTO</td>
-<td>-</td>
+<td>Unidade de pronto atendimento</td>
+<td>Utilizado apenas na ficha de atendimento domiciliar</td>
 </tr>
 <tr>
 <td>13 L</td>
-<td>CACON/UNACON</td>
-<td>-</td>
+<td>CACON / UNACON</td>
+<td>Utilizado apenas na ficha de atendimento domiciliar</td>
 </tr>
 <tr>
 <td>14 L</td>
-<td>HOSPITAL_SOS_URGENCIA/EMERGENCIA</td>
-<td>-</td>
+<td>Hospital SOS Urgência / Emergência</td>
+<td>Utilizado apenas na ficha de atendimento domiciliar</td>
 </tr>
 <tr>
 <td>15 L</td>
-<td>HOSPITAL_SOS_DEMAIS_SETORES</td>
-<td>-</td>
+<td>Hospital SOS demais setores</td>
+<td>Utilizado apenas na ficha de atendimento domiciliar</td>
 </tr>
 </tbody></table>
 
@@ -1848,12 +1852,12 @@
 </thead><tbody>
 <tr>
 <td>83 L</td>
-<td>URBANA</td>
+<td>Urbana</td>
 <td>-</td>
 </tr>
 <tr>
 <td>84 L</td>
-<td>RURAL</td>
+<td>Rural</td>
 <td>-</td>
 </tr>
 </tbody></table>
@@ -1869,42 +1873,42 @@
 </thead><tbody>
 <tr>
 <td>109 L</td>
-<td>ALVENARIA_COM_REVESTIMENTO</td>
+<td>Alvenaria com revestimento</td>
 <td>-</td>
 </tr>
 <tr>
 <td>110 L</td>
-<td>ALVENARIA_SEM_REVESTIMENTO</td>
+<td>Alvenaria sem revestimento</td>
 <td>-</td>
 </tr>
 <tr>
 <td>111 L</td>
-<td>TAIPA_COM_REVESTIMENTO</td>
+<td>Taipa com revestimento</td>
 <td>-</td>
 </tr>
 <tr>
 <td>112 L</td>
-<td>TAIPA_SEM_REVESTIMENTO</td>
+<td>Taipa sem revestimento</td>
 <td>-</td>
 </tr>
 <tr>
 <td>113 L</td>
-<td>MADEIRA_EMPARELHADA</td>
+<td>Madeira emparelhada</td>
 <td>-</td>
 </tr>
 <tr>
 <td>114 L</td>
-<td>MATERIAL_APROVEITADO</td>
+<td>Material aproveitado</td>
 <td>-</td>
 </tr>
 <tr>
 <td>115 L</td>
-<td>PALHA</td>
+<td>Palha</td>
 <td>-</td>
 </tr>
 <tr>
 <td>116 L</td>
-<td>OUTRO_MATERIAL</td>
+<td>Outro material</td>
 <td>-</td>
 </tr>
 </tbody></table>
@@ -1920,22 +1924,22 @@
 </thead><tbody>
 <tr>
 <td>1 L</td>
-<td>AD_1</td>
+<td>AD 1</td>
 <td>-</td>
 </tr>
 <tr>
 <td>2 L</td>
-<td>AD_2</td>
+<td>AD 2</td>
 <td>-</td>
 </tr>
 <tr>
 <td>3 L</td>
-<td>AD_3</td>
+<td>AD 3</td>
 <td>-</td>
 </tr>
 <tr>
 <td>4 L</td>
-<td>INELEGIVEL</td>
+<td>Ielegível</td>
 <td>Utilizado apenas na ficha de avaliação de elegibilidade</td>
 </tr>
 </tbody></table>
@@ -1951,12 +1955,12 @@
 </thead><tbody>
 <tr>
 <td>135 L</td>
-<td>SAIDA_CIDADAO_OBITO</td>
+<td>Óbito</td>
 <td>-</td>
 </tr>
 <tr>
 <td>136 L</td>
-<td>SAIDA_CIDADAO_MUDANCA_TERRITORIO</td>
+<td>Mudança de território</td>
 <td>-</td>
 </tr>
 </tbody></table>
@@ -1972,167 +1976,167 @@
 </thead><tbody>
 <tr>
 <td>1 L</td>
-<td>CADASTRAMENTO_OU_ATUALIZACAO</td>
+<td>Cadastramento / Atualização</td>
 <td>#TIPO_VISITA</td>
 </tr>
 <tr>
 <td>29 L</td>
-<td>VISITA_PERIODICA</td>
+<td>Visita periódica</td>
 <td>-</td>
 </tr>
 <tr>
 <td>2 L</td>
-<td>CONSULTA</td>
+<td>Consulta</td>
 <td>#BUSCA_ATIVA</td>
 </tr>
 <tr>
 <td>3 L</td>
-<td>EXAME</td>
+<td>Exame</td>
 <td>-</td>
 </tr>
 <tr>
 <td>4 L</td>
-<td>VACINA</td>
+<td>Vacina</td>
 <td>-</td>
 </tr>
 <tr>
 <td>30 L</td>
-<td>CONDICIONALIDADES_BOLSA_FAMILIA</td>
+<td>Condicionalidades do bolsa família</td>
 <td>-</td>
 </tr>
 <tr>
 <td>5 L</td>
-<td>GESTANTE</td>
+<td>Gestante</td>
 <td>#ACOMPANHAMENTO</td>
 </tr>
 <tr>
 <td>6 L</td>
-<td>PUERPERA</td>
+<td>Puérpera</td>
 <td>-</td>
 </tr>
 <tr>
 <td>7 L</td>
-<td>RECEM_NASCIDO</td>
+<td>Recém-nascido</td>
 <td>-</td>
 </tr>
 <tr>
 <td>8 L</td>
-<td>CRIANCA</td>
+<td>Criança</td>
 <td>-</td>
 </tr>
 <tr>
 <td>9 L</td>
-<td>PESSOA_COM_DESNUTRICAO</td>
+<td>Pessoa com desnutrição</td>
 <td>-</td>
 </tr>
 <tr>
 <td>10 L</td>
-<td>PESSOA_EM_REABILITACAO_OU_COM_DEFICIENCIA</td>
+<td>Pessoa em reabilitação ou com deficiência</td>
 <td>-</td>
 </tr>
 <tr>
 <td>11 L</td>
-<td>PESSOA_COM_HIPERTENSAO</td>
+<td>Pessoa com hipertensão</td>
 <td>-</td>
 </tr>
 <tr>
 <td>12 L</td>
-<td>PESSOA_COM_DIABETES</td>
+<td>Pessoa com diabetes</td>
 <td>-</td>
 </tr>
 <tr>
 <td>13 L</td>
-<td>PESSOA_COM_ASMA</td>
+<td>Pessoa com asma</td>
 <td>-</td>
 </tr>
 <tr>
 <td>14 L</td>
-<td>PESSOA_COM_DPOC_OU_ENFISEMA</td>
+<td>Pessoa com DPOC / enfisema</td>
 <td>-</td>
 </tr>
 <tr>
 <td>15 L</td>
-<td>PESSOA_COM_CANCER</td>
+<td>Pessoa com câncer</td>
 <td>-</td>
 </tr>
 <tr>
 <td>16 L</td>
-<td>PESSOA_COM_OUTRAS_DOENCAS_CRONICAS</td>
+<td>Pessoa com outras doenças crônicas</td>
 <td>-</td>
 </tr>
 <tr>
 <td>17 L</td>
-<td>PESSOA_COM_HANSENIASE</td>
+<td>Pessoa com hanseníase</td>
 <td>-</td>
 </tr>
 <tr>
 <td>18 L</td>
-<td>PESSOA_COM_TUBERCULOSE</td>
+<td>Pessoa com tuberculose</td>
 <td>-</td>
 </tr>
 <tr>
 <td>32 L</td>
-<td>SINTOMATICOS_RESPORATORIOS</td>
+<td>Sintomáticos respiratórios</td>
 <td>-</td>
 </tr>
 <tr>
 <td>33 L</td>
-<td>TABAGISTA</td>
+<td>Tabagista</td>
 <td>-</td>
 </tr>
 <tr>
 <td>19 L</td>
-<td>DOMICILIADOS_OU_ACAMADOS</td>
+<td>Domiciliados / Acamados</td>
 <td>-</td>
 </tr>
 <tr>
 <td>20 L</td>
-<td>CONDICOES_DE_VULNERABILIDADE_SOCIAL</td>
+<td>Condições de vulnerabilidade social</td>
 <td>-</td>
 </tr>
 <tr>
 <td>21 L</td>
-<td>CONDICIONALIDADES_BOLSA_FAMILIA</td>
+<td>Condicionalidades do bolsa família</td>
 <td>-</td>
 </tr>
 <tr>
 <td>22 L</td>
-<td>SAUDE_MENTAL</td>
+<td>Saúde mental</td>
 <td>-</td>
 </tr>
 <tr>
 <td>23 L</td>
-<td>USUARIO_DE_ALCOOL</td>
+<td>Usuário de álcool</td>
 <td>-</td>
 </tr>
 <tr>
 <td>24 L</td>
-<td>USUARIO_DE_OUTRAS_DROGAS</td>
+<td>Usuário de outras drogas</td>
 <td>-</td>
 </tr>
 <tr>
 <td>25 L</td>
-<td>EGRESSO_DE_INTERNACAO</td>
+<td>Egresso de internação</td>
 <td>#OUTROS</td>
 </tr>
 <tr>
 <td>26 L</td>
-<td>CONTROLE_DE_AMBIENTES_OU_VETORES</td>
+<td>Controle de ambientes / vetores</td>
 <td>-</td>
 </tr>
 <tr>
 <td>27 L</td>
-<td>CONVITE_PARA_ATIVIDADES_COLETIVAS_OU_CAMPANHA_DE_SAUDE</td>
+<td>Convite para atividades coletivas / campanha de saúde</td>
 <td>-</td>
 </tr>
 <tr>
 <td>31 L</td>
-<td>ORIENTACAO_OU_PREVENCAO</td>
+<td>Orientação / Prevenção</td>
 <td>-</td>
 </tr>
 <tr>
 <td>28 L</td>
-<td>OUTROS</td>
+<td>Outros</td>
 <td>-</td>
 </tr>
 </tbody></table>
@@ -2148,17 +2152,17 @@
 </thead><tbody>
 <tr>
 <td>1 L</td>
-<td>BRASILEIRA</td>
+<td>Brasileira</td>
 <td>-</td>
 </tr>
 <tr>
 <td>2 L</td>
-<td>NATURALIZADO</td>
+<td>Naturalizado</td>
 <td>-</td>
 </tr>
 <tr>
 <td>3 L</td>
-<td>ESTRANGEIRO</td>
+<td>Estrangeiro</td>
 <td>-</td>
 </tr>
 </tbody></table>
@@ -2174,17 +2178,17 @@
 </thead><tbody>
 <tr>
 <td>1 L</td>
-<td>AVALIACAO_DIAGNOSTICO</td>
+<td>Avaliação / Diagnóstico</td>
 <td>-</td>
 </tr>
 <tr>
 <td>2 L</td>
-<td>PROCEDIMENTOS_CLINICOS_TERAPEUTICO</td>
+<td>Procedimentos clinicos terapeuticos</td>
 <td>-</td>
 </tr>
 <tr>
 <td>3 L</td>
-<td>PRESCRICAO_TERAPEUTICA</td>
+<td>Prescreição terapeutica</td>
 <td>-</td>
 </tr>
 </tbody></table>
@@ -2200,37 +2204,37 @@
 </thead><tbody>
 <tr>
 <td>5 L</td>
-<td>HETEROSSEXUAL</td>
+<td>Heterossexual</td>
 <td>-</td>
 </tr>
 <tr>
 <td>6 L</td>
-<td>GAY</td>
+<td>Gay</td>
 <td>-</td>
 </tr>
 <tr>
 <td>7 L</td>
-<td>LESBICA</td>
+<td>Lésbica</td>
 <td>-</td>
 </tr>
 <tr>
 <td>8 L</td>
-<td>BISSEXUAL</td>
+<td>Bissexual</td>
 <td>-</td>
 </tr>
 <tr>
 <td>9 L</td>
-<td>TRAVESTI</td>
+<td>Travesti</td>
 <td>-</td>
 </tr>
 <tr>
 <td>10 L</td>
-<td>TRANSSEXUAL</td>
+<td>Transsexual</td>
 <td>-</td>
 </tr>
 <tr>
 <td>11 L</td>
-<td>OUTRO</td>
+<td>Outro</td>
 <td>-</td>
 </tr>
 </tbody></table>
@@ -2246,27 +2250,27 @@
 </thead><tbody>
 <tr>
 <td>37 L</td>
-<td>RESTAURANTE_POPULAR</td>
+<td>Restaurante popular</td>
 <td>-</td>
 </tr>
 <tr>
 <td>38 L</td>
-<td>DOACAO_GRUPO_RELIGIOSO</td>
+<td>Doação grupo religioso</td>
 <td>-</td>
 </tr>
 <tr>
 <td>39 L</td>
-<td>DOACAO_RESTAURANTE</td>
+<td>Doação restaurante</td>
 <td>-</td>
 </tr>
 <tr>
 <td>40 L</td>
-<td>DOACAO_DE_POPULAR</td>
+<td>Doação popular</td>
 <td>-</td>
 </tr>
 <tr>
 <td>41 L</td>
-<td>OUTROS</td>
+<td>Outros</td>
 <td>-</td>
 </tr>
 </tbody></table>
@@ -2282,42 +2286,42 @@
 </thead><tbody>
 <tr>
 <td>1 L</td>
-<td>MEDICINA_TRADICIONAL_CHINESA</td>
+<td>Medicina tradicional chinesa</td>
 <td>-</td>
 </tr>
 <tr>
 <td>2 L</td>
-<td>ANTROPOSOFIA_APLICADO_A_SAUDE</td>
+<td>Antroposofia aplicado a saúde</td>
 <td>-</td>
 </tr>
 <tr>
 <td>3 L</td>
-<td>HOMEOPATIA</td>
+<td>Homeopatia</td>
 <td>-</td>
 </tr>
 <tr>
 <td>4 L</td>
-<td>FITOTERAPIA</td>
+<td>Fitoterapia</td>
 <td>-</td>
 </tr>
 <tr>
 <td>5 L</td>
-<td>TERMALISMO_OU_CRENOTERAPIA</td>
+<td>Termalismo / Crenoterapia</td>
 <td>-</td>
 </tr>
 <tr>
 <td>6 L</td>
-<td>PRATICAS_CORPORAIS_E_MENTAIS_EM_PICS</td>
+<td>Práticas corporais e mentais em PICS</td>
 <td>-</td>
 </tr>
 <tr>
 <td>7 L</td>
-<td>TECNICAS_MANUAIS_EM_PICS</td>
+<td>Técnicas manuais em PICS</td>
 <td>-</td>
 </tr>
 <tr>
 <td>8 L</td>
-<td>OUTROS</td>
+<td>Outros</td>
 <td>-</td>
 </tr>
 </tbody></table>
@@ -2333,142 +2337,142 @@
 </thead><tbody>
 <tr>
 <td>1 L</td>
-<td>ALIMENTACAO_SAUDAVEL</td>
+<td>Alimentação saldavel</td>
 <td>-</td>
 </tr>
 <tr>
 <td>2 L</td>
-<td>APLICACAO_TOPICA_DE_FLUOR</td>
+<td>Aplicação tópica de fluor</td>
 <td>-</td>
 </tr>
 <tr>
 <td>3 L</td>
-<td>SAUDE_OCULAR</td>
+<td>Saúde ocular</td>
 <td>-</td>
 </tr>
 <tr>
 <td>4 L</td>
-<td>AUTOCUIDADO_DE_PESSOAS_COM_DOENCAS_CRONICAS</td>
+<td>Autocuidado de pessoas com doenças crônicas</td>
 <td>-</td>
 </tr>
 <tr>
 <td>5 L</td>
-<td>CIDADANIA_E_DIREITOS_HUMANOS</td>
+<td>Cidadania e direitos homanos</td>
 <td>-</td>
 </tr>
 <tr>
 <td>6 L</td>
-<td>SAUDE_DO_TRABALHADOR</td>
+<td>Saúde do trabalhador</td>
 <td>-</td>
 </tr>
 <tr>
 <td>7 L</td>
-<td>DEPENDENCIA_QUIMICA_TABACO_ALCOOL_E_OUTRAS_DROGAS</td>
+<td>Dependência química / tabaco / álcool / outras drogas</td>
 <td>-</td>
 </tr>
 <tr>
 <td>8 L</td>
-<td>ENVELHECIMENTO_CLIMATERIO_ANDROPAUSA_ETC</td>
+<td>Envelhecimento / Climatério / Andropausa  / Etc</td>
 <td>-</td>
 </tr>
 <tr>
 <td>9 L</td>
-<td>ESCOVACAO_DENTAL_SUPERVISIONADA</td>
+<td>Escovação dentária supervisionada</td>
 <td>-</td>
 </tr>
 <tr>
 <td>10 L</td>
-<td>PLANTAS_MEDICINAIS_FITOTERAPIA</td>
+<td>Plantas medicinais / Fitoterapia</td>
 <td>-</td>
 </tr>
 <tr>
 <td>11 L</td>
-<td>PRATICAS_CORPORAIS_OU_ATIVIDADE_FISICA</td>
+<td>Práticvas corporais / Atividade física</td>
 <td>-</td>
 </tr>
 <tr>
 <td>12 L</td>
-<td>PRATICAS_CORPORAIS_E_MENTAIS_EM_PIC</td>
+<td>Práticvas corporais e mentais em PIC</td>
 <td>-</td>
 </tr>
 <tr>
 <td>13 L</td>
-<td>PREVENCAO_DA_VIOLENCIA_E_PROMOCAO_DA_CULTURA_DA_PAZ</td>
+<td>Prevenção da violencia e promoção da cultura da paz</td>
 <td>-</td>
 </tr>
 <tr>
 <td>14 L</td>
-<td>SAUDE_AMBIENTAL</td>
+<td>Saúde ambiental</td>
 <td>-</td>
 </tr>
 <tr>
 <td>15 L</td>
-<td>SAUDE_BUCAL</td>
+<td>Saúde bucal</td>
 <td>-</td>
 </tr>
 <tr>
 <td>16 L</td>
-<td>SAUDE_MENTAL</td>
+<td>Saúde mental</td>
 <td>-</td>
 </tr>
 <tr>
 <td>17 L</td>
-<td>SAUDE_SEXUAL_E_REPRODUTIVA</td>
+<td>Saúde sexual e reprodutiva</td>
 <td>-</td>
 </tr>
 <tr>
 <td>18 L</td>
-<td>SEMANA_SAUDE_NA_ESCOLA</td>
+<td>Semana saúde na escola</td>
 <td>-</td>
 </tr>
 <tr>
 <td>19 L</td>
-<td>AGRAVOS_NEGLIGENCIADOS</td>
+<td>Agravos nigligenciados</td>
 <td>-</td>
 </tr>
 <tr>
 <td>20 L</td>
-<td>ANTROPOMETRIA</td>
+<td>Antropometria</td>
 <td>-</td>
 </tr>
 <tr>
 <td>21 L</td>
-<td>OUTROS</td>
+<td>Outros</td>
 <td>-</td>
 </tr>
 <tr>
 <td>22 L</td>
-<td>SAUDE_AUDITIVA</td>
+<td>Saúde auditiva</td>
 <td>-</td>
 </tr>
 <tr>
 <td>23 L</td>
-<td>DESENVOLVIMENTO_DA_LINGUAGEM</td>
+<td>Desenvolvimento da linguagem</td>
 <td>-</td>
 </tr>
 <tr>
 <td>24 L</td>
-<td>VERIFICACAO_DA_SITUACAO_VACINAL</td>
+<td>Verificação da situação vacinal</td>
 <td>-</td>
 </tr>
 <tr>
 <td>25 L</td>
-<td>PNCT_SESSAO_1</td>
+<td>PNCT 1</td>
 <td>-</td>
 </tr>
 <tr>
 <td>26 L</td>
-<td>PNCT_SESSAO_2</td>
+<td>PNCT 2</td>
 <td>-</td>
 </tr>
 <tr>
 <td>27 L</td>
-<td>PNCT_SESSAO_3</td>
+<td>PNCT 3</td>
 <td>-</td>
 </tr>
 <tr>
 <td>28 L</td>
-<td>PNCT_SESSAO_4</td>
+<td>PNCT 4</td>
 <td>-</td>
 </tr>
 </tbody></table>
@@ -2484,17 +2488,17 @@
 </thead><tbody>
 <tr>
 <td>27 L</td>
-<td>INSUFICIENCIA_RENAL</td>
+<td>Insuficiência renal</td>
 <td>-</td>
 </tr>
 <tr>
 <td>28 L</td>
-<td>OUTRO</td>
+<td>Outro</td>
 <td>-</td>
 </tr>
 <tr>
 <td>29 L</td>
-<td>NAO_SABE</td>
+<td>Não sabe</td>
 <td>-</td>
 </tr>
 </tbody></table>
@@ -2606,17 +2610,17 @@
 </thead><tbody>
 <tr>
 <td>34 L</td>
-<td>UMA_POR_DIA</td>
+<td>1 vez</td>
 <td>-</td>
 </tr>
 <tr>
 <td>35 L</td>
-<td>DUAS_A_3_POR_DIA</td>
+<td>2 ou 3 vezes</td>
 <td>-</td>
 </tr>
 <tr>
 <td>36 L</td>
-<td>MAIS_DE_3</td>
+<td>mais de 3 vezes</td>
 <td>-</td>
 </tr>
 </tbody></table>
@@ -2668,52 +2672,52 @@
 </thead><tbody>
 <tr>
 <td>137 L</td>
-<td>CONJUGE_OU_COMPANHEIRO</td>
+<td>Cônjuge / Companheiro(a)</td>
 <td>-</td>
 </tr>
 <tr>
 <td>138 L</td>
-<td>FILHO</td>
+<td>Filho(a)</td>
 <td>-</td>
 </tr>
 <tr>
 <td>139 L</td>
-<td>ENTEADO</td>
+<td>Enteado(a)</td>
 <td>-</td>
 </tr>
 <tr>
 <td>140 L</td>
-<td>NETO_OU_BISNETO</td>
+<td>Neto(a) / Bisneto(a)</td>
 <td>-</td>
 </tr>
 <tr>
 <td>141 L</td>
-<td>PAI_OU_MAE</td>
+<td>Pai / Mãe</td>
 <td>-</td>
 </tr>
 <tr>
 <td>142 L</td>
-<td>SOGRO</td>
+<td>Sogro(a)</td>
 <td>-</td>
 </tr>
 <tr>
 <td>143 L</td>
-<td>IRMAO_OU_IRMA</td>
+<td>Irmão / Irmã</td>
 <td>-</td>
 </tr>
 <tr>
 <td>144 L</td>
-<td>GENRO_OU_NORA</td>
+<td>Genro / Nora</td>
 <td>-</td>
 </tr>
 <tr>
 <td>145 L</td>
-<td>OUTRO_PARENTE</td>
+<td>Outro parente</td>
 <td>-</td>
 </tr>
 <tr>
 <td>146 L</td>
-<td>NAO_PARENTE</td>
+<td>Não parente</td>
 <td>-</td>
 </tr>
 </tbody></table>
@@ -2775,32 +2779,32 @@
 </thead><tbody>
 <tr>
 <td>1 L</td>
-<td>ADULTO_RESPONSAVEL</td>
+<td>Adulto responsável</td>
 <td>-</td>
 </tr>
 <tr>
 <td>2 L</td>
-<td>OUTRAS_CRIANCAS</td>
+<td>Outra(s) criança(s)</td>
 <td>-</td>
 </tr>
 <tr>
 <td>133 L</td>
-<td>ADOLESCENTE</td>
+<td>Adolecente</td>
 <td>-</td>
 </tr>
 <tr>
 <td>3 L</td>
-<td>SOZINHA</td>
+<td>Sozinha</td>
 <td>-</td>
 </tr>
 <tr>
 <td>134 L</td>
-<td>CRECHE</td>
+<td>Creche</td>
 <td>-</td>
 </tr>
 <tr>
 <td>4 L</td>
-<td>OUTRO</td>
+<td>Outro</td>
 <td>-</td>
 </tr>
 </tbody></table>
@@ -2837,42 +2841,42 @@
 </thead><tbody>
 <tr>
 <td>75 L</td>
-<td>PROPRIO</td>
+<td>Próprio</td>
 <td>-</td>
 </tr>
 <tr>
 <td>76 L</td>
-<td>FINANCIADO</td>
+<td>Financiado</td>
 <td>-</td>
 </tr>
 <tr>
 <td>77 L</td>
-<td>ALUGADO</td>
+<td>Alugado</td>
 <td>-</td>
 </tr>
 <tr>
 <td>78 L</td>
-<td>ARRENDADO</td>
+<td>Arrendado</td>
 <td>-</td>
 </tr>
 <tr>
 <td>79 L</td>
-<td>CEDIDO</td>
+<td>Cedido</td>
 <td>-</td>
 </tr>
 <tr>
 <td>80 L</td>
-<td>OCUPACAO</td>
+<td>Ocupacao</td>
 <td>-</td>
 </tr>
 <tr>
 <td>81 L</td>
-<td>SITUACAO_DE_RUA</td>
+<td>Situacao de rua</td>
 <td>-</td>
 </tr>
 <tr>
 <td>82 L</td>
-<td>OUTRA</td>
+<td>Outra</td>
 <td>-</td>
 </tr>
 </tbody></table>
@@ -2909,47 +2913,47 @@
 </thead><tbody>
 <tr>
 <td>66 L</td>
-<td>EMPREGADOR</td>
+<td>Empregador</td>
 <td>-</td>
 </tr>
 <tr>
 <td>67 L</td>
-<td>ASSALARIADO_COM_CARTEIRA_TRABALHO</td>
+<td>Assalariado com carteira de trabalho</td>
 <td>-</td>
 </tr>
 <tr>
 <td>68 L</td>
-<td>ASSALARIADO_SEM_CARTEIRA_TRABALHO</td>
+<td>Assalariado sem carteira de trabalho</td>
 <td>-</td>
 </tr>
 <tr>
 <td>69 L</td>
-<td>AUTONOMO_COM_PREVIDENCIA_SOCIAL</td>
+<td>Autônomo com previdência social</td>
 <td>-</td>
 </tr>
 <tr>
 <td>70 L</td>
-<td>AUTONOMO_SEM_PREVIDENCIA_SOCIAL</td>
+<td>Autônomo sem previdência social</td>
 <td>-</td>
 </tr>
 <tr>
 <td>71 L</td>
-<td>APOSENTADO_OU_PENSIONISTA</td>
+<td>Aposentado / Pensionista</td>
 <td>-</td>
 </tr>
 <tr>
 <td>72 L</td>
-<td>DESEMPREGADO</td>
+<td>Desempregado</td>
 <td>-</td>
 </tr>
 <tr>
 <td>73 L</td>
-<td>NAO_TRABALHA</td>
+<td>Não trabalha</td>
 <td>-</td>
 </tr>
 <tr>
 <td>74 L</td>
-<td>OUTRO</td>
+<td>Outro</td>
 <td>-</td>
 </tr>
 </tbody></table>
@@ -3011,22 +3015,22 @@
 </thead><tbody>
 <tr>
 <td>17 L</td>
-<td>MENOS_6_MESES</td>
+<td>Menos de 6 meses</td>
 <td>-</td>
 </tr>
 <tr>
 <td>18 L</td>
-<td>SEIS_A_12_MESES</td>
+<td>6 a 12 meses</td>
 <td>-</td>
 </tr>
 <tr>
 <td>19 L</td>
-<td>UM_A_5_ANOS</td>
+<td>1 a 5 anos</td>
 <td>-</td>
 </tr>
 <tr>
 <td>20 L</td>
-<td>MAIS_DE_5_ANOS</td>
+<td>Mais de 5 anos</td>
 <td>-</td>
 </tr>
 </tbody></table>
@@ -3122,8 +3126,8 @@
 <td>-</td>
 </tr>
 <tr>
-<td>9 L</td>
-<td>Atendimento realizado pelo software de prontuário</td>
+<td>-</td>
+<td>-</td>
 <td>-</td>
 </tr>
 <tr>
@@ -3154,22 +3158,22 @@
 </thead><tbody>
 <tr>
 <td>89 L</td>
-<td>PAVIMENTO</td>
+<td>Pavimento</td>
 <td>-</td>
 </tr>
 <tr>
 <td>90 L</td>
-<td>CHAO_BATIDO</td>
+<td>Chão batido</td>
 <td>-</td>
 </tr>
 <tr>
 <td>91 L</td>
-<td>FLUVIAL</td>
+<td>Fluvial</td>
 <td>-</td>
 </tr>
 <tr>
 <td>92 L</td>
-<td>OUTRO</td>
+<td>Outro</td>
 <td>-</td>
 </tr>
 </tbody></table>
@@ -3216,7 +3220,7 @@
 <tr>
 <td>8 L</td>
 <td>ATENDIMENTO NÃO PROGRAMADO</td>
-<td>-</td>
+<td>Utilizados apenas nas fichas de atendimento domiciliar</td>
 </tr>
 </tbody></table>
 
@@ -3257,22 +3261,22 @@
 </thead><tbody>
 <tr>
 <td>85 L</td>
-<td>CASA</td>
+<td>Casa</td>
 <td>-</td>
 </tr>
 <tr>
 <td>86 L</td>
-<td>APARTAMENTO</td>
+<td>Apartamento</td>
 <td>-</td>
 </tr>
 <tr>
 <td>87 L</td>
-<td>COMODO</td>
+<td>Cômodo</td>
 <td>-</td>
 </tr>
 <tr>
 <td>88 L</td>
-<td>OUTRO</td>
+<td>Outro</td>
 <td>-</td>
 </tr>
 </tbody></table>
@@ -3288,22 +3292,22 @@
 </thead><tbody>
 <tr>
 <td>97 L</td>
-<td>FILTRACAO</td>
+<td>Filtração</td>
 <td>-</td>
 </tr>
 <tr>
 <td>98 L</td>
-<td>FERVURA</td>
+<td>Fervura</td>
 <td>-</td>
 </tr>
 <tr>
 <td>99 L</td>
-<td>CLORACAO</td>
+<td>Cloração</td>
 <td>-</td>
 </tr>
 <tr>
 <td>100 L</td>
-<td>SEM_TRATAMENTO</td>
+<td>Sem tratamento</td>
 <td>-</td>
 </tr>
 </tbody></table>
@@ -13790,7 +13794,7 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>List<FichaAtendimentoDomiciliarChild></td>
+<td>List&lt;FichaAtendimentoDomiciliarChild&gt;</td>
 <td>Sim</td>
 <td>1</td>
 <td>13</td>
@@ -13976,7 +13980,7 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>List<Long></td>
+<td>List&lt;Long&gt;</td>
 <td>Opcional</td>
 <td>0</td>
 <td>24</td>
@@ -14039,7 +14043,7 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>List<String></td>
+<td>List&lt;String&gt;</td>
 <td>Opcional</td>
 <td>0</td>
 <td>21</td>
@@ -14062,7 +14066,7 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>List<String></td>
+<td>List&lt;String&gt;</td>
 <td>Opcional</td>
 <td>0</td>
 <td>4</td>
@@ -15563,7 +15567,7 @@
 
 <h3 id="4-gestante">#4 gestante</h3>
 
-<p>Marcador que indica se o cidadão esta gestante.</p>
+<p>Marcador que indica se o cidadão está gestante.</p>
 
 <table><thead>
 <tr>
@@ -15586,7 +15590,7 @@
 
 <h3 id="5-necessidadesespeciais">#5 necessidadesEspeciais</h3>
 
-<p>Marcador que indica se o cidadão é portador de necessidades especiais,</p>
+<p>Marcador que indica se o cidadão é portador de necessidades especiais.</p>
 
 <table><thead>
 <tr>
@@ -15676,7 +15680,7 @@
 
 <h3 id="9-tiposfornecimodonto">#9 tiposFornecimOdonto</h3>
 
-<p>Materias fornecidos durante o atendimento.</p>
+<p>Materiais fornecidos durante o atendimento.</p>
 
 <table><thead>
 <tr>
@@ -15738,12 +15742,15 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras</strong>:
-<br> • É Requerido se o <a href="/integracao/docs/dicionario/dicionario.html#tipodeatendimento">TipoDeAtendimento</a> = <code>2L (consulta agendada)</code>.
-<br> • Não pode ser preenchido se o <a href="/integracao/docs/dicionario/dicionario.html#tipodeatendimento">TipoDeAtendimento</a> = <code>4L (escuta inicial ou orientação)</code>.
-<br> • Se o <a href="/integracao/docs/dicionario/dicionario.html#tipodeatendimento">TipoDeAtendimento</a> = <code>6L (atendimento de urgência)</code>, a opção de <code>2L (consulta de retorno)</code> não pode ser marcada.
-<br> • Se <a href="/integracao/docs/dicionario/dicionario.html#tipodeatendimento">TipoDeAtendimento</a> = <code>5L (consulta no dia)</code>, o campo é opcional.
-<br> • Aceita apenas um registro.</p>
+<p><strong>Regras</strong>:</p>
+
+<ul>
+<li>É Requerido se o <a href="/integracao/docs/dicionario/dicionario.html#tipodeatendimento">TipoDeAtendimento</a> = <code>2L (consulta agendada)</code>.</li>
+<li>Não pode ser preenchido se o <a href="/integracao/docs/dicionario/dicionario.html#tipodeatendimento">TipoDeAtendimento</a> = <code>4L (escuta inicial ou orientação)</code>.</li>
+<li>Se o <a href="/integracao/docs/dicionario/dicionario.html#tipodeatendimento">TipoDeAtendimento</a> = <code>6L (atendimento de urgência)</code>, a opção de <code>2L (consulta de retorno)</code> não pode ser marcada.</li>
+<li>Se <a href="/integracao/docs/dicionario/dicionario.html#tipodeatendimento">TipoDeAtendimento</a> = <code>5L (consulta no dia)</code>, o campo é opcional.</li>
+<li>Aceita apenas um registro.</li>
+</ul>
 
 <p><strong>Referências:</strong> <a href="/integracao/docs/dicionario/dicionario.html#tipodeconsultaodonto">TipoDeConsultaOdonto</a></p>
 
@@ -15767,8 +15774,11 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong>
-<br> • Não pode haver procedimentos com o mesmo código.</p>
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Não pode haver procedimentos com o mesmo código.</li>
+</ul>
 
 <p><strong>Referências:</strong>   <a href="
         /integracao/docs/#listaprocedimentosrealizados">ListaProcedimentosRealizados</a></p>
@@ -15793,10 +15803,13 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong>
-<br> • Não pode conter procedimentos da <a href="
-        /integracao/docs/#listaprocedimentosrealizados">ListaProcedimentosRealizados</a>.
-<br> • Não pode haver procedimentos com o mesmo código.</p>
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Não pode conter procedimentos da <a href="
+        /integracao/docs/#listaprocedimentosrealizados">ListaProcedimentosRealizados</a>.</li>
+<li>Não pode haver procedimentos com o mesmo código.</li>
+</ul>
 
 <p><strong>Referências:</strong> <a href="
         /integracao/docs/#procedimentoquantidade">ProcedimentoQuantidade</a></p>
@@ -15892,8 +15905,11 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong>
-<br> • Valor máximo que pode ser registrado é 99.</p>
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Valor máximo que pode ser registrado é 99.</li>
+</ul>
 
 <h2 id="listaprocedimentosrealizados">ListaProcedimentosRealizados</h2>
 
@@ -16129,7 +16145,7 @@
 
 <h3 id="5-horainicio">#5 horaInicio</h3>
 
-<p>Hora de incício de realização da atividade coletiva.</p>
+<p>Hora de início da realização da atividade coletiva.</p>
 
 <table><thead>
 <tr>
@@ -16218,12 +16234,15 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras</strong>:
-<br/> • CNS válido de acordo com o algoritmo.
-<br/> • O profissional responsável deve ser um registro da lista de profissionais.</p>
+<p><strong>Regras</strong>:</p>
 
-<p><strong>Referência</strong>: Para ver o algoritmo utilizado, acesse: <a href="
-        /integracao/docs/http://cartaonet.datasus.gov.br/">Catão NET Datasus</a>, em &quot;Downloads&quot; baixe o arquivo de rotina de validação Java.</p>
+<ul>
+<li>CNS válido de acordo com o algoritmo.</li>
+<li>O profissional responsável deve ser um registro da lista de profissionais.</li>
+</ul>
+
+<p><strong>Referência</strong>: Para ver o algorítmo utilizado, acesse: <a href="
+        /integracao/docs/http://cartaonet.datasus.gov.br/">Cartão NET Datasus</a>, em &quot;Downloads&quot; baixe o arquivo de rotina de validação Java.</p>
 
 <h3 id="9-responsavelcnesunidade">#9 responsavelCnesUnidade</h3>
 
@@ -16322,7 +16341,7 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>List<ProfissionalCboRowItem></td>
+<td>List&lt;ProfissionalCboRowItem&gt;</td>
 <td>Sim</td>
 <td>1</td>
 <td>99</td>
@@ -16368,16 +16387,19 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>List<Long></td>
+<td>List&lt;Long&gt;</td>
 <td>Condicional</td>
 <td>-</td>
 <td>-</td>
 </tr>
 </tbody></table>
 
-<p><strong>Regras</strong>:
-<br> • É Requerido se <a href="/integracao/docs/dicionario/dicionario.html#tipoatividadecoletiva">TipoAtividadeColetiva</a> for <code>1L</code>, <code>2L</code> ou <code>3L</code>.
-<br> • Não pode ser preenchido se <a href="/integracao/docs/dicionario/dicionario.html#tipoatividadecoletiva">TipoAtividadeColetiva</a> for <code>4L</code>, <code>5L</code>, <code>6L</code> ou <code>7L</code>.</p>
+<p><strong>Regras</strong>:</p>
+
+<ul>
+<li>É Requerido se <a href="/integracao/docs/dicionario/dicionario.html#tipoatividadecoletiva">TipoAtividadeColetiva</a> for <code>1L</code>, <code>2L</code> ou <code>3L</code>.</li>
+<li>Não pode ser preenchido se <a href="/integracao/docs/dicionario/dicionario.html#tipoatividadecoletiva">TipoAtividadeColetiva</a> for <code>4L</code>, <code>5L</code>, <code>6L</code> ou <code>7L</code>.</li>
+</ul>
 
 <p><strong>Referência</strong>: <a href="/integracao/docs/dicionario/dicionario.html#temasparareuniao">TemasParaReuniao</a></p>
 
@@ -16394,16 +16416,19 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>List<Long></td>
+<td>List&lt;Long&gt;</td>
 <td>Condicional</td>
 <td>-</td>
 <td>-</td>
 </tr>
 </tbody></table>
 
-<p><strong>Regras</strong>:
-<br> • É Requerido se <a href="/integracao/docs/dicionario/dicionario.html#tipoatividadecoletiva">TipoAtividadeColetiva</a> for <code>4L</code>, <code>5L</code>, <code>6L</code> ou <code>7L</code>.
-<br> • Não pode ser preenchido se <a href="/integracao/docs/dicionario/dicionario.html#tipoatividadecoletiva">TipoAtividadeColetiva</a> for <code>1L</code>, <code>2L</code> ou <code>3L</code>.</p>
+<p><strong>Regras</strong>:</p>
+
+<ul>
+<li>É Requerido se <a href="/integracao/docs/dicionario/dicionario.html#tipoatividadecoletiva">TipoAtividadeColetiva</a> for <code>4L</code>, <code>5L</code>, <code>6L</code> ou <code>7L</code>.</li>
+<li>Não pode ser preenchido se <a href="/integracao/docs/dicionario/dicionario.html#tipoatividadecoletiva">TipoAtividadeColetiva</a> for <code>1L</code>, <code>2L</code> ou <code>3L</code>.</li>
+</ul>
 
 <p><strong>Referência</strong>: <a href="/integracao/docs/dicionario/dicionario.html#publicoalvo">PublicoAlvo</a></p>
 
@@ -16420,16 +16445,19 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>List<Long></td>
+<td>List&lt;Long&gt;</td>
 <td>Condicional</td>
 <td>-</td>
 <td>-</td>
 </tr>
 </tbody></table>
 
-<p><strong>Regras</strong>:
-<br> • É Requerido se <a href="/integracao/docs/dicionario/dicionario.html#tipoatividadecoletiva">TipoAtividadeColetiva</a> for <code>4L</code>, <code>5L</code>, <code>6L</code> ou <code>7L</code>.
-<br> • Não pode ser preenchido se <a href="/integracao/docs/dicionario/dicionario.html#tipoatividadecoletiva">TipoAtividadeColetiva</a> for <code>1L</code>, <code>2L</code> ou <code>3L</code>.</p>
+<p><strong>Regras</strong>:</p>
+
+<ul>
+<li>É Requerido se <a href="/integracao/docs/dicionario/dicionario.html#tipoatividadecoletiva">TipoAtividadeColetiva</a> for <code>4L</code>, <code>5L</code>, <code>6L</code> ou <code>7L</code>.</li>
+<li>Não pode ser preenchido se <a href="/integracao/docs/dicionario/dicionario.html#tipoatividadecoletiva">TipoAtividadeColetiva</a> for <code>1L</code>, <code>2L</code> ou <code>3L</code>.</li>
+</ul>
 
 <p><strong>Referências</strong>:   <a href="/integracao/docs/dicionario/dicionario.html#praticastemasparasaude">PraticasTemasParaSaude</a></p>
 
@@ -16446,7 +16474,7 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>List<ParticipanteRowItem></td>
+<td>List&lt;ParticipanteRowItem&gt;</td>
 <td>Opcional</td>
 <td>0</td>
 <td>33</td>
@@ -16592,11 +16620,14 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras</strong>:
-<br/> • Apenas números e vírgula (<code>,</code>).
-<br/> • Máximo de 3 números após a vírgula.
-<br/> • Se tiver vírgula, tamanho máximo = 7.
-<br/> • Valor mínimo = 0,5 e máximo = 500.</p>
+<p><strong>Regras</strong>:</p>
+
+<ul>
+<li>Apenas números e vírgula (<code>,</code>).</li>
+<li>Máximo de 3 números após a vírgula.</li>
+<li>Se tiver vírgula, tamanho máximo = 7.</li>
+<li>Valor mínimo = 0,5 e máximo = 500.</li>
+</ul>
 
 <h3 id="5-altura">#5 altura</h3>
 
@@ -16618,11 +16649,14 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras</strong>:
-<br/> • Apenas números e vírgula (<code>,</code>).
-<br/> • Máximo de 3 números após a vírgula.
-<br/> • Se tiver vírgula, tamanho máximo = 5.
-<br/> • Valor mínimo 20 e máximo 250.</p>
+<p><strong>Regras</strong>:</p>
+
+<ul>
+<li>Apenas números e vírgula (<code>,</code>).</li>
+<li>Máximo de 3 números após a vírgula.</li>
+<li>Se tiver vírgula, tamanho máximo = 5.</li>
+<li>Valor mínimo 20 e máximo 250.</li>
+</ul>
 
 <h3 id="6-cessouhabitofumar">#6 cessouHabitoFumar</h3>
 
@@ -16759,7 +16793,9 @@
 
 <p><strong>Referências:</strong>   <a href="/integracao/docs/profissional.html">Profissional</a></p>
 
-<h3 id="4-numerocartaosus-cns-do-cidadão">#4 numeroCartaoSus CNS do cidadão.</h3>
+<h3 id="4-numerocartaosus">#4 numeroCartaoSus</h3>
+
+<p>CNS do cidadão.</p>
 
 <table><thead>
 <tr>
@@ -16769,9 +16805,13 @@
 <th>Máximo</th>
 </tr>
 </thead><tbody>
+<tr>
+<td>String</td>
+<td>Requerido</td>
+<td>15</td>
+<td>15</td>
+</tr>
 </tbody></table>
-
-<p>String  Requerido   15  15</p>
 
 <p>CNS valido de acordo com o algoritmo.</p>
 
@@ -16798,11 +16838,14 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras</strong>:
-<br> • Ter ao menos duas palavras.
-<br> • Somente texto e apóstrofo (<code>&#39;</code>).
-<br> •    Opcional caso <a href="
-        /integracao/docs/##23-conclusaodestinoelegivel">conclusaoDestinoElegivel</a> for diferente de <code>1L (admissao propria emad)</code>.</p>
+<p><strong>Regras</strong>:</p>
+
+<ul>
+<li>Ter ao menos duas palavras.</li>
+<li>Somente texto e apóstrofo (<code>&#39;</code>).</li>
+<li>  Opcional caso <a href="
+        /integracao/docs/##23-conclusaodestinoelegivel">conclusaoDestinoElegivel</a> for diferente de <code>1L (admissao propria emad)</code>.</li>
+</ul>
 
 <h3 id="6-nomesocialcidadao">#6 nomeSocialCidadao</h3>
 
@@ -16824,8 +16867,11 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong>
-<br> • Somente texto e apóstrofo (<code>&#39;</code>).</p>
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Somente texto e apóstrofo (<code>&#39;</code>).</li>
+</ul>
 
 <h3 id="7-datanascimentocidadao">#7 dataNascimentoCidadao</h3>
 
@@ -16876,7 +16922,7 @@
 
 <h3 id="9-racacorcidadao">#9 racaCorCidadao</h3>
 
-<p>Raça / Cor do cidadão</p>
+<p>Raça / Cor do cidadão.</p>
 
 <table><thead>
 <tr>
@@ -16894,9 +16940,12 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong>
-<br> •    Opcional caso <a href="
-        /integracao/docs/##23-conclusaodestinoelegivel">conclusaoDestinoElegivel</a> for diferente de <code>1L (admissao propria emad)</code>.</p>
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>  Opcional caso <a href="
+        /integracao/docs/##23-conclusaodestinoelegivel">conclusaoDestinoElegivel</a> for diferente de <code>1L (admissao propria emad)</code>.</li>
+</ul>
 
 <p><strong>Referências:</strong> <a href="/integracao/docs/dicionario/dicionario.html#racacor">RacaCor</a></p>
 
@@ -16920,11 +16969,14 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras</strong>:
-<br> • Ter ao menos duas palavras.
-<br> • Somente texto e apóstrofo (<code>&#39;</code>).
-<br> • Não pode ser preenchido se o campo <a href="
-        /integracao/docs/##11-desconhecenomemae">desconheceNomeMae</a> = <code>true</code>.</p>
+<p><strong>Regras</strong>:</p>
+
+<ul>
+<li>Ter ao menos duas palavras.</li>
+<li>Somente texto e apóstrofo (<code>&#39;</code>).</li>
+<li>Não pode ser preenchido se o campo <a href="
+        /integracao/docs/##11-desconhecenomemae">desconheceNomeMae</a> = <code>true</code>.</li>
+</ul>
 
 <h3 id="11-desconhecenomemae">#11    desconheceNomeMae</h3>
 
@@ -16991,9 +17043,12 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong>
-<br> •    Opcional caso <a href="
-        /integracao/docs/##23-conclusaodestinoelegivel">conclusaoDestinoElegivel</a> for diferente de <code>1L (admissao propria emad)</code>.</p>
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>  Opcional caso <a href="
+        /integracao/docs/##23-conclusaodestinoelegivel">conclusaoDestinoElegivel</a> for diferente de <code>1L (admissao propria emad)</code>.</li>
+</ul>
 
 <p><strong>Referências:</strong> <a href="/integracao/docs/dicionario/dicionario.html#nacionalidade">Nacionalidade</a></p>
 
@@ -17061,9 +17116,12 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras</strong>:
-<br> •    Opcional caso <a href="
-        /integracao/docs/##23-conclusaodestinoelegivel">conclusaoDestinoElegivel</a> for diferente de <code>1L (admissao propria emad)</code>.</p>
+<p><strong>Regras</strong>:</p>
+
+<ul>
+<li>  Opcional caso <a href="
+        /integracao/docs/##23-conclusaodestinoelegivel">conclusaoDestinoElegivel</a> for diferente de <code>1L (admissao propria emad)</code>.</li>
+</ul>
 
 <p><strong>Referências:</strong>   <a href="
         /integracao/docs/#enderecolocalpermanencia">EnderecoLocalPermanencia</a></p>
@@ -17114,7 +17172,7 @@
 
 <h3 id="19-situacoespresentes">#19    situacoesPresentes</h3>
 
-<p>Marcadores de situações presentes</p>
+<p>Marcadores de situações presentes.</p>
 
 <table><thead>
 <tr>
@@ -17185,7 +17243,7 @@
 
 <h3 id="22-cid10terceiro">#22    cid10Terceiro</h3>
 
-<p>CID10 registrado na avaliação</p>
+<p>CID10 registrado na avaliação.</p>
 
 <table><thead>
 <tr>
@@ -17227,9 +17285,12 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong>
-<br> • Só pode ser preenchido se <a href="
-        /integracao/docs/##18-atencaodomiciliarmodalidade">atencaoDomiciliarModalidade</a> for diferente de <code>4L (inelegível)</code>.</p>
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Só pode ser preenchido se <a href="
+        /integracao/docs/##18-atencaodomiciliarmodalidade">atencaoDomiciliarModalidade</a> for diferente de <code>4L (inelegível)</code>.</li>
+</ul>
 
 <p><strong>Referências:</strong> <a href="/integracao/docs/dicionario/dicionario.html#conclusaodestinoelegivel">ConclusaoDestinoElegivel</a></p>
 
@@ -17255,8 +17316,11 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras</strong>:
-<br> • Só pode ser preenchido se atencaoDomiciliarModalidade for igual a de <code>4L (inelegível)</code>.</p>
+<p><strong>Regras</strong>:</p>
+
+<ul>
+<li>Só pode ser preenchido se atencaoDomiciliarModalidade for igual a de <code>4L (inelegível)</code>.</li>
+</ul>
 
 <p><strong>Referências:</strong> <a href="/integracao/docs/dicionario/dicionario.html#conclusaodestinoinelegivel">ConclusaoDestinoInelegivel</a></p>
 
@@ -17410,10 +17474,13 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras</strong>:
-<br> • Apenas letras e números.
-<br> • Não pode ser preenchido caso <a href="
-        /integracao/docs/##11-stsemnumero">stSemNumero</a> = <code>true</code>.</p>
+<p><strong>Regras</strong>:</p>
+
+<ul>
+<li>Apenas letras e números.</li>
+<li>Não pode ser preenchido caso <a href="
+        /integracao/docs/##11-stsemnumero">stSemNumero</a> = <code>true</code>.</li>
+</ul>
 
 <h3 id="7-numerodneuf">#7 numeroDneUf</h3>
 
@@ -17501,7 +17568,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Deve ser informado o código DNE</p>
+<p><strong>Regras:</strong> Deve ser informado o código DNE.</p>
 
 <p><strong>Referências:</strong> <a href="/integracao/docs/referencias.html#tipo-de-logradouro">TipoLogradouro</a></p>
 
@@ -17673,9 +17740,12 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong>
-<br> • Não pode ser preenchido se o campo <a href="
-        /integracao/docs/##9-statustermorecusacadatrodomiciliaratencaobasica">statusTermoRecusaCadastroDomiciliarAtencaoBasica</a> = <code>true</code>.</p>
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Não pode ser preenchido se o campo <a href="
+        /integracao/docs/##9-statustermorecusacadatrodomiciliaratencaobasica">statusTermoRecusaCadastroDomiciliarAtencaoBasica</a> = <code>true</code>.</li>
+</ul>
 
 <p><strong>Referências:</strong> <a href="/integracao/docs/dicionario/dicionario.html#animalnodomicilio">AnimalNoDomicilio</a></p>
 
@@ -17699,16 +17769,19 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong>
-<br> • Não devem ser preenchidos se o campo <a href="
-        /integracao/docs/##9-statustermorecusacadatrodomiciliaratencaobasica">statusTermoRecusaCadastroDomiciliarAtencaoBasica</a> = <code>true</code>.</p>
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Não devem ser preenchidos se o campo <a href="
+        /integracao/docs/##9-statustermorecusacadatrodomiciliaratencaobasica">statusTermoRecusaCadastroDomiciliarAtencaoBasica</a> = <code>true</code>.</li>
+</ul>
 
 <p><strong>Referências:</strong> <a href="
         /integracao/docs/#condicaomoradia">CondicaoMoradia</a></p>
 
 <h3 id="3-dadosgerais">#3 dadosGerais</h3>
 
-<p>Informações sobre o profissionale a data do cadastro.</p>
+<p>Informações sobre o profissional e a data do cadastro.</p>
 
 <table><thead>
 <tr>
@@ -17748,8 +17821,8 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Preencimento opcional se o campo <a href="
-        /integracao/docs/##9-statustermorecusacadatrodomiciliaratencaobasica">statusTermoRecusaCadastroDomiciliarAtencaoBasica</a> = <code>true</code>.</p>
+<p><strong>Regras:</strong> Preencimento obrigatório caso o campo <a href="
+        /integracao/docs/##9-statustermorecusacadatrodomiciliaratencaobasica">statusTermoRecusaCadastroDomiciliarAtencaoBasica</a> = <code>false</code>.</p>
 
 <p><strong>Referências:</strong> <a href="
         /integracao/docs/#enderecolocalpermanencia">EnderecoLocalPermanencia</a></p>
@@ -17775,7 +17848,7 @@
 </tbody></table>
 
 <p><strong>Regras:</strong>
-<br> • Não pode ser preenchidos se o campo <a href="
+* Não pode ser preenchidos caso o campo <a href="
         /integracao/docs/##9-statustermorecusacadatrodomiciliaratencaobasica">statusTermoRecusaCadastroDomiciliarAtencaoBasica</a> = <code>true</code>.</p>
 
 <h3 id="6-fichaatualizada">#6 fichaAtualizada</h3>
@@ -17818,11 +17891,14 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong>
-<br> • Não pode ser preenchido se o campo <a href="
-        /integracao/docs/##8-stanimaisnodomicilio">stAnimaisNoDomicilio</a> = <code>false</code>.
-<br> • Não pode ser preenchido se o campo <a href="
-        /integracao/docs/##9-statustermorecusacadatrodomiciliaratencaobasica">statusTermoRecusaCadastroDomiciliarAtencaoBasica</a> = <code>true</code>.</p>
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Não pode ser preenchido se o campo <a href="
+        /integracao/docs/##8-stanimaisnodomicilio">stAnimaisNoDomicilio</a> = <code>false</code>.</li>
+<li>Não pode ser preenchido se o campo <a href="
+        /integracao/docs/##9-statustermorecusacadatrodomiciliaratencaobasica">statusTermoRecusaCadastroDomiciliarAtencaoBasica</a> = <code>true</code>.</li>
+</ul>
 
 <h3 id="8-stanimaisnodomicilio">#8 stAnimaisNoDomicilio</h3>
 
@@ -17844,9 +17920,12 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong>
-<br> • Não pode ser preenchidos se o campo <a href="
-        /integracao/docs/##9-statustermorecusacadatrodomiciliaratencaobasica">statusTermoRecusaCadastroDomiciliarAtencaoBasica</a> = <code>true</code>.</p>
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Não pode ser preenchidos se o campo <a href="
+        /integracao/docs/##9-statustermorecusacadatrodomiciliaratencaobasica">statusTermoRecusaCadastroDomiciliarAtencaoBasica</a> = <code>true</code>.</li>
+</ul>
 
 <h3 id="9-statustermorecusacadatrodomiciliaratencaobasica">#9 statusTermoRecusaCadatroDomiciliarAtencaoBasica</h3>
 
@@ -18222,10 +18301,13 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong>
-<br> • Apenas letras e números.
-<br> • Não pode ser preenchido caso <a href="
-        /integracao/docs/##11-stsemnumero">stSemNumero</a> = <code>true</code>.</p>
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Apenas letras e números.</li>
+<li>Não pode ser preenchido caso <a href="
+        /integracao/docs/##11-stsemnumero">stSemNumero</a> = <code>true</code>.</li>
+</ul>
 
 <h3 id="7-numerodneuf">#7 numeroDneUf</h3>
 
@@ -18269,7 +18351,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> mínimo 10 dígitos, máximo 11 (DDD + 8 ou 9).</p>
+<p><strong>Regras:</strong> Mínimo 10 dígitos, máximo 11 (DDD + 8 ou 9).</p>
 
 <h3 id="9-telresidencial">#9 telResidencial</h3>
 
@@ -18381,7 +18463,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Preenchimento obrigatório se o campo <a href="
+<p><strong>Regras:</strong> Preenchimento obrigatório caso o campo <a href="
         /integracao/docs/##5-localizacao">Localização</a> = <code>84L (rural)</code>.</p>
 
 <p><strong>Referências:</strong> <a href="/integracao/docs/dicionario/dicionario.html#condicaodeposseeusodaterra">CondicaoDePosseEUsoDaTerra</a></p>
@@ -18670,9 +18752,9 @@
 <p><strong>Referência</strong>: <a href="
         /integracao/docs/#condicoesdesaude">CondicoesDeSaude</a></p>
 
-<h3 id="2-dadosgerais-dados">#2 dadosGerais Dados</h3>
+<h3 id="2-dadosgerais">#2 dadosGerais</h3>
 
-<p>referentes ao profissional e a data do cadastro.</p>
+<p>Dados referentes ao profissional e a data do cadastro.</p>
 
 <table><thead>
 <tr>
@@ -18731,7 +18813,7 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>boolean</td>
+<td>Boolean</td>
 <td>Sim</td>
 <td>-</td>
 <td>-</td>
@@ -18904,7 +18986,7 @@
 <p>Observação: Não deve ser preenchido se o campo <a href="
         /integracao/docs/##27-statusteveinternadoem12meses">statusTeveInternadoem12Meses</a> = <code>false</code>.</p>
 
-<h3 id="2-ddescricaooutracondicao1">#2 ddescricaoOutraCondicao1</h3>
+<h3 id="2-descricaooutracondicao1">#2 descricaoOutraCondicao1</h3>
 
 <p>Condição de saúde informada pelo cidadão.</p>
 
@@ -18966,7 +19048,7 @@
 
 <h3 id="5-descricaoplantasmedicinaisusadas">#5 descricaoPlantasMedicinaisUsadas</h3>
 
-<p>Descricao das plantas medicinais utilizadas.</p>
+<p>Descrição das plantas medicinais utilizadas.</p>
 
 <table><thead>
 <tr>
@@ -19000,7 +19082,7 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>List<Long></td>
+<td>List&lt;Long&gt;</td>
 <td>Condicional</td>
 <td>0</td>
 <td>3</td>
@@ -19010,7 +19092,7 @@
 <p><strong>Regras:</strong>
 <br> • Requerido preenchimento de pelo menos um item se o campo <a href="
         /integracao/docs/##25-statustevedoencacardiaca">statusTeveDoencaCardiaca</a> = <code>true</code>.
-<br> • Não deve ser preenchido preenchido se o campo <a href="
+<br> • Não deve ser preenchido se o campo <a href="
         /integracao/docs/##25-statustevedoencacardiaca">statusTeveDoencaCardiaca</a> = <code>false</code>.</p>
 
 <p><strong>Referência:</strong> <a href="/integracao/docs/dicionario/dicionario.html#doencacardiaca">DoencaCardiaca</a>.</p>
@@ -19028,7 +19110,7 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>List<Long></td>
+<td>List&lt;Long&gt;</td>
 <td>Condicional</td>
 <td>0</td>
 <td>4</td>
@@ -19056,10 +19138,10 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>List<Long></td>
+<td>List&lt;Long&gt;</td>
 <td>Condicional</td>
-<td>0 3</td>
-<td></td>
+<td>0</td>
+<td>3</td>
 </tr>
 </tbody></table>
 
@@ -19118,7 +19200,7 @@
 
 <h3 id="11-statusehdependentealcool">#11 statusEhDependenteAlcool</h3>
 
-<p>Marcador se o cidadão é dependente de alcool.</p>
+<p>Marcador se o cidadão é dependente de álcool.</p>
 
 <table><thead>
 <tr>
@@ -19196,9 +19278,14 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras</strong>: Só pode ser preenchido se o campo <a href="
-        /integracao/docs/##16-sexocidadao">sexoCidadao</a> = <code>feminino</code> e o campo <a href="
-        /integracao/docs/##3-datanascimentocidadao">dataNascimentoCidadao</a> for anterior ou igual à 12 anos a partir da data atual.</p>
+<p><strong>Regras</strong>: Só pode ser preenchido se:</p>
+
+<ul>
+<li>O campo <a href="
+        /integracao/docs/##16-sexocidadao">sexoCidadao</a> = <code>feminino</code></li>
+<li>O campo <a href="
+        /integracao/docs/##3-datanascimentocidadao">dataNascimentoCidadao</a> for mais anterior que 12 anos a partir da <a href="/integracao/docs/profissional.html##5-dataatendimento">dataAtendimento</a>.</li>
+</ul>
 
 <h3 id="15-statusestaacamado">#15 statusEstaAcamado</h3>
 
@@ -19543,9 +19630,9 @@
 </tbody></table>
 
 <p><strong>Regras:</strong>
-<br> • Não pode ser preechido se o campo <a href="
+* Não pode ser preechido se o campo <a href="
         /integracao/docs/##9-statussituacaorua">statusSituacaoRua</a> = <code>false</code>.
-<br> • Não pode ser preenchido se o campo <a href="
+* Não pode ser preenchido se o campo <a href="
         /integracao/docs/##11-statusvisitafamiliarfrequentemente">statusVisitaFamiliarFrequentemente</a> = <code>false</code>.</p>
 
 <h3 id="2-higienepessoalsituacaorua">#2 higienePessoalSituacaoRua</h3>
@@ -19561,18 +19648,21 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>List<Long></td>
+<td>List&lt;Long&gt;</td>
 <td>Condicional</td>
 <td>0</td>
 <td>4</td>
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong>
-<br> • Não pode ser preechido se o campo <a href="
-        /integracao/docs/##9-statussituacaorua">statusSituacaoRua</a> = <code>false</code>.
-<br> • Requerido preenchimento de pelo menos um item se o campo <a href="
-        /integracao/docs/##10-statustemacessohigienepessoalsituacaorua">statusTemAcessoHigienePessoalSituacaoRua</a> = <code>true</code>.</p>
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Não pode ser preechido se o campo <a href="
+        /integracao/docs/##9-statussituacaorua">statusSituacaoRua</a> = <code>false</code>.</li>
+<li>Requerido preenchimento de pelo menos um item se o campo <a href="
+        /integracao/docs/##10-statustemacessohigienepessoalsituacaorua">statusTemAcessoHigienePessoalSituacaoRua</a> = <code>true</code>.</li>
+</ul>
 
 <p><strong>Referência:</strong> <a href="/integracao/docs/dicionario/dicionario.html#acessohigiene">AcessoHigiene</a>.</p>
 
@@ -19589,7 +19679,7 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>List<Long></td>
+<td>List&lt;Long&gt;</td>
 <td>Opcional</td>
 <td>0</td>
 <td>5</td>
@@ -19879,7 +19969,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Não pode ser posterior a <a href="/integracao/docs/profissional.html##5-dataatendimento">dataAtendimento</a> e anterior a 130 anos a partir da <a href="/integracao/docs/profissional.html##5-dataatendimento">dataAtendimento</a>.</p>
+<p><strong>Regras:</strong> Não pode ser posterior a <a href="/integracao/docs/profissional.html##5-dataatendimento">dataAtendimento</a> ou mais anterior que 130 anos a partir da <a href="/integracao/docs/profissional.html##5-dataatendimento">dataAtendimento</a>.</p>
 
 <p><strong>Referência:</strong> Para ver a referência sobre o formato epoch, acesse: <a href="
         /integracao/docs/https://en.wikipedia.org/wiki/Epoch_(reference_date)">Epoch Wikipedia</a>.</p>
@@ -19904,7 +19994,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Não pode ser posterior a <a href="/integracao/docs/profissional.html##5-dataatendimento">dataAtendimento</a> ou anterior a 130 anos a partir da <a href="/integracao/docs/profissional.html##5-dataatendimento">dataAtendimento</a>.</p>
+<p><strong>Regras:</strong> Não pode ser posterior a <a href="/integracao/docs/profissional.html##5-dataatendimento">dataAtendimento</a> ou mais anterior que 130 anos a partir da <a href="/integracao/docs/profissional.html##5-dataatendimento">dataAtendimento</a>.</p>
 
 <p><strong>Referência:</strong> Para ver a referência sobre o formato epoch, acesse: <a href="
         /integracao/docs/https://en.wikipedia.org/wiki/Epoch_(reference_date)">Epoch Wikipedia</a>.</p>
@@ -20015,10 +20105,13 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong>
-<br> • Requerido espaço em branco para indicar o sobrenome.
-<br> • Não deve ser preenchido se o campo <a href="
-        /integracao/docs/##5-desconhecenomedamae">desconheceNomeMae</a> = <code>true</code>.</p>
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Requerido espaço em branco para indicar o sobrenome.</li>
+<li>Não deve ser preenchido se o campo <a href="
+        /integracao/docs/##5-desconhecenomedamae">desconheceNomeMae</a> = <code>true</code>.</li>
+</ul>
 
 <h3 id="10-numerocartaosus">#10 numeroCartaoSus</h3>
 
@@ -20095,9 +20188,9 @@
 
 <p><strong>Regras:</strong> Apenas números.</p>
 
-<h3 id="13-paisnacimento">#13 paisNacimento</h3>
+<h3 id="13-numeronispispasep">#13 numeroNisPisPasep</h3>
 
-<p>País de nascimento do cidadão.</p>
+<p>Número do PIS/PASEP do cidadão.</p>
 
 <table><thead>
 <tr>
@@ -20136,7 +20229,7 @@
 </tbody></table>
 
 <p><strong>Regras</strong>: Só pode ser preenchido se o campo <a href="
-        /integracao/docs/##7-nacionalidadecidadao">nacionalidadeCidadao</a> = <code>1L (Brasileiro)</code>.</p>
+        /integracao/docs/##7-nacionalidadecidadao">nacionalidadeCidadao</a> = <code>1L (Brasileira)</code>.</p>
 
 <p><strong>Referência:</strong> <a href="/integracao/docs/referencias.html#pa%C3%ADs">País</a>.</p>
 
@@ -20219,7 +20312,7 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>List<Long></td>
+<td>List&lt;Long&gt;</td>
 <td>Condicional</td>
 <td>1</td>
 <td>5</td>
@@ -20248,7 +20341,7 @@
 </thead><tbody>
 <tr>
 <td>Long</td>
-<td>Opicional</td>
+<td>opcional</td>
 <td>-</td>
 <td>-</td>
 </tr>
@@ -20270,7 +20363,7 @@
 </thead><tbody>
 <tr>
 <td>Long</td>
-<td>Opicional</td>
+<td>opcional</td>
 <td>-</td>
 <td>-</td>
 </tr>
@@ -20292,7 +20385,7 @@
 </thead><tbody>
 <tr>
 <td>String</td>
-<td>Opicional</td>
+<td>opcional</td>
 <td>6</td>
 <td>6</td>
 </tr>
@@ -20319,7 +20412,7 @@
 </thead><tbody>
 <tr>
 <td>Long</td>
-<td>Opicional</td>
+<td>opcional</td>
 <td>-</td>
 <td>-</td>
 </tr>
@@ -20341,7 +20434,7 @@
 </thead><tbody>
 <tr>
 <td>String</td>
-<td>Opicional</td>
+<td>opcional</td>
 <td>0</td>
 <td>100</td>
 </tr>
@@ -20364,7 +20457,7 @@
 </thead><tbody>
 <tr>
 <td>Long</td>
-<td>Opicional</td>
+<td>opcional</td>
 <td>-</td>
 <td>-</td>
 </tr>
@@ -20374,7 +20467,7 @@
 
 <h3 id="8-responsavelporcrianca">#8 responsavelPorCrianca</h3>
 
-<p>Responsável por criancas de até 9 anos.</p>
+<p>Responsável por crianças de até 9 anos.</p>
 
 <table><thead>
 <tr>
@@ -20386,7 +20479,7 @@
 </thead><tbody>
 <tr>
 <td>Long</td>
-<td>Opicional</td>
+<td>opcional</td>
 <td>-</td>
 <td>-</td>
 </tr>
@@ -20396,7 +20489,7 @@
 
 <h3 id="9-situacaomercadotrabalhocidadao">#9 situacaoMercadoTrabalhoCidadao</h3>
 
-<p>Situação do cidadão no mercdo de trabalho.</p>
+<p>Situação do cidadão no mercado de trabalho.</p>
 
 <table><thead>
 <tr>
@@ -20408,7 +20501,7 @@
 </thead><tbody>
 <tr>
 <td>Long</td>
-<td>Opicional</td>
+<td>opcional</td>
 <td>-</td>
 <td>-</td>
 </tr>
@@ -20430,7 +20523,7 @@
 </thead><tbody>
 <tr>
 <td>Boolean</td>
-<td>Opicional</td>
+<td>opcional</td>
 <td>-</td>
 <td>-</td>
 </tr>
@@ -20450,7 +20543,7 @@
 </thead><tbody>
 <tr>
 <td>Boolean</td>
-<td>Opicional</td>
+<td>opcional</td>
 <td>-</td>
 <td>-</td>
 </tr>
@@ -20490,7 +20583,7 @@
 </thead><tbody>
 <tr>
 <td>Boolean</td>
-<td>Opicional</td>
+<td>opcional</td>
 <td>-</td>
 <td>-</td>
 </tr>
@@ -20510,7 +20603,7 @@
 </thead><tbody>
 <tr>
 <td>Boolean</td>
-<td>Opicional</td>
+<td>opcional</td>
 <td>-</td>
 <td>-</td>
 </tr>
@@ -20530,7 +20623,7 @@
 </thead><tbody>
 <tr>
 <td>Boolean</td>
-<td>Opicional</td>
+<td>opcional</td>
 <td>-</td>
 <td>-</td>
 </tr>
@@ -20660,7 +20753,7 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>List<FichaProcedimentoChild></td>
+<td>List&lt;FichaProcedimentoChild&gt;</td>
 <td>Condicional</td>
 <td>1</td>
 <td>23</td>
@@ -20992,7 +21085,7 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>List<String></td>
+<td>List&lt;String&gt;</td>
 <td>Condicional</td>
 <td>0</td>
 <td>32</td>
@@ -21019,16 +21112,19 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>List<String></td>
+<td>List&lt;String&gt;</td>
 <td>Condicional</td>
-<td>-</td>
-<td>-</td>
+<td>0</td>
+<td>6</td>
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong>
-<br> • Caracteres maiúsculos e sem espaço em branco.
-<br> • Não repetir procedimentos.</p>
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Caracteres maiúsculos e sem espaço em branco.</li>
+<li>Não repetir procedimentos.</li>
+</ul>
 
 <p><strong>Referência</strong>: Para ver a referência da tabela do SIGTAP acesse: <a href="
         /integracao/docs/http://sigtap.datasus.gov.br/tabela-unificada/app/sec/procedimento/publicados/consultar">Tabela unificada SIGTAP</a></p>
@@ -21277,7 +21373,7 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>List<FichaVisitaDomiciliarChild></td>
+<td>List&lt;FichaVisitaDomiciliarChild&gt;</td>
 <td>Sim</td>
 <td>-</td>
 <td>-</td>
@@ -21438,7 +21534,7 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>List<Long></td>
+<td>List&lt;Long&gt;</td>
 <td>Condicional</td>
 <td>-</td>
 <td>-</td>
@@ -21538,7 +21634,7 @@
 <p><strong>Regras</strong>: CNS valido de acordo com o algoritmo.</p>
 
 <p><strong>Referência</strong>: Para ver o algoritmo utilizado, acesse: <a href="
-        /integracao/docs/http://cartaonet.datasus.gov.br/">Cartao Net Datasus</a>. Em &quot;Downloads&quot; baixe o arquivo de rotina de validação Java.  </p>
+        /integracao/docs/http://cartaonet.datasus.gov.br/">Cartão Net Datasus</a>. Em &quot;Downloads&quot; baixe o arquivo de rotina de validação Java.  </p>
 
 <h3 id="3-identificacaousuario">#3 identificacaoUsuario</h3>
 
@@ -21560,9 +21656,12 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras</strong>:
-<br> • Ter ao menos duas palavras.
-<br> • Somente texto e apóstrofo (<code>&#39;</code>).</p>
+<p><strong>Regras</strong>:</p>
+
+<ul>
+<li>Ter ao menos duas palavras.</li>
+<li>Somente texto e apóstrofo (<code>&#39;</code>).</li>
+</ul>
 
 <h3 id="4-datanascimento">#4 dataNascimento</h3>
 
@@ -21936,9 +22035,12 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong>
-<br> • Deve respeitar as regras das respostas referente a pergunta .
-<br> • Pode ser preenchido somente se a pergunta for 12L.</p>
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Deve respeitar as regras das respostas referente a pergunta .</li>
+<li>Pode ser preenchido somente se a pergunta for 12L.</li>
+</ul>
 
 <p><strong>Referência:</strong> <a href="
         /integracao/docs/#respostamultiplaescolhaenum">RespostaMultiplaEscolhaEnum</a>.</p>
@@ -22130,8 +22232,7 @@
 <td>QUAIS_REFEICOES_VOCE_FAZ_AO_LONGO_DO_DIA</td>
 <td>12</td>
 <td><a href="
-        /integracao/docs/"
-        /integracao/docs/>RespostaMultiplaEscolhaEnum</a></td>
+        /integracao/docs/#respostamultiplaescolhaenum">RespostaMultiplaEscolhaEnum</a></td>
 </tr>
 <tr>
 <td>FEIJAO</td>
@@ -22199,7 +22300,7 @@
 <td>5L</td>
 </tr>
 <tr>
-<td>TRES<em>VEZES</em>OU_MAIS</td>
+<td>TRES_VEZES_OU_MAIS</td>
 <td>6L</td>
 </tr>
 <tr>
@@ -22211,7 +22312,7 @@
 <td>8L</td>
 </tr>
 <tr>
-<td>PASSADA<em>NA</em>PENEIRA</td>
+<td>PASSADA_NA_PENEIRA</td>
 <td>9L</td>
 </tr>
 <tr>
@@ -22219,7 +22320,7 @@
 <td>10L</td>
 </tr>
 <tr>
-<td>SO<em>O</em>CALDO</td>
+<td>SO_O_CALDO</td>
 <td>11L</td>
 </tr>
 </tbody></table>
@@ -22233,11 +22334,11 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>CAFE<em>DA</em>MANHA</td>
+<td>CAFE_DA_MANHA</td>
 <td>12L</td>
 </tr>
 <tr>
-<td>LANCHE<em>DA</em>MANHA</td>
+<td>LANCHE_DA_MANHA</td>
 <td>13L</td>
 </tr>
 <tr>
@@ -22245,7 +22346,7 @@
 <td>14L</td>
 </tr>
 <tr>
-<td>LANCHE<em>DA</em>TARDE</td>
+<td>LANCHE_DA_TARDE</td>
 <td>15L</td>
 </tr>
 <tr>
@@ -50341,7 +50442,7 @@
 </thead><tbody>
 <tr>
 <td>String</td>
-<td>Opicional</td>
+<td>Opcional</td>
 <td>15</td>
 <td>15</td>
 </tr>
@@ -50368,7 +50469,7 @@
 </thead><tbody>
 <tr>
 <td>String</td>
-<td>Opicional</td>
+<td>Opcional</td>
 <td>-</td>
 <td>-</td>
 </tr>
@@ -50600,7 +50701,7 @@
 </thead><tbody>
 <tr>
 <td>String</td>
-<td>Opicional</td>
+<td>Opcional</td>
 <td>10</td>
 <td>10</td>
 </tr>
@@ -50622,7 +50723,7 @@
 </thead><tbody>
 <tr>
 <td>Long</td>
-<td>Opicional</td>
+<td>Opcional</td>
 <td>0</td>
 <td>2</td>
 </tr>

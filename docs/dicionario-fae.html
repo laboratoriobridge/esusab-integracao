@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Ficha de Avaliação de Elegibilidade</title>
-  <meta name="description" content="Dicionário de dados e-SUS AB">
+  <meta name="description" content="Ficha de Avaliação de Elegibilidade">
 
   <link rel="stylesheet" href="/integracao/css/main.css">
   <link rel="canonical" href="/integracao/docs/dicionario-fae.html">
@@ -196,7 +196,7 @@
     <p class="post-meta">
       <a class="btn" href="/integracao/pdf.html?include=dicionario-fae"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 11/09/2015</span>
+        <span class="label" title="Data da última modificação">Alterado em 09/11/2015</span>
       
     </p>
   </header>
@@ -274,7 +274,9 @@
 
 <p><strong>Referências:</strong>   <a href="/integracao/docs/profissional.html">Profissional</a></p>
 
-<h3 id="4-numerocartaosus-cns-do-cidadão">#4 numeroCartaoSus CNS do cidadão.</h3>
+<h3 id="4-numerocartaosus">#4 numeroCartaoSus</h3>
+
+<p>CNS do cidadão.</p>
 
 <table><thead>
 <tr>
@@ -284,9 +286,13 @@
 <th>Máximo</th>
 </tr>
 </thead><tbody>
+<tr>
+<td>String</td>
+<td>Requerido</td>
+<td>15</td>
+<td>15</td>
+</tr>
 </tbody></table>
-
-<p>String  Requerido   15  15</p>
 
 <p>CNS valido de acordo com o algoritmo.</p>
 
@@ -312,10 +318,13 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras</strong>:
-<br> • Ter ao menos duas palavras.
-<br> • Somente texto e apóstrofo (<code>&#39;</code>).
-<br> •    Opcional caso <a href="##23-conclusaodestinoelegivel">conclusaoDestinoElegivel</a> for diferente de <code>1L (admissao propria emad)</code>.</p>
+<p><strong>Regras</strong>:</p>
+
+<ul>
+<li>Ter ao menos duas palavras.</li>
+<li>Somente texto e apóstrofo (<code>&#39;</code>).</li>
+<li>  Opcional caso <a href="##23-conclusaodestinoelegivel">conclusaoDestinoElegivel</a> for diferente de <code>1L (admissao propria emad)</code>.</li>
+</ul>
 
 <h3 id="6-nomesocialcidadao">#6 nomeSocialCidadao</h3>
 
@@ -337,8 +346,11 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong>
-<br> • Somente texto e apóstrofo (<code>&#39;</code>).</p>
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Somente texto e apóstrofo (<code>&#39;</code>).</li>
+</ul>
 
 <h3 id="7-datanascimentocidadao">#7 dataNascimentoCidadao</h3>
 
@@ -388,7 +400,7 @@
 
 <h3 id="9-racacorcidadao">#9 racaCorCidadao</h3>
 
-<p>Raça / Cor do cidadão</p>
+<p>Raça / Cor do cidadão.</p>
 
 <table><thead>
 <tr>
@@ -406,8 +418,11 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong>
-<br> •    Opcional caso <a href="##23-conclusaodestinoelegivel">conclusaoDestinoElegivel</a> for diferente de <code>1L (admissao propria emad)</code>.</p>
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>  Opcional caso <a href="##23-conclusaodestinoelegivel">conclusaoDestinoElegivel</a> for diferente de <code>1L (admissao propria emad)</code>.</li>
+</ul>
 
 <p><strong>Referências:</strong> <a href="/integracao/docs/dicionario/dicionario.html#racacor">RacaCor</a></p>
 
@@ -431,10 +446,13 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras</strong>:
-<br> • Ter ao menos duas palavras.
-<br> • Somente texto e apóstrofo (<code>&#39;</code>).
-<br> • Não pode ser preenchido se o campo <a href="##11-desconhecenomemae">desconheceNomeMae</a> = <code>true</code>.</p>
+<p><strong>Regras</strong>:</p>
+
+<ul>
+<li>Ter ao menos duas palavras.</li>
+<li>Somente texto e apóstrofo (<code>&#39;</code>).</li>
+<li>Não pode ser preenchido se o campo <a href="##11-desconhecenomemae">desconheceNomeMae</a> = <code>true</code>.</li>
+</ul>
 
 <h3 id="11-desconhecenomemae">#11    desconheceNomeMae</h3>
 
@@ -500,8 +518,11 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong>
-<br> •    Opcional caso <a href="##23-conclusaodestinoelegivel">conclusaoDestinoElegivel</a> for diferente de <code>1L (admissao propria emad)</code>.</p>
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>  Opcional caso <a href="##23-conclusaodestinoelegivel">conclusaoDestinoElegivel</a> for diferente de <code>1L (admissao propria emad)</code>.</li>
+</ul>
 
 <p><strong>Referências:</strong> <a href="/integracao/docs/dicionario/dicionario.html#nacionalidade">Nacionalidade</a></p>
 
@@ -569,8 +590,11 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras</strong>:
-<br> •    Opcional caso <a href="##23-conclusaodestinoelegivel">conclusaoDestinoElegivel</a> for diferente de <code>1L (admissao propria emad)</code>.</p>
+<p><strong>Regras</strong>:</p>
+
+<ul>
+<li>  Opcional caso <a href="##23-conclusaodestinoelegivel">conclusaoDestinoElegivel</a> for diferente de <code>1L (admissao propria emad)</code>.</li>
+</ul>
 
 <p><strong>Referências:</strong>   <a href="#enderecolocalpermanencia">EnderecoLocalPermanencia</a></p>
 
@@ -620,7 +644,7 @@
 
 <h3 id="19-situacoespresentes">#19    situacoesPresentes</h3>
 
-<p>Marcadores de situações presentes</p>
+<p>Marcadores de situações presentes.</p>
 
 <table><thead>
 <tr>
@@ -686,7 +710,7 @@
 
 <h3 id="22-cid10terceiro">#22    cid10Terceiro</h3>
 
-<p>CID10 registrado na avaliação</p>
+<p>CID10 registrado na avaliação.</p>
 
 <table><thead>
 <tr>
@@ -726,8 +750,11 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong>
-<br> • Só pode ser preenchido se <a href="##18-atencaodomiciliarmodalidade">atencaoDomiciliarModalidade</a> for diferente de <code>4L (inelegível)</code>.</p>
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Só pode ser preenchido se <a href="##18-atencaodomiciliarmodalidade">atencaoDomiciliarModalidade</a> for diferente de <code>4L (inelegível)</code>.</li>
+</ul>
 
 <p><strong>Referências:</strong> <a href="/integracao/docs/dicionario/dicionario.html#conclusaodestinoelegivel">ConclusaoDestinoElegivel</a></p>
 
@@ -753,8 +780,11 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras</strong>:
-<br> • Só pode ser preenchido se atencaoDomiciliarModalidade for igual a de <code>4L (inelegível)</code>.</p>
+<p><strong>Regras</strong>:</p>
+
+<ul>
+<li>Só pode ser preenchido se atencaoDomiciliarModalidade for igual a de <code>4L (inelegível)</code>.</li>
+</ul>
 
 <p><strong>Referências:</strong> <a href="/integracao/docs/dicionario/dicionario.html#conclusaodestinoinelegivel">ConclusaoDestinoInelegivel</a></p>
 
@@ -908,9 +938,12 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras</strong>:
-<br> • Apenas letras e números.
-<br> • Não pode ser preenchido caso <a href="##11-stsemnumero">stSemNumero</a> = <code>true</code>.</p>
+<p><strong>Regras</strong>:</p>
+
+<ul>
+<li>Apenas letras e números.</li>
+<li>Não pode ser preenchido caso <a href="##11-stsemnumero">stSemNumero</a> = <code>true</code>.</li>
+</ul>
 
 <h3 id="7-numerodneuf">#7 numeroDneUf</h3>
 
@@ -998,7 +1031,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Deve ser informado o código DNE</p>
+<p><strong>Regras:</strong> Deve ser informado o código DNE.</p>
 
 <p><strong>Referências:</strong> <a href="/integracao/docs/referencias.html#tipo-de-logradouro">TipoLogradouro</a></p>
 

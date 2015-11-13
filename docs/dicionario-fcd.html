@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Ficha de Cadastro Domiciliar</title>
-  <meta name="description" content="Dicionário de dados e-SUS AB">
+  <meta name="description" content="Ficha de Cadastro Domiciliar">
 
   <link rel="stylesheet" href="/integracao/css/main.css">
   <link rel="canonical" href="/integracao/docs/dicionario-fcd.html">
@@ -196,7 +196,7 @@
     <p class="post-meta">
       <a class="btn" href="/integracao/pdf.html?include=dicionario-fcd"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 11/09/2015</span>
+        <span class="label" title="Data da última modificação">Alterado em 06/11/2015</span>
       
     </p>
   </header>
@@ -226,8 +226,11 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong>
-<br> • Não pode ser preenchido se o campo <a href="##9-statustermorecusacadatrodomiciliaratencaobasica">statusTermoRecusaCadastroDomiciliarAtencaoBasica</a> = <code>true</code>.</p>
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Não pode ser preenchido se o campo <a href="##9-statustermorecusacadatrodomiciliaratencaobasica">statusTermoRecusaCadastroDomiciliarAtencaoBasica</a> = <code>true</code>.</li>
+</ul>
 
 <p><strong>Referências:</strong> <a href="/integracao/docs/dicionario/dicionario.html#animalnodomicilio">AnimalNoDomicilio</a></p>
 
@@ -251,14 +254,17 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong>
-<br> • Não devem ser preenchidos se o campo <a href="##9-statustermorecusacadatrodomiciliaratencaobasica">statusTermoRecusaCadastroDomiciliarAtencaoBasica</a> = <code>true</code>.</p>
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Não devem ser preenchidos se o campo <a href="##9-statustermorecusacadatrodomiciliaratencaobasica">statusTermoRecusaCadastroDomiciliarAtencaoBasica</a> = <code>true</code>.</li>
+</ul>
 
 <p><strong>Referências:</strong> <a href="#condicaomoradia">CondicaoMoradia</a></p>
 
 <h3 id="3-dadosgerais">#3 dadosGerais</h3>
 
-<p>Informações sobre o profissionale a data do cadastro.</p>
+<p>Informações sobre o profissional e a data do cadastro.</p>
 
 <table><thead>
 <tr>
@@ -298,7 +304,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Preencimento opcional se o campo <a href="##9-statustermorecusacadatrodomiciliaratencaobasica">statusTermoRecusaCadastroDomiciliarAtencaoBasica</a> = <code>true</code>.</p>
+<p><strong>Regras:</strong> Preencimento obrigatório caso o campo <a href="##9-statustermorecusacadatrodomiciliaratencaobasica">statusTermoRecusaCadastroDomiciliarAtencaoBasica</a> = <code>false</code>.</p>
 
 <p><strong>Referências:</strong> <a href="#enderecolocalpermanencia">EnderecoLocalPermanencia</a></p>
 
@@ -323,7 +329,7 @@
 </tbody></table>
 
 <p><strong>Regras:</strong>
-<br> • Não pode ser preenchidos se o campo <a href="##9-statustermorecusacadatrodomiciliaratencaobasica">statusTermoRecusaCadastroDomiciliarAtencaoBasica</a> = <code>true</code>.</p>
+* Não pode ser preenchidos caso o campo <a href="##9-statustermorecusacadatrodomiciliaratencaobasica">statusTermoRecusaCadastroDomiciliarAtencaoBasica</a> = <code>true</code>.</p>
 
 <h3 id="6-fichaatualizada">#6 fichaAtualizada</h3>
 
@@ -365,9 +371,12 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong>
-<br> • Não pode ser preenchido se o campo <a href="##8-stanimaisnodomicilio">stAnimaisNoDomicilio</a> = <code>false</code>.
-<br> • Não pode ser preenchido se o campo <a href="##9-statustermorecusacadatrodomiciliaratencaobasica">statusTermoRecusaCadastroDomiciliarAtencaoBasica</a> = <code>true</code>.</p>
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Não pode ser preenchido se o campo <a href="##8-stanimaisnodomicilio">stAnimaisNoDomicilio</a> = <code>false</code>.</li>
+<li>Não pode ser preenchido se o campo <a href="##9-statustermorecusacadatrodomiciliaratencaobasica">statusTermoRecusaCadastroDomiciliarAtencaoBasica</a> = <code>true</code>.</li>
+</ul>
 
 <h3 id="8-stanimaisnodomicilio">#8 stAnimaisNoDomicilio</h3>
 
@@ -389,8 +398,11 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong>
-<br> • Não pode ser preenchidos se o campo <a href="##9-statustermorecusacadatrodomiciliaratencaobasica">statusTermoRecusaCadastroDomiciliarAtencaoBasica</a> = <code>true</code>.</p>
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Não pode ser preenchidos se o campo <a href="##9-statustermorecusacadatrodomiciliaratencaobasica">statusTermoRecusaCadastroDomiciliarAtencaoBasica</a> = <code>true</code>.</li>
+</ul>
 
 <h3 id="9-statustermorecusacadatrodomiciliaratencaobasica">#9 statusTermoRecusaCadatroDomiciliarAtencaoBasica</h3>
 
@@ -760,9 +772,12 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong>
-<br> • Apenas letras e números.
-<br> • Não pode ser preenchido caso <a href="##11-stsemnumero">stSemNumero</a> = <code>true</code>.</p>
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Apenas letras e números.</li>
+<li>Não pode ser preenchido caso <a href="##11-stsemnumero">stSemNumero</a> = <code>true</code>.</li>
+</ul>
 
 <h3 id="7-numerodneuf">#7 numeroDneUf</h3>
 
@@ -806,7 +821,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> mínimo 10 dígitos, máximo 11 (DDD + 8 ou 9).</p>
+<p><strong>Regras:</strong> Mínimo 10 dígitos, máximo 11 (DDD + 8 ou 9).</p>
 
 <h3 id="9-telresidencial">#9 telResidencial</h3>
 
@@ -918,7 +933,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Preenchimento obrigatório se o campo <a href="##5-localizacao">Localização</a> = <code>84L (rural)</code>.</p>
+<p><strong>Regras:</strong> Preenchimento obrigatório caso o campo <a href="##5-localizacao">Localização</a> = <code>84L (rural)</code>.</p>
 
 <p><strong>Referências:</strong> <a href="/integracao/docs/dicionario/dicionario.html#condicaodeposseeusodaterra">CondicaoDePosseEUsoDaTerra</a></p>
 

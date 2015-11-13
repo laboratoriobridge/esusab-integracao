@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Ficha de Atendimento Odontológico</title>
-  <meta name="description" content="Dicionário de dados e-SUS AB">
+  <meta name="description" content="Ficha de Atendimento Odontológico">
 
   <link rel="stylesheet" href="/integracao/css/main.css">
   <link rel="canonical" href="/integracao/docs/dicionario-fao.html">
@@ -196,7 +196,7 @@
     <p class="post-meta">
       <a class="btn" href="/integracao/pdf.html?include=dicionario-fao"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 11/09/2015</span>
+        <span class="label" title="Data da última modificação">Alterado em 09/11/2015</span>
       
     </p>
   </header>
@@ -372,7 +372,7 @@
 
 <h3 id="4-gestante">#4 gestante</h3>
 
-<p>Marcador que indica se o cidadão esta gestante.</p>
+<p>Marcador que indica se o cidadão está gestante.</p>
 
 <table><thead>
 <tr>
@@ -394,7 +394,7 @@
 
 <h3 id="5-necessidadesespeciais">#5 necessidadesEspeciais</h3>
 
-<p>Marcador que indica se o cidadão é portador de necessidades especiais,</p>
+<p>Marcador que indica se o cidadão é portador de necessidades especiais.</p>
 
 <table><thead>
 <tr>
@@ -484,7 +484,7 @@
 
 <h3 id="9-tiposfornecimodonto">#9 tiposFornecimOdonto</h3>
 
-<p>Materias fornecidos durante o atendimento.</p>
+<p>Materiais fornecidos durante o atendimento.</p>
 
 <table><thead>
 <tr>
@@ -546,12 +546,15 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras</strong>:
-<br> • É Requerido se o <a href="/integracao/docs/dicionario/dicionario.html#tipodeatendimento">TipoDeAtendimento</a> = <code>2L (consulta agendada)</code>.
-<br> • Não pode ser preenchido se o <a href="/integracao/docs/dicionario/dicionario.html#tipodeatendimento">TipoDeAtendimento</a> = <code>4L (escuta inicial ou orientação)</code>.
-<br> • Se o <a href="/integracao/docs/dicionario/dicionario.html#tipodeatendimento">TipoDeAtendimento</a> = <code>6L (atendimento de urgência)</code>, a opção de <code>2L (consulta de retorno)</code> não pode ser marcada.
-<br> • Se <a href="/integracao/docs/dicionario/dicionario.html#tipodeatendimento">TipoDeAtendimento</a> = <code>5L (consulta no dia)</code>, o campo é opcional.
-<br> • Aceita apenas um registro.</p>
+<p><strong>Regras</strong>:</p>
+
+<ul>
+<li>É Requerido se o <a href="/integracao/docs/dicionario/dicionario.html#tipodeatendimento">TipoDeAtendimento</a> = <code>2L (consulta agendada)</code>.</li>
+<li>Não pode ser preenchido se o <a href="/integracao/docs/dicionario/dicionario.html#tipodeatendimento">TipoDeAtendimento</a> = <code>4L (escuta inicial ou orientação)</code>.</li>
+<li>Se o <a href="/integracao/docs/dicionario/dicionario.html#tipodeatendimento">TipoDeAtendimento</a> = <code>6L (atendimento de urgência)</code>, a opção de <code>2L (consulta de retorno)</code> não pode ser marcada.</li>
+<li>Se <a href="/integracao/docs/dicionario/dicionario.html#tipodeatendimento">TipoDeAtendimento</a> = <code>5L (consulta no dia)</code>, o campo é opcional.</li>
+<li>Aceita apenas um registro.</li>
+</ul>
 
 <p><strong>Referências:</strong> <a href="/integracao/docs/dicionario/dicionario.html#tipodeconsultaodonto">TipoDeConsultaOdonto</a></p>
 
@@ -575,8 +578,11 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong>
-<br> • Não pode haver procedimentos com o mesmo código.</p>
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Não pode haver procedimentos com o mesmo código.</li>
+</ul>
 
 <p><strong>Referências:</strong>   <a href="#listaprocedimentosrealizados">ListaProcedimentosRealizados</a></p>
 
@@ -600,9 +606,12 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong>
-<br> • Não pode conter procedimentos da <a href="#listaprocedimentosrealizados">ListaProcedimentosRealizados</a>.
-<br> • Não pode haver procedimentos com o mesmo código.</p>
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Não pode conter procedimentos da <a href="#listaprocedimentosrealizados">ListaProcedimentosRealizados</a>.</li>
+<li>Não pode haver procedimentos com o mesmo código.</li>
+</ul>
 
 <p><strong>Referências:</strong> <a href="#procedimentoquantidade">ProcedimentoQuantidade</a></p>
 
@@ -696,8 +705,11 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong>
-<br> • Valor máximo que pode ser registrado é 99.</p>
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Valor máximo que pode ser registrado é 99.</li>
+</ul>
 
 <h2 id="listaprocedimentosrealizados">ListaProcedimentosRealizados</h2>
 

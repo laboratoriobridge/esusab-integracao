@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Marcadores de Consumo Alimentar</title>
-  <meta name="description" content="Dicionário de dados e-SUS AB">
+  <meta name="description" content="Marcadores de Consumo Alimentar">
 
   <link rel="stylesheet" href="/integracao/css/main.css">
   <link rel="canonical" href="/integracao/docs/dicionario-mca.html">
@@ -196,7 +196,7 @@
     <p class="post-meta">
       <a class="btn" href="/integracao/pdf.html?include=dicionario-mca"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 09/09/2015</span>
+        <span class="label" title="Data da última modificação">Alterado em 09/11/2015</span>
       
     </p>
   </header>
@@ -250,7 +250,7 @@
 
 <p><strong>Regras</strong>: CNS valido de acordo com o algoritmo.</p>
 
-<p><strong>Referência</strong>: Para ver o algoritmo utilizado, acesse: <a href="http://cartaonet.datasus.gov.br/">Cartao Net Datasus</a>. Em &quot;Downloads&quot; baixe o arquivo de rotina de validação Java.  </p>
+<p><strong>Referência</strong>: Para ver o algoritmo utilizado, acesse: <a href="http://cartaonet.datasus.gov.br/">Cartão Net Datasus</a>. Em &quot;Downloads&quot; baixe o arquivo de rotina de validação Java.  </p>
 
 <h3 id="3-identificacaousuario">#3 identificacaoUsuario</h3>
 
@@ -272,9 +272,12 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras</strong>:
-<br> • Ter ao menos duas palavras.
-<br> • Somente texto e apóstrofo (<code>&#39;</code>).</p>
+<p><strong>Regras</strong>:</p>
+
+<ul>
+<li>Ter ao menos duas palavras.</li>
+<li>Somente texto e apóstrofo (<code>&#39;</code>).</li>
+</ul>
 
 <h3 id="4-datanascimento">#4 dataNascimento</h3>
 
@@ -634,9 +637,12 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong>
-<br> • Deve respeitar as regras das respostas referente a pergunta .
-<br> • Pode ser preenchido somente se a pergunta for 12L.</p>
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Deve respeitar as regras das respostas referente a pergunta .</li>
+<li>Pode ser preenchido somente se a pergunta for 12L.</li>
+</ul>
 
 <p><strong>Referência:</strong> <a href="#respostamultiplaescolhaenum">RespostaMultiplaEscolhaEnum</a>.</p>
 
@@ -826,7 +832,7 @@
 <tr>
 <td>QUAIS_REFEICOES_VOCE_FAZ_AO_LONGO_DO_DIA</td>
 <td>12</td>
-<td><a href="">RespostaMultiplaEscolhaEnum</a></td>
+<td><a href="#respostamultiplaescolhaenum">RespostaMultiplaEscolhaEnum</a></td>
 </tr>
 <tr>
 <td>FEIJAO</td>
@@ -894,7 +900,7 @@
 <td>5L</td>
 </tr>
 <tr>
-<td>TRES<em>VEZES</em>OU_MAIS</td>
+<td>TRES_VEZES_OU_MAIS</td>
 <td>6L</td>
 </tr>
 <tr>
@@ -906,7 +912,7 @@
 <td>8L</td>
 </tr>
 <tr>
-<td>PASSADA<em>NA</em>PENEIRA</td>
+<td>PASSADA_NA_PENEIRA</td>
 <td>9L</td>
 </tr>
 <tr>
@@ -914,7 +920,7 @@
 <td>10L</td>
 </tr>
 <tr>
-<td>SO<em>O</em>CALDO</td>
+<td>SO_O_CALDO</td>
 <td>11L</td>
 </tr>
 </tbody></table>
@@ -928,11 +934,11 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>CAFE<em>DA</em>MANHA</td>
+<td>CAFE_DA_MANHA</td>
 <td>12L</td>
 </tr>
 <tr>
-<td>LANCHE<em>DA</em>MANHA</td>
+<td>LANCHE_DA_MANHA</td>
 <td>13L</td>
 </tr>
 <tr>
@@ -940,7 +946,7 @@
 <td>14L</td>
 </tr>
 <tr>
-<td>LANCHE<em>DA</em>TARDE</td>
+<td>LANCHE_DA_TARDE</td>
 <td>15L</td>
 </tr>
 <tr>

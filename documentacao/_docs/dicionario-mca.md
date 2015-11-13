@@ -54,7 +54,7 @@ Data de nascimento do cidadão no formato epoch time.
 
 **Regras**: Não pode ser posterior a [dataAtendimento]({% url profissional %}##5-dataatendimento) e anterior a 130 anos a partir da [dataAtendimento]({% url profissional %}##5-dataatendimento).
 
-**Referêcia**: Para ver a referência sobre o formato epoch, acesse: [Epoch Wikipedia](https://en.wikipedia.org/wiki/Epoch\_(reference\_date)).
+**Referêcia**: [Epoch Wikipedia](https://en.wikipedia.org/wiki/Epoch\_(reference\_date)).
 
 ### \#5 sexo
 

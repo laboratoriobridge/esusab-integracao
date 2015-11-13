@@ -395,23 +395,23 @@ order: 0
 ## PublicoAlvo
 |Código|	Descrição|	Observações|
 |---|---|---|
-|1 L|	COMUNIDADE\_EM\_GERAL|	-|
-|2 L|	CRIANCA\_0\_A\_3\_ANOS|	-|
-|3 L|	CRIANCA\_4\_A\_5\_ANOS|	-|
-|4 L|	CRIANCA\_6\_A\_11\_ANOS|	-|
-|5 L|	ADOLESCENTE|	-|
-|6 L|	MULHER|	-|
-|7 L|	GESTANTE|	-|
-|8 L|	HOMEM|	-|
-|9 L|	FAMILIARES|	-|
-|10 L|	IDOSO|	-|
-|12 L|	PESSOAS\_COM\_DOENCAS\_CRONICAS|	-|
-|13 L|	USUARIO\_DE\_TABACO|	-|
-|14 L|	USUARIO\_DE\_ALCOOL|	-|
-|15 L|	USUARIO\_DE\_OUTRAS\_DROGAS|	-|
-|16 L|	PORTADOR\_COM\_SOFRIMENTO\_OU\_TRANSTORNO\_MENTAL|	-|
-|17 L|	PROFISSIONAL\_DE\_EDUCACAO|	-|
-|18 L|	OUTROS|	-|
+|1 L|	Comunidade em geral|	-|
+|2 L|	Criança de 0 a 3 anos|	-|
+|3 L| Criança de 4 a 5 anos|	-|
+|4 L|	Criança de 6 a 11 anos|	-|
+|5 L|	Adolecente|	-|
+|6 L|	Mulher|	-|
+|7 L|	Gestante|	-|
+|8 L|	Homem|	-|
+|9 L|	Familiares|	-|
+|10 L|	Idoso|	-|
+|12 L|	Pessoas com doenças crônicas|	-|
+|13 L|	Usuário de tabaco|	-|
+|14 L|	Usuário de álcool|	-|
+|15 L|	Usuário de outras drogas|	-|
+|16 L|	Portador com sofrimento ou transtorno mental |	-|
+|17 L|	Profissional da educação|	-|
+|18 L|	Outros|	-|
 
 ## QuantasVezesAlimentacao
 |Código|	Descrição|	Observações|
@@ -423,11 +423,11 @@ order: 0
 ## RacaCor
 |Código|	Descrição|	Observações|
 |---|---|---|
-|1 L|	BRANCA|	-|
-|2 L|	PRETA|	-|
-|4 L|	PARDA|	-|
-|3 L|	AMARELA|	-|
-|5 L|	INDIGENA|	-|
+|1 L|	Branca|	-|
+|2 L|	Preta|	-|
+|4 L|	Parda|	-|
+|3 L|	Amarela|	-|
+|5 L|	Indigena|	-|
 
 ## RelacaoParentesco
 |Código|	Descrição|	Observações|
@@ -446,13 +446,13 @@ order: 0
 ## RendaFamiliar
 |Código|	Descrição|	Observações|
 |---|---|---|
-|1 L|	UM\_QUARTO\_DE\_SALARIO\_MINIMO	|-|
-|2 L|	MEIO\_SALARIO\_MINIMO	|-|
-|3 L|	UM\_SALARIO\_MINIMO	|-|
-|4 L|	DOIS\_SALARIOS\_MINIMOS	|-|
-|7 L|	TRES\_SALARIOS\_MINIMOS	|-|
-|5 L|	QUATRO\_SALARIOS\_MINIMOS	|-|
-|6 L|	ACIMA\_DE\_QUATRO\_SALARIOS\_MINIMOS	|-|
+|1 L|	1/4 de salário mínimo	|-|
+|2 L| Meio salário mínimo	|-|
+|3 L|	Um salário mínimo	|-|
+|4 L|	Dois salários mínimos	|-|
+|7 L|	Três salários mínimos	|-|
+|5 L|	Quatro salários mínimos	|-|
+|6 L|	Acima de quatro salários mínimos	|-|
 
 ## ResponsavelCrianca
 |Código|	Descrição|	Observações|
@@ -467,8 +467,8 @@ order: 0
 ## Sexo
 |Código|	Descrição|	Observações|
 |---|---|---|
-|0 L|	MASCULINO	|-|
-|1 L|	FEMININO	|-|
+|0 L|	Masculino	|-|
+|1 L|	Feminino	|-|
 
 ## SituacaoDeMoradia
 |Código|	Descrição|	Observações|
@@ -485,8 +485,8 @@ order: 0
 ## SituacaoExame
 |Código|	Descrição|	Observações|
 |---|---|---|
-|"S"|	SOLICITADO|	-|
-|"A"|	AVALIADO|	-|
+|"S"|	Solicitado |	-|
+|"A"|	Avaliado |	-|
 
 ## SituacaoMercadoTrabalho
 |Código|	Descrição|	Observações|
@@ -504,13 +504,13 @@ order: 0
 ## TemasParaReuniao
 |Código|	Descrição|	Observações|
 |---|---|---|
-|1 L|	QUESTOES\_ADMINISTRATIVAS\_OU\_FUNCIONAMENTO|	-|
-|2 L|	PROCESSOS\_DE\_TRABALHO|	-|
-|3 L|	DIAGNOSTICO\_DO\_TERRITORIO\_OU\_MONITORAMENTO\_DO\_TERRITORIO|	-|
-|4 L|	PLANEJAMENTO\_OU\_MONITORAMENTO\_DAS\_ACOES\_DA\_EQUIPE|	-|
-|5 L|	DISCUSSAO\_DE\_CASO\_OU\_PROJETO\_TERAPEUTICO\_SINGULAR|	-|
-|6 L|	EDUCACAO\_PERMANENTE|	-|
-|7 L|	OUTROS|	-|
+|1 L|	Questões administrativas / funcionamento|	-|
+|2 L|	Processo de trabalho|	-|
+|3 L|	Diagnóstico / Monitoramento do território|	-|
+|4 L|	Planejamento / Monitoramento das ações da equipe|	-|
+|5 L| Discussão de caso ou projeto terapêutico singular|	-|
+|6 L|	Educação permanente|	-|
+|7 L|	Outros|	-|
 
 ## TempoSituacaoDeRua
 |Código|	Descrição| Observações|
@@ -524,13 +524,13 @@ order: 0
 
 |Código|	Descrição|	Observações|
 |---|---|---|
-|1 L|	REUNIAO\_DE\_EQUIPE	|-|
-|2 L|	REUNIAO\_COM\_OUTRAS\_EQUIPES\_DE\_SAUDE	|-|
-|3 L|	REUNIAO\_INTERSETORIAL\_OU\_CONSELHO\_LOCAL\_DE\_SAUDE\_OU\_CONTROLE\_SOCIAL 	|-|
-|4 L|	EDUCACAO\_EM\_SAUDE	|-|
-|5 L|	ATENDIMENTO\_EM\_GRUPO	|-|
-|6 L|	AVALIACAO\_OU\_PROCEDIMENTO\_COLETIVO 	|-|
-|7 L|	MOBILIZACAO\_SOCIAL	|-|
+|1 L|	Reunião de equipe	|-|
+|2 L|	Reunião com outras equipes de saúde	|-|
+|3 L|	Reunião intersetorial  / Conselho local de saúde  / Controle social -|
+|4 L|	Educação em saúde	|-|
+|5 L|	Atendimento em grupo	|-|
+|6 L|	Avaliação / Procedimento coletivo 	|-|
+|7 L|	Mobilização social	|-|
 
 ## TipoDadoSerializado
 |Código|	Descrição|	Observações|
@@ -558,20 +558,20 @@ order: 0
 ## TipoDeAtendimento
 |Código|	Descrição	|Observações|
 |---|---|---|
-|1 L|	CONSULTA\_AGENDADA\_PROGRAMADA\_CUIDADO\_CONTINUADO|	-|
-|2 L|	CONSULTA\_AGENDADA|	-|
-|4 L|	ESCUTA\_INICIAL\_OU\_ORIENTACAO| 	-|
-|5 L|	CONSULTA\_NO\_DIA|	-|
-|6 L|	ATENDIMENTO\_DE\_URGENCIA|	-|
-|7 L|	ATENDIMENTO\_PROGRAMADO|	Utilizados apenas nas fichas de atendimento domiciliar |
-|8 L|	ATENDIMENTO NÃO PROGRAMADO| Utilizados apenas nas fichas de atendimento domiciliar |
+|1 L|	Consulta agendada programada / Cuidado continuado|	-|
+|2 L|	Consulta agendada|	-|
+|4 L|	Escuta inicial / Orientação | 	-|
+|5 L|	Consulta no dia|	-|
+|6 L|	Atendimento de urgência|	-|
+|7 L|	Atendimento programado|	Utilizados apenas nas fichas de atendimento domiciliar |
+|8 L|	Atendimento não programado| Utilizados apenas nas fichas de atendimento domiciliar |
 
 ## TipoDeConsultaOdonto
 |Código|	Descrição|	Observações|
 |---|---|---|
-|1 L|	PRIMEIRA\_CONSULTA\_ODONTOLOGICA\_PROGRAMATICA|	-|
-|2 L|	CONSULTA\_DE\_RETORNO|	-|
-|4 L|	CONSULTA\_DE\_MANUTENCAO|	-|
+|1 L|	Primeira consulta odontológica programática|	-|
+|2 L|	Consulta de retorno|	-|
+|4 L| Consulta de manutenção|	-|
 
 ## TipoDeDomicilio
 |Código|	Descrição|	Observações|
@@ -592,17 +592,17 @@ order: 0
 ## Turno
 |Código|	Descrição|	Observações|
 |---|---|---|
-|1 L|	MATUTINO|	-|
-|2 L|	VESPERTINO|	-|
-|3 L|	NOTURNO|	-|
+|1 L|	Matutino|	-|
+|2 L|	Vespertino|	-|
+|3 L|	Noturno|	-|
 
 ## VigilanciaEmSaudeBucal
 |Código|	Descrição|	Observações|
 |---|---|---|
-|1 L|	ABSCESSO\_DENTO\_ALVEOLAR|	-|
-|2 L|	ALTERACAO\_EM\_TECIDOS\_MOLES|	-|
-|3 L|	DOR\_DE\_DENTE|	-|
-|4 L|	FENDAS\_OU\_FISSURAS\_LABIO\_PALATAIS|	-|
-|5 L|	FLUOROSE\_DENTARIA\_MODERADA\_OU\_SEVERA|	-|
-|6 L|	TRAUMATISMO\_DENTO\_ALVEOLAR|	-|
-|99 L|	NAO\_IDENTIFICADO|	-|
+|1 L|	Abscesso dento alveolar|	-|
+|2 L|	Alteração em tecidos moles|	-|
+|3 L|	Dor de dente|	-|
+|4 L|	Fendas / Fissuras labio palatais|	-|
+|5 L|	Fluorose dentária moderada / severa |	-|
+|6 L|	Traumatismo dento alveolar|	-|
+|99 L|	Não identificado|	-|

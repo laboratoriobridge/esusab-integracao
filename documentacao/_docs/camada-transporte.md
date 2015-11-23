@@ -21,9 +21,9 @@ UUID do dado (identificador "universal" gerado na criação do registro).
 |---| --- |---  | --- |
 |String |Sim |36 | 44 |
 
-**Regras**: É recomendado concatenar o CNES na frente do UUID, de modo que os 7 digitos (CNES) + 1 de hífen somados aos 36 (32 caracteres + 4 hífen) do UUID são a limitação de 44 bytes do campo. Formato canônico.
+**Regras:** É recomendado concatenar o CNES na frente do UUID, de modo que os 7 digitos (CNES) + 1 de hífen somados aos 36 (32 caracteres + 4 hífen) do UUID são a limitação de 44 bytes do campo. Formato canônico.
 
-**Referência**: [UUID Wikipedia](https://en.wikipedia.org/wiki/Universally_unique_identifier)
+**Referência:** [UUID Wikipedia](https://en.wikipedia.org/wiki/Universally_unique_identifier)
 
 ### \#2 tipoDadoSerializado
 Tipo/classe do objeto serializado através do [TBinaryProtocol](https://github.com/apache/thrift/blob/0.9.2/lib/java/src/org/apache/thrift/protocol/TBinaryProtocol.java).
@@ -32,7 +32,7 @@ Tipo/classe do objeto serializado através do [TBinaryProtocol](https://github.c
 |---| --- |---  | --- |
 | Long |Sim |1 | 2 |
 
-**Referência**: [TipoDadoSerializado]({% url dicionario %}#tipodadoserializado)
+**Referência:** [TipoDadoSerializado]({% url dicionario %}#tipodadoserializado)
 
 ### \#3 cnesDadoSerializado
 CNES da unidade de saúde.
@@ -48,7 +48,7 @@ Código IBGE do dado serializado através do [TBinaryProtocol](https://github.co
 |---| --- |---  | --- |
 | String | Sim | 7 | 7 |
 
-**Referência**: [Municípios]({% url municipios %})
+**Referência:** [Municípios]({% url municipios %})
 
 ### \#5	ineDadoSerializado
 INE da equipe que gerou a ficha.
@@ -78,7 +78,7 @@ Identifica a instalação que enviou o dado.
 |---| --- |---  | --- |
 |DadoInstalacao| Sim|	-|	-|
 
-**Referência**: [DadoInstalacao](#DadoInstalacao)
+**Referência:** [DadoInstalacao](#DadoInstalacao)
 
 ### \#9	originadora
 Identifica a instalação que cadastrou/digitou.
@@ -87,7 +87,7 @@ Identifica a instalação que cadastrou/digitou.
 |---| --- |---  | --- |
 |DadoInstalacao|	Sim |	-|	-|
 
-**Referência**: [DadoInstalacao](#DadoInstalacao)
+**Referência:** [DadoInstalacao](#DadoInstalacao)
 
 ### \#10	versao
 Identifica a versão do e-SUS AB.
@@ -96,7 +96,7 @@ Identifica a versão do e-SUS AB.
 |---| --- |---  | --- |
 | Versao| Requerido	|-|	-|
 
-**Referência**: [Versão]({%url versao %})
+**Referência:** [Versão]({%url versao %})
 
 ## DadoInstalacao
 

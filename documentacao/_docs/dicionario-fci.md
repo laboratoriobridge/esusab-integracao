@@ -16,9 +16,9 @@ Formulário referente as condições de saúde do cidadão.
 |--- |--- |--- |--- |
 |CondicoesDeSaude |Condicional |- |- |
 
-**Regras:**: Não deve ser preenchido se o campo [statusTermoRecusaCadastroIndividualAtencaoBasica](##7-statustermorecusacadastroindividualatencaobasica) = `true`.
+**Regras:** Não deve ser preenchido se o campo [statusTermoRecusaCadastroIndividualAtencaoBasica](##7-statustermorecusacadastroindividualatencaobasica) = `true`.
 
-**Referência**: [CondicoesDeSaude](#condicoesdesaude)
+**Referência:** [CondicoesDeSaude](#condicoesdesaude)
 
 ### \#2 dadosGerais
 Dados referentes ao profissional e a data do cadastro.
@@ -27,7 +27,7 @@ Dados referentes ao profissional e a data do cadastro.
 |--- |--- |--- |--- |
 |HeaderCdsCadastro |Sim |- |- |
 
-**Referência**: [HeaderCdsCadastro]({% url profissional %}#headercdscadastro).
+**Referência:** [HeaderCdsCadastro]({% url profissional %}#headercdscadastro).
 
 ### \#3 emSituacaoDeRua
 Formulário referente a informações de situação de rua (se o cidadão se encontrar nessa situação).
@@ -36,9 +36,9 @@ Formulário referente a informações de situação de rua (se o cidadão se enc
 |--- |--- |--- |--- |
 |EmSituacaoDeRua |Condicional |- |- |
 
-**Regras:**: Não deve ser preenchido se o campo [statusTermoRecusaCadastroIndividualAtencaoBasica](##7-statustermorecusacadastroindividualatencaobasica) = `true`.
+**Regras:** Não deve ser preenchido se o campo [statusTermoRecusaCadastroIndividualAtencaoBasica](##7-statustermorecusacadastroindividualatencaobasica) = `true`.
 
-**Referência**: [EmSituacaoDeRua](#emsituacaoderua).
+**Referência:** [EmSituacaoDeRua](#emsituacaoderua).
 
 ### \#4 fichaAtualizada
 Marcador que indica se a ficha é uma atualização.
@@ -56,7 +56,7 @@ Dados que identificam o cidadão.
 
 **Regras:** Opcional se o campo [statusTermoRecusaCadastroIndividualAtencaoBasica](##7-statustermorecusacadastroindividualatencaobasica) = `true`.
 
-**Referência**: [IdentificacaoUsuarioCidadao](#identificacaousuariocidadao)
+**Referência:** [IdentificacaoUsuarioCidadao](#identificacaousuariocidadao)
 
 ### \#6 informacoesSocioDemograficas
 Informações sócio-demográficas fornecidas pelo cidadão.
@@ -92,7 +92,7 @@ Código UUID para identificar a ficha na base de dados nacional.
 
 **Regras:** É recomendado concatenar o CNES na frente do UUID, de modo que os 7 digitos (CNES) + 1 de hífen somados aos 36 (32 caracteres + 4 hífen) do UUID são a limitação de 44 bytes do campo. Formato canônico.
 
-**Referência**: Para ver a referência sobre o UUID, acesse: [UUID Wikipedia](https://en.wikipedia.org/wiki/Universally_unique_identifier)
+**Referência:** Para ver a referência sobre o UUID, acesse: [UUID Wikipedia](https://en.wikipedia.org/wiki/Universally_unique_identifier)
 
 ### \#10 uuidFichaOriginadora
 Código UUID para identificar a ficha que deu origem ao cadastro do registro.
@@ -103,7 +103,7 @@ Código UUID para identificar a ficha que deu origem ao cadastro do registro.
 
 **Regras:** Se for uma ficha de atualização, deve ser preenchido com o UUID da ficha que deu origem ao registro. Se for a ficha de cadastro, este campo deve ser igual ao campo uuid.
 
-**Referência**: Para ver a referência sobre o UUID, acesse: [UUID Wikipedia](https://en.wikipedia.org/wiki/Universally_unique_identifier)
+**Referência:** Para ver a referência sobre o UUID, acesse: [UUID Wikipedia](https://en.wikipedia.org/wiki/Universally_unique_identifier)
 
 ## CondicoesDeSaude
 
@@ -231,7 +231,7 @@ Marcador se o cidadão está gestante.
 |--- |--- |--- |--- |
 |Boolean |Opcional |- |- |
 
-**Regras**: Só pode ser preenchido se:
+**Regras:** Só pode ser preenchido se:
 
 * O campo [sexoCidadao](##16-sexocidadao) = `feminino`
 * O campo [dataNascimentoCidadao](##3-datanascimentocidadao) for mais anterior que 12 anos a partir da [dataAtendimento]({% url profissional %}##5-dataatendimento).
@@ -606,7 +606,7 @@ País de nascimento do cidadão.
 |--- |--- |--- |--- |
 |Long |Opcional |- |- |
 
-**Regras**: Só pode ser preenchido se o campo [nacionalidadeCidadao](##7-nacionalidadecidadao) = `1L (Brasileira)`.
+**Regras:** Só pode ser preenchido se o campo [nacionalidadeCidadao](##7-nacionalidadecidadao) = `1L (Brasileira)`.
 
 **Referência:** [País]({% url referencias %}#país).
 

@@ -25,7 +25,7 @@ Registro individualizado dos atendimentos.
 |---| --- |---  | --- |
 |List\<FichaAtendimentoIndividualChild>|	Sim	|1	|13|
 
-**Regras**: No máximo 13 atendimentos podem ser registrados.
+**Regras:** No máximo 13 atendimentos podem ser registrados.
 
 **Referências:** [FichaAtendimentoIndividualChild](#fichaatendimentoindividualchild).
 
@@ -58,7 +58,7 @@ Número do prontuário.
 |---| --- |---  | --- |
 |String|	Opcional|	0|	30|
 
-**Regras**: Apenas letras e números são aceitos.
+**Regras:** Apenas letras e números são aceitos.
 
 ### \#2	cns
 CNS do cidadão.
@@ -67,7 +67,7 @@ CNS do cidadão.
 |---| --- |---  | --- |
 |String|	Opcional|	15|	15|
 
-**Regras**: CNS válido de acordo com o algoritmo.
+**Regras:** CNS válido de acordo com o algoritmo.
 
 **Referências:** Para ver o algoritmo utilizado, acesse: [Cartão Net Datasus](http://cartaonet.datasus.gov.br/), em "Downloads" baixe o arquivo de rotina de validação Java.
 
@@ -78,7 +78,7 @@ Data de nascimento do cidadão.
 |---| --- |---  | --- |
 |Long|	Requerido|	-|	-|
 
-**Regras**: Não pode ser posterior a [dataAtendimento]({% url profissional %}##5-dataatendimento) e anterior a 130 anos a partir da [dataAtendimento]({% url profissional %}##5-dataatendimento).
+**Regras:** Não pode ser posterior a [dataAtendimento]({% url profissional %}##5-dataatendimento) e anterior a 130 anos a partir da [dataAtendimento]({% url profissional %}##5-dataatendimento).
 
 **Refererência**:[Epoch Wikipedia](https://en.wikipedia.org/wiki/Epoch_(reference_date)).
 
@@ -89,7 +89,7 @@ Local onde o atendimento foi realizado.
 |---| --- |---  | --- |
 |Long|	Requerido|	-|	-|
 
-**Regras**: Apenas valores de `1L` a `10L`.
+**Regras:** Apenas valores de `1L` a `10L`.
 
 **Referências:** [LocalDeAtendimento]({% url dicionario %}#localdeatendimento)
 
@@ -118,7 +118,7 @@ Tipo de atendimento realizado.
 |---| --- |---  | --- |
 |Long|	Requerido|	-|	-|
 
-**Regras**: Apenas valores de `1L` a `6L`
+**Regras:** Apenas valores de `1L` a `6L`
 
 **Referências:** [TipoDeAtendimento]({% url dicionario %}#tipodeatendimento)
 
@@ -129,7 +129,7 @@ Peso do cidadão em Kg.
 |---| --- |---  | --- |
 |Double|	Opcional|	1|	6|
 
-**Regras**:
+**Regras:**
 <br> • Apenas números e vírgula (`,`).
 <br> • Máximo de números após a vírgula.
 <br> • Se tiver vírgula, tamanho máximo = 7.
@@ -142,7 +142,7 @@ Altura do cidadão em cm.
 |---| --- |---  | --- |
 |Double|	Opcional|	2|	4|
 
-**Regras**:
+**Regras:**
 <br> • Apenas números e vírgula (`,`).
 <br> • Máximo de números após a vírgula.
 <br> • Se tiver vírgula, tamanho máximo = 5.
@@ -188,7 +188,7 @@ Modalidade AD do cidadão atendido.
 |---| --- |---  | --- |
 |Long|	Opcional|	-|	-|
 
-**Regras**:
+**Regras:**
 <br> • Apenas valores de `1L` a `3L`.
 
 **Referências:**	[ModalidadeAD]({% url dicionario %}#modalidadead)
@@ -209,7 +209,7 @@ Lista de exames solicitados que são apresentados na ficha.
 |---| --- |---  | --- |
 |List\<String>|	Opcional|	0|	23|
 
-**Regras**: Não pode conter dois exames iguais.
+**Regras:** Não pode conter dois exames iguais.
 
 **Referências:** [ListaExameSolicitado](#listaexamesolicitado)
 
@@ -220,7 +220,7 @@ Lista de exames avaliados que são apresentados na ficha.
 |---| --- |---  | --- |
 |List\<String>|	Opcional|	0|	23|
 
-**Regras**:
+**Regras:**
 <br> • Não pode conter dois exames iguais.
 
 **Referências:** [ListaExameSolicitado](#listaexamesolicitado)
@@ -273,7 +273,7 @@ Condutas adotadas no atendimento.
 |---| --- |---  | --- |
 |List\<Long>|	Requerido|	1|	12|
 
-**Regras**: Não deve conter duas condutas iguais.
+**Regras:** Não deve conter duas condutas iguais.
 
 **Referências:** [CondutaEncaminhamento]({% url dicionario %}#condutaencaminhamento)
 
@@ -337,7 +337,7 @@ Lista de Ciaps apresentados na lista.
 |---| --- |---  | --- |
 |List\<String>|	Condicional |	0 |	22 |
 
-**Regras**:
+**Regras:**
 <br> • Não deve conter dois "Problemas / Condições" iguais.
 <br> • É Requerido o preenchimento de pelo menos um dos itens.
 

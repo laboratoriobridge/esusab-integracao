@@ -18,7 +18,7 @@ Código UUID para identificar a ficha na base de dados nacional.
 
 **Regras:** É recomendado concatenar o CNES na frente do UUID, de modo que os 7 digitos (CNES) + 1 de hífen somados aos 36 (32 caracteres + 4 hífen) do UUID são a limitação de 44 bytes do campo. Formato canônico.
 
-**Referência**: Para ver a referência sobre o UUID, acesse [UUID Wikipedia](https://en.wikipedia.org/wiki/Universally_unique_identifier).
+**Referência:** Para ver a referência sobre o UUID, acesse [UUID Wikipedia](https://en.wikipedia.org/wiki/Universally_unique_identifier).
 
 ### \#2 tpCdsOrigem
 Tipo de origem dos dados do registro.
@@ -36,7 +36,7 @@ Profissional que realizou os procedimentos.
 |--- |--- |--- |--- |
 |UnicaLotacaoHeader |Sim |- |- |
 
-**Referência**: [Profissional]({% url profissional %})
+**Referência:** [Profissional]({% url profissional %})
 
 ### \#4 atendProcedimentos
 Registro dos procedimentos realizados.
@@ -45,7 +45,7 @@ Registro dos procedimentos realizados.
 |--- |--- |--- |--- |
 |List\<FichaProcedimentoChild\> |Condicional |1 |23 |
 
-**Referência**: [FichaProcedimentoChild](#fichaprocedimentochild).
+**Referência:** [FichaProcedimentoChild](#fichaprocedimentochild).
 
 Observação: É requerido pelo menos um dentre os itens `#4` a `#11`.
 
@@ -146,7 +146,7 @@ Sexo do cidadão.
 |--- |--- |--- |--- |
 |Long |Sim |- |- |
 
-**Referência**: [Sexo]({% url dicionario %}#sexo).
+**Referência:** [Sexo]({% url dicionario %}#sexo).
 
 ### \#5 localAtendimento
 Local onde o atendimento foi realizado.
@@ -155,7 +155,7 @@ Local onde o atendimento foi realizado.
 |--- |--- |--- |--- |
 |Long |Sim |- |- |
 
-**Referência**: [LocalDeAtendimento]({% url dicionario %}#localdeatendimento).
+**Referência:** [LocalDeAtendimento]({% url dicionario %}#localdeatendimento).
 
 ### \#6 turno
 Turno onde aconteceu o atendimento.
@@ -164,7 +164,7 @@ Turno onde aconteceu o atendimento.
 |--- |--- |--- |--- |
 |Long |Opcional |- |- |
 
-**Referência**: [Turno]({% url dicionario %}#turno).
+**Referência:** [Turno]({% url dicionario %}#turno).
 
 ### \#7 statusEscutaInicialOrientacao
 Indica a realização da escuta inicial.
@@ -182,7 +182,7 @@ Lista dos procedimentos que são registrados na ficha de procedimentos.
 
 **Regras:** Caracteres maiúsculos e sem espaço em branco.
 
-**Referência**: [ListaDeProcedimento](#listadeprocedimento).
+**Referência:** [ListaDeProcedimento](#listadeprocedimento).
 
 Observação: É requerido pelo menos um dentre os itens `#8` e `#9`.
 
@@ -198,7 +198,7 @@ Outros procedimentos do SIGTAP ou SISAB.
 * Caracteres maiúsculos e sem espaço em branco.
 * Não repetir procedimentos.
 
-**Referência**: Para ver a referência da tabela do SIGTAP acesse: [Tabela unificada SIGTAP](http://sigtap.datasus.gov.br/tabela-unificada/app/sec/procedimento/publicados/consultar)
+**Referência:** Para ver a referência da tabela do SIGTAP acesse: [Tabela unificada SIGTAP](http://sigtap.datasus.gov.br/tabela-unificada/app/sec/procedimento/publicados/consultar)
 
 Observação: É requerido pelo menos um dentre os itens `#8` e `#9`.
 

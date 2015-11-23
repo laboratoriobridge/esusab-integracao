@@ -50,7 +50,7 @@ CNS do cidadão.
 |---| --- |---  | --- |
 |String	|Requerido	|15	|15 |
 
-**Regras**: CNS valido de acordo com o algoritmo.
+**Regras:** CNS valido de acordo com o algoritmo.
 
 **Referências**: Para ver o algoritmo utilizado, acesse [Cartão Net Datasus](http://cartaonet.datasus.gov.br/), em "Downloads" baixe o arquivo de rotina de validação Java.
 
@@ -61,7 +61,7 @@ Nome do cidadão.
 |---| --- |---  | --- |
 |String |	Condicional	|5|	100|
 
-**Regras**:
+**Regras:**
 * Ter ao menos duas palavras.
 * Somente texto e apóstrofo (`'`).
 *	Opcional caso [conclusaoDestinoElegivel](##23-conclusaodestinoelegivel) for diferente de `1L (admissao própria emad)`.
@@ -85,7 +85,7 @@ Data de nascimento do cidadão no formato epoch time.
 |---| --- |---  | --- |
 |Long|	Requerido|	-|	-|
 
-**Regras**: Não pode ser posterior a [dataAtendimento]({% url profissional %}##5-dataatendimento) e anterior a 130 anos a partir da [dataAtendimento]({% url profissional %}##5-dataatendimento).
+**Regras:** Não pode ser posterior a [dataAtendimento]({% url profissional %}##5-dataatendimento) e anterior a 130 anos a partir da [dataAtendimento]({% url profissional %}##5-dataatendimento).
 
 **Refererência**: [Epoch Wikipedia](https://en.wikipedia.org/wiki/Epoch_(reference_date)).
 
@@ -118,7 +118,7 @@ Nome da mãe do cidadão.
 |---| --- |---  | --- |
 |String|	Condicional |	5|	100|
 
-**Regras**:
+**Regras:**
 
 * Ter ao menos duas palavras.
 * Somente texto e apóstrofo (`'`).
@@ -171,7 +171,7 @@ Número do PIS/PASEP do cidadão.
 |---| --- |---  | --- |
 |String|	Opcional|	11|	11|
 
-**Regras**: Apenas números.
+**Regras:** Apenas números.
 
 ### \#16	endereco
 Informações sobre o endereço do domicílio
@@ -180,7 +180,7 @@ Informações sobre o endereço do domicílio
 |---| --- |---  | --- |
 |EnderecoLocalPermanencia|	Condicional |	-|	-|
 
-**Regras**:
+**Regras:**
 
 *	Opcional caso [conclusaoDestinoElegivel](##23-conclusaodestinoelegivel) for diferente de `1L (admissao própria emad)`.
 
@@ -262,7 +262,7 @@ Conduta adotada caso cidadão seja `Inelegível`.
 |---| --- |---  | --- |
 |List\<Long>|	Condicional| 	0|	5|
 
-**Regras**:
+**Regras:**
 
 * Só pode ser preenchido se atencaoDomiciliarModalidade for igual a de `4L (inelegível)`.
 
@@ -295,7 +295,7 @@ CEP do logradouro do domicílio.
 |---| --- |---  | --- |
 |String|	Opcional|	8|	8|
 
-**Regras**:	Apenas números.
+**Regras:**	Apenas números.
 
 ### \#3	codigoIbgeMunicipio
 Código IBGE do município.
@@ -327,7 +327,7 @@ Número do domicílio.
 |---| --- |---  | --- |
 |String|	Requerido|	1|	10|
 
-**Regras**:
+**Regras:**
 
 * Apenas letras e números.
 * Não pode ser preenchido caso [stSemNumero](##11-stsemnumero) = `true`.

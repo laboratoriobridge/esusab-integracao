@@ -54,7 +54,7 @@ Turno onde aconteceu o atendimento.
 |---| --- |---  | --- |
 |Long|	Sim|	-|	-|
 
-**Referência**: [Turno]({% url dicionario %}#turno)
+**Referência:** [Turno]({% url dicionario %}#turno)
 
 ### \#2	cns
 CNS do cidadão que participou da atividade.
@@ -65,7 +65,7 @@ CNS do cidadão que participou da atividade.
 
 **Regras:** Validado pelo algoritmo.
 
-**Referência**: Para ver o algoritmo utilizado, acesse: [Cartão Net Datasus](http://cartaonet.datasus.gov.br/), em "Downloads" baixe o arquivo de rotina de validação Java.  
+**Referência:** Para ver o algoritmo utilizado, acesse: [Cartão Net Datasus](http://cartaonet.datasus.gov.br/), em "Downloads" baixe o arquivo de rotina de validação Java.  
 
 ### \#3	dataNascimento
 Data de nascimento do cidadão.
@@ -85,7 +85,7 @@ Sexo do cidadão.
 |---| --- |---  | --- |
 |Long|	Sim|	-|	-|
 
-**Referência**:	[Sexo]({% url dicionario%}#sexo)
+**Referência:**	[Sexo]({% url dicionario%}#sexo)
 
 ### \#5	localDeAtendimento
 Local onde o atendimento foi realizado.
@@ -104,9 +104,9 @@ Modalidade AD do cidadão atendido.
 |---| --- |---  | --- |
 |Long|	Sim|	-|	-|
 
-**Regras**: Apenas as opções `1L`, `2L` e `3L` são aceitas.
+**Regras:** Apenas as opções `1L`, `2L` e `3L` são aceitas.
 
-**Referência**: [ModalidadeAD]({% url dicionario %}#modalidadead)
+**Referência:** [ModalidadeAD]({% url dicionario %}#modalidadead)
 
 ### \#7	tipoAtendimento
 Tipo de atendimento.
@@ -115,7 +115,7 @@ Tipo de atendimento.
 |---| --- |---  | --- |
 |Long|	Sim|	-|	-|
 
-**Regras**: Apenas as opções `7L` e `8L` são aceitas.
+**Regras:** Apenas as opções `7L` e `8L` são aceitas.
 
 **Referências**: [TipoDeAtendimento]({% url dicionario %}#tipodeatendimento)
 
@@ -149,7 +149,7 @@ Procedimentos registrados no atendimento disponíveis na ficha.
 |---| --- |---  | --- |
 |List\<String\>|	Opcional|	0|	21|
 
-**Referência**: [ProcedimentosDaAtençãoDomiciliar](#procedimentos-da-atenção-domiciliar)
+**Referência:** [ProcedimentosDaAtençãoDomiciliar](#procedimentos-da-atenção-domiciliar)
 
 ### \#12	outrosProcedimentos
 Procedimentos SIGTAP registrados no atendimento.
@@ -158,7 +158,7 @@ Procedimentos SIGTAP registrados no atendimento.
 |---| --- |---  | --- |
 |List\<String\>|	Opcional	|0|	4|
 
-**Regras**:
+**Regras:**
 <br> • Não podem ser iguais aos procedimentos a cima.
 <br> • Não podem conter procedimentos repetidos.
 
@@ -169,9 +169,9 @@ Desfecho do atendimento do cidadão.
 |---| --- |---  | --- |
 |Long|	Opcional|	-|	-|
 
-**Regras**:	Não podem conter as opções `7L` ou `8L`.
+**Regras:**	Não podem conter as opções `7L` ou `8L`.
 
-**Referência**:	[CondutaDesfecho]({% url dicionario %}#condutadesfecho)
+**Referência:**	[CondutaDesfecho]({% url dicionario %}#condutadesfecho)
 
 ### \#14	statusInicioAcompanhamentoPosObito
 Marcador que indica se a família irá receber acompanhamento pós-óbito.

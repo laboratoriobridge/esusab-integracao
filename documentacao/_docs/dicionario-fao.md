@@ -59,7 +59,7 @@ Data de nascimento do cidadão.
 |---| --- |---  | --- |
 |Long|	Requerido|	-|	-|
 
-**Regras**: Não pode ser posterior a [dataAtendimento]({% url profissional %}##5-dataatendimento) e anterior a 130 anos a partir da [dataAtendimento]({% url profissional %}##5-dataatendimento).
+**Regras:** Não pode ser posterior a [dataAtendimento]({% url profissional %}#5-dataatendimento) e anterior a 130 anos a partir da [dataAtendimento]({% url profissional %}#5-dataatendimento).
 
 **Referências:** [Epoch Wikipedia](https://en.wikipedia.org/wiki/Epoch_(reference_date))
 
@@ -81,7 +81,7 @@ Número do prontuário do cidadão.
 |---| --- |---  | --- |
 |String	|Opcional|	0|	30|
 
-**Regras**: Apenas letras e números são aceitos.
+**Regras:** Apenas letras e números são aceitos.
 
 ### \#4	gestante
 Marcador que indica se o cidadão está gestante.
@@ -90,7 +90,7 @@ Marcador que indica se o cidadão está gestante.
 |---| --- |---  | --- |
 |Boolean|	Opcional|	-|	-|
 
-**Regras:** [Sexo](##14-sexo) = `1L (feminino)`.
+**Regras:** [Sexo](#14-sexo) = `1L (feminino)`.
 
 ### \#5	necessidadesEspeciais
 Marcador que indica se o cidadão é portador de necessidades especiais.
@@ -155,7 +155,7 @@ Tipo de consulta odontológica realizada.
 |---| --- |---  | --- |
 |List\<Long>|	Condicional |	-	|-|
 
-**Regras**:
+**Regras:**
 
 * É Requerido se o [TipoDeAtendimento]({% url dicionario %}#tipodeatendimento) = `2L (consulta agendada)`.
 * Não pode ser preenchido se o [TipoDeAtendimento]({% url dicionario %}#tipodeatendimento) = `4L (escuta inicial ou orientação)`.

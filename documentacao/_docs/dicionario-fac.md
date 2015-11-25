@@ -16,9 +16,9 @@ Código UUID para identificar a ficha na base de dados nacional.
 |---| --- |---  | --- |
 |String|	Requerido|	36|	44|
 
-**Regras**: É recomendado concatenar o CNES na frente do UUID, de modo que os 7 digitos (CNES) + 1 de hífen somados aos 36 (32 caracteres + 4 hífen) do UUID são a limitação de 44 bytes do campo. Formato canônico.
+**Regras:** É recomendado concatenar o CNES na frente do UUID, de modo que os 7 digitos (CNES) + 1 de hífen somados aos 36 (32 caracteres + 4 hífen) do UUID são a limitação de 44 bytes do campo. Formato canônico.
 
-**Referência**: [UUID Wikipedia](https://en.wikipedia.org/wiki/Universally_unique_identifier)
+**Referência:** [UUID Wikipedia](https://en.wikipedia.org/wiki/Universally_unique_identifier)
 
 ### \#2	dtAtividadeColetiva
 Data de realização da atividade coletiva.
@@ -27,9 +27,9 @@ Data de realização da atividade coletiva.
 |---| --- |---  | --- |
 |Long|	Requerido|	-|-|
 
-**Regras**: Não pode ser posterior a data atual.
+**Regras:** Não pode ser posterior a data atual.
 
-**Referência**: [Epoch Wikipedia](https://en.wikipedia.org/wiki/Epoch)
+**Referência:** [Epoch Wikipedia](https://en.wikipedia.org/wiki/Epoch)
 
 ### \#3	numParticipantesProgramados
 Previsão da quantidade de participantes para a atividade coletiva.
@@ -38,7 +38,7 @@ Previsão da quantidade de participantes para a atividade coletiva.
 |---| --- |---  | --- |
 |Integer|	Opcional|	0|	3|
 
-**Regras**:	Valores entre 0 e 999.
+**Regras:**	Valores entre 0 e 999.
 
 ### \#4	localAtividade
 Descrição do local onde é realizada a atividade coletiva.
@@ -54,9 +54,9 @@ Hora de início da realização da atividade coletiva.
 |---| --- |---  | --- |
 |Long|	Opcional|	-|	-|
 
-**Regras**: Verificar validações
+**Regras:** Verificar validações.
 
-**Referência**: [Epoch Wikipedia](https://en.wikipedia.org/wiki/Epoch)
+**Referência:** [Epoch Wikipedia](https://en.wikipedia.org/wiki/Epoch)
 
 ### \#6	horaFim
 Hora de fim de realização da atividade coletiva.
@@ -65,9 +65,9 @@ Hora de fim de realização da atividade coletiva.
 |---| --- |---  | --- |
 |Long|	Opcional|	-|	-|
 
-**Regras**: Deve ser posterior a [horaInicio](##5-horainicio).
+**Regras:** Deve ser posterior a [horaInicio](#5-horainicio).
 
-**Referência**: [Epoch Wikipedia](https://en.wikipedia.org/wiki/Epoch)
+**Referência:** [Epoch Wikipedia](https://en.wikipedia.org/wiki/Epoch)
 
 ### \#7	inep
 Número INEP da instituição.
@@ -83,12 +83,12 @@ CNS do responsável pela atividade coletiva.
 |---| --- |---  | --- |
 |String|	Requerido|	15|	15|
 
-**Regras**:
+**Regras:**
 
 * CNS válido de acordo com o algoritmo.
 * O profissional responsável deve ser um registro da lista de profissionais.
 
-**Referência**: Para ver o algorítmo utilizado, acesse: [Cartão NET Datasus](http://cartaonet.datasus.gov.br/), em "Downloads" baixe o arquivo de rotina de validação Java.
+**Referência:** Para ver o algorítmo utilizado, acesse: [Cartão NET Datasus](http://cartaonet.datasus.gov.br/), em "Downloads" baixe o arquivo de rotina de validação Java.
 
 ### \#9	responsavelCnesUnidade
 CNES do responsável pela atividade coletiva.
@@ -111,16 +111,16 @@ Número de participantes da atividade.
 |---| --- |---  | --- |
 |Integer|	Opcional|	0|	3|
 
-**Regras**: Valores entre 0 e 999.
+**Regras:** Valores entre 0 e 999.
 
 ### \#12	numAvaliacoesAlteradas
-Número das avaliações alteradas.
+Número de avaliações alteradas.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |Integer|	Opcional|	0|	3|
 
-**Regras**:	Valores entre 0 e 999.
+**Regras:**	Valores entre 0 e 999.
 
 ### \#13	profissionais
 Lista dos profissionais que participaram da atividade.
@@ -129,9 +129,9 @@ Lista dos profissionais que participaram da atividade.
 |---| --- |---  | --- |
 |List\<ProfissionalCboRowItem\> |Sim |1	|99 |
 
-**Regras**: Entre 1 e 99 registros.
+**Regras:** Entre 1 e 99 registros.
 
-**Referência**:	[ProfissionalCboRowItem]({% url profissional %}#profissionalcborowitem)
+**Referência:**	[ProfissionalCboRowItem]({% url profissional %}#profissionalcborowitem)
 
 ### \#14 atividadeTipo
 Tipo da atividade que será realizada.
@@ -149,12 +149,12 @@ Temas para reunião.
 |---| --- |---  | --- |
 |	List\<Long\>|	Condicional |- |	-|
 
-**Regras**:
+**Regras:**
 
 * É Requerido se [TipoAtividadeColetiva]({% url dicionario %}#tipoatividadecoletiva) for `1L`, `2L` ou `3L`.
 * Não pode ser preenchido se [TipoAtividadeColetiva]({% url dicionario %}#tipoatividadecoletiva) for `4L`, `5L`, `6L` ou `7L`.
 
-**Referência**: [TemasParaReuniao]({% url dicionario %}#temasparareuniao)
+**Referência:** [TemasParaReuniao]({% url dicionario %}#temasparareuniao)
 
 ### \#16	publicoAlvo
 Público alvo da atividade.
@@ -163,12 +163,12 @@ Público alvo da atividade.
 |---| --- |---  | --- |
 |List\<Long\>|	Condicional |	-|	-|
 
-**Regras**:
+**Regras:**
 
 * É Requerido se [TipoAtividadeColetiva]({% url dicionario %}#tipoatividadecoletiva) for `4L`, `5L`, `6L` ou `7L`.
 * Não pode ser preenchido se [TipoAtividadeColetiva]({% url dicionario %}#tipoatividadecoletiva) for `1L`, `2L` ou `3L`.
 
-**Referência**: [PublicoAlvo]({% url dicionario %}#publicoalvo)
+**Referência:** [PublicoAlvo]({% url dicionario %}#publicoalvo)
 
 ### \#17	praticasTemasParaSaude
 Práticas ou temas abordados na atividade.
@@ -177,7 +177,7 @@ Práticas ou temas abordados na atividade.
 |---| --- |---  | --- |
 |List\<Long\>|	Condicional| 	-|	-|
 
-**Regras**:
+**Regras:**
 
 * É Requerido se [TipoAtividadeColetiva]({% url dicionario %}#tipoatividadecoletiva) for `4L`, `5L`, `6L` ou `7L`.
 * Não pode ser preenchido se [TipoAtividadeColetiva]({% url dicionario %}#tipoatividadecoletiva) for `1L`, `2L` ou `3L`.
@@ -191,7 +191,7 @@ Cidadãos que participaram da atividade coletiva.
 |---| --- |---  | --- |
 |List\<ParticipanteRowItem\>|	Opcional|	0|33|
 
-**Referência**: [ParticipanteRowItem](#participanterowitem)
+**Referência:** [ParticipanteRowItem](#participanterowitem)
 
 ### \#19	tbCdsOrigem
 Tipo de origem dos dados do registro.
@@ -220,9 +220,9 @@ CNS do cidadão que participou da atividade.
 |---| --- |---  | --- |
 |String|	Sim|	15|	15|
 
-**Regras**: 	CNS válido de acordo com o algoritmo.
+**Regras:** 	CNS válido de acordo com o algoritmo.
 
-**Referência**: Para ver o algoritmo utilizado, acesse: [Cartão NET Datasus](http://cartaonet.datasus.gov.br/), em "Downloads" baixe o arquivo de rotina de validação Java.
+**Referência:** Para ver o algoritmo utilizado, acesse: [Cartão NET Datasus](http://cartaonet.datasus.gov.br/), em "Downloads" baixe o arquivo de rotina de validação Java.
 
 ### \#2	dataNascimento
 Data de nascimento do cidadão.
@@ -231,7 +231,7 @@ Data de nascimento do cidadão.
 |---| --- |---  | --- |
 |	Long|	Opcional|	-|	-|
 
-**Regras**: 	Não pode ser posterior a [dataAtendimento]({% url profissional %}##5-dataatendimento) e anterior a 130 anos a partir da [dataAtendimento]({% url profissional %}##5-dataatendimento).
+**Regras:** 	Não pode ser posterior a [dataAtendimento]({% url profissional %}#5-dataatendimento) e anterior a 130 anos a partir da [dataAtendimento]({% url profissional %}#5-dataatendimento).
 
 **Referências**: [Epoch Wikipedia](https://en.wikipedia.org/wiki/Epoch_(reference_date))
 
@@ -249,7 +249,7 @@ Peso do cidadão em Kg.
 |---| --- |---  | --- |
 |	Double|	Opcional|	1|	6|
 
-**Regras**:
+**Regras:**
 
 * Apenas números e vírgula (`,`).
 * Máximo de 3 números após a vírgula.
@@ -263,7 +263,7 @@ Altura do cidadão em cm.
 |---| --- |---  | --- |
 |Double|	Opcional| 	2|	4|
 
-**Regras**:
+**Regras:**
 
 * Apenas números e vírgula (`,`).
 * Máximo de 3 números após a vírgula.
@@ -277,7 +277,7 @@ Marcação se o cidadão cessou o hábito de fumar.
 |---| --- |---  | --- |
 |Boolean|	Opcional|	-|	-|
 
-**Regras**: Não deve ser preenchido se o [praticasTemasParaSaude]({% url dicionario %}#praticastemasparasaude) não for 25, 26, 27 ou 28 (referentes ao PNCT).
+**Regras:** Não deve ser preenchido se o [praticasTemasParaSaude]({% url dicionario %}#praticastemasparasaude) não for 25, 26, 27 ou 28 (referentes ao PNCT).
 
 ### \#7	abadonouGrupo
 Marcação se o cidadão abandonou o grupo de tabagismo.
@@ -286,4 +286,4 @@ Marcação se o cidadão abandonou o grupo de tabagismo.
 |---| --- |---  | --- |
 |Boolean|	Opcional|	-|	-|
 
-**Regras**: Não deve ser preenchido se o [praticasTemasParaSaude]({% url dicionario %}#praticastemasparasaude) não for 25, 26, 27 ou 28 (referentes ao PNCT).
+**Regras:** Não deve ser preenchido se o [praticasTemasParaSaude]({% url dicionario %}#praticastemasparasaude) não for 25, 26, 27 ou 28 (referentes ao PNCT).

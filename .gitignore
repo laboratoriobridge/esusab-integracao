@@ -1,1 +1,18 @@
 html/_site/
+
+*.class
+*.project
+*.orig
+**/.classpath
+**/.factorypath
+.settings
+
+# Ignorar gerados pelos "annotation processing" mas não os gerados que estiverem em src #
+generated/
+!/**/src/**
+
+# Eclipse e Mvn #
+bin/
+build/
+target/
+metamodel/

@@ -1,4 +1,4 @@
-package utils;
+package examplo.utils;
 
 import java.io.ByteArrayOutputStream;
 
@@ -15,13 +15,10 @@ public class ThriftSerializer {
 	 *
 	 * @param thrift - o thrift preenchido com as informações do atendimento.
 	 * @return um array com os bytes serializados.
-	 * @throws TException
 	 */
-	public static byte[] serialize(TBase<?, ? extends TFieldIdEnum> thrift) {
-		ByteArrayOutputStream baos = null;
-
+	public static byte[] serializeBinary(TBase<?, ? extends TFieldIdEnum> thrift) {
 		try {
-			baos = new ByteArrayOutputStream();
+			ByteArrayOutputStream baos = new ByteArrayOutputStream();
 			TIOStreamTransport transport = new TIOStreamTransport(baos);
 			TBinaryProtocol protocol = new TBinaryProtocol(transport);
 			thrift.write(protocol);
@@ -31,7 +28,7 @@ public class ThriftSerializer {
 			exception.printStackTrace();
 		}
 
-		return new byte[0];
+		return null;
 	}
 
 }

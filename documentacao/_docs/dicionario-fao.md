@@ -59,7 +59,7 @@ Data de nascimento do cidadão.
 |---| --- |---  | --- |
 |Long|	Requerido|	-|	-|
 
-**Regras:** Não pode ser posterior a [dataAtendimento]({% url profissional %}##5-dataatendimento) e anterior a 130 anos a partir da [dataAtendimento]({% url profissional %}##5-dataatendimento).
+**Regras:** Não pode ser posterior a [dataAtendimento]({% url profissional %}#5-dataatendimento) e anterior a 130 anos a partir da [dataAtendimento]({% url profissional %}#5-dataatendimento).
 
 **Referências:** [Epoch Wikipedia](https://en.wikipedia.org/wiki/Epoch_(reference_date))
 
@@ -90,7 +90,7 @@ Marcador que indica se o cidadão está gestante.
 |---| --- |---  | --- |
 |Boolean|	Opcional|	-|	-|
 
-**Regras:** [Sexo](##14-sexo) = `1L (feminino)`.
+**Regras:** [Sexo](#14-sexo) = `1L (feminino)`.
 
 ### \#5	necessidadesEspeciais
 Marcador que indica se o cidadão é portador de necessidades especiais.

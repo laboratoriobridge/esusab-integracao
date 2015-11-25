@@ -65,7 +65,7 @@ Hora de fim de realização da atividade coletiva.
 |---| --- |---  | --- |
 |Long|	Opcional|	-|	-|
 
-**Regras:** Deve ser posterior a [horaInicio](##5-horainicio).
+**Regras:** Deve ser posterior a [horaInicio](#5-horainicio).
 
 **Referência:** [Epoch Wikipedia](https://en.wikipedia.org/wiki/Epoch)
 
@@ -231,7 +231,7 @@ Data de nascimento do cidadão.
 |---| --- |---  | --- |
 |	Long|	Opcional|	-|	-|
 
-**Regras:** 	Não pode ser posterior a [dataAtendimento]({% url profissional %}##5-dataatendimento) e anterior a 130 anos a partir da [dataAtendimento]({% url profissional %}##5-dataatendimento).
+**Regras:** 	Não pode ser posterior a [dataAtendimento]({% url profissional %}#5-dataatendimento) e anterior a 130 anos a partir da [dataAtendimento]({% url profissional %}#5-dataatendimento).
 
 **Referências**: [Epoch Wikipedia](https://en.wikipedia.org/wiki/Epoch_(reference_date))
 

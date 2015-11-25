@@ -78,7 +78,7 @@ Data de nascimento do cidadão.
 |---| --- |---  | --- |
 |Long|	Requerido|	-|	-|
 
-**Regras:** Não pode ser posterior a [dataAtendimento]({% url profissional %}##5-dataatendimento) e anterior a 130 anos a partir da [dataAtendimento]({% url profissional %}##5-dataatendimento).
+**Regras:** Não pode ser posterior a [dataAtendimento]({% url profissional %}#5-dataatendimento) e anterior a 130 anos a partir da [dataAtendimento]({% url profissional %}#5-dataatendimento).
 
 **Refererência**: [Epoch Wikipedia](https://en.wikipedia.org/wiki/Epoch_(reference_date)).
 
@@ -168,8 +168,8 @@ Data da última menstruação da gestante.
 
 **Regras:**
 
-* Não pode ser superior a [dataAtendimento]({% url profissional %}##5-dataatendimento), nem inferior a data de nascimento.
-* Não pode ser preenchido quando [Sexo](##5-sexo) = `0L (masculino)`.
+* Não pode ser superior a [dataAtendimento]({% url profissional %}#5-dataatendimento), nem inferior a data de nascimento.
+* Não pode ser preenchido quando [Sexo](#5-sexo) = `0L (masculino)`.
 
 **Referências:** [Epoch Wikipedia](https://en.wikipedia.org/wiki/Epoch_(reference_date))
 
@@ -183,7 +183,7 @@ Idade gestacional em semanas.
 **Regras**
 
 * Valor mínimo 1 e máximo 42.
-* Não pode ser preenchido quando [Sexo](##5-sexo) = `0L (masculino)`.
+* Não pode ser preenchido quando [Sexo](#5-sexo) = `0L (masculino)`.
 
 ### \#13	atencaoDomiciliarModalidade
 Modalidade AD do cidadão atendido.
@@ -287,7 +287,7 @@ Marcador que indica se a gravidez é planejada.
 |---| --- |---  | --- |
 |Boolean|	Opcional|	-|	-|
 
-**Regras:** Não pode ser preenchido quando [Sexo](##5-sexo) = `0L (masculino)`.
+**Regras:** Não pode ser preenchido quando [Sexo](#5-sexo) = `0L (masculino)`.
 
 ### \#24	nuGestasPrevias
 Número de gestações prévias.
@@ -296,7 +296,7 @@ Número de gestações prévias.
 |---| --- |---  | --- |
 |Integer|	Opcional|	0|	2|
 
-**Regras:** Não pode ser preenchido quando [Sexo](##5-sexo) = `0L (masculino)`.
+**Regras:** Não pode ser preenchido quando [Sexo](#5-sexo) = `0L (masculino)`.
 
 ### \#25	nuPartos
 Número de partos que a mulher já teve.
@@ -305,7 +305,7 @@ Número de partos que a mulher já teve.
 |---| --- |---  | --- |
 |Integer|	Opcional|	0|	2|
 
-**Regras:** Não pode ser preenchido quando [Sexo](##5-sexo) = `0L (masculino)`.
+**Regras:** Não pode ser preenchido quando [Sexo](#5-sexo) = `0L (masculino)`.
 
 ## OutrosSia
 
@@ -356,7 +356,7 @@ CIAP1 registrado no antedimento.
 
 **Regras:**
 
-* Não pode ser igual a [outroCiap2](##3-outrociap2).
+* Não pode ser igual a [outroCiap2](#3-outrociap2).
 * É Requerido o preenchimento de pelo menos um dos itens de `#1` a `#4`.
 
 ### \#3	outroCiap2
@@ -368,7 +368,7 @@ CIAP2 registrado no antedimento.
 
 **Regras:**
 
-* Não pode ser igual a [outroCiap1](##2-outrociap1).
+* Não pode ser igual a [outroCiap1](#2-outrociap1).
 * É Requerido o preenchimento de pelo menos um dos itens de `#1` a `#4`.
 
 ### \#4	cid10

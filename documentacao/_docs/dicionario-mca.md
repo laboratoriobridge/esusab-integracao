@@ -52,7 +52,7 @@ Data de nascimento do cidadão no formato epoch time.
 |--- |--- |--- |--- |
 |Long |Sim |- |- |
 
-**Regras:** Não pode ser posterior a [dataAtendimento]({% url profissional %}##5-dataatendimento) e anterior a 130 anos a partir da [dataAtendimento]({% url profissional %}##5-dataatendimento).
+**Regras:** Não pode ser posterior a [dataAtendimento]({% url profissional %}#5-dataatendimento) e anterior a 130 anos a partir da [dataAtendimento]({% url profissional %}#5-dataatendimento).
 
 **Referêcia**: [Epoch Wikipedia](https://en.wikipedia.org/wiki/Epoch\_(reference\_date)).
 
@@ -84,7 +84,7 @@ Marcadores referentes aos cidadãos menores de seis meses de idade.
 |--- |--- |--- |--- |
 |List\<PerguntaQuestionarioCriancasMenoresSeisMeses\> |Condicional |- |- |
 
-**Regras:** Requerido se [dataNascimento](##4-datanascimento) < 6 meses a partir da [dataAtendimento]({% url profissional %}##5-dataatendimento).
+**Regras:** Requerido se [dataNascimento](#4-datanascimento) < 6 meses a partir da [dataAtendimento]({% url profissional %}#5-dataatendimento).
 
 **Referêcia**: [PerguntaQuestionarioCriancasMenoresSeisMeses](#perguntaquestionariocriancasmenoresseismeses).
 
@@ -98,7 +98,7 @@ Marcadores referentes aos cidadãos que tem entre seis e vinte e três meses de 
 |--- |--- |--- |--- |
 |List\<PerguntaQuestionarioCriancasDeSeisVinteTresMeses\> |Condicional |- |- |
 
-**Regras:** Requerido se [dataNascimento](##4-datanascimento) >= 6 meses e <= 23 meses a partir da [dataAtendimento]({% url profissional %}##5-dataatendimento).
+**Regras:** Requerido se [dataNascimento](#4-datanascimento) >= 6 meses e <= 23 meses a partir da [dataAtendimento]({% url profissional %}#5-dataatendimento).
 
 **Referêcia**: [PerguntaQuestionarioCriancasDeSeisVinteTresMeses](#perguntaquestionariocriancasdeseisvintetresmeses).
 
@@ -112,7 +112,7 @@ Marcadores referentes aos cidadãos que tem vinte e quatro meses ou mais.
 |--- |--- |--- |--- |
 |List\<PerguntaQuestionarioCriancasComMaisDoisAnos\> |Condicional |- |- |
 
-**Regras:** Requerido se [dataNascimento](##4-datanascimento) >= 24 meses a partir da [dataAtendimento]({% url profissional %}##5-dataatendimento).
+**Regras:** Requerido se [dataNascimento](#4-datanascimento) >= 24 meses a partir da [dataAtendimento]({% url profissional %}#5-dataatendimento).
 
 **Referêcia**: [PerguntaQuestionarioCriancasComMaisDoisAnos](#perguntaquestionariocriancascommaisdoisanos).
 

@@ -18,7 +18,7 @@ Lista de animais no domicílio.
 
 **Regras:**
 
-* Não pode ser preenchido se o campo [statusTermoRecusaCadastroDomiciliarAtencaoBasica](##9-statustermorecusacadatrodomiciliaratencaobasica) = `true`.
+* Não pode ser preenchido se o campo [statusTermoRecusaCadastroDomiciliarAtencaoBasica](#9-statustermorecusacadatrodomiciliaratencaobasica) = `true`.
 
 **Referências:** [AnimalNoDomicilio]({% url dicionario %}#animalnodomicilio)
 
@@ -31,7 +31,7 @@ Condições de moradia do domicílio.
 
 **Regras:**
 
-* Não devem ser preenchidos se o campo [statusTermoRecusaCadastroDomiciliarAtencaoBasica](##9-statustermorecusacadatrodomiciliaratencaobasica) = `true`.
+* Não devem ser preenchidos se o campo [statusTermoRecusaCadastroDomiciliarAtencaoBasica](#9-statustermorecusacadatrodomiciliaratencaobasica) = `true`.
 
 **Referências:** [CondicaoMoradia](#condicaomoradia)
 
@@ -51,7 +51,7 @@ Informações sobre o endereço do domicílio.
 | ---| --- |---  | --- |
 | EnderecoLocalPermanencia|	Condicional |  - | -|
 
-**Regras:** Preenchimento obrigatório caso o campo [statusTermoRecusaCadastroDomiciliarAtencaoBasica](##9-statustermorecusacadatrodomiciliaratencaobasica) = `false`.
+**Regras:** Preenchimento obrigatório caso o campo [statusTermoRecusaCadastroDomiciliarAtencaoBasica](#9-statustermorecusacadatrodomiciliaratencaobasica) = `false`.
 
 **Referências:** [EnderecoLocalPermanencia](#enderecolocalpermanencia)
 
@@ -63,7 +63,7 @@ Lista das famílias que residem no domicílio.
 |List\<FamiliaRow>| Condicional| 	0|	4|
 
 **Regras:**
-* Não pode ser preenchido caso o campo [statusTermoRecusaCadastroDomiciliarAtencaoBasica](##9-statustermorecusacadatrodomiciliaratencaobasica) = `true`.
+* Não pode ser preenchido caso o campo [statusTermoRecusaCadastroDomiciliarAtencaoBasica](#9-statustermorecusacadatrodomiciliaratencaobasica) = `true`.
 
 ### \#6	fichaAtualizada
 Marcador que indica se a ficha é uma atualização.
@@ -81,8 +81,8 @@ Número de animais no domicílio.
 
 **Regras:**
 
-* Não pode ser preenchido se o campo [stAnimaisNoDomicilio](##8-stanimaisnodomicilio) = `false`.
-* Não pode ser preenchido se o campo [statusTermoRecusaCadastroDomiciliarAtencaoBasica](##9-statustermorecusacadatrodomiciliaratencaobasica) = `true`.
+* Não pode ser preenchido se o campo [stAnimaisNoDomicilio](#8-stanimaisnodomicilio) = `false`.
+* Não pode ser preenchido se o campo [statusTermoRecusaCadastroDomiciliarAtencaoBasica](#9-statustermorecusacadatrodomiciliaratencaobasica) = `true`.
 
 ### \#8	stAnimaisNoDomicilio
 Marcador que indica se existem animais no domicílio.
@@ -93,7 +93,7 @@ Marcador que indica se existem animais no domicílio.
 
 **Regras:**
 
-* Não pode ser preenchido se o campo [statusTermoRecusaCadastroDomiciliarAtencaoBasica](##9-statustermorecusacadatrodomiciliaratencaobasica) = `true`.
+* Não pode ser preenchido se o campo [statusTermoRecusaCadastroDomiciliarAtencaoBasica](#9-statustermorecusacadatrodomiciliaratencaobasica) = `true`.
 
 ### \#9	statusTermoRecusaCadatroDomiciliarAtencaoBasica
 Marcador que indica se o cadastro foi utilizado o termo de recusa de cadastro do domicílio.
@@ -129,7 +129,7 @@ Código UUID para identificar a ficha que deu origem ao cadastro do registro.
 |---| --- |---  | --- |
 |String|	Requerido|	36|	44|
 
-**Regras:** Se for uma ficha de atualização, deve ser preenchido com o UUID da ficha que deu origem ao registro. Se for uma ficha de cadastro, este campo deve ser igual ao campo [UUID](##11-uuid).
+**Regras:** Se for uma ficha de atualização, deve ser preenchido com o UUID da ficha que deu origem ao registro. Se for uma ficha de cadastro, este campo deve ser igual ao campo [UUID](#11-uuid).
 
 **Referências:** Para ver a referência sobre o UUID, acesse: [UUID Wikipedia](https://en.wikipedia.org/wiki/Universally_unique_identifier).
 
@@ -245,7 +245,7 @@ Número do domicílio.
 **Regras:**
 
 * Apenas letras e números.
-* Não pode ser preenchido caso [stSemNumero](##11-stsemnumero) = `true`.
+* Não pode ser preenchido caso [stSemNumero](#11-stsemnumero) = `true`.
 
 ### \#7	numeroDneUf
 Indexador referente a Unidade Federativa.
@@ -310,7 +310,7 @@ Condição de posse e uso da terra.
 |---| --- |---  | --- |
 |Long|	Condicional | 	-|	-|
 
-**Regras:** Preenchimento obrigatório caso o campo [Localização](##5-localizacao) = `84L (rural)`.
+**Regras:** Preenchimento obrigatório caso o campo [Localização](#5-localizacao) = `84L (rural)`.
 
 **Referências:** [CondicaoDePosseEUsoDaTerra]({% url dicionario %}#condicaodeposseeusodaterra)
 

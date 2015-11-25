@@ -50,7 +50,7 @@ CNS do cidadão.
 |---| --- |---  | --- |
 |String	|Requerido	|15	|15 |
 
-**Regras**: CNS valido de acordo com o algoritmo.
+**Regras:** CNS válido de acordo com o algoritmo.
 
 **Referências**: Para ver o algoritmo utilizado, acesse [Cartão Net Datasus](http://cartaonet.datasus.gov.br/), em "Downloads" baixe o arquivo de rotina de validação Java.
 
@@ -61,10 +61,10 @@ Nome do cidadão.
 |---| --- |---  | --- |
 |String |	Condicional	|5|	100|
 
-**Regras**:
+**Regras:**
 * Ter ao menos duas palavras.
 * Somente texto e apóstrofo (`'`).
-*	Opcional caso [conclusaoDestinoElegivel](##23-conclusaodestinoelegivel) for diferente de `1L (admissao própria emad)`.
+*	Opcional caso [conclusaoDestinoElegivel](#23-conclusaodestinoelegivel) for diferente de `1L (admissão própria emad)`.
 
 ### \#6	nomeSocialCidadao
 
@@ -85,7 +85,7 @@ Data de nascimento do cidadão no formato epoch time.
 |---| --- |---  | --- |
 |Long|	Requerido|	-|	-|
 
-**Regras**: Não pode ser posterior a [dataAtendimento]({% url profissional %}##5-dataatendimento) e anterior a 130 anos a partir da [dataAtendimento]({% url profissional %}##5-dataatendimento).
+**Regras:** Não pode ser posterior a [dataAtendimento]({% url profissional %}#5-dataatendimento) e anterior a 130 anos a partir da [dataAtendimento]({% url profissional %}#5-dataatendimento).
 
 **Refererência**: [Epoch Wikipedia](https://en.wikipedia.org/wiki/Epoch_(reference_date)).
 
@@ -107,7 +107,7 @@ Raça / Cor do cidadão.
 
 **Regras:**
 
-*	Opcional caso [conclusaoDestinoElegivel](##23-conclusaodestinoelegivel) for diferente de `1L (admissao própria emad)`.
+*	Opcional caso [conclusaoDestinoElegivel](#23-conclusaodestinoelegivel) for diferente de `1L (admissão própria emad)`.
 
 **Referências:** [RacaCor]({% url dicionario %}#racacor)
 
@@ -118,11 +118,11 @@ Nome da mãe do cidadão.
 |---| --- |---  | --- |
 |String|	Condicional |	5|	100|
 
-**Regras**:
+**Regras:**
 
 * Ter ao menos duas palavras.
 * Somente texto e apóstrofo (`'`).
-* Não pode ser preenchido se o campo [desconheceNomeMae](##11-desconhecenomemae) = `true`.
+* Não pode ser preenchido se o campo [desconheceNomeMae](#11-desconhecenomemae) = `true`.
 
 ### \#11	desconheceNomeMae
 Marcador que indica que o cidadão desconhece o nome da mãe.
@@ -138,7 +138,7 @@ Código IBGE do município.
 |---| --- |---  | --- |
 |String|	Opcional|	-|	-|
 
-**Regras:** Não pode ser preenchido se [codigoNacionalidade](##13-codigonacionalidade) for diferente de `1L (brasileiro)`.
+**Regras:** Não pode ser preenchido se [codigoNacionalidade](#13-codigonacionalidade) for diferente de `1L (brasileiro)`.
 
 **Referências:**	[Municípios]({% url municipios %})
 
@@ -151,7 +151,7 @@ Marcador que indica se o cidadão é brasileiro, naturalizado ou estrangeiro.
 
 **Regras:**
 
-*	Opcional caso [conclusaoDestinoElegivel](##23-conclusaodestinoelegivel) for diferente de `1L (admissao própria emad)`.
+*	Opcional caso [conclusaoDestinoElegivel](#23-conclusaodestinoelegivel) for diferente de `1L (admissão própria emad)`.
 
 **Referências:** [Nacionalidade]({% url dicionario %}#nacionalidade)
 
@@ -171,7 +171,7 @@ Número do PIS/PASEP do cidadão.
 |---| --- |---  | --- |
 |String|	Opcional|	11|	11|
 
-**Regras**: Apenas números.
+**Regras:** Apenas números.
 
 ### \#16	endereco
 Informações sobre o endereço do domicílio
@@ -180,9 +180,9 @@ Informações sobre o endereço do domicílio
 |---| --- |---  | --- |
 |EnderecoLocalPermanencia|	Condicional |	-|	-|
 
-**Regras**:
+**Regras:**
 
-*	Opcional caso [conclusaoDestinoElegivel](##23-conclusaodestinoelegivel) for diferente de `1L (admissao própria emad)`.
+*	Opcional caso [conclusaoDestinoElegivel](#23-conclusaodestinoelegivel) for diferente de `1L (admissão própria emad)`.
 
 **Referências:**	[EnderecoLocalPermanencia](#enderecolocalpermanencia)
 
@@ -220,7 +220,7 @@ CID10 principal registrado na avaliação.
 |---| --- |---  | --- |
 |String|	Requerido|	-|	-|
 
-**Regras:** Não pode ser igual ao [CID10Segundo](##21-cid10segundo) nem [CID10Terceiro](##22-cid10terceiro).
+**Regras:** Não pode ser igual ao [CID10Segundo](#21-cid10segundo) nem [CID10Terceiro](#22-cid10terceiro).
 
 ### \#21	cid10Segundo
 CID10 registrado na avaliação.
@@ -229,7 +229,7 @@ CID10 registrado na avaliação.
 |---| --- |---  | --- |
 |String|	Opcional|	-|	-|
 
-**Regras:** Não pode ser igual ao [CID10Principal](##20-cid10principal) nem [CID10Terceiro](##22-cid10terceiro).
+**Regras:** Não pode ser igual ao [CID10Principal](#20-cid10principal) nem [CID10Terceiro](#22-cid10terceiro).
 
 ### \#22	cid10Terceiro
 CID10 registrado na avaliação.
@@ -238,7 +238,7 @@ CID10 registrado na avaliação.
 |---| --- |---  | --- |
 |String|	Opcional|	-|	-|
 
-**Regras:** Não pode ser igual ao [CID10Principal](##20-cid10principal) nem [CID10Segundo](##21-cid10segundo).
+**Regras:** Não pode ser igual ao [CID10Principal](#20-cid10principal) nem [CID10Segundo](#21-cid10segundo).
 
 ### \#23	conclusaoDestinoElegivel
 Conduta adotada caso cidadão seja `Elegível`.
@@ -249,7 +249,7 @@ Conduta adotada caso cidadão seja `Elegível`.
 
 **Regras:**
 
-* Só pode ser preenchido se [atencaoDomiciliarModalidade](##18-atencaodomiciliarmodalidade) for diferente de `4L (inelegível)`.
+* Só pode ser preenchido se [atencaoDomiciliarModalidade](#18-atencaodomiciliarmodalidade) for diferente de `4L (inelegível)`.
 
 **Referências:** [ConclusaoDestinoElegivel]({% url dicionario %}#conclusaodestinoelegivel)
 
@@ -262,9 +262,9 @@ Conduta adotada caso cidadão seja `Inelegível`.
 |---| --- |---  | --- |
 |List\<Long>|	Condicional| 	0|	5|
 
-**Regras**:
+**Regras:**
 
-* Só pode ser preenchido se atencaoDomiciliarModalidade for igual a de `4L (inelegível)`.
+* Só pode ser preenchido se [atencaoDomiciliarModalidade](#18-atencaoDomiciliarModalidade) for igual a de `4L (inelegível)`.
 
 **Referências:** [ConclusaoDestinoInelegivel]({% url dicionario %}#conclusaodestinoinelegivel)
 
@@ -295,7 +295,7 @@ CEP do logradouro do domicílio.
 |---| --- |---  | --- |
 |String|	Opcional|	8|	8|
 
-**Regras**:	Apenas números.
+**Regras:**	Apenas números.
 
 ### \#3	codigoIbgeMunicipio
 Código IBGE do município.
@@ -327,10 +327,10 @@ Número do domicílio.
 |---| --- |---  | --- |
 |String|	Requerido|	1|	10|
 
-**Regras**:
+**Regras:**
 
 * Apenas letras e números.
-* Não pode ser preenchido caso [stSemNumero](##11-stsemnumero) = `true`.
+* Não pode ser preenchido caso [stSemNumero](#11-stsemnumero) = `true`.
 
 ### \#7	numeroDneUf
 Indexador referente a Unidade Federativa.
@@ -348,7 +348,7 @@ Telefone de referência.
 |---| --- |---  | --- |
 |String|	Opcional|	10|	11|
 
-Observações: Mínimo 10 digitos, máximo 11 (DDD + 8 ou 9)
+Observações: Mínimo 10 dígitos, máximo 11 (DDD + 8 ou 9)
 
 ### \#9	telResidencial
 Telefone residencial.
@@ -357,7 +357,7 @@ Telefone residencial.
 |---| --- |---  | --- |
 |String| Opcional|	10|	11|
 
-Observações: Mínimo 10 digitos, máximo 11 (DDD + 8 ou 9)
+Observações: Mínimo 10 dígitos, máximo 11 (DDD + 8 ou 9)
 
 ### \#10	tipoLogradouroNumeroDne
 Tipo do logradouro onde está o domicílio.

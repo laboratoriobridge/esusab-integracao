@@ -50,7 +50,7 @@ CNS do cidadão.
 |---| --- |---  | --- |
 |String	|Requerido	|15	|15 |
 
-**Regras:** CNS valido de acordo com o algoritmo.
+**Regras:** CNS válido de acordo com o algoritmo.
 
 **Referências**: Para ver o algoritmo utilizado, acesse [Cartão Net Datasus](http://cartaonet.datasus.gov.br/), em "Downloads" baixe o arquivo de rotina de validação Java.
 
@@ -64,7 +64,7 @@ Nome do cidadão.
 **Regras:**
 * Ter ao menos duas palavras.
 * Somente texto e apóstrofo (`'`).
-*	Opcional caso [conclusaoDestinoElegivel](##23-conclusaodestinoelegivel) for diferente de `1L (admissao própria emad)`.
+*	Opcional caso [conclusaoDestinoElegivel](##23-conclusaodestinoelegivel) for diferente de `1L (admissão própria emad)`.
 
 ### \#6	nomeSocialCidadao
 
@@ -107,7 +107,7 @@ Raça / Cor do cidadão.
 
 **Regras:**
 
-*	Opcional caso [conclusaoDestinoElegivel](##23-conclusaodestinoelegivel) for diferente de `1L (admissao própria emad)`.
+*	Opcional caso [conclusaoDestinoElegivel](##23-conclusaodestinoelegivel) for diferente de `1L (admissão própria emad)`.
 
 **Referências:** [RacaCor]({% url dicionario %}#racacor)
 
@@ -151,7 +151,7 @@ Marcador que indica se o cidadão é brasileiro, naturalizado ou estrangeiro.
 
 **Regras:**
 
-*	Opcional caso [conclusaoDestinoElegivel](##23-conclusaodestinoelegivel) for diferente de `1L (admissao própria emad)`.
+*	Opcional caso [conclusaoDestinoElegivel](##23-conclusaodestinoelegivel) for diferente de `1L (admissão própria emad)`.
 
 **Referências:** [Nacionalidade]({% url dicionario %}#nacionalidade)
 
@@ -182,7 +182,7 @@ Informações sobre o endereço do domicílio
 
 **Regras:**
 
-*	Opcional caso [conclusaoDestinoElegivel](##23-conclusaodestinoelegivel) for diferente de `1L (admissao própria emad)`.
+*	Opcional caso [conclusaoDestinoElegivel](##23-conclusaodestinoelegivel) for diferente de `1L (admissão própria emad)`.
 
 **Referências:**	[EnderecoLocalPermanencia](#enderecolocalpermanencia)
 
@@ -264,7 +264,7 @@ Conduta adotada caso cidadão seja `Inelegível`.
 
 **Regras:**
 
-* Só pode ser preenchido se atencaoDomiciliarModalidade for igual a de `4L (inelegível)`.
+* Só pode ser preenchido se [atencaoDomiciliarModalidade](#18-atencaoDomiciliarModalidade) for igual a de `4L (inelegível)`.
 
 **Referências:** [ConclusaoDestinoInelegivel]({% url dicionario %}#conclusaodestinoinelegivel)
 
@@ -348,7 +348,7 @@ Telefone de referência.
 |---| --- |---  | --- |
 |String|	Opcional|	10|	11|
 
-Observações: Mínimo 10 digitos, máximo 11 (DDD + 8 ou 9)
+Observações: Mínimo 10 dígitos, máximo 11 (DDD + 8 ou 9)
 
 ### \#9	telResidencial
 Telefone residencial.
@@ -357,7 +357,7 @@ Telefone residencial.
 |---| --- |---  | --- |
 |String| Opcional|	10|	11|
 
-Observações: Mínimo 10 digitos, máximo 11 (DDD + 8 ou 9)
+Observações: Mínimo 10 dígitos, máximo 11 (DDD + 8 ou 9)
 
 ### \#10	tipoLogradouroNumeroDne
 Tipo do logradouro onde está o domicílio.

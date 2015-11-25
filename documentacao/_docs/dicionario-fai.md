@@ -80,7 +80,7 @@ Data de nascimento do cidadão.
 
 **Regras:** Não pode ser posterior a [dataAtendimento]({% url profissional %}##5-dataatendimento) e anterior a 130 anos a partir da [dataAtendimento]({% url profissional %}##5-dataatendimento).
 
-**Refererência**:[Epoch Wikipedia](https://en.wikipedia.org/wiki/Epoch_(reference_date)).
+**Refererência**: [Epoch Wikipedia](https://en.wikipedia.org/wiki/Epoch_(reference_date)).
 
 ### \#4	localDeAtendimento
 Local onde o atendimento foi realizado.
@@ -130,10 +130,11 @@ Peso do cidadão em Kg.
 |Double|	Opcional|	1|	6|
 
 **Regras:**
-<br> • Apenas números e vírgula (`,`).
-<br> • Máximo de números após a vírgula.
-<br> • Se tiver vírgula, tamanho máximo = 7.
-<br> • Valor mínimo = 0,5 e máximo = 500.
+
+* Apenas números e vírgula (`,`).
+* Máximo de números após a vírgula.
+* Se tiver vírgula, tamanho máximo = 7.
+* Valor mínimo = 0,5 e máximo = 500.
 
 ### \#9	alturaAcompanhamentoNutricional
 Altura do cidadão em cm.
@@ -143,10 +144,11 @@ Altura do cidadão em cm.
 |Double|	Opcional|	2|	4|
 
 **Regras:**
-<br> • Apenas números e vírgula (`,`).
-<br> • Máximo de números após a vírgula.
-<br> • Se tiver vírgula, tamanho máximo = 5.
-<br> • Valor mínimo 20 e máximo 250.
+
+* Apenas números e vírgula (`,`).
+* Máximo de números após a vírgula.
+* Se tiver vírgula, tamanho máximo = 5.
+* Valor mínimo 20 e máximo 250.
 
 ### \#10	aleitamentoMaterno
 Marcadores referentes ao aleitamento materno.
@@ -158,15 +160,16 @@ Marcadores referentes ao aleitamento materno.
 **Referências:**	[AleitamentoMaterno]({% url dicionario %}#aleitamentomaterno)
 
 ### \#11	dumDaGestante
-Data da Última Mestruação da gestante.
+Data da última menstruação da gestante.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |Long|	Opcional|	-|	-|
 
 **Regras:**
-<br> • Não pode ser superior a [dataAtendimento]({% url profissional %}##5-dataatendimento), nem inferior a data de nascimento.
-<br> • Não pode ser preenchido quando [Sexo](##5-sexo) = `0L (masculino)`.
+
+* Não pode ser superior a [dataAtendimento]({% url profissional %}##5-dataatendimento), nem inferior a data de nascimento.
+* Não pode ser preenchido quando [Sexo](##5-sexo) = `0L (masculino)`.
 
 **Referências:** [Epoch Wikipedia](https://en.wikipedia.org/wiki/Epoch_(reference_date))
 
@@ -178,8 +181,9 @@ Idade gestacional em semanas.
 |Integer|	Opcional|	0|	2|
 
 **Regras**
-<br> • Valor mínimo 1 e máximo 42.
-<br> • Não pode ser preenchido quando [Sexo](##5-sexo) = `0L (masculino)`.
+
+* Valor mínimo 1 e máximo 42.
+* Não pode ser preenchido quando [Sexo](##5-sexo) = `0L (masculino)`.
 
 ### \#13	atencaoDomiciliarModalidade
 Modalidade AD do cidadão atendido.
@@ -188,8 +192,7 @@ Modalidade AD do cidadão atendido.
 |---| --- |---  | --- |
 |Long|	Opcional|	-|	-|
 
-**Regras:**
-<br> • Apenas valores de `1L` a `3L`.
+**Regras:** Apenas valores de `1L` a `3L`.
 
 **Referências:**	[ModalidadeAD]({% url dicionario %}#modalidadead)
 
@@ -221,7 +224,7 @@ Lista de exames avaliados que são apresentados na ficha.
 |List\<String>|	Opcional|	0|	23|
 
 **Regras:**
-<br> • Não pode conter dois exames iguais.
+* Não pode conter dois exames iguais.
 
 **Referências:** [ListaExameSolicitado](#listaexamesolicitado)
 
@@ -242,7 +245,7 @@ Marcador referente a vacinação em dia do cidadão.
 |Boolean|	Opcional|	-|	-|
 
 ### \#19	pic
-Práticas Integrativas e Comprelementares.
+Práticas Integrativas e Complementares.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -338,8 +341,9 @@ Lista de Ciaps apresentados na lista.
 |List\<String>|	Condicional |	0 |	22 |
 
 **Regras:**
-<br> • Não deve conter dois "Problemas / Condições" iguais.
-<br> • É Requerido o preenchimento de pelo menos um dos itens.
+
+* Não deve conter dois "Problemas / Condições" iguais.
+* É Requerido o preenchimento de pelo menos um dos itens de `#1` a `#4`.
 
 **Referências:** [ListaCiapCondicaoAvaliada](#listaciapcondicaoavaliada)
 
@@ -350,7 +354,10 @@ CIAP1 registrado no antedimento.
 |---| --- |---  | --- |
 |String|	Condicional | 	-|	-|
 
-**Regras:** Não pode ser igual a [outroCiap2](##3-outrociap2).
+**Regras:**
+
+* Não pode ser igual a [outroCiap2](##3-outrociap2).
+* É Requerido o preenchimento de pelo menos um dos itens de `#1` a `#4`.
 
 ### \#3	outroCiap2
 CIAP2 registrado no antedimento.
@@ -359,7 +366,10 @@ CIAP2 registrado no antedimento.
 |---| --- |---  | --- |
 |String|	Condicional|	-|	-|
 
-**Regras:**	Não pode ser igual a [outroCiap1](##2-outrociap1).
+**Regras:**
+
+* Não pode ser igual a [outroCiap1](##2-outrociap1).
+* É Requerido o preenchimento de pelo menos um dos itens de `#1` a `#4`.
 
 ### \#4	cid10
 CID10 registrado no atendimento.
@@ -367,6 +377,9 @@ CID10 registrado no atendimento.
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |String|	Condicional|	-|	-|
+
+**Regras:**
+* É Requerido o preenchimento de pelo menos um dos itens de `#1` a `#4`.
 
 ## ListaCiapCondicaoAvaliada
 |Código| Descrição|
@@ -391,7 +404,7 @@ CID10 registrado no atendimento.
 |ABP003|	Saúde Sexual e Reprodutiva|
 |ABP011|	Tabagismo|
 |ABP017|	Tuberculose|
-|ABP012|	Usuário de alcool|
+|ABP012|	Usuário de álcool|
 |ABP013|	Usuário de outras drogas|
 
 ## ListaExameSolicitado
@@ -418,5 +431,5 @@ CID10 registrado no atendimento.
 |ABEX023|		Teste de gravidez|
 |ABEX022|		Teste do olhinho|
 |ABEX021|		Teste do pezinho|
-|ABEX024|		Ultrassonografia obstetrica|
+|ABEX024|		Ultrassonografia obstétrica|
 |ABEX029|		Urocultura|

@@ -54,7 +54,7 @@ Hora de início da realização da atividade coletiva.
 |---| --- |---  | --- |
 |Long|	Opcional|	-|	-|
 
-**Regras:** Verificar validações
+**Regras:** Verificar validações.
 
 **Referência:** [Epoch Wikipedia](https://en.wikipedia.org/wiki/Epoch)
 
@@ -114,7 +114,7 @@ Número de participantes da atividade.
 **Regras:** Valores entre 0 e 999.
 
 ### \#12	numAvaliacoesAlteradas
-Número das avaliações alteradas.
+Número de avaliações alteradas.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |

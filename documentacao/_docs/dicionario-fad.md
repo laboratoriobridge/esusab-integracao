@@ -18,7 +18,7 @@ UUID para identificar a ficha na base de dados nacional.
 
 **Regras:** É recomendado concatenar o CNES na frente do UUID, de modo que os 7 digitos (CNES) + 1 de hífen somados aos 36 (32 caracteres + 4 hífen) do UUID são a limitação de 44 bytes do campo.
 
-**Referência:** Formato canônico.	Para ver a referência sobre o UUID, acesse: [UUID Wikipedia](https://en.wikipedia.org/wiki/Universally_unique_identifier).
+**Referências:** Formato canônico.	Para ver a referência sobre o UUID, acesse: [UUID Wikipedia](https://en.wikipedia.org/wiki/Universally_unique_identifier).
 
 ### \#2	tpCdsOrigem
 Tipo de origem dos dados do registro.
@@ -36,7 +36,7 @@ Profissional que realizou a visita.
 |---| --- |---  | --- |
 |UnicaLotacaoHeader|	Sim|	-|	-|
 
-**Referências**	[UnicaLotacaoHeader]({% url profissional %}#unicalotacaoheader)
+**Referências:**	[UnicaLotacaoHeader]({% url profissional %}#unicalotacaoheader)
 
 ### \#4	atendimentosDomiciliares
 Lista dos atendimentos realizados pelo profissional.
@@ -54,7 +54,7 @@ Turno onde aconteceu o atendimento.
 |---| --- |---  | --- |
 |Long|	Sim|	-|	-|
 
-**Referência:** [Turno]({% url dicionario %}#turno)
+**Referências:** [Turno]({% url dicionario %}#turno)
 
 ### \#2	cns
 CNS do cidadão que participou da atividade.
@@ -65,7 +65,7 @@ CNS do cidadão que participou da atividade.
 
 **Regras:** Validado pelo algoritmo.
 
-**Referência:** Para ver o algoritmo utilizado, acesse: [Cartão Net Datasus](http://cartaonet.datasus.gov.br/), em "Downloads" baixe o arquivo de rotina de validação Java.  
+**Referências:** Para ver o algoritmo utilizado, acesse: [Cartão Net Datasus](http://cartaonet.datasus.gov.br/), em "Downloads" baixe o arquivo de rotina de validação Java.  
 
 ### \#3	dataNascimento
 Data de nascimento do cidadão.
@@ -85,7 +85,7 @@ Sexo do cidadão.
 |---| --- |---  | --- |
 |Long|	Sim|	-|	-|
 
-**Referência:**	[Sexo]({% url dicionario%}#sexo)
+**Referências:**	[Sexo]({% url dicionario%}#sexo)
 
 ### \#5	localDeAtendimento
 Local onde o atendimento foi realizado.
@@ -94,7 +94,7 @@ Local onde o atendimento foi realizado.
 |---| --- |---  | --- |
 |Long|	Sim|	-|	-|
 
-**Referência** [LocalDeAtendimento]({% url dicionario%}#localdeatendimento)
+**Referências:** [LocalDeAtendimento]({% url dicionario%}#localdeatendimento)
 
 ### \#6	atencaoDomiciliarModalidade
 
@@ -106,7 +106,7 @@ Modalidade AD do cidadão atendido.
 
 **Regras:** Apenas as opções `1L`, `2L` e `3L` são aceitas.
 
-**Referência:** [ModalidadeAD]({% url dicionario %}#modalidadead)
+**Referências:** [ModalidadeAD]({% url dicionario %}#modalidadead)
 
 ### \#7	tipoAtendimento
 Tipo de atendimento.
@@ -117,7 +117,7 @@ Tipo de atendimento.
 
 **Regras:** Apenas as opções `7L` e `8L` são aceitas.
 
-**Referências**: [TipoDeAtendimento]({% url dicionario %}#tipodeatendimento)
+**Referências:**: [TipoDeAtendimento]({% url dicionario %}#tipodeatendimento)
 
 ### \#8	situacoesPresentes
 Marcadores das situações presentes.
@@ -126,7 +126,7 @@ Marcadores das situações presentes.
 |---| --- |---  | --- |
 |List\<Long\>|	Opcional|	0|	24|
 
-**Referências**: [SituacoesPresentes](##8-situacoespresentes)
+**Referências:**: [SituacoesPresentes](##8-situacoespresentes)
 
 ### \#9	cid
 CID registrado no atendimento.
@@ -149,7 +149,7 @@ Procedimentos registrados no atendimento disponíveis na ficha.
 |---| --- |---  | --- |
 |List\<String\>|	Opcional|	0|	21|
 
-**Referência:** [ProcedimentosDaAtençãoDomiciliar](#procedimentos-da-atenção-domiciliar)
+**Referências:** [ProcedimentosDaAtençãoDomiciliar](#procedimentos-da-atenção-domiciliar)
 
 ### \#12	outrosProcedimentos
 Procedimentos SIGTAP registrados no atendimento.
@@ -159,8 +159,9 @@ Procedimentos SIGTAP registrados no atendimento.
 |List\<String\>|	Opcional	|0|	4|
 
 **Regras:**
-<br> • Não podem ser iguais aos procedimentos a cima.
-<br> • Não podem conter procedimentos repetidos.
+
+* Não podem ser iguais aos procedimentos à cima.
+* Não podem conter procedimentos repetidos.
 
 ### \#13	condutaDesfecho
 Desfecho do atendimento do cidadão.
@@ -171,7 +172,7 @@ Desfecho do atendimento do cidadão.
 
 **Regras:**	Não podem conter as opções `7L` ou `8L`.
 
-**Referência:**	[CondutaDesfecho]({% url dicionario %}#condutadesfecho)
+**Referências:**	[CondutaDesfecho]({% url dicionario %}#condutadesfecho)
 
 ### \#14	statusInicioAcompanhamentoPosObito
 Marcador que indica se a família irá receber acompanhamento pós-óbito.

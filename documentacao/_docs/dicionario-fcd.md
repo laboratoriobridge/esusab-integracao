@@ -51,7 +51,7 @@ Informações sobre o endereço do domicílio.
 | ---| --- |---  | --- |
 | EnderecoLocalPermanencia|	Condicional |  - | -|
 
-**Regras:** Preencimento obrigatório caso o campo [statusTermoRecusaCadastroDomiciliarAtencaoBasica](##9-statustermorecusacadatrodomiciliaratencaobasica) = `false`.
+**Regras:** Preenchimento obrigatório caso o campo [statusTermoRecusaCadastroDomiciliarAtencaoBasica](##9-statustermorecusacadatrodomiciliaratencaobasica) = `false`.
 
 **Referências:** [EnderecoLocalPermanencia](#enderecolocalpermanencia)
 

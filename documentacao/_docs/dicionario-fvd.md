@@ -112,7 +112,7 @@ Motivos da visita.
 |--- |--- |--- |--- |
 |List\<Long\> |Condicional |- |- |
 
-**Regras:** Não é Obrigatório se [Desfecho]({% url dicionario %}#desfecho) é `AUSENTE` ou `VISITA_RECUSADA`.
+**Regras:** Não pode ser preenchido caso [Desfecho]({% url dicionario %}#desfecho) é `AUSENTE` ou `VISITA_RECUSADA`.
 
 **Referência:** [MotivoVisita]({% url dicionario %}#motivovisita).
 

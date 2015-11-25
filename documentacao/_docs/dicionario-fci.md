@@ -16,7 +16,7 @@ Formulário referente as condições de saúde do cidadão.
 |--- |--- |--- |--- |
 |CondicoesDeSaude |Condicional |- |- |
 
-**Regras:** Não deve ser preenchido se o campo [statusTermoRecusaCadastroIndividualAtencaoBasica](##7-statustermorecusacadastroindividualatencaobasica) = `true`.
+**Regras:** Não deve ser preenchido se o campo [statusTermoRecusaCadastroIndividualAtencaoBasica](\#7-statustermorecusacadastroindividualatencaobasica) = `true`.
 
 **Referência:** [CondicoesDeSaude](#condicoesdesaude)
 
@@ -154,8 +154,8 @@ Doenças cardíacas que o cidadão informou.
 |List\<Long\> |Condicional |0 |3 |
 
 **Regras:**
-<br> • Requerido preenchimento de pelo menos um item se o campo [statusTeveDoencaCardiaca](##25-statustevedoencacardiaca) = `true`.
-<br> • Não deve ser preenchido se o campo [statusTeveDoencaCardiaca](##25-statustevedoencacardiaca) = `false`.
+* Requerido preenchimento de pelo menos um item se o campo [statusTeveDoencaCardiaca](##25-statustevedoencacardiaca) = `true`.
+* Não deve ser preenchido se o campo [statusTeveDoencaCardiaca](##25-statustevedoencacardiaca) = `false`.
 
 **Referência:** [DoencaCardiaca]({% url dicionario %}#doencacardiaca).
 
@@ -167,8 +167,9 @@ Doenças respiratórias que o cidadão informou.
 |List\<Long\> |Condicional |0 |4 |
 
 **Regras:**
-<br> • Requerido preenchimento de pelo menos um item se o campo [statusTemDoencaRespiratorio](##18-statustemdoencarespiratorio) = `true`.
-<br> •  Não deve ser preenchido o campo [stcampoatusTemDoencaRespiratorio](##18-statustemdoencarespiratorio) = `false`.
+
+* Requerido preenchimento de pelo menos um item se o campo [statusTemDoencaRespiratorio](##18-statustemdoencarespiratorio) = `true`.
+*  Não deve ser preenchido o campo [statusTemDoencaRespiratorio](##18-statustemdoencarespiratorio) = `false`.
 
 **Referência:** [DoencaRespiratoria]({% url dicionario %}#doencarespiratoria).
 
@@ -180,13 +181,14 @@ Doenças renais que o cidadão informou.
 |List\<Long\> |Condicional |0 |3 |
 
 **Regras:**
-<br> • Requerido preenchimento de pelo menos um item se o campo [statusTemTeveDoencasRins](##22-statustemtevedoencasrins) = `true`.
-<br> • Não deve ser preenchido se o campo [statusTemTeveDoencasRins](##22-statustemtevedoencasrins) = `false`.
+
+* Requerido preenchimento de pelo menos um item se o campo [statusTemTeveDoencasRins](##22-statustemtevedoencasrins) = `true`.
+* Não deve ser preenchido se o campo [statusTemTeveDoencasRins](##22-statustemtevedoencasrins) = `false`.
 
 **Referência:** [ConsideracaoPeso]({% url dicionario %}#consideracaopeso).
 
 ### \#9 maternidadeDeReferencia
-Nome da maternindade de referência.
+Nome da maternidade de referência.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |--- |--- |--- |--- |
@@ -358,6 +360,7 @@ Grau de parentesco do familiar que frequenta.
 |String |Condicional |0 |100 |
 
 **Regras:**
+
 * Não pode ser preechido se o campo [statusSituacaoRua](##9-statussituacaorua) = `false`.
 * Não pode ser preenchido se o campo [statusVisitaFamiliarFrequentemente](##11-statusvisitafamiliarfrequentemente) = `false`.
 
@@ -394,8 +397,9 @@ Nome de outra instituição que acompanha o cidadão.
 |String |Opcional |0 |100 |
 
 **Regras:**
-<br> • Não pode ser preechido se o campo [statusSituacaoRua](##9-statussituacaorua) = `false`.
-<br> • Não pode ser preenchido se o campo [statusAcompanhadoPorOutraInstituição](##6-statusacompanhadoporoutrainstituicao) = `false`.
+
+* Não pode ser preechido se o campo [statusSituacaoRua](##9-statussituacaorua) = `false`.
+* Não pode ser preenchido se o campo [statusAcompanhadoPorOutraInstituição](##6-statusacompanhadoporoutrainstituicao) = `false`.
 
 ### \#5 quantidadeAlimentacoesAoDiaSituacaoRua
 Quantas vezes o cidadão se alimenta ao dia.
@@ -578,8 +582,8 @@ CNS do responsável do cidadão.
 |String |Opcional |15 |15 |
 
 **Regras:**
-<br> • Validado por algoritmo.
-<br> • Só pode ser preenchido se o campo [statusEhResponsavel](##17-statusehresponsavel) = `true`.
+* Validado por algoritmo.
+* Só pode ser preenchido se o campo [statusEhResponsavel](##17-statusehresponsavel) = `true`.
 
 **Referência:** Para ver o algoritmo utilizado, acesse: [Cartão Net Datasus](http://cartaonet.datasus.gov.br/), em "Downloads" baixe o arquivo de rotina de validação Java.
 
@@ -599,7 +603,7 @@ Número do PIS/PASEP do cidadão.
 |--- |--- |--- |--- |
 |String |Opcional |11 |11 |
 
-### \#14 paisNacimento
+### \#14 paisNascimento
 País de nascimento do cidadão.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -647,15 +651,15 @@ Lista de deficiências que o cidadão possui.
 **Referência:** [DeficienciaCidadao]({% url dicionario %}#deficienciacidadao).
 
 **Regras:**
-<br> • Requerido preenchimento de pelo menos um item se o campo [statusTemAlgumaDeficiencia](##16-statustemalgumadeficiencia) = `true`.
-<br> • Não deve ser preenchido se o campo [statusTemAlgumaDeficiencia](##16-statustemalgumadeficiencia) = `false`.
+* Requerido preenchimento de pelo menos um item se o campo [statusTemAlgumaDeficiencia](##16-statustemalgumadeficiencia) = `true`.
+* Não deve ser preenchido se o campo [statusTemAlgumaDeficiencia](##16-statustemalgumadeficiencia) = `false`.
 
 ### \#2 grauInstrucaoCidadao
 Curso mais elevado que o cidadão frequenta ou frequentou.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |--- |--- |--- |--- |
-|Long |opcional |- |- |
+|Long |Opcional |- |- |
 
 **Referência:** [CursoMaisElevado]({% url dicionario %}#cursomaiselevado).
 
@@ -664,7 +668,7 @@ Motivo da saída do cidadão do cadastro.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |--- |--- |--- |--- |
-|Long |opcional |- |- |
+|Long |Opcional |- |- |
 
 **Referência:** [MotivoSaida]({% url dicionario %}#motivosaida).
 
@@ -673,11 +677,11 @@ Ocupaçao do cidadão.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |--- |--- |--- |--- |
-|String |opcional |6 |6 |
+|String |Opcional |6 |6 |
 
 **Regras:**
-<br> • Deve ser um CBO válido.
-<br> • Não pode ser preenchido se o campo [statusDesejaInformarOrientacaoSexual](##10-statusdesejainformarorientacaosexual) = `false`.
+* Deve ser um CBO válido.
+* Não pode ser preenchido se o campo [statusDesejaInformarOrientacaoSexual](##10-statusdesejainformarorientacaosexual) = `false`.
 
 **Referência:** [CBO]({% url cbo %}).
 
@@ -686,7 +690,7 @@ Orientação sexual informada pelo cidadão.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |--- |--- |--- |--- |
-|Long |opcional |- |- |
+|Long |Opcional |- |- |
 
 **Referência:** [OrientacaoSexual]({% url dicionario %}#orientacaosexual).
 
@@ -695,7 +699,7 @@ Nome da comunidade tradicional que o cidadão frequenta.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |--- |--- |--- |--- |
-|String |opcional |0 |100 |
+|String |Opcional |0 |100 |
 
 **Regras:** Não deve ser preenchido se o campo [statusMembroPovoComunidadeTradicional](##13-statusmembropovocomunidadetradicional) = `false`.
 
@@ -704,7 +708,7 @@ Relação de parentesco com o responsável familiar.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |--- |--- |--- |--- |
-|Long |opcional |- |- |
+|Long |Opcional |- |- |
 
 **Referência:** [RelacaoParentesco]({% url dicionario %}#relacaoparentesco).
 
@@ -713,7 +717,7 @@ Responsável por crianças de até 9 anos.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |--- |--- |--- |--- |
-|Long |opcional |- |- |
+|Long |Opcional |- |- |
 
 **Referência:** [ResponsavelCrianca]({% url dicionario %}#responsavelcrianca).
 
@@ -722,7 +726,7 @@ Situação do cidadão no mercado de trabalho.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |--- |--- |--- |--- |
-|Long |opcional |- |- |
+|Long |Opcional |- |- |
 
 **Referência:** [SituacaoMercadoTrabalho]({% url dicionario %}#situacaomercadotrabalho).
 
@@ -732,7 +736,7 @@ Marcador que indica se o cidadão deseja informar sua orientação sexual.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |--- |--- |--- |--- |
-|Boolean |opcional |- |- |
+|Boolean |Opcional |- |- |
 
 ### \#11 statusFrequentaBenzedeira
 
@@ -740,7 +744,7 @@ Marcador que indica se o cidadão frequenta cuidador tradicional.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |--- |--- |--- |--- |
-|Boolean |opcional |- |- |
+|Boolean |Opcional |- |- |
 
 ### \#12 statusFrequentaEscola
 Marcador que indica se o cidadão frequenta escola ou creche.
@@ -754,21 +758,21 @@ Marcador que indica se o cidadão é membro de um povo ou comunidade tradicional
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |--- |--- |--- |--- |
-|Boolean |opcional |- |- |
+|Boolean |Opcional |- |- |
 
 ### \#14 statusParticipaGrupoComunitario
 Marcador que indica se o cidadão participa de algum grupo comunitário.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |--- |--- |--- |--- |
-|Boolean |opcional |- |- |
+|Boolean |Opcional |- |- |
 
 ### \#15 statusPossuiPlanoSaudePrivado
 Marcador que indica se o cidadão possui plano de saúde privado.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |--- |--- |--- |--- |
-|Boolean |opcional |- |- |
+|Boolean |Opcional |- |- |
 
 ### \#16 statusTemAlgumaDeficiencia
 Marcador que indica se cidadão tem alguma dificiência.

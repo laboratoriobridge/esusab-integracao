@@ -35,7 +35,7 @@ order: 0
 |---|---|---|
 |128 L|	Gato	|-|
 |129 L|	Cachorro	|-|
-|130 L|	Passaro	|-|
+|130 L|	Pássaro	|-|
 |131 L|	De criação (porco, galinha...) |-|
 |132 L|	Outros|	-|
 
@@ -61,11 +61,11 @@ order: 0
 ## ConclusaoDestinoInelegivel
 |Código|	Descrição|	Observações|
 |---|---|---|
-|1 L|	INSTABILIDADE\_CLINICA	|-|
-|2 L|	NECESSIDADE\_PROPEDEUTICA|	-|
-|3 L|	OUTRO\_MOTIVO	|-|
-|4 L|	AUSENCIA\_CUIDADOR|	-|
-|5 L|	OUTRAS\_CONDICOES\_SOCIAIS	|-|
+|1 L|	Instabilidade clínica	|-|
+|2 L|	Necessidade propedeutica|	-|
+|3 L|	Outro motivo	|-|
+|4 L|	Ausência de cuidador |	-|
+|5 L|	Outras condições sociais	|-|
 
 ## CondicaoDePosseEUsoDaTerra
 |Código|	Descrição|	Observações|
@@ -136,7 +136,7 @@ order: 0
 |Código|	Descrição|	Observações|
 |---|---|---|
 |1 L|	Não possui |	-|
-|2 L|	Conjuge / Companheiro|	-|
+|2 L|	Cônjuge / Companheiro|	-|
 |3 L|	Filho / Enteado|	-|
 |4 L|	Pai / Mãe|	-|
 |5 L|	Avô(ó)|	-|
@@ -318,8 +318,8 @@ order: 0
 |Código|	Descrição|	Observações|
 |---|---|---|
 |1 L|	Avaliação / Diagnóstico| 	-|
-|2 L|	Procedimentos clinicos terapeuticos| 	-|
-|3 L|	Prescreição terapeutica| 	-|
+|2 L|	Procedimentos clínicos terapeuticos| 	-|
+|3 L|	Prescrição terapêutica| 	-|
 
 ## OrientacaoSexual
 |Código| Descrição|	Observações|
@@ -356,7 +356,7 @@ order: 0
 ## PraticasTemasParaSaude
 |Código|	Descrição|	Observações|
 |---|---|---|
-|1 L|	Alimentação saldavel|	-|
+|1 L|	Alimentação saudável|	-|
 |2 L|	Aplicação tópica de fluor|	-|
 |3 L|	Saúde ocular|	-|
 |4 L|	Autocuidado de pessoas com doenças crônicas |	-|
@@ -366,15 +366,15 @@ order: 0
 |8 L|	Envelhecimento / Climatério / Andropausa  / Etc|	-|
 |9 L|	Escovação dentária supervisionada |	-|
 |10 L|	Plantas medicinais / Fitoterapia|	-|
-|11 L|	Práticvas corporais / Atividade física|	-|
-|12 L|	Práticvas corporais e mentais em PIC |	-|
-|13 L|	Prevenção da violencia e promoção da cultura da paz|	-|
+|11 L|	Práticas corporais / Atividade física|	-|
+|12 L|	Práticas corporais e mentais em PIC |	-|
+|13 L|	Prevenção da violência e promoção da cultura da paz|	-|
 |14 L|	Saúde ambiental|	-|
 |15 L|	Saúde bucal|	-|
 |16 L|	Saúde mental|	-|
 |17 L|	Saúde sexual e reprodutiva|	-|
 |18 L|	Semana saúde na escola|	-|
-|19 L|	Agravos nigligenciados|	-|
+|19 L|	Agravos negligenciados|	-|
 |20 L|	Antropometria|	-|
 |21 L|	Outros|	-|
 |22 L|	Saúde auditiva |	-|
@@ -399,7 +399,7 @@ order: 0
 |2 L|	Criança de 0 a 3 anos|	-|
 |3 L| Criança de 4 a 5 anos|	-|
 |4 L|	Criança de 6 a 11 anos|	-|
-|5 L|	Adolecente|	-|
+|5 L|	Adolescente|	-|
 |6 L|	Mulher|	-|
 |7 L|	Gestante|	-|
 |8 L|	Homem|	-|
@@ -427,7 +427,7 @@ order: 0
 |2 L|	Preta|	-|
 |4 L|	Parda|	-|
 |3 L|	Amarela|	-|
-|5 L|	Indigena|	-|
+|5 L|	Indígena|	-|
 
 ## RelacaoParentesco
 |Código|	Descrição|	Observações|
@@ -459,7 +459,7 @@ order: 0
 |---|---|---|
 |1 L|	Adulto responsável|	-|
 |2 L|	Outra(s) criança(s)|	-|
-|133 L|	Adolecente|	-|
+|133 L|	Adolescente|	-|
 |3 L|	Sozinha|	-|
 |134 L|	Creche|	-|
 |4 L|	Outro|	-|
@@ -478,8 +478,8 @@ order: 0
 |77 L|	Alugado|	-|
 |78 L|	Arrendado|	-|
 |79 L|	Cedido|	-|
-|80 L|	Ocupacao|	-|
-|81 L|	Situacao de rua|	-|
+|80 L|	Ocupação|	-|
+|81 L|	Situação de rua|	-|
 |82 L|	Outra|	-|
 
 ## SituacaoExame
@@ -526,7 +526,7 @@ order: 0
 |---|---|---|
 |1 L|	Reunião de equipe	|-|
 |2 L|	Reunião com outras equipes de saúde	|-|
-|3 L|	Reunião intersetorial  / Conselho local de saúde  / Controle social -|
+|3 L|	Reunião intersetorial  / Conselho local de saúde  / Controle social | -|
 |4 L|	Educação em saúde	|-|
 |5 L|	Atendimento em grupo	|-|
 |6 L|	Avaliação / Procedimento coletivo 	|-|
@@ -602,7 +602,7 @@ order: 0
 |1 L|	Abscesso dento alveolar|	-|
 |2 L|	Alteração em tecidos moles|	-|
 |3 L|	Dor de dente|	-|
-|4 L|	Fendas / Fissuras labio palatais|	-|
+|4 L|	Fendas / Fissuras lábio palatais|	-|
 |5 L|	Fluorose dentária moderada / severa |	-|
 |6 L|	Traumatismo dento alveolar|	-|
 |99 L|	Não identificado|	-|

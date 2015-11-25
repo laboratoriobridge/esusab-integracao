@@ -63,13 +63,9 @@ public class ExemploDadosParaThrift {
 		remetente.setUuidInstalacao("UUIDUNICO222");
 		dadoTransporteThrift.setRemetente(remetente);
 
-		// Opcionais;
 		dadoTransporteThrift.setNumLote(0l);
 
-		VersaoThrift versaoThrift = new VersaoThrift();
-		versaoThrift.setMajor(2);
-		versaoThrift.setMinor(0);
-		versaoThrift.setRevision(0);
+		VersaoThrift versaoThrift = new VersaoThrift(2, 0, 0);
 		dadoTransporteThrift.setVersao(versaoThrift);
 
 		return dadoTransporteThrift;

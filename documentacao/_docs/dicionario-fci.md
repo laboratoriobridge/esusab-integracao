@@ -561,7 +561,7 @@ Nome da mãe do cidadão.
 **Regras:**
 
 * Requerido espaço em branco para indicar o sobrenome.
-* Não deve ser preenchido se o campo [desconheceNomeMae](#5-desconhecenomedamae) = `true`.
+* Não deve ser preenchido se o campo [desconheceNomeMae](#5-desconhecenomemae) = `true`.
 
 ### \#10 numeroCartaoSus
 CNS do cidadão.
@@ -673,14 +673,14 @@ Motivo da saída do cidadão do cadastro.
 **Referência:** [MotivoSaida]({% url dicionario %}#motivosaida).
 
 ### \#4 ocupacaoCodigoCbo2002
-Ocupaçao do cidadão.
+Código do CBO que representa a ocupaçao do cidadão.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |--- |--- |--- |--- |
 |String |Opcional |6 |6 |
 
 **Regras:**
-* Deve ser um CBO válido.
+* Deve ser um código de CBO válido.
 * Não pode ser preenchido se o campo [statusDesejaInformarOrientacaoSexual](#10-statusdesejainformarorientacaosexual) = `false`.
 
 **Referência:** [CBO]({% url cbo %}).

@@ -23,7 +23,7 @@ CNS do profissional.
 Observação: Esta entidade é utilizada para representar o profissional responsável pelas fichas.
 
 ### \#2	cboCodigo_2002
-CBO do profissional.
+Código do CBO do profissional.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |--- |--- |--- |--- |
@@ -98,7 +98,7 @@ CNS do profissional1.
 Observação: Esta entidade é utilizada para representar o profissional responsável pela ficha e os outros que o auxiliaram na atividade.
 
 ### \#3 cboCodigo\_2002\_1
-CBO do profissional1.
+Código do CBO do profissional1.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |--- |--- |--- |--- |
@@ -124,7 +124,7 @@ CNS do profissional2.
 Observação: Esta entidade é utilizada para representar o profissional responsável pela ficha e os outros que o auxiliaram na atividade.
 
 ### \#5 cboCodigo\_2002\_2
-CBO do profissional2.
+Código do CBO do profissional2.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |--- |--- |--- |--- |
@@ -152,7 +152,7 @@ CNS do profissional.
 Observação: Esta entidade é utilizada para representar os profissionais que participaram da atividade coletiva
 
 ### \#2 codigoCbo2002
-CBO do profissional.
+Código CBO do profissional.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |--- |--- |--- |--- |

@@ -154,6 +154,7 @@ Código das doenças cardíacas que o cidadão informou.
 |List\<Long\> |Condicional |0 |3 |
 
 **Regras:**
+
 * Requerido preenchimento de pelo menos um item se o campo [statusTeveDoencaCardiaca](#25-statustevedoencacardiaca) = `true`.
 * Não deve ser preenchido se o campo [statusTeveDoencaCardiaca](#25-statustevedoencacardiaca) = `false`.
 

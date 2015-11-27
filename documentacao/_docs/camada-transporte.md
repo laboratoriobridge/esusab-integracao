@@ -35,7 +35,7 @@ Tipo/classe do objeto serializado através do [TBinaryProtocol](https://github.c
 **Referência:** [TipoDadoSerializado]({% url dicionario %}#tipodadoserializado)
 
 ### \#3 cnesDadoSerializado
-CNES da unidade de saúde.
+Código CNES da unidade de saúde.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -51,7 +51,7 @@ Código IBGE do dado serializado através do [TBinaryProtocol](https://github.co
 **Referência:** [Municípios]({% url municipios %})
 
 ### \#5	ineDadoSerializado
-INE da equipe que gerou a ficha.
+Código INE da equipe que gerou a ficha.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |

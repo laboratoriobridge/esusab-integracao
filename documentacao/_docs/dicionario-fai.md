@@ -83,7 +83,7 @@ Data de nascimento do cidadão.
 **Refererência**: [Epoch Wikipedia](https://en.wikipedia.org/wiki/Epoch_(reference_date)).
 
 ### \#4	localDeAtendimento
-Local onde o atendimento foi realizado.
+Código do local onde o atendimento foi realizado.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -94,7 +94,7 @@ Local onde o atendimento foi realizado.
 **Referências:** [LocalDeAtendimento]({% url dicionario %}#localdeatendimento)
 
 ### \#5	sexo
-Sexo do cidadão.
+Código do sexo do cidadão.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -103,7 +103,7 @@ Sexo do cidadão.
 **Referências:** [Sexo]({% url dicionario %}#sexo)
 
 ### \#6	turno
-Turno em que o atendimento foi realizado.
+Código do turno em que o atendimento foi realizado.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -112,7 +112,7 @@ Turno em que o atendimento foi realizado.
 **Referências:** [Turno]({% url dicionario %}#turno)
 
 ### \#7	tipoAtendimento
-Tipo de atendimento realizado.
+Código do tipo de atendimento realizado.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -151,7 +151,7 @@ Altura do cidadão em cm.
 * Valor mínimo 20 e máximo 250.
 
 ### \#10	aleitamentoMaterno
-Marcadores referentes ao aleitamento materno.
+Código do marcador referente ao aleitamento materno.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -186,7 +186,7 @@ Idade gestacional em semanas.
 * Não pode ser preenchido quando [Sexo](#5-sexo) = `0L (masculino)`.
 
 ### \#13	atencaoDomiciliarModalidade
-Modalidade AD do cidadão atendido.
+Código do modalidade AD do cidadão atendido.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -245,7 +245,7 @@ Marcador referente a vacinação em dia do cidadão.
 |Boolean|	Opcional|	-|	-|
 
 ### \#19	pic
-Práticas Integrativas e Complementares.
+Código das Práticas Integrativas e Complementares.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -261,16 +261,16 @@ Marcador referente se o cidadão ficou em observação no atendimento.
 |Boolean|	Opcional|	-|	-|
 
 ### \#21	nasfs
-Ações realizadas pelo Núcleo de Atenção a Saúde da Família.
+Código das ações realizadas pelo Núcleo de Atenção a Saúde da Família.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |List\<Long>|	Opcional|	0|	3|
 
-**Referências:**	[Nasf]({% url dicionario %}#nasf)
+**Referências:** [Nasf]({% url dicionario %}#nasf)
 
 ### \#22	condutas
-Condutas adotadas no atendimento.
+Código das condutas adotadas no atendimento.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -323,7 +323,7 @@ Código do exame solicitado ou avaliado.
 **Observações**: Sem ponto ou hifen, ex: `0101010010`
 
 ### \#2	solicitadoAvaliado
-Indicador se o exame foi `Solicitado` e / ou `Avaliado`.
+Código do indicador se o exame foi `Solicitado` e / ou `Avaliado`.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -334,7 +334,7 @@ Indicador se o exame foi `Solicitado` e / ou `Avaliado`.
 ## ProblemaCondicaoAvaliacaoAI
 
 ### \#1	ciaps
-Lista de Ciaps apresentados na lista.
+Código dos CIAPs apresentados na lista.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -348,7 +348,7 @@ Lista de Ciaps apresentados na lista.
 **Referências:** [ListaCiapCondicaoAvaliada](#listaciapcondicaoavaliada)
 
 ### \#2	outroCiap1
-CIAP1 registrado no antedimento.
+Código do CIAP1 registrado no antedimento.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -360,7 +360,7 @@ CIAP1 registrado no antedimento.
 * É Requerido o preenchimento de pelo menos um dos itens de `#1` a `#4`.
 
 ### \#3	outroCiap2
-CIAP2 registrado no antedimento.
+Código do CIAP2 registrado no antedimento.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -372,7 +372,7 @@ CIAP2 registrado no antedimento.
 * É Requerido o preenchimento de pelo menos um dos itens de `#1` a `#4`.
 
 ### \#4	cid10
-CID10 registrado no atendimento.
+Código do CID10 registrado no atendimento.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |

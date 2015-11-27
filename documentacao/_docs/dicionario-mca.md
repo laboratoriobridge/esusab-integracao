@@ -20,7 +20,6 @@ Profissional que realizou a visita.
 **Referência:** {% link profissional %}
 
 ### \#2 numeroCartaoSus
-
 CNS do cidadão.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -32,7 +31,6 @@ CNS do cidadão.
 **Referência:** Para ver o algoritmo utilizado, acesse: [Cartão Net Datasus](http://cartaonet.datasus.gov.br/). Em "Downloads" baixe o arquivo de rotina de validação Java.  
 
 ### \#3 identificacaoUsuario
-
 Nome do cidadão.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -45,7 +43,6 @@ Nome do cidadão.
 * Somente texto e apóstrofo (`'`).
 
 ### \#4 dataNascimento
-
 Data de nascimento do cidadão no formato epoch time.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -57,8 +54,7 @@ Data de nascimento do cidadão no formato epoch time.
 **Referêcia**: [Epoch Wikipedia](https://en.wikipedia.org/wiki/Epoch\_(reference\_date)).
 
 ### \#5 sexo
-
-Sexo do cidadão.
+Código do sexo do cidadão.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |--- |--- |--- |--- |
@@ -67,8 +63,7 @@ Sexo do cidadão.
 **Referêcia**: [Sexo]({% url dicionario#sexo %})
 
 ### \#6 localAtendimento
-
-Local onde o atendimento foi realizado.
+Código do local onde o atendimento foi realizado.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |--- |--- |--- |--- |
@@ -77,7 +72,6 @@ Local onde o atendimento foi realizado.
 **Referêcia**: [LocalDeAtendimento]({% url dicionario#localdeatendimento %})
 
 ### \#7 perguntasQuestionarioCriancasMenoresSeisMeses
-
 Marcadores referentes aos cidadãos menores de seis meses de idade.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -91,7 +85,6 @@ Marcadores referentes aos cidadãos menores de seis meses de idade.
 Observações: Os campos `#7`, `#8` e `#9` são mutuamente exclusivos, isto é, um e apenas um deles deve não ser nulo.
 
 ### \#8 perguntasQuestionarioCriancasDeSeisVinteTresMeses
-
 Marcadores referentes aos cidadãos que tem entre seis e vinte e três meses de idade.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -105,7 +98,6 @@ Marcadores referentes aos cidadãos que tem entre seis e vinte e três meses de 
 Observações: Os campos `#7`, `#8` e `#9` são mutuamente exclusivos, isto é, um e apenas um deles deve não ser nulo.
 
 ### \#9 perguntasQuestionarioCriancasComMaisDoisAnos
-
 Marcadores referentes aos cidadãos que tem vinte e quatro meses ou mais.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -119,7 +111,6 @@ Marcadores referentes aos cidadãos que tem vinte e quatro meses ou mais.
 Observações: Os campos `#7`, `#8` e `#9` são mutuamente exclusivos, isto é, um e apenas um deles deve não ser nulo.
 
 ### \#10 uuidFicha
-
 Código UUID para identificar a ficha na base de dados nacional.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -131,7 +122,6 @@ Código UUID para identificar a ficha na base de dados nacional.
 **Referêcia**: Para ver a referência sobre o UUID, acesse: [UUID Wikipedia](https://en.wikipedia.org/wiki/Universally\_unique\_identifier).
 
 ### \#11 tpCdsOrigem
-
 Tipo de origem dos dados do registro.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -143,7 +133,6 @@ Tipo de origem dos dados do registro.
 ## PerguntaQuestionarioCriancasMenoresSeisMeses
 
 ### \#1	pergunta
-
 Identificador da pergunta referente ao questionário para cidadãos menores de seis meses.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -153,7 +142,6 @@ Identificador da pergunta referente ao questionário para cidadãos menores de s
 **Referência:** [PerguntaCriancasMenoresSeisMesesEnum](#perguntacriancasmenoresseismesesenum).
 
 ### \#2	respostaUnicaEscolha
-
 Resposta referente à pergunta.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -167,7 +155,6 @@ Resposta referente à pergunta.
 ## PerguntaQuestionarioCriancasDeSeisVinteTresMeses
 
 ### \#1	pergunta
-
 Identificador da pergunta referente ao questionário para cidadãos menores de seis meses.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -177,7 +164,6 @@ Identificador da pergunta referente ao questionário para cidadãos menores de s
 **Referências:** [PerguntaCriancasDeSeisVinteTresMesesEnum](#perguntacriancasdeseisvintetresmesesenum).
 
 ### \#2	respostaUnicaEscolha
-
 Resposta referente a pergunta.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -191,17 +177,15 @@ Resposta referente a pergunta.
 ## PerguntaQuestionarioCriancasComMaisDoisAnos
 
 ### \#1	pergunta
-
 Pergunta do questionário de cidadãos que tem vinte e quatro meses ou mais.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |--- |--- |--- |--- |
-|p | Requerido |- |- |
+|PerguntaCriancasComMaisDoisAnosEnum | Requerido |- |- |
 
 **Referência:** [PerguntaCriancasComMaisDoisAnosEnum](#perguntacriancascommaisdoisanosenum).
 
 ### \#2	respostaUnicaEscolha
-
 Resposta referente a pergunta do registro.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -215,7 +199,6 @@ Resposta referente a pergunta do registro.
 Observações: Os campos `#2` e `#3` são mutuamente exclusivos, isto é, um e apenas um deles deve não ser nulo.
 
 ### \#3	respostaMultiplaEscolha
-
 Resposta referente à pergunta do registro acima.
 
 | Tipo | Obrigatório | Mínimo | Máximo |

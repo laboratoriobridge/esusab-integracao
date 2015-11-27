@@ -20,9 +20,7 @@ Código UUID para identificar a ficha na base de dados nacional.
 
 **Referências:**  [Wikipedia UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier)
 
-
 ### \#2	tpCdsOrigem
-
 Tipo de origem dos dados do registro.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -31,9 +29,7 @@ Tipo de origem dos dados do registro.
 
 **Observação**: Utilizar valor 3 (sistemas terceiros).
 
-
 ### \#3	headerTransport
-
 Profissional que realizou a visita.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -43,7 +39,6 @@ Profissional que realizou a visita.
 **Referências:**	[Profissional]({% url profissional %})
 
 ### \#4	numeroCartaoSus
-
 CNS do cidadão.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -67,7 +62,6 @@ Nome do cidadão.
 *	Opcional caso [conclusaoDestinoElegivel](#23-conclusaodestinoelegivel) for diferente de `1L (admissão própria emad)`.
 
 ### \#6	nomeSocialCidadao
-
 Nome social do cidadão.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -90,7 +84,7 @@ Data de nascimento do cidadão no formato epoch time.
 **Refererência**: [Epoch Wikipedia](https://en.wikipedia.org/wiki/Epoch_(reference_date)).
 
 ### \#8	sexoCidadao
-Sexo do cidadão.
+Código do sexo do cidadão.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -99,7 +93,7 @@ Sexo do cidadão.
 **Referências:** [Sexo]({% url dicionario %}#sexo)
 
 ### \#9	racaCorCidadao
-Raça / Cor do cidadão.
+Código da raça / cor do cidadão.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -140,10 +134,10 @@ Código IBGE do município.
 
 **Regras:** Não pode ser preenchido se [codigoNacionalidade](#13-codigonacionalidade) for diferente de `1L (brasileiro)`.
 
-**Referências:**	[Municípios]({% url municipios %})
+**Referências:** [Municípios]({% url municipios %})
 
 ### \#13	codigoNacionalidade
-Marcador que indica se o cidadão é brasileiro, naturalizado ou estrangeiro.
+Código do marcador que indica se o cidadão é brasileiro, naturalizado ou estrangeiro.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -187,7 +181,7 @@ Informações sobre o endereço do domicílio
 **Referências:**	[EnderecoLocalPermanencia](#enderecolocalpermanencia)
 
 ### \#17	atencaoDomiciliarOrigem
-Local de atendimento de origem do cidadão.
+Código do local de atendimento de origem do cidadão.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -196,7 +190,7 @@ Local de atendimento de origem do cidadão.
 **Referências:** [AtencaoDomiciliarOrigem]({% url dicionario %}#atencaodomiciliarorigem)
 
 ### \#18	atencaoDomiciliarModalidade
-Opções de modalidade, indica se o cidadão é elegível ou inelegível.
+Código das opções de modalidade, indica se o cidadão é elegível ou inelegível.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -214,7 +208,7 @@ Marcadores de situações presentes.
 **Referências:** [QuestionárioDeSituaçõesPresentes](#questionáriodesituaçõespresentes)
 
 ### \#20	cid10Principal
-CID10 principal registrado na avaliação.
+Código do CID10 principal registrado na avaliação.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -223,7 +217,7 @@ CID10 principal registrado na avaliação.
 **Regras:** Não pode ser igual ao [CID10Segundo](#21-cid10segundo) nem [CID10Terceiro](#22-cid10terceiro).
 
 ### \#21	cid10Segundo
-CID10 registrado na avaliação.
+Código do CID10 registrado na avaliação.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -232,7 +226,7 @@ CID10 registrado na avaliação.
 **Regras:** Não pode ser igual ao [CID10Principal](#20-cid10principal) nem [CID10Terceiro](#22-cid10terceiro).
 
 ### \#22	cid10Terceiro
-CID10 registrado na avaliação.
+Código do CID10 registrado na avaliação.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -241,7 +235,7 @@ CID10 registrado na avaliação.
 **Regras:** Não pode ser igual ao [CID10Principal](#20-cid10principal) nem [CID10Segundo](#21-cid10segundo).
 
 ### \#23	conclusaoDestinoElegivel
-Conduta adotada caso cidadão seja `Elegível`.
+Código da conduta adotada caso cidadão seja `Elegível`.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -256,7 +250,7 @@ Conduta adotada caso cidadão seja `Elegível`.
 Observações: Os campos `#23` e `#24` são mutuamente exclusivos.
 
 ### \#24	conclusaoDestinoInelegivel
-Conduta adotada caso cidadão seja `Inelegível`.
+Código da conduta adotada caso cidadão seja `Inelegível`.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -271,7 +265,7 @@ Conduta adotada caso cidadão seja `Inelegível`.
 Observações: Os campos `#23` e `#24` são mutuamente exclusivos.
 
 ### \#25	cuidadorCidadao
-Relação de parentesco do cuidador com o cidadão em atenção domiciliar.
+Código da relação de parentesco do cuidador com o cidadão em atenção domiciliar.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -333,7 +327,7 @@ Número do domicílio.
 * Não pode ser preenchido caso [stSemNumero](#11-stsemnumero) = `true`.
 
 ### \#7	numeroDneUf
-Indexador referente a Unidade Federativa.
+Código indexador referente a Unidade Federativa.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -360,7 +354,7 @@ Telefone residencial.
 Observações: Mínimo 10 dígitos, máximo 11 (DDD + 8 ou 9)
 
 ### \#10	tipoLogradouroNumeroDne
-Tipo do logradouro onde está o domicílio.
+Código do tipo do logradouro onde está o domicílio.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |

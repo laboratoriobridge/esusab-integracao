@@ -10,7 +10,7 @@ order: 1
 ## CadastroDomiciliar
 
 ### \#1	animaisNoDomicilio
-Lista de animais no domicílio.
+Lista de código dos animais no domicílio.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -170,7 +170,7 @@ Código do prontuário familiar na UBS.
 **Regras:** Apenas letras e números.
 
 ### \#5	rendaFamiliar
-Renda familiar em salários mínimos.
+Código da renda familiar em salários mínimos.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -248,7 +248,7 @@ Número do domicílio.
 * Não pode ser preenchido caso [stSemNumero](#11-stsemnumero) = `true`.
 
 ### \#7	numeroDneUf
-Indexador referente a Unidade Federativa.
+Código indexador referente a Unidade Federativa.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -295,7 +295,7 @@ Marcador que indica que o domicílio não possui número.
 ##CondicaoMoradia
 
 ### \#1	abastecimentoAgua
-Tipo de abastecimento de água.
+Código do tipo de abastecimento de água.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -304,7 +304,7 @@ Tipo de abastecimento de água.
 **Referências:**	[AbastecimentoDeAgua]({% url dicionario %}#abastecimentodeagua)
 
 ### \#2	areaProducaoRural
-Condição de posse e uso da terra.
+Código da condição de posse e uso da terra.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -315,7 +315,7 @@ Condição de posse e uso da terra.
 **Referências:** [CondicaoDePosseEUsoDaTerra]({% url dicionario %}#condicaodeposseeusodaterra)
 
 ### \#3	destinoLixo
-Destino do lixo.
+Código do destino do lixo.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -324,7 +324,7 @@ Destino do lixo.
 **Referências:** [DestinoDoLixo]({% url dicionario %}#destinodolixo)
 
 ### \#4	formaEscoamentoBanheiro
-Forma de escoamento do banheiro ou sanitário.
+Código da forma de escoamento do banheiro ou sanitário.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -333,7 +333,7 @@ Forma de escoamento do banheiro ou sanitário.
 **Referências:** [FormaDeEscoamentoDoBanheiroOuSanitario]({% url dicionario %}#formadeescoamentodobanheiroousanitario)
 
 ### \#5	localizacao
-Localização do domicílio.
+Código do localização do domicílio.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -342,7 +342,7 @@ Localização do domicílio.
 **Referências:** [LocalizacaoDaMoradia]({% url dicionario %}#localizacaodamoradia)
 
 ### \#6	materialPredominanteParedesExtDomicilio
-Tipo de material predominante nas paredes externas do domicílio.
+Código do tipo de material predominante nas paredes externas do domicílio.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -364,8 +364,8 @@ Número de moradores do domicílio.
 |---| --- |---  | --- |
 |String|	Opcional|	0|	2|
 
-### \#9	situacaoMoradiaPosseTerra
-Situação de moradia ou de posse da terra.
+### \#9 situacaoMoradiaPosseTerra
+Código da situação de moradia ou de posse da terra.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -373,15 +373,15 @@ Situação de moradia ou de posse da terra.
 
 **Referências:** [SituacaoDeMoradia]({% url dicionario %}#situacaodemoradia)
 
-### \#10	stDiponibilidadeEnergiaeletrica
+### \#10 stDiponibilidadeEnergiaeletrica
 Marcador que indica se existe disponibilidade de energia elétrica.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |Boolean|	Opcional|	-|	-|
 
-### \#11	tipoAcessoDomicilio
-Tipo de acesso ao domicílio.
+### \#11 tipoAcessoDomicilio
+Código do tipo de acesso ao domicílio.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -390,7 +390,7 @@ Tipo de acesso ao domicílio.
 **Referências:** [TipoDeAcessoAoDomicilio]({% url dicionario %}#tipodeacessoaodomicilio)
 
 ### \#12	tipoDomicilio
-Tipo de domicílio.
+Código do tipo de domicílio.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -399,7 +399,7 @@ Tipo de domicílio.
 **Referências:** [TipoDeDomicilio]({% url dicionario %}#tipodedomicilio)
 
 ### \#13	tratamentoAguaDomicilio
-Tipo do tratamento de água do domicílio.
+Código do tipo do tratamento de água do domicílio.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |

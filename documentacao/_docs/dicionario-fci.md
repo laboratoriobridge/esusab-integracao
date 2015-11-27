@@ -147,7 +147,7 @@ Descrição das plantas medicinais utilizadas.
 **Regras:** Não deve ser preenchido se o campo [statusUsaPlantasMedicinais](#30-statususaplantasmedicinais) = `false`.
 
 ### \#6 doencaCardiaca
-Doenças cardíacas que o cidadão informou.
+Código das doenças cardíacas que o cidadão informou.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |--- |--- |--- |--- |
@@ -160,7 +160,7 @@ Doenças cardíacas que o cidadão informou.
 **Referência:** [DoencaCardiaca]({% url dicionario %}#doencacardiaca).
 
 ### \#7 doencaRespiratoria
-Doenças respiratórias que o cidadão informou.
+Código d as doenças respiratórias que o cidadão informou.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |--- |--- |--- |--- |
@@ -174,7 +174,7 @@ Doenças respiratórias que o cidadão informou.
 **Referência:** [DoencaRespiratoria]({% url dicionario %}#doencarespiratoria).
 
 ### \#8 doencaRins
-Doenças renais que o cidadão informou.
+Código das doenças renais que o cidadão informou.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |--- |--- |--- |--- |
@@ -197,7 +197,7 @@ Nome da maternidade de referência.
 **Regras:** Não pode ser preenchido se o campo [statusEhGestante](#14-statusehgestante) = `false`.
 
 ### \#10 situacaoPeso
-Situação referente ao peso corporal.
+Código da situação referente ao peso corporal.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |--- |--- |--- |--- |
@@ -365,7 +365,7 @@ Grau de parentesco do familiar que frequenta.
 * Não pode ser preenchido se o campo [statusVisitaFamiliarFrequentemente](#11-statusvisitafamiliarfrequentemente) = `false`.
 
 ### \#2 higienePessoalSituacaoRua
-Condições de higiene que o cidadão tem acesso.
+Código das condições de higiene que o cidadão tem acesso.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |--- |--- |--- |--- |
@@ -379,7 +379,7 @@ Condições de higiene que o cidadão tem acesso.
 **Referência:** [AcessoHigiene]({% url dicionario %}#acessohigiene).
 
 ### \#3 origemAlimentoSituacaoRua
-Origem da alimentação do cidadão em situação de rua.
+Código da origem da alimentação do cidadão em situação de rua.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |--- |--- |--- |--- |
@@ -402,7 +402,7 @@ Nome de outra instituição que acompanha o cidadão.
 * Não pode ser preenchido se o campo [statusAcompanhadoPorOutraInstituição](#6-statusacompanhadoporoutrainstituicao) = `false`.
 
 ### \#5 quantidadeAlimentacoesAoDiaSituacaoRua
-Quantas vezes o cidadão se alimenta ao dia.
+Código da quantidade de vezes que o cidadão se alimenta por dia.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |--- |--- |--- |--- |
@@ -465,7 +465,7 @@ Marcador que indica se o cidadão visita algum familiar frequentemente.
 **Regras:** Não pode ser preechido se o campo [statusSituacaoRua](#9-statussituacaorua) = `false`.
 
 ### \#12 tempoSituacaoRua
-Tempo que o cidadão está em situação de rua.
+Código do tempo que o cidadão está em situação de rua.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |--- |--- |--- |--- |
@@ -534,7 +534,7 @@ Email do cidadão.
 **Regras:** Requerido seguir o padrão `endereco@domínio.extensao`.
 
 ### \#7 nacionalidadeCidadao
-Marcador que indica se o cidadão é brasileiro, naturalizado ou estrangeiro.
+Código do marcador que indica se o cidadão é brasileiro, naturalizado ou estrangeiro.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |--- |--- |--- |--- |
@@ -561,7 +561,7 @@ Nome da mãe do cidadão.
 **Regras:**
 
 * Requerido espaço em branco para indicar o sobrenome.
-* Não deve ser preenchido se o campo [desconheceNomeMae](#5-desconhecenomedamae) = `true`.
+* Não deve ser preenchido se o campo [desconheceNomeMae](#5-desconhecenomemae) = `true`.
 
 ### \#10 numeroCartaoSus
 CNS do cidadão.
@@ -604,7 +604,7 @@ Número do PIS/PASEP do cidadão.
 |String |Opcional |11 |11 |
 
 ### \#14 paisNascimento
-País de nascimento do cidadão.
+Código do país de nascimento do cidadão.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |--- |--- |--- |--- |
@@ -615,7 +615,7 @@ País de nascimento do cidadão.
 **Referência:** [País]({% url referencias %}#país).
 
 ### \#15 racaCorCidadao
-Raça/Cor do cidadão.
+Código da raça / cor do cidadão.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |--- |--- |--- |--- |
@@ -624,7 +624,7 @@ Raça/Cor do cidadão.
 **Referência:** [RacaCor]({% url dicionario %}#racacor).
 
 ### \#16 sexoCidadao
-Sexo do cidadão.
+Código do sexo do cidadão.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |--- |--- |--- |--- |
@@ -642,20 +642,20 @@ Marcador que indica se o cidadão é responsável familiar.
 ## InformacoesSocioDemograficas
 
 ### \#1 deficienciasCidadao
-Lista de deficiências que o cidadão possui.
+Código das deficiências que o cidadão possui.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |--- |--- |--- |--- |
 |List\<Long\> |Condicional |1 |5 |
 
-**Referência:** [DeficienciaCidadao]({% url dicionario %}#deficienciacidadao).
-
 **Regras:**
 * Requerido preenchimento de pelo menos um item se o campo [statusTemAlgumaDeficiencia](#16-statustemalgumadeficiencia) = `true`.
 * Não deve ser preenchido se o campo [statusTemAlgumaDeficiencia](#16-statustemalgumadeficiencia) = `false`.
 
+**Referência:** [DeficienciaCidadao]({% url dicionario %}#deficienciacidadao).
+
 ### \#2 grauInstrucaoCidadao
-Curso mais elevado que o cidadão frequenta ou frequentou.
+Código do curso mais elevado que o cidadão frequenta ou frequentou.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |--- |--- |--- |--- |
@@ -664,7 +664,7 @@ Curso mais elevado que o cidadão frequenta ou frequentou.
 **Referência:** [CursoMaisElevado]({% url dicionario %}#cursomaiselevado).
 
 ### \#3 motivoSaidaCidadao
-Motivo da saída do cidadão do cadastro.
+Código do motivo da saída do cidadão do cadastro.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |--- |--- |--- |--- |
@@ -673,20 +673,20 @@ Motivo da saída do cidadão do cadastro.
 **Referência:** [MotivoSaida]({% url dicionario %}#motivosaida).
 
 ### \#4 ocupacaoCodigoCbo2002
-Ocupaçao do cidadão.
+Código do CBO que representa a ocupaçao do cidadão.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |--- |--- |--- |--- |
 |String |Opcional |6 |6 |
 
 **Regras:**
-* Deve ser um CBO válido.
+* Deve ser um código de CBO válido.
 * Não pode ser preenchido se o campo [statusDesejaInformarOrientacaoSexual](#10-statusdesejainformarorientacaosexual) = `false`.
 
 **Referência:** [CBO]({% url cbo %}).
 
 ### \#5 orientacaoSexualCidadao
-Orientação sexual informada pelo cidadão.  
+Código da orientação sexual informada pelo cidadão.  
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |--- |--- |--- |--- |
@@ -704,7 +704,7 @@ Nome da comunidade tradicional que o cidadão frequenta.
 **Regras:** Não deve ser preenchido se o campo [statusMembroPovoComunidadeTradicional](#13-statusmembropovocomunidadetradicional) = `false`.
 
 ### \#7 relacaoParentescoCidadao
-Relação de parentesco com o responsável familiar.
+Código da relação de parentesco com o responsável familiar.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |--- |--- |--- |--- |
@@ -713,7 +713,7 @@ Relação de parentesco com o responsável familiar.
 **Referência:** [RelacaoParentesco]({% url dicionario %}#relacaoparentesco).
 
 ### \#8 responsavelPorCrianca
-Responsável por crianças de até 9 anos.
+Código do responsável por crianças de até 9 anos.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |--- |--- |--- |--- |
@@ -722,7 +722,7 @@ Responsável por crianças de até 9 anos.
 **Referência:** [ResponsavelCrianca]({% url dicionario %}#responsavelcrianca).
 
 ### \#9 situacaoMercadoTrabalhoCidadao
-Situação do cidadão no mercado de trabalho.
+Código da situação do cidadão no mercado de trabalho.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |--- |--- |--- |--- |
@@ -731,7 +731,6 @@ Situação do cidadão no mercado de trabalho.
 **Referência:** [SituacaoMercadoTrabalho]({% url dicionario %}#situacaomercadotrabalho).
 
 ### \#10 statusDesejaInformarOrientacaoSexual
-
 Marcador que indica se o cidadão deseja informar sua orientação sexual.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -739,7 +738,6 @@ Marcador que indica se o cidadão deseja informar sua orientação sexual.
 |Boolean |Opcional |- |- |
 
 ### \#11 statusFrequentaBenzedeira
-
 Marcador que indica se o cidadão frequenta cuidador tradicional.
 
 | Tipo | Obrigatório | Mínimo | Máximo |

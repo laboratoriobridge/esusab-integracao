@@ -91,14 +91,14 @@ CNS do responsável pela atividade coletiva.
 **Referência:** Para ver o algorítmo utilizado, acesse: [Cartão NET Datasus](http://cartaonet.datasus.gov.br/), em "Downloads" baixe o arquivo de rotina de validação Java.
 
 ### \#9	responsavelCnesUnidade
-CNES do responsável pela atividade coletiva.
+Código CNES da unidade do responsável pela atividade coletiva.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |String|	Requerido	|7|	7|
 
 ### \#10	responsavelNumIne
-INE do responsável pela atividade coletiva.
+Código INE da equipe do responsável pela atividade coletiva.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -134,15 +134,15 @@ Lista dos profissionais que participaram da atividade.
 **Referência:**	[ProfissionalCboRowItem]({% url profissional %}#profissionalcborowitem)
 
 ### \#14 atividadeTipo
-Tipo da atividade que será realizada.
+Código do tipo da atividade que será realizada.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |Long|	Sim |	-|	-|
 
 **Referências**: [TipoAtividadeColetiva]({% url dicionario %}#tipoatividadecoletiva)
-### \#15 temasParaReuniao
 
+### \#15 temasParaReuniao
 Temas para reunião.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -157,7 +157,7 @@ Temas para reunião.
 **Referência:** [TemasParaReuniao]({% url dicionario %}#temasparareuniao)
 
 ### \#16	publicoAlvo
-Público alvo da atividade.
+Código do público alvo da atividade.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -171,7 +171,7 @@ Público alvo da atividade.
 **Referência:** [PublicoAlvo]({% url dicionario %}#publicoalvo)
 
 ### \#17	praticasTemasParaSaude
-Práticas ou temas abordados na atividade.
+Código das práticas ou temas abordados na atividade.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -212,15 +212,15 @@ Código IBGE do município.
 **Referências**: {% link municipios %}
 
 ## ParticipanteRowItem
-### \#1	cns
 
+### \#1	cns
 CNS do cidadão que participou da atividade.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |String|	Sim|	15|	15|
 
-**Regras:** 	CNS válido de acordo com o algoritmo.
+**Regras:** CNS válido de acordo com o algoritmo.
 
 **Referência:** Para ver o algoritmo utilizado, acesse: [Cartão NET Datasus](http://cartaonet.datasus.gov.br/), em "Downloads" baixe o arquivo de rotina de validação Java.
 

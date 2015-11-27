@@ -36,7 +36,7 @@ Profissional que realizou a visita.
 |--- |--- |--- |--- |
 |UnicaLotacaoHeader |Sim |- |- |
 
-**Referência:** {% link profissional %}
+**Referência:** [Profissional]({% link profissional %}).
 
 ### \#4 visitasDomiciliares
 Pelo menos 1 item na lista, no máximo 23.
@@ -50,7 +50,7 @@ Pelo menos 1 item na lista, no máximo 23.
 ## FichaVisitaDomiciliarChild
 
 ### \#1 turno
-Turno onde aconteceu o atendimento.
+Código do turno onde aconteceu o atendimento.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |--- |--- |--- |--- |
@@ -90,7 +90,7 @@ Data de nascimento do cidadão.
 **Referência:** [Epoch Wikipedia](https://en.wikipedia.org/wiki/Epoch_(reference_date)).
 
 ### \#5 sexo
-Sexo do cidadão.
+Código do sexo do cidadão.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |--- |--- |--- |--- |
@@ -106,7 +106,7 @@ Marcador que indica se a visita foi compartilhada com outro profissional.
 |Boolean |Não |- |- |
 
 ### \#7 motivosVisita
-Motivos da visita.
+Código dos motivos da visita.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |--- |--- |--- |--- |
@@ -117,7 +117,7 @@ Motivos da visita.
 **Referência:** [MotivoVisita]({% url dicionario %}#motivovisita).
 
 ### \#8 desfecho
-Resultado da ação de visita.
+Código dos resultados da ação de visita.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |--- |--- |--- |--- |

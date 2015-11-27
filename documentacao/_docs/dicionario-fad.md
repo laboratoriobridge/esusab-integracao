@@ -9,8 +9,8 @@ order: 1
 
 ## FichaAtendimentoDomiciliarMaster
 
-### \#1	uuidFicha	Código
-UUID para identificar a ficha na base de dados nacional.
+### \#1	uuidFicha
+Código UUID para identificar a ficha na base de dados nacional.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -48,7 +48,7 @@ Lista dos atendimentos realizados pelo profissional.
 ## FichaAtendimentoDomiciliarChild
 
 ### \#1	turno
-Turno onde aconteceu o atendimento.
+Código do turno onde aconteceu o atendimento.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -79,7 +79,7 @@ Data de nascimento do cidadão.
 **Referencias:** [Epoch Wikipedia](https://en.wikipedia.org/wiki/Epoch_(reference_date))
 
 ### \#4	sexo
-Sexo do cidadão.
+Código do sexo do cidadão.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -88,7 +88,7 @@ Sexo do cidadão.
 **Referências:**	[Sexo]({% url dicionario%}#sexo)
 
 ### \#5	localDeAtendimento
-Local onde o atendimento foi realizado.
+Cógido do local onde o atendimento foi realizado.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -97,8 +97,7 @@ Local onde o atendimento foi realizado.
 **Referências:** [LocalDeAtendimento]({% url dicionario%}#localdeatendimento)
 
 ### \#6	atencaoDomiciliarModalidade
-
-Modalidade AD do cidadão atendido.
+Código da modalidade AD do cidadão atendido.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -109,7 +108,7 @@ Modalidade AD do cidadão atendido.
 **Referências:** [ModalidadeAD]({% url dicionario %}#modalidadead)
 
 ### \#7	tipoAtendimento
-Tipo de atendimento.
+Código do tipo de atendimento.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -126,24 +125,22 @@ Marcadores das situações presentes.
 |---| --- |---  | --- |
 |List\<Long\>|	Opcional|	0|	24|
 
-**Referências:**: [SituacoesPresentes](#8-situacoespresentes)
-
 ### \#9	cid
-CID registrado no atendimento.
+Código do CID registrado no atendimento.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |String|	Opcional|	-|	-|
 
 ### \#10	ciap
-CIAP registrado no atendimento.
+Código do CIAP registrado no atendimento.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |String|	Opcional|	-	|-|
 
 ### \#11	procedimentos
-Procedimentos registrados no atendimento disponíveis na ficha.
+Código dos procedimentos registrados no atendimento disponíveis na ficha.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -152,7 +149,7 @@ Procedimentos registrados no atendimento disponíveis na ficha.
 **Referências:** [ProcedimentosDaAtençãoDomiciliar](#procedimentos-da-atenção-domiciliar)
 
 ### \#12	outrosProcedimentos
-Procedimentos SIGTAP registrados no atendimento.
+Código dos procedimentos SIGTAP registrados no atendimento.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -164,7 +161,7 @@ Procedimentos SIGTAP registrados no atendimento.
 * Não podem conter procedimentos repetidos.
 
 ### \#13	condutaDesfecho
-Desfecho do atendimento do cidadão.
+Código do desfecho do atendimento do cidadão.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |

@@ -140,7 +140,7 @@ Data de nascimento do cidadão no formato epoch time.
 **Referência:** [Epoch Wikipedia](https://en.wikipedia.org/wiki/Epoch_(reference_date))
 
 ### \#4 sexo
-Sexo do cidadão.
+Código do sexo do cidadão.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |--- |--- |--- |--- |
@@ -149,7 +149,7 @@ Sexo do cidadão.
 **Referência:** [Sexo]({% url dicionario %}#sexo).
 
 ### \#5 localAtendimento
-Local onde o atendimento foi realizado.
+Código do local onde o atendimento foi realizado.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |--- |--- |--- |--- |
@@ -158,7 +158,7 @@ Local onde o atendimento foi realizado.
 **Referência:** [LocalDeAtendimento]({% url dicionario %}#localdeatendimento).
 
 ### \#6 turno
-Turno onde aconteceu o atendimento.
+Código do turno onde aconteceu o atendimento.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |--- |--- |--- |--- |
@@ -174,7 +174,7 @@ Indica a realização da escuta inicial.
 |Long |Opcional |- |- |
 
 ### \#8 procedimentos
-Lista dos procedimentos que são registrados na ficha de procedimentos.
+Lista dos códigos dos procedimentos que são registrados na ficha de procedimentos.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |--- |--- |--- |--- |
@@ -187,7 +187,7 @@ Lista dos procedimentos que são registrados na ficha de procedimentos.
 Observação: É requerido pelo menos um dentre os itens `#8` e `#9`.
 
 ### \#9 outrosSiaProcedimentos
-Outros procedimentos do SIGTAP ou SISAB.
+Código dos outros procedimentos do SIGTAP ou SISAB.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |--- |--- |--- |--- |

@@ -10,7 +10,6 @@ order: 1
 ## FichaAtendimentoOdontologicoMaster
 
 ### \#1	uuidFicha
-
 Código UUID para identificar a ficha na base de dados nacional.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -100,7 +99,7 @@ Marcador que indica se o cidadão é portador de necessidades especiais.
 |Boolean|	Opcional|	-|	-|
 
 ### \#6	localAtendimento
-Local onde o atendimento foi realizado.
+Código do local onde o atendimento foi realizado.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -111,7 +110,7 @@ Local onde o atendimento foi realizado.
 **Referências:** [LocalDeAtendimento]({% url dicionario %}#localdeatendimento)
 
 ### \#7	tipoAtendimento
-Tipo de atendimento realizado.
+Código do tipo de atendimento realizado.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -122,7 +121,7 @@ Tipo de atendimento realizado.
 **Referências:**	[TipoDeAtendimento]({% url dicionario %}#tipodeatendimento)
 
 ### \#8	tiposEncamOdonto
-Condutas adotadas e possíveis encaminhamentos.
+Código das condutas adotadas e possíveis encaminhamentos.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -131,7 +130,7 @@ Condutas adotadas e possíveis encaminhamentos.
 **Referências:** [CondutaEncaminhamentoOdonto]({% url dicionario %}#condutaencaminhamentoodonto)
 
 ### \#9	tiposFornecimOdonto
-Materiais fornecidos durante o atendimento.
+Código dos materiais fornecidos durante o atendimento.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -140,7 +139,7 @@ Materiais fornecidos durante o atendimento.
 **Referências:** [FornecimentoOdonto]({% url dicionario %}#fornecimentoodonto)
 
 ### \#10	tiposVigilanciaSaudeBucal
-Marcadores referentes a situação de vigilância em saúde bucal.
+Código dos marcadores referentes a situação de vigilância em saúde bucal.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -149,7 +148,7 @@ Marcadores referentes a situação de vigilância em saúde bucal.
 **Referências:** [VigilanciaEmSaudeBucal]({% url dicionario %}#vigilanciaemsaudebucal)
 
 ### \#11	tiposConsultaOdonto
-Tipo de consulta odontológica realizada.
+Código do tipo de consulta odontológica realizada.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -166,7 +165,7 @@ Tipo de consulta odontológica realizada.
 **Referências:** [TipoDeConsultaOdonto]({% url dicionario %}#tipodeconsultaodonto)
 
 ### \#12	procedimentosRealizados
-Procedimentos que são apresentados na ficha.
+Código dos procedimentos que são apresentados na ficha.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -179,7 +178,7 @@ Procedimentos que são apresentados na ficha.
 **Referências:**	[ListaProcedimentosRealizados](#listaprocedimentosrealizados)
 
 ### \#13	outrosSiaProcedimentos
-Lista de outros procedimentos.
+Lista de outros códigos de procedimentos.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -193,7 +192,7 @@ Lista de outros procedimentos.
 **Referências:** [ProcedimentoQuantidade](#procedimentoquantidade)
 
 ### \#14	sexo
-Sexo do cidadão.
+Código do sexo do cidadão.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -201,8 +200,8 @@ Sexo do cidadão.
 
 **Referências:** [Sexo]({% url dicionario %}#sexo)
 
-### \#15	turno
-Turno em que o atendimento foi realizado.
+### \#15 turno
+Código do turno em que o atendimento foi realizado.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |

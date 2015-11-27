@@ -57,6 +57,7 @@ Nome do cidadão.
 |String |	Condicional	|5|	100|
 
 **Regras:**
+
 * Ter ao menos duas palavras.
 * Somente texto e apóstrofo (`'`).
 *	Opcional caso [conclusaoDestinoElegivel](#23-conclusaodestinoelegivel) for diferente de `1L (admissão própria emad)`.

@@ -63,6 +63,7 @@ Lista das famílias que residem no domicílio.
 |List\<FamiliaRow>| Condicional| 	0|	4|
 
 **Regras:**
+
 * Não pode ser preenchido caso o campo [statusTermoRecusaCadastroDomiciliarAtencaoBasica](#9-statustermorecusacadatrodomiciliaratencaobasica) = `true`.
 
 ### \#6	fichaAtualizada

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns3:dadoTransporteTransportXml xmlns:ns2="http://esus.ufsc.br/v2000/dadoinstalacao" xmlns:ns3="http://esus.ufsc.br/v2000/dadotransporte" xmlns:ns4="http://esus.ufsc.br/v2000/fichaavaliacaoelegibilidade">
+	<uuidDadoSerializado>5444428-269f1ecd-7e98-4504-9fe3-f826707735c3</uuidDadoSerializado>
+	<tipoDadoSerializado>11</tipoDadoSerializado>
+	<codIbge>4205407</codIbge>
+	<cnesDadoSerializado>5444428</cnesDadoSerializado>
+	<ineDadoSerializado>9023673542</ineDadoSerializado>
+	<numLote>39</numLote>
+	<ns4:fichaAvaliacaoElegibilidadeTransport>
+		<headerTransport>
+			<profissionalCNS>708407713297266</profissionalCNS>
+			<cboCodigo_2002>225142</cboCodigo_2002>
+			<cnes>5444428</cnes>
+			<ine>9023673542</ine>
+			<dataAtendimento>1430406000000</dataAtendimento>
+			<codigoIbgeMunicipio>4205407</codigoIbgeMunicipio>
+		</headerTransport>
+		<uuidFicha>5444428-269f1ecd-7e98-4504-9fe3-f826707735c3</uuidFicha>
+		<tpCdsOrigem>1</tpCdsOrigem>
+		<numeroCartaoSus>127984422070002</numeroCartaoSus>
+		<dataNascimentoCidadao>635094000000</dataNascimentoCidadao>
+		<sexoCidadao>1</sexoCidadao>
+		<nomeCidadao>MARIA CÂNDIDA DA SILVA</nomeCidadao>
+		<racaCorCidadao>1</racaCorCidadao>
+		<nomeSocialCidadao>MARIA</nomeSocialCidadao>
+		<nomeMaeCidadao>JOANA DA SILVA</nomeMaeCidadao>
+		<desconheceNomeMae>false</desconheceNomeMae>
+		<codigoIbgeMunicipioNascimento>3100104</codigoIbgeMunicipioNascimento>
+		<codigoNacionalidade>1</codigoNacionalidade>
+		<emailCidadao>maria@candida.com.br</emailCidadao>
+		<cuidadorCidadao>4</cuidadorCidadao>
+		<numeroNisPisPasep>10005984111</numeroNisPisPasep>
+		<atencaoDomiciliarOrigem>1</atencaoDomiciliarOrigem>
+		<atencaoDomiciliarModalidade>1</atencaoDomiciliarModalidade>
+		<situacoesPresentes>9</situacoesPresentes>
+		<situacoesPresentes>10</situacoesPresentes>
+		<situacoesPresentes>11</situacoesPresentes>
+		<situacoesPresentes>12</situacoesPresentes>
+		<situacoesPresentes>5</situacoesPresentes>
+		<situacoesPresentes>6</situacoesPresentes>
+		<situacoesPresentes>7</situacoesPresentes>
+		<situacoesPresentes>8</situacoesPresentes>
+		<situacoesPresentes>17</situacoesPresentes>
+		<situacoesPresentes>18</situacoesPresentes>
+		<situacoesPresentes>19</situacoesPresentes>
+		<situacoesPresentes>20</situacoesPresentes>
+		<situacoesPresentes>13</situacoesPresentes>
+		<situacoesPresentes>14</situacoesPresentes>
+		<situacoesPresentes>15</situacoesPresentes>
+		<situacoesPresentes>16</situacoesPresentes>
+		<situacoesPresentes>22</situacoesPresentes>
+		<situacoesPresentes>21</situacoesPresentes>
+		<situacoesPresentes>24</situacoesPresentes>
+		<situacoesPresentes>23</situacoesPresentes>
+		<situacoesPresentes>4</situacoesPresentes>
+		<situacoesPresentes>3</situacoesPresentes>
+		<situacoesPresentes>2</situacoesPresentes>
+		<situacoesPresentes>1</situacoesPresentes>
+		<cid10Principal>B170</cid10Principal>
+		<cid10Segundo>T740</cid10Segundo>
+		<cid10Terceiro>O037</cid10Terceiro>
+		<conclusaoDestinoElegivel>1</conclusaoDestinoElegivel>
+		<endereco>
+			<tipoLogradouroNumeroDne>081</tipoLogradouroNumeroDne>
+			<nomeLogradouro>Delminda Silveira</nomeLogradouro>
+			<numero>125</numero>
+			<complemento>perto da padaria</complemento>
+			<bairro>AGRONÔMICA</bairro>
+			<codigoIbgeMunicipio>4205407</codigoIbgeMunicipio>
+			<numeroDneUf>25</numeroDneUf>
+			<cep>88025500</cep>
+			<telResidencial>4833658474</telResidencial>
+			<telReferencial>4833614858</telReferencial>
+			<stSemNumero>false</stSemNumero>
+		</endereco>
+	</ns4:fichaAvaliacaoElegibilidadeTransport>
+	<ns2:remetente>
+		<contraChave>003d61860206f2804eefff4d01ef1a3f</contraChave>
+		<uuidInstalacao>10e769db-a642-43e4-b970-ff01ba660b51</uuidInstalacao>
+		<cpfOuCnpj>08953588910</cpfOuCnpj>
+		<nomeOuRazaoSocial>MARIANA MELO</nomeOuRazaoSocial>
+	</ns2:remetente>
+	<ns2:originadora>
+		<contraChave>003d61860206f2804eefff4d01ef1a3f</contraChave>
+		<uuidInstalacao>10e769db-a642-43e4-b970-ff01ba660b51</uuidInstalacao>
+		<cpfOuCnpj>08953588910</cpfOuCnpj>
+		<nomeOuRazaoSocial>MARIANA MELO</nomeOuRazaoSocial>
+	</ns2:originadora>
+	<versao major="2" minor="0" revision="0"/>
+</ns3:dadoTransporteTransportXml>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns3:dadoTransporteTransportXml xmlns:ns2="http://esus.ufsc.br/v2000/dadoinstalacao" xmlns:ns3="http://esus.ufsc.br/v2000/dadotransporte" xmlns:ns4="http://esus.ufsc.br/v2000/fichaconsumoalimentar">
+	<uuidDadoSerializado>5444428-effae787-e3a2-4941-8ba6-ab7d47f9297a</uuidDadoSerializado>
+	<tipoDadoSerializado>12</tipoDadoSerializado>
+	<codIbge>4205407</codIbge>
+	<cnesDadoSerializado>5444428</cnesDadoSerializado>
+	<ineDadoSerializado>1382855330</ineDadoSerializado>
+	<numLote>39</numLote>
+	<ns4:fichaConsumoAlimentarTransport>
+		<headerTransport>
+			<profissionalCNS>702605236551744</profissionalCNS>
+			<cboCodigo_2002>225142</cboCodigo_2002>
+			<cnes>5444428</cnes>
+			<ine>1382855330</ine>
+			<dataAtendimento>1430406000000</dataAtendimento>
+			<codigoIbgeMunicipio>4205407</codigoIbgeMunicipio>
+		</headerTransport>
+		<numeroCartaoSus>127984422070002</numeroCartaoSus>
+		<identificacaoUsuario>MARIA CÂNDIDA DA SILVA</identificacaoUsuario>
+		<dataNascimento>729788400000</dataNascimento>
+		<sexo>1</sexo>
+		<localAtendimento>1</localAtendimento>
+		<perguntasQuestionarioCriancasComMaisDoisAnos>
+			<pergunta>VOCE_TEM_COSTUME_DE_REALIZAR_AS_REFEICOES_ASSISTINDO_TV_MEXENDO_NO_COMPUTADOR_E_OU_CELULAR</pergunta>
+			<respostaUnicaEscolha>SIM</respostaUnicaEscolha>
+		</perguntasQuestionarioCriancasComMaisDoisAnos>
+		<perguntasQuestionarioCriancasComMaisDoisAnos>
+			<pergunta>QUAIS_REFEICOES_VOCE_FAZ_AO_LONGO_DO_DIA</pergunta>
+			<respostaMultiplaEscolha>CAFE_DA_MANHA</respostaMultiplaEscolha>
+			<respostaMultiplaEscolha>LANCHE_DA_MANHA</respostaMultiplaEscolha>
+			<respostaMultiplaEscolha>ALMOCO</respostaMultiplaEscolha>
+			<respostaMultiplaEscolha>LANCHE_DA_TARDE</respostaMultiplaEscolha>
+			<respostaMultiplaEscolha>JANTAR</respostaMultiplaEscolha>
+			<respostaMultiplaEscolha>CEIA</respostaMultiplaEscolha>
+		</perguntasQuestionarioCriancasComMaisDoisAnos>
+		<perguntasQuestionarioCriancasComMaisDoisAnos>
+			<pergunta>FEIJAO</pergunta>
+			<respostaUnicaEscolha>NAO</respostaUnicaEscolha>
+		</perguntasQuestionarioCriancasComMaisDoisAnos>
+		<perguntasQuestionarioCriancasComMaisDoisAnos>
+			<pergunta>FRUTAS_FRESCAS</pergunta>
+			<respostaUnicaEscolha>SIM</respostaUnicaEscolha>
+		</perguntasQuestionarioCriancasComMaisDoisAnos>
+		<perguntasQuestionarioCriancasComMaisDoisAnos>
+			<pergunta>VERDURAS_E_OU_LEGUMES</pergunta>
+			<respostaUnicaEscolha>NAO</respostaUnicaEscolha>
+		</perguntasQuestionarioCriancasComMaisDoisAnos>
+		<perguntasQuestionarioCriancasComMaisDoisAnos>
+			<pergunta>HAMBURGUER_E_OU_EMBUTIDOS</pergunta>
+			<respostaUnicaEscolha>NAO_SABE</respostaUnicaEscolha>
+		</perguntasQuestionarioCriancasComMaisDoisAnos>
+		<perguntasQuestionarioCriancasComMaisDoisAnos>
+			<pergunta>BEBIDAS_ADOCADAS</pergunta>
+			<respostaUnicaEscolha>SIM</respostaUnicaEscolha>
+		</perguntasQuestionarioCriancasComMaisDoisAnos>
+		<perguntasQuestionarioCriancasComMaisDoisAnos>
+			<pergunta>MACARRAO_INSTANTANEO_SALGADINHOS_BISCOITOS</pergunta>
+			<respostaUnicaEscolha>NAO</respostaUnicaEscolha>
+		</perguntasQuestionarioCriancasComMaisDoisAnos>
+		<perguntasQuestionarioCriancasComMaisDoisAnos>
+			<pergunta>BISCOITO_RECHEADO_DOCES_OU_GULOSEIMAS</pergunta>
+			<respostaUnicaEscolha>NAO_SABE</respostaUnicaEscolha>
+		</perguntasQuestionarioCriancasComMaisDoisAnos>
+		<uuidFicha>5444428-effae787-e3a2-4941-8ba6-ab7d47f9297a</uuidFicha>
+		<tpCdsOrigem>1</tpCdsOrigem>
+	</ns4:fichaConsumoAlimentarTransport>
+	<ns2:remetente>
+		<contraChave>003d61860206f2804eefff4d01ef1a3f</contraChave>
+		<uuidInstalacao>10e769db-a642-43e4-b970-ff01ba660b51</uuidInstalacao>
+		<cpfOuCnpj>08953588910</cpfOuCnpj>
+		<nomeOuRazaoSocial>MARIANA MELO</nomeOuRazaoSocial>
+	</ns2:remetente>
+	<ns2:originadora>
+		<contraChave>003d61860206f2804eefff4d01ef1a3f</contraChave>
+		<uuidInstalacao>10e769db-a642-43e4-b970-ff01ba660b51</uuidInstalacao>
+		<cpfOuCnpj>08953588910</cpfOuCnpj>
+		<nomeOuRazaoSocial>MARIANA MELO</nomeOuRazaoSocial>
+	</ns2:originadora>
+	<versao major="2" minor="0" revision="0"/>
+</ns3:dadoTransporteTransportXml>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns3:dadoTransporteTransportXml xmlns:ns2="http://esus.ufsc.br/v2000/dadoinstalacao" xmlns:ns3="http://esus.ufsc.br/v2000/dadotransporte" xmlns:ns4="http://esus.ufsc.br/v2000/cadastrodomiciliar">
+	<uuidDadoSerializado>5444428-6348bc4d-9ab9-476c-9d11-ab475120febe</uuidDadoSerializado>
+	<tipoDadoSerializado>3</tipoDadoSerializado>
+	<codIbge>4205407</codIbge>
+	<cnesDadoSerializado>5444428</cnesDadoSerializado>
+	<ineDadoSerializado>1382855330</ineDadoSerializado>
+	<numLote>39</numLote>
+	<ns4:cadastroDomiciliarTransport>
+		<dadosGerais>
+			<cnsProfissional>708508393009478</cnsProfissional>
+			<cnesUnidadeSaude>5444428</cnesUnidadeSaude>
+			<ineEquipe>1382855330</ineEquipe>
+			<microarea>54</microarea>
+			<dataAtendimento>1430406000000</dataAtendimento>
+			<codigoIbgeMunicipio>4205407</codigoIbgeMunicipio>
+		</dadosGerais>
+		<enderecoLocalPermanencia>
+			<tipoLogradouroNumeroDne>520</tipoLogradouroNumeroDne>
+			<nomeLogradouro>RUA DOS LOBOS</nomeLogradouro>
+			<numero>254</numero>
+			<complemento>PERTO DO POSTO DE GASOLINA</complemento>
+			<bairro>SANTA MONICA</bairro>
+			<codigoIbgeMunicipio>4205407</codigoIbgeMunicipio>
+			<numeroDneUf>25</numeroDneUf>
+			<cep>88025500</cep>
+			<telResidencial>4833658484</telResidencial>
+			<telReferencial>4833254141</telReferencial>
+			<stSemNumero>false</stSemNumero>
+		</enderecoLocalPermanencia>
+		<condicaoMoradia/>
+		<tpCdsOrigem>1</tpCdsOrigem>
+		<uuid>5444428-6348bc4d-9ab9-476c-9d11-ab475120febe</uuid>
+		<uuidFichaOriginadora>5444428-6348bc4d-9ab9-476c-9d11-ab475120febe</uuidFichaOriginadora>
+		<fichaAtualizada>false</fichaAtualizada>
+		<statusTermoRecusaCadastroDomiciliarAtencaoBasica>true</statusTermoRecusaCadastroDomiciliarAtencaoBasica>
+	</ns4:cadastroDomiciliarTransport>
+	<ns2:remetente>
+		<contraChave>003d61860206f2804eefff4d01ef1a3f</contraChave>
+		<uuidInstalacao>10e769db-a642-43e4-b970-ff01ba660b51</uuidInstalacao>
+		<cpfOuCnpj>08953588910</cpfOuCnpj>
+		<nomeOuRazaoSocial>MARIANA MELO</nomeOuRazaoSocial>
+	</ns2:remetente>
+	<ns2:originadora>
+		<contraChave>003d61860206f2804eefff4d01ef1a3f</contraChave>
+		<uuidInstalacao>10e769db-a642-43e4-b970-ff01ba660b51</uuidInstalacao>
+		<cpfOuCnpj>08953588910</cpfOuCnpj>
+		<nomeOuRazaoSocial>MARIANA MELO</nomeOuRazaoSocial>
+	</ns2:originadora>
+	<versao major="2" minor="0" revision="0"/>
+</ns3:dadoTransporteTransportXml>

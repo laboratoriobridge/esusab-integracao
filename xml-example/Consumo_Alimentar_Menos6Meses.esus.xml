@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns3:dadoTransporteTransportXml xmlns:ns2="http://esus.ufsc.br/v2000/dadoinstalacao" xmlns:ns3="http://esus.ufsc.br/v2000/dadotransporte" xmlns:ns4="http://esus.ufsc.br/v2000/fichaconsumoalimentar">
+	<uuidDadoSerializado>5444428-0bcf3a98-d685-4195-acb7-b36715fb1f22</uuidDadoSerializado>
+	<tipoDadoSerializado>12</tipoDadoSerializado>
+	<codIbge>4205407</codIbge>
+	<cnesDadoSerializado>5444428</cnesDadoSerializado>
+	<ineDadoSerializado>9023673542</ineDadoSerializado>
+	<numLote>39</numLote>
+	<ns4:fichaConsumoAlimentarTransport>
+		<headerTransport>
+			<profissionalCNS>708004871002225</profissionalCNS>
+			<cboCodigo_2002>225142</cboCodigo_2002>
+			<cnes>5444428</cnes>
+			<ine>9023673542</ine>
+			<dataAtendimento>1430406000000</dataAtendimento>
+			<codigoIbgeMunicipio>4205407</codigoIbgeMunicipio>
+		</headerTransport>
+		<numeroCartaoSus>106123881340003</numeroCartaoSus>
+		<identificacaoUsuario>ANNA BATISTA</identificacaoUsuario>
+		<dataNascimento>1425999600000</dataNascimento>
+		<sexo>1</sexo>
+		<localAtendimento>1</localAtendimento>
+		<perguntasQuestionarioCriancasMenoresSeisMeses>
+			<pergunta>A_CRIANCA_ONTEM_TOMOU_LEITE_DO_PEITO</pergunta>
+			<respostaUnicaEscolha>SIM</respostaUnicaEscolha>
+		</perguntasQuestionarioCriancasMenoresSeisMeses>
+		<perguntasQuestionarioCriancasMenoresSeisMeses>
+			<pergunta>MINGAU</pergunta>
+			<respostaUnicaEscolha>NAO</respostaUnicaEscolha>
+		</perguntasQuestionarioCriancasMenoresSeisMeses>
+		<perguntasQuestionarioCriancasMenoresSeisMeses>
+			<pergunta>AGUA_CHA</pergunta>
+			<respostaUnicaEscolha>NAO_SABE</respostaUnicaEscolha>
+		</perguntasQuestionarioCriancasMenoresSeisMeses>
+		<perguntasQuestionarioCriancasMenoresSeisMeses>
+			<pergunta>LEITE_VACA</pergunta>
+			<respostaUnicaEscolha>SIM</respostaUnicaEscolha>
+		</perguntasQuestionarioCriancasMenoresSeisMeses>
+		<perguntasQuestionarioCriancasMenoresSeisMeses>
+			<pergunta>FORMULA_INFANTIL</pergunta>
+			<respostaUnicaEscolha>NAO</respostaUnicaEscolha>
+		</perguntasQuestionarioCriancasMenoresSeisMeses>
+		<perguntasQuestionarioCriancasMenoresSeisMeses>
+			<pergunta>SUCO_FRUTA</pergunta>
+			<respostaUnicaEscolha>NAO_SABE</respostaUnicaEscolha>
+		</perguntasQuestionarioCriancasMenoresSeisMeses>
+		<perguntasQuestionarioCriancasMenoresSeisMeses>
+			<pergunta>FRUTA</pergunta>
+			<respostaUnicaEscolha>SIM</respostaUnicaEscolha>
+		</perguntasQuestionarioCriancasMenoresSeisMeses>
+		<perguntasQuestionarioCriancasMenoresSeisMeses>
+			<pergunta>COMIDA_DE_SAL</pergunta>
+			<respostaUnicaEscolha>NAO</respostaUnicaEscolha>
+		</perguntasQuestionarioCriancasMenoresSeisMeses>
+		<perguntasQuestionarioCriancasMenoresSeisMeses>
+			<pergunta>OUTROS_ALIMENTOS_BEBIDAS</pergunta>
+			<respostaUnicaEscolha>NAO_SABE</respostaUnicaEscolha>
+		</perguntasQuestionarioCriancasMenoresSeisMeses>
+		<uuidFicha>5444428-0bcf3a98-d685-4195-acb7-b36715fb1f22</uuidFicha>
+		<tpCdsOrigem>1</tpCdsOrigem>
+	</ns4:fichaConsumoAlimentarTransport>
+	<ns2:remetente>
+		<contraChave>003d61860206f2804eefff4d01ef1a3f</contraChave>
+		<uuidInstalacao>10e769db-a642-43e4-b970-ff01ba660b51</uuidInstalacao>
+		<cpfOuCnpj>08953588910</cpfOuCnpj>
+		<nomeOuRazaoSocial>MARIANA MELO</nomeOuRazaoSocial>
+	</ns2:remetente>
+	<ns2:originadora>
+		<contraChave>003d61860206f2804eefff4d01ef1a3f</contraChave>
+		<uuidInstalacao>10e769db-a642-43e4-b970-ff01ba660b51</uuidInstalacao>
+		<cpfOuCnpj>08953588910</cpfOuCnpj>
+		<nomeOuRazaoSocial>MARIANA MELO</nomeOuRazaoSocial>
+	</ns2:originadora>
+	<versao major="2" minor="0" revision="0"/>
+</ns3:dadoTransporteTransportXml>

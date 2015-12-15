@@ -1,9 +1,14 @@
-package examplo;
+package exemplo;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 import java.util.UUID;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipOutputStream;
 
 import br.gov.saude.esus.cds.transport.generated.thrift.common.UnicaLotacaoHeaderThrift;
 import br.gov.saude.esus.cds.transport.generated.thrift.procedimento.FichaProcedimentoChildThrift;
@@ -11,24 +16,54 @@ import br.gov.saude.esus.cds.transport.generated.thrift.procedimento.FichaProced
 import br.gov.saude.esus.transport.common.api.configuracaodestino.VersaoThrift;
 import br.gov.saude.esus.transport.common.generated.thrift.DadoInstalacaoThrift;
 import br.gov.saude.esus.transport.common.generated.thrift.DadoTransporteThrift;
-import examplo.utils.ThriftSerializer;
-import examplo.utils.ZipWriterExemplo;
 
-public class ExemploDadosParaThrift {
+public class ExemploFichaProcedimentoThrift {
 
+	private final static String EXTENSAO_EXPORT = ".esus";
 	private static long TIPO_DADO_SERIALIZADO_FICHA_PROCEDIMENTO = 7;
 
 	public static void main(String[] args) {
-		FichaProcedimentoMasterThrift thriftAtendimento = getFicha();
+		// Passo 1: Popular a ficha
+		FichaProcedimentoMasterThrift thriftFichaProcedimento = getFicha();
 
-		DadoTransporteThrift dadoTransporteThrift = getDadoTransporte(thriftAtendimento);
+		// Passo 2: Popular o DadoTransporte usando os dados da ficha e do software que está enviando.
+		DadoTransporteThrift dadoTransporteThrift = getDadoTransporte(thriftFichaProcedimento);
 
-		byte[] dadoSerializado = ThriftSerializer.serializeBinary(thriftAtendimento);
+		// Passo 3: Serializar a ficha utilizando o TBinaryProtocol da biblioteca thrift.
+		byte[] fichaSerializada = SerializadorThrift.serializar(thriftFichaProcedimento);
 
+		// Passo 4: Adicionar a ficha serializada e seu tipo no DadoTransporte.
 		dadoTransporteThrift.setTipoDadoSerializado(TIPO_DADO_SERIALIZADO_FICHA_PROCEDIMENTO);
-		dadoTransporteThrift.setDadoSerializado(dadoSerializado);
+		dadoTransporteThrift.setDadoSerializado(fichaSerializada);
 
-		ZipWriterExemplo.generateZip(dadoTransporteThrift);
+		// Não esquecer de informar a versão do dado a ser transmitido (não é a versão do e-SUS AB)
+		VersaoThrift versaoThrift = new VersaoThrift(2, 0, 0);
+		dadoTransporteThrift.setVersao(versaoThrift);
+
+		try {
+			// Passo 5: Criar um arquivo zip para conter as fichas
+			File zipFile = new File(System.getProperty("user.home") + "/exemploConversaoThrift.zip");
+			ZipOutputStream outputStream = new ZipOutputStream(new FileOutputStream(zipFile));
+
+			// Passo 6: Dar um nome para o arquivo (nesse caso usamos o UUID da ficha) sempre acrescentando a extensão ".esus" ao final
+			String entryName = dadoTransporteThrift.getUuidDadoSerializado() + EXTENSAO_EXPORT;
+
+			// Passo 7: Adicionar uma nova entrada (novo arquivo) dentro do zip com o nome definido
+			outputStream.putNextEntry(new ZipEntry(entryName));
+
+			// Passo 8: serializar o DadoTransporte utilizando o TBinaryProtocol da biblioteca thrift
+			byte[] dadoTransporteSerializado = SerializadorThrift.serializar(dadoTransporteThrift);
+
+			// Passo 9: escrever o dadoTransporteSerializado na entrada do arquivo zip criado anteriormente
+			outputStream.write(dadoTransporteSerializado);
+
+			// Para adicionar mais fichas no mesmo zip, repetir os passos 6, 7, 8 e 9 com as demais fichas
+
+			// Passo 10: Finalizar o arquivo zip
+			outputStream.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 	/**
@@ -65,8 +100,7 @@ public class ExemploDadosParaThrift {
 
 		dadoTransporteThrift.setNumLote(0l);
 
-		VersaoThrift versaoThrift = new VersaoThrift(2, 0, 0);
-		dadoTransporteThrift.setVersao(versaoThrift);
+
 
 		return dadoTransporteThrift;
 	}

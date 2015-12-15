@@ -1,4 +1,4 @@
-package examplo.utils;
+package exemplo;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -24,7 +24,7 @@ public class ZipWriterExemplo {
 
 			String entryName = thrift.getUuidDadoSerializado() + EXTENSAO_EXPORT;
 			outputStream.putNextEntry(new ZipEntry(entryName));
-			byte[] data = ThriftSerializer.serializeBinary(thrift);
+			byte[] data = SerializadorThrift.serializar(thrift);
 			outputStream.write(data);
 
 			outputStream.closeEntry();

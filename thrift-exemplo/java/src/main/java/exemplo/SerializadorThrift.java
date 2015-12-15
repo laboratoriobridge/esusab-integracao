@@ -1,4 +1,4 @@
-package examplo.utils;
+package exemplo;
 
 import java.io.ByteArrayOutputStream;
 
@@ -8,7 +8,7 @@ import org.apache.thrift.TFieldIdEnum;
 import org.apache.thrift.protocol.TBinaryProtocol;
 import org.apache.thrift.transport.TIOStreamTransport;
 
-public class ThriftSerializer {
+public class SerializadorThrift {
 
 	/**
 	 * Realiza a serialização do thrift.
@@ -16,7 +16,7 @@ public class ThriftSerializer {
 	 * @param thrift - o thrift preenchido com as informações do atendimento.
 	 * @return um array com os bytes serializados.
 	 */
-	public static byte[] serializeBinary(TBase<?, ? extends TFieldIdEnum> thrift) {
+	public static byte[] serializar(TBase<?, ? extends TFieldIdEnum> thrift) {
 		try {
 			ByteArrayOutputStream baos = new ByteArrayOutputStream();
 			TIOStreamTransport transport = new TIOStreamTransport(baos);

@@ -27,10 +27,10 @@ DadoTransporteThrift dadoTransporteThrift = new DadoTransporteThrift();
 Este objeto funciona como um pacote, onde parte das informações são a respeito da origem da ficha (CNES, IBGE e INE).
 
 ```java
-dadoTransporteThrift.setUuidDadoSerializado(ficha.getUuidFicha());
-dadoTransporteThrift.setIneDadoSerializado(ficha.getHeaderTransport().getIne());
-dadoTransporteThrift.setCodIbge(ficha.getHeaderTransport().getCodigoIbgeMunicipio());
-dadoTransporteThrift.setCnesDadoSerializado(ficha.getHeaderTransport().getCnes());
+dadoTransporteThrift.setUuidDadoSerializado(thriftProcedimentos.getUuidFicha());
+dadoTransporteThrift.setIneDadoSerializado(thriftProcedimentos.getHeaderTransport().getIne());
+dadoTransporteThrift.setCodIbge(thriftProcedimentos.getHeaderTransport().getCodigoIbgeMunicipio());
+dadoTransporteThrift.setCnesDadoSerializado(thriftProcedimentos.getHeaderTransport().getCnes());
 ```
 
 E parte sobre o software que a está enviando.

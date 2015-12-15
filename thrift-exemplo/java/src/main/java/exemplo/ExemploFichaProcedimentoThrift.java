@@ -36,7 +36,7 @@ public class ExemploFichaProcedimentoThrift {
 		dadoTransporteThrift.setTipoDadoSerializado(TIPO_DADO_SERIALIZADO_FICHA_PROCEDIMENTO);
 		dadoTransporteThrift.setDadoSerializado(fichaSerializada);
 
-		// Não esquecer de informar a versão do dado a ser exportada (não é a versão do e-SUS AB)
+		// Não esquecer de informar a versão da ficha a ser exportada (não é a versão do e-SUS AB)
 		VersaoThrift versaoThrift = new VersaoThrift(2, 0, 0);
 		dadoTransporteThrift.setVersao(versaoThrift);
 
@@ -54,7 +54,7 @@ public class ExemploFichaProcedimentoThrift {
 			// Passo 8: serializar o DadoTransporte utilizando o TBinaryProtocol da biblioteca thrift
 			byte[] dadoTransporteSerializado = SerializadorThrift.serializar(dadoTransporteThrift);
 
-			// Passo 9: escrever o dadoTransporteSerializado na entrada do arquivo zip criado anteriormente
+			// Passo 9: escrever o dadoTransporteSerializado no arquivo zip
 			outputStream.write(dadoTransporteSerializado);
 
 			// Para adicionar mais fichas no mesmo zip, repetir os passos 6, 7, 8 e 9 com as demais fichas

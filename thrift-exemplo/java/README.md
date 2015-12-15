@@ -1,6 +1,6 @@
 #Exemplo Java
 
-Este exemplo demonstra como criar um arquivo .zip com fichas serializadas para importação no e-SUS AB.
+Este exemplo é um projeto maven que demonstra como criar um arquivo .zip com fichas serializadas para importação no e-SUS AB.
 
 ##Passo 1
 
@@ -27,10 +27,10 @@ DadoTransporteThrift dadoTransporteThrift = new DadoTransporteThrift();
 Este objeto funciona como um pacote, onde parte das informações são a respeito da origem da ficha (CNES, IBGE e INE).
 
 ```java
-dadoTransporteThrift.setUuidDadoSerializado(ficha.getUuidFicha());
-dadoTransporteThrift.setIneDadoSerializado(ficha.getHeaderTransport().getIne());
-dadoTransporteThrift.setCodIbge(ficha.getHeaderTransport().getCodigoIbgeMunicipio());
-dadoTransporteThrift.setCnesDadoSerializado(ficha.getHeaderTransport().getCnes());
+dadoTransporteThrift.setUuidDadoSerializado(thriftProcedimentos.getUuidFicha());
+dadoTransporteThrift.setIneDadoSerializado(thriftProcedimentos.getHeaderTransport().getIne());
+dadoTransporteThrift.setCodIbge(thriftProcedimentos.getHeaderTransport().getCodigoIbgeMunicipio());
+dadoTransporteThrift.setCnesDadoSerializado(thriftProcedimentos.getHeaderTransport().getCnes());
 ```
 
 E parte sobre o software que a está enviando.

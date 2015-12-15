@@ -36,7 +36,7 @@ public class ExemploFichaProcedimentoThrift {
 		dadoTransporteThrift.setTipoDadoSerializado(TIPO_DADO_SERIALIZADO_FICHA_PROCEDIMENTO);
 		dadoTransporteThrift.setDadoSerializado(fichaSerializada);
 
-		// Não esquecer de informar a versão do dado a ser transmitido (não é a versão do e-SUS AB)
+		// Não esquecer de informar a versão do dado a ser exportada (não é a versão do e-SUS AB)
 		VersaoThrift versaoThrift = new VersaoThrift(2, 0, 0);
 		dadoTransporteThrift.setVersao(versaoThrift);
 
@@ -112,7 +112,7 @@ public class ExemploFichaProcedimentoThrift {
 		FichaProcedimentoMasterThrift thriftProcedimentos = new FichaProcedimentoMasterThrift();
 
 		String uuidFicha = UUID.randomUUID().toString();
-		thriftProcedimentos.setUuidFicha(uuidFicha); // Utilizar o UUID da ficha;
+		thriftProcedimentos.setUuidFicha(uuidFicha);
 
 		thriftProcedimentos.setAtendProcedimentos(getAtendimentos());
 		thriftProcedimentos.setHeaderTransport(getHeader());

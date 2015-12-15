@@ -1,6 +1,6 @@
 #Exemplo Java
 
-Este exemplo demonstra como criar um arquivo .zip com fichas serializadas para importação no e-SUS AB.
+Este exemplo é um projeto maven que demonstra como criar um arquivo .zip com fichas serializadas para importação no e-SUS AB.
 
 ##Passo 1
 

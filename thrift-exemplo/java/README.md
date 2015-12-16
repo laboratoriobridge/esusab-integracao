@@ -86,7 +86,7 @@ ZipOutputStream outputStream = new ZipOutputStream(new FileOutputStream(zipFile)
 Dar um nome para o arquivo a ser inserido no zip (nesse caso usamos o UUID da ficha) sempre acrescentando a extensão ".esus" ao final
 
 ```java
-String entryName = dadoTransporteThrift.getUuidDadoSerializado() + EXTENSAO_EXPORT;
+String entryName = dadoTransporteThrift.getUuidDadoSerializado() + ".esus";
 ```
 
 ##Passo 7

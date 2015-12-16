@@ -414,6 +414,13 @@ a[name]::before {
   margin: -70px 0 0;
   z-index: -1; }
 
+.post p > img[alt] {
+  display: block;
+  margin: 0 auto; }
+  .post p > img[alt] ~ em {
+    display: block;
+    text-align: center; }
+
 /**
  * Syntax highlighting styles
  */
@@ -577,7 +584,9 @@ table tr:nth-child(even) {
 .menu {
   border-radius: 4px;
   border: 1px solid #ddd;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  max-height: 80vh;
+  overflow: auto; }
   .menu a {
     color: #444;
     text-decoration: none;
@@ -660,18 +669,20 @@ table tr:nth-child(even) {
     .pdf-select {
       display: none; } }
 
+.pdf.shown {
+  display: block; }
+
+.pdf.hidden {
+  display: none; }
+
 .pdf-separator {
   border: 2px solid #ddd;
-  margin-bottom: 25px; }
+  margin: 50px 0; }
 
 @media print {
   *,
   *:before,
   *:after {
-    background: transparent !important;
-    color: #000 !important;
-    /* Black prints faster:
-       http://www.sanbeiji.com/archives/953 */
     box-shadow: none !important;
     text-shadow: none !important;
     font-size: 9pt !important; }
@@ -679,14 +690,6 @@ table tr:nth-child(even) {
   a,
   a:visited {
     text-decoration: underline; }
-
-  /*
-   * Don't show links that are fragment identifiers,
-   * or use the `javascript:` pseudo protocol
-   */
-  a[href^="#"]:after,
-  a[href^="javascript:"]:after {
-    content: ""; }
 
   pre,
   blockquote {
@@ -707,21 +710,16 @@ table tr:nth-child(even) {
     display: table-footer-group; }
 
   img {
-    page-break-inside: avoid; }
-
-  img {
-    max-width: 100% !important; }
+    page-break-inside: avoid;
+    max-width: 100% !important;
+    max-height: 700px !important; }
 
   p,
-  h1,
-  h2,
-  h3 {
+  h1, h2, h3, h4, h5, h6 {
     orphans: 3;
     widows: 3; }
 
-  h1,
-  h2,
-  h3 {
+  h1, h2, h3, h4, h5, h6 {
     page-break-after: avoid; }
 
   .post-title {
@@ -751,7 +749,16 @@ table tr:nth-child(even) {
     margin: 0;
     padding: 0;
     width: 100%;
-    float: none; } }
+    float: none; }
+
+  .pdf-separator {
+    visibility: hidden; }
+
+  .pdf.shown {
+    page-break-after: always; }
+
+  .pdf.shown:last-of-type {
+    page-break-after: avoid; } }
 ol.breadcrumb {
   list-style: none;
   margin: 0;

@@ -86,7 +86,7 @@
 
         <div class="sidebar">
           <div class="sidebar-content">
-            <form action="/search.html">
+            <form id="search-form">
   <input type="search" placeholder="Pesquisar..." name="q" id="search-input" autocomplete="off">
 </form>
 
@@ -98,6 +98,11 @@
     resultsContainer: document.getElementById('search-results'),
     json: '/integracao/search.json',
     noResultsText: 'Nenhum resultado encontrado'
+  });
+
+  document.getElementById('search-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    return false;
   });
 </script>
 
@@ -196,7 +201,7 @@
     <p class="post-meta">
       <a class="btn" href="/integracao/pdf.html?include=municipios"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 01/09/2015</span>
+        <span class="label" title="Data da última modificação">Alterado em 02/12/2015</span>
       
     </p>
   </header>

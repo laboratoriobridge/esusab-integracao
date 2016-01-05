@@ -7,10 +7,6 @@ html/_site/
 **/.factorypath
 .settings
 
-# Ignorar gerados pelos "annotation processing" mas não os gerados que estiverem em src #
-generated/
-!/**/src/**
-
 # Eclipse e Mvn #
 bin/
 build/

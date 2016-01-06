@@ -21,7 +21,7 @@ begin
   zipFile := TZipFile.Create;
   try
     zipFile.Open('C:\temp\exemploConversaoThriftDelphi.zip', zmWrite);
-    zipFile.Add(thriftSerializado, dadoTransporte.UuidDadoSerializado + '.esus13', zcDeflate);
+    zipFile.Add(thriftSerializado, dadoTransporte.UuidDadoSerializado + '.esus', zcDeflate);
   finally
     zipFile.Free;
   end

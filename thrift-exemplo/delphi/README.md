@@ -222,7 +222,7 @@ Dar um nome para o arquivo a ser inserido no zip (nesse caso usamos o UUID da fi
     zipFile := TZipFile.Create;
     try
       zipFile.Open('<caminho>\exemploConversaoThriftDelphi.zip', zmWrite);
-      zipFile.Add(thriftSerializado, dadoTransporte.UuidDadoSerializado + '.esus13', zcDeflate);
+      zipFile.Add(thriftSerializado, dadoTransporte.UuidDadoSerializado + '.esus', zcDeflate);
     finally
       zipFile.Free;
     end

@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Camada de Transporte de Dados</title>
-  <meta name="description" content="Cada ficha dentro do arquivo compactado representa um DadoTransport serializado através do TBinaryProtocol, sendo necessário que a extensão da ficha esteja d...">
+  <meta name="description" content="Dicionário de dados e-SUS AB">
 
   <link rel="stylesheet" href="/integracao/css/main.css">
   <link rel="canonical" href="/integracao/docs/camada-transporte.html">
@@ -201,7 +201,7 @@
     <p class="post-meta">
       <a class="btn" href="/integracao/pdf.html?include=camada-transporte"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 02/12/2015</span>
+        <span class="label" title="Data da última modificação">Alterado em 08/01/2016</span>
       
     </p>
   </header>
@@ -217,7 +217,7 @@
 
 <p>Os atributos do registro transportado devem seguir as regras aqui descritas. Qualquer inconsistência nos dados transportados resultará no descarte da entidade <a href="#dadotransporte">DadoTransporte</a>.</p>
 
-<h3 id="1-uuiddadoserializado">#1 uuidDadoSerializado</h3>
+<h3 id="#1-uuiddadoserializado">#1 uuidDadoSerializado</h3>
 
 <p>UUID do dado (identificador &quot;universal&quot; gerado na criação do registro).</p>
 
@@ -241,7 +241,7 @@
 
 <p><strong>Referência:</strong> <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">UUID Wikipedia</a></p>
 
-<h3 id="2-tipodadoserializado">#2 tipoDadoSerializado</h3>
+<h3 id="#2-tipodadoserializado">#2 tipoDadoSerializado</h3>
 
 <p>Tipo/classe do objeto serializado através do <a href="https://github.com/apache/thrift/blob/0.9.2/lib/java/src/org/apache/thrift/protocol/TBinaryProtocol.java">TBinaryProtocol</a>.</p>
 
@@ -263,7 +263,7 @@
 
 <p><strong>Referência:</strong> <a href="/integracao/docs/dicionario/dicionario.html#tipodadoserializado">TipoDadoSerializado</a></p>
 
-<h3 id="3-cnesdadoserializado">#3 cnesDadoSerializado</h3>
+<h3 id="#3-cnesdadoserializado">#3 cnesDadoSerializado</h3>
 
 <p>Código CNES da unidade de saúde.</p>
 
@@ -283,7 +283,7 @@
 </tr>
 </tbody></table>
 
-<h3 id="4-codibge">#4 codIbge</h3>
+<h3 id="#4-codibge">#4 codIbge</h3>
 
 <p>Código IBGE do dado serializado através do <a href="https://github.com/apache/thrift/blob/0.9.2/lib/java/src/org/apache/thrift/protocol/TBinaryProtocol.java">TBinaryProtocol</a>.</p>
 
@@ -305,7 +305,7 @@
 
 <p><strong>Referência:</strong> <a href="/integracao/docs/municipios.html">Municípios</a></p>
 
-<h3 id="5-inedadoserializado">#5 ineDadoSerializado</h3>
+<h3 id="#5-inedadoserializado">#5 ineDadoSerializado</h3>
 
 <p>Código INE da equipe que gerou a ficha.</p>
 
@@ -319,13 +319,13 @@
 </thead><tbody>
 <tr>
 <td>String</td>
-<td>Opcional</td>
+<td>Não</td>
 <td>10</td>
 <td>10</td>
 </tr>
 </tbody></table>
 
-<h3 id="6-numlote">#6 numLote</h3>
+<h3 id="#6-numlote">#6 numLote</h3>
 
 <p>Número do lote para controle interno dos arquivos enviados.</p>
 
@@ -339,13 +339,13 @@
 </thead><tbody>
 <tr>
 <td>Long</td>
-<td>Opcional</td>
+<td>Não</td>
 <td>-</td>
 <td>-</td>
 </tr>
 </tbody></table>
 
-<h3 id="7-dadoserializado">#7 dadoSerializado</h3>
+<h3 id="#7-dadoserializado">#7 dadoSerializado</h3>
 
 <p>Dado serializado através do <a href="https://github.com/apache/thrift/blob/0.9.2/lib/java/src/org/apache/thrift/protocol/TBinaryProtocol.java">TBinaryProtocol</a> a partir de uma ficha.</p>
 
@@ -365,7 +365,7 @@
 </tr>
 </tbody></table>
 
-<h3 id="8-remetente">#8 remetente</h3>
+<h3 id="#8-remetente">#8 remetente</h3>
 
 <p>Identifica a instalação que enviou o dado.</p>
 
@@ -387,7 +387,7 @@
 
 <p><strong>Referência:</strong> <a href="#DadoInstalacao">DadoInstalacao</a></p>
 
-<h3 id="9-originadora">#9 originadora</h3>
+<h3 id="#9-originadora">#9 originadora</h3>
 
 <p>Identifica a instalação que cadastrou/digitou.</p>
 
@@ -409,7 +409,7 @@
 
 <p><strong>Referência:</strong> <a href="#DadoInstalacao">DadoInstalacao</a></p>
 
-<h3 id="10-versao">#10    versao</h3>
+<h3 id="#10-versao">#10    versao</h3>
 
 <p>Identifica a versão do e-SUS AB.</p>
 
@@ -423,7 +423,7 @@
 </thead><tbody>
 <tr>
 <td>Versao</td>
-<td>Requerido</td>
+<td>Sim</td>
 <td>-</td>
 <td>-</td>
 </tr>
@@ -433,7 +433,7 @@
 
 <h2 id="dadoinstalacao">DadoInstalacao</h2>
 
-<h3 id="1-contrachave">#1 contraChave</h3>
+<h3 id="#1-contrachave">#1 contraChave</h3>
 
 <p>Identifica o software que gerou o dado (pec/cds, cdsOff ou software de terceiros).</p>
 
@@ -447,7 +447,7 @@
 </thead><tbody>
 <tr>
 <td>String</td>
-<td>Requerido</td>
+<td>Sim</td>
 <td>-</td>
 <td>-</td>
 </tr>
@@ -457,7 +457,7 @@
 
 <p>Observações: Campo serve para a identificar a instalação que gerou / cadastrou / enviou os dados.</p>
 
-<h3 id="2-uuidinstalacao">#2 uuidInstalacao</h3>
+<h3 id="#2-uuidinstalacao">#2 uuidInstalacao</h3>
 
 <p>É um identificador da instalação do software que gerou o dado. Seja ele o e-SUS ou software de terceiro. Cada e-SUS possui um UUID.</p>
 
@@ -471,7 +471,7 @@
 </thead><tbody>
 <tr>
 <td>String</td>
-<td>Requerido</td>
+<td>Sim</td>
 <td>-</td>
 <td>-</td>
 </tr>
@@ -479,7 +479,7 @@
 
 <p>Observações: Campo serve para a identificar a instalação que gerou / cadastrou / enviou os dados.</p>
 
-<h3 id="3-cpfoucnpj">#3 cpfOuCnpj</h3>
+<h3 id="#3-cpfoucnpj">#3 cpfOuCnpj</h3>
 
 <p>CPF do responsável ou CNPJ da empresa responsável.</p>
 
@@ -493,7 +493,7 @@
 </thead><tbody>
 <tr>
 <td>String</td>
-<td>Requerido</td>
+<td>Sim</td>
 <td>11</td>
 <td>15</td>
 </tr>
@@ -506,7 +506,7 @@
 <li>Campo serve para a identificar a instalação que gerou / cadastrou / enviou os dados.</li>
 </ul>
 
-<h3 id="4-nomeourazaosocial">#4 nomeOuRazaoSocial</h3>
+<h3 id="#4-nomeourazaosocial">#4 nomeOuRazaoSocial</h3>
 
 <p>Nome do responsável ou razão social da empresa responsável.</p>
 
@@ -520,7 +520,7 @@
 </thead><tbody>
 <tr>
 <td>String</td>
-<td>Requerido</td>
+<td>Sim</td>
 <td>-</td>
 <td>-</td>
 </tr>
@@ -528,7 +528,7 @@
 
 <p>Observações: Campo serve para a identificar a instalação que gerou / cadastrou / enviou os dados.</p>
 
-<h3 id="5-fone">#5 fone</h3>
+<h3 id="#5-fone">#5 fone</h3>
 
 <p>Telefone da pessoa ou empresa responsável.</p>
 
@@ -542,7 +542,7 @@
 </thead><tbody>
 <tr>
 <td>String</td>
-<td>Opcional</td>
+<td>Não</td>
 <td>10</td>
 <td>11</td>
 </tr>
@@ -550,7 +550,7 @@
 
 <p>Observações: Campo serve para a identificar a instalação que gerou / cadastrou / enviou os dados.</p>
 
-<h3 id="6-email">#6 email</h3>
+<h3 id="#6-email">#6 email</h3>
 
 <p>Email da pessoa ou empresa responsável.</p>
 
@@ -564,7 +564,7 @@
 </thead><tbody>
 <tr>
 <td>String</td>
-<td>Opcional</td>
+<td>Não</td>
 <td>6</td>
 <td>255</td>
 </tr>

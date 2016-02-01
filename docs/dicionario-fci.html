@@ -201,7 +201,7 @@
     <p class="post-meta">
       <a class="btn" href="/integracao/pdf.html?include=dicionario-fci"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 08/01/2016</span>
+        <span class="label" title="Data da última modificação">Alterado em 01/02/2016</span>
       
     </p>
   </header>
@@ -628,7 +628,7 @@
 <li>Não deve ser preenchido se o campo <a href="#22-statustemtevedoencasrins">statusTemTeveDoencasRins</a> = <code>false</code>.</li>
 </ul>
 
-<p><strong>Referência:</strong> <a href="/integracao/docs/dicionario/dicionario.html#consideracaopeso">ConsideracaoPeso</a>.</p>
+<p><strong>Referência:</strong> <a href="/integracao/docs/dicionario/dicionario.html#problemasrins">ProblemasRins</a>.</p>
 
 <h3 id="#9-maternidadedereferencia">#9 maternidadeDeReferencia</h3>
 
@@ -1687,7 +1687,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Só pode ser preenchido se o campo <a href="#7-nacionalidadecidadao">nacionalidadeCidadao</a> = <code>1L (Brasileira)</code>.</p>
+<p><strong>Regras:</strong> Só pode ser preenchido se o campo <a href="#7-nacionalidadecidadao">nacionalidadeCidadao</a> for diferente de <code>1L (Brasileira)</code>.</p>
 
 <p><strong>Referência:</strong> <a href="/integracao/docs/referencias.html#pa%C3%ADs">País</a>.</p>
 
@@ -1847,9 +1847,11 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong>
-* Deve ser um código de CBO válido.
-* Não pode ser preenchido se o campo <a href="#10-statusdesejainformarorientacaosexual">statusDesejaInformarOrientacaoSexual</a> = <code>false</code>.</p>
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Deve ser um código de CBO válido.</li>
+</ul>
 
 <p><strong>Referência:</strong> <a href="/integracao/docs/cbo.html">CBO</a>.</p>
 
@@ -1872,6 +1874,9 @@
 <td>-</td>
 </tr>
 </tbody></table>
+
+<p><strong>Regras:</strong>
+* Não pode ser preenchido se o campo <a href="#10-statusdesejainformarorientacaosexual">statusDesejaInformarOrientacaoSexual</a> = <code>false</code>.</p>
 
 <p><strong>Referência:</strong> <a href="/integracao/docs/dicionario/dicionario.html#orientacaosexual">OrientacaoSexual</a>.</p>
 

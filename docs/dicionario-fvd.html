@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Ficha de Visita Domiciliar</title>
-  <meta name="description" content="Dicionário de dados e-SUS AB">
+  <meta name="description" content="Ficha de Visita Domiciliar">
 
   <link rel="stylesheet" href="/integracao/css/main.css">
   <link rel="canonical" href="/integracao/docs/dicionario-fvd.html">
@@ -201,7 +201,7 @@
     <p class="post-meta">
       <a class="btn" href="/integracao/pdf.html?include=dicionario-fvd"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 08/01/2016</span>
+        <span class="label" title="Data da última modificação">Alterado em 17/03/2016</span>
       
     </p>
   </header>
@@ -211,7 +211,7 @@
 
 <h2 id="fichavisitadomiciliarmaster">FichaVisitaDomiciliarMaster</h2>
 
-<h3 id="#1-uuidficha">#1 uuidFicha</h3>
+<h3 id="1-uuidficha">#1 uuidFicha</h3>
 
 <p>Código UUID para identificar a ficha na base de dados nacional.</p>
 
@@ -235,7 +235,7 @@
 
 <p><strong>Referência:</strong> Para ver a referência sobre o UUID, acesse <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">UUID Wikipedia</a>.</p>
 
-<h3 id="#2-tpcdsorigem">#2 tpCdsOrigem</h3>
+<h3 id="2-tpcdsorigem">#2 tpCdsOrigem</h3>
 
 <p>Tipo de origem dos dados do registro.</p>
 
@@ -257,7 +257,7 @@
 
 <p><strong>Regras:</strong> Utilizar valor 3 (sistemas terceiros).</p>
 
-<h3 id="#3-headertransport">#3 headerTransport</h3>
+<h3 id="3-headertransport">#3 headerTransport</h3>
 
 <p>Profissional que realizou a visita.</p>
 
@@ -279,7 +279,7 @@
 
 <p><strong>Referência:</strong> <a href="a%20href=%22/integracao/docs/profissional.html%22%3EProfissional%3C/a">Profissional</a>.</p>
 
-<h3 id="#4-visitasdomiciliares">#4 visitasDomiciliares</h3>
+<h3 id="4-visitasdomiciliares">#4 visitasDomiciliares</h3>
 
 <p>Pelo menos 1 item na lista, no máximo 23.</p>
 
@@ -303,7 +303,7 @@
 
 <h2 id="fichavisitadomiciliarchild">FichaVisitaDomiciliarChild</h2>
 
-<h3 id="#1-turno">#1 turno</h3>
+<h3 id="1-turno">#1 turno</h3>
 
 <p>Código do turno onde aconteceu o atendimento.</p>
 
@@ -325,7 +325,7 @@
 
 <p><strong>Referência:</strong> <a href="/integracao/docs/dicionario/dicionario.html#turno">Turno</a>.</p>
 
-<h3 id="#2-numprontuario">#2 numProntuario</h3>
+<h3 id="2-numprontuario">#2 numProntuario</h3>
 
 <p>Número do prontuário do cidadão na UBS.</p>
 
@@ -347,7 +347,7 @@
 
 <p><strong>Regras:</strong> Somente letras e números.</p>
 
-<h3 id="#3-numcartaosus">#3 numCartaoSus</h3>
+<h3 id="3-numcartaosus">#3 numCartaoSus</h3>
 
 <p>Número do cartão SUS do cidadão.</p>
 
@@ -371,7 +371,7 @@
 
 <p><strong>Referência:</strong> Para ver o algoritmo utilizado, acesse: <a href="http://cartaonet.datasus.gov.br/">Cartão Net Datasus</a>, em &quot;Downloads&quot; baixe o arquivo de rotina de validação Java.  </p>
 
-<h3 id="#4-dtnascimento">#4 dtNascimento</h3>
+<h3 id="4-dtnascimento">#4 dtNascimento</h3>
 
 <p>Data de nascimento do cidadão.</p>
 
@@ -393,9 +393,9 @@
 
 <p><strong>Regras:</strong> Não pode ser posterior a <a href="/integracao/docs/profissional.html#5-dataatendimento">dataAtendimento</a> e anterior a 130 anos a partir da <a href="/integracao/docs/profissional.html#5-dataatendimento">dataAtendimento</a>.</p>
 
-<p><strong>Referência:</strong> <a href="https://en.wikipedia.org/wiki/Epoch_(reference_date)">Epoch Wikipedia</a>.</p>
+<p><strong>Referência:</strong> <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch Wikipedia</a> em milisegundos.</p>
 
-<h3 id="#5-sexo">#5 sexo</h3>
+<h3 id="5-sexo">#5 sexo</h3>
 
 <p>Código do sexo do cidadão.</p>
 
@@ -417,7 +417,7 @@
 
 <p><strong>Referência:</strong> <a href="/integracao/docs/dicionario/dicionario.html#sexo">Sexo</a>.</p>
 
-<h3 id="#6-statusvisitacompartilhadaoutroprofissional">#6 statusVisitaCompartilhadaOutroProfissional</h3>
+<h3 id="6-statusvisitacompartilhadaoutroprofissional">#6 statusVisitaCompartilhadaOutroProfissional</h3>
 
 <p>Marcador que indica se a visita foi compartilhada com outro profissional.</p>
 
@@ -437,7 +437,7 @@
 </tr>
 </tbody></table>
 
-<h3 id="#7-motivosvisita">#7 motivosVisita</h3>
+<h3 id="7-motivosvisita">#7 motivosVisita</h3>
 
 <p>Código dos motivos da visita.</p>
 
@@ -461,7 +461,7 @@
 
 <p><strong>Referência:</strong> <a href="/integracao/docs/dicionario/dicionario.html#motivovisita">MotivoVisita</a>.</p>
 
-<h3 id="#8-desfecho">#8 desfecho</h3>
+<h3 id="8-desfecho">#8 desfecho</h3>
 
 <p>Código dos resultados da ação de visita.</p>
 

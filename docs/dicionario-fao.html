@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Ficha de Atendimento Odontológico</title>
-  <meta name="description" content="Dicionário de dados e-SUS AB">
+  <meta name="description" content="Ficha de Atendimento Odontológico">
 
   <link rel="stylesheet" href="/integracao/css/main.css">
   <link rel="canonical" href="/integracao/docs/dicionario-fao.html">
@@ -207,11 +207,11 @@
   </header>
 
   <article class="post-content">
-    <h1 id="ficha-de-atendimento-odontológico">Ficha de Atendimento Odontológico</h1>
+    <h1 id="ficha-de-atendimento-odontol-gico">Ficha de Atendimento Odontológico</h1>
 
 <h2 id="fichaatendimentoodontologicomaster">FichaAtendimentoOdontologicoMaster</h2>
 
-<h3 id="#1-uuidficha">#1 uuidFicha</h3>
+<h3 id="1-uuidficha">#1 uuidFicha</h3>
 
 <p>Código UUID para identificar a ficha na base de dados nacional.</p>
 
@@ -235,7 +235,7 @@
 
 <p><strong>Referências:</strong> Para ver a referência sobre o UUID, acesse: <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">UUID Wikipedia</a>.</p>
 
-<h3 id="#2-headertransport">#2 headerTransport</h3>
+<h3 id="2-headertransport">#2 headerTransport</h3>
 
 <p>Profissionais que realizaram o atendimento.</p>
 
@@ -257,7 +257,7 @@
 
 <p><strong>Referências:</strong> <a href="/integracao/docs/profissional.html">Profissional</a></p>
 
-<h3 id="#3-atendimentosodontologicos">#3 atendimentosOdontologicos</h3>
+<h3 id="3-atendimentosodontologicos">#3 atendimentosOdontologicos</h3>
 
 <p>Registro individualizado dos atendimentos.</p>
 
@@ -281,7 +281,7 @@
 
 <p><strong>Referências:</strong> <a href="#fichaatendimentoodontologicochild">FichaAtendimentoOdontologicoChild</a></p>
 
-<h3 id="#4-tpcdsorigem">#4 tpCdsOrigem</h3>
+<h3 id="4-tpcdsorigem">#4 tpCdsOrigem</h3>
 
 <p>Tipo de origem dos dados do registro.</p>
 
@@ -305,7 +305,7 @@
 
 <h2 id="fichaatendimentoodontologicochild">FichaAtendimentoOdontologicoChild</h2>
 
-<h3 id="#1-dtnascimento">#1 dtNascimento</h3>
+<h3 id="1-dtnascimento">#1 dtNascimento</h3>
 
 <p>Data de nascimento do cidadão.</p>
 
@@ -329,7 +329,7 @@
 
 <p><strong>Referências:</strong> <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch Wikipedia</a> em milisegundos.</p>
 
-<h3 id="#2-numcartaosus">#2 numCartaoSus</h3>
+<h3 id="2-numcartaosus">#2 numCartaoSus</h3>
 
 <p>CNS do cidadão.</p>
 
@@ -353,7 +353,7 @@
 
 <p><strong>Referências:</strong> Para ver o algoritmo utilizado, acesse: <a href="http://cartaonet.datasus.gov.br/">Cartão Net Datasus</a>, em &quot;Downloads&quot; baixe o arquivo de rotina de validação Java.</p>
 
-<h3 id="#3-numprontuario">#3 numProntuario</h3>
+<h3 id="3-numprontuario">#3 numProntuario</h3>
 
 <p>Número do prontuário do cidadão.</p>
 
@@ -375,7 +375,7 @@
 
 <p><strong>Regras:</strong> Apenas letras e números são aceitos.</p>
 
-<h3 id="#4-gestante">#4 gestante</h3>
+<h3 id="4-gestante">#4 gestante</h3>
 
 <p>Marcador que indica se o cidadão está gestante.</p>
 
@@ -397,7 +397,7 @@
 
 <p><strong>Regras:</strong> <a href="#14-sexo">Sexo</a> = <code>1 (feminino)</code>.</p>
 
-<h3 id="#5-necessidadesespeciais">#5 necessidadesEspeciais</h3>
+<h3 id="5-necessidadesespeciais">#5 necessidadesEspeciais</h3>
 
 <p>Marcador que indica se o cidadão é portador de necessidades especiais.</p>
 
@@ -417,7 +417,7 @@
 </tr>
 </tbody></table>
 
-<h3 id="#6-localatendimento">#6 localAtendimento</h3>
+<h3 id="6-localatendimento">#6 localAtendimento</h3>
 
 <p>Código do local onde o atendimento foi realizado.</p>
 
@@ -441,7 +441,7 @@
 
 <p><strong>Referências:</strong> <a href="/integracao/docs/dicionario/dicionario.html#localdeatendimento">LocalDeAtendimento</a></p>
 
-<h3 id="#7-tipoatendimento">#7 tipoAtendimento</h3>
+<h3 id="7-tipoatendimento">#7 tipoAtendimento</h3>
 
 <p>Código do tipo de atendimento realizado.</p>
 
@@ -465,7 +465,7 @@
 
 <p><strong>Referências:</strong>   <a href="/integracao/docs/dicionario/dicionario.html#tipodeatendimento">TipoDeAtendimento</a></p>
 
-<h3 id="#8-tiposencamodonto">#8 tiposEncamOdonto</h3>
+<h3 id="8-tiposencamodonto">#8 tiposEncamOdonto</h3>
 
 <p>Código das condutas adotadas e possíveis encaminhamentos.</p>
 
@@ -487,7 +487,7 @@
 
 <p><strong>Referências:</strong> <a href="/integracao/docs/dicionario/dicionario.html#condutaencaminhamentoodonto">CondutaEncaminhamentoOdonto</a></p>
 
-<h3 id="#9-tiposfornecimodonto">#9 tiposFornecimOdonto</h3>
+<h3 id="9-tiposfornecimodonto">#9 tiposFornecimOdonto</h3>
 
 <p>Código dos materiais fornecidos durante o atendimento.</p>
 
@@ -509,7 +509,7 @@
 
 <p><strong>Referências:</strong> <a href="/integracao/docs/dicionario/dicionario.html#fornecimentoodonto">FornecimentoOdonto</a></p>
 
-<h3 id="#10-tiposvigilanciasaudebucal">#10    tiposVigilanciaSaudeBucal</h3>
+<h3 id="10-tiposvigilanciasaudebucal">#10    tiposVigilanciaSaudeBucal</h3>
 
 <p>Código dos marcadores referentes a situação de vigilância em saúde bucal.</p>
 
@@ -531,7 +531,7 @@
 
 <p><strong>Referências:</strong> <a href="/integracao/docs/dicionario/dicionario.html#vigilanciaemsaudebucal">VigilanciaEmSaudeBucal</a></p>
 
-<h3 id="#11-tiposconsultaodonto">#11    tiposConsultaOdonto</h3>
+<h3 id="11-tiposconsultaodonto">#11    tiposConsultaOdonto</h3>
 
 <p>Código do tipo de consulta odontológica realizada.</p>
 
@@ -563,7 +563,7 @@
 
 <p><strong>Referências:</strong> <a href="/integracao/docs/dicionario/dicionario.html#tipodeconsultaodonto">TipoDeConsultaOdonto</a></p>
 
-<h3 id="#12-procedimentosrealizados">#12    procedimentosRealizados</h3>
+<h3 id="12-procedimentosrealizados">#12    procedimentosRealizados</h3>
 
 <p>Código dos procedimentos que são apresentados na ficha.</p>
 
@@ -591,7 +591,7 @@
 
 <p><strong>Referências:</strong>   <a href="#listaprocedimentosrealizados">ListaProcedimentosRealizados</a></p>
 
-<h3 id="#13-outrossiaprocedimentos">#13    outrosSiaProcedimentos</h3>
+<h3 id="13-outrossiaprocedimentos">#13    outrosSiaProcedimentos</h3>
 
 <p>Lista de outros códigos de procedimentos.</p>
 
@@ -620,7 +620,7 @@
 
 <p><strong>Referências:</strong> <a href="#procedimentoquantidade">ProcedimentoQuantidade</a></p>
 
-<h3 id="#14-sexo">#14    sexo</h3>
+<h3 id="14-sexo">#14    sexo</h3>
 
 <p>Código do sexo do cidadão.</p>
 
@@ -642,7 +642,7 @@
 
 <p><strong>Referências:</strong> <a href="/integracao/docs/dicionario/dicionario.html#sexo">Sexo</a></p>
 
-<h3 id="#15-turno">#15 turno</h3>
+<h3 id="15-turno">#15 turno</h3>
 
 <p>Código do turno em que o atendimento foi realizado.</p>
 
@@ -666,7 +666,7 @@
 
 <h2 id="procedimentoquantidade">ProcedimentoQuantidade</h2>
 
-<h3 id="#1-comsprocedimento">#1 coMsProcedimento</h3>
+<h3 id="1-comsprocedimento">#1 coMsProcedimento</h3>
 
 <p>Código do procedimento no MS.</p>
 
@@ -690,7 +690,7 @@
 
 <p><strong>Referências:</strong> Para ver a referência da tabela do SIGTAP acesse: <a href="http://sigtap.datasus.gov.br/tabela-unificada/app/sec/procedimento/publicados/consultar">Tabela Unificada SIGTAP</a>.</p>
 
-<h3 id="#2-quantidade">#2 quantidade</h3>
+<h3 id="2-quantidade">#2 quantidade</h3>
 
 <p>Quantidade de procedimentos realizados.</p>
 

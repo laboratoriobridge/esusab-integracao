@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Ficha de Avaliação de Elegibilidade</title>
-  <meta name="description" content="Dicionário de dados e-SUS AB">
+  <meta name="description" content="Ficha de Avaliação de Elegibilidade">
 
   <link rel="stylesheet" href="/integracao/css/main.css">
   <link rel="canonical" href="/integracao/docs/dicionario-fae.html">
@@ -207,11 +207,11 @@
   </header>
 
   <article class="post-content">
-    <h1 id="ficha-de-avaliação-de-elegibilidade">Ficha de Avaliação de Elegibilidade</h1>
+    <h1 id="ficha-de-avalia-o-de-elegibilidade">Ficha de Avaliação de Elegibilidade</h1>
 
 <h2 id="fichaavaliacaoelegibilidade">FichaAvaliacaoElegibilidade</h2>
 
-<h3 id="#1-uuidficha">#1 uuidFicha</h3>
+<h3 id="1-uuidficha">#1 uuidFicha</h3>
 
 <p>Código UUID para identificar a ficha na base de dados nacional.</p>
 
@@ -235,7 +235,7 @@
 
 <p><strong>Referências:</strong>  <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">Wikipedia UUID</a></p>
 
-<h3 id="#2-tpcdsorigem">#2 tpCdsOrigem</h3>
+<h3 id="2-tpcdsorigem">#2 tpCdsOrigem</h3>
 
 <p>Tipo de origem dos dados do registro.</p>
 
@@ -257,7 +257,7 @@
 
 <p><strong>Observação</strong>: Utilizar valor 3 (sistemas terceiros).</p>
 
-<h3 id="#3-headertransport">#3 headerTransport</h3>
+<h3 id="3-headertransport">#3 headerTransport</h3>
 
 <p>Profissional que realizou a visita.</p>
 
@@ -279,7 +279,7 @@
 
 <p><strong>Referências:</strong>   <a href="/integracao/docs/profissional.html">Profissional</a></p>
 
-<h3 id="#4-numerocartaosus">#4 numeroCartaoSus</h3>
+<h3 id="4-numerocartaosus">#4 numeroCartaoSus</h3>
 
 <p>CNS do cidadão.</p>
 
@@ -303,7 +303,7 @@
 
 <p><strong>Referências</strong>: Para ver o algoritmo utilizado, acesse <a href="http://cartaonet.datasus.gov.br/">Cartão Net Datasus</a>, em &quot;Downloads&quot; baixe o arquivo de rotina de validação Java.</p>
 
-<h3 id="#5-nomecidadao">#5 nomeCidadao</h3>
+<h3 id="5-nomecidadao">#5 nomeCidadao</h3>
 
 <p>Nome do cidadão.</p>
 
@@ -331,7 +331,7 @@
 <li>  Opcional caso <a href="#23-conclusaodestinoelegivel">conclusaoDestinoElegivel</a> for diferente de <code>1 (admissão própria emad)</code>.</li>
 </ul>
 
-<h3 id="#6-nomesocialcidadao">#6 nomeSocialCidadao</h3>
+<h3 id="6-nomesocialcidadao">#6 nomeSocialCidadao</h3>
 
 <p>Nome social do cidadão.</p>
 
@@ -357,7 +357,7 @@
 <li>Somente texto e apóstrofo (<code>&#39;</code>).</li>
 </ul>
 
-<h3 id="#7-datanascimentocidadao">#7 dataNascimentoCidadao</h3>
+<h3 id="7-datanascimentocidadao">#7 dataNascimentoCidadao</h3>
 
 <p>Data de nascimento do cidadão no formato epoch time.</p>
 
@@ -381,7 +381,7 @@
 
 <p><strong>Refererência</strong>: <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch Wikipedia</a> em milisegundos..</p>
 
-<h3 id="#8-sexocidadao">#8 sexoCidadao</h3>
+<h3 id="8-sexocidadao">#8 sexoCidadao</h3>
 
 <p>Código do sexo do cidadão.</p>
 
@@ -403,7 +403,7 @@
 
 <p><strong>Referências:</strong> <a href="/integracao/docs/dicionario/dicionario.html#sexo">Sexo</a></p>
 
-<h3 id="#9-racacorcidadao">#9 racaCorCidadao</h3>
+<h3 id="9-racacorcidadao">#9 racaCorCidadao</h3>
 
 <p>Código da raça / cor do cidadão.</p>
 
@@ -431,7 +431,7 @@
 
 <p><strong>Referências:</strong> <a href="/integracao/docs/dicionario/dicionario.html#racacor">RacaCor</a></p>
 
-<h3 id="#10-nomemaecidadao">#10    nomeMaeCidadao</h3>
+<h3 id="10-nomemaecidadao">#10    nomeMaeCidadao</h3>
 
 <p>Nome da mãe do cidadão.</p>
 
@@ -459,7 +459,7 @@
 <li>Não pode ser preenchido se o campo <a href="#11-desconhecenomemae">desconheceNomeMae</a> = <code>true</code>.</li>
 </ul>
 
-<h3 id="#11-desconhecenomemae">#11    desconheceNomeMae</h3>
+<h3 id="11-desconhecenomemae">#11    desconheceNomeMae</h3>
 
 <p>Marcador que indica que o cidadão desconhece o nome da mãe.</p>
 
@@ -479,7 +479,7 @@
 </tr>
 </tbody></table>
 
-<h3 id="#12-codigoibgemunicipionascimento">#12    codigoIbgeMunicipioNascimento</h3>
+<h3 id="12-codigoibgemunicipionascimento">#12    codigoIbgeMunicipioNascimento</h3>
 
 <p>Código IBGE do município.</p>
 
@@ -503,7 +503,7 @@
 
 <p><strong>Referências:</strong> <a href="/integracao/docs/municipios.html">Municípios</a></p>
 
-<h3 id="#13-codigonacionalidade">#13    codigoNacionalidade</h3>
+<h3 id="13-codigonacionalidade">#13    codigoNacionalidade</h3>
 
 <p>Código do marcador que indica se o cidadão é brasileiro, naturalizado ou estrangeiro.</p>
 
@@ -531,7 +531,7 @@
 
 <p><strong>Referências:</strong> <a href="/integracao/docs/dicionario/dicionario.html#nacionalidade">Nacionalidade</a></p>
 
-<h3 id="#14-emailcidadao">#14    emailCidadao</h3>
+<h3 id="14-emailcidadao">#14    emailCidadao</h3>
 
 <p>Email do cidadão.</p>
 
@@ -553,7 +553,7 @@
 
 <p><strong>Regras:</strong> Requerido seguir o padrão <code>endereco@domínio.extensão</code>.</p>
 
-<h3 id="#15-numeronispispasep">#15    numeroNisPisPasep</h3>
+<h3 id="15-numeronispispasep">#15    numeroNisPisPasep</h3>
 
 <p>Número do PIS/PASEP do cidadão.</p>
 
@@ -575,7 +575,7 @@
 
 <p><strong>Regras:</strong> Apenas números.</p>
 
-<h3 id="#16-endereco">#16    endereco</h3>
+<h3 id="16-endereco">#16    endereco</h3>
 
 <p>Informações sobre o endereço do domicílio</p>
 
@@ -603,7 +603,7 @@
 
 <p><strong>Referências:</strong>   <a href="#enderecolocalpermanencia">EnderecoLocalPermanencia</a></p>
 
-<h3 id="#17-atencaodomiciliarorigem">#17    atencaoDomiciliarOrigem</h3>
+<h3 id="17-atencaodomiciliarorigem">#17    atencaoDomiciliarOrigem</h3>
 
 <p>Código do local de atendimento de origem do cidadão.</p>
 
@@ -625,7 +625,7 @@
 
 <p><strong>Referências:</strong> <a href="/integracao/docs/dicionario/dicionario.html#atencaodomiciliarorigem">AtencaoDomiciliarOrigem</a></p>
 
-<h3 id="#18-atencaodomiciliarmodalidade">#18    atencaoDomiciliarModalidade</h3>
+<h3 id="18-atencaodomiciliarmodalidade">#18    atencaoDomiciliarModalidade</h3>
 
 <p>Código das opções de modalidade, indica se o cidadão é elegível ou inelegível.</p>
 
@@ -647,7 +647,7 @@
 
 <p><strong>Referências:</strong> <a href="/integracao/docs/dicionario/dicionario.html#modalidadead">ModalidadeAD</a></p>
 
-<h3 id="#19-situacoespresentes">#19    situacoesPresentes</h3>
+<h3 id="19-situacoespresentes">#19    situacoesPresentes</h3>
 
 <p>Marcadores de situações presentes.</p>
 
@@ -669,7 +669,7 @@
 
 <p><strong>Referências:</strong> <a href="#question%C3%A1riodesitua%C3%A7%C3%B5espresentes">QuestionárioDeSituaçõesPresentes</a></p>
 
-<h3 id="#20-cid10principal">#20    cid10Principal</h3>
+<h3 id="20-cid10principal">#20    cid10Principal</h3>
 
 <p>Código do CID10 principal registrado na avaliação.</p>
 
@@ -691,7 +691,7 @@
 
 <p><strong>Regras:</strong> Não pode ser igual ao <a href="#21-cid10segundo">CID10Segundo</a> nem <a href="#22-cid10terceiro">CID10Terceiro</a>.</p>
 
-<h3 id="#21-cid10segundo">#21    cid10Segundo</h3>
+<h3 id="21-cid10segundo">#21    cid10Segundo</h3>
 
 <p>Código do CID10 registrado na avaliação.</p>
 
@@ -713,7 +713,7 @@
 
 <p><strong>Regras:</strong> Não pode ser igual ao <a href="#20-cid10principal">CID10Principal</a> nem <a href="#22-cid10terceiro">CID10Terceiro</a>.</p>
 
-<h3 id="#22-cid10terceiro">#22    cid10Terceiro</h3>
+<h3 id="22-cid10terceiro">#22    cid10Terceiro</h3>
 
 <p>Código do CID10 registrado na avaliação.</p>
 
@@ -735,7 +735,7 @@
 
 <p><strong>Regras:</strong> Não pode ser igual ao <a href="#20-cid10principal">CID10Principal</a> nem <a href="#21-cid10segundo">CID10Segundo</a>.</p>
 
-<h3 id="#23-conclusaodestinoelegivel">#23    conclusaoDestinoElegivel</h3>
+<h3 id="23-conclusaodestinoelegivel">#23    conclusaoDestinoElegivel</h3>
 
 <p>Código da conduta adotada caso cidadão seja <code>Elegível</code>.</p>
 
@@ -765,7 +765,7 @@
 
 <p>Observações: Os campos <code>#23</code> e <code>#24</code> são mutuamente exclusivos.</p>
 
-<h3 id="#24-conclusaodestinoinelegivel">#24    conclusaoDestinoInelegivel</h3>
+<h3 id="24-conclusaodestinoinelegivel">#24    conclusaoDestinoInelegivel</h3>
 
 <p>Código da conduta adotada caso cidadão seja <code>Inelegível</code>.</p>
 
@@ -795,7 +795,7 @@
 
 <p>Observações: Os campos <code>#23</code> e <code>#24</code> são mutuamente exclusivos.</p>
 
-<h3 id="#25-cuidadorcidadao">#25    cuidadorCidadao</h3>
+<h3 id="25-cuidadorcidadao">#25    cuidadorCidadao</h3>
 
 <p>Código da relação de parentesco do cuidador com o cidadão em atenção domiciliar.</p>
 
@@ -819,7 +819,7 @@
 
 <h2 id="enderecolocalpermanencia">EnderecoLocalPermanencia</h2>
 
-<h3 id="#1-bairro">#1 bairro</h3>
+<h3 id="1-bairro">#1 bairro</h3>
 
 <p>Bairro onde está localizado o domicílio.</p>
 
@@ -839,7 +839,7 @@
 </tr>
 </tbody></table>
 
-<h3 id="#2-cep">#2 cep</h3>
+<h3 id="2-cep">#2 cep</h3>
 
 <p>CEP do logradouro do domicílio.</p>
 
@@ -861,7 +861,7 @@
 
 <p><strong>Regras:</strong> Apenas números.</p>
 
-<h3 id="#3-codigoibgemunicipio">#3 codigoIbgeMunicipio</h3>
+<h3 id="3-codigoibgemunicipio">#3 codigoIbgeMunicipio</h3>
 
 <p>Código IBGE do município.</p>
 
@@ -883,7 +883,7 @@
 
 <p><strong>Referências:</strong> <a href="/integracao/docs/municipios.html">Municipios</a></p>
 
-<h3 id="#4-complemento">#4 complemento</h3>
+<h3 id="4-complemento">#4 complemento</h3>
 
 <p>Complemento do endereço do domicílio.</p>
 
@@ -903,7 +903,7 @@
 </tr>
 </tbody></table>
 
-<h3 id="#5-nomelogradouro">#5 nomeLogradouro</h3>
+<h3 id="5-nomelogradouro">#5 nomeLogradouro</h3>
 
 <p>Nome do logradouro.</p>
 
@@ -923,7 +923,7 @@
 </tr>
 </tbody></table>
 
-<h3 id="#6-numero">#6 numero</h3>
+<h3 id="6-numero">#6 numero</h3>
 
 <p>Número do domicílio.</p>
 
@@ -950,7 +950,7 @@
 <li>Não pode ser preenchido caso <a href="#11-stsemnumero">stSemNumero</a> = <code>true</code>.</li>
 </ul>
 
-<h3 id="#7-numerodneuf">#7 numeroDneUf</h3>
+<h3 id="7-numerodneuf">#7 numeroDneUf</h3>
 
 <p>Código indexador referente a Unidade Federativa.</p>
 
@@ -972,7 +972,7 @@
 
 <p><strong>Referências:</strong>   <a href="/integracao/docs/referencias.html#uf">Estados</a></p>
 
-<h3 id="#8-telreferencial">#8 telReferencial</h3>
+<h3 id="8-telreferencial">#8 telReferencial</h3>
 
 <p>Telefone de referência.</p>
 
@@ -994,7 +994,7 @@
 
 <p>Observações: Mínimo 10 dígitos, máximo 11 (DDD + 8 ou 9)</p>
 
-<h3 id="#9-telresidencial">#9 telResidencial</h3>
+<h3 id="9-telresidencial">#9 telResidencial</h3>
 
 <p>Telefone residencial.</p>
 
@@ -1016,7 +1016,7 @@
 
 <p>Observações: Mínimo 10 dígitos, máximo 11 (DDD + 8 ou 9)</p>
 
-<h3 id="#10-tipologradouronumerodne">#10    tipoLogradouroNumeroDne</h3>
+<h3 id="10-tipologradouronumerodne">#10    tipoLogradouroNumeroDne</h3>
 
 <p>Código do tipo do logradouro onde está o domicílio.</p>
 
@@ -1040,7 +1040,7 @@
 
 <p><strong>Referências:</strong> <a href="/integracao/docs/referencias.html#tipo-de-logradouro">TipoLogradouro</a></p>
 
-<h3 id="#11-stsemnumero">#11    stSemNumero</h3>
+<h3 id="11-stsemnumero">#11    stSemNumero</h3>
 
 <p>Marcador que indica que o domicílio não possui número.</p>
 
@@ -1060,7 +1060,7 @@
 </tr>
 </tbody></table>
 
-<h2 id="questionáriodesituaçõespresentes">QuestionárioDeSituaçõesPresentes</h2>
+<h2 id="question-riodesitua-espresentes">QuestionárioDeSituaçõesPresentes</h2>
 
 <table><thead>
 <tr>

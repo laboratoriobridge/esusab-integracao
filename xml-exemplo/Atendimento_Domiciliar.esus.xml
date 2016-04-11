@@ -74,7 +74,7 @@
 			<condutaDesfecho>3</condutaDesfecho>
 			<statusInicioAcompanhamentoPosObito>false</statusInicioAcompanhamentoPosObito>
 		</atendimentosDomiciliares>
-		<tpCdsOrigem>1</tpCdsOrigem>
+		<tpCdsOrigem>3</tpCdsOrigem>
 		<uuidFicha>5444428-49fe27e4-e779-4c94-86e2-ec0f390ab3c8</uuidFicha>
 	</ns4:fichaAtendimentoDomiciliarMasterTransport>
 	<ns2:remetente>

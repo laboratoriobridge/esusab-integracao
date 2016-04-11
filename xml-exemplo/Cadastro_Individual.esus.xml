@@ -115,7 +115,7 @@
 			<grauParentescoFamiliarFrequentado>mãe</grauParentescoFamiliarFrequentado>
 		</emSituacaoDeRua>
 		<statusTermoRecusaCadastroIndividualAtencaoBasica>false</statusTermoRecusaCadastroIndividualAtencaoBasica>
-		<tpCdsOrigem>1</tpCdsOrigem>
+		<tpCdsOrigem>3</tpCdsOrigem>
 		<uuid>5444428-7d5df96b-2ed0-45b3-8383-cf0e58ed062f</uuid>
 		<uuidFichaOriginadora>5444428-7d5df96b-2ed0-45b3-8383-cf0e58ed062f</uuidFichaOriginadora>
 		<fichaAtualizada>false</fichaAtualizada>

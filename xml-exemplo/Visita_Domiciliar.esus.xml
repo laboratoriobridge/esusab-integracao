@@ -94,7 +94,7 @@
 			<statusVisitaCompartilhadaOutroProfissional>true</statusVisitaCompartilhadaOutroProfissional>
 			<desfecho>3</desfecho>
 		</visitasDomiciliares>
-		<tpCdsOrigem>1</tpCdsOrigem>
+		<tpCdsOrigem>3</tpCdsOrigem>
 		<uuidFicha>5444428-12d7d355-80a7-47a5-8fad-2e7552ee9a9c</uuidFicha>
 	</ns4:fichaVisitaDomiciliarMasterTransport>
 	<ns2:remetente>

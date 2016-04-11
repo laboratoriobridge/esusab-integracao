@@ -31,7 +31,7 @@
 		<condicoesDeSaude/>
 		<emSituacaoDeRua/>
 		<statusTermoRecusaCadastroIndividualAtencaoBasica>true</statusTermoRecusaCadastroIndividualAtencaoBasica>
-		<tpCdsOrigem>1</tpCdsOrigem>
+		<tpCdsOrigem>3</tpCdsOrigem>
 		<uuid>5444428-9cac3d17-2427-4455-83f1-6fc6b8b1cf6b</uuid>
 		<uuidFichaOriginadora>5444428-9cac3d17-2427-4455-83f1-6fc6b8b1cf6b</uuidFichaOriginadora>
 		<fichaAtualizada>false</fichaAtualizada>

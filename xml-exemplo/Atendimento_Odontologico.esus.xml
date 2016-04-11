@@ -8,7 +8,7 @@
 	<numLote>39</numLote>
 	<ns4:fichaAtendimentoOdontologicoMasterTransport>
 		<uuidFicha>5444428-8279992d-e5c1-4ffe-81f7-8816feb1aa79</uuidFicha>
-		<tpCdsOrigem>1</tpCdsOrigem>
+		<tpCdsOrigem>3</tpCdsOrigem>
 		<atendimentosOdontologicos>
 			<numProntuario>632</numProntuario>
 			<numCartaoSus>127984422070002</numCartaoSus>

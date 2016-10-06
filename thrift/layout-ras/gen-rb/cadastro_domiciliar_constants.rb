@@ -10,15 +10,9 @@ require 'cadastro_domiciliar_types'
 module Br
   module Gov
     module Saude
-      module Esus
-        module Cds
-          module Transport
-            module Generated
-              module Thrift
-                module Cadastrodomiciliar
-                end
-              end
-            end
+      module Esusab
+        module Ras
+          module Cadastrodomiciliar
           end
         end
       end

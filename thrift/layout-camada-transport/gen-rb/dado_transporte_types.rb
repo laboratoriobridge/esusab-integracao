@@ -5,108 +5,132 @@
 #
 
 require 'thrift'
-require 'br/gov/saude/esus/transport/common/api/configuracaodestino/configuracao_destino_types'
-
 
 module Br
   module Gov
     module Saude
-      module Esus
-        module Transport
-          module Common
-            module Generated
-              module Thrift
-                # Dados para identificar a instalacao que cadastrou/gerou os dados e/ou enviou<br />
-# Obs. Se for Admin ou 'schedule' não terá Unidade de Saude
-                class DadoInstalacaoThrift
-                  include ::Thrift::Struct, ::Thrift::Struct_Union
-                  CONTRACHAVE = 1
-                  UUIDINSTALACAO = 2
-                  CPFOUCNPJ = 3
-                  NOMEOURAZAOSOCIAL = 4
-                  FONE = 5
-                  EMAIL = 6
+      module Esusab
+        module Dadotransp
+          # Indica a versão do dado a ser transportado. A versão do dado não necessariamente reflete a versão do sistema.
+          class VersaoThrift
+            include ::Thrift::Struct, ::Thrift::Struct_Union
+            MAJOR = 1
+            MINOR = 2
+            REVISION = 3
 
-                  FIELDS = {
-                    # Identifica o software (pec/cds, cdsOff ou software de terceiros)
-                    CONTRACHAVE => {:type => ::Thrift::Types::STRING, :name => 'contraChave'},
-                    # 
-                    UUIDINSTALACAO => {:type => ::Thrift::Types::STRING, :name => 'uuidInstalacao', :optional => true},
-                    # Cpf do responsável ou CNPJ da empresa responsável
-                    CPFOUCNPJ => {:type => ::Thrift::Types::STRING, :name => 'cpfOuCnpj'},
-                    # Nome do responsável ou Razão Social da empresa responsável
-                    NOMEOURAZAOSOCIAL => {:type => ::Thrift::Types::STRING, :name => 'nomeOuRazaoSocial'},
-                    # Telefone da pessoa ou empresa responsável
-                    FONE => {:type => ::Thrift::Types::STRING, :name => 'fone', :optional => true},
-                    # Email da pessoa ou empresa responsável
-                    EMAIL => {:type => ::Thrift::Types::STRING, :name => 'email', :optional => true}
-                  }
+            FIELDS = {
+              MAJOR => {:type => ::Thrift::Types::I32, :name => 'major'},
+              MINOR => {:type => ::Thrift::Types::I32, :name => 'minor'},
+              REVISION => {:type => ::Thrift::Types::I32, :name => 'revision'}
+            }
 
-                  def struct_fields; FIELDS; end
+            def struct_fields; FIELDS; end
 
-                  def validate
-                    raise ::Thrift::ProtocolException.new(::Thrift::ProtocolException::UNKNOWN, 'Required field contraChave is unset!') unless @contraChave
-                    raise ::Thrift::ProtocolException.new(::Thrift::ProtocolException::UNKNOWN, 'Required field cpfOuCnpj is unset!') unless @cpfOuCnpj
-                    raise ::Thrift::ProtocolException.new(::Thrift::ProtocolException::UNKNOWN, 'Required field nomeOuRazaoSocial is unset!') unless @nomeOuRazaoSocial
-                  end
-
-                  ::Thrift::Struct.generate_accessors self
-                end
-
-                # "Pacote" que encapsula os dados transmissíveis
-                class DadoTransporteThrift
-                  include ::Thrift::Struct, ::Thrift::Struct_Union
-                  UUIDDADOSERIALIZADO = 1
-                  TIPODADOSERIALIZADO = 2
-                  CNESDADOSERIALIZADO = 3
-                  CODIBGE = 4
-                  INEDADOSERIALIZADO = 5
-                  NUMLOTE = 6
-                  DADOSERIALIZADO = 7
-                  REMETENTE = 8
-                  ORIGINADORA = 9
-                  VERSAO = 10
-
-                  FIELDS = {
-                    # UUID do dado (identificador "universal" gerado na criação do item)
-                    UUIDDADOSERIALIZADO => {:type => ::Thrift::Types::STRING, :name => 'uuidDadoSerializado'},
-                    # Tipo/classe do obj serializado
-                    TIPODADOSERIALIZADO => {:type => ::Thrift::Types::I64, :name => 'tipoDadoSerializado'},
-                    # Cnes
-                    CNESDADOSERIALIZADO => {:type => ::Thrift::Types::STRING, :name => 'cnesDadoSerializado'},
-                    # Código IBGE do dado serializado
-                    CODIBGE => {:type => ::Thrift::Types::STRING, :name => 'codIbge', :optional => true},
-                    # INE
-                    INEDADOSERIALIZADO => {:type => ::Thrift::Types::STRING, :name => 'ineDadoSerializado', :optional => true},
-                    # Numero do lote em {@link DadoTransporteThrift#originadora}
-                    NUMLOTE => {:type => ::Thrift::Types::I64, :name => 'numLote', :optional => true},
-                    # Dado serializado a partir de um Thrift
-                    DADOSERIALIZADO => {:type => ::Thrift::Types::STRING, :name => 'dadoSerializado', :binary => true},
-                    # Identifica a instalação que enviou o dado
-                    REMETENTE => {:type => ::Thrift::Types::STRUCT, :name => 'remetente', :class => ::Br::Gov::Saude::Esus::Transport::Common::Generated::Thrift::DadoInstalacaoThrift},
-                    # Identifica a instalação que cadastrou/digitou
-                    ORIGINADORA => {:type => ::Thrift::Types::STRUCT, :name => 'originadora', :class => ::Br::Gov::Saude::Esus::Transport::Common::Generated::Thrift::DadoInstalacaoThrift},
-                    # Versão da ficha (optional temporario pra nao quebrar outros fluxos)
-                    VERSAO => {:type => ::Thrift::Types::STRUCT, :name => 'versao', :class => ::Br::Gov::Saude::Esus::Transport::Common::Api::Configuracaodestino::VersaoThrift, :optional => true}
-                  }
-
-                  def struct_fields; FIELDS; end
-
-                  def validate
-                    raise ::Thrift::ProtocolException.new(::Thrift::ProtocolException::UNKNOWN, 'Required field uuidDadoSerializado is unset!') unless @uuidDadoSerializado
-                    raise ::Thrift::ProtocolException.new(::Thrift::ProtocolException::UNKNOWN, 'Required field tipoDadoSerializado is unset!') unless @tipoDadoSerializado
-                    raise ::Thrift::ProtocolException.new(::Thrift::ProtocolException::UNKNOWN, 'Required field cnesDadoSerializado is unset!') unless @cnesDadoSerializado
-                    raise ::Thrift::ProtocolException.new(::Thrift::ProtocolException::UNKNOWN, 'Required field dadoSerializado is unset!') unless @dadoSerializado
-                    raise ::Thrift::ProtocolException.new(::Thrift::ProtocolException::UNKNOWN, 'Required field remetente is unset!') unless @remetente
-                    raise ::Thrift::ProtocolException.new(::Thrift::ProtocolException::UNKNOWN, 'Required field originadora is unset!') unless @originadora
-                  end
-
-                  ::Thrift::Struct.generate_accessors self
-                end
-
-              end
+            def validate
+              raise ::Thrift::ProtocolException.new(::Thrift::ProtocolException::UNKNOWN, 'Required field major is unset!') unless @major
+              raise ::Thrift::ProtocolException.new(::Thrift::ProtocolException::UNKNOWN, 'Required field minor is unset!') unless @minor
+              raise ::Thrift::ProtocolException.new(::Thrift::ProtocolException::UNKNOWN, 'Required field revision is unset!') unless @revision
             end
+
+            ::Thrift::Struct.generate_accessors self
           end
+
+          # Dados para identificar a instalacao que cadastrou/gerou os dados e/ou enviou
+          class DadoInstalacaoThrift
+            include ::Thrift::Struct, ::Thrift::Struct_Union
+            CONTRACHAVE = 1
+            UUIDINSTALACAO = 2
+            CPFOUCNPJ = 3
+            NOMEOURAZAOSOCIAL = 4
+            FONE = 5
+            EMAIL = 6
+            VERSAOSISTEMA = 7
+            NOMEBANCODADOS = 8
+
+            FIELDS = {
+              # Identifica o software que gerou o dado (pec/cds, cdsOff ou software de terceiros).
+              CONTRACHAVE => {:type => ::Thrift::Types::STRING, :name => 'contraChave'},
+              # É um identificador da instalação do software que gerou o dado. Seja ele o e-SUS ou software de terceiro.
+              UUIDINSTALACAO => {:type => ::Thrift::Types::STRING, :name => 'uuidInstalacao', :optional => true},
+              # Cpf do responsável ou CNPJ da empresa responsável
+              CPFOUCNPJ => {:type => ::Thrift::Types::STRING, :name => 'cpfOuCnpj'},
+              # Nome do responsável ou Razão Social da empresa responsável
+              NOMEOURAZAOSOCIAL => {:type => ::Thrift::Types::STRING, :name => 'nomeOuRazaoSocial'},
+              # Telefone da pessoa ou empresa responsável
+              FONE => {:type => ::Thrift::Types::STRING, :name => 'fone', :optional => true},
+              # Email da pessoa ou empresa responsável
+              EMAIL => {:type => ::Thrift::Types::STRING, :name => 'email', :optional => true},
+              # Versão do software
+              VERSAOSISTEMA => {:type => ::Thrift::Types::STRING, :name => 'versaoSistema', :optional => true},
+              # Nome do banco de dados que o software utiliza
+              NOMEBANCODADOS => {:type => ::Thrift::Types::STRING, :name => 'nomeBancoDados', :optional => true}
+            }
+
+            def struct_fields; FIELDS; end
+
+            def validate
+              raise ::Thrift::ProtocolException.new(::Thrift::ProtocolException::UNKNOWN, 'Required field contraChave is unset!') unless @contraChave
+              raise ::Thrift::ProtocolException.new(::Thrift::ProtocolException::UNKNOWN, 'Required field cpfOuCnpj is unset!') unless @cpfOuCnpj
+              raise ::Thrift::ProtocolException.new(::Thrift::ProtocolException::UNKNOWN, 'Required field nomeOuRazaoSocial is unset!') unless @nomeOuRazaoSocial
+            end
+
+            ::Thrift::Struct.generate_accessors self
+          end
+
+          # Objeto que encapsula uma ficha serializada com TBinaryProtocol e alguns de seus dados de identificação
+          class DadoTransporteThrift
+            include ::Thrift::Struct, ::Thrift::Struct_Union
+            UUIDDADOSERIALIZADO = 1
+            TIPODADOSERIALIZADO = 2
+            CNESDADOSERIALIZADO = 3
+            CODIBGE = 4
+            INEDADOSERIALIZADO = 5
+            NUMLOTE = 6
+            DADOSERIALIZADO = 7
+            REMETENTE = 8
+            ORIGINADORA = 9
+            VERSAO = 10
+
+            FIELDS = {
+              # UUID do dado (identificador "universal" gerado na criação do item)
+              UUIDDADOSERIALIZADO => {:type => ::Thrift::Types::STRING, :name => 'uuidDadoSerializado'},
+              # Tipo/classe do objeto serializado através do TBinaryProtocol.
+              TIPODADOSERIALIZADO => {:type => ::Thrift::Types::I64, :name => 'tipoDadoSerializado'},
+              # Código CNES da unidade de saúde.
+              CNESDADOSERIALIZADO => {:type => ::Thrift::Types::STRING, :name => 'cnesDadoSerializado'},
+              # Código IBGE do dado serializado
+              CODIBGE => {:type => ::Thrift::Types::STRING, :name => 'codIbge', :optional => true},
+              # Código INE da equipe que gerou a ficha.
+              INEDADOSERIALIZADO => {:type => ::Thrift::Types::STRING, :name => 'ineDadoSerializado', :optional => true},
+              # Numero do lote em {@link DadoTransporteThrift#originadora}
+              NUMLOTE => {:type => ::Thrift::Types::I64, :name => 'numLote', :optional => true},
+              # Ficha serializado através do TBinaryProtocol.
+              DADOSERIALIZADO => {:type => ::Thrift::Types::STRING, :name => 'dadoSerializado', :binary => true},
+              # Identifica a instalação que enviou o dado
+# @see DadoInstalacaoThrift
+              REMETENTE => {:type => ::Thrift::Types::STRUCT, :name => 'remetente', :class => ::Br::Gov::Saude::Esusab::Dadotransp::DadoInstalacaoThrift},
+              # Identifica a instalação que cadastrou/digitou
+# @see DadoInstalacaoThrift
+              ORIGINADORA => {:type => ::Thrift::Types::STRUCT, :name => 'originadora', :class => ::Br::Gov::Saude::Esusab::Dadotransp::DadoInstalacaoThrift},
+              # Versão da ficha
+# @see VersaoThrift
+              VERSAO => {:type => ::Thrift::Types::STRUCT, :name => 'versao', :class => ::Br::Gov::Saude::Esusab::Dadotransp::VersaoThrift, :optional => true}
+            }
+
+            def struct_fields; FIELDS; end
+
+            def validate
+              raise ::Thrift::ProtocolException.new(::Thrift::ProtocolException::UNKNOWN, 'Required field uuidDadoSerializado is unset!') unless @uuidDadoSerializado
+              raise ::Thrift::ProtocolException.new(::Thrift::ProtocolException::UNKNOWN, 'Required field tipoDadoSerializado is unset!') unless @tipoDadoSerializado
+              raise ::Thrift::ProtocolException.new(::Thrift::ProtocolException::UNKNOWN, 'Required field cnesDadoSerializado is unset!') unless @cnesDadoSerializado
+              raise ::Thrift::ProtocolException.new(::Thrift::ProtocolException::UNKNOWN, 'Required field dadoSerializado is unset!') unless @dadoSerializado
+              raise ::Thrift::ProtocolException.new(::Thrift::ProtocolException::UNKNOWN, 'Required field remetente is unset!') unless @remetente
+              raise ::Thrift::ProtocolException.new(::Thrift::ProtocolException::UNKNOWN, 'Required field originadora is unset!') unless @originadora
+            end
+
+            ::Thrift::Struct.generate_accessors self
+          end
+
         end
       end
     end

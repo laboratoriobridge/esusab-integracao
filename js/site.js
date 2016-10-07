@@ -6,12 +6,13 @@ var stickyComponents = function() {
   if (window.scrollY > startPosY) {
     breadcrumb.classList.add('sticky');
     sidebar.classList.add('sticky');
-    sidebar.style.marginTop = (window.scrollY - startPosY) + "px";
+    sidebar.style.marginTop = (window.scrollY - startPosY) + 'px';
   } else {
     breadcrumb.classList.remove('sticky');
     sidebar.classList.remove('sticky');
-    sidebar.style.marginTop = "0";
+    sidebar.style.marginTop = '0';
   }
 };
 
+window.addEventListener('load', stickyComponents);
 window.addEventListener('scroll', stickyComponents);

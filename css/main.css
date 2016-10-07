@@ -1,3 +1,4 @@
+@import "https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i";
 *, *:after, *:before {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -16,10 +17,10 @@ dl, dd, ol, ul, figure {
  * Basic styling
  */
 body {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
   font-size: 15px;
   line-height: 1.5;
-  font-weight: 300;
+  font-weight: 400;
   color: #444;
   background-color: #fdfdfd;
   -webkit-text-size-adjust: 100%; }
@@ -58,12 +59,6 @@ ul, ol {
 li > ul,
 li > ol {
   margin-bottom: 0; }
-
-/**
- * Headings
- */
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 300; }
 
 /**
  * Links
@@ -158,18 +153,6 @@ dl dd {
   margin-left: 20px;
   margin-bottom: 15px; }
 
-input[type=search] {
-  width: 100%;
-  margin-bottom: 10px;
-  padding: 8px 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
-  transition: all 0.4s; }
-  input[type=search]:focus {
-    outline: 0;
-    border-color: #297aea; }
-
 label {
   cursor: pointer;
   display: block; }
@@ -179,6 +162,17 @@ li p {
 
 li ul {
   margin-bottom: 14px; }
+
+/**
+ * Text selection color
+ */
+::-moz-selection {
+  background: #297aea;
+  color: #fff; }
+
+::selection {
+  background: #297aea;
+  color: #fff; }
 
 /* Helper classes */
 .pull-right {
@@ -195,231 +189,6 @@ li ul {
 
 .block {
   display: block; }
-
-/* Site structure */
-.sidebar {
-  float: left;
-  width: 25%;
-  max-width: 330px; }
-  @media screen and (max-width: 800px) {
-    .sidebar {
-      float: none;
-      width: 100%;
-      max-width: none;
-      padding: 0; } }
-  .sidebar:after {
-    content: "\00a0";
-    /* Hack to preserve width of empty floating div */ }
-
-.sidebar-content {
-  height: 100%;
-  overflow: auto; }
-  @media screen and (max-width: 800px) {
-    .sidebar-content.sticky {
-      margin-top: 0 !important; } }
-
-.content {
-  float: left;
-  width: 75%;
-  padding-left: 50px; }
-  @media screen and (max-width: 800px) {
-    .content {
-      float: none;
-      width: 100%;
-      padding: 0; } }
-
-/**
- * Site header including nav, logo, site title
- */
-.site-header {
-  padding: 15px 0;
-  border-top: 5px solid #297aea;
-  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
-  position: relative; }
-
-.site-title {
-  font-size: 24px;
-  line-height: 56px;
-  margin-bottom: 0;
-  float: left;
-  text-decoration: none;
-  color: #444;
-  font-weight: 300; }
-  .site-title img {
-    padding-right: 20px; }
-  .site-title span {
-    vertical-align: middle; }
-
-@media screen and (max-width: 600px) {
-  .site-header .title-text {
-    display: none; } }
-
-.site-nav {
-  float: right;
-  line-height: 56px; }
-  .site-nav .menu-icon {
-    display: none; }
-  .site-nav a {
-    color: #444;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: 300; }
-    .site-nav a:not(:first-child) {
-      margin-left: 20px; }
-    .site-nav a:hover {
-      color: #297aea; }
-  @media screen and (max-width: 600px) {
-    .site-nav {
-      position: absolute;
-      top: 30px;
-      right: 30px;
-      background-color: #fdfdfd;
-      border: 1px solid #e8e8e8;
-      border-radius: 5px;
-      text-align: left; }
-      .site-nav a {
-        display: block;
-        margin-left: 0 !important;
-        padding: 0 10px; }
-      .site-nav .menu-icon {
-        display: block;
-        float: right;
-        width: 36px;
-        height: 26px;
-        line-height: 0;
-        padding-top: 6px;
-        text-align: center; }
-        .site-nav .menu-icon > svg {
-          width: 18px;
-          height: 15px; }
-          .site-nav .menu-icon > svg path {
-            fill: #424242; }
-      .site-nav .trigger {
-        clear: both;
-        display: none; }
-      .site-nav:hover .trigger {
-        display: block;
-        padding-bottom: 5px; }
-      .site-nav .page-link {
-        display: block;
-        padding: 5px 10px; } }
-
-/* Site content, post and doc styling plus specific typography */
-.page-content {
-  padding: 15px 0; }
-
-.page-heading {
-  font-size: 20px; }
-
-.post-list {
-  margin-left: 0;
-  list-style: none; }
-  .post-list > li {
-    margin-bottom: 28px; }
-
-.post-meta {
-  font-size: 13px;
-  color: #828282; }
-  .post-meta .btn {
-    margin-right: 10px; }
-
-.post-link {
-  display: block;
-  font-size: 24px; }
-
-/**
- * Posts
- */
-.post-header {
-  margin-bottom: 28px;
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 5px; }
-
-.post-title {
-  margin: 0;
-  font-size: 36px;
-  line-height: 1.35;
-  font-weight: 600; }
-  @media screen and (max-width: 800px) {
-    .post-title {
-      font-size: 32px; } }
-
-.post-content {
-  margin-bottom: 28px; }
-  .post-content * + h1,
-  .post-content * + h2,
-  .post-content * + h3,
-  .post-content * + h4,
-  .post-content * + h5,
-  .post-content * + h6 {
-    margin-top: 40px; }
-  .post-content h1 {
-    font-size: 32px;
-    font-weight: 400;
-    border-bottom: 1px solid #ddd; }
-    @media screen and (max-width: 800px) {
-      .post-content h1 {
-        font-size: 28px; } }
-  .post-content h2 {
-    font-size: 28px;
-    font-weight: 300; }
-    @media screen and (max-width: 800px) {
-      .post-content h2 {
-        font-size: 24px; } }
-  .post-content h3 {
-    font-size: 24px;
-    font-weight: 300; }
-    @media screen and (max-width: 800px) {
-      .post-content h3 {
-        font-size: 20px; } }
-  .post-content h4 {
-    font-size: 20px;
-    font-weight: 300; }
-    @media screen and (max-width: 800px) {
-      .post-content h4 {
-        font-size: 16px; } }
-  .post-content h4 {
-    font-size: 20px;
-    font-weight: 300; }
-    @media screen and (max-width: 800px) {
-      .post-content h4 {
-        font-size: 16px; } }
-  .post-content h5 {
-    font-size: 18px;
-    font-weight: 600; }
-    @media screen and (max-width: 800px) {
-      .post-content h5 {
-        font-size: 15px; } }
-  .post-content h6 {
-    font-size: 16px;
-    font-weight: 600; }
-    @media screen and (max-width: 800px) {
-      .post-content h6 {
-        font-size: 15px; } }
-
-/**
- * Fix for anchor links with sticky header
- * From http://nicolasgallagher.com/jump-links-and-viewport-positioning/
- */
-h1[id]::before,
-h2[id]::before,
-h3[id]::before,
-h4[id]::before,
-h5[id]::before,
-h6[id]::before,
-a[name]::before {
-  content: "";
-  display: block;
-  height: 70px;
-  margin: -70px 0 0;
-  z-index: -1; }
-
-.post p > img[alt] {
-  display: block;
-  margin: 0 auto; }
-  .post p > img[alt] ~ em {
-    display: block;
-    text-align: center; }
 
 /**
  * Syntax highlighting styles
@@ -560,139 +329,254 @@ a[name]::before {
   .highlight .il {
     color: #099; }
 
-table td {
-  padding: 5px 10px; }
+/**
+ * Site header including nav, logo, site title
+ */
+.site-header {
+  padding: 15px 0;
+  border-top: 5px solid #297aea;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+  position: relative; }
 
-table {
-  border-collapse: collapse;
-  width: 100%;
-  margin-bottom: 20px; }
+.site-title {
+  font-size: 24px;
+  line-height: 56px;
+  margin-bottom: 0;
+  float: left;
+  text-decoration: none;
+  color: #444;
+  font-weight: 400; }
+  .site-title img {
+    padding-right: 20px; }
+  .site-title span {
+    vertical-align: middle; }
 
-table tr, table th, * + table td {
-  border: 1px solid #bbb; }
+@media screen and (max-width: 600px) {
+  .site-header .title-text {
+    display: none; } }
 
-table th {
-  background-color: #dfdfdf;
-  padding: 8px 10px;
-  text-align: left;
-  font-size: 0.9em;
-  font-weight: 600; }
-
-table tr:nth-child(even) {
-  background-color: #f9f9f9; }
-
-.menu {
-  border-radius: 4px;
-  border: 1px solid #ddd;
-  margin-bottom: 20px;
-  max-height: 80vh;
-  overflow: auto; }
-  .menu a {
+.site-nav {
+  float: right;
+  line-height: 56px; }
+  .site-nav .menu-icon {
+    display: none; }
+  .site-nav a {
     color: #444;
     text-decoration: none;
-    display: block; }
-  .menu ul {
-    list-style: none;
-    margin: 0; }
+    font-size: 18px;
+    font-weight: 400; }
+    .site-nav a:not(:first-child) {
+      margin-left: 20px; }
+    .site-nav a:hover {
+      color: #297aea; }
+  @media screen and (max-width: 600px) {
+    .site-nav {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      background-color: #fdfdfd;
+      border: 1px solid #e8e8e8;
+      border-radius: 5px;
+      text-align: left; }
+      .site-nav a {
+        display: block;
+        margin-left: 0 !important;
+        padding: 0 10px; }
+      .site-nav .menu-icon {
+        display: block;
+        float: right;
+        width: 36px;
+        height: 26px;
+        line-height: 0;
+        padding-top: 6px;
+        text-align: center; }
+        .site-nav .menu-icon > svg {
+          width: 18px;
+          height: 15px; }
+          .site-nav .menu-icon > svg path {
+            fill: #424242; }
+      .site-nav .trigger {
+        clear: both;
+        display: none; }
+      .site-nav:hover .trigger {
+        display: block;
+        padding-bottom: 5px; }
+      .site-nav .page-link {
+        display: block;
+        padding: 5px 10px; } }
 
-.menu > ul {
-  font-size: 15px;
-  font-weight: bold; }
-  .menu > ul > li:not(:first-child) {
-    border-top: 1px solid #ddd; }
-  .menu > ul > li > a {
-    padding: 10px 20px; }
-    .menu > ul > li > a:hover {
-      background-color: #f5f5f5; }
-  .menu > ul > li > a.open {
-    background-color: #fdfdfd;
-    cursor: default; }
-  .menu > ul > li > .back-link {
-    color: #297aea;
-    font-size: 14px;
-    text-transform: uppercase;
-    padding-top: 6px; }
-    .menu > ul > li > .back-link small {
-      text-transform: none;
-      color: #777;
-      font-size: 12px;
-      font-weight: 400;
-      display: block;
-      padding-left: 30px; }
+.sidebar {
+  float: left;
+  width: 25%;
+  max-width: 330px; }
+  @media screen and (max-width: 800px) {
+    .sidebar {
+      float: none;
+      width: 100%;
+      max-width: none;
+      padding: 0; } }
+  .sidebar:after {
+    content: "\00a0";
+    /* Hack to preserve width of empty floating div */ }
 
-.menu ul ul {
-  background-color: #f5f5f5;
-  font-size: 14px;
-  font-weight: 400;
-  padding: 15px 30px; }
-  .menu ul ul li {
-    margin-bottom: 9px;
-    margin-left: 15px; }
-  .menu ul ul a {
-    text-decoration: underline; }
-    .menu ul ul a:hover {
-      text-decoration: none; }
-  .menu ul ul li.active a {
-    font-weight: bold;
-    text-decoration: none; }
+.sidebar-content {
+  height: 100%;
+  overflow: auto; }
+  @media screen and (max-width: 800px) {
+    .sidebar-content.sticky {
+      margin-top: 0 !important; } }
 
-.has-subitems {
-  position: relative; }
-  .has-subitems:before {
-    line-height: 1;
-    left: -25px;
-    position: absolute;
-    content: "+";
-    background-color: #e9e9e9;
-    border-radius: 2px;
-    padding: 2px 5px;
-    color: #aaa; }
+.content {
+  float: left;
+  width: 75%;
+  padding-left: 50px; }
+  @media screen and (max-width: 800px) {
+    .content {
+      float: none;
+      width: 100%;
+      padding: 0; } }
 
-/**
- * Definitions for the "Generate PDF" file
- */
-.pdf-select {
-  border: 1px solid #ddd;
-  margin-bottom: 20px;
-  padding: 15px 20px;
-  border-radius: 4px; }
-  .pdf-select > ul {
-    margin: 0; }
-  .pdf-select ul {
-    list-style: none; }
-  .pdf-select label small {
-    display: none;
-    white-space: nowrap; }
-  .pdf-select label:hover small {
-    display: inline; }
-  @media print {
-    .pdf-select {
-      display: none; } }
+.page-content {
+  padding: 15px 0; }
 
-.pdf.shown {
+.page-heading {
+  font-size: 20px; }
+
+.post-list {
+  margin-left: 0;
+  list-style: none; }
+  .post-list > li {
+    margin-bottom: 28px; }
+
+.post-meta {
+  font-size: 13px;
+  color: #828282; }
+  .post-meta .btn {
+    margin-right: 10px; }
+
+.post-link {
+  font-size: 24px;
   display: block; }
 
-.pdf.hidden {
-  display: none; }
+/**
+ * Posts
+ */
+.post-header {
+  margin-bottom: 1.75em;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #ddd; }
 
-.pdf-separator {
-  border: 2px solid #ddd;
-  margin: 50px 0; }
+.post-title {
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1.35;
+  margin: 0; }
+  @media screen and (max-width: 800px) {
+    .post-title {
+      font-size: 32px; } }
+
+.post p > img[alt] {
+  display: block;
+  margin: 0 auto; }
+  .post p > img[alt] ~ em {
+    display: block;
+    text-align: center; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400; }
+
+.post-content {
+  margin-bottom: 28px; }
+  .post-content h1 {
+    font-size: 30px;
+    font-weight: 600; }
+    @media screen and (max-width: 800px) {
+      .post-content h1 {
+        font-size: 28px; } }
+  .post-content h2 {
+    font-size: 26px; }
+    @media screen and (max-width: 800px) {
+      .post-content h2 {
+        font-size: 24px; } }
+  .post-content h3 {
+    font-size: 24px; }
+    @media screen and (max-width: 800px) {
+      .post-content h3 {
+        font-size: 22px; } }
+  .post-content h4 {
+    font-size: 22px; }
+    @media screen and (max-width: 800px) {
+      .post-content h4 {
+        font-size: 20px; } }
+  .post-content h5 {
+    font-size: 20px; }
+    @media screen and (max-width: 800px) {
+      .post-content h5 {
+        font-size: 18px; } }
+  .post-content h6 {
+    font-size: 18px; }
+    @media screen and (max-width: 800px) {
+      .post-content h6 {
+        font-size: 16px; } }
+
+/**
+Fix for anchor links with sticky header
+From http://nicolasgallagher.com/jump-links-and-viewport-positioning/
+*/
+h1[id]::before, h2[id]::before, h3[id]::before, h4[id]::before, h5[id]::before,
+h6[id]::before, a[name]::before {
+  z-index: -1;
+  display: block;
+  height: 70px;
+  margin: -70px 0 0;
+  content: ''; }
 
 @media print {
-  *,
-  *:before,
-  *:after {
+  @page {
+    margin: .75in .5in;
+    size: a4;
+    @top-right {
+      padding-top: 10mm;
+      content: url("../img/bridge-logo-sm.png"); }
+    @bottom-center {
+      content: url("../img/print-footer.png");
+      border-top: 1px solid #ddd; }
+    @bottom-left {
+      content: '';
+      border-top: 1px solid #ddd; }
+    @bottom-right {
+      font-size: 8pt;
+      content: counter(page) "/" counter(pages);
+      border-top: 1px solid #ddd; } }
+  @page :first {
+    @top-right {
+      content: none; }
+    @bottom-center {
+      content: none;
+      border-top: 0; }
+    @bottom-left {
+      content: none;
+      border-top: 0; }
+    @bottom-right {
+      content: none;
+      border-top: 0; } }
+  *, *:before, *:after {
+    font-size: 9pt !important;
     box-shadow: none !important;
-    text-shadow: none !important;
-    font-size: 9pt !important; }
+    text-shadow: none !important; }
 
-  a,
-  a:visited {
+  body {
+    margin: 0;
+    background: #fff; }
+
+  .wrapper, .breadcrumb-wrapper.sticky .breadcrumb {
+    margin: 0;
+    padding: 0; }
+
+  a, a:visited {
     text-decoration: underline; }
 
-  pre,
-  blockquote {
+  pre, blockquote {
     border: 1px solid #999;
     page-break-inside: avoid; }
 
@@ -709,13 +593,12 @@ table tr:nth-child(even) {
   tfoot {
     display: table-footer-group; }
 
-  img {
-    page-break-inside: avoid;
+  .pdf img {
     max-width: 100% !important;
-    max-height: 700px !important; }
+    max-height: 700px !important;
+    page-break-inside: avoid; }
 
-  p,
-  h1, h2, h3, h4, h5, h6 {
+  p, h1, h2, h3, h4, h5, h6 {
     orphans: 3;
     widows: 3; }
 
@@ -737,19 +620,14 @@ table tr:nth-child(even) {
   h4, h5, h6 {
     font-size: 12pt !important; }
 
-  /* Remove unecessary elements */
-  footer,
-  .site-header,
-  .post-meta,
-  .sidebar,
-  .breadcrumb {
+  .site-header, .post-meta, .sidebar, .breadcrumb, .breadcrumb-placeholder {
     display: none; }
 
   .content {
-    margin: 0;
-    padding: 0;
+    float: none;
     width: 100%;
-    float: none; }
+    margin: 0;
+    padding: 0; }
 
   .pdf-separator {
     visibility: hidden; }
@@ -758,7 +636,94 @@ table tr:nth-child(even) {
     page-break-after: always; }
 
   .pdf.shown:last-of-type {
-    page-break-after: avoid; } }
+    page-break-after: avoid; }
+
+  .visible-print {
+    display: block !important; } }
+table td {
+  padding: 5px 10px; }
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 20px; }
+
+table tr, table th, * + table td {
+  border: 1px solid #bbb; }
+
+table th {
+  background-color: #dfdfdf;
+  padding: 8px 10px;
+  text-align: left;
+  font-size: 0.9em;
+  font-weight: 600; }
+
+table tr:nth-child(even) {
+  background-color: #f9f9f9; }
+
+/**
+ * Definitions for the "Generate PDF" file
+ */
+.pdf-select {
+  margin-bottom: 20px;
+  padding: 15px 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px; }
+  .pdf-select > ul {
+    margin: 0; }
+  .pdf-select ul {
+    list-style: none; }
+  .pdf-select label small {
+    display: none;
+    white-space: nowrap; }
+  .pdf-select label:hover small {
+    display: inline; }
+  @media print {
+    .pdf-select {
+      display: none; } }
+
+.pdf.shown {
+  display: block; }
+
+.pdf.hidden {
+  display: none; }
+
+.pdf-separator {
+  margin: 50px 0;
+  border: 2px solid #ddd; }
+
+.print-header, .print-footer {
+  display: none; }
+
+.capa {
+  display: none;
+  text-align: center;
+  page-break-after: always; }
+  .capa .capa-center {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  .capa .capa-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0); }
+  .capa img {
+    vertical-align: middle;
+    height: 90px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+    margin-bottom: 20px; }
+  .capa h1 {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 16pt; }
+  .capa p {
+    font-weight: 700;
+    margin: 0;
+    font-size: 13pt !important; }
+
 ol.breadcrumb {
   list-style: none;
   margin: 0;
@@ -836,6 +801,69 @@ ol.breadcrumb {
       display: none !important; }
     .sticky ol.breadcrumb li:not(:last-child) {
       display: none; } }
+.menu {
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+  max-height: 80vh;
+  overflow: auto; }
+  .menu a {
+    color: #444;
+    text-decoration: none;
+    display: block; }
+  .menu ul {
+    list-style: none;
+    margin: 0; }
+
+.menu > ul {
+  font-weight: bold; }
+  .menu > ul > li:not(:first-child) {
+    border-top: 1px solid #ddd; }
+  .menu > ul > li > a {
+    padding: 10px 20px; }
+    .menu > ul > li > a:hover {
+      background-color: #f5f5f5; }
+  .menu > ul > li > a.open {
+    border-bottom: 1px solid #ddd; }
+  .menu > ul > li > .back-link {
+    color: #297aea;
+    text-transform: uppercase;
+    padding-top: 6px; }
+    .menu > ul > li > .back-link small {
+      text-transform: none;
+      color: #777;
+      font-size: 13px;
+      font-weight: 400;
+      display: block;
+      padding-left: 30px; }
+
+.menu ul ul {
+  background-color: #f5f5f5;
+  font-weight: 400;
+  padding: 15px 30px; }
+  .menu ul ul li {
+    margin-bottom: 9px;
+    margin-left: 15px; }
+  .menu ul ul a {
+    text-decoration: underline; }
+    .menu ul ul a:hover {
+      text-decoration: none; }
+  .menu ul ul li.active a {
+    font-weight: bold;
+    text-decoration: none; }
+
+.has-subitems {
+  position: relative; }
+  .has-subitems:before {
+    line-height: 1;
+    left: -25px;
+    position: absolute;
+    content: "+";
+    background-color: #e9e9e9;
+    border-radius: 2px;
+    padding: 2px 5px;
+    color: #aaa; }
+
 .label {
   color: #777777;
   background-color: #eee;
@@ -898,3 +926,17 @@ ol.breadcrumb {
 
 .icon-about:before {
   content: "\e603"; }
+
+input[type=search],
+input[type=text] {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+  transition: all 0.4s; }
+  input[type=search]:focus,
+  input[type=text]:focus {
+    outline: 0;
+    border-color: #297aea; }

@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Camada de Transporte de Dados</title>
-  <meta name="description" content="Quando a integração for realizada através do Apache Thrift, cada ficha dentro do arquivo compactado representa um DadoTransport serializado através do TBinar...">
+  <title>Cabeçalho (headerTransport)</title>
+  <meta name="description" content="UnicaLotacaoHeader">
 
   <link rel="stylesheet" href="/integracao/css/main.css">
-  <link rel="canonical" href="/integracao/docs/camada-transporte.html">
+  <link rel="canonical" href="/integracao/docs/header-transport.html">
   <link rel="icon" type="image/png" href="/integracao/img/logo-esus.png">
 
   <script src="//code.jquery.com/jquery-3.1.0.min.js"></script>
@@ -72,7 +72,7 @@
       
         
           
-            <li><a title="Camada de Transporte de Dados" href="/integracao/docs/camada-transporte.html">Camada de Transporte de Dados</a></li>
+            <li><a title="Cabeçalho (headerTransport)" href="/integracao/docs/header-transport.html">Cabeçalho (headerTransport)</a></li>
           
         
 
@@ -214,29 +214,21 @@
           <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Camada de Transporte de Dados</h1>
+    <h1 class="post-title">Cabeçalho (headerTransport)</h1>
     <p class="post-meta">
-      <a class="btn" href="/integracao/pdf.html?include=/docs/camada-transporte.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
+      <a class="btn" href="/integracao/pdf.html?include=/docs/header-transport.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 23/08/2016</span>
+        <span class="label" title="Data da última modificação">Alterado em 11/07/2016</span>
       
     </p>
   </header>
 
   <article class="post-content">
-    <p>Quando a integração for realizada através do <strong>Apache Thrift</strong>, cada ficha dentro do arquivo compactado representa um DadoTransport serializado através do <a href="https://github.com/apache/thrift/blob/0.9.2/lib/java/src/org/apache/thrift/protocol/TBinaryProtocol.java">TBinaryProtocol</a>, sendo necessário que a extensão da ficha esteja definida como &quot;.esus&quot;.</p>
+    <h2 id="unicalotacaoheader">UnicaLotacaoHeader</h2>
 
-<p>O pacote que encapsula os dados transmissíveis, cada ficha deve conter as informações de identificação deste cabeçalho, incluindo o dadoSerializado (conteúdo da ficha).</p>
+<h3 id="1-profissionalcns">#1 profissionalCNS</h3>
 
-<p>No caso do software de terceiro o campo remetente será igual ao originadora, que indica qual instalação gerou/enviou o dado.</p>
-
-<h2 id="dadotransporte">DadoTransporte</h2>
-
-<p>Os atributos do registro transportado devem seguir as regras aqui descritas. Qualquer inconsistência nos dados transportados resultará no descarte da entidade <a href="#dadotransporte">DadoTransporte</a>.</p>
-
-<h3 id="1-uuiddadoserializado">#1 uuidDadoSerializado</h3>
-
-<p>UUID do dado (identificador &quot;universal&quot; gerado na criação do registro).</p>
+<p>CNS do profissional.</p>
 
 <table><thead>
 <tr>
@@ -249,283 +241,20 @@
 <tr>
 <td>String</td>
 <td>Sim</td>
-<td>36</td>
-<td>44</td>
-</tr>
-</tbody></table>
-
-<p><strong>Regras:</strong> É recomendado concatenar o CNES na frente do UUID, de modo que os 7 digitos (CNES) + 1 de hífen somados aos 36 (32 caracteres + 4 hífen) do UUID são a limitação de 44 bytes do campo. Formato canônico.</p>
-
-<p><strong>Referência:</strong> <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">UUID Wikipedia</a>.</p>
-
-<h3 id="2-tipodadoserializado">#2 tipoDadoSerializado</h3>
-
-<p>Tipo/classe do objeto serializado através do <a href="https://github.com/apache/thrift/blob/0.9.2/lib/java/src/org/apache/thrift/protocol/TBinaryProtocol.java">TBinaryProtocol</a>.</p>
-
-<table><thead>
-<tr>
-<th>Tipo</th>
-<th>Obrigatório</th>
-<th>Mínimo</th>
-<th>Máximo</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Long</td>
-<td>Sim</td>
-<td>1</td>
-<td>2</td>
-</tr>
-</tbody></table>
-
-<p><strong>Referência:</strong> <a href="/integracao/docs/dicionario/dicionario.html#tipodadoserializado">TipoDadoSerializado</a>.</p>
-
-<h3 id="3-cnesdadoserializado">#3 cnesDadoSerializado</h3>
-
-<p>Código CNES da unidade de saúde.</p>
-
-<table><thead>
-<tr>
-<th>Tipo</th>
-<th>Obrigatório</th>
-<th>Mínimo</th>
-<th>Máximo</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>String</td>
-<td>Sim</td>
-<td>7</td>
-<td>7</td>
-</tr>
-</tbody></table>
-
-<h3 id="4-codibge">#4 codIbge</h3>
-
-<p>Código IBGE do dado serializado através do <a href="https://github.com/apache/thrift/blob/0.9.2/lib/java/src/org/apache/thrift/protocol/TBinaryProtocol.java">TBinaryProtocol</a>.</p>
-
-<table><thead>
-<tr>
-<th>Tipo</th>
-<th>Obrigatório</th>
-<th>Mínimo</th>
-<th>Máximo</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>String</td>
-<td>Sim</td>
-<td>7</td>
-<td>7</td>
-</tr>
-</tbody></table>
-
-<p><strong>Referência:</strong> <a href="/integracao/docs/municipios.html">Municípios</a>.</p>
-
-<h3 id="5-inedadoserializado">#5 ineDadoSerializado</h3>
-
-<p>Código INE da equipe que gerou a ficha.</p>
-
-<table><thead>
-<tr>
-<th>Tipo</th>
-<th>Obrigatório</th>
-<th>Mínimo</th>
-<th>Máximo</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>String</td>
-<td>Não</td>
-<td>10</td>
-<td>10</td>
-</tr>
-</tbody></table>
-
-<h3 id="6-numlote">#6 numLote</h3>
-
-<p>Número do lote para controle interno dos arquivos enviados.</p>
-
-<table><thead>
-<tr>
-<th>Tipo</th>
-<th>Obrigatório</th>
-<th>Mínimo</th>
-<th>Máximo</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Long</td>
-<td>Não</td>
-<td>-</td>
-<td>-</td>
-</tr>
-</tbody></table>
-
-<h3 id="7-dadoserializado">#7 dadoSerializado</h3>
-
-<p>Dado serializado através do <a href="https://github.com/apache/thrift/blob/0.9.2/lib/java/src/org/apache/thrift/protocol/TBinaryProtocol.java">TBinaryProtocol</a> a partir de uma ficha.</p>
-
-<table><thead>
-<tr>
-<th>Tipo</th>
-<th>Obrigatório</th>
-<th>Mínimo</th>
-<th>Máximo</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Binary</td>
-<td>Sim</td>
-<td>-</td>
-<td>-</td>
-</tr>
-</tbody></table>
-
-<h3 id="8-remetente">#8 remetente</h3>
-
-<p>Identifica a instalação que enviou o dado.</p>
-
-<table><thead>
-<tr>
-<th>Tipo</th>
-<th>Obrigatório</th>
-<th>Mínimo</th>
-<th>Máximo</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>DadoInstalacao</td>
-<td>Sim</td>
-<td>-</td>
-<td>-</td>
-</tr>
-</tbody></table>
-
-<p><strong>Referência:</strong> <a href="#dadoinstalacao">DadoInstalacao</a>.</p>
-
-<h3 id="9-originadora">#9 originadora</h3>
-
-<p>Identifica a instalação que cadastrou/digitou.</p>
-
-<table><thead>
-<tr>
-<th>Tipo</th>
-<th>Obrigatório</th>
-<th>Mínimo</th>
-<th>Máximo</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>DadoInstalacao</td>
-<td>Sim</td>
-<td>-</td>
-<td>-</td>
-</tr>
-</tbody></table>
-
-<p><strong>Referência:</strong> <a href="#dadoinstalacao">DadoInstalacao</a>.</p>
-
-<h3 id="10-versao">#10    versao</h3>
-
-<p>Identifica a versão do e-SUS AB.</p>
-
-<table><thead>
-<tr>
-<th>Tipo</th>
-<th>Obrigatório</th>
-<th>Mínimo</th>
-<th>Máximo</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Versao</td>
-<td>Sim</td>
-<td>-</td>
-<td>-</td>
-</tr>
-</tbody></table>
-
-<p><strong>Referência:</strong> <a href="/integracao/docs/versao.html">Versão</a>.</p>
-
-<h2 id="dadoinstalacao">DadoInstalacao</h2>
-
-<h3 id="1-contrachave">#1 contraChave</h3>
-
-<p>Identifica o software que gerou o dado (pec/cds, cdsOff ou software de terceiros).</p>
-
-<table><thead>
-<tr>
-<th>Tipo</th>
-<th>Obrigatório</th>
-<th>Mínimo</th>
-<th>Máximo</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>String</td>
-<td>Sim</td>
-<td>-</td>
-<td>-</td>
-</tr>
-</tbody></table>
-
-<p><strong>Regras:</strong> Seguir o padrão <code>&lt;Nome do software do município&gt; - Versão do software</code>.</p>
-
-<p>Observações: Campo serve para a identificar o software que gerou / cadastrou / enviou os dados.</p>
-
-<h3 id="2-uuidinstalacao">#2 uuidInstalacao</h3>
-
-<p>É um identificador da instalação do software que gerou o dado. Seja ele o e-SUS ou software de terceiro. Cada e-SUS possui um UUID.</p>
-
-<table><thead>
-<tr>
-<th>Tipo</th>
-<th>Obrigatório</th>
-<th>Mínimo</th>
-<th>Máximo</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>String</td>
-<td>Sim</td>
-<td>-</td>
-<td>-</td>
-</tr>
-</tbody></table>
-
-<p>Observações: Campo serve para a identificar a instalação que gerou / cadastrou / enviou os dados.</p>
-
-<h3 id="3-cpfoucnpj">#3 cpfOuCnpj</h3>
-
-<p>CPF do responsável ou CNPJ da empresa responsável.</p>
-
-<table><thead>
-<tr>
-<th>Tipo</th>
-<th>Obrigatório</th>
-<th>Mínimo</th>
-<th>Máximo</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>String</td>
-<td>Sim</td>
-<td>11</td>
+<td>15</td>
 <td>15</td>
 </tr>
 </tbody></table>
 
-<p>Observações:</p>
+<p><strong>Regras:</strong> CNS validado de acordo com o algoritmo.</p>
 
-<ul>
-<li>Apenas CPFs e CNPJs válidos. Rever validação;</li>
-<li>Campo serve para a identificar a instalação que gerou / cadastrou / enviou os dados.</li>
-</ul>
+<p><strong>Referências:</strong> O algoritmo de validação está presente em <a href="/integracao/docs/algoritmo_CNS.html">Algoritmo de validação do CNS</a>.</p>
 
-<h3 id="4-nomeourazaosocial">#4 nomeOuRazaoSocial</h3>
+<p>Observações: Esta entidade é utilizada para representar o profissional responsável pelas fichas.</p>
 
-<p>Nome do responsável ou razão social da empresa responsável.</p>
+<h3 id="2-cbocodigo_2002">#2 cboCodigo_2002</h3>
+
+<p>Código do CBO do profissional.</p>
 
 <table><thead>
 <tr>
@@ -543,11 +272,35 @@
 </tr>
 </tbody></table>
 
-<p>Observações: Campo serve para a identificar a instalação que gerou / cadastrou / enviou os dados.</p>
+<p><strong>Referências:</strong> <a href="/integracao/docs/cbo.html">CBO</a>.</p>
 
-<h3 id="5-fone">#5 fone</h3>
+<p>Observações: Esta entidade é utilizada para representar o profissional responsável pelas fichas.</p>
 
-<p>Telefone da pessoa ou empresa responsável.</p>
+<h3 id="3-cnes">#3 cnes</h3>
+
+<p>Código do CNES da unidade de saúde que o profissional está lotado.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Sim</td>
+<td>7</td>
+<td>7</td>
+</tr>
+</tbody></table>
+
+<p>Observações: Esta entidade é utilizada para representar o profissional responsável pelas fichas.</p>
+
+<h3 id="4-ine">#4 ine</h3>
+
+<p>Código INE da equipe do profissional.</p>
 
 <table><thead>
 <tr>
@@ -561,15 +314,127 @@
 <td>String</td>
 <td>Não</td>
 <td>10</td>
-<td>11</td>
+<td>10</td>
 </tr>
 </tbody></table>
 
-<p>Observações: Campo serve para a identificar a instalação que gerou / cadastrou / enviou os dados.</p>
+<p>Observações: Esta entidade é utilizada para representar o profissional responsável pelas fichas.</p>
 
-<h3 id="6-email">#6 email</h3>
+<h3 id="5-dataatendimento">#5 dataAtendimento</h3>
 
-<p>Email da pessoa ou empresa responsável.</p>
+<p>Data em que está sendo realizada a ação.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Referências:</strong> <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch Wikipedia</a> em milissegundos.</p>
+
+<h3 id="6-codigoibgemunicipio">#6 codigoIbgeMunicipio</h3>
+
+<p>Código IBGE do município.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Sim</td>
+<td>7</td>
+<td>7</td>
+</tr>
+</tbody></table>
+
+<p><strong>Referências:</strong> <a href="/integracao/docs/municipios.html">Municípios</a>.</p>
+
+<h2 id="lotacaoheader">LotacaoHeader</h2>
+
+<h3 id="1-profissionalcns">#1 profissionalCNS</h3>
+
+<p>CNS do profissional.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Sim</td>
+<td>15</td>
+<td>15</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> CNS validado de acordo com o algoritmo.</p>
+
+<p><strong>Referências:</strong> O algoritmo de validação está presente em <a href="/integracao/docs/algoritmo_CNS.html">Algoritmo de validação do CNS</a>.</p>
+
+<h3 id="2-cbocodigo_2002">#2 cboCodigo_2002</h3>
+
+<p>Código do CBO do profissional.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Referências:</strong> <a href="/integracao/docs/cbo.html">CBO</a>.</p>
+
+<h3 id="3-cnes">#3 cnes</h3>
+
+<p>Código do CNES da unidade de saúde que o profissional está lotado.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Sim</td>
+<td>7</td>
+<td>7</td>
+</tr>
+</tbody></table>
+
+<h3 id="4-ine">#4 ine</h3>
+
+<p>Código INE da equipe do profissional.</p>
 
 <table><thead>
 <tr>
@@ -582,14 +447,104 @@
 <tr>
 <td>String</td>
 <td>Não</td>
-<td>6</td>
-<td>255</td>
+<td>10</td>
+<td>10</td>
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Requerido seguir o padrão <code>endereco@domínio.extensão</code>.</p>
+<h2 id="variaslotacoesheader">VariasLotacoesHeader</h2>
 
-<p>Observações: Campo serve para a identificar a instalação que gerou / cadastrou / enviou os dados.</p>
+<h3 id="1-lotacaoformprincipal">#1 lotacaoFormPrincipal</h3>
+
+<p>Profissional responsável pelo atendimento.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>LotacaoHeader</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p>Observações: Esta entidade é utilizada para representar o profissional responsável pela ficha.</p>
+
+<p><strong>Referências:</strong> <a href="#lotacaoheader">LotacaoHeader</a>.</p>
+
+<h3 id="2-lotacaoformatendimentocompartilhado">#2 lotacaoFormAtendimentoCompartilhado</h3>
+
+<p>Profissional auxiliar no atendimento.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>LotacaoHeader</td>
+<td>Não</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p>Observações: Esta entidade é utilizada para representar um profissional que auxiliou o profissional responsável pela ficha.</p>
+
+<p><strong>Referências:</strong> <a href="#lotacaoheader">LotacaoHeader</a>.</p>
+
+<h3 id="3-dataatendimento">#3 dataAtendimento</h3>
+
+<p>Data em que está sendo realizada a ação.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Referências:</strong> <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch Wikipedia</a> em milissegundos.</p>
+
+<h3 id="4-codigoibgemunicipio">#4 codigoIbgeMunicipio</h3>
+
+<p>Código IBGE do município.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Sim</td>
+<td>7</td>
+<td>7</td>
+</tr>
+</tbody></table>
+
+<p><strong>Referências:</strong> <a href="/integracao/docs/municipios.html">Municípios</a>.</p>
 
   </article>
 

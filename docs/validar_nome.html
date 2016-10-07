@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Layout e-SUS AB de Dados e Interface (LEDI AB) versão 2.1</title>
-  <meta name="description" content="Layout e-SUS AB de Dados e Interface (LEDI AB)">
+  <title>Validar nome</title>
+  <meta name="description" content="Essas regras foram baseadas nas regras oficiais definidas pelo CADSUS na Especificação Técnica para integração PIX/PDQ    ">
 
   <link rel="stylesheet" href="/integracao/css/main.css">
-  <link rel="canonical" href="/integracao/">
+  <link rel="canonical" href="/integracao/docs/validar_nome.html">
   <link rel="icon" type="image/png" href="/integracao/img/logo-esus.png">
 
   <script src="//code.jquery.com/jquery-3.1.0.min.js"></script>
@@ -70,7 +70,12 @@
       <li><a href="/integracao/">Home</a></li>
 
       
-        <li title="Layout e-SUS AB de Dados e Interface (LEDI AB) versão 2.1">Layout e-SUS AB de Dados e Interface (LEDI AB) versão 2.1</li>
+        
+          
+            <li><a title="Validar nome" href="/integracao/docs/validar_nome.html">Validar nome</a></li>
+          
+        
+
       
     </ol>
   </div>
@@ -209,28 +214,42 @@
           <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Layout e-SUS AB de Dados e Interface (LEDI AB) versão 2.1</h1>
+    <h1 class="post-title">Validar nome</h1>
     <p class="post-meta">
-      <a class="btn" href="/integracao/pdf.html?include=/"><i class="icon-pdf"></i> Gerar PDF desta página</a>
+      <a class="btn" href="/integracao/pdf.html?include=/docs/validar_nome.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 06/10/2016</span>
+        <span class="label" title="Data da última modificação">Alterado em 25/05/2016</span>
       
     </p>
   </header>
 
   <article class="post-content">
-    <h6 id="este-documento-descreve-os-atributos-utilizados-no-ledi-ab-vers-o-2-1">Este documento descreve os atributos utilizados no <strong>LEDI AB</strong> versão 2.1</h6>
+    <p>Essas regras foram baseadas nas regras oficiais definidas pelo CADSUS na Especificação Técnica para integração PIX/PDQ
+<a href="dicionario/Especificacao_CADSUS.pdf" title="Clique para visualizar o documento de Especificação Técnica para integração PIX/PDQ">
+    <img src="dicionario/pdf.jpg" width="20" height="20"/>
+</a></p>
 
-<ul>
-<li>O <strong>LEDI AB</strong> é uma camada abstrata que especifica as informações e seus formatos, que são aceitos no envio de dados de sistemas próprios para o e-SUS AB (PEC).</li>
-<li>O <strong>LEDI AB</strong> pode ser implementado utilizando <a href="https://pt.wikipedia.org/wiki/XML">XML</a> ou <a href="https://en.wikipedia.org/wiki/Apache_Thrift">Apache Thrift</a>.</li>
-</ul>
+<p>No documento essa regras são definidas na <strong>RN002. Informação do “Nome do Usuário”</strong>. Nem todas as regras do manual são implementadas no PEC.</p>
 
-<hr>
+<h3 id="1-regras-aplicadas">1. Regras aplicadas</h3>
 
-<p><em>Caso você já realizava a integração com o e-SUS AB na versão 2.0 e deseja saber as principais alterações estruturais de cada ficha para a versão 2.1, <a href="/integracao/docs/principais_alteracoes.html">clique aqui</a>.</em></p>
+<p><strong>1.</strong> A informação deve conter pelo menos três caracteres;</p>
 
-<p><em>Se deseja realizar a integração com a versão 2.0 do e-SUS AB, acesse a versão 2.0 deste documento <a href="http://esusab.github.io/integracao/v20/">clicando aqui</a>.</em></p>
+<p><strong>2.</strong> A informação que contiver um único termo, não entrará na base de dados (Ex: JOAQUIM);</p>
+
+<p><strong>3.</strong> A informação não deve permitir a inserção de espaço duplicado;</p>
+
+<p><strong>4.</strong> A informação deve ser padronizada para letra maiúscula, ou seja, letras minúsculas deverão ser convertidas para maiúsculas (Ex: Maria da Paz é convertida para MARIA DA PAZ);</p>
+
+<p><strong>5.</strong> A informação que contiver, após o 1o termo, um termo com apenas um caractere não entrará na base de dados, exceto se o termo for a letra E ou Y (Ex: JOAQUIM MARIA A SILVA não entra, mas JOAQUIM MARIA E SILVA é admissível; JOAQUIM RODRIGUEZ Y RODRIGUEZ é admissível);</p>
+
+<p><strong>6.</strong> A informação só pode conter letras do alfabeto romano (incluindo K, W, Y), além dos acentos gráficos (agudo, circunflexo, til e trema) e do caractere apóstrofo (‘), para possibilitar a inserção de nomes como JOÃO D’ÁVILA, sendo vedada a utilização de outros caracteres especiais;</p>
+
+<p><strong>7.</strong> A informação que contiver o primeiro e segundo termos com apenas um caractere em cada um deles não entrará na base de dados (Ex. A A DA SILVA);</p>
+
+<p><strong>8.</strong> A informação que contiver apenas dois termos, ambos com apenas dois caracteres, não entrará na base de dados;</p>
+
+<p>As outras regras da especificação que não são citadas acima, serão validadas apenas pelo serviço do CADSUS, no módulo de cidadão, no momento em que o cadastro for enviado ao serviço PIX do CADSUS.</p>
 
   </article>
 

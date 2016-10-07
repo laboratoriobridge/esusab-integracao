@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://esus.ufsc.br/respostaunicaescolhaenum" version="1.0">
+
+  <xs:simpleType name="respostaUnicaEscolhaEnumTransport">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="PASSADA_NA_PENEIRA"/>
+      <xs:enumeration value="AMASSADA"/>
+      <xs:enumeration value="LIQUIDIFICADA"/>
+      <xs:enumeration value="SIM"/>
+      <xs:enumeration value="TRES_VEZES_OU_MAIS"/>
+      <xs:enumeration value="NAO"/>
+      <xs:enumeration value="SO_O_CALDO"/>
+      <xs:enumeration value="NAO_SABE"/>
+      <xs:enumeration value="DUAS_VEZES"/>
+      <xs:enumeration value="EM_PEDACOS"/>
+      <xs:enumeration value="UMA_VEZ"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

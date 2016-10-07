@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dadoInstalacao="http://esus.ufsc.br/dadoinstalacao" xmlns:dadoTransporte="http://esus.ufsc.br/dadotransporte" xmlns:versao="http://esus.ufsc.br/versao" targetNamespace="http://esus.ufsc.br/dadotransporte" version="1.0">
+
+  <xs:import namespace="http://esus.ufsc.br/dadoinstalacao" schemaLocation="dadoinstalacao.xsd"/>
+
+  <xs:import namespace="http://esus.ufsc.br/versao" schemaLocation="versao.xsd"/>
+
+  <xs:element name="dadoTransporteTransportXml" type="dadoTransporte:dadoTransporteTransportXml"/>
+
+  <xs:complexType mixed="true" name="dadoTransporteTransportXml">
+    <xs:sequence>
+      <xs:element maxOccurs="1" name="uuidDadoSerializado" type="xs:string"/>
+      <xs:element maxOccurs="1" name="tipoDadoSerializado" type="xs:long"/>
+      <xs:element maxOccurs="1" name="codIbge" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="cnesDadoSerializado" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="ineDadoSerializado" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="numLote" type="xs:long"/>
+      <xs:any namespace="##other" processContents="lax"/>
+      <xs:element maxOccurs="1" ref="dadoInstalacao:remetente"/>
+      <xs:element maxOccurs="1" ref="dadoInstalacao:originadora"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="versao" type="versao:versaoTransport"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

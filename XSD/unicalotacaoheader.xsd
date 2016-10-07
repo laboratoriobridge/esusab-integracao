@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://esus.ufsc.br/unicalotacaoheader" version="1.0">
+
+  <xs:complexType name="unicaLotacaoHeaderTransport">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="profissionalCNS" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="cboCodigo_2002" type="xs:string"/>
+      <xs:element maxOccurs="1" name="cnes" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="ine" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="dataAtendimento" type="xs:long"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="codigoIbgeMunicipio" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://esus.ufsc.br/versao" version="1.0">
+
+  <xs:complexType name="versaoTransport">
+    <xs:sequence/>
+    <xs:attribute name="major" type="xs:int" use="required"/>
+    <xs:attribute name="minor" type="xs:int" use="required"/>
+    <xs:attribute name="revision" type="xs:int" use="required"/>
+  </xs:complexType>
+</xs:schema>

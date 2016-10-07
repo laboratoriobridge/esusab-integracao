@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:cadastroDomiciliar="http://esus.ufsc.br/cadastrodomiciliar" xmlns:condicaoMoradia="http://esus.ufsc.br/condicaomoradia" xmlns:enderecoLocalPermanencia="http://esus.ufsc.br/enderecolocalpermanencia" xmlns:familiaRow="http://esus.ufsc.br/familiarow" xmlns:instituicaoPermanenciaTransport="http://esus.ufsc.br/instituicaopermanencia" xmlns:unicaLotacaoHeader="http://esus.ufsc.br/unicalotacaoheader" targetNamespace="http://esus.ufsc.br/cadastrodomiciliar" version="1.0">
+
+  <xs:import namespace="http://esus.ufsc.br/condicaomoradia" schemaLocation="condicaomoradia.xsd"/>
+
+  <xs:import namespace="http://esus.ufsc.br/enderecolocalpermanencia" schemaLocation="enderecolocalpermanencia.xsd"/>
+
+  <xs:import namespace="http://esus.ufsc.br/familiarow" schemaLocation="familiarow.xsd"/>
+
+  <xs:import namespace="http://esus.ufsc.br/instituicaopermanencia" schemaLocation="instituicaopermanencia.xsd"/>
+
+  <xs:import namespace="http://esus.ufsc.br/unicalotacaoheader" schemaLocation="unicalotacaoheader.xsd"/>
+
+  <xs:element name="cadastroDomiciliarTransport" type="cadastroDomiciliar:cadastroDomiciliarTransport"/>
+
+  <xs:complexType name="cadastroDomiciliarTransport">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="animaisNoDomicilio" type="xs:long"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="condicaoMoradia" type="condicaoMoradia:condicaoMoradiaTransport"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="enderecoLocalPermanencia" type="enderecoLocalPermanencia:enderecoLocalPermanenciaTransport"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="familias" type="familiaRow:familiaRowTransport"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="fichaAtualizada" type="xs:boolean"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="quantosAnimaisNoDomicilio" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="stAnimaisNoDomicilio" type="xs:boolean"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="statusTermoRecusa" type="xs:boolean"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="tpCdsOrigem" type="xs:int"/>
+      <xs:element maxOccurs="1" name="uuid" type="xs:string"/>
+      <xs:element maxOccurs="1" name="uuidFichaOriginadora" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="tipoDeImovel" type="xs:long"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="instituicaoPermanencia" type="instituicaoPermanenciaTransport:instituicaoPermanencia"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="headerTransport" type="unicaLotacaoHeader:unicaLotacaoHeaderTransport"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

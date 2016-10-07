@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://esus.ufsc.br/condicaomoradia" version="1.0">
+
+  <xs:complexType name="condicaoMoradiaTransport">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="abastecimentoAgua" type="xs:long"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="areaProducaoRural" type="xs:long"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="destinoLixo" type="xs:long"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="formaEscoamentoBanheiro" type="xs:long"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="localizacao" type="xs:long"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="materialPredominanteParedesExtDomicilio" type="xs:long"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="nuComodos" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="nuMoradores" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="situacaoMoradiaPosseTerra" type="xs:long"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="stDisponibilidadeEnergiaEletrica" type="xs:boolean"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="tipoAcessoDomicilio" type="xs:long"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="tipoDomicilio" type="xs:long"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="aguaConsumoDomicilio" type="xs:long"/>
+      <xs:element minOccurs="0" name="isComercial" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="isInstituicao" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

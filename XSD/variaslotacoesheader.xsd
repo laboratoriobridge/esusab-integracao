@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:lotacaoHeader="http://esus.ufsc.br/lotacaoheader" targetNamespace="http://esus.ufsc.br/variaslotacoesheader" version="1.0">
+
+  <xs:import namespace="http://esus.ufsc.br/lotacaoheader" schemaLocation="lotacaoheader.xsd"/>
+
+  <xs:complexType name="variasLotacoesHeaderTransport">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="lotacaoFormPrincipal" type="lotacaoHeader:lotacaoHeaderTransport"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="lotacaoFormAtendimentoCompartilhado" type="lotacaoHeader:lotacaoHeaderTransport"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="dataAtendimento" type="xs:long"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="codigoIbgeMunicipio" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

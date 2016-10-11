@@ -10,15 +10,9 @@ require 'common_types'
 module Br
   module Gov
     module Saude
-      module Esus
-        module Cds
-          module Transport
-            module Generated
-              module Thrift
-                module Common
-                end
-              end
-            end
+      module Esusab
+        module Ras
+          module Common
           end
         end
       end

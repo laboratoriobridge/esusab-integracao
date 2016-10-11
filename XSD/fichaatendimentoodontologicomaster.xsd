@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fichaAtendimentoOdontologicoChild="http://esus.ufsc.br/fichaatendimentoodontologicochild" xmlns:fichaAtendimentoOdontologicoMaster="http://esus.ufsc.br/fichaatendimentoodontologicomaster" xmlns:lotacaoHeader="http://esus.ufsc.br/lotacaoheader" xmlns:procedimentoQuantidade="http://esus.ufsc.br/procedimentoquantidade" xmlns:variasLotacoesHeader="http://esus.ufsc.br/variaslotacoesheader" targetNamespace="http://esus.ufsc.br/fichaatendimentoodontologicomaster" version="1.0">
+
+  <xs:import namespace="http://esus.ufsc.br/procedimentoquantidade" schemaLocation="procedimentoquantidade.xsd"/>
+
+  <xs:import namespace="http://esus.ufsc.br/fichaatendimentoodontologicochild" schemaLocation="fichaatendimentoodontologicochild.xsd"/>
+
+  <xs:import namespace="http://esus.ufsc.br/lotacaoheader" schemaLocation="lotacaoheader.xsd"/>
+
+  <xs:import namespace="http://esus.ufsc.br/variaslotacoesheader" schemaLocation="variaslotacoesheader.xsd"/>
+
+  <xs:element name="fichaAtendimentoOdontologicoMasterTransport" type="fichaAtendimentoOdontologicoMaster:fichaAtendimentoOdontologicoMasterTransport"/>
+
+  <xs:complexType name="fichaAtendimentoOdontologicoMasterTransport">
+    <xs:sequence>
+      <xs:element maxOccurs="1" name="uuidFicha" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="tpCdsOrigem" type="xs:int"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="atendimentosOdontologicos" type="fichaAtendimentoOdontologicoChild:fichaAtendimentoOdontologicoChildTransport"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="headerTransport" type="variasLotacoesHeader:variasLotacoesHeaderTransport"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

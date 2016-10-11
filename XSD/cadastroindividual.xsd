@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:cadastroIndividual="http://esus.ufsc.br/cadastroindividual" xmlns:condicoesDeSaude="http://esus.ufsc.br/condicoesdesaude" xmlns:emSituacaoDeRua="http://esus.ufsc.br/emsituacaoderua" xmlns:identificacaoUsuarioCidadao="http://esus.ufsc.br/identificacaousuariocidadao" xmlns:informacoesSocioDemograficas="http://esus.ufsc.br/informacoessociodemograficas" xmlns:saidaCidadaoCadastro="http://esus.ufsc.br/saidacidadaocadastro" xmlns:unicaLotacaoHeader="http://esus.ufsc.br/unicalotacaoheader" targetNamespace="http://esus.ufsc.br/cadastroindividual" version="1.0">
+
+  <xs:import namespace="http://esus.ufsc.br/condicoesdesaude" schemaLocation="condicoesdesaude.xsd"/>
+
+  <xs:import namespace="http://esus.ufsc.br/emsituacaoderua" schemaLocation="emsituacaoderua.xsd"/>
+
+  <xs:import namespace="http://esus.ufsc.br/identificacaousuariocidadao" schemaLocation="identificacaousuariocidadao.xsd"/>
+
+  <xs:import namespace="http://esus.ufsc.br/informacoessociodemograficas" schemaLocation="informacoessociodemograficas.xsd"/>
+
+  <xs:import namespace="http://esus.ufsc.br/saidacidadaocadastro" schemaLocation="saidacidadaocadastro.xsd"/>
+
+  <xs:import namespace="http://esus.ufsc.br/unicalotacaoheader" schemaLocation="unicalotacaoheader.xsd"/>
+
+  <xs:element name="cadastroIndividualTransport" type="cadastroIndividual:cadastroIndividualTransport"/>
+
+  <xs:complexType name="cadastroIndividualTransport">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="condicoesDeSaude" type="condicoesDeSaude:condicoesDeSaudeTransport"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="emSituacaoDeRua" type="emSituacaoDeRua:emSituacaoDeRuaTransport"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="fichaAtualizada" type="xs:boolean"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="identificacaoUsuarioCidadao" type="identificacaoUsuarioCidadao:identificacaoUsuarioCidadaoTransport"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="informacoesSocioDemograficas" type="informacoesSocioDemograficas:informacoesSocioDemograficasTransport"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="saidaCidadaoCadastro" type="saidaCidadaoCadastro:saidaCidadaoCadastroTransport"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="statusTermoRecusaCadastroIndividualAtencaoBasica" type="xs:boolean"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="tpCdsOrigem" type="xs:int"/>
+      <xs:element maxOccurs="1" name="uuid" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="uuidFichaOriginadora" type="xs:string"/>
+      <xs:element minOccurs="0" name="uuidCidadao" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="headerTransport" type="unicaLotacaoHeader:unicaLotacaoHeaderTransport"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

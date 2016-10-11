@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fichaComplementarZikaMicrocefalia="http://esus.ufsc.br/fichacomplementarzikamicrocefalia" xmlns:unicaLotacaoHeader="http://esus.ufsc.br/unicalotacaoheader" targetNamespace="http://esus.ufsc.br/fichacomplementarzikamicrocefalia" version="1.0">
+
+  <xs:import namespace="http://esus.ufsc.br/unicalotacaoheader" schemaLocation="unicalotacaoheader.xsd"/>
+
+  <xs:element name="fichaComplementarZikaMicrocefaliaTransport" type="fichaComplementarZikaMicrocefalia:fichaComplementarZikaMicrocefaliaTransport"/>
+
+  <xs:complexType name="fichaComplementarZikaMicrocefaliaTransport">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="headerTransport" type="unicaLotacaoHeader:unicaLotacaoHeaderTransport"/>
+      <xs:element maxOccurs="1" name="uuidFicha" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="tpCdsOrigem" type="xs:int"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="turno" type="xs:long"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="cnsCidadao" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="cnsResponsavelFamiliar" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="dataRealizacaoTesteOlhinho" type="xs:long"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="coResultadoTesteOlhinho" type="xs:long"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="dataRealizacaoExameFundoOlho" type="xs:long"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="coResultadoExameFundoOlho" type="xs:long"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="dataRealizacaoTesteOrelhinha" type="xs:long"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="coResultadoTesteOrelhinha" type="xs:long"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="dataRealizacaoUSTransfontanela" type="xs:long"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="coResultadoUsTransfontanela" type="xs:long"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="dataRealizacaoTomografiaComputadorizada" type="xs:long"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="coResultadoTomografiaComputadorizada" type="xs:long"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="dataRealizacaoRessonanciaMagnetica" type="xs:long"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="coResultadoRessonanciaMagnetica" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

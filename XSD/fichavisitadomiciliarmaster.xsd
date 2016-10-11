@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fichaVisitaDomiciliarChild="http://esus.ufsc.br/fichavisitadomiciliarchild" xmlns:fichaVisitaDomiciliarMaster="http://esus.ufsc.br/fichavisitadomiciliarmaster" xmlns:unicaLotacaoHeader="http://esus.ufsc.br/unicalotacaoheader" targetNamespace="http://esus.ufsc.br/fichavisitadomiciliarmaster" version="1.0">
+
+  <xs:import namespace="http://esus.ufsc.br/unicalotacaoheader" schemaLocation="unicalotacaoheader.xsd"/>
+
+  <xs:import namespace="http://esus.ufsc.br/fichavisitadomiciliarchild" schemaLocation="fichavisitadomiciliarchild.xsd"/>
+
+  <xs:element name="fichaVisitaDomiciliarMasterTransport" type="fichaVisitaDomiciliarMaster:fichaVisitaDomiciliarMasterTransport"/>
+
+  <xs:complexType name="fichaVisitaDomiciliarMasterTransport">
+    <xs:sequence>
+      <xs:element maxOccurs="1" name="uuidFicha" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="tpCdsOrigem" type="xs:int"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="headerTransport" type="unicaLotacaoHeader:unicaLotacaoHeaderTransport"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="visitasDomiciliares" type="fichaVisitaDomiciliarChild:fichaVisitaDomiciliarChildTransport"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

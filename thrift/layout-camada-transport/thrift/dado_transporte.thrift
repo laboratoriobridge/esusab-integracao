@@ -1,9 +1,11 @@
 
-namespace java br.gov.saude.esus.transport.common.generated.thrift
-namespace php br.gov.saude.esus.transport.common.generated.thrift
-namespace delphi br.gov.saude.esus.transport.common.generated.thrift
-namespace csharp br.gov.saude.esus.transport.common.generated.thrift
-namespace rb br.gov.saude.esus.transport.common.generated.thrift
+namespace java br.gov.saude.esusab.dadotransp
+namespace php br.gov.saude.esusab.dadotransp
+namespace delphi br.gov.saude.esusab.dadotransp
+namespace csharp br.gov.saude.esusab.dadotransp
+namespace rb br.gov.saude.esusab.dadotransp
+namespace go br.gov.saude.esusab.dadotransp
+namespace py br.gov.saude.esusab.dadotransp
 
 /**
  * Indica a versão do dado a ser transportado. A versão do dado não necessariamente reflete a versão do sistema.
@@ -47,6 +49,16 @@ struct DadoInstalacaoThrift {
 	 * Email da pessoa ou empresa responsável
 	 */
 	6:optional string email;
+
+	/**
+	 * Versão do software
+	 */
+	7:optional string versaoSistema;
+
+	/**
+	 * Nome do banco de dados que o software utiliza
+	 */
+  8:optional string nomeBancoDados;
 }
 
 /**

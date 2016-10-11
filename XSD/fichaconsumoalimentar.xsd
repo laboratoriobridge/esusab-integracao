@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fichaConsumoAlimentar="http://esus.ufsc.br/fichaconsumoalimentar" xmlns:perguntaCriancasComMaisDoisAnosEnum="http://esus.ufsc.br/perguntacriancascommaisdoisanosenum" xmlns:perguntaCriancasDeSeisVinteTresMesesEnum="http://esus.ufsc.br/perguntacriancasdeseisvintetresmesesenum" xmlns:perguntaCriancasMenoresSeisMesesEnum="http://esus.ufsc.br/perguntacriancasmenoresseismesesenum" xmlns:perguntaQuestionarioCriancasComMaisDoisAnos="http://esus.ufsc.br/perguntaquestionariocriancascommaisdoisanos" xmlns:perguntaQuestionarioCriancasDeSeisVinteTresMeses="http://esus.ufsc.br/perguntaquestionariocriancasdeseisvintetresmeses" xmlns:perguntaQuestionarioCriancasMenoresSeisMeses="http://esus.ufsc.br/perguntaquestionariocriancasmenoresseismeses" xmlns:respostaMultiplaEscolhaEnum="http://esus.ufsc.br/respostamultiplaescolhaenum" xmlns:respostaUnicaEscolhaEnum="http://esus.ufsc.br/respostaunicaescolhaenum" xmlns:unicaLotacaoHeader="http://esus.ufsc.br/unicalotacaoheader" targetNamespace="http://esus.ufsc.br/fichaconsumoalimentar" version="1.0">
+
+  <xs:import namespace="http://esus.ufsc.br/unicalotacaoheader" schemaLocation="unicalotacaoheader.xsd"/>
+
+  <xs:import namespace="http://esus.ufsc.br/perguntacriancasmenoresseismesesenum" schemaLocation="perguntacriancasmenoresseismesesenum.xsd"/>
+
+  <xs:import namespace="http://esus.ufsc.br/respostaunicaescolhaenum" schemaLocation="respostaunicaescolhaenum.xsd"/>
+
+  <xs:import namespace="http://esus.ufsc.br/perguntaquestionariocriancasmenoresseismeses" schemaLocation="perguntaquestionariocriancasmenoresseismeses.xsd"/>
+
+  <xs:import namespace="http://esus.ufsc.br/perguntacriancasdeseisvintetresmesesenum" schemaLocation="perguntacriancasdeseisvintetresmesesenum.xsd"/>
+
+  <xs:import namespace="http://esus.ufsc.br/perguntaquestionariocriancasdeseisvintetresmeses" schemaLocation="perguntaquestionariocriancasdeseisvintetresmeses.xsd"/>
+
+  <xs:import namespace="http://esus.ufsc.br/perguntacriancascommaisdoisanosenum" schemaLocation="perguntacriancascommaisdoisanosenum.xsd"/>
+
+  <xs:import namespace="http://esus.ufsc.br/respostamultiplaescolhaenum" schemaLocation="respostamultiplaescolhaenum.xsd"/>
+
+  <xs:import namespace="http://esus.ufsc.br/perguntaquestionariocriancascommaisdoisanos" schemaLocation="perguntaquestionariocriancascommaisdoisanos.xsd"/>
+
+  <xs:element name="fichaConsumoAlimentarTransport" type="fichaConsumoAlimentar:fichaConsumoAlimentarTransport"/>
+
+  <xs:complexType name="fichaConsumoAlimentarTransport">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="headerTransport" type="unicaLotacaoHeader:unicaLotacaoHeaderTransport"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="cnsCidadao" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="identificacaoUsuario" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="dataNascimento" type="xs:long"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="sexo" type="xs:long"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="localAtendimento" type="xs:long"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="perguntasQuestionarioCriancasMenoresSeisMeses" type="perguntaQuestionarioCriancasMenoresSeisMeses:perguntaQuestionarioCriancasMenoresSeisMesesTransport"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="perguntasQuestionarioCriancasDeSeisVinteTresMeses" type="perguntaQuestionarioCriancasDeSeisVinteTresMeses:perguntaQuestionarioCriancasDeSeisVinteTresMesesTransport"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="perguntasQuestionarioCriancasComMaisDoisAnos" type="perguntaQuestionarioCriancasComMaisDoisAnos:perguntaQuestionarioCriancasComMaisDoisAnosTransport"/>
+      <xs:element maxOccurs="1" name="uuidFicha" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="tpCdsOrigem" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

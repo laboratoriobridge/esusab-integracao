@@ -10,14 +10,8 @@ require 'dado_transporte_types'
 module Br
   module Gov
     module Saude
-      module Esus
-        module Transport
-          module Common
-            module Generated
-              module Thrift
-              end
-            end
-          end
+      module Esusab
+        module Dadotransp
         end
       end
     end

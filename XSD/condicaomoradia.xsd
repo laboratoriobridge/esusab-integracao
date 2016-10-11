@@ -16,8 +16,6 @@
       <xs:element maxOccurs="1" minOccurs="0" name="tipoAcessoDomicilio" type="xs:long"/>
       <xs:element maxOccurs="1" minOccurs="0" name="tipoDomicilio" type="xs:long"/>
       <xs:element maxOccurs="1" minOccurs="0" name="aguaConsumoDomicilio" type="xs:long"/>
-      <xs:element minOccurs="0" name="isComercial" type="xs:boolean"/>
-      <xs:element minOccurs="0" name="isInstituicao" type="xs:boolean"/>
     </xs:sequence>
   </xs:complexType>
 </xs:schema>

@@ -1,229 +1,88 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<ns3:dadoTransporteTransportXml xmlns:ns2="http://esus.ufsc.br/v2000/dadoinstalacao" xmlns:ns3="http://esus.ufsc.br/v2000/dadotransporte" xmlns:ns4="http://esus.ufsc.br/v2000/fichaatendimentoindividualmaster">
-	<uuidDadoSerializado>5444428-f971f6da-52a9-4f1e-ac86-d3e3f9513746</uuidDadoSerializado>
+<ns3:dadoTransporteTransportXml
+	xmlns:ns2="http://esus.ufsc.br/dadoinstalacao" xmlns:ns3="http://esus.ufsc.br/dadotransporte"
+	xmlns:ns4="http://esus.ufsc.br/fichaatendimentoindividualmaster">
+	<uuidDadoSerializado>5444429-def97f6b-96d5-4e12-9fb5-4da36f8c472e</uuidDadoSerializado>
 	<tipoDadoSerializado>4</tipoDadoSerializado>
 	<codIbge>4205407</codIbge>
-	<cnesDadoSerializado>5444428</cnesDadoSerializado>
-	<ineDadoSerializado>1382855330</ineDadoSerializado>
-	<numLote>39</numLote>
+	<cnesDadoSerializado>5444429</cnesDadoSerializado>
+	<ineDadoSerializado>5511178891</ineDadoSerializado>
+	<numLote>3</numLote>
 	<ns4:fichaAtendimentoIndividualMasterTransport>
 		<headerTransport>
-			<lotacaoForm>
-				<profissionalCNS>702605236551744</profissionalCNS>
+			<lotacaoFormPrincipal>
+				<profissionalCNS>703006821796679</profissionalCNS>
+				<cboCodigo_2002>223505</cboCodigo_2002>
+				<cnes>5444429</cnes>
+				<ine>5511178891</ine>
+			</lotacaoFormPrincipal>
+			<lotacaoFormAtendimentoCompartilhado>
+				<profissionalCNS>708607577486986</profissionalCNS>
 				<cboCodigo_2002>225142</cboCodigo_2002>
 				<cnes>5444428</cnes>
-				<ine>1382855330</ine>
-				<dataAtendimento>1430406000000</dataAtendimento>
-				<codigoIbgeMunicipio>4205407</codigoIbgeMunicipio>
-			</lotacaoForm>
-			<profissionalCNS1>705004017585855</profissionalCNS1>
-			<cboCodigo_2002_1>225130</cboCodigo_2002_1>
-			<profissionalCNS2>814648566222348</profissionalCNS2>
-			<cboCodigo_2002_2>322415</cboCodigo_2002_2>
+				<ine>8033774553</ine>
+			</lotacaoFormAtendimentoCompartilhado>
+			<dataAtendimento>1475676000000</dataAtendimento>
+			<codigoIbgeMunicipio>4205407</codigoIbgeMunicipio>
 		</headerTransport>
 		<atendimentosIndividuais>
-			<numeroProntuario>9874</numeroProntuario>
-			<cns>127984422070002</cns>
-			<dataNascimento>540399600000</dataNascimento>
-			<localDeAtendimento>7</localDeAtendimento>
+			<numeroProntuario>123</numeroProntuario>
+			<cns>898001159125084</cns>
+			<dataNascimento>1044108000000</dataNascimento>
+			<localDeAtendimento>1</localDeAtendimento>
 			<sexo>1</sexo>
-			<turno>2</turno>
+			<turno>1</turno>
 			<tipoAtendimento>1</tipoAtendimento>
-			<pesoAcompanhamentoNutricional>60.0</pesoAcompanhamentoNutricional>
-			<alturaAcompanhamentoNutricional>170.0</alturaAcompanhamentoNutricional>
-			<aleitamentoMaterno>1</aleitamentoMaterno>
-			<dumDaGestante>1425308400000</dumDaGestante>
-			<stGravidezPlanejada>true</stGravidezPlanejada>
-			<idadeGestacional>20</idadeGestacional>
-			<nuGestasPrevias>2</nuGestasPrevias>
-			<nuPartos>2</nuPartos>
-			<atencaoDomiciliarModalidade>2</atencaoDomiciliarModalidade>
-			<problemaCondicaoAvaliada>
-				<ciaps>ABP002</ciaps>
-				<ciaps>ABP020</ciaps>
-				<ciaps>ABP005</ciaps>
-				<ciaps>ABP013</ciaps>
-				<ciaps>ABP008</ciaps>
-				<ciaps>ABP024</ciaps>
-				<ciaps>ABP022</ciaps>
-				<ciaps>ABP018</ciaps>
-				<ciaps>ABP015</ciaps>
-				<ciaps>ABP012</ciaps>
-				<ciaps>ABP006</ciaps>
-				<ciaps>ABP004</ciaps>
-				<ciaps>ABP010</ciaps>
-				<ciaps>ABP011</ciaps>
-				<ciaps>ABP001</ciaps>
-				<ciaps>ABP023</ciaps>
-				<ciaps>ABP014</ciaps>
-				<ciaps>ABP009</ciaps>
-				<ciaps>ABP017</ciaps>
-				<ciaps>ABP019</ciaps>
-				<ciaps>ABP003</ciaps>
-				<ciaps>ABP007</ciaps>
-				<outroCiap1>A99</outroCiap1>
-				<outroCiap2>A89</outroCiap2>
-				<cid10>O033</cid10>
-			</problemaCondicaoAvaliada>
-			<examesSolicitados>ABEX019</examesSolicitados>
-			<examesSolicitados>ABEX018</examesSolicitados>
-			<examesSolicitados>ABEX026</examesSolicitados>
-			<examesSolicitados>ABEX030</examesSolicitados>
-			<examesSolicitados>ABEX027</examesSolicitados>
-			<examesSolicitados>ABEX031</examesSolicitados>
-			<examesSolicitados>ABEX003</examesSolicitados>
-			<examesSolicitados>ABEX002</examesSolicitados>
-			<examesSolicitados>ABEX008</examesSolicitados>
-			<examesSolicitados>ABEX006</examesSolicitados>
-			<examesSolicitados>ABEX029</examesSolicitados>
-			<examesSolicitados>ABEX007</examesSolicitados>
-			<examesSolicitados>ABEX021</examesSolicitados>
-			<examesSolicitados>ABEX028</examesSolicitados>
-			<examesSolicitados>ABEX013</examesSolicitados>
-			<examesSolicitados>ABEX020</examesSolicitados>
-			<examesSolicitados>ABEX005</examesSolicitados>
-			<examesSolicitados>ABEX024</examesSolicitados>
-			<examesSolicitados>ABEX009</examesSolicitados>
-			<examesSolicitados>ABEX016</examesSolicitados>
-			<examesSolicitados>ABEX022</examesSolicitados>
-			<examesSolicitados>ABEX023</examesSolicitados>
-			<examesSolicitados>ABEX004</examesSolicitados>
-			<examesAvaliados>ABEX027</examesAvaliados>
-			<examesAvaliados>ABEX021</examesAvaliados>
-			<examesAvaliados>ABEX030</examesAvaliados>
-			<examesAvaliados>ABEX018</examesAvaliados>
-			<examesAvaliados>ABEX026</examesAvaliados>
-			<examesAvaliados>ABEX008</examesAvaliados>
-			<examesAvaliados>ABEX007</examesAvaliados>
-			<examesAvaliados>ABEX009</examesAvaliados>
-			<examesAvaliados>ABEX028</examesAvaliados>
-			<examesAvaliados>ABEX031</examesAvaliados>
-			<examesAvaliados>ABEX029</examesAvaliados>
-			<examesAvaliados>ABEX002</examesAvaliados>
-			<examesAvaliados>ABEX006</examesAvaliados>
-			<examesAvaliados>ABEX023</examesAvaliados>
-			<examesAvaliados>ABEX016</examesAvaliados>
-			<examesAvaliados>ABEX005</examesAvaliados>
-			<examesAvaliados>ABEX013</examesAvaliados>
-			<examesAvaliados>ABEX003</examesAvaliados>
-			<examesAvaliados>ABEX004</examesAvaliados>
-			<examesAvaliados>ABEX022</examesAvaliados>
-			<examesAvaliados>ABEX020</examesAvaliados>
-			<examesAvaliados>ABEX019</examesAvaliados>
-			<examesAvaliados>ABEX024</examesAvaliados>
-			<outrosSia>
-				<codigoExame>ABPG040</codigoExame>
-				<solicitadoAvaliado>A</solicitadoAvaliado>
-				<solicitadoAvaliado>S</solicitadoAvaliado>
-			</outrosSia>
-			<outrosSia>
-				<codigoExame>0201010100</codigoExame>
-				<solicitadoAvaliado>S</solicitadoAvaliado>
-				<solicitadoAvaliado>A</solicitadoAvaliado>
-			</outrosSia>
-			<outrosSia>
-				<codigoExame>0201010666</codigoExame>
-				<solicitadoAvaliado>A</solicitadoAvaliado>
-				<solicitadoAvaliado>S</solicitadoAvaliado>
-			</outrosSia>
-			<vacinaEmDia>true</vacinaEmDia>
-			<pic>3</pic>
-			<ficouEmObservacao>true</ficouEmObservacao>
-			<nasfs>1</nasfs>
-			<nasfs>3</nasfs>
-			<nasfs>2</nasfs>
-			<condutas>7</condutas>
-			<condutas>3</condutas>
-			<condutas>1</condutas>
-			<condutas>9</condutas>
-			<condutas>4</condutas>
-			<condutas>6</condutas>
-			<condutas>11</condutas>
-			<condutas>5</condutas>
-			<condutas>8</condutas>
-			<condutas>10</condutas>
-			<condutas>2</condutas>
-			<condutas>12</condutas>
-		</atendimentosIndividuais>
-		<atendimentosIndividuais>
-			<dataNascimento>760978800000</dataNascimento>
-			<localDeAtendimento>2</localDeAtendimento>
-			<sexo>0</sexo>
-			<tipoAtendimento>1</tipoAtendimento>
-			<pesoAcompanhamentoNutricional>80.0</pesoAcompanhamentoNutricional>
-			<alturaAcompanhamentoNutricional>190.0</alturaAcompanhamentoNutricional>
-			<aleitamentoMaterno>1</aleitamentoMaterno>
+			<pesoAcompanhamentoNutricional>62.0</pesoAcompanhamentoNutricional>
+			<alturaAcompanhamentoNutricional>152.0</alturaAcompanhamentoNutricional>
 			<atencaoDomiciliarModalidade>1</atencaoDomiciliarModalidade>
 			<problemaCondicaoAvaliada>
+				<ciaps>ABP020</ciaps>
 				<ciaps>ABP001</ciaps>
+				<ciaps>ABP024</ciaps>
 				<ciaps>ABP009</ciaps>
-				<outroCiap1>A92</outroCiap1>
-				<outroCiap2>A88</outroCiap2>
-				<cid10>L639</cid10>
+				<ciaps>ABP011</ciaps>
+				<outroCiap1>30</outroCiap1>
+				<cid10>B469</cid10>
 			</problemaCondicaoAvaliada>
-			<examesAvaliados>ABEX022</examesAvaliados>
-			<examesAvaliados>ABEX002</examesAvaliados>
-			<examesAvaliados>ABEX009</examesAvaliados>
-			<examesAvaliados>ABEX005</examesAvaliados>
+			<examesSolicitados>ABEX020</examesSolicitados>
+			<examesSolicitados>ABEX022</examesSolicitados>
+			<examesSolicitados>ABEX028</examesSolicitados>
+			<examesSolicitados>ABEX021</examesSolicitados>
 			<outrosSia>
-				<codigoExame>0201010178</codigoExame>
+				<codigoExame>0201010500</codigoExame>
 				<solicitadoAvaliado>S</solicitadoAvaliado>
-			</outrosSia>
-			<outrosSia>
-				<codigoExame>0201010054</codigoExame>
-				<solicitadoAvaliado>S</solicitadoAvaliado>
+				<solicitadoAvaliado>A</solicitadoAvaliado>
 			</outrosSia>
 			<vacinaEmDia>true</vacinaEmDia>
-			<pic>6</pic>
 			<ficouEmObservacao>true</ficouEmObservacao>
 			<nasfs>1</nasfs>
-			<nasfs>2</nasfs>
 			<condutas>1</condutas>
 			<condutas>11</condutas>
-			<condutas>12</condutas>
+			<stGravidezPlanejada>false</stGravidezPlanejada>
+			<nuGestasPrevias>1</nuGestasPrevias>
+			<nuPartos>1</nuPartos>
+			<racionalidadeSaude>1</racionalidadeSaude>
+			<perimetroCefalico>50.0</perimetroCefalico>
 		</atendimentosIndividuais>
-		<atendimentosIndividuais>
-			<dataNascimento>1427814000000</dataNascimento>
-			<localDeAtendimento>2</localDeAtendimento>
-			<sexo>1</sexo>
-			<tipoAtendimento>1</tipoAtendimento>
-			<problemaCondicaoAvaliada>
-				<ciaps>ABP005</ciaps>
-				<ciaps>ABP006</ciaps>
-				<ciaps>ABP003</ciaps>
-			</problemaCondicaoAvaliada>
-			<nasfs>3</nasfs>
-			<condutas>2</condutas>
-			<condutas>12</condutas>
-		</atendimentosIndividuais>
-		<atendimentosIndividuais>
-			<dataNascimento>1427986800000</dataNascimento>
-			<localDeAtendimento>4</localDeAtendimento>
-			<sexo>1</sexo>
-			<turno>3</turno>
-			<tipoAtendimento>1</tipoAtendimento>
-			<problemaCondicaoAvaliada>
-				<ciaps>ABP002</ciaps>
-				<ciaps>ABP009</ciaps>
-				<ciaps>ABP006</ciaps>
-			</problemaCondicaoAvaliada>
-			<condutas>2</condutas>
-			<condutas>12</condutas>
-		</atendimentosIndividuais>
-		<tpCdsOrigem>3</tpCdsOrigem>
-		<uuidFicha>5444428-f971f6da-52a9-4f1e-ac86-d3e3f9513746</uuidFicha>
+		<tpCdsOrigem>1</tpCdsOrigem>
+		<uuidFicha>5444429-def97f6b-96d5-4e12-9fb5-4da36f8c472e</uuidFicha>
 	</ns4:fichaAtendimentoIndividualMasterTransport>
 	<ns2:remetente>
-		<contraChave>003d61860206f2804eefff4d01ef1a3f</contraChave>
-		<uuidInstalacao>10e769db-a642-43e4-b970-ff01ba660b51</uuidInstalacao>
-		<cpfOuCnpj>08953588910</cpfOuCnpj>
-		<nomeOuRazaoSocial>MARIANA MELO</nomeOuRazaoSocial>
+		<contraChave>TREINAMENTO</contraChave>
+		<uuidInstalacao>TREINAMENTO</uuidInstalacao>
+		<cpfOuCnpj>10365895954</cpfOuCnpj>
+		<nomeOuRazaoSocial>NATHALIA LIZ DE BRITO</nomeOuRazaoSocial>
+		<versaoSistema>2.1.05</versaoSistema>
+		<nomeBancoDados>Postgres</nomeBancoDados>
 	</ns2:remetente>
 	<ns2:originadora>
-		<contraChave>003d61860206f2804eefff4d01ef1a3f</contraChave>
-		<uuidInstalacao>10e769db-a642-43e4-b970-ff01ba660b51</uuidInstalacao>
-		<cpfOuCnpj>08953588910</cpfOuCnpj>
-		<nomeOuRazaoSocial>MARIANA MELO</nomeOuRazaoSocial>
+		<contraChave>TREINAMENTO</contraChave>
+		<uuidInstalacao>TREINAMENTO</uuidInstalacao>
+		<cpfOuCnpj>10365895954</cpfOuCnpj>
+		<nomeOuRazaoSocial>NATHALIA LIZ DE BRITO</nomeOuRazaoSocial>
+		<versaoSistema>2.1.05</versaoSistema>
+		<nomeBancoDados>Postgres</nomeBancoDados>
 	</ns2:originadora>
-	<versao major="2" minor="0" revision="0"/>
+	<versao major="2" minor="1" revision="0" />
 </ns3:dadoTransporteTransportXml>

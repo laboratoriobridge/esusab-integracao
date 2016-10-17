@@ -1,51 +1,62 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<ns3:dadoTransporteTransportXml xmlns:ns2="http://esus.ufsc.br/v2000/dadoinstalacao" xmlns:ns3="http://esus.ufsc.br/v2000/dadotransporte" xmlns:ns4="http://esus.ufsc.br/v2000/cadastrodomiciliar">
-	<uuidDadoSerializado>5444428-6348bc4d-9ab9-476c-9d11-ab475120febe</uuidDadoSerializado>
+<ns3:dadoTransporteTransportXml
+	xmlns:ns2="http://esus.ufsc.br/dadoinstalacao" xmlns:ns3="http://esus.ufsc.br/dadotransporte"
+	xmlns:ns4="http://esus.ufsc.br/cadastrodomiciliar">
+	<uuidDadoSerializado>5444428-d6416a7d-392c-4f91-9954-c1984c43dbbe
+	</uuidDadoSerializado>
 	<tipoDadoSerializado>3</tipoDadoSerializado>
 	<codIbge>4205407</codIbge>
 	<cnesDadoSerializado>5444428</cnesDadoSerializado>
-	<ineDadoSerializado>1382855330</ineDadoSerializado>
-	<numLote>39</numLote>
+	<ineDadoSerializado>7023672534</ineDadoSerializado>
+	<numLote>3</numLote>
 	<ns4:cadastroDomiciliarTransport>
-		<dadosGerais>
-			<cnsProfissional>708508393009478</cnsProfissional>
-			<cnesUnidadeSaude>5444428</cnesUnidadeSaude>
-			<ineEquipe>1382855330</ineEquipe>
-			<microarea>54</microarea>
-			<dataAtendimento>1430406000000</dataAtendimento>
-			<codigoIbgeMunicipio>4205407</codigoIbgeMunicipio>
-		</dadosGerais>
+		<condicaoMoradia />
 		<enderecoLocalPermanencia>
-			<tipoLogradouroNumeroDne>520</tipoLogradouroNumeroDne>
-			<nomeLogradouro>RUA DOS LOBOS</nomeLogradouro>
-			<numero>254</numero>
-			<complemento>PERTO DO POSTO DE GASOLINA</complemento>
-			<bairro>SANTA MONICA</bairro>
-			<codigoIbgeMunicipio>4205407</codigoIbgeMunicipio>
+			<bairro>CAMPINAS</bairro>
+			<cep>88101020</cep>
+			<codigoIbgeMunicipio>4216602</codigoIbgeMunicipio>
+			<complemento>APTO 504</complemento>
+			<nomeLogradouro>MARECHAL CASTELO BRANCO</nomeLogradouro>
+			<numero>162</numero>
 			<numeroDneUf>25</numeroDneUf>
-			<cep>88025500</cep>
-			<telResidencial>4833658484</telResidencial>
-			<telReferencial>4833254141</telReferencial>
+			<telefoneContato>4832568888</telefoneContato>
+			<telefoneResidencia>4832596666</telefoneResidencia>
+			<tipoLogradouroNumeroDne>008</tipoLogradouroNumeroDne>
 			<stSemNumero>false</stSemNumero>
+			<microArea>FA</microArea>
+			<stForaArea>true</stForaArea>
 		</enderecoLocalPermanencia>
-		<condicaoMoradia/>
-		<tpCdsOrigem>3</tpCdsOrigem>
-		<uuid>5444428-6348bc4d-9ab9-476c-9d11-ab475120febe</uuid>
-		<uuidFichaOriginadora>5444428-6348bc4d-9ab9-476c-9d11-ab475120febe</uuidFichaOriginadora>
 		<fichaAtualizada>false</fichaAtualizada>
-		<statusTermoRecusaCadastroDomiciliarAtencaoBasica>true</statusTermoRecusaCadastroDomiciliarAtencaoBasica>
+		<statusTermoRecusa>true</statusTermoRecusa>
+		<tpCdsOrigem>1</tpCdsOrigem>
+		<uuid>5444428-d6416a7d-392c-4f91-9954-c1984c43dbbe</uuid>
+		<uuidFichaOriginadora>5444428-d6416a7d-392c-4f91-9954-c1984c43dbbe</uuidFichaOriginadora>
+		<tipoDeImovel>1</tipoDeImovel>
+		<instituicaoPermanencia />
+		<headerTransport>
+			<profissionalCNS>703006821796679</profissionalCNS>
+			<cboCodigo_2002>322205</cboCodigo_2002>
+			<cnes>5444428</cnes>
+			<ine>7023672534</ine>
+			<dataAtendimento>1475852400000</dataAtendimento>
+			<codigoIbgeMunicipio>4205407</codigoIbgeMunicipio>
+		</headerTransport>
 	</ns4:cadastroDomiciliarTransport>
 	<ns2:remetente>
-		<contraChave>003d61860206f2804eefff4d01ef1a3f</contraChave>
-		<uuidInstalacao>10e769db-a642-43e4-b970-ff01ba660b51</uuidInstalacao>
-		<cpfOuCnpj>08953588910</cpfOuCnpj>
-		<nomeOuRazaoSocial>MARIANA MELO</nomeOuRazaoSocial>
+		<contraChave>TREINAMENTO</contraChave>
+		<uuidInstalacao>TREINAMENTO</uuidInstalacao>
+		<cpfOuCnpj>10365895954</cpfOuCnpj>
+		<nomeOuRazaoSocial>NATHALIA LIZ DE BRITO</nomeOuRazaoSocial>
+		<versaoSistema>2.1.05</versaoSistema>
+		<nomeBancoDados>Postgres</nomeBancoDados>
 	</ns2:remetente>
 	<ns2:originadora>
-		<contraChave>003d61860206f2804eefff4d01ef1a3f</contraChave>
-		<uuidInstalacao>10e769db-a642-43e4-b970-ff01ba660b51</uuidInstalacao>
-		<cpfOuCnpj>08953588910</cpfOuCnpj>
-		<nomeOuRazaoSocial>MARIANA MELO</nomeOuRazaoSocial>
+		<contraChave>TREINAMENTO</contraChave>
+		<uuidInstalacao>TREINAMENTO</uuidInstalacao>
+		<cpfOuCnpj>10365895954</cpfOuCnpj>
+		<nomeOuRazaoSocial>NATHALIA LIZ DE BRITO</nomeOuRazaoSocial>
+		<versaoSistema>2.1.05</versaoSistema>
+		<nomeBancoDados>Postgres</nomeBancoDados>
 	</ns2:originadora>
-	<versao major="2" minor="0" revision="0"/>
+	<versao major="2" minor="1" revision="0" />
 </ns3:dadoTransporteTransportXml>

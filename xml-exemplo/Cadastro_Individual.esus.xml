@@ -1,136 +1,93 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<ns3:dadoTransporteTransportXml xmlns:ns2="http://esus.ufsc.br/v2000/dadoinstalacao" xmlns:ns3="http://esus.ufsc.br/v2000/dadotransporte" xmlns:ns4="http://esus.ufsc.br/v2000/cadastroindividual">
-	<uuidDadoSerializado>5444428-7d5df96b-2ed0-45b3-8383-cf0e58ed062f</uuidDadoSerializado>
+<ns3:dadoTransporteTransportXml
+	xmlns:ns2="http://esus.ufsc.br/dadoinstalacao" xmlns:ns3="http://esus.ufsc.br/dadotransporte"
+	xmlns:ns4="http://esus.ufsc.br/cadastroindividual">
+	<uuidDadoSerializado>5444428-d98d44f6-da82-4d75-a08f-d3969a826e13
+	</uuidDadoSerializado>
 	<tipoDadoSerializado>2</tipoDadoSerializado>
 	<codIbge>4205407</codIbge>
 	<cnesDadoSerializado>5444428</cnesDadoSerializado>
-	<ineDadoSerializado>1382855330</ineDadoSerializado>
-	<numLote>39</numLote>
+	<ineDadoSerializado>7023672534</ineDadoSerializado>
+	<numLote>3</numLote>
 	<ns4:cadastroIndividualTransport>
-		<dadosGerais>
-			<cnsProfissional>708407713297266</cnsProfissional>
-			<cnesUnidadeSaude>5444428</cnesUnidadeSaude>
-			<ineEquipe>1382855330</ineEquipe>
-			<microarea>78</microarea>
-			<dataAtendimento>1430406000000</dataAtendimento>
-			<codigoIbgeMunicipio>4205407</codigoIbgeMunicipio>
-		</dadosGerais>
-		<identificacaoUsuarioCidadao>
-			<numeroCartaoSusResponsavel>106123881340003</numeroCartaoSusResponsavel>
-			<dataNascimentoResponsavel>132332400000</dataNascimentoResponsavel>
-			<numeroCartaoSus>127984422070002</numeroCartaoSus>
-			<statusEhResponsavel>false</statusEhResponsavel>
-			<nomeCidadao>MARIA CÂNDIDA DA SILVA</nomeCidadao>
-			<nomeSocialCidadao>MARIA</nomeSocialCidadao>
-			<dataNascimentoCidadao>761065200000</dataNascimentoCidadao>
-			<racaCorCidadao>1</racaCorCidadao>
-			<sexoCidadao>1</sexoCidadao>
-			<numeroNisPisPasep>75450006564</numeroNisPisPasep>
-			<nomeMaeCidadao>SILVIA CÂNDIDA DA SILVA</nomeMaeCidadao>
-			<desconheceNomeMae>false</desconheceNomeMae>
-			<nacionalidadeCidadao>1</nacionalidadeCidadao>
-			<codigoIbgeMunicipioNascimento>4314902</codigoIbgeMunicipioNascimento>
-			<paisNascimento>31</paisNascimento>
-			<numeroCelularCidadao>4899658474</numeroCelularCidadao>
-			<emailCidadao>maria@candida.com.br</emailCidadao>
-		</identificacaoUsuarioCidadao>
-		<informacoesSocioDemograficas>
-			<relacaoParentescoCidadao>141</relacaoParentescoCidadao>
-			<ocupacaoCodigoCbo2002>312320</ocupacaoCodigoCbo2002>
-			<statusFrequentaEscola>true</statusFrequentaEscola>
-			<grauInstrucaoCidadao>60</grauInstrucaoCidadao>
-			<responsavelPorCrianca>1</responsavelPorCrianca>
-			<statusFrequentaBenzedeira>true</statusFrequentaBenzedeira>
-			<statusParticipaGrupoComunitario>true</statusParticipaGrupoComunitario>
-			<statusPossuiPlanoSaudePrivado>true</statusPossuiPlanoSaudePrivado>
-			<statusMembroPovoComunidadeTradicional>true</statusMembroPovoComunidadeTradicional>
-			<povoComunidadeTradicional>comunidade </povoComunidadeTradicional>
-			<statusDesejaInformarOrientacaoSexual>true</statusDesejaInformarOrientacaoSexual>
-			<orientacaoSexualCidadao>5</orientacaoSexualCidadao>
-			<statusTemAlgumaDeficiencia>true</statusTemAlgumaDeficiencia>
-			<deficienciasCidadao>13</deficienciasCidadao>
-			<deficienciasCidadao>15</deficienciasCidadao>
-			<deficienciasCidadao>12</deficienciasCidadao>
-			<deficienciasCidadao>16</deficienciasCidadao>
-			<deficienciasCidadao>14</deficienciasCidadao>
-		</informacoesSocioDemograficas>
 		<condicoesDeSaude>
-			<statusEhGestante>true</statusEhGestante>
-			<maternidadeDeReferencia>carmela dutra</maternidadeDeReferencia>
-			<situacaoPeso>22</situacaoPeso>
-			<statusEhFumante>true</statusEhFumante>
-			<statusEhDependenteAlcool>false</statusEhDependenteAlcool>
-			<statusEhDependenteOutrasDrogas>true</statusEhDependenteOutrasDrogas>
-			<statusTemHipertensaoArterial>false</statusTemHipertensaoArterial>
-			<statusTemDiabetes>true</statusTemDiabetes>
-			<statusTeveAvcDerrame>false</statusTeveAvcDerrame>
-			<statusTeveInfarto>true</statusTeveInfarto>
-			<doencaCardiaca>26</doencaCardiaca>
-			<doencaCardiaca>25</doencaCardiaca>
-			<doencaCardiaca>24</doencaCardiaca>
-			<statusTeveDoencaCardiaca>true</statusTeveDoencaCardiaca>
-			<doencaRins>27</doencaRins>
-			<doencaRins>29</doencaRins>
-			<doencaRins>28</doencaRins>
-			<statusTemTeveDoencasRins>true</statusTemTeveDoencasRins>
-			<doencaRespiratoria>31</doencaRespiratoria>
-			<doencaRespiratoria>30</doencaRespiratoria>
-			<doencaRespiratoria>32</doencaRespiratoria>
+			<descricaoCausaInternacaoEm12Meses>APENDICITE</descricaoCausaInternacaoEm12Meses>
 			<doencaRespiratoria>33</doencaRespiratoria>
+			<situacaoPeso>22</situacaoPeso>
+			<statusEhDependenteAlcool>true</statusEhDependenteAlcool>
+			<statusEhDependenteOutrasDrogas>false</statusEhDependenteOutrasDrogas>
+			<statusEhFumante>true</statusEhFumante>
+			<statusTemDiabetes>false</statusTemDiabetes>
 			<statusTemDoencaRespiratoria>true</statusTemDoencaRespiratoria>
-			<statusTemTeveCancer>false</statusTemTeveCancer>
 			<statusTemHanseniase>false</statusTemHanseniase>
+			<statusTemHipertensaoArterial>false</statusTemHipertensaoArterial>
+			<statusTemTeveCancer>false</statusTemTeveCancer>
 			<statusTemTuberculose>false</statusTemTuberculose>
+			<statusTeveAvcDerrame>false</statusTeveAvcDerrame>
+			<statusTeveDoencaCardiaca>false</statusTeveDoencaCardiaca>
+			<statusTeveInfarto>false</statusTeveInfarto>
 			<statusTeveInternadoEm12Meses>true</statusTeveInternadoEm12Meses>
-			<descricaoCausaInternacaoEm12Meses>pneumonia</descricaoCausaInternacaoEm12Meses>
-			<statusTratamentoPsiquicoOuProblemaMental>false</statusTratamentoPsiquicoOuProblemaMental>
-			<statusEstaAcamado>true</statusEstaAcamado>
-			<statusEstaDomiciliado>false</statusEstaDomiciliado>
-			<statusUsaPlantaMedicinais>true</statusUsaPlantaMedicinais>
-			<descricaoPlantasMedicinaisUsadas>erva mate</descricaoPlantasMedicinaisUsadas>
-			<statusUsaOutrasPraticasIntegrativasOuComplementares>true</statusUsaOutrasPraticasIntegrativasOuComplementares>
-			<descricaoOutraCondicao1>condição 2</descricaoOutraCondicao1>
-			<descricaoOutraCondicao2>condição 1</descricaoOutraCondicao2>
-			<descricaoOutraCondicao3>condição 3</descricaoOutraCondicao3>
 		</condicoesDeSaude>
 		<emSituacaoDeRua>
-			<quantidadeAlimentacoesAoDiaSituacaoRua>35</quantidadeAlimentacoesAoDiaSituacaoRua>
-			<origemAlimentoSituacaoRua>37</origemAlimentoSituacaoRua>
-			<origemAlimentoSituacaoRua>41</origemAlimentoSituacaoRua>
-			<origemAlimentoSituacaoRua>38</origemAlimentoSituacaoRua>
-			<origemAlimentoSituacaoRua>40</origemAlimentoSituacaoRua>
-			<origemAlimentoSituacaoRua>39</origemAlimentoSituacaoRua>
-			<statusTemAcessoHigienePessoalSituacaoRua>true</statusTemAcessoHigienePessoalSituacaoRua>
-			<higienePessoalSituacaoRua>42</higienePessoalSituacaoRua>
-			<higienePessoalSituacaoRua>43</higienePessoalSituacaoRua>
-			<higienePessoalSituacaoRua>44</higienePessoalSituacaoRua>
-			<higienePessoalSituacaoRua>45</higienePessoalSituacaoRua>
-			<statusSituacaoRua>true</statusSituacaoRua>
-			<tempoSituacaoRua>18</tempoSituacaoRua>
-			<statusAcompanhadoPorOutraInstituicao>true</statusAcompanhadoPorOutraInstituicao>
-			<outraInstituicaoQueAcompanha>ufsc</outraInstituicaoQueAcompanha>
-			<statusRecebeBeneficio>true</statusRecebeBeneficio>
-			<statusPossuiReferenciaFamiliar>true</statusPossuiReferenciaFamiliar>
-			<statusVisitaFamiliarFrequentemente>true</statusVisitaFamiliarFrequentemente>
-			<grauParentescoFamiliarFrequentado>mãe</grauParentescoFamiliarFrequentado>
+			<statusSituacaoRua>false</statusSituacaoRua>
 		</emSituacaoDeRua>
-		<statusTermoRecusaCadastroIndividualAtencaoBasica>false</statusTermoRecusaCadastroIndividualAtencaoBasica>
-		<tpCdsOrigem>3</tpCdsOrigem>
-		<uuid>5444428-7d5df96b-2ed0-45b3-8383-cf0e58ed062f</uuid>
-		<uuidFichaOriginadora>5444428-7d5df96b-2ed0-45b3-8383-cf0e58ed062f</uuidFichaOriginadora>
 		<fichaAtualizada>false</fichaAtualizada>
+		<identificacaoUsuarioCidadao>
+			<codigoIbgeMunicipioNascimento>4120655</codigoIbgeMunicipioNascimento>
+			<dataNascimentoCidadao>-252406800000</dataNascimentoCidadao>
+			<desconheceNomeMae>true</desconheceNomeMae>
+			<nacionalidadeCidadao>1</nacionalidadeCidadao>
+			<nomeCidadao>JOSÉ DA SILVA</nomeCidadao>
+			<paisNascimento>31</paisNascimento>
+			<racaCorCidadao>4</racaCorCidadao>
+			<sexoCidadao>0</sexoCidadao>
+			<desconheceNomePai>true</desconheceNomePai>
+			<microArea>FA</microArea>
+			<stForaArea>true</stForaArea>
+		</identificacaoUsuarioCidadao>
+		<informacoesSocioDemograficas>
+			<grauInstrucaoCidadao>62</grauInstrucaoCidadao>
+			<ocupacaoCodigoCbo2002>848505</ocupacaoCodigoCbo2002>
+			<orientacaoSexualCidadao>148</orientacaoSexualCidadao>
+			<situacaoMercadoTrabalhoCidadao>67</situacaoMercadoTrabalhoCidadao>
+			<statusDesejaInformarOrientacaoSexual>true</statusDesejaInformarOrientacaoSexual>
+			<statusFrequentaBenzedeira>false</statusFrequentaBenzedeira>
+			<statusFrequentaEscola>false</statusFrequentaEscola>
+			<statusMembroPovoComunidadeTradicional>false</statusMembroPovoComunidadeTradicional>
+			<statusParticipaGrupoComunitario>false</statusParticipaGrupoComunitario>
+			<statusPossuiPlanoSaudePrivado>false</statusPossuiPlanoSaudePrivado>
+			<statusTemAlgumaDeficiencia>false</statusTemAlgumaDeficiencia>
+			<statusDesejaInformarIdentidadeGenero>false</statusDesejaInformarIdentidadeGenero>
+		</informacoesSocioDemograficas>
+		<saidaCidadaoCadastro />
+		<statusTermoRecusaCadastroIndividualAtencaoBasica>false</statusTermoRecusaCadastroIndividualAtencaoBasica>
+		<tpCdsOrigem>1</tpCdsOrigem>
+		<uuid>5444428-d98d44f6-da82-4d75-a08f-d3969a826e13</uuid>
+		<uuidFichaOriginadora>5444428-d98d44f6-da82-4d75-a08f-d3969a826e13</uuidFichaOriginadora>
+		<headerTransport>
+			<profissionalCNS>705004017585855</profissionalCNS>
+			<cboCodigo_2002>322205</cboCodigo_2002>
+			<cnes>5444428</cnes>
+			<ine>7023672534</ine>
+			<dataAtendimento>1476457200000</dataAtendimento>
+			<codigoIbgeMunicipio>4205407</codigoIbgeMunicipio>
+		</headerTransport>
 	</ns4:cadastroIndividualTransport>
 	<ns2:remetente>
-		<contraChave>003d61860206f2804eefff4d01ef1a3f</contraChave>
-		<uuidInstalacao>10e769db-a642-43e4-b970-ff01ba660b51</uuidInstalacao>
-		<cpfOuCnpj>08953588910</cpfOuCnpj>
-		<nomeOuRazaoSocial>MARIANA MELO</nomeOuRazaoSocial>
+		<contraChave>TREINAMENTO</contraChave>
+		<uuidInstalacao>TREINAMENTO</uuidInstalacao>
+		<cpfOuCnpj>10365895954</cpfOuCnpj>
+		<nomeOuRazaoSocial>NATHALIA LIZ DE BRITO</nomeOuRazaoSocial>
+		<versaoSistema>2.1.05</versaoSistema>
+		<nomeBancoDados>Postgres</nomeBancoDados>
 	</ns2:remetente>
 	<ns2:originadora>
-		<contraChave>003d61860206f2804eefff4d01ef1a3f</contraChave>
-		<uuidInstalacao>10e769db-a642-43e4-b970-ff01ba660b51</uuidInstalacao>
-		<cpfOuCnpj>08953588910</cpfOuCnpj>
-		<nomeOuRazaoSocial>MARIANA MELO</nomeOuRazaoSocial>
+		<contraChave>TREINAMENTO</contraChave>
+		<uuidInstalacao>TREINAMENTO</uuidInstalacao>
+		<cpfOuCnpj>10365895954</cpfOuCnpj>
+		<nomeOuRazaoSocial>NATHALIA LIZ DE BRITO</nomeOuRazaoSocial>
+		<versaoSistema>2.1.05</versaoSistema>
+		<nomeBancoDados>Postgres</nomeBancoDados>
 	</ns2:originadora>
-	<versao major="2" minor="0" revision="0"/>
+	<versao major="2" minor="1" revision="0" />
 </ns3:dadoTransporteTransportXml>

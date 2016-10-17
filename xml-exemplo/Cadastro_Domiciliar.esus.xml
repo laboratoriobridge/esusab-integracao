@@ -1,103 +1,83 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<ns3:dadoTransporteTransportXml xmlns:ns2="http://esus.ufsc.br/v2000/dadoinstalacao" xmlns:ns3="http://esus.ufsc.br/v2000/dadotransporte" xmlns:ns4="http://esus.ufsc.br/v2000/cadastrodomiciliar">
-	<uuidDadoSerializado>5444428-5bb8a66a-cb97-40e4-8b13-0cc015bb65f7</uuidDadoSerializado>
+<ns3:dadoTransporteTransportXml
+	xmlns:ns2="http://esus.ufsc.br/dadoinstalacao" xmlns:ns3="http://esus.ufsc.br/dadotransporte"
+	xmlns:ns4="http://esus.ufsc.br/cadastrodomiciliar">
+	<uuidDadoSerializado>5444429-78b4990f-78df-477c-8f96-aec49e2c47b3
+	</uuidDadoSerializado>
 	<tipoDadoSerializado>3</tipoDadoSerializado>
 	<codIbge>4205407</codIbge>
-	<cnesDadoSerializado>5444428</cnesDadoSerializado>
-	<ineDadoSerializado>1382855330</ineDadoSerializado>
-	<numLote>39</numLote>
+	<cnesDadoSerializado>5444429</cnesDadoSerializado>
+	<ineDadoSerializado>5511178891</ineDadoSerializado>
+	<numLote>3</numLote>
 	<ns4:cadastroDomiciliarTransport>
-		<dadosGerais>
-			<cnsProfissional>700609923387762</cnsProfissional>
-			<cnesUnidadeSaude>5444428</cnesUnidadeSaude>
-			<ineEquipe>1382855330</ineEquipe>
-			<microarea>54</microarea>
-			<dataAtendimento>1430406000000</dataAtendimento>
-			<codigoIbgeMunicipio>4205407</codigoIbgeMunicipio>
-		</dadosGerais>
-		<enderecoLocalPermanencia>
-			<tipoLogradouroNumeroDne>103</tipoLogradouroNumeroDne>
-			<nomeLogradouro>CELSO RAMOS</nomeLogradouro>
-			<numero>124</numero>
-			<complemento>PERTO DA PADARIA</complemento>
-			<bairro>ITACORUBI</bairro>
-			<codigoIbgeMunicipio>4205407</codigoIbgeMunicipio>
-			<numeroDneUf>25</numeroDneUf>
-			<cep>88025500</cep>
-			<telResidencial>4833659894</telResidencial>
-			<telReferencial>4833154241</telReferencial>
-			<stSemNumero>false</stSemNumero>
-		</enderecoLocalPermanencia>
-		<condicaoMoradia>
-			<nuComodos>15</nuComodos>
-			<nuMoradores>10</nuMoradores>
-			<situacaoMoradiaPosseTerra>75</situacaoMoradiaPosseTerra>
-			<localizacao>84</localizacao>
-			<tipoDomicilio>85</tipoDomicilio>
-			<areaProducaoRural>101</areaProducaoRural>
-			<tipoAcessoDomicilio>90</tipoAcessoDomicilio>
-			<materialPredominanteParedesExtDomicilio>109</materialPredominanteParedesExtDomicilio>
-			<abastecimentoAgua>117</abastecimentoAgua>
-			<tratamentoAguaDomicilio>97</tratamentoAguaDomicilio>
-			<formaEscoamentoBanheiro>122</formaEscoamentoBanheiro>
-			<destinoLixo>93</destinoLixo>
-		</condicaoMoradia>
-		<stAnimaisNoDomicilio>true</stAnimaisNoDomicilio>
 		<animaisNoDomicilio>128</animaisNoDomicilio>
-		<animaisNoDomicilio>129</animaisNoDomicilio>
-		<animaisNoDomicilio>130</animaisNoDomicilio>
-		<animaisNoDomicilio>131</animaisNoDomicilio>
-		<animaisNoDomicilio>132</animaisNoDomicilio>
-		<quantosAnimaisNoDomicilio>6</quantosAnimaisNoDomicilio>
+		<condicaoMoradia>
+			<abastecimentoAgua>117</abastecimentoAgua>
+			<destinoLixo>93</destinoLixo>
+			<formaEscoamentoBanheiro>122</formaEscoamentoBanheiro>
+			<localizacao>83</localizacao>
+			<materialPredominanteParedesExtDomicilio>109</materialPredominanteParedesExtDomicilio>
+			<nuComodos>6</nuComodos>
+			<nuMoradores>5</nuMoradores>
+			<situacaoMoradiaPosseTerra>76</situacaoMoradiaPosseTerra>
+			<stDisponibilidadeEnergiaEletrica>true</stDisponibilidadeEnergiaEletrica>
+			<tipoAcessoDomicilio>89</tipoAcessoDomicilio>
+			<tipoDomicilio>86</tipoDomicilio>
+			<aguaConsumoDomicilio>97</aguaConsumoDomicilio>
+		</condicaoMoradia>
+		<enderecoLocalPermanencia>
+			<bairro>PONTA DE BAIXO</bairro>
+			<cep>88104020</cep>
+			<codigoIbgeMunicipio>4216602</codigoIbgeMunicipio>
+			<nomeLogradouro>DO IMPERADOR</nomeLogradouro>
+			<numero>S/N</numero>
+			<numeroDneUf>25</numeroDneUf>
+			<tipoLogradouroNumeroDne>081</tipoLogradouroNumeroDne>
+			<stSemNumero>true</stSemNumero>
+			<microArea>20</microArea>
+			<stForaArea>false</stForaArea>
+		</enderecoLocalPermanencia>
 		<familias>
-			<numeroProntuario/>
-			<numeroCnsResponsavel>112172354890000</numeroCnsResponsavel>
-			<stMudanca>false</stMudanca>
-		</familias>
-		<familias>
-			<numeroProntuario>254</numeroProntuario>
-			<numeroCnsResponsavel>114080564610018</numeroCnsResponsavel>
-			<dataNascimentoResponsavel>539967600000</dataNascimentoResponsavel>
+			<dataNascimentoResponsavel>381596400000</dataNascimentoResponsavel>
+			<numeroCnsResponsavel>898001152206097</numeroCnsResponsavel>
+			<numeroMembrosFamilia>5</numeroMembrosFamilia>
 			<rendaFamiliar>7</rendaFamiliar>
-			<numeroMembrosFamilia>40</numeroMembrosFamilia>
-			<resideDesde>1044064800000</resideDesde>
-			<stMudanca>true</stMudanca>
-		</familias>
-		<familias>
-			<numeroProntuario>20</numeroProntuario>
-			<numeroCnsResponsavel>269128820670002</numeroCnsResponsavel>
-			<dataNascimentoResponsavel>540356400000</dataNascimentoResponsavel>
-			<rendaFamiliar>4</rendaFamiliar>
-			<numeroMembrosFamilia>6</numeroMembrosFamilia>
-			<resideDesde>946692000000</resideDesde>
-			<stMudanca>true</stMudanca>
-		</familias>
-		<familias>
-			<numeroProntuario>454</numeroProntuario>
-			<numeroCnsResponsavel>157956566220005</numeroCnsResponsavel>
-			<dataNascimentoResponsavel>540356400000</dataNascimentoResponsavel>
-			<rendaFamiliar>6</rendaFamiliar>
-			<numeroMembrosFamilia>2</numeroMembrosFamilia>
-			<resideDesde>978314400000</resideDesde>
+			<resideDesde>1114916400000</resideDesde>
 			<stMudanca>false</stMudanca>
 		</familias>
-		<tpCdsOrigem>3</tpCdsOrigem>
-		<uuid>5444428-5bb8a66a-cb97-40e4-8b13-0cc015bb65f7</uuid>
-		<uuidFichaOriginadora>5444428-5bb8a66a-cb97-40e4-8b13-0cc015bb65f7</uuidFichaOriginadora>
 		<fichaAtualizada>false</fichaAtualizada>
-		<statusTermoRecusaCadastroDomiciliarAtencaoBasica>false</statusTermoRecusaCadastroDomiciliarAtencaoBasica>
+		<quantosAnimaisNoDomicilio>2</quantosAnimaisNoDomicilio>
+		<stAnimaisNoDomicilio>true</stAnimaisNoDomicilio>
+		<statusTermoRecusa>false</statusTermoRecusa>
+		<tpCdsOrigem>1</tpCdsOrigem>
+		<uuid>5444429-78b4990f-78df-477c-8f96-aec49e2c47b3</uuid>
+		<uuidFichaOriginadora>5444429-78b4990f-78df-477c-8f96-aec49e2c47b3</uuidFichaOriginadora>
+		<tipoDeImovel>1</tipoDeImovel>
+		<instituicaoPermanencia />
+		<headerTransport>
+			<profissionalCNS>708607577486986</profissionalCNS>
+			<cboCodigo_2002>322205</cboCodigo_2002>
+			<cnes>5444429</cnes>
+			<ine>5511178891</ine>
+			<dataAtendimento>1476370800000</dataAtendimento>
+			<codigoIbgeMunicipio>4205407</codigoIbgeMunicipio>
+		</headerTransport>
 	</ns4:cadastroDomiciliarTransport>
 	<ns2:remetente>
-		<contraChave>003d61860206f2804eefff4d01ef1a3f</contraChave>
-		<uuidInstalacao>10e769db-a642-43e4-b970-ff01ba660b51</uuidInstalacao>
-		<cpfOuCnpj>08953588910</cpfOuCnpj>
-		<nomeOuRazaoSocial>MARIANA MELO</nomeOuRazaoSocial>
+		<contraChave>TREINAMENTO</contraChave>
+		<uuidInstalacao>TREINAMENTO</uuidInstalacao>
+		<cpfOuCnpj>10365895954</cpfOuCnpj>
+		<nomeOuRazaoSocial>NATHALIA LIZ DE BRITO</nomeOuRazaoSocial>
+		<versaoSistema>2.1.05</versaoSistema>
+		<nomeBancoDados>Postgres</nomeBancoDados>
 	</ns2:remetente>
 	<ns2:originadora>
-		<contraChave>003d61860206f2804eefff4d01ef1a3f</contraChave>
-		<uuidInstalacao>10e769db-a642-43e4-b970-ff01ba660b51</uuidInstalacao>
-		<cpfOuCnpj>08953588910</cpfOuCnpj>
-		<nomeOuRazaoSocial>MARIANA MELO</nomeOuRazaoSocial>
+		<contraChave>TREINAMENTO</contraChave>
+		<uuidInstalacao>TREINAMENTO</uuidInstalacao>
+		<cpfOuCnpj>10365895954</cpfOuCnpj>
+		<nomeOuRazaoSocial>NATHALIA LIZ DE BRITO</nomeOuRazaoSocial>
+		<versaoSistema>2.1.05</versaoSistema>
+		<nomeBancoDados>Postgres</nomeBancoDados>
 	</ns2:originadora>
-	<versao major="2" minor="0" revision="0"/>
+	<versao major="2" minor="1" revision="0" />
 </ns3:dadoTransporteTransportXml>

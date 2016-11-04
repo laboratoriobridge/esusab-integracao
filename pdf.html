@@ -1554,11 +1554,11 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Só pode ser preenchido se:</p>
+<p><strong>Regras:</strong> Não pode ser preenchido se:</p>
 
 <ul>
-<li>O campo <a href="/integracao/docs/#15-sexocidadao">sexoCidadao</a> = <code>feminino</code>;</li>
-<li>O campo <a href="/integracao/docs/#3-datanascimentocidadao">dataNascimentoCidadao</a> for mais anterior que 9 anos a partir da <a href="/integracao/docs/header-transport.html#5-dataatendimento">dataAtendimento</a>.</li>
+<li>Campo <a href="/integracao/docs/#15-sexocidadao">sexoCidadao</a> = <code>0 - Masculino</code>;</li>
+<li>Campo <a href="/integracao/docs/#3-datanascimentocidadao">dataNascimentoCidadao</a> for menor que 9 anos ou maior que 60 anos a partir da <a href="/integracao/docs/header-transport.html#5-dataatendimento">dataAtendimento</a>.</li>
 </ul>
 
 <h3 id="15-statusestaacamado">#15 statusEstaAcamado</h3>

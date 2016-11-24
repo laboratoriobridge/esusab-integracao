@@ -109,16 +109,16 @@
 	<ns2:remetente>
 		<contraChave>TREINAMENTO</contraChave>
 		<uuidInstalacao>TREINAMENTO</uuidInstalacao>
-		<cpfOuCnpj>10365895954</cpfOuCnpj>
-		<nomeOuRazaoSocial>NATHALIA LIZ DE BRITO</nomeOuRazaoSocial>
+		<cpfOuCnpj>01234567890</cpfOuCnpj>
+		<nomeOuRazaoSocial>ADMINISTRADOR DA INSTALAÇÃO</nomeOuRazaoSocial>
 		<versaoSistema>2.1.05</versaoSistema>
 		<nomeBancoDados>Postgres</nomeBancoDados>
 	</ns2:remetente>
 	<ns2:originadora>
 		<contraChave>TREINAMENTO</contraChave>
 		<uuidInstalacao>TREINAMENTO</uuidInstalacao>
-		<cpfOuCnpj>10365895954</cpfOuCnpj>
-		<nomeOuRazaoSocial>NATHALIA LIZ DE BRITO</nomeOuRazaoSocial>
+		<cpfOuCnpj>01234567890</cpfOuCnpj>
+		<nomeOuRazaoSocial>ADMINISTRADOR DA INSTALAÇÃO</nomeOuRazaoSocial>
 		<versaoSistema>2.1.05</versaoSistema>
 		<nomeBancoDados>Postgres</nomeBancoDados>
 	</ns2:originadora>

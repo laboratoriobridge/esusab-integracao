@@ -89,8 +89,8 @@
 	<ns2:remetente>
 		<contraChave>TREINAMENTO</contraChave>
 		<uuidInstalacao>TREINAMENTO</uuidInstalacao>
-		<cpfOuCnpj>09721090999</cpfOuCnpj>
-		<nomeOuRazaoSocial>GUILHERME SCHMITT</nomeOuRazaoSocial>
+		<cpfOuCnpj>01234567890</cpfOuCnpj>
+		<nomeOuRazaoSocial>ADMINISTRADOR DA INSTALAÇÃO</nomeOuRazaoSocial>
 		<fone>6186226778</fone>
 		<email>prof@esus.br</email>
 		<versaoSistema>2.1.01</versaoSistema>
@@ -99,8 +99,8 @@
 	<ns2:originadora>
 		<contraChave>TREINAMENTO</contraChave>
 		<uuidInstalacao>TREINAMENTO</uuidInstalacao>
-		<cpfOuCnpj>09721090999</cpfOuCnpj>
-		<nomeOuRazaoSocial>GUILHERME SCHMITT</nomeOuRazaoSocial>
+		<cpfOuCnpj>01234567890</cpfOuCnpj>
+		<nomeOuRazaoSocial>ADMINISTRADOR DA INSTALAÇÃO</nomeOuRazaoSocial>
 		<fone>6186226778</fone>
 		<email>prof@esus.br</email>
 		<versaoSistema>2.1.01</versaoSistema>

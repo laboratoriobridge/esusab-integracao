@@ -1,8 +1,8 @@
-#Exemplo Delphi
+# Exemplo Delphi
 
 Este exemplo é um projeto delphi que demonstra como criar um arquivo .zip com fichas serializadas para importação no e-SUS AB.
 
-##Passo 1
+## Passo 1
 **1.**
 
 Criar o objeto da ficha e populá-lo com as informações.
@@ -100,7 +100,7 @@ Popular o thrift com as informações dos profissionais, unidades, local e data 
   end;
 ```
 
-##Passo 2
+## Passo 2
 
 Depois de montar o objeto da ficha, você deve criar e popular o objeto de transporte.
 ```
@@ -164,7 +164,7 @@ E parte sobre o software que a está enviando.
   end;
 ```
 
-##Passo 3
+## Passo 3
 
 Serializar o objeto da ficha utilizando o TBinaryProtocol da biblioteca thrift.
 
@@ -198,7 +198,7 @@ Serializar o objeto da ficha utilizando o TBinaryProtocol da biblioteca thrift.
 
 Esta classe encontra-se em /thrift-exemplo/delphi/src/common (ThriftSerializer.pas).
 
-##Passo 4
+## Passo 4
 
 Criar um zip em disco para inserir as fichas.
 

@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Layout e-SUS AB de Dados e Interface (LEDI AB) versão 2.1.1</title>
-  <meta name="description" content="Layout e-SUS AB de Dados e Interface (LEDI AB)">
+  <title>Layout e-SUS AB de Dados e Interface</title>
+  <meta name="description" content="Este documento descreve os atributos utilizados no LEDI AB:O LEDI AB é uma camada abstrata que especifica as informações, e seus formatos, que são aceitos no...">
 
   <link rel="stylesheet" href="/integracao/css/main.css">
   <link rel="canonical" href="/integracao/">
@@ -28,7 +28,7 @@
       <img src="/integracao/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Layout e-SUS AB de Dados e Interface (LEDI AB)</span>
       
-        <span class="label">versão 2.1.1</span>
+        <span class="label">versão 2.2.0</span>
       
     </a>
 
@@ -42,8 +42,6 @@
       </a>
 
       <div class="trigger">
-        
-          
         
           
         
@@ -70,7 +68,12 @@
       <li><a href="/integracao/">Home</a></li>
 
       
-        <li title="Layout e-SUS AB de Dados e Interface (LEDI AB) versão 2.1.1">Layout e-SUS AB de Dados e Interface (LEDI AB) versão 2.1.1</li>
+        
+          
+            <li><a title="Layout e-SUS AB de Dados e Interface" href="/integracao/">Layout e-SUS AB de Dados e Interface</a></li>
+          
+        
+
       
     </ol>
   </div>
@@ -80,159 +83,49 @@
     <div class="page-content">
       <div class="wrapper">
 
-        <div class="sidebar">
-          <div class="sidebar-content">
-            <form id="search-form">
-  <input type="search" placeholder="Pesquisar por título..." name="q" id="search-input" autocomplete="off">
-</form>
-
-<ul id="search-results"></ul>
-
-<script>
-  SimpleJekyllSearch({
-    searchInput: document.getElementById('search-input'),
-    resultsContainer: document.getElementById('search-results'),
-    json: '/integracao/search.json',
-    noResultsText: 'Nenhum resultado encontrado'
-  });
-
-  document.getElementById('search-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    return false;
-  });
-</script>
-
-<div class="menu">
-  
-
-
-
-  <ul>
-    
-      <li>
-        <a href="/integracao/docs/camada-transporte.html">Camada de Transporte de Dados</a>
-      </li>
-    
-      <li>
-        <a href="/integracao/docs/dicionario-fci.html">Ficha de Cadastro Individual</a>
-      </li>
-    
-      <li>
-        <a href="/integracao/docs/dicionario-fcd.html">Ficha de Cadastro Domiciliar e Territorial</a>
-      </li>
-    
-      <li>
-        <a href="/integracao/docs/dicionario-fai.html">Ficha de Atendimento Individual</a>
-      </li>
-    
-      <li>
-        <a href="/integracao/docs/dicionario-fao.html">Ficha de Atendimento Odontológico Individual</a>
-      </li>
-    
-      <li>
-        <a href="/integracao/docs/dicionario-fac.html">Ficha de Atividade Coletiva</a>
-      </li>
-    
-      <li>
-        <a href="/integracao/docs/dicionario-fp.html">Ficha de Procedimentos</a>
-      </li>
-    
-      <li>
-        <a href="/integracao/docs/dicionario-fvd.html">Ficha de Visita Domiciliar e Territorial</a>
-      </li>
-    
-      <li>
-        <a href="/integracao/docs/dicionario-mca.html">Marcadores de Consumo Alimentar</a>
-      </li>
-    
-      <li>
-        <a href="/integracao/docs/dicionario-fae.html">Ficha de Avaliação de Elegibilidade</a>
-      </li>
-    
-      <li>
-        <a href="/integracao/docs/dicionario-fad.html">Ficha de Atendimento Domiciliar</a>
-      </li>
-    
-      <li>
-        <a href="/integracao/docs/dicionario-fczm.html">Ficha complementar - Síndrome neurológica por Zika / Microcefalia</a>
-      </li>
-    
-      <li>
-        <a href="/integracao/docs/header-transport.html">Cabeçalho (headerTransport)</a>
-      </li>
-    
-      <li>
-        <a href="/integracao/docs/dicionario/dicionario.html">Dicionário de dados</a>
-      </li>
-    
-      <li>
-        <a href="/integracao/docs/referencias.html">Referências</a>
-      </li>
-    
-      <li>
-        <a href="/integracao/docs/municipios.html">Municípios</a>
-      </li>
-    
-      <li>
-        <a href="/integracao/docs/cbo.html">CBO</a>
-      </li>
-    
-      <li>
-        <a href="/integracao/docs/thrift-xsd.html">Thrift x XSD</a>
-      </li>
-    
-      <li>
-        <a href="/integracao/docs/algoritmo_CNS.html">Algoritmo de validação do CNS</a>
-      </li>
-    
-      <li>
-        <a href="/integracao/docs/validar_nome.html">Validar nome</a>
-      </li>
-    
-      <li>
-        <a href="/integracao/docs/versao.html">Versão</a>
-      </li>
-    
-      <li>
-        <a href="/integracao/docs/principais_alteracoes.html">Principais alterações da v2.1.0 para a v2.1.1</a>
-      </li>
-    
-  </ul>
-
-
-</div>
-
-          </div>
-        </div>
+        
 
         <div class="content">
           <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Layout e-SUS AB de Dados e Interface (LEDI AB) versão 2.1.1</h1>
+    <h1 class="post-title">Layout e-SUS AB de Dados e Interface</h1>
     <p class="post-meta">
       <a class="btn" href="/integracao/pdf.html?include=/"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 28/04/2017</span>
+        <span class="label" title="Data da última modificação">Alterado em 21/09/2017</span>
       
     </p>
   </header>
 
   <article class="post-content">
-    <h6 id="este-documento-descreve-os-atributos-utilizados-no-ledi-ab-vers-o-2-1-1">Este documento descreve os atributos utilizados no <strong>LEDI AB</strong> versão 2.1.1</h6>
+    <p><h6>Este documento descreve os atributos utilizados no <strong>LEDI AB</strong>:</h6></p>
 
 <ul>
-<li>O <strong>LEDI AB</strong> é uma camada abstrata que especifica as informações e seus formatos, que são aceitos no envio de dados de sistemas próprios para o e-SUS AB (PEC);</li>
+<li>O <strong>LEDI AB</strong> é uma camada abstrata que especifica as informações, e seus formatos, que são aceitos no envio de dados de sistemas próprios para o e-SUS AB (PEC);</li>
 <li>O <strong>LEDI AB</strong> pode ser implementado utilizando <a href="https://pt.wikipedia.org/wiki/XML">XML</a> ou <a href="https://en.wikipedia.org/wiki/Apache_Thrift">Apache Thrift</a>.</li>
 </ul>
 
 <hr>
 
-<p><em>Caso você já realizava a integração com o e-SUS AB na versão 2.1.0 e deseja saber as principais alterações para a versão 2.1.1, <a href="/integracao/docs/principais_alteracoes.html">clique aqui</a>.</em></p>
+<p>Clique nos cards para acessar a documentação da versão desejada:</p>
 
-<p><em>Se deseja realizar a integração com a versão 2.0 do e-SUS AB, acesse a versão 2.0 deste documento <a href="http://esusab.github.io/integracao/v20/">clicando aqui</a>.</em></p>
-
-<p><em>Se deseja realizar a integração com a versão 2.1.0 do e-SUS AB, acesse a versão 2.1.0 deste documento <a href="http://esusab.github.io/integracao/v210/">clicando aqui</a>.</em></p>
+<table style="width: 360px;">
+    <tr class="button-block">
+        <td class="button-block" style="min-width: 80px;">
+            <a class="button" href="http://esusab.github.io/integracao/v20/">LEDI AB 2.0</a>
+        </td>
+        <td class="button-block" style="min-width: 80px;">
+            <a class="button" href="http://esusab.github.io/integracao/v210/">LEDI AB 2.1.0</a>
+        </td>
+        <td class="button-block" style="min-width: 80px;">
+            <a class="button" href="http://esusab.github.io/integracao/v211/">LEDI AB 2.1.1</a>
+        </td>
+        <td class="button-block" style="min-width: 80px;">
+            <a class="button" href="ledi/">LEDI AB 2.2</a>
+        </td>
+    </tr>
+</table>
 
   </article>
 

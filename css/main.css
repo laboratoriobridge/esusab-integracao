@@ -648,6 +648,11 @@ table {
   width: 100%;
   margin-bottom: 20px; }
 
+.button-block {
+  border-collapse: collapse;
+  border: none !important;
+  padding: 0px 15px 0px 0px !important; }
+
 table tr, table th, * + table td {
   border: 1px solid #bbb; }
 
@@ -892,6 +897,34 @@ ol.breadcrumb {
   border: 0; }
   .btn.primary:hover {
     background-color: #1461cc; }
+
+.button {
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  padding-top: 25px;
+  padding-bottom: 29px;
+  vertical-align: middle;
+  transition: 0.35s;
+  font-family: Lato;
+  font-size: 13px;
+  font-weight: bold;
+  color: #666666;
+  letter-spacing: 0.3px;
+  width: 150px;
+  height: 70px;
+  border-radius: 2px;
+  background-color: #f8f8f8;
+  border: solid 1px #dddddd; }
+
+.button:hover {
+  border: solid 1px #297aea;
+  color: #297aea; }
+
+.button:active {
+  background-color: #f5f5f5;
+  border: solid 1px #297aea;
+  color: #297aea; }
 
 @font-face {
   font-family: 'docs-icons';

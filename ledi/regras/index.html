@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Resultados de Pesquisa</title>
-  <meta name="description" content="Layout e-SUS AB de Dados e Interface (LEDI AB)">
+  <title>Regras</title>
+  <meta name="description" content="O envio de dados de sistemas próprios para o e-SUS AB (PEC) deve atender as regras listadas abaixo:">
 
   <link rel="stylesheet" href="/integracao/css/main.css">
-  <link rel="canonical" href="/integracao/search.html">
+  <link rel="canonical" href="/integracao/ledi/regras/">
   <link rel="icon" type="image/png" href="/integracao/img/logo-esus.png">
 
   <script src="//code.jquery.com/jquery-3.1.0.min.js"></script>
@@ -68,7 +68,20 @@
       <li><a href="/integracao/">Home</a></li>
 
       
-        <li title="Resultados de Pesquisa">Resultados de Pesquisa</li>
+        
+          
+            <li><a title="Layout e-SUS AB de Dados e Interface" href="/integracao/">Layout e-SUS AB de Dados e Interface</a></li>
+          
+        
+          
+            <li><a title="Layout e-SUS AB de Dados e Interface Versão 2.2" href="/integracao/ledi/index.html">Layout e-SUS AB de Dados e Interface Versão 2.2</a></li>
+          
+        
+          
+            <li><a title="Regras" href="/integracao/ledi/regras/index.html">Regras</a></li>
+          
+        
+
       
     </ol>
   </div>
@@ -106,12 +119,45 @@
 
 
 
+  
+
   <ul>
     
       <li>
-        <a href="/integracao/">Layout e-SUS AB de Dados e Interface</a>
+        <a title="Voltar para Layout e-SUS AB de Dados e Interface Versão 2.2" href="/integracao/ledi/index.html" class="back-link">
+          <i class="icon icon-back"></i> Voltar
+          <small>(Layout e-SUS AB de Dados e Interface Versão 2.2)</small>
+        </a>
       </li>
     
+
+    <li>
+      <a class="open" title="Regras" href="/integracao/ledi/regras/index.html">Regras</a>
+      <ul>
+        
+          <li >
+          
+            <a title="Validar CNS" href="/integracao/ledi/regras/algoritmo_CNS.html">
+              Validar CNS
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Grupos de CBOs x Tipo de ficha" href="/integracao/ledi/regras/cbo.html">
+              Grupos de CBOs x Tipo de ficha
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Validar nome" href="/integracao/ledi/regras/validar_nome.html">
+              Validar nome
+            </a>
+          </li>
+        
+      </ul>
+    </li>
   </ul>
 
 
@@ -122,17 +168,30 @@
         
 
         <div class="content">
-          <h1>Resultados de pesquisa</h1>
+          <div class="post">
 
-<form>
-  <input id="search" type="search" name="q" placeholder="Pesquisar..." value="" autocomplete="off">
-</form>
+  <header class="post-header">
+    <h1 class="post-title">Regras</h1>
+    <p class="post-meta">
+      <a class="btn" href="/integracao/pdf.html?include=/ledi/regras/index.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
+      
+        <span class="label" title="Data da última modificação">Alterado em 22/09/2017</span>
+      
+    </p>
+  </header>
 
-<script type="text/javascript">
-  var search = document.getElementById('search');
-  var q = location.search.split('q=')[1];
-  search.value = q;
-</script>
+  <article class="post-content">
+    <p>O envio de dados de sistemas próprios para o e-SUS AB (PEC) deve atender as regras listadas abaixo:</p>
+
+<ul>
+<li><a href="/integracao/ledi/regras/algoritmo_CNS.html">Validar CNS</a>;</li>
+<li><a href="/integracao/ledi/regras/validar_nome.html">Validar nome</a>;</li>
+<li><a href="/integracao/ledi/regras/cbo.html">Grupos de CBOs x Tipo de ficha</a>.</li>
+</ul>
+
+  </article>
+
+</div>
 
         </div>
 

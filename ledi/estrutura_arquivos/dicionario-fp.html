@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Ficha de Procedimentos</title>
+  <meta name="description" content="FichaProcedimentoMaster">
+
+  <link rel="stylesheet" href="/integracao/css/main.css">
+  <link rel="canonical" href="/integracao/ledi/estrutura_arquivos/dicionario-fp.html">
+  <link rel="icon" type="image/png" href="/integracao/img/logo-esus.png">
+
+  <script src="//code.jquery.com/jquery-3.1.0.min.js"></script>
+  <script src="/integracao/js/search.js" type="text/javascript"></script>
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/integracao/">
+      <img src="/integracao/img/logo-esus.png" alt="e-SUS">
+      <span class="title-text">Layout e-SUS AB de Dados e Interface (LEDI AB)</span>
+      
+        <span class="label">versão 2.2.0</span>
+      
+    </a>
+
+    <nav class="site-nav">
+      <a href="javascript: void" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+        
+          
+            <a href="/integracao/pdf.html"><i class="icon-pdf"></i> Gerar PDF</a>
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="breadcrumb-placeholder">
+  <div class="wrapper breadcrumb-wrapper">
+    <ol class="breadcrumb">
+      <img src="/integracao/img/logo-esus.png" alt="e-SUS">
+      <li><a href="/integracao/">Home</a></li>
+
+      
+        
+          
+            <li><a title="Layout e-SUS AB de Dados e Interface" href="/integracao/">Layout e-SUS AB de Dados e Interface</a></li>
+          
+        
+          
+            <li><a title="Layout e-SUS AB de Dados e Interface Versão 2.2" href="/integracao/ledi/index.html">Layout e-SUS AB de Dados e Interface Versão 2.2</a></li>
+          
+        
+          
+            <li><a title="Estrutura dos arquivos" href="/integracao/ledi/estrutura_arquivos/index.html">Estrutura dos arquivos</a></li>
+          
+        
+          
+            <li><a title="Ficha de Procedimentos" href="/integracao/ledi/estrutura_arquivos/dicionario-fp.html">Ficha de Procedimentos</a></li>
+          
+        
+
+      
+    </ol>
+  </div>
+</div>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+
+        
+        <div class="sidebar">
+          <div class="sidebar-content">
+            <form id="search-form">
+  <input type="search" placeholder="Pesquisar por título..." name="q" id="search-input" autocomplete="off">
+</form>
+
+<ul id="search-results"></ul>
+
+<script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('search-results'),
+    json: '/integracao/search.json',
+    noResultsText: 'Nenhum resultado encontrado'
+  });
+
+  document.getElementById('search-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    return false;
+  });
+</script>
+
+<div class="menu">
+  
+
+
+
+  
+
+  <ul>
+    
+      <li>
+        <a title="Voltar para Layout e-SUS AB de Dados e Interface Versão 2.2" href="/integracao/ledi/index.html" class="back-link">
+          <i class="icon icon-back"></i> Voltar
+          <small>(Layout e-SUS AB de Dados e Interface Versão 2.2)</small>
+        </a>
+      </li>
+    
+
+    <li>
+      <a class="open" title="Estrutura dos arquivos" href="/integracao/ledi/estrutura_arquivos/index.html">Estrutura dos arquivos</a>
+      <ul>
+        
+          <li >
+          
+            <a title="Camada de Transporte de Dados" href="/integracao/ledi/estrutura_arquivos/camada-transporte.html">
+              Camada de Transporte de Dados
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Cabeçalho (headerTransport)" href="/integracao/ledi/estrutura_arquivos/header-transport.html">
+              Cabeçalho (headerTransport)
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha de Cadastro Individual" href="/integracao/ledi/estrutura_arquivos/dicionario-fci.html">
+              Ficha de Cadastro Individual
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha de Cadastro Domiciliar e Territorial" href="/integracao/ledi/estrutura_arquivos/dicionario-fcd.html">
+              Ficha de Cadastro Domiciliar e Territorial
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha de Atendimento Individual" href="/integracao/ledi/estrutura_arquivos/dicionario-fai.html">
+              Ficha de Atendimento Individual
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha de Atendimento Odontológico Individual" href="/integracao/ledi/estrutura_arquivos/dicionario-fao.html">
+              Ficha de Atendimento Odontológico Individual
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha de Atividade Coletiva" href="/integracao/ledi/estrutura_arquivos/dicionario-fac.html">
+              Ficha de Atividade Coletiva
+            </a>
+          </li>
+        
+          <li class="active">
+          
+            <a title="Ficha de Procedimentos" href="/integracao/ledi/estrutura_arquivos/dicionario-fp.html">
+              Ficha de Procedimentos
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha de Visita Domiciliar e Territorial" href="/integracao/ledi/estrutura_arquivos/dicionario-fvd.html">
+              Ficha de Visita Domiciliar e Territorial
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Marcadores de Consumo Alimentar" href="/integracao/ledi/estrutura_arquivos/dicionario-mca.html">
+              Marcadores de Consumo Alimentar
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha de Avaliação de Elegibilidade" href="/integracao/ledi/estrutura_arquivos/dicionario-fae.html">
+              Ficha de Avaliação de Elegibilidade
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha de Atendimento Domiciliar" href="/integracao/ledi/estrutura_arquivos/dicionario-fad.html">
+              Ficha de Atendimento Domiciliar
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha complementar - Síndrome neurológica por Zika / Microcefalia" href="/integracao/ledi/estrutura_arquivos/dicionario-fczm.html">
+              Ficha complementar - Síndrome neurológica por Zika / Microcefalia
+            </a>
+          </li>
+        
+      </ul>
+    </li>
+  </ul>
+
+
+</div>
+
+          </div>
+        </div>
+        
+
+        <div class="content">
+          <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Ficha de Procedimentos</h1>
+    <p class="post-meta">
+      <a class="btn" href="/integracao/pdf.html?include=/ledi/estrutura_arquivos/dicionario-fp.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
+      
+        <span class="label" title="Data da última modificação">Alterado em 22/09/2017</span>
+      
+    </p>
+  </header>
+
+  <article class="post-content">
+    <h2 id="fichaprocedimentomaster">FichaProcedimentoMaster</h2>
+
+<h3 id="1-uuidficha">#1 uuidFicha</h3>
+
+<p>Código UUID para identificar a ficha na base de dados nacional.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Sim</td>
+<td>36</td>
+<td>44</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> É recomendado concatenar o CNES na frente do UUID, de modo que os 7 dígitos (CNES) + 1 de hífen somados aos 36 (32 caracteres + 4 hífen) do UUID são a limitação de 44 bytes do campo. Formato canônico.</p>
+
+<p><strong>Referências:</strong> Para ver a referência sobre o UUID, acesse <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">UUID Wikipedia</a>.</p>
+
+<h3 id="2-tpcdsorigem">#2 tpCdsOrigem</h3>
+
+<p>Tipo de origem dos dados do registro.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Integer</td>
+<td>Sim</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> Utilizar valor <code>3 (sistemas terceiros)</code>.</p>
+
+<h3 id="3-headertransport">#3 headerTransport</h3>
+
+<p>Profissional que realizou os procedimentos.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>UnicaLotacaoHeader</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> Somente as CBOs apresentadas na <a href="/integracao/ledi/regras/cbo.html#ficha-de-procedimentos">Tabela 6 - CBOs que podem registrar ficha de procedimento</a> podem ser adicionadas no campo CBO do profissional.</p>
+
+<p><strong>Referências:</strong> <a href="/integracao/ledi/estrutura_arquivos/header-transport.html#unicalotacaoheader">UnicaLotacaoHeader</a>.</p>
+
+<h3 id="4-atendprocedimentos">#4 atendProcedimentos</h3>
+
+<p>Registro dos procedimentos realizados.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>List&lt;FichaProcedimentoChild&gt;</td>
+<td>Condicional</td>
+<td>0</td>
+<td>99</td>
+</tr>
+</tbody></table>
+
+<p><strong>Referências:</strong> <a href="#fichaprocedimentochild">FichaProcedimentoChild</a>.</p>
+
+<p>Observação: É requerido pelo menos um dentre os itens <code>#4</code> a <code>#11</code>.</p>
+
+<h3 id="5-numtotalafericaopa">#5 numTotalAfericaoPa</h3>
+
+<p>Quantidade de aferições de pressão realizadas.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Condicional</td>
+<td>0</td>
+<td>3</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> </p>
+
+<ul>
+<li>Não pode ser preenchido com o valor &quot;0&quot; (zero);</li>
+<li>É requerido pelo menos um dentre os itens <code>#4</code> a <code>#11</code>.</li>
+</ul>
+
+<h3 id="6-numtotalglicemiacapilar">#6 numTotalGlicemiaCapilar</h3>
+
+<p>Quantidade de aferições de glicemia capilar.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Condicional</td>
+<td>0</td>
+<td>3</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> </p>
+
+<ul>
+<li>Não pode ser preenchido com o valor &quot;0&quot; (zero);</li>
+<li>É requerido pelo menos um dentre os itens <code>#4</code> a <code>#11</code>.</li>
+</ul>
+
+<h3 id="7-numtotalafericaotemperatura">#7 numTotalAfericaoTemperatura</h3>
+
+<p>Quantidade de aferições de temperatura realizadas.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Condicional</td>
+<td>0</td>
+<td>3</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> </p>
+
+<ul>
+<li>Não pode ser preenchido com o valor &quot;0&quot; (zero);</li>
+<li>É requerido pelo menos um dentre os itens <code>#4</code> a <code>#11</code>.</li>
+</ul>
+
+<h3 id="8-numtotalmedicaoaltura">#8 numTotalMedicaoAltura</h3>
+
+<p>Quantidade de aferições de altura.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Condicional</td>
+<td>0</td>
+<td>3</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> </p>
+
+<ul>
+<li>Não pode ser preenchido com o valor &quot;0&quot; (zero);</li>
+<li>É requerido pelo menos um dentre os itens <code>#4</code> a <code>#11</code>.</li>
+</ul>
+
+<h3 id="9-numtotalcurativosimples">#9 numTotalCurativoSimples</h3>
+
+<p>Quantidade de curativos simples realizados.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Condicional</td>
+<td>0</td>
+<td>3</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> </p>
+
+<ul>
+<li>Não pode ser preenchido com o valor &quot;0&quot; (zero);</li>
+<li>É requerido pelo menos um dentre os itens <code>#4</code> a <code>#11</code>.</li>
+</ul>
+
+<h3 id="10-numtotalmedicaopeso">#10 numTotalMedicaoPeso</h3>
+
+<p>Quantidade de aferições de peso.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Condicional</td>
+<td>0</td>
+<td>3</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> </p>
+
+<ul>
+<li>Não pode ser preenchido com o valor &quot;0&quot; (zero);</li>
+<li>É requerido pelo menos um dentre os itens <code>#4</code> a <code>#11</code>..</li>
+</ul>
+
+<h3 id="11-numtotalcoletamaterialparaexamelaboratorial">#11 numTotalColetaMaterialParaExameLaboratorial</h3>
+
+<p>Quantidade de coletas para exame laboratorial.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Condicional</td>
+<td>0</td>
+<td>3</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> </p>
+
+<ul>
+<li>Não pode ser preenchido com o valor &quot;0&quot; (zero);</li>
+<li>É requerido pelo menos um dentre os itens <code>#4</code> a <code>#11</code>.</li>
+</ul>
+
+<h2 id="fichaprocedimentochild">FichaProcedimentoChild</h2>
+
+<h3 id="1-numprontuario">#1 numProntuario</h3>
+
+<p>Número do prontuário do cidadão na UBS.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Não</td>
+<td>0</td>
+<td>30</td>
+</tr>
+</tbody></table>
+
+<h3 id="2-cnscidadao">#2 cnsCidadao</h3>
+
+<p>CNS do cidadão.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Não</td>
+<td>15</td>
+<td>15</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras</strong>: Validado por algoritmo.</p>
+
+<p><strong>Referências:</strong> O algoritmo de validação está presente em <a href="/integracao/ledi/regras/algoritmo_CNS.html">Validar CNS</a>.</p>
+
+<h3 id="3-dtnascimento">#3 dtNascimento</h3>
+
+<p>Data de nascimento do cidadão no formato epoch time.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> Não pode ser posterior a <a href="/integracao/ledi/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a> e anterior a 130 anos a partir da <a href="/integracao/ledi/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>.</p>
+
+<p><strong>Referências:</strong> <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch Wikipedia</a> em milissegundos.</p>
+
+<h3 id="4-sexo">#4 sexo</h3>
+
+<p>Código do sexo do cidadão.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Referências:</strong> <a href="/integracao/ledi/referencias/dicionario.html#sexo">Sexo</a>.</p>
+
+<h3 id="5-localatendimento">#5 localAtendimento</h3>
+
+<p>Código do local onde o atendimento foi realizado.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> Apenas valores de <code>1</code> a <code>10</code>.</p>
+
+<p><strong>Referências:</strong> <a href="/integracao/ledi/referencias/dicionario.html#localdeatendimento">LocalDeAtendimento</a>.</p>
+
+<h3 id="6-turno">#6 turno</h3>
+
+<p>Código do turno onde aconteceu o atendimento.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Referências:</strong> <a href="/integracao/ledi/referencias/dicionario.html#turno">Turno</a>.</p>
+
+<h3 id="7-statusescutainicialorientacao">#7 statusEscutaInicialOrientacao</h3>
+
+<p>Indica a realização da escuta inicial.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Não</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h3 id="8-procedimentos">#8 procedimentos</h3>
+
+<p>Lista dos códigos dos procedimentos que são registrados na ficha de procedimentos.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>List&lt;String&gt;</td>
+<td>Condicional</td>
+<td>0</td>
+<td>33</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> </p>
+
+<ul>
+<li>Preencher apenas com o código <strong>AB</strong> do procedimento.</li>
+<li>É requerido pelo menos um dentre os itens <code>#8</code> e <code>#9</code>.</li>
+<li>Se o campo <a href="#7-statusescutainicialorientacao">statusEscutaInicialOrientacao</a> = <code>true</code>, este campo é opcional.</li>
+</ul>
+
+<p><strong>Referências:</strong> <a href="#procedimentos-da-ficha">Procedimentos da Ficha</a>.</p>
+
+<p>Observação: Inserir o código do procedimento AB em caracteres maiúsculos, sem espaços.</p>
+
+<h3 id="9-outrossiaprocedimentos">#9 outrosSiaProcedimentos</h3>
+
+<p>Código dos outros procedimentos do SIGTAP ou SISAB.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>List&lt;String&gt;</td>
+<td>Condicional</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Só é permitido inserir procedimentos cujo grupo é igual a <code>01</code> - Ações de promoção e prevenção em saúde, <code>02</code> - Procedimentos com finalidade diagnóstica, <code>03</code> - Procedimentos clínicos ou <code>04</code> - Procedimentos cirúrgicos.</li>
+<li>Não podem haver procedimentos que estão na tabela <a href="#procedimentos-da-ficha">Procedimentos da Ficha</a>.</li>
+<li>Não podem haver procedimentos com o mesmo código.</li>
+<li>É requerido pelo menos um dentre os itens <code>#8</code> e <code>#9</code>.</li>
+<li>Se o campo <a href="#7-statusescutainicialorientacao">statusEscutaInicialOrientacao</a> = <code>true</code>, este campo é opcional.</li>
+</ul>
+
+<p><strong>Referências:</strong> Tabela do SIGTAP, competência 03/2017 disponível em: <a href="http://sigtap.datasus.gov.br/tabela-unificada/app/sec/procedimento/publicados/consultar">Tabela unificada SIGTAP</a>.</p>
+
+<p>Observação: Inserir o código do procedimento sem ponto ou hífen, ex: <code>0201010010</code>. </p>
+
+<h2 id="procedimentos-da-ficha">Procedimentos da Ficha</h2>
+
+<table><thead>
+<tr>
+<th>Código SIGTAP *</th>
+<th>Descrição AB</th>
+<th>Código AB correspondente</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>03.09.05.002-2</td>
+<td>Acupuntura com inserção de agulhas</td>
+<td>ABPG001</td>
+</tr>
+<tr>
+<td>01.01.04.005-9</td>
+<td>Administração de vitamina A</td>
+<td>ABPG002</td>
+</tr>
+<tr>
+<td>03.01.10.004-7</td>
+<td>Cateterismo vesical de alívio</td>
+<td>ABPG003</td>
+</tr>
+<tr>
+<td>03.03.08.001-9</td>
+<td>Cauterização química de pequenas lesões</td>
+<td>ABPG004</td>
+</tr>
+<tr>
+<td>04.01.02.017-7</td>
+<td>Cirurgia de unha (cantoplastia)</td>
+<td>ABPG005</td>
+</tr>
+<tr>
+<td>03.01.10.006-3</td>
+<td>Cuidado de estomas</td>
+<td>ABPG006</td>
+</tr>
+<tr>
+<td>Não possui</td>
+<td>Curativo especial</td>
+<td>ABPG007</td>
+</tr>
+<tr>
+<td>04.01.01.003-1</td>
+<td>Drenagem de abscesso</td>
+<td>ABPG008</td>
+</tr>
+<tr>
+<td>02.11.02.003-6</td>
+<td>Eletrocardiograma</td>
+<td>ABEX004</td>
+</tr>
+<tr>
+<td>02.01.02.003-3</td>
+<td>Coleta de citopatológico de colo uterino</td>
+<td>ABPG010</td>
+</tr>
+<tr>
+<td>03.01.04.009-5</td>
+<td>Exame do pé diabético</td>
+<td>ABPG011</td>
+</tr>
+<tr>
+<td>04.01.01.007-4</td>
+<td>Exérese / Biópsia / Punção de tumores superficiais de pele</td>
+<td>ABPG012</td>
+</tr>
+<tr>
+<td>02.11.06.010-0</td>
+<td>Fundoscopia (exame de fundo de olho)</td>
+<td>ABPG013</td>
+</tr>
+<tr>
+<td>03.03.09.003-0</td>
+<td>Infiltração em cavidade sinovial</td>
+<td>ABPG014</td>
+</tr>
+<tr>
+<td>04.04.01.030-0</td>
+<td>Remoção de corpo estranho da cavidade auditiva e nasal</td>
+<td>ABPG015</td>
+</tr>
+<tr>
+<td>04.01.01.011-2</td>
+<td>Remoção de corpo estranho subcutâneo</td>
+<td>ABPG016</td>
+</tr>
+<tr>
+<td>Não possui</td>
+<td>Retirada de cerume</td>
+<td>ABPG017</td>
+</tr>
+<tr>
+<td>03.01.10.015-2</td>
+<td>Retirada de pontos de cirurgias</td>
+<td>ABPG018</td>
+</tr>
+<tr>
+<td>04.01.01.006-6</td>
+<td>Sutura simples</td>
+<td>ABPG019</td>
+</tr>
+<tr>
+<td>02.11.06.027-5</td>
+<td>Triagem oftalmológica</td>
+<td>ABPG020</td>
+</tr>
+<tr>
+<td>04.04.01.034-2</td>
+<td>Tamponamento de epistaxe</td>
+<td>ABPG021</td>
+</tr>
+<tr>
+<td>02.14.01.006-6</td>
+<td>Teste rápido de gravidez</td>
+<td>ABPG022</td>
+</tr>
+<tr>
+<td>Não possui</td>
+<td>Teste rápido para dosagem de proteinúria</td>
+<td>ABPG040</td>
+</tr>
+<tr>
+<td>02.14.01.005-8</td>
+<td>Teste rápido para HIV</td>
+<td>ABPG024</td>
+</tr>
+<tr>
+<td>02.14.01.009-0</td>
+<td>Teste rápido para hepatite C</td>
+<td>ABPG025</td>
+</tr>
+<tr>
+<td>02.14.01.007-4</td>
+<td>Teste rápido para sífilis</td>
+<td>ABPG026</td>
+</tr>
+<tr>
+<td>Não possui</td>
+<td>Administração de medicamentos via Oral</td>
+<td>ABPG027</td>
+</tr>
+<tr>
+<td>Não possui</td>
+<td>Administração de medicamentos via Intramuscular</td>
+<td>ABPG028</td>
+</tr>
+<tr>
+<td>Não possui</td>
+<td>Administração de medicamentos via Endovenosa</td>
+<td>ABPG029</td>
+</tr>
+<tr>
+<td>03.01.10.010-1</td>
+<td>Administração de medicamentos via Inalação / Nebulização</td>
+<td>ABPG030</td>
+</tr>
+<tr>
+<td>Não possui</td>
+<td>Administração de medicamentos via Tópica</td>
+<td>ABPG031</td>
+</tr>
+<tr>
+<td>Não possui</td>
+<td>Administração de Penicilina para tratamento de sífilis</td>
+<td>ABPG032</td>
+</tr>
+<tr>
+<td>Não possui</td>
+<td>Administração de medicamentos via Subcutânea (SC)</td>
+<td>ABPG041</td>
+</tr>
+</tbody></table>
+
+<p><em>* Procedimentos pertencentes a competência <strong>03/2017</strong> do SIGTAP.</em></p>
+
+  </article>
+
+</div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <script src="/integracao/js/site.js" type="text/javascript"></script>
+  </body>
+</html>

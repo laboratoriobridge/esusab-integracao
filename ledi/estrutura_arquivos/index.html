@@ -245,7 +245,7 @@
     <p class="post-meta">
       <a class="btn" href="/integracao/pdf.html?include=/ledi/estrutura_arquivos/index.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 22/09/2017</span>
+        <span class="label" title="Data da última modificação">Alterado em 26/09/2017</span>
       
     </p>
   </header>
@@ -267,71 +267,14 @@
 
 <p><img src="img/camada_transporte.png" alt="Camada de transporte - Macro estrutura de um arquivo de dados" title="Camada de transporte - Macro estrutura de um arquivo de dados"> <em>Camada de transporte - Macro estrutura de um arquivo de dados</em></p>
 
-<p>A seguir é apresentada a definição de cada um dos elementos da Camada de transporte. O dicionário de dados da Camada de transporte, por sua vez, é apresentado no documento <a href="/integracao/ledi/estrutura_arquivos/camada-transporte.html">Camada de Transporte de Dados</a>.</p>
-
-<h4 id="1-uuiddadoserializado">1. uuidDadoSerializado</h4>
-
-<p>Este campo indica o UUID do dado serializado.</p>
-
-<h4 id="2-tipodadoserializado">2. tipoDadoSerializado</h4>
-
-<p>Este campo indica o tipo da ficha contida no dado serializado.</p>
-
-<h4 id="3-cnesdadoserializado">3. cnesDadoSerializado</h4>
-
-<p>Este campo indica o CNES da Unidade de saúde que gerou a ficha contida no dado serializado.</p>
-
-<h4 id="4-codibge">4. codIbge</h4>
-
-<p>Este campo indica o código do IBGE do município que gerou a ficha contida no dado serializado.</p>
-
-<h4 id="5-inedadoserializado">5. ineDadoSerializado</h4>
-
-<p>Este campo indica o código do equipe de saúde que gerou a ficha contida no dado serializado.</p>
-
-<h4 id="6-numlote">6. numLote</h4>
-
-<p>Este campo indica o número do lote ao qual o arquivo de dados (camada de transporte) pertence.</p>
-
-<h4 id="7-dadoserializado">7. dadoSerializado</h4>
-
-<p>Este campo contém a serialização dos dados de uma ficha. A serialização é feita utilizando o <a href="https://github.com/apache/thrift/blob/0.9.2/lib/java/src/org/apache/thrift/protocol/TBinaryProtocol.java">TBinaryProtocol</a>.</p>
+<p>A definição de cada um dos elementos da Camada de transporte é apresentada no documento <a href="/integracao/ledi/estrutura_arquivos/camada-transporte.html">Camada de Transporte de Dados</a>.</p>
 
 <p>O dado serializado possui dois componentes: Cabeçalho e Dados da ficha.</p>
 
-<p><img src="img/dado_serializado.png" alt="Estrutura do dado serializado" title="Estrutura do dado serializado"> <em>Estrutura do dado serializado</em></p>
-
-<p>O dicionário de dados do <strong>Cabeçalho</strong> é definido no documento <a href="/integracao/ledi/estrutura_arquivos/header-transport.html">Cabeçalho (headerTransport)</a>;</p>
-
-<p>Os <strong>Dados da ficha</strong> devem ser estruturados em arquivos Thrift conforme descrito no documento <a href="/integracao/ledi/thrift-xsd.html">Arquivos Thrift / XSD por ficha</a>.</p>
-
-<p>Os dicionários de dados de cada tipo de ficha são definidos nos documentos:</p>
-
 <ul>
-<li><a href="/integracao/ledi/estrutura_arquivos/dicionario-fci.html">Ficha de Cadastro Individual</a>;</li>
-<li><a href="/integracao/ledi/estrutura_arquivos/dicionario-fcd.html">Ficha de Cadastro Domiciliar e Territorial</a>;</li>
-<li><a href="/integracao/ledi/estrutura_arquivos/dicionario-fai.html">Ficha de Atendimento Individual</a>;</li>
-<li><a href="/integracao/ledi/estrutura_arquivos/dicionario-fao.html">Ficha de Atendimento Odontológico Individual</a>;</li>
-<li><a href="/integracao/ledi/estrutura_arquivos/dicionario-fac.html">Ficha de Atividade Coletiva</a>;</li>
-<li><a href="/integracao/ledi/estrutura_arquivos/dicionario-fp.html">Ficha de Procedimentos</a>;</li>
-<li><a href="/integracao/ledi/estrutura_arquivos/dicionario-fvd.html">Ficha de Visita Domiciliar e Territorial</a>;</li>
-<li><a href="/integracao/ledi/estrutura_arquivos/dicionario-mca.html">Marcadores de Consumo Alimentar</a>;</li>
-<li><a href="/integracao/ledi/estrutura_arquivos/dicionario-fae.html">Ficha de Avaliação de Elegibilidade</a>;</li>
-<li><a href="/integracao/ledi/estrutura_arquivos/dicionario-fad.html">Ficha de Atendimento Domiciliar</a>;</li>
-<li><a href="/integracao/ledi/estrutura_arquivos/dicionario-fczm.html">Ficha complementar - Síndrome neurológica por Zika / Microcefalia</a>.</li>
+<li><p>O dicionário de dados do <strong>Cabeçalho</strong> é definido no documento <a href="/integracao/ledi/estrutura_arquivos/header-transport.html">Cabeçalho (headerTransport)</a>;</p></li>
+<li><p>Os <strong>Dados da ficha</strong> devem ser estruturados em registros Thrift/XML conforme descrito no documento <a href="/integracao/ledi/thrift-xsd.html">Registros Thrift / XSD por ficha</a>.</p></li>
 </ul>
-
-<h4 id="8-remetente">8. remetente</h4>
-
-<p>No caso do software de terceiro o campo remetente será igual ao campo Originadora.</p>
-
-<h4 id="9-originadora">9. originadora</h4>
-
-<p>Este campo indica qual instalação gerou/enviou o dado. Estas informações são representadas por um <a href="/integracao/ledi/estrutura_arquivos/camada-transporte.html#dadoinstalacao">DadoInstalacao</a>.</p>
-
-<h4 id="10-versao">10. versao</h4>
-
-<p>O campo versão deve ser informado conforme definido no documento <a href="/integracao/ledi/referencias/versao.html">Versão</a>.</p>
 
   </article>
 

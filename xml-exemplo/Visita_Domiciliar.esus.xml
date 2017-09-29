@@ -2,14 +2,14 @@
 <ns3:dadoTransporteTransportXml
 	xmlns:ns2="http://esus.ufsc.br/dadoinstalacao" xmlns:ns3="http://esus.ufsc.br/dadotransporte"
 	xmlns:ns4="http://esus.ufsc.br/fichavisitadomiciliarmaster">
-	<uuidDadoSerializado>6257621-4234c010-9e4a-4517-a7b3-35c3eb69a056</uuidDadoSerializado>
+	<uuidDadoSerializado>6257621-4234c010-9e4a-4517-a7b3-f4g3eb69a056</uuidDadoSerializado>
 	<tipoDadoSerializado>8</tipoDadoSerializado>
 	<codIbge>-</codIbge>
 	<cnesDadoSerializado>2257621</cnesDadoSerializado>
 	<ineDadoSerializado>1234500015</ineDadoSerializado>
 	<numLote>1</numLote>
 	<ns4:fichaVisitaDomiciliarMasterTransport>
-		<uuidFicha>6257621-4234c010-9e4a-4517-a7b3-35c3eb69a056</uuidFicha>
+		<uuidFicha>6257621-4234c010-9e4a-4517-a7b3-f4g3eb69a056</uuidFicha>
 		<tpCdsOrigem>1</tpCdsOrigem>
 		<headerTransport>
 			<profissionalCNS>115423907540000</profissionalCNS>
@@ -51,5 +51,5 @@
 		<cpfOuCnpj>11144477735</cpfOuCnpj>
 		<nomeOuRazaoSocial>Razao social</nomeOuRazaoSocial>
 	</ns2:originadora>
-	<versao major="2" minor="1" revision="0" />
+	<versao major="2" minor="2" revision="0" />
 </ns3:dadoTransporteTransportXml>

@@ -2,7 +2,7 @@
 <ns3:dadoTransporteTransportXml
 	xmlns:ns2="http://esus.ufsc.br/dadoinstalacao" xmlns:ns3="http://esus.ufsc.br/dadotransporte"
 	xmlns:ns4="http://esus.ufsc.br/fichaatividadecoletiva">
-	<uuidDadoSerializado>5444429-45108449-84a1-4b79-8370-c902cfcf7db6
+	<uuidDadoSerializado>5444429-45108449-84a1-4b79-8370-g402cfcf7db6
 	</uuidDadoSerializado>
 	<tipoDadoSerializado>6</tipoDadoSerializado>
 	<codIbge>4205407</codIbge>
@@ -10,7 +10,7 @@
 	<ineDadoSerializado>5511178891</ineDadoSerializado>
 	<numLote>1</numLote>
 	<ns4:fichaAtividadeColetivaTransport>
-		<uuidFicha>5444429-45108449-84a1-4b79-8370-c902cfcf7db6</uuidFicha>
+		<uuidFicha>5444429-45108449-84a1-4b79-8370-g402cfcf7db6</uuidFicha>
 		<inep>45646132</inep>
 		<numParticipantes>456</numParticipantes>
 		<numAvaliacoesAlteradas>1</numAvaliacoesAlteradas>
@@ -106,5 +106,5 @@
 		<versaoSistema>2.1.01</versaoSistema>
 		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:originadora>
-	<versao major="2" minor="1" revision="0" />
+	<versao major="2" minor="2" revision="0" />
 </ns3:dadoTransporteTransportXml>

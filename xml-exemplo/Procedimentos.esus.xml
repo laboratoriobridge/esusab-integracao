@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ns3:dadoTransporteTransportXml xmlns:ns2="http://esus.ufsc.br/dadoinstalacao" xmlns:ns3="http://esus.ufsc.br/dadotransporte" xmlns:ns4="http://esus.ufsc.br/fichaprocedimentomaster">
-	<uuidDadoSerializado>1111111-9fa75dbc-8a32-44e0-9b69-7fe57f8d0a2a</uuidDadoSerializado>
+	<uuidDadoSerializado>1111111-9fa75dbc-8a32-44e0-9b69-5gh57f8d0a2a</uuidDadoSerializado>
 	<tipoDadoSerializado>7</tipoDadoSerializado>
 	<codIbge>4205407</codIbge>
 	<cnesDadoSerializado>1111111</cnesDadoSerializado>
@@ -30,7 +30,7 @@
 			<procedimentos>ABEX004</procedimentos>
 			<outrosSiaProcedimentos>0301060037</outrosSiaProcedimentos>
 		</atendProcedimentos>
-		<uuidFicha>1111111-9fa75dbc-8a32-44e0-9b69-7fe57f8d0a2a</uuidFicha>
+		<uuidFicha>1111111-9fa75dbc-8a32-44e0-9b69-5gh57f8d0a2a</uuidFicha>
 		<tpCdsOrigem>1</tpCdsOrigem>
 		<numTotalAfericaoPa>1</numTotalAfericaoPa>
 		<numTotalAfericaoTemperatura>2</numTotalAfericaoTemperatura>
@@ -52,5 +52,5 @@
 		<cpfOuCnpj>01234567890</cpfOuCnpj>
 		<nomeOuRazaoSocial>ADMINISTRADOR INSTALAÇÃO</nomeOuRazaoSocial>
 	</ns2:originadora>
-	<versao major="2" minor="1" revision="0"/>
+	<versao major="2" minor="2" revision="0"/>
 </ns3:dadoTransporteTransportXml>

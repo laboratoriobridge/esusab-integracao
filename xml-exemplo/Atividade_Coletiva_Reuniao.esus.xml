@@ -2,7 +2,7 @@
 <ns3:dadoTransporteTransportXml
 	xmlns:ns2="http://esus.ufsc.br/dadoinstalacao" xmlns:ns3="http://esus.ufsc.br/dadotransporte"
 	xmlns:ns4="http://esus.ufsc.br/fichaatividadecoletiva">
-	<uuidDadoSerializado>5444429-9d5269e7-2690-4db0-90ce-bd5ede2b0074
+	<uuidDadoSerializado>5444429-9d5269e7-1f90-4db0-90ce-bd5ede2b0074
 	</uuidDadoSerializado>
 	<tipoDadoSerializado>6</tipoDadoSerializado>
 	<codIbge>4205407</codIbge>
@@ -10,7 +10,7 @@
 	<ineDadoSerializado>2015847261</ineDadoSerializado>
 	<numLote>3</numLote>
 	<ns4:fichaAtividadeColetivaTransport>
-		<uuidFicha>5444429-9d5269e7-2690-4db0-90ce-bd5ede2b0074</uuidFicha>
+		<uuidFicha>5444429-9d5269e7-1f90-4db0-90ce-bd5ede2b0074</uuidFicha>
 		<numParticipantes>30</numParticipantes>
 		<numAvaliacoesAlteradas>1</numAvaliacoesAlteradas>
 		<atividadeTipo>1</atividadeTipo>
@@ -52,5 +52,5 @@
 		<versaoSistema>2.1.05</versaoSistema>
 		<nomeBancoDados>Postgres</nomeBancoDados>
 	</ns2:originadora>
-	<versao major="2" minor="1" revision="0" />
+	<versao major="2" minor="2" revision="0" />
 </ns3:dadoTransporteTransportXml>

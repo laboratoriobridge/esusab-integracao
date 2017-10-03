@@ -2,7 +2,7 @@
 <ns3:dadoTransporteTransportXml
 	xmlns:ns2="http://esus.ufsc.br/dadoinstalacao" xmlns:ns3="http://esus.ufsc.br/dadotransporte"
 	xmlns:ns4="http://esus.ufsc.br/cadastroindividual">
-	<uuidDadoSerializado>5444428-d98d44f6-da82-4d75-a08f-d3969a826e13
+	<uuidDadoSerializado>5444428-d98d44f6-da82-4d75-a08f-d5f69a826e13
 	</uuidDadoSerializado>
 	<tipoDadoSerializado>2</tipoDadoSerializado>
 	<codIbge>4205407</codIbge>
@@ -62,8 +62,8 @@
 		<saidaCidadaoCadastro />
 		<statusTermoRecusaCadastroIndividualAtencaoBasica>false</statusTermoRecusaCadastroIndividualAtencaoBasica>
 		<tpCdsOrigem>1</tpCdsOrigem>
-		<uuid>5444428-d98d44f6-da82-4d75-a08f-d3969a826e13</uuid>
-		<uuidFichaOriginadora>5444428-d98d44f6-da82-4d75-a08f-d3969a826e13</uuidFichaOriginadora>
+		<uuid>5444428-d98d44f6-da82-4d75-a08f-d5f69a826e13</uuid>
+		<uuidFichaOriginadora>5444428-d98d44f6-da82-4d75-a08f-d5f69a826e13</uuidFichaOriginadora>
 		<headerTransport>
 			<profissionalCNS>705004017585855</profissionalCNS>
 			<cboCodigo_2002>322205</cboCodigo_2002>
@@ -89,5 +89,5 @@
 		<versaoSistema>2.1.05</versaoSistema>
 		<nomeBancoDados>Postgres</nomeBancoDados>
 	</ns2:originadora>
-	<versao major="2" minor="1" revision="0" />
+	<versao major="2" minor="2" revision="0" />
 </ns3:dadoTransporteTransportXml>

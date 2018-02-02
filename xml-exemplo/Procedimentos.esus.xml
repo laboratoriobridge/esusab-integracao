@@ -1,56 +1,66 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ns3:dadoTransporteTransportXml xmlns:ns2="http://esus.ufsc.br/dadoinstalacao" xmlns:ns3="http://esus.ufsc.br/dadotransporte" xmlns:ns4="http://esus.ufsc.br/fichaprocedimentomaster">
-	<uuidDadoSerializado>1111111-9fa75dbc-8a32-44e0-9b69-5gh57f8d0a2a</uuidDadoSerializado>
+	<uuidDadoSerializado>5444429-0fae865e-124b-411d-a5ab-8c4c23966046</uuidDadoSerializado>
 	<tipoDadoSerializado>7</tipoDadoSerializado>
 	<codIbge>4205407</codIbge>
-	<cnesDadoSerializado>1111111</cnesDadoSerializado>
+	<cnesDadoSerializado>5444429</cnesDadoSerializado>
 	<ineDadoSerializado>1382855330</ineDadoSerializado>
-	<numLote>197</numLote>
+	<numLote>1</numLote>
 	<ns4:fichaProcedimentoMasterTransport>
 		<headerTransport>
-			<profissionalCNS>898001160640507</profissionalCNS>
-			<cboCodigo_2002>225142</cboCodigo_2002>
-			<cnes>1111111</cnes>
+			<profissionalCNS>700609923387762</profissionalCNS>
+			<cboCodigo_2002>223505</cboCodigo_2002>
+			<cnes>5444429</cnes>
 			<ine>1382855330</ine>
-			<dataAtendimento>1465830000000</dataAtendimento>
+			<dataAtendimento>1517234400000</dataAtendimento>
 			<codigoIbgeMunicipio>4205407</codigoIbgeMunicipio>
 		</headerTransport>
 		<atendProcedimentos>
-			<numProntuario>123123123</numProntuario>
-			<cnsCidadao>876347714750004</cnsCidadao>
-			<dtNascimento>189356400000</dtNascimento>
+			<numProntuario>12</numProntuario>
+			<cnsCidadao>127301025020001</cnsCidadao>
+			<dtNascimento>953128800000</dtNascimento>
 			<sexo>0</sexo>
-			<localAtendimento>1</localAtendimento>
+			<localAtendimento>2</localAtendimento>
 			<turno>2</turno>
-			<statusEscutaInicialOrientacao>false</statusEscutaInicialOrientacao>
-			<procedimentos>ABPG021</procedimentos>
+			<statusEscutaInicialOrientacao>true</statusEscutaInicialOrientacao>
+			<procedimentos>ABPG019</procedimentos>
+			<procedimentos>ABPG040</procedimentos>
+			<procedimentos>ABPG027</procedimentos>
 			<procedimentos>ABPG001</procedimentos>
-			<procedimentos>ABPG031</procedimentos>
 			<procedimentos>ABPG022</procedimentos>
-			<procedimentos>ABEX004</procedimentos>
-			<outrosSiaProcedimentos>0301060037</outrosSiaProcedimentos>
+			<procedimentos>ABPG041</procedimentos>
+			<outrosSiaProcedimentos>0307020029</outrosSiaProcedimentos>
+			<outrosSiaProcedimentos>0101010010</outrosSiaProcedimentos>
 		</atendProcedimentos>
-		<uuidFicha>1111111-9fa75dbc-8a32-44e0-9b69-5gh57f8d0a2a</uuidFicha>
+		<uuidFicha>5444429-0fae865e-124b-411d-a5ab-8c4c23966046</uuidFicha>
 		<tpCdsOrigem>1</tpCdsOrigem>
-		<numTotalAfericaoPa>1</numTotalAfericaoPa>
-		<numTotalAfericaoTemperatura>2</numTotalAfericaoTemperatura>
-		<numTotalCurativoSimples>3</numTotalCurativoSimples>
-		<numTotalColetaMaterialParaExameLaboratorial>4</numTotalColetaMaterialParaExameLaboratorial>
+		<numTotalAfericaoPa>4</numTotalAfericaoPa>
+		<numTotalAfericaoTemperatura>3</numTotalAfericaoTemperatura>
+		<numTotalCurativoSimples>2</numTotalCurativoSimples>
+		<numTotalColetaMaterialParaExameLaboratorial>5</numTotalColetaMaterialParaExameLaboratorial>
 		<numTotalGlicemiaCapilar>5</numTotalGlicemiaCapilar>
-		<numTotalMedicaoAltura>6</numTotalMedicaoAltura>
-		<numTotalMedicaoPeso>7</numTotalMedicaoPeso>
+		<numTotalMedicaoAltura>5</numTotalMedicaoAltura>
+		<numTotalMedicaoPeso>5</numTotalMedicaoPeso>
 	</ns4:fichaProcedimentoMasterTransport>
 	<ns2:remetente>
 		<contraChave>TREINAMENTO</contraChave>
 		<uuidInstalacao>TREINAMENTO</uuidInstalacao>
 		<cpfOuCnpj>01234567890</cpfOuCnpj>
 		<nomeOuRazaoSocial>ADMINISTRADOR INSTALAÇÃO</nomeOuRazaoSocial>
+		<fone>8216756527</fone>
+		<email>prof@esus.br</email>
+		<versaoSistema>3.0.01</versaoSistema>
+		<nomeBancoDados>Postgres</nomeBancoDados>
 	</ns2:remetente>
 	<ns2:originadora>
 		<contraChave>TREINAMENTO</contraChave>
 		<uuidInstalacao>TREINAMENTO</uuidInstalacao>
 		<cpfOuCnpj>01234567890</cpfOuCnpj>
 		<nomeOuRazaoSocial>ADMINISTRADOR INSTALAÇÃO</nomeOuRazaoSocial>
+		<fone>8216756527</fone>
+		<email>prof@esus.br</email>
+		<versaoSistema>3.0.01</versaoSistema>
+		<nomeBancoDados>Postgres</nomeBancoDados>
 	</ns2:originadora>
-	<versao major="2" minor="2" revision="0"/>
+	<versao major="3" minor="0" revision="0" />
 </ns3:dadoTransporteTransportXml>

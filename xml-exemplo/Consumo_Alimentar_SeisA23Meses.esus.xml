@@ -1,31 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<ns3:dadoTransporteTransportXml
-	xmlns:ns2="http://esus.ufsc.br/dadoinstalacao" xmlns:ns3="http://esus.ufsc.br/dadotransporte"
-	xmlns:ns4="http://esus.ufsc.br/fichaconsumoalimentar">
-	<uuidDadoSerializado>5444429-b7416e97-aa55-4a87-afd0-18ee337c36b7
-	</uuidDadoSerializado>
+<ns3:dadoTransporteTransportXml xmlns:ns2="http://esus.ufsc.br/dadoinstalacao" xmlns:ns3="http://esus.ufsc.br/dadotransporte" xmlns:ns4="http://esus.ufsc.br/fichaconsumoalimentar">
+	<uuidDadoSerializado>5444429-6f1a9651-37bd-4639-bba9-ea41b52053b0</uuidDadoSerializado>
 	<tipoDadoSerializado>12</tipoDadoSerializado>
 	<codIbge>4205407</codIbge>
 	<cnesDadoSerializado>5444429</cnesDadoSerializado>
-	<ineDadoSerializado>2015847261</ineDadoSerializado>
-	<numLote>3</numLote>
+	<numLote>1</numLote>
 	<ns4:fichaConsumoAlimentarTransport>
 		<headerTransport>
-			<profissionalCNS>703006821796679</profissionalCNS>
-			<cboCodigo_2002>223208</cboCodigo_2002>
+			<profissionalCNS>700609923387762</profissionalCNS>
+			<cboCodigo_2002>225130</cboCodigo_2002>
 			<cnes>5444429</cnes>
-			<ine>2015847261</ine>
-			<dataAtendimento>1475766000000</dataAtendimento>
+			<dataAtendimento>1517234400000</dataAtendimento>
 			<codigoIbgeMunicipio>4205407</codigoIbgeMunicipio>
 		</headerTransport>
-		<cnsCidadao>898001299046721</cnsCidadao>
-		<identificacaoUsuario>MARIANA MENDES</identificacaoUsuario>
-		<dataNascimento>1441206000000</dataNascimento>
+		<cnsCidadao>127301025020001</cnsCidadao>
+		<identificacaoUsuario>MARTA SILVA</identificacaoUsuario>
+		<dataNascimento>1493992800000</dataNascimento>
 		<sexo>1</sexo>
-		<localAtendimento>2</localAtendimento>
+		<localAtendimento>1</localAtendimento>
 		<perguntasQuestionarioCriancasDeSeisVinteTresMeses>
 			<pergunta>A_CRIANCA_ONTEM_TOMOU_LEITE_PEITO</pergunta>
-			<respostaUnicaEscolha>NAO</respostaUnicaEscolha>
+			<respostaUnicaEscolha>SIM</respostaUnicaEscolha>
 		</perguntasQuestionarioCriancasDeSeisVinteTresMeses>
 		<perguntasQuestionarioCriancasDeSeisVinteTresMeses>
 			<pergunta>ONTEM_A_CRIANCA_COMEU_FRUTA_INTEIRA_PEDACO_AMASSADO</pergunta>
@@ -33,7 +28,7 @@
 		</perguntasQuestionarioCriancasDeSeisVinteTresMeses>
 		<perguntasQuestionarioCriancasDeSeisVinteTresMeses>
 			<pergunta>SE_SIM_QUANTAS_VEZES</pergunta>
-			<respostaUnicaEscolha>UMA_VEZ</respostaUnicaEscolha>
+			<respostaUnicaEscolha>DUAS_VEZES</respostaUnicaEscolha>
 		</perguntasQuestionarioCriancasDeSeisVinteTresMeses>
 		<perguntasQuestionarioCriancasDeSeisVinteTresMeses>
 			<pergunta>ONTEM_A_CRIANCA_COMEU_COMIDA_DE_SAL</pergunta>
@@ -41,7 +36,7 @@
 		</perguntasQuestionarioCriancasDeSeisVinteTresMeses>
 		<perguntasQuestionarioCriancasDeSeisVinteTresMeses>
 			<pergunta>SE_COMEU_COMIDA_DE_SAL_QUANTAS_VEZES</pergunta>
-			<respostaUnicaEscolha>DUAS_VEZES</respostaUnicaEscolha>
+			<respostaUnicaEscolha>TRES_VEZES_OU_MAIS</respostaUnicaEscolha>
 		</perguntasQuestionarioCriancasDeSeisVinteTresMeses>
 		<perguntasQuestionarioCriancasDeSeisVinteTresMeses>
 			<pergunta>SE_SIM_ESSA_COMIDA_FOI_OFERECIDA</pergunta>
@@ -53,74 +48,78 @@
 		</perguntasQuestionarioCriancasDeSeisVinteTresMeses>
 		<perguntasQuestionarioCriancasDeSeisVinteTresMeses>
 			<pergunta>MINGAU_COM_LEITE</pergunta>
-			<respostaUnicaEscolha>NAO</respostaUnicaEscolha>
+			<respostaUnicaEscolha>SIM</respostaUnicaEscolha>
 		</perguntasQuestionarioCriancasDeSeisVinteTresMeses>
 		<perguntasQuestionarioCriancasDeSeisVinteTresMeses>
 			<pergunta>IOGURTE</pergunta>
-			<respostaUnicaEscolha>SIM</respostaUnicaEscolha>
+			<respostaUnicaEscolha>NAO_SABE</respostaUnicaEscolha>
 		</perguntasQuestionarioCriancasDeSeisVinteTresMeses>
 		<perguntasQuestionarioCriancasDeSeisVinteTresMeses>
 			<pergunta>LEGUMES</pergunta>
-			<respostaUnicaEscolha>NAO</respostaUnicaEscolha>
+			<respostaUnicaEscolha>SIM</respostaUnicaEscolha>
 		</perguntasQuestionarioCriancasDeSeisVinteTresMeses>
 		<perguntasQuestionarioCriancasDeSeisVinteTresMeses>
 			<pergunta>VEGETAL_OU_FRUTAS_COR_ALARANJADA_OU_FOLHAS_ESCURAS</pergunta>
-			<respostaUnicaEscolha>SIM</respostaUnicaEscolha>
+			<respostaUnicaEscolha>NAO</respostaUnicaEscolha>
 		</perguntasQuestionarioCriancasDeSeisVinteTresMeses>
 		<perguntasQuestionarioCriancasDeSeisVinteTresMeses>
 			<pergunta>VERDURA_DE_FOLHA</pergunta>
-			<respostaUnicaEscolha>NAO</respostaUnicaEscolha>
+			<respostaUnicaEscolha>NAO_SABE</respostaUnicaEscolha>
 		</perguntasQuestionarioCriancasDeSeisVinteTresMeses>
 		<perguntasQuestionarioCriancasDeSeisVinteTresMeses>
 			<pergunta>CARNE</pergunta>
-			<respostaUnicaEscolha>NAO_SABE</respostaUnicaEscolha>
+			<respostaUnicaEscolha>SIM</respostaUnicaEscolha>
 		</perguntasQuestionarioCriancasDeSeisVinteTresMeses>
 		<perguntasQuestionarioCriancasDeSeisVinteTresMeses>
 			<pergunta>FIGADO</pergunta>
-			<respostaUnicaEscolha>NAO</respostaUnicaEscolha>
+			<respostaUnicaEscolha>SIM</respostaUnicaEscolha>
 		</perguntasQuestionarioCriancasDeSeisVinteTresMeses>
 		<perguntasQuestionarioCriancasDeSeisVinteTresMeses>
 			<pergunta>FEIJAO</pergunta>
-			<respostaUnicaEscolha>NAO</respostaUnicaEscolha>
+			<respostaUnicaEscolha>SIM</respostaUnicaEscolha>
 		</perguntasQuestionarioCriancasDeSeisVinteTresMeses>
 		<perguntasQuestionarioCriancasDeSeisVinteTresMeses>
 			<pergunta>ARROZ_BATATA_INHAME_MANDIOCA_FARINHA_MACARRAO</pergunta>
-			<respostaUnicaEscolha>SIM</respostaUnicaEscolha>
+			<respostaUnicaEscolha>NAO_SABE</respostaUnicaEscolha>
 		</perguntasQuestionarioCriancasDeSeisVinteTresMeses>
 		<perguntasQuestionarioCriancasDeSeisVinteTresMeses>
 			<pergunta>HAMBURGUER_E_OU_EMBUTIDOS</pergunta>
-			<respostaUnicaEscolha>NAO_SABE</respostaUnicaEscolha>
+			<respostaUnicaEscolha>NAO</respostaUnicaEscolha>
 		</perguntasQuestionarioCriancasDeSeisVinteTresMeses>
 		<perguntasQuestionarioCriancasDeSeisVinteTresMeses>
 			<pergunta>BEBIDAS_ADOCADAS</pergunta>
-			<respostaUnicaEscolha>NAO_SABE</respostaUnicaEscolha>
+			<respostaUnicaEscolha>NAO</respostaUnicaEscolha>
 		</perguntasQuestionarioCriancasDeSeisVinteTresMeses>
 		<perguntasQuestionarioCriancasDeSeisVinteTresMeses>
 			<pergunta>MACARRAO_INSTANTANEO_SALGADINHOS_BISCOITOS</pergunta>
-			<respostaUnicaEscolha>SIM</respostaUnicaEscolha>
+			<respostaUnicaEscolha>NAO</respostaUnicaEscolha>
 		</perguntasQuestionarioCriancasDeSeisVinteTresMeses>
 		<perguntasQuestionarioCriancasDeSeisVinteTresMeses>
 			<pergunta>BISCOITO_RECHEADO_DOCES_OU_GULOSEIMAS</pergunta>
 			<respostaUnicaEscolha>SIM</respostaUnicaEscolha>
 		</perguntasQuestionarioCriancasDeSeisVinteTresMeses>
-		<uuidFicha>5444429-b7416e97-aa55-4a87-afd0-18ee337c36b7</uuidFicha>
+		<uuidFicha>5444429-6f1a9651-37bd-4639-bba9-ea41b52053b0</uuidFicha>
 		<tpCdsOrigem>1</tpCdsOrigem>
 	</ns4:fichaConsumoAlimentarTransport>
 	<ns2:remetente>
 		<contraChave>TREINAMENTO</contraChave>
 		<uuidInstalacao>TREINAMENTO</uuidInstalacao>
 		<cpfOuCnpj>01234567890</cpfOuCnpj>
-		<nomeOuRazaoSocial>ADMINISTRADOR DA INSTALAÇÃO</nomeOuRazaoSocial>
-		<versaoSistema>2.1.05</versaoSistema>
+		<nomeOuRazaoSocial>ADMINISTRADOR INSTALAÇÃO</nomeOuRazaoSocial>
+		<fone>8216756527</fone>
+		<email>prof@esus.br</email>
+		<versaoSistema>3.0.01</versaoSistema>
 		<nomeBancoDados>Postgres</nomeBancoDados>
 	</ns2:remetente>
 	<ns2:originadora>
 		<contraChave>TREINAMENTO</contraChave>
 		<uuidInstalacao>TREINAMENTO</uuidInstalacao>
 		<cpfOuCnpj>01234567890</cpfOuCnpj>
-		<nomeOuRazaoSocial>ADMINISTRADOR DA INSTALAÇÃO</nomeOuRazaoSocial>
-		<versaoSistema>2.1.05</versaoSistema>
+		<nomeOuRazaoSocial>ADMINISTRADOR INSTALAÇÃO</nomeOuRazaoSocial>
+		<fone>8216756527</fone>
+		<email>prof@esus.br</email>
+		<versaoSistema>3.0.01</versaoSistema>
 		<nomeBancoDados>Postgres</nomeBancoDados>
 	</ns2:originadora>
-	<versao major="2" minor="2" revision="0" />
+	<versao major="3" minor="0" revision="0" />
 </ns3:dadoTransporteTransportXml>

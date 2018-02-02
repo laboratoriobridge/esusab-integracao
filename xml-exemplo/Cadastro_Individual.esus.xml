@@ -1,75 +1,106 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<ns3:dadoTransporteTransportXml
-	xmlns:ns2="http://esus.ufsc.br/dadoinstalacao" xmlns:ns3="http://esus.ufsc.br/dadotransporte"
-	xmlns:ns4="http://esus.ufsc.br/cadastroindividual">
-	<uuidDadoSerializado>5444428-d98d44f6-da82-4d75-a08f-d5f69a826e13
-	</uuidDadoSerializado>
+<ns3:dadoTransporteTransportXml xmlns:ns2="http://esus.ufsc.br/dadoinstalacao" xmlns:ns3="http://esus.ufsc.br/dadotransporte" xmlns:ns4="http://esus.ufsc.br/cadastroindividual">
+	<uuidDadoSerializado>5444429-0fee3dd1-c44c-417c-bc35-984326843cd7</uuidDadoSerializado>
 	<tipoDadoSerializado>2</tipoDadoSerializado>
 	<codIbge>4205407</codIbge>
-	<cnesDadoSerializado>5444428</cnesDadoSerializado>
-	<ineDadoSerializado>7023672534</ineDadoSerializado>
-	<numLote>3</numLote>
+	<cnesDadoSerializado>5444429</cnesDadoSerializado>
+	<numLote>1</numLote>
 	<ns4:cadastroIndividualTransport>
 		<condicoesDeSaude>
-			<descricaoCausaInternacaoEm12Meses>APENDICITE</descricaoCausaInternacaoEm12Meses>
-			<doencaRespiratoria>33</doencaRespiratoria>
+			<descricaoCausaInternacaoEm12Meses>gripe</descricaoCausaInternacaoEm12Meses>
+			<descricaoOutraCondicao1>alérgico</descricaoOutraCondicao1>
+			<descricaoOutraCondicao2>intolerante a lactose</descricaoOutraCondicao2>
+			<descricaoPlantasMedicinaisUsadas>macela e boldo</descricaoPlantasMedicinaisUsadas>
+			<doencaCardiaca>26</doencaCardiaca>
+			<doencaRespiratoria>30</doencaRespiratoria>
+			<doencaRins>27</doencaRins>
+			<maternidadeDeReferencia>maternidade</maternidadeDeReferencia>
 			<situacaoPeso>22</situacaoPeso>
-			<statusEhDependenteAlcool>true</statusEhDependenteAlcool>
+			<statusEhDependenteAlcool>false</statusEhDependenteAlcool>
 			<statusEhDependenteOutrasDrogas>false</statusEhDependenteOutrasDrogas>
-			<statusEhFumante>true</statusEhFumante>
+			<statusEhFumante>false</statusEhFumante>
+			<statusEhGestante>true</statusEhGestante>
+			<statusEstaAcamado>false</statusEstaAcamado>
+			<statusEstaDomiciliado>false</statusEstaDomiciliado>
 			<statusTemDiabetes>false</statusTemDiabetes>
 			<statusTemDoencaRespiratoria>true</statusTemDoencaRespiratoria>
 			<statusTemHanseniase>false</statusTemHanseniase>
 			<statusTemHipertensaoArterial>false</statusTemHipertensaoArterial>
 			<statusTemTeveCancer>false</statusTemTeveCancer>
+			<statusTemTeveDoencasRins>true</statusTemTeveDoencasRins>
 			<statusTemTuberculose>false</statusTemTuberculose>
 			<statusTeveAvcDerrame>false</statusTeveAvcDerrame>
-			<statusTeveDoencaCardiaca>false</statusTeveDoencaCardiaca>
+			<statusTeveDoencaCardiaca>true</statusTeveDoencaCardiaca>
 			<statusTeveInfarto>false</statusTeveInfarto>
 			<statusTeveInternadoEm12Meses>true</statusTeveInternadoEm12Meses>
+			<statusUsaPlantaMedicinais>true</statusUsaPlantaMedicinais>
+			<statusDiagnosticoMental>true</statusDiagnosticoMental>
 		</condicoesDeSaude>
 		<emSituacaoDeRua>
-			<statusSituacaoRua>false</statusSituacaoRua>
+			<grauParentescoFamiliarFrequentado>avós</grauParentescoFamiliarFrequentado>
+			<higienePessoalSituacaoRua>44</higienePessoalSituacaoRua>
+			<higienePessoalSituacaoRua>42</higienePessoalSituacaoRua>
+			<origemAlimentoSituacaoRua>40</origemAlimentoSituacaoRua>
+			<origemAlimentoSituacaoRua>37</origemAlimentoSituacaoRua>
+			<outraInstituicaoQueAcompanha>outra instituição</outraInstituicaoQueAcompanha>
+			<quantidadeAlimentacoesAoDiaSituacaoRua>35</quantidadeAlimentacoesAoDiaSituacaoRua>
+			<statusAcompanhadoPorOutraInstituicao>true</statusAcompanhadoPorOutraInstituicao>
+			<statusPossuiReferenciaFamiliar>false</statusPossuiReferenciaFamiliar>
+			<statusRecebeBeneficio>false</statusRecebeBeneficio>
+			<statusSituacaoRua>true</statusSituacaoRua>
+			<statusTemAcessoHigienePessoalSituacaoRua>true</statusTemAcessoHigienePessoalSituacaoRua>
+			<statusVisitaFamiliarFrequentemente>true</statusVisitaFamiliarFrequentemente>
+			<tempoSituacaoRua>17</tempoSituacaoRua>
 		</emSituacaoDeRua>
 		<fichaAtualizada>false</fichaAtualizada>
 		<identificacaoUsuarioCidadao>
-			<codigoIbgeMunicipioNascimento>4120655</codigoIbgeMunicipioNascimento>
-			<dataNascimentoCidadao>-252406800000</dataNascimentoCidadao>
-			<desconheceNomeMae>true</desconheceNomeMae>
+			<codigoIbgeMunicipioNascimento>3100203</codigoIbgeMunicipioNascimento>
+			<dataNascimentoCidadao>978357600000</dataNascimentoCidadao>
+			<desconheceNomeMae>false</desconheceNomeMae>
+			<emailCidadao>gmail@gmail.com</emailCidadao>
 			<nacionalidadeCidadao>1</nacionalidadeCidadao>
-			<nomeCidadao>JOSÉ DA SILVA</nomeCidadao>
+			<nomeCidadao>INES DOS SANTOS</nomeCidadao>
+			<nomeMaeCidadao>MARTA DOS SANTOS</nomeMaeCidadao>
+			<cnsCidadao>216071536850003</cnsCidadao>
+			<telefoneCelular>99999999999</telefoneCelular>
 			<paisNascimento>31</paisNascimento>
-			<racaCorCidadao>4</racaCorCidadao>
-			<sexoCidadao>0</sexoCidadao>
-			<desconheceNomePai>true</desconheceNomePai>
-			<microArea>FA</microArea>
-			<stForaArea>true</stForaArea>
+			<racaCorCidadao>5</racaCorCidadao>
+			<sexoCidadao>1</sexoCidadao>
+			<statusEhResponsavel>true</statusEhResponsavel>
+			<etnia>5</etnia>
+			<nomePaiCidadao>PEDRO DOS SANTOS</nomePaiCidadao>
+			<desconheceNomePai>false</desconheceNomePai>
+			<microArea>01</microArea>
+			<stForaArea>false</stForaArea>
 		</identificacaoUsuarioCidadao>
 		<informacoesSocioDemograficas>
-			<grauInstrucaoCidadao>62</grauInstrucaoCidadao>
-			<ocupacaoCodigoCbo2002>848505</ocupacaoCodigoCbo2002>
+			<deficienciasCidadao>12</deficienciasCidadao>
+			<deficienciasCidadao>16</deficienciasCidadao>
+			<grauInstrucaoCidadao>55</grauInstrucaoCidadao>
+			<ocupacaoCodigoCbo2002>252105</ocupacaoCodigoCbo2002>
 			<orientacaoSexualCidadao>148</orientacaoSexualCidadao>
-			<situacaoMercadoTrabalhoCidadao>67</situacaoMercadoTrabalhoCidadao>
+			<povoComunidadeTradicional>CERRADO</povoComunidadeTradicional>
+			<situacaoMercadoTrabalhoCidadao>66</situacaoMercadoTrabalhoCidadao>
 			<statusDesejaInformarOrientacaoSexual>true</statusDesejaInformarOrientacaoSexual>
-			<statusFrequentaBenzedeira>false</statusFrequentaBenzedeira>
-			<statusFrequentaEscola>false</statusFrequentaEscola>
-			<statusMembroPovoComunidadeTradicional>false</statusMembroPovoComunidadeTradicional>
-			<statusParticipaGrupoComunitario>false</statusParticipaGrupoComunitario>
-			<statusPossuiPlanoSaudePrivado>false</statusPossuiPlanoSaudePrivado>
-			<statusTemAlgumaDeficiencia>false</statusTemAlgumaDeficiencia>
-			<statusDesejaInformarIdentidadeGenero>false</statusDesejaInformarIdentidadeGenero>
+			<statusFrequentaBenzedeira>true</statusFrequentaBenzedeira>
+			<statusFrequentaEscola>true</statusFrequentaEscola>
+			<statusMembroPovoComunidadeTradicional>true</statusMembroPovoComunidadeTradicional>
+			<statusParticipaGrupoComunitario>true</statusParticipaGrupoComunitario>
+			<statusPossuiPlanoSaudePrivado>true</statusPossuiPlanoSaudePrivado>
+			<statusTemAlgumaDeficiencia>true</statusTemAlgumaDeficiencia>
+			<identidadeGeneroCidadao>151</identidadeGeneroCidadao>
+			<statusDesejaInformarIdentidadeGenero>true</statusDesejaInformarIdentidadeGenero>
 		</informacoesSocioDemograficas>
 		<saidaCidadaoCadastro />
 		<statusTermoRecusaCadastroIndividualAtencaoBasica>false</statusTermoRecusaCadastroIndividualAtencaoBasica>
 		<tpCdsOrigem>1</tpCdsOrigem>
-		<uuid>5444428-d98d44f6-da82-4d75-a08f-d5f69a826e13</uuid>
-		<uuidFichaOriginadora>5444428-d98d44f6-da82-4d75-a08f-d5f69a826e13</uuidFichaOriginadora>
+		<uuid>5444429-0fee3dd1-c44c-417c-bc35-984326843cd7</uuid>
+		<uuidFichaOriginadora>5444429-0fee3dd1-c44c-417c-bc35-984326843cd7</uuidFichaOriginadora>
 		<headerTransport>
-			<profissionalCNS>705004017585855</profissionalCNS>
-			<cboCodigo_2002>322205</cboCodigo_2002>
-			<cnes>5444428</cnes>
-			<ine>7023672534</ine>
-			<dataAtendimento>1476457200000</dataAtendimento>
+			<profissionalCNS>700609923387762</profissionalCNS>
+			<cboCodigo_2002>515105</cboCodigo_2002>
+			<cnes>5444429</cnes>
+			<dataAtendimento>1517148000000</dataAtendimento>
 			<codigoIbgeMunicipio>4205407</codigoIbgeMunicipio>
 		</headerTransport>
 	</ns4:cadastroIndividualTransport>
@@ -77,17 +108,21 @@
 		<contraChave>TREINAMENTO</contraChave>
 		<uuidInstalacao>TREINAMENTO</uuidInstalacao>
 		<cpfOuCnpj>01234567890</cpfOuCnpj>
-		<nomeOuRazaoSocial>ADMINISTRADOR DA INSTALAÇÃO</nomeOuRazaoSocial>
-		<versaoSistema>2.1.05</versaoSistema>
+		<nomeOuRazaoSocial>ADMINISTRADOR INSTALAÇÃO</nomeOuRazaoSocial>
+		<fone>8216756527</fone>
+		<email>prof@esus.br</email>
+		<versaoSistema>3.0.01</versaoSistema>
 		<nomeBancoDados>Postgres</nomeBancoDados>
 	</ns2:remetente>
 	<ns2:originadora>
 		<contraChave>TREINAMENTO</contraChave>
 		<uuidInstalacao>TREINAMENTO</uuidInstalacao>
 		<cpfOuCnpj>01234567890</cpfOuCnpj>
-		<nomeOuRazaoSocial>ADMINISTRADOR DA INSTALAÇÃO</nomeOuRazaoSocial>
-		<versaoSistema>2.1.05</versaoSistema>
+		<nomeOuRazaoSocial>ADMINISTRADOR INSTALAÇÃO</nomeOuRazaoSocial>
+		<fone>8216756527</fone>
+		<email>prof@esus.br</email>
+		<versaoSistema>3.0.01</versaoSistema>
 		<nomeBancoDados>Postgres</nomeBancoDados>
 	</ns2:originadora>
-	<versao major="2" minor="2" revision="0" />
+	<versao major="3" minor="0" revision="0" />
 </ns3:dadoTransporteTransportXml>

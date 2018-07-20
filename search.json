@@ -94,6 +94,15 @@
     {
       
           "dir"      : "ledi",
+          "title"    : "Ficha de Vacinação",
+          "url"      : "/integracao/ledi/estrutura_arquivos/dicionario-fv.html"
+          
+      
+    },
+    
+    {
+      
+          "dir"      : "ledi",
           "title"    : "Ficha de Visita Domiciliar e Territorial",
           "url"      : "/integracao/ledi/estrutura_arquivos/dicionario-fvd.html"
           
@@ -130,7 +139,7 @@
     {
       
           "dir"      : "ledi",
-          "title"    : "Layout e-SUS AB de Dados e Interface Versão 2.2",
+          "title"    : "Layout e-SUS AB de Dados e Interface Versão 3.0",
           "url"      : "/integracao/ledi/index.html"
           
       
@@ -148,7 +157,7 @@
     {
       
           "dir"      : "ledi",
-          "title"    : "Principais alterações da v2.1.1 para a v2.2",
+          "title"    : "Principais alterações da v2.2 para a v3.0",
           "url"      : "/integracao/ledi/principais_alteracoes.html"
           
       
@@ -240,6 +249,15 @@
           "dir"      : "ledi",
           "title"    : "Regras",
           "url"      : "/integracao/ledi/regras/index.html"
+          
+      
+    },
+    
+    {
+      
+          "dir"      : "ledi",
+          "title"    : "Regras de vacinação",
+          "url"      : "/integracao/ledi/regras/valdidar_regras_vacinacao.html"
           
       
     },

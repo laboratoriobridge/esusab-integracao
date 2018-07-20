@@ -28,7 +28,7 @@
       <img src="/integracao/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Layout e-SUS AB de Dados e Interface (LEDI AB)</span>
       
-        <span class="label">versão 2.2.0</span>
+        <span class="label">versão 3.0.0</span>
       
     </a>
 
@@ -74,7 +74,7 @@
           
         
           
-            <li><a title="Layout e-SUS AB de Dados e Interface Versão 2.2" href="/integracao/ledi/index.html">Layout e-SUS AB de Dados e Interface Versão 2.2</a></li>
+            <li><a title="Layout e-SUS AB de Dados e Interface Versão 3.0" href="/integracao/ledi/index.html">Layout e-SUS AB de Dados e Interface Versão 3.0</a></li>
           
         
           
@@ -128,9 +128,9 @@
   <ul>
     
       <li>
-        <a title="Voltar para Layout e-SUS AB de Dados e Interface Versão 2.2" href="/integracao/ledi/index.html" class="back-link">
+        <a title="Voltar para Layout e-SUS AB de Dados e Interface Versão 3.0" href="/integracao/ledi/index.html" class="back-link">
           <i class="icon icon-back"></i> Voltar
-          <small>(Layout e-SUS AB de Dados e Interface Versão 2.2)</small>
+          <small>(Layout e-SUS AB de Dados e Interface Versão 3.0)</small>
         </a>
       </li>
     
@@ -185,6 +185,13 @@
           
             <a title="Ficha de Atividade Coletiva" href="/integracao/ledi/estrutura_arquivos/dicionario-fac.html">
               Ficha de Atividade Coletiva
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha de Vacinação" href="/integracao/ledi/estrutura_arquivos/dicionario-fv.html">
+              Ficha de Vacinação
             </a>
           </li>
         
@@ -249,7 +256,7 @@
     <p class="post-meta">
       <a class="btn" href="/integracao/pdf.html?include=/ledi/estrutura_arquivos/dicionario-fczm.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 22/09/2017</span>
+        <span class="label" title="Data da última modificação">Alterado em 20/07/2018</span>
       
     </p>
   </header>
@@ -417,12 +424,14 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> </p>
+<p><strong>Regras:</strong></p>
 
 <ul>
-<li>Não pode ser anterior em 20 anos ou posterior a <a href="/integracao/ledi/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>.</li>
+<li>Não pode ser anterior em 20 anos ou posterior a <a href="/integracao/ledi/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>;</li>
 <li>Se este campo for preenchido, o campo <a href="#8-coresultadotesteolhinho">coResultadoTesteOlhinho</a> é obrigatório.</li>
 </ul>
+
+<p><strong>Referências:</strong> A data deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos . Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
 
 <h3 id="8-coresultadotesteolhinho">#8 coResultadoTesteOlhinho</h3>
 
@@ -447,7 +456,7 @@
 <p><strong>Regras:</strong></p>
 
 <ul>
-<li>É obrigatório o preenchimento de pelo menos um destes campos: <code>8</code>, <code>10</code>, <code>12</code>, <code>14</code>, <code>16</code> e <code>18</code>.</li>
+<li>É obrigatório o preenchimento de pelo menos um destes campos: <code>8</code>, <code>10</code>, <code>12</code>, <code>14</code>, <code>16</code> e <code>18</code>;</li>
 <li>Se este campo for preenchido, o campo <a href="#7-datarealizacaotesteolhinho">dataRealizacaoTesteOlhinho</a> é obrigatório.</li>
 </ul>
 
@@ -473,14 +482,18 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> </p>
+<p><strong>Regras:</strong></p>
 
 <ul>
-<li>Não pode ser anterior em 20 anos ou posterior a <a href="/integracao/ledi/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>.</li>
+<li>Não pode ser anterior em 20 anos ou posterior a <a href="/integracao/ledi/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>;</li>
 <li>Se este campo for preenchido, o campo <a href="#10-coresultadoexamefundoolho">coResultadoExameFundoOlho</a> é obrigatório.</li>
 </ul>
 
-<p><strong>Referências:</strong> O código deste exame é compatível com a competência 03/2017 da tabela do SIGTAP, disponível em: <a href="http://sigtap.datasus.gov.br/tabela-unificada/app/sec/procedimento/publicados/consultar">Tabela unificada SIGTAP</a>.</p>
+<p><strong>Referências:</strong></p>
+
+<p><strong>1.</strong> O código deste exame é compatível com a competência 04/2018 da tabela do SIGTAP, disponível em: <a href="http://sigtap.datasus.gov.br/tabela-unificada/app/sec/procedimento/publicados/consultar">Tabela unificada SIGTAP</a>.</p>
+
+<p><strong>2.</strong> A data deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos . Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
 
 <h3 id="10-coresultadoexamefundoolho">#10 coResultadoExameFundoOlho</h3>
 
@@ -505,7 +518,7 @@
 <p><strong>Regras:</strong></p>
 
 <ul>
-<li>É obrigatório o preenchimento de pelo menos um destes campos: <code>8</code>, <code>10</code>, <code>12</code>, <code>14</code>, <code>16</code> e <code>18</code>.</li>
+<li>É obrigatório o preenchimento de pelo menos um destes campos: <code>8</code>, <code>10</code>, <code>12</code>, <code>14</code>, <code>16</code> e <code>18</code>;</li>
 <li>Se este campo for preenchido, o campo <a href="#9-datarealizacaoexamefundoolho">dataRealizacaoExameFundoOlho</a> é obrigatório.</li>
 </ul>
 
@@ -531,14 +544,18 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> </p>
+<p><strong>Regras:</strong></p>
 
 <ul>
-<li>Não pode ser anterior em 20 anos ou posterior a <a href="/integracao/ledi/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>.</li>
+<li>Não pode ser anterior em 20 anos ou posterior a <a href="/integracao/ledi/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>;</li>
 <li>Se este campo for preenchido, o campo <a href="#12-coresultadotesteorelhinha">coResultadoTesteOrelhinha</a> é obrigatório.</li>
 </ul>
 
-<p><strong>Referências:</strong> O código deste exame é compatível com a competência 03/2017 da tabela do SIGTAP, disponível em: <a href="http://sigtap.datasus.gov.br/tabela-unificada/app/sec/procedimento/publicados/consultar">Tabela unificada SIGTAP</a>.</p>
+<p><strong>Referências:</strong></p>
+
+<p><strong>1.</strong> O código deste exame é compatível com a competência 04/2018 da tabela do SIGTAP, disponível em: <a href="http://sigtap.datasus.gov.br/tabela-unificada/app/sec/procedimento/publicados/consultar">Tabela unificada SIGTAP</a>.</p>
+
+<p><strong>2.</strong> A data deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos . Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
 
 <h3 id="12-coresultadotesteorelhinha">#12 coResultadoTesteOrelhinha</h3>
 
@@ -563,7 +580,7 @@
 <p><strong>Regras:</strong></p>
 
 <ul>
-<li>É obrigatório o preenchimento de pelo menos um destes campos: <code>8</code>, <code>10</code>, <code>12</code>, <code>14</code>, <code>16</code> e <code>18</code>.</li>
+<li>É obrigatório o preenchimento de pelo menos um destes campos: <code>8</code>, <code>10</code>, <code>12</code>, <code>14</code>, <code>16</code> e <code>18</code>;</li>
 <li>Se este campo for preenchido, o campo <a href="#11-datarealizacaotesteorelhinha">dataRealizacaoTesteOrelhinha</a> é obrigatório.</li>
 </ul>
 
@@ -589,14 +606,18 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> </p>
+<p><strong>Regras:</strong></p>
 
 <ul>
-<li>Não pode ser anterior em 20 anos ou posterior a <a href="/integracao/ledi/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>.</li>
+<li>Não pode ser anterior em 20 anos ou posterior a <a href="/integracao/ledi/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>;</li>
 <li>Se este campo for preenchido, o campo <a href="#14-coresultadoustransfontanela">coResultadoUsTransfontanela</a> é obrigatório.</li>
 </ul>
 
-<p><strong>Referências:</strong> O código deste exame é compatível com a competência 03/2017 da tabela do SIGTAP, disponível em: <a href="http://sigtap.datasus.gov.br/tabela-unificada/app/sec/procedimento/publicados/consultar">Tabela unificada SIGTAP</a>.</p>
+<p><strong>Referências:</strong></p>
+
+<p><strong>1.</strong> O código deste exame é compatível com a competência 04/2018 da tabela do SIGTAP, disponível em: <a href="http://sigtap.datasus.gov.br/tabela-unificada/app/sec/procedimento/publicados/consultar">Tabela unificada SIGTAP</a>.</p>
+
+<p><strong>2.</strong> A data deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos . Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
 
 <h3 id="14-coresultadoustransfontanela">#14 coResultadoUsTransfontanela</h3>
 
@@ -621,7 +642,7 @@
 <p><strong>Regras:</strong></p>
 
 <ul>
-<li>É obrigatório o preenchimento de pelo menos um destes campos: <code>8</code>, <code>10</code>, <code>12</code>, <code>14</code>, <code>16</code> e <code>18</code>.</li>
+<li>É obrigatório o preenchimento de pelo menos um destes campos: <code>8</code>, <code>10</code>, <code>12</code>, <code>14</code>, <code>16</code> e <code>18</code>;</li>
 <li>Se este campo for preenchido, o campo <a href="#13-datarealizacaoustransfontanela">dataRealizacaoUSTransfontanela</a> é obrigatório.</li>
 </ul>
 
@@ -647,14 +668,18 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> </p>
+<p><strong>Regras:</strong></p>
 
 <ul>
-<li>Não pode ser anterior em 20 anos ou posterior a <a href="/integracao/ledi/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>.</li>
+<li>Não pode ser anterior em 20 anos ou posterior a <a href="/integracao/ledi/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>;</li>
 <li>Se este campo for preenchido, o campo <a href="#16-coresultadotomografiacomputadorizada">coResultadoTomografiaComputadorizada</a> é obrigatório.</li>
 </ul>
 
-<p><strong>Referências:</strong> O código deste exame é compatível com a competência 03/2017 da tabela do SIGTAP, disponível em: <a href="http://sigtap.datasus.gov.br/tabela-unificada/app/sec/procedimento/publicados/consultar">Tabela unificada SIGTAP</a>.</p>
+<p><strong>Referências:</strong></p>
+
+<p><strong>1.</strong> O código deste exame é compatível com a competência 04/2018 da tabela do SIGTAP, disponível em: <a href="http://sigtap.datasus.gov.br/tabela-unificada/app/sec/procedimento/publicados/consultar">Tabela unificada SIGTAP</a>.</p>
+
+<p><strong>2.</strong> A data deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos . Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
 
 <h3 id="16-coresultadotomografiacomputadorizada">#16 coResultadoTomografiaComputadorizada</h3>
 
@@ -679,7 +704,7 @@
 <p><strong>Regras:</strong></p>
 
 <ul>
-<li>É obrigatório o preenchimento de pelo menos um destes campos: <code>8</code>, <code>10</code>, <code>12</code>, <code>14</code>, <code>16</code> e <code>18</code>.</li>
+<li>É obrigatório o preenchimento de pelo menos um destes campos: <code>8</code>, <code>10</code>, <code>12</code>, <code>14</code>, <code>16</code> e <code>18</code>;</li>
 <li>Se este campo for preenchido, o campo <a href="#15-datarealizacaotomografiacomputadorizada">dataRealizacaoTomografiaComputadorizada</a> é obrigatório.</li>
 </ul>
 
@@ -705,14 +730,18 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> </p>
+<p><strong>Regras:</strong></p>
 
 <ul>
-<li>Não pode ser anterior em 20 anos ou posterior a <a href="/integracao/ledi/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>.</li>
+<li>Não pode ser anterior em 20 anos ou posterior a <a href="/integracao/ledi/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>;</li>
 <li>Se este campo for preenchido, o campo <a href="#18-coresultadoressonanciamagnetica">coResultadoRessonanciaMagnetica</a> é obrigatório.</li>
 </ul>
 
-<p><strong>Referências:</strong> O código deste exame é compatível com a competência 03/2017 da tabela do SIGTAP, disponível em: <a href="http://sigtap.datasus.gov.br/tabela-unificada/app/sec/procedimento/publicados/consultar">Tabela unificada SIGTAP</a>.</p>
+<p><strong>Referências:</strong></p>
+
+<p><strong>1.</strong> O código deste exame é compatível com a competência 04/2018 da tabela do SIGTAP, disponível em: <a href="http://sigtap.datasus.gov.br/tabela-unificada/app/sec/procedimento/publicados/consultar">Tabela unificada SIGTAP</a>.</p>
+
+<p><strong>2.</strong> A data deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos . Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
 
 <h3 id="18-coresultadoressonanciamagnetica">#18 coResultadoRessonanciaMagnetica</h3>
 
@@ -737,7 +766,7 @@
 <p><strong>Regras:</strong></p>
 
 <ul>
-<li>É obrigatório o preenchimento de pelo menos um destes campos: <code>8</code>, <code>10</code>, <code>12</code>, <code>14</code>, <code>16</code> e <code>18</code>.</li>
+<li>É obrigatório o preenchimento de pelo menos um destes campos: <code>8</code>, <code>10</code>, <code>12</code>, <code>14</code>, <code>16</code> e <code>18</code>;</li>
 <li>Se este campo for preenchido, o campo <a href="#17-datarealizacaoressonanciamagnetica">dataRealizacaoRessonanciaMagnetica</a> é obrigatório.</li>
 </ul>
 

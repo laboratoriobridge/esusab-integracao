@@ -1,65 +1,75 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<ns3:dadoTransporteTransportXml
-	xmlns:ns2="http://esus.ufsc.br/dadoinstalacao" xmlns:ns3="http://esus.ufsc.br/dadotransporte"
-	xmlns:ns4="http://esus.ufsc.br/cadastrodomiciliar">
-	<uuidDadoSerializado>5444429-72g6990f-78df-477c-8f96-aec49e2c47b3
-	</uuidDadoSerializado>
+<ns3:dadoTransporteTransportXml xmlns:ns2="http://esus.ufsc.br/dadoinstalacao" xmlns:ns3="http://esus.ufsc.br/dadotransporte" xmlns:ns4="http://esus.ufsc.br/cadastrodomiciliar">
+	<uuidDadoSerializado>5444429-5f295fe4-ba40-4894-a7d0-d474798126b0</uuidDadoSerializado>
 	<tipoDadoSerializado>3</tipoDadoSerializado>
 	<codIbge>4205407</codIbge>
 	<cnesDadoSerializado>5444429</cnesDadoSerializado>
-	<ineDadoSerializado>5511178891</ineDadoSerializado>
-	<numLote>3</numLote>
+	<numLote>1</numLote>
 	<ns4:cadastroDomiciliarTransport>
 		<animaisNoDomicilio>128</animaisNoDomicilio>
+		<animaisNoDomicilio>129</animaisNoDomicilio>
 		<condicaoMoradia>
 			<abastecimentoAgua>117</abastecimentoAgua>
 			<destinoLixo>93</destinoLixo>
 			<formaEscoamentoBanheiro>122</formaEscoamentoBanheiro>
 			<localizacao>83</localizacao>
 			<materialPredominanteParedesExtDomicilio>109</materialPredominanteParedesExtDomicilio>
-			<nuComodos>6</nuComodos>
-			<nuMoradores>5</nuMoradores>
-			<situacaoMoradiaPosseTerra>76</situacaoMoradiaPosseTerra>
+			<nuComodos>5</nuComodos>
+			<nuMoradores>2</nuMoradores>
+			<situacaoMoradiaPosseTerra>75</situacaoMoradiaPosseTerra>
 			<stDisponibilidadeEnergiaEletrica>true</stDisponibilidadeEnergiaEletrica>
 			<tipoAcessoDomicilio>89</tipoAcessoDomicilio>
 			<tipoDomicilio>86</tipoDomicilio>
 			<aguaConsumoDomicilio>97</aguaConsumoDomicilio>
 		</condicaoMoradia>
 		<enderecoLocalPermanencia>
-			<bairro>PONTA DE BAIXO</bairro>
-			<cep>88104020</cep>
-			<codigoIbgeMunicipio>4216602</codigoIbgeMunicipio>
-			<nomeLogradouro>DO IMPERADOR</nomeLogradouro>
-			<numero>S/N</numero>
+			<bairro>PANTANAL</bairro>
+			<cep>88040050</cep>
+			<codigoIbgeMunicipio>4205407</codigoIbgeMunicipio>
+			<complemento>APARTAMENTO</complemento>
+			<nomeLogradouro>MARTINHO LEANDRO DOS SANTOS</nomeLogradouro>
+			<numero>72</numero>
 			<numeroDneUf>25</numeroDneUf>
-			<tipoLogradouroNumeroDne>081</tipoLogradouroNumeroDne>
-			<stSemNumero>true</stSemNumero>
-			<microArea>20</microArea>
+			<telefoneContato>99999999999</telefoneContato>
+			<telefoneResidencia>99999999999</telefoneResidencia>
+			<tipoLogradouroNumeroDne>094</tipoLogradouroNumeroDne>
+			<stSemNumero>false</stSemNumero>
+			<pontoReferencia>MERCADO</pontoReferencia>
+			<microArea>02</microArea>
 			<stForaArea>false</stForaArea>
 		</enderecoLocalPermanencia>
 		<familias>
-			<dataNascimentoResponsavel>381596400000</dataNascimentoResponsavel>
-			<numeroCnsResponsavel>898001152206097</numeroCnsResponsavel>
-			<numeroMembrosFamilia>5</numeroMembrosFamilia>
-			<rendaFamiliar>7</rendaFamiliar>
-			<resideDesde>1114916400000</resideDesde>
+			<dataNascimentoResponsavel>978357600000</dataNascimentoResponsavel>
+			<numeroCnsResponsavel>700609923387762</numeroCnsResponsavel>
+			<numeroMembrosFamilia>1</numeroMembrosFamilia>
+			<numeroProntuario>2</numeroProntuario>
+			<rendaFamiliar>2</rendaFamiliar>
+			<resideDesde>1506826800000</resideDesde>
+			<stMudanca>false</stMudanca>
+		</familias>
+		<familias>
+			<dataNascimentoResponsavel>662738400000</dataNascimentoResponsavel>
+			<numeroCnsResponsavel>178716863270001</numeroCnsResponsavel>
+			<numeroMembrosFamilia>1</numeroMembrosFamilia>
+			<numeroProntuario>1</numeroProntuario>
+			<rendaFamiliar>3</rendaFamiliar>
+			<resideDesde>1512093600000</resideDesde>
 			<stMudanca>false</stMudanca>
 		</familias>
 		<fichaAtualizada>false</fichaAtualizada>
-		<quantosAnimaisNoDomicilio>2</quantosAnimaisNoDomicilio>
+		<quantosAnimaisNoDomicilio>3</quantosAnimaisNoDomicilio>
 		<stAnimaisNoDomicilio>true</stAnimaisNoDomicilio>
 		<statusTermoRecusa>false</statusTermoRecusa>
 		<tpCdsOrigem>1</tpCdsOrigem>
-		<uuid>5444429-72g6990f-78df-477c-8f96-aec49e2c47b3</uuid>
-		<uuidFichaOriginadora>5444429-72g6990f-78df-477c-8f96-aec49e2c47b3</uuidFichaOriginadora>
+		<uuid>5444429-5f295fe4-ba40-4894-a7d0-d474798126b0</uuid>
+		<uuidFichaOriginadora>5444429-5f295fe4-ba40-4894-a7d0-d474798126b0</uuidFichaOriginadora>
 		<tipoDeImovel>1</tipoDeImovel>
 		<instituicaoPermanencia />
 		<headerTransport>
-			<profissionalCNS>708607577486986</profissionalCNS>
-			<cboCodigo_2002>322205</cboCodigo_2002>
+			<profissionalCNS>700609923387762</profissionalCNS>
+			<cboCodigo_2002>515105</cboCodigo_2002>
 			<cnes>5444429</cnes>
-			<ine>5511178891</ine>
-			<dataAtendimento>1476370800000</dataAtendimento>
+			<dataAtendimento>1517148000000</dataAtendimento>
 			<codigoIbgeMunicipio>4205407</codigoIbgeMunicipio>
 		</headerTransport>
 	</ns4:cadastroDomiciliarTransport>
@@ -67,17 +77,21 @@
 		<contraChave>TREINAMENTO</contraChave>
 		<uuidInstalacao>TREINAMENTO</uuidInstalacao>
 		<cpfOuCnpj>01234567890</cpfOuCnpj>
-		<nomeOuRazaoSocial>ADMINISTRADOR DA INSTALAÇÃO</nomeOuRazaoSocial>
-		<versaoSistema>2.1.05</versaoSistema>
+		<nomeOuRazaoSocial>ADMINISTRADOR INSTALAÇÃO</nomeOuRazaoSocial>
+		<fone>8216756527</fone>
+		<email>prof@esus.br</email>
+		<versaoSistema>3.0.01</versaoSistema>
 		<nomeBancoDados>Postgres</nomeBancoDados>
 	</ns2:remetente>
 	<ns2:originadora>
 		<contraChave>TREINAMENTO</contraChave>
 		<uuidInstalacao>TREINAMENTO</uuidInstalacao>
 		<cpfOuCnpj>01234567890</cpfOuCnpj>
-		<nomeOuRazaoSocial>ADMINISTRADOR DA INSTALAÇÃO</nomeOuRazaoSocial>
-		<versaoSistema>2.1.05</versaoSistema>
+		<nomeOuRazaoSocial>ADMINISTRADOR INSTALAÇÃO</nomeOuRazaoSocial>
+		<fone>8216756527</fone>
+		<email>prof@esus.br</email>
+		<versaoSistema>3.0.01</versaoSistema>
 		<nomeBancoDados>Postgres</nomeBancoDados>
 	</ns2:originadora>
-	<versao major="2" minor="2" revision="0" />
+	<versao major="3" minor="0" revision="0" />
 </ns3:dadoTransporteTransportXml>

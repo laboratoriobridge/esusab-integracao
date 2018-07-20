@@ -1,47 +1,40 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<ns3:dadoTransporteTransportXml
-	xmlns:ns2="http://esus.ufsc.br/dadoinstalacao" xmlns:ns3="http://esus.ufsc.br/dadotransporte"
-	xmlns:ns4="http://esus.ufsc.br/fichaatendimentodomiciliarmaster">
-	<uuidDadoSerializado>1111111-d0b87758-f84b-4861-8aeb-3fga60ee5103
-	</uuidDadoSerializado>
+<ns3:dadoTransporteTransportXml xmlns:ns2="http://esus.ufsc.br/dadoinstalacao" xmlns:ns3="http://esus.ufsc.br/dadotransporte" xmlns:ns4="http://esus.ufsc.br/fichaatendimentodomiciliarmaster">
+	<uuidDadoSerializado>5444429-dee8f6ef-9f0a-42e3-8d99-7231564694e1</uuidDadoSerializado>
 	<tipoDadoSerializado>10</tipoDadoSerializado>
 	<codIbge>4205407</codIbge>
-	<cnesDadoSerializado>1111111</cnesDadoSerializado>
+	<cnesDadoSerializado>5444429</cnesDadoSerializado>
 	<ineDadoSerializado>1382855330</ineDadoSerializado>
 	<numLote>1</numLote>
 	<ns4:fichaAtendimentoDomiciliarMasterTransport>
-		<uuidFicha>1111111-d0b87758-f84b-4861-8aeb-3fga60ee5103</uuidFicha>
+		<uuidFicha>5444429-dee8f6ef-9f0a-42e3-8d99-7231564694e1</uuidFicha>
 		<tpCdsOrigem>1</tpCdsOrigem>
 		<headerTransport>
 			<lotacaoFormPrincipal>
-				<profissionalCNS>898001160640507</profissionalCNS>
-				<cboCodigo_2002>225142</cboCodigo_2002>
-				<cnes>1111111</cnes>
+				<profissionalCNS>700609923387762</profissionalCNS>
+				<cboCodigo_2002>223505</cboCodigo_2002>
+				<cnes>5444429</cnes>
 				<ine>1382855330</ine>
 			</lotacaoFormPrincipal>
-			<lotacaoFormAtendimentoCompartilhado>
-				<profissionalCNS>705007288953756</profissionalCNS>
-				<cboCodigo_2002>225142</cboCodigo_2002>
-				<cnes>2222222</cnes>
-				<ine>1382855331</ine>
-			</lotacaoFormAtendimentoCompartilhado>
-			<dataAtendimento>1465830000000</dataAtendimento>
+			<dataAtendimento>1517320800000</dataAtendimento>
 			<codigoIbgeMunicipio>4205407</codigoIbgeMunicipio>
 		</headerTransport>
 		<atendimentosDomiciliares>
 			<turno>2</turno>
-			<cnsCidadao>876347714750004</cnsCidadao>
-			<dataNascimento>189356400000</dataNascimento>
+			<cnsCidadao>898050047989752</cnsCidadao>
+			<dataNascimento>1012658400000</dataNascimento>
 			<sexo>0</sexo>
 			<localAtendimento>1</localAtendimento>
 			<atencaoDomiciliarModalidade>1</atencaoDomiciliarModalidade>
-			<tipoAtendimento>8</tipoAtendimento>
-			<condicoesAvaliadas>8</condicoesAvaliadas>
-			<cid>T740</cid>
-			<ciap>A70</ciap>
+			<tipoAtendimento>7</tipoAtendimento>
+			<condicoesAvaliadas>2</condicoesAvaliadas>
+			<cid>Z620</cid>
+			<ciap>31</ciap>
 			<procedimentos>0301070024</procedimentos>
-			<outrosProcedimentos>0307020010</outrosProcedimentos>
-			<condutaDesfecho>3</condutaDesfecho>
+			<procedimentos>0301050090</procedimentos>
+			<outrosProcedimentos>0404030319</outrosProcedimentos>
+			<outrosProcedimentos>0301070083</outrosProcedimentos>
+			<condutaDesfecho>1</condutaDesfecho>
 		</atendimentosDomiciliares>
 	</ns4:fichaAtendimentoDomiciliarMasterTransport>
 	<ns2:remetente>
@@ -49,7 +42,9 @@
 		<uuidInstalacao>TREINAMENTO</uuidInstalacao>
 		<cpfOuCnpj>01234567890</cpfOuCnpj>
 		<nomeOuRazaoSocial>ADMINISTRADOR INSTALAÇÃO</nomeOuRazaoSocial>
-		<versaoSistema>2.1-2016.06</versaoSistema>
+		<fone>8216756527</fone>
+		<email>prof@esus.br</email>
+		<versaoSistema>3.0.01</versaoSistema>
 		<nomeBancoDados>Postgres</nomeBancoDados>
 	</ns2:remetente>
 	<ns2:originadora>
@@ -57,8 +52,10 @@
 		<uuidInstalacao>TREINAMENTO</uuidInstalacao>
 		<cpfOuCnpj>01234567890</cpfOuCnpj>
 		<nomeOuRazaoSocial>ADMINISTRADOR INSTALAÇÃO</nomeOuRazaoSocial>
-		<versaoSistema>2.1-2016.06</versaoSistema>
+		<fone>8216756527</fone>
+		<email>prof@esus.br</email>
+		<versaoSistema>3.0.01</versaoSistema>
 		<nomeBancoDados>Postgres</nomeBancoDados>
 	</ns2:originadora>
-	<versao major="2" minor="2" revision="0" />
+	<versao major="3" minor="0" revision="0" />
 </ns3:dadoTransporteTransportXml>

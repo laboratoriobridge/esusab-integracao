@@ -1,41 +1,50 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ns3:dadoTransporteTransportXml xmlns:ns2="http://esus.ufsc.br/dadoinstalacao" xmlns:ns3="http://esus.ufsc.br/dadotransporte" xmlns:ns4="http://esus.ufsc.br/fichaatividadecoletiva">
-	<uuidDadoSerializado>5444429-4d5c25d6-f4b6-4c5e-a8b8-7651ef1d4ffe</uuidDadoSerializado>
+	<uuidDadoSerializado>5444429-bd94d05d-a303-443b-94a9-f93068e369f0</uuidDadoSerializado>
 	<tipoDadoSerializado>6</tipoDadoSerializado>
 	<codIbge>4205407</codIbge>
 	<cnesDadoSerializado>5444429</cnesDadoSerializado>
 	<numLote>1</numLote>
 	<ns4:fichaAtividadeColetivaTransport>
-		<uuidFicha>5444429-4d5c25d6-f4b6-4c5e-a8b8-7651ef1d4ffe</uuidFicha>
-		<outraLocalidade>salão comunitário</outraLocalidade>
-		<numParticipantes>10</numParticipantes>
-		<numAvaliacoesAlteradas>0</numAvaliacoesAlteradas>
-		<atividadeTipo>5</atividadeTipo>
-		<publicoAlvo>18</publicoAlvo>
-		<publicoAlvo>4</publicoAlvo>
+		<uuidFicha>5444429-bd94d05d-a303-443b-94a9-f93068e369f0</uuidFicha>
+		<numParticipantes>5</numParticipantes>
+		<numAvaliacoesAlteradas>1</numAvaliacoesAlteradas>
+		<atividadeTipo>6</atividadeTipo>
+		<publicoAlvo>5</publicoAlvo>
 		<participantes>
 			<cnsParticipante>127301025020001</cnsParticipante>
-			<dataNascimento>908287200000</dataNascimento>
-			<avaliacaoAlterada>false</avaliacaoAlterada>
+			<dataNascimento>545493600000</dataNascimento>
+			<avaliacaoAlterada>true</avaliacaoAlterada>
+			<peso>74.0</peso>
+			<altura>170.0</altura>
 			<cessouHabitoFumar>true</cessouHabitoFumar>
-			<abandonouGrupo>false</abandonouGrupo>
-			<sexo>1</sexo>
+			<abandonouGrupo>true</abandonouGrupo>
+			<sexo>0</sexo>
+		</participantes>
+		<participantes>
+			<cnsParticipante>107723290110009</cnsParticipante>
+			<dataNascimento>978357600000</dataNascimento>
+			<avaliacaoAlterada>false</avaliacaoAlterada>
+			<cessouHabitoFumar>false</cessouHabitoFumar>
+			<abandonouGrupo>true</abandonouGrupo>
+			<sexo>0</sexo>
 		</participantes>
 		<tbCdsOrigem>1</tbCdsOrigem>
-		<turno>2</turno>
+		<cnesLocalAtividade>6364403</cnesLocalAtividade>
+		<procedimento>0101020023</procedimento>
+		<turno>1</turno>
 		<pseEducacao>false</pseEducacao>
 		<pseSaude>false</pseSaude>
 		<headerTransport>
-			<profissionalCNS>279772041750007</profissionalCNS>
-			<cboCodigo_2002>223208</cboCodigo_2002>
+			<profissionalCNS>700609923387762</profissionalCNS>
+			<cboCodigo_2002>223293</cboCodigo_2002>
 			<cnes>5444429</cnes>
 			<dataAtendimento>1517320800000</dataAtendimento>
 			<codigoIbgeMunicipio>4205407</codigoIbgeMunicipio>
 		</headerTransport>
-		<temasParaSaude>15</temasParaSaude>
-		<praticasEmSaude>2</praticasEmSaude>
-		<praticasEmSaude>28</praticasEmSaude>
-		<praticasEmSaude>12</praticasEmSaude>
+		<temasParaSaude>13</temasParaSaude>
+		<praticasEmSaude>30</praticasEmSaude>
+		<praticasEmSaude>25</praticasEmSaude>
 	</ns4:fichaAtividadeColetivaTransport>
 	<ns2:remetente>
 		<contraChave>TREINAMENTO</contraChave>

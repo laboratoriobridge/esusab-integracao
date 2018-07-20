@@ -5,7 +5,7 @@
       
           "dir"      : "ledi",
           "title"    : "Camada de Transporte de Dados",
-          "url"      : "/integracao/ledi/estrutura_arquivos/camada-transporte.html"
+          "url"      : "/integracao/v220/ledi/estrutura_arquivos/camada-transporte.html"
           
       
     },
@@ -14,7 +14,7 @@
       
           "dir"      : "ledi",
           "title"    : "Ficha de Atividade Coletiva",
-          "url"      : "/integracao/ledi/estrutura_arquivos/dicionario-fac.html"
+          "url"      : "/integracao/v220/ledi/estrutura_arquivos/dicionario-fac.html"
           
       
     },
@@ -23,7 +23,7 @@
       
           "dir"      : "ledi",
           "title"    : "Ficha de Atendimento Domiciliar",
-          "url"      : "/integracao/ledi/estrutura_arquivos/dicionario-fad.html"
+          "url"      : "/integracao/v220/ledi/estrutura_arquivos/dicionario-fad.html"
           
       
     },
@@ -32,7 +32,7 @@
       
           "dir"      : "ledi",
           "title"    : "Ficha de Avaliação de Elegibilidade",
-          "url"      : "/integracao/ledi/estrutura_arquivos/dicionario-fae.html"
+          "url"      : "/integracao/v220/ledi/estrutura_arquivos/dicionario-fae.html"
           
       
     },
@@ -41,7 +41,7 @@
       
           "dir"      : "ledi",
           "title"    : "Ficha de Atendimento Individual",
-          "url"      : "/integracao/ledi/estrutura_arquivos/dicionario-fai.html"
+          "url"      : "/integracao/v220/ledi/estrutura_arquivos/dicionario-fai.html"
           
       
     },
@@ -50,7 +50,7 @@
       
           "dir"      : "ledi",
           "title"    : "Ficha de Atendimento Odontológico Individual",
-          "url"      : "/integracao/ledi/estrutura_arquivos/dicionario-fao.html"
+          "url"      : "/integracao/v220/ledi/estrutura_arquivos/dicionario-fao.html"
           
       
     },
@@ -59,7 +59,7 @@
       
           "dir"      : "ledi",
           "title"    : "Ficha de Cadastro Domiciliar e Territorial",
-          "url"      : "/integracao/ledi/estrutura_arquivos/dicionario-fcd.html"
+          "url"      : "/integracao/v220/ledi/estrutura_arquivos/dicionario-fcd.html"
           
       
     },
@@ -68,7 +68,7 @@
       
           "dir"      : "ledi",
           "title"    : "Ficha de Cadastro Individual",
-          "url"      : "/integracao/ledi/estrutura_arquivos/dicionario-fci.html"
+          "url"      : "/integracao/v220/ledi/estrutura_arquivos/dicionario-fci.html"
           
       
     },
@@ -77,7 +77,7 @@
       
           "dir"      : "ledi",
           "title"    : "Ficha complementar - Síndrome neurológica por Zika / Microcefalia",
-          "url"      : "/integracao/ledi/estrutura_arquivos/dicionario-fczm.html"
+          "url"      : "/integracao/v220/ledi/estrutura_arquivos/dicionario-fczm.html"
           
       
     },
@@ -86,7 +86,7 @@
       
           "dir"      : "ledi",
           "title"    : "Ficha de Procedimentos",
-          "url"      : "/integracao/ledi/estrutura_arquivos/dicionario-fp.html"
+          "url"      : "/integracao/v220/ledi/estrutura_arquivos/dicionario-fp.html"
           
       
     },
@@ -95,7 +95,7 @@
       
           "dir"      : "ledi",
           "title"    : "Ficha de Visita Domiciliar e Territorial",
-          "url"      : "/integracao/ledi/estrutura_arquivos/dicionario-fvd.html"
+          "url"      : "/integracao/v220/ledi/estrutura_arquivos/dicionario-fvd.html"
           
       
     },
@@ -104,7 +104,7 @@
       
           "dir"      : "ledi",
           "title"    : "Marcadores de Consumo Alimentar",
-          "url"      : "/integracao/ledi/estrutura_arquivos/dicionario-mca.html"
+          "url"      : "/integracao/v220/ledi/estrutura_arquivos/dicionario-mca.html"
           
       
     },
@@ -113,7 +113,7 @@
       
           "dir"      : "ledi",
           "title"    : "Cabeçalho (headerTransport)",
-          "url"      : "/integracao/ledi/estrutura_arquivos/header-transport.html"
+          "url"      : "/integracao/v220/ledi/estrutura_arquivos/header-transport.html"
           
       
     },
@@ -122,7 +122,7 @@
       
           "dir"      : "ledi",
           "title"    : "Estrutura dos arquivos",
-          "url"      : "/integracao/ledi/estrutura_arquivos/index.html"
+          "url"      : "/integracao/v220/ledi/estrutura_arquivos/index.html"
           
       
     },
@@ -131,7 +131,7 @@
       
           "dir"      : "ledi",
           "title"    : "Layout e-SUS AB de Dados e Interface Versão 2.2",
-          "url"      : "/integracao/ledi/index.html"
+          "url"      : "/integracao/v220/ledi/index.html"
           
       
     },
@@ -140,7 +140,7 @@
       
           "dir"      : "ledi",
           "title"    : "Layout e-SUS AB de Dados e Interface",
-          "url"      : "/integracao/"
+          "url"      : "/integracao/v220/"
           
       
     },
@@ -149,7 +149,7 @@
       
           "dir"      : "ledi",
           "title"    : "Principais alterações da v2.1.1 para a v2.2",
-          "url"      : "/integracao/ledi/principais_alteracoes.html"
+          "url"      : "/integracao/v220/ledi/principais_alteracoes.html"
           
       
     },
@@ -158,7 +158,7 @@
       
           "dir"      : "ledi",
           "title"    : "CBOs",
-          "url"      : "/integracao/ledi/referencias/cbo_disponiveis.html"
+          "url"      : "/integracao/v220/ledi/referencias/cbo_disponiveis.html"
           
       
     },
@@ -167,7 +167,7 @@
       
           "dir"      : "ledi",
           "title"    : "Dicionário de dados",
-          "url"      : "/integracao/ledi/referencias/dicionario.html"
+          "url"      : "/integracao/v220/ledi/referencias/dicionario.html"
           
       
     },
@@ -176,7 +176,7 @@
       
           "dir"      : "ledi",
           "title"    : "Referências",
-          "url"      : "/integracao/ledi/referencias/index.html"
+          "url"      : "/integracao/v220/ledi/referencias/index.html"
           
       
     },
@@ -185,7 +185,7 @@
       
           "dir"      : "ledi",
           "title"    : "Municípios",
-          "url"      : "/integracao/ledi/referencias/municipios.html"
+          "url"      : "/integracao/v220/ledi/referencias/municipios.html"
           
       
     },
@@ -194,7 +194,7 @@
       
           "dir"      : "ledi",
           "title"    : "Países",
-          "url"      : "/integracao/ledi/referencias/paises.html"
+          "url"      : "/integracao/v220/ledi/referencias/paises.html"
           
       
     },
@@ -203,7 +203,7 @@
       
           "dir"      : "ledi",
           "title"    : "UFs",
-          "url"      : "/integracao/ledi/referencias/uf.html"
+          "url"      : "/integracao/v220/ledi/referencias/uf.html"
           
       
     },
@@ -212,7 +212,7 @@
       
           "dir"      : "ledi",
           "title"    : "Versão",
-          "url"      : "/integracao/ledi/referencias/versao.html"
+          "url"      : "/integracao/v220/ledi/referencias/versao.html"
           
       
     },
@@ -221,7 +221,7 @@
       
           "dir"      : "ledi",
           "title"    : "Validar CNS",
-          "url"      : "/integracao/ledi/regras/algoritmo_CNS.html"
+          "url"      : "/integracao/v220/ledi/regras/algoritmo_CNS.html"
           
       
     },
@@ -230,7 +230,7 @@
       
           "dir"      : "ledi",
           "title"    : "Grupos de CBOs x Tipo de ficha",
-          "url"      : "/integracao/ledi/regras/cbo.html"
+          "url"      : "/integracao/v220/ledi/regras/cbo.html"
           
       
     },
@@ -239,7 +239,7 @@
       
           "dir"      : "ledi",
           "title"    : "Regras",
-          "url"      : "/integracao/ledi/regras/index.html"
+          "url"      : "/integracao/v220/ledi/regras/index.html"
           
       
     },
@@ -248,7 +248,7 @@
       
           "dir"      : "ledi",
           "title"    : "Validar nome",
-          "url"      : "/integracao/ledi/regras/validar_nome.html"
+          "url"      : "/integracao/v220/ledi/regras/validar_nome.html"
           
       
     },
@@ -256,8 +256,8 @@
     {
       
           "dir"      : "ledi",
-          "title"    : "Arquivos Thrift / XSD por ficha",
-          "url"      : "/integracao/ledi/thrift-xsd.html"
+          "title"    : "Registros Thrift / XSD por ficha",
+          "url"      : "/integracao/v220/ledi/thrift-xsd.html"
           
       
     },

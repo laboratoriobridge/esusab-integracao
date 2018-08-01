@@ -91,7 +91,7 @@
 			<racionalidadeSaude>4</racionalidadeSaude>
 			<perimetroCefalico>56.0</perimetroCefalico>
 		</atendimentosIndividuais>
-		<tpCdsOrigem>1</tpCdsOrigem>
+		<tpCdsOrigem>3</tpCdsOrigem>
 		<uuidFicha>5444429-e3da23da-bf5c-48b4-9982-0e85bf46483e</uuidFicha>
 	</ns4:fichaAtendimentoIndividualMasterTransport>
 	<ns2:remetente>

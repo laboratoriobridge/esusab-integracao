@@ -59,7 +59,7 @@
 			<respostaUnicaEscolha>NAO_SABE</respostaUnicaEscolha>
 		</perguntasQuestionarioCriancasComMaisDoisAnos>
 		<uuidFicha>5444429-8134c3ff-25ce-4900-9ade-7d8ef110e243</uuidFicha>
-		<tpCdsOrigem>1</tpCdsOrigem>
+		<tpCdsOrigem>3</tpCdsOrigem>
 	</ns4:fichaConsumoAlimentarTransport>
 	<ns2:remetente>
 		<contraChave>TREINAMENTO</contraChave>

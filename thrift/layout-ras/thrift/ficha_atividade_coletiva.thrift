@@ -42,4 +42,6 @@ struct FichaAtividadeColetivaThrift {
 	24:optional common.UnicaLotacaoHeaderThrift headerTransport;	
 	25:optional list<i64> temasParaSaude;
 	26:optional list<i64> praticasEmSaude;
+	27:optional bool pseEducacao;
+	28:optional bool pseSaude;
 }

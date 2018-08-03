@@ -599,6 +599,8 @@ type FichaAtividadeColetivaThrift struct {
 	HeaderTransport    *common.UnicaLotacaoHeaderThrift `thrift:"headerTransport,24" json:"headerTransport"`
 	TemasParaSaude     []int64                          `thrift:"temasParaSaude,25" json:"temasParaSaude"`
 	PraticasEmSaude    []int64                          `thrift:"praticasEmSaude,26" json:"praticasEmSaude"`
+	PseEducacao        *bool                            `thrift:"pseEducacao,27" json:"pseEducacao"`
+	PseSaude           *bool                            `thrift:"pseSaude,28" json:"pseSaude"`
 }
 
 func NewFichaAtividadeColetivaThrift() *FichaAtividadeColetivaThrift {
@@ -734,6 +736,24 @@ var FichaAtividadeColetivaThrift_PraticasEmSaude_DEFAULT []int64
 func (p *FichaAtividadeColetivaThrift) GetPraticasEmSaude() []int64 {
 	return p.PraticasEmSaude
 }
+
+var FichaAtividadeColetivaThrift_PseEducacao_DEFAULT bool
+
+func (p *FichaAtividadeColetivaThrift) GetPseEducacao() bool {
+	if !p.IsSetPseEducacao() {
+		return FichaAtividadeColetivaThrift_PseEducacao_DEFAULT
+	}
+	return *p.PseEducacao
+}
+
+var FichaAtividadeColetivaThrift_PseSaude_DEFAULT bool
+
+func (p *FichaAtividadeColetivaThrift) GetPseSaude() bool {
+	if !p.IsSetPseSaude() {
+		return FichaAtividadeColetivaThrift_PseSaude_DEFAULT
+	}
+	return *p.PseSaude
+}
 func (p *FichaAtividadeColetivaThrift) IsSetOutraLocalidade() bool {
 	return p.OutraLocalidade != nil
 }
@@ -796,6 +816,14 @@ func (p *FichaAtividadeColetivaThrift) IsSetTemasParaSaude() bool {
 
 func (p *FichaAtividadeColetivaThrift) IsSetPraticasEmSaude() bool {
 	return p.PraticasEmSaude != nil
+}
+
+func (p *FichaAtividadeColetivaThrift) IsSetPseEducacao() bool {
+	return p.PseEducacao != nil
+}
+
+func (p *FichaAtividadeColetivaThrift) IsSetPseSaude() bool {
+	return p.PseSaude != nil
 }
 
 func (p *FichaAtividadeColetivaThrift) Read(iprot thrift.TProtocol) error {
@@ -877,6 +905,14 @@ func (p *FichaAtividadeColetivaThrift) Read(iprot thrift.TProtocol) error {
 			}
 		case 26:
 			if err := p.ReadField26(iprot); err != nil {
+				return err
+			}
+		case 27:
+			if err := p.ReadField27(iprot); err != nil {
+				return err
+			}
+		case 28:
+			if err := p.ReadField28(iprot); err != nil {
 				return err
 			}
 		default:
@@ -1120,6 +1156,24 @@ func (p *FichaAtividadeColetivaThrift) ReadField26(iprot thrift.TProtocol) error
 	return nil
 }
 
+func (p *FichaAtividadeColetivaThrift) ReadField27(iprot thrift.TProtocol) error {
+	if v, err := iprot.ReadBool(); err != nil {
+		return fmt.Errorf("error reading field 27: %s", err)
+	} else {
+		p.PseEducacao = &v
+	}
+	return nil
+}
+
+func (p *FichaAtividadeColetivaThrift) ReadField28(iprot thrift.TProtocol) error {
+	if v, err := iprot.ReadBool(); err != nil {
+		return fmt.Errorf("error reading field 28: %s", err)
+	} else {
+		p.PseSaude = &v
+	}
+	return nil
+}
+
 func (p *FichaAtividadeColetivaThrift) Write(oprot thrift.TProtocol) error {
 	if err := oprot.WriteStructBegin("FichaAtividadeColetivaThrift"); err != nil {
 		return fmt.Errorf("%T write struct begin error: %s", p, err)
@@ -1173,6 +1227,12 @@ func (p *FichaAtividadeColetivaThrift) Write(oprot thrift.TProtocol) error {
 		return err
 	}
 	if err := p.writeField26(oprot); err != nil {
+		return err
+	}
+	if err := p.writeField27(oprot); err != nil {
+		return err
+	}
+	if err := p.writeField28(oprot); err != nil {
 		return err
 	}
 	if err := oprot.WriteFieldStop(); err != nil {
@@ -1480,6 +1540,36 @@ func (p *FichaAtividadeColetivaThrift) writeField26(oprot thrift.TProtocol) (err
 		}
 		if err := oprot.WriteFieldEnd(); err != nil {
 			return fmt.Errorf("%T write field end error 26:praticasEmSaude: %s", p, err)
+		}
+	}
+	return err
+}
+
+func (p *FichaAtividadeColetivaThrift) writeField27(oprot thrift.TProtocol) (err error) {
+	if p.IsSetPseEducacao() {
+		if err := oprot.WriteFieldBegin("pseEducacao", thrift.BOOL, 27); err != nil {
+			return fmt.Errorf("%T write field begin error 27:pseEducacao: %s", p, err)
+		}
+		if err := oprot.WriteBool(bool(*p.PseEducacao)); err != nil {
+			return fmt.Errorf("%T.pseEducacao (27) field write error: %s", p, err)
+		}
+		if err := oprot.WriteFieldEnd(); err != nil {
+			return fmt.Errorf("%T write field end error 27:pseEducacao: %s", p, err)
+		}
+	}
+	return err
+}
+
+func (p *FichaAtividadeColetivaThrift) writeField28(oprot thrift.TProtocol) (err error) {
+	if p.IsSetPseSaude() {
+		if err := oprot.WriteFieldBegin("pseSaude", thrift.BOOL, 28); err != nil {
+			return fmt.Errorf("%T write field begin error 28:pseSaude: %s", p, err)
+		}
+		if err := oprot.WriteBool(bool(*p.PseSaude)); err != nil {
+			return fmt.Errorf("%T.pseSaude (28) field write error: %s", p, err)
+		}
+		if err := oprot.WriteFieldEnd(); err != nil {
+			return fmt.Errorf("%T write field end error 28:pseSaude: %s", p, err)
 		}
 	}
 	return err

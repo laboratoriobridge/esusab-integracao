@@ -1,75 +1,82 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<ns3:dadoTransporteTransportXml xmlns:ns2="http://esus.ufsc.br/v2000/dadoinstalacao" xmlns:ns3="http://esus.ufsc.br/v2000/dadotransporte" xmlns:ns4="http://esus.ufsc.br/v2000/fichaavaliacaoelegibilidade">
-	<uuidDadoSerializado>5444428-2da2bf1a-9c2d-478e-908d-7cd52cbaf26b</uuidDadoSerializado>
+<ns3:dadoTransporteTransportXml xmlns:ns2="http://esus.ufsc.br/dadoinstalacao" xmlns:ns3="http://esus.ufsc.br/dadotransporte" xmlns:ns4="http://esus.ufsc.br/fichaavaliacaoelegibilidade">
+	<uuidDadoSerializado>5444428-52b23223-774a-4158-8457-09bbb8ec4fc7</uuidDadoSerializado>
 	<tipoDadoSerializado>11</tipoDadoSerializado>
 	<codIbge>4205407</codIbge>
 	<cnesDadoSerializado>5444428</cnesDadoSerializado>
 	<ineDadoSerializado>9023673542</ineDadoSerializado>
-	<numLote>39</numLote>
+	<numLote>1</numLote>
 	<ns4:fichaAvaliacaoElegibilidadeTransport>
 		<headerTransport>
-			<profissionalCNS>702605236551744</profissionalCNS>
-			<cboCodigo_2002>225142</cboCodigo_2002>
-			<cnes>5444428</cnes>
-			<ine>9023673542</ine>
-			<dataAtendimento>1430406000000</dataAtendimento>
+			<lotacaoFormPrincipal>
+				<profissionalCNS>700609923387762</profissionalCNS>
+				<cboCodigo_2002>223505</cboCodigo_2002>
+				<cnes>5444428</cnes>
+				<ine>9023673542</ine>
+			</lotacaoFormPrincipal>
+			<dataAtendimento>1517320800000</dataAtendimento>
 			<codigoIbgeMunicipio>4205407</codigoIbgeMunicipio>
 		</headerTransport>
-		<uuidFicha>5444428-2da2bf1a-9c2d-478e-908d-7cd52cbaf26b</uuidFicha>
-		<tpCdsOrigem>3</tpCdsOrigem>
-		<numeroCartaoSus>280935581350003</numeroCartaoSus>
-		<dataNascimentoCidadao>950194800000</dataNascimentoCidadao>
+		<uuidFicha>5444428-52b23223-774a-4158-8457-09bbb8ec4fc7</uuidFicha>
+		<tpCdsOrigem>1</tpCdsOrigem>
+		<turno>2</turno>
+		<cnsCidadao>898050047989752</cnsCidadao>
+		<dataNascimentoCidadao>1046700000000</dataNascimentoCidadao>
 		<sexoCidadao>1</sexoCidadao>
+		<nomeCidadao>ANDRE SILVA</nomeCidadao>
+		<racaCorCidadao>1</racaCorCidadao>
+		<nomeSocialCidadao></nomeSocialCidadao>
+		<nomeMaeCidadao>BIANCA SILVA</nomeMaeCidadao>
 		<desconheceNomeMae>false</desconheceNomeMae>
-		<atencaoDomiciliarOrigem>1</atencaoDomiciliarOrigem>
+		<nacionalidadeCidadao>2</nacionalidadeCidadao>
+		<emailCidadao>gmail@gmail.com</emailCidadao>
+		<cuidadorCidadao>1</cuidadorCidadao>
+		<numeroNisPisPasep>12345678901</numeroNisPisPasep>
+		<atencaoDomiciliarProcedencia>12</atencaoDomiciliarProcedencia>
 		<atencaoDomiciliarModalidade>4</atencaoDomiciliarModalidade>
-		<situacoesPresentes>9</situacoesPresentes>
-		<situacoesPresentes>10</situacoesPresentes>
-		<situacoesPresentes>11</situacoesPresentes>
-		<situacoesPresentes>12</situacoesPresentes>
-		<situacoesPresentes>5</situacoesPresentes>
-		<situacoesPresentes>6</situacoesPresentes>
-		<situacoesPresentes>7</situacoesPresentes>
-		<situacoesPresentes>8</situacoesPresentes>
-		<situacoesPresentes>17</situacoesPresentes>
-		<situacoesPresentes>18</situacoesPresentes>
-		<situacoesPresentes>19</situacoesPresentes>
-		<situacoesPresentes>20</situacoesPresentes>
-		<situacoesPresentes>13</situacoesPresentes>
-		<situacoesPresentes>14</situacoesPresentes>
-		<situacoesPresentes>15</situacoesPresentes>
-		<situacoesPresentes>16</situacoesPresentes>
-		<situacoesPresentes>22</situacoesPresentes>
-		<situacoesPresentes>21</situacoesPresentes>
-		<situacoesPresentes>24</situacoesPresentes>
-		<situacoesPresentes>23</situacoesPresentes>
-		<situacoesPresentes>4</situacoesPresentes>
-		<situacoesPresentes>3</situacoesPresentes>
-		<situacoesPresentes>2</situacoesPresentes>
-		<situacoesPresentes>1</situacoesPresentes>
-		<cid10Principal>O037</cid10Principal>
-		<cid10Segundo>L853</cid10Segundo>
-		<cid10Terceiro>O068</cid10Terceiro>
-		<conclusaoDestinoInelegivel>1</conclusaoDestinoInelegivel>
-		<conclusaoDestinoInelegivel>2</conclusaoDestinoInelegivel>
+		<condicoesAvaliadas>24</condicoesAvaliadas>
+		<condicoesAvaliadas>16</condicoesAvaliadas>
+		<cid10Principal>Z409</cid10Principal>
 		<conclusaoDestinoInelegivel>3</conclusaoDestinoInelegivel>
 		<conclusaoDestinoInelegivel>4</conclusaoDestinoInelegivel>
-		<conclusaoDestinoInelegivel>5</conclusaoDestinoInelegivel>
 		<endereco>
+			<bairro>PANTANAL</bairro>
+			<cep>88040050</cep>
+			<codigoIbgeMunicipio>4205407</codigoIbgeMunicipio>
+			<complemento>APARTAMENTO</complemento>
+			<nomeLogradouro>MARTINHO LEANDRO DOS SANTOS</nomeLogradouro>
+			<numero>72</numero>
+			<numeroDneUf>25</numeroDneUf>
+			<telefoneContato>99999999999</telefoneContato>
+			<telefoneResidencia>99999999999</telefoneResidencia>
+			<tipoLogradouroNumeroDne>094</tipoLogradouroNumeroDne>
 			<stSemNumero>false</stSemNumero>
+			<pontoReferencia>OFICINA</pontoReferencia>
 		</endereco>
+		<nomePaiCidadao>PEDRO SILVA</nomePaiCidadao>
+		<desconheceNomePai>false</desconheceNomePai>
+		<dtNaturalizacao>1454421600000</dtNaturalizacao>
+		<portariaNaturalizacao>123456</portariaNaturalizacao>
 	</ns4:fichaAvaliacaoElegibilidadeTransport>
 	<ns2:remetente>
-		<contraChave>003d61860206f2804eefff4d01ef1a3f</contraChave>
-		<uuidInstalacao>10e769db-a642-43e4-b970-ff01ba660b51</uuidInstalacao>
-		<cpfOuCnpj>08953588910</cpfOuCnpj>
-		<nomeOuRazaoSocial>MARIANA MELO</nomeOuRazaoSocial>
+		<contraChave>TREINAMENTO</contraChave>
+		<uuidInstalacao>TREINAMENTO</uuidInstalacao>
+		<cpfOuCnpj>01234567890</cpfOuCnpj>
+		<nomeOuRazaoSocial>ADMINISTRADOR INSTALAÇÃO</nomeOuRazaoSocial>
+		<fone>8216756527</fone>
+		<email>prof@esus.br</email>
+		<versaoSistema>3.0.01</versaoSistema>
+		<nomeBancoDados>Postgres</nomeBancoDados>
 	</ns2:remetente>
 	<ns2:originadora>
-		<contraChave>003d61860206f2804eefff4d01ef1a3f</contraChave>
-		<uuidInstalacao>10e769db-a642-43e4-b970-ff01ba660b51</uuidInstalacao>
-		<cpfOuCnpj>08953588910</cpfOuCnpj>
-		<nomeOuRazaoSocial>MARIANA MELO</nomeOuRazaoSocial>
+		<contraChave>TREINAMENTO</contraChave>
+		<uuidInstalacao>TREINAMENTO</uuidInstalacao>
+		<cpfOuCnpj>01234567890</cpfOuCnpj>
+		<nomeOuRazaoSocial>ADMINISTRADOR INSTALAÇÃO</nomeOuRazaoSocial>
+		<fone>8216756527</fone>
+		<email>prof@esus.br</email>
+		<versaoSistema>3.0.01</versaoSistema>
+		<nomeBancoDados>Postgres</nomeBancoDados>
 	</ns2:originadora>
-	<versao major="2" minor="0" revision="0"/>
+	<versao major="3" minor="0" revision="0" />
 </ns3:dadoTransporteTransportXml>

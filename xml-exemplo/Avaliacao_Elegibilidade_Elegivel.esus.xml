@@ -1,90 +1,82 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<ns3:dadoTransporteTransportXml xmlns:ns2="http://esus.ufsc.br/v2000/dadoinstalacao" xmlns:ns3="http://esus.ufsc.br/v2000/dadotransporte" xmlns:ns4="http://esus.ufsc.br/v2000/fichaavaliacaoelegibilidade">
-	<uuidDadoSerializado>5444428-269f1ecd-7e98-4504-9fe3-f826707735c3</uuidDadoSerializado>
+<ns3:dadoTransporteTransportXml xmlns:ns2="http://esus.ufsc.br/dadoinstalacao" xmlns:ns3="http://esus.ufsc.br/dadotransporte" xmlns:ns4="http://esus.ufsc.br/fichaavaliacaoelegibilidade">
+	<uuidDadoSerializado>5444428-2bcb85ec-212f-47fc-88a7-baae0d432926</uuidDadoSerializado>
 	<tipoDadoSerializado>11</tipoDadoSerializado>
 	<codIbge>4205407</codIbge>
 	<cnesDadoSerializado>5444428</cnesDadoSerializado>
 	<ineDadoSerializado>9023673542</ineDadoSerializado>
-	<numLote>39</numLote>
+	<numLote>1</numLote>
 	<ns4:fichaAvaliacaoElegibilidadeTransport>
 		<headerTransport>
-			<profissionalCNS>708407713297266</profissionalCNS>
-			<cboCodigo_2002>225142</cboCodigo_2002>
-			<cnes>5444428</cnes>
-			<ine>9023673542</ine>
-			<dataAtendimento>1430406000000</dataAtendimento>
+			<lotacaoFormPrincipal>
+				<profissionalCNS>700609923387762</profissionalCNS>
+				<cboCodigo_2002>225142</cboCodigo_2002>
+				<cnes>5444428</cnes>
+				<ine>9023673542</ine>
+			</lotacaoFormPrincipal>
+			<dataAtendimento>1517320800000</dataAtendimento>
 			<codigoIbgeMunicipio>4205407</codigoIbgeMunicipio>
 		</headerTransport>
-		<uuidFicha>5444428-269f1ecd-7e98-4504-9fe3-f826707735c3</uuidFicha>
-		<tpCdsOrigem>3</tpCdsOrigem>
-		<numeroCartaoSus>127984422070002</numeroCartaoSus>
-		<dataNascimentoCidadao>635094000000</dataNascimentoCidadao>
-		<sexoCidadao>1</sexoCidadao>
-		<nomeCidadao>MARIA CÂNDIDA DA SILVA</nomeCidadao>
-		<racaCorCidadao>1</racaCorCidadao>
-		<nomeSocialCidadao>MARIA</nomeSocialCidadao>
-		<nomeMaeCidadao>JOANA DA SILVA</nomeMaeCidadao>
+		<uuidFicha>5444428-2bcb85ec-212f-47fc-88a7-baae0d432926</uuidFicha>
+		<tpCdsOrigem>1</tpCdsOrigem>
+		<turno>1</turno>
+		<cnsCidadao>898050047989752</cnsCidadao>
+		<dataNascimentoCidadao>813765600000</dataNascimentoCidadao>
+		<sexoCidadao>0</sexoCidadao>
+		<nomeCidadao>JONAS DUTRA</nomeCidadao>
+		<racaCorCidadao>4</racaCorCidadao>
+		<nomeSocialCidadao></nomeSocialCidadao>
+		<nomeMaeCidadao>INES DUTRA</nomeMaeCidadao>
 		<desconheceNomeMae>false</desconheceNomeMae>
-		<codigoIbgeMunicipioNascimento>3100104</codigoIbgeMunicipioNascimento>
-		<codigoNacionalidade>1</codigoNacionalidade>
-		<emailCidadao>maria@candida.com.br</emailCidadao>
-		<cuidadorCidadao>4</cuidadorCidadao>
-		<numeroNisPisPasep>10005984111</numeroNisPisPasep>
-		<atencaoDomiciliarOrigem>1</atencaoDomiciliarOrigem>
-		<atencaoDomiciliarModalidade>1</atencaoDomiciliarModalidade>
-		<situacoesPresentes>9</situacoesPresentes>
-		<situacoesPresentes>10</situacoesPresentes>
-		<situacoesPresentes>11</situacoesPresentes>
-		<situacoesPresentes>12</situacoesPresentes>
-		<situacoesPresentes>5</situacoesPresentes>
-		<situacoesPresentes>6</situacoesPresentes>
-		<situacoesPresentes>7</situacoesPresentes>
-		<situacoesPresentes>8</situacoesPresentes>
-		<situacoesPresentes>17</situacoesPresentes>
-		<situacoesPresentes>18</situacoesPresentes>
-		<situacoesPresentes>19</situacoesPresentes>
-		<situacoesPresentes>20</situacoesPresentes>
-		<situacoesPresentes>13</situacoesPresentes>
-		<situacoesPresentes>14</situacoesPresentes>
-		<situacoesPresentes>15</situacoesPresentes>
-		<situacoesPresentes>16</situacoesPresentes>
-		<situacoesPresentes>22</situacoesPresentes>
-		<situacoesPresentes>21</situacoesPresentes>
-		<situacoesPresentes>24</situacoesPresentes>
-		<situacoesPresentes>23</situacoesPresentes>
-		<situacoesPresentes>4</situacoesPresentes>
-		<situacoesPresentes>3</situacoesPresentes>
-		<situacoesPresentes>2</situacoesPresentes>
-		<situacoesPresentes>1</situacoesPresentes>
-		<cid10Principal>B170</cid10Principal>
-		<cid10Segundo>T740</cid10Segundo>
-		<cid10Terceiro>O037</cid10Terceiro>
+		<codigoIbgeMunicipioNascimento>1500107</codigoIbgeMunicipioNascimento>
+		<nacionalidadeCidadao>1</nacionalidadeCidadao>
+		<emailCidadao>gmail@gmail.com</emailCidadao>
+		<cuidadorCidadao>2</cuidadorCidadao>
+		<atencaoDomiciliarProcedencia>1</atencaoDomiciliarProcedencia>
+		<atencaoDomiciliarModalidade>2</atencaoDomiciliarModalidade>
+		<condicoesAvaliadas>2</condicoesAvaliadas>
+		<condicoesAvaliadas>1</condicoesAvaliadas>
+		<cid10Principal>M842</cid10Principal>
+		<cid10SecundarioUm>Y06</cid10SecundarioUm>
 		<conclusaoDestinoElegivel>1</conclusaoDestinoElegivel>
 		<endereco>
-			<tipoLogradouroNumeroDne>081</tipoLogradouroNumeroDne>
-			<nomeLogradouro>Delminda Silveira</nomeLogradouro>
-			<numero>125</numero>
-			<complemento>perto da padaria</complemento>
-			<bairro>AGRONÔMICA</bairro>
+			<bairro>ITACORUBI</bairro>
+			<cep>88034102</cep>
 			<codigoIbgeMunicipio>4205407</codigoIbgeMunicipio>
+			<complemento>CASA</complemento>
+			<nomeLogradouro>AMARO ANTÔNIO VIEIRA</nomeLogradouro>
+			<numero>100</numero>
 			<numeroDneUf>25</numeroDneUf>
-			<cep>88025500</cep>
-			<telResidencial>4833658474</telResidencial>
-			<telReferencial>4833614858</telReferencial>
+			<telefoneContato>99999999999</telefoneContato>
+			<telefoneResidencia>99999999999</telefoneResidencia>
+			<tipoLogradouroNumeroDne>090</tipoLogradouroNumeroDne>
 			<stSemNumero>false</stSemNumero>
+			<pontoReferencia>MERCADO</pontoReferencia>
 		</endereco>
+		<nomePaiCidadao>PEDRO DUTRA</nomePaiCidadao>
+		<desconheceNomePai>false</desconheceNomePai>
+		<paisNascimento>31</paisNascimento>
+		<cnsCuidador>898050047989752</cnsCuidador>
 	</ns4:fichaAvaliacaoElegibilidadeTransport>
 	<ns2:remetente>
-		<contraChave>003d61860206f2804eefff4d01ef1a3f</contraChave>
-		<uuidInstalacao>10e769db-a642-43e4-b970-ff01ba660b51</uuidInstalacao>
-		<cpfOuCnpj>08953588910</cpfOuCnpj>
-		<nomeOuRazaoSocial>MARIANA MELO</nomeOuRazaoSocial>
+		<contraChave>TREINAMENTO</contraChave>
+		<uuidInstalacao>TREINAMENTO</uuidInstalacao>
+		<cpfOuCnpj>01234567890</cpfOuCnpj>
+		<nomeOuRazaoSocial>ADMINISTRADOR INSTALAÇÃO</nomeOuRazaoSocial>
+		<fone>8216756527</fone>
+		<email>prof@esus.br</email>
+		<versaoSistema>3.0.01</versaoSistema>
+		<nomeBancoDados>Postgres</nomeBancoDados>
 	</ns2:remetente>
 	<ns2:originadora>
-		<contraChave>003d61860206f2804eefff4d01ef1a3f</contraChave>
-		<uuidInstalacao>10e769db-a642-43e4-b970-ff01ba660b51</uuidInstalacao>
-		<cpfOuCnpj>08953588910</cpfOuCnpj>
-		<nomeOuRazaoSocial>MARIANA MELO</nomeOuRazaoSocial>
+		<contraChave>TREINAMENTO</contraChave>
+		<uuidInstalacao>TREINAMENTO</uuidInstalacao>
+		<cpfOuCnpj>01234567890</cpfOuCnpj>
+		<nomeOuRazaoSocial>ADMINISTRADOR INSTALAÇÃO</nomeOuRazaoSocial>
+		<fone>8216756527</fone>
+		<email>prof@esus.br</email>
+		<versaoSistema>3.0.01</versaoSistema>
+		<nomeBancoDados>Postgres</nomeBancoDados>
 	</ns2:originadora>
-	<versao major="2" minor="0" revision="0"/>
+	<versao major="3" minor="0" revision="0" />
 </ns3:dadoTransporteTransportXml>

@@ -1,8 +1,8 @@
-#Exemplo Java
+# Exemplo Java
 
 Este exemplo é um projeto maven que demonstra como criar um arquivo .zip com fichas serializadas para importação no e-SUS AB.
 
-##Passo 1
+## Passo 1
 
 Criar o objeto da ficha e populá-lo com as informações.
 Para mais informações sobre as validações dos dados no sistema e-SUS AB consulte o [dicionário de dados](http://esusab.github.io/integracao/).
@@ -16,7 +16,7 @@ thriftProcedimentos.setNumTotalAfericaoTemperatura(1);
 //... 
 ```
 
-##Passo 2
+## Passo 2
 
 Depois de montar o objeto da ficha, você deve criar e popular o objeto de transporte.
 
@@ -48,7 +48,7 @@ dadoTransporteThrift.setOriginadora(originadoraRemetente);
 dadoTransporteThrift.setRemetente(originadoraRemetente);
 ```
 
-##Passo 3
+## Passo 3
 
 Serializar o objeto da ficha utilizando o TBinaryProtocol da biblioteca thrift.
 
@@ -61,7 +61,7 @@ thriftProcedimentos.write(protocol);
 byte[] thriftProcedimentosSerializado = baos.toByteArray();
 ```
 
-##Passo 4
+## Passo 4
 
 Informar o tipo da ficha, a ficha serializada e a versão no DadoTransporte.
 
@@ -72,7 +72,7 @@ VersaoThrift versaoThrift = new VersaoThrift(2, 0, 0); // versão da ficha a ser
 dadoTransporteThrift.setVersao(versaoThrift);
 ```
 
-##Passo 5
+## Passo 5
 
 Criar um zip em disco para inserir as fichas.
 
@@ -81,7 +81,7 @@ File zipFile = new File(System.getProperty("user.home") + "/exemploConversaoThri
 ZipOutputStream outputStream = new ZipOutputStream(new FileOutputStream(zipFile));
 ```
 
-##Passo 6
+## Passo 6
 
 Dar um nome para o arquivo a ser inserido no zip (nesse caso usamos o UUID da ficha) sempre acrescentando a extensão ".esus" ao final
 
@@ -89,7 +89,7 @@ Dar um nome para o arquivo a ser inserido no zip (nesse caso usamos o UUID da fi
 String entryName = dadoTransporteThrift.getUuidDadoSerializado() + ".esus";
 ```
 
-##Passo 7
+## Passo 7
 
 Adicionar uma nova entrada (novo arquivo) dentro do zip com o nome definido
 
@@ -97,7 +97,7 @@ Adicionar uma nova entrada (novo arquivo) dentro do zip com o nome definido
 outputStream.putNextEntry(new ZipEntry(entryName));
 ```
 
-##Passo 8
+## Passo 8
 
 Serializar o objeto DadoTransporte utilizando o TBinaryProtocol da biblioteca thrift
 
@@ -110,7 +110,7 @@ dadoTransporteThrift.write(protocol);
 byte[] dadoTransporteSerializado = baos.toByteArray();
 ```
 
-##Passo 9
+## Passo 9
 
 Escrever o dadoTransporteSerializado no arquivo zip.
 
@@ -120,7 +120,7 @@ outputStream.write(dadoTransporteSerializado);
 
 Para adicionar mais fichas no mesmo zip, repetir os passos 6, 7, 8 e 9 com as demais fichas.
 
-##Passo 10
+## Passo 10
 
 Finalizar o arquivo zip.
 

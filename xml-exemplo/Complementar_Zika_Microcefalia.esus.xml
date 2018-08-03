@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns3:dadoTransporteTransportXml xmlns:ns2="http://esus.ufsc.br/dadoinstalacao" xmlns:ns3="http://esus.ufsc.br/dadotransporte" xmlns:ns4="http://esus.ufsc.br/fichacomplementarzikamicrocefalia">
+	<uuidDadoSerializado>5444429-5235eb5f-6fab-48f2-be51-1c2e3982493d</uuidDadoSerializado>
+	<tipoDadoSerializado>13</tipoDadoSerializado>
+	<codIbge>4205407</codIbge>
+	<cnesDadoSerializado>5444429</cnesDadoSerializado>
+	<ineDadoSerializado>1382855330</ineDadoSerializado>
+	<numLote>1</numLote>
+	<ns4:fichaComplementarZikaMicrocefaliaTransport>
+		<headerTransport>
+			<profissionalCNS>700609923387762</profissionalCNS>
+			<cboCodigo_2002>225142</cboCodigo_2002>
+			<cnes>5444429</cnes>
+			<ine>1382855330</ine>
+			<dataAtendimento>1517320800000</dataAtendimento>
+			<codigoIbgeMunicipio>4205407</codigoIbgeMunicipio>
+		</headerTransport>
+		<uuidFicha>5444429-5235eb5f-6fab-48f2-be51-1c2e3982493d</uuidFicha>
+		<tpCdsOrigem>1</tpCdsOrigem>
+		<turno>1</turno>
+		<cnsCidadao>898050047989752</cnsCidadao>
+		<cnsResponsavelFamiliar>100291426250007</cnsResponsavelFamiliar>
+		<dataRealizacaoTesteOlhinho>1517148000000</dataRealizacaoTesteOlhinho>
+		<coResultadoTesteOlhinho>1</coResultadoTesteOlhinho>
+		<dataRealizacaoExameFundoOlho>1517234400000</dataRealizacaoExameFundoOlho>
+		<coResultadoExameFundoOlho>3</coResultadoExameFundoOlho>
+		<dataRealizacaoTesteOrelhinha>1517320800000</dataRealizacaoTesteOrelhinha>
+		<coResultadoTesteOrelhinha>5</coResultadoTesteOrelhinha>
+		<dataRealizacaoUSTransfontanela>1517148000000</dataRealizacaoUSTransfontanela>
+		<coResultadoUsTransfontanela>8</coResultadoUsTransfontanela>
+		<dataRealizacaoTomografiaComputadorizada>1517320800000</dataRealizacaoTomografiaComputadorizada>
+		<coResultadoTomografiaComputadorizada>13</coResultadoTomografiaComputadorizada>
+		<dataRealizacaoRessonanciaMagnetica>1517148000000</dataRealizacaoRessonanciaMagnetica>
+		<coResultadoRessonanciaMagnetica>18</coResultadoRessonanciaMagnetica>
+	</ns4:fichaComplementarZikaMicrocefaliaTransport>
+	<ns2:remetente>
+		<contraChave>TREINAMENTO</contraChave>
+		<uuidInstalacao>TREINAMENTO</uuidInstalacao>
+		<cpfOuCnpj>01234567890</cpfOuCnpj>
+		<nomeOuRazaoSocial>ADMINISTRADOR INSTALAÇÃO</nomeOuRazaoSocial>
+		<fone>8216756527</fone>
+		<email>prof@esus.br</email>
+		<versaoSistema>3.0.01</versaoSistema>
+		<nomeBancoDados>Postgres</nomeBancoDados>
+	</ns2:remetente>
+	<ns2:originadora>
+		<contraChave>TREINAMENTO</contraChave>
+		<uuidInstalacao>TREINAMENTO</uuidInstalacao>
+		<cpfOuCnpj>01234567890</cpfOuCnpj>
+		<nomeOuRazaoSocial>ADMINISTRADOR INSTALAÇÃO</nomeOuRazaoSocial>
+		<fone>8216756527</fone>
+		<email>prof@esus.br</email>
+		<versaoSistema>3.0.01</versaoSistema>
+		<nomeBancoDados>Postgres</nomeBancoDados>
+	</ns2:originadora>
+	<versao major="3" minor="0" revision="0" />
+</ns3:dadoTransporteTransportXml>

@@ -1,124 +1,66 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<ns3:dadoTransporteTransportXml xmlns:ns2="http://esus.ufsc.br/v2000/dadoinstalacao" xmlns:ns3="http://esus.ufsc.br/v2000/dadotransporte" xmlns:ns4="http://esus.ufsc.br/v2000/fichaprocedimentomaster">
-	<uuidDadoSerializado>5444428-22bdc76b-1667-4779-8f1f-b4e2a2b43fcc</uuidDadoSerializado>
+<ns3:dadoTransporteTransportXml xmlns:ns2="http://esus.ufsc.br/dadoinstalacao" xmlns:ns3="http://esus.ufsc.br/dadotransporte" xmlns:ns4="http://esus.ufsc.br/fichaprocedimentomaster">
+	<uuidDadoSerializado>5444429-0fae865e-124b-411d-a5ab-8c4c23966046</uuidDadoSerializado>
 	<tipoDadoSerializado>7</tipoDadoSerializado>
 	<codIbge>4205407</codIbge>
-	<cnesDadoSerializado>5444428</cnesDadoSerializado>
+	<cnesDadoSerializado>5444429</cnesDadoSerializado>
 	<ineDadoSerializado>1382855330</ineDadoSerializado>
-	<numLote>39</numLote>
+	<numLote>1</numLote>
 	<ns4:fichaProcedimentoMasterTransport>
 		<headerTransport>
-			<profissionalCNS>709000834341415</profissionalCNS>
-			<cboCodigo_2002>225142</cboCodigo_2002>
-			<cnes>5444428</cnes>
+			<profissionalCNS>700609923387762</profissionalCNS>
+			<cboCodigo_2002>223505</cboCodigo_2002>
+			<cnes>5444429</cnes>
 			<ine>1382855330</ine>
-			<dataAtendimento>1430406000000</dataAtendimento>
+			<dataAtendimento>1517234400000</dataAtendimento>
 			<codigoIbgeMunicipio>4205407</codigoIbgeMunicipio>
 		</headerTransport>
 		<atendProcedimentos>
-			<numProntuario>154</numProntuario>
-			<numCartaoSus>108664915360004</numCartaoSus>
-			<dtNascimento>445705200000</dtNascimento>
-			<sexo>1</sexo>
-			<localAtendimento>2</localAtendimento>
-			<turno>1</turno>
-			<statusEscutaInicialOrientacao>true</statusEscutaInicialOrientacao>
-		</atendProcedimentos>
-		<atendProcedimentos>
-			<numProntuario>165</numProntuario>
-			<numCartaoSus>159463994730018</numCartaoSus>
-			<dtNascimento>447001200000</dtNascimento>
-			<sexo>1</sexo>
-			<localAtendimento>2</localAtendimento>
-			<turno>2</turno>
-			<statusEscutaInicialOrientacao>true</statusEscutaInicialOrientacao>
-			<procedimentos>ABPG040</procedimentos>
-			<procedimentos>ABPG002</procedimentos>
-			<procedimentos>ABPG019</procedimentos>
-			<procedimentos>ABPG020</procedimentos>
-			<procedimentos>ABPG026</procedimentos>
-			<procedimentos>ABPG010</procedimentos>
-			<procedimentos>ABPG014</procedimentos>
-			<procedimentos>ABPG030</procedimentos>
-			<procedimentos>ABPG006</procedimentos>
-			<procedimentos>ABPG021</procedimentos>
-			<procedimentos>ABPG027</procedimentos>
-			<procedimentos>ABPG025</procedimentos>
-			<procedimentos>ABPG005</procedimentos>
-			<procedimentos>ABPG024</procedimentos>
-			<procedimentos>ABPG008</procedimentos>
-			<procedimentos>ABPG015</procedimentos>
-			<procedimentos>ABPG031</procedimentos>
-			<procedimentos>ABPG017</procedimentos>
-			<procedimentos>ABPG003</procedimentos>
-			<procedimentos>ABPG004</procedimentos>
-			<procedimentos>ABPG001</procedimentos>
-			<procedimentos>ABPG028</procedimentos>
-			<procedimentos>ABPG016</procedimentos>
-			<procedimentos>ABPG013</procedimentos>
-			<procedimentos>ABPG018</procedimentos>
-			<procedimentos>ABPG022</procedimentos>
-			<procedimentos>ABPG011</procedimentos>
-			<procedimentos>ABPG032</procedimentos>
-			<procedimentos>ABPG029</procedimentos>
-			<procedimentos>ABEX004</procedimentos>
-			<procedimentos>ABPG007</procedimentos>
-			<procedimentos>ABPG012</procedimentos>
-			<outrosSiaProcedimentos>0201010054</outrosSiaProcedimentos>
-			<outrosSiaProcedimentos>0201010038</outrosSiaProcedimentos>
-			<outrosSiaProcedimentos>0201010046</outrosSiaProcedimentos>
-		</atendProcedimentos>
-		<atendProcedimentos>
-			<numProntuario>4541</numProntuario>
-			<numCartaoSus>127984422070002</numCartaoSus>
-			<dtNascimento>968770800000</dtNascimento>
-			<sexo>1</sexo>
-			<localAtendimento>3</localAtendimento>
-			<turno>2</turno>
-			<statusEscutaInicialOrientacao>true</statusEscutaInicialOrientacao>
-			<procedimentos>ABPG040</procedimentos>
-			<procedimentos>ABEX004</procedimentos>
-			<procedimentos>ABPG030</procedimentos>
-			<procedimentos>ABPG013</procedimentos>
-			<procedimentos>ABPG024</procedimentos>
-			<procedimentos>ABPG004</procedimentos>
-			<procedimentos>ABPG001</procedimentos>
-			<procedimentos>ABPG028</procedimentos>
-			<procedimentos>ABPG015</procedimentos>
-			<outrosSiaProcedimentos>ABEX008</outrosSiaProcedimentos>
-			<outrosSiaProcedimentos>0201010046</outrosSiaProcedimentos>
-			<outrosSiaProcedimentos>0201010020</outrosSiaProcedimentos>
-		</atendProcedimentos>
-		<atendProcedimentos>
-			<dtNascimento>-151578000000</dtNascimento>
+			<numProntuario>12</numProntuario>
+			<cnsCidadao>127301025020001</cnsCidadao>
+			<dtNascimento>953128800000</dtNascimento>
 			<sexo>0</sexo>
-			<localAtendimento>4</localAtendimento>
-			<statusEscutaInicialOrientacao>false</statusEscutaInicialOrientacao>
-			<procedimentos>ABPG006</procedimentos>
-			<procedimentos>ABPG003</procedimentos>
-			<procedimentos>ABPG028</procedimentos>
+			<localAtendimento>2</localAtendimento>
+			<turno>2</turno>
+			<statusEscutaInicialOrientacao>true</statusEscutaInicialOrientacao>
+			<procedimentos>ABPG019</procedimentos>
+			<procedimentos>ABPG040</procedimentos>
+			<procedimentos>ABPG027</procedimentos>
+			<procedimentos>ABPG001</procedimentos>
+			<procedimentos>ABPG022</procedimentos>
+			<procedimentos>ABPG041</procedimentos>
+			<outrosSiaProcedimentos>0307020029</outrosSiaProcedimentos>
+			<outrosSiaProcedimentos>0101010010</outrosSiaProcedimentos>
 		</atendProcedimentos>
-		<uuidFicha>5444428-22bdc76b-1667-4779-8f1f-b4e2a2b43fcc</uuidFicha>
-		<tpCdsOrigem>3</tpCdsOrigem>
-		<numTotalAfericaoPa>3</numTotalAfericaoPa>
-		<numTotalGlicemiaCapilar>2</numTotalGlicemiaCapilar>
-		<numTotalAfericaoTemperatura>2</numTotalAfericaoTemperatura>
-		<numTotalMedicaoAltura>2</numTotalMedicaoAltura>
-		<numTotalCurativoSimples>1</numTotalCurativoSimples>
-		<numTotalMedicaoPeso>1</numTotalMedicaoPeso>
-		<numTotalColetaMaterialParaExameLaboratorial>2</numTotalColetaMaterialParaExameLaboratorial>
+		<uuidFicha>5444429-0fae865e-124b-411d-a5ab-8c4c23966046</uuidFicha>
+		<tpCdsOrigem>1</tpCdsOrigem>
+		<numTotalAfericaoPa>4</numTotalAfericaoPa>
+		<numTotalAfericaoTemperatura>3</numTotalAfericaoTemperatura>
+		<numTotalCurativoSimples>2</numTotalCurativoSimples>
+		<numTotalColetaMaterialParaExameLaboratorial>5</numTotalColetaMaterialParaExameLaboratorial>
+		<numTotalGlicemiaCapilar>5</numTotalGlicemiaCapilar>
+		<numTotalMedicaoAltura>5</numTotalMedicaoAltura>
+		<numTotalMedicaoPeso>5</numTotalMedicaoPeso>
 	</ns4:fichaProcedimentoMasterTransport>
 	<ns2:remetente>
-		<contraChave>003d61860206f2804eefff4d01ef1a3f</contraChave>
-		<uuidInstalacao>10e769db-a642-43e4-b970-ff01ba660b51</uuidInstalacao>
-		<cpfOuCnpj>08953588910</cpfOuCnpj>
-		<nomeOuRazaoSocial>MARIANA MELO</nomeOuRazaoSocial>
+		<contraChave>TREINAMENTO</contraChave>
+		<uuidInstalacao>TREINAMENTO</uuidInstalacao>
+		<cpfOuCnpj>01234567890</cpfOuCnpj>
+		<nomeOuRazaoSocial>ADMINISTRADOR INSTALAÇÃO</nomeOuRazaoSocial>
+		<fone>8216756527</fone>
+		<email>prof@esus.br</email>
+		<versaoSistema>3.0.01</versaoSistema>
+		<nomeBancoDados>Postgres</nomeBancoDados>
 	</ns2:remetente>
 	<ns2:originadora>
-		<contraChave>003d61860206f2804eefff4d01ef1a3f</contraChave>
-		<uuidInstalacao>10e769db-a642-43e4-b970-ff01ba660b51</uuidInstalacao>
-		<cpfOuCnpj>08953588910</cpfOuCnpj>
-		<nomeOuRazaoSocial>MARIANA MELO</nomeOuRazaoSocial>
+		<contraChave>TREINAMENTO</contraChave>
+		<uuidInstalacao>TREINAMENTO</uuidInstalacao>
+		<cpfOuCnpj>01234567890</cpfOuCnpj>
+		<nomeOuRazaoSocial>ADMINISTRADOR INSTALAÇÃO</nomeOuRazaoSocial>
+		<fone>8216756527</fone>
+		<email>prof@esus.br</email>
+		<versaoSistema>3.0.01</versaoSistema>
+		<nomeBancoDados>Postgres</nomeBancoDados>
 	</ns2:originadora>
-	<versao major="2" minor="0" revision="0"/>
+	<versao major="3" minor="0" revision="0" />
 </ns3:dadoTransporteTransportXml>

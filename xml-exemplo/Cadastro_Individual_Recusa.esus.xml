@@ -32,7 +32,7 @@
 		<informacoesSocioDemograficas />
 		<saidaCidadaoCadastro />
 		<statusTermoRecusaCadastroIndividualAtencaoBasica>true</statusTermoRecusaCadastroIndividualAtencaoBasica>
-		<tpCdsOrigem>1</tpCdsOrigem>
+		<tpCdsOrigem>3</tpCdsOrigem>
 		<uuid>5444429-9b109465-2b83-4c9e-89dd-aa6223f24a95</uuid>
 		<uuidFichaOriginadora>5444429-9b109465-2b83-4c9e-89dd-aa6223f24a95</uuidFichaOriginadora>
 		<headerTransport>

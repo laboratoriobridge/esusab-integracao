@@ -1,10 +1,12 @@
 include "./common.thrift"
 
-namespace java br.gov.saude.esus.cds.transport.generated.thrift.vacinacao
-namespace php br.gov.saude.esus.cds.transport.generated.thrift.vacinacao
-namespace delphi br.gov.saude.esus.cds.transport.generated.thrift.vacinacao
-namespace csharp br.gov.saude.esus.cds.transport.generated.thrift.vacinacao
-namespace rb br.gov.saude.esus.cds.transport.generated.thrift.vacinacao
+namespace java br.gov.saude.esusab.ras.vacinacao
+namespace php br.gov.saude.esusab.ras.vacinacao
+namespace delphi br.gov.saude.esusab.ras.vacinacao
+namespace csharp br.gov.saude.esusab.ras.vacinacao
+namespace rb br.gov.saude.esusab.ras.vacinacao
+namespace go br.gov.saude.esusab.ras.vacinacao
+namespace py br.gov.saude.esusab.ras.vacinacao
 
 struct VacinaRowThrift {
 	1:optional i64 imunobiologico;

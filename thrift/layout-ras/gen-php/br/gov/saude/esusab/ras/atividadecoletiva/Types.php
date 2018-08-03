@@ -422,6 +422,14 @@ class FichaAtividadeColetivaThrift {
    * @var int[]
    */
   public $praticasEmSaude = null;
+  /**
+   * @var bool
+   */
+  public $pseEducacao = null;
+  /**
+   * @var bool
+   */
+  public $pseSaude = null;
 
   public function __construct($vals=null) {
     if (!isset(self::$_TSPEC)) {
@@ -521,6 +529,14 @@ class FichaAtividadeColetivaThrift {
             'type' => TType::I64,
             ),
           ),
+        27 => array(
+          'var' => 'pseEducacao',
+          'type' => TType::BOOL,
+          ),
+        28 => array(
+          'var' => 'pseSaude',
+          'type' => TType::BOOL,
+          ),
         );
     }
     if (is_array($vals)) {
@@ -574,6 +590,12 @@ class FichaAtividadeColetivaThrift {
       }
       if (isset($vals['praticasEmSaude'])) {
         $this->praticasEmSaude = $vals['praticasEmSaude'];
+      }
+      if (isset($vals['pseEducacao'])) {
+        $this->pseEducacao = $vals['pseEducacao'];
+      }
+      if (isset($vals['pseSaude'])) {
+        $this->pseSaude = $vals['pseSaude'];
       }
     }
   }
@@ -779,6 +801,20 @@ class FichaAtividadeColetivaThrift {
             $xfer += $input->skip($ftype);
           }
           break;
+        case 27:
+          if ($ftype == TType::BOOL) {
+            $xfer += $input->readBool($this->pseEducacao);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 28:
+          if ($ftype == TType::BOOL) {
+            $xfer += $input->readBool($this->pseSaude);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
         default:
           $xfer += $input->skip($ftype);
           break;
@@ -950,6 +986,16 @@ class FichaAtividadeColetivaThrift {
         }
         $output->writeListEnd();
       }
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->pseEducacao !== null) {
+      $xfer += $output->writeFieldBegin('pseEducacao', TType::BOOL, 27);
+      $xfer += $output->writeBool($this->pseEducacao);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->pseSaude !== null) {
+      $xfer += $output->writeFieldBegin('pseSaude', TType::BOOL, 28);
+      $xfer += $output->writeBool($this->pseSaude);
       $xfer += $output->writeFieldEnd();
     }
     $xfer += $output->writeFieldStop();

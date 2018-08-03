@@ -273,6 +273,8 @@ class FichaAtividadeColetivaThrift:
    - headerTransport
    - temasParaSaude
    - praticasEmSaude
+   - pseEducacao
+   - pseSaude
   """
 
   thrift_spec = (
@@ -303,9 +305,11 @@ class FichaAtividadeColetivaThrift:
     (24, TType.STRUCT, 'headerTransport', (br.gov.saude.esusab.ras.common.ttypes.UnicaLotacaoHeaderThrift, br.gov.saude.esusab.ras.common.ttypes.UnicaLotacaoHeaderThrift.thrift_spec), None, ), # 24
     (25, TType.LIST, 'temasParaSaude', (TType.I64,None), None, ), # 25
     (26, TType.LIST, 'praticasEmSaude', (TType.I64,None), None, ), # 26
+    (27, TType.BOOL, 'pseEducacao', None, None, ), # 27
+    (28, TType.BOOL, 'pseSaude', None, None, ), # 28
   )
 
-  def __init__(self, uuidFicha=None, outraLocalidade=None, inep=None, numParticipantes=None, numAvaliacoesAlteradas=None, profissionais=None, atividadeTipo=None, temasParaReuniao=None, publicoAlvo=None, participantes=None, tbCdsOrigem=None, cnesLocalAtividade=None, procedimento=None, turno=None, headerTransport=None, temasParaSaude=None, praticasEmSaude=None,):
+  def __init__(self, uuidFicha=None, outraLocalidade=None, inep=None, numParticipantes=None, numAvaliacoesAlteradas=None, profissionais=None, atividadeTipo=None, temasParaReuniao=None, publicoAlvo=None, participantes=None, tbCdsOrigem=None, cnesLocalAtividade=None, procedimento=None, turno=None, headerTransport=None, temasParaSaude=None, praticasEmSaude=None, pseEducacao=None, pseSaude=None,):
     self.uuidFicha = uuidFicha
     self.outraLocalidade = outraLocalidade
     self.inep = inep
@@ -323,6 +327,8 @@ class FichaAtividadeColetivaThrift:
     self.headerTransport = headerTransport
     self.temasParaSaude = temasParaSaude
     self.praticasEmSaude = praticasEmSaude
+    self.pseEducacao = pseEducacao
+    self.pseSaude = pseSaude
 
   def read(self, iprot):
     if iprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None and fastbinary is not None:
@@ -451,6 +457,16 @@ class FichaAtividadeColetivaThrift:
           iprot.readListEnd()
         else:
           iprot.skip(ftype)
+      elif fid == 27:
+        if ftype == TType.BOOL:
+          self.pseEducacao = iprot.readBool();
+        else:
+          iprot.skip(ftype)
+      elif fid == 28:
+        if ftype == TType.BOOL:
+          self.pseSaude = iprot.readBool();
+        else:
+          iprot.skip(ftype)
       else:
         iprot.skip(ftype)
       iprot.readFieldEnd()
@@ -547,6 +563,14 @@ class FichaAtividadeColetivaThrift:
         oprot.writeI64(iter41)
       oprot.writeListEnd()
       oprot.writeFieldEnd()
+    if self.pseEducacao is not None:
+      oprot.writeFieldBegin('pseEducacao', TType.BOOL, 27)
+      oprot.writeBool(self.pseEducacao)
+      oprot.writeFieldEnd()
+    if self.pseSaude is not None:
+      oprot.writeFieldBegin('pseSaude', TType.BOOL, 28)
+      oprot.writeBool(self.pseSaude)
+      oprot.writeFieldEnd()
     oprot.writeFieldStop()
     oprot.writeStructEnd()
 
@@ -575,6 +599,8 @@ class FichaAtividadeColetivaThrift:
     value = (value * 31) ^ hash(self.headerTransport)
     value = (value * 31) ^ hash(self.temasParaSaude)
     value = (value * 31) ^ hash(self.praticasEmSaude)
+    value = (value * 31) ^ hash(self.pseEducacao)
+    value = (value * 31) ^ hash(self.pseSaude)
     return value
 
   def __repr__(self):

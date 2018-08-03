@@ -39,6 +39,8 @@ namespace br.gov.saude.esusab.ras.atividadecoletiva
     private br.gov.saude.esusab.ras.common.UnicaLotacaoHeaderThrift _headerTransport;
     private List<long> _temasParaSaude;
     private List<long> _praticasEmSaude;
+    private bool _pseEducacao;
+    private bool _pseSaude;
 
     public string UuidFicha { get; set; }
 
@@ -250,6 +252,32 @@ namespace br.gov.saude.esusab.ras.atividadecoletiva
       }
     }
 
+    public bool PseEducacao
+    {
+      get
+      {
+        return _pseEducacao;
+      }
+      set
+      {
+        __isset.pseEducacao = true;
+        this._pseEducacao = value;
+      }
+    }
+
+    public bool PseSaude
+    {
+      get
+      {
+        return _pseSaude;
+      }
+      set
+      {
+        __isset.pseSaude = true;
+        this._pseSaude = value;
+      }
+    }
+
 
     public Isset __isset;
     #if !SILVERLIGHT
@@ -272,6 +300,8 @@ namespace br.gov.saude.esusab.ras.atividadecoletiva
       public bool headerTransport;
       public bool temasParaSaude;
       public bool praticasEmSaude;
+      public bool pseEducacao;
+      public bool pseSaude;
     }
 
     public FichaAtividadeColetivaThrift() {
@@ -477,6 +507,20 @@ namespace br.gov.saude.esusab.ras.atividadecoletiva
               TProtocolUtil.Skip(iprot, field.Type);
             }
             break;
+          case 27:
+            if (field.Type == TType.Bool) {
+              PseEducacao = iprot.ReadBool();
+            } else { 
+              TProtocolUtil.Skip(iprot, field.Type);
+            }
+            break;
+          case 28:
+            if (field.Type == TType.Bool) {
+              PseSaude = iprot.ReadBool();
+            } else { 
+              TProtocolUtil.Skip(iprot, field.Type);
+            }
+            break;
           default: 
             TProtocolUtil.Skip(iprot, field.Type);
             break;
@@ -668,6 +712,22 @@ namespace br.gov.saude.esusab.ras.atividadecoletiva
         }
         oprot.WriteFieldEnd();
       }
+      if (__isset.pseEducacao) {
+        field.Name = "pseEducacao";
+        field.Type = TType.Bool;
+        field.ID = 27;
+        oprot.WriteFieldBegin(field);
+        oprot.WriteBool(PseEducacao);
+        oprot.WriteFieldEnd();
+      }
+      if (__isset.pseSaude) {
+        field.Name = "pseSaude";
+        field.Type = TType.Bool;
+        field.ID = 28;
+        oprot.WriteFieldBegin(field);
+        oprot.WriteBool(PseSaude);
+        oprot.WriteFieldEnd();
+      }
       oprot.WriteFieldStop();
       oprot.WriteStructEnd();
     }
@@ -739,6 +799,14 @@ namespace br.gov.saude.esusab.ras.atividadecoletiva
       if (PraticasEmSaude != null && __isset.praticasEmSaude) {
         __sb.Append(", PraticasEmSaude: ");
         __sb.Append(PraticasEmSaude);
+      }
+      if (__isset.pseEducacao) {
+        __sb.Append(", PseEducacao: ");
+        __sb.Append(PseEducacao);
+      }
+      if (__isset.pseSaude) {
+        __sb.Append(", PseSaude: ");
+        __sb.Append(PseSaude);
       }
       __sb.Append(")");
       return __sb.ToString();

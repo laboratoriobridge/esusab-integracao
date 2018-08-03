@@ -238,6 +238,10 @@ type
     procedure SetTemasParaSaude( const Value: IThriftList<Int64>);
     function GetPraticasEmSaude: IThriftList<Int64>;
     procedure SetPraticasEmSaude( const Value: IThriftList<Int64>);
+    function GetPseEducacao: Boolean;
+    procedure SetPseEducacao( const Value: Boolean);
+    function GetPseSaude: Boolean;
+    procedure SetPseSaude( const Value: Boolean);
 
     property UuidFicha: string read GetUuidFicha write SetUuidFicha;
     property OutraLocalidade: string read GetOutraLocalidade write SetOutraLocalidade;
@@ -256,6 +260,8 @@ type
     property HeaderTransport: IUnicaLotacaoHeaderThrift read GetHeaderTransport write SetHeaderTransport;
     property TemasParaSaude: IThriftList<Int64> read GetTemasParaSaude write SetTemasParaSaude;
     property PraticasEmSaude: IThriftList<Int64> read GetPraticasEmSaude write SetPraticasEmSaude;
+    property PseEducacao: Boolean read GetPseEducacao write SetPseEducacao;
+    property PseSaude: Boolean read GetPseSaude write SetPseSaude;
 
     function Get__isset_OutraLocalidade: Boolean;
     function Get__isset_Inep: Boolean;
@@ -273,6 +279,8 @@ type
     function Get__isset_HeaderTransport: Boolean;
     function Get__isset_TemasParaSaude: Boolean;
     function Get__isset_PraticasEmSaude: Boolean;
+    function Get__isset_PseEducacao: Boolean;
+    function Get__isset_PseSaude: Boolean;
 
     property __isset_OutraLocalidade: Boolean read Get__isset_OutraLocalidade;
     property __isset_Inep: Boolean read Get__isset_Inep;
@@ -290,6 +298,8 @@ type
     property __isset_HeaderTransport: Boolean read Get__isset_HeaderTransport;
     property __isset_TemasParaSaude: Boolean read Get__isset_TemasParaSaude;
     property __isset_PraticasEmSaude: Boolean read Get__isset_PraticasEmSaude;
+    property __isset_PseEducacao: Boolean read Get__isset_PseEducacao;
+    property __isset_PseSaude: Boolean read Get__isset_PseSaude;
   end;
 
   TFichaAtividadeColetivaThriftImpl = class(TInterfacedObject, IBase, IFichaAtividadeColetivaThrift)
@@ -311,6 +321,8 @@ type
     FHeaderTransport: IUnicaLotacaoHeaderThrift;
     FTemasParaSaude: IThriftList<Int64>;
     FPraticasEmSaude: IThriftList<Int64>;
+    FPseEducacao: Boolean;
+    FPseSaude: Boolean;
     
     F__isset_OutraLocalidade: Boolean;
     F__isset_Inep: Boolean;
@@ -328,6 +340,8 @@ type
     F__isset_HeaderTransport: Boolean;
     F__isset_TemasParaSaude: Boolean;
     F__isset_PraticasEmSaude: Boolean;
+    F__isset_PseEducacao: Boolean;
+    F__isset_PseSaude: Boolean;
     
     function GetUuidFicha: string;
     procedure SetUuidFicha( const Value: string);
@@ -363,6 +377,10 @@ type
     procedure SetTemasParaSaude( const Value: IThriftList<Int64>);
     function GetPraticasEmSaude: IThriftList<Int64>;
     procedure SetPraticasEmSaude( const Value: IThriftList<Int64>);
+    function GetPseEducacao: Boolean;
+    procedure SetPseEducacao( const Value: Boolean);
+    function GetPseSaude: Boolean;
+    procedure SetPseSaude( const Value: Boolean);
 
     function Get__isset_OutraLocalidade: Boolean;
     function Get__isset_Inep: Boolean;
@@ -380,6 +398,8 @@ type
     function Get__isset_HeaderTransport: Boolean;
     function Get__isset_TemasParaSaude: Boolean;
     function Get__isset_PraticasEmSaude: Boolean;
+    function Get__isset_PseEducacao: Boolean;
+    function Get__isset_PseSaude: Boolean;
   public
     constructor Create;
     destructor Destroy; override;
@@ -408,6 +428,8 @@ type
     property HeaderTransport: IUnicaLotacaoHeaderThrift read GetHeaderTransport write SetHeaderTransport;
     property TemasParaSaude: IThriftList<Int64> read GetTemasParaSaude write SetTemasParaSaude;
     property PraticasEmSaude: IThriftList<Int64> read GetPraticasEmSaude write SetPraticasEmSaude;
+    property PseEducacao: Boolean read GetPseEducacao write SetPseEducacao;
+    property PseSaude: Boolean read GetPseSaude write SetPseSaude;
 
     // isset
     property __isset_OutraLocalidade: Boolean read Get__isset_OutraLocalidade;
@@ -426,6 +448,8 @@ type
     property __isset_HeaderTransport: Boolean read Get__isset_HeaderTransport;
     property __isset_TemasParaSaude: Boolean read Get__isset_TemasParaSaude;
     property __isset_PraticasEmSaude: Boolean read Get__isset_PraticasEmSaude;
+    property __isset_PseEducacao: Boolean read Get__isset_PseEducacao;
+    property __isset_PseSaude: Boolean read Get__isset_PseSaude;
   end;
 
 implementation
@@ -1236,6 +1260,38 @@ begin
   Result := F__isset_PraticasEmSaude;
 end;
 
+function TFichaAtividadeColetivaThriftImpl.GetPseEducacao: Boolean;
+begin
+  Result := FPseEducacao;
+end;
+
+procedure TFichaAtividadeColetivaThriftImpl.SetPseEducacao( const Value: Boolean);
+begin
+  F__isset_PseEducacao := True;
+  FPseEducacao := Value;
+end;
+
+function TFichaAtividadeColetivaThriftImpl.Get__isset_PseEducacao: Boolean;
+begin
+  Result := F__isset_PseEducacao;
+end;
+
+function TFichaAtividadeColetivaThriftImpl.GetPseSaude: Boolean;
+begin
+  Result := FPseSaude;
+end;
+
+procedure TFichaAtividadeColetivaThriftImpl.SetPseSaude( const Value: Boolean);
+begin
+  F__isset_PseSaude := True;
+  FPseSaude := Value;
+end;
+
+function TFichaAtividadeColetivaThriftImpl.Get__isset_PseSaude: Boolean;
+begin
+  Result := F__isset_PseSaude;
+end;
+
 procedure TFichaAtividadeColetivaThriftImpl.Read( const iprot: IProtocol);
 var
   field_ : IField;
@@ -1470,6 +1526,24 @@ begin
           begin
             TProtocolUtil.Skip(iprot, field_.Type_);
           end;
+        end;
+        27: begin
+          if (field_.Type_ = TType.Bool_) then
+          begin
+            PseEducacao := iprot.ReadBool();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        28: begin
+          if (field_.Type_ = TType.Bool_) then
+          begin
+            PseSaude := iprot.ReadBool();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
         end
         else begin
           TProtocolUtil.Skip(iprot, field_.Type_);
@@ -1691,6 +1765,24 @@ begin
     oprot.WriteListEnd();
     oprot.WriteFieldEnd();
   end;
+  if (__isset_PseEducacao) then
+  begin
+    field_.Name := 'pseEducacao';
+    field_.Type_  := TType.Bool_;
+    field_.ID := 27;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteBool(PseEducacao);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_PseSaude) then
+  begin
+    field_.Name := 'pseSaude';
+    field_.Type_  := TType.Bool_;
+    field_.ID := 28;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteBool(PseSaude);
+    oprot.WriteFieldEnd();
+  end;
   oprot.WriteFieldStop();
   oprot.WriteStructEnd();
 end;
@@ -1766,6 +1858,14 @@ begin
     if (PraticasEmSaude <> nil) and __isset_PraticasEmSaude then begin
       _sb34.Append(', PraticasEmSaude: ');
       _sb34.Append(PraticasEmSaude);
+    end;
+    if (__isset_PseEducacao) then begin
+      _sb34.Append(', PseEducacao: ');
+      _sb34.Append(PseEducacao);
+    end;
+    if (__isset_PseSaude) then begin
+      _sb34.Append(', PseSaude: ');
+      _sb34.Append(PseSaude);
     end;
     _sb34.Append(')');
     Result := _sb34.ToString;

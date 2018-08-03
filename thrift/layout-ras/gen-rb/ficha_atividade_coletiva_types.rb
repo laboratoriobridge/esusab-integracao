@@ -81,6 +81,8 @@ module Br
               HEADERTRANSPORT = 24
               TEMASPARASAUDE = 25
               PRATICASEMSAUDE = 26
+              PSEEDUCACAO = 27
+              PSESAUDE = 28
 
               FIELDS = {
                 UUIDFICHA => {:type => ::Thrift::Types::STRING, :name => 'uuidFicha'},
@@ -99,7 +101,9 @@ module Br
                 TURNO => {:type => ::Thrift::Types::I64, :name => 'turno', :optional => true},
                 HEADERTRANSPORT => {:type => ::Thrift::Types::STRUCT, :name => 'headerTransport', :class => ::Br::Gov::Saude::Esusab::Ras::Common::UnicaLotacaoHeaderThrift, :optional => true},
                 TEMASPARASAUDE => {:type => ::Thrift::Types::LIST, :name => 'temasParaSaude', :element => {:type => ::Thrift::Types::I64}, :optional => true},
-                PRATICASEMSAUDE => {:type => ::Thrift::Types::LIST, :name => 'praticasEmSaude', :element => {:type => ::Thrift::Types::I64}, :optional => true}
+                PRATICASEMSAUDE => {:type => ::Thrift::Types::LIST, :name => 'praticasEmSaude', :element => {:type => ::Thrift::Types::I64}, :optional => true},
+                PSEEDUCACAO => {:type => ::Thrift::Types::BOOL, :name => 'pseEducacao', :optional => true},
+                PSESAUDE => {:type => ::Thrift::Types::BOOL, :name => 'pseSaude', :optional => true}
               }
 
               def struct_fields; FIELDS; end

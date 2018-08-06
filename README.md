@@ -11,7 +11,7 @@ Esse repositório contém esses arquivos além de exemplos de como utilizá-los.
 # Organização do repositório:
  * **XSD** - Arquivos XSD fornecidos para integração via XML.
  * **thrift-exemplo** - Exemplos de código preenchendo e serializando fichas no formato thrift.
- * **thrift** - Arquivos fornecidos para integração via thrift nas linguagens C#, Delphi, Java, Php e Ruby.
+ * **thrift** - Arquivos fornecidos para integração via thrift nas linguagens C#, Delphi, Go, Java, Php, Python e Ruby.
  * **xml-exemplo** - Exemplo de arquivos xml preenchidos com dados válidos. 
  
 # Dicionário de dados

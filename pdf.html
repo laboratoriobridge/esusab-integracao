@@ -4877,7 +4877,6 @@
 
 <ul>
 <li>Não pode ser posterior à data atual.</li>
-<li>Não pode ser anterior à data de nascimento do responsável pela família.</li>
 </ul>
 
 <h3 id="7-stmudanca">#7 stMudanca</h3>
@@ -6978,7 +6977,12 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Preencher somente um dos itens <code>2</code>, <code>3</code> ou <code>12</code>.</p>
+<p><strong>Regras:</strong> </p>
+
+<ul>
+<li>Preencher somente um dos campos: <a href="/integracao/ledi/estrutura_arquivos/dicionario-fac.html#2-outralocalidade">outraLocalidade</a>, <a href="/integracao/ledi/estrutura_arquivos/dicionario-fac.html#3-inep">inep</a> ou <a href="/integracao/ledi/estrutura_arquivos/dicionario-fac.html#12-cnesLocalAtividade">cnesLocalAtivade</a>;</li>
+<li>Não deve ser preenchido se <a href="/integracao/ledi/estrutura_arquivos/dicionario-fac.html#18-pseeducacao">pseEducacao</a> = <code>true</code> ou <a href="/integracao/ledi/estrutura_arquivos/dicionario-fac.html#19-psesaude">pseSaude</a> = <code>true</code>.</li>
+</ul>
 
 <h3 id="3-inep">#3 inep</h3>
 
@@ -7000,9 +7004,12 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong>
-- Preencher somente um dos itens <code>2</code>, <code>3</code> ou <code>12</code>;
-- É de preenchimento obrigatório se <a href="/integracao/ledi/estrutura_arquivos/#18-pseEducacao">pseEducacao</a> = <code>true</code> ou <a href="/integracao/ledi/estrutura_arquivos/#19-pseSaude">pseSaude</a> = <code>true</code>.</p>
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Preencher somente um dos campos: <a href="/integracao/ledi/estrutura_arquivos/dicionario-fac.html#2-outralocalidade">outraLocalidade</a>, <a href="/integracao/ledi/estrutura_arquivos/dicionario-fac.html#3-inep">inep</a> ou <a href="/integracao/ledi/estrutura_arquivos/dicionario-fac.html#12-cnesLocalAtividade">cnesLocalAtivade</a>;</li>
+<li>É de preenchimento obrigatório se <a href="/integracao/ledi/estrutura_arquivos/dicionario-fac.html#18-pseeducacao">pseEducacao</a> = <code>true</code> ou <a href="/integracao/ledi/estrutura_arquivos/dicionario-fac.html#19-psesaude">pseSaude</a> = <code>true</code>.</li>
+</ul>
 
 <h3 id="4-numparticipantes">#4 numParticipantes</h3>
 
@@ -7028,7 +7035,7 @@
 
 <ul>
 <li>Valores entre 1 e 999;</li>
-<li>Deve ser maior ou igual a quantidade de participantes inseridos em <a href="/integracao/ledi/estrutura_arquivos/#10-participantes">participantes</a>.</li>
+<li>Deve ser maior ou igual a quantidade de participantes inseridos em <a href="/integracao/ledi/estrutura_arquivos/dicionario-fac.html#10-participantes">participantes</a>.</li>
 </ul>
 
 <h3 id="5-numavaliacoesalteradas">#5 numAvaliacoesAlteradas</h3>
@@ -7055,7 +7062,7 @@
 
 <ul>
 <li>Valores entre 0 e 999.</li>
-<li>O valor do campo deve ser igual ao número de participantes que tiveram o campo <a href="/integracao/ledi/estrutura_arquivos/#3-avaliacaoalterada">avaliacaoAlterada</a> = <code>true</code>.</li>
+<li>O valor do campo deve ser igual ao número de participantes que tiveram o campo <a href="/integracao/ledi/estrutura_arquivos/dicionario-fac.html#3-avaliacaoalterada">avaliacaoAlterada</a> = <code>true</code>.</li>
 </ul>
 
 <h3 id="6-profissionais">#6 profissionais</h3>
@@ -7081,10 +7088,10 @@
 <p><strong>Regras:</strong></p>
 
 <ul>
-<li>Não pode ser preenchido se <a href="/integracao/ledi/estrutura_arquivos/#18-pseEducacao">pseEducacao</a> = <code>true</code>.</li>
+<li>Não pode ser preenchido se <a href="/integracao/ledi/estrutura_arquivos/dicionario-fac.html#18-pseeducacao">pseEducacao</a> = <code>true</code> e <a href="/integracao/ledi/estrutura_arquivos/dicionario-fac.html#19-psesaude">pseSaude</a> = <code>false</code>.</li>
 </ul>
 
-<p><strong>Referências:</strong>   <a href="/integracao/ledi/estrutura_arquivos/#profissionalcborowitem">ProfissionalCboRowItem</a>.</p>
+<p><strong>Referências:</strong>   <a href="/integracao/ledi/estrutura_arquivos/dicionario-fac.html#profissionalcborowitem">ProfissionalCboRowItem</a>.</p>
 
 <h3 id="7-atividadetipo">#7 atividadeTipo</h3>
 
@@ -7109,8 +7116,17 @@
 <p><strong>Regras:</strong></p>
 
 <ul>
-<li>Os itens <code>01 - Reunião de equipe</code>, <code>02 - Reunião com outras equipes de saúde</code>, <code>03 - Reunião intersetorial / Conselho local de saúde / Controle social</code>, <code>05 - Atendimento em grupo</code> não podem ser preenchidos se <a href="/integracao/ledi/estrutura_arquivos/#18-pseEducacao">pseEducacao</a> = <code>true</code>.</li>
+<li><p>Os itens:</p>
+
+<ul>
+<li><code>01 - Reunião de equipe</code>;</li>
+<li><code>02 - Reunião com outras equipes de saúde</code>;</li>
+<li><code>03 - Reunião intersetorial / Conselho local de saúde / Controle social</code>;</li>
+<li><code>05 - Atendimento em grupo</code>.</li>
+</ul></li>
 </ul>
+
+<p>Não podem ser selecionados se <a href="/integracao/ledi/estrutura_arquivos/dicionario-fac.html#18-pseeducacao">pseEducacao</a> = <code>true</code> e <a href="/integracao/ledi/estrutura_arquivos/dicionario-fac.html#19-psesaude">pseSaude</a> = <code>false</code>.</p>
 
 <p><strong>Referências</strong>: <a href="/integracao/ledi/referencias/dicionario.html#tipoatividadecoletiva">TipoAtividadeColetiva</a>.</p>
 
@@ -7137,9 +7153,9 @@
 <p><strong>Regras:</strong></p>
 
 <ul>
-<li>É de preenchimento obrigatório se <a href="/integracao/ledi/estrutura_arquivos/#7-atividadetipo">atividadeTipo</a> for <code>1</code>, <code>2</code> ou <code>3</code>;</li>
-<li>Não pode ser preenchido se <a href="/integracao/ledi/estrutura_arquivos/#7-atividadetipo">atividadeTipo</a> for <code>4</code>, <code>5</code>, <code>6</code> ou <code>7</code>;</li>
-<li>Não pode ser preenchido se <a href="/integracao/ledi/estrutura_arquivos/#18-pseEducacao">pseEducacao</a> = <code>true</code>.</li>
+<li>É de preenchimento obrigatório se <a href="/integracao/ledi/estrutura_arquivos/dicionario-fac.html#7-atividadetipo">atividadeTipo</a> for <code>1</code>, <code>2</code> ou <code>3</code>;</li>
+<li>Não pode ser preenchido se <a href="/integracao/ledi/estrutura_arquivos/dicionario-fac.html#7-atividadetipo">atividadeTipo</a> for <code>4</code>, <code>5</code>, <code>6</code> ou <code>7</code>;</li>
+<li>Não pode ser preenchido se <a href="/integracao/ledi/estrutura_arquivos/dicionario-fac.html#18-pseeducacao">pseEducacao</a> = <code>true</code> e <a href="/integracao/ledi/estrutura_arquivos/dicionario-fac.html#19-psesaude">pseSaude</a> = <code>false</code>.</li>
 </ul>
 
 <p><strong>Referências:</strong> <a href="/integracao/ledi/referencias/dicionario.html#temasparareuniao">TemasParaReuniao</a>.</p>
@@ -7167,8 +7183,8 @@
 <p><strong>Regras:</strong></p>
 
 <ul>
-<li>É de preenchimento obrigatório se <a href="/integracao/ledi/estrutura_arquivos/#7-atividadetipo">atividadeTipo</a> for <code>4</code>, <code>5</code>, <code>6</code> ou <code>7</code>;</li>
-<li>Não pode ser preenchido se <a href="/integracao/ledi/estrutura_arquivos/#7-atividadetipo">atividadeTipo</a> for <code>1</code>, <code>2</code> ou <code>3</code>.</li>
+<li>É de preenchimento obrigatório se <a href="/integracao/ledi/estrutura_arquivos/dicionario-fac.html#7-atividadetipo">atividadeTipo</a> for <code>4</code>, <code>5</code>, <code>6</code> ou <code>7</code>;</li>
+<li>Não pode ser preenchido se <a href="/integracao/ledi/estrutura_arquivos/dicionario-fac.html#7-atividadetipo">atividadeTipo</a> for <code>1</code>, <code>2</code> ou <code>3</code>.</li>
 </ul>
 
 <p><strong>Referências:</strong> <a href="/integracao/ledi/referencias/dicionario.html#publicoalvo">PublicoAlvo</a>.</p>
@@ -7193,9 +7209,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> É de preenchimento obrigatório se <a href="/integracao/ledi/estrutura_arquivos/#7-atividadetipo">atividadeTipo</a> for <code>5</code> ou <code>6</code>.</p>
+<p><strong>Regras:</strong> É de preenchimento obrigatório se <a href="/integracao/ledi/estrutura_arquivos/dicionario-fac.html#7-atividadetipo">atividadeTipo</a> for <code>5</code> ou <code>6</code>.</p>
 
-<p><strong>Referências:</strong> <a href="/integracao/ledi/estrutura_arquivos/#participanterowitem">ParticipanteRowItem</a>.</p>
+<p><strong>Referências:</strong> <a href="/integracao/ledi/estrutura_arquivos/dicionario-fac.html#participanterowitem">ParticipanteRowItem</a>.</p>
 
 <h3 id="11-tbcdsorigem">#11    tbCdsOrigem</h3>
 
@@ -7239,7 +7255,12 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Preencher somente um dos itens <code>2</code>, <code>3</code> ou <code>12</code>.</p>
+<p><strong>Regras:</strong> </p>
+
+<ul>
+<li>Preencher somente um dos campos: <a href="/integracao/ledi/estrutura_arquivos/dicionario-fac.html#2-outralocalidade">outraLocalidade</a>, <a href="/integracao/ledi/estrutura_arquivos/dicionario-fac.html#3-inep">inep</a> ou <a href="/integracao/ledi/estrutura_arquivos/dicionario-fac.html#12-cnesLocalAtividade">cnesLocalAtivade</a>;</li>
+<li>Não deve ser preenchido se <a href="/integracao/ledi/estrutura_arquivos/dicionario-fac.html#18-pseeducacao">pseEducacao</a> = <code>true</code> ou <a href="/integracao/ledi/estrutura_arquivos/dicionario-fac.html#19-psesaude">pseSaude</a> = <code>true</code>.</li>
+</ul>
 
 <h3 id="13-procedimento">#13    procedimento</h3>
 
@@ -7261,9 +7282,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Só pode ser preenchido se o campo <a href="/integracao/ledi/estrutura_arquivos/#17-praticasemsaude">praticasEmSaude</a> possuir o valor <code>30</code>.</p>
+<p><strong>Regras:</strong> Só pode ser preenchido se o campo <a href="/integracao/ledi/estrutura_arquivos/dicionario-fac.html#17-praticasemsaude">praticasEmSaude</a> possuir o valor <code>30</code>.</p>
 
-<p><strong>Referências:</strong> <a href="/integracao/ledi/estrutura_arquivos/#outroprocedimentocoletivo">OutroProcedimentoColetivo</a>.</p>
+<p><strong>Referências:</strong> <a href="/integracao/ledi/estrutura_arquivos/dicionario-fac.html#outroprocedimentocoletivo">OutroProcedimentoColetivo</a>.</p>
 
 <h3 id="14-turno">#14    turno</h3>
 
@@ -7334,9 +7355,9 @@
 <p><strong>Regras:</strong></p>
 
 <ul>
-<li>Não pode ser preenchido se <a href="/integracao/ledi/estrutura_arquivos/#7-atividadetipo">atividadeTipo</a> = <code>1</code>, <code>2</code> ou <code>3</code>;</li>
-<li>É de preenchimento obrigatório se <a href="/integracao/ledi/estrutura_arquivos/#7-atividadetipo">atividadeTipo</a> = <code>4</code>, <code>5</code> ou <code>7</code>;</li>
-<li>Se <a href="/integracao/ledi/estrutura_arquivos/#16-temasParaSaude">temasParaSaude</a> = <code>15 - Semana saúde na escola</code>, torna-se obrigatório o preenchimento de <a href="/integracao/ledi/estrutura_arquivos/#18-pseEducacao">pseEducacao</a> ou <a href="/integracao/ledi/estrutura_arquivos/#19-pseSaude">pseSaude</a>.</li>
+<li>Não pode ser preenchido se <a href="/integracao/ledi/estrutura_arquivos/dicionario-fac.html#7-atividadetipo">atividadeTipo</a> = <code>1</code>, <code>2</code> ou <code>3</code>;</li>
+<li>É de preenchimento obrigatório se <a href="/integracao/ledi/estrutura_arquivos/dicionario-fac.html#7-atividadetipo">atividadeTipo</a> = <code>4</code>, <code>5</code> ou <code>7</code>;</li>
+<li>Se <a href="/integracao/ledi/estrutura_arquivos/dicionario-fac.html#16-temasparasaude">temasParaSaude</a> = <code>18 - Semana saúde na escola</code>, torna-se obrigatório o preenchimento de <a href="/integracao/ledi/estrutura_arquivos/dicionario-fac.html#18-pseeducacao">pseEducacao</a> ou <a href="/integracao/ledi/estrutura_arquivos/dicionario-fac.html#19-psesaude">pseSaude</a>.</li>
 </ul>
 
 <p><strong>Referências:</strong> <a href="/integracao/ledi/referencias/dicionario.html#temasparasaude">TemasParaSaude</a>.</p>
@@ -7364,11 +7385,24 @@
 <p><strong>Regras:</strong></p>
 
 <ul>
-<li>Não pode ser preenchido se <a href="/integracao/ledi/estrutura_arquivos/#7-atividadetipo">atividadeTipo</a> = <code>1</code>, <code>2</code>, <code>3</code>, <code>4</code> ou <code>7</code>;</li>
-<li>É de preenchimento obrigatório se <a href="/integracao/ledi/estrutura_arquivos/#7-atividadetipo">atividadeTipo</a> = <code>6</code>;</li>
-<li>Os itens <code>2 - Aplicação tópica de flúor</code> e <code>9 - Escovação dental supervisionada</code> só podem ser utilizados se <a href="/integracao/ledi/estrutura_arquivos/#7-atividadetipo">atividadeTipo</a> = <code>6</code>;</li>
-<li>Os itens <code>02 - Aplicação tópica de flúor</code>, <code>04 - Escovação dental supervisionada</code>, <code>06 - PNCT* sessão 1</code>, <code>07 - PNCT* sessão 2</code>,  <code>08 - PNCT* sessão 3</code>,  <code>09 - PNCT* sessão 4</code>, <code>12 - Verificação da situação vacinal</code>, <code>14 - Outro procedimento coletivo</code> não podem ser preenchidos se <a href="/integracao/ledi/estrutura_arquivos/#18-pseEducacao">pseEducacao</a> = <code>true</code>.</li>
+<li>Não pode ser preenchido se <a href="/integracao/ledi/estrutura_arquivos/dicionario-fac.html#7-atividadetipo">atividadeTipo</a> = <code>1</code>, <code>2</code>, <code>3</code>, <code>4</code> ou <code>7</code>;</li>
+<li>É de preenchimento obrigatório se <a href="/integracao/ledi/estrutura_arquivos/dicionario-fac.html#7-atividadetipo">atividadeTipo</a> = <code>6</code>;</li>
+<li>Os itens <code>2 - Aplicação tópica de flúor</code> e <code>9 - Escovação dental supervisionada</code> só podem ser utilizados se <a href="/integracao/ledi/estrutura_arquivos/dicionario-fac.html#7-atividadetipo">atividadeTipo</a> = <code>6</code>;</li>
+<li><p>Os itens:</p>
+
+<ul>
+<li><code>2 - Aplicação tópica de flúor</code>;</li>
+<li><code>9 - Escovação dental supervisionada</code>;</li>
+<li><code>25 - PNCT* sessão 1</code>;</li>
+<li><code>26 - PNCT* sessão 2</code>;</li>
+<li><code>27 - PNCT* sessão 3</code>;</li>
+<li><code>28 - PNCT* sessão 4</code>;</li>
+<li><code>24 - Verificação da situação vacinal</code>;</li>
+<li><code>30 - Outro procedimento coletivo</code>.</li>
+</ul></li>
 </ul>
+
+<p>Não podem ser selecionados se <a href="/integracao/ledi/estrutura_arquivos/dicionario-fac.html#18-pseeducacao">pseEducacao</a> = <code>true</code> e <a href="/integracao/ledi/estrutura_arquivos/dicionario-fac.html#19-psesaude">pseSaude</a> = <code>false</code>.</p>
 
 <p><strong>Referências:</strong> <a href="/integracao/ledi/referencias/dicionario.html#praticasemsaude">PraticasEmSaude</a>.</p>
 
@@ -7395,16 +7429,16 @@
 <p><strong>Regras:</strong></p>
 
 <ul>
-<li>Se <a href="/integracao/ledi/estrutura_arquivos/#18-pseEducacao">pseEducacao</a> = <code>true</code>, <a href="/integracao/ledi/estrutura_arquivos/#3-inep">inep</a> torna-se obrigatório;</li>
-<li>Se <a href="/integracao/ledi/estrutura_arquivos/#18-pseEducacao">pseEducacao</a> = <code>true</code> e <a href="/integracao/ledi/estrutura_arquivos/#18-pseSaude">pseSaude</a> = <code>false</code>, desabilitar o preenchimento de:
+<li>Se <a href="/integracao/ledi/estrutura_arquivos/dicionario-fac.html#18-pseeducacao">pseEducacao</a> = <code>true</code>, <a href="/integracao/ledi/estrutura_arquivos/dicionario-fac.html#3-inep">inep</a> torna-se obrigatório;</li>
+<li>É de preenchimento obrigatório se <a href="/integracao/ledi/estrutura_arquivos/dicionario-fac.html#16-temasparasaude">temasParaSaude</a> = <code>18 - Semana saúde na escola</code> e <a href="/integracao/ledi/estrutura_arquivos/dicionario-fac.html#19-psesaude">pseSaude</a> = <code>false</code>.</li>
+<li>Se <a href="/integracao/ledi/estrutura_arquivos/dicionario-fac.html#18-pseeducacao">pseEducacao</a> = <code>true</code> e <a href="/integracao/ledi/estrutura_arquivos/dicionario-fac.html#19-psesaude">pseSaude</a> = <code>false</code>:
 
 <ul>
-<li><a href="/integracao/ledi/estrutura_arquivos/#6-profissionais">profissionais</a>;</li>
-<li><a href="/integracao/ledi/estrutura_arquivos/#7-atividadeTipo">atividadeTipo</a> os itens <code>01 - Reunião de equipe</code>, <code>02 - Reunião com outras equipes de saúde</code>, <code>03 - Reunião intersetorial / Conselho local de saúde / Controle social</code>, <code>05 - Atendimento em grupo</code>;</li>
-<li><a href="/integracao/ledi/estrutura_arquivos/#8-temasParaReuniao">temasParaReuniao</a>;</li>
-<li><a href="/integracao/ledi/estrutura_arquivos/#17-praticasEmSaude">praticasEmSaude</a> os itens <code>02 - Aplicação tópica de flúor</code>, <code>04 - Escovação dental supervisionada</code>, <code>06 - PNCT* sessão 1</code>, <code>07 - PNCT* sessão 2</code>,  <code>08 - PNCT* sessão 3</code>,  <code>09 - PNCT* sessão 4</code>, <code>12 - Verificação da situação vacinal</code>, <code>14 - Outro procedimento coletivo</code>;</li>
+<li>O grupo <a href="/integracao/ledi/estrutura_arquivos/dicionario-fac.html#6-profissionais">profissionais</a> não deve ser preenchido;</li>
+<li>Os itens <code>01 - Reunião de equipe</code>, <code>02 - Reunião com outras equipes de saúde</code>, <code>03 - Reunião intersetorial / Conselho local de saúde / Controle social</code> e <code>05 - Atendimento em grupo</code> do campo <a href="/integracao/ledi/estrutura_arquivos/dicionario-fac.html#7-atividadetipo">atividadeTipo</a> não devem ser selecionados;</li>
+<li>O grupo <a href="/integracao/ledi/estrutura_arquivos/dicionario-fac.html#8-temasparareuniao">temasParaReuniao</a> não deve ser preenchido;</li>
+<li>Os itens <code>2 - Aplicação tópica de flúor</code>, <code>9 - Escovação dental supervisionada</code>, <code>25 - PNCT* sessão 1</code>, <code>26 - PNCT* sessão 2</code>,  <code>27 - PNCT* sessão 3</code>,  <code>28 - PNCT* sessão 4</code>, <code>24 - Verificação da situação vacinal</code> e <code>30 - Outro procedimento coletivo</code> do campo <a href="/integracao/ledi/estrutura_arquivos/dicionario-fac.html#17-praticasemsaude">praticasEmSaude</a> não devem ser selecionados;</li>
 </ul></li>
-<li>É de preenchimento obrigatório se <a href="/integracao/ledi/estrutura_arquivos/#16-temasParaSaude">temasParaSaude</a> = <code>15 - Semana saúde na escola</code> e <a href="/integracao/ledi/estrutura_arquivos/#19-pseSaude">pseSaude</a> = <code>false</code>.</li>
 </ul>
 
 <h3 id="19-psesaude">#19    pseSaude</h3>
@@ -7430,8 +7464,8 @@
 <p><strong>Regras:</strong></p>
 
 <ul>
-<li>Se <a href="/integracao/ledi/estrutura_arquivos/#19-pseSaude">pseSaude</a> = <code>true</code>, <a href="/integracao/ledi/estrutura_arquivos/#3-inep">inep</a> torna-se obrigatório;</li>
-<li>É de preenchimento obrigatório se <a href="/integracao/ledi/estrutura_arquivos/#16-temasParaSaude">temasParaSaude</a> = <code>15 - Semana saúde na escola</code> e <a href="/integracao/ledi/estrutura_arquivos/#18-pseEducacao">pseEducacao</a> = <code>false</code>.</li>
+<li>Se <a href="/integracao/ledi/estrutura_arquivos/dicionario-fac.html#19-psesaude">pseSaude</a> = <code>true</code>, o campo <a href="/integracao/ledi/estrutura_arquivos/dicionario-fac.html#3-inep">inep</a> torna-se obrigatório;</li>
+<li>É de preenchimento obrigatório se <a href="/integracao/ledi/estrutura_arquivos/dicionario-fac.html#16-temasparasaude">temasParaSaude</a> = <code>18 - Semana saúde na escola</code> e <a href="/integracao/ledi/estrutura_arquivos/dicionario-fac.html#18-pseeducacao">pseEducacao</a> = <code>false</code>.</li>
 </ul>
 
 <h2 id="participanterowitem">ParticipanteRowItem</h2>
@@ -7460,7 +7494,7 @@
 
 <ul>
 <li>CNS validado de acordo com o algoritmo;</li>
-<li>É de preenchimento obrigatório se <a href="/integracao/ledi/estrutura_arquivos/#7-atividadetipo">atividadeTipo</a> for <code>5</code> ou <code>6</code>.</li>
+<li>É de preenchimento obrigatório se <a href="/integracao/ledi/estrutura_arquivos/dicionario-fac.html#7-atividadetipo">atividadeTipo</a> for <code>5</code> ou <code>6</code>.</li>
 </ul>
 
 <p><strong>Referências:</strong> O algoritmo de validação está presente em <a href="/integracao/ledi/regras/algoritmo_CNS.html">Validar CNS</a>.</p>
@@ -7585,7 +7619,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Não deve ser preenchido se o campo <a href="/integracao/ledi/estrutura_arquivos/#17-praticasemsaude">praticasEmSaude</a> for diferente de <code>25</code>, <code>26</code>, <code>27</code> ou <code>28</code> (referentes ao PNCT).</p>
+<p><strong>Regras:</strong> Não deve ser preenchido se o campo <a href="/integracao/ledi/estrutura_arquivos/dicionario-fac.html#17-praticasemsaude">praticasEmSaude</a> for diferente de <code>25</code>, <code>26</code>, <code>27</code> ou <code>28</code> (referentes ao PNCT).</p>
 
 <h3 id="7-abandonougrupo">#7 abandonouGrupo</h3>
 
@@ -7607,7 +7641,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Não deve ser preenchido se o campo <a href="/integracao/ledi/estrutura_arquivos/#17-praticasemsaude">praticasEmSaude</a> for diferente de <code>25</code>, <code>26</code>, <code>27</code> ou <code>28</code> (referentes ao PNCT).</p>
+<p><strong>Regras:</strong> Não deve ser preenchido se o campo <a href="/integracao/ledi/estrutura_arquivos/dicionario-fac.html#17-praticasemsaude">praticasEmSaude</a> for diferente de <code>25</code>, <code>26</code>, <code>27</code> ou <code>28</code> (referentes ao PNCT).</p>
 
 <h2 id="8-sexo">#8  sexo</h2>
 
@@ -8746,7 +8780,7 @@
 
 <table><thead>
 <tr>
-<th>Código SIGTAP*</th>
+<th>Código SIGTAP *</th>
 <th>Descrição AB</th>
 <th>Código AB correspondente</th>
 </tr>
@@ -42774,13 +42808,13 @@
 <td>major</td>
 <td>Integer</td>
 <td>Sim</td>
-<td>Valor único = 2</td>
+<td>Valor único = 3</td>
 </tr>
 <tr>
 <td>minor</td>
 <td>Integer</td>
 <td>Sim</td>
-<td>Valor único = 2</td>
+<td>Valor único = 0</td>
 </tr>
 <tr>
 <td>revision</td>
@@ -65704,13 +65738,11 @@
 
 <p><strong>4.</strong> A informação deve ser padronizada para letra maiúscula, ou seja, letras minúsculas deverão ser convertidas para maiúsculas (Ex: Maria da Paz é convertida para MARIA DA PAZ);</p>
 
-<p><strong>5.</strong> A informação que contiver, após o 1o termo, um termo com apenas um caractere não entrará na base de dados, exceto se o termo for a letra E ou Y (Ex: JOAQUIM MARIA A SILVA não entra, mas JOAQUIM MARIA E SILVA é admissível; JOAQUIM RODRIGUEZ Y RODRIGUEZ é admissível);</p>
+<p><strong>5.</strong> A informação só pode conter letras do alfabeto romano (incluindo K, W, Y), além dos acentos gráficos (agudo, circunflexo, til e trema) e do caractere apóstrofo (‘), para possibilitar a inserção de nomes como JOÃO D’ÁVILA, sendo vedada a utilização de outros caracteres especiais;</p>
 
-<p><strong>6.</strong> A informação só pode conter letras do alfabeto romano (incluindo K, W, Y), além dos acentos gráficos (agudo, circunflexo, til e trema) e do caractere apóstrofo (‘), para possibilitar a inserção de nomes como JOÃO D’ÁVILA, sendo vedada a utilização de outros caracteres especiais;</p>
+<p><strong>6.</strong> A informação que contiver o primeiro e segundo termos com apenas um caractere em cada um deles não entrará na base de dados (Ex. A A DA SILVA);</p>
 
-<p><strong>7.</strong> A informação que contiver o primeiro e segundo termos com apenas um caractere em cada um deles não entrará na base de dados (Ex. A A DA SILVA);</p>
-
-<p><strong>8.</strong> A informação que contiver apenas dois termos, ambos com apenas dois caracteres, não entrará na base de dados;</p>
+<p><strong>7.</strong> A informação que contiver apenas dois termos, ambos com apenas dois caracteres, não entrará na base de dados;</p>
 
 <p>As outras regras da especificação que não são citadas acima, serão validadas apenas pelo serviço do CADSUS, no módulo de cidadão, no momento em que o cadastro for enviado ao serviço PIX do CADSUS.</p>
 
@@ -66161,7 +66193,9 @@
 
 <p><strong>3.</strong> Inclusão da <a href="/integracao/ledi/estrutura_arquivos/dicionario-fv.html">Ficha de Vacinação</a>.</p>
 
-<p><strong>4.</strong> Atualização das CBOs que preenchem fichas <a href="/integracao/ledi/regras/cbo.html">Grupos de CBOs x Tipo de ficha</a>. As diferenças estão contidas nas seguintes tabelas:</p>
+<p><strong>4.</strong> Passam a ser aceitos nomes que possuem termos de apenas um caractere diferente de <code>E</code> ou <code>Y</code>. A regra foi removida do documento <a href="/integracao/ledi/regras/validar_nome.html">Validar nome</a>.</p>
+
+<p><strong>5.</strong> Atualização das CBOs que preenchem fichas <a href="/integracao/ledi/regras/cbo.html">Grupos de CBOs x Tipo de ficha</a>. As diferenças estão contidas nas seguintes tabelas:</p>
 
 <h2 id="cbos-que-podem-preencher-fichas">CBOs que podem preencher fichas</h2>
 
@@ -66980,6 +67014,10 @@
 <td>NATURÓLOGO</td>
 </tr>
 <tr>
+<td>223305</td>
+<td>MÉDICO VETERINÁRIO</td>
+</tr>
+<tr>
 <td>1312C1</td>
 <td>SANITARISTA</td>
 </tr>
@@ -67038,6 +67076,10 @@
 <tr>
 <td>234410</td>
 <td>PROFESSOR DE EDUCAÇÃO FÍSICA NO ENSINO SUPERIOR</td>
+</tr>
+<tr>
+<td>223305</td>
+<td>MÉDICO VETERINÁRIO</td>
 </tr>
 <tr>
 <td>322405</td>

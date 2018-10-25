@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Layout e-SUS AB de Dados e Interface Versão 3.0.1</title>
-  <meta name="description" content="Este documento descreve os atributos utilizados no LEDI AB versão 3.0.1">
+  <title>Data Warehouse Relatórios e-SUS AB PEC</title>
+  <meta name="description" content="Esta seção descreve a estrutura de Data Warehouse (DW) onde são armazenados os dados para a geração dos relatórios.">
 
   <link rel="stylesheet" href="/integracao/css/main.css">
-  <link rel="canonical" href="/integracao/ledi/">
+  <link rel="canonical" href="/integracao/dw/">
   <link rel="icon" type="image/png" href="/integracao/img/logo-esus.png">
 
   <script src="//code.jquery.com/jquery-3.1.0.min.js"></script>
@@ -72,11 +72,7 @@
       
         
           
-            <li><a title="Layout e-SUS AB de Dados e Interface" href="/integracao/ledi/ledi.html">Layout e-SUS AB de Dados e Interface</a></li>
-          
-        
-          
-            <li><a title="Layout e-SUS AB de Dados e Interface Versão 3.0.1" href="/integracao/ledi/index.html">Layout e-SUS AB de Dados e Interface Versão 3.0.1</a></li>
+            <li><a title="Data Warehouse Relatórios e-SUS AB PEC" href="/integracao/dw/index.html">Data Warehouse Relatórios e-SUS AB PEC</a></li>
           
         
 
@@ -122,49 +118,28 @@
   <ul>
     
       <li>
-        <a title="Voltar para Layout e-SUS AB de Dados e Interface" href="/integracao/ledi/ledi.html" class="back-link">
+        <a title="Voltar para Home" href="/integracao/" class="back-link">
           <i class="icon icon-back"></i> Voltar
-          <small>(Layout e-SUS AB de Dados e Interface)</small>
+          <small>(Home)</small>
         </a>
       </li>
     
 
     <li>
-      <a class="open" title="Layout e-SUS AB de Dados e Interface Versão 3.0.1" href="/integracao/ledi/index.html">Layout e-SUS AB de Dados e Interface Versão 3.0.1</a>
+      <a class="open" title="Data Warehouse Relatórios e-SUS AB PEC" href="/integracao/dw/index.html">Data Warehouse Relatórios e-SUS AB PEC</a>
       <ul>
         
-          <li  class="has-subitems">
-          
-            <a title="Estrutura dos arquivos" href="/integracao/ledi/estrutura_arquivos/index.html">
-              Estrutura dos arquivos
-            </a>
-          </li>
-        
-          <li  class="has-subitems">
-          
-            <a title="Referências" href="/integracao/ledi/referencias/index.html">
-              Referências
-            </a>
-          </li>
-        
-          <li  class="has-subitems">
-          
-            <a title="Regras" href="/integracao/ledi/regras/index.html">
-              Regras
-            </a>
-          </li>
-        
           <li >
           
-            <a title="Registros Thrift / XSD por ficha" href="/integracao/ledi/thrift-xsd.html">
-              Registros Thrift / XSD por ficha
+            <a title="Dimensões" href="/integracao/dw/dimensoes.html">
+              Dimensões
             </a>
           </li>
         
-          <li >
+          <li  class="has-subitems">
           
-            <a title="Principais alterações da v3.0.0 para a v3.0.1" href="/integracao/ledi/principais_alteracoes.html">
-              Principais alterações da v3.0.0 para a v3.0.1
+            <a title="Fatos" href="/integracao/dw/fatos/index.html">
+              Fatos
             </a>
           </li>
         
@@ -183,19 +158,25 @@
           <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Layout e-SUS AB de Dados e Interface Versão 3.0.1</h1>
+    <h1 class="post-title">Data Warehouse Relatórios e-SUS AB PEC</h1>
     <p class="post-meta">
-      <a class="btn" href="/integracao/pdf.html?include=/ledi/index.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
+      <a class="btn" href="/integracao/pdf.html?include=/dw/index.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 13/10/2018</span>
+        <span class="label" title="Data da última modificação">Alterado em 18/10/2018</span>
       
     </p>
   </header>
 
   <article class="post-content">
-    <h6 id="este-documento-descreve-os-atributos-utilizados-no-ledi-ab-vers-o-3-0-1">Este documento descreve os atributos utilizados no <strong>LEDI AB</strong> versão 3.0.1</h6>
+    <p>Esta seção descreve a estrutura de Data Warehouse (DW) onde são armazenados os dados para a geração dos relatórios.</p>
 
-<p>Confira as principais alterações da V3.0.0 para a V3.0.1 <a href="/integracao/ledi/principais_alteracoes.html">aqui</a>.</p>
+<p>O DW é uma base de dados contendo vários componentes. Possui uma arquitetura multidimensional, onde encontram-se as <a href="/integracao/dw/dimensoes.html">Dimensões</a> e <a href="/integracao/dw/fatos/index.html">Fatos</a>. Estas estruturas são alguns dos elementos do DW, são dependentes entre si e permitem o armazenamento dos dados.</p>
+
+<p>Através de um sistema de <a href="https://pt.wikipedia.org/wiki/Extract,_transform,_load">ETL</a>, as informações são extraídas de arquivos conforme descritos na estrutura <a href="/integracao/ledi/ledi.html">Layout e-SUS AB de Dados e Interface</a> e armazenadas nas tabelas Fatos e Dimensões.</p>
+
+<p>As Dimensões possuem características descritivas dentro do DW. São responsáveis por qualificar as informações provenientes das tabelas Fatos. As tabelas Fatos possuem características quantitativa dentro do DW. A partir delas, são extraídas métricas que são cruzadas com os dados das Dimensões, gerando informações significativas para a avaliação do usuário. Todos os dados históricos no DW ficam armazenadas nas tabelas Fatos.</p>
+
+<p>Com exceção dos relatórios Operacionais, todos os outros modelos de relatórios do e-SUS AB PEC utilizam esta estrutura de Data Warehouse.</p>
 
   </article>
 

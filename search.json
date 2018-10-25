@@ -149,7 +149,7 @@
       
           "dir"      : "ledi",
           "title"    : "Layout e-SUS AB de Dados e Interface",
-          "url"      : "/integracao/"
+          "url"      : "/integracao/ledi/ledi.html"
           
       
     },
@@ -276,6 +276,143 @@
           "dir"      : "ledi",
           "title"    : "Registros Thrift / XSD por ficha",
           "url"      : "/integracao/ledi/thrift-xsd.html"
+          
+      
+    },
+    
+  
+    
+    {
+      
+          "dir"      : "dw",
+          "title"    : "Dimensões",
+          "url"      : "/integracao/dw/dimensoes.html"
+          
+      
+    },
+    
+    {
+      
+          "dir"      : "dw",
+          "title"    : "Atendimento domiciliar",
+          "url"      : "/integracao/dw/fatos/atendimento_domiciliar.html"
+          
+      
+    },
+    
+    {
+      
+          "dir"      : "dw",
+          "title"    : "Atendimento individual",
+          "url"      : "/integracao/dw/fatos/atendimento_individual.html"
+          
+      
+    },
+    
+    {
+      
+          "dir"      : "dw",
+          "title"    : "Atendimento odontológico individual",
+          "url"      : "/integracao/dw/fatos/atendimento_odontologico_individual.html"
+          
+      
+    },
+    
+    {
+      
+          "dir"      : "dw",
+          "title"    : "Atividade coletiva",
+          "url"      : "/integracao/dw/fatos/atividade_coletiva.html"
+          
+      
+    },
+    
+    {
+      
+          "dir"      : "dw",
+          "title"    : "Avaliação de elegibilidade",
+          "url"      : "/integracao/dw/fatos/avaliacao_elegibilidade.html"
+          
+      
+    },
+    
+    {
+      
+          "dir"      : "dw",
+          "title"    : "Cadastro domiciliar",
+          "url"      : "/integracao/dw/fatos/cadastro_domiciliar.html"
+          
+      
+    },
+    
+    {
+      
+          "dir"      : "dw",
+          "title"    : "Cadastro individual",
+          "url"      : "/integracao/dw/fatos/cadastro_individual.html"
+          
+      
+    },
+    
+    {
+      
+          "dir"      : "dw",
+          "title"    : "Síndrome neurológica por Zika / Microcefalia",
+          "url"      : "/integracao/dw/fatos/ficha_complementar.html"
+          
+      
+    },
+    
+    {
+      
+          "dir"      : "dw",
+          "title"    : "Fatos",
+          "url"      : "/integracao/dw/fatos/index.html"
+          
+      
+    },
+    
+    {
+      
+          "dir"      : "dw",
+          "title"    : "Marcadores de consumo alimentar",
+          "url"      : "/integracao/dw/fatos/marcadores_consumo_alimentar.html"
+          
+      
+    },
+    
+    {
+      
+          "dir"      : "dw",
+          "title"    : "Procedimentos",
+          "url"      : "/integracao/dw/fatos/procedimentos.html"
+          
+      
+    },
+    
+    {
+      
+          "dir"      : "dw",
+          "title"    : "Vacinação",
+          "url"      : "/integracao/dw/fatos/vacinacao.html"
+          
+      
+    },
+    
+    {
+      
+          "dir"      : "dw",
+          "title"    : "Visita domiciliar",
+          "url"      : "/integracao/dw/fatos/visita_domiciliar.html"
+          
+      
+    },
+    
+    {
+      
+          "dir"      : "dw",
+          "title"    : "Data Warehouse Relatórios e-SUS AB PEC",
+          "url"      : "/integracao/dw/index.html"
           
       
     },

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Fatos</title>
+  <meta name="description" content="O nome das tabelas Fato é formado pelo prefixo &quot;tb_fat_&quot; seguido do nome do respectivo fato, por exemplo: tb_fat_cid_individual. As tabelas Fato co...">
+
+  <link rel="stylesheet" href="/integracao/css/main.css">
+  <link rel="canonical" href="/integracao/dw/fatos/">
+  <link rel="icon" type="image/png" href="/integracao/img/logo-esus.png">
+
+  <script src="//code.jquery.com/jquery-3.1.0.min.js"></script>
+  <script src="/integracao/js/search.js" type="text/javascript"></script>
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/integracao/">
+      <img src="/integracao/img/logo-esus.png" alt="e-SUS">
+      <span class="title-text">Integração e-SUS AB PEC</span>
+      
+        <span class="label">versão 3.0.1</span>
+      
+    </a>
+
+    <nav class="site-nav">
+      <a href="javascript: void" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+        
+          
+        
+          
+            <a href="/integracao/pdf.html"><i class="icon-pdf"></i> Gerar PDF</a>
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="breadcrumb-placeholder">
+  <div class="wrapper breadcrumb-wrapper">
+    <ol class="breadcrumb">
+      <img src="/integracao/img/logo-esus.png" alt="e-SUS">
+      <li><a href="/integracao/">Home</a></li>
+
+      
+        
+          
+            <li><a title="Data Warehouse Relatórios e-SUS AB PEC" href="/integracao/dw/index.html">Data Warehouse Relatórios e-SUS AB PEC</a></li>
+          
+        
+          
+            <li><a title="Fatos" href="/integracao/dw/fatos/index.html">Fatos</a></li>
+          
+        
+
+      
+    </ol>
+  </div>
+</div>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+
+        
+        <div class="sidebar">
+          <div class="sidebar-content">
+            <form id="search-form">
+  <input type="search" placeholder="Pesquisar por título..." name="q" id="search-input" autocomplete="off">
+</form>
+
+<ul id="search-results"></ul>
+
+<script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('search-results'),
+    json: '/integracao/search.json',
+    noResultsText: 'Nenhum resultado encontrado'
+  });
+
+  document.getElementById('search-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    return false;
+  });
+</script>
+
+<div class="menu">
+  
+
+
+
+  
+
+  <ul>
+    
+      <li>
+        <a title="Voltar para Data Warehouse Relatórios e-SUS AB PEC" href="/integracao/dw/index.html" class="back-link">
+          <i class="icon icon-back"></i> Voltar
+          <small>(Data Warehouse Relatórios e-SUS AB PEC)</small>
+        </a>
+      </li>
+    
+
+    <li>
+      <a class="open" title="Fatos" href="/integracao/dw/fatos/index.html">Fatos</a>
+      <ul>
+        
+          <li >
+          
+            <a title="Cadastro individual" href="/integracao/dw/fatos/cadastro_individual.html">
+              Cadastro individual
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Cadastro domiciliar" href="/integracao/dw/fatos/cadastro_domiciliar.html">
+              Cadastro domiciliar
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Atendimento individual" href="/integracao/dw/fatos/atendimento_individual.html">
+              Atendimento individual
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Atendimento odontológico individual" href="/integracao/dw/fatos/atendimento_odontologico_individual.html">
+              Atendimento odontológico individual
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Atividade coletiva" href="/integracao/dw/fatos/atividade_coletiva.html">
+              Atividade coletiva
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Procedimentos" href="/integracao/dw/fatos/procedimentos.html">
+              Procedimentos
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Visita domiciliar" href="/integracao/dw/fatos/visita_domiciliar.html">
+              Visita domiciliar
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Marcadores de consumo alimentar" href="/integracao/dw/fatos/marcadores_consumo_alimentar.html">
+              Marcadores de consumo alimentar
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Avaliação de elegibilidade" href="/integracao/dw/fatos/avaliacao_elegibilidade.html">
+              Avaliação de elegibilidade
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Atendimento domiciliar" href="/integracao/dw/fatos/atendimento_domiciliar.html">
+              Atendimento domiciliar
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Síndrome neurológica por Zika / Microcefalia" href="/integracao/dw/fatos/ficha_complementar.html">
+              Síndrome neurológica por Zika / Microcefalia
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Vacinação" href="/integracao/dw/fatos/vacinacao.html">
+              Vacinação
+            </a>
+          </li>
+        
+      </ul>
+    </li>
+  </ul>
+
+
+</div>
+
+          </div>
+        </div>
+        
+
+        <div class="content">
+          <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Fatos</h1>
+    <p class="post-meta">
+      <a class="btn" href="/integracao/pdf.html?include=/dw/fatos/index.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
+      
+        <span class="label" title="Data da última modificação">Alterado em 18/10/2018</span>
+      
+    </p>
+  </header>
+
+  <article class="post-content">
+    <p>O nome das tabelas <strong>Fato</strong> é formado pelo prefixo &quot;<strong>tb_fat_</strong>&quot; seguido do nome do respectivo fato, por exemplo: <strong>tb_fat_cid_individual</strong>. As tabelas Fato consistem em métricas ou medidas referentes a uma determinada <strong>estratégia de negócio</strong> a ser analisada. Apresentam colunas que armazenam os fatos propriamente dito e outras que fazem a ligação com as tabelas Dimensão. Para identificar as tabelas <strong>dimensão</strong> responsáveis por contextualizar os identificadores, basta verificar a <em>Foreign Key</em> (FK) da respectiva coluna.</p>
+
+<p>Os Fatos fazem referência para as dimensões, formando assim um esquema de estrela, onde o fato é a tabela central. Algumas estratégias de negócio podem ser formadas por mais de um fato, adquirindo o formato de constelação de fatos.</p>
+
+<p>Na perspectiva do sistema, algumas fichas podem ter mais de um registro de atendimento vinculado a ela. Na estrutura do DW, este cenário é representado de maneira linear, ou seja, cada registro corresponde a uma tupla na respectiva tabela.</p>
+
+<p>Neste contexto, a estrutura das tabelas pode ser diferentes da estrutura do <a href="http://esusab.github.io/integracao/">LEDI</a>, principalmente no que diz respeito aos campos onde é permitido selecionar mais de uma opção. Para estes cenários, o DW apresenta uma coluna para cada opção do campo, sendo que se o valor for &quot;1&quot; indica que a respectiva opção foi selecionada e se o valor for &quot;0&quot; indica que não foi selecionada. Estes casos serão explicados de acordo com cada estratégia de negócio do e-SUS AB PEC:</p>
+
+<ul>
+<li><a href="/integracao/dw/fatos/cadastro_individual.html">Cadastro individual</a>;</li>
+<li><a href="/integracao/dw/fatos/cadastro_domiciliar.html">Cadastro domiciliar</a>;</li>
+<li><a href="/integracao/dw/fatos/atendimento_individual.html">Atendimento individual</a>;</li>
+<li><a href="/integracao/dw/fatos/atendimento_odontologico_individual.html">Atendimento odontológico individual</a>;</li>
+<li><a href="/integracao/dw/fatos/atividade_coletiva.html">Atividade coletiva</a>;</li>
+<li><a href="/integracao/dw/fatos/procedimentos.html">Procedimentos</a>;</li>
+<li><a href="/integracao/dw/fatos/visita_domiciliar.html">Visita domiciliar</a>;</li>
+<li><a href="/integracao/dw/fatos/marcadores_consumo_alimentar.html">Marcadores de consumo alimentar</a>;</li>
+<li><a href="/integracao/dw/fatos/avaliacao_elegibilidade.html">Avaliação de elegibilidade</a>;</li>
+<li><a href="/integracao/dw/fatos/atendimento_domiciliar.html">Atendimento domiciliar</a>;</li>
+<li><a href="/integracao/dw/fatos/ficha_complementar.html">Síndrome neurológica por Zika / Microcefalia</a>;</li>
+<li><a href="/integracao/dw/fatos/vacinacao.html">Vacinação</a>.</li>
+</ul>
+
+<p>Existem algumas tabelas Fato que foram criadas com o objetivo de organizar a pré-processar as informações apresentadas nos relatórios existentes no e-SUS AB PEC, conforme apresentadas na Tabela 1. Porém, elas podem ser utilizadas também para construir relatórios dinâmicos, caso necessário.</p>
+
+<table><thead>
+<tr>
+<th>Nome da Tabela</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>tb_fat_fichas</td>
+<td>Utilizada apenas para registrar as fichas presentes no DW</td>
+</tr>
+<tr>
+<td>tb_fat_cidadao</td>
+<td>Utilizada nos relatórios consolidados de cadastro</td>
+</tr>
+<tr>
+<td>tb_fat_familia</td>
+<td>Utilizada nos relatórios consolidados de cadastro</td>
+</tr>
+<tr>
+<td>tb_fat_cidadao_territorio</td>
+<td>Utilizada nos relatórios operacionais de cadastro</td>
+</tr>
+<tr>
+<td>tb_fat_familia_territorio</td>
+<td>Utilizada nos relatórios operacionais de cadastro</td>
+</tr>
+<tr>
+<td>tb_fat_cidadao_pec</td>
+<td>Utilizada nos relatórios operacionais</td>
+</tr>
+<tr>
+<td>tb_fat_cnslddo_ciddo_fai_cid</td>
+<td>Utilizada nos relatórios operacionais</td>
+</tr>
+<tr>
+<td>tb_fat_consolidado_cidadao_fai</td>
+<td>Utilizada nos relatórios operacionais</td>
+</tr>
+<tr>
+<td>tb_fat_consolidado_cidadao_fao</td>
+<td>Utilizada nos relatórios operacionais</td>
+</tr>
+<tr>
+<td>tb_fat_consolidado_cidadao_fci</td>
+<td>Utilizada nos relatórios operacionais</td>
+</tr>
+<tr>
+<td>tb_fat_consolidado_cidadao_fp</td>
+<td>Utilizada nos relatórios operacionais</td>
+</tr>
+<tr>
+<td>tb_fat_consolidado_cidadao_fvd</td>
+<td>Utilizada nos relatórios operacionais</td>
+</tr>
+<tr>
+<td>tb_fat_rel_op_crianca</td>
+<td>Utilizada nos relatórios operacionais</td>
+</tr>
+<tr>
+<td>tb_fat_rel_op_gestante</td>
+<td>Utilizada nos relatórios operacionais</td>
+</tr>
+<tr>
+<td>tb_fat_rel_op_risco_cardio</td>
+<td>Utilizada nos relatórios operacionais</td>
+</tr>
+</tbody></table>
+
+<p><em>Tabela 1 - Tabelas criadas para organização dos relatórios do PEC</em></p>
+
+  </article>
+
+</div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <script src="/integracao/js/site.js" type="text/javascript"></script>
+  </body>
+</html>

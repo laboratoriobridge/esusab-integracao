@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Integração e-SUS AB</title>
-  <meta name="description" content="Integração e-SUS AB PEC">
+  <title>Layout e-SUS AB de Dados e Interface</title>
+  <meta name="description" content="Este documento descreve os atributos utilizados no LEDI AB:O LEDI AB é uma camada abstrata que especifica as informações, e seus formatos, que são aceitos no...">
 
   <link rel="stylesheet" href="/integracao/css/main.css">
-  <link rel="canonical" href="/integracao/">
+  <link rel="canonical" href="/integracao/ledi/ledi.html">
   <link rel="icon" type="image/png" href="/integracao/img/logo-esus.png">
 
   <script src="//code.jquery.com/jquery-3.1.0.min.js"></script>
@@ -70,7 +70,12 @@
       <li><a href="/integracao/">Home</a></li>
 
       
-        <li title="Integração e-SUS AB">Integração e-SUS AB</li>
+        
+          
+            <li><a title="Layout e-SUS AB de Dados e Interface" href="/integracao/ledi/ledi.html">Layout e-SUS AB de Dados e Interface</a></li>
+          
+        
+
       
     </ol>
   </div>
@@ -86,9 +91,9 @@
           <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Integração e-SUS AB</h1>
+    <h1 class="post-title">Layout e-SUS AB de Dados e Interface</h1>
     <p class="post-meta">
-      <a class="btn" href="/integracao/pdf.html?include=/"><i class="icon-pdf"></i> Gerar PDF desta página</a>
+      <a class="btn" href="/integracao/pdf.html?include=/ledi/ledi.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
         <span class="label" title="Data da última modificação">Alterado em 18/10/2018</span>
       
@@ -96,29 +101,36 @@
   </header>
 
   <article class="post-content">
-    <p>Esta página apresenta os documentos de integração do e-SUS Atenção Básica. Atualmente são disponibilizadas as documentações <strong>LEDI AB</strong> e <strong>DW PEC</strong>.</p>
+    <h6 id="este-documento-descreve-os-atributos-utilizados-no-ledi-ab">Este documento descreve os atributos utilizados no <strong>LEDI AB</strong>:</h6>
 
-<h1 id="1-ledi-ab">1. LEDI AB</h1>
+<ul>
+<li>O <strong>LEDI AB</strong> é uma camada abstrata que especifica as informações, e seus formatos, que são aceitos no envio de dados de sistemas próprios para o e-SUS AB (PEC);</li>
+<li>O <strong>LEDI AB</strong> pode ser implementado utilizando <a href="https://pt.wikipedia.org/wiki/XML">XML</a> ou <a href="https://en.wikipedia.org/wiki/Apache_Thrift">Apache Thrift</a>.</li>
+</ul>
 
-<p>O Layout e-SUS AB de Dados e Interface (LEDI AB) permite a integração de sistemas próprios com o e-SUS AB PEC. Esta integração pode ser realizada através das tecnologias Apache Thrift ou XML e é independente de linguagem de programação.</p>
+<hr>
 
-<table style="width: 160px;" align="center">
+<p>Clique nos cards para acessar a documentação da versão desejada:</p>
+
+<table style="width: 360px;">
     <tr class="button-block">
-        <td class="button-block">
-            <a class="button button-large" href="/integracao/ledi/ledi.html">LEDI AB</a>
+        <td class="button-block" style="min-width: 80px;">
+            <a class="button" href="http://esusab.github.io/integracao/v20/">LEDI AB 2.0.0</a>
         </td>
-    </tr>
-</table>
-
-<h1 id="2-dw-pec">2. DW PEC</h1>
-
-<p>A estrutura de Data Warehouse do e-SUS AB PEC (DW PEC) é responsável por armazenar os dados utilizados para a geração dos relatórios do sistema de Prontuário Eletrônico do Cidadão da Atenção Básica.
-A documentação DW PEC tem o objetivo de orientar os profissionais com conhecimento em banco de dados a extrair informações que julgarem pertinentes.</p>
-
-<table style="width: 160px;" align="center">
-    <tr class="button-block">
-        <td class="button-block">
-            <a class="button button-large" href="/integracao/dw/index.html">DW PEC</a>
+        <td class="button-block" style="min-width: 80px;">
+            <a class="button" href="http://esusab.github.io/integracao/v210/">LEDI AB 2.1.0</a>
+        </td>
+        <td class="button-block" style="min-width: 80px;">
+            <a class="button" href="http://esusab.github.io/integracao/v211/">LEDI AB 2.1.1</a>
+        </td>
+        <td class="button-block" style="min-width: 80px;">
+            <a class="button" href="http://esusab.github.io/integracao/v220/">LEDI AB 2.2.0</a>
+        </td>
+        <td class="button-block" style="min-width: 80px;">
+            <a class="button" href="http://esusab.github.io/integracao/v300/">LEDI AB 3.0.0</a>
+        </td>
+        <td class="button-block" style="min-width: 80px;">
+            <a class="button" href="/integracao/ledi/index.html">LEDI AB 3.0.1</a>
         </td>
     </tr>
 </table>

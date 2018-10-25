@@ -926,6 +926,12 @@ ol.breadcrumb {
   border: solid 1px #297aea;
   color: #297aea; }
 
+.button-large {
+  padding-top: 35px;
+  width: 150px;
+  height: 100px;
+  font-size: 18px; }
+
 @font-face {
   font-family: 'docs-icons';
   src: url("../fonts/docs-icons.eot?1iu6fj");

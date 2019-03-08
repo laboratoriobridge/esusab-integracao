@@ -3,7 +3,7 @@
    {
      
         "title"    : "Algoritmo de validação do CNS",
-        "url"      : "/integracao/v210/docs/algoritmo_CNS.html"
+        "url"      : "/v210/docs/algoritmo_CNS.html"
         
      
    } ,
@@ -11,7 +11,7 @@
    {
      
         "title"    : "Camada de Transporte de Dados",
-        "url"      : "/integracao/v210/docs/camada-transporte.html"
+        "url"      : "/v210/docs/camada-transporte.html"
         
      
    } ,
@@ -19,7 +19,7 @@
    {
      
         "title"    : "CBO",
-        "url"      : "/integracao/v210/docs/cbo.html"
+        "url"      : "/v210/docs/cbo.html"
         
      
    } ,
@@ -27,7 +27,7 @@
    {
      
         "title"    : "Ficha de Atividade Coletiva",
-        "url"      : "/integracao/v210/docs/dicionario-fac.html"
+        "url"      : "/v210/docs/dicionario-fac.html"
         
      
    } ,
@@ -35,7 +35,7 @@
    {
      
         "title"    : "Ficha de Atendimento Domiciliar",
-        "url"      : "/integracao/v210/docs/dicionario-fad.html"
+        "url"      : "/v210/docs/dicionario-fad.html"
         
      
    } ,
@@ -43,7 +43,7 @@
    {
      
         "title"    : "Ficha de Avaliação de Elegibilidade",
-        "url"      : "/integracao/v210/docs/dicionario-fae.html"
+        "url"      : "/v210/docs/dicionario-fae.html"
         
      
    } ,
@@ -51,7 +51,7 @@
    {
      
         "title"    : "Ficha de Atendimento Individual",
-        "url"      : "/integracao/v210/docs/dicionario-fai.html"
+        "url"      : "/v210/docs/dicionario-fai.html"
         
      
    } ,
@@ -59,7 +59,7 @@
    {
      
         "title"    : "Ficha de Atendimento Odontológico Individual",
-        "url"      : "/integracao/v210/docs/dicionario-fao.html"
+        "url"      : "/v210/docs/dicionario-fao.html"
         
      
    } ,
@@ -67,7 +67,7 @@
    {
      
         "title"    : "Ficha de Cadastro Domiciliar e Territorial",
-        "url"      : "/integracao/v210/docs/dicionario-fcd.html"
+        "url"      : "/v210/docs/dicionario-fcd.html"
         
      
    } ,
@@ -75,7 +75,7 @@
    {
      
         "title"    : "Ficha de Cadastro Individual",
-        "url"      : "/integracao/v210/docs/dicionario-fci.html"
+        "url"      : "/v210/docs/dicionario-fci.html"
         
      
    } ,
@@ -83,7 +83,7 @@
    {
      
         "title"    : "Ficha complementar - Síndrome neurológica por Zika / Microcefalia",
-        "url"      : "/integracao/v210/docs/dicionario-fczm.html"
+        "url"      : "/v210/docs/dicionario-fczm.html"
         
      
    } ,
@@ -91,7 +91,7 @@
    {
      
         "title"    : "Ficha de Procedimentos",
-        "url"      : "/integracao/v210/docs/dicionario-fp.html"
+        "url"      : "/v210/docs/dicionario-fp.html"
         
      
    } ,
@@ -99,7 +99,7 @@
    {
      
         "title"    : "Ficha de Visita Domiciliar e Territorial",
-        "url"      : "/integracao/v210/docs/dicionario-fvd.html"
+        "url"      : "/v210/docs/dicionario-fvd.html"
         
      
    } ,
@@ -107,7 +107,7 @@
    {
      
         "title"    : "Marcadores de Consumo Alimentar",
-        "url"      : "/integracao/v210/docs/dicionario-mca.html"
+        "url"      : "/v210/docs/dicionario-mca.html"
         
      
    } ,
@@ -115,7 +115,7 @@
    {
      
         "title"    : "Dicionário de dados",
-        "url"      : "/integracao/v210/docs/dicionario/dicionario.html"
+        "url"      : "/v210/docs/dicionario/dicionario.html"
         
      
    } ,
@@ -123,7 +123,7 @@
    {
      
         "title"    : "Cabeçalho (headerTransport)",
-        "url"      : "/integracao/v210/docs/header-transport.html"
+        "url"      : "/v210/docs/header-transport.html"
         
      
    } ,
@@ -131,7 +131,7 @@
    {
      
         "title"    : "Municípios",
-        "url"      : "/integracao/v210/docs/municipios.html"
+        "url"      : "/v210/docs/municipios.html"
         
      
    } ,
@@ -139,7 +139,7 @@
    {
      
         "title"    : "Principais alterações da v2.0 para a v2.1",
-        "url"      : "/integracao/v210/docs/principais_alteracoes.html"
+        "url"      : "/v210/docs/principais_alteracoes.html"
         
      
    } ,
@@ -147,7 +147,7 @@
    {
      
         "title"    : "Referências",
-        "url"      : "/integracao/v210/docs/referencias.html"
+        "url"      : "/v210/docs/referencias.html"
         
      
    } ,
@@ -155,7 +155,7 @@
    {
      
         "title"    : "Thrift x XSD",
-        "url"      : "/integracao/v210/docs/thrift-xsd.html"
+        "url"      : "/v210/docs/thrift-xsd.html"
         
      
    } ,
@@ -163,7 +163,7 @@
    {
      
         "title"    : "Validar nome",
-        "url"      : "/integracao/v210/docs/validar_nome.html"
+        "url"      : "/v210/docs/validar_nome.html"
         
      
    } ,
@@ -171,7 +171,7 @@
    {
      
         "title"    : "Versão",
-        "url"      : "/integracao/v210/docs/versao.html"
+        "url"      : "/v210/docs/versao.html"
         
      
    } 

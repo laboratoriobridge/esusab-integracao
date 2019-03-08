@@ -3,7 +3,7 @@
    {
      
         "title"    : "Camada de Transporte de Dados",
-        "url"      : "/integracao/docs/fichas/camada-transporte.html"
+        "url"      : "/docs/fichas/camada-transporte.html"
         
      
    } ,
@@ -11,7 +11,7 @@
    {
      
         "title"    : "Esus PEC Atendimento",
-        "url"      : "/integracao/docs/fichas/dicionario-epa.html"
+        "url"      : "/docs/fichas/dicionario-epa.html"
         
      
    } ,
@@ -19,7 +19,7 @@
    {
      
         "title"    : "Ficha de Atividade Coletiva",
-        "url"      : "/integracao/docs/fichas/dicionario-fac.html"
+        "url"      : "/docs/fichas/dicionario-fac.html"
         
      
    } ,
@@ -27,7 +27,7 @@
    {
      
         "title"    : "Ficha de Atendimento Domiciliar",
-        "url"      : "/integracao/docs/fichas/dicionario-fad.html"
+        "url"      : "/docs/fichas/dicionario-fad.html"
         
      
    } ,
@@ -35,7 +35,7 @@
    {
      
         "title"    : "Ficha de Avaliação de Elegibilidade",
-        "url"      : "/integracao/docs/fichas/dicionario-fae.html"
+        "url"      : "/docs/fichas/dicionario-fae.html"
         
      
    } ,
@@ -43,7 +43,7 @@
    {
      
         "title"    : "Ficha de Atendimento Individual",
-        "url"      : "/integracao/docs/fichas/dicionario-fai.html"
+        "url"      : "/docs/fichas/dicionario-fai.html"
         
      
    } ,
@@ -51,7 +51,7 @@
    {
      
         "title"    : "Ficha de Atendimento Odontológico Individual",
-        "url"      : "/integracao/docs/fichas/dicionario-fao.html"
+        "url"      : "/docs/fichas/dicionario-fao.html"
         
      
    } ,
@@ -59,7 +59,7 @@
    {
      
         "title"    : "Ficha de Cadastro Domiciliar e Territorial",
-        "url"      : "/integracao/docs/fichas/dicionario-fcd.html"
+        "url"      : "/docs/fichas/dicionario-fcd.html"
         
      
    } ,
@@ -67,7 +67,7 @@
    {
      
         "title"    : "Ficha de Cadastro Individual",
-        "url"      : "/integracao/docs/fichas/dicionario-fci.html"
+        "url"      : "/docs/fichas/dicionario-fci.html"
         
      
    } ,
@@ -75,7 +75,7 @@
    {
      
         "title"    : "Ficha complementar - Síndrome neurológica por Zika / Microcefalia",
-        "url"      : "/integracao/docs/fichas/dicionario-fczm.html"
+        "url"      : "/docs/fichas/dicionario-fczm.html"
         
      
    } ,
@@ -83,7 +83,7 @@
    {
      
         "title"    : "Ficha de Procedimentos",
-        "url"      : "/integracao/docs/fichas/dicionario-fp.html"
+        "url"      : "/docs/fichas/dicionario-fp.html"
         
      
    } ,
@@ -91,7 +91,7 @@
    {
      
         "title"    : "Ficha de Visita Domiciliar e Territorial",
-        "url"      : "/integracao/docs/fichas/dicionario-fvd.html"
+        "url"      : "/docs/fichas/dicionario-fvd.html"
         
      
    } ,
@@ -99,7 +99,7 @@
    {
      
         "title"    : "Marcadores de Consumo Alimentar",
-        "url"      : "/integracao/docs/fichas/dicionario-mca.html"
+        "url"      : "/docs/fichas/dicionario-mca.html"
         
      
    } ,
@@ -107,7 +107,7 @@
    {
      
         "title"    : "Cabeçalho (headerTransport)",
-        "url"      : "/integracao/docs/fichas/header-transport.html"
+        "url"      : "/docs/fichas/header-transport.html"
         
      
    } ,
@@ -115,7 +115,7 @@
    {
      
         "title"    : "Estrutura dos arquivos",
-        "url"      : "/integracao/docs/fichas/index.html"
+        "url"      : "/docs/fichas/index.html"
         
      
    } ,
@@ -123,7 +123,7 @@
    {
      
         "title"    : "Layout e-SUS AB de Dados e Interface Versão 2.2",
-        "url"      : "/integracao/docs/index.html"
+        "url"      : "/docs/index.html"
         
      
    } ,
@@ -131,7 +131,7 @@
    {
      
         "title"    : "Principais alterações da v2.1.1 para a v2.2",
-        "url"      : "/integracao/docs/principais_alteracoes.html"
+        "url"      : "/docs/principais_alteracoes.html"
         
      
    } ,
@@ -139,7 +139,7 @@
    {
      
         "title"    : "CBOs",
-        "url"      : "/integracao/docs/referencias/cbo_disponiveis.html"
+        "url"      : "/docs/referencias/cbo_disponiveis.html"
         
      
    } ,
@@ -147,7 +147,7 @@
    {
      
         "title"    : "Dicionário de dados",
-        "url"      : "/integracao/docs/referencias/dicionario.html"
+        "url"      : "/docs/referencias/dicionario.html"
         
      
    } ,
@@ -155,7 +155,7 @@
    {
      
         "title"    : "Referências",
-        "url"      : "/integracao/docs/referencias/index.html"
+        "url"      : "/docs/referencias/index.html"
         
      
    } ,
@@ -163,7 +163,7 @@
    {
      
         "title"    : "Municípios",
-        "url"      : "/integracao/docs/referencias/municipios.html"
+        "url"      : "/docs/referencias/municipios.html"
         
      
    } ,
@@ -171,7 +171,7 @@
    {
      
         "title"    : "Países",
-        "url"      : "/integracao/docs/referencias/paises.html"
+        "url"      : "/docs/referencias/paises.html"
         
      
    } ,
@@ -179,7 +179,7 @@
    {
      
         "title"    : "UFs",
-        "url"      : "/integracao/docs/referencias/uf.html"
+        "url"      : "/docs/referencias/uf.html"
         
      
    } ,
@@ -187,7 +187,7 @@
    {
      
         "title"    : "Versão",
-        "url"      : "/integracao/docs/referencias/versao.html"
+        "url"      : "/docs/referencias/versao.html"
         
      
    } ,
@@ -195,7 +195,7 @@
    {
      
         "title"    : "Validar CNS",
-        "url"      : "/integracao/docs/regras/algoritmo_CNS.html"
+        "url"      : "/docs/regras/algoritmo_CNS.html"
         
      
    } ,
@@ -203,7 +203,7 @@
    {
      
         "title"    : "Grupos de CBOs x Tipo de ficha",
-        "url"      : "/integracao/docs/regras/cbo.html"
+        "url"      : "/docs/regras/cbo.html"
         
      
    } ,
@@ -211,7 +211,7 @@
    {
      
         "title"    : "Regras",
-        "url"      : "/integracao/docs/regras/index.html"
+        "url"      : "/docs/regras/index.html"
         
      
    } ,
@@ -219,7 +219,7 @@
    {
      
         "title"    : "Validar regras de vacinação",
-        "url"      : "/integracao/docs/regras/regra_vacinacao.html"
+        "url"      : "/docs/regras/regra_vacinacao.html"
         
      
    } ,
@@ -227,7 +227,7 @@
    {
      
         "title"    : "Validar nome",
-        "url"      : "/integracao/docs/regras/validar_nome.html"
+        "url"      : "/docs/regras/validar_nome.html"
         
      
    } ,
@@ -235,7 +235,7 @@
    {
      
         "title"    : "Arquivos Thrift / XSD por ficha",
-        "url"      : "/integracao/docs/thrift-xsd.html"
+        "url"      : "/docs/thrift-xsd.html"
         
      
    } 

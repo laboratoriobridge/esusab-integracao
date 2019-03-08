@@ -3,7 +3,7 @@
    {
      
         "title"    : "Camada de Transporte de Dados",
-        "url"      : "/integracao/v20/docs/camada-transporte.html"
+        "url"      : "/v20/docs/camada-transporte.html"
         
      
    } ,
@@ -11,7 +11,7 @@
    {
      
         "title"    : "CBO",
-        "url"      : "/integracao/v20/docs/cbo.html"
+        "url"      : "/v20/docs/cbo.html"
         
      
    } ,
@@ -19,7 +19,7 @@
    {
      
         "title"    : "Ficha de Atividade Coletiva",
-        "url"      : "/integracao/v20/docs/dicionario-fac.html"
+        "url"      : "/v20/docs/dicionario-fac.html"
         
      
    } ,
@@ -27,7 +27,7 @@
    {
      
         "title"    : "Ficha de Atendimento Domiciliar",
-        "url"      : "/integracao/v20/docs/dicionario-fad.html"
+        "url"      : "/v20/docs/dicionario-fad.html"
         
      
    } ,
@@ -35,7 +35,7 @@
    {
      
         "title"    : "Ficha de Avaliação de Elegibilidade",
-        "url"      : "/integracao/v20/docs/dicionario-fae.html"
+        "url"      : "/v20/docs/dicionario-fae.html"
         
      
    } ,
@@ -43,7 +43,7 @@
    {
      
         "title"    : "Ficha de Atendimento Individual",
-        "url"      : "/integracao/v20/docs/dicionario-fai.html"
+        "url"      : "/v20/docs/dicionario-fai.html"
         
      
    } ,
@@ -51,7 +51,7 @@
    {
      
         "title"    : "Ficha de Atendimento Odontológico",
-        "url"      : "/integracao/v20/docs/dicionario-fao.html"
+        "url"      : "/v20/docs/dicionario-fao.html"
         
      
    } ,
@@ -59,7 +59,7 @@
    {
      
         "title"    : "Ficha de Cadastro Domiciliar",
-        "url"      : "/integracao/v20/docs/dicionario-fcd.html"
+        "url"      : "/v20/docs/dicionario-fcd.html"
         
      
    } ,
@@ -67,7 +67,7 @@
    {
      
         "title"    : "Ficha de Cadastro Individual",
-        "url"      : "/integracao/v20/docs/dicionario-fci.html"
+        "url"      : "/v20/docs/dicionario-fci.html"
         
      
    } ,
@@ -75,7 +75,7 @@
    {
      
         "title"    : "Ficha de Procedimentos",
-        "url"      : "/integracao/v20/docs/dicionario-fp.html"
+        "url"      : "/v20/docs/dicionario-fp.html"
         
      
    } ,
@@ -83,7 +83,7 @@
    {
      
         "title"    : "Ficha de Visita Domiciliar",
-        "url"      : "/integracao/v20/docs/dicionario-fvd.html"
+        "url"      : "/v20/docs/dicionario-fvd.html"
         
      
    } ,
@@ -91,7 +91,7 @@
    {
      
         "title"    : "Marcadores de Consumo Alimentar",
-        "url"      : "/integracao/v20/docs/dicionario-mca.html"
+        "url"      : "/v20/docs/dicionario-mca.html"
         
      
    } ,
@@ -99,7 +99,7 @@
    {
      
         "title"    : "Dicionário de dados",
-        "url"      : "/integracao/v20/docs/dicionario/dicionario.html"
+        "url"      : "/v20/docs/dicionario/dicionario.html"
         
      
    } ,
@@ -107,7 +107,7 @@
    {
      
         "title"    : "Municípios",
-        "url"      : "/integracao/v20/docs/municipios.html"
+        "url"      : "/v20/docs/municipios.html"
         
      
    } ,
@@ -115,7 +115,7 @@
    {
      
         "title"    : "Profissional",
-        "url"      : "/integracao/v20/docs/profissional.html"
+        "url"      : "/v20/docs/profissional.html"
         
      
    } ,
@@ -123,7 +123,7 @@
    {
      
         "title"    : "Referências",
-        "url"      : "/integracao/v20/docs/referencias.html"
+        "url"      : "/v20/docs/referencias.html"
         
      
    } ,
@@ -131,7 +131,7 @@
    {
      
         "title"    : "Thrift x XSD",
-        "url"      : "/integracao/v20/docs/thrift-xsd.html"
+        "url"      : "/v20/docs/thrift-xsd.html"
         
      
    } ,
@@ -139,7 +139,7 @@
    {
      
         "title"    : "Versão",
-        "url"      : "/integracao/v20/docs/versao.html"
+        "url"      : "/v20/docs/versao.html"
         
      
    } 

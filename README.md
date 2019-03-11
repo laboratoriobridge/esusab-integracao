@@ -15,6 +15,6 @@ Esse repositório contém esses arquivos além de exemplos de como utilizá-los.
  * **xml-exemplo** - Exemplo de arquivos xml preenchidos com dados válidos. 
  
 # Dicionário de dados
-O dicionário de dados contém as regras de preenchimento e utilização desses arquivos de integração. Ele está disponível no link: http://esusab.github.io/integracao/
+O dicionário de dados contém as regras de preenchimento e utilização desses arquivos de integração. Ele está disponível no link: https://integracao.esusab.ufsc.br
  
 

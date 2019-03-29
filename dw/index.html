@@ -9,12 +9,12 @@
   <title>Data Warehouse Relatórios e-SUS AB PEC</title>
   <meta name="description" content="Atenção!  Esta documentação está em desenvolvimento e algumas informações podem não representar a estrutura atual da base de dados.">
 
-  <link rel="stylesheet" href="/integracao/css/main.css">
-  <link rel="canonical" href="/integracao/dw/">
-  <link rel="icon" type="image/png" href="/integracao/img/logo-esus.png">
+  <link rel="stylesheet" href="//css/main.css">
+  <link rel="canonical" href="//dw/">
+  <link rel="icon" type="image/png" href="//img/logo-esus.png">
 
   <script src="//code.jquery.com/jquery-3.1.0.min.js"></script>
-  <script src="/integracao/js/search.js" type="text/javascript"></script>
+  <script src="//js/search.js" type="text/javascript"></script>
 </head>
 
 
@@ -24,8 +24,8 @@
 
   <div class="wrapper">
 
-    <a class="site-title" href="/integracao/">
-      <img src="/integracao/img/logo-esus.png" alt="e-SUS">
+    <a class="site-title" href="//">
+      <img src="//img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS AB PEC</span>
       
         <span class="label">versão 3.0.1</span>
@@ -48,7 +48,7 @@
           
         
           
-            <a href="/integracao/pdf.html"><i class="icon-pdf"></i> Gerar PDF</a>
+            <a href="//pdf.html"><i class="icon-pdf"></i> Gerar PDF</a>
           
         
           
@@ -66,13 +66,13 @@
     <div class="breadcrumb-placeholder">
   <div class="wrapper breadcrumb-wrapper">
     <ol class="breadcrumb">
-      <img src="/integracao/img/logo-esus.png" alt="e-SUS">
-      <li><a href="/integracao/">Home</a></li>
+      <img src="//img/logo-esus.png" alt="e-SUS">
+      <li><a href="//">Home</a></li>
 
       
         
           
-            <li><a title="Data Warehouse Relatórios e-SUS AB PEC" href="/integracao/dw/index.html">Data Warehouse Relatórios e-SUS AB PEC</a></li>
+            <li><a title="Data Warehouse Relatórios e-SUS AB PEC" href="//dw/index.html">Data Warehouse Relatórios e-SUS AB PEC</a></li>
           
         
 
@@ -98,7 +98,7 @@
   SimpleJekyllSearch({
     searchInput: document.getElementById('search-input'),
     resultsContainer: document.getElementById('search-results'),
-    json: '/integracao/search.json',
+    json: '//search.json',
     noResultsText: 'Nenhum resultado encontrado'
   });
 
@@ -118,7 +118,7 @@
   <ul>
     
       <li>
-        <a title="Voltar para Home" href="/integracao/" class="back-link">
+        <a title="Voltar para Home" href="//" class="back-link">
           <i class="icon icon-back"></i> Voltar
           <small>(Home)</small>
         </a>
@@ -126,19 +126,19 @@
     
 
     <li>
-      <a class="open" title="Data Warehouse Relatórios e-SUS AB PEC" href="/integracao/dw/index.html">Data Warehouse Relatórios e-SUS AB PEC</a>
+      <a class="open" title="Data Warehouse Relatórios e-SUS AB PEC" href="//dw/index.html">Data Warehouse Relatórios e-SUS AB PEC</a>
       <ul>
         
           <li >
           
-            <a title="Dimensões" href="/integracao/dw/dimensoes.html">
+            <a title="Dimensões" href="//dw/dimensoes.html">
               Dimensões
             </a>
           </li>
         
           <li  class="has-subitems">
           
-            <a title="Fatos" href="/integracao/dw/fatos/index.html">
+            <a title="Fatos" href="//dw/fatos/index.html">
               Fatos
             </a>
           </li>
@@ -160,7 +160,7 @@
   <header class="post-header">
     <h1 class="post-title">Data Warehouse Relatórios e-SUS AB PEC</h1>
     <p class="post-meta">
-      <a class="btn" href="/integracao/pdf.html?include=/dw/index.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
+      <a class="btn" href="//pdf.html?include=/dw/index.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
         <span class="label" title="Data da última modificação">Alterado em 20/11/2018</span>
       
@@ -172,9 +172,9 @@
 
 <p>Esta seção descreve a estrutura de Data Warehouse (DW) onde são armazenados os dados para a geração dos relatórios.</p>
 
-<p>O DW é uma base de dados contendo vários componentes. Possui uma arquitetura multidimensional, onde encontram-se as <a href="/integracao/dw/dimensoes.html">Dimensões</a> e <a href="/integracao/dw/fatos/index.html">Fatos</a>. Estas estruturas são alguns dos elementos do DW, são dependentes entre si e permitem o armazenamento dos dados.</p>
+<p>O DW é uma base de dados contendo vários componentes. Possui uma arquitetura multidimensional, onde encontram-se as <a href="//dw/dimensoes.html">Dimensões</a> e <a href="//dw/fatos/index.html">Fatos</a>. Estas estruturas são alguns dos elementos do DW, são dependentes entre si e permitem o armazenamento dos dados.</p>
 
-<p>Através de um sistema de <a href="https://pt.wikipedia.org/wiki/Extract,_transform,_load">ETL</a>, as informações são extraídas de arquivos conforme descritos na estrutura <a href="/integracao/ledi/ledi.html">Layout e-SUS AB de Dados e Interface</a> e armazenadas nas tabelas Fatos e Dimensões.</p>
+<p>Através de um sistema de <a href="https://pt.wikipedia.org/wiki/Extract,_transform,_load">ETL</a>, as informações são extraídas de arquivos conforme descritos na estrutura <a href="//ledi/ledi.html">Layout e-SUS AB de Dados e Interface</a> e armazenadas nas tabelas Fatos e Dimensões.</p>
 
 <p>As Dimensões possuem características descritivas dentro do DW. São responsáveis por qualificar as informações provenientes das tabelas Fatos. As tabelas Fatos possuem características quantitativa dentro do DW. A partir delas, são extraídas métricas que são cruzadas com os dados das Dimensões, gerando informações significativas para a avaliação do usuário. Todos os dados históricos no DW ficam armazenadas nas tabelas Fatos.</p>
 
@@ -189,6 +189,6 @@
       </div>
     </div>
 
-    <script src="/integracao/js/site.js" type="text/javascript"></script>
+    <script src="//js/site.js" type="text/javascript"></script>
   </body>
 </html>

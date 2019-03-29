@@ -9,12 +9,12 @@
   <title>Dimensões</title>
   <meta name="description" content="O nome das tabelas de Dimensão é formado pelo prefixo &quot;tb_dim_&quot; seguido do nome da respectiva dimensão, por exemplo: tb_dim_racionalidade_saude. Ne...">
 
-  <link rel="stylesheet" href="//css/main.css">
-  <link rel="canonical" href="//dw/dimensoes.html">
-  <link rel="icon" type="image/png" href="//img/logo-esus.png">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="/dw/dimensoes.html">
+  <link rel="icon" type="image/png" href="/img/logo-esus.png">
 
   <script src="//code.jquery.com/jquery-3.1.0.min.js"></script>
-  <script src="//js/search.js" type="text/javascript"></script>
+  <script src="/js/search.js" type="text/javascript"></script>
 </head>
 
 
@@ -24,8 +24,8 @@
 
   <div class="wrapper">
 
-    <a class="site-title" href="//">
-      <img src="//img/logo-esus.png" alt="e-SUS">
+    <a class="site-title" href="/">
+      <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS AB PEC</span>
       
         <span class="label">versão 3.0.1</span>
@@ -48,7 +48,7 @@
           
         
           
-            <a href="//pdf.html"><i class="icon-pdf"></i> Gerar PDF</a>
+            <a href="/pdf.html"><i class="icon-pdf"></i> Gerar PDF</a>
           
         
           
@@ -66,17 +66,17 @@
     <div class="breadcrumb-placeholder">
   <div class="wrapper breadcrumb-wrapper">
     <ol class="breadcrumb">
-      <img src="//img/logo-esus.png" alt="e-SUS">
-      <li><a href="//">Home</a></li>
+      <img src="/img/logo-esus.png" alt="e-SUS">
+      <li><a href="/">Home</a></li>
 
       
         
           
-            <li><a title="Data Warehouse Relatórios e-SUS AB PEC" href="//dw/index.html">Data Warehouse Relatórios e-SUS AB PEC</a></li>
+            <li><a title="Data Warehouse Relatórios e-SUS AB PEC" href="/dw/index.html">Data Warehouse Relatórios e-SUS AB PEC</a></li>
           
         
           
-            <li><a title="Dimensões" href="//dw/dimensoes.html">Dimensões</a></li>
+            <li><a title="Dimensões" href="/dw/dimensoes.html">Dimensões</a></li>
           
         
 
@@ -102,7 +102,7 @@
   SimpleJekyllSearch({
     searchInput: document.getElementById('search-input'),
     resultsContainer: document.getElementById('search-results'),
-    json: '//search.json',
+    json: '/search.json',
     noResultsText: 'Nenhum resultado encontrado'
   });
 
@@ -122,7 +122,7 @@
   <ul>
     
       <li>
-        <a title="Voltar para Home" href="//" class="back-link">
+        <a title="Voltar para Home" href="/" class="back-link">
           <i class="icon icon-back"></i> Voltar
           <small>(Home)</small>
         </a>
@@ -130,19 +130,19 @@
     
 
     <li>
-      <a class="open" title="Data Warehouse Relatórios e-SUS AB PEC" href="//dw/index.html">Data Warehouse Relatórios e-SUS AB PEC</a>
+      <a class="open" title="Data Warehouse Relatórios e-SUS AB PEC" href="/dw/index.html">Data Warehouse Relatórios e-SUS AB PEC</a>
       <ul>
         
           <li class="active">
           
-            <a title="Dimensões" href="//dw/dimensoes.html">
+            <a title="Dimensões" href="/dw/dimensoes.html">
               Dimensões
             </a>
           </li>
         
           <li  class="has-subitems">
           
-            <a title="Fatos" href="//dw/fatos/index.html">
+            <a title="Fatos" href="/dw/fatos/index.html">
               Fatos
             </a>
           </li>
@@ -164,7 +164,7 @@
   <header class="post-header">
     <h1 class="post-title">Dimensões</h1>
     <p class="post-meta">
-      <a class="btn" href="//pdf.html?include=/dw/dimensoes.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
+      <a class="btn" href="/pdf.html?include=/dw/dimensoes.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
         <span class="label" title="Data da última modificação">Alterado em 25/10/2018</span>
       
@@ -200,7 +200,7 @@
 
 <p><em>Tabela 1 - Tabelas de organização</em></p>
 
-<p>Outras tabelas apresentam as informações que darão sentido aos identificadores existentes nas tabelas <strong>Fatos</strong>. Portanto, muitas delas apresentam registros predefinidos, geralmente determinados pelo <a href="//ledi/ledi.html">Layout e-SUS AB de Dados e Interface</a> (conforme apresentadas na Tabela 2) e incluem também o registro &quot;Não informado&quot;. Além destas características, algumas tabelas podem apresentar a coluna <strong>st_registro_valido</strong>.</p>
+<p>Outras tabelas apresentam as informações que darão sentido aos identificadores existentes nas tabelas <strong>Fatos</strong>. Portanto, muitas delas apresentam registros predefinidos, geralmente determinados pelo <a href="/ledi/ledi.html">Layout e-SUS AB de Dados e Interface</a> (conforme apresentadas na Tabela 2) e incluem também o registro &quot;Não informado&quot;. Além destas características, algumas tabelas podem apresentar a coluna <strong>st_registro_valido</strong>.</p>
 
 <p>A coluna <strong>st_registro_valido</strong> é utilizada para identificar se o respectivo registro está completo na tabela do DW. Isto ocorre durante o processamento inicial dos dados. Caso o identificador não exista na tabela, o mesmo é inserido. Neste momento, apenas o identificador existe no DW, então a coluna &quot;st_registro_valido&quot; é marcada com o valor &quot;inválido&quot; para que seja reprocessado novamente e adicionadas as informações complementares (geralmente nome ou descrição). Este reprocessamento realiza a busca na base de dados do e-SUS AB PEC e, encontrando o identificador, inclui as demais informações e marca o registro como &quot;válido&quot;.</p>
 
@@ -212,35 +212,35 @@
 </thead><tbody>
 <tr>
 <td>tb_dim_aleitamento</td>
-<td><a href="//ledi/referencias/dicionario.html#aleitamentomaterno">Aleitamento materno</a></td>
+<td><a href="/ledi/referencias/dicionario.html#aleitamentomaterno">Aleitamento materno</a></td>
 </tr>
 <tr>
 <td>tb_dim_cbo</td>
-<td>Qualquer registro pertencente à lista de <a href="//ledi/referencias/cbo_disponiveis.html">CBO</a> pode existir nesta tabela</td>
+<td>Qualquer registro pertencente à lista de <a href="/ledi/referencias/cbo_disponiveis.html">CBO</a> pode existir nesta tabela</td>
 </tr>
 <tr>
 <td>tb_dim_cds_tipo_origem</td>
-<td>Contém a informação de qual sistema gerou a informação. As opções são apresentadas na <a href="//dw/dimensoes.html#tabela-tb_dim_cds_tipo_origem">Tabela Sistema de Origem</a></td>
+<td>Contém a informação de qual sistema gerou a informação. As opções são apresentadas na <a href="/dw/dimensoes.html#tabela-tb_dim_cds_tipo_origem">Tabela Sistema de Origem</a></td>
 </tr>
 <tr>
 <td>tb_dim_ciap</td>
-<td><a href="//ledi/referencias/index.html">Classificação Internacional de Atenção Primária - Segunda Edição (CIAP2)</a></td>
+<td><a href="/ledi/referencias/index.html">Classificação Internacional de Atenção Primária - Segunda Edição (CIAP2)</a></td>
 </tr>
 <tr>
 <td>tb_dim_cid</td>
-<td><a href="//ledi/referencias/index.html">Classificação Internacional de Doenças - Versão 10</a></td>
+<td><a href="/ledi/referencias/index.html">Classificação Internacional de Doenças - Versão 10</a></td>
 </tr>
 <tr>
 <td>tb_dim_cuidador</td>
-<td><a href="//ledi/referencias/dicionario.html#cuidadorcidadao">Cuidador do cidadão</a></td>
+<td><a href="/ledi/referencias/dicionario.html#cuidadorcidadao">Cuidador do cidadão</a></td>
 </tr>
 <tr>
 <td>tb_dim_desfecho_visita</td>
-<td><a href="//ledi/referencias/dicionario.html#desfecho">Desfecho</a></td>
+<td><a href="/ledi/referencias/dicionario.html#desfecho">Desfecho</a></td>
 </tr>
 <tr>
 <td>tb_dim_dose_imunobiologico</td>
-<td><a href="//ledi/referencias/dicionario.html#dose">Dose de imunobiológico</a></td>
+<td><a href="/ledi/referencias/dicionario.html#dose">Dose de imunobiológico</a></td>
 </tr>
 <tr>
 <td>tb_dim_equipe</td>
@@ -248,35 +248,35 @@
 </tr>
 <tr>
 <td>tb_dim_estrategia_vacinacao</td>
-<td><a href="//ledi/referencias/dicionario.html#estrategiavacinacao">Estratégia de vacinação</a></td>
+<td><a href="/ledi/referencias/dicionario.html#estrategiavacinacao">Estratégia de vacinação</a></td>
 </tr>
 <tr>
 <td>tb_dim_etnia</td>
-<td><a href="//ledi/referencias/dicionario.html#etnia">Etnia</a></td>
+<td><a href="/ledi/referencias/dicionario.html#etnia">Etnia</a></td>
 </tr>
 <tr>
 <td>tb_dim_faixa_etaria</td>
-<td>Apresenta as informações conforme <a href="//dw/dimensoes.html#tabela-tb_dim_faixa_etaria">Tabela de Faixa Etária</a></td>
+<td>Apresenta as informações conforme <a href="/dw/dimensoes.html#tabela-tb_dim_faixa_etaria">Tabela de Faixa Etária</a></td>
 </tr>
 <tr>
 <td>tb_dim_frequencia_alimentacao</td>
-<td><a href="//ledi/referencias/dicionario.html#quantasvezesalimentacao">Quantas vezes se alimenta ao dia?</a></td>
+<td><a href="/ledi/referencias/dicionario.html#quantasvezesalimentacao">Quantas vezes se alimenta ao dia?</a></td>
 </tr>
 <tr>
 <td>tb_dim_identidade_genero</td>
-<td><a href="//ledi/referencias/dicionario.html#identidadegenerocidadao">Identidade de gênero</a></td>
+<td><a href="/ledi/referencias/dicionario.html#identidadegenerocidadao">Identidade de gênero</a></td>
 </tr>
 <tr>
 <td>tb_dim_imunobiologico</td>
-<td><a href="//ledi/referencias/dicionario.html#imunobiologico">Imunobiológico</a></td>
+<td><a href="/ledi/referencias/dicionario.html#imunobiologico">Imunobiológico</a></td>
 </tr>
 <tr>
 <td>tb_dim_local_atendimento</td>
-<td><a href="//ledi/referencias/dicionario.html#localdeatendimento">Local de atendimento</a></td>
+<td><a href="/ledi/referencias/dicionario.html#localdeatendimento">Local de atendimento</a></td>
 </tr>
 <tr>
 <td>tb_dim_modalidade_ad</td>
-<td><a href="//ledi/referencias/dicionario.html#modalidadead">Modalidade AD</a></td>
+<td><a href="/ledi/referencias/dicionario.html#modalidadead">Modalidade AD</a></td>
 </tr>
 <tr>
 <td>tb_dim_municipio</td>
@@ -284,7 +284,7 @@
 </tr>
 <tr>
 <td>tb_dim_nacionalidade</td>
-<td><a href="//ledi/referencias/dicionario.html#nacionalidade">Nacionalidade</a></td>
+<td><a href="/ledi/referencias/dicionario.html#nacionalidade">Nacionalidade</a></td>
 </tr>
 <tr>
 <td>tb_dim_pais</td>
@@ -296,11 +296,11 @@
 </tr>
 <tr>
 <td>tb_dim_procedencia_origem</td>
-<td><a href="//ledi/referencias/dicionario.html#atencaodomiciliarprocedencia">Procedência</a></td>
+<td><a href="/ledi/referencias/dicionario.html#atencaodomiciliarprocedencia">Procedência</a></td>
 </tr>
 <tr>
 <td>tb_dim_procedimento</td>
-<td><a href="//ledi/referencias/index.html">Tabela Unificada SIGTAP</a></td>
+<td><a href="/ledi/referencias/index.html">Tabela Unificada SIGTAP</a></td>
 </tr>
 <tr>
 <td>tb_dim_profissional</td>
@@ -308,127 +308,127 @@
 </tr>
 <tr>
 <td>tb_dim_raca_cor</td>
-<td><a href="//ledi/referencias/dicionario.html#racacor">Raça / Cor</a></td>
+<td><a href="/ledi/referencias/dicionario.html#racacor">Raça / Cor</a></td>
 </tr>
 <tr>
 <td>tb_dim_racionalidade_saude</td>
-<td><a href="//ledi/referencias/dicionario.html#racionalidadesaude">Racionalidade em saúde</a></td>
+<td><a href="/ledi/referencias/dicionario.html#racionalidadesaude">Racionalidade em saúde</a></td>
 </tr>
 <tr>
 <td>tb_dim_sexo</td>
-<td><a href="//ledi/referencias/dicionario.html#sexo">Sexo</a> <br> Desconsiderar a opção &quot;Ignorado&quot;</td>
+<td><a href="/ledi/referencias/dicionario.html#sexo">Sexo</a> <br> Desconsiderar a opção &quot;Ignorado&quot;</td>
 </tr>
 <tr>
 <td>tb_dim_situacao_trabalho</td>
-<td><a href="//ledi/referencias/dicionario.html#situacaomercadotrabalho">Situação no mercado de trabalho</a></td>
+<td><a href="/ledi/referencias/dicionario.html#situacaomercadotrabalho">Situação no mercado de trabalho</a></td>
 </tr>
 <tr>
 <td>tb_dim_tempo_morador_rua</td>
-<td><a href="//ledi/referencias/dicionario.html#temposituacaoderua">Tempo em situação de rua</a></td>
+<td><a href="/ledi/referencias/dicionario.html#temposituacaoderua">Tempo em situação de rua</a></td>
 </tr>
 <tr>
 <td>tb_dim_tipo_abastecimento_agua</td>
-<td><a href="//ledi/referencias/dicionario.html#abastecimentodeagua">Abastecimento de água</a></td>
+<td><a href="/ledi/referencias/dicionario.html#abastecimentodeagua">Abastecimento de água</a></td>
 </tr>
 <tr>
 <td>tb_dim_tipo_acesso_domicilio</td>
-<td><a href="//ledi/referencias/dicionario.html#tipodeacessoaodomicilio">Tipo de acesso ao domicílio</a></td>
+<td><a href="/ledi/referencias/dicionario.html#tipodeacessoaodomicilio">Tipo de acesso ao domicílio</a></td>
 </tr>
 <tr>
 <td>tb_dim_tipo_atendimento</td>
-<td><a href="//ledi/referencias/dicionario.html#tipodeatendimento">Tipo de atendimento</a> <br> Também apresenta a opção &quot;Consultas&quot;. A coluna co_dim_tipo_atendimento_pai referencia o registro pai, utilizado para agrupamento da informação / visualização hierárquica</td>
+<td><a href="/ledi/referencias/dicionario.html#tipodeatendimento">Tipo de atendimento</a> <br> Também apresenta a opção &quot;Consultas&quot;. A coluna co_dim_tipo_atendimento_pai referencia o registro pai, utilizado para agrupamento da informação / visualização hierárquica</td>
 </tr>
 <tr>
 <td>tb_dim_tipo_atividade</td>
-<td><a href="//ledi/referencias/dicionario.html#tipoatividadecoletiva">Atividade</a></td>
+<td><a href="/ledi/referencias/dicionario.html#tipoatividadecoletiva">Atividade</a></td>
 </tr>
 <tr>
 <td>tb_dim_tipo_condicao_peso</td>
-<td><a href="//ledi/referencias/dicionario.html#consideracaopeso">Sobre seu peso, você se considera?</a></td>
+<td><a href="/ledi/referencias/dicionario.html#consideracaopeso">Sobre seu peso, você se considera?</a></td>
 </tr>
 <tr>
 <td>tb_dim_tipo_consulta</td>
-<td><a href="//ledi/referencias/dicionario.html#tipodeconsultaodonto">Tipo de consulta</a> <br> Para manter a compatibilidade com versões anteriores, também apresenta as opções &quot;Consulta de conclusão de tratamento&quot; e &quot;Não se aplica (NA)&quot;</td>
+<td><a href="/ledi/referencias/dicionario.html#tipodeconsultaodonto">Tipo de consulta</a> <br> Para manter a compatibilidade com versões anteriores, também apresenta as opções &quot;Consulta de conclusão de tratamento&quot; e &quot;Não se aplica (NA)&quot;</td>
 </tr>
 <tr>
 <td>tb_dim_tipo_destino_lixo</td>
-<td><a href="//ledi/referencias/dicionario.html#destinodolixo">Destino do lixo</a></td>
+<td><a href="/ledi/referencias/dicionario.html#destinodolixo">Destino do lixo</a></td>
 </tr>
 <tr>
 <td>tb_dim_tipo_domicilio</td>
-<td><a href="//ledi/referencias/dicionario.html#tipodedomicilio">Tipo de domicílio</a></td>
+<td><a href="/ledi/referencias/dicionario.html#tipodedomicilio">Tipo de domicílio</a></td>
 </tr>
 <tr>
 <td>tb_dim_tipo_elegibilidade</td>
-<td><a href="//ledi/referencias/dicionario.html#conclusaodestinoelegivel">Elegível</a></td>
+<td><a href="/ledi/referencias/dicionario.html#conclusaodestinoelegivel">Elegível</a></td>
 </tr>
 <tr>
 <td>tb_dim_tipo_escoamento_sanitar</td>
-<td><a href="//ledi/referencias/dicionario.html#formadeescoamentodobanheiroousanitario">Forma de escoamento do banheiro ou sanitário</a></td>
+<td><a href="/ledi/referencias/dicionario.html#formadeescoamentodobanheiroousanitario">Forma de escoamento do banheiro ou sanitário</a></td>
 </tr>
 <tr>
 <td>tb_dim_tipo_escolaridade</td>
-<td><a href="//ledi/referencias/dicionario.html#cursomaiselevado">Qual é o curso mais elevado que frequenta ou frequentou?</a></td>
+<td><a href="/ledi/referencias/dicionario.html#cursomaiselevado">Qual é o curso mais elevado que frequenta ou frequentou?</a></td>
 </tr>
 <tr>
 <td>tb_dim_tipo_ficha</td>
-<td><a href="//ledi/referencias/dicionario.html#tipodadoserializado">Tipo de ficha</a> <br> Também apresenta as opções &quot;AD resumo&quot; e &quot;ESUS PEC Atendimento&quot;</td>
+<td><a href="/ledi/referencias/dicionario.html#tipodadoserializado">Tipo de ficha</a> <br> Também apresenta as opções &quot;AD resumo&quot; e &quot;ESUS PEC Atendimento&quot;</td>
 </tr>
 <tr>
 <td>tb_dim_tipo_imovel</td>
-<td><a href="//ledi/referencias/dicionario.html#tipodeimovel">Tipo de imóvel</a></td>
+<td><a href="/ledi/referencias/dicionario.html#tipodeimovel">Tipo de imóvel</a></td>
 </tr>
 <tr>
 <td>tb_dim_tipo_localizacao</td>
-<td><a href="//ledi/referencias/dicionario.html#localizacaodamoradia">Localização</a></td>
+<td><a href="/ledi/referencias/dicionario.html#localizacaodamoradia">Localização</a></td>
 </tr>
 <tr>
 <td>tb_dim_tipo_logradouro</td>
-<td><a href="//ledi/referencias/uf.html#tipo-de-logradouro">Tipo de logradouro</a></td>
+<td><a href="/ledi/referencias/uf.html#tipo-de-logradouro">Tipo de logradouro</a></td>
 </tr>
 <tr>
 <td>tb_dim_tipo_material_parede</td>
-<td><a href="//ledi/referencias/dicionario.html#materialpredominantenaconstrucao">Material predominante na construção das paredes externas de seu domicílio</a></td>
+<td><a href="/ledi/referencias/dicionario.html#materialpredominantenaconstrucao">Material predominante na construção das paredes externas de seu domicílio</a></td>
 </tr>
 <tr>
 <td>tb_dim_tipo_orientacao_sexual</td>
-<td><a href="//ledi/referencias/dicionario.html#orientacaosexual">Orientação sexual</a></td>
+<td><a href="/ledi/referencias/dicionario.html#orientacaosexual">Orientação sexual</a></td>
 </tr>
 <tr>
 <td>tb_dim_tipo_origem_dado_transp</td>
-<td>Apresenta a informação de qual forma o dado foi registrado na base, conforme apresentado na <a href="//dw/dimensoes.html#tabela-tb_dim_tipo_origem_dado_transp">Tabela Origem da Ficha</a></td>
+<td>Apresenta a informação de qual forma o dado foi registrado na base, conforme apresentado na <a href="/dw/dimensoes.html#tabela-tb_dim_tipo_origem_dado_transp">Tabela Origem da Ficha</a></td>
 </tr>
 <tr>
 <td>tb_dim_tipo_parentesco</td>
-<td><a href="//ledi/referencias/dicionario.html#relacaoparentesco">Relação de parentesco com o responsável familiar</a></td>
+<td><a href="/ledi/referencias/dicionario.html#relacaoparentesco">Relação de parentesco com o responsável familiar</a></td>
 </tr>
 <tr>
 <td>tb_dim_tipo_posse_terra</td>
-<td><a href="//ledi/referencias/dicionario.html#condicaodeposseeusodaterra">Em caso de área de produção rural: condição de posse e uso da terra</a></td>
+<td><a href="/ledi/referencias/dicionario.html#condicaodeposseeusodaterra">Em caso de área de produção rural: condição de posse e uso da terra</a></td>
 </tr>
 <tr>
 <td>tb_dim_tipo_renda_familiar</td>
-<td><a href="//ledi/referencias/dicionario.html#rendafamiliar">Renda familiar (sal. mínimo)</a></td>
+<td><a href="/ledi/referencias/dicionario.html#rendafamiliar">Renda familiar (sal. mínimo)</a></td>
 </tr>
 <tr>
 <td>tb_dim_tipo_saida_cadastro</td>
-<td><a href="//ledi/referencias/dicionario.html#motivosaida">Saída do cidadão do cadastro</a></td>
+<td><a href="/ledi/referencias/dicionario.html#motivosaida">Saída do cidadão do cadastro</a></td>
 </tr>
 <tr>
 <td>tb_dim_tipo_situacao_moradia</td>
-<td><a href="//ledi/referencias/dicionario.html#situacaodemoradia">Situação de moradia / Posse da terra</a></td>
+<td><a href="/ledi/referencias/dicionario.html#situacaodemoradia">Situação de moradia / Posse da terra</a></td>
 </tr>
 <tr>
 <td>tb_dim_tipo_tratamento_agua</td>
-<td><a href="//ledi/referencias/dicionario.html#aguaconsumodomicilio">Água para consumo no domicílio</a></td>
+<td><a href="/ledi/referencias/dicionario.html#aguaconsumodomicilio">Água para consumo no domicílio</a></td>
 </tr>
 <tr>
 <td>tb_dim_turno</td>
-<td><a href="//ledi/referencias/dicionario.html#turno">Turno</a></td>
+<td><a href="/ledi/referencias/dicionario.html#turno">Turno</a></td>
 </tr>
 <tr>
 <td>tb_dim_uf</td>
-<td><a href="//ledi/referencias/uf.html#uf">Unidade federativa</a></td>
+<td><a href="/ledi/referencias/uf.html#uf">Unidade federativa</a></td>
 </tr>
 <tr>
 <td>tb_dim_unidade_saude</td>
@@ -440,7 +440,7 @@
 
 <h1 id="anexo-1-tabelas-complementares">Anexo 1 - Tabelas complementares</h1>
 
-<p>O anexo 1 apresenta as tabelas dimensão pertencentes a estrutura do Data Warehouse que não estão definidas no <a href="//ledi/ledi.html">Layout e-SUS AB de Dados e Interface</a>.</p>
+<p>O anexo 1 apresenta as tabelas dimensão pertencentes a estrutura do Data Warehouse que não estão definidas no <a href="/ledi/ledi.html">Layout e-SUS AB de Dados e Interface</a>.</p>
 
 <h2 id="tabela-tb_dim_cds_tipo_origem">Tabela tb_dim_cds_tipo_origem</h2>
 
@@ -474,7 +474,7 @@
 <tr>
 <td>3</td>
 <td>Externo</td>
-<td>A origem da informação é de um sistema terceiro e foi importado no e-SUS AB PEC através do <a href="//ledi/ledi.html">LEDI</a></td>
+<td>A origem da informação é de um sistema terceiro e foi importado no e-SUS AB PEC através do <a href="/ledi/ledi.html">LEDI</a></td>
 </tr>
 <tr>
 <td>4</td>
@@ -631,7 +631,7 @@
 <tr>
 <td>3</td>
 <td>Importado de arquivo (zip)</td>
-<td>Pode ter sido gerado por qualquer sistema e importado conforme definido no <a href="//ledi/ledi.html">LEDI</a></td>
+<td>Pode ter sido gerado por qualquer sistema e importado conforme definido no <a href="/ledi/ledi.html">LEDI</a></td>
 </tr>
 <tr>
 <td>4</td>
@@ -654,6 +654,6 @@
       </div>
     </div>
 
-    <script src="//js/site.js" type="text/javascript"></script>
+    <script src="/js/site.js" type="text/javascript"></script>
   </body>
 </html>

@@ -1,25 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ns3:dadoTransporteTransportXml xmlns:ns2="http://esus.ufsc.br/dadoinstalacao" xmlns:ns3="http://esus.ufsc.br/dadotransporte" xmlns:ns4="http://esus.ufsc.br/fichavacinacaomaster">
-	<uuidDadoSerializado>5444429-9de1d63d-f392-4f30-a14f-893418c29004</uuidDadoSerializado>
+	<uuidDadoSerializado>3186717-6e80c626-44ac-4e27-a7d0-6b2848c3b364</uuidDadoSerializado>
 	<tipoDadoSerializado>14</tipoDadoSerializado>
 	<codIbge>4205407</codIbge>
-	<cnesDadoSerializado>5444429</cnesDadoSerializado>
+	<cnesDadoSerializado>3186717</cnesDadoSerializado>
+	<ineDadoSerializado>0000406465</ineDadoSerializado>
 	<numLote>1</numLote>
 	<ns4:fichaVacinacaoMasterTransport>
 		<headerTransport>
 			<profissionalCNS>700609923387762</profissionalCNS>
-			<cboCodigo_2002>322245</cboCodigo_2002>
-			<cnes>5444429</cnes>
-			<dataAtendimento>1517320800000</dataAtendimento>
+			<cboCodigo_2002>223505</cboCodigo_2002>
+			<cnes>3186717</cnes>
+			<ine>0000406465</ine>
+			<dataAtendimento>1552489200000</dataAtendimento>
 			<codigoIbgeMunicipio>4205407</codigoIbgeMunicipio>
 		</headerTransport>
-		<uuidFicha>5444429-9de1d63d-f392-4f30-a14f-893418c29004</uuidFicha>
-		<tpCdsOrigem>3</tpCdsOrigem>
+		<uuidFicha>3186717-6e80c626-44ac-4e27-a7d0-6b2848c3b364</uuidFicha>
+		<tpCdsOrigem>1</tpCdsOrigem>
 		<vacinacoes>
 			<turno>1</turno>
-			<numProntuario>456</numProntuario>
+			<numProntuario>123</numProntuario>
 			<cnsCidadao>100291426250007</cnsCidadao>
-			<dtNascimento>1252504800000</dtNascimento>
+			<dtNascimento>978361200000</dtNascimento>
 			<sexo>1</sexo>
 			<localAtendimento>1</localAtendimento>
 			<viajante>true</viajante>
@@ -34,12 +36,14 @@
 				<fabricante>FABRICANTE</fabricante>
 			</vacinas>
 			<vacinas>
-				<imunobiologico>14</imunobiologico>
+				<imunobiologico>82</imunobiologico>
 				<estrategiaVacinacao>4</estrategiaVacinacao>
-				<dose>9</dose>
-				<lote>456</lote>
+				<dose>2</dose>
+				<lote>321</lote>
 				<fabricante>FABRICANTE</fabricante>
 			</vacinas>
+			<dataHoraInicialAtendimento>1552489200000</dataHoraInicialAtendimento>
+			<dataHoraFinalAtendimento>1552491000000</dataHoraFinalAtendimento>
 		</vacinacoes>
 	</ns4:fichaVacinacaoMasterTransport>
 	<ns2:remetente>
@@ -49,7 +53,7 @@
 		<nomeOuRazaoSocial>ADMINISTRADOR INSTALAÇÃO</nomeOuRazaoSocial>
 		<fone>8216756527</fone>
 		<email>prof@esus.br</email>
-		<versaoSistema>3.0.01</versaoSistema>
+		<versaoSistema>3.2.05</versaoSistema>
 		<nomeBancoDados>Postgres</nomeBancoDados>
 	</ns2:remetente>
 	<ns2:originadora>
@@ -59,8 +63,8 @@
 		<nomeOuRazaoSocial>ADMINISTRADOR INSTALAÇÃO</nomeOuRazaoSocial>
 		<fone>8216756527</fone>
 		<email>prof@esus.br</email>
-		<versaoSistema>3.0.01</versaoSistema>
+		<versaoSistema>3.2.05</versaoSistema>
 		<nomeBancoDados>Postgres</nomeBancoDados>
 	</ns2:originadora>
-	<versao major="3" minor="0" revision="0" />
+	<versao major="3" minor="2" revision="1" />
 </ns3:dadoTransporteTransportXml>

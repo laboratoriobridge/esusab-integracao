@@ -1,98 +1,88 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ns3:dadoTransporteTransportXml xmlns:ns2="http://esus.ufsc.br/dadoinstalacao" xmlns:ns3="http://esus.ufsc.br/dadotransporte" xmlns:ns4="http://esus.ufsc.br/fichaatendimentoindividualmaster">
-	<uuidDadoSerializado>5444429-e3da23da-bf5c-48b4-9982-0e85bf46483e</uuidDadoSerializado>
+	<uuidDadoSerializado>3186717-c939bdd2-5708-4644-a603-97a60b24ca42</uuidDadoSerializado>
 	<tipoDadoSerializado>4</tipoDadoSerializado>
 	<codIbge>4205407</codIbge>
-	<cnesDadoSerializado>5444429</cnesDadoSerializado>
+	<cnesDadoSerializado>3186717</cnesDadoSerializado>
+	<ineDadoSerializado>0000406465</ineDadoSerializado>
 	<numLote>1</numLote>
 	<ns4:fichaAtendimentoIndividualMasterTransport>
 		<headerTransport>
 			<lotacaoFormPrincipal>
 				<profissionalCNS>700609923387762</profissionalCNS>
-				<cboCodigo_2002>225130</cboCodigo_2002>
-				<cnes>5444429</cnes>
+				<cboCodigo_2002>225142</cboCodigo_2002>
+				<cnes>3186717</cnes>
+				<ine>0000406465</ine>
 			</lotacaoFormPrincipal>
-			<lotacaoFormAtendimentoCompartilhado>
-				<profissionalCNS>703405460942700</profissionalCNS>
-				<cboCodigo_2002>225130</cboCodigo_2002>
-				<cnes>5444429</cnes>
-				<ine>1382855330</ine>
-			</lotacaoFormAtendimentoCompartilhado>
-			<dataAtendimento>1517320800000</dataAtendimento>
+			<dataAtendimento>1553094000000</dataAtendimento>
 			<codigoIbgeMunicipio>4205407</codigoIbgeMunicipio>
 		</headerTransport>
 		<atendimentosIndividuais>
-			<numeroProntuario>987</numeroProntuario>
-			<dataNascimento>1115301600000</dataNascimento>
-			<localDeAtendimento>4</localDeAtendimento>
-			<sexo>0</sexo>
-			<turno>3</turno>
-			<tipoAtendimento>5</tipoAtendimento>
-			<atencaoDomiciliarModalidade>1</atencaoDomiciliarModalidade>
-			<problemaCondicaoAvaliada>
-				<ciaps>ABP007</ciaps>
-			</problemaCondicaoAvaliada>
-			<condutas>9</condutas>
-		</atendimentosIndividuais>
-		<atendimentosIndividuais>
 			<numeroProntuario>123</numeroProntuario>
 			<cns>279573698530018</cns>
-			<dataNascimento>1012658400000</dataNascimento>
+			<dataNascimento>978361200000</dataNascimento>
 			<localDeAtendimento>1</localDeAtendimento>
 			<sexo>1</sexo>
 			<turno>1</turno>
 			<tipoAtendimento>2</tipoAtendimento>
-			<pesoAcompanhamentoNutricional>60.0</pesoAcompanhamentoNutricional>
-			<alturaAcompanhamentoNutricional>170.0</alturaAcompanhamentoNutricional>
+			<pesoAcompanhamentoNutricional>70.0</pesoAcompanhamentoNutricional>
+			<alturaAcompanhamentoNutricional>180.0</alturaAcompanhamentoNutricional>
 			<aleitamentoMaterno>1</aleitamentoMaterno>
-			<dumDaGestante>1515592800000</dumDaGestante>
-			<idadeGestacional>3</idadeGestacional>
-			<atencaoDomiciliarModalidade>3</atencaoDomiciliarModalidade>
+			<dumDaGestante>1551452400000</dumDaGestante>
+			<atencaoDomiciliarModalidade>1</atencaoDomiciliarModalidade>
 			<problemaCondicaoAvaliada>
 				<ciaps>ABP003</ciaps>
-				<ciaps>ABP023</ciaps>
-				<ciaps>ABP006</ciaps>
-				<ciaps>ABP017</ciaps>
-				<outroCiap1>32</outroCiap1>
-				<outroCiap2>30</outroCiap2>
-				<cid10>W78</cid10>
-				<cid10_2>K031</cid10_2>
+				<ciaps>ABP024</ciaps>
+				<ciaps>ABP009</ciaps>
+				<ciaps>ABP019</ciaps>
+				<outroCiap1>A03</outroCiap1>
+				<cid10>R50</cid10>
 			</problemaCondicaoAvaliada>
-			<examesSolicitados>ABEX022</examesSolicitados>
+			<examesSolicitados>ABEX007</examesSolicitados>
 			<examesSolicitados>ABEX026</examesSolicitados>
-			<examesSolicitados>ABEX020</examesSolicitados>
-			<examesSolicitados>ABEX002</examesSolicitados>
-			<examesAvaliados>ABEX022</examesAvaliados>
-			<examesAvaliados>ABEX005</examesAvaliados>
-			<examesAvaliados>ABEX021</examesAvaliados>
 			<examesAvaliados>ABEX002</examesAvaliados>
+			<examesAvaliados>ABEX026</examesAvaliados>
 			<outrosSia>
-				<codigoExame>0205010040</codigoExame>
+				<codigoExame>0212010018</codigoExame>
 				<solicitadoAvaliado>A</solicitadoAvaliado>
 				<solicitadoAvaliado>S</solicitadoAvaliado>
 			</outrosSia>
 			<outrosSia>
-				<codigoExame>0202020061</codigoExame>
+				<codigoExame>0201020041</codigoExame>
 				<solicitadoAvaliado>S</solicitadoAvaliado>
 			</outrosSia>
 			<outrosSia>
-				<codigoExame>0201010542</codigoExame>
+				<codigoExame>0211030015</codigoExame>
 				<solicitadoAvaliado>A</solicitadoAvaliado>
 			</outrosSia>
 			<vacinaEmDia>true</vacinaEmDia>
 			<ficouEmObservacao>false</ficouEmObservacao>
-			<nasfs>3</nasfs>
+			<nasfs>1</nasfs>
 			<condutas>9</condutas>
-			<condutas>1</condutas>
-			<condutas>4</condutas>
-			<stGravidezPlanejada>true</stGravidezPlanejada>
+			<condutas>5</condutas>
+			<stGravidezPlanejada>false</stGravidezPlanejada>
 			<nuGestasPrevias>1</nuGestasPrevias>
 			<nuPartos>1</nuPartos>
-			<racionalidadeSaude>4</racionalidadeSaude>
-			<perimetroCefalico>56.0</perimetroCefalico>
+			<racionalidadeSaude>6</racionalidadeSaude>
+			<perimetroCefalico>58.0</perimetroCefalico>
+			<dataHoraInicialAtendimento>1553094000000</dataHoraInicialAtendimento>
+			<dataHoraFinalAtendimento>1553095500000</dataHoraFinalAtendimento>
 		</atendimentosIndividuais>
-		<tpCdsOrigem>3</tpCdsOrigem>
-		<uuidFicha>5444429-e3da23da-bf5c-48b4-9982-0e85bf46483e</uuidFicha>
+		<atendimentosIndividuais>
+			<dataNascimento>1046703600000</dataNascimento>
+			<localDeAtendimento>1</localDeAtendimento>
+			<sexo>0</sexo>
+			<turno>2</turno>
+			<tipoAtendimento>4</tipoAtendimento>
+			<problemaCondicaoAvaliada>
+				<ciaps>ABP003</ciaps>
+			</problemaCondicaoAvaliada>
+			<condutas>1</condutas>
+			<dataHoraInicialAtendimento>1553099100000</dataHoraInicialAtendimento>
+			<dataHoraFinalAtendimento>1553100600000</dataHoraFinalAtendimento>
+		</atendimentosIndividuais>
+		<tpCdsOrigem>1</tpCdsOrigem>
+		<uuidFicha>3186717-c939bdd2-5708-4644-a603-97a60b24ca42</uuidFicha>
 	</ns4:fichaAtendimentoIndividualMasterTransport>
 	<ns2:remetente>
 		<contraChave>TREINAMENTO</contraChave>
@@ -101,7 +91,7 @@
 		<nomeOuRazaoSocial>ADMINISTRADOR INSTALAÇÃO</nomeOuRazaoSocial>
 		<fone>8216756527</fone>
 		<email>prof@esus.br</email>
-		<versaoSistema>3.0.01</versaoSistema>
+		<versaoSistema>3.2.05</versaoSistema>
 		<nomeBancoDados>Postgres</nomeBancoDados>
 	</ns2:remetente>
 	<ns2:originadora>
@@ -111,8 +101,8 @@
 		<nomeOuRazaoSocial>ADMINISTRADOR INSTALAÇÃO</nomeOuRazaoSocial>
 		<fone>8216756527</fone>
 		<email>prof@esus.br</email>
-		<versaoSistema>3.0.01</versaoSistema>
+		<versaoSistema>3.2.05</versaoSistema>
 		<nomeBancoDados>Postgres</nomeBancoDados>
 	</ns2:originadora>
-	<versao major="3" minor="0" revision="0" />
+	<versao major="3" minor="2" revision="1" />
 </ns3:dadoTransporteTransportXml>

@@ -1,46 +1,47 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ns3:dadoTransporteTransportXml xmlns:ns2="http://esus.ufsc.br/dadoinstalacao" xmlns:ns3="http://esus.ufsc.br/dadotransporte" xmlns:ns4="http://esus.ufsc.br/fichaprocedimentomaster">
-	<uuidDadoSerializado>5444429-0fae865e-124b-411d-a5ab-8c4c23966046</uuidDadoSerializado>
+	<uuidDadoSerializado>3186717-236c2ece-7449-4a50-9a87-bb35b0c10926</uuidDadoSerializado>
 	<tipoDadoSerializado>7</tipoDadoSerializado>
 	<codIbge>4205407</codIbge>
-	<cnesDadoSerializado>5444429</cnesDadoSerializado>
-	<ineDadoSerializado>1382855330</ineDadoSerializado>
+	<cnesDadoSerializado>3186717</cnesDadoSerializado>
+	<ineDadoSerializado>0000406465</ineDadoSerializado>
 	<numLote>1</numLote>
 	<ns4:fichaProcedimentoMasterTransport>
 		<headerTransport>
 			<profissionalCNS>700609923387762</profissionalCNS>
 			<cboCodigo_2002>223505</cboCodigo_2002>
-			<cnes>5444429</cnes>
-			<ine>1382855330</ine>
-			<dataAtendimento>1517234400000</dataAtendimento>
+			<cnes>3186717</cnes>
+			<ine>0000406465</ine>
+			<dataAtendimento>1552575600000</dataAtendimento>
 			<codigoIbgeMunicipio>4205407</codigoIbgeMunicipio>
 		</headerTransport>
 		<atendProcedimentos>
-			<numProntuario>12</numProntuario>
-			<cnsCidadao>127301025020001</cnsCidadao>
-			<dtNascimento>953128800000</dtNascimento>
+			<numProntuario>123</numProntuario>
+			<cnsCidadao>279573698530018</cnsCidadao>
+			<dtNascimento>1012662000000</dtNascimento>
 			<sexo>0</sexo>
-			<localAtendimento>2</localAtendimento>
-			<turno>2</turno>
+			<localAtendimento>1</localAtendimento>
+			<turno>1</turno>
 			<statusEscutaInicialOrientacao>true</statusEscutaInicialOrientacao>
-			<procedimentos>ABPG019</procedimentos>
-			<procedimentos>ABPG040</procedimentos>
+			<procedimentos>ABPG007</procedimentos>
+			<procedimentos>ABPG005</procedimentos>
 			<procedimentos>ABPG027</procedimentos>
-			<procedimentos>ABPG001</procedimentos>
-			<procedimentos>ABPG022</procedimentos>
+			<procedimentos>ABPG026</procedimentos>
 			<procedimentos>ABPG041</procedimentos>
-			<outrosSiaProcedimentos>0307020029</outrosSiaProcedimentos>
-			<outrosSiaProcedimentos>0101010010</outrosSiaProcedimentos>
+			<outrosSiaProcedimentos>0401010015</outrosSiaProcedimentos>
+			<outrosSiaProcedimentos>0413010058</outrosSiaProcedimentos>
+			<dataHoraInicialAtendimento>1552575600000</dataHoraInicialAtendimento>
+			<dataHoraFinalAtendimento>1552578600000</dataHoraFinalAtendimento>
 		</atendProcedimentos>
-		<uuidFicha>5444429-0fae865e-124b-411d-a5ab-8c4c23966046</uuidFicha>
-		<tpCdsOrigem>3</tpCdsOrigem>
-		<numTotalAfericaoPa>4</numTotalAfericaoPa>
-		<numTotalAfericaoTemperatura>3</numTotalAfericaoTemperatura>
-		<numTotalCurativoSimples>2</numTotalCurativoSimples>
-		<numTotalColetaMaterialParaExameLaboratorial>5</numTotalColetaMaterialParaExameLaboratorial>
-		<numTotalGlicemiaCapilar>5</numTotalGlicemiaCapilar>
-		<numTotalMedicaoAltura>5</numTotalMedicaoAltura>
-		<numTotalMedicaoPeso>5</numTotalMedicaoPeso>
+		<uuidFicha>3186717-236c2ece-7449-4a50-9a87-bb35b0c10926</uuidFicha>
+		<tpCdsOrigem>1</tpCdsOrigem>
+		<numTotalAfericaoPa>2</numTotalAfericaoPa>
+		<numTotalAfericaoTemperatura>2</numTotalAfericaoTemperatura>
+		<numTotalCurativoSimples>5</numTotalCurativoSimples>
+		<numTotalColetaMaterialParaExameLaboratorial>1</numTotalColetaMaterialParaExameLaboratorial>
+		<numTotalGlicemiaCapilar>1</numTotalGlicemiaCapilar>
+		<numTotalMedicaoAltura>4</numTotalMedicaoAltura>
+		<numTotalMedicaoPeso>4</numTotalMedicaoPeso>
 	</ns4:fichaProcedimentoMasterTransport>
 	<ns2:remetente>
 		<contraChave>TREINAMENTO</contraChave>
@@ -49,7 +50,7 @@
 		<nomeOuRazaoSocial>ADMINISTRADOR INSTALAÇÃO</nomeOuRazaoSocial>
 		<fone>8216756527</fone>
 		<email>prof@esus.br</email>
-		<versaoSistema>3.0.01</versaoSistema>
+		<versaoSistema>3.2.05</versaoSistema>
 		<nomeBancoDados>Postgres</nomeBancoDados>
 	</ns2:remetente>
 	<ns2:originadora>
@@ -59,8 +60,8 @@
 		<nomeOuRazaoSocial>ADMINISTRADOR INSTALAÇÃO</nomeOuRazaoSocial>
 		<fone>8216756527</fone>
 		<email>prof@esus.br</email>
-		<versaoSistema>3.0.01</versaoSistema>
+		<versaoSistema>3.2.05</versaoSistema>
 		<nomeBancoDados>Postgres</nomeBancoDados>
 	</ns2:originadora>
-	<versao major="3" minor="0" revision="0" />
+	<versao major="3" minor="2" revision="1" />
 </ns3:dadoTransporteTransportXml>

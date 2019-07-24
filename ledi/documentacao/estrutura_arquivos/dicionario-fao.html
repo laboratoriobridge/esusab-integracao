@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Ficha de Atendimento Odontológico Individual</title>
+  <meta name="description" content="FichaAtendimentoOdontologicoMaster">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="/ledi/documentacao/estrutura_arquivos/dicionario-fao.html">
+  <link rel="icon" type="image/png" href="/img/logo-esus.png">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">
+      <img src="/img/logo-esus.png" alt="e-SUS">
+      <span class="title-text">Integração e-SUS AB PEC</span>
+      
+        <span class="label">versão 3.2.0</span>
+      
+    </a>
+
+    <nav class="site-nav">
+      <a href="javascript: void" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+        
+          
+        
+          
+        
+          
+            <a href="/pdf.html"><i class="icon-pdf"></i> Gerar PDF</a>
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="breadcrumb-placeholder">
+  <div class="wrapper breadcrumb-wrapper">
+    <ol class="breadcrumb">
+      <img src="/img/logo-esus.png" alt="e-SUS">
+      <li><a href="/">Home</a></li>
+
+      
+        
+          
+            <li><a title="Layout e-SUS AB de Dados e Interface" href="/ledi/index.html">Layout e-SUS AB de Dados e Interface</a></li>
+          
+        
+          
+            <li><a title="Layout e-SUS AB de Dados e Interface Versão 3.2.1" href="/ledi/documentacao/index.html">Layout e-SUS AB de Dados e Interface Versão 3.2.1</a></li>
+          
+        
+          
+            <li><a title="Estrutura dos arquivos" href="/ledi/documentacao/estrutura_arquivos/index.html">Estrutura dos arquivos</a></li>
+          
+        
+          
+            <li><a title="Ficha de Atendimento Odontológico Individual" href="/ledi/documentacao/estrutura_arquivos/dicionario-fao.html">Ficha de Atendimento Odontológico Individual</a></li>
+          
+        
+
+      
+    </ol>
+  </div>
+</div>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+
+        
+        <div class="sidebar">
+          <div class="sidebar-content">
+            <form action="/search.html" method="get">
+  <input type="search" placeholder="Pesquisar..." name="query" id="quick-search" autocomplete="off">
+</form>
+
+<ul id="search-results"></ul>
+
+<div class="menu">
+  
+
+
+
+  
+
+  <ul>
+    
+      <li>
+        <a title="Voltar para Layout e-SUS AB de Dados e Interface Versão 3.2.1" href="/ledi/documentacao/index.html" class="back-link">
+          <i class="icon icon-back"></i> Voltar
+          <small>(Layout e-SUS AB de Dados e Interface Versão 3.2.1)</small>
+        </a>
+      </li>
+    
+
+    <li>
+      <a class="open" title="Estrutura dos arquivos" href="/ledi/documentacao/estrutura_arquivos/index.html">Estrutura dos arquivos</a>
+      <ul>
+        
+          <li >
+          
+            <a title="Camada de Transporte de Dados" href="/ledi/documentacao/estrutura_arquivos/camada-transporte.html">
+              Camada de Transporte de Dados
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Cabeçalho (headerTransport)" href="/ledi/documentacao/estrutura_arquivos/header-transport.html">
+              Cabeçalho (headerTransport)
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha de Cadastro Individual" href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html">
+              Ficha de Cadastro Individual
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha de Cadastro Domiciliar e Territorial" href="/ledi/documentacao/estrutura_arquivos/dicionario-fcd.html">
+              Ficha de Cadastro Domiciliar e Territorial
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha de Atendimento Individual" href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html">
+              Ficha de Atendimento Individual
+            </a>
+          </li>
+        
+          <li class="active">
+          
+            <a title="Ficha de Atendimento Odontológico Individual" href="/ledi/documentacao/estrutura_arquivos/dicionario-fao.html">
+              Ficha de Atendimento Odontológico Individual
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha de Atividade Coletiva" href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html">
+              Ficha de Atividade Coletiva
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha de Vacinação" href="/ledi/documentacao/estrutura_arquivos/dicionario-fv.html">
+              Ficha de Vacinação
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha de Procedimentos" href="/ledi/documentacao/estrutura_arquivos/dicionario-fp.html">
+              Ficha de Procedimentos
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha de Visita Domiciliar e Territorial" href="/ledi/documentacao/estrutura_arquivos/dicionario-fvd.html">
+              Ficha de Visita Domiciliar e Territorial
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Marcadores de Consumo Alimentar" href="/ledi/documentacao/estrutura_arquivos/dicionario-mca.html">
+              Marcadores de Consumo Alimentar
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha de Avaliação de Elegibilidade" href="/ledi/documentacao/estrutura_arquivos/dicionario-fae.html">
+              Ficha de Avaliação de Elegibilidade
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha de Atendimento Domiciliar" href="/ledi/documentacao/estrutura_arquivos/dicionario-fad.html">
+              Ficha de Atendimento Domiciliar
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha complementar - Síndrome neurológica por Zika / Microcefalia" href="/ledi/documentacao/estrutura_arquivos/dicionario-fczm.html">
+              Ficha complementar - Síndrome neurológica por Zika / Microcefalia
+            </a>
+          </li>
+        
+      </ul>
+    </li>
+  </ul>
+
+
+</div>
+
+          </div>
+        </div>
+        
+
+        <div class="content">
+          <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Ficha de Atendimento Odontológico Individual</h1>
+    <p class="post-meta">
+      <a class="btn" href="/pdf.html?include=/ledi/documentacao/estrutura_arquivos/dicionario-fao.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
+      
+        <span class="label" title="Data da última modificação">Alterado em 24/07/2019</span>
+      
+    </p>
+  </header>
+
+  <article class="post-content">
+    <h2 id="fichaatendimentoodontologicomaster">FichaAtendimentoOdontologicoMaster</h2>
+
+<h3 id="1-uuidficha">#1 uuidFicha</h3>
+
+<p>Código UUID para identificar a ficha na base de dados nacional.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Sim</td>
+<td>36</td>
+<td>44</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> É recomendado concatenar o CNES na frente do UUID, de modo que os 7 dígitos (CNES) + 1 de hífen somados aos 36 (32 caracteres + 4 hífen) do UUID são a limitação de 44 bytes do campo. Formato canônico.</p>
+
+<p><strong>Referências:</strong> Para ver a referência sobre o UUID, acesse: <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">UUID Wikipedia</a>.</p>
+
+<h3 id="2-headertransport">#2 headerTransport</h3>
+
+<p>Profissionais que realizaram o atendimento.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>VariasLotacoesHeader</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> Somente as CBOs apresentadas na <a href="/ledi/documentacao/regras/cbo.html#ficha-de-atendimento-odontol-gico-individual">Tabela 4 - CBOs que podem registrar ficha de atendimento odontológico individual</a> podem ser adicionadas no campo CBO do profissional principal.</p>
+
+<p><strong>Referências:</strong> <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#variaslotacoesheader">VariasLotacoesHeader</a>.</p>
+
+<h3 id="3-atendimentosodontologicos">#3 atendimentosOdontologicos</h3>
+
+<p>Registro individualizado dos atendimentos.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>List&lt;FichaAtendimentoOdontologicoChild&gt;</td>
+<td>Sim</td>
+<td>1</td>
+<td>99</td>
+</tr>
+</tbody></table>
+
+<p><strong>Referências:</strong> <a href="#fichaatendimentoodontologicochild">FichaAtendimentoOdontologicoChild</a>.</p>
+
+<h3 id="4-tpcdsorigem">#4 tpCdsOrigem</h3>
+
+<p>Tipo de origem dos dados do registro.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Integer</td>
+<td>Sim</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> Utilizar valor 3 (sistemas terceiros).</p>
+
+<h2 id="fichaatendimentoodontologicochild">FichaAtendimentoOdontologicoChild</h2>
+
+<h3 id="1-dtnascimento">#1 dtNascimento</h3>
+
+<p>Data de nascimento do cidadão.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> Não pode ser posterior à <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a> e anterior à 130 anos a partir da <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>.</p>
+
+<p><strong>Referências:</strong> A data deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
+
+<h3 id="2-cnscidadao">#2 cnsCidadao</h3>
+
+<p>CNS do cidadão.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Não</td>
+<td>15</td>
+<td>15</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> CNS validado de acordo com o algoritmo.</p>
+
+<p><strong>Referências:</strong> O algoritmo de validação está presente em <a href="/ledi/documentacao/regras/algoritmo_CNS.html">Validar CNS</a>.</p>
+
+<h3 id="3-numprontuario">#3 numProntuario</h3>
+
+<p>Número do prontuário do cidadão.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Não</td>
+<td>0</td>
+<td>30</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> Apenas letras e números são aceitos.</p>
+
+<h3 id="4-gestante">#4 gestante</h3>
+
+<p>Marcador que indica se o cidadão está gestante.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h3 id="5-necessidadesespeciais">#5 necessidadesEspeciais</h3>
+
+<p>Marcador que indica se o cidadão é portador de necessidades especiais.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Não</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h3 id="6-localatendimento">#6 localAtendimento</h3>
+
+<p>Código do local onde o atendimento foi realizado.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> Apenas valores de <code>1</code> a <code>10</code>.</p>
+
+<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#localdeatendimento">LocalDeAtendimento</a>.</p>
+
+<h3 id="7-tipoatendimento">#7 tipoAtendimento</h3>
+
+<p>Código do tipo de atendimento realizado.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> Apenas as opções <code>2</code>, <code>4</code>, <code>5</code> ou <code>6</code> são aceitas.</p>
+
+<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#tipodeatendimento">TipoDeAtendimento</a>.</p>
+
+<h3 id="8-tiposencamodonto">#8 tiposEncamOdonto</h3>
+
+<p>Código das condutas adotadas e possíveis encaminhamentos.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>List&lt;Long&gt;</td>
+<td>Sim</td>
+<td>1</td>
+<td>17</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>A opção <code>15 - Tratamento concluído</code> só pode ser selecionada se no campo <a href="#11-tiposconsultaodonto">tiposConsultaOdonto</a> for selecionada uma das opções <code>1 - Primeira consulta odontológica programática</code> ou <code>2 - Consulta de retorno em odontologia</code>;</li>
+<li>A opção <code>17 - Alta do episódio</code> não pode ser selecionada se no campo <a href="#11-tiposconsultaodonto">tiposConsultaOdonto</a> for selecionada uma das opções <code>1 - Primeira consulta odontológica programática</code> ou <code>2 - Consulta de retorno em odontologia</code>.</li>
+</ul>
+
+<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#condutaencaminhamentoodonto">CondutaEncaminhamentoOdonto</a>.</p>
+
+<h3 id="9-tiposfornecimodonto">#9 tiposFornecimOdonto</h3>
+
+<p>Código dos materiais fornecidos durante o atendimento.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>List&lt;Long&gt;</td>
+<td>Não</td>
+<td>0</td>
+<td>3</td>
+</tr>
+</tbody></table>
+
+<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#fornecimentoodonto">FornecimentoOdonto</a>.</p>
+
+<h3 id="10-tiposvigilanciasaudebucal">#10    tiposVigilanciaSaudeBucal</h3>
+
+<p>Código dos marcadores referentes a situação de vigilância em saúde bucal.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>List&lt;Long&gt;</td>
+<td>Sim</td>
+<td>1</td>
+<td>7</td>
+</tr>
+</tbody></table>
+
+<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#vigilanciaemsaudebucal">VigilanciaEmSaudeBucal</a>.</p>
+
+<h3 id="11-tiposconsultaodonto">#11    tiposConsultaOdonto</h3>
+
+<p>Código do tipo de consulta odontológica realizada.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>List&lt;Long&gt;</td>
+<td>Condicional</td>
+<td>0</td>
+<td>1</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>É de preenchimento obrigatório se o <a href="/ledi/documentacao/referencias/dicionario.html#tipodeatendimento">TipoDeAtendimento</a> = <code>2 (consulta agendada)</code>;</li>
+<li>Não pode ser preenchido se o <a href="/ledi/documentacao/referencias/dicionario.html#tipodeatendimento">TipoDeAtendimento</a> = <code>4 (escuta inicial ou orientação)</code>;</li>
+<li>Se o <a href="/ledi/documentacao/referencias/dicionario.html#tipodeatendimento">TipoDeAtendimento</a> = <code>6 (atendimento de urgência)</code>, a opção de <code>2 (consulta de retorno)</code> não pode ser marcada;</li>
+<li>Se <a href="/ledi/documentacao/referencias/dicionario.html#tipodeatendimento">TipoDeAtendimento</a> = <code>5 (consulta no dia)</code>, o campo é opcional;</li>
+<li>Aceita apenas um registro.</li>
+</ul>
+
+<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#tipodeconsultaodonto">TipoDeConsultaOdonto</a></p>
+
+<h3 id="12-procedimentosrealizados">#12    procedimentosRealizados</h3>
+
+<p>Código dos procedimentos que são apresentados na ficha.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>List&lt;ProcedimentoQuantidade&gt;</td>
+<td>Não</td>
+<td>0</td>
+<td>27</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Não podem haver procedimentos com o mesmo código;</li>
+<li>Somente os procedimentos <strong>AB</strong> listados em <a href="#listaprocedimentosrealizados">ListaProcedimentosRealizados</a> podem ser adicionados. Verificar o procedimento AB correspondente ao procedimento SIGTAP desejado.</li>
+</ul>
+
+<p><strong>Referências:</strong> <a href="#procedimentoquantidade">ProcedimentoQuantidade</a>.</p>
+
+<h3 id="13-outrossiaprocedimentos">#13    outrosSiaProcedimentos</h3>
+
+<p>Lista de outros códigos de procedimentos.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>List&lt;ProcedimentoQuantidade&gt;</td>
+<td>Não</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Não pode conter procedimentos da <a href="#listaprocedimentosrealizados">ListaProcedimentosRealizados</a>;</li>
+<li>Não podem haver procedimentos com o mesmo código.</li>
+</ul>
+
+<p><strong>Referências:</strong> <a href="#procedimentoquantidade">ProcedimentoQuantidade</a>.</p>
+
+<h3 id="14-sexo">#14    sexo</h3>
+
+<p>Código do sexo do cidadão.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#sexo">Sexo</a>.</p>
+
+<h3 id="15-turno">#15 turno</h3>
+
+<p>Código do turno em que o atendimento foi realizado.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#turno">Turno</a>.</p>
+
+<h3 id="16-datahorainicialatendimento">#16 dataHoraInicialAtendimento</h3>
+
+<p>Data e hora do início do atendimento.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Não pode ser anterior à <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>;</li>
+<li>Não pode ser posterior à <a href="#17-datahorafinalatendimento">dataHoraFinalAtendimento</a> e à data atual.</li>
+</ul>
+
+<p><strong>Referências:</strong> Deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
+
+<h3 id="17-datahorafinalatendimento">#17 dataHoraFinalAtendimento</h3>
+
+<p>Data e hora do fim do atendimento.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Não pode ser anterior à <a href="#16-datahorainicialatendimento">dataHoraInicialAtendimento</a>;</li>
+<li>Não pode ser posterior à data atual.</li>
+</ul>
+
+<p><strong>Referências:</strong> Deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
+
+<h2 id="procedimentoquantidade">ProcedimentoQuantidade</h2>
+
+<h3 id="1-comsprocedimento">#1 coMsProcedimento</h3>
+
+<p>Código do procedimento no MS.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Quando a lista partir da estrutura <a href="#12-procedimentosrealizados">procedimentosRealizados</a>, somente os procedimentos <strong>AB</strong> listados em <a href="#listaprocedimentosrealizados">ListaProcedimentosRealizados</a> podem ser adicionados. Verificar o procedimento AB correspondente ao procedimento SIGTAP desejado;</li>
+<li>Quando a lista partir da estrutura <a href="#13-outrossiaprocedimentos">outrosSiaProcedimentos</a>, ela não pode conter procedimentos da <a href="#listaprocedimentosrealizados">ListaProcedimentosRealizados</a> e só podem ser inseridos procedimentos cujo grupo é igual a <code>01</code> - Ações de promoção e prevenção em saúde, <code>02</code> - Procedimentos com finalidade diagnóstica, <code>03</code> - Procedimentos clínicos ou <code>04</code> - Procedimentos cirúrgicos.</li>
+</ul>
+
+<p><strong>Referência:</strong> Tabela do SIGTAP, competência 02/2019 disponível em: <a href="http://sigtap.datasus.gov.br/tabela-unificada/app/sec/procedimento/publicados/consultar">Tabela Unificada SIGTAP</a>.</p>
+
+<p>Observações: </p>
+
+<ul>
+<li>Inserir o código do procedimento SIGTAP sem ponto ou hífen, ex: <code>0201010010</code>;</li>
+<li>Inserir o código do procedimento AB em caracteres maiúsculos, sem espaços.</li>
+</ul>
+
+<h3 id="2-quantidade">#2 quantidade</h3>
+
+<p>Quantidade de procedimentos realizados.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Integer</td>
+<td>Sim</td>
+<td>1</td>
+<td>99</td>
+</tr>
+</tbody></table>
+
+<h2 id="listaprocedimentosrealizados">ListaProcedimentosRealizados</h2>
+
+<table><thead>
+<tr>
+<th>Código SIGTAP *</th>
+<th>Descrição AB</th>
+<th>Código AB correspondente</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>03.07.02.001-0</td>
+<td>Acesso a polpa dentária e medicação (por dente)</td>
+<td>ABPO001</td>
+</tr>
+<tr>
+<td>03.07.04.014-3</td>
+<td>Adaptação de Prótese Dentária</td>
+<td>ABPO002</td>
+</tr>
+<tr>
+<td>01.01.02.005-8</td>
+<td>Aplicação de cariostático (por dente)</td>
+<td>ABPO003</td>
+</tr>
+<tr>
+<td>01.01.02.006-6</td>
+<td>Aplicação de selante (por dente)</td>
+<td>ABPO004</td>
+</tr>
+<tr>
+<td>01.01.02.007-4</td>
+<td>Aplicação tópica de flúor (individual por sessão)</td>
+<td>ABPO005</td>
+</tr>
+<tr>
+<td>03.07.01.001-5</td>
+<td>Capeamento pulpar</td>
+<td>ABPO006</td>
+</tr>
+<tr>
+<td>03.07.04.013-5</td>
+<td>Cimentação de prótese dentária</td>
+<td>ABPO007</td>
+</tr>
+<tr>
+<td>03.07.02.002-9</td>
+<td>Curativo de demora c/ ou s/ preparo biomecânico</td>
+<td>ABPO008</td>
+</tr>
+<tr>
+<td>04.01.01.003-1</td>
+<td>Drenagem de abscesso</td>
+<td>ABPG008</td>
+</tr>
+<tr>
+<td>01.01.02.008-2</td>
+<td>Evidenciação de placa bacteriana</td>
+<td>ABPO010</td>
+</tr>
+<tr>
+<td>04.14.02.012-0</td>
+<td>Exodontia de dente decíduo</td>
+<td>ABPO011</td>
+</tr>
+<tr>
+<td>04.14.02.013-8</td>
+<td>Exodontia de dente permanente</td>
+<td>ABPO012</td>
+</tr>
+<tr>
+<td>03.07.04.016-0</td>
+<td>Instalação de prótese dentária</td>
+<td>ABPO013</td>
+</tr>
+<tr>
+<td>03.07.04.007-0</td>
+<td>Moldagem dento-gengival p/ construção de prótese dentária</td>
+<td>ABPO014</td>
+</tr>
+<tr>
+<td>Não possui</td>
+<td>Orientação de Higiene Bucal</td>
+<td>ABPO015</td>
+</tr>
+<tr>
+<td>03.07.03.004-0</td>
+<td>Profilaxia / Remoção de placa bacteriana</td>
+<td>ABPO016</td>
+</tr>
+<tr>
+<td>03.07.02.007-0</td>
+<td>Pulpotomia dentária</td>
+<td>ABPO017</td>
+</tr>
+<tr>
+<td>02.04.01.018-7</td>
+<td>Radiografia Periapical / Interproximal</td>
+<td>ABPO018</td>
+</tr>
+<tr>
+<td>03.07.03.005-9</td>
+<td>Raspagem alisamento e polimento supragengivais (por sextante)</td>
+<td>ABPO019</td>
+</tr>
+<tr>
+<td>03.07.03.002-4</td>
+<td>Raspagem alisamento subgengivais (por sextante)</td>
+<td>ABPO020</td>
+</tr>
+<tr>
+<td>03.07.01.002-3</td>
+<td>Restauração de dente decíduo</td>
+<td>ABPO021</td>
+</tr>
+<tr>
+<td>03.07.01.003-1</td>
+<td>Restauração de dente permanente anterior</td>
+<td>ABPO022</td>
+</tr>
+<tr>
+<td>03.07.01.004-0</td>
+<td>Restauração de dente permanente posterior</td>
+<td>ABPO023</td>
+</tr>
+<tr>
+<td>03.01.10.015-2</td>
+<td>Retirada de pontos de cirurgias básicas (por paciente)</td>
+<td>ABPG018</td>
+</tr>
+<tr>
+<td>01.01.02.009-0</td>
+<td>Selamento provisório de cavidade dentária</td>
+<td>ABPO025</td>
+</tr>
+<tr>
+<td>04.14.02.038-3</td>
+<td>Tratamento de alveolite</td>
+<td>ABPO026</td>
+</tr>
+<tr>
+<td>04.14.02.040-5</td>
+<td>Ulotomia / Ulectomia</td>
+<td>ABPO027</td>
+</tr>
+</tbody></table>
+
+<p><em>* Procedimentos pertencentes a competência <strong>02/2019</strong> do SIGTAP.</em></p>
+
+  </article>
+
+</div>
+
+        </div>
+
+      </div>
+    </div>
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>  
+    <script src="/js/lunr.min.js"></script>
+
+    <script src="/js/site.js" type="text/javascript"></script>    
+    <script src="/js/search-index.js" type="text/javascript"></script>
+    <script src="/js/busca.js"></script>
+  </body>
+</html>

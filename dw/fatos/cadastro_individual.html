@@ -12,9 +12,6 @@
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="/dw/fatos/cadastro_individual.html">
   <link rel="icon" type="image/png" href="/img/logo-esus.png">
-
-  <script src="//code.jquery.com/jquery-3.1.0.min.js"></script>
-  <script src="/js/search.js" type="text/javascript"></script>
 </head>
 
 
@@ -28,7 +25,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS AB PEC</span>
       
-        <span class="label">versão 3.0.1</span>
+        <span class="label">versão 3.2.0</span>
       
     </a>
 
@@ -42,6 +39,8 @@
       </a>
 
       <div class="trigger">
+        
+          
         
           
         
@@ -96,25 +95,11 @@
         
         <div class="sidebar">
           <div class="sidebar-content">
-            <form id="search-form">
-  <input type="search" placeholder="Pesquisar por título..." name="q" id="search-input" autocomplete="off">
+            <form action="/search.html" method="get">
+  <input type="search" placeholder="Pesquisar..." name="query" id="quick-search" autocomplete="off">
 </form>
 
 <ul id="search-results"></ul>
-
-<script>
-  SimpleJekyllSearch({
-    searchInput: document.getElementById('search-input'),
-    resultsContainer: document.getElementById('search-results'),
-    json: '/search.json',
-    noResultsText: 'Nenhum resultado encontrado'
-  });
-
-  document.getElementById('search-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    return false;
-  });
-</script>
 
 <div class="menu">
   
@@ -246,7 +231,7 @@
   </header>
 
   <article class="post-content">
-    <p>Esta estratégia de negócio refere-se ao <a href="/ledi/estrutura_arquivos/dicionario-fci.html">Cadastro Individual do Cidadão</a> e está centrada na <strong>tb_fat_cad_individual</strong>.</p>
+    <p>Esta estratégia de negócio refere-se ao <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html">Cadastro Individual do Cidadão</a> e está centrada na <strong>tb_fat_cad_individual</strong>.</p>
 
 <table><thead>
 <tr>
@@ -257,37 +242,37 @@
 </thead><tbody>
 <tr>
 <td>st_respons_crianca_adulto_resp <br> st_respons_crianca_outra_crian <br> st_respons_crianca_adolescente <br> st_respons_crianca_sozinha <br> st_respons_crianca_creche  <br> st_respons_crianca_outro</td>
-<td><a href="/ledi/estrutura_arquivos/dicionario-fci.html#17-responsavelporcrianca">#17 responsavelPorCrianca</a></td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#17-responsavelporcrianca">#17 responsavelPorCrianca</a></td>
 <td>Crianças de 0 a 9 anos, com quem fica?</td>
 </tr>
 <tr>
 <td>st_defi_auditiva <br> st_defi_intelectual_cognitiva <br> st_defi_outra <br> st_defi_visual <br> st_defi_fisica</td>
-<td><a href="/ledi/estrutura_arquivos/dicionario-fci.html#1-deficienciascidadao">#1 deficienciasCidadao</a></td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#1-deficienciascidadao">#1 deficienciasCidadao</a></td>
 <td>Tem alguma deficiência? Se sim, qual(is)?</td>
 </tr>
 <tr>
 <td>st_doenca_respira_asma <br> st_doenca_respira_dpoc_enfisem <br> st_doenca_respira_outra <br> st_doenca_respira_n_sabe</td>
-<td><a href="/ledi/estrutura_arquivos/dicionario-fci.html#7-doencarespiratoria">#7 doencaRespiratoria</a></td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#7-doencarespiratoria">#7 doencaRespiratoria</a></td>
 <td>Tem doença respiratória / no pulmão? Se sim, indique qual(is).</td>
 </tr>
 <tr>
 <td>st_doenca_card_insuficiencia <br> st_doenca_card_outro <br> st_doenca_card_n_sabe</td>
-<td><a href="/ledi/estrutura_arquivos/dicionario-fci.html#6-doencacardiaca">#6 doencaCardiaca</a></td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#6-doencacardiaca">#6 doencaCardiaca</a></td>
 <td>Tem doença cardíaca / do coração? Se sim, indique qual(is).</td>
 </tr>
 <tr>
 <td>st_problema_rins_insuficiencia <br> st_problema_rins_outro <br> st_problema_rins_nao_sabe</td>
-<td><a href="/ledi/estrutura_arquivos/dicionario-fci.html#8-doencarins">#8 doencaRins</a></td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#8-doencarins">#8 doencaRins</a></td>
 <td>Tem ou teve problemas nos rins? Se sim, indique qual(is).</td>
 </tr>
 <tr>
 <td>st_orig_alimen_restaurante_pop <br> st_orig_alimen_doacao_reli <br> st_orig_alimen_doacao_rest <br> st_orig_alimen_doacao_popular <br> st_orig_alimen_outros</td>
-<td><a href="/ledi/estrutura_arquivos/dicionario-fci.html#3-origemalimentosituacaorua">#3 origemAlimentoSituacaoRua</a></td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#3-origemalimentosituacaorua">#3 origemAlimentoSituacaoRua</a></td>
 <td>Qual a origem da alimentação?</td>
 </tr>
 <tr>
 <td>st_hig_pess_banho <br> st_hig_pess_sanitario <br> st_hig_pess_higiene_bucal <br> st_hig_pess_outros</td>
-<td><a href="/ledi/estrutura_arquivos/dicionario-fci.html#2-higienepessoalsituacaorua">#2 higienePessoalSituacaoRua</a></td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#2-higienepessoalsituacaorua">#2 higienePessoalSituacaoRua</a></td>
 <td>Tem acesso a higiene pessoal? Se sim, indique qual(is).</td>
 </tr>
 </tbody></table>
@@ -302,7 +287,11 @@
 
       </div>
     </div>
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>  
+    <script src="/js/lunr.min.js"></script>
 
-    <script src="/js/site.js" type="text/javascript"></script>
+    <script src="/js/site.js" type="text/javascript"></script>    
+    <script src="/js/search-index.js" type="text/javascript"></script>
+    <script src="/js/busca.js"></script>
   </body>
 </html>

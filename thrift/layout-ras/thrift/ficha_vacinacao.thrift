@@ -28,6 +28,8 @@ struct FichaVacinacaoChildThrift {
 	9:optional bool gestante;
 	10:optional bool puerpera;	
 	11:optional list<VacinaRowThrift> vacinas;
+	12:optional i64 dataHoraInicialAtendimento;
+	13:optional i64 dataHoraFinalAtendimento;
 }
 
 struct FichaVacinacaoMasterThrift {

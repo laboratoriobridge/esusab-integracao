@@ -49,6 +49,8 @@ struct FichaAtendimentoIndividualChildThrift {
 	25:optional i32 nuPartos;
 	26:optional i64 racionalidadeSaude;
 	27:optional double perimetroCefalico;
+	28:optional i64 dataHoraInicialAtendimento;
+	29:optional i64 dataHoraFinalAtendimento;
 }
 
 struct FichaAtendimentoIndividualMasterThrift {

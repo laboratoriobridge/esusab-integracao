@@ -18,6 +18,8 @@ struct FichaProcedimentoChildThrift {
 	7:optional bool statusEscutaInicialOrientacao;
 	8:optional list<string> procedimentos;
 	9:optional list<string> outrosSiaProcedimentos;
+	10:optional i64 dataHoraInicialAtendimento;
+	11:optional i64 dataHoraFinalAtendimento;
 }
 
 struct FichaProcedimentoMasterThrift {

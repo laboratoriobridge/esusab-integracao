@@ -29,6 +29,8 @@ struct FichaAtendimentoOdontologicoChildThrift {
 	13:optional list<ProcedimentoQuantidadeThrift> outrosSiaProcedimentos;
 	14:optional i64 sexo;
 	15:optional i64 turno;
+	16:optional i64 dataHoraInicialAtendimento;
+	17:optional i64 dataHoraFinalAtendimento;
 }
 
 struct FichaAtendimentoOdontologicoMasterThrift {

@@ -33,6 +33,8 @@
       <xs:element maxOccurs="1" minOccurs="0" name="nuPartos" type="xs:int"/>
       <xs:element maxOccurs="1" minOccurs="0" name="racionalidadeSaude" type="xs:long"/>
       <xs:element maxOccurs="1" minOccurs="0" name="perimetroCefalico" type="xs:double"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="dataHoraInicialAtendimento" type="xs:long"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="dataHoraFinalAtendimento" type="xs:long"/>
     </xs:sequence>
   </xs:complexType>
 </xs:schema>

@@ -3,15 +3,15 @@
 
   <xs:simpleType name="perguntaCriancasMenoresSeisMesesEnumTransport">
     <xs:restriction base="xs:string">
+      <xs:enumeration value="A_CRIANCA_ONTEM_TOMOU_LEITE_DO_PEITO"/>
+      <xs:enumeration value="MINGAU"/>
       <xs:enumeration value="LEITE_VACA"/>
       <xs:enumeration value="AGUA_CHA"/>
       <xs:enumeration value="SUCO_FRUTA"/>
-      <xs:enumeration value="OUTROS_ALIMENTOS_BEBIDAS"/>
-      <xs:enumeration value="FRUTA"/>
-      <xs:enumeration value="FORMULA_INFANTIL"/>
-      <xs:enumeration value="A_CRIANCA_ONTEM_TOMOU_LEITE_DO_PEITO"/>
-      <xs:enumeration value="MINGAU"/>
       <xs:enumeration value="COMIDA_DE_SAL"/>
+      <xs:enumeration value="OUTROS_ALIMENTOS_BEBIDAS"/>
+      <xs:enumeration value="FORMULA_INFANTIL"/>
+      <xs:enumeration value="FRUTA"/>
     </xs:restriction>
   </xs:simpleType>
 </xs:schema>

@@ -12,6 +12,8 @@
       <xs:element minOccurs="0" name="statusEscutaInicialOrientacao" type="xs:boolean"/>
       <xs:element maxOccurs="unbounded" minOccurs="0" name="procedimentos" type="xs:string"/>
       <xs:element maxOccurs="unbounded" minOccurs="0" name="outrosSiaProcedimentos" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="dataHoraInicialAtendimento" type="xs:long"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="dataHoraFinalAtendimento" type="xs:long"/>
     </xs:sequence>
   </xs:complexType>
 </xs:schema>

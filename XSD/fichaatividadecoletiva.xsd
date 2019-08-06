@@ -25,6 +25,8 @@
       <xs:element maxOccurs="1" minOccurs="0" name="cnesLocalAtividade" type="xs:string"/>
       <xs:element maxOccurs="1" minOccurs="0" name="procedimento" type="xs:string"/>
       <xs:element maxOccurs="1" minOccurs="0" name="turno" type="xs:long"/>
+      <xs:element maxOccurs="1" name="pseEducacao" type="xs:boolean"/>
+      <xs:element maxOccurs="1" name="pseSaude" type="xs:boolean"/>
       <xs:element maxOccurs="1" minOccurs="0" name="headerTransport" type="unicaLotacaoHeader:unicaLotacaoHeaderTransport"/>
       <xs:element maxOccurs="unbounded" minOccurs="0" name="temasParaSaude" type="xs:long"/>
       <xs:element maxOccurs="unbounded" minOccurs="0" name="praticasEmSaude" type="xs:long"/>

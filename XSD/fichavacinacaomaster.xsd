@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fichaVacinacaoChild="http://esus.ufsc.br/fichavacinacaochild" xmlns:fichaVacinacaoMaster="http://esus.ufsc.br/fichavacinacaomaster" xmlns:unicaLotacaoHeader="http://esus.ufsc.br/unicalotacaoheader" xmlns:vacinaRow="http://esus.ufsc.br/vacinarow" targetNamespace="http://esus.ufsc.br/fichavacinacaomaster" version="1.0">
+
+  <xs:import namespace="http://esus.ufsc.br/unicalotacaoheader" schemaLocation="unicalotacaoheader.xsd"/>
+
+  <xs:import namespace="http://esus.ufsc.br/vacinarow" schemaLocation="vacinarow.xsd"/>
+
+  <xs:import namespace="http://esus.ufsc.br/fichavacinacaochild" schemaLocation="fichavacinacaochild.xsd"/>
+
+  <xs:element name="fichaVacinacaoMasterTransport" type="fichaVacinacaoMaster:fichaVacinacaoMasterTransport"/>
+
+  <xs:complexType name="fichaVacinacaoMasterTransport">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="headerTransport" type="unicaLotacaoHeader:unicaLotacaoHeaderTransport"/>
+      <xs:element maxOccurs="1" name="uuidFicha" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="tpCdsOrigem" type="xs:int"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="vacinacoes" type="fichaVacinacaoChild:fichaVacinacaoChildTransport"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

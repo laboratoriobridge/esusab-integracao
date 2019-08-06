@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vacinaRow="http://esus.ufsc.br/vacinarow" targetNamespace="http://esus.ufsc.br/fichavacinacaochild" version="1.0">
+
+  <xs:import namespace="http://esus.ufsc.br/vacinarow" schemaLocation="vacinarow.xsd"/>
+
+  <xs:complexType name="fichaVacinacaoChildTransport">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="turno" type="xs:long"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="numProntuario" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="cnsCidadao" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="dtNascimento" type="xs:long"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="sexo" type="xs:long"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="localAtendimento" type="xs:long"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="viajante" type="xs:boolean"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="comunicanteHanseniase" type="xs:boolean"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="gestante" type="xs:boolean"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="puerpera" type="xs:boolean"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="vacinas" type="vacinaRow:vacinaRowTransport"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="dataHoraInicialAtendimento" type="xs:long"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="dataHoraFinalAtendimento" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

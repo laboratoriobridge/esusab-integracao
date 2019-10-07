@@ -26,7 +26,6 @@ struct FichaAtendimentoOdontologicoChildThrift {
 	10:optional list<i64> tiposVigilanciaSaudeBucal;
 	11:optional list<i64> tiposConsultaOdonto;
 	12:optional list<ProcedimentoQuantidadeThrift> procedimentosRealizados;
-	13:optional list<ProcedimentoQuantidadeThrift> outrosSiaProcedimentos;
 	14:optional i64 sexo;
 	15:optional i64 turno;
 	16:optional i64 dataHoraInicialAtendimento;

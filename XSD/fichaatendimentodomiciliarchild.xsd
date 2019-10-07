@@ -14,7 +14,6 @@
       <xs:element maxOccurs="1" minOccurs="0" name="cid" type="xs:string"/>
       <xs:element maxOccurs="1" minOccurs="0" name="ciap" type="xs:string"/>
       <xs:element maxOccurs="unbounded" minOccurs="0" name="procedimentos" type="xs:string"/>
-      <xs:element maxOccurs="unbounded" minOccurs="0" name="outrosProcedimentos" type="xs:string"/>
       <xs:element maxOccurs="1" minOccurs="0" name="condutaDesfecho" type="xs:long"/>
     </xs:sequence>
   </xs:complexType>

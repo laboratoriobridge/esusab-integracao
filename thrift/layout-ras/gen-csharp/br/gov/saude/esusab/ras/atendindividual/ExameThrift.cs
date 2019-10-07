@@ -21,7 +21,7 @@ namespace br.gov.saude.esusab.ras.atendindividual
   #if !SILVERLIGHT
   [Serializable]
   #endif
-  public partial class OutrosSiaThrift : TBase
+  public partial class ExameThrift : TBase
   {
     private string _codigoExame;
     private List<string> _solicitadoAvaliado;
@@ -62,7 +62,7 @@ namespace br.gov.saude.esusab.ras.atendindividual
       public bool solicitadoAvaliado;
     }
 
-    public OutrosSiaThrift() {
+    public ExameThrift() {
     }
 
     public void Read (TProtocol iprot)
@@ -122,7 +122,7 @@ namespace br.gov.saude.esusab.ras.atendindividual
       oprot.IncrementRecursionDepth();
       try
       {
-        TStruct struc = new TStruct("OutrosSiaThrift");
+        TStruct struc = new TStruct("ExameThrift");
         oprot.WriteStructBegin(struc);
         TField field = new TField();
         if (CodigoExame != null && __isset.codigoExame) {
@@ -158,7 +158,7 @@ namespace br.gov.saude.esusab.ras.atendindividual
     }
 
     public override string ToString() {
-      StringBuilder __sb = new StringBuilder("OutrosSiaThrift(");
+      StringBuilder __sb = new StringBuilder("ExameThrift(");
       bool __first = true;
       if (CodigoExame != null && __isset.codigoExame) {
         if(!__first) { __sb.Append(", "); }

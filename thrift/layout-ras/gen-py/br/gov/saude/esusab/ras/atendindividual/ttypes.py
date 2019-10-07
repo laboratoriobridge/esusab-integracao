@@ -19,7 +19,7 @@ except:
 
 
 
-class OutrosSiaThrift:
+class ExameThrift:
   """
   Attributes:
    - codigoExame
@@ -69,7 +69,7 @@ class OutrosSiaThrift:
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
       oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
       return
-    oprot.writeStructBegin('OutrosSiaThrift')
+    oprot.writeStructBegin('ExameThrift')
     if self.codigoExame is not None:
       oprot.writeFieldBegin('codigoExame', TType.STRING, 1)
       oprot.writeString(self.codigoExame)
@@ -247,9 +247,7 @@ class FichaAtendimentoIndividualChildThrift:
    - idadeGestacional
    - atencaoDomiciliarModalidade
    - problemaCondicaoAvaliada
-   - examesSolicitados
-   - examesAvaliados
-   - outrosSia
+   - exame
    - vacinaEmDia
    - pic
    - ficouEmObservacao
@@ -280,9 +278,9 @@ class FichaAtendimentoIndividualChildThrift:
     (12, TType.I32, 'idadeGestacional', None, None, ), # 12
     (13, TType.I64, 'atencaoDomiciliarModalidade', None, None, ), # 13
     (14, TType.STRUCT, 'problemaCondicaoAvaliada', (ProblemaCondicaoAvaliacaoAIThrift, ProblemaCondicaoAvaliacaoAIThrift.thrift_spec), None, ), # 14
-    (15, TType.LIST, 'examesSolicitados', (TType.STRING,None), None, ), # 15
-    (16, TType.LIST, 'examesAvaliados', (TType.STRING,None), None, ), # 16
-    (17, TType.LIST, 'outrosSia', (TType.STRUCT,(OutrosSiaThrift, OutrosSiaThrift.thrift_spec)), None, ), # 17
+    None, # 15
+    None, # 16
+    (17, TType.LIST, 'exame', (TType.STRUCT,(ExameThrift, ExameThrift.thrift_spec)), None, ), # 17
     (18, TType.BOOL, 'vacinaEmDia', None, None, ), # 18
     (19, TType.I64, 'pic', None, None, ), # 19
     (20, TType.BOOL, 'ficouEmObservacao', None, None, ), # 20
@@ -297,7 +295,7 @@ class FichaAtendimentoIndividualChildThrift:
     (29, TType.I64, 'dataHoraFinalAtendimento', None, None, ), # 29
   )
 
-  def __init__(self, numeroProntuario=None, cns=None, dataNascimento=None, localDeAtendimento=None, sexo=None, turno=None, tipoAtendimento=None, pesoAcompanhamentoNutricional=None, alturaAcompanhamentoNutricional=None, aleitamentoMaterno=None, dumDaGestante=None, idadeGestacional=None, atencaoDomiciliarModalidade=None, problemaCondicaoAvaliada=None, examesSolicitados=None, examesAvaliados=None, outrosSia=None, vacinaEmDia=None, pic=None, ficouEmObservacao=None, nasfs=None, condutas=None, stGravidezPlanejada=None, nuGestasPrevias=None, nuPartos=None, racionalidadeSaude=None, perimetroCefalico=None, dataHoraInicialAtendimento=None, dataHoraFinalAtendimento=None,):
+  def __init__(self, numeroProntuario=None, cns=None, dataNascimento=None, localDeAtendimento=None, sexo=None, turno=None, tipoAtendimento=None, pesoAcompanhamentoNutricional=None, alturaAcompanhamentoNutricional=None, aleitamentoMaterno=None, dumDaGestante=None, idadeGestacional=None, atencaoDomiciliarModalidade=None, problemaCondicaoAvaliada=None, exame=None, vacinaEmDia=None, pic=None, ficouEmObservacao=None, nasfs=None, condutas=None, stGravidezPlanejada=None, nuGestasPrevias=None, nuPartos=None, racionalidadeSaude=None, perimetroCefalico=None, dataHoraInicialAtendimento=None, dataHoraFinalAtendimento=None,):
     self.numeroProntuario = numeroProntuario
     self.cns = cns
     self.dataNascimento = dataNascimento
@@ -312,9 +310,7 @@ class FichaAtendimentoIndividualChildThrift:
     self.idadeGestacional = idadeGestacional
     self.atencaoDomiciliarModalidade = atencaoDomiciliarModalidade
     self.problemaCondicaoAvaliada = problemaCondicaoAvaliada
-    self.examesSolicitados = examesSolicitados
-    self.examesAvaliados = examesAvaliados
-    self.outrosSia = outrosSia
+    self.exame = exame
     self.vacinaEmDia = vacinaEmDia
     self.pic = pic
     self.ficouEmObservacao = ficouEmObservacao
@@ -408,34 +404,14 @@ class FichaAtendimentoIndividualChildThrift:
           self.problemaCondicaoAvaliada.read(iprot)
         else:
           iprot.skip(ftype)
-      elif fid == 15:
-        if ftype == TType.LIST:
-          self.examesSolicitados = []
-          (_etype17, _size14) = iprot.readListBegin()
-          for _i18 in xrange(_size14):
-            _elem19 = iprot.readString()
-            self.examesSolicitados.append(_elem19)
-          iprot.readListEnd()
-        else:
-          iprot.skip(ftype)
-      elif fid == 16:
-        if ftype == TType.LIST:
-          self.examesAvaliados = []
-          (_etype23, _size20) = iprot.readListBegin()
-          for _i24 in xrange(_size20):
-            _elem25 = iprot.readString()
-            self.examesAvaliados.append(_elem25)
-          iprot.readListEnd()
-        else:
-          iprot.skip(ftype)
       elif fid == 17:
         if ftype == TType.LIST:
-          self.outrosSia = []
-          (_etype29, _size26) = iprot.readListBegin()
-          for _i30 in xrange(_size26):
-            _elem31 = OutrosSiaThrift()
-            _elem31.read(iprot)
-            self.outrosSia.append(_elem31)
+          self.exame = []
+          (_etype17, _size14) = iprot.readListBegin()
+          for _i18 in xrange(_size14):
+            _elem19 = ExameThrift()
+            _elem19.read(iprot)
+            self.exame.append(_elem19)
           iprot.readListEnd()
         else:
           iprot.skip(ftype)
@@ -457,20 +433,20 @@ class FichaAtendimentoIndividualChildThrift:
       elif fid == 21:
         if ftype == TType.LIST:
           self.nasfs = []
-          (_etype35, _size32) = iprot.readListBegin()
-          for _i36 in xrange(_size32):
-            _elem37 = iprot.readI64()
-            self.nasfs.append(_elem37)
+          (_etype23, _size20) = iprot.readListBegin()
+          for _i24 in xrange(_size20):
+            _elem25 = iprot.readI64()
+            self.nasfs.append(_elem25)
           iprot.readListEnd()
         else:
           iprot.skip(ftype)
       elif fid == 22:
         if ftype == TType.LIST:
           self.condutas = []
-          (_etype41, _size38) = iprot.readListBegin()
-          for _i42 in xrange(_size38):
-            _elem43 = iprot.readI64()
-            self.condutas.append(_elem43)
+          (_etype29, _size26) = iprot.readListBegin()
+          for _i30 in xrange(_size26):
+            _elem31 = iprot.readI64()
+            self.condutas.append(_elem31)
           iprot.readListEnd()
         else:
           iprot.skip(ftype)
@@ -575,25 +551,11 @@ class FichaAtendimentoIndividualChildThrift:
       oprot.writeFieldBegin('problemaCondicaoAvaliada', TType.STRUCT, 14)
       self.problemaCondicaoAvaliada.write(oprot)
       oprot.writeFieldEnd()
-    if self.examesSolicitados is not None:
-      oprot.writeFieldBegin('examesSolicitados', TType.LIST, 15)
-      oprot.writeListBegin(TType.STRING, len(self.examesSolicitados))
-      for iter44 in self.examesSolicitados:
-        oprot.writeString(iter44)
-      oprot.writeListEnd()
-      oprot.writeFieldEnd()
-    if self.examesAvaliados is not None:
-      oprot.writeFieldBegin('examesAvaliados', TType.LIST, 16)
-      oprot.writeListBegin(TType.STRING, len(self.examesAvaliados))
-      for iter45 in self.examesAvaliados:
-        oprot.writeString(iter45)
-      oprot.writeListEnd()
-      oprot.writeFieldEnd()
-    if self.outrosSia is not None:
-      oprot.writeFieldBegin('outrosSia', TType.LIST, 17)
-      oprot.writeListBegin(TType.STRUCT, len(self.outrosSia))
-      for iter46 in self.outrosSia:
-        iter46.write(oprot)
+    if self.exame is not None:
+      oprot.writeFieldBegin('exame', TType.LIST, 17)
+      oprot.writeListBegin(TType.STRUCT, len(self.exame))
+      for iter32 in self.exame:
+        iter32.write(oprot)
       oprot.writeListEnd()
       oprot.writeFieldEnd()
     if self.vacinaEmDia is not None:
@@ -611,15 +573,15 @@ class FichaAtendimentoIndividualChildThrift:
     if self.nasfs is not None:
       oprot.writeFieldBegin('nasfs', TType.LIST, 21)
       oprot.writeListBegin(TType.I64, len(self.nasfs))
-      for iter47 in self.nasfs:
-        oprot.writeI64(iter47)
+      for iter33 in self.nasfs:
+        oprot.writeI64(iter33)
       oprot.writeListEnd()
       oprot.writeFieldEnd()
     if self.condutas is not None:
       oprot.writeFieldBegin('condutas', TType.LIST, 22)
       oprot.writeListBegin(TType.I64, len(self.condutas))
-      for iter48 in self.condutas:
-        oprot.writeI64(iter48)
+      for iter34 in self.condutas:
+        oprot.writeI64(iter34)
       oprot.writeListEnd()
       oprot.writeFieldEnd()
     if self.stGravidezPlanejada is not None:
@@ -673,9 +635,7 @@ class FichaAtendimentoIndividualChildThrift:
     value = (value * 31) ^ hash(self.idadeGestacional)
     value = (value * 31) ^ hash(self.atencaoDomiciliarModalidade)
     value = (value * 31) ^ hash(self.problemaCondicaoAvaliada)
-    value = (value * 31) ^ hash(self.examesSolicitados)
-    value = (value * 31) ^ hash(self.examesAvaliados)
-    value = (value * 31) ^ hash(self.outrosSia)
+    value = (value * 31) ^ hash(self.exame)
     value = (value * 31) ^ hash(self.vacinaEmDia)
     value = (value * 31) ^ hash(self.pic)
     value = (value * 31) ^ hash(self.ficouEmObservacao)
@@ -742,11 +702,11 @@ class FichaAtendimentoIndividualMasterThrift:
       elif fid == 2:
         if ftype == TType.LIST:
           self.atendimentosIndividuais = []
-          (_etype52, _size49) = iprot.readListBegin()
-          for _i53 in xrange(_size49):
-            _elem54 = FichaAtendimentoIndividualChildThrift()
-            _elem54.read(iprot)
-            self.atendimentosIndividuais.append(_elem54)
+          (_etype38, _size35) = iprot.readListBegin()
+          for _i39 in xrange(_size35):
+            _elem40 = FichaAtendimentoIndividualChildThrift()
+            _elem40.read(iprot)
+            self.atendimentosIndividuais.append(_elem40)
           iprot.readListEnd()
         else:
           iprot.skip(ftype)
@@ -777,8 +737,8 @@ class FichaAtendimentoIndividualMasterThrift:
     if self.atendimentosIndividuais is not None:
       oprot.writeFieldBegin('atendimentosIndividuais', TType.LIST, 2)
       oprot.writeListBegin(TType.STRUCT, len(self.atendimentosIndividuais))
-      for iter55 in self.atendimentosIndividuais:
-        iter55.write(oprot)
+      for iter41 in self.atendimentosIndividuais:
+        iter41.write(oprot)
       oprot.writeListEnd()
       oprot.writeFieldEnd()
     if self.uuidFicha is not None:

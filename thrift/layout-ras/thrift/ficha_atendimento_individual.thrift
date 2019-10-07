@@ -8,7 +8,7 @@ namespace rb br.gov.saude.esusab.ras.atendindividual
 namespace go br.gov.saude.esusab.ras.atendindividual
 namespace py br.gov.saude.esusab.ras.atendindividual
 
-struct OutrosSiaThrift {
+struct ExameThrift {
 	1:optional string codigoExame;
 	2:optional list<string> solicitadoAvaliado;
 }
@@ -36,9 +36,7 @@ struct FichaAtendimentoIndividualChildThrift {
 	12:optional i32 idadeGestacional;
 	13:optional i64 atencaoDomiciliarModalidade;
 	14:optional ProblemaCondicaoAvaliacaoAIThrift problemaCondicaoAvaliada;
-	15:optional list<string> examesSolicitados;
-	16:optional list<string> examesAvaliados;
-	17:optional list<OutrosSiaThrift> outrosSia;
+	17:optional list<ExameThrift> exame;
 	18:optional bool vacinaEmDia;
 	19:optional i64 pic;
 	20:optional bool ficouEmObservacao;

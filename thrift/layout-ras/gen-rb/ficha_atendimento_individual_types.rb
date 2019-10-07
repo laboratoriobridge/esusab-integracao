@@ -14,7 +14,7 @@ module Br
       module Esusab
         module Ras
           module Atendindividual
-            class OutrosSiaThrift
+            class ExameThrift
               include ::Thrift::Struct, ::Thrift::Struct_Union
               CODIGOEXAME = 1
               SOLICITADOAVALIADO = 2
@@ -72,9 +72,7 @@ module Br
               IDADEGESTACIONAL = 12
               ATENCAODOMICILIARMODALIDADE = 13
               PROBLEMACONDICAOAVALIADA = 14
-              EXAMESSOLICITADOS = 15
-              EXAMESAVALIADOS = 16
-              OUTROSSIA = 17
+              EXAME = 17
               VACINAEMDIA = 18
               PIC = 19
               FICOUEMOBSERVACAO = 20
@@ -103,9 +101,7 @@ module Br
                 IDADEGESTACIONAL => {:type => ::Thrift::Types::I32, :name => 'idadeGestacional', :optional => true},
                 ATENCAODOMICILIARMODALIDADE => {:type => ::Thrift::Types::I64, :name => 'atencaoDomiciliarModalidade', :optional => true},
                 PROBLEMACONDICAOAVALIADA => {:type => ::Thrift::Types::STRUCT, :name => 'problemaCondicaoAvaliada', :class => ::Br::Gov::Saude::Esusab::Ras::Atendindividual::ProblemaCondicaoAvaliacaoAIThrift, :optional => true},
-                EXAMESSOLICITADOS => {:type => ::Thrift::Types::LIST, :name => 'examesSolicitados', :element => {:type => ::Thrift::Types::STRING}, :optional => true},
-                EXAMESAVALIADOS => {:type => ::Thrift::Types::LIST, :name => 'examesAvaliados', :element => {:type => ::Thrift::Types::STRING}, :optional => true},
-                OUTROSSIA => {:type => ::Thrift::Types::LIST, :name => 'outrosSia', :element => {:type => ::Thrift::Types::STRUCT, :class => ::Br::Gov::Saude::Esusab::Ras::Atendindividual::OutrosSiaThrift}, :optional => true},
+                EXAME => {:type => ::Thrift::Types::LIST, :name => 'exame', :element => {:type => ::Thrift::Types::STRUCT, :class => ::Br::Gov::Saude::Esusab::Ras::Atendindividual::ExameThrift}, :optional => true},
                 VACINAEMDIA => {:type => ::Thrift::Types::BOOL, :name => 'vacinaEmDia', :optional => true},
                 PIC => {:type => ::Thrift::Types::I64, :name => 'pic', :optional => true},
                 FICOUEMOBSERVACAO => {:type => ::Thrift::Types::BOOL, :name => 'ficouEmObservacao', :optional => true},

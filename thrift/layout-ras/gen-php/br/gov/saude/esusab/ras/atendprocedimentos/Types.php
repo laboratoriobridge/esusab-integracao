@@ -53,10 +53,6 @@ class FichaProcedimentoChildThrift {
    */
   public $procedimentos = null;
   /**
-   * @var string[]
-   */
-  public $outrosSiaProcedimentos = null;
-  /**
    * @var int
    */
   public $dataHoraInicialAtendimento = null;
@@ -104,14 +100,6 @@ class FichaProcedimentoChildThrift {
             'type' => TType::STRING,
             ),
           ),
-        9 => array(
-          'var' => 'outrosSiaProcedimentos',
-          'type' => TType::LST,
-          'etype' => TType::STRING,
-          'elem' => array(
-            'type' => TType::STRING,
-            ),
-          ),
         10 => array(
           'var' => 'dataHoraInicialAtendimento',
           'type' => TType::I64,
@@ -146,9 +134,6 @@ class FichaProcedimentoChildThrift {
       }
       if (isset($vals['procedimentos'])) {
         $this->procedimentos = $vals['procedimentos'];
-      }
-      if (isset($vals['outrosSiaProcedimentos'])) {
-        $this->outrosSiaProcedimentos = $vals['outrosSiaProcedimentos'];
       }
       if (isset($vals['dataHoraInicialAtendimento'])) {
         $this->dataHoraInicialAtendimento = $vals['dataHoraInicialAtendimento'];
@@ -244,23 +229,6 @@ class FichaProcedimentoChildThrift {
             $xfer += $input->skip($ftype);
           }
           break;
-        case 9:
-          if ($ftype == TType::LST) {
-            $this->outrosSiaProcedimentos = array();
-            $_size6 = 0;
-            $_etype9 = 0;
-            $xfer += $input->readListBegin($_etype9, $_size6);
-            for ($_i10 = 0; $_i10 < $_size6; ++$_i10)
-            {
-              $elem11 = null;
-              $xfer += $input->readString($elem11);
-              $this->outrosSiaProcedimentos []= $elem11;
-            }
-            $xfer += $input->readListEnd();
-          } else {
-            $xfer += $input->skip($ftype);
-          }
-          break;
         case 10:
           if ($ftype == TType::I64) {
             $xfer += $input->readI64($this->dataHoraInicialAtendimento);
@@ -331,26 +299,9 @@ class FichaProcedimentoChildThrift {
       {
         $output->writeListBegin(TType::STRING, count($this->procedimentos));
         {
-          foreach ($this->procedimentos as $iter12)
+          foreach ($this->procedimentos as $iter6)
           {
-            $xfer += $output->writeString($iter12);
-          }
-        }
-        $output->writeListEnd();
-      }
-      $xfer += $output->writeFieldEnd();
-    }
-    if ($this->outrosSiaProcedimentos !== null) {
-      if (!is_array($this->outrosSiaProcedimentos)) {
-        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
-      }
-      $xfer += $output->writeFieldBegin('outrosSiaProcedimentos', TType::LST, 9);
-      {
-        $output->writeListBegin(TType::STRING, count($this->outrosSiaProcedimentos));
-        {
-          foreach ($this->outrosSiaProcedimentos as $iter13)
-          {
-            $xfer += $output->writeString($iter13);
+            $xfer += $output->writeString($iter6);
           }
         }
         $output->writeListEnd();
@@ -558,15 +509,15 @@ class FichaProcedimentoMasterThrift {
         case 4:
           if ($ftype == TType::LST) {
             $this->atendProcedimentos = array();
-            $_size14 = 0;
-            $_etype17 = 0;
-            $xfer += $input->readListBegin($_etype17, $_size14);
-            for ($_i18 = 0; $_i18 < $_size14; ++$_i18)
+            $_size7 = 0;
+            $_etype10 = 0;
+            $xfer += $input->readListBegin($_etype10, $_size7);
+            for ($_i11 = 0; $_i11 < $_size7; ++$_i11)
             {
-              $elem19 = null;
-              $elem19 = new \br\gov\saude\esusab\ras\atendprocedimentos\FichaProcedimentoChildThrift();
-              $xfer += $elem19->read($input);
-              $this->atendProcedimentos []= $elem19;
+              $elem12 = null;
+              $elem12 = new \br\gov\saude\esusab\ras\atendprocedimentos\FichaProcedimentoChildThrift();
+              $xfer += $elem12->read($input);
+              $this->atendProcedimentos []= $elem12;
             }
             $xfer += $input->readListEnd();
           } else {
@@ -661,9 +612,9 @@ class FichaProcedimentoMasterThrift {
       {
         $output->writeListBegin(TType::STRUCT, count($this->atendProcedimentos));
         {
-          foreach ($this->atendProcedimentos as $iter20)
+          foreach ($this->atendProcedimentos as $iter13)
           {
-            $xfer += $iter20->write($output);
+            $xfer += $iter13->write($output);
           }
         }
         $output->writeListEnd();

@@ -30,7 +30,6 @@ class FichaProcedimentoChildThrift:
    - turno
    - statusEscutaInicialOrientacao
    - procedimentos
-   - outrosSiaProcedimentos
    - dataHoraInicialAtendimento
    - dataHoraFinalAtendimento
   """
@@ -45,12 +44,12 @@ class FichaProcedimentoChildThrift:
     (6, TType.I64, 'turno', None, None, ), # 6
     (7, TType.BOOL, 'statusEscutaInicialOrientacao', None, None, ), # 7
     (8, TType.LIST, 'procedimentos', (TType.STRING,None), None, ), # 8
-    (9, TType.LIST, 'outrosSiaProcedimentos', (TType.STRING,None), None, ), # 9
+    None, # 9
     (10, TType.I64, 'dataHoraInicialAtendimento', None, None, ), # 10
     (11, TType.I64, 'dataHoraFinalAtendimento', None, None, ), # 11
   )
 
-  def __init__(self, numProntuario=None, cnsCidadao=None, dtNascimento=None, sexo=None, localAtendimento=None, turno=None, statusEscutaInicialOrientacao=None, procedimentos=None, outrosSiaProcedimentos=None, dataHoraInicialAtendimento=None, dataHoraFinalAtendimento=None,):
+  def __init__(self, numProntuario=None, cnsCidadao=None, dtNascimento=None, sexo=None, localAtendimento=None, turno=None, statusEscutaInicialOrientacao=None, procedimentos=None, dataHoraInicialAtendimento=None, dataHoraFinalAtendimento=None,):
     self.numProntuario = numProntuario
     self.cnsCidadao = cnsCidadao
     self.dtNascimento = dtNascimento
@@ -59,7 +58,6 @@ class FichaProcedimentoChildThrift:
     self.turno = turno
     self.statusEscutaInicialOrientacao = statusEscutaInicialOrientacao
     self.procedimentos = procedimentos
-    self.outrosSiaProcedimentos = outrosSiaProcedimentos
     self.dataHoraInicialAtendimento = dataHoraInicialAtendimento
     self.dataHoraFinalAtendimento = dataHoraFinalAtendimento
 
@@ -117,16 +115,6 @@ class FichaProcedimentoChildThrift:
           iprot.readListEnd()
         else:
           iprot.skip(ftype)
-      elif fid == 9:
-        if ftype == TType.LIST:
-          self.outrosSiaProcedimentos = []
-          (_etype9, _size6) = iprot.readListBegin()
-          for _i10 in xrange(_size6):
-            _elem11 = iprot.readString()
-            self.outrosSiaProcedimentos.append(_elem11)
-          iprot.readListEnd()
-        else:
-          iprot.skip(ftype)
       elif fid == 10:
         if ftype == TType.I64:
           self.dataHoraInicialAtendimento = iprot.readI64()
@@ -178,15 +166,8 @@ class FichaProcedimentoChildThrift:
     if self.procedimentos is not None:
       oprot.writeFieldBegin('procedimentos', TType.LIST, 8)
       oprot.writeListBegin(TType.STRING, len(self.procedimentos))
-      for iter12 in self.procedimentos:
-        oprot.writeString(iter12)
-      oprot.writeListEnd()
-      oprot.writeFieldEnd()
-    if self.outrosSiaProcedimentos is not None:
-      oprot.writeFieldBegin('outrosSiaProcedimentos', TType.LIST, 9)
-      oprot.writeListBegin(TType.STRING, len(self.outrosSiaProcedimentos))
-      for iter13 in self.outrosSiaProcedimentos:
-        oprot.writeString(iter13)
+      for iter6 in self.procedimentos:
+        oprot.writeString(iter6)
       oprot.writeListEnd()
       oprot.writeFieldEnd()
     if self.dataHoraInicialAtendimento is not None:
@@ -214,7 +195,6 @@ class FichaProcedimentoChildThrift:
     value = (value * 31) ^ hash(self.turno)
     value = (value * 31) ^ hash(self.statusEscutaInicialOrientacao)
     value = (value * 31) ^ hash(self.procedimentos)
-    value = (value * 31) ^ hash(self.outrosSiaProcedimentos)
     value = (value * 31) ^ hash(self.dataHoraInicialAtendimento)
     value = (value * 31) ^ hash(self.dataHoraFinalAtendimento)
     return value
@@ -302,11 +282,11 @@ class FichaProcedimentoMasterThrift:
       elif fid == 4:
         if ftype == TType.LIST:
           self.atendProcedimentos = []
-          (_etype17, _size14) = iprot.readListBegin()
-          for _i18 in xrange(_size14):
-            _elem19 = FichaProcedimentoChildThrift()
-            _elem19.read(iprot)
-            self.atendProcedimentos.append(_elem19)
+          (_etype10, _size7) = iprot.readListBegin()
+          for _i11 in xrange(_size7):
+            _elem12 = FichaProcedimentoChildThrift()
+            _elem12.read(iprot)
+            self.atendProcedimentos.append(_elem12)
           iprot.readListEnd()
         else:
           iprot.skip(ftype)
@@ -370,8 +350,8 @@ class FichaProcedimentoMasterThrift:
     if self.atendProcedimentos is not None:
       oprot.writeFieldBegin('atendProcedimentos', TType.LIST, 4)
       oprot.writeListBegin(TType.STRUCT, len(self.atendProcedimentos))
-      for iter20 in self.atendProcedimentos:
-        iter20.write(oprot)
+      for iter13 in self.atendProcedimentos:
+        iter13.write(oprot)
       oprot.writeListEnd()
       oprot.writeFieldEnd()
     if self.numTotalAfericaoPa is not None:

@@ -31,7 +31,6 @@ namespace br.gov.saude.esusab.ras.atendprocedimentos
     private long _turno;
     private bool _statusEscutaInicialOrientacao;
     private List<string> _procedimentos;
-    private List<string> _outrosSiaProcedimentos;
     private long _dataHoraInicialAtendimento;
     private long _dataHoraFinalAtendimento;
 
@@ -139,19 +138,6 @@ namespace br.gov.saude.esusab.ras.atendprocedimentos
       }
     }
 
-    public List<string> OutrosSiaProcedimentos
-    {
-      get
-      {
-        return _outrosSiaProcedimentos;
-      }
-      set
-      {
-        __isset.outrosSiaProcedimentos = true;
-        this._outrosSiaProcedimentos = value;
-      }
-    }
-
     public long DataHoraInicialAtendimento
     {
       get
@@ -192,7 +178,6 @@ namespace br.gov.saude.esusab.ras.atendprocedimentos
       public bool turno;
       public bool statusEscutaInicialOrientacao;
       public bool procedimentos;
-      public bool outrosSiaProcedimentos;
       public bool dataHoraInicialAtendimento;
       public bool dataHoraFinalAtendimento;
     }
@@ -274,23 +259,6 @@ namespace br.gov.saude.esusab.ras.atendprocedimentos
                     string _elem2;
                     _elem2 = iprot.ReadString();
                     Procedimentos.Add(_elem2);
-                  }
-                  iprot.ReadListEnd();
-                }
-              } else { 
-                TProtocolUtil.Skip(iprot, field.Type);
-              }
-              break;
-            case 9:
-              if (field.Type == TType.List) {
-                {
-                  OutrosSiaProcedimentos = new List<string>();
-                  TList _list3 = iprot.ReadListBegin();
-                  for( int _i4 = 0; _i4 < _list3.Count; ++_i4)
-                  {
-                    string _elem5;
-                    _elem5 = iprot.ReadString();
-                    OutrosSiaProcedimentos.Add(_elem5);
                   }
                   iprot.ReadListEnd();
                 }
@@ -396,24 +364,9 @@ namespace br.gov.saude.esusab.ras.atendprocedimentos
           oprot.WriteFieldBegin(field);
           {
             oprot.WriteListBegin(new TList(TType.String, Procedimentos.Count));
-            foreach (string _iter6 in Procedimentos)
+            foreach (string _iter3 in Procedimentos)
             {
-              oprot.WriteString(_iter6);
-            }
-            oprot.WriteListEnd();
-          }
-          oprot.WriteFieldEnd();
-        }
-        if (OutrosSiaProcedimentos != null && __isset.outrosSiaProcedimentos) {
-          field.Name = "outrosSiaProcedimentos";
-          field.Type = TType.List;
-          field.ID = 9;
-          oprot.WriteFieldBegin(field);
-          {
-            oprot.WriteListBegin(new TList(TType.String, OutrosSiaProcedimentos.Count));
-            foreach (string _iter7 in OutrosSiaProcedimentos)
-            {
-              oprot.WriteString(_iter7);
+              oprot.WriteString(_iter3);
             }
             oprot.WriteListEnd();
           }
@@ -494,12 +447,6 @@ namespace br.gov.saude.esusab.ras.atendprocedimentos
         __first = false;
         __sb.Append("Procedimentos: ");
         __sb.Append(Procedimentos);
-      }
-      if (OutrosSiaProcedimentos != null && __isset.outrosSiaProcedimentos) {
-        if(!__first) { __sb.Append(", "); }
-        __first = false;
-        __sb.Append("OutrosSiaProcedimentos: ");
-        __sb.Append(OutrosSiaProcedimentos);
       }
       if (__isset.dataHoraInicialAtendimento) {
         if(!__first) { __sb.Append(", "); }

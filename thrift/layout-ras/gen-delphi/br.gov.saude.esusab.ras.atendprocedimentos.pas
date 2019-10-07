@@ -47,8 +47,6 @@ type
     procedure SetStatusEscutaInicialOrientacao( const Value: Boolean);
     function GetProcedimentos: IThriftList<string>;
     procedure SetProcedimentos( const Value: IThriftList<string>);
-    function GetOutrosSiaProcedimentos: IThriftList<string>;
-    procedure SetOutrosSiaProcedimentos( const Value: IThriftList<string>);
     function GetDataHoraInicialAtendimento: Int64;
     procedure SetDataHoraInicialAtendimento( const Value: Int64);
     function GetDataHoraFinalAtendimento: Int64;
@@ -62,7 +60,6 @@ type
     property Turno: Int64 read GetTurno write SetTurno;
     property StatusEscutaInicialOrientacao: Boolean read GetStatusEscutaInicialOrientacao write SetStatusEscutaInicialOrientacao;
     property Procedimentos: IThriftList<string> read GetProcedimentos write SetProcedimentos;
-    property OutrosSiaProcedimentos: IThriftList<string> read GetOutrosSiaProcedimentos write SetOutrosSiaProcedimentos;
     property DataHoraInicialAtendimento: Int64 read GetDataHoraInicialAtendimento write SetDataHoraInicialAtendimento;
     property DataHoraFinalAtendimento: Int64 read GetDataHoraFinalAtendimento write SetDataHoraFinalAtendimento;
 
@@ -74,7 +71,6 @@ type
     function Get__isset_Turno: Boolean;
     function Get__isset_StatusEscutaInicialOrientacao: Boolean;
     function Get__isset_Procedimentos: Boolean;
-    function Get__isset_OutrosSiaProcedimentos: Boolean;
     function Get__isset_DataHoraInicialAtendimento: Boolean;
     function Get__isset_DataHoraFinalAtendimento: Boolean;
 
@@ -86,7 +82,6 @@ type
     property __isset_Turno: Boolean read Get__isset_Turno;
     property __isset_StatusEscutaInicialOrientacao: Boolean read Get__isset_StatusEscutaInicialOrientacao;
     property __isset_Procedimentos: Boolean read Get__isset_Procedimentos;
-    property __isset_OutrosSiaProcedimentos: Boolean read Get__isset_OutrosSiaProcedimentos;
     property __isset_DataHoraInicialAtendimento: Boolean read Get__isset_DataHoraInicialAtendimento;
     property __isset_DataHoraFinalAtendimento: Boolean read Get__isset_DataHoraFinalAtendimento;
   end;
@@ -101,7 +96,6 @@ type
     FTurno: Int64;
     FStatusEscutaInicialOrientacao: Boolean;
     FProcedimentos: IThriftList<string>;
-    FOutrosSiaProcedimentos: IThriftList<string>;
     FDataHoraInicialAtendimento: Int64;
     FDataHoraFinalAtendimento: Int64;
     
@@ -113,7 +107,6 @@ type
     F__isset_Turno: Boolean;
     F__isset_StatusEscutaInicialOrientacao: Boolean;
     F__isset_Procedimentos: Boolean;
-    F__isset_OutrosSiaProcedimentos: Boolean;
     F__isset_DataHoraInicialAtendimento: Boolean;
     F__isset_DataHoraFinalAtendimento: Boolean;
     
@@ -133,8 +126,6 @@ type
     procedure SetStatusEscutaInicialOrientacao( const Value: Boolean);
     function GetProcedimentos: IThriftList<string>;
     procedure SetProcedimentos( const Value: IThriftList<string>);
-    function GetOutrosSiaProcedimentos: IThriftList<string>;
-    procedure SetOutrosSiaProcedimentos( const Value: IThriftList<string>);
     function GetDataHoraInicialAtendimento: Int64;
     procedure SetDataHoraInicialAtendimento( const Value: Int64);
     function GetDataHoraFinalAtendimento: Int64;
@@ -148,7 +139,6 @@ type
     function Get__isset_Turno: Boolean;
     function Get__isset_StatusEscutaInicialOrientacao: Boolean;
     function Get__isset_Procedimentos: Boolean;
-    function Get__isset_OutrosSiaProcedimentos: Boolean;
     function Get__isset_DataHoraInicialAtendimento: Boolean;
     function Get__isset_DataHoraFinalAtendimento: Boolean;
   public
@@ -170,7 +160,6 @@ type
     property Turno: Int64 read GetTurno write SetTurno;
     property StatusEscutaInicialOrientacao: Boolean read GetStatusEscutaInicialOrientacao write SetStatusEscutaInicialOrientacao;
     property Procedimentos: IThriftList<string> read GetProcedimentos write SetProcedimentos;
-    property OutrosSiaProcedimentos: IThriftList<string> read GetOutrosSiaProcedimentos write SetOutrosSiaProcedimentos;
     property DataHoraInicialAtendimento: Int64 read GetDataHoraInicialAtendimento write SetDataHoraInicialAtendimento;
     property DataHoraFinalAtendimento: Int64 read GetDataHoraFinalAtendimento write SetDataHoraFinalAtendimento;
 
@@ -183,7 +172,6 @@ type
     property __isset_Turno: Boolean read Get__isset_Turno;
     property __isset_StatusEscutaInicialOrientacao: Boolean read Get__isset_StatusEscutaInicialOrientacao;
     property __isset_Procedimentos: Boolean read Get__isset_Procedimentos;
-    property __isset_OutrosSiaProcedimentos: Boolean read Get__isset_OutrosSiaProcedimentos;
     property __isset_DataHoraInicialAtendimento: Boolean read Get__isset_DataHoraInicialAtendimento;
     property __isset_DataHoraFinalAtendimento: Boolean read Get__isset_DataHoraFinalAtendimento;
   end;
@@ -481,22 +469,6 @@ begin
   Result := F__isset_Procedimentos;
 end;
 
-function TFichaProcedimentoChildThriftImpl.GetOutrosSiaProcedimentos: IThriftList<string>;
-begin
-  Result := FOutrosSiaProcedimentos;
-end;
-
-procedure TFichaProcedimentoChildThriftImpl.SetOutrosSiaProcedimentos( const Value: IThriftList<string>);
-begin
-  F__isset_OutrosSiaProcedimentos := True;
-  FOutrosSiaProcedimentos := Value;
-end;
-
-function TFichaProcedimentoChildThriftImpl.Get__isset_OutrosSiaProcedimentos: Boolean;
-begin
-  Result := F__isset_OutrosSiaProcedimentos;
-end;
-
 function TFichaProcedimentoChildThriftImpl.GetDataHoraInicialAtendimento: Int64;
 begin
   Result := FDataHoraInicialAtendimento;
@@ -537,9 +509,6 @@ var
   _list0: IList;
   _i1: Integer;
   _elem2: string;
-  _list3: IList;
-  _i4: Integer;
-  _elem5: string;
 
 begin
   tracker := iprot.NextRecursionLevel;
@@ -632,22 +601,6 @@ begin
             TProtocolUtil.Skip(iprot, field_.Type_);
           end;
         end;
-        9: begin
-          if (field_.Type_ = TType.List) then
-          begin
-            OutrosSiaProcedimentos := TThriftListImpl<string>.Create;
-            _list3 := iprot.ReadListBegin();
-            for _i4 := 0 to _list3.Count - 1 do
-            begin
-              _elem5 := iprot.ReadString();
-              OutrosSiaProcedimentos.Add(_elem5);
-            end;
-            iprot.ReadListEnd();
-          end else
-          begin
-            TProtocolUtil.Skip(iprot, field_.Type_);
-          end;
-        end;
         10: begin
           if (field_.Type_ = TType.I64) then
           begin
@@ -682,10 +635,8 @@ var
   struc : IStruct;
   field_ : IField;
   tracker : IProtocolRecursionTracker;
-  list_6 : IList;
-  _iter7: string;
-  list_8 : IList;
-  _iter9: string;
+  list_3 : IList;
+  _iter4: string;
 begin
   tracker := oprot.NextRecursionLevel;
   struc := TStructImpl.Create('FichaProcedimentoChildThrift');
@@ -760,26 +711,11 @@ begin
     field_.Type_  := TType.List;
     field_.ID := 8;
     oprot.WriteFieldBegin(field_);
-    list_6 := TListImpl.Create(TType.String_, Procedimentos.Count);
-    oprot.WriteListBegin( list_6);
-    for _iter7 in Procedimentos do
+    list_3 := TListImpl.Create(TType.String_, Procedimentos.Count);
+    oprot.WriteListBegin( list_3);
+    for _iter4 in Procedimentos do
     begin
-      oprot.WriteString(_iter7);
-    end;
-    oprot.WriteListEnd();
-    oprot.WriteFieldEnd();
-  end;
-  if (OutrosSiaProcedimentos <> nil) and __isset_OutrosSiaProcedimentos then
-  begin
-    field_.Name := 'outrosSiaProcedimentos';
-    field_.Type_  := TType.List;
-    field_.ID := 9;
-    oprot.WriteFieldBegin(field_);
-    list_8 := TListImpl.Create(TType.String_, OutrosSiaProcedimentos.Count);
-    oprot.WriteListBegin( list_8);
-    for _iter9 in OutrosSiaProcedimentos do
-    begin
-      oprot.WriteString(_iter9);
+      oprot.WriteString(_iter4);
     end;
     oprot.WriteListEnd();
     oprot.WriteFieldEnd();
@@ -808,83 +744,77 @@ end;
 
 function TFichaProcedimentoChildThriftImpl.ToString: string;
 var
-  _sb10 : TThriftStringBuilder;
-  _first11 : Boolean;
+  _sb5 : TThriftStringBuilder;
+  _first6 : Boolean;
 begin
-  _sb10 := TThriftStringBuilder.Create('(');
+  _sb5 := TThriftStringBuilder.Create('(');
   try
-    _first11 := TRUE;
+    _first6 := TRUE;
     if (__isset_NumProntuario) then begin
-      if not _first11 then _sb10.Append(',');
-      _first11 := FALSE;
-      _sb10.Append('NumProntuario: ');
-      _sb10.Append(NumProntuario);
+      if not _first6 then _sb5.Append(',');
+      _first6 := FALSE;
+      _sb5.Append('NumProntuario: ');
+      _sb5.Append(NumProntuario);
     end;
     if (__isset_CnsCidadao) then begin
-      if not _first11 then _sb10.Append(',');
-      _first11 := FALSE;
-      _sb10.Append('CnsCidadao: ');
-      _sb10.Append(CnsCidadao);
+      if not _first6 then _sb5.Append(',');
+      _first6 := FALSE;
+      _sb5.Append('CnsCidadao: ');
+      _sb5.Append(CnsCidadao);
     end;
     if (__isset_DtNascimento) then begin
-      if not _first11 then _sb10.Append(',');
-      _first11 := FALSE;
-      _sb10.Append('DtNascimento: ');
-      _sb10.Append(DtNascimento);
+      if not _first6 then _sb5.Append(',');
+      _first6 := FALSE;
+      _sb5.Append('DtNascimento: ');
+      _sb5.Append(DtNascimento);
     end;
     if (__isset_Sexo) then begin
-      if not _first11 then _sb10.Append(',');
-      _first11 := FALSE;
-      _sb10.Append('Sexo: ');
-      _sb10.Append(Sexo);
+      if not _first6 then _sb5.Append(',');
+      _first6 := FALSE;
+      _sb5.Append('Sexo: ');
+      _sb5.Append(Sexo);
     end;
     if (__isset_LocalAtendimento) then begin
-      if not _first11 then _sb10.Append(',');
-      _first11 := FALSE;
-      _sb10.Append('LocalAtendimento: ');
-      _sb10.Append(LocalAtendimento);
+      if not _first6 then _sb5.Append(',');
+      _first6 := FALSE;
+      _sb5.Append('LocalAtendimento: ');
+      _sb5.Append(LocalAtendimento);
     end;
     if (__isset_Turno) then begin
-      if not _first11 then _sb10.Append(',');
-      _first11 := FALSE;
-      _sb10.Append('Turno: ');
-      _sb10.Append(Turno);
+      if not _first6 then _sb5.Append(',');
+      _first6 := FALSE;
+      _sb5.Append('Turno: ');
+      _sb5.Append(Turno);
     end;
     if (__isset_StatusEscutaInicialOrientacao) then begin
-      if not _first11 then _sb10.Append(',');
-      _first11 := FALSE;
-      _sb10.Append('StatusEscutaInicialOrientacao: ');
-      _sb10.Append(StatusEscutaInicialOrientacao);
+      if not _first6 then _sb5.Append(',');
+      _first6 := FALSE;
+      _sb5.Append('StatusEscutaInicialOrientacao: ');
+      _sb5.Append(StatusEscutaInicialOrientacao);
     end;
     if (Procedimentos <> nil) and __isset_Procedimentos then begin
-      if not _first11 then _sb10.Append(',');
-      _first11 := FALSE;
-      _sb10.Append('Procedimentos: ');
-      _sb10.Append(Procedimentos);
-    end;
-    if (OutrosSiaProcedimentos <> nil) and __isset_OutrosSiaProcedimentos then begin
-      if not _first11 then _sb10.Append(',');
-      _first11 := FALSE;
-      _sb10.Append('OutrosSiaProcedimentos: ');
-      _sb10.Append(OutrosSiaProcedimentos);
+      if not _first6 then _sb5.Append(',');
+      _first6 := FALSE;
+      _sb5.Append('Procedimentos: ');
+      _sb5.Append(Procedimentos);
     end;
     if (__isset_DataHoraInicialAtendimento) then begin
-      if not _first11 then _sb10.Append(',');
-      _first11 := FALSE;
-      _sb10.Append('DataHoraInicialAtendimento: ');
-      _sb10.Append(DataHoraInicialAtendimento);
+      if not _first6 then _sb5.Append(',');
+      _first6 := FALSE;
+      _sb5.Append('DataHoraInicialAtendimento: ');
+      _sb5.Append(DataHoraInicialAtendimento);
     end;
     if (__isset_DataHoraFinalAtendimento) then begin
-      if not _first11 then _sb10.Append(',');
-      _first11 := FALSE;
-      _sb10.Append('DataHoraFinalAtendimento: ');
-      _sb10.Append(DataHoraFinalAtendimento);
+      if not _first6 then _sb5.Append(',');
+      _first6 := FALSE;
+      _sb5.Append('DataHoraFinalAtendimento: ');
+      _sb5.Append(DataHoraFinalAtendimento);
     end;
-    _sb10.Append(')');
-    Result := _sb10.ToString;
-    if _first11 then {prevent warning};
+    _sb5.Append(')');
+    Result := _sb5.ToString;
+    if _first6 then {prevent warning};
   finally
-    _sb10.Free;
+    _sb5.Free;
   end;
 end;
 
@@ -1074,9 +1004,9 @@ var
   struc : IStruct;
   tracker : IProtocolRecursionTracker;
   _req_isset_UuidFicha : Boolean;
-  _list12: IList;
-  _i13: Integer;
-  _elem14: IFichaProcedimentoChildThrift;
+  _list7: IList;
+  _i8: Integer;
+  _elem9: IFichaProcedimentoChildThrift;
 
 begin
   tracker := iprot.NextRecursionLevel;
@@ -1124,12 +1054,12 @@ begin
           if (field_.Type_ = TType.List) then
           begin
             AtendProcedimentos := TThriftListImpl<IFichaProcedimentoChildThrift>.Create;
-            _list12 := iprot.ReadListBegin();
-            for _i13 := 0 to _list12.Count - 1 do
+            _list7 := iprot.ReadListBegin();
+            for _i8 := 0 to _list7.Count - 1 do
             begin
-              _elem14 := TFichaProcedimentoChildThriftImpl.Create;
-              _elem14.Read(iprot);
-              AtendProcedimentos.Add(_elem14);
+              _elem9 := TFichaProcedimentoChildThriftImpl.Create;
+              _elem9.Read(iprot);
+              AtendProcedimentos.Add(_elem9);
             end;
             iprot.ReadListEnd();
           end else
@@ -1218,8 +1148,8 @@ var
   struc : IStruct;
   field_ : IField;
   tracker : IProtocolRecursionTracker;
-  list_15 : IList;
-  _iter16: IFichaProcedimentoChildThrift;
+  list_10 : IList;
+  _iter11: IFichaProcedimentoChildThrift;
 begin
   tracker := oprot.NextRecursionLevel;
   struc := TStructImpl.Create('FichaProcedimentoMasterThrift');
@@ -1256,11 +1186,11 @@ begin
     field_.Type_  := TType.List;
     field_.ID := 4;
     oprot.WriteFieldBegin(field_);
-    list_15 := TListImpl.Create(TType.Struct, AtendProcedimentos.Count);
-    oprot.WriteListBegin( list_15);
-    for _iter16 in AtendProcedimentos do
+    list_10 := TListImpl.Create(TType.Struct, AtendProcedimentos.Count);
+    oprot.WriteListBegin( list_10);
+    for _iter11 in AtendProcedimentos do
     begin
-      _iter16.Write(oprot);
+      _iter11.Write(oprot);
     end;
     oprot.WriteListEnd();
     oprot.WriteFieldEnd();
@@ -1334,56 +1264,56 @@ end;
 
 function TFichaProcedimentoMasterThriftImpl.ToString: string;
 var
-  _sb17 : TThriftStringBuilder;
+  _sb12 : TThriftStringBuilder;
 begin
-  _sb17 := TThriftStringBuilder.Create('(');
+  _sb12 := TThriftStringBuilder.Create('(');
   try
-    _sb17.Append(', UuidFicha: ');
-    _sb17.Append(UuidFicha);
+    _sb12.Append(', UuidFicha: ');
+    _sb12.Append(UuidFicha);
     if (__isset_TpCdsOrigem) then begin
-      _sb17.Append(', TpCdsOrigem: ');
-      _sb17.Append(TpCdsOrigem);
+      _sb12.Append(', TpCdsOrigem: ');
+      _sb12.Append(TpCdsOrigem);
     end;
     if (HeaderTransport <> nil) and __isset_HeaderTransport then begin
-      _sb17.Append(', HeaderTransport: ');
-      if (HeaderTransport = nil) then _sb17.Append('<null>') else _sb17.Append(HeaderTransport.ToString());
+      _sb12.Append(', HeaderTransport: ');
+      if (HeaderTransport = nil) then _sb12.Append('<null>') else _sb12.Append(HeaderTransport.ToString());
     end;
     if (AtendProcedimentos <> nil) and __isset_AtendProcedimentos then begin
-      _sb17.Append(', AtendProcedimentos: ');
-      _sb17.Append(AtendProcedimentos);
+      _sb12.Append(', AtendProcedimentos: ');
+      _sb12.Append(AtendProcedimentos);
     end;
     if (__isset_NumTotalAfericaoPa) then begin
-      _sb17.Append(', NumTotalAfericaoPa: ');
-      _sb17.Append(NumTotalAfericaoPa);
+      _sb12.Append(', NumTotalAfericaoPa: ');
+      _sb12.Append(NumTotalAfericaoPa);
     end;
     if (__isset_NumTotalGlicemiaCapilar) then begin
-      _sb17.Append(', NumTotalGlicemiaCapilar: ');
-      _sb17.Append(NumTotalGlicemiaCapilar);
+      _sb12.Append(', NumTotalGlicemiaCapilar: ');
+      _sb12.Append(NumTotalGlicemiaCapilar);
     end;
     if (__isset_NumTotalAfericaoTemperatura) then begin
-      _sb17.Append(', NumTotalAfericaoTemperatura: ');
-      _sb17.Append(NumTotalAfericaoTemperatura);
+      _sb12.Append(', NumTotalAfericaoTemperatura: ');
+      _sb12.Append(NumTotalAfericaoTemperatura);
     end;
     if (__isset_NumTotalMedicaoAltura) then begin
-      _sb17.Append(', NumTotalMedicaoAltura: ');
-      _sb17.Append(NumTotalMedicaoAltura);
+      _sb12.Append(', NumTotalMedicaoAltura: ');
+      _sb12.Append(NumTotalMedicaoAltura);
     end;
     if (__isset_NumTotalCurativoSimples) then begin
-      _sb17.Append(', NumTotalCurativoSimples: ');
-      _sb17.Append(NumTotalCurativoSimples);
+      _sb12.Append(', NumTotalCurativoSimples: ');
+      _sb12.Append(NumTotalCurativoSimples);
     end;
     if (__isset_NumTotalMedicaoPeso) then begin
-      _sb17.Append(', NumTotalMedicaoPeso: ');
-      _sb17.Append(NumTotalMedicaoPeso);
+      _sb12.Append(', NumTotalMedicaoPeso: ');
+      _sb12.Append(NumTotalMedicaoPeso);
     end;
     if (__isset_NumTotalColetaMaterialParaExameLaboratorial) then begin
-      _sb17.Append(', NumTotalColetaMaterialParaExameLaboratorial: ');
-      _sb17.Append(NumTotalColetaMaterialParaExameLaboratorial);
+      _sb12.Append(', NumTotalColetaMaterialParaExameLaboratorial: ');
+      _sb12.Append(NumTotalColetaMaterialParaExameLaboratorial);
     end;
-    _sb17.Append(')');
-    Result := _sb17.ToString;
+    _sb12.Append(')');
+    Result := _sb12.ToString;
   finally
-    _sb17.Free;
+    _sb12.Free;
   end;
 end;
 

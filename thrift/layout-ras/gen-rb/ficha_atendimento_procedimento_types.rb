@@ -24,7 +24,6 @@ module Br
               TURNO = 6
               STATUSESCUTAINICIALORIENTACAO = 7
               PROCEDIMENTOS = 8
-              OUTROSSIAPROCEDIMENTOS = 9
               DATAHORAINICIALATENDIMENTO = 10
               DATAHORAFINALATENDIMENTO = 11
 
@@ -37,7 +36,6 @@ module Br
                 TURNO => {:type => ::Thrift::Types::I64, :name => 'turno', :optional => true},
                 STATUSESCUTAINICIALORIENTACAO => {:type => ::Thrift::Types::BOOL, :name => 'statusEscutaInicialOrientacao', :optional => true},
                 PROCEDIMENTOS => {:type => ::Thrift::Types::LIST, :name => 'procedimentos', :element => {:type => ::Thrift::Types::STRING}, :optional => true},
-                OUTROSSIAPROCEDIMENTOS => {:type => ::Thrift::Types::LIST, :name => 'outrosSiaProcedimentos', :element => {:type => ::Thrift::Types::STRING}, :optional => true},
                 DATAHORAINICIALATENDIMENTO => {:type => ::Thrift::Types::I64, :name => 'dataHoraInicialAtendimento', :optional => true},
                 DATAHORAFINALATENDIMENTO => {:type => ::Thrift::Types::I64, :name => 'dataHoraFinalAtendimento', :optional => true}
               }

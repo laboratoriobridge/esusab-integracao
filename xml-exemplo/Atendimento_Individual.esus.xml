@@ -1,18 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <ns3:dadoTransporteTransportXml xmlns:ns2="http://esus.ufsc.br/dadoinstalacao" xmlns:ns3="http://esus.ufsc.br/dadotransporte" xmlns:ns4="http://esus.ufsc.br/fichaatendimentoindividualmaster">
-	<uuidDadoSerializado>3186717-c939bdd2-5708-4644-a603-97a60b24ca42</uuidDadoSerializado>
+	<uuidDadoSerializado>0019615-edee6500-bf76-4691-b9c7-f7b1d550bc7a</uuidDadoSerializado>
 	<tipoDadoSerializado>4</tipoDadoSerializado>
 	<codIbge>4205407</codIbge>
-	<cnesDadoSerializado>3186717</cnesDadoSerializado>
-	<ineDadoSerializado>0000406465</ineDadoSerializado>
-	<numLote>1</numLote>
+	<cnesDadoSerializado>0019615</cnesDadoSerializado>
+	<ineDadoSerializado>0000471828</ineDadoSerializado>
+	<numLote>2</numLote>
 	<ns4:fichaAtendimentoIndividualMasterTransport>
 		<headerTransport>
 			<lotacaoFormPrincipal>
-				<profissionalCNS>700609923387762</profissionalCNS>
+				<profissionalCNS>898001161481488</profissionalCNS>
 				<cboCodigo_2002>225142</cboCodigo_2002>
-				<cnes>3186717</cnes>
-				<ine>0000406465</ine>
+				<cnes>0019615</cnes>
+				<ine>0000471828</ine>
 			</lotacaoFormPrincipal>
 			<dataAtendimento>1553094000000</dataAtendimento>
 			<codigoIbgeMunicipio>4205407</codigoIbgeMunicipio>
@@ -31,30 +31,50 @@
 			<dumDaGestante>1551452400000</dumDaGestante>
 			<atencaoDomiciliarModalidade>1</atencaoDomiciliarModalidade>
 			<problemaCondicaoAvaliada>
-				<ciaps>ABP003</ciaps>
-				<ciaps>ABP024</ciaps>
 				<ciaps>ABP009</ciaps>
 				<ciaps>ABP019</ciaps>
-				<outroCiap1>A03</outroCiap1>
-				<cid10>R50</cid10>
+				<ciaps>ABP008</ciaps>
+				<ciaps>ABP006</ciaps>
+				<ciaps>ABP010</ciaps>
+				<ciaps>ABP020</ciaps>
+				<ciaps>ABP018</ciaps>
+				<ciaps>ABP005</ciaps>
+				<ciaps>ABP007</ciaps>
+				<ciaps>ABP001</ciaps>
+				<ciaps>ABP004</ciaps>
+				<ciaps>ABP002</ciaps>
+				<ciaps>ABP023</ciaps>
+				<ciaps>ABP022</ciaps>
+				<ciaps>ABP024</ciaps>
+				<ciaps>ABP015</ciaps>
+				<ciaps>ABP014</ciaps>
+				<ciaps>ABP003</ciaps>
+				<ciaps>ABP011</ciaps>
+				<ciaps>ABP017</ciaps>
+				<ciaps>ABP012</ciaps>
+				<ciaps>ABP013</ciaps>
+				<outroCiap1>R88</outroCiap1>
+				<outroCiap2>R02</outroCiap2>
+				<cid10>J70</cid10>
+				<cid10_2>J99</cid10_2>
 			</problemaCondicaoAvaliada>
-			<examesSolicitados>ABEX007</examesSolicitados>
-			<examesSolicitados>ABEX026</examesSolicitados>
-			<examesAvaliados>ABEX002</examesAvaliados>
-			<examesAvaliados>ABEX026</examesAvaliados>
-			<outrosSia>
-				<codigoExame>0212010018</codigoExame>
+			<exame>
+				<codigoExame>0201010054</codigoExame>
 				<solicitadoAvaliado>A</solicitadoAvaliado>
 				<solicitadoAvaliado>S</solicitadoAvaliado>
-			</outrosSia>
-			<outrosSia>
-				<codigoExame>0201020041</codigoExame>
+			</exame>
+			<exame>
+				<codigoExame>ABEX007</codigoExame>
 				<solicitadoAvaliado>S</solicitadoAvaliado>
-			</outrosSia>
-			<outrosSia>
-				<codigoExame>0211030015</codigoExame>
+			</exame>
+			<exame>
+				<codigoExame>ABEX002</codigoExame>
+				<solicitadoAvaliado>S</solicitadoAvaliado>
+			</exame>
+			<exame>
+				<codigoExame>ABEX020</codigoExame>
 				<solicitadoAvaliado>A</solicitadoAvaliado>
-			</outrosSia>
+			</exame>
 			<vacinaEmDia>true</vacinaEmDia>
 			<ficouEmObservacao>false</ficouEmObservacao>
 			<nasfs>1</nasfs>
@@ -82,27 +102,23 @@
 			<dataHoraFinalAtendimento>1553100600000</dataHoraFinalAtendimento>
 		</atendimentosIndividuais>
 		<tpCdsOrigem>1</tpCdsOrigem>
-		<uuidFicha>3186717-c939bdd2-5708-4644-a603-97a60b24ca42</uuidFicha>
+		<uuidFicha>0019615-edee6500-bf76-4691-b9c7-f7b1d550bc7a</uuidFicha>
 	</ns4:fichaAtendimentoIndividualMasterTransport>
 	<ns2:remetente>
 		<contraChave>TREINAMENTO</contraChave>
 		<uuidInstalacao>TREINAMENTO</uuidInstalacao>
 		<cpfOuCnpj>01234567890</cpfOuCnpj>
 		<nomeOuRazaoSocial>ADMINISTRADOR INSTALAÇÃO</nomeOuRazaoSocial>
-		<fone>8216756527</fone>
-		<email>prof@esus.br</email>
-		<versaoSistema>3.2.05</versaoSistema>
-		<nomeBancoDados>Postgres</nomeBancoDados>
+		<versaoSistema>3.2.18</versaoSistema>
+		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:remetente>
 	<ns2:originadora>
 		<contraChave>TREINAMENTO</contraChave>
 		<uuidInstalacao>TREINAMENTO</uuidInstalacao>
 		<cpfOuCnpj>01234567890</cpfOuCnpj>
 		<nomeOuRazaoSocial>ADMINISTRADOR INSTALAÇÃO</nomeOuRazaoSocial>
-		<fone>8216756527</fone>
-		<email>prof@esus.br</email>
-		<versaoSistema>3.2.05</versaoSistema>
-		<nomeBancoDados>Postgres</nomeBancoDados>
+		<versaoSistema>3.2.18</versaoSistema>
+		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:originadora>
-	<versao major="3" minor="2" revision="1" />
+	<versao major="3" minor="2" revision="2" />
 </ns3:dadoTransporteTransportXml>

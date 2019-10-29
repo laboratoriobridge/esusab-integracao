@@ -1,47 +1,50 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <ns3:dadoTransporteTransportXml xmlns:ns2="http://esus.ufsc.br/dadoinstalacao" xmlns:ns3="http://esus.ufsc.br/dadotransporte" xmlns:ns4="http://esus.ufsc.br/fichaprocedimentomaster">
-	<uuidDadoSerializado>3186717-236c2ece-7449-4a50-9a87-bb35b0c10926</uuidDadoSerializado>
+	<uuidDadoSerializado>0019615-6f783cac-ab7c-4246-8458-d3cd99164c10</uuidDadoSerializado>
 	<tipoDadoSerializado>7</tipoDadoSerializado>
 	<codIbge>4205407</codIbge>
-	<cnesDadoSerializado>3186717</cnesDadoSerializado>
-	<ineDadoSerializado>0000406465</ineDadoSerializado>
-	<numLote>1</numLote>
+	<cnesDadoSerializado>0019615</cnesDadoSerializado>
+	<ineDadoSerializado>0000471828</ineDadoSerializado>
+	<numLote>10</numLote>
 	<ns4:fichaProcedimentoMasterTransport>
 		<headerTransport>
-			<profissionalCNS>700609923387762</profissionalCNS>
-			<cboCodigo_2002>223505</cboCodigo_2002>
-			<cnes>3186717</cnes>
-			<ine>0000406465</ine>
-			<dataAtendimento>1552575600000</dataAtendimento>
+			<profissionalCNS>898001161481488</profissionalCNS>
+			<cboCodigo_2002>225142</cboCodigo_2002>
+			<cnes>0019615</cnes>
+			<ine>0000471828</ine>
+			<dataAtendimento>1559833200000</dataAtendimento>
 			<codigoIbgeMunicipio>4205407</codigoIbgeMunicipio>
 		</headerTransport>
 		<atendProcedimentos>
-			<numProntuario>123</numProntuario>
-			<cnsCidadao>279573698530018</cnsCidadao>
-			<dtNascimento>1012662000000</dtNascimento>
+			<numProntuario>010</numProntuario>
+			<cnsCidadao>167070651000006</cnsCidadao>
+			<dtNascimento>1149606000000</dtNascimento>
 			<sexo>0</sexo>
 			<localAtendimento>1</localAtendimento>
 			<turno>1</turno>
 			<statusEscutaInicialOrientacao>true</statusEscutaInicialOrientacao>
 			<procedimentos>ABPG007</procedimentos>
-			<procedimentos>ABPG005</procedimentos>
 			<procedimentos>ABPG027</procedimentos>
-			<procedimentos>ABPG026</procedimentos>
+			<procedimentos>ABPG031</procedimentos>
 			<procedimentos>ABPG041</procedimentos>
-			<outrosSiaProcedimentos>0401010015</outrosSiaProcedimentos>
-			<outrosSiaProcedimentos>0413010058</outrosSiaProcedimentos>
-			<dataHoraInicialAtendimento>1552575600000</dataHoraInicialAtendimento>
-			<dataHoraFinalAtendimento>1552578600000</dataHoraFinalAtendimento>
+			<procedimentos>ABPG017</procedimentos>
+			<procedimentos>ABPG032</procedimentos>
+			<procedimentos>ABPG029</procedimentos>
+			<procedimentos>ABPG028</procedimentos>
+			<procedimentos>0401010015</procedimentos>
+			<procedimentos>0413010058</procedimentos>
+			<dataHoraInicialAtendimento>1559833200000</dataHoraInicialAtendimento>
+			<dataHoraFinalAtendimento>1559833200000</dataHoraFinalAtendimento>
 		</atendProcedimentos>
-		<uuidFicha>3186717-236c2ece-7449-4a50-9a87-bb35b0c10926</uuidFicha>
-		<tpCdsOrigem>1</tpCdsOrigem>
-		<numTotalAfericaoPa>2</numTotalAfericaoPa>
-		<numTotalAfericaoTemperatura>2</numTotalAfericaoTemperatura>
-		<numTotalCurativoSimples>5</numTotalCurativoSimples>
+		<uuidFicha>0019615-6f783cac-ab7c-4246-8458-d3cd99164c10</uuidFicha>
+		<tpCdsOrigem>3</tpCdsOrigem>
+		<numTotalAfericaoPa>1</numTotalAfericaoPa>
+		<numTotalAfericaoTemperatura>1</numTotalAfericaoTemperatura>
+		<numTotalCurativoSimples>1</numTotalCurativoSimples>
 		<numTotalColetaMaterialParaExameLaboratorial>1</numTotalColetaMaterialParaExameLaboratorial>
 		<numTotalGlicemiaCapilar>1</numTotalGlicemiaCapilar>
-		<numTotalMedicaoAltura>4</numTotalMedicaoAltura>
-		<numTotalMedicaoPeso>4</numTotalMedicaoPeso>
+		<numTotalMedicaoAltura>1</numTotalMedicaoAltura>
+		<numTotalMedicaoPeso>1</numTotalMedicaoPeso>
 	</ns4:fichaProcedimentoMasterTransport>
 	<ns2:remetente>
 		<contraChave>TREINAMENTO</contraChave>
@@ -50,8 +53,8 @@
 		<nomeOuRazaoSocial>ADMINISTRADOR INSTALAÇÃO</nomeOuRazaoSocial>
 		<fone>8216756527</fone>
 		<email>prof@esus.br</email>
-		<versaoSistema>3.2.05</versaoSistema>
-		<nomeBancoDados>Postgres</nomeBancoDados>
+		<versaoSistema>3.2.18</versaoSistema>
+		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:remetente>
 	<ns2:originadora>
 		<contraChave>TREINAMENTO</contraChave>
@@ -60,8 +63,8 @@
 		<nomeOuRazaoSocial>ADMINISTRADOR INSTALAÇÃO</nomeOuRazaoSocial>
 		<fone>8216756527</fone>
 		<email>prof@esus.br</email>
-		<versaoSistema>3.2.05</versaoSistema>
-		<nomeBancoDados>Postgres</nomeBancoDados>
+		<versaoSistema>3.2.18</versaoSistema>
+		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:originadora>
-	<versao major="3" minor="2" revision="1" />
+	<versao major="3" minor="2" revision="2" />
 </ns3:dadoTransporteTransportXml>

@@ -1,19 +1,28 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <ns3:dadoTransporteTransportXml xmlns:ns2="http://esus.ufsc.br/dadoinstalacao" xmlns:ns3="http://esus.ufsc.br/dadotransporte" xmlns:ns4="http://esus.ufsc.br/fichaatividadecoletiva">
-	<uuidDadoSerializado>5444429-bd94d05d-a303-443b-94a9-f93068e369f0</uuidDadoSerializado>
+	<uuidDadoSerializado>0019615-40a7d073-3710-4a13-b7c8-428de1f5cd41</uuidDadoSerializado>
 	<tipoDadoSerializado>6</tipoDadoSerializado>
 	<codIbge>4205407</codIbge>
-	<cnesDadoSerializado>5444429</cnesDadoSerializado>
-	<numLote>1</numLote>
+	<cnesDadoSerializado>0019615</cnesDadoSerializado>
+	<ineDadoSerializado>0000471828</ineDadoSerializado>
+	<numLote>41</numLote>
 	<ns4:fichaAtividadeColetivaTransport>
-		<uuidFicha>5444429-bd94d05d-a303-443b-94a9-f93068e369f0</uuidFicha>
+		<uuidFicha>0019615-40a7d073-3710-4a13-b7c8-428de1f5cd41</uuidFicha>
 		<numParticipantes>5</numParticipantes>
 		<numAvaliacoesAlteradas>1</numAvaliacoesAlteradas>
+		<profissionais>
+			<cnsProfissional>898000390023312</cnsProfissional>
+			<codigoCbo2002>223208</codigoCbo2002>
+		</profissionais>
+		<profissionais>
+			<cnsProfissional>980016293630071</cnsProfissional>
+			<codigoCbo2002>322245</codigoCbo2002>
+		</profissionais>
 		<atividadeTipo>6</atividadeTipo>
 		<publicoAlvo>5</publicoAlvo>
 		<participantes>
-			<cnsParticipante>127301025020001</cnsParticipante>
-			<dataNascimento>545493600000</dataNascimento>
+			<cnsParticipante>767273769570018</cnsParticipante>
+			<dataNascimento>1430838000000</dataNascimento>
 			<avaliacaoAlterada>true</avaliacaoAlterada>
 			<peso>74.0</peso>
 			<altura>170.0</altura>
@@ -30,21 +39,30 @@
 			<sexo>0</sexo>
 		</participantes>
 		<tbCdsOrigem>3</tbCdsOrigem>
-		<cnesLocalAtividade>6364403</cnesLocalAtividade>
+		<cnesLocalAtividade>0019615</cnesLocalAtividade>
 		<procedimento>0101020023</procedimento>
 		<turno>1</turno>
 		<pseEducacao>false</pseEducacao>
 		<pseSaude>false</pseSaude>
 		<headerTransport>
-			<profissionalCNS>700609923387762</profissionalCNS>
-			<cboCodigo_2002>223293</cboCodigo_2002>
-			<cnes>5444429</cnes>
-			<dataAtendimento>1517320800000</dataAtendimento>
+			<profissionalCNS>898001161481488</profissionalCNS>
+			<cboCodigo_2002>223208</cboCodigo_2002>
+			<cnes>0019615</cnes>
+			<ine>0000471828</ine>
+			<dataAtendimento>1549465200000</dataAtendimento>
 			<codigoIbgeMunicipio>4205407</codigoIbgeMunicipio>
 		</headerTransport>
 		<temasParaSaude>13</temasParaSaude>
+		<temasParaSaude>15</temasParaSaude>
+		<temasParaSaude>21</temasParaSaude>
+		<praticasEmSaude>28</praticasEmSaude>
+		<praticasEmSaude>12</praticasEmSaude>
+		<praticasEmSaude>27</praticasEmSaude>
+		<praticasEmSaude>23</praticasEmSaude>
 		<praticasEmSaude>30</praticasEmSaude>
 		<praticasEmSaude>25</praticasEmSaude>
+		<praticasEmSaude>26</praticasEmSaude>
+		<praticasEmSaude>11</praticasEmSaude>
 	</ns4:fichaAtividadeColetivaTransport>
 	<ns2:remetente>
 		<contraChave>TREINAMENTO</contraChave>
@@ -53,8 +71,8 @@
 		<nomeOuRazaoSocial>ADMINISTRADOR INSTALAÇÃO</nomeOuRazaoSocial>
 		<fone>8216756527</fone>
 		<email>prof@esus.br</email>
-		<versaoSistema>3.0.01</versaoSistema>
-		<nomeBancoDados>Postgres</nomeBancoDados>
+		<versaoSistema>3.2.18</versaoSistema>
+		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:remetente>
 	<ns2:originadora>
 		<contraChave>TREINAMENTO</contraChave>
@@ -63,8 +81,8 @@
 		<nomeOuRazaoSocial>ADMINISTRADOR INSTALAÇÃO</nomeOuRazaoSocial>
 		<fone>8216756527</fone>
 		<email>prof@esus.br</email>
-		<versaoSistema>3.0.01</versaoSistema>
-		<nomeBancoDados>Postgres</nomeBancoDados>
+		<versaoSistema>3.2.18</versaoSistema>
+		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:originadora>
-	<versao major="3" minor="0" revision="0" />
+	<versao major="3" minor="2" revision="2" />
 </ns3:dadoTransporteTransportXml>

@@ -1,57 +1,84 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <ns3:dadoTransporteTransportXml xmlns:ns2="http://esus.ufsc.br/dadoinstalacao" xmlns:ns3="http://esus.ufsc.br/dadotransporte" xmlns:ns4="http://esus.ufsc.br/fichaavaliacaoelegibilidade">
-	<uuidDadoSerializado>5444428-2bcb85ec-212f-47fc-88a7-baae0d432926</uuidDadoSerializado>
+	<uuidDadoSerializado>0019615-0ff12f9f-90ad-4be8-83c5-2153f9829405</uuidDadoSerializado>
 	<tipoDadoSerializado>11</tipoDadoSerializado>
 	<codIbge>4205407</codIbge>
-	<cnesDadoSerializado>5444428</cnesDadoSerializado>
-	<ineDadoSerializado>9023673542</ineDadoSerializado>
-	<numLote>1</numLote>
+	<cnesDadoSerializado>0019615</cnesDadoSerializado>
+	<ineDadoSerializado>0000471828</ineDadoSerializado>
+	<numLote>5</numLote>
 	<ns4:fichaAvaliacaoElegibilidadeTransport>
 		<headerTransport>
 			<lotacaoFormPrincipal>
-				<profissionalCNS>700609923387762</profissionalCNS>
+				<profissionalCNS>898001161481488</profissionalCNS>
 				<cboCodigo_2002>225142</cboCodigo_2002>
-				<cnes>5444428</cnes>
-				<ine>9023673542</ine>
+				<cnes>0019615</cnes>
+				<ine>0000471828</ine>
 			</lotacaoFormPrincipal>
-			<dataAtendimento>1517320800000</dataAtendimento>
+			<lotacaoFormAtendimentoCompartilhado>
+				<profissionalCNS>898000390023312</profissionalCNS>
+				<cboCodigo_2002>225130</cboCodigo_2002>
+				<cnes>0019615</cnes>
+				<ine>0000471828</ine>
+			</lotacaoFormAtendimentoCompartilhado>
+			<dataAtendimento>1550242800000</dataAtendimento>
 			<codigoIbgeMunicipio>4205407</codigoIbgeMunicipio>
 		</headerTransport>
-		<uuidFicha>5444428-2bcb85ec-212f-47fc-88a7-baae0d432926</uuidFicha>
+		<uuidFicha>0019615-0ff12f9f-90ad-4be8-83c5-2153f9829405</uuidFicha>
 		<tpCdsOrigem>3</tpCdsOrigem>
 		<turno>1</turno>
-		<cnsCidadao>898050047989752</cnsCidadao>
-		<dataNascimentoCidadao>813765600000</dataNascimentoCidadao>
+		<cnsCidadao>119141073230003</cnsCidadao>
+		<dataNascimentoCidadao>662742000000</dataNascimentoCidadao>
 		<sexoCidadao>0</sexoCidadao>
-		<nomeCidadao>JONAS DUTRA</nomeCidadao>
+		<nomeCidadao>CIDADÃO VALIDAÇÃO LEDI</nomeCidadao>
 		<racaCorCidadao>4</racaCorCidadao>
 		<nomeSocialCidadao></nomeSocialCidadao>
 		<nomeMaeCidadao>INES DUTRA</nomeMaeCidadao>
 		<desconheceNomeMae>false</desconheceNomeMae>
-		<codigoIbgeMunicipioNascimento>1500107</codigoIbgeMunicipioNascimento>
+		<codigoIbgeMunicipioNascimento>4205407</codigoIbgeMunicipioNascimento>
 		<nacionalidadeCidadao>1</nacionalidadeCidadao>
 		<emailCidadao>gmail@gmail.com</emailCidadao>
 		<cuidadorCidadao>2</cuidadorCidadao>
 		<atencaoDomiciliarProcedencia>1</atencaoDomiciliarProcedencia>
-		<atencaoDomiciliarModalidade>2</atencaoDomiciliarModalidade>
+		<atencaoDomiciliarModalidade>1</atencaoDomiciliarModalidade>
+		<condicoesAvaliadas>9</condicoesAvaliadas>
+		<condicoesAvaliadas>10</condicoesAvaliadas>
+		<condicoesAvaliadas>11</condicoesAvaliadas>
+		<condicoesAvaliadas>12</condicoesAvaliadas>
+		<condicoesAvaliadas>5</condicoesAvaliadas>
+		<condicoesAvaliadas>6</condicoesAvaliadas>
+		<condicoesAvaliadas>7</condicoesAvaliadas>
+		<condicoesAvaliadas>8</condicoesAvaliadas>
+		<condicoesAvaliadas>17</condicoesAvaliadas>
+		<condicoesAvaliadas>18</condicoesAvaliadas>
+		<condicoesAvaliadas>19</condicoesAvaliadas>
+		<condicoesAvaliadas>20</condicoesAvaliadas>
+		<condicoesAvaliadas>13</condicoesAvaliadas>
+		<condicoesAvaliadas>14</condicoesAvaliadas>
+		<condicoesAvaliadas>15</condicoesAvaliadas>
+		<condicoesAvaliadas>16</condicoesAvaliadas>
+		<condicoesAvaliadas>22</condicoesAvaliadas>
+		<condicoesAvaliadas>21</condicoesAvaliadas>
+		<condicoesAvaliadas>24</condicoesAvaliadas>
+		<condicoesAvaliadas>23</condicoesAvaliadas>
+		<condicoesAvaliadas>4</condicoesAvaliadas>
+		<condicoesAvaliadas>3</condicoesAvaliadas>
 		<condicoesAvaliadas>2</condicoesAvaliadas>
 		<condicoesAvaliadas>1</condicoesAvaliadas>
-		<cid10Principal>M842</cid10Principal>
-		<cid10SecundarioUm>Y06</cid10SecundarioUm>
+		<cid10Principal>Y26</cid10Principal>
 		<conclusaoDestinoElegivel>1</conclusaoDestinoElegivel>
 		<endereco>
-			<bairro>ITACORUBI</bairro>
-			<cep>88034102</cep>
+			<bairro>RIO TAVARES</bairro>
+			<cep>88048330</cep>
 			<codigoIbgeMunicipio>4205407</codigoIbgeMunicipio>
 			<complemento>CASA</complemento>
-			<nomeLogradouro>AMARO ANTÔNIO VIEIRA</nomeLogradouro>
-			<numero>100</numero>
+			<nomeLogradouro>PAU DE CANELA</nomeLogradouro>
+			<numero>322</numero>
 			<numeroDneUf>25</numeroDneUf>
 			<telefoneContato>99999999999</telefoneContato>
 			<telefoneResidencia>99999999999</telefoneResidencia>
-			<tipoLogradouroNumeroDne>090</tipoLogradouroNumeroDne>
+			<tipoLogradouroNumeroDne>081</tipoLogradouroNumeroDne>
 			<stSemNumero>false</stSemNumero>
-			<pontoReferencia>MERCADO</pontoReferencia>
+			<pontoReferencia>PRAIA</pontoReferencia>
 		</endereco>
 		<nomePaiCidadao>PEDRO DUTRA</nomePaiCidadao>
 		<desconheceNomePai>false</desconheceNomePai>
@@ -65,8 +92,8 @@
 		<nomeOuRazaoSocial>ADMINISTRADOR INSTALAÇÃO</nomeOuRazaoSocial>
 		<fone>8216756527</fone>
 		<email>prof@esus.br</email>
-		<versaoSistema>3.0.01</versaoSistema>
-		<nomeBancoDados>Postgres</nomeBancoDados>
+		<versaoSistema>3.2.18</versaoSistema>
+		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:remetente>
 	<ns2:originadora>
 		<contraChave>TREINAMENTO</contraChave>
@@ -75,8 +102,8 @@
 		<nomeOuRazaoSocial>ADMINISTRADOR INSTALAÇÃO</nomeOuRazaoSocial>
 		<fone>8216756527</fone>
 		<email>prof@esus.br</email>
-		<versaoSistema>3.0.01</versaoSistema>
-		<nomeBancoDados>Postgres</nomeBancoDados>
+		<versaoSistema>3.2.18</versaoSistema>
+		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:originadora>
-	<versao major="3" minor="0" revision="0" />
+	<versao major="3" minor="2" revision="2" />
 </ns3:dadoTransporteTransportXml>

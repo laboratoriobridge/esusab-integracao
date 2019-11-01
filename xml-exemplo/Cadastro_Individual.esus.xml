@@ -1,10 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <ns3:dadoTransporteTransportXml xmlns:ns2="http://esus.ufsc.br/dadoinstalacao" xmlns:ns3="http://esus.ufsc.br/dadotransporte" xmlns:ns4="http://esus.ufsc.br/cadastroindividual">
-	<uuidDadoSerializado>5444429-0fee3dd1-c44c-417c-bc35-984326843cd7</uuidDadoSerializado>
+	<uuidDadoSerializado>0019615-ced61f6f-0f37-48df-b894-1d1c729f8ad7</uuidDadoSerializado>
 	<tipoDadoSerializado>2</tipoDadoSerializado>
 	<codIbge>4205407</codIbge>
-	<cnesDadoSerializado>5444429</cnesDadoSerializado>
-	<numLote>1</numLote>
+	<cnesDadoSerializado>0019615</cnesDadoSerializado>
+	<ineDadoSerializado>0000471828</ineDadoSerializado>
+	<numLote>7</numLote>
 	<ns4:cadastroIndividualTransport>
 		<condicoesDeSaude>
 			<descricaoCausaInternacaoEm12Meses>gripe</descricaoCausaInternacaoEm12Meses>
@@ -54,14 +55,14 @@
 		</emSituacaoDeRua>
 		<fichaAtualizada>false</fichaAtualizada>
 		<identificacaoUsuarioCidadao>
-			<codigoIbgeMunicipioNascimento>3100203</codigoIbgeMunicipioNascimento>
-			<dataNascimentoCidadao>978357600000</dataNascimentoCidadao>
+			<codigoIbgeMunicipioNascimento>4205407</codigoIbgeMunicipioNascimento>
+			<dataNascimentoCidadao>662742000000</dataNascimentoCidadao>
 			<desconheceNomeMae>false</desconheceNomeMae>
-			<emailCidadao>gmail@gmail.com</emailCidadao>
+			<emailCidadao>fci.gmail@gmail.com</emailCidadao>
 			<nacionalidadeCidadao>1</nacionalidadeCidadao>
-			<nomeCidadao>INES DOS SANTOS</nomeCidadao>
+			<nomeCidadao>CIDADÃO VALIDAÇÃO LEDI</nomeCidadao>
 			<nomeMaeCidadao>MARTA DOS SANTOS</nomeMaeCidadao>
-			<cnsCidadao>216071536850003</cnsCidadao>
+			<cnsCidadao>119141073230003</cnsCidadao>
 			<telefoneCelular>99999999999</telefoneCelular>
 			<paisNascimento>31</paisNascimento>
 			<racaCorCidadao>5</racaCorCidadao>
@@ -94,13 +95,14 @@
 		<saidaCidadaoCadastro />
 		<statusTermoRecusaCadastroIndividualAtencaoBasica>false</statusTermoRecusaCadastroIndividualAtencaoBasica>
 		<tpCdsOrigem>3</tpCdsOrigem>
-		<uuid>5444429-0fee3dd1-c44c-417c-bc35-984326843cd7</uuid>
-		<uuidFichaOriginadora>5444429-0fee3dd1-c44c-417c-bc35-984326843cd7</uuidFichaOriginadora>
+		<uuid>0019615-ced61f6f-0f37-48df-b894-1d1c729f8ad7</uuid>
+		<uuidFichaOriginadora>0019615-ced61f6f-0f37-48df-b894-1d1c729f8ad7</uuidFichaOriginadora>
 		<headerTransport>
-			<profissionalCNS>700609923387762</profissionalCNS>
+			<profissionalCNS>898001161481488</profissionalCNS>
 			<cboCodigo_2002>515105</cboCodigo_2002>
-			<cnes>5444429</cnes>
-			<dataAtendimento>1517148000000</dataAtendimento>
+			<cnes>0019615</cnes>
+			<ine>0000471828</ine>
+			<dataAtendimento>1549119600000</dataAtendimento>
 			<codigoIbgeMunicipio>4205407</codigoIbgeMunicipio>
 		</headerTransport>
 	</ns4:cadastroIndividualTransport>
@@ -109,20 +111,16 @@
 		<uuidInstalacao>TREINAMENTO</uuidInstalacao>
 		<cpfOuCnpj>01234567890</cpfOuCnpj>
 		<nomeOuRazaoSocial>ADMINISTRADOR INSTALAÇÃO</nomeOuRazaoSocial>
-		<fone>8216756527</fone>
-		<email>prof@esus.br</email>
-		<versaoSistema>3.0.01</versaoSistema>
-		<nomeBancoDados>Postgres</nomeBancoDados>
+		<versaoSistema>3.2.18</versaoSistema>
+		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:remetente>
 	<ns2:originadora>
 		<contraChave>TREINAMENTO</contraChave>
 		<uuidInstalacao>TREINAMENTO</uuidInstalacao>
 		<cpfOuCnpj>01234567890</cpfOuCnpj>
 		<nomeOuRazaoSocial>ADMINISTRADOR INSTALAÇÃO</nomeOuRazaoSocial>
-		<fone>8216756527</fone>
-		<email>prof@esus.br</email>
-		<versaoSistema>3.0.01</versaoSistema>
-		<nomeBancoDados>Postgres</nomeBancoDados>
+		<versaoSistema>3.2.18</versaoSistema>
+		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:originadora>
-	<versao major="3" minor="0" revision="0" />
+	<versao major="3" minor="2" revision="2" />
 </ns3:dadoTransporteTransportXml>

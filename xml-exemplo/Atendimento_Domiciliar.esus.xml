@@ -1,22 +1,22 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <ns3:dadoTransporteTransportXml xmlns:ns2="http://esus.ufsc.br/dadoinstalacao" xmlns:ns3="http://esus.ufsc.br/dadotransporte" xmlns:ns4="http://esus.ufsc.br/fichaatendimentodomiciliarmaster">
-	<uuidDadoSerializado>5444429-dee8f6ef-9f0a-42e3-8d99-7231564694e1</uuidDadoSerializado>
+	<uuidDadoSerializado>0019615-3025ba67-1b02-470e-b094-0f7c698d681a</uuidDadoSerializado>
 	<tipoDadoSerializado>10</tipoDadoSerializado>
 	<codIbge>4205407</codIbge>
-	<cnesDadoSerializado>5444429</cnesDadoSerializado>
+	<cnesDadoSerializado>0019615</cnesDadoSerializado>
 	<ineDadoSerializado>1382855330</ineDadoSerializado>
 	<numLote>1</numLote>
 	<ns4:fichaAtendimentoDomiciliarMasterTransport>
-		<uuidFicha>5444429-dee8f6ef-9f0a-42e3-8d99-7231564694e1</uuidFicha>
+		<uuidFicha>0019615-3025ba67-1b02-470e-b094-0f7c698d681a</uuidFicha>
 		<tpCdsOrigem>3</tpCdsOrigem>
 		<headerTransport>
 			<lotacaoFormPrincipal>
 				<profissionalCNS>700609923387762</profissionalCNS>
 				<cboCodigo_2002>223505</cboCodigo_2002>
-				<cnes>5444429</cnes>
+				<cnes>0019615</cnes>
 				<ine>1382855330</ine>
 			</lotacaoFormPrincipal>
-			<dataAtendimento>1517320800000</dataAtendimento>
+			<dataAtendimento>1550674800000</dataAtendimento>
 			<codigoIbgeMunicipio>4205407</codigoIbgeMunicipio>
 		</headerTransport>
 		<atendimentosDomiciliares>
@@ -29,11 +29,11 @@
 			<tipoAtendimento>7</tipoAtendimento>
 			<condicoesAvaliadas>2</condicoesAvaliadas>
 			<cid>Z620</cid>
-			<ciap>31</ciap>
+			<ciap>S96</ciap>
 			<procedimentos>0301070024</procedimentos>
 			<procedimentos>0301050090</procedimentos>
-			<outrosProcedimentos>0404030319</outrosProcedimentos>
-			<outrosProcedimentos>0301070083</outrosProcedimentos>
+			<procedimentos>0404030319</procedimentos>
+			<procedimentos>0301070083</procedimentos>
 			<condutaDesfecho>1</condutaDesfecho>
 		</atendimentosDomiciliares>
 	</ns4:fichaAtendimentoDomiciliarMasterTransport>
@@ -44,8 +44,8 @@
 		<nomeOuRazaoSocial>ADMINISTRADOR INSTALAÇÃO</nomeOuRazaoSocial>
 		<fone>8216756527</fone>
 		<email>prof@esus.br</email>
-		<versaoSistema>3.0.01</versaoSistema>
-		<nomeBancoDados>Postgres</nomeBancoDados>
+		<versaoSistema>3.2.18</versaoSistema>
+		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:remetente>
 	<ns2:originadora>
 		<contraChave>TREINAMENTO</contraChave>
@@ -54,8 +54,8 @@
 		<nomeOuRazaoSocial>ADMINISTRADOR INSTALAÇÃO</nomeOuRazaoSocial>
 		<fone>8216756527</fone>
 		<email>prof@esus.br</email>
-		<versaoSistema>3.0.01</versaoSistema>
-		<nomeBancoDados>Postgres</nomeBancoDados>
+		<versaoSistema>3.2.18</versaoSistema>
+		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:originadora>
-	<versao major="3" minor="0" revision="0" />
+	<versao major="3" minor="2" revision="2" />
 </ns3:dadoTransporteTransportXml>

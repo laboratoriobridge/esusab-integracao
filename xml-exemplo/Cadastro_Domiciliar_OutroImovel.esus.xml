@@ -1,10 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <ns3:dadoTransporteTransportXml xmlns:ns2="http://esus.ufsc.br/dadoinstalacao" xmlns:ns3="http://esus.ufsc.br/dadotransporte" xmlns:ns4="http://esus.ufsc.br/cadastrodomiciliar">
-	<uuidDadoSerializado>5444429-e5df6b42-313d-4efe-add1-24cdc368cda9</uuidDadoSerializado>
+	<uuidDadoSerializado>0019615-1bb84623-72c6-4300-b505-c7c6b84ae661</uuidDadoSerializado>
 	<tipoDadoSerializado>3</tipoDadoSerializado>
 	<codIbge>4205407</codIbge>
-	<cnesDadoSerializado>5444429</cnesDadoSerializado>
-	<numLote>1</numLote>
+	<cnesDadoSerializado>0019615</cnesDadoSerializado>
+	<ineDadoSerializado>0000471828</ineDadoSerializado>
+	<numLote>61</numLote>
 	<ns4:cadastroDomiciliarTransport>
 		<condicaoMoradia>
 			<abastecimentoAgua>117</abastecimentoAgua>
@@ -21,34 +22,35 @@
 			<codigoIbgeMunicipio>4205407</codigoIbgeMunicipio>
 			<complemento>CASA</complemento>
 			<nomeLogradouro>LUIZ OSCAR DE CARVALHO</nomeLogradouro>
-			<numero>100</numero>
+			<numero>122</numero>
 			<numeroDneUf>25</numeroDneUf>
-			<telefoneContato>99999999999</telefoneContato>
+			<telefoneContato>48994899948</telefoneContato>
 			<tipoLogradouroNumeroDne>081</tipoLogradouroNumeroDne>
 			<stSemNumero>false</stSemNumero>
-			<pontoReferencia>MERCADO</pontoReferencia>
-			<microArea>05</microArea>
+			<pontoReferencia>UNIVERSIDADE</pontoReferencia>
+			<microArea>03</microArea>
 			<stForaArea>false</stForaArea>
 		</enderecoLocalPermanencia>
 		<fichaAtualizada>false</fichaAtualizada>
 		<statusTermoRecusa>false</statusTermoRecusa>
 		<tpCdsOrigem>3</tpCdsOrigem>
-		<uuid>5444429-e5df6b42-313d-4efe-add1-24cdc368cda9</uuid>
-		<uuidFichaOriginadora>5444429-e5df6b42-313d-4efe-add1-24cdc368cda9</uuidFichaOriginadora>
+		<uuid>0019615-1bb84623-72c6-4300-b505-c7c6b84ae661</uuid>
+		<uuidFichaOriginadora>0019615-1bb84623-72c6-4300-b505-c7c6b84ae661</uuidFichaOriginadora>
 		<tipoDeImovel>7</tipoDeImovel>
 		<instituicaoPermanencia>
-			<nomeInstituicaoPermanencia>instituição de permanência</nomeInstituicaoPermanencia>
+			<nomeInstituicaoPermanencia>INSTITUIÇÃO DE PERMANÊNCIA</nomeInstituicaoPermanencia>
 			<stOutrosProfissionaisVinculados>true</stOutrosProfissionaisVinculados>
-			<nomeResponsavelTecnico>josé da silva</nomeResponsavelTecnico>
+			<nomeResponsavelTecnico>JOSÉ DA SILVA</nomeResponsavelTecnico>
 			<cnsResponsavelTecnico>192308788760001</cnsResponsavelTecnico>
-			<cargoInstituicao>administrador</cargoInstituicao>
-			<telefoneResponsavelTecnico>99999999999</telefoneResponsavelTecnico>
+			<cargoInstituicao>ADMINISTRADOR</cargoInstituicao>
+			<telefoneResponsavelTecnico>48919191919</telefoneResponsavelTecnico>
 		</instituicaoPermanencia>
 		<headerTransport>
-			<profissionalCNS>700609923387762</profissionalCNS>
+			<profissionalCNS>898001161481488</profissionalCNS>
 			<cboCodigo_2002>515105</cboCodigo_2002>
-			<cnes>5444429</cnes>
-			<dataAtendimento>1517148000000</dataAtendimento>
+			<cnes>0019615</cnes>
+			<ine>0000471828</ine>
+			<dataAtendimento>1549206000000</dataAtendimento>
 			<codigoIbgeMunicipio>4205407</codigoIbgeMunicipio>
 		</headerTransport>
 	</ns4:cadastroDomiciliarTransport>
@@ -59,8 +61,8 @@
 		<nomeOuRazaoSocial>ADMINISTRADOR INSTALAÇÃO</nomeOuRazaoSocial>
 		<fone>8216756527</fone>
 		<email>prof@esus.br</email>
-		<versaoSistema>3.0.01</versaoSistema>
-		<nomeBancoDados>Postgres</nomeBancoDados>
+		<versaoSistema>3.2.18</versaoSistema>
+		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:remetente>
 	<ns2:originadora>
 		<contraChave>TREINAMENTO</contraChave>
@@ -69,8 +71,8 @@
 		<nomeOuRazaoSocial>ADMINISTRADOR INSTALAÇÃO</nomeOuRazaoSocial>
 		<fone>8216756527</fone>
 		<email>prof@esus.br</email>
-		<versaoSistema>3.0.01</versaoSistema>
-		<nomeBancoDados>Postgres</nomeBancoDados>
+		<versaoSistema>3.2.18</versaoSistema>
+		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:originadora>
-	<versao major="3" minor="0" revision="0" />
+	<versao major="3" minor="2" revision="2" />
 </ns3:dadoTransporteTransportXml>

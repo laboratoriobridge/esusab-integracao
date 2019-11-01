@@ -1,32 +1,32 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <ns3:dadoTransporteTransportXml xmlns:ns2="http://esus.ufsc.br/dadoinstalacao" xmlns:ns3="http://esus.ufsc.br/dadotransporte" xmlns:ns4="http://esus.ufsc.br/fichaavaliacaoelegibilidade">
-	<uuidDadoSerializado>5444428-52b23223-774a-4158-8457-09bbb8ec4fc7</uuidDadoSerializado>
+	<uuidDadoSerializado>0019615-0ff12f9f-90ad-4be8-83c5-2153f9829451</uuidDadoSerializado>
 	<tipoDadoSerializado>11</tipoDadoSerializado>
 	<codIbge>4205407</codIbge>
-	<cnesDadoSerializado>5444428</cnesDadoSerializado>
-	<ineDadoSerializado>9023673542</ineDadoSerializado>
-	<numLote>1</numLote>
+	<cnesDadoSerializado>0019615</cnesDadoSerializado>
+	<ineDadoSerializado>0000471828</ineDadoSerializado>
+	<numLote>51</numLote>
 	<ns4:fichaAvaliacaoElegibilidadeTransport>
 		<headerTransport>
 			<lotacaoFormPrincipal>
-				<profissionalCNS>700609923387762</profissionalCNS>
-				<cboCodigo_2002>223505</cboCodigo_2002>
-				<cnes>5444428</cnes>
-				<ine>9023673542</ine>
+				<profissionalCNS>898001161481488</profissionalCNS>
+				<cboCodigo_2002>225142</cboCodigo_2002>
+				<cnes>0019615</cnes>
+				<ine>0000471828</ine>
 			</lotacaoFormPrincipal>
-			<dataAtendimento>1517320800000</dataAtendimento>
+			<dataAtendimento>1550242800000</dataAtendimento>
 			<codigoIbgeMunicipio>4205407</codigoIbgeMunicipio>
 		</headerTransport>
-		<uuidFicha>5444428-52b23223-774a-4158-8457-09bbb8ec4fc7</uuidFicha>
+		<uuidFicha>0019615-0ff12f9f-90ad-4be8-83c5-2153f9829451</uuidFicha>
 		<tpCdsOrigem>3</tpCdsOrigem>
 		<turno>2</turno>
-		<cnsCidadao>898050047989752</cnsCidadao>
-		<dataNascimentoCidadao>1046700000000</dataNascimentoCidadao>
+		<cnsCidadao>119141073230003</cnsCidadao>
+		<dataNascimentoCidadao>662742000000</dataNascimentoCidadao>
 		<sexoCidadao>1</sexoCidadao>
-		<nomeCidadao>ANDRE SILVA</nomeCidadao>
+		<nomeCidadao>CIDADÃO VALIDA LEDI</nomeCidadao>
 		<racaCorCidadao>1</racaCorCidadao>
 		<nomeSocialCidadao></nomeSocialCidadao>
-		<nomeMaeCidadao>BIANCA SILVA</nomeMaeCidadao>
+		<nomeMaeCidadao>BIANCA SILVEIRA</nomeMaeCidadao>
 		<desconheceNomeMae>false</desconheceNomeMae>
 		<nacionalidadeCidadao>2</nacionalidadeCidadao>
 		<emailCidadao>gmail@gmail.com</emailCidadao>
@@ -36,7 +36,7 @@
 		<atencaoDomiciliarModalidade>4</atencaoDomiciliarModalidade>
 		<condicoesAvaliadas>24</condicoesAvaliadas>
 		<condicoesAvaliadas>16</condicoesAvaliadas>
-		<cid10Principal>Z409</cid10Principal>
+		<cid10Principal>Y26</cid10Principal>
 		<conclusaoDestinoInelegivel>3</conclusaoDestinoInelegivel>
 		<conclusaoDestinoInelegivel>4</conclusaoDestinoInelegivel>
 		<endereco>
@@ -45,15 +45,15 @@
 			<codigoIbgeMunicipio>4205407</codigoIbgeMunicipio>
 			<complemento>APARTAMENTO</complemento>
 			<nomeLogradouro>MARTINHO LEANDRO DOS SANTOS</nomeLogradouro>
-			<numero>72</numero>
+			<numero>27</numero>
 			<numeroDneUf>25</numeroDneUf>
 			<telefoneContato>99999999999</telefoneContato>
 			<telefoneResidencia>99999999999</telefoneResidencia>
 			<tipoLogradouroNumeroDne>094</tipoLogradouroNumeroDne>
 			<stSemNumero>false</stSemNumero>
-			<pontoReferencia>OFICINA</pontoReferencia>
+			<pontoReferencia>UFSC</pontoReferencia>
 		</endereco>
-		<nomePaiCidadao>PEDRO SILVA</nomePaiCidadao>
+		<nomePaiCidadao>PEDRO SILVEIRA</nomePaiCidadao>
 		<desconheceNomePai>false</desconheceNomePai>
 		<dtNaturalizacao>1454421600000</dtNaturalizacao>
 		<portariaNaturalizacao>123456</portariaNaturalizacao>
@@ -65,8 +65,8 @@
 		<nomeOuRazaoSocial>ADMINISTRADOR INSTALAÇÃO</nomeOuRazaoSocial>
 		<fone>8216756527</fone>
 		<email>prof@esus.br</email>
-		<versaoSistema>3.0.01</versaoSistema>
-		<nomeBancoDados>Postgres</nomeBancoDados>
+		<versaoSistema>3.2.18</versaoSistema>
+		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:remetente>
 	<ns2:originadora>
 		<contraChave>TREINAMENTO</contraChave>
@@ -75,8 +75,8 @@
 		<nomeOuRazaoSocial>ADMINISTRADOR INSTALAÇÃO</nomeOuRazaoSocial>
 		<fone>8216756527</fone>
 		<email>prof@esus.br</email>
-		<versaoSistema>3.0.01</versaoSistema>
-		<nomeBancoDados>Postgres</nomeBancoDados>
+		<versaoSistema>3.2.18</versaoSistema>
+		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:originadora>
-	<versao major="3" minor="0" revision="0" />
+	<versao major="3" minor="2" revision="2" />
 </ns3:dadoTransporteTransportXml>

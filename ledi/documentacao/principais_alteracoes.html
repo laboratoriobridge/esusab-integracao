@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Principais alterações da v3.2.1 para a v3.2.2</title>
-  <meta name="description" content="Este documento relata as principais alterações em relação à versão 3.2.1 do LEDI AB:">
+  <title>Principais alterações da v3.0.1 para a v3.2.1</title>
+  <meta name="description" content="Este documento relata as principais alterações em relação à versão 3.0.1 do e-SUS AB (PEC):">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="/ledi/documentacao/principais_alteracoes.html">
@@ -25,7 +25,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS AB PEC</span>
       
-        <span class="label">versão 3.2.2</span>
+        <span class="label">versão 3.2.1</span>
       
     </a>
 
@@ -75,11 +75,11 @@
           
         
           
-            <li><a title="Layout e-SUS AB de Dados e Interface Versão 3.2.2" href="/ledi/documentacao/index.html">Layout e-SUS AB de Dados e Interface Versão 3.2.2</a></li>
+            <li><a title="Layout e-SUS AB de Dados e Interface Versão 3.2.1" href="/ledi/documentacao/index.html">Layout e-SUS AB de Dados e Interface Versão 3.2.1</a></li>
           
         
           
-            <li><a title="Principais alterações da v3.2.1 para a v3.2.2" href="/ledi/documentacao/principais_alteracoes.html">Principais alterações da v3.2.1 para a v3.2.2</a></li>
+            <li><a title="Principais alterações da v3.0.1 para a v3.2.1" href="/ledi/documentacao/principais_alteracoes.html">Principais alterações da v3.0.1 para a v3.2.1</a></li>
           
         
 
@@ -119,7 +119,7 @@
     
 
     <li>
-      <a class="open" title="Layout e-SUS AB de Dados e Interface Versão 3.2.2" href="/ledi/documentacao/index.html">Layout e-SUS AB de Dados e Interface Versão 3.2.2</a>
+      <a class="open" title="Layout e-SUS AB de Dados e Interface Versão 3.2.1" href="/ledi/documentacao/index.html">Layout e-SUS AB de Dados e Interface Versão 3.2.1</a>
       <ul>
         
           <li  class="has-subitems">
@@ -152,8 +152,8 @@
         
           <li class="active">
           
-            <a title="Principais alterações da v3.2.1 para a v3.2.2" href="/ledi/documentacao/principais_alteracoes.html">
-              Principais alterações da v3.2.1 para a v3.2.2
+            <a title="Principais alterações da v3.0.1 para a v3.2.1" href="/ledi/documentacao/principais_alteracoes.html">
+              Principais alterações da v3.0.1 para a v3.2.1
             </a>
           </li>
         
@@ -172,223 +172,25 @@
           <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Principais alterações da v3.2.1 para a v3.2.2</h1>
+    <h1 class="post-title">Principais alterações da v3.0.1 para a v3.2.1</h1>
     <p class="post-meta">
       <a class="btn" href="/pdf.html?include=/ledi/documentacao/principais_alteracoes.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 01/11/2019</span>
+        <span class="label" title="Data da última modificação">Alterado em 24/07/2019</span>
       
     </p>
   </header>
 
   <article class="post-content">
-    <p>Este documento relata as principais alterações em relação à versão 3.2.1 do LEDI AB:</p>
+    <p>Este documento relata as principais alterações em relação à versão 3.0.1 do e-SUS AB (PEC):</p>
 
-<p><strong>1. </strong> Em todas as estruturas foi adicionada a validação para não permitir receber fichas com datas futuras.</p>
+<p><strong>1. </strong> Atualização da competência do SIGTAP para 02/2019.</p>
 
-<p><strong>2. </strong> Em todas as estruturas foram adicionadas a validação para não permitir receber fichas com CNS do profissional, INE ou CNES não existentes na base de dados. Caso esta inconsistência ocorra, baixar o arquivo XML do CNES atualizado e importar no e-SUS AB PEC. Após esta atualização, importar novamente os lotes.</p>
+<p><strong>2. </strong> Atualização das <a href="/ledi/documentacao/regras/cbo.html">CBOs que preenchem cada ficha</a>.</p>
 
-<p><strong>3. </strong> Incluída permissão para preenchimento das <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html">Ficha de Cadastro Individual</a>, <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fcd.html">Ficha de Cadastro Domiciliar e Territorial</a> e <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html">Ficha de Atividade Coletiva</a> pela CBO 131225 - SANITARISTA, conforme apresentado nas respectivas tabelas de <a href="/ledi/documentacao/regras/cbo.html">Grupos de CBOs x Tipo de ficha</a>.</p>
+<p><strong>3. </strong> Incluída permissão para preenchimento das <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html">Ficha de Atividade Coletiva</a> e <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fp.html">Ficha de Procedimentos</a> pela CBO 322125 - TERAPÊUTA HOLÍSTICO.</p>
 
-<h3 id="1-ficha-de-cadastro-individual">1. Ficha de Cadastro Individual</h3>
-
-<p><strong>4. </strong> Se o campo <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#7-statustermorecusacadastroindividualatencaobasica">statusTermoRecusaCadastroIndividualAtencaoBasica</a> = <code>True</code>, é possível preencher o campo <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#6-nacionalidadecidadao">nacionalidadeCidadao</a> com a opção <code>3 (Estrangeiro)</code> e o campo o <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#13-paisnascimento">paisNascimento</a> não é de preenchimento obrigatório.</p>
-
-<h3 id="2-ficha-de-cadastro-domiciliar-e-territorial">2. Ficha de Cadastro Domiciliar e Territorial</h3>
-
-<p><strong>5. </strong> Não podem ser cadastradas <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fcd.html#4-familias">Famílias</a> com o mesmo <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fcd.html#2-numerocnsresponsavel">numeroCnsResponsavel</a>.</p>
-
-<p><strong>6. </strong> Não podem ser cadastradas <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fcd.html#4-familias">Famílias</a> se o campo <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fcd.html#8-statustermorecusa">statusTermoRecusa</a> = <code>True</code>.</p>
-
-<h3 id="3-ficha-de-atendimento-individual">3. Ficha de Atendimento Individual</h3>
-
-<p><strong>7. </strong> No campo <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#1-ciaps">ciaps</a> é permitido registrar somente &quot;problemas e/ou condições&quot; presentes na <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#listaciapcondicaoavaliada">ListaCiapCondicaoAvaliada</a>. Além disso, as condições &quot;ABP001 - Pré-natal&quot;, &quot;ABP002 - Puerpério&quot; e &quot;ABP022 - Rastreamento de Câncer do colo do útero&quot; podem ser registradas somente para o sexo feminino, conforme definido na <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#listaciapcondicaoavaliada">ListaCiapCondicaoAvaliada</a>.</p>
-
-<p><strong>8. </strong> Nos campos <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#2-outrociap1">outroCiap1</a>, <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#3-outrociap2">outroCiap2</a>, <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#4-cid10">cid10</a>, <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#5-cid10_2">cid10_2</a>, foram incluídas as regras de preenchimento conforme sexo do cidadão.</p>
-
-<p><strong>9. </strong> Nos campos <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#2-outrociap1">outroCiap1</a> e <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#3-outrociap2">outroCiap2</a> não podem ter registros pertencentes ao grupo <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#1-ciaps">ciaps</a>.</p>
-
-<p><strong>10. </strong> O campo &quot;#17 outrosSia&quot; foi renomeado para <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#17-exame">Exame</a>.</p>
-
-<p><strong>11. </strong> Foram excluídos os campos &quot;#15 examesSolicitados&quot; e &quot;#16 examesAvaliados&quot;. Todos os exames (solicitados e avaliados) devem ser registrados no grupo <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#17-exame">Exame</a>.</p>
-
-<p><strong>12. </strong> Não serão permitidos <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#17-exame">Exame</a> duplicados e foi incluído o limite de no máximo 100 exames (entre solicitados e avaliados) por registro da ficha.</p>
-
-<p><strong>13. </strong> Não serão aceitos registros de atendimentos exatamente iguais. Caso isso ocorra, a ficha será glosada.</p>
-
-<h3 id="4-ficha-de-atendimento-odontol-gico">4. Ficha de Atendimento Odontológico</h3>
-
-<p><strong>14. </strong> Incluída regra permitindo o preenchimento do campo <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fao.html#4-gestante">Gestante</a> somente quando o <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fao.html#14-sexo">Sexo</a> não for <code>0 (masculino)</code>.</p>
-
-<p><strong>15. </strong> Foi excluído campo &quot;#13 outrosSiaProcedimentos&quot;. Todos os procedimentos devem ser registrados no grupo <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fao.html#12-procedimentosrealizados">procedimentosRealizados</a>.</p>
-
-<p><strong>16. </strong> No grupo <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fao.html#12-procedimentosrealizados">procedimentosRealizados</a>:</p>
-
-<ul>
-<li><p>É permitido registrar até 20 procedimentos. Para cada procedimento a quantidade máxima permitida está definida na <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fao.html#lista-de-procedimentos-por-local-e-quantidade-m-xima-permitida">Lista de procedimentos por local e quantidade máxima permitida</a>.</p></li>
-<li><p>Podem ser informados os procedimentos pertencentes aos grupos <code>01 - Ações de promoção e prevenção em saúde</code>, <code>02 - Procedimentos com finalidade diagnóstica</code>, <code>03 - Procedimentos clínicos</code>, <code>04 - Procedimentos cirúrgicos</code> ou presentes na <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fao.html#listaprocedimentosrealizados">ListaProcedimentosRealizados</a>, neste caso, se não tiver uma referência no SIGTAP, deve ser informado o código <strong>AB</strong> do procedimento;</p></li>
-<li><p>Além destes procedimentos, são permitidos os procedimentos pertencentes ao grupo <code>07 - Órteses, próteses e materiais especiais</code>:</p>
-
-<ul>
-<li>07.01.07.006-4 - MANTENEDOR DE ESPAÇO;</li>
-<li>07.01.07.007-2 - PLACA OCLUSAL;</li>
-<li>07.01.07.008-0 - PLANO INCLINADO;</li>
-<li>07.01.07.009-9 - PROTESE PARCIAL MANDIBULAR REMOVIVEL;</li>
-<li>07.01.07.010-2 - PROTESE PARCIAL MAXILAR REMOVIVEL;</li>
-<li>07.01.07.011-0 - PROTESE TEMPORARIA;</li>
-<li>07.01.07.012-9 - PROTESE TOTAL MANDIBULAR;</li>
-<li>07.01.07.013-7 - PROTESE TOTAL MAXILAR;</li>
-<li>07.01.07.005-6 - COROA PROVISORIA;</li>
-<li>07.01.07.014-5 - PROTESES CORONARIAS / INTRA-RADICULARES FIXAS / ADESIVAS (POR ELEMENTO).</li>
-</ul></li>
-<li><p>Não pode ser preenchido com o procedimento &quot;03.01.04.007-9 - Escuta inicial / orientação (acolhimento a demanda espontânea)&quot;. Esta informação deve ser registrada através do campo <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fao.html#7-tipoatendimento">tipoAtendimento</a>, opção <code>4 (escuta inicial ou orientação)</code>.</p></li>
-</ul>
-
-<p><strong>17. </strong> Não é permitido registrar <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fao.html#1-comsprocedimento">coMsProcedimento</a> duplicados.</p>
-
-<p><strong>18. </strong> Não serão aceitos registros de atendimento odontológicos exatamente iguais. Caso isso ocorra, a ficha será glosada.</p>
-
-<h3 id="5-ficha-de-procedimentos">5. Ficha de Procedimentos</h3>
-
-<p><strong>19. </strong> Foi excluído o campo &quot;#9 outrosSiaProcedimentos&quot;. Todos os procedimento devem ser registrados no grupo <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fp.html#8-procedimentos">Procedimentos</a>.</p>
-
-<p><strong>20. </strong> No grupo <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fp.html#8-procedimentos">Procedimentos</a>:</p>
-
-<ul>
-<li>É permitido registrar no máximo 20 procedimentos;</li>
-<li>Não é permitido registrar procedimentos duplicados;</li>
-<li>Não pode ser preenchido com o procedimento &quot;03.01.04.007-9 - Escuta inicial / orientação (acolhimento a demanda espontânea)&quot;. Esta informação deve ser registrada através do campo <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fp.html#7-statusescutainicialorientacao">statusEscutaInicialOrientacao</a>.</li>
-</ul>
-
-<p><strong>21. </strong> Não serão aceitos registros de procedimentos exatamente iguais. Caso isso ocorra, a ficha será glosada.</p>
-
-<p><strong>22. </strong> Foi atualizada a <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fp.html#procedimentos-da-ficha">Lista de Procedimentos da Ficha</a> usada como referência para o preenchimento do grupo <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fp.html#8-procedimentos">Procedimentos</a>. A seguir são apresentados os relacionamentos atualizados:</p>
-
-<table><thead>
-<tr>
-<th>Código SIGTAP *</th>
-<th>Descrição AB</th>
-<th>Código AB correspondente</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>04.01.01.002-3</td>
-<td>Curativo especial</td>
-<td>ABPG007</td>
-</tr>
-<tr>
-<td>04.04.01.027-0</td>
-<td>Retirada de cerume</td>
-<td>ABPG017</td>
-</tr>
-<tr>
-<td>03.01.10.002-0</td>
-<td>Administração de medicamentos via Oral</td>
-<td>ABPG027</td>
-</tr>
-<tr>
-<td>03.01.10.002-0</td>
-<td>Administração de medicamentos via Intramuscular</td>
-<td>ABPG028</td>
-</tr>
-<tr>
-<td>03.01.10.002-0</td>
-<td>Administração de medicamentos via Endovenosa</td>
-<td>ABPG029</td>
-</tr>
-<tr>
-<td>03.01.10.002-0</td>
-<td>Administração de medicamentos via Tópica</td>
-<td>ABPG031</td>
-</tr>
-<tr>
-<td>03.01.10.002-0</td>
-<td>Administração de Penicilina para tratamento de sífilis</td>
-<td>ABPG032</td>
-</tr>
-<tr>
-<td>03.01.10.002-0</td>
-<td>Administração de medicamentos via Subcutânea (SC)</td>
-<td>ABPG041</td>
-</tr>
-</tbody></table>
-
-<p><em>* Procedimentos pertencentes a competência <strong>02/2019</strong> do SIGTAP.</em></p>
-
-<p>Além disso, foram adicionados os seguintes procedimentos:</p>
-
-<table><thead>
-<tr>
-<th>Descrição AB</th>
-<th>Código AB correspondente</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Curativo simples</td>
-<td>ABPG035</td>
-</tr>
-<tr>
-<td>Aferição de temperatura</td>
-<td>ABPG034</td>
-</tr>
-<tr>
-<td>Medição de altura</td>
-<td>ABPG038</td>
-</tr>
-<tr>
-<td>Medição de peso</td>
-<td>ABPG039</td>
-</tr>
-</tbody></table>
-
-<h3 id="6-ficha-de-visita-domiciliar">6. Ficha de Visita Domiciliar</h3>
-
-<p><strong>23. </strong> No campo <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fvd.html#7-motivosvisita">motivosVisita</a>, as opções <code>5 (Gestante)</code> e <code>6 (Puérpera)</code> não podem ser informadas se o <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fvd.html#5-sexo">Sexo</a> = <code>0 (masculino)</code>.</p>
-
-<h3 id="7-ficha-de-atividade-coletiva">7. Ficha de Atividade Coletiva</h3>
-
-<p><strong>24. </strong> Foi atualizada a lista de <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#outroprocedimentocoletivo">OutroProcedimentoColetivo</a>, nos quais são apresentados no campo <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#13-procedimento">Procedimento</a>:</p>
-
-<ul>
-<li>Foi removido o procedimento &quot;01.01.05.003-8 - DANÇA CIRCULAR/BIODANÇA&quot;;</li>
-<li>Foram incluídos os procedimentos:
-
-<ul>
-<li>01.01.01.001-0 - ATIVIDADE EDUCATIVA / ORIENTAÇÃO EM GRUPO NA ATENÇÃO BÁSICA;</li>
-<li>01.01.01.002-8 - ATIVIDADE EDUCATIVA / ORIENTAÇÃO EM GRUPO NA ATENÇÃO ESPECIALIZADA;</li>
-<li>01.01.05.010-0 - SESSÃO DE BIODANÇA;</li>
-<li>01.01.05.011-9 - SESSÃO DE BIOENERGÉTICA;</li>
-<li>01.01.05.012-7 - SESSÃO DE CONSTELAÇÃO FAMILIAR;</li>
-<li>01.01.05.013-5 - SESSÃO DE DANÇA CIRCULAR;</li>
-<li>01.02.02.002-7 - ATIVIDADE EDUCATIVA EM SAÚDE DO TRABALHADOR.</li>
-</ul></li>
-</ul>
-
-<h3 id="8-ficha-de-vacina-o">8. Ficha de Vacinação</h3>
-
-<p><strong>25. </strong> Os campos <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fv.html#9-gestante">Gestante</a> e <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fv.html#10-puerpera">Puerpera</a> não pode ser preenchido para cidadãos com <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fv.html#5-sexo">Sexo</a> = <code>0 (masculino)</code>.</p>
-
-<p><strong>26. </strong> No grupo <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fv.html#11-vacinas">Vacinas</a>, é permitido registrar até 10 vacinas.</p>
-
-<ul>
-<li>Não pode ser registrado <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fv.html#1-imunobiologico">imunobiologico</a> duplicado.</li>
-</ul>
-
-<p><strong>27. </strong> Não serão aceitos registros de vacinas exatamente iguais. Caso isso ocorra, a ficha será glosada.</p>
-
-<h3 id="9-ficha-de-avalia-o-de-elegibilidade">9. Ficha de Avaliação de Elegibilidade</h3>
-
-<p><strong>28. </strong> Os campos <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fae.html#19-cid10principal">cid10Principal</a>, <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fae.html#20-cid10secundarioum">cid10SecundarioUm</a> e <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fae.html#21-cid10secundariodois">cid10SecundarioDois</a> devem apresentar somente CID-10 permitidas para o <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fae.html#7-sexocidadao">Sexo</a> do cidadão.</p>
-
-<h3 id="10-ficha-de-atendimento-domiciliar">10. Ficha de Atendimento Domiciliar</h3>
-
-<p><strong>29. </strong> Foi excluído o campo #12 outrosProcedimentos. Todos os procedimentos são registrados no campo <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fad.html#11-procedimentos">Procedimentos</a>.</p>
-
-<p><strong>30. </strong> Não serão permitidos <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fad.html#11-procedimentos">Procedimentos</a> duplicados e foi incluído o limite de no máximo 30 procedimentos por registro da ficha.</p>
-
-<p><strong>31. </strong> Não serão aceitos registros de atendimentos exatamente iguais. Caso isso ocorra, a ficha será glosada.</p>
-
-<p><strong>32. </strong> Os campos <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fad.html#9-cid">CID-10</a> e <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fad.html#10-ciap">CIAP2</a> só podem ser preenchidos com informações de acordo com o sexo do cidadão.</p>
+<p><strong>4. </strong> Inclusão dos campos &quot;dataHoraInicialAtendimento&quot; e &quot;dataHoraFinalAtendimento&quot; nas <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#27-datahorainicialatendimento">Ficha de Atendimento Individual</a>, <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fp.html#10-datahorainicialatendimento">Ficha de Procedimentos</a>, <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fao.html#16-datahorainicialatendimento">Ficha de Atendimento Odontológico Individual</a> e <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fv.html#12-datahorainicialatendimento">Ficha de Vacinação</a>.</p>
 
   </article>
 

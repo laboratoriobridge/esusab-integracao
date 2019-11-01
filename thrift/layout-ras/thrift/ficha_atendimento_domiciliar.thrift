@@ -20,7 +20,6 @@ struct FichaAtendimentoDomiciliarChildThrift {
 	9:optional string cid;
 	10:optional string ciap;
 	11:optional list<string> procedimentos;
-	12:optional list<string> outrosProcedimentos;
 	13:optional i64 condutaDesfecho;
 }
 

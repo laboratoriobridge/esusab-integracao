@@ -35,7 +35,6 @@ namespace br.gov.saude.esusab.ras.atendodonto
     private List<long> _tiposVigilanciaSaudeBucal;
     private List<long> _tiposConsultaOdonto;
     private List<ProcedimentoQuantidadeThrift> _procedimentosRealizados;
-    private List<ProcedimentoQuantidadeThrift> _outrosSiaProcedimentos;
     private long _sexo;
     private long _turno;
     private long _dataHoraInicialAtendimento;
@@ -197,19 +196,6 @@ namespace br.gov.saude.esusab.ras.atendodonto
       }
     }
 
-    public List<ProcedimentoQuantidadeThrift> OutrosSiaProcedimentos
-    {
-      get
-      {
-        return _outrosSiaProcedimentos;
-      }
-      set
-      {
-        __isset.outrosSiaProcedimentos = true;
-        this._outrosSiaProcedimentos = value;
-      }
-    }
-
     public long Sexo
     {
       get
@@ -280,7 +266,6 @@ namespace br.gov.saude.esusab.ras.atendodonto
       public bool tiposVigilanciaSaudeBucal;
       public bool tiposConsultaOdonto;
       public bool procedimentosRealizados;
-      public bool outrosSiaProcedimentos;
       public bool sexo;
       public bool turno;
       public bool dataHoraInicialAtendimento;
@@ -440,24 +425,6 @@ namespace br.gov.saude.esusab.ras.atendodonto
                 TProtocolUtil.Skip(iprot, field.Type);
               }
               break;
-            case 13:
-              if (field.Type == TType.List) {
-                {
-                  OutrosSiaProcedimentos = new List<ProcedimentoQuantidadeThrift>();
-                  TList _list15 = iprot.ReadListBegin();
-                  for( int _i16 = 0; _i16 < _list15.Count; ++_i16)
-                  {
-                    ProcedimentoQuantidadeThrift _elem17;
-                    _elem17 = new ProcedimentoQuantidadeThrift();
-                    _elem17.Read(iprot);
-                    OutrosSiaProcedimentos.Add(_elem17);
-                  }
-                  iprot.ReadListEnd();
-                }
-              } else { 
-                TProtocolUtil.Skip(iprot, field.Type);
-              }
-              break;
             case 14:
               if (field.Type == TType.I64) {
                 Sexo = iprot.ReadI64();
@@ -570,9 +537,9 @@ namespace br.gov.saude.esusab.ras.atendodonto
           oprot.WriteFieldBegin(field);
           {
             oprot.WriteListBegin(new TList(TType.I64, TiposEncamOdonto.Count));
-            foreach (long _iter18 in TiposEncamOdonto)
+            foreach (long _iter15 in TiposEncamOdonto)
             {
-              oprot.WriteI64(_iter18);
+              oprot.WriteI64(_iter15);
             }
             oprot.WriteListEnd();
           }
@@ -585,9 +552,9 @@ namespace br.gov.saude.esusab.ras.atendodonto
           oprot.WriteFieldBegin(field);
           {
             oprot.WriteListBegin(new TList(TType.I64, TiposFornecimOdonto.Count));
-            foreach (long _iter19 in TiposFornecimOdonto)
+            foreach (long _iter16 in TiposFornecimOdonto)
             {
-              oprot.WriteI64(_iter19);
+              oprot.WriteI64(_iter16);
             }
             oprot.WriteListEnd();
           }
@@ -600,9 +567,9 @@ namespace br.gov.saude.esusab.ras.atendodonto
           oprot.WriteFieldBegin(field);
           {
             oprot.WriteListBegin(new TList(TType.I64, TiposVigilanciaSaudeBucal.Count));
-            foreach (long _iter20 in TiposVigilanciaSaudeBucal)
+            foreach (long _iter17 in TiposVigilanciaSaudeBucal)
             {
-              oprot.WriteI64(_iter20);
+              oprot.WriteI64(_iter17);
             }
             oprot.WriteListEnd();
           }
@@ -615,9 +582,9 @@ namespace br.gov.saude.esusab.ras.atendodonto
           oprot.WriteFieldBegin(field);
           {
             oprot.WriteListBegin(new TList(TType.I64, TiposConsultaOdonto.Count));
-            foreach (long _iter21 in TiposConsultaOdonto)
+            foreach (long _iter18 in TiposConsultaOdonto)
             {
-              oprot.WriteI64(_iter21);
+              oprot.WriteI64(_iter18);
             }
             oprot.WriteListEnd();
           }
@@ -630,24 +597,9 @@ namespace br.gov.saude.esusab.ras.atendodonto
           oprot.WriteFieldBegin(field);
           {
             oprot.WriteListBegin(new TList(TType.Struct, ProcedimentosRealizados.Count));
-            foreach (ProcedimentoQuantidadeThrift _iter22 in ProcedimentosRealizados)
+            foreach (ProcedimentoQuantidadeThrift _iter19 in ProcedimentosRealizados)
             {
-              _iter22.Write(oprot);
-            }
-            oprot.WriteListEnd();
-          }
-          oprot.WriteFieldEnd();
-        }
-        if (OutrosSiaProcedimentos != null && __isset.outrosSiaProcedimentos) {
-          field.Name = "outrosSiaProcedimentos";
-          field.Type = TType.List;
-          field.ID = 13;
-          oprot.WriteFieldBegin(field);
-          {
-            oprot.WriteListBegin(new TList(TType.Struct, OutrosSiaProcedimentos.Count));
-            foreach (ProcedimentoQuantidadeThrift _iter23 in OutrosSiaProcedimentos)
-            {
-              _iter23.Write(oprot);
+              _iter19.Write(oprot);
             }
             oprot.WriteListEnd();
           }
@@ -768,12 +720,6 @@ namespace br.gov.saude.esusab.ras.atendodonto
         __first = false;
         __sb.Append("ProcedimentosRealizados: ");
         __sb.Append(ProcedimentosRealizados);
-      }
-      if (OutrosSiaProcedimentos != null && __isset.outrosSiaProcedimentos) {
-        if(!__first) { __sb.Append(", "); }
-        __first = false;
-        __sb.Append("OutrosSiaProcedimentos: ");
-        __sb.Append(OutrosSiaProcedimentos);
       }
       if (__isset.sexo) {
         if(!__first) { __sb.Append(", "); }

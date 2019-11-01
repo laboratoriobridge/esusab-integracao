@@ -46,7 +46,6 @@ module Br
               TIPOSVIGILANCIASAUDEBUCAL = 10
               TIPOSCONSULTAODONTO = 11
               PROCEDIMENTOSREALIZADOS = 12
-              OUTROSSIAPROCEDIMENTOS = 13
               SEXO = 14
               TURNO = 15
               DATAHORAINICIALATENDIMENTO = 16
@@ -65,7 +64,6 @@ module Br
                 TIPOSVIGILANCIASAUDEBUCAL => {:type => ::Thrift::Types::LIST, :name => 'tiposVigilanciaSaudeBucal', :element => {:type => ::Thrift::Types::I64}, :optional => true},
                 TIPOSCONSULTAODONTO => {:type => ::Thrift::Types::LIST, :name => 'tiposConsultaOdonto', :element => {:type => ::Thrift::Types::I64}, :optional => true},
                 PROCEDIMENTOSREALIZADOS => {:type => ::Thrift::Types::LIST, :name => 'procedimentosRealizados', :element => {:type => ::Thrift::Types::STRUCT, :class => ::Br::Gov::Saude::Esusab::Ras::Atendodonto::ProcedimentoQuantidadeThrift}, :optional => true},
-                OUTROSSIAPROCEDIMENTOS => {:type => ::Thrift::Types::LIST, :name => 'outrosSiaProcedimentos', :element => {:type => ::Thrift::Types::STRUCT, :class => ::Br::Gov::Saude::Esusab::Ras::Atendodonto::ProcedimentoQuantidadeThrift}, :optional => true},
                 SEXO => {:type => ::Thrift::Types::I64, :name => 'sexo', :optional => true},
                 TURNO => {:type => ::Thrift::Types::I64, :name => 'turno', :optional => true},
                 DATAHORAINICIALATENDIMENTO => {:type => ::Thrift::Types::I64, :name => 'dataHoraInicialAtendimento', :optional => true},

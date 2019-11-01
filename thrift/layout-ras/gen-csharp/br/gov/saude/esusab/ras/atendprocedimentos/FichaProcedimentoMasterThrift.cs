@@ -234,13 +234,13 @@ namespace br.gov.saude.esusab.ras.atendprocedimentos
               if (field.Type == TType.List) {
                 {
                   AtendProcedimentos = new List<FichaProcedimentoChildThrift>();
-                  TList _list8 = iprot.ReadListBegin();
-                  for( int _i9 = 0; _i9 < _list8.Count; ++_i9)
+                  TList _list4 = iprot.ReadListBegin();
+                  for( int _i5 = 0; _i5 < _list4.Count; ++_i5)
                   {
-                    FichaProcedimentoChildThrift _elem10;
-                    _elem10 = new FichaProcedimentoChildThrift();
-                    _elem10.Read(iprot);
-                    AtendProcedimentos.Add(_elem10);
+                    FichaProcedimentoChildThrift _elem6;
+                    _elem6 = new FichaProcedimentoChildThrift();
+                    _elem6.Read(iprot);
+                    AtendProcedimentos.Add(_elem6);
                   }
                   iprot.ReadListEnd();
                 }
@@ -349,9 +349,9 @@ namespace br.gov.saude.esusab.ras.atendprocedimentos
           oprot.WriteFieldBegin(field);
           {
             oprot.WriteListBegin(new TList(TType.Struct, AtendProcedimentos.Count));
-            foreach (FichaProcedimentoChildThrift _iter11 in AtendProcedimentos)
+            foreach (FichaProcedimentoChildThrift _iter7 in AtendProcedimentos)
             {
-              _iter11.Write(oprot);
+              _iter7.Write(oprot);
             }
             oprot.WriteListEnd();
           }

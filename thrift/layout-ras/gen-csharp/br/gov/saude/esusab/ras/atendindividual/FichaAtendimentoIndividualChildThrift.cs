@@ -37,9 +37,7 @@ namespace br.gov.saude.esusab.ras.atendindividual
     private int _idadeGestacional;
     private long _atencaoDomiciliarModalidade;
     private ProblemaCondicaoAvaliacaoAIThrift _problemaCondicaoAvaliada;
-    private List<string> _examesSolicitados;
-    private List<string> _examesAvaliados;
-    private List<OutrosSiaThrift> _outrosSia;
+    private List<ExameThrift> _exame;
     private bool _vacinaEmDia;
     private long _pic;
     private bool _ficouEmObservacao;
@@ -235,42 +233,16 @@ namespace br.gov.saude.esusab.ras.atendindividual
       }
     }
 
-    public List<string> ExamesSolicitados
+    public List<ExameThrift> Exame
     {
       get
       {
-        return _examesSolicitados;
+        return _exame;
       }
       set
       {
-        __isset.examesSolicitados = true;
-        this._examesSolicitados = value;
-      }
-    }
-
-    public List<string> ExamesAvaliados
-    {
-      get
-      {
-        return _examesAvaliados;
-      }
-      set
-      {
-        __isset.examesAvaliados = true;
-        this._examesAvaliados = value;
-      }
-    }
-
-    public List<OutrosSiaThrift> OutrosSia
-    {
-      get
-      {
-        return _outrosSia;
-      }
-      set
-      {
-        __isset.outrosSia = true;
-        this._outrosSia = value;
+        __isset.exame = true;
+        this._exame = value;
       }
     }
 
@@ -450,9 +422,7 @@ namespace br.gov.saude.esusab.ras.atendindividual
       public bool idadeGestacional;
       public bool atencaoDomiciliarModalidade;
       public bool problemaCondicaoAvaliada;
-      public bool examesSolicitados;
-      public bool examesAvaliados;
-      public bool outrosSia;
+      public bool exame;
       public bool vacinaEmDia;
       public bool pic;
       public bool ficouEmObservacao;
@@ -584,51 +554,17 @@ namespace br.gov.saude.esusab.ras.atendindividual
                 TProtocolUtil.Skip(iprot, field.Type);
               }
               break;
-            case 15:
-              if (field.Type == TType.List) {
-                {
-                  ExamesSolicitados = new List<string>();
-                  TList _list8 = iprot.ReadListBegin();
-                  for( int _i9 = 0; _i9 < _list8.Count; ++_i9)
-                  {
-                    string _elem10;
-                    _elem10 = iprot.ReadString();
-                    ExamesSolicitados.Add(_elem10);
-                  }
-                  iprot.ReadListEnd();
-                }
-              } else { 
-                TProtocolUtil.Skip(iprot, field.Type);
-              }
-              break;
-            case 16:
-              if (field.Type == TType.List) {
-                {
-                  ExamesAvaliados = new List<string>();
-                  TList _list11 = iprot.ReadListBegin();
-                  for( int _i12 = 0; _i12 < _list11.Count; ++_i12)
-                  {
-                    string _elem13;
-                    _elem13 = iprot.ReadString();
-                    ExamesAvaliados.Add(_elem13);
-                  }
-                  iprot.ReadListEnd();
-                }
-              } else { 
-                TProtocolUtil.Skip(iprot, field.Type);
-              }
-              break;
             case 17:
               if (field.Type == TType.List) {
                 {
-                  OutrosSia = new List<OutrosSiaThrift>();
-                  TList _list14 = iprot.ReadListBegin();
-                  for( int _i15 = 0; _i15 < _list14.Count; ++_i15)
+                  Exame = new List<ExameThrift>();
+                  TList _list8 = iprot.ReadListBegin();
+                  for( int _i9 = 0; _i9 < _list8.Count; ++_i9)
                   {
-                    OutrosSiaThrift _elem16;
-                    _elem16 = new OutrosSiaThrift();
-                    _elem16.Read(iprot);
-                    OutrosSia.Add(_elem16);
+                    ExameThrift _elem10;
+                    _elem10 = new ExameThrift();
+                    _elem10.Read(iprot);
+                    Exame.Add(_elem10);
                   }
                   iprot.ReadListEnd();
                 }
@@ -661,12 +597,12 @@ namespace br.gov.saude.esusab.ras.atendindividual
               if (field.Type == TType.List) {
                 {
                   Nasfs = new List<long>();
-                  TList _list17 = iprot.ReadListBegin();
-                  for( int _i18 = 0; _i18 < _list17.Count; ++_i18)
+                  TList _list11 = iprot.ReadListBegin();
+                  for( int _i12 = 0; _i12 < _list11.Count; ++_i12)
                   {
-                    long _elem19;
-                    _elem19 = iprot.ReadI64();
-                    Nasfs.Add(_elem19);
+                    long _elem13;
+                    _elem13 = iprot.ReadI64();
+                    Nasfs.Add(_elem13);
                   }
                   iprot.ReadListEnd();
                 }
@@ -678,12 +614,12 @@ namespace br.gov.saude.esusab.ras.atendindividual
               if (field.Type == TType.List) {
                 {
                   Condutas = new List<long>();
-                  TList _list20 = iprot.ReadListBegin();
-                  for( int _i21 = 0; _i21 < _list20.Count; ++_i21)
+                  TList _list14 = iprot.ReadListBegin();
+                  for( int _i15 = 0; _i15 < _list14.Count; ++_i15)
                   {
-                    long _elem22;
-                    _elem22 = iprot.ReadI64();
-                    Condutas.Add(_elem22);
+                    long _elem16;
+                    _elem16 = iprot.ReadI64();
+                    Condutas.Add(_elem16);
                   }
                   iprot.ReadListEnd();
                 }
@@ -873,46 +809,16 @@ namespace br.gov.saude.esusab.ras.atendindividual
           ProblemaCondicaoAvaliada.Write(oprot);
           oprot.WriteFieldEnd();
         }
-        if (ExamesSolicitados != null && __isset.examesSolicitados) {
-          field.Name = "examesSolicitados";
-          field.Type = TType.List;
-          field.ID = 15;
-          oprot.WriteFieldBegin(field);
-          {
-            oprot.WriteListBegin(new TList(TType.String, ExamesSolicitados.Count));
-            foreach (string _iter23 in ExamesSolicitados)
-            {
-              oprot.WriteString(_iter23);
-            }
-            oprot.WriteListEnd();
-          }
-          oprot.WriteFieldEnd();
-        }
-        if (ExamesAvaliados != null && __isset.examesAvaliados) {
-          field.Name = "examesAvaliados";
-          field.Type = TType.List;
-          field.ID = 16;
-          oprot.WriteFieldBegin(field);
-          {
-            oprot.WriteListBegin(new TList(TType.String, ExamesAvaliados.Count));
-            foreach (string _iter24 in ExamesAvaliados)
-            {
-              oprot.WriteString(_iter24);
-            }
-            oprot.WriteListEnd();
-          }
-          oprot.WriteFieldEnd();
-        }
-        if (OutrosSia != null && __isset.outrosSia) {
-          field.Name = "outrosSia";
+        if (Exame != null && __isset.exame) {
+          field.Name = "exame";
           field.Type = TType.List;
           field.ID = 17;
           oprot.WriteFieldBegin(field);
           {
-            oprot.WriteListBegin(new TList(TType.Struct, OutrosSia.Count));
-            foreach (OutrosSiaThrift _iter25 in OutrosSia)
+            oprot.WriteListBegin(new TList(TType.Struct, Exame.Count));
+            foreach (ExameThrift _iter17 in Exame)
             {
-              _iter25.Write(oprot);
+              _iter17.Write(oprot);
             }
             oprot.WriteListEnd();
           }
@@ -949,9 +855,9 @@ namespace br.gov.saude.esusab.ras.atendindividual
           oprot.WriteFieldBegin(field);
           {
             oprot.WriteListBegin(new TList(TType.I64, Nasfs.Count));
-            foreach (long _iter26 in Nasfs)
+            foreach (long _iter18 in Nasfs)
             {
-              oprot.WriteI64(_iter26);
+              oprot.WriteI64(_iter18);
             }
             oprot.WriteListEnd();
           }
@@ -964,9 +870,9 @@ namespace br.gov.saude.esusab.ras.atendindividual
           oprot.WriteFieldBegin(field);
           {
             oprot.WriteListBegin(new TList(TType.I64, Condutas.Count));
-            foreach (long _iter27 in Condutas)
+            foreach (long _iter19 in Condutas)
             {
-              oprot.WriteI64(_iter27);
+              oprot.WriteI64(_iter19);
             }
             oprot.WriteListEnd();
           }
@@ -1124,23 +1030,11 @@ namespace br.gov.saude.esusab.ras.atendindividual
         __sb.Append("ProblemaCondicaoAvaliada: ");
         __sb.Append(ProblemaCondicaoAvaliada== null ? "<null>" : ProblemaCondicaoAvaliada.ToString());
       }
-      if (ExamesSolicitados != null && __isset.examesSolicitados) {
+      if (Exame != null && __isset.exame) {
         if(!__first) { __sb.Append(", "); }
         __first = false;
-        __sb.Append("ExamesSolicitados: ");
-        __sb.Append(ExamesSolicitados);
-      }
-      if (ExamesAvaliados != null && __isset.examesAvaliados) {
-        if(!__first) { __sb.Append(", "); }
-        __first = false;
-        __sb.Append("ExamesAvaliados: ");
-        __sb.Append(ExamesAvaliados);
-      }
-      if (OutrosSia != null && __isset.outrosSia) {
-        if(!__first) { __sb.Append(", "); }
-        __first = false;
-        __sb.Append("OutrosSia: ");
-        __sb.Append(OutrosSia);
+        __sb.Append("Exame: ");
+        __sb.Append(Exame);
       }
       if (__isset.vacinaEmDia) {
         if(!__first) { __sb.Append(", "); }

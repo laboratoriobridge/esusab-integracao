@@ -27,7 +27,6 @@ var GoUnusedProtection__ int
 //  - Turno
 //  - StatusEscutaInicialOrientacao
 //  - Procedimentos
-//  - OutrosSiaProcedimentos
 //  - DataHoraInicialAtendimento
 //  - DataHoraFinalAtendimento
 type FichaProcedimentoChildThrift struct {
@@ -39,9 +38,9 @@ type FichaProcedimentoChildThrift struct {
 	Turno                         *int64   `thrift:"turno,6" json:"turno,omitempty"`
 	StatusEscutaInicialOrientacao *bool    `thrift:"statusEscutaInicialOrientacao,7" json:"statusEscutaInicialOrientacao,omitempty"`
 	Procedimentos                 []string `thrift:"procedimentos,8" json:"procedimentos,omitempty"`
-	OutrosSiaProcedimentos        []string `thrift:"outrosSiaProcedimentos,9" json:"outrosSiaProcedimentos,omitempty"`
-	DataHoraInicialAtendimento    *int64   `thrift:"dataHoraInicialAtendimento,10" json:"dataHoraInicialAtendimento,omitempty"`
-	DataHoraFinalAtendimento      *int64   `thrift:"dataHoraFinalAtendimento,11" json:"dataHoraFinalAtendimento,omitempty"`
+	// unused field # 9
+	DataHoraInicialAtendimento *int64 `thrift:"dataHoraInicialAtendimento,10" json:"dataHoraInicialAtendimento,omitempty"`
+	DataHoraFinalAtendimento   *int64 `thrift:"dataHoraFinalAtendimento,11" json:"dataHoraFinalAtendimento,omitempty"`
 }
 
 func NewFichaProcedimentoChildThrift() *FichaProcedimentoChildThrift {
@@ -117,12 +116,6 @@ func (p *FichaProcedimentoChildThrift) GetProcedimentos() []string {
 	return p.Procedimentos
 }
 
-var FichaProcedimentoChildThrift_OutrosSiaProcedimentos_DEFAULT []string
-
-func (p *FichaProcedimentoChildThrift) GetOutrosSiaProcedimentos() []string {
-	return p.OutrosSiaProcedimentos
-}
-
 var FichaProcedimentoChildThrift_DataHoraInicialAtendimento_DEFAULT int64
 
 func (p *FichaProcedimentoChildThrift) GetDataHoraInicialAtendimento() int64 {
@@ -170,10 +163,6 @@ func (p *FichaProcedimentoChildThrift) IsSetStatusEscutaInicialOrientacao() bool
 
 func (p *FichaProcedimentoChildThrift) IsSetProcedimentos() bool {
 	return p.Procedimentos != nil
-}
-
-func (p *FichaProcedimentoChildThrift) IsSetOutrosSiaProcedimentos() bool {
-	return p.OutrosSiaProcedimentos != nil
 }
 
 func (p *FichaProcedimentoChildThrift) IsSetDataHoraInicialAtendimento() bool {
@@ -228,10 +217,6 @@ func (p *FichaProcedimentoChildThrift) Read(iprot thrift.TProtocol) error {
 			}
 		case 8:
 			if err := p.readField8(iprot); err != nil {
-				return err
-			}
-		case 9:
-			if err := p.readField9(iprot); err != nil {
 				return err
 			}
 		case 10:
@@ -342,28 +327,6 @@ func (p *FichaProcedimentoChildThrift) readField8(iprot thrift.TProtocol) error 
 	return nil
 }
 
-func (p *FichaProcedimentoChildThrift) readField9(iprot thrift.TProtocol) error {
-	_, size, err := iprot.ReadListBegin()
-	if err != nil {
-		return thrift.PrependError("error reading list begin: ", err)
-	}
-	tSlice := make([]string, 0, size)
-	p.OutrosSiaProcedimentos = tSlice
-	for i := 0; i < size; i++ {
-		var _elem1 string
-		if v, err := iprot.ReadString(); err != nil {
-			return thrift.PrependError("error reading field 0: ", err)
-		} else {
-			_elem1 = v
-		}
-		p.OutrosSiaProcedimentos = append(p.OutrosSiaProcedimentos, _elem1)
-	}
-	if err := iprot.ReadListEnd(); err != nil {
-		return thrift.PrependError("error reading list end: ", err)
-	}
-	return nil
-}
-
 func (p *FichaProcedimentoChildThrift) readField10(iprot thrift.TProtocol) error {
 	if v, err := iprot.ReadI64(); err != nil {
 		return thrift.PrependError("error reading field 10: ", err)
@@ -408,9 +371,6 @@ func (p *FichaProcedimentoChildThrift) Write(oprot thrift.TProtocol) error {
 		return err
 	}
 	if err := p.writeField8(oprot); err != nil {
-		return err
-	}
-	if err := p.writeField9(oprot); err != nil {
 		return err
 	}
 	if err := p.writeField10(oprot); err != nil {
@@ -551,29 +511,6 @@ func (p *FichaProcedimentoChildThrift) writeField8(oprot thrift.TProtocol) (err 
 		}
 		if err := oprot.WriteFieldEnd(); err != nil {
 			return thrift.PrependError(fmt.Sprintf("%T write field end error 8:procedimentos: ", p), err)
-		}
-	}
-	return err
-}
-
-func (p *FichaProcedimentoChildThrift) writeField9(oprot thrift.TProtocol) (err error) {
-	if p.IsSetOutrosSiaProcedimentos() {
-		if err := oprot.WriteFieldBegin("outrosSiaProcedimentos", thrift.LIST, 9); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field begin error 9:outrosSiaProcedimentos: ", p), err)
-		}
-		if err := oprot.WriteListBegin(thrift.STRING, len(p.OutrosSiaProcedimentos)); err != nil {
-			return thrift.PrependError("error writing list begin: ", err)
-		}
-		for _, v := range p.OutrosSiaProcedimentos {
-			if err := oprot.WriteString(string(v)); err != nil {
-				return thrift.PrependError(fmt.Sprintf("%T. (0) field write error: ", p), err)
-			}
-		}
-		if err := oprot.WriteListEnd(); err != nil {
-			return thrift.PrependError("error writing list end: ", err)
-		}
-		if err := oprot.WriteFieldEnd(); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field end error 9:outrosSiaProcedimentos: ", p), err)
 		}
 	}
 	return err
@@ -889,11 +826,11 @@ func (p *FichaProcedimentoMasterThrift) readField4(iprot thrift.TProtocol) error
 	tSlice := make([]*FichaProcedimentoChildThrift, 0, size)
 	p.AtendProcedimentos = tSlice
 	for i := 0; i < size; i++ {
-		_elem2 := &FichaProcedimentoChildThrift{}
-		if err := _elem2.Read(iprot); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T error reading struct: ", _elem2), err)
+		_elem1 := &FichaProcedimentoChildThrift{}
+		if err := _elem1.Read(iprot); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T error reading struct: ", _elem1), err)
 		}
-		p.AtendProcedimentos = append(p.AtendProcedimentos, _elem2)
+		p.AtendProcedimentos = append(p.AtendProcedimentos, _elem1)
 	}
 	if err := iprot.ReadListEnd(); err != nil {
 		return thrift.PrependError("error reading list end: ", err)

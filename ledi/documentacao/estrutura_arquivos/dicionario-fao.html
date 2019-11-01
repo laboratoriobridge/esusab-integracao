@@ -25,7 +25,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS AB PEC</span>
       
-        <span class="label">versão 3.2.1</span>
+        <span class="label">versão 3.2.2</span>
       
     </a>
 
@@ -75,7 +75,7 @@
           
         
           
-            <li><a title="Layout e-SUS AB de Dados e Interface Versão 3.2.1" href="/ledi/documentacao/index.html">Layout e-SUS AB de Dados e Interface Versão 3.2.1</a></li>
+            <li><a title="Layout e-SUS AB de Dados e Interface Versão 3.2.2" href="/ledi/documentacao/index.html">Layout e-SUS AB de Dados e Interface Versão 3.2.2</a></li>
           
         
           
@@ -115,9 +115,9 @@
   <ul>
     
       <li>
-        <a title="Voltar para Layout e-SUS AB de Dados e Interface Versão 3.2.1" href="/ledi/documentacao/index.html" class="back-link">
+        <a title="Voltar para Layout e-SUS AB de Dados e Interface Versão 3.2.2" href="/ledi/documentacao/index.html" class="back-link">
           <i class="icon icon-back"></i> Voltar
-          <small>(Layout e-SUS AB de Dados e Interface Versão 3.2.1)</small>
+          <small>(Layout e-SUS AB de Dados e Interface Versão 3.2.2)</small>
         </a>
       </li>
     
@@ -177,13 +177,6 @@
         
           <li >
           
-            <a title="Ficha de Vacinação" href="/ledi/documentacao/estrutura_arquivos/dicionario-fv.html">
-              Ficha de Vacinação
-            </a>
-          </li>
-        
-          <li >
-          
             <a title="Ficha de Procedimentos" href="/ledi/documentacao/estrutura_arquivos/dicionario-fp.html">
               Ficha de Procedimentos
             </a>
@@ -224,6 +217,13 @@
             </a>
           </li>
         
+          <li >
+          
+            <a title="Ficha de Vacinação" href="/ledi/documentacao/estrutura_arquivos/dicionario-fv.html">
+              Ficha de Vacinação
+            </a>
+          </li>
+        
       </ul>
     </li>
   </ul>
@@ -243,7 +243,7 @@
     <p class="post-meta">
       <a class="btn" href="/pdf.html?include=/ledi/documentacao/estrutura_arquivos/dicionario-fao.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 24/07/2019</span>
+        <span class="label" title="Data da última modificação">Alterado em 01/11/2019</span>
       
     </p>
   </header>
@@ -435,6 +435,8 @@
 </tr>
 </tbody></table>
 
+<p><strong>Regra:</strong> Não pode ser preenchido quando <a href="#14-sexo">Sexo</a> = <code>0 (masculino)</code>.</p>
+
 <h3 id="5-necessidadesespeciais">#5 necessidadesEspeciais</h3>
 
 <p>Marcador que indica se o cidadão é portador de necessidades especiais.</p>
@@ -554,7 +556,7 @@
 
 <p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#fornecimentoodonto">FornecimentoOdonto</a>.</p>
 
-<h3 id="10-tiposvigilanciasaudebucal">#10    tiposVigilanciaSaudeBucal</h3>
+<h3 id="10-tiposvigilanciasaudebucal">#10 tiposVigilanciaSaudeBucal</h3>
 
 <p>Código dos marcadores referentes a situação de vigilância em saúde bucal.</p>
 
@@ -576,7 +578,7 @@
 
 <p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#vigilanciaemsaudebucal">VigilanciaEmSaudeBucal</a>.</p>
 
-<h3 id="11-tiposconsultaodonto">#11    tiposConsultaOdonto</h3>
+<h3 id="11-tiposconsultaodonto">#11 tiposConsultaOdonto</h3>
 
 <p>Código do tipo de consulta odontológica realizada.</p>
 
@@ -608,9 +610,9 @@
 
 <p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#tipodeconsultaodonto">TipoDeConsultaOdonto</a></p>
 
-<h3 id="12-procedimentosrealizados">#12    procedimentosRealizados</h3>
+<h3 id="12-procedimentosrealizados">#12 procedimentosRealizados</h3>
 
-<p>Código dos procedimentos que são apresentados na ficha.</p>
+<p>Código dos procedimentos.</p>
 
 <table><thead>
 <tr>
@@ -624,49 +626,13 @@
 <td>List&lt;ProcedimentoQuantidade&gt;</td>
 <td>Não</td>
 <td>0</td>
-<td>27</td>
+<td>20</td>
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong></p>
+<p><strong>Referência:</strong> <a href="#procedimentoquantidade">ProcedimentoQuantidade</a>.</p>
 
-<ul>
-<li>Não podem haver procedimentos com o mesmo código;</li>
-<li>Somente os procedimentos <strong>AB</strong> listados em <a href="#listaprocedimentosrealizados">ListaProcedimentosRealizados</a> podem ser adicionados. Verificar o procedimento AB correspondente ao procedimento SIGTAP desejado.</li>
-</ul>
-
-<p><strong>Referências:</strong> <a href="#procedimentoquantidade">ProcedimentoQuantidade</a>.</p>
-
-<h3 id="13-outrossiaprocedimentos">#13    outrosSiaProcedimentos</h3>
-
-<p>Lista de outros códigos de procedimentos.</p>
-
-<table><thead>
-<tr>
-<th>Tipo</th>
-<th>Obrigatório</th>
-<th>Mínimo</th>
-<th>Máximo</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>List&lt;ProcedimentoQuantidade&gt;</td>
-<td>Não</td>
-<td>-</td>
-<td>-</td>
-</tr>
-</tbody></table>
-
-<p><strong>Regras:</strong></p>
-
-<ul>
-<li>Não pode conter procedimentos da <a href="#listaprocedimentosrealizados">ListaProcedimentosRealizados</a>;</li>
-<li>Não podem haver procedimentos com o mesmo código.</li>
-</ul>
-
-<p><strong>Referências:</strong> <a href="#procedimentoquantidade">ProcedimentoQuantidade</a>.</p>
-
-<h3 id="14-sexo">#14    sexo</h3>
+<h3 id="14-sexo">#14 sexo</h3>
 
 <p>Código do sexo do cidadão.</p>
 
@@ -793,17 +759,37 @@
 <p><strong>Regras:</strong></p>
 
 <ul>
-<li>Quando a lista partir da estrutura <a href="#12-procedimentosrealizados">procedimentosRealizados</a>, somente os procedimentos <strong>AB</strong> listados em <a href="#listaprocedimentosrealizados">ListaProcedimentosRealizados</a> podem ser adicionados. Verificar o procedimento AB correspondente ao procedimento SIGTAP desejado;</li>
-<li>Quando a lista partir da estrutura <a href="#13-outrossiaprocedimentos">outrosSiaProcedimentos</a>, ela não pode conter procedimentos da <a href="#listaprocedimentosrealizados">ListaProcedimentosRealizados</a> e só podem ser inseridos procedimentos cujo grupo é igual a <code>01</code> - Ações de promoção e prevenção em saúde, <code>02</code> - Procedimentos com finalidade diagnóstica, <code>03</code> - Procedimentos clínicos ou <code>04</code> - Procedimentos cirúrgicos.</li>
+<li>Não pode conter procedimentos repetidos;</li>
+<li>Podem ser informados os procedimentos pertencentes aos grupos <code>01 - Ações de promoção e prevenção em saúde</code>, <code>02 - Procedimentos com finalidade diagnóstica</code>, <code>03 - Procedimentos clínicos</code>, <code>04 - Procedimentos cirúrgicos</code> ou presentes na <a href="#listaprocedimentosrealizados">ListaProcedimentosRealizados</a>, neste caso, se não tiver uma referência no SIGTAP, deve ser informado o código <strong>AB</strong> do procedimento;</li>
+<li><p>Além destes procedimentos, são permitidos os procedimentos pertencentes ao grupo <code>07 - Órteses, próteses e materiais especiais</code>:</p>
+
+<ul>
+<li>07.01.07.006-4 - MANTENEDOR DE ESPAÇO;</li>
+<li>07.01.07.007-2 - PLACA OCLUSAL;</li>
+<li>07.01.07.008-0 - PLANO INCLINADO;</li>
+<li>07.01.07.009-9 - PROTESE PARCIAL MANDIBULAR REMOVIVEL;</li>
+<li>07.01.07.010-2 - PROTESE PARCIAL MAXILAR REMOVIVEL;</li>
+<li>07.01.07.011-0 - PROTESE TEMPORARIA;</li>
+<li>07.01.07.012-9 - PROTESE TOTAL MANDIBULAR;</li>
+<li>07.01.07.013-7 - PROTESE TOTAL MAXILAR;</li>
+<li>07.01.07.005-6 - COROA PROVISORIA;</li>
+<li>07.01.07.014-5 - PROTESES CORONARIAS / INTRA-RADICULARES FIXAS / ADESIVAS (POR ELEMENTO).</li>
+</ul></li>
+<li><p>Não pode ser preenchido com o procedimento &quot;03.01.04.007-9 - Escuta inicial / orientação (acolhimento a demanda espontânea)&quot;. Esta informação deve ser registrada através do campo <a href="#7-tipoatendimento">#7 tipoAtendimento</a>, opção <code>4 (escuta inicial ou orientação)</code>.</p></li>
 </ul>
 
-<p><strong>Referência:</strong> Tabela do SIGTAP, competência 02/2019 disponível em: <a href="http://sigtap.datasus.gov.br/tabela-unificada/app/sec/procedimento/publicados/consultar">Tabela Unificada SIGTAP</a>.</p>
+<p><strong>Referências:</strong></p>
 
-<p>Observações: </p>
+<ul>
+<li>Tabela do SIGTAP, competência 02/2019 disponível em: <a href="http://sigtap.datasus.gov.br/tabela-unificada/app/sec/procedimento/publicados/consultar">Tabela Unificada SIGTAP</a>;</li>
+<li><a href="#listaprocedimentosrealizados">ListaProcedimentosRealizados</a>.</li>
+</ul>
+
+<p>Observações:</p>
 
 <ul>
 <li>Inserir o código do procedimento SIGTAP sem ponto ou hífen, ex: <code>0201010010</code>;</li>
-<li>Inserir o código do procedimento AB em caracteres maiúsculos, sem espaços.</li>
+<li>Inserir o código do procedimento AB em caracteres maiúsculos, sem espaços, ex: <code>ABPO015</code>.</li>
 </ul>
 
 <h3 id="2-quantidade">#2 quantidade</h3>
@@ -822,9 +808,16 @@
 <td>Integer</td>
 <td>Sim</td>
 <td>1</td>
-<td>99</td>
+<td>Condicional</td>
 </tr>
 </tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>A quantidade limite deve ser verificada de acordo com a <a href="#lista-de-procedimentos-por-local-e-quantidade-m-xima-permitida">Lista de procedimentos por local e quantidade máxima permitida</a>;</li>
+<li>Os procedimentos que não estão presentes na <a href="#lista-de-procedimentos-por-local-e-quantidade-m-xima-permitida">Lista de procedimentos por local e quantidade máxima permitida</a> podem ser registrados apenas com a quantidade 1.</li>
+</ul>
 
 <h2 id="listaprocedimentosrealizados">ListaProcedimentosRealizados</h2>
 
@@ -969,6 +962,404 @@
 <td>04.14.02.040-5</td>
 <td>Ulotomia / Ulectomia</td>
 <td>ABPO027</td>
+</tr>
+</tbody></table>
+
+<p><em>* Procedimentos pertencentes a competência <strong>02/2019</strong> do SIGTAP.</em></p>
+
+<h2 id="lista-de-procedimentos-por-local-e-quantidade-m-xima-permitida">Lista de procedimentos por local e quantidade máxima permitida</h2>
+
+<table><thead>
+<tr>
+<th>Código SIGTAP*</th>
+<th>Descrição SIGTAP</th>
+<th>Local</th>
+<th>Quantidade máxima</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>02.04.01.016-0</td>
+<td>RADIOGRAFIA OCLUSAL</td>
+<td>Arcada</td>
+<td>2</td>
+</tr>
+<tr>
+<td>03.07.04.001-1</td>
+<td>COLOCACAO DE PLACA DE MORDIDA</td>
+<td>Arcada</td>
+<td>2</td>
+</tr>
+<tr>
+<td>03.07.04.012-7</td>
+<td>MANUTENÇÃO/CONSERTO DE APARELHO ORTODÔNTICO/ORTOPÉDICO</td>
+<td>Arcada</td>
+<td>2</td>
+</tr>
+<tr>
+<td>04.04.02.044-5</td>
+<td>CONTENÇÃO DE DENTES POR SPLINTAGEM</td>
+<td>Arcada</td>
+<td>2</td>
+</tr>
+<tr>
+<td>04.04.02.061-5</td>
+<td>REDUÇÃO DE LUXAÇÃO TÊMPORO-MANDIBULAR</td>
+<td>Arcada</td>
+<td>2</td>
+</tr>
+<tr>
+<td>04.04.02.062-3</td>
+<td>RETIRADA DE MATERIAL DE SÍNTESE ÓSSEA / DENTÁRIA</td>
+<td>Arcada</td>
+<td>2</td>
+</tr>
+<tr>
+<td>04.14.01.036-1</td>
+<td>EXERESE DE CISTO ODONTOGÊNICO E NÃO-ODONTOGÊNICO</td>
+<td>Arcada</td>
+<td>2</td>
+</tr>
+<tr>
+<td>04.14.01.038-8</td>
+<td>TRATAMENTO CIRÚRGICO DE FÍSTULA INTRA / EXTRAORAL</td>
+<td>Arcada</td>
+<td>2</td>
+</tr>
+<tr>
+<td>04.14.02.004-9</td>
+<td>CORREÇÃO DE BRIDAS MUSCULARES</td>
+<td>Arcada</td>
+<td>2</td>
+</tr>
+<tr>
+<td>04.14.02.005-7</td>
+<td>CORREÇÃO DE IRREGULARIDADES DE REBORDO ALVEOLAR</td>
+<td>Arcada</td>
+<td>2</td>
+</tr>
+<tr>
+<td>04.14.02.029-4</td>
+<td>REMOÇÃO DE TORUS E EXOSTOSES</td>
+<td>Arcada</td>
+<td>2</td>
+</tr>
+<tr>
+<td>07.01.07.006-4</td>
+<td>MANTENEDOR DE ESPAÇO</td>
+<td>Arcada</td>
+<td>2</td>
+</tr>
+<tr>
+<td>07.01.07.007-2</td>
+<td>PLACA OCLUSAL</td>
+<td>Arcada</td>
+<td>2</td>
+</tr>
+<tr>
+<td>07.01.07.008-0</td>
+<td>PLANO INCLINADO</td>
+<td>Arcada</td>
+<td>2</td>
+</tr>
+<tr>
+<td>07.01.07.009-9</td>
+<td>PROTESE PARCIAL MANDIBULAR REMOVIVEL</td>
+<td>Arcada</td>
+<td>2</td>
+</tr>
+<tr>
+<td>07.01.07.010-2</td>
+<td>PROTESE PARCIAL MAXILAR REMOVIVEL</td>
+<td>Arcada</td>
+<td>2</td>
+</tr>
+<tr>
+<td>07.01.07.011-0</td>
+<td>PROTESE TEMPORARIA</td>
+<td>Arcada</td>
+<td>2</td>
+</tr>
+<tr>
+<td>07.01.07.012-9</td>
+<td>PROTESE TOTAL MANDIBULAR</td>
+<td>Arcada</td>
+<td>2</td>
+</tr>
+<tr>
+<td>07.01.07.013-7</td>
+<td>PROTESE TOTAL MAXILAR</td>
+<td>Arcada</td>
+<td>2</td>
+</tr>
+<tr>
+<td>01.01.02.005-8</td>
+<td>APLICAÇÃO DE CARIOSTÁTICO (POR DENTE)</td>
+<td>Dente</td>
+<td>32</td>
+</tr>
+<tr>
+<td>01.01.02.006-6</td>
+<td>APLICAÇÃO DE SELANTE (POR DENTE)</td>
+<td>Dente</td>
+<td>32</td>
+</tr>
+<tr>
+<td>01.01.02.009-0</td>
+<td>SELAMENTO PROVISÓRIO DE CAVIDADE DENTÁRIA</td>
+<td>Dente</td>
+<td>32</td>
+</tr>
+<tr>
+<td>02.04.01.018-7</td>
+<td>RADIOGRAFIA PERI-APICAL INTERPROXIMAL (BITE-WING)</td>
+<td>Dente</td>
+<td>32</td>
+</tr>
+<tr>
+<td>03.07.01.001-5</td>
+<td>CAPEAMENTO PULPAR</td>
+<td>Dente</td>
+<td>32</td>
+</tr>
+<tr>
+<td>03.07.01.002-3</td>
+<td>RESTAURAÇÃO DE DENTE DECÍDUO</td>
+<td>Dente</td>
+<td>32</td>
+</tr>
+<tr>
+<td>03.07.01.003-1</td>
+<td>RESTAURAÇÃO DE DENTE PERMANENTE ANTERIOR</td>
+<td>Dente</td>
+<td>32</td>
+</tr>
+<tr>
+<td>03.07.01.004-0</td>
+<td>RESTAURAÇÃO DE DENTE PERMANENTE POSTERIOR</td>
+<td>Dente</td>
+<td>32</td>
+</tr>
+<tr>
+<td>03.07.02.001-0</td>
+<td>ACESSO A POLPA DENTARIA E MEDICACAO (POR DENTE)</td>
+<td>Dente</td>
+<td>32</td>
+</tr>
+<tr>
+<td>03.07.02.002-9</td>
+<td>CURATIVO DE DEMORA C/ OU S/ PREPARO BIOMECANICO</td>
+<td>Dente</td>
+<td>32</td>
+</tr>
+<tr>
+<td>03.07.02.003-7</td>
+<td>OBTURAÇÃO DE DENTE DECÍDUO</td>
+<td>Dente</td>
+<td>32</td>
+</tr>
+<tr>
+<td>03.07.02.004-5</td>
+<td>OBTURAÇÃO EM DENTE PERMANENTE BIRRADICULAR</td>
+<td>Dente</td>
+<td>32</td>
+</tr>
+<tr>
+<td>03.07.02.005-3</td>
+<td>OBTURAÇÃO EM DENTE PERMANENTE COM TRÊS OU MAIS RAÍZES</td>
+<td>Dente</td>
+<td>32</td>
+</tr>
+<tr>
+<td>03.07.02.006-1</td>
+<td>OBTURAÇÃO EM DENTE PERMANENTE UNIRRADICULAR</td>
+<td>Dente</td>
+<td>32</td>
+</tr>
+<tr>
+<td>03.07.02.007-0</td>
+<td>PULPOTOMIA DENTÁRIA</td>
+<td>Dente</td>
+<td>32</td>
+</tr>
+<tr>
+<td>03.07.02.008-8</td>
+<td>RETRATAMENTO ENDODÔNTICO EM DENTE PERMANENTE BI-RADICULAR</td>
+<td>Dente</td>
+<td>32</td>
+</tr>
+<tr>
+<td>03.07.02.009-6</td>
+<td>RETRATAMENTO ENDODÔNTICO EM DENTE PERMANENTE COM 3 OU MAIS RAÍZES</td>
+<td>Dente</td>
+<td>32</td>
+</tr>
+<tr>
+<td>03.07.02.010-0</td>
+<td>RETRATAMENTO ENDODÔNTICO EM DENTE PERMANENTE UNI-RADICULAR</td>
+<td>Dente</td>
+<td>32</td>
+</tr>
+<tr>
+<td>03.07.02.011-8</td>
+<td>SELAMENTO DE PERFURAÇÃO RADICULAR</td>
+<td>Dente</td>
+<td>32</td>
+</tr>
+<tr>
+<td>03.07.04.007-0</td>
+<td>MOLDAGEM DENTO-GENGIVAL P/ CONSTRUCAO DE PROTESE DENTARIA</td>
+<td>Dente</td>
+<td>32</td>
+</tr>
+<tr>
+<td>03.07.04.008-9</td>
+<td>REEMBASAMENTO E CONSERTO DE PROTESE DENTARIA</td>
+<td>Dente</td>
+<td>32</td>
+</tr>
+<tr>
+<td>03.07.04.013-5</td>
+<td>CIMENTAÇÃO DE PRÓTESE DENTÁRIA</td>
+<td>Dente</td>
+<td>32</td>
+</tr>
+<tr>
+<td>03.07.04.014-3</td>
+<td>ADAPTAÇÃO DE PRÓTESE DENTÁRIA</td>
+<td>Dente</td>
+<td>32</td>
+</tr>
+<tr>
+<td>03.07.04.015-1</td>
+<td>AJUSTE OCLUSAL</td>
+<td>Dente</td>
+<td>32</td>
+</tr>
+<tr>
+<td>03.07.04.016-0</td>
+<td>INSTALAÇÃO DE PRÓTESE DENTÁRIA</td>
+<td>Dente</td>
+<td>32</td>
+</tr>
+<tr>
+<td>04.14.02.002-2</td>
+<td>APICECTOMIA COM OU SEM OBTURAÇÃO RETRÓGRADA</td>
+<td>Dente</td>
+<td>32</td>
+</tr>
+<tr>
+<td>04.14.02.007-3</td>
+<td>CURETAGEM PERIAPICAL</td>
+<td>Dente</td>
+<td>32</td>
+</tr>
+<tr>
+<td>04.14.02.012-0</td>
+<td>EXODONTIA DE DENTE DECÍDUO</td>
+<td>Dente</td>
+<td>32</td>
+</tr>
+<tr>
+<td>04.14.02.013-8</td>
+<td>EXODONTIA DE DENTE PERMANENTE</td>
+<td>Dente</td>
+<td>32</td>
+</tr>
+<tr>
+<td>04.14.02.014-6</td>
+<td>EXODONTIA MÚLTIPLA COM ALVEOLOPLASTIA POR SEXTANTE</td>
+<td>Dente</td>
+<td>32</td>
+</tr>
+<tr>
+<td>04.14.02.021-9</td>
+<td>ODONTOSECÇÃO / RADILECTOMIA / TUNELIZAÇÃO</td>
+<td>Dente</td>
+<td>32</td>
+</tr>
+<tr>
+<td>04.14.02.024-3</td>
+<td>REIMPLANTE E TRANSPLANTE DENTAL (POR ELEMENTO)</td>
+<td>Dente</td>
+<td>32</td>
+</tr>
+<tr>
+<td>04.14.02.027-8</td>
+<td>REMOÇÃO DE DENTE RETIDO (INCLUSO / IMPACTADO)</td>
+<td>Dente</td>
+<td>32</td>
+</tr>
+<tr>
+<td>04.14.02.036-7</td>
+<td>TRATAMENTO CIRÚRGICO PARA TRACIONAMENTO DENTAL</td>
+<td>Dente</td>
+<td>32</td>
+</tr>
+<tr>
+<td>04.14.02.038-3</td>
+<td>TRATAMENTO DE ALVEOLITE</td>
+<td>Dente</td>
+<td>32</td>
+</tr>
+<tr>
+<td>04.14.02.040-5</td>
+<td>ULOTOMIA/ULECTOMIA</td>
+<td>Dente</td>
+<td>32</td>
+</tr>
+<tr>
+<td>07.01.07.005-6</td>
+<td>COROA PROVISORIA</td>
+<td>Dente</td>
+<td>32</td>
+</tr>
+<tr>
+<td>07.01.07.014-5</td>
+<td>PROTESES CORONARIAS / INTRA-RADICULARES FIXAS / ADESIVAS (POR ELEMENTO)</td>
+<td>Dente</td>
+<td>32</td>
+</tr>
+<tr>
+<td>03.07.03.001-6</td>
+<td>RASPAGEM ALISAMENTO E POLIMENTO SUPRAGENGIVAIS (POR SEXTANTE)</td>
+<td>Sextante</td>
+<td>6</td>
+</tr>
+<tr>
+<td>03.07.03.002-4</td>
+<td>RASPAGEM ALISAMENTO SUBGENGIVAIS (POR SEXTANTE)</td>
+<td>Sextante</td>
+<td>6</td>
+</tr>
+<tr>
+<td>03.07.03.005-9</td>
+<td>RASPAGEM ALISAMENTO E POLIMENTO SUPRAGENGIVAIS (POR SEXTANTE)</td>
+<td>Sextante</td>
+<td>6</td>
+</tr>
+<tr>
+<td>04.14.02.003-0</td>
+<td>APROFUNDAMENTO DE VESTÍBULO ORAL (POR SEXTANTE)</td>
+<td>Sextante</td>
+<td>6</td>
+</tr>
+<tr>
+<td>04.14.02.015-4</td>
+<td>GENGIVECTOMIA (POR SEXTANTE)</td>
+<td>Sextante</td>
+<td>6</td>
+</tr>
+<tr>
+<td>04.14.02.016-2</td>
+<td>GENGIVOPLASTIA (POR SEXTANTE)</td>
+<td>Sextante</td>
+<td>6</td>
+</tr>
+<tr>
+<td>04.14.02.037-5</td>
+<td>TRATAMENTO CIRÚRGICO PERIODONTAL (POR SEXTANTE)</td>
+<td>Sextante</td>
+<td>6</td>
 </tr>
 </tbody></table>
 

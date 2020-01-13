@@ -30,6 +30,7 @@ struct FichaVacinacaoChildThrift {
 	11:optional list<VacinaRowThrift> vacinas;
 	12:optional i64 dataHoraInicialAtendimento;
 	13:optional i64 dataHoraFinalAtendimento;
+	14:optional string cpfCidadao;
 }
 
 struct FichaVacinacaoMasterThrift {

@@ -43,4 +43,6 @@ struct FichaAvaliacaoElegibilidadeThrift {
 	33:optional i64 paisNascimento;
 	34:optional i64 etnia;
 	35:optional string cnsCuidador;
+	36:optional string cpfCidadao;
+	37:optional string cpfCuidador;
 }

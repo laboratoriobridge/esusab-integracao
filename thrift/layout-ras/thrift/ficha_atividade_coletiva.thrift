@@ -17,6 +17,7 @@ struct ParticipanteRowItemThrift {
 	6:optional bool cessouHabitoFumar;
 	7:optional bool abandonouGrupo;
 	8:optional i64 sexo;
+	9:optional string cpfParticipante;
 }
 
 struct ProfissionalCboRowItemThrift {

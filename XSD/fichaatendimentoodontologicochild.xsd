@@ -7,6 +7,7 @@
     <xs:sequence>
       <xs:element maxOccurs="1" minOccurs="0" name="numProntuario" type="xs:string"/>
       <xs:element maxOccurs="1" minOccurs="0" name="cnsCidadao" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="cpfCidadao" type="xs:string"/>
       <xs:element maxOccurs="1" minOccurs="0" name="dtNascimento" type="xs:long"/>
       <xs:element maxOccurs="1" minOccurs="0" name="localAtendimento" type="xs:long"/>
       <xs:element maxOccurs="1" minOccurs="0" name="gestante" type="xs:boolean"/>

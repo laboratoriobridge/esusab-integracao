@@ -318,6 +318,7 @@ func (p *VacinaRowThrift) String() string {
 //  - Vacinas
 //  - DataHoraInicialAtendimento
 //  - DataHoraFinalAtendimento
+//  - CpfCidadao
 type FichaVacinacaoChildThrift struct {
 	Turno                      *int64             `thrift:"turno,1" json:"turno,omitempty"`
 	NumProntuario              *string            `thrift:"numProntuario,2" json:"numProntuario,omitempty"`
@@ -332,6 +333,7 @@ type FichaVacinacaoChildThrift struct {
 	Vacinas                    []*VacinaRowThrift `thrift:"vacinas,11" json:"vacinas,omitempty"`
 	DataHoraInicialAtendimento *int64             `thrift:"dataHoraInicialAtendimento,12" json:"dataHoraInicialAtendimento,omitempty"`
 	DataHoraFinalAtendimento   *int64             `thrift:"dataHoraFinalAtendimento,13" json:"dataHoraFinalAtendimento,omitempty"`
+	CpfCidadao                 *string            `thrift:"cpfCidadao,14" json:"cpfCidadao,omitempty"`
 }
 
 func NewFichaVacinacaoChildThrift() *FichaVacinacaoChildThrift {
@@ -451,6 +453,15 @@ func (p *FichaVacinacaoChildThrift) GetDataHoraFinalAtendimento() int64 {
 	}
 	return *p.DataHoraFinalAtendimento
 }
+
+var FichaVacinacaoChildThrift_CpfCidadao_DEFAULT string
+
+func (p *FichaVacinacaoChildThrift) GetCpfCidadao() string {
+	if !p.IsSetCpfCidadao() {
+		return FichaVacinacaoChildThrift_CpfCidadao_DEFAULT
+	}
+	return *p.CpfCidadao
+}
 func (p *FichaVacinacaoChildThrift) IsSetTurno() bool {
 	return p.Turno != nil
 }
@@ -501,6 +512,10 @@ func (p *FichaVacinacaoChildThrift) IsSetDataHoraInicialAtendimento() bool {
 
 func (p *FichaVacinacaoChildThrift) IsSetDataHoraFinalAtendimento() bool {
 	return p.DataHoraFinalAtendimento != nil
+}
+
+func (p *FichaVacinacaoChildThrift) IsSetCpfCidadao() bool {
+	return p.CpfCidadao != nil
 }
 
 func (p *FichaVacinacaoChildThrift) Read(iprot thrift.TProtocol) error {
@@ -567,6 +582,10 @@ func (p *FichaVacinacaoChildThrift) Read(iprot thrift.TProtocol) error {
 			}
 		case 13:
 			if err := p.readField13(iprot); err != nil {
+				return err
+			}
+		case 14:
+			if err := p.readField14(iprot); err != nil {
 				return err
 			}
 		default:
@@ -712,6 +731,15 @@ func (p *FichaVacinacaoChildThrift) readField13(iprot thrift.TProtocol) error {
 	return nil
 }
 
+func (p *FichaVacinacaoChildThrift) readField14(iprot thrift.TProtocol) error {
+	if v, err := iprot.ReadString(); err != nil {
+		return thrift.PrependError("error reading field 14: ", err)
+	} else {
+		p.CpfCidadao = &v
+	}
+	return nil
+}
+
 func (p *FichaVacinacaoChildThrift) Write(oprot thrift.TProtocol) error {
 	if err := oprot.WriteStructBegin("FichaVacinacaoChildThrift"); err != nil {
 		return thrift.PrependError(fmt.Sprintf("%T write struct begin error: ", p), err)
@@ -753,6 +781,9 @@ func (p *FichaVacinacaoChildThrift) Write(oprot thrift.TProtocol) error {
 		return err
 	}
 	if err := p.writeField13(oprot); err != nil {
+		return err
+	}
+	if err := p.writeField14(oprot); err != nil {
 		return err
 	}
 	if err := oprot.WriteFieldStop(); err != nil {
@@ -962,6 +993,21 @@ func (p *FichaVacinacaoChildThrift) writeField13(oprot thrift.TProtocol) (err er
 		}
 		if err := oprot.WriteFieldEnd(); err != nil {
 			return thrift.PrependError(fmt.Sprintf("%T write field end error 13:dataHoraFinalAtendimento: ", p), err)
+		}
+	}
+	return err
+}
+
+func (p *FichaVacinacaoChildThrift) writeField14(oprot thrift.TProtocol) (err error) {
+	if p.IsSetCpfCidadao() {
+		if err := oprot.WriteFieldBegin("cpfCidadao", thrift.STRING, 14); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field begin error 14:cpfCidadao: ", p), err)
+		}
+		if err := oprot.WriteString(string(*p.CpfCidadao)); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T.cpfCidadao (14) field write error: ", p), err)
+		}
+		if err := oprot.WriteFieldEnd(); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field end error 14:cpfCidadao: ", p), err)
 		}
 	}
 	return err

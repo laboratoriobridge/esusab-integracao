@@ -183,6 +183,7 @@ func (p *ProcedimentoQuantidadeThrift) String() string {
 //  - Turno
 //  - DataHoraInicialAtendimento
 //  - DataHoraFinalAtendimento
+//  - CpfCidadao
 type FichaAtendimentoOdontologicoChildThrift struct {
 	DtNascimento              *int64                          `thrift:"dtNascimento,1" json:"dtNascimento,omitempty"`
 	CnsCidadao                *string                         `thrift:"cnsCidadao,2" json:"cnsCidadao,omitempty"`
@@ -197,10 +198,11 @@ type FichaAtendimentoOdontologicoChildThrift struct {
 	TiposConsultaOdonto       []int64                         `thrift:"tiposConsultaOdonto,11" json:"tiposConsultaOdonto,omitempty"`
 	ProcedimentosRealizados   []*ProcedimentoQuantidadeThrift `thrift:"procedimentosRealizados,12" json:"procedimentosRealizados,omitempty"`
 	// unused field # 13
-	Sexo                       *int64 `thrift:"sexo,14" json:"sexo,omitempty"`
-	Turno                      *int64 `thrift:"turno,15" json:"turno,omitempty"`
-	DataHoraInicialAtendimento *int64 `thrift:"dataHoraInicialAtendimento,16" json:"dataHoraInicialAtendimento,omitempty"`
-	DataHoraFinalAtendimento   *int64 `thrift:"dataHoraFinalAtendimento,17" json:"dataHoraFinalAtendimento,omitempty"`
+	Sexo                       *int64  `thrift:"sexo,14" json:"sexo,omitempty"`
+	Turno                      *int64  `thrift:"turno,15" json:"turno,omitempty"`
+	DataHoraInicialAtendimento *int64  `thrift:"dataHoraInicialAtendimento,16" json:"dataHoraInicialAtendimento,omitempty"`
+	DataHoraFinalAtendimento   *int64  `thrift:"dataHoraFinalAtendimento,17" json:"dataHoraFinalAtendimento,omitempty"`
+	CpfCidadao                 *string `thrift:"cpfCidadao,18" json:"cpfCidadao,omitempty"`
 }
 
 func NewFichaAtendimentoOdontologicoChildThrift() *FichaAtendimentoOdontologicoChildThrift {
@@ -335,6 +337,15 @@ func (p *FichaAtendimentoOdontologicoChildThrift) GetDataHoraFinalAtendimento() 
 	}
 	return *p.DataHoraFinalAtendimento
 }
+
+var FichaAtendimentoOdontologicoChildThrift_CpfCidadao_DEFAULT string
+
+func (p *FichaAtendimentoOdontologicoChildThrift) GetCpfCidadao() string {
+	if !p.IsSetCpfCidadao() {
+		return FichaAtendimentoOdontologicoChildThrift_CpfCidadao_DEFAULT
+	}
+	return *p.CpfCidadao
+}
 func (p *FichaAtendimentoOdontologicoChildThrift) IsSetDtNascimento() bool {
 	return p.DtNascimento != nil
 }
@@ -397,6 +408,10 @@ func (p *FichaAtendimentoOdontologicoChildThrift) IsSetDataHoraInicialAtendiment
 
 func (p *FichaAtendimentoOdontologicoChildThrift) IsSetDataHoraFinalAtendimento() bool {
 	return p.DataHoraFinalAtendimento != nil
+}
+
+func (p *FichaAtendimentoOdontologicoChildThrift) IsSetCpfCidadao() bool {
+	return p.CpfCidadao != nil
 }
 
 func (p *FichaAtendimentoOdontologicoChildThrift) Read(iprot thrift.TProtocol) error {
@@ -475,6 +490,10 @@ func (p *FichaAtendimentoOdontologicoChildThrift) Read(iprot thrift.TProtocol) e
 			}
 		case 17:
 			if err := p.readField17(iprot); err != nil {
+				return err
+			}
+		case 18:
+			if err := p.readField18(iprot); err != nil {
 				return err
 			}
 		default:
@@ -699,6 +718,15 @@ func (p *FichaAtendimentoOdontologicoChildThrift) readField17(iprot thrift.TProt
 	return nil
 }
 
+func (p *FichaAtendimentoOdontologicoChildThrift) readField18(iprot thrift.TProtocol) error {
+	if v, err := iprot.ReadString(); err != nil {
+		return thrift.PrependError("error reading field 18: ", err)
+	} else {
+		p.CpfCidadao = &v
+	}
+	return nil
+}
+
 func (p *FichaAtendimentoOdontologicoChildThrift) Write(oprot thrift.TProtocol) error {
 	if err := oprot.WriteStructBegin("FichaAtendimentoOdontologicoChildThrift"); err != nil {
 		return thrift.PrependError(fmt.Sprintf("%T write struct begin error: ", p), err)
@@ -749,6 +777,9 @@ func (p *FichaAtendimentoOdontologicoChildThrift) Write(oprot thrift.TProtocol) 
 		return err
 	}
 	if err := p.writeField17(oprot); err != nil {
+		return err
+	}
+	if err := p.writeField18(oprot); err != nil {
 		return err
 	}
 	if err := oprot.WriteFieldStop(); err != nil {
@@ -1035,6 +1066,21 @@ func (p *FichaAtendimentoOdontologicoChildThrift) writeField17(oprot thrift.TPro
 		}
 		if err := oprot.WriteFieldEnd(); err != nil {
 			return thrift.PrependError(fmt.Sprintf("%T write field end error 17:dataHoraFinalAtendimento: ", p), err)
+		}
+	}
+	return err
+}
+
+func (p *FichaAtendimentoOdontologicoChildThrift) writeField18(oprot thrift.TProtocol) (err error) {
+	if p.IsSetCpfCidadao() {
+		if err := oprot.WriteFieldBegin("cpfCidadao", thrift.STRING, 18); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field begin error 18:cpfCidadao: ", p), err)
+		}
+		if err := oprot.WriteString(string(*p.CpfCidadao)); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T.cpfCidadao (18) field write error: ", p), err)
+		}
+		if err := oprot.WriteFieldEnd(); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field end error 18:cpfCidadao: ", p), err)
 		}
 	}
 	return err

@@ -55,6 +55,8 @@ type
     procedure SetProcedimentos( const Value: IThriftList<string>);
     function GetCondutaDesfecho: Int64;
     procedure SetCondutaDesfecho( const Value: Int64);
+    function GetCpfCidadao: string;
+    procedure SetCpfCidadao( const Value: string);
 
     property Turno: Int64 read GetTurno write SetTurno;
     property CnsCidadao: string read GetCnsCidadao write SetCnsCidadao;
@@ -68,6 +70,7 @@ type
     property Ciap: string read GetCiap write SetCiap;
     property Procedimentos: IThriftList<string> read GetProcedimentos write SetProcedimentos;
     property CondutaDesfecho: Int64 read GetCondutaDesfecho write SetCondutaDesfecho;
+    property CpfCidadao: string read GetCpfCidadao write SetCpfCidadao;
 
     function Get__isset_Turno: Boolean;
     function Get__isset_CnsCidadao: Boolean;
@@ -81,6 +84,7 @@ type
     function Get__isset_Ciap: Boolean;
     function Get__isset_Procedimentos: Boolean;
     function Get__isset_CondutaDesfecho: Boolean;
+    function Get__isset_CpfCidadao: Boolean;
 
     property __isset_Turno: Boolean read Get__isset_Turno;
     property __isset_CnsCidadao: Boolean read Get__isset_CnsCidadao;
@@ -94,6 +98,7 @@ type
     property __isset_Ciap: Boolean read Get__isset_Ciap;
     property __isset_Procedimentos: Boolean read Get__isset_Procedimentos;
     property __isset_CondutaDesfecho: Boolean read Get__isset_CondutaDesfecho;
+    property __isset_CpfCidadao: Boolean read Get__isset_CpfCidadao;
   end;
 
   TFichaAtendimentoDomiciliarChildThriftImpl = class(TInterfacedObject, IBase, IFichaAtendimentoDomiciliarChildThrift)
@@ -110,6 +115,7 @@ type
     FCiap: string;
     FProcedimentos: IThriftList<string>;
     FCondutaDesfecho: Int64;
+    FCpfCidadao: string;
     
     F__isset_Turno: Boolean;
     F__isset_CnsCidadao: Boolean;
@@ -123,6 +129,7 @@ type
     F__isset_Ciap: Boolean;
     F__isset_Procedimentos: Boolean;
     F__isset_CondutaDesfecho: Boolean;
+    F__isset_CpfCidadao: Boolean;
     
     function GetTurno: Int64;
     procedure SetTurno( const Value: Int64);
@@ -148,6 +155,8 @@ type
     procedure SetProcedimentos( const Value: IThriftList<string>);
     function GetCondutaDesfecho: Int64;
     procedure SetCondutaDesfecho( const Value: Int64);
+    function GetCpfCidadao: string;
+    procedure SetCpfCidadao( const Value: string);
 
     function Get__isset_Turno: Boolean;
     function Get__isset_CnsCidadao: Boolean;
@@ -161,6 +170,7 @@ type
     function Get__isset_Ciap: Boolean;
     function Get__isset_Procedimentos: Boolean;
     function Get__isset_CondutaDesfecho: Boolean;
+    function Get__isset_CpfCidadao: Boolean;
   public
     constructor Create;
     destructor Destroy; override;
@@ -184,6 +194,7 @@ type
     property Ciap: string read GetCiap write SetCiap;
     property Procedimentos: IThriftList<string> read GetProcedimentos write SetProcedimentos;
     property CondutaDesfecho: Int64 read GetCondutaDesfecho write SetCondutaDesfecho;
+    property CpfCidadao: string read GetCpfCidadao write SetCpfCidadao;
 
     // isset
     property __isset_Turno: Boolean read Get__isset_Turno;
@@ -198,6 +209,7 @@ type
     property __isset_Ciap: Boolean read Get__isset_Ciap;
     property __isset_Procedimentos: Boolean read Get__isset_Procedimentos;
     property __isset_CondutaDesfecho: Boolean read Get__isset_CondutaDesfecho;
+    property __isset_CpfCidadao: Boolean read Get__isset_CpfCidadao;
   end;
 
   IFichaAtendimentoDomiciliarMasterThrift = interface(IBase)
@@ -473,6 +485,22 @@ begin
   Result := F__isset_CondutaDesfecho;
 end;
 
+function TFichaAtendimentoDomiciliarChildThriftImpl.GetCpfCidadao: string;
+begin
+  Result := FCpfCidadao;
+end;
+
+procedure TFichaAtendimentoDomiciliarChildThriftImpl.SetCpfCidadao( const Value: string);
+begin
+  F__isset_CpfCidadao := True;
+  FCpfCidadao := Value;
+end;
+
+function TFichaAtendimentoDomiciliarChildThriftImpl.Get__isset_CpfCidadao: Boolean;
+begin
+  Result := F__isset_CpfCidadao;
+end;
+
 procedure TFichaAtendimentoDomiciliarChildThriftImpl.Read( const iprot: IProtocol);
 var
   field_ : IField;
@@ -614,6 +642,15 @@ begin
           if (field_.Type_ = TType.I64) then
           begin
             CondutaDesfecho := iprot.ReadI64();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        15: begin
+          if (field_.Type_ = TType.String_) then
+          begin
+            CpfCidadao := iprot.ReadString();
           end else
           begin
             TProtocolUtil.Skip(iprot, field_.Type_);
@@ -764,6 +801,15 @@ begin
     oprot.WriteI64(CondutaDesfecho);
     oprot.WriteFieldEnd();
   end;
+  if (__isset_CpfCidadao) then
+  begin
+    field_.Name := 'cpfCidadao';
+    field_.Type_  := TType.String_;
+    field_.ID := 15;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteString(CpfCidadao);
+    oprot.WriteFieldEnd();
+  end;
   oprot.WriteFieldStop();
   oprot.WriteStructEnd();
 end;
@@ -847,6 +893,12 @@ begin
       _first11 := FALSE;
       _sb10.Append('CondutaDesfecho: ');
       _sb10.Append(CondutaDesfecho);
+    end;
+    if (__isset_CpfCidadao) then begin
+      if not _first11 then _sb10.Append(',');
+      _first11 := FALSE;
+      _sb10.Append('CpfCidadao: ');
+      _sb10.Append(CpfCidadao);
     end;
     _sb10.Append(')');
     Result := _sb10.ToString;

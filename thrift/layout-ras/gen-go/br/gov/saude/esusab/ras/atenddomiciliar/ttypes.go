@@ -31,6 +31,7 @@ var GoUnusedProtection__ int
 //  - Ciap
 //  - Procedimentos
 //  - CondutaDesfecho
+//  - CpfCidadao
 type FichaAtendimentoDomiciliarChildThrift struct {
 	Turno                       *int64   `thrift:"turno,1" json:"turno,omitempty"`
 	CnsCidadao                  *string  `thrift:"cnsCidadao,2" json:"cnsCidadao,omitempty"`
@@ -45,6 +46,8 @@ type FichaAtendimentoDomiciliarChildThrift struct {
 	Procedimentos               []string `thrift:"procedimentos,11" json:"procedimentos,omitempty"`
 	// unused field # 12
 	CondutaDesfecho *int64 `thrift:"condutaDesfecho,13" json:"condutaDesfecho,omitempty"`
+	// unused field # 14
+	CpfCidadao *string `thrift:"cpfCidadao,15" json:"cpfCidadao,omitempty"`
 }
 
 func NewFichaAtendimentoDomiciliarChildThrift() *FichaAtendimentoDomiciliarChildThrift {
@@ -152,6 +155,15 @@ func (p *FichaAtendimentoDomiciliarChildThrift) GetCondutaDesfecho() int64 {
 	}
 	return *p.CondutaDesfecho
 }
+
+var FichaAtendimentoDomiciliarChildThrift_CpfCidadao_DEFAULT string
+
+func (p *FichaAtendimentoDomiciliarChildThrift) GetCpfCidadao() string {
+	if !p.IsSetCpfCidadao() {
+		return FichaAtendimentoDomiciliarChildThrift_CpfCidadao_DEFAULT
+	}
+	return *p.CpfCidadao
+}
 func (p *FichaAtendimentoDomiciliarChildThrift) IsSetTurno() bool {
 	return p.Turno != nil
 }
@@ -198,6 +210,10 @@ func (p *FichaAtendimentoDomiciliarChildThrift) IsSetProcedimentos() bool {
 
 func (p *FichaAtendimentoDomiciliarChildThrift) IsSetCondutaDesfecho() bool {
 	return p.CondutaDesfecho != nil
+}
+
+func (p *FichaAtendimentoDomiciliarChildThrift) IsSetCpfCidadao() bool {
+	return p.CpfCidadao != nil
 }
 
 func (p *FichaAtendimentoDomiciliarChildThrift) Read(iprot thrift.TProtocol) error {
@@ -260,6 +276,10 @@ func (p *FichaAtendimentoDomiciliarChildThrift) Read(iprot thrift.TProtocol) err
 			}
 		case 13:
 			if err := p.readField13(iprot); err != nil {
+				return err
+			}
+		case 15:
+			if err := p.readField15(iprot); err != nil {
 				return err
 			}
 		default:
@@ -411,6 +431,15 @@ func (p *FichaAtendimentoDomiciliarChildThrift) readField13(iprot thrift.TProtoc
 	return nil
 }
 
+func (p *FichaAtendimentoDomiciliarChildThrift) readField15(iprot thrift.TProtocol) error {
+	if v, err := iprot.ReadString(); err != nil {
+		return thrift.PrependError("error reading field 15: ", err)
+	} else {
+		p.CpfCidadao = &v
+	}
+	return nil
+}
+
 func (p *FichaAtendimentoDomiciliarChildThrift) Write(oprot thrift.TProtocol) error {
 	if err := oprot.WriteStructBegin("FichaAtendimentoDomiciliarChildThrift"); err != nil {
 		return thrift.PrependError(fmt.Sprintf("%T write struct begin error: ", p), err)
@@ -449,6 +478,9 @@ func (p *FichaAtendimentoDomiciliarChildThrift) Write(oprot thrift.TProtocol) er
 		return err
 	}
 	if err := p.writeField13(oprot); err != nil {
+		return err
+	}
+	if err := p.writeField15(oprot); err != nil {
 		return err
 	}
 	if err := oprot.WriteFieldStop(); err != nil {
@@ -651,6 +683,21 @@ func (p *FichaAtendimentoDomiciliarChildThrift) writeField13(oprot thrift.TProto
 		}
 		if err := oprot.WriteFieldEnd(); err != nil {
 			return thrift.PrependError(fmt.Sprintf("%T write field end error 13:condutaDesfecho: ", p), err)
+		}
+	}
+	return err
+}
+
+func (p *FichaAtendimentoDomiciliarChildThrift) writeField15(oprot thrift.TProtocol) (err error) {
+	if p.IsSetCpfCidadao() {
+		if err := oprot.WriteFieldBegin("cpfCidadao", thrift.STRING, 15); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field begin error 15:cpfCidadao: ", p), err)
+		}
+		if err := oprot.WriteString(string(*p.CpfCidadao)); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T.cpfCidadao (15) field write error: ", p), err)
+		}
+		if err := oprot.WriteFieldEnd(); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field end error 15:cpfCidadao: ", p), err)
 		}
 	}
 	return err

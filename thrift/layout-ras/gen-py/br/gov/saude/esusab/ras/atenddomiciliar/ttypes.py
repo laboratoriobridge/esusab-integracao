@@ -34,6 +34,7 @@ class FichaAtendimentoDomiciliarChildThrift:
    - ciap
    - procedimentos
    - condutaDesfecho
+   - cpfCidadao
   """
 
   thrift_spec = (
@@ -51,9 +52,11 @@ class FichaAtendimentoDomiciliarChildThrift:
     (11, TType.LIST, 'procedimentos', (TType.STRING,None), None, ), # 11
     None, # 12
     (13, TType.I64, 'condutaDesfecho', None, None, ), # 13
+    None, # 14
+    (15, TType.STRING, 'cpfCidadao', None, None, ), # 15
   )
 
-  def __init__(self, turno=None, cnsCidadao=None, dataNascimento=None, sexo=None, localAtendimento=None, atencaoDomiciliarModalidade=None, tipoAtendimento=None, condicoesAvaliadas=None, cid=None, ciap=None, procedimentos=None, condutaDesfecho=None,):
+  def __init__(self, turno=None, cnsCidadao=None, dataNascimento=None, sexo=None, localAtendimento=None, atencaoDomiciliarModalidade=None, tipoAtendimento=None, condicoesAvaliadas=None, cid=None, ciap=None, procedimentos=None, condutaDesfecho=None, cpfCidadao=None,):
     self.turno = turno
     self.cnsCidadao = cnsCidadao
     self.dataNascimento = dataNascimento
@@ -66,6 +69,7 @@ class FichaAtendimentoDomiciliarChildThrift:
     self.ciap = ciap
     self.procedimentos = procedimentos
     self.condutaDesfecho = condutaDesfecho
+    self.cpfCidadao = cpfCidadao
 
   def read(self, iprot):
     if iprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None and fastbinary is not None:
@@ -146,6 +150,11 @@ class FichaAtendimentoDomiciliarChildThrift:
           self.condutaDesfecho = iprot.readI64()
         else:
           iprot.skip(ftype)
+      elif fid == 15:
+        if ftype == TType.STRING:
+          self.cpfCidadao = iprot.readString()
+        else:
+          iprot.skip(ftype)
       else:
         iprot.skip(ftype)
       iprot.readFieldEnd()
@@ -210,6 +219,10 @@ class FichaAtendimentoDomiciliarChildThrift:
       oprot.writeFieldBegin('condutaDesfecho', TType.I64, 13)
       oprot.writeI64(self.condutaDesfecho)
       oprot.writeFieldEnd()
+    if self.cpfCidadao is not None:
+      oprot.writeFieldBegin('cpfCidadao', TType.STRING, 15)
+      oprot.writeString(self.cpfCidadao)
+      oprot.writeFieldEnd()
     oprot.writeFieldStop()
     oprot.writeStructEnd()
 
@@ -231,6 +244,7 @@ class FichaAtendimentoDomiciliarChildThrift:
     value = (value * 31) ^ hash(self.ciap)
     value = (value * 31) ^ hash(self.procedimentos)
     value = (value * 31) ^ hash(self.condutaDesfecho)
+    value = (value * 31) ^ hash(self.cpfCidadao)
     return value
 
   def __repr__(self):

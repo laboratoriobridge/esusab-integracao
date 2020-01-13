@@ -35,6 +35,7 @@ namespace br.gov.saude.esusab.ras.atenddomiciliar
     private string _ciap;
     private List<string> _procedimentos;
     private long _condutaDesfecho;
+    private string _cpfCidadao;
 
     public long Turno
     {
@@ -192,6 +193,19 @@ namespace br.gov.saude.esusab.ras.atenddomiciliar
       }
     }
 
+    public string CpfCidadao
+    {
+      get
+      {
+        return _cpfCidadao;
+      }
+      set
+      {
+        __isset.cpfCidadao = true;
+        this._cpfCidadao = value;
+      }
+    }
+
 
     public Isset __isset;
     #if !SILVERLIGHT
@@ -210,6 +224,7 @@ namespace br.gov.saude.esusab.ras.atenddomiciliar
       public bool ciap;
       public bool procedimentos;
       public bool condutaDesfecho;
+      public bool cpfCidadao;
     }
 
     public FichaAtendimentoDomiciliarChildThrift() {
@@ -330,6 +345,13 @@ namespace br.gov.saude.esusab.ras.atenddomiciliar
             case 13:
               if (field.Type == TType.I64) {
                 CondutaDesfecho = iprot.ReadI64();
+              } else { 
+                TProtocolUtil.Skip(iprot, field.Type);
+              }
+              break;
+            case 15:
+              if (field.Type == TType.String) {
+                CpfCidadao = iprot.ReadString();
               } else { 
                 TProtocolUtil.Skip(iprot, field.Type);
               }
@@ -465,6 +487,14 @@ namespace br.gov.saude.esusab.ras.atenddomiciliar
           oprot.WriteI64(CondutaDesfecho);
           oprot.WriteFieldEnd();
         }
+        if (CpfCidadao != null && __isset.cpfCidadao) {
+          field.Name = "cpfCidadao";
+          field.Type = TType.String;
+          field.ID = 15;
+          oprot.WriteFieldBegin(field);
+          oprot.WriteString(CpfCidadao);
+          oprot.WriteFieldEnd();
+        }
         oprot.WriteFieldStop();
         oprot.WriteStructEnd();
       }
@@ -548,6 +578,12 @@ namespace br.gov.saude.esusab.ras.atenddomiciliar
         __first = false;
         __sb.Append("CondutaDesfecho: ");
         __sb.Append(CondutaDesfecho);
+      }
+      if (CpfCidadao != null && __isset.cpfCidadao) {
+        if(!__first) { __sb.Append(", "); }
+        __first = false;
+        __sb.Append("CpfCidadao: ");
+        __sb.Append(CpfCidadao);
       }
       __sb.Append(")");
       return __sb.ToString();

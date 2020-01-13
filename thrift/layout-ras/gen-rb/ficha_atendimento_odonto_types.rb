@@ -50,6 +50,7 @@ module Br
               TURNO = 15
               DATAHORAINICIALATENDIMENTO = 16
               DATAHORAFINALATENDIMENTO = 17
+              CPFCIDADAO = 18
 
               FIELDS = {
                 DTNASCIMENTO => {:type => ::Thrift::Types::I64, :name => 'dtNascimento', :optional => true},
@@ -67,7 +68,8 @@ module Br
                 SEXO => {:type => ::Thrift::Types::I64, :name => 'sexo', :optional => true},
                 TURNO => {:type => ::Thrift::Types::I64, :name => 'turno', :optional => true},
                 DATAHORAINICIALATENDIMENTO => {:type => ::Thrift::Types::I64, :name => 'dataHoraInicialAtendimento', :optional => true},
-                DATAHORAFINALATENDIMENTO => {:type => ::Thrift::Types::I64, :name => 'dataHoraFinalAtendimento', :optional => true}
+                DATAHORAFINALATENDIMENTO => {:type => ::Thrift::Types::I64, :name => 'dataHoraFinalAtendimento', :optional => true},
+                CPFCIDADAO => {:type => ::Thrift::Types::STRING, :name => 'cpfCidadao', :optional => true}
               }
 
               def struct_fields; FIELDS; end

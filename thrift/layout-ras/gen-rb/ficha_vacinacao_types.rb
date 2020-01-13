@@ -53,6 +53,7 @@ module Br
               VACINAS = 11
               DATAHORAINICIALATENDIMENTO = 12
               DATAHORAFINALATENDIMENTO = 13
+              CPFCIDADAO = 14
 
               FIELDS = {
                 TURNO => {:type => ::Thrift::Types::I64, :name => 'turno', :optional => true},
@@ -67,7 +68,8 @@ module Br
                 PUERPERA => {:type => ::Thrift::Types::BOOL, :name => 'puerpera', :optional => true},
                 VACINAS => {:type => ::Thrift::Types::LIST, :name => 'vacinas', :element => {:type => ::Thrift::Types::STRUCT, :class => ::Br::Gov::Saude::Esusab::Ras::Vacinacao::VacinaRowThrift}, :optional => true},
                 DATAHORAINICIALATENDIMENTO => {:type => ::Thrift::Types::I64, :name => 'dataHoraInicialAtendimento', :optional => true},
-                DATAHORAFINALATENDIMENTO => {:type => ::Thrift::Types::I64, :name => 'dataHoraFinalAtendimento', :optional => true}
+                DATAHORAFINALATENDIMENTO => {:type => ::Thrift::Types::I64, :name => 'dataHoraFinalAtendimento', :optional => true},
+                CPFCIDADAO => {:type => ::Thrift::Types::STRING, :name => 'cpfCidadao', :optional => true}
               }
 
               def struct_fields; FIELDS; end

@@ -26,6 +26,7 @@ module Br
               PROCEDIMENTOS = 8
               DATAHORAINICIALATENDIMENTO = 10
               DATAHORAFINALATENDIMENTO = 11
+              CPFCIDADAO = 12
 
               FIELDS = {
                 NUMPRONTUARIO => {:type => ::Thrift::Types::STRING, :name => 'numProntuario', :optional => true},
@@ -37,7 +38,8 @@ module Br
                 STATUSESCUTAINICIALORIENTACAO => {:type => ::Thrift::Types::BOOL, :name => 'statusEscutaInicialOrientacao', :optional => true},
                 PROCEDIMENTOS => {:type => ::Thrift::Types::LIST, :name => 'procedimentos', :element => {:type => ::Thrift::Types::STRING}, :optional => true},
                 DATAHORAINICIALATENDIMENTO => {:type => ::Thrift::Types::I64, :name => 'dataHoraInicialAtendimento', :optional => true},
-                DATAHORAFINALATENDIMENTO => {:type => ::Thrift::Types::I64, :name => 'dataHoraFinalAtendimento', :optional => true}
+                DATAHORAFINALATENDIMENTO => {:type => ::Thrift::Types::I64, :name => 'dataHoraFinalAtendimento', :optional => true},
+                CPFCIDADAO => {:type => ::Thrift::Types::STRING, :name => 'cpfCidadao', :optional => true}
               }
 
               def struct_fields; FIELDS; end

@@ -260,6 +260,7 @@ class FichaAtendimentoIndividualChildThrift:
    - perimetroCefalico
    - dataHoraInicialAtendimento
    - dataHoraFinalAtendimento
+   - cpfCidadao
   """
 
   thrift_spec = (
@@ -293,9 +294,10 @@ class FichaAtendimentoIndividualChildThrift:
     (27, TType.DOUBLE, 'perimetroCefalico', None, None, ), # 27
     (28, TType.I64, 'dataHoraInicialAtendimento', None, None, ), # 28
     (29, TType.I64, 'dataHoraFinalAtendimento', None, None, ), # 29
+    (30, TType.STRING, 'cpfCidadao', None, None, ), # 30
   )
 
-  def __init__(self, numeroProntuario=None, cns=None, dataNascimento=None, localDeAtendimento=None, sexo=None, turno=None, tipoAtendimento=None, pesoAcompanhamentoNutricional=None, alturaAcompanhamentoNutricional=None, aleitamentoMaterno=None, dumDaGestante=None, idadeGestacional=None, atencaoDomiciliarModalidade=None, problemaCondicaoAvaliada=None, exame=None, vacinaEmDia=None, pic=None, ficouEmObservacao=None, nasfs=None, condutas=None, stGravidezPlanejada=None, nuGestasPrevias=None, nuPartos=None, racionalidadeSaude=None, perimetroCefalico=None, dataHoraInicialAtendimento=None, dataHoraFinalAtendimento=None,):
+  def __init__(self, numeroProntuario=None, cns=None, dataNascimento=None, localDeAtendimento=None, sexo=None, turno=None, tipoAtendimento=None, pesoAcompanhamentoNutricional=None, alturaAcompanhamentoNutricional=None, aleitamentoMaterno=None, dumDaGestante=None, idadeGestacional=None, atencaoDomiciliarModalidade=None, problemaCondicaoAvaliada=None, exame=None, vacinaEmDia=None, pic=None, ficouEmObservacao=None, nasfs=None, condutas=None, stGravidezPlanejada=None, nuGestasPrevias=None, nuPartos=None, racionalidadeSaude=None, perimetroCefalico=None, dataHoraInicialAtendimento=None, dataHoraFinalAtendimento=None, cpfCidadao=None,):
     self.numeroProntuario = numeroProntuario
     self.cns = cns
     self.dataNascimento = dataNascimento
@@ -323,6 +325,7 @@ class FichaAtendimentoIndividualChildThrift:
     self.perimetroCefalico = perimetroCefalico
     self.dataHoraInicialAtendimento = dataHoraInicialAtendimento
     self.dataHoraFinalAtendimento = dataHoraFinalAtendimento
+    self.cpfCidadao = cpfCidadao
 
   def read(self, iprot):
     if iprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None and fastbinary is not None:
@@ -485,6 +488,11 @@ class FichaAtendimentoIndividualChildThrift:
           self.dataHoraFinalAtendimento = iprot.readI64()
         else:
           iprot.skip(ftype)
+      elif fid == 30:
+        if ftype == TType.STRING:
+          self.cpfCidadao = iprot.readString()
+        else:
+          iprot.skip(ftype)
       else:
         iprot.skip(ftype)
       iprot.readFieldEnd()
@@ -612,6 +620,10 @@ class FichaAtendimentoIndividualChildThrift:
       oprot.writeFieldBegin('dataHoraFinalAtendimento', TType.I64, 29)
       oprot.writeI64(self.dataHoraFinalAtendimento)
       oprot.writeFieldEnd()
+    if self.cpfCidadao is not None:
+      oprot.writeFieldBegin('cpfCidadao', TType.STRING, 30)
+      oprot.writeString(self.cpfCidadao)
+      oprot.writeFieldEnd()
     oprot.writeFieldStop()
     oprot.writeStructEnd()
 
@@ -648,6 +660,7 @@ class FichaAtendimentoIndividualChildThrift:
     value = (value * 31) ^ hash(self.perimetroCefalico)
     value = (value * 31) ^ hash(self.dataHoraInicialAtendimento)
     value = (value * 31) ^ hash(self.dataHoraFinalAtendimento)
+    value = (value * 31) ^ hash(self.cpfCidadao)
     return value
 
   def __repr__(self):

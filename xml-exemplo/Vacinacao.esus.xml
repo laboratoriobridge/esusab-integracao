@@ -45,6 +45,34 @@
 			<dataHoraInicialAtendimento>1551538800000</dataHoraInicialAtendimento>
 			<dataHoraFinalAtendimento>1551538800000</dataHoraFinalAtendimento>
 		</vacinacoes>
+		<vacinacoes>
+			<turno>1</turno>
+			<numProntuario>52</numProntuario>
+			<cpfCidadao>31422733521</cpfCidadao>
+			<dtNascimento>1430808000000</dtNascimento>
+			<sexo>1</sexo>
+			<localAtendimento>1</localAtendimento>
+			<viajante>true</viajante>
+			<comunicanteHanseniase>false</comunicanteHanseniase>
+			<gestante>true</gestante>
+			<puerpera>false</puerpera>
+			<vacinas>
+				<imunobiologico>5</imunobiologico>
+				<estrategiaVacinacao>2</estrategiaVacinacao>
+				<dose>1</dose>
+				<lote>DEF01</lote>
+				<fabricante>BUILD SUSTAINABILITY</fabricante>
+			</vacinas>
+			<vacinas>
+				<imunobiologico>15</imunobiologico>
+				<estrategiaVacinacao>1</estrategiaVacinacao>
+				<dose>9</dose>
+				<lote>ABC</lote>
+				<fabricante>AMERICAN JOIN ULTIMATE</fabricante>
+			</vacinas>
+			<dataHoraInicialAtendimento>1551538800000</dataHoraInicialAtendimento>
+			<dataHoraFinalAtendimento>1551538800000</dataHoraFinalAtendimento>
+		</vacinacoes>
 	</ns4:fichaVacinacaoMasterTransport>
 	<ns2:remetente>
 		<contraChave>TREINAMENTO</contraChave>

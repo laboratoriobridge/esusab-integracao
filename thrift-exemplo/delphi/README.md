@@ -156,9 +156,9 @@ E parte sobre o software que a está enviando.
     versaoThrift: IVersaoThrift;
   begin
     versaoThrift := TVersaoThriftImpl.Create;
-    versaoThrift.Major := 2;
-    versaoThrift.Minor := 0;
-    versaoThrift.Revision := 0;
+    versaoThrift.Major := 3;
+    versaoThrift.Minor := 2;
+    versaoThrift.Revision := 4;
 
     Result := versaoThrift;
   end;

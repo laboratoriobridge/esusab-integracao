@@ -56,6 +56,15 @@
 			<resideDesde>1512093600000</resideDesde>
 			<stMudanca>false</stMudanca>
 		</familias>
+		<familias>
+			<dataNascimentoResponsavel>662738000000</dataNascimentoResponsavel>
+			<cpfResponsavel>31422733521</cpfResponsavel>
+			<numeroMembrosFamilia>1</numeroMembrosFamilia>
+			<numeroProntuario>1</numeroProntuario>
+			<rendaFamiliar>3</rendaFamiliar>
+			<resideDesde>1512093600000</resideDesde>
+			<stMudanca>false</stMudanca>
+		</familias>
 		<fichaAtualizada>false</fichaAtualizada>
 		<quantosAnimaisNoDomicilio>3</quantosAnimaisNoDomicilio>
 		<stAnimaisNoDomicilio>true</stAnimaisNoDomicilio>

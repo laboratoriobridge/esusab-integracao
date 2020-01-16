@@ -170,6 +170,42 @@
 			<dataHoraFinalAtendimento>1553097000000</dataHoraFinalAtendimento>
 		</atendimentosOdontologicos>
 		<atendimentosOdontologicos>
+			<numProntuario>123</numProntuario>
+			<cpfCidadao>68688625042</cpfCidadao>			
+			<dtNascimento>1081090800000</dtNascimento>
+			<localAtendimento>1</localAtendimento>
+			<gestante>true</gestante>
+			<necessidadesEspeciais>true</necessidadesEspeciais>
+			<tipoAtendimento>2</tipoAtendimento>
+			<tiposEncamOdonto>4</tiposEncamOdonto>
+			<tiposEncamOdonto>10</tiposEncamOdonto>
+			<tiposEncamOdonto>15</tiposEncamOdonto>
+			<tiposEncamOdonto>16</tiposEncamOdonto>
+			<tiposFornecimOdonto>2</tiposFornecimOdonto>
+			<tiposVigilanciaSaudeBucal>3</tiposVigilanciaSaudeBucal>
+			<tiposConsultaOdonto>2</tiposConsultaOdonto>
+			<procedimentosRealizados>
+				<coMsProcedimento>ABPO007</coMsProcedimento>
+				<quantidade>2</quantidade>
+			</procedimentosRealizados>
+			<procedimentosRealizados>
+				<coMsProcedimento>ABPO004</coMsProcedimento>
+				<quantidade>2</quantidade>
+			</procedimentosRealizados>
+			<outrosSiaProcedimentos>
+				<coMsProcedimento>0307020045</coMsProcedimento>
+				<quantidade>1</quantidade>
+			</outrosSiaProcedimentos>
+			<outrosSiaProcedimentos>
+				<coMsProcedimento>0307020037</coMsProcedimento>
+				<quantidade>3</quantidade>
+			</outrosSiaProcedimentos>
+			<turno>1</turno>
+			<sexo>1</sexo>
+			<dataHoraInicialAtendimento>1553094000000</dataHoraInicialAtendimento>
+			<dataHoraFinalAtendimento>1553097000000</dataHoraFinalAtendimento>
+		</atendimentosOdontologicos>
+		<atendimentosOdontologicos>
 			<dtNascimento>1115305200000</dtNascimento>
 			<localAtendimento>1</localAtendimento>
 			<gestante>false</gestante>

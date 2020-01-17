@@ -167,7 +167,7 @@ E parte sobre o software que a está enviando.
     versaoThrift := TVersaoThriftImpl.Create;
     versaoThrift.Major := 3;
     versaoThrift.Minor := 2;
-    versaoThrift.Revision := 3;
+    versaoThrift.Revision := 4;
 
     Result := versaoThrift;
   end;

@@ -31,7 +31,7 @@
 			<sexo>0</sexo>
 		</participantes>
 		<participantes>
-			<cpfParticipante>107723290110009</cpfParticipante>
+			<cpfParticipante>68688625042</cpfParticipante>
 			<dataNascimento>978357600000</dataNascimento>
 			<avaliacaoAlterada>false</avaliacaoAlterada>
 			<cessouHabitoFumar>false</cessouHabitoFumar>
@@ -84,5 +84,5 @@
 		<versaoSistema>3.2.18</versaoSistema>
 		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:originadora>
-	<versao major="3" minor="2" revision="3" />
+	<versao major="3" minor="2" revision="4" />
 </ns3:dadoTransporteTransportXml>

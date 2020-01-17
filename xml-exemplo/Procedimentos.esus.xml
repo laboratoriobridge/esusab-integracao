@@ -87,5 +87,5 @@
 		<versaoSistema>3.2.18</versaoSistema>
 		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:originadora>
-	<versao major="3" minor="2" revision="3" />
+	<versao major="3" minor="2" revision="4" />
 </ns3:dadoTransporteTransportXml>

@@ -13,7 +13,7 @@ String uuidFicha = UUID.randomUUID().toString();
 thriftProcedimentos.setUuidFicha(uuidFicha);
 thriftProcedimentos.setNumTotalAfericaoPa(1);
 thriftProcedimentos.setNumTotalAfericaoTemperatura(1);
-//... 
+//...
 ```
 
 ## Passo 2
@@ -68,7 +68,7 @@ Informar o tipo da ficha, a ficha serializada e a versão no DadoTransporte.
 ```java
 dadoTransporteThrift.setTipoDadoSerializado(7L); // 7 é o tipo da Ficha de Procedimentos, usada nesse exemplo.
 dadoTransporteThrift.setDadoSerializado(thriftProcedimentosSerializado);
-VersaoThrift versaoThrift = new VersaoThrift(3, 2, 4); // versão da ficha a ser exportada (não é a versão do e-SUS AB)
+VersaoThrift versaoThrift = new VersaoThrift(3, 2, 3); // versão da ficha a ser exportada (não é a versão do e-SUS AB)
 dadoTransporteThrift.setVersao(versaoThrift);
 ```
 

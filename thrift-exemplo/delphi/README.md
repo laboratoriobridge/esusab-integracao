@@ -3,6 +3,7 @@
 Este exemplo é um projeto delphi que demonstra como criar um arquivo .zip com fichas serializadas para importação no e-SUS AB.
 
 ## Passo 1
+
 **1.**
 
 Criar o objeto da ficha e populá-lo com as informações.
@@ -36,6 +37,7 @@ Popular o thrift com os dados dos atendimentos realizados.
   fichaProcedimentos.AtendProcedimentos := converterAtendimentos();
   ...
 ```
+
 ```
   function converterAtendimentos: IThriftList<IFichaProcedimentoChildThrift>;
   var
@@ -61,6 +63,7 @@ Popular o thrift com os dados dos atendimentos realizados.
     Result := procedimentosList;
   end;
 ```
+
 ```
   function converterProcedimentos: IThriftList<String>;
   var
@@ -79,6 +82,7 @@ Popular o thrift com os dados dos atendimentos realizados.
 **3.**
 
 Popular o thrift com as informações dos profissionais, unidades, local e data relativos ao atendimento.
+
 ```
   function converterInformacoesAtendimento: IUnicaLotacaoHeaderThrift;
   var
@@ -103,6 +107,7 @@ Popular o thrift com as informações dos profissionais, unidades, local e data 
 ## Passo 2
 
 Depois de montar o objeto da ficha, você deve criar e popular o objeto de transporte.
+
 ```
   function preencherThriftTransporte(thriftAtendimento: IFichaProcedimentoMasterThrift): IDadoTransporteThrift;
   var
@@ -125,7 +130,9 @@ Este objeto funciona como um pacote onde parte das informações são a respeito
     thriftTransporte.NumLote := 1;
   ...
 ```
+
 E parte sobre o software que a está enviando.
+
 ```
   ...
     thriftTransporte.Remetente := preencherDadoInstalacaoThrift();
@@ -133,6 +140,7 @@ E parte sobre o software que a está enviando.
     thriftTransporte.Versao := preencherVersaoThrift();
   ...
 ```
+
 ```
   function preencherDadoInstalacaoThrift: IDadoInstalacaoThrift;
   var
@@ -150,6 +158,7 @@ E parte sobre o software que a está enviando.
     Result := dadoInstalacaoThrift;
   end;
 ```
+
 ```
   function preencherVersaoThrift: IVersaoThrift;
   var
@@ -158,7 +167,7 @@ E parte sobre o software que a está enviando.
     versaoThrift := TVersaoThriftImpl.Create;
     versaoThrift.Major := 3;
     versaoThrift.Minor := 2;
-    versaoThrift.Revision := 4;
+    versaoThrift.Revision := 3;
 
     Result := versaoThrift;
   end;

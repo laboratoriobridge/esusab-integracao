@@ -30,6 +30,14 @@
 			<altura>160.0</altura>
 			<sexo>1</sexo>
 		</participantes>
+		<participantes>
+			<cpfParticipante>68688625042</cpfParticipante>
+			<dataNascimento>1430838000000</dataNascimento>
+			<avaliacaoAlterada>false</avaliacaoAlterada>
+			<peso>50.0</peso>
+			<altura>149.0</altura>
+			<sexo>1</sexo>
+		</participantes>
 		<tbCdsOrigem>3</tbCdsOrigem>
 		<turno>1</turno>
 		<pseEducacao>true</pseEducacao>

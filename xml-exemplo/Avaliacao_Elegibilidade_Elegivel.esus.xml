@@ -26,7 +26,7 @@
 		<uuidFicha>0019615-0ff12f9f-90ad-4be8-83c5-2153f9829405</uuidFicha>
 		<tpCdsOrigem>3</tpCdsOrigem>
 		<turno>1</turno>
-		<cnsCidadao>119141073230003</cnsCidadao>
+		<cpfCidadao>68688625042</cpfCidadao>
 		<dataNascimentoCidadao>662742000000</dataNascimentoCidadao>
 		<sexoCidadao>0</sexoCidadao>
 		<nomeCidadao>CIDADÃO VALIDAÇÃO LEDI</nomeCidadao>
@@ -83,7 +83,7 @@
 		<nomePaiCidadao>PEDRO DUTRA</nomePaiCidadao>
 		<desconheceNomePai>false</desconheceNomePai>
 		<paisNascimento>31</paisNascimento>
-		<cnsCuidador>898050047989752</cnsCuidador>
+		<cpfCuidador>31422733521</cpfCuidador>
 	</ns4:fichaAvaliacaoElegibilidadeTransport>
 	<ns2:remetente>
 		<contraChave>TREINAMENTO</contraChave>

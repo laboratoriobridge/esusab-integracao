@@ -40,20 +40,11 @@
 		</enderecoLocalPermanencia>
 		<familias>
 			<dataNascimentoResponsavel>978357600000</dataNascimentoResponsavel>
-			<numeroCnsResponsavel>119141073230003</numeroCnsResponsavel>
+			<cnsResponsavel>119141073230003</cnsResponsavel>
 			<numeroMembrosFamilia>1</numeroMembrosFamilia>
 			<numeroProntuario>2</numeroProntuario>
 			<rendaFamiliar>2</rendaFamiliar>
 			<resideDesde>1506826800000</resideDesde>
-			<stMudanca>false</stMudanca>
-		</familias>
-		<familias>
-			<dataNascimentoResponsavel>662738400000</dataNascimentoResponsavel>
-			<numeroCnsResponsavel>178716863270001</numeroCnsResponsavel>
-			<numeroMembrosFamilia>1</numeroMembrosFamilia>
-			<numeroProntuario>1</numeroProntuario>
-			<rendaFamiliar>3</rendaFamiliar>
-			<resideDesde>1512093600000</resideDesde>
 			<stMudanca>false</stMudanca>
 		</familias>
 		<familias>

@@ -12,3 +12,5 @@ bin/
 build/
 target/
 metamodel/
+
+.idea/

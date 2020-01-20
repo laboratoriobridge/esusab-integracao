@@ -163,7 +163,7 @@ public class ExemploFichaProcedimentoThrift {
 			atendimentoProcedimentoThrift.setDtNascimento(dataNascimento.getTimeInMillis());
 
 			atendimentoProcedimentoThrift.setLocalAtendimento(1);
-			atendimentoProcedimentoThrift.setCnsCidadao("898001161218973");
+			atendimentoProcedimentoThrift.setCpfCidadao("80487483391");
 			atendimentoProcedimentoThrift.setNumProntuario("43143");
 			atendimentoProcedimentoThrift.setSexo(1);
 			atendimentoProcedimentoThrift.setTurno(1);

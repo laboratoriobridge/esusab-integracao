@@ -5,7 +5,6 @@ interface
 uses
   System.SysUtils,
   System.Classes,
-  br.gov.saude.esus.transport.common.generated.thrift,
   thrift.Serializer,
   Thrift,
   Thrift.Protocol,

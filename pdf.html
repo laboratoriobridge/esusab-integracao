@@ -25,7 +25,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS AB PEC</span>
       
-        <span class="label">versão 3.2.2</span>
+        <span class="label">versão 3.2.4</span>
       
     </a>
 
@@ -137,7 +137,7 @@
 
       <li id="item-layout_ab" data-url="/ledi/documentacao/index.html">
         <label>
-          <input type="checkbox" value="layout_ab" checked="checked"> Layout e-SUS AB de Dados e Interface Versão 3.2.2
+          <input type="checkbox" value="layout_ab" checked="checked"> Layout e-SUS AB de Dados e Interface Versão 3.2.4
           <small>
             <a onclick="checkById('layout_ab', true); return false;">Marcar todos</a> |
             <a onclick="checkById('layout_ab', false); return false;">Desmarcar todos</a>
@@ -611,7 +611,7 @@
 
       <li id="item-principais_alteracoes" data-url="/ledi/documentacao/principais_alteracoes.html">
         <label>
-          <input type="checkbox" value="principais_alteracoes" checked="checked"> Principais alterações da v3.2.1 para a v3.2.2
+          <input type="checkbox" value="principais_alteracoes" checked="checked"> Principais alterações da v3.2.2 para a v3.2.4
           <small>
             <a onclick="checkById('principais_alteracoes', true); return false;">Marcar todos</a> |
             <a onclick="checkById('principais_alteracoes', false); return false;">Desmarcar todos</a>
@@ -921,7 +921,7 @@
   
       <!-- Cria a lista de itens[páginas] que foram selecionados  -->
 
-  <li id="summary-layout_ab"><a href="#layout_ab">Layout e-SUS AB de Dados e Interface Versão 3.2.2</a></li>
+  <li id="summary-layout_ab"><a href="#layout_ab">Layout e-SUS AB de Dados e Interface Versão 3.2.4</a></li>
   
       <!-- Cria a lista de itens[páginas] que foram selecionados  -->
 
@@ -1121,7 +1121,7 @@
 
   
 
-  <li id="summary-principais_alteracoes"><a href="#principais_alteracoes">Principais alterações da v3.2.1 para a v3.2.2</a></li>
+  <li id="summary-principais_alteracoes"><a href="#principais_alteracoes">Principais alterações da v3.2.2 para a v3.2.4</a></li>
   
       <!-- Cria a lista de itens[páginas] que foram selecionados  -->
 
@@ -1289,7 +1289,12 @@
             <a class="button" href="https://integracao.esusab.ufsc.br/v321/">LEDI AB 3.2.1</a>
         </td>
         <td class="button-block">
-            <a class="button" href="/ledi/documentacao/index.html">LEDI AB 3.2.2</a>
+            <a class="button" href="https://integracao.esusab.ufsc.br/v322/">LEDI AB 3.2.2</a>
+        </td>
+    </tr>
+    <tr class="button-block" style="background-color: #fdfdfd;">
+        <td class="button-block">
+            <a class="button" href="/ledi/documentacao/index.html">LEDI AB 3.2.4</a>
         </td>
     </tr>
 </table>
@@ -1303,17 +1308,17 @@
         
     <div class="post pdf shown" id="layout_ab" data-url="/ledi/documentacao/index.html">
       <header class="post-header">
-        <h1 class="post-title">Layout e-SUS AB de Dados e Interface Versão 3.2.2</h1>
+        <h1 class="post-title">Layout e-SUS AB de Dados e Interface Versão 3.2.4</h1>
       </header>
 
       
 
       <article class="post-content">
-        <p>Esta documentação descreve as estruturas de dados, seus atributos e regras utilizadas no <strong>LEDI AB</strong> versão 3.2.2.</p>
+        <p>Esta documentação descreve as estruturas de dados, seus atributos e regras utilizadas no <strong>LEDI AB</strong> versão 3.2.4.</p>
 
-<p>A versão <strong>LEDI AB</strong> 3.2.2 é compatível com o sistema <strong>e-SUS AB PEC</strong> versão 3.2.18 ou superior.</p>
+<p>A versão <strong>LEDI AB</strong> 3.2.4 é compatível com o sistema <strong>e-SUS AB PEC</strong> versão 3.2.20 ou superior.</p>
 
-<p>Confira as principais alterações da V3.2.1 para a V3.2.2 <a href="/ledi/documentacao/principais_alteracoes.html">aqui</a>.</p>
+<p>Confira as principais alterações da V3.2.2 para a V3.2.4 <a href="/ledi/documentacao/principais_alteracoes.html">aqui</a>.</p>
 
       </article>
 
@@ -2201,7 +2206,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Observação:</strong> Caso seja uma ficha de atualização, o campo <a href="/ledi/documentacao/estrutura_arquivos/#9-uuidfichaoriginadora">uuidFichaOriginadora</a> deve ser preenchido com o UUID da ficha que deu origem ao registro.</p>
+<p><strong>Observação:</strong> Caso seja uma ficha de atualização, recomenda-se que o campo <a href="/ledi/documentacao/estrutura_arquivos/#9-uuidfichaoriginadora">uuidFichaOriginadora</a> seja preenchido com o UUID da ficha que deu origem ao registro.</p>
 
 <h3 id="5-identificacaousuariocidadao">#5 identificacaoUsuarioCidadao</h3>
 
@@ -2337,7 +2342,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Se for uma ficha de atualização, deve ser preenchido com o UUID da ficha que deu origem ao registro. Se for a ficha de cadastro, este campo deve ser igual ao campo uuid.</p>
+<p><strong>Observação:</strong> Recomenda-se que, se for uma ficha de atualização, deve ser preenchido com o UUID da ficha que deu origem ao registro. Se for a ficha de cadastro, este campo deve ser igual ao campo <a href="/ledi/documentacao/estrutura_arquivos/#9-uuid">UUID</a>.</p>
 
 <p><strong>Referências:</strong> Para ver a referência sobre o UUID, acesse: <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">UUID Wikipedia</a>.</p>
 
@@ -3543,7 +3548,12 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Validado por algoritmo.</p>
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Validado por algoritmo;</li>
+<li>Não pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#25-cpfcidadao">cpfCidadao</a> for preenchido.</li>
+</ul>
 
 <p><strong>Referências:</strong> O algoritmo de validação está presente em <a href="/ledi/documentacao/regras/algoritmo_CNS.html">Validar CNS</a>.</p>
 
@@ -3571,7 +3581,8 @@
 
 <ul>
 <li>Validado por algoritmo;</li>
-<li>Só pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#16-statusehresponsavel">statusEhResponsavel</a> = <code>false</code>.</li>
+<li>Só pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#16-statusehresponsavel">statusEhResponsavel</a> = <code>false</code>;</li>
+<li>Não pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#26-cpfresponsavelfamiliar">cpfResponsavelFamiliar</a> for preenchido.</li>
 </ul>
 
 <p><strong>Referências:</strong> O algoritmo de validação está presente em <a href="/ledi/documentacao/regras/algoritmo_CNS.html">Validar CNS</a>.</p>
@@ -3907,6 +3918,61 @@
 <td>-</td>
 </tr>
 </tbody></table>
+
+<h3 id="25-cpfcidadao">#25 cpfCidadao</h3>
+
+<p>CPF do cidadão.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Não</td>
+<td>11</td>
+<td>11</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> </p>
+
+<ul>
+<li>Somente CPF válido será aceito;</li>
+<li>Não pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#9-cnscidadao">cnsCidadao</a> for preenchido.</li>
+</ul>
+
+<h3 id="26-cpfresponsavelfamiliar">#26 cpfResponsavelFamiliar</h3>
+
+<p>CPF do responsável do cidadão.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Não</td>
+<td>11</td>
+<td>11</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> </p>
+
+<ul>
+<li>Somente CPF válido será aceito;</li>
+<li>Só pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#16-statusehresponsavel">statusEhResponsavel</a> = <code>false</code>;</li>
+<li>Não pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#10-cnsresponsavelfamiliar">cnsResponsavelFamiliar</a> for preenchido.</li>
+</ul>
 
 <h2 id="informacoessociodemograficas">InformacoesSocioDemograficas</h2>
 
@@ -4526,7 +4592,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Observação:</strong> Caso seja uma ficha de atualização, o campo <a href="/ledi/documentacao/estrutura_arquivos/#11-uuidfichaoriginadora">uuidFichaOriginadora</a> deve ser preenchido com o UUID da ficha que deu origem ao registro.</p>
+<p><strong>Observação:</strong> Caso seja uma ficha de atualização, recomenda-se que o campo <a href="/ledi/documentacao/estrutura_arquivos/#11-uuidfichaoriginadora">uuidFichaOriginadora</a> seja preenchido com o UUID da ficha que deu origem ao registro.</p>
 
 <h3 id="6-quantosanimaisnodomicilio">#6 quantosAnimaisNoDomicilio</h3>
 
@@ -4671,7 +4737,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Se for uma ficha de atualização, deve ser preenchido com o UUID da ficha que deu origem ao registro. Se for uma ficha de cadastro, este campo deve ser igual ao campo <a href="/ledi/documentacao/estrutura_arquivos/#10-uuid">UUID</a>.</p>
+<p><strong>Observação:</strong> Recomenda-se que, se for uma ficha de atualização, deve ser preenchido com o UUID da ficha que deu origem ao registro. Se for uma ficha de cadastro, este campo deve ser igual ao campo <a href="/ledi/documentacao/estrutura_arquivos/#10-uuid">UUID</a>.</p>
 
 <p><strong>Referências:</strong> Para ver a referência sobre o UUID, acesse: <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">UUID Wikipedia</a>.</p>
 
@@ -5416,7 +5482,12 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Validado por algoritmo.</p>
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Validado por algoritmo;</li>
+<li>Não pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#8-cpfresponsavel">cpfResponsavel</a> for preenchido.</li>
+</ul>
 
 <p><strong>Referências:</strong> O algoritmo de validação está presente em <a href="/ledi/documentacao/regras/algoritmo_CNS.html">Validar CNS</a>.</p>
 
@@ -5506,13 +5577,9 @@
 </tr>
 </tbody></table>
 
+<p><strong>Regras:</strong> Não pode ser posterior à data atual.</p>
+
 <p><strong>Referências:</strong> <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch Wikipedia</a> em milissegundos.</p>
-
-<p><strong>Regras:</strong></p>
-
-<ul>
-<li>Não pode ser posterior à data atual.</li>
-</ul>
 
 <h3 id="7-stmudanca">#7 stMudanca</h3>
 
@@ -5533,6 +5600,33 @@
 <td>-</td>
 </tr>
 </tbody></table>
+
+<h3 id="8-cpfresponsavel">#8 cpfResponsavel</h3>
+
+<p>CPF do responsável.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Não</td>
+<td>11</td>
+<td>11</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> </p>
+
+<ul>
+<li>Somente CPF válido será aceito;</li>
+<li>Não pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#2-numerocnsresponsavel">numeroCnsResponsavel</a> for preenchido.</li>
+</ul>
 
 <h2 id="instituicaopermanencia">InstituicaoPermanencia</h2>
 
@@ -5818,7 +5912,12 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> CNS validado de acordo com o <a href="/ledi/documentacao/regras/algoritmo_CNS.html">algoritmo de validação</a>;</p>
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>CNS validado de acordo com o <a href="/ledi/documentacao/regras/algoritmo_CNS.html">algoritmo de validação</a>;</li>
+<li>Não pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#29-cpfcidadao">cpfCidadao</a> for preenchido.</li>
+</ul>
 
 <h3 id="3-datanascimento">#3 dataNascimento</h3>
 
@@ -6397,6 +6496,33 @@
 </ul>
 
 <p><strong>Referências:</strong> Deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
+
+<h3 id="29-cpfcidadao">#29 cpfCidadao</h3>
+
+<p>CPF do cidadão.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Não</td>
+<td>11</td>
+<td>11</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> </p>
+
+<ul>
+<li>Somente CPF válido será aceito;</li>
+<li>Não pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#2-cns">cns</a> for preenchido.</li>
+</ul>
 
 <h2 id="exame">Exame</h2>
 
@@ -7041,7 +7167,12 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> CNS validado de acordo com o algoritmo.</p>
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>CNS validado de acordo com o algoritmo;</li>
+<li>Não pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#18-cpfcidadao">cpfCidadao</a> for preenchido.</li>
+</ul>
 
 <p><strong>Referências:</strong> O algoritmo de validação está presente em <a href="/ledi/documentacao/regras/algoritmo_CNS.html">Validar CNS</a>.</p>
 
@@ -7385,6 +7516,33 @@
 </ul>
 
 <p><strong>Referências:</strong> Deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
+
+<h3 id="18-cpfcidadao">#18 cpfCidadao</h3>
+
+<p>CPF do cidadão.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Não</td>
+<td>11</td>
+<td>11</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> </p>
+
+<ul>
+<li>Somente CPF válido será aceito;</li>
+<li>Não pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#2-cnscidadao">cnsCidadao</a> for preenchido.</li>
+</ul>
 
 <h2 id="procedimentoquantidade">ProcedimentoQuantidade</h2>
 
@@ -8600,7 +8758,8 @@
 
 <ul>
 <li>CNS validado de acordo com o algoritmo;</li>
-<li>É de preenchimento obrigatório se <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#7-atividadetipo">atividadeTipo</a> for <code>5</code> ou <code>6</code>.</li>
+<li>É de preenchimento obrigatório se <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#7-atividadetipo">atividadeTipo</a> for <code>5</code> ou <code>6</code>;</li>
+<li>Não pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#9-cpfparticipante">cpfParticipante</a> for preenchido.</li>
 </ul>
 
 <p><strong>Referências:</strong> O algoritmo de validação está presente em <a href="/ledi/documentacao/regras/algoritmo_CNS.html">Validar CNS</a>.</p>
@@ -8770,6 +8929,34 @@
 </tbody></table>
 
 <p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#sexo">Sexo</a>.</p>
+
+<h3 id="9-cpfparticipante">#9 cpfParticipante</h3>
+
+<p>CPF do participante.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Não</td>
+<td>11</td>
+<td>11</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> </p>
+
+<ul>
+<li>Somente CPF válido será aceito;</li>
+<li>É de preenchimento obrigatório se <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#7-atividadetipo">atividadeTipo</a> for <code>5</code> ou <code>6</code>;</li>
+<li>Não pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#1-cnsparticipante">cnsParticipante</a> for preenchido.</li>
+</ul>
 
 <h2 id="profissionalcborowitem">ProfissionalCboRowItem</h2>
 
@@ -9248,7 +9435,12 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras</strong>: Validado por algoritmo.</p>
+<p><strong>Regras</strong>:</p>
+
+<ul>
+<li>Validado por algoritmo;</li>
+<li>Não pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#12-cpfcidadao">cpfCidadao</a> for preenchido.</li>
+</ul>
 
 <p><strong>Referências:</strong> O algoritmo de validação está presente em <a href="/ledi/documentacao/regras/algoritmo_CNS.html">Validar CNS</a>.</p>
 
@@ -9464,6 +9656,33 @@
 </ul>
 
 <p><strong>Referências:</strong> Deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
+
+<h3 id="12-cpfcidadao">#12 cpfCidadao</h3>
+
+<p>CPF do cidadão.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Não</td>
+<td>11</td>
+<td>11</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> </p>
+
+<ul>
+<li>Somente CPF válido será aceito;</li>
+<li>Não pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#2-cnscidadao">cnsCidadao</a> for preenchido.</li>
+</ul>
 
 <h2 id="procedimentos-da-ficha">Procedimentos da Ficha</h2>
 
@@ -9856,7 +10075,8 @@
 <ul>
 <li>Validado pelo algoritmo;</li>
 <li>Não deve ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#11-tipodeimovel">tipoDeImovel</a> = <code>02</code> comércio, <code>03</code> terreno baldio, <code>04</code> Ponto Estratégico, <code>05</code> Escola, <code>06</code> Creche ou <code>12</code> Estabelecimento religioso;</li>
-<li>Para visita periódica ou visita domiciliar para controle vetorial preencher este campo com o CNS do responsável familiar.</li>
+<li>Para visita periódica ou visita domiciliar para controle vetorial preencher este campo com o CNS do responsável familiar;</li>
+<li>Não pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#14-cpfcidadao">cpfCidadao</a> for preenchido.</li>
 </ul>
 
 <p><strong>Referências:</strong> O algoritmo de validação está presente em <a href="/ledi/documentacao/regras/algoritmo_CNS.html">Validar CNS</a>.</p>
@@ -10143,6 +10363,35 @@
 <li>Não deve ser preenchido caso o campo <a href="/ledi/documentacao/estrutura_arquivos/#8-desfecho">desfecho</a> = <code>3</code> Ausente ou <code>2</code> Visita Recusada.</li>
 </ul>
 
+<h3 id="14-cpfcidadao">#14 cpfCidadao</h3>
+
+<p>CPF do cidadão.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Não</td>
+<td>11</td>
+<td>11</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> </p>
+
+<ul>
+<li>Somente CPF válido será aceito;</li>
+<li>Não deve ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#11-tipodeimovel">tipoDeImovel</a> = <code>02</code> comércio, <code>03</code> terreno baldio, <code>04</code> Ponto Estratégico, <code>05</code> Escola, <code>06</code> Creche ou <code>12</code> Estabelecimento religioso;</li>
+<li>Para visita periódica ou visita domiciliar para controle vetorial preencher este campo com o CPF do responsável familiar;</li>
+<li>Não pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#3-cnscidadao">cnsCidadao</a> for preenchido.</li>
+</ul>
+
       </article>
 
       <div class="pdf-separator"></div>
@@ -10207,7 +10456,12 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> CNS validado de acordo com o algoritmo.</p>
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>CNS validado de acordo com o algoritmo;</li>
+<li>Não pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#12-cpfcidadao">cpfCidadao</a> for preenchido.</li>
+</ul>
 
 <p><strong>Referências:</strong> O algoritmo de validação está presente em <a href="/ledi/documentacao/regras/algoritmo_CNS.html">Validar CNS</a>.</p>
 
@@ -10426,6 +10680,33 @@
 </tbody></table>
 
 <p><strong>Regras:</strong> Utilizar valor 3 (sistemas terceiros).</p>
+
+<h3 id="12-cpfcidadao">#12 cpfCidadao</h3>
+
+<p>CPF do cidadão.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Não</td>
+<td>11</td>
+<td>11</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> </p>
+
+<ul>
+<li>Somente CPF válido será aceito;</li>
+<li>Não pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#2-cnscidadao">cnsCidadao</a> for preenchido.</li>
+</ul>
 
 <h2 id="perguntaquestionariocriancasmenoresseismeses">PerguntaQuestionarioCriancasMenoresSeisMeses</h2>
 
@@ -11007,7 +11288,12 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> CNS validado de acordo com o algoritmo.</p>
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>CNS validado de acordo com o algoritmo;</li>
+<li>Não pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#36-cpfcidadao">cpfCidadao</a> for preenchido.</li>
+</ul>
 
 <p><strong>Referências:</strong> O algoritmo de validação está presente em <a href="/ledi/documentacao/regras/algoritmo_CNS.html">Validar CNS</a>.</p>
 
@@ -11762,10 +12048,66 @@
 
 <ul>
 <li>CNS validado de acordo com o algoritmo;</li>
-<li>Não pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#24-cuidadorcidadao">cuidadorCidadao</a> = <code>1</code>.</li>
+<li>Não pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#24-cuidadorcidadao">cuidadorCidadao</a> = <code>1</code>;</li>
+<li>Não pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#37-cpfcuidador">cpfCuidador</a> for preenchido.</li>
 </ul>
 
 <p><strong>Referências:</strong> O algoritmo de validação está presente em <a href="/ledi/documentacao/regras/algoritmo_CNS.html">Validar CNS</a>.</p>
+
+<h3 id="36-cpfcidadao">#36 cpfCidadao</h3>
+
+<p>CPF do cidadão.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Não</td>
+<td>11</td>
+<td>11</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> </p>
+
+<ul>
+<li>Somente CPF válido será aceito;</li>
+<li>Não pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#3-cnscidadao">cnsCidadao</a> for preenchido.</li>
+</ul>
+
+<h3 id="37-cpfcuidador">#37 cpfCuidador</h3>
+
+<p>CPF do cuidador.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Não</td>
+<td>11</td>
+<td>11</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> </p>
+
+<ul>
+<li>Somente CPF válido será aceito;</li>
+<li>Não pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#24-cuidadorcidadao">cuidadorCidadao</a> = <code>1</code>;</li>
+<li>Não pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#34-cnscuidador">cnsCuidador</a> for preenchido.</li>
+</ul>
 
 <h2 id="enderecolocalpermanencia">EnderecoLocalPermanencia</h2>
 
@@ -12311,7 +12653,12 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Validado pelo algoritmo.</p>
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Validado pelo algoritmo;</li>
+<li>Não pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#15-cpfcidadao">cpfCidadao</a> for preenchido.</li>
+</ul>
 
 <p><strong>Referências:</strong> O algoritmo de validação está presente em <a href="/ledi/documentacao/regras/algoritmo_CNS.html">Validar CNS</a>.</p>
 
@@ -12559,6 +12906,33 @@
 
 <p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#condutadesfecho">CondutaDesfecho</a>.</p>
 
+<h3 id="15-cpfcidadao">#15 cpfCidadao</h3>
+
+<p>CPF do cidadão que recebeu o atendimento.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Não</td>
+<td>11</td>
+<td>11</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> </p>
+
+<ul>
+<li>Somente CPF válido será aceito;</li>
+<li>Não pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#2-cnscidadao">cnsCidadao</a> for preenchido.</li>
+</ul>
+
 <h2 id="condi-es-avaliadas">Condições avaliadas</h2>
 
 <table><thead>
@@ -12797,7 +13171,12 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Validado por algoritmo.</p>
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Validado por algoritmo;</li>
+<li>Não pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#19-cpfcidadao">cpfCidadao</a> for preenchido.</li>
+</ul>
 
 <p><strong>Referências:</strong> O algoritmo de validação está presente em <a href="/ledi/documentacao/regras/algoritmo_CNS.html">Validar CNS</a>.</p>
 
@@ -12821,7 +13200,12 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Validado por algoritmo.</p>
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Validado por algoritmo;</li>
+<li>Não pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#20-cpfresponsavelfamiliar">cpfResponsavelFamiliar</a> for preenchido.</li>
+</ul>
 
 <p><strong>Referências:</strong> O algoritmo de validação está presente em <a href="/ledi/documentacao/regras/algoritmo_CNS.html">Validar CNS</a>.</p>
 
@@ -13193,6 +13577,60 @@
 
 <p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#ressonanciamagnetica">ressonanciaMagnetica</a>.</p>
 
+<h3 id="19-cpfcidadao">#19 cpfCidadao</h3>
+
+<p>CPF do cidadão.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Não</td>
+<td>11</td>
+<td>11</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> </p>
+
+<ul>
+<li>Somente CPF válido será aceito;</li>
+<li>Não pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#5-cnscidadao">cnsCidadao</a> for preenchido.</li>
+</ul>
+
+<h3 id="20-cpfresponsavelfamiliar">#20 cpfResponsavelFamiliar</h3>
+
+<p>CPF do responsável do cidadão.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Não</td>
+<td>11</td>
+<td>11</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> </p>
+
+<ul>
+<li>Somente CPF válido será aceito;</li>
+<li>Não pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#6-cnsresponsavelfamiliar">cnsResponsavelFamiliar</a> for preenchido.</li>
+</ul>
+
       </article>
 
       <div class="pdf-separator"></div>
@@ -13368,7 +13806,12 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras</strong>: Validado por algoritmo.</p>
+<p><strong>Regras</strong>:</p>
+
+<ul>
+<li>Validado por algoritmo;</li>
+<li>Não pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#14-cpfcidadao">cpfCidadao</a> for preenchido.</li>
+</ul>
 
 <p><strong>Referências:</strong> O algoritmo de validação está presente em <a href="/ledi/documentacao/regras/algoritmo_CNS.html">Validar CNS</a>.</p>
 
@@ -13624,6 +14067,33 @@
 </ul>
 
 <p><strong>Referências:</strong> Deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
+
+<h3 id="14-cpfcidadao">#14 cpfCidadao</h3>
+
+<p>CPF do cidadão.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Não</td>
+<td>11</td>
+<td>11</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> </p>
+
+<ul>
+<li>Somente CPF válido será aceito;</li>
+<li>Não pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#3-cnscidadao">cnsCidadao</a> for preenchido.</li>
+</ul>
 
 <h2 id="vacinarowthrift">VacinaRowThrift</h2>
 
@@ -44086,7 +44556,7 @@
 <td>revision</td>
 <td>Integer</td>
 <td>Sim</td>
-<td>Valor único = 2</td>
+<td>Valor único = 4</td>
 </tr>
 </tbody></table>
 
@@ -67424,219 +67894,71 @@
 
     <div class="post pdf shown" id="principais_alteracoes" data-url="/ledi/documentacao/principais_alteracoes.html">
       <header class="post-header">
-        <h1 class="post-title">Principais alterações da v3.2.1 para a v3.2.2</h1>
+        <h1 class="post-title">Principais alterações da v3.2.2 para a v3.2.4</h1>
       </header>
 
       
 
       <article class="post-content">
-        <p>Este documento relata as principais alterações em relação à versão 3.2.1 do LEDI AB:</p>
+        <p>Este documento relata as principais alterações em relação à versão 3.2.2 do LEDI AB:</p>
 
-<p><strong>1. </strong> Em todas as estruturas foi adicionada a validação para não permitir receber fichas com datas futuras.</p>
+<p><strong>1. </strong> Em todas as estruturas foi adicionado o campo para registrar a informação do CPF do cidadão.</p>
 
-<p><strong>2. </strong> Em todas as estruturas foram adicionadas a validação para não permitir receber fichas com CNS do profissional, INE ou CNES não existentes na base de dados. Caso esta inconsistência ocorra, baixar o arquivo XML do CNES atualizado e importar no e-SUS AB PEC. Após esta atualização, importar novamente os lotes.</p>
-
-<p><strong>3. </strong> Incluída permissão para preenchimento das <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html">Ficha de Cadastro Individual</a>, <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fcd.html">Ficha de Cadastro Domiciliar e Territorial</a> e <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html">Ficha de Atividade Coletiva</a> pela CBO 131225 - SANITARISTA, conforme apresentado nas respectivas tabelas de <a href="/ledi/documentacao/regras/cbo.html">Grupos de CBOs x Tipo de ficha</a>.</p>
+<p><strong>2. </strong> Em todos os casos, só será permitido o preenchimento de um dos campos identificadores do cidadão, o CPF ou o CNS·</p>
 
 <h3 id="1-ficha-de-cadastro-individual">1. Ficha de Cadastro Individual</h3>
 
-<p><strong>4. </strong> Se o campo <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#7-statustermorecusacadastroindividualatencaobasica">statusTermoRecusaCadastroIndividualAtencaoBasica</a> = <code>True</code>, é possível preencher o campo <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#6-nacionalidadecidadao">nacionalidadeCidadao</a> com a opção <code>3 (Estrangeiro)</code> e o campo o <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#13-paisnascimento">paisNascimento</a> não é de preenchimento obrigatório.</p>
+<ul>
+<li>Foram adicionados os campos <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#25-cpfcidadao">cpfCidadao</a> e <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#26-cpfresponsavelfamiliar">cpfResponsavelFamiliar</a>;</li>
+<li>A regra de preenchimento do campo <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#10-uuidfichaoriginadora">uuidFichaOriginadora</a> passa a ser apenas uma recomendação.</li>
+</ul>
 
 <h3 id="2-ficha-de-cadastro-domiciliar-e-territorial">2. Ficha de Cadastro Domiciliar e Territorial</h3>
 
-<p><strong>5. </strong> Não podem ser cadastradas <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fcd.html#4-familias">Famílias</a> com o mesmo <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fcd.html#2-numerocnsresponsavel">numeroCnsResponsavel</a>.</p>
-
-<p><strong>6. </strong> Não podem ser cadastradas <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fcd.html#4-familias">Famílias</a> se o campo <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fcd.html#8-statustermorecusa">statusTermoRecusa</a> = <code>True</code>.</p>
+<ul>
+<li>Foi adicionado o campo    <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fcd.html#8-cpfresponsavel">cpfResponsavel</a>;</li>
+<li>A regra de preenchimento do campo <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fcd.html#11-uuidfichaoriginadora">uuidFichaOriginadora</a> passa a ser apenas uma recomendação.</li>
+</ul>
 
 <h3 id="3-ficha-de-atendimento-individual">3. Ficha de Atendimento Individual</h3>
 
-<p><strong>7. </strong> No campo <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#1-ciaps">ciaps</a> é permitido registrar somente &quot;problemas e/ou condições&quot; presentes na <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#listaciapcondicaoavaliada">ListaCiapCondicaoAvaliada</a>. Além disso, as condições &quot;ABP001 - Pré-natal&quot;, &quot;ABP002 - Puerpério&quot; e &quot;ABP022 - Rastreamento de Câncer do colo do útero&quot; podem ser registradas somente para o sexo feminino, conforme definido na <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#listaciapcondicaoavaliada">ListaCiapCondicaoAvaliada</a>.</p>
-
-<p><strong>8. </strong> Nos campos <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#2-outrociap1">outroCiap1</a>, <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#3-outrociap2">outroCiap2</a>, <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#4-cid10">cid10</a>, <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#5-cid10_2">cid10_2</a>, foram incluídas as regras de preenchimento conforme sexo do cidadão.</p>
-
-<p><strong>9. </strong> Nos campos <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#2-outrociap1">outroCiap1</a> e <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#3-outrociap2">outroCiap2</a> não podem ter registros pertencentes ao grupo <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#1-ciaps">ciaps</a>.</p>
-
-<p><strong>10. </strong> O campo &quot;#17 outrosSia&quot; foi renomeado para <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#17-exame">Exame</a>.</p>
-
-<p><strong>11. </strong> Foram excluídos os campos &quot;#15 examesSolicitados&quot; e &quot;#16 examesAvaliados&quot;. Todos os exames (solicitados e avaliados) devem ser registrados no grupo <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#17-exame">Exame</a>.</p>
-
-<p><strong>12. </strong> Não serão permitidos <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#17-exame">Exame</a> duplicados e foi incluído o limite de no máximo 100 exames (entre solicitados e avaliados) por registro da ficha.</p>
-
-<p><strong>13. </strong> Não serão aceitos registros de atendimentos exatamente iguais. Caso isso ocorra, a ficha será glosada.</p>
+<p>Foi adicionado o campo  <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#29-cpfcidadao">cpfCidadao</a>.</p>
 
 <h3 id="4-ficha-de-atendimento-odontol-gico">4. Ficha de Atendimento Odontológico</h3>
 
-<p><strong>14. </strong> Incluída regra permitindo o preenchimento do campo <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fao.html#4-gestante">Gestante</a> somente quando o <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fao.html#14-sexo">Sexo</a> não for <code>0 (masculino)</code>.</p>
-
-<p><strong>15. </strong> Foi excluído campo &quot;#13 outrosSiaProcedimentos&quot;. Todos os procedimentos devem ser registrados no grupo <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fao.html#12-procedimentosrealizados">procedimentosRealizados</a>.</p>
-
-<p><strong>16. </strong> No grupo <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fao.html#12-procedimentosrealizados">procedimentosRealizados</a>:</p>
-
-<ul>
-<li><p>É permitido registrar até 20 procedimentos. Para cada procedimento a quantidade máxima permitida está definida na <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fao.html#lista-de-procedimentos-por-local-e-quantidade-m-xima-permitida">Lista de procedimentos por local e quantidade máxima permitida</a>.</p></li>
-<li><p>Podem ser informados os procedimentos pertencentes aos grupos <code>01 - Ações de promoção e prevenção em saúde</code>, <code>02 - Procedimentos com finalidade diagnóstica</code>, <code>03 - Procedimentos clínicos</code>, <code>04 - Procedimentos cirúrgicos</code> ou presentes na <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fao.html#listaprocedimentosrealizados">ListaProcedimentosRealizados</a>, neste caso, se não tiver uma referência no SIGTAP, deve ser informado o código <strong>AB</strong> do procedimento;</p></li>
-<li><p>Além destes procedimentos, são permitidos os procedimentos pertencentes ao grupo <code>07 - Órteses, próteses e materiais especiais</code>:</p>
-
-<ul>
-<li>07.01.07.006-4 - MANTENEDOR DE ESPAÇO;</li>
-<li>07.01.07.007-2 - PLACA OCLUSAL;</li>
-<li>07.01.07.008-0 - PLANO INCLINADO;</li>
-<li>07.01.07.009-9 - PROTESE PARCIAL MANDIBULAR REMOVIVEL;</li>
-<li>07.01.07.010-2 - PROTESE PARCIAL MAXILAR REMOVIVEL;</li>
-<li>07.01.07.011-0 - PROTESE TEMPORARIA;</li>
-<li>07.01.07.012-9 - PROTESE TOTAL MANDIBULAR;</li>
-<li>07.01.07.013-7 - PROTESE TOTAL MAXILAR;</li>
-<li>07.01.07.005-6 - COROA PROVISORIA;</li>
-<li>07.01.07.014-5 - PROTESES CORONARIAS / INTRA-RADICULARES FIXAS / ADESIVAS (POR ELEMENTO).</li>
-</ul></li>
-<li><p>Não pode ser preenchido com o procedimento &quot;03.01.04.007-9 - Escuta inicial / orientação (acolhimento a demanda espontânea)&quot;. Esta informação deve ser registrada através do campo <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fao.html#7-tipoatendimento">tipoAtendimento</a>, opção <code>4 (escuta inicial ou orientação)</code>.</p></li>
-</ul>
-
-<p><strong>17. </strong> Não é permitido registrar <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fao.html#1-comsprocedimento">coMsProcedimento</a> duplicados.</p>
-
-<p><strong>18. </strong> Não serão aceitos registros de atendimento odontológicos exatamente iguais. Caso isso ocorra, a ficha será glosada.</p>
+<p>Foi adicionado o campo  <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fao.html#18-cpfcidadao">cpfCidadao</a>.</p>
 
 <h3 id="5-ficha-de-procedimentos">5. Ficha de Procedimentos</h3>
 
-<p><strong>19. </strong> Foi excluído o campo &quot;#9 outrosSiaProcedimentos&quot;. Todos os procedimento devem ser registrados no grupo <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fp.html#8-procedimentos">Procedimentos</a>.</p>
-
-<p><strong>20. </strong> No grupo <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fp.html#8-procedimentos">Procedimentos</a>:</p>
-
-<ul>
-<li>É permitido registrar no máximo 20 procedimentos;</li>
-<li>Não é permitido registrar procedimentos duplicados;</li>
-<li>Não pode ser preenchido com o procedimento &quot;03.01.04.007-9 - Escuta inicial / orientação (acolhimento a demanda espontânea)&quot;. Esta informação deve ser registrada através do campo <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fp.html#7-statusescutainicialorientacao">statusEscutaInicialOrientacao</a>.</li>
-</ul>
-
-<p><strong>21. </strong> Não serão aceitos registros de procedimentos exatamente iguais. Caso isso ocorra, a ficha será glosada.</p>
-
-<p><strong>22. </strong> Foi atualizada a <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fp.html#procedimentos-da-ficha">Lista de Procedimentos da Ficha</a> usada como referência para o preenchimento do grupo <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fp.html#8-procedimentos">Procedimentos</a>. A seguir são apresentados os relacionamentos atualizados:</p>
-
-<table><thead>
-<tr>
-<th>Código SIGTAP *</th>
-<th>Descrição AB</th>
-<th>Código AB correspondente</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>04.01.01.002-3</td>
-<td>Curativo especial</td>
-<td>ABPG007</td>
-</tr>
-<tr>
-<td>04.04.01.027-0</td>
-<td>Retirada de cerume</td>
-<td>ABPG017</td>
-</tr>
-<tr>
-<td>03.01.10.002-0</td>
-<td>Administração de medicamentos via Oral</td>
-<td>ABPG027</td>
-</tr>
-<tr>
-<td>03.01.10.002-0</td>
-<td>Administração de medicamentos via Intramuscular</td>
-<td>ABPG028</td>
-</tr>
-<tr>
-<td>03.01.10.002-0</td>
-<td>Administração de medicamentos via Endovenosa</td>
-<td>ABPG029</td>
-</tr>
-<tr>
-<td>03.01.10.002-0</td>
-<td>Administração de medicamentos via Tópica</td>
-<td>ABPG031</td>
-</tr>
-<tr>
-<td>03.01.10.002-0</td>
-<td>Administração de Penicilina para tratamento de sífilis</td>
-<td>ABPG032</td>
-</tr>
-<tr>
-<td>03.01.10.002-0</td>
-<td>Administração de medicamentos via Subcutânea (SC)</td>
-<td>ABPG041</td>
-</tr>
-</tbody></table>
-
-<p><em>* Procedimentos pertencentes a competência <strong>02/2019</strong> do SIGTAP.</em></p>
-
-<p>Além disso, foram adicionados os seguintes procedimentos:</p>
-
-<table><thead>
-<tr>
-<th>Descrição AB</th>
-<th>Código AB correspondente</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Curativo simples</td>
-<td>ABPG035</td>
-</tr>
-<tr>
-<td>Aferição de temperatura</td>
-<td>ABPG034</td>
-</tr>
-<tr>
-<td>Medição de altura</td>
-<td>ABPG038</td>
-</tr>
-<tr>
-<td>Medição de peso</td>
-<td>ABPG039</td>
-</tr>
-</tbody></table>
+<p>Foi adicionado o campo  <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fp.html#12-cpfcidadao">cpfCidadao</a>.</p>
 
 <h3 id="6-ficha-de-visita-domiciliar">6. Ficha de Visita Domiciliar</h3>
 
-<p><strong>23. </strong> No campo <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fvd.html#7-motivosvisita">motivosVisita</a>, as opções <code>5 (Gestante)</code> e <code>6 (Puérpera)</code> não podem ser informadas se o <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fvd.html#5-sexo">Sexo</a> = <code>0 (masculino)</code>.</p>
+<p>Foi adicionado o campo  <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fvd.html#14-cpfcidadao">cpfCidadao</a>.</p>
 
 <h3 id="7-ficha-de-atividade-coletiva">7. Ficha de Atividade Coletiva</h3>
 
-<p><strong>24. </strong> Foi atualizada a lista de <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#outroprocedimentocoletivo">OutroProcedimentoColetivo</a>, nos quais são apresentados no campo <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#13-procedimento">Procedimento</a>:</p>
-
-<ul>
-<li>Foi removido o procedimento &quot;01.01.05.003-8 - DANÇA CIRCULAR/BIODANÇA&quot;;</li>
-<li>Foram incluídos os procedimentos:
-
-<ul>
-<li>01.01.01.001-0 - ATIVIDADE EDUCATIVA / ORIENTAÇÃO EM GRUPO NA ATENÇÃO BÁSICA;</li>
-<li>01.01.01.002-8 - ATIVIDADE EDUCATIVA / ORIENTAÇÃO EM GRUPO NA ATENÇÃO ESPECIALIZADA;</li>
-<li>01.01.05.010-0 - SESSÃO DE BIODANÇA;</li>
-<li>01.01.05.011-9 - SESSÃO DE BIOENERGÉTICA;</li>
-<li>01.01.05.012-7 - SESSÃO DE CONSTELAÇÃO FAMILIAR;</li>
-<li>01.01.05.013-5 - SESSÃO DE DANÇA CIRCULAR;</li>
-<li>01.02.02.002-7 - ATIVIDADE EDUCATIVA EM SAÚDE DO TRABALHADOR.</li>
-</ul></li>
-</ul>
+<p>Foi adicionado o campo  <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#9-cpfparticipante">cpfParticipante</a>.</p>
 
 <h3 id="8-ficha-de-vacina-o">8. Ficha de Vacinação</h3>
 
-<p><strong>25. </strong> Os campos <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fv.html#9-gestante">Gestante</a> e <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fv.html#10-puerpera">Puerpera</a> não pode ser preenchido para cidadãos com <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fv.html#5-sexo">Sexo</a> = <code>0 (masculino)</code>.</p>
-
-<p><strong>26. </strong> No grupo <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fv.html#11-vacinas">Vacinas</a>, é permitido registrar até 10 vacinas.</p>
-
-<ul>
-<li>Não pode ser registrado <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fv.html#1-imunobiologico">imunobiologico</a> duplicado.</li>
-</ul>
-
-<p><strong>27. </strong> Não serão aceitos registros de vacinas exatamente iguais. Caso isso ocorra, a ficha será glosada.</p>
+<p>Foi adicionado o campo  <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fv.html#14-cpfcidadao">cpfCidadao</a>.</p>
 
 <h3 id="9-ficha-de-avalia-o-de-elegibilidade">9. Ficha de Avaliação de Elegibilidade</h3>
 
-<p><strong>28. </strong> Os campos <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fae.html#19-cid10principal">cid10Principal</a>, <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fae.html#20-cid10secundarioum">cid10SecundarioUm</a> e <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fae.html#21-cid10secundariodois">cid10SecundarioDois</a> devem apresentar somente CID-10 permitidas para o <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fae.html#7-sexocidadao">Sexo</a> do cidadão.</p>
+<p>Foram adicionados os campos <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fae.html#36-cpfcidadao">cpfCidadao</a> e <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fae.html#37-cpfcuidador">cpfCuidador</a>.</p>
 
 <h3 id="10-ficha-de-atendimento-domiciliar">10. Ficha de Atendimento Domiciliar</h3>
 
-<p><strong>29. </strong> Foi excluído o campo #12 outrosProcedimentos. Todos os procedimentos são registrados no campo <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fad.html#11-procedimentos">Procedimentos</a>.</p>
+<p>Foi adicionado o campo  <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fad.html#15-cpfcidadao">cpfCidadao</a>.</p>
 
-<p><strong>30. </strong> Não serão permitidos <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fad.html#11-procedimentos">Procedimentos</a> duplicados e foi incluído o limite de no máximo 30 procedimentos por registro da ficha.</p>
+<h3 id="11-marcadores-de-consumo-alimentar">11. Marcadores de Consumo Alimentar</h3>
 
-<p><strong>31. </strong> Não serão aceitos registros de atendimentos exatamente iguais. Caso isso ocorra, a ficha será glosada.</p>
+<p>Foi adicionado o campo  <a href="/ledi/documentacao/estrutura_arquivos/dicionario-mca.html#12-cpfcidadao">cpfCidadao</a>.</p>
 
-<p><strong>32. </strong> Os campos <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fad.html#9-cid">CID-10</a> e <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fad.html#10-ciap">CIAP2</a> só podem ser preenchidos com informações de acordo com o sexo do cidadão.</p>
+<h3 id="12-ficha-complementar-s-ndrome-neurol-gica-por-zika-microcefalia">12. Ficha Complementar - Síndrome Neurológica por Zika / Microcefalia</h3>
+
+<p>Foram adicionados os campos <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fczm.html#19-cpfcidadao">cpfCidadao</a> e <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fczm.html#20-cpfresponsavelfamiliar">cpfResponsavelFamiliar</a>.</p>
 
       </article>
 

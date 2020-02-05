@@ -19,7 +19,7 @@
 		</headerTransport>
 		<atendimentosIndividuais>
 			<numeroProntuario>123</numeroProntuario>
-			<cns>279573698530018</cns>
+			<cnsCidadao>279573698530018</cnsCidadao>
 			<dataNascimento>978361200000</dataNascimento>
 			<localDeAtendimento>1</localDeAtendimento>
 			<sexo>1</sexo>
@@ -89,6 +89,61 @@
 			<dataHoraFinalAtendimento>1553095500000</dataHoraFinalAtendimento>
 		</atendimentosIndividuais>
 		<atendimentosIndividuais>
+			<numeroProntuario>1234</numeroProntuario>
+			<cpfCidadao>68688625042</cpfCidadao>			
+			<dataNascimento>978361200000</dataNascimento>
+			<localDeAtendimento>1</localDeAtendimento>
+			<sexo>1</sexo>
+			<turno>1</turno>
+			<tipoAtendimento>2</tipoAtendimento>
+			<pesoAcompanhamentoNutricional>70.0</pesoAcompanhamentoNutricional>
+			<alturaAcompanhamentoNutricional>180.0</alturaAcompanhamentoNutricional>
+			<aleitamentoMaterno>1</aleitamentoMaterno>
+			<dumDaGestante>1551452400000</dumDaGestante>
+			<atencaoDomiciliarModalidade>1</atencaoDomiciliarModalidade>
+			<problemaCondicaoAvaliada>
+				<ciaps>ABP009</ciaps>
+				<ciaps>ABP019</ciaps>
+				<ciaps>ABP008</ciaps>
+				<ciaps>ABP006</ciaps>
+				<ciaps>ABP012</ciaps>
+				<ciaps>ABP013</ciaps>
+				<outroCiap1>R88</outroCiap1>
+				<outroCiap2>R02</outroCiap2>
+				<cid10>J70</cid10>
+				<cid10_2>J99</cid10_2>
+			</problemaCondicaoAvaliada>
+			<exame>
+				<codigoExame>0201010054</codigoExame>
+				<solicitadoAvaliado>A</solicitadoAvaliado>
+				<solicitadoAvaliado>S</solicitadoAvaliado>
+			</exame>
+			<exame>
+				<codigoExame>ABEX007</codigoExame>
+				<solicitadoAvaliado>S</solicitadoAvaliado>
+			</exame>
+			<exame>
+				<codigoExame>ABEX002</codigoExame>
+				<solicitadoAvaliado>S</solicitadoAvaliado>
+			</exame>
+			<exame>
+				<codigoExame>ABEX020</codigoExame>
+				<solicitadoAvaliado>A</solicitadoAvaliado>
+			</exame>
+			<vacinaEmDia>true</vacinaEmDia>
+			<ficouEmObservacao>false</ficouEmObservacao>
+			<nasfs>1</nasfs>
+			<condutas>9</condutas>
+			<condutas>5</condutas>
+			<stGravidezPlanejada>false</stGravidezPlanejada>
+			<nuGestasPrevias>1</nuGestasPrevias>
+			<nuPartos>1</nuPartos>
+			<racionalidadeSaude>6</racionalidadeSaude>
+			<perimetroCefalico>58.0</perimetroCefalico>
+			<dataHoraInicialAtendimento>1553084000000</dataHoraInicialAtendimento>
+			<dataHoraFinalAtendimento>1553096500000</dataHoraFinalAtendimento>
+		</atendimentosIndividuais>
+		<atendimentosIndividuais>
 			<dataNascimento>1046703600000</dataNascimento>
 			<localDeAtendimento>1</localDeAtendimento>
 			<sexo>0</sexo>
@@ -120,5 +175,5 @@
 		<versaoSistema>3.2.18</versaoSistema>
 		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:originadora>
-	<versao major="3" minor="2" revision="2" />
+	<versao major="3" minor="2" revision="4" />
 </ns3:dadoTransporteTransportXml>

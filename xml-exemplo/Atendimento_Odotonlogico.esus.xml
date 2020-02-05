@@ -40,7 +40,7 @@
 		</atendimentosOdontologicos>
 		<atendimentosOdontologicos>
 			<numProntuario>4321</numProntuario>
-			<cnsCidadao>205199270910000</cnsCidadao>
+			<cpfCidadao>68688625042</cpfCidadao>
 			<dtNascimento>799686000000</dtNascimento>
 			<localAtendimento>3</localAtendimento>
 			<gestante>true</gestante>
@@ -121,7 +121,7 @@
 		<versaoSistema>3.2.18</versaoSistema>
 		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:originadora>
-	<versao major="3" minor="2" revision="2" />
+	<versao major="3" minor="2" revision="4" />
 </ns3:dadoTransporteTransportXml>
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ns3:dadoTransporteTransportXml xmlns:ns2="http://esus.ufsc.br/dadoinstalacao" xmlns:ns3="http://esus.ufsc.br/dadotransporte" xmlns:ns4="http://esus.ufsc.br/fichaatendimentoodontologicomaster">
@@ -136,6 +136,42 @@
 		<atendimentosOdontologicos>
 			<numProntuario>123</numProntuario>
 			<cnsCidadao>279573698530018</cnsCidadao>
+			<dtNascimento>1081090800000</dtNascimento>
+			<localAtendimento>1</localAtendimento>
+			<gestante>true</gestante>
+			<necessidadesEspeciais>true</necessidadesEspeciais>
+			<tipoAtendimento>2</tipoAtendimento>
+			<tiposEncamOdonto>4</tiposEncamOdonto>
+			<tiposEncamOdonto>10</tiposEncamOdonto>
+			<tiposEncamOdonto>15</tiposEncamOdonto>
+			<tiposEncamOdonto>16</tiposEncamOdonto>
+			<tiposFornecimOdonto>2</tiposFornecimOdonto>
+			<tiposVigilanciaSaudeBucal>3</tiposVigilanciaSaudeBucal>
+			<tiposConsultaOdonto>2</tiposConsultaOdonto>
+			<procedimentosRealizados>
+				<coMsProcedimento>ABPO007</coMsProcedimento>
+				<quantidade>2</quantidade>
+			</procedimentosRealizados>
+			<procedimentosRealizados>
+				<coMsProcedimento>ABPO004</coMsProcedimento>
+				<quantidade>2</quantidade>
+			</procedimentosRealizados>
+			<outrosSiaProcedimentos>
+				<coMsProcedimento>0307020045</coMsProcedimento>
+				<quantidade>1</quantidade>
+			</outrosSiaProcedimentos>
+			<outrosSiaProcedimentos>
+				<coMsProcedimento>0307020037</coMsProcedimento>
+				<quantidade>3</quantidade>
+			</outrosSiaProcedimentos>
+			<turno>1</turno>
+			<sexo>1</sexo>
+			<dataHoraInicialAtendimento>1553094000000</dataHoraInicialAtendimento>
+			<dataHoraFinalAtendimento>1553097000000</dataHoraFinalAtendimento>
+		</atendimentosOdontologicos>
+		<atendimentosOdontologicos>
+			<numProntuario>123</numProntuario>
+			<cpfCidadao>68688625042</cpfCidadao>			
 			<dtNascimento>1081090800000</dtNascimento>
 			<localAtendimento>1</localAtendimento>
 			<gestante>true</gestante>

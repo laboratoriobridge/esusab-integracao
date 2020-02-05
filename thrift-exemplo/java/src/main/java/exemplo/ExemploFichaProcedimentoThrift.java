@@ -10,9 +10,9 @@ import java.util.UUID;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
-import br.gov.saude.esus.cds.transport.generated.thrift.common.UnicaLotacaoHeaderThrift;
-import br.gov.saude.esus.cds.transport.generated.thrift.procedimento.FichaProcedimentoChildThrift;
-import br.gov.saude.esus.cds.transport.generated.thrift.procedimento.FichaProcedimentoMasterThrift;
+import br.gov.saude.esusab.ras.common.UnicaLotacaoHeaderThrift;
+import br.gov.saude.esusab.ras.atendprocedimentos.FichaProcedimentoChildThrift;
+import br.gov.saude.esusab.ras.atendprocedimentos.FichaProcedimentoMasterThrift;
 import br.gov.saude.esus.transport.common.api.configuracaodestino.VersaoThrift;
 import br.gov.saude.esus.transport.common.generated.thrift.DadoInstalacaoThrift;
 import br.gov.saude.esus.transport.common.generated.thrift.DadoTransporteThrift;
@@ -37,7 +37,7 @@ public class ExemploFichaProcedimentoThrift {
 		dadoTransporteThrift.setDadoSerializado(fichaSerializada);
 
 		// Não esquecer de informar a versão da ficha a ser exportada (não é a versão do e-SUS AB)
-		VersaoThrift versaoThrift = new VersaoThrift(2, 0, 0);
+		VersaoThrift versaoThrift = new VersaoThrift(3, 2, 3);
 		dadoTransporteThrift.setVersao(versaoThrift);
 
 		try {
@@ -137,7 +137,7 @@ public class ExemploFichaProcedimentoThrift {
 		UnicaLotacaoHeaderThrift headerThrift = new UnicaLotacaoHeaderThrift();
 
 		Calendar dataAtendimento = Calendar.getInstance();
-		dataAtendimento.set(2014, 11, 20);
+		dataAtendimento.set(2019, 11, 20);
 		headerThrift.setDataAtendimento(dataAtendimento.getTimeInMillis());
 
 		headerThrift.setCboCodigo_2002("223212");
@@ -163,12 +163,12 @@ public class ExemploFichaProcedimentoThrift {
 			atendimentoProcedimentoThrift.setDtNascimento(dataNascimento.getTimeInMillis());
 
 			atendimentoProcedimentoThrift.setLocalAtendimento(1);
-			atendimentoProcedimentoThrift.setNumCartaoSus("898001161218973");
+			atendimentoProcedimentoThrift.setCpfCidadao("80487483391");
 			atendimentoProcedimentoThrift.setNumProntuario("43143");
 			atendimentoProcedimentoThrift.setSexo(1);
 			atendimentoProcedimentoThrift.setTurno(1);
 
-			atendimentoProcedimentoThrift.setOutrosSiaProcedimentos(getProcedimentosSia());
+			atendimentoProcedimentoThrift.setProcedimentos(getProcedimentosSia());
 			atendimentoProcedimentoThrift.setProcedimentos(getProcedimentos());
 
 			listaProcedimentosAtendimento.add(atendimentoProcedimentoThrift);

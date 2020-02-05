@@ -1,8 +1,13 @@
 html/_site/
 
+*.dcu
+*.exe
 *.class
 *.project
 *.orig
+*.dproj.local
+*.res
+*.identcache
 **/.classpath
 **/.factorypath
 .settings
@@ -12,3 +17,6 @@ bin/
 build/
 target/
 metamodel/
+__history/
+
+.idea/

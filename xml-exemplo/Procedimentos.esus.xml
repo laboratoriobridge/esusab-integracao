@@ -36,6 +36,27 @@
 			<dataHoraInicialAtendimento>1559833200000</dataHoraInicialAtendimento>
 			<dataHoraFinalAtendimento>1559833200000</dataHoraFinalAtendimento>
 		</atendProcedimentos>
+		<atendProcedimentos>
+			<numProntuario>016</numProntuario>
+			<cpfCidadao>31422733521</cpfCidadao>
+			<dtNascimento>1149306000000</dtNascimento>
+			<sexo>0</sexo>
+			<localAtendimento>1</localAtendimento>
+			<turno>2</turno>
+			<statusEscutaInicialOrientacao>true</statusEscutaInicialOrientacao>
+			<procedimentos>ABPG007</procedimentos>
+			<procedimentos>ABPG027</procedimentos>
+			<procedimentos>ABPG031</procedimentos>
+			<procedimentos>ABPG041</procedimentos>
+			<procedimentos>ABPG017</procedimentos>
+			<procedimentos>ABPG032</procedimentos>
+			<procedimentos>ABPG029</procedimentos>
+			<procedimentos>ABPG028</procedimentos>
+			<procedimentos>0401010015</procedimentos>
+			<procedimentos>0413010058</procedimentos>
+			<dataHoraInicialAtendimento>1559833200000</dataHoraInicialAtendimento>
+			<dataHoraFinalAtendimento>1559833200000</dataHoraFinalAtendimento>
+		</atendProcedimentos>
 		<uuidFicha>0019615-6f783cac-ab7c-4246-8458-d3cd99164c10</uuidFicha>
 		<tpCdsOrigem>3</tpCdsOrigem>
 		<numTotalAfericaoPa>1</numTotalAfericaoPa>
@@ -66,5 +87,5 @@
 		<versaoSistema>3.2.18</versaoSistema>
 		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:originadora>
-	<versao major="3" minor="2" revision="2" />
+	<versao major="3" minor="2" revision="4" />
 </ns3:dadoTransporteTransportXml>

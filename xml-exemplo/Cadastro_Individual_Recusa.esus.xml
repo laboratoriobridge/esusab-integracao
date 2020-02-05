@@ -17,8 +17,8 @@
 			<emailCidadao>gmail@gmail.com</emailCidadao>
 			<nacionalidadeCidadao>2</nacionalidadeCidadao>
 			<nomeCidadao>ABREU SILVA</nomeCidadao>
-			<cnsCidadao>279573698530018</cnsCidadao>
-			<cnsResponsavelFamiliar>898050047989752</cnsResponsavelFamiliar>
+			<cpfCidadao>31422733521</cpfCidadao>
+			<cpfResponsavelFamiliar>68688625042</cpfResponsavelFamiliar>
 			<telefoneCelular>99999999999</telefoneCelular>
 			<racaCorCidadao>1</racaCorCidadao>
 			<sexoCidadao>0</sexoCidadao>
@@ -60,5 +60,5 @@
 		<versaoSistema>3.2.18</versaoSistema>
 		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:originadora>
-	<versao major="3" minor="2" revision="2" />
+	<versao major="3" minor="2" revision="4" />
 </ns3:dadoTransporteTransportXml>

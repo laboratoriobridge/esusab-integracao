@@ -6,19 +6,40 @@ program ThriftExample;
 uses
   System.SysUtils,
   System.Classes,
-  br.gov.saude.esus.cds.transport.generated.thrift.common
-    in 'src\thriftesus\br.gov.saude.esus.cds.transport.generated.thrift.common.pas',
-  br.gov.saude.esus.cds.transport.generated.thrift.procedimento
-    in 'src\thriftesus\br.gov.saude.esus.cds.transport.generated.thrift.procedimento.pas',
-  br.gov.saude.esus.transport.common.api.configuracaodestino
-    in 'src\thriftesus\br.gov.saude.esus.transport.common.api.configuracaodestino.pas',
-  br.gov.saude.esus.transport.common.generated.thrift
-    in 'src\thriftesus\br.gov.saude.esus.transport.common.generated.thrift.pas',
-
-  thrift.Collections in 'src\thriftutils\Thrift.Collections.pas',
-
   ZipWriterExemplo in 'src\common\ZipWriterExemplo.pas',
-  ThriftSerializer in 'src\common\ThriftSerializer.pas';
+  ThriftSerializer in 'src\common\ThriftSerializer.pas',
+  br.gov.saude.esusab.ras.atenddomiciliar in 'src\thriftesus\br.gov.saude.esusab.ras.atenddomiciliar.pas',
+  br.gov.saude.esusab.ras.atendindividual in 'src\thriftesus\br.gov.saude.esusab.ras.atendindividual.pas',
+  br.gov.saude.esusab.ras.atendodonto in 'src\thriftesus\br.gov.saude.esusab.ras.atendodonto.pas',
+  br.gov.saude.esusab.ras.atendprocedimentos in 'src\thriftesus\br.gov.saude.esusab.ras.atendprocedimentos.pas',
+  br.gov.saude.esusab.ras.atividadecoletiva in 'src\thriftesus\br.gov.saude.esusab.ras.atividadecoletiva.pas',
+  br.gov.saude.esusab.ras.avaliacaoelegibilidade in 'src\thriftesus\br.gov.saude.esusab.ras.avaliacaoelegibilidade.pas',
+  br.gov.saude.esusab.ras.cadastrodomiciliar in 'src\thriftesus\br.gov.saude.esusab.ras.cadastrodomiciliar.pas',
+  br.gov.saude.esusab.ras.cadastroindividual in 'src\thriftesus\br.gov.saude.esusab.ras.cadastroindividual.pas',
+  br.gov.saude.esusab.ras.common in 'src\thriftesus\br.gov.saude.esusab.ras.common.pas',
+  br.gov.saude.esusab.ras.complementarzika in 'src\thriftesus\br.gov.saude.esusab.ras.complementarzika.pas',
+  br.gov.saude.esusab.ras.consumoalimentar in 'src\thriftesus\br.gov.saude.esusab.ras.consumoalimentar.pas',
+  br.gov.saude.esusab.ras.vacinacao in 'src\thriftesus\br.gov.saude.esusab.ras.vacinacao.pas',
+  br.gov.saude.esusab.ras.visitadomiciliar in 'src\thriftesus\br.gov.saude.esusab.ras.visitadomiciliar.pas',
+  br.gov.saude.esusab.dadotransp in 'src\thriftesus\br.gov.saude.esusab.dadotransp.pas',
+  Thrift.Collections in 'src\thriftutils\Thrift.Collections.pas',
+  Thrift.Configuration in 'src\thriftutils\Thrift.Configuration.pas',
+  Thrift.Console in 'src\thriftutils\Thrift.Console.pas',
+  Thrift.Exception in 'src\thriftutils\Thrift.Exception.pas',
+  Thrift in 'src\thriftutils\Thrift.pas',
+  Thrift.Processor.Multiplex in 'src\thriftutils\Thrift.Processor.Multiplex.pas',
+  Thrift.Protocol.Compact in 'src\thriftutils\Thrift.Protocol.Compact.pas',
+  Thrift.Protocol.JSON in 'src\thriftutils\Thrift.Protocol.JSON.pas',
+  Thrift.Protocol.Multiplex in 'src\thriftutils\Thrift.Protocol.Multiplex.pas',
+  Thrift.Protocol in 'src\thriftutils\Thrift.Protocol.pas',
+  Thrift.Serializer in 'src\thriftutils\Thrift.Serializer.pas',
+  Thrift.Server in 'src\thriftutils\Thrift.Server.pas',
+  Thrift.Socket in 'src\thriftutils\Thrift.Socket.pas',
+  Thrift.Stream in 'src\thriftutils\Thrift.Stream.pas',
+  Thrift.TypeRegistry in 'src\thriftutils\Thrift.TypeRegistry.pas',
+  Thrift.Utils in 'src\thriftutils\Thrift.Utils.pas',
+  Thrift.WinHTTP in 'src\thriftutils\Thrift.WinHTTP.pas',
+  Thrift.Transport in 'src\thriftutils\Thrift.Transport.pas';
 
 function converterInformacoesAtendimento: IUnicaLotacaoHeaderThrift;
 var
@@ -63,8 +84,8 @@ begin
   atendimento := TFichaProcedimentoChildThriftImpl.Create;
 
   atendimento.NumProntuario := '123421';
-  atendimento.NumCartaoSus := '898001150797241';
-  dataAtendimento := FloatToStr(EncodeDate(2000, 5, 2) * 86400);
+  atendimento.CpfCidadao := '25573455982';
+  dataAtendimento := FloatToStr(EncodeDate(2019, 5, 2) * 86400);
   atendimento.DtNascimento := System.Int64.Parse(dataAtendimento);
   atendimento.Sexo := 1;
   atendimento.LocalAtendimento := 1;
@@ -97,9 +118,9 @@ var
   versaoThrift: IVersaoThrift;
 begin
   versaoThrift := TVersaoThriftImpl.Create;
-  versaoThrift.Major := 2;
-  versaoThrift.Minor := 0;
-  versaoThrift.Revision := 0;
+  versaoThrift.Major := 3;
+  versaoThrift.Minor := 2;
+  versaoThrift.Revision := 4;
 
   Result := versaoThrift;
 end;

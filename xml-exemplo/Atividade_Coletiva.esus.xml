@@ -30,6 +30,14 @@
 			<abandonouGrupo>false</abandonouGrupo>
 			<sexo>1</sexo>
 		</participantes>
+		<participantes>
+			<cpfParticipante>68688625042</cpfParticipante>
+			<dataNascimento>1430838000000</dataNascimento>
+			<avaliacaoAlterada>false</avaliacaoAlterada>
+			<peso>24.0</peso>
+			<altura>98.0</altura>
+			<sexo>0</sexo>
+		</participantes>
 		<tbCdsOrigem>3</tbCdsOrigem>
 		<procedimento>0101020023</procedimento>
 		<turno>2</turno>
@@ -75,5 +83,5 @@
 		<versaoSistema>3.2.18</versaoSistema>
 		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:originadora>
-	<versao major="3" minor="2" revision="2" />
+	<versao major="3" minor="2" revision="4" />
 </ns3:dadoTransporteTransportXml>

@@ -86,6 +86,25 @@
 			<pesoAcompanhamentoNutricional>95.0</pesoAcompanhamentoNutricional>
 			<alturaAcompanhamentoNutricional>179.0</alturaAcompanhamentoNutricional>
 		</visitasDomiciliares>
+		<visitasDomiciliares>
+			<turno>3</turno>
+			<numProntuario>1212</numProntuario>
+			<cpfCidadao>31422733521</cpfCidadao>
+			<dtNascimento>-582540200000</dtNascimento>
+			<sexo>0</sexo>
+			<statusVisitaCompartilhadaOutroProfissional>true</statusVisitaCompartilhadaOutroProfissional>
+			<motivosVisita>2</motivosVisita>
+			<motivosVisita>32</motivosVisita>
+			<motivosVisita>34</motivosVisita>
+			<motivosVisita>1</motivosVisita>
+			<motivosVisita>25</motivosVisita>
+			<desfecho>1</desfecho>
+			<microArea>07</microArea>
+			<stForaArea>false</stForaArea>
+			<tipoDeImovel>1</tipoDeImovel>
+			<pesoAcompanhamentoNutricional>95.0</pesoAcompanhamentoNutricional>
+			<alturaAcompanhamentoNutricional>179.0</alturaAcompanhamentoNutricional>
+		</visitasDomiciliares>
 	</ns4:fichaVisitaDomiciliarMasterTransport>
 	<ns2:remetente>
 		<contraChave>TREINAMENTO</contraChave>
@@ -107,5 +126,5 @@
 		<versaoSistema>3.2.18</versaoSistema>
 		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:originadora>
-	<versao major="3" minor="2" revision="2" />
+	<versao major="3" minor="2" revision="4" />
 </ns3:dadoTransporteTransportXml>

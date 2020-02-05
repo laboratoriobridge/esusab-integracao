@@ -4,8 +4,8 @@ interface
 
 uses
   System.Zip,
-  br.gov.saude.esus.transport.common.generated.thrift,
-  ThriftSerializer;
+  ThriftSerializer,
+  br.gov.saude.esusab.dadotransp;
 
 procedure gerarArquivoZip(dadoTransporte: IDadoTransporteThrift);
 

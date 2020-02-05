@@ -20,7 +20,7 @@
 		<uuidFicha>0019615-0ff12f9f-90ad-4be8-83c5-2153f9829451</uuidFicha>
 		<tpCdsOrigem>3</tpCdsOrigem>
 		<turno>2</turno>
-		<cnsCidadao>119141073230003</cnsCidadao>
+		<cpfCidadao>31422733521</cpfCidadao>
 		<dataNascimentoCidadao>662742000000</dataNascimentoCidadao>
 		<sexoCidadao>1</sexoCidadao>
 		<nomeCidadao>CIDADÃO VALIDA LEDI</nomeCidadao>
@@ -78,5 +78,5 @@
 		<versaoSistema>3.2.18</versaoSistema>
 		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:originadora>
-	<versao major="3" minor="2" revision="2" />
+	<versao major="3" minor="2" revision="4" />
 </ns3:dadoTransporteTransportXml>

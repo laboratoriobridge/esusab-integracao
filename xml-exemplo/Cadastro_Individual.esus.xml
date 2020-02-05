@@ -62,7 +62,7 @@
 			<nacionalidadeCidadao>1</nacionalidadeCidadao>
 			<nomeCidadao>CIDADÃO VALIDAÇÃO LEDI</nomeCidadao>
 			<nomeMaeCidadao>MARTA DOS SANTOS</nomeMaeCidadao>
-			<cnsCidadao>119141073230003</cnsCidadao>
+			<cpfCidadao>31422733521</cpfCidadao>
 			<telefoneCelular>99999999999</telefoneCelular>
 			<paisNascimento>31</paisNascimento>
 			<racaCorCidadao>5</racaCorCidadao>
@@ -122,5 +122,5 @@
 		<versaoSistema>3.2.18</versaoSistema>
 		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:originadora>
-	<versao major="3" minor="2" revision="2" />
+	<versao major="3" minor="2" revision="4" />
 </ns3:dadoTransporteTransportXml>

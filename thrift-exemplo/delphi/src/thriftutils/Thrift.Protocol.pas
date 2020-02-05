@@ -56,6 +56,19 @@ type
     Oneway = 4
   );
 
+const
+  VALID_TTYPES = [
+    TType.Stop, TType.Void,
+    TType.Bool_, TType.Byte_, TType.Double_, TType.I16, TType.I32, TType.I64, TType.String_,
+    TType.Struct, TType.Map, TType.Set_, TType.List
+  ];
+
+  VALID_MESSAGETYPES = [Low(TMessageType)..High(TMessageType)];
+
+const
+  DEFAULT_RECURSION_LIMIT = 64;
+
+type
   IProtocol = interface;
   IStruct = interface;
 
@@ -114,7 +127,7 @@ type
     function GetCount: Integer;
     procedure SetCount( Value: Integer);
   public
-    constructor Create( AValueType: TType; AKeyType: TType; ACount: Integer); overload;
+    constructor Create( AKeyType, AValueType: TType; ACount: Integer); overload;
     constructor Create; overload;
   end;
 
@@ -234,8 +247,21 @@ type
     class procedure Skip( prot: IProtocol; type_: TType);
   end;
 
+  IProtocolRecursionTracker = interface
+    ['{29CA033F-BB56-49B1-9EE3-31B1E82FC7A5}']
+    // no members yet
+  end;
+
+  TProtocolRecursionTrackerImpl = class abstract( TInterfacedObject, IProtocolRecursionTracker)
+  protected
+    FProtocol : IProtocol;
+  public
+    constructor Create( prot : IProtocol);
+    destructor Destroy; override;
+  end;
+
   IProtocol = interface
-    ['{FD95C151-1527-4C96-8134-B902BFC4B4FC}']
+    ['{602A7FFB-0D9E-4CD8-8D7F-E5076660588A}']
     function GetTransport: ITransport;
     procedure WriteMessageBegin( const msg: IMessage);
     procedure WriteMessageEnd;
@@ -281,12 +307,29 @@ type
     function ReadBinary: TBytes;
     function ReadString: string;
     function ReadAnsiString: AnsiString;
+
+    procedure SetRecursionLimit( value : Integer);
+    function  GetRecursionLimit : Integer;
+    function  NextRecursionLevel : IProtocolRecursionTracker;
+    procedure IncrementRecursionDepth;
+    procedure DecrementRecursionDepth;
+
     property Transport: ITransport read GetTransport;
+    property RecursionLimit : Integer read GetRecursionLimit write SetRecursionLimit;
   end;
 
   TProtocolImpl = class abstract( TInterfacedObject, IProtocol)
   protected
     FTrans : ITransport;
+    FRecursionLimit : Integer;
+    FRecursionDepth : Integer;
+
+    procedure SetRecursionLimit( value : Integer);
+    function  GetRecursionLimit : Integer;
+    function  NextRecursionLevel : IProtocolRecursionTracker;
+    procedure IncrementRecursionDepth;
+    procedure DecrementRecursionDepth;
+
     function GetTransport: ITransport;
   public
     procedure WriteMessageBegin( const msg: IMessage); virtual; abstract;
@@ -599,12 +642,65 @@ begin
   FType := Value;
 end;
 
+{ TProtocolRecursionTrackerImpl }
+
+constructor TProtocolRecursionTrackerImpl.Create( prot : IProtocol);
+begin
+  inherited Create;
+
+  // storing the pointer *after* the (successful) increment is important here
+  prot.IncrementRecursionDepth;
+  FProtocol := prot;
+end;
+
+destructor TProtocolRecursionTrackerImpl.Destroy;
+begin
+  try
+    // we have to release the reference iff the pointer has been stored
+    if FProtocol <> nil then begin
+      FProtocol.DecrementRecursionDepth;
+      FProtocol := nil;
+    end;
+  finally
+    inherited Destroy;
+  end;
+end;
+
 { TProtocolImpl }
 
 constructor TProtocolImpl.Create(trans: ITransport);
 begin
   inherited Create;
   FTrans := trans;
+  FRecursionLimit := DEFAULT_RECURSION_LIMIT;
+  FRecursionDepth := 0;
+end;
+
+procedure TProtocolImpl.SetRecursionLimit( value : Integer);
+begin
+  FRecursionLimit := value;
+end;
+
+function TProtocolImpl.GetRecursionLimit : Integer;
+begin
+  result := FRecursionLimit;
+end;
+
+function TProtocolImpl.NextRecursionLevel : IProtocolRecursionTracker;
+begin
+  result := TProtocolRecursionTrackerImpl.Create(Self);
+end;
+
+procedure TProtocolImpl.IncrementRecursionDepth;
+begin
+  if FRecursionDepth < FRecursionLimit
+  then Inc(FRecursionDepth)
+  else raise TProtocolException.Create( TProtocolException.DEPTH_LIMIT, 'Depth limit exceeded');
+end;
+
+procedure TProtocolImpl.DecrementRecursionDepth;
+begin
+  Dec(FRecursionDepth)
 end;
 
 function TProtocolImpl.GetTransport: ITransport;
@@ -662,7 +758,9 @@ var field : IField;
     set_  : ISet;
     list  : IList;
     i     : Integer;
+    tracker : IProtocolRecursionTracker;
 begin
+  tracker := prot.NextRecursionLevel;
   case type_ of
     // simple types
     TType.Bool_   :  prot.ReadBool();
@@ -733,7 +831,7 @@ end;
 
 { TMapImpl }
 
-constructor TMapImpl.Create(AValueType, AKeyType: TType; ACount: Integer);
+constructor TMapImpl.Create( AKeyType, AValueType: TType; ACount: Integer);
 begin
   inherited Create;
   FValueType := AValueType;

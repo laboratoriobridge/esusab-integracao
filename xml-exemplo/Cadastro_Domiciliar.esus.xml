@@ -40,7 +40,7 @@
 		</enderecoLocalPermanencia>
 		<familias>
 			<dataNascimentoResponsavel>978357600000</dataNascimentoResponsavel>
-			<numeroCnsResponsavel>119141073230003</numeroCnsResponsavel>
+			<cnsResponsavel>119141073230003</cnsResponsavel>
 			<numeroMembrosFamilia>1</numeroMembrosFamilia>
 			<numeroProntuario>2</numeroProntuario>
 			<rendaFamiliar>2</rendaFamiliar>
@@ -48,8 +48,8 @@
 			<stMudanca>false</stMudanca>
 		</familias>
 		<familias>
-			<dataNascimentoResponsavel>662738400000</dataNascimentoResponsavel>
-			<numeroCnsResponsavel>178716863270001</numeroCnsResponsavel>
+			<dataNascimentoResponsavel>662738000000</dataNascimentoResponsavel>
+			<cpfResponsavel>31422733521</cpfResponsavel>
 			<numeroMembrosFamilia>1</numeroMembrosFamilia>
 			<numeroProntuario>1</numeroProntuario>
 			<rendaFamiliar>3</rendaFamiliar>
@@ -94,5 +94,5 @@
 		<versaoSistema>3.2.18</versaoSistema>
 		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:originadora>
-	<versao major="3" minor="2" revision="2" />
+	<versao major="3" minor="2" revision="4" />
 </ns3:dadoTransporteTransportXml>

@@ -18,8 +18,8 @@
 		<uuidFicha>0019615-f4718f9b-2d1d-4072-b94c-77c6b78c5218</uuidFicha>
 		<tpCdsOrigem>3</tpCdsOrigem>
 		<turno>1</turno>
-		<cnsCidadao>205199270910000</cnsCidadao>
-		<cnsResponsavelFamiliar>100291426250007</cnsResponsavelFamiliar>
+		<cpfCidadao>31422733521</cpfCidadao>
+		<cpfResponsavelFamiliar>68688625042</cpfResponsavelFamiliar>
 		<dataRealizacaoTesteOlhinho>1551106800000</dataRealizacaoTesteOlhinho>
 		<coResultadoTesteOlhinho>1</coResultadoTesteOlhinho>
 		<dataRealizacaoExameFundoOlho>1550674800000</dataRealizacaoExameFundoOlho>
@@ -53,5 +53,5 @@
 		<versaoSistema>3.2.18</versaoSistema>
 		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:originadora>
-	<versao major="3" minor="2" revision="2" />
+	<versao major="3" minor="2" revision="4" />
 </ns3:dadoTransporteTransportXml>

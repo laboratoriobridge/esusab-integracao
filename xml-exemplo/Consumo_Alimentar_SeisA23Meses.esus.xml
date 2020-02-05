@@ -15,7 +15,7 @@
 			<dataAtendimento>1517234400000</dataAtendimento>
 			<codigoIbgeMunicipio>4205407</codigoIbgeMunicipio>
 		</headerTransport>
-		<cnsCidadao>119141073230003</cnsCidadao>
+		<cpfCidadao>31422733521</cpfCidadao>
 		<identificacaoUsuario>MARTA SILVIANO SILVA</identificacaoUsuario>
 		<dataNascimento>1493992800000</dataNascimento>
 		<sexo>1</sexo>
@@ -123,5 +123,5 @@
 		<versaoSistema>3.2.18</versaoSistema>
 		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:originadora>
-	<versao major="3" minor="2" revision="2" />
+	<versao major="3" minor="2" revision="4" />
 </ns3:dadoTransporteTransportXml>

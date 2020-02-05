@@ -30,6 +30,14 @@
 			<altura>160.0</altura>
 			<sexo>1</sexo>
 		</participantes>
+		<participantes>
+			<cpfParticipante>68688625042</cpfParticipante>
+			<dataNascimento>1430838000000</dataNascimento>
+			<avaliacaoAlterada>false</avaliacaoAlterada>
+			<peso>50.0</peso>
+			<altura>149.0</altura>
+			<sexo>1</sexo>
+		</participantes>
 		<tbCdsOrigem>3</tbCdsOrigem>
 		<turno>1</turno>
 		<pseEducacao>true</pseEducacao>
@@ -65,5 +73,5 @@
 		<versaoSistema>3.2.18</versaoSistema>
 		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:originadora>
-	<versao major="3" minor="2" revision="2" />
+	<versao major="3" minor="2" revision="4" />
 </ns3:dadoTransporteTransportXml>

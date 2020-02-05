@@ -14,7 +14,7 @@ struct InstituicaoPermanenciaThrift {
 	3:optional string nomeResponsavelTecnico,
 	4:optional string cnsResponsavelTecnico,
 	5:optional string cargoInstituicao,
-	6:optional string telefoneResponsavelTecnico
+	6:optional string telefoneResponsavelTecnico;
 }
 
 struct CondicaoMoradiaThrift {
@@ -30,7 +30,7 @@ struct CondicaoMoradiaThrift {
 	10:optional bool stDisponibilidadeEnergiaEletrica,
 	11:optional i64 tipoAcessoDomicilio,
 	12:optional i64 tipoDomicilio,
-	13:optional i64 aguaConsumoDomicilio
+	13:optional i64 aguaConsumoDomicilio;
 }
 
 struct FamiliaRowThrift {
@@ -40,7 +40,8 @@ struct FamiliaRowThrift {
 	4:optional string numeroProntuario,
 	5:optional i64 rendaFamiliar,
 	6:optional i64 resideDesde,
-	7:optional bool stMudanca
+	7:optional bool stMudanca,
+	8:optional string cpfResponsavel;
 }
 
 struct CadastroDomiciliarThrift {

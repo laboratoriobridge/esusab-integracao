@@ -22,6 +22,7 @@ struct FichaVisitaDomiciliarChildThrift {
 	11:optional i64 tipoDeImovel;
 	12:optional double pesoAcompanhamentoNutricional;
 	13:optional double alturaAcompanhamentoNutricional;
+	14:optional string cpfCidadao;
 }
 
 struct FichaVisitaDomiciliarMasterThrift {

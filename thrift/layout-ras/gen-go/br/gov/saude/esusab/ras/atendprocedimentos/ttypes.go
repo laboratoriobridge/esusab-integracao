@@ -29,6 +29,7 @@ var GoUnusedProtection__ int
 //  - Procedimentos
 //  - DataHoraInicialAtendimento
 //  - DataHoraFinalAtendimento
+//  - CpfCidadao
 type FichaProcedimentoChildThrift struct {
 	NumProntuario                 *string  `thrift:"numProntuario,1" json:"numProntuario,omitempty"`
 	CnsCidadao                    *string  `thrift:"cnsCidadao,2" json:"cnsCidadao,omitempty"`
@@ -39,8 +40,9 @@ type FichaProcedimentoChildThrift struct {
 	StatusEscutaInicialOrientacao *bool    `thrift:"statusEscutaInicialOrientacao,7" json:"statusEscutaInicialOrientacao,omitempty"`
 	Procedimentos                 []string `thrift:"procedimentos,8" json:"procedimentos,omitempty"`
 	// unused field # 9
-	DataHoraInicialAtendimento *int64 `thrift:"dataHoraInicialAtendimento,10" json:"dataHoraInicialAtendimento,omitempty"`
-	DataHoraFinalAtendimento   *int64 `thrift:"dataHoraFinalAtendimento,11" json:"dataHoraFinalAtendimento,omitempty"`
+	DataHoraInicialAtendimento *int64  `thrift:"dataHoraInicialAtendimento,10" json:"dataHoraInicialAtendimento,omitempty"`
+	DataHoraFinalAtendimento   *int64  `thrift:"dataHoraFinalAtendimento,11" json:"dataHoraFinalAtendimento,omitempty"`
+	CpfCidadao                 *string `thrift:"cpfCidadao,12" json:"cpfCidadao,omitempty"`
 }
 
 func NewFichaProcedimentoChildThrift() *FichaProcedimentoChildThrift {
@@ -133,6 +135,15 @@ func (p *FichaProcedimentoChildThrift) GetDataHoraFinalAtendimento() int64 {
 	}
 	return *p.DataHoraFinalAtendimento
 }
+
+var FichaProcedimentoChildThrift_CpfCidadao_DEFAULT string
+
+func (p *FichaProcedimentoChildThrift) GetCpfCidadao() string {
+	if !p.IsSetCpfCidadao() {
+		return FichaProcedimentoChildThrift_CpfCidadao_DEFAULT
+	}
+	return *p.CpfCidadao
+}
 func (p *FichaProcedimentoChildThrift) IsSetNumProntuario() bool {
 	return p.NumProntuario != nil
 }
@@ -171,6 +182,10 @@ func (p *FichaProcedimentoChildThrift) IsSetDataHoraInicialAtendimento() bool {
 
 func (p *FichaProcedimentoChildThrift) IsSetDataHoraFinalAtendimento() bool {
 	return p.DataHoraFinalAtendimento != nil
+}
+
+func (p *FichaProcedimentoChildThrift) IsSetCpfCidadao() bool {
+	return p.CpfCidadao != nil
 }
 
 func (p *FichaProcedimentoChildThrift) Read(iprot thrift.TProtocol) error {
@@ -225,6 +240,10 @@ func (p *FichaProcedimentoChildThrift) Read(iprot thrift.TProtocol) error {
 			}
 		case 11:
 			if err := p.readField11(iprot); err != nil {
+				return err
+			}
+		case 12:
+			if err := p.readField12(iprot); err != nil {
 				return err
 			}
 		default:
@@ -345,6 +364,15 @@ func (p *FichaProcedimentoChildThrift) readField11(iprot thrift.TProtocol) error
 	return nil
 }
 
+func (p *FichaProcedimentoChildThrift) readField12(iprot thrift.TProtocol) error {
+	if v, err := iprot.ReadString(); err != nil {
+		return thrift.PrependError("error reading field 12: ", err)
+	} else {
+		p.CpfCidadao = &v
+	}
+	return nil
+}
+
 func (p *FichaProcedimentoChildThrift) Write(oprot thrift.TProtocol) error {
 	if err := oprot.WriteStructBegin("FichaProcedimentoChildThrift"); err != nil {
 		return thrift.PrependError(fmt.Sprintf("%T write struct begin error: ", p), err)
@@ -377,6 +405,9 @@ func (p *FichaProcedimentoChildThrift) Write(oprot thrift.TProtocol) error {
 		return err
 	}
 	if err := p.writeField11(oprot); err != nil {
+		return err
+	}
+	if err := p.writeField12(oprot); err != nil {
 		return err
 	}
 	if err := oprot.WriteFieldStop(); err != nil {
@@ -541,6 +572,21 @@ func (p *FichaProcedimentoChildThrift) writeField11(oprot thrift.TProtocol) (err
 		}
 		if err := oprot.WriteFieldEnd(); err != nil {
 			return thrift.PrependError(fmt.Sprintf("%T write field end error 11:dataHoraFinalAtendimento: ", p), err)
+		}
+	}
+	return err
+}
+
+func (p *FichaProcedimentoChildThrift) writeField12(oprot thrift.TProtocol) (err error) {
+	if p.IsSetCpfCidadao() {
+		if err := oprot.WriteFieldBegin("cpfCidadao", thrift.STRING, 12); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field begin error 12:cpfCidadao: ", p), err)
+		}
+		if err := oprot.WriteString(string(*p.CpfCidadao)); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T.cpfCidadao (12) field write error: ", p), err)
+		}
+		if err := oprot.WriteFieldEnd(); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field end error 12:cpfCidadao: ", p), err)
 		}
 	}
 	return err

@@ -5,6 +5,7 @@
     <xs:sequence>
       <xs:element maxOccurs="1" minOccurs="0" name="dataNascimentoResponsavel" type="xs:long"/>
       <xs:element maxOccurs="1" minOccurs="0" name="numeroCnsResponsavel" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="cpfResponsavel" type="xs:string"/>
       <xs:element maxOccurs="1" minOccurs="0" name="numeroMembrosFamilia" type="xs:int"/>
       <xs:element maxOccurs="1" minOccurs="0" name="numeroProntuario" type="xs:string"/>
       <xs:element maxOccurs="1" minOccurs="0" name="rendaFamiliar" type="xs:long"/>

@@ -80,7 +80,9 @@ struct IdentificacaoUsuarioCidadaoThrift {
 	22:optional string portariaNaturalizacao,
 	23:optional i64 dtEntradaBrasil,
 	24:optional string microArea,
-	25:optional bool stForaArea;
+	25:optional bool stForaArea,
+	26:optional string cpfCidadao,
+	27:optional string cpfResponsavelFamiliar;
 }
 
 struct InformacoesSocioDemograficasThrift {
@@ -100,13 +102,13 @@ struct InformacoesSocioDemograficasThrift {
 	16:optional bool statusTemAlgumaDeficiencia,
 	17:optional i64 identidadeGeneroCidadao,
 	18:optional bool statusDesejaInformarIdentidadeGenero,
-	19:optional list<i64> responsavelPorCrianca
+	19:optional list<i64> responsavelPorCrianca;
 }
 
 struct SaidaCidadaoCadastroThrift {
-	1:optional i64 motivoSaidaCidadao,
-	2:optional i64 dataObito,
-	3:optional string numeroDO
+	1:optional i64 motivoSaidaCidadao;
+	2:optional i64 dataObito;
+	3:optional string numeroDO;
 }
 
 struct CadastroIndividualThrift {

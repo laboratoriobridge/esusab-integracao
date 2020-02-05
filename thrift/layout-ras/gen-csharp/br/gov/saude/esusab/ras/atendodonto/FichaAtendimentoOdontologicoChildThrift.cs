@@ -39,6 +39,7 @@ namespace br.gov.saude.esusab.ras.atendodonto
     private long _turno;
     private long _dataHoraInicialAtendimento;
     private long _dataHoraFinalAtendimento;
+    private string _cpfCidadao;
 
     public long DtNascimento
     {
@@ -248,6 +249,19 @@ namespace br.gov.saude.esusab.ras.atendodonto
       }
     }
 
+    public string CpfCidadao
+    {
+      get
+      {
+        return _cpfCidadao;
+      }
+      set
+      {
+        __isset.cpfCidadao = true;
+        this._cpfCidadao = value;
+      }
+    }
+
 
     public Isset __isset;
     #if !SILVERLIGHT
@@ -270,6 +284,7 @@ namespace br.gov.saude.esusab.ras.atendodonto
       public bool turno;
       public bool dataHoraInicialAtendimento;
       public bool dataHoraFinalAtendimento;
+      public bool cpfCidadao;
     }
 
     public FichaAtendimentoOdontologicoChildThrift() {
@@ -449,6 +464,13 @@ namespace br.gov.saude.esusab.ras.atendodonto
             case 17:
               if (field.Type == TType.I64) {
                 DataHoraFinalAtendimento = iprot.ReadI64();
+              } else { 
+                TProtocolUtil.Skip(iprot, field.Type);
+              }
+              break;
+            case 18:
+              if (field.Type == TType.String) {
+                CpfCidadao = iprot.ReadString();
               } else { 
                 TProtocolUtil.Skip(iprot, field.Type);
               }
@@ -637,6 +659,14 @@ namespace br.gov.saude.esusab.ras.atendodonto
           oprot.WriteI64(DataHoraFinalAtendimento);
           oprot.WriteFieldEnd();
         }
+        if (CpfCidadao != null && __isset.cpfCidadao) {
+          field.Name = "cpfCidadao";
+          field.Type = TType.String;
+          field.ID = 18;
+          oprot.WriteFieldBegin(field);
+          oprot.WriteString(CpfCidadao);
+          oprot.WriteFieldEnd();
+        }
         oprot.WriteFieldStop();
         oprot.WriteStructEnd();
       }
@@ -744,6 +774,12 @@ namespace br.gov.saude.esusab.ras.atendodonto
         __first = false;
         __sb.Append("DataHoraFinalAtendimento: ");
         __sb.Append(DataHoraFinalAtendimento);
+      }
+      if (CpfCidadao != null && __isset.cpfCidadao) {
+        if(!__first) { __sb.Append(", "); }
+        __first = false;
+        __sb.Append("CpfCidadao: ");
+        __sb.Append(CpfCidadao);
       }
       __sb.Append(")");
       return __sb.ToString();

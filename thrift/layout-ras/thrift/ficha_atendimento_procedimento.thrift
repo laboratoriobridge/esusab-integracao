@@ -19,6 +19,7 @@ struct FichaProcedimentoChildThrift {
 	8:optional list<string> procedimentos;
 	10:optional i64 dataHoraInicialAtendimento;
 	11:optional i64 dataHoraFinalAtendimento;
+	12:optional string cpfCidadao;
 }
 
 struct FichaProcedimentoMasterThrift {

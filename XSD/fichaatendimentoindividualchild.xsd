@@ -8,7 +8,8 @@
   <xs:complexType name="fichaAtendimentoIndividualChildTransport">
     <xs:sequence>
       <xs:element maxOccurs="1" minOccurs="0" name="numeroProntuario" type="xs:string"/>
-      <xs:element maxOccurs="1" minOccurs="0" name="cns" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="cnsCidadao" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="cpfCidadao" type="xs:string"/>
       <xs:element maxOccurs="1" minOccurs="0" name="dataNascimento" type="xs:long"/>
       <xs:element maxOccurs="1" minOccurs="0" name="localDeAtendimento" type="xs:long"/>
       <xs:element maxOccurs="1" minOccurs="0" name="sexo" type="xs:long"/>

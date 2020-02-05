@@ -152,6 +152,7 @@ class FichaVacinacaoChildThrift:
    - vacinas
    - dataHoraInicialAtendimento
    - dataHoraFinalAtendimento
+   - cpfCidadao
   """
 
   thrift_spec = (
@@ -169,9 +170,10 @@ class FichaVacinacaoChildThrift:
     (11, TType.LIST, 'vacinas', (TType.STRUCT,(VacinaRowThrift, VacinaRowThrift.thrift_spec)), None, ), # 11
     (12, TType.I64, 'dataHoraInicialAtendimento', None, None, ), # 12
     (13, TType.I64, 'dataHoraFinalAtendimento', None, None, ), # 13
+    (14, TType.STRING, 'cpfCidadao', None, None, ), # 14
   )
 
-  def __init__(self, turno=None, numProntuario=None, cnsCidadao=None, dtNascimento=None, sexo=None, localAtendimento=None, viajante=None, comunicanteHanseniase=None, gestante=None, puerpera=None, vacinas=None, dataHoraInicialAtendimento=None, dataHoraFinalAtendimento=None,):
+  def __init__(self, turno=None, numProntuario=None, cnsCidadao=None, dtNascimento=None, sexo=None, localAtendimento=None, viajante=None, comunicanteHanseniase=None, gestante=None, puerpera=None, vacinas=None, dataHoraInicialAtendimento=None, dataHoraFinalAtendimento=None, cpfCidadao=None,):
     self.turno = turno
     self.numProntuario = numProntuario
     self.cnsCidadao = cnsCidadao
@@ -185,6 +187,7 @@ class FichaVacinacaoChildThrift:
     self.vacinas = vacinas
     self.dataHoraInicialAtendimento = dataHoraInicialAtendimento
     self.dataHoraFinalAtendimento = dataHoraFinalAtendimento
+    self.cpfCidadao = cpfCidadao
 
   def read(self, iprot):
     if iprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None and fastbinary is not None:
@@ -266,6 +269,11 @@ class FichaVacinacaoChildThrift:
           self.dataHoraFinalAtendimento = iprot.readI64()
         else:
           iprot.skip(ftype)
+      elif fid == 14:
+        if ftype == TType.STRING:
+          self.cpfCidadao = iprot.readString()
+        else:
+          iprot.skip(ftype)
       else:
         iprot.skip(ftype)
       iprot.readFieldEnd()
@@ -331,6 +339,10 @@ class FichaVacinacaoChildThrift:
       oprot.writeFieldBegin('dataHoraFinalAtendimento', TType.I64, 13)
       oprot.writeI64(self.dataHoraFinalAtendimento)
       oprot.writeFieldEnd()
+    if self.cpfCidadao is not None:
+      oprot.writeFieldBegin('cpfCidadao', TType.STRING, 14)
+      oprot.writeString(self.cpfCidadao)
+      oprot.writeFieldEnd()
     oprot.writeFieldStop()
     oprot.writeStructEnd()
 
@@ -353,6 +365,7 @@ class FichaVacinacaoChildThrift:
     value = (value * 31) ^ hash(self.vacinas)
     value = (value * 31) ^ hash(self.dataHoraInicialAtendimento)
     value = (value * 31) ^ hash(self.dataHoraFinalAtendimento)
+    value = (value * 31) ^ hash(self.cpfCidadao)
     return value
 
   def __repr__(self):

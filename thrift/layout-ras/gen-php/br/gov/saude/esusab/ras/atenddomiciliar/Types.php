@@ -68,6 +68,10 @@ class FichaAtendimentoDomiciliarChildThrift {
    * @var int
    */
   public $condutaDesfecho = null;
+  /**
+   * @var string
+   */
+  public $cpfCidadao = null;
 
   public function __construct($vals=null) {
     if (!isset(self::$_TSPEC)) {
@@ -128,6 +132,10 @@ class FichaAtendimentoDomiciliarChildThrift {
           'var' => 'condutaDesfecho',
           'type' => TType::I64,
           ),
+        15 => array(
+          'var' => 'cpfCidadao',
+          'type' => TType::STRING,
+          ),
         );
     }
     if (is_array($vals)) {
@@ -166,6 +174,9 @@ class FichaAtendimentoDomiciliarChildThrift {
       }
       if (isset($vals['condutaDesfecho'])) {
         $this->condutaDesfecho = $vals['condutaDesfecho'];
+      }
+      if (isset($vals['cpfCidadao'])) {
+        $this->cpfCidadao = $vals['cpfCidadao'];
       }
     }
   }
@@ -293,6 +304,13 @@ class FichaAtendimentoDomiciliarChildThrift {
             $xfer += $input->skip($ftype);
           }
           break;
+        case 15:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->cpfCidadao);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
         default:
           $xfer += $input->skip($ftype);
           break;
@@ -388,6 +406,11 @@ class FichaAtendimentoDomiciliarChildThrift {
     if ($this->condutaDesfecho !== null) {
       $xfer += $output->writeFieldBegin('condutaDesfecho', TType::I64, 13);
       $xfer += $output->writeI64($this->condutaDesfecho);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->cpfCidadao !== null) {
+      $xfer += $output->writeFieldBegin('cpfCidadao', TType::STRING, 15);
+      $xfer += $output->writeString($this->cpfCidadao);
       $xfer += $output->writeFieldEnd();
     }
     $xfer += $output->writeFieldStop();

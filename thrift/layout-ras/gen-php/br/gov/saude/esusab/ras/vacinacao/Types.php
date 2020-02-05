@@ -239,6 +239,10 @@ class FichaVacinacaoChildThrift {
    * @var int
    */
   public $dataHoraFinalAtendimento = null;
+  /**
+   * @var string
+   */
+  public $cpfCidadao = null;
 
   public function __construct($vals=null) {
     if (!isset(self::$_TSPEC)) {
@@ -300,6 +304,10 @@ class FichaVacinacaoChildThrift {
           'var' => 'dataHoraFinalAtendimento',
           'type' => TType::I64,
           ),
+        14 => array(
+          'var' => 'cpfCidadao',
+          'type' => TType::STRING,
+          ),
         );
     }
     if (is_array($vals)) {
@@ -341,6 +349,9 @@ class FichaVacinacaoChildThrift {
       }
       if (isset($vals['dataHoraFinalAtendimento'])) {
         $this->dataHoraFinalAtendimento = $vals['dataHoraFinalAtendimento'];
+      }
+      if (isset($vals['cpfCidadao'])) {
+        $this->cpfCidadao = $vals['cpfCidadao'];
       }
     }
   }
@@ -466,6 +477,13 @@ class FichaVacinacaoChildThrift {
             $xfer += $input->skip($ftype);
           }
           break;
+        case 14:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->cpfCidadao);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
         default:
           $xfer += $input->skip($ftype);
           break;
@@ -554,6 +572,11 @@ class FichaVacinacaoChildThrift {
     if ($this->dataHoraFinalAtendimento !== null) {
       $xfer += $output->writeFieldBegin('dataHoraFinalAtendimento', TType::I64, 13);
       $xfer += $output->writeI64($this->dataHoraFinalAtendimento);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->cpfCidadao !== null) {
+      $xfer += $output->writeFieldBegin('cpfCidadao', TType::STRING, 14);
+      $xfer += $output->writeString($this->cpfCidadao);
       $xfer += $output->writeFieldEnd();
     }
     $xfer += $output->writeFieldStop();

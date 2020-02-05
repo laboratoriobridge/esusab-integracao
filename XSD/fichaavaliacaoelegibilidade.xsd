@@ -16,6 +16,7 @@
       <xs:element maxOccurs="1" minOccurs="0" name="tpCdsOrigem" type="xs:int"/>
       <xs:element maxOccurs="1" minOccurs="0" name="turno" type="xs:long"/>
       <xs:element maxOccurs="1" minOccurs="0" name="cnsCidadao" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="cpfCidadao" type="xs:string"/>
       <xs:element maxOccurs="1" minOccurs="0" name="dataNascimentoCidadao" type="xs:long"/>
       <xs:element maxOccurs="1" minOccurs="0" name="sexoCidadao" type="xs:long"/>
       <xs:element maxOccurs="1" minOccurs="0" name="nomeCidadao" type="xs:string"/>
@@ -45,6 +46,7 @@
       <xs:element maxOccurs="1" minOccurs="0" name="paisNascimento" type="xs:long"/>
       <xs:element maxOccurs="1" minOccurs="0" name="etnia" type="xs:long"/>
       <xs:element maxOccurs="1" minOccurs="0" name="cnsCuidador" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="cpfCuidador" type="xs:string"/>
     </xs:sequence>
   </xs:complexType>
 </xs:schema>

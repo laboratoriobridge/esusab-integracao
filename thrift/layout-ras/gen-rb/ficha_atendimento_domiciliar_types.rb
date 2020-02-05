@@ -28,6 +28,7 @@ module Br
               CIAP = 10
               PROCEDIMENTOS = 11
               CONDUTADESFECHO = 13
+              CPFCIDADAO = 15
 
               FIELDS = {
                 TURNO => {:type => ::Thrift::Types::I64, :name => 'turno', :optional => true},
@@ -41,7 +42,8 @@ module Br
                 CID => {:type => ::Thrift::Types::STRING, :name => 'cid', :optional => true},
                 CIAP => {:type => ::Thrift::Types::STRING, :name => 'ciap', :optional => true},
                 PROCEDIMENTOS => {:type => ::Thrift::Types::LIST, :name => 'procedimentos', :element => {:type => ::Thrift::Types::STRING}, :optional => true},
-                CONDUTADESFECHO => {:type => ::Thrift::Types::I64, :name => 'condutaDesfecho', :optional => true}
+                CONDUTADESFECHO => {:type => ::Thrift::Types::I64, :name => 'condutaDesfecho', :optional => true},
+                CPFCIDADAO => {:type => ::Thrift::Types::STRING, :name => 'cpfCidadao', :optional => true}
               }
 
               def struct_fields; FIELDS; end

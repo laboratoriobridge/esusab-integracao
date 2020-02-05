@@ -114,6 +114,8 @@ type
     procedure SetDataHoraInicialAtendimento( const Value: Int64);
     function GetDataHoraFinalAtendimento: Int64;
     procedure SetDataHoraFinalAtendimento( const Value: Int64);
+    function GetCpfCidadao: string;
+    procedure SetCpfCidadao( const Value: string);
 
     property DtNascimento: Int64 read GetDtNascimento write SetDtNascimento;
     property CnsCidadao: string read GetCnsCidadao write SetCnsCidadao;
@@ -131,6 +133,7 @@ type
     property Turno: Int64 read GetTurno write SetTurno;
     property DataHoraInicialAtendimento: Int64 read GetDataHoraInicialAtendimento write SetDataHoraInicialAtendimento;
     property DataHoraFinalAtendimento: Int64 read GetDataHoraFinalAtendimento write SetDataHoraFinalAtendimento;
+    property CpfCidadao: string read GetCpfCidadao write SetCpfCidadao;
 
     function Get__isset_DtNascimento: Boolean;
     function Get__isset_CnsCidadao: Boolean;
@@ -148,6 +151,7 @@ type
     function Get__isset_Turno: Boolean;
     function Get__isset_DataHoraInicialAtendimento: Boolean;
     function Get__isset_DataHoraFinalAtendimento: Boolean;
+    function Get__isset_CpfCidadao: Boolean;
 
     property __isset_DtNascimento: Boolean read Get__isset_DtNascimento;
     property __isset_CnsCidadao: Boolean read Get__isset_CnsCidadao;
@@ -165,6 +169,7 @@ type
     property __isset_Turno: Boolean read Get__isset_Turno;
     property __isset_DataHoraInicialAtendimento: Boolean read Get__isset_DataHoraInicialAtendimento;
     property __isset_DataHoraFinalAtendimento: Boolean read Get__isset_DataHoraFinalAtendimento;
+    property __isset_CpfCidadao: Boolean read Get__isset_CpfCidadao;
   end;
 
   TFichaAtendimentoOdontologicoChildThriftImpl = class(TInterfacedObject, IBase, IFichaAtendimentoOdontologicoChildThrift)
@@ -185,6 +190,7 @@ type
     FTurno: Int64;
     FDataHoraInicialAtendimento: Int64;
     FDataHoraFinalAtendimento: Int64;
+    FCpfCidadao: string;
     
     F__isset_DtNascimento: Boolean;
     F__isset_CnsCidadao: Boolean;
@@ -202,6 +208,7 @@ type
     F__isset_Turno: Boolean;
     F__isset_DataHoraInicialAtendimento: Boolean;
     F__isset_DataHoraFinalAtendimento: Boolean;
+    F__isset_CpfCidadao: Boolean;
     
     function GetDtNascimento: Int64;
     procedure SetDtNascimento( const Value: Int64);
@@ -235,6 +242,8 @@ type
     procedure SetDataHoraInicialAtendimento( const Value: Int64);
     function GetDataHoraFinalAtendimento: Int64;
     procedure SetDataHoraFinalAtendimento( const Value: Int64);
+    function GetCpfCidadao: string;
+    procedure SetCpfCidadao( const Value: string);
 
     function Get__isset_DtNascimento: Boolean;
     function Get__isset_CnsCidadao: Boolean;
@@ -252,6 +261,7 @@ type
     function Get__isset_Turno: Boolean;
     function Get__isset_DataHoraInicialAtendimento: Boolean;
     function Get__isset_DataHoraFinalAtendimento: Boolean;
+    function Get__isset_CpfCidadao: Boolean;
   public
     constructor Create;
     destructor Destroy; override;
@@ -279,6 +289,7 @@ type
     property Turno: Int64 read GetTurno write SetTurno;
     property DataHoraInicialAtendimento: Int64 read GetDataHoraInicialAtendimento write SetDataHoraInicialAtendimento;
     property DataHoraFinalAtendimento: Int64 read GetDataHoraFinalAtendimento write SetDataHoraFinalAtendimento;
+    property CpfCidadao: string read GetCpfCidadao write SetCpfCidadao;
 
     // isset
     property __isset_DtNascimento: Boolean read Get__isset_DtNascimento;
@@ -297,6 +308,7 @@ type
     property __isset_Turno: Boolean read Get__isset_Turno;
     property __isset_DataHoraInicialAtendimento: Boolean read Get__isset_DataHoraInicialAtendimento;
     property __isset_DataHoraFinalAtendimento: Boolean read Get__isset_DataHoraFinalAtendimento;
+    property __isset_CpfCidadao: Boolean read Get__isset_CpfCidadao;
   end;
 
   IFichaAtendimentoOdontologicoMasterThrift = interface(IBase)
@@ -785,6 +797,22 @@ begin
   Result := F__isset_DataHoraFinalAtendimento;
 end;
 
+function TFichaAtendimentoOdontologicoChildThriftImpl.GetCpfCidadao: string;
+begin
+  Result := FCpfCidadao;
+end;
+
+procedure TFichaAtendimentoOdontologicoChildThriftImpl.SetCpfCidadao( const Value: string);
+begin
+  F__isset_CpfCidadao := True;
+  FCpfCidadao := Value;
+end;
+
+function TFichaAtendimentoOdontologicoChildThriftImpl.Get__isset_CpfCidadao: Boolean;
+begin
+  Result := F__isset_CpfCidadao;
+end;
+
 procedure TFichaAtendimentoOdontologicoChildThriftImpl.Read( const iprot: IProtocol);
 var
   field_ : IField;
@@ -997,6 +1025,15 @@ begin
           begin
             TProtocolUtil.Skip(iprot, field_.Type_);
           end;
+        end;
+        18: begin
+          if (field_.Type_ = TType.String_) then
+          begin
+            CpfCidadao := iprot.ReadString();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
         end
         else begin
           TProtocolUtil.Skip(iprot, field_.Type_);
@@ -1203,6 +1240,15 @@ begin
     oprot.WriteI64(DataHoraFinalAtendimento);
     oprot.WriteFieldEnd();
   end;
+  if (__isset_CpfCidadao) then
+  begin
+    field_.Name := 'cpfCidadao';
+    field_.Type_  := TType.String_;
+    field_.ID := 18;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteString(CpfCidadao);
+    oprot.WriteFieldEnd();
+  end;
   oprot.WriteFieldStop();
   oprot.WriteStructEnd();
 end;
@@ -1310,6 +1356,12 @@ begin
       _first28 := FALSE;
       _sb27.Append('DataHoraFinalAtendimento: ');
       _sb27.Append(DataHoraFinalAtendimento);
+    end;
+    if (__isset_CpfCidadao) then begin
+      if not _first28 then _sb27.Append(',');
+      _first28 := FALSE;
+      _sb27.Append('CpfCidadao: ');
+      _sb27.Append(CpfCidadao);
     end;
     _sb27.Append(')');
     Result := _sb27.ToString;

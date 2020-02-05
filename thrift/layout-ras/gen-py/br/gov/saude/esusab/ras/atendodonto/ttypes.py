@@ -116,6 +116,7 @@ class FichaAtendimentoOdontologicoChildThrift:
    - turno
    - dataHoraInicialAtendimento
    - dataHoraFinalAtendimento
+   - cpfCidadao
   """
 
   thrift_spec = (
@@ -137,9 +138,10 @@ class FichaAtendimentoOdontologicoChildThrift:
     (15, TType.I64, 'turno', None, None, ), # 15
     (16, TType.I64, 'dataHoraInicialAtendimento', None, None, ), # 16
     (17, TType.I64, 'dataHoraFinalAtendimento', None, None, ), # 17
+    (18, TType.STRING, 'cpfCidadao', None, None, ), # 18
   )
 
-  def __init__(self, dtNascimento=None, cnsCidadao=None, numProntuario=None, gestante=None, necessidadesEspeciais=None, localAtendimento=None, tipoAtendimento=None, tiposEncamOdonto=None, tiposFornecimOdonto=None, tiposVigilanciaSaudeBucal=None, tiposConsultaOdonto=None, procedimentosRealizados=None, sexo=None, turno=None, dataHoraInicialAtendimento=None, dataHoraFinalAtendimento=None,):
+  def __init__(self, dtNascimento=None, cnsCidadao=None, numProntuario=None, gestante=None, necessidadesEspeciais=None, localAtendimento=None, tipoAtendimento=None, tiposEncamOdonto=None, tiposFornecimOdonto=None, tiposVigilanciaSaudeBucal=None, tiposConsultaOdonto=None, procedimentosRealizados=None, sexo=None, turno=None, dataHoraInicialAtendimento=None, dataHoraFinalAtendimento=None, cpfCidadao=None,):
     self.dtNascimento = dtNascimento
     self.cnsCidadao = cnsCidadao
     self.numProntuario = numProntuario
@@ -156,6 +158,7 @@ class FichaAtendimentoOdontologicoChildThrift:
     self.turno = turno
     self.dataHoraInicialAtendimento = dataHoraInicialAtendimento
     self.dataHoraFinalAtendimento = dataHoraFinalAtendimento
+    self.cpfCidadao = cpfCidadao
 
   def read(self, iprot):
     if iprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None and fastbinary is not None:
@@ -272,6 +275,11 @@ class FichaAtendimentoOdontologicoChildThrift:
           self.dataHoraFinalAtendimento = iprot.readI64()
         else:
           iprot.skip(ftype)
+      elif fid == 18:
+        if ftype == TType.STRING:
+          self.cpfCidadao = iprot.readString()
+        else:
+          iprot.skip(ftype)
       else:
         iprot.skip(ftype)
       iprot.readFieldEnd()
@@ -361,6 +369,10 @@ class FichaAtendimentoOdontologicoChildThrift:
       oprot.writeFieldBegin('dataHoraFinalAtendimento', TType.I64, 17)
       oprot.writeI64(self.dataHoraFinalAtendimento)
       oprot.writeFieldEnd()
+    if self.cpfCidadao is not None:
+      oprot.writeFieldBegin('cpfCidadao', TType.STRING, 18)
+      oprot.writeString(self.cpfCidadao)
+      oprot.writeFieldEnd()
     oprot.writeFieldStop()
     oprot.writeStructEnd()
 
@@ -386,6 +398,7 @@ class FichaAtendimentoOdontologicoChildThrift:
     value = (value * 31) ^ hash(self.turno)
     value = (value * 31) ^ hash(self.dataHoraInicialAtendimento)
     value = (value * 31) ^ hash(self.dataHoraFinalAtendimento)
+    value = (value * 31) ^ hash(self.cpfCidadao)
     return value
 
   def __repr__(self):

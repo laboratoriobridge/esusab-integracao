@@ -90,7 +90,7 @@
 		</atendimentosIndividuais>
 		<atendimentosIndividuais>
 			<numeroProntuario>1234</numeroProntuario>
-			<cpfCidadao>68688625042</cpfCidadao>			
+			<cpfCidadao>68688625042</cpfCidadao>
 			<dataNascimento>978361200000</dataNascimento>
 			<localDeAtendimento>1</localDeAtendimento>
 			<sexo>1</sexo>
@@ -140,7 +140,7 @@
 			<nuPartos>1</nuPartos>
 			<racionalidadeSaude>6</racionalidadeSaude>
 			<perimetroCefalico>58.0</perimetroCefalico>
-			<dataHoraInicialAtendimento>1553084000000</dataHoraInicialAtendimento>
+			<dataHoraInicialAtendimento>1553094000000</dataHoraInicialAtendimento>
 			<dataHoraFinalAtendimento>1553096500000</dataHoraFinalAtendimento>
 		</atendimentosIndividuais>
 		<atendimentosIndividuais>

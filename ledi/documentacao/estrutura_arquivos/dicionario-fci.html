@@ -25,7 +25,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS AB PEC</span>
       
-        <span class="label">versão 3.2.4</span>
+        <span class="label">versão 4.0.0</span>
       
     </a>
 
@@ -75,7 +75,7 @@
           
         
           
-            <li><a title="Layout e-SUS AB de Dados e Interface Versão 3.2.4" href="/ledi/documentacao/index.html">Layout e-SUS AB de Dados e Interface Versão 3.2.4</a></li>
+            <li><a title="Layout e-SUS AB de Dados e Interface Versão 4.0.0" href="/ledi/documentacao/index.html">Layout e-SUS AB de Dados e Interface Versão 4.0.0</a></li>
           
         
           
@@ -115,9 +115,9 @@
   <ul>
     
       <li>
-        <a title="Voltar para Layout e-SUS AB de Dados e Interface Versão 3.2.4" href="/ledi/documentacao/index.html" class="back-link">
+        <a title="Voltar para Layout e-SUS AB de Dados e Interface Versão 4.0.0" href="/ledi/documentacao/index.html" class="back-link">
           <i class="icon icon-back"></i> Voltar
-          <small>(Layout e-SUS AB de Dados e Interface Versão 3.2.4)</small>
+          <small>(Layout e-SUS AB de Dados e Interface Versão 4.0.0)</small>
         </a>
       </li>
     
@@ -243,7 +243,7 @@
     <p class="post-meta">
       <a class="btn" href="/pdf.html?include=/ledi/documentacao/estrutura_arquivos/dicionario-fci.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 14/01/2020</span>
+        <span class="label" title="Data da última modificação">Alterado em 27/03/2020</span>
       
     </p>
   </header>
@@ -289,7 +289,7 @@
 </thead><tbody>
 <tr>
 <td>EmSituacaoDeRua</td>
-<td>Condicional</td>
+<td>Não</td>
 <td>-</td>
 <td>-</td>
 </tr>
@@ -1382,7 +1382,7 @@
 </thead><tbody>
 <tr>
 <td>Boolean</td>
-<td>Sim</td>
+<td>Não</td>
 <td>-</td>
 <td>-</td>
 </tr>
@@ -1655,7 +1655,7 @@
 </thead><tbody>
 <tr>
 <td>String</td>
-<td>Não</td>
+<td>Condicional</td>
 <td>15</td>
 <td>15</td>
 </tr>
@@ -1665,7 +1665,8 @@
 
 <ul>
 <li>Validado por algoritmo;</li>
-<li>Não pode ser preenchido se o campo <a href="#25-cpfcidadao">cpfCidadao</a> for preenchido.</li>
+<li>Não pode ser preenchido se o campo <a href="#25-cpfcidadao">cpfCidadao</a> for preenchido;</li>
+<li>Este campo é de preenchimento obrigatório apenas se o campo <a href="#25-cpfcidadao">cpfCidadao</a> não estiver preenchido.</li>
 </ul>
 
 <p><strong>Referências:</strong> O algoritmo de validação está presente em <a href="/ledi/documentacao/regras/algoritmo_CNS.html">Validar CNS</a>.</p>
@@ -1714,13 +1715,18 @@
 </thead><tbody>
 <tr>
 <td>String</td>
-<td>Não</td>
+<td>Condicional</td>
 <td>10</td>
 <td>11</td>
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Apenas números.</p>
+<p><strong>Regras:</strong> </p>
+
+<ul>
+<li>Apenas números;</li>
+<li>O preenchimento do campo é obrigatório apenas se o campo <a href="#6-nacionalidadecidadao">nacionalidadeCidadao</a> estiver preenchido como &quot;brasileira&quot; ou &quot;naturalizado&quot;.</li>
+</ul>
 
 <h3 id="12-numeronispispasep">#12 numeroNisPisPasep</h3>
 
@@ -2004,13 +2010,13 @@
 </thead><tbody>
 <tr>
 <td>String</td>
-<td>Condicional</td>
+<td>Não</td>
 <td>2</td>
 <td>2</td>
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Não deve ser preenchido se o campo <a href="#24-stforaarea">stForaArea</a> = <code>true</code>. Caso contrário, o preenchimento é obrigatório.</p>
+<p><strong>Regras:</strong> Não deve ser preenchido se o campo <a href="#24-stforaarea">stForaArea</a> = <code>true</code>.</p>
 
 <h3 id="24-stforaarea">#24 stForaArea</h3>
 
@@ -2046,7 +2052,7 @@
 </thead><tbody>
 <tr>
 <td>String</td>
-<td>Não</td>
+<td>Condicional</td>
 <td>11</td>
 <td>11</td>
 </tr>
@@ -2056,7 +2062,8 @@
 
 <ul>
 <li>Somente CPF válido será aceito;</li>
-<li>Não pode ser preenchido se o campo <a href="#9-cnscidadao">cnsCidadao</a> for preenchido.</li>
+<li>Não pode ser preenchido se o campo <a href="#9-cnscidadao">cnsCidadao</a> for preenchido;</li>
+<li>Este campo é de preenchimento obrigatório apenas se o campo <a href="#9-cnscidadao">cnsCidadao</a> não estiver preenchido.</li>
 </ul>
 
 <h3 id="26-cpfresponsavelfamiliar">#26 cpfResponsavelFamiliar</h3>
@@ -2321,7 +2328,7 @@
 </thead><tbody>
 <tr>
 <td>Boolean</td>
-<td>Sim</td>
+<td>Não</td>
 <td>-</td>
 <td>-</td>
 </tr>
@@ -2401,7 +2408,7 @@
 </thead><tbody>
 <tr>
 <td>Boolean</td>
-<td>Sim</td>
+<td>Não</td>
 <td>-</td>
 <td>-</td>
 </tr>

@@ -25,7 +25,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS AB PEC</span>
       
-        <span class="label">versão 3.2.4</span>
+        <span class="label">versão 4.0.0</span>
       
     </a>
 
@@ -75,7 +75,7 @@
           
         
           
-            <li><a title="Layout e-SUS AB de Dados e Interface Versão 3.2.4" href="/ledi/documentacao/index.html">Layout e-SUS AB de Dados e Interface Versão 3.2.4</a></li>
+            <li><a title="Layout e-SUS AB de Dados e Interface Versão 4.0.0" href="/ledi/documentacao/index.html">Layout e-SUS AB de Dados e Interface Versão 4.0.0</a></li>
           
         
           
@@ -115,9 +115,9 @@
   <ul>
     
       <li>
-        <a title="Voltar para Layout e-SUS AB de Dados e Interface Versão 3.2.4" href="/ledi/documentacao/index.html" class="back-link">
+        <a title="Voltar para Layout e-SUS AB de Dados e Interface Versão 4.0.0" href="/ledi/documentacao/index.html" class="back-link">
           <i class="icon icon-back"></i> Voltar
-          <small>(Layout e-SUS AB de Dados e Interface Versão 3.2.4)</small>
+          <small>(Layout e-SUS AB de Dados e Interface Versão 4.0.0)</small>
         </a>
       </li>
     
@@ -243,7 +243,7 @@
     <p class="post-meta">
       <a class="btn" href="/pdf.html?include=/ledi/documentacao/estrutura_arquivos/dicionario-fae.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 20/12/2019</span>
+        <span class="label" title="Data da última modificação">Alterado em 27/03/2020</span>
       
     </p>
   </header>
@@ -311,7 +311,7 @@
 </thead><tbody>
 <tr>
 <td>String</td>
-<td>Sim</td>
+<td>Condicional</td>
 <td>15</td>
 <td>15</td>
 </tr>
@@ -321,7 +321,8 @@
 
 <ul>
 <li>CNS validado de acordo com o algoritmo;</li>
-<li>Não pode ser preenchido se o campo <a href="#36-cpfcidadao">cpfCidadao</a> for preenchido.</li>
+<li>Não pode ser preenchido se o campo <a href="#36-cpfcidadao">cpfCidadao</a> for preenchido;</li>
+<li>Este campo é de preenchimento obrigatório apenas se o campo <a href="#36-cpfcidadao">cpfCidadao</a> não estiver preenchido.</li>
 </ul>
 
 <p><strong>Referências:</strong> O algoritmo de validação está presente em <a href="/ledi/documentacao/regras/algoritmo_CNS.html">Validar CNS</a>.</p>
@@ -1097,7 +1098,7 @@
 </thead><tbody>
 <tr>
 <td>String</td>
-<td>Não</td>
+<td>Condicional</td>
 <td>11</td>
 <td>11</td>
 </tr>
@@ -1107,7 +1108,8 @@
 
 <ul>
 <li>Somente CPF válido será aceito;</li>
-<li>Não pode ser preenchido se o campo <a href="#3-cnscidadao">cnsCidadao</a> for preenchido.</li>
+<li>Não pode ser preenchido se o campo <a href="#3-cnscidadao">cnsCidadao</a> for preenchido;</li>
+<li>Este campo é de preenchimento obrigatório apenas se o campo <a href="#3-cnscidadao">cnsCidadao</a> não estiver preenchido.</li>
 </ul>
 
 <h3 id="37-cpfcuidador">#37 cpfCuidador</h3>
@@ -1321,11 +1323,18 @@
 </thead><tbody>
 <tr>
 <td>String</td>
-<td>Não</td>
+<td>Condicional</td>
 <td>10</td>
 <td>11</td>
 </tr>
 </tbody></table>
+
+<p><strong>Regras:</strong> </p>
+
+<ul>
+<li>Este campo é de preenchimento obrigatório caso <a href="#22-conclusaodestinoelegivel">conclusaoDestinoElegivel</a> = <code>1 (Admissão na própria EMAD)</code> e <a href="#17-atencaodomiciliarmodalidade">atencaoDomiciliarModalidade</a> = <code>1 (AD1)</code>, <code>2 (AD2)</code> ou <code>3 (AD3)</code>;</li>
+<li>Este campo não é de preenchimento obrigatório caso o campo <a href="#9-telefoneresidencia">telefoneResidencia</a> estiver preenchido.</li>
+</ul>
 
 <p>Observações: Mínimo 10 dígitos, máximo 11 (DDD + 8 ou 9).</p>
 
@@ -1343,11 +1352,18 @@
 </thead><tbody>
 <tr>
 <td>String</td>
-<td>Não</td>
+<td>Condicional</td>
 <td>10</td>
 <td>11</td>
 </tr>
 </tbody></table>
+
+<p><strong>Regras:</strong> </p>
+
+<ul>
+<li>Este campo é de preenchimento obrigatório caso <a href="#22-conclusaodestinoelegivel">conclusaoDestinoElegivel</a> = <code>1 (Admissão na própria EMAD)</code> e <a href="#17-atencaodomiciliarmodalidade">atencaoDomiciliarModalidade</a> = <code>1 (AD1)</code>, <code>2 (AD2)</code> ou <code>3 (AD3)</code>;</li>
+<li>Este campo não é de preenchimento obrigatório caso o campo <a href="#8-telefonecontato">telefoneContato</a> estiver preenchido.</li>
+</ul>
 
 <p>Observações: Mínimo 10 dígitos, máximo 11 (DDD + 8 ou 9).</p>
 

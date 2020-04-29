@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ns3:dadoTransporteTransportXml xmlns:ns2="http://esus.ufsc.br/dadoinstalacao" xmlns:ns3="http://esus.ufsc.br/dadotransporte" xmlns:ns4="http://esus.ufsc.br/fichavisitadomiciliarmaster">
-	<uuidDadoSerializado>0019615-67345abe-c945-469c-bf04-291e8f20ac12</uuidDadoSerializado>
+	<uuidDadoSerializado>0019615-67345abe-c945-469c-bf04-291e8f20ac16</uuidDadoSerializado>
 	<tipoDadoSerializado>8</tipoDadoSerializado>
 	<codIbge>4205407</codIbge>
 	<cnesDadoSerializado>0019615</cnesDadoSerializado>
 	<ineDadoSerializado>0000471828</ineDadoSerializado>
 	<numLote>12</numLote>
 	<ns4:fichaVisitaDomiciliarMasterTransport>
-		<uuidFicha>0019615-67345abe-c945-469c-bf04-291e8f20ac12</uuidFicha>
+		<uuidFicha>0019615-67345abe-c945-469c-bf04-291e8f20ac16</uuidFicha>
 		<tpCdsOrigem>3</tpCdsOrigem>
 		<headerTransport>
 			<profissionalCNS>898001161481488</profissionalCNS>
@@ -66,6 +66,11 @@
 			<tipoDeImovel>1</tipoDeImovel>
 			<pesoAcompanhamentoNutricional>70.0</pesoAcompanhamentoNutricional>
 			<alturaAcompanhamentoNutricional>176.0</alturaAcompanhamentoNutricional>
+			<pressaoSistolica>80</pressaoSistolica>
+			<pressaoDiastolica>120</pressaoDiastolica>
+			<temperatura>36.5</temperatura>
+			<tipoGlicemia>1</tipoGlicemia>
+			<glicemia>180</glicemia>
 		</visitasDomiciliares>
 		<visitasDomiciliares>
 			<turno>3</turno>
@@ -85,6 +90,10 @@
 			<tipoDeImovel>1</tipoDeImovel>
 			<pesoAcompanhamentoNutricional>95.0</pesoAcompanhamentoNutricional>
 			<alturaAcompanhamentoNutricional>179.0</alturaAcompanhamentoNutricional>
+			<pressaoSistolica>90</pressaoSistolica>
+			<pressaoDiastolica>130</pressaoDiastolica>
+			<tipoGlicemia>0</tipoGlicemia>
+			<glicemia>86</glicemia>
 		</visitasDomiciliares>
 		<visitasDomiciliares>
 			<turno>3</turno>
@@ -104,6 +113,7 @@
 			<tipoDeImovel>1</tipoDeImovel>
 			<pesoAcompanhamentoNutricional>95.0</pesoAcompanhamentoNutricional>
 			<alturaAcompanhamentoNutricional>179.0</alturaAcompanhamentoNutricional>
+			<temperatura>39</temperatura>
 		</visitasDomiciliares>
 	</ns4:fichaVisitaDomiciliarMasterTransport>
 	<ns2:remetente>
@@ -113,7 +123,7 @@
 		<nomeOuRazaoSocial>ADMINISTRADOR INSTALAÇÃO</nomeOuRazaoSocial>
 		<fone>8216756527</fone>
 		<email>prof@esus.br</email>
-		<versaoSistema>3.2.18</versaoSistema>
+		<versaoSistema>4.1.0</versaoSistema>
 		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:remetente>
 	<ns2:originadora>
@@ -123,8 +133,8 @@
 		<nomeOuRazaoSocial>ADMINISTRADOR INSTALAÇÃO</nomeOuRazaoSocial>
 		<fone>8216756527</fone>
 		<email>prof@esus.br</email>
-		<versaoSistema>3.2.18</versaoSistema>
+		<versaoSistema>4.1.0</versaoSistema>
 		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:originadora>
-	<versao major="3" minor="2" revision="4" />
+	<versao major="4" minor="1" revision="0" />
 </ns3:dadoTransporteTransportXml>

@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Gerar PDF</title>
-  <meta name="description" content="Integração e-SUS AB PEC">
+  <meta name="description" content="Integração e-SUS APS PEC">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="/pdf.html">
@@ -23,9 +23,9 @@
 
     <a class="site-title" href="/">
       <img src="/img/logo-esus.png" alt="e-SUS">
-      <span class="title-text">Integração e-SUS AB PEC</span>
+      <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 4.0.0</span>
+        <span class="label">versão 4.0.1</span>
       
     </a>
 
@@ -96,7 +96,7 @@
   <ul>
     
       <li>
-        <a href="/ledi/index.html">Layout e-SUS AB de Dados e Interface</a>
+        <a href="/ledi/index.html">Layout e-SUS APS de Dados e Interface</a>
       </li>
     
       <li>
@@ -123,7 +123,7 @@
 
       <li id="item-ledi" data-url="/ledi/index.html">
         <label>
-          <input type="checkbox" value="ledi" checked="checked"> Layout e-SUS AB de Dados e Interface
+          <input type="checkbox" value="ledi" checked="checked"> Layout e-SUS APS de Dados e Interface
           <small>
             <a onclick="checkById('ledi', true); return false;">Marcar todos</a> |
             <a onclick="checkById('ledi', false); return false;">Desmarcar todos</a>
@@ -137,7 +137,7 @@
 
       <li id="item-layout_ab" data-url="/ledi/documentacao/index.html">
         <label>
-          <input type="checkbox" value="layout_ab" checked="checked"> Layout e-SUS AB de Dados e Interface Versão 4.0.0
+          <input type="checkbox" value="layout_ab" checked="checked"> Layout e-SUS AB de Dados e Interface Versão 4.0.1
           <small>
             <a onclick="checkById('layout_ab', true); return false;">Marcar todos</a> |
             <a onclick="checkById('layout_ab', false); return false;">Desmarcar todos</a>
@@ -611,7 +611,7 @@
 
       <li id="item-principais_alteracoes" data-url="/ledi/documentacao/principais_alteracoes.html">
         <label>
-          <input type="checkbox" value="principais_alteracoes" checked="checked"> Principais alterações da v3.2.4 para a v4.0.0
+          <input type="checkbox" value="principais_alteracoes" checked="checked"> Principais alterações da v4.0.0 para a v4.0.1
           <small>
             <a onclick="checkById('principais_alteracoes', true); return false;">Marcar todos</a> |
             <a onclick="checkById('principais_alteracoes', false); return false;">Desmarcar todos</a>
@@ -917,11 +917,11 @@
     <p></p>
     <!-- Cria a lista de itens[páginas] que foram selecionados  -->
 
-  <li id="summary-ledi"><a href="#ledi">Layout e-SUS AB de Dados e Interface</a></li>
+  <li id="summary-ledi"><a href="#ledi">Layout e-SUS APS de Dados e Interface</a></li>
   
       <!-- Cria a lista de itens[páginas] que foram selecionados  -->
 
-  <li id="summary-layout_ab"><a href="#layout_ab">Layout e-SUS AB de Dados e Interface Versão 4.0.0</a></li>
+  <li id="summary-layout_ab"><a href="#layout_ab">Layout e-SUS AB de Dados e Interface Versão 4.0.1</a></li>
   
       <!-- Cria a lista de itens[páginas] que foram selecionados  -->
 
@@ -1121,7 +1121,7 @@
 
   
 
-  <li id="summary-principais_alteracoes"><a href="#principais_alteracoes">Principais alterações da v3.2.4 para a v4.0.0</a></li>
+  <li id="summary-principais_alteracoes"><a href="#principais_alteracoes">Principais alterações da v4.0.0 para a v4.0.1</a></li>
   
       <!-- Cria a lista de itens[páginas] que foram selecionados  -->
 
@@ -1246,61 +1246,73 @@
   
     <div class="post pdf shown" id="ledi" data-url="/ledi/index.html">
       <header class="post-header">
-        <h1 class="post-title">Layout e-SUS AB de Dados e Interface</h1>
+        <h1 class="post-title">Layout e-SUS APS de Dados e Interface</h1>
       </header>
 
       
 
       <article class="post-content">
-        <p>Este documento descreve os atributos utilizados no <strong>LEDI AB</strong>:</p>
+        <p>Este documento descreve os atributos utilizados no <strong>LEDI APS</strong>:</p>
 
 <ul>
-<li>O <strong>LEDI AB</strong> é uma camada abstrata que especifica as informações, e seus formatos, que são aceitos no envio de dados de sistemas próprios para o e-SUS AB (PEC);</li>
-<li>O <strong>LEDI AB</strong> pode ser implementado utilizando <a href="https://pt.wikipedia.org/wiki/XML">XML</a> ou <a href="https://en.wikipedia.org/wiki/Apache_Thrift">Apache Thrift</a>.</li>
+<li>O <strong>LEDI APS</strong> é uma camada abstrata que especifica as informações, e seus formatos, que são aceitos no envio de dados de sistemas próprios para o e-SUS APS (PEC);</li>
+<li>O <strong>LEDI APS</strong> pode ser implementado utilizando <a href="https://pt.wikipedia.org/wiki/XML">XML</a> ou <a href="https://en.wikipedia.org/wiki/Apache_Thrift">Apache Thrift</a>;</li>
+<li>Possui versionamento independente, podendo não corresponder com a respectiva versão do sistema e-SUS APS PEC. A <strong>Tabela 1</strong> apresenta a compatibilidade entre as versões do LEDI APS e do e-SUS APS PEC.</li>
 </ul>
 
-<hr>
+<p><strong>Tabela 1.</strong> Compatibilidade entre as versões do LEDI APS e e-SUS APS PEC</p>
 
-<p>Clique nos cards para acessar a documentação da versão desejada:</p>
-
-<table style="width: 700px; border-collapse: separate; border-spacing: 0px 25px;">
-    <tr class="button-block" style="background-color: #fdfdfd;">
-        <td class="button-block">
-            <a class="button" href="https://integracao.esusab.ufsc.br/v20/">LEDI AB 2.0.0</a>
-        </td>
-        <td class="button-block">
-            <a class="button" href="https://integracao.esusab.ufsc.br/v210/">LEDI AB 2.1.0</a>
-        </td>
-        <td class="button-block">
-            <a class="button" href="https://integracao.esusab.ufsc.br/v211/">LEDI AB 2.1.1</a>
-        </td>
-        <td class="button-block">
-            <a class="button" href="https://integracao.esusab.ufsc.br/v220/">LEDI AB 2.2.0</a>
-        </td>
-    </tr>
-    <tr class="button-block" style="background-color: #fdfdfd;">
-        <td class="button-block">
-            <a class="button" href="https://integracao.esusab.ufsc.br/v300/">LEDI AB 3.0.0</a>
-        </td>
-        <td class="button-block">
-            <a class="button" href="https://integracao.esusab.ufsc.br/v301/">LEDI AB 3.0.1</a>
-        </td>
-        <td class="button-block">
-            <a class="button" href="https://integracao.esusab.ufsc.br/v321/">LEDI AB 3.2.1</a>
-        </td>
-        <td class="button-block">
-            <a class="button" href="https://integracao.esusab.ufsc.br/v322/">LEDI AB 3.2.2</a>
-        </td>
-        <td class="button-block">
-            <a class="button" href="https://integracao.esusab.ufsc.br/v324/">LEDI AB 3.2.4</a>
-        </td>
-    </tr>
-    <tr class="button-block" style="background-color: #fdfdfd;">
-        <td class="button-block">
-            <a class="button" href="/ledi/documentacao/index.html">LEDI AB 4.0.0</a>
-        </td>
-    </tr>
-</table>
+<table><thead>
+<tr>
+<th>Versão e-SUS APS PEC</th>
+<th>Versão do LEDI APS compatível</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>2.0.00 ou superior</td>
+<td><a href="https://integracao.esusab.ufsc.br/v20/">LEDI APS 2.0.0</a></td>
+</tr>
+<tr>
+<td>2.1.00 ou superior</td>
+<td><a href="https://integracao.esusab.ufsc.br/v210/">LEDI APS 2.1.0</a></td>
+</tr>
+<tr>
+<td>2.1.07 ou superior</td>
+<td><a href="https://integracao.esusab.ufsc.br/v211/">LEDI APS 2.1.1</a></td>
+</tr>
+<tr>
+<td>2.2.00 ou superior</td>
+<td><a href="https://integracao.esusab.ufsc.br/v220/">LEDI APS 2.2.0</a></td>
+</tr>
+<tr>
+<td>3.0.00 ou superior</td>
+<td><a href="https://integracao.esusab.ufsc.br/v300/">LEDI APS 3.0.0</a></td>
+</tr>
+<tr>
+<td>3.0.13 ou superior</td>
+<td><a href="https://integracao.esusab.ufsc.br/v301/">LEDI APS 3.0.1</a></td>
+</tr>
+<tr>
+<td>3.2.12 ou superior</td>
+<td><a href="https://integracao.esusab.ufsc.br/v321/">LEDI APS 3.2.1</a></td>
+</tr>
+<tr>
+<td>3.2.18 ou superior</td>
+<td><a href="https://integracao.esusab.ufsc.br/v322/">LEDI APS 3.2.2</a></td>
+</tr>
+<tr>
+<td>3.2.20 ou superior</td>
+<td><a href="https://integracao.esusab.ufsc.br/v324/">LEDI APS 3.2.4</a></td>
+</tr>
+<tr>
+<td>3.2.23 ou superior</td>
+<td><a href="https://integracao.esusab.ufsc.br/v400/">LEDI APS 4.0.0</a></td>
+</tr>
+<tr>
+<td>3.2.25 ou superior</td>
+<td><a href="/ledi/documentacao/index.html">LEDI APS 4.0.1</a></td>
+</tr>
+</tbody></table>
 
       </article>
 
@@ -1311,17 +1323,17 @@
         
     <div class="post pdf shown" id="layout_ab" data-url="/ledi/documentacao/index.html">
       <header class="post-header">
-        <h1 class="post-title">Layout e-SUS AB de Dados e Interface Versão 4.0.0</h1>
+        <h1 class="post-title">Layout e-SUS AB de Dados e Interface Versão 4.0.1</h1>
       </header>
 
       
 
       <article class="post-content">
-        <p>Esta documentação descreve as estruturas de dados, seus atributos e regras utilizadas no <strong>LEDI AB</strong> versão 4.0.0.</p>
+        <p>Esta documentação descreve as estruturas de dados, seus atributos e regras utilizadas no <strong>LEDI AB</strong> versão 4.0.1.</p>
 
-<p>A versão <strong>LEDI AB</strong> 4.0.0 é compatível com o sistema <strong>e-SUS AB PEC</strong> versão 3.2.23 ou superior.</p>
+<p>A versão <strong>LEDI AB</strong> 4.0.1 é compatível com o sistema <strong>e-SUS AB PEC</strong> versão 3.2.25 ou superior.</p>
 
-<p>Confira as principais alterações da V3.2.4 para a V4.0.0 <a href="/ledi/documentacao/principais_alteracoes.html">aqui</a>.</p>
+<p>Confira as principais alterações da V4.0.0 para a V4.0.1 <a href="/ledi/documentacao/principais_alteracoes.html">aqui</a>.</p>
 
       </article>
 
@@ -2402,26 +2414,6 @@
 <p><strong>Regras:</strong> Somente as CBOs apresentadas na <a href="/ledi/documentacao/regras/cbo.html#ficha-de-cadastro-individual">Tabela 1 - CBOs que podem registrar ficha de cadastro individual</a> podem ser adicionadas no campo CBO do profissional.</p>
 
 <p><strong>Referências:</strong> <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#unicalotacaoheader">UnicaLotacaoHeader</a>.</p>
-
-<h3 id="14-statuscadastroindividualinativo">#14 statusCadastroIndividualInativo</h3>
-
-<p>Marcador que indica se o cadastro está inativo.</p>
-
-<table><thead>
-<tr>
-<th>Tipo</th>
-<th>Obrigatório</th>
-<th>Mínimo</th>
-<th>Máximo</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Boolean</td>
-<td>Não</td>
-<td>-</td>
-<td>-</td>
-</tr>
-</tbody></table>
 
 <h2 id="condicoesdesaude">CondicoesDeSaude</h2>
 
@@ -14277,7 +14269,7 @@
       
 
       <article class="post-content">
-        <p>As referências para alguns campos combobox são apresentadas nos documentos listados abaixo:</p>
+        <p>As referências para alguns campos são apresentadas nos documentos listados abaixo:</p>
 
 <ul>
 <li><a href="/ledi/documentacao/referencias/municipios.html">Municípios</a>;</li>
@@ -14287,8 +14279,12 @@
 <li><a href="/ledi/documentacao/referencias/cbo_disponiveis.html">CBOs</a>;</li>
 <li><a href="/ledi/documentacao/referencias/dicionario.html">Dicionário de dados</a>;</li>
 <li><a href="http://www.sbmfc.org.br/default.asp?paginaId=72">Classificação Internacional de Atenção Primária - Segunda Edição (CIAP2)</a>;</li>
-<li><a href="http://www.datasus.gov.br/cid10/V2008/cid10.htm">Classificação Internacional de Doenças - Versão 10</a>;</li>
-<li>Procedimentos: Compatível com a competência do <a href="http://sigtap.datasus.gov.br/tabela-unificada/app/sec/inicio.jsp">SIGTAP</a> 02/2019.</li>
+<li><a href="https://rts.saude.gov.br/#/cid">Classificação Internacional de Doenças - Versão 10</a>;</li>
+<li>Procedimentos: Compatível com a competência do <a href="http://sigtap.datasus.gov.br/tabela-unificada/app/sec/inicio.jsp">SIGTAP</a> 02/2019.
+
+<ul>
+<li><strong>OBS:</strong> Além dos procedimentos da competência 02/2019, foram adicionados os procedimentos 02.14.01.016-3 TESTE RÁPIDO PARA DETECÇÃO DE SARS-COV-2 e 02.13.01.072-0 PESQUISA DE SARS-COV-2 POR RT - PCR, adicionados na competência 06/2020. Nas próximas versões do LEDI será atualizada toda a competência.</li>
+</ul></li>
 </ul>
 
       </article>
@@ -44605,7 +44601,7 @@
 <td>revision</td>
 <td>Integer</td>
 <td>Sim</td>
-<td>Valor único = 0</td>
+<td>Valor único = 1</td>
 </tr>
 </tbody></table>
 
@@ -56102,6 +56098,26 @@
 <td>Reforço</td>
 <td>-</td>
 </tr>
+<tr>
+<td>39</td>
+<td>3º Reforço</td>
+<td>-</td>
+</tr>
+<tr>
+<td>40</td>
+<td>4º Reforço</td>
+<td>-</td>
+</tr>
+<tr>
+<td>41</td>
+<td>5º Reforço</td>
+<td>-</td>
+</tr>
+<tr>
+<td>42</td>
+<td>6º Reforço</td>
+<td>-</td>
+</tr>
 </tbody></table>
 
 <h2 id="estrategiavacinacao">EstrategiaVacinacao</h2>
@@ -56330,6 +56346,10 @@
 <td>Poliomielite oral (Bivalente)</td>
 </tr>
 <tr>
+<td>29</td>
+<td>DTPa / Hib / Polio Inativa</td>
+</tr>
+<tr>
 <td>30</td>
 <td>Febre tifóide (polissacarídica)</td>
 </tr>
@@ -56374,6 +56394,10 @@
 <td>DTP/HB/Hib</td>
 </tr>
 <tr>
+<td>43</td>
+<td>Hexavalente</td>
+</tr>
+<tr>
 <td>45</td>
 <td>Vacina rotavírus humano</td>
 </tr>
@@ -56402,6 +56426,30 @@
 <td>Tríplice bacteriana acelular (adulto)- dTpa</td>
 </tr>
 <tr>
+<td>59</td>
+<td>Pneumocócica 13V</td>
+</tr>
+<tr>
+<td>60</td>
+<td>HPV Bivalente</td>
+</tr>
+<tr>
+<td>62</td>
+<td>Hepatite AeB (pediátrica)</td>
+</tr>
+<tr>
+<td>63</td>
+<td>Hepatite AeB (uso adulto)</td>
+</tr>
+<tr>
+<td>65</td>
+<td>Rotavírus pentavalente</td>
+</tr>
+<tr>
+<td>66</td>
+<td>Meningocócica B / C</td>
+</tr>
+<tr>
 <td>67</td>
 <td>HPV Quadrivalente</td>
 </tr>
@@ -56416,6 +56464,18 @@
 <tr>
 <td>75</td>
 <td>Cólera oral</td>
+</tr>
+<tr>
+<td>76</td>
+<td>Herpez Zoster</td>
+</tr>
+<tr>
+<td>77</td>
+<td>Influenza Tetravalente</td>
+</tr>
+<tr>
+<td>78</td>
+<td>Meningocócica B</td>
 </tr>
 <tr>
 <td>82</td>
@@ -63936,55 +63996,103 @@
 </tr>
 <tr>
 <td>dTpa adulto</td>
-<td>Tríplice bacteriana acelular (adulto)- dTpa</td>
+<td>Tríplice bacteriana acelular (adulto) - dTpa</td>
+<td>ESPECIAL</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>dTpa adulto</td>
+<td>Tríplice bacteriana acelular (adulto) - dTpa</td>
+<td>ESPECIAL</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>dTpa adulto</td>
+<td>Tríplice bacteriana acelular (adulto) - dTpa</td>
+<td>ESPECIAL</td>
+<td>D3</td>
+</tr>
+<tr>
+<td>dTpa adulto</td>
+<td>Tríplice bacteriana acelular (adulto) - dTpa</td>
+<td>ESPECIAL</td>
+<td>DU</td>
+</tr>
+<tr>
+<td>dTpa adulto</td>
+<td>Tríplice bacteriana acelular (adulto) - dTpa</td>
+<td>ESPECIAL</td>
+<td>R1</td>
+</tr>
+<tr>
+<td>dTpa adulto</td>
+<td>Tríplice bacteriana acelular (adulto) - dTpa</td>
 <td>ESPECIAL</td>
 <td>R2</td>
 </tr>
 <tr>
 <td>dTpa adulto</td>
-<td>Tríplice bacteriana acelular (adulto)- dTpa</td>
+<td>Tríplice bacteriana acelular (adulto) - dTpa</td>
+<td>ESPECIAL</td>
+<td>R3</td>
+</tr>
+<tr>
+<td>dTpa adulto</td>
+<td>Tríplice bacteriana acelular (adulto) - dTpa</td>
+<td>ESPECIAL</td>
+<td>R4</td>
+</tr>
+<tr>
+<td>dTpa adulto</td>
+<td>Tríplice bacteriana acelular (adulto) - dTpa</td>
+<td>ESPECIAL</td>
+<td>R5</td>
+</tr>
+<tr>
+<td>dTpa adulto</td>
+<td>Tríplice bacteriana acelular (adulto) - dTpa</td>
 <td>MULTIVACINAÇÃO</td>
 <td>D1</td>
 </tr>
 <tr>
 <td>dTpa adulto</td>
-<td>Tríplice bacteriana acelular (adulto)- dTpa</td>
+<td>Tríplice bacteriana acelular (adulto) - dTpa</td>
 <td>MULTIVACINAÇÃO</td>
 <td>D2</td>
 </tr>
 <tr>
 <td>dTpa adulto</td>
-<td>Tríplice bacteriana acelular (adulto)- dTpa</td>
+<td>Tríplice bacteriana acelular (adulto) - dTpa</td>
 <td>MULTIVACINAÇÃO</td>
 <td>D3</td>
 </tr>
 <tr>
 <td>dTpa adulto</td>
-<td>Tríplice bacteriana acelular (adulto)- dTpa</td>
+<td>Tríplice bacteriana acelular (adulto) - dTpa</td>
 <td>MULTIVACINAÇÃO</td>
 <td>R1</td>
 </tr>
 <tr>
 <td>dTpa adulto</td>
-<td>Tríplice bacteriana acelular (adulto)- dTpa</td>
+<td>Tríplice bacteriana acelular (adulto) - dTpa</td>
 <td>ROTINA</td>
 <td>D1</td>
 </tr>
 <tr>
 <td>dTpa adulto</td>
-<td>Tríplice bacteriana acelular (adulto)- dTpa</td>
+<td>Tríplice bacteriana acelular (adulto) - dTpa</td>
 <td>ROTINA</td>
 <td>D2</td>
 </tr>
 <tr>
 <td>dTpa adulto</td>
-<td>Tríplice bacteriana acelular (adulto)- dTpa</td>
+<td>Tríplice bacteriana acelular (adulto) - dTpa</td>
 <td>ROTINA</td>
 <td>D3</td>
 </tr>
 <tr>
 <td>dTpa adulto</td>
-<td>Tríplice bacteriana acelular (adulto)- dTpa</td>
+<td>Tríplice bacteriana acelular (adulto) - dTpa</td>
 <td>ROTINA</td>
 <td>R1</td>
 </tr>
@@ -64070,36 +64178,36 @@
 <td>FA</td>
 <td>Febre amarela</td>
 <td>MULTIVACINAÇÃO</td>
-<td>DU</td>
-</tr>
-<tr>
-<td>FA</td>
-<td>Febre amarela</td>
-<td>ROTINA</td>
-<td>DU</td>
-</tr>
-<tr>
-<td>FA</td>
-<td>Febre amarela</td>
-<td>ROTINA</td>
 <td>D1</td>
 </tr>
 <tr>
 <td>FA</td>
 <td>Febre amarela</td>
-<td>ROTINA</td>
+<td>MULTIVACINAÇÃO</td>
+<td>DU</td>
+</tr>
+<tr>
+<td>FA</td>
+<td>Febre amarela</td>
+<td>MULTIVACINAÇÃO</td>
 <td>REF</td>
 </tr>
 <tr>
 <td>FA</td>
 <td>Febre amarela</td>
-<td>MULTIVACINAÇÃO</td>
+<td>ROTINA</td>
 <td>D1</td>
 </tr>
 <tr>
 <td>FA</td>
 <td>Febre amarela</td>
-<td>MULTIVACINAÇÃO</td>
+<td>ROTINA</td>
+<td>DU</td>
+</tr>
+<tr>
+<td>FA</td>
+<td>Febre amarela</td>
+<td>ROTINA</td>
 <td>REF</td>
 </tr>
 <tr>
@@ -64415,6 +64523,36 @@
 <td>REV</td>
 </tr>
 <tr>
+<td>HEXA</td>
+<td>Hexavalente</td>
+<td>ESPECIAL</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>HEXA</td>
+<td>Hexavalente</td>
+<td>ESPECIAL</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>HEXA</td>
+<td>Hexavalente</td>
+<td>ESPECIAL</td>
+<td>D3</td>
+</tr>
+<tr>
+<td>HEXA</td>
+<td>Hexavalente</td>
+<td>ESPECIAL</td>
+<td>R1</td>
+</tr>
+<tr>
+<td>HEXA</td>
+<td>Hexavalente</td>
+<td>ESPECIAL</td>
+<td>R2</td>
+</tr>
+<tr>
 <td>Hib</td>
 <td>Haemophilus tipo b</td>
 <td>ESPECIAL</td>
@@ -64527,6 +64665,12 @@
 <td>Imunoglobulina anti hepatite B</td>
 <td>ESPECIAL</td>
 <td>T5</td>
+</tr>
+<tr>
+<td>IGRH</td>
+<td>Imunoglobulina anti rábica</td>
+<td>ESPECIAL</td>
+<td>DU</td>
 </tr>
 <tr>
 <td>IGRH</td>
@@ -64652,6 +64796,12 @@
 <td>IGTH</td>
 <td>Imunoglobulina anti tetânica</td>
 <td>ESPECIAL</td>
+<td>DU</td>
+</tr>
+<tr>
+<td>IGTH</td>
+<td>Imunoglobulina anti tetânica</td>
+<td>ESPECIAL</td>
 <td>T1</td>
 </tr>
 <tr>
@@ -64772,6 +64922,12 @@
 <td>IGVZ</td>
 <td>Imunoglobulina anti varicela zoster</td>
 <td>ESPECIAL</td>
+<td>DU</td>
+</tr>
+<tr>
+<td>IGVZ</td>
+<td>Imunoglobulina anti varicela zoster</td>
+<td>ESPECIAL</td>
 <td>T1</td>
 </tr>
 <tr>
@@ -64799,124 +64955,64 @@
 <td>T5</td>
 </tr>
 <tr>
-<td>Men Conj C</td>
-<td>Meningocócica conjugada C</td>
-<td>BLOQUEIO</td>
+<td>MenACWY</td>
+<td>Meningocócica ACWY</td>
+<td>ESPECIAL</td>
 <td>D1</td>
 </tr>
 <tr>
-<td>Men Conj C</td>
-<td>Meningocócica conjugada C</td>
-<td>BLOQUEIO</td>
+<td>MenACWY</td>
+<td>Meningocócica ACWY</td>
+<td>ESPECIAL</td>
 <td>D2</td>
 </tr>
 <tr>
-<td>Men Conj C</td>
-<td>Meningocócica conjugada C</td>
-<td>BLOQUEIO</td>
+<td>MenACWY</td>
+<td>Meningocócica ACWY</td>
+<td>ESPECIAL</td>
+<td>D3</td>
+</tr>
+<tr>
+<td>MenACWY</td>
+<td>Meningocócica ACWY</td>
+<td>ESPECIAL</td>
 <td>DU</td>
 </tr>
 <tr>
-<td>Men Conj C</td>
-<td>Meningocócica conjugada C</td>
-<td>BLOQUEIO</td>
+<td>MenACWY</td>
+<td>Meningocócica ACWY</td>
+<td>ESPECIAL</td>
 <td>R1</td>
 </tr>
 <tr>
-<td>Men Conj C</td>
-<td>Meningocócica conjugada C</td>
-<td>BLOQUEIO</td>
+<td>MenACWY</td>
+<td>Meningocócica ACWY</td>
+<td>ESPECIAL</td>
 <td>R2</td>
 </tr>
 <tr>
-<td>Men Conj C</td>
-<td>Meningocócica conjugada C</td>
-<td>INTENSIFICAÇÃO</td>
-<td>D1</td>
+<td>MenACWY</td>
+<td>Meningocócica ACWY</td>
+<td>ESPECIAL</td>
+<td>R3</td>
 </tr>
 <tr>
-<td>Men Conj C</td>
-<td>Meningocócica conjugada C</td>
-<td>INTENSIFICAÇÃO</td>
-<td>D2</td>
+<td>MenACWY</td>
+<td>Meningocócica ACWY</td>
+<td>ESPECIAL</td>
+<td>R4</td>
 </tr>
 <tr>
-<td>Men Conj C</td>
-<td>Meningocócica conjugada C</td>
-<td>INTENSIFICAÇÃO</td>
-<td>DU</td>
+<td>MenACWY</td>
+<td>Meningocócica ACWY</td>
+<td>ESPECIAL</td>
+<td>R5</td>
 </tr>
 <tr>
-<td>Men Conj C</td>
-<td>Meningocócica conjugada C</td>
-<td>INTENSIFICAÇÃO</td>
-<td>R1</td>
-</tr>
-<tr>
-<td>Men Conj C</td>
-<td>Meningocócica conjugada C</td>
-<td>INTENSIFICAÇÃO</td>
-<td>R2</td>
-</tr>
-<tr>
-<td>Men Conj C</td>
-<td>Meningocócica conjugada C</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D1</td>
-</tr>
-<tr>
-<td>Men Conj C</td>
-<td>Meningocócica conjugada C</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D2</td>
-</tr>
-<tr>
-<td>Men Conj C</td>
-<td>Meningocócica conjugada C</td>
-<td>MULTIVACINAÇÃO</td>
-<td>DU</td>
-</tr>
-<tr>
-<td>Men Conj C</td>
-<td>Meningocócica conjugada C</td>
-<td>MULTIVACINAÇÃO</td>
-<td>R1</td>
-</tr>
-<tr>
-<td>Men Conj C</td>
-<td>Meningocócica conjugada C</td>
-<td>MULTIVACINAÇÃO</td>
-<td>R2</td>
-</tr>
-<tr>
-<td>Men Conj C</td>
-<td>Meningocócica conjugada C</td>
-<td>ROTINA</td>
-<td>D1</td>
-</tr>
-<tr>
-<td>Men Conj C</td>
-<td>Meningocócica conjugada C</td>
-<td>ROTINA</td>
-<td>D2</td>
-</tr>
-<tr>
-<td>Men Conj C</td>
-<td>Meningocócica conjugada C</td>
-<td>ROTINA</td>
-<td>DU</td>
-</tr>
-<tr>
-<td>Men Conj C</td>
-<td>Meningocócica conjugada C</td>
-<td>ROTINA</td>
-<td>R1</td>
-</tr>
-<tr>
-<td>Men Conj C</td>
-<td>Meningocócica conjugada C</td>
-<td>ROTINA</td>
-<td>R2</td>
+<td>MenACWY</td>
+<td>Meningocócica ACWY</td>
+<td>ESPECIAL</td>
+<td>R6</td>
 </tr>
 <tr>
 <td>MenACWY</td>
@@ -64943,122 +65039,296 @@
 <td>REF</td>
 </tr>
 <tr>
+<td>Men Conj C</td>
+<td>Meningocócica conjugada C</td>
+<td>BLOQUEIO</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>Men Conj C</td>
+<td>Meningocócica conjugada C</td>
+<td>BLOQUEIO</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>Men Conj C</td>
+<td>Meningocócica conjugada C</td>
+<td>BLOQUEIO</td>
+<td>DU</td>
+</tr>
+<tr>
+<td>Men Conj C</td>
+<td>Meningocócica conjugada C</td>
+<td>BLOQUEIO</td>
+<td>R1</td>
+</tr>
+<tr>
+<td>Men Conj C</td>
+<td>Meningocócica conjugada C</td>
+<td>BLOQUEIO</td>
+<td>R2</td>
+</tr>
+<tr>
+<td>Men Conj C</td>
+<td>Meningocócica conjugada C</td>
+<td>ESPECIAL</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>Men Conj C</td>
+<td>Meningocócica conjugada C</td>
+<td>ESPECIAL</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>Men Conj C</td>
+<td>Meningocócica conjugada C</td>
+<td>ESPECIAL</td>
+<td>DU</td>
+</tr>
+<tr>
+<td>Men Conj C</td>
+<td>Meningocócica conjugada C</td>
+<td>ESPECIAL</td>
+<td>R1</td>
+</tr>
+<tr>
+<td>Men Conj C</td>
+<td>Meningocócica conjugada C</td>
+<td>ESPECIAL</td>
+<td>R2</td>
+</tr>
+<tr>
+<td>Men Conj C</td>
+<td>Meningocócica conjugada C</td>
+<td>ESPECIAL</td>
+<td>R3</td>
+</tr>
+<tr>
+<td>Men Conj C</td>
+<td>Meningocócica conjugada C</td>
+<td>ESPECIAL</td>
+<td>R4</td>
+</tr>
+<tr>
+<td>Men Conj C</td>
+<td>Meningocócica conjugada C</td>
+<td>ESPECIAL</td>
+<td>R5</td>
+</tr>
+<tr>
+<td>Men Conj C</td>
+<td>Meningocócica conjugada C</td>
+<td>ESPECIAL</td>
+<td>R6</td>
+</tr>
+<tr>
+<td>Men Conj C</td>
+<td>Meningocócica conjugada C</td>
+<td>INTENSIFICAÇÃO</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>Men Conj C</td>
+<td>Meningocócica conjugada C</td>
+<td>INTENSIFICAÇÃO</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>Men Conj C</td>
+<td>Meningocócica conjugada C</td>
+<td>INTENSIFICAÇÃO</td>
+<td>DU</td>
+</tr>
+<tr>
+<td>Men Conj C</td>
+<td>Meningocócica conjugada C</td>
+<td>INTENSIFICAÇÃO</td>
+<td>R1</td>
+</tr>
+<tr>
+<td>Men Conj C</td>
+<td>Meningocócica conjugada C</td>
+<td>INTENSIFICAÇÃO</td>
+<td>R2</td>
+</tr>
+<tr>
+<td>Men Conj C</td>
+<td>Meningocócica conjugada C</td>
+<td>MULTIVACINAÇÃO</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>Men Conj C</td>
+<td>Meningocócica conjugada C</td>
+<td>MULTIVACINAÇÃO</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>Men Conj C</td>
+<td>Meningocócica conjugada C</td>
+<td>MULTIVACINAÇÃO</td>
+<td>DU</td>
+</tr>
+<tr>
+<td>Men Conj C</td>
+<td>Meningocócica conjugada C</td>
+<td>MULTIVACINAÇÃO</td>
+<td>R1</td>
+</tr>
+<tr>
+<td>Men Conj C</td>
+<td>Meningocócica conjugada C</td>
+<td>MULTIVACINAÇÃO</td>
+<td>R2</td>
+</tr>
+<tr>
+<td>Men Conj C</td>
+<td>Meningocócica conjugada C</td>
+<td>ROTINA</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>Men Conj C</td>
+<td>Meningocócica conjugada C</td>
+<td>ROTINA</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>Men Conj C</td>
+<td>Meningocócica conjugada C</td>
+<td>ROTINA</td>
+<td>DU</td>
+</tr>
+<tr>
+<td>Men Conj C</td>
+<td>Meningocócica conjugada C</td>
+<td>ROTINA</td>
+<td>R1</td>
+</tr>
+<tr>
+<td>Men Conj C</td>
+<td>Meningocócica conjugada C</td>
+<td>ROTINA</td>
+<td>R2</td>
+</tr>
+<tr>
 <td>Penta</td>
-<td>DTP/HB/Hib</td>
+<td>DTP / HB / Hib</td>
 <td>ESPECIAL</td>
 <td>D1</td>
 </tr>
 <tr>
 <td>Penta</td>
-<td>DTP/HB/Hib</td>
+<td>DTP / HB / Hib</td>
 <td>ESPECIAL</td>
 <td>D2</td>
 </tr>
 <tr>
 <td>Penta</td>
-<td>DTP/HB/Hib</td>
+<td>DTP / HB / Hib</td>
 <td>ESPECIAL</td>
 <td>D3</td>
 </tr>
 <tr>
 <td>Penta</td>
-<td>DTP/HB/Hib</td>
+<td>DTP / HB / Hib</td>
 <td>ESPECIAL</td>
 <td>R1</td>
 </tr>
 <tr>
 <td>Penta</td>
-<td>DTP/HB/Hib</td>
+<td>DTP / HB / Hib</td>
 <td>ESPECIAL</td>
 <td>R2</td>
 </tr>
 <tr>
 <td>Penta</td>
-<td>DTP/HB/Hib</td>
+<td>DTP / HB / Hib</td>
 <td>INTENSIFICAÇÃO</td>
 <td>D1</td>
 </tr>
 <tr>
 <td>Penta</td>
-<td>DTP/HB/Hib</td>
+<td>DTP / HB / Hib</td>
 <td>INTENSIFICAÇÃO</td>
 <td>D2</td>
 </tr>
 <tr>
 <td>Penta</td>
-<td>DTP/HB/Hib</td>
+<td>DTP / HB / Hib</td>
 <td>INTENSIFICAÇÃO</td>
 <td>D3</td>
 </tr>
 <tr>
 <td>Penta</td>
-<td>DTP/HB/Hib</td>
+<td>DTP / HB / Hib</td>
 <td>INTENSIFICAÇÃO</td>
 <td>R1</td>
 </tr>
 <tr>
 <td>Penta</td>
-<td>DTP/HB/Hib</td>
+<td>DTP / HB / Hib</td>
 <td>INTENSIFICAÇÃO</td>
 <td>R2</td>
 </tr>
 <tr>
 <td>Penta</td>
-<td>DTP/HB/Hib</td>
+<td>DTP / HB / Hib</td>
 <td>MULTIVACINAÇÃO</td>
 <td>D1</td>
 </tr>
 <tr>
 <td>Penta</td>
-<td>DTP/HB/Hib</td>
+<td>DTP / HB / Hib</td>
 <td>MULTIVACINAÇÃO</td>
 <td>D2</td>
 </tr>
 <tr>
 <td>Penta</td>
-<td>DTP/HB/Hib</td>
+<td>DTP / HB / Hib</td>
 <td>MULTIVACINAÇÃO</td>
 <td>D3</td>
 </tr>
 <tr>
 <td>Penta</td>
-<td>DTP/HB/Hib</td>
+<td>DTP / HB / Hib</td>
 <td>MULTIVACINAÇÃO</td>
 <td>R1</td>
 </tr>
 <tr>
 <td>Penta</td>
-<td>DTP/HB/Hib</td>
+<td>DTP / HB / Hib</td>
 <td>MULTIVACINAÇÃO</td>
 <td>R2</td>
 </tr>
 <tr>
 <td>Penta</td>
-<td>DTP/HB/Hib</td>
+<td>DTP / HB / Hib</td>
 <td>ROTINA</td>
 <td>D1</td>
 </tr>
 <tr>
 <td>Penta</td>
-<td>DTP/HB/Hib</td>
+<td>DTP / HB / Hib</td>
 <td>ROTINA</td>
 <td>D2</td>
 </tr>
 <tr>
 <td>Penta</td>
-<td>DTP/HB/Hib</td>
+<td>DTP / HB / Hib</td>
 <td>ROTINA</td>
 <td>D3</td>
 </tr>
 <tr>
 <td>Penta</td>
-<td>DTP/HB/Hib</td>
+<td>DTP / HB / Hib</td>
 <td>ROTINA</td>
 <td>R1</td>
 </tr>
 <tr>
 <td>Penta</td>
-<td>DTP/HB/Hib</td>
+<td>DTP / HB / Hib</td>
 <td>ROTINA</td>
 <td>R2</td>
 </tr>
@@ -65119,6 +65389,12 @@
 <tr>
 <td>Pncc10V</td>
 <td>Pneumocócica 10V</td>
+<td>ESPECIAL</td>
+<td>REF</td>
+</tr>
+<tr>
+<td>Pncc10V</td>
+<td>Pneumocócica 10V</td>
 <td>INTENSIFICAÇÃO</td>
 <td>D1</td>
 </tr>
@@ -65205,6 +65481,42 @@
 <td>Pneumocócica 10V</td>
 <td>ROTINA</td>
 <td>REF</td>
+</tr>
+<tr>
+<td>Pncc13V</td>
+<td>Pneumocócica 13V</td>
+<td>ESPECIAL</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>Pncc13V</td>
+<td>Pneumocócica 13V</td>
+<td>ESPECIAL</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>Pncc13V</td>
+<td>Pneumocócica 13V</td>
+<td>ESPECIAL</td>
+<td>D3</td>
+</tr>
+<tr>
+<td>Pncc13V</td>
+<td>Pneumocócica 13V</td>
+<td>ESPECIAL</td>
+<td>DU</td>
+</tr>
+<tr>
+<td>Pncc23V</td>
+<td>Pneumocócica 23V</td>
+<td>ESPECIAL</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>Pncc23V</td>
+<td>Pneumocócica 23V</td>
+<td>ESPECIAL</td>
+<td>D2</td>
 </tr>
 <tr>
 <td>Pncc23V</td>
@@ -65748,253 +66060,253 @@
 </tr>
 <tr>
 <td>SBOCR</td>
-<td>Soro botrópico/crotálico</td>
+<td>Soro botrópico / crotálico</td>
 <td>SOROTERAPIA</td>
 <td>T1</td>
 </tr>
 <tr>
 <td>SBOCR</td>
-<td>Soro botrópico/crotálico</td>
+<td>Soro botrópico / crotálico</td>
 <td>SOROTERAPIA</td>
 <td>T10</td>
 </tr>
 <tr>
 <td>SBOCR</td>
-<td>Soro botrópico/crotálico</td>
+<td>Soro botrópico / crotálico</td>
 <td>SOROTERAPIA</td>
 <td>T11</td>
 </tr>
 <tr>
 <td>SBOCR</td>
-<td>Soro botrópico/crotálico</td>
+<td>Soro botrópico / crotálico</td>
 <td>SOROTERAPIA</td>
 <td>T12</td>
 </tr>
 <tr>
 <td>SBOCR</td>
-<td>Soro botrópico/crotálico</td>
+<td>Soro botrópico / crotálico</td>
 <td>SOROTERAPIA</td>
 <td>T13</td>
 </tr>
 <tr>
 <td>SBOCR</td>
-<td>Soro botrópico/crotálico</td>
+<td>Soro botrópico / crotálico</td>
 <td>SOROTERAPIA</td>
 <td>T14</td>
 </tr>
 <tr>
 <td>SBOCR</td>
-<td>Soro botrópico/crotálico</td>
+<td>Soro botrópico / crotálico</td>
 <td>SOROTERAPIA</td>
 <td>T15</td>
 </tr>
 <tr>
 <td>SBOCR</td>
-<td>Soro botrópico/crotálico</td>
+<td>Soro botrópico / crotálico</td>
 <td>SOROTERAPIA</td>
 <td>T16</td>
 </tr>
 <tr>
 <td>SBOCR</td>
-<td>Soro botrópico/crotálico</td>
+<td>Soro botrópico / crotálico</td>
 <td>SOROTERAPIA</td>
 <td>T17</td>
 </tr>
 <tr>
 <td>SBOCR</td>
-<td>Soro botrópico/crotálico</td>
+<td>Soro botrópico / crotálico</td>
 <td>SOROTERAPIA</td>
 <td>T18</td>
 </tr>
 <tr>
 <td>SBOCR</td>
-<td>Soro botrópico/crotálico</td>
+<td>Soro botrópico / crotálico</td>
 <td>SOROTERAPIA</td>
 <td>T19</td>
 </tr>
 <tr>
 <td>SBOCR</td>
-<td>Soro botrópico/crotálico</td>
+<td>Soro botrópico / crotálico</td>
 <td>SOROTERAPIA</td>
 <td>T2</td>
 </tr>
 <tr>
 <td>SBOCR</td>
-<td>Soro botrópico/crotálico</td>
+<td>Soro botrópico / crotálico</td>
 <td>SOROTERAPIA</td>
 <td>T20</td>
 </tr>
 <tr>
 <td>SBOCR</td>
-<td>Soro botrópico/crotálico</td>
+<td>Soro botrópico / crotálico</td>
 <td>SOROTERAPIA</td>
 <td>T24</td>
 </tr>
 <tr>
 <td>SBOCR</td>
-<td>Soro botrópico/crotálico</td>
+<td>Soro botrópico / crotálico</td>
 <td>SOROTERAPIA</td>
 <td>T3</td>
 </tr>
 <tr>
 <td>SBOCR</td>
-<td>Soro botrópico/crotálico</td>
+<td>Soro botrópico / crotálico</td>
 <td>SOROTERAPIA</td>
 <td>T4</td>
 </tr>
 <tr>
 <td>SBOCR</td>
-<td>Soro botrópico/crotálico</td>
+<td>Soro botrópico / crotálico</td>
 <td>SOROTERAPIA</td>
 <td>T5</td>
 </tr>
 <tr>
 <td>SBOCR</td>
-<td>Soro botrópico/crotálico</td>
+<td>Soro botrópico / crotálico</td>
 <td>SOROTERAPIA</td>
 <td>T6</td>
 </tr>
 <tr>
 <td>SBOCR</td>
-<td>Soro botrópico/crotálico</td>
+<td>Soro botrópico / crotálico</td>
 <td>SOROTERAPIA</td>
 <td>T7</td>
 </tr>
 <tr>
 <td>SBOCR</td>
-<td>Soro botrópico/crotálico</td>
+<td>Soro botrópico / crotálico</td>
 <td>SOROTERAPIA</td>
 <td>T8</td>
 </tr>
 <tr>
 <td>SBOCR</td>
-<td>Soro botrópico/crotálico</td>
+<td>Soro botrópico / crotálico</td>
 <td>SOROTERAPIA</td>
 <td>T9</td>
 </tr>
 <tr>
 <td>SBOLAQ</td>
-<td>Soro botrópico/laquético</td>
+<td>Soro botrópico / laquético</td>
 <td>SOROTERAPIA</td>
 <td>T1</td>
 </tr>
 <tr>
 <td>SBOLAQ</td>
-<td>Soro botrópico/laquético</td>
+<td>Soro botrópico / laquético</td>
 <td>SOROTERAPIA</td>
 <td>T10</td>
 </tr>
 <tr>
 <td>SBOLAQ</td>
-<td>Soro botrópico/laquético</td>
+<td>Soro botrópico / laquético</td>
 <td>SOROTERAPIA</td>
 <td>T11</td>
 </tr>
 <tr>
 <td>SBOLAQ</td>
-<td>Soro botrópico/laquético</td>
+<td>Soro botrópico / laquético</td>
 <td>SOROTERAPIA</td>
 <td>T12</td>
 </tr>
 <tr>
 <td>SBOLAQ</td>
-<td>Soro botrópico/laquético</td>
+<td>Soro botrópico / laquético</td>
 <td>SOROTERAPIA</td>
 <td>T13</td>
 </tr>
 <tr>
 <td>SBOLAQ</td>
-<td>Soro botrópico/laquético</td>
+<td>Soro botrópico / laquético</td>
 <td>SOROTERAPIA</td>
 <td>T14</td>
 </tr>
 <tr>
 <td>SBOLAQ</td>
-<td>Soro botrópico/laquético</td>
+<td>Soro botrópico / laquético</td>
 <td>SOROTERAPIA</td>
 <td>T15</td>
 </tr>
 <tr>
 <td>SBOLAQ</td>
-<td>Soro botrópico/laquético</td>
+<td>Soro botrópico / laquético</td>
 <td>SOROTERAPIA</td>
 <td>T16</td>
 </tr>
 <tr>
 <td>SBOLAQ</td>
-<td>Soro botrópico/laquético</td>
+<td>Soro botrópico / laquético</td>
 <td>SOROTERAPIA</td>
 <td>T17</td>
 </tr>
 <tr>
 <td>SBOLAQ</td>
-<td>Soro botrópico/laquético</td>
+<td>Soro botrópico / laquético</td>
 <td>SOROTERAPIA</td>
 <td>T18</td>
 </tr>
 <tr>
 <td>SBOLAQ</td>
-<td>Soro botrópico/laquético</td>
+<td>Soro botrópico / laquético</td>
 <td>SOROTERAPIA</td>
 <td>T19</td>
 </tr>
 <tr>
 <td>SBOLAQ</td>
-<td>Soro botrópico/laquético</td>
+<td>Soro botrópico / laquético</td>
 <td>SOROTERAPIA</td>
 <td>T2</td>
 </tr>
 <tr>
 <td>SBOLAQ</td>
-<td>Soro botrópico/laquético</td>
+<td>Soro botrópico / laquético</td>
 <td>SOROTERAPIA</td>
 <td>T20</td>
 </tr>
 <tr>
 <td>SBOLAQ</td>
-<td>Soro botrópico/laquético</td>
+<td>Soro botrópico / laquético</td>
 <td>SOROTERAPIA</td>
 <td>T24</td>
 </tr>
 <tr>
 <td>SBOLAQ</td>
-<td>Soro botrópico/laquético</td>
+<td>Soro botrópico / laquético</td>
 <td>SOROTERAPIA</td>
 <td>T3</td>
 </tr>
 <tr>
 <td>SBOLAQ</td>
-<td>Soro botrópico/laquético</td>
+<td>Soro botrópico / laquético</td>
 <td>SOROTERAPIA</td>
 <td>T4</td>
 </tr>
 <tr>
 <td>SBOLAQ</td>
-<td>Soro botrópico/laquético</td>
+<td>Soro botrópico / laquético</td>
 <td>SOROTERAPIA</td>
 <td>T5</td>
 </tr>
 <tr>
 <td>SBOLAQ</td>
-<td>Soro botrópico/laquético</td>
+<td>Soro botrópico / laquético</td>
 <td>SOROTERAPIA</td>
 <td>T6</td>
 </tr>
 <tr>
 <td>SBOLAQ</td>
-<td>Soro botrópico/laquético</td>
+<td>Soro botrópico / laquético</td>
 <td>SOROTERAPIA</td>
 <td>T7</td>
 </tr>
 <tr>
 <td>SBOLAQ</td>
-<td>Soro botrópico/laquético</td>
+<td>Soro botrópico / laquético</td>
 <td>SOROTERAPIA</td>
 <td>T8</td>
 </tr>
 <tr>
 <td>SBOLAQ</td>
-<td>Soro botrópico/laquético</td>
+<td>Soro botrópico / laquético</td>
 <td>SOROTERAPIA</td>
 <td>T9</td>
 </tr>
@@ -67152,61 +67464,61 @@
 </tr>
 <tr>
 <td>VARC</td>
-<td>Varicela(atenuada)</td>
+<td>Varicela (atenuada)</td>
 <td>BLOQUEIO</td>
 <td>D1</td>
 </tr>
 <tr>
 <td>VARC</td>
-<td>Varicela(atenuada)</td>
+<td>Varicela (atenuada)</td>
 <td>BLOQUEIO</td>
 <td>D2</td>
 </tr>
 <tr>
 <td>VARC</td>
-<td>Varicela(atenuada)</td>
+<td>Varicela (atenuada)</td>
 <td>ESPECIAL</td>
 <td>D1</td>
 </tr>
 <tr>
 <td>VARC</td>
-<td>Varicela(atenuada)</td>
+<td>Varicela (atenuada)</td>
 <td>ESPECIAL</td>
 <td>D2</td>
 </tr>
 <tr>
 <td>VARC</td>
-<td>Varicela(atenuada)</td>
+<td>Varicela (atenuada)</td>
 <td>INTENSIFICAÇÃO</td>
 <td>D1</td>
 </tr>
 <tr>
 <td>VARC</td>
-<td>Varicela(atenuada)</td>
+<td>Varicela (atenuada)</td>
 <td>INTENSIFICAÇÃO</td>
 <td>D2</td>
 </tr>
 <tr>
 <td>VARC</td>
-<td>Varicela(atenuada)</td>
+<td>Varicela (atenuada)</td>
 <td>MULTIVACINAÇÃO</td>
 <td>D1</td>
 </tr>
 <tr>
 <td>VARC</td>
-<td>Varicela(atenuada)</td>
+<td>Varicela (atenuada)</td>
 <td>MULTIVACINAÇÃO</td>
 <td>D2</td>
 </tr>
 <tr>
 <td>VARC</td>
-<td>Varicela(atenuada)</td>
+<td>Varicela (atenuada)</td>
 <td>ROTINA</td>
 <td>D1</td>
 </tr>
 <tr>
 <td>VARC</td>
-<td>Varicela(atenuada)</td>
+<td>Varicela (atenuada)</td>
 <td>ROTINA</td>
 <td>D2</td>
 </tr>
@@ -68029,36 +68341,29 @@
 
     <div class="post pdf shown" id="principais_alteracoes" data-url="/ledi/documentacao/principais_alteracoes.html">
       <header class="post-header">
-        <h1 class="post-title">Principais alterações da v3.2.4 para a v4.0.0</h1>
+        <h1 class="post-title">Principais alterações da v4.0.0 para a v4.0.1</h1>
       </header>
 
       
 
       <article class="post-content">
-        <p>Este documento relata as principais alterações em relação à versão 3.2.4 do LEDI AB:</p>
+        <p>Este documento relata as principais alterações em relação à versão 4.0.0 do LEDI AB:</p>
 
-<h3 id="1-ficha-de-cadastro-individual">1. Ficha de Cadastro Individual</h3>
-
-<ul>
-<li>É obrigatório o preenchimento do campo <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#25-cpfcidadao">cpfCidadao</a> ou <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#9-cnscidadao">cnsCidadao</a>;</li>
-<li>Caso o campo <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#6-nacionalidadecidadao">nacionalidadeCidadao</a> for &quot;brasileira&quot; ou &quot;naturalizado&quot;, então, o campo <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#11-telefonecelular">telefoneCelular</a> é de preenchimento obrigatório;</li>
-<li>Os campos <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#9-statussituacaorua">emSituacaoDeRua</a>, <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#10-statusfrequentaescola">statusFrequentaEscola</a>, <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#23-microarea">microarea</a> e <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#14-statustemalgumadeficiencia">statusTemAlgumaDeficiencia</a> passam a não ser obrigatórios;</li>
-<li>Incluída permissão para preenchimento das Ficha de Cadastro Individual pelas CBOs:
+<h3 id="1-inclus-o-de-doses-e-regras-de-vacina-o">1. Inclusão de doses e regras de vacinação</h3>
 
 <ul>
-<li>411010: ASSISTENTE ADMINISTRATIVO</li>
-<li>412110: DIGITADOR</li>
-<li>422215: MONITOR DE TELEATENDIMENTO</li>
-<li>422220: OPERADOR DE RADIO CHAMADA</li>
-<li>142340: OUVIDOR</li>
-<li>422205: TELEFONISTA</li>
-<li>422210: TELEOPERADOR</li>
-</ul></li>
+<li>Inclusão das doses 3º reforço, 4º reforço, 5º reforço e 6º reforço na <a href="/ledi/documentacao/referencias/dicionario.html#dose">Tabela de referência</a>;</li>
+<li>Inclusão de novas regras de vacinação relacionadas à <strong>estratégia especial</strong> descritas em <a href="/ledi/documentacao/regras/valdidar_regras_vacinacao.html">Regras de vacinação</a>.</li>
 </ul>
 
-<h3 id="2-ficha-de-avalia-o-de-elegibilidade">2. Ficha de Avaliação de Elegibilidade</h3>
+<h3 id="2-inclus-o-de-exames-para-a-covid-19">2. Inclusão de exames para a COVID-19</h3>
 
-<p>Caso o campo <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fae.html#12-nacionalidadecidadao">nacionalidadeCidadao</a> for &quot;brasileira&quot; ou &quot;naturalizado&quot;, então, pelo menos um dos campos <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fae.html#8-telefonecontato">telefoneContato</a> ou <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fae.html#9-telefoneresidencia">telefoneResidencia</a> é de preenchimento obrigatório.</p>
+<p><strong>1. </strong> Inclusão dos exames para o diagnóstico laboratorial de infecção pelo SARS-CoV-2 na Tabela de Procedimentos, Medicamentos, Órteses, Próteses e Materiais Especiais (OPM) do Sistema Único de Saúde (SUS) conforme <a href="http://www.in.gov.br/en/web/dou/-/portaria-n-464-de-20-de-maio-de-2020-258043581">PORTARIA Nº 464, DE 20 DE MAIO DE 2020</a>.</p>
+
+<ul>
+<li>02.14.01.016-3 TESTE RÁPIDO PARA DETECÇÃO DE SARS-COV-2;</li>
+<li>02.13.01.072-0 PESQUISA DE SARS-COV-2 POR RT - PCR.</li>
+</ul>
 
       </article>
 
@@ -68088,7 +68393,7 @@
 
 <p>O DW é uma base de dados contendo vários componentes. Possui uma arquitetura multidimensional, onde encontram-se as <a href="/dw/dimensoes.html">Dimensões</a> e <a href="/dw/fatos/index.html">Fatos</a>. Estas estruturas são alguns dos elementos do DW, são dependentes entre si e permitem o armazenamento dos dados.</p>
 
-<p>Através de um sistema de <a href="https://pt.wikipedia.org/wiki/Extract,_transform,_load">ETL</a>, as informações são extraídas de arquivos conforme descritos na estrutura <a href="/ledi/index.html">Layout e-SUS AB de Dados e Interface</a> e armazenadas nas tabelas Fatos e Dimensões.</p>
+<p>Através de um sistema de <a href="https://pt.wikipedia.org/wiki/Extract,_transform,_load">ETL</a>, as informações são extraídas de arquivos conforme descritos na estrutura <a href="/ledi/index.html">Layout e-SUS APS de Dados e Interface</a> e armazenadas nas tabelas Fatos e Dimensões.</p>
 
 <p>As Dimensões possuem características descritivas dentro do DW. São responsáveis por qualificar as informações provenientes das tabelas Fatos. As tabelas Fatos possuem características quantitativa dentro do DW. A partir delas, são extraídas métricas que são cruzadas com os dados das Dimensões, gerando informações significativas para a avaliação do usuário. Todos os dados históricos no DW ficam armazenadas nas tabelas Fatos.</p>
 
@@ -68137,7 +68442,7 @@
 
 <p><em>Tabela 1 - Tabelas de organização</em></p>
 
-<p>Outras tabelas apresentam as informações que darão sentido aos identificadores existentes nas tabelas <strong>Fatos</strong>. Portanto, muitas delas apresentam registros predefinidos, geralmente determinados pelo <a href="/ledi/index.html">Layout e-SUS AB de Dados e Interface</a> (conforme apresentadas na Tabela 2) e incluem também o registro &quot;Não informado&quot;. Além destas características, algumas tabelas podem apresentar a coluna <strong>st_registro_valido</strong>.</p>
+<p>Outras tabelas apresentam as informações que darão sentido aos identificadores existentes nas tabelas <strong>Fatos</strong>. Portanto, muitas delas apresentam registros predefinidos, geralmente determinados pelo <a href="/ledi/index.html">Layout e-SUS APS de Dados e Interface</a> (conforme apresentadas na Tabela 2) e incluem também o registro &quot;Não informado&quot;. Além destas características, algumas tabelas podem apresentar a coluna <strong>st_registro_valido</strong>.</p>
 
 <p>A coluna <strong>st_registro_valido</strong> é utilizada para identificar se o respectivo registro está completo na tabela do DW. Isto ocorre durante o processamento inicial dos dados. Caso o identificador não exista na tabela, o mesmo é inserido. Neste momento, apenas o identificador existe no DW, então a coluna &quot;st_registro_valido&quot; é marcada com o valor &quot;inválido&quot; para que seja reprocessado novamente e adicionadas as informações complementares (geralmente nome ou descrição). Este reprocessamento realiza a busca na base de dados do e-SUS AB PEC e, encontrando o identificador, inclui as demais informações e marca o registro como &quot;válido&quot;.</p>
 
@@ -68377,7 +68682,7 @@
 
 <h1 id="anexo-1-tabelas-complementares">Anexo 1 - Tabelas complementares</h1>
 
-<p>O anexo 1 apresenta as tabelas dimensão pertencentes a estrutura do Data Warehouse que não estão definidas no <a href="/ledi/index.html">Layout e-SUS AB de Dados e Interface</a>.</p>
+<p>O anexo 1 apresenta as tabelas dimensão pertencentes a estrutura do Data Warehouse que não estão definidas no <a href="/ledi/index.html">Layout e-SUS APS de Dados e Interface</a>.</p>
 
 <h2 id="tabela-tb_dim_cds_tipo_origem">Tabela tb_dim_cds_tipo_origem</h2>
 
@@ -68616,7 +68921,7 @@
 
 <p>Na perspectiva do sistema, algumas fichas podem ter mais de um registro de atendimento vinculado a ela. Na estrutura do DW, este cenário é representado de maneira linear, ou seja, cada registro corresponde a uma tupla na respectiva tabela.</p>
 
-<p>Neste contexto, a estrutura das tabelas pode ser diferentes da estrutura do <a href="/ledi/index.html">Layout e-SUS AB de Dados e Interface</a>, principalmente no que diz respeito aos campos onde é permitido selecionar mais de uma opção. Para estes cenários, o DW apresenta uma coluna para cada opção do campo, sendo que se o valor for &quot;1&quot; indica que a respectiva opção foi selecionada e se o valor for &quot;0&quot; indica que não foi selecionada. Estes casos serão explicados de acordo com cada estratégia de negócio do e-SUS AB PEC:</p>
+<p>Neste contexto, a estrutura das tabelas pode ser diferentes da estrutura do <a href="/ledi/index.html">Layout e-SUS APS de Dados e Interface</a>, principalmente no que diz respeito aos campos onde é permitido selecionar mais de uma opção. Para estes cenários, o DW apresenta uma coluna para cada opção do campo, sendo que se o valor for &quot;1&quot; indica que a respectiva opção foi selecionada e se o valor for &quot;0&quot; indica que não foi selecionada. Estes casos serão explicados de acordo com cada estratégia de negócio do e-SUS AB PEC:</p>
 
 <ul>
 <li><a href="/dw/fatos/cadastro_individual.html">Cadastro individual</a>;</li>

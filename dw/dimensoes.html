@@ -23,9 +23,9 @@
 
     <a class="site-title" href="/">
       <img src="/img/logo-esus.png" alt="e-SUS">
-      <span class="title-text">Integração e-SUS AB PEC</span>
+      <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 4.0.0</span>
+        <span class="label">versão 4.0.1</span>
       
     </a>
 
@@ -185,7 +185,7 @@
 
 <p><em>Tabela 1 - Tabelas de organização</em></p>
 
-<p>Outras tabelas apresentam as informações que darão sentido aos identificadores existentes nas tabelas <strong>Fatos</strong>. Portanto, muitas delas apresentam registros predefinidos, geralmente determinados pelo <a href="/ledi/index.html">Layout e-SUS AB de Dados e Interface</a> (conforme apresentadas na Tabela 2) e incluem também o registro &quot;Não informado&quot;. Além destas características, algumas tabelas podem apresentar a coluna <strong>st_registro_valido</strong>.</p>
+<p>Outras tabelas apresentam as informações que darão sentido aos identificadores existentes nas tabelas <strong>Fatos</strong>. Portanto, muitas delas apresentam registros predefinidos, geralmente determinados pelo <a href="/ledi/index.html">Layout e-SUS APS de Dados e Interface</a> (conforme apresentadas na Tabela 2) e incluem também o registro &quot;Não informado&quot;. Além destas características, algumas tabelas podem apresentar a coluna <strong>st_registro_valido</strong>.</p>
 
 <p>A coluna <strong>st_registro_valido</strong> é utilizada para identificar se o respectivo registro está completo na tabela do DW. Isto ocorre durante o processamento inicial dos dados. Caso o identificador não exista na tabela, o mesmo é inserido. Neste momento, apenas o identificador existe no DW, então a coluna &quot;st_registro_valido&quot; é marcada com o valor &quot;inválido&quot; para que seja reprocessado novamente e adicionadas as informações complementares (geralmente nome ou descrição). Este reprocessamento realiza a busca na base de dados do e-SUS AB PEC e, encontrando o identificador, inclui as demais informações e marca o registro como &quot;válido&quot;.</p>
 
@@ -425,7 +425,7 @@
 
 <h1 id="anexo-1-tabelas-complementares">Anexo 1 - Tabelas complementares</h1>
 
-<p>O anexo 1 apresenta as tabelas dimensão pertencentes a estrutura do Data Warehouse que não estão definidas no <a href="/ledi/index.html">Layout e-SUS AB de Dados e Interface</a>.</p>
+<p>O anexo 1 apresenta as tabelas dimensão pertencentes a estrutura do Data Warehouse que não estão definidas no <a href="/ledi/index.html">Layout e-SUS APS de Dados e Interface</a>.</p>
 
 <h2 id="tabela-tb_dim_cds_tipo_origem">Tabela tb_dim_cds_tipo_origem</h2>
 

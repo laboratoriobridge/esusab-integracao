@@ -4,7 +4,7 @@
 	<tipoDadoSerializado>10</tipoDadoSerializado>
 	<codIbge>4205407</codIbge>
 	<cnesDadoSerializado>0019615</cnesDadoSerializado>
-	<ineDadoSerializado>1382855330</ineDadoSerializado>
+	<ineDadoSerializado>0000471828</ineDadoSerializado>
 	<numLote>1</numLote>
 	<ns4:fichaAtendimentoDomiciliarMasterTransport>
 		<uuidFicha>0019615-3025ba67-1b02-470e-b094-0f7c698d681a</uuidFicha>
@@ -14,7 +14,7 @@
 				<profissionalCNS>700609923387762</profissionalCNS>
 				<cboCodigo_2002>223505</cboCodigo_2002>
 				<cnes>0019615</cnes>
-				<ine>1382855330</ine>
+				<ine>0000471828</ine>
 			</lotacaoFormPrincipal>
 			<dataAtendimento>1550674800000</dataAtendimento>
 			<codigoIbgeMunicipio>4205407</codigoIbgeMunicipio>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ns3:dadoTransporteTransportXml xmlns:ns2="http://esus.ufsc.br/dadoinstalacao" xmlns:ns3="http://esus.ufsc.br/dadotransporte" xmlns:ns4="http://esus.ufsc.br/fichavisitadomiciliarmaster">
-	<uuidDadoSerializado>0019615-67345abe-c945-469c-bf04-291e8f20ac16</uuidDadoSerializado>
+	<uuidDadoSerializado>0019615-67345abe-c945-469c-bf04-291e8f20ac17</uuidDadoSerializado>
 	<tipoDadoSerializado>8</tipoDadoSerializado>
 	<codIbge>4205407</codIbge>
 	<cnesDadoSerializado>0019615</cnesDadoSerializado>
 	<ineDadoSerializado>0000471828</ineDadoSerializado>
 	<numLote>12</numLote>
 	<ns4:fichaVisitaDomiciliarMasterTransport>
-		<uuidFicha>0019615-67345abe-c945-469c-bf04-291e8f20ac16</uuidFicha>
+		<uuidFicha>0019615-67345abe-c945-469c-bf04-291e8f20ac17</uuidFicha>
 		<tpCdsOrigem>3</tpCdsOrigem>
 		<headerTransport>
 			<profissionalCNS>898001161481488</profissionalCNS>
@@ -69,8 +69,8 @@
 			<pressaoSistolica>80</pressaoSistolica>
 			<pressaoDiastolica>120</pressaoDiastolica>
 			<temperatura>36.5</temperatura>
-			<tipoGlicemia>1</tipoGlicemia>
-			<glicemia>180</glicemia>
+			<glicemia>198</glicemia>
+			<tipoGlicemia>2</tipoGlicemia>
 		</visitasDomiciliares>
 		<visitasDomiciliares>
 			<turno>3</turno>
@@ -92,8 +92,8 @@
 			<alturaAcompanhamentoNutricional>179.0</alturaAcompanhamentoNutricional>
 			<pressaoSistolica>90</pressaoSistolica>
 			<pressaoDiastolica>130</pressaoDiastolica>
-			<tipoGlicemia>0</tipoGlicemia>
 			<glicemia>86</glicemia>
+			<tipoGlicemia>0</tipoGlicemia>
 		</visitasDomiciliares>
 		<visitasDomiciliares>
 			<turno>3</turno>

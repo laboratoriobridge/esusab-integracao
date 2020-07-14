@@ -111,7 +111,7 @@
 				<doseUnica>false</doseUnica>
 				<usoContinuo>false</usoContinuo>
 				<doseFrequenciaTipo>1</doseFrequenciaTipo>
-				<doseFrequencia>1</doseFrequencia>
+				<doseFrequencia>manhã</doseFrequencia>
 				<doseFrequenciaQuantidade>2</doseFrequenciaQuantidade>
 				<doseFrequenciaUnidadeMedida>3</doseFrequenciaUnidadeMedida>
 				<dtInicioTratamento>1586095200000</dtInicioTratamento>

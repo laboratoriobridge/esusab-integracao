@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ns3:dadoTransporteTransportXml xmlns:ns2="http://esus.ufsc.br/dadoinstalacao" xmlns:ns3="http://esus.ufsc.br/dadotransporte" xmlns:ns4="http://esus.ufsc.br/fichaatendimentoodontologicomaster">
-	<uuidDadoSerializado>0019615-ef3cd1a5-c9fc-4742-835d-a9586b36bf8a</uuidDadoSerializado>
+	<uuidDadoSerializado>0019615-ef3cd1a5-c9fc-4742-835d-a9586b36bf8c</uuidDadoSerializado>
 	<tipoDadoSerializado>5</tipoDadoSerializado>
 	<codIbge>4205407</codIbge>
 	<cnesDadoSerializado>0019615</cnesDadoSerializado>
 	<ineDadoSerializado>0000471828</ineDadoSerializado>
 	<numLote>3</numLote>
 	<ns4:fichaAtendimentoOdontologicoMasterTransport>
-		<uuidFicha>0019615-ef3cd1a5-c9fc-4742-835d-a9586b36bf8a</uuidFicha>
+		<uuidFicha>0019615-ef3cd1a5-c9fc-4742-835d-a9586b36bf8c</uuidFicha>
 		<tpCdsOrigem>1</tpCdsOrigem>
 		<atendimentosOdontologicos>
 			<cnsCidadao>119141073230003</cnsCidadao>
@@ -16,7 +16,7 @@
 			<gestante>false</gestante>
 			<necessidadesEspeciais>false</necessidadesEspeciais>
 			<tipoAtendimento>6</tipoAtendimento>
-			<tiposEncamOdonto>17</tiposEncamOdonto>
+			<tiposEncamOdonto>4</tiposEncamOdonto>
 			<tiposEncamOdonto>14</tiposEncamOdonto>
 			<tiposFornecimOdonto>1</tiposFornecimOdonto>
 			<tiposVigilanciaSaudeBucal>3</tiposVigilanciaSaudeBucal>
@@ -34,9 +34,49 @@
 				<quantidade>10</quantidade>
 			</procedimentosRealizados>
 			<turno>2</turno>
-			<sexo>0</sexo>
+			<sexo>1</sexo>
 			<dataHoraInicialAtendimento>1549378800000</dataHoraInicialAtendimento>
 			<dataHoraFinalAtendimento>1549378800000</dataHoraFinalAtendimento>
+			<medicamentos>
+				<codigoCatmat>BR0293891</codigoCatmat>
+				<viaAdministracao>0</viaAdministracao>
+				<dose>1 comprimido</dose>
+				<doseUnica>false</doseUnica>
+				<usoContinuo>true</usoContinuo>
+				<doseFrequenciaTipo>2</doseFrequenciaTipo>
+				<doseFrequencia>3</doseFrequencia>
+				<doseFrequenciaQuantidade>1</doseFrequenciaQuantidade>
+				<doseFrequenciaUnidadeMedida>1</doseFrequenciaUnidadeMedida>
+				<dtInicioTratamento>1586095200000</dtInicioTratamento>
+				<duracaoTratamento>7</duracaoTratamento>
+				<duracaoTratamentoMedida>1</duracaoTratamentoMedida>
+				<quantidadeReceitada>8</quantidadeReceitada>
+			</medicamentos>
+			<medicamentos>
+				<codigoCatmat>BR0387985</codigoCatmat>
+				<viaAdministracao>11</viaAdministracao>
+				<dose>1 aplicação</dose>
+				<doseUnica>false</doseUnica>
+				<usoContinuo>false</usoContinuo>
+				<doseFrequenciaTipo>1</doseFrequenciaTipo>
+				<doseFrequencia>1</doseFrequencia>
+				<doseFrequenciaQuantidade>2</doseFrequenciaQuantidade>
+				<doseFrequenciaUnidadeMedida>3</doseFrequenciaUnidadeMedida>
+				<dtInicioTratamento>1586095200000</dtInicioTratamento>
+				<duracaoTratamento>12</duracaoTratamento>
+				<duracaoTratamentoMedida>3</duracaoTratamentoMedida>
+				<quantidadeReceitada>12</quantidadeReceitada>
+			</medicamentos>
+			<encaminhamentos>
+				<especialidade>3</especialidade>
+				<hipoteseDiagnosticoCid10>B170</hipoteseDiagnosticoCid10>
+				<classificacaoRisco>3</classificacaoRisco>
+				</encaminhamentos>
+			<encaminhamentos>
+				<especialidade>10</especialidade>
+				<hipoteseDiagnosticoCid10>O03</hipoteseDiagnosticoCid10>
+				<classificacaoRisco>1</classificacaoRisco>
+			</encaminhamentos>
 		</atendimentosOdontologicos>
 		<atendimentosOdontologicos>
 			<numProntuario>4321</numProntuario>
@@ -90,49 +130,6 @@
 			<dataHoraInicialAtendimento>1549378800000</dataHoraInicialAtendimento>
 			<dataHoraFinalAtendimento>1549378800000</dataHoraFinalAtendimento>
 		</atendimentosOdontologicos>
-		<headerTransport>
-			<lotacaoFormPrincipal>
-				<profissionalCNS>898001161481488</profissionalCNS>
-				<cboCodigo_2002>223208</cboCodigo_2002>
-				<cnes>0019615</cnes>
-				<ine>0000471828</ine>
-			</lotacaoFormPrincipal>
-			<dataAtendimento>1549378800000</dataAtendimento>
-			<codigoIbgeMunicipio>4205407</codigoIbgeMunicipio>
-		</headerTransport>
-	</ns4:fichaAtendimentoOdontologicoMasterTransport>
-	<ns2:remetente>
-		<contraChave>TREINAMENTO</contraChave>
-		<uuidInstalacao>TREINAMENTO</uuidInstalacao>
-		<cpfOuCnpj>01234567890</cpfOuCnpj>
-		<nomeOuRazaoSocial>ADMINISTRADOR INSTALAÇÃO</nomeOuRazaoSocial>
-		<fone>8216756527</fone>
-		<email>prof@esus.br</email>
-		<versaoSistema>3.2.18</versaoSistema>
-		<nomeBancoDados>Oracle</nomeBancoDados>
-	</ns2:remetente>
-	<ns2:originadora>
-		<contraChave>TREINAMENTO</contraChave>
-		<uuidInstalacao>TREINAMENTO</uuidInstalacao>
-		<cpfOuCnpj>01234567890</cpfOuCnpj>
-		<nomeOuRazaoSocial>ADMINISTRADOR INSTALAÇÃO</nomeOuRazaoSocial>
-		<fone>8216756527</fone>
-		<email>prof@esus.br</email>
-		<versaoSistema>3.2.18</versaoSistema>
-		<nomeBancoDados>Oracle</nomeBancoDados>
-	</ns2:originadora>
-	<versao major="3" minor="2" revision="4" />
-</ns3:dadoTransporteTransportXml>
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<ns3:dadoTransporteTransportXml xmlns:ns2="http://esus.ufsc.br/dadoinstalacao" xmlns:ns3="http://esus.ufsc.br/dadotransporte" xmlns:ns4="http://esus.ufsc.br/fichaatendimentoodontologicomaster">
-	<uuidDadoSerializado>3186717-37ba9028-2bc1-432a-b610-43ed5387b3a5</uuidDadoSerializado>
-	<tipoDadoSerializado>5</tipoDadoSerializado>
-	<codIbge>4205407</codIbge>
-	<cnesDadoSerializado>3186717</cnesDadoSerializado>
-	<numLote>1</numLote>
-	<ns4:fichaAtendimentoOdontologicoMasterTransport>
-		<uuidFicha>3186717-37ba9028-2bc1-432a-b610-43ed5387b3a5</uuidFicha>
-		<tpCdsOrigem>1</tpCdsOrigem>
 		<atendimentosOdontologicos>
 			<numProntuario>123</numProntuario>
 			<cnsCidadao>279573698530018</cnsCidadao>
@@ -156,14 +153,6 @@
 				<coMsProcedimento>ABPO004</coMsProcedimento>
 				<quantidade>2</quantidade>
 			</procedimentosRealizados>
-			<outrosSiaProcedimentos>
-				<coMsProcedimento>0307020045</coMsProcedimento>
-				<quantidade>1</quantidade>
-			</outrosSiaProcedimentos>
-			<outrosSiaProcedimentos>
-				<coMsProcedimento>0307020037</coMsProcedimento>
-				<quantidade>3</quantidade>
-			</outrosSiaProcedimentos>
 			<turno>1</turno>
 			<sexo>1</sexo>
 			<dataHoraInicialAtendimento>1553094000000</dataHoraInicialAtendimento>
@@ -192,14 +181,6 @@
 				<coMsProcedimento>ABPO004</coMsProcedimento>
 				<quantidade>2</quantidade>
 			</procedimentosRealizados>
-			<outrosSiaProcedimentos>
-				<coMsProcedimento>0307020045</coMsProcedimento>
-				<quantidade>1</quantidade>
-			</outrosSiaProcedimentos>
-			<outrosSiaProcedimentos>
-				<coMsProcedimento>0307020037</coMsProcedimento>
-				<quantidade>3</quantidade>
-			</outrosSiaProcedimentos>
 			<turno>1</turno>
 			<sexo>1</sexo>
 			<dataHoraInicialAtendimento>1553094000000</dataHoraInicialAtendimento>
@@ -220,11 +201,12 @@
 		</atendimentosOdontologicos>
 		<headerTransport>
 			<lotacaoFormPrincipal>
-				<profissionalCNS>700609923387762</profissionalCNS>
-				<cboCodigo_2002>223293</cboCodigo_2002>
-				<cnes>3186717</cnes>
+				<profissionalCNS>898001161481488</profissionalCNS>
+				<cboCodigo_2002>223208</cboCodigo_2002>
+				<cnes>0019615</cnes>
+				<ine>0000471828</ine>
 			</lotacaoFormPrincipal>
-			<dataAtendimento>1553094000000</dataAtendimento>
+			<dataAtendimento>1549378800000</dataAtendimento>
 			<codigoIbgeMunicipio>4205407</codigoIbgeMunicipio>
 		</headerTransport>
 	</ns4:fichaAtendimentoOdontologicoMasterTransport>
@@ -235,8 +217,8 @@
 		<nomeOuRazaoSocial>ADMINISTRADOR INSTALAÇÃO</nomeOuRazaoSocial>
 		<fone>8216756527</fone>
 		<email>prof@esus.br</email>
-		<versaoSistema>3.2.05</versaoSistema>
-		<nomeBancoDados>Postgres</nomeBancoDados>
+		<versaoSistema>4.1.0</versaoSistema>
+		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:remetente>
 	<ns2:originadora>
 		<contraChave>TREINAMENTO</contraChave>
@@ -245,8 +227,8 @@
 		<nomeOuRazaoSocial>ADMINISTRADOR INSTALAÇÃO</nomeOuRazaoSocial>
 		<fone>8216756527</fone>
 		<email>prof@esus.br</email>
-		<versaoSistema>3.2.05</versaoSistema>
-		<nomeBancoDados>Postgres</nomeBancoDados>
+		<versaoSistema>4.1.0</versaoSistema>
+		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:originadora>
-	<versao major="3" minor="2" revision="1" />
+	<versao major="4" minor="1" revision="0" />
 </ns3:dadoTransporteTransportXml>

@@ -14,7 +14,7 @@
 				<cnes>0019615</cnes>
 				<ine>0000471828</ine>
 			</lotacaoFormPrincipal>
-			<dataAtendimento>1553094000000</dataAtendimento>
+			<dataAtendimento>1586095200000</dataAtendimento>
 			<codigoIbgeMunicipio>4205407</codigoIbgeMunicipio>
 		</headerTransport>
 		<atendimentosIndividuais>
@@ -29,6 +29,7 @@
 			<alturaAcompanhamentoNutricional>180.0</alturaAcompanhamentoNutricional>
 			<aleitamentoMaterno>1</aleitamentoMaterno>
 			<dumDaGestante>1551452400000</dumDaGestante>
+			<idadeGestacional>35</idadeGestacional>
 			<atencaoDomiciliarModalidade>1</atencaoDomiciliarModalidade>
 			<problemaCondicaoAvaliada>
 				<ciaps>ABP009</ciaps>
@@ -80,13 +81,54 @@
 			<nasfs>1</nasfs>
 			<condutas>9</condutas>
 			<condutas>5</condutas>
+			<condutas>4</condutas>
 			<stGravidezPlanejada>false</stGravidezPlanejada>
 			<nuGestasPrevias>1</nuGestasPrevias>
 			<nuPartos>1</nuPartos>
 			<racionalidadeSaude>6</racionalidadeSaude>
 			<perimetroCefalico>58.0</perimetroCefalico>
-			<dataHoraInicialAtendimento>1553094000000</dataHoraInicialAtendimento>
-			<dataHoraFinalAtendimento>1553095500000</dataHoraFinalAtendimento>
+			<dataHoraInicialAtendimento>1586098800000</dataHoraInicialAtendimento>
+			<dataHoraFinalAtendimento>1586102400000</dataHoraFinalAtendimento>
+			<medicamentos>
+				<codigoCatmat>BR0293891</codigoCatmat>
+				<viaAdministracao>0</viaAdministracao>
+				<dose>1 comprimido</dose>
+				<doseUnica>false</doseUnica>
+				<usoContinuo>true</usoContinuo>
+				<doseFrequenciaTipo>2</doseFrequenciaTipo>
+				<doseFrequencia>3</doseFrequencia>
+				<doseFrequenciaQuantidade>1</doseFrequenciaQuantidade>
+				<doseFrequenciaUnidadeMedida>1</doseFrequenciaUnidadeMedida>
+				<dtInicioTratamento>1586095200000</dtInicioTratamento>
+				<duracaoTratamento>7</duracaoTratamento>
+				<duracaoTratamentoMedida>1</duracaoTratamentoMedida>
+				<quantidadeReceitada>8</quantidadeReceitada>
+			</medicamentos>
+			<medicamentos>
+				<codigoCatmat>BR0387985</codigoCatmat>
+				<viaAdministracao>11</viaAdministracao>
+				<dose>1 aplicação</dose>
+				<doseUnica>false</doseUnica>
+				<usoContinuo>false</usoContinuo>
+				<doseFrequenciaTipo>1</doseFrequenciaTipo>
+				<doseFrequencia>1</doseFrequencia>
+				<doseFrequenciaQuantidade>2</doseFrequenciaQuantidade>
+				<doseFrequenciaUnidadeMedida>3</doseFrequenciaUnidadeMedida>
+				<dtInicioTratamento>1586095200000</dtInicioTratamento>
+				<duracaoTratamento>12</duracaoTratamento>
+				<duracaoTratamentoMedida>3</duracaoTratamentoMedida>
+				<quantidadeReceitada>12</quantidadeReceitada>
+			</medicamentos>
+			<encaminhamentos>
+				<especialidade>3</especialidade>
+				<hipoteseDiagnosticoCid10>B170</hipoteseDiagnosticoCid10>
+				<classificacaoRisco>3</classificacaoRisco>
+				</encaminhamentos>
+			<encaminhamentos>
+				<especialidade>10</especialidade>
+				<hipoteseDiagnosticoCid10>O03</hipoteseDiagnosticoCid10>
+				<classificacaoRisco>1</classificacaoRisco>
+			</encaminhamentos>
 		</atendimentosIndividuais>
 		<atendimentosIndividuais>
 			<numeroProntuario>1234</numeroProntuario>
@@ -140,8 +182,8 @@
 			<nuPartos>1</nuPartos>
 			<racionalidadeSaude>6</racionalidadeSaude>
 			<perimetroCefalico>58.0</perimetroCefalico>
-			<dataHoraInicialAtendimento>1553094000000</dataHoraInicialAtendimento>
-			<dataHoraFinalAtendimento>1553096500000</dataHoraFinalAtendimento>
+			<dataHoraInicialAtendimento>1586098800000</dataHoraInicialAtendimento>
+			<dataHoraFinalAtendimento>1586102400000</dataHoraFinalAtendimento>
 		</atendimentosIndividuais>
 		<atendimentosIndividuais>
 			<dataNascimento>1046703600000</dataNascimento>
@@ -153,8 +195,8 @@
 				<ciaps>ABP003</ciaps>
 			</problemaCondicaoAvaliada>
 			<condutas>1</condutas>
-			<dataHoraInicialAtendimento>1553099100000</dataHoraInicialAtendimento>
-			<dataHoraFinalAtendimento>1553100600000</dataHoraFinalAtendimento>
+			<dataHoraInicialAtendimento>1586098800000</dataHoraInicialAtendimento>
+			<dataHoraFinalAtendimento>1586102400000</dataHoraFinalAtendimento>
 		</atendimentosIndividuais>
 		<tpCdsOrigem>1</tpCdsOrigem>
 		<uuidFicha>0019615-edee6500-bf76-4691-b9c7-f7b1d550bc7a</uuidFicha>
@@ -164,7 +206,7 @@
 		<uuidInstalacao>TREINAMENTO</uuidInstalacao>
 		<cpfOuCnpj>01234567890</cpfOuCnpj>
 		<nomeOuRazaoSocial>ADMINISTRADOR INSTALAÇÃO</nomeOuRazaoSocial>
-		<versaoSistema>3.2.18</versaoSistema>
+		<versaoSistema>4.1.0</versaoSistema>
 		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:remetente>
 	<ns2:originadora>
@@ -172,8 +214,8 @@
 		<uuidInstalacao>TREINAMENTO</uuidInstalacao>
 		<cpfOuCnpj>01234567890</cpfOuCnpj>
 		<nomeOuRazaoSocial>ADMINISTRADOR INSTALAÇÃO</nomeOuRazaoSocial>
-		<versaoSistema>3.2.18</versaoSistema>
+		<versaoSistema>4.1.0</versaoSistema>
 		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:originadora>
-	<versao major="3" minor="2" revision="4" />
+	<versao major="4" minor="1" revision="0" />
 </ns3:dadoTransporteTransportXml>

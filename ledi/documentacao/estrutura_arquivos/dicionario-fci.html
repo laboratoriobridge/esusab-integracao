@@ -25,7 +25,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 4.0.1</span>
+        <span class="label">versão 4.0.2</span>
       
     </a>
 
@@ -75,7 +75,7 @@
           
         
           
-            <li><a title="Layout e-SUS AB de Dados e Interface Versão 4.0.1" href="/ledi/documentacao/index.html">Layout e-SUS AB de Dados e Interface Versão 4.0.1</a></li>
+            <li><a title="Layout e-SUS APS de Dados e Interface Versão 4.0.2" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 4.0.2</a></li>
           
         
           
@@ -115,9 +115,9 @@
   <ul>
     
       <li>
-        <a title="Voltar para Layout e-SUS AB de Dados e Interface Versão 4.0.1" href="/ledi/documentacao/index.html" class="back-link">
+        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 4.0.2" href="/ledi/documentacao/index.html" class="back-link">
           <i class="icon icon-back"></i> Voltar
-          <small>(Layout e-SUS AB de Dados e Interface Versão 4.0.1)</small>
+          <small>(Layout e-SUS APS de Dados e Interface Versão 4.0.2)</small>
         </a>
       </li>
     
@@ -243,7 +243,7 @@
     <p class="post-meta">
       <a class="btn" href="/pdf.html?include=/ledi/documentacao/estrutura_arquivos/dicionario-fci.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 09/06/2020</span>
+        <span class="label" title="Data da última modificação">Alterado em 22/09/2020</span>
       
     </p>
   </header>
@@ -271,7 +271,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Não deve ser preenchido se o campo <a href="#6-statustermorecusacadastroindividualatencaobasica">statusTermoRecusaCadastroIndividualAtencaoBasica</a> = <code>true</code>.</p>
+<p><strong>Regras:</strong> Não deve ser preenchido se o campo <a href="#7-statustermorecusacadastroindividualatencaobasica">statusTermoRecusaCadastroIndividualAtencaoBasica</a> = <code>true</code>.</p>
 
 <p><strong>Referências:</strong> <a href="#condicoesdesaude">CondicoesDeSaude</a>.</p>
 
@@ -295,7 +295,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Não deve ser preenchido se o campo <a href="#6-statustermorecusacadastroindividualatencaobasica">statusTermoRecusaCadastroIndividualAtencaoBasica</a> = <code>true</code>.</p>
+<p><strong>Regras:</strong> Não deve ser preenchido se o campo <a href="#7-statustermorecusacadastroindividualatencaobasica">statusTermoRecusaCadastroIndividualAtencaoBasica</a> = <code>true</code>.</p>
 
 <p><strong>Referências:</strong> <a href="#emsituacaoderua">EmSituacaoDeRua</a>.</p>
 
@@ -319,7 +319,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regra:</strong> Caso seja uma ficha de atualização, o campo <a href="#9-uuidfichaoriginadora">uuidFichaOriginadora</a> deve ser preenchido com o UUID da ficha que deu origem ao registro.</p>
+<p><strong>Regra:</strong> Caso seja uma ficha de atualização, o campo <a href="#10-uuidfichaoriginadora">uuidFichaOriginadora</a> deve ser preenchido com o UUID da ficha que deu origem ao registro.</p>
 
 <h3 id="5-identificacaousuariocidadao">#5 identificacaoUsuarioCidadao</h3>
 
@@ -341,7 +341,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Opcional se o campo <a href="#6-statustermorecusacadastroindividualatencaobasica">statusTermoRecusaCadastroIndividualAtencaoBasica</a> = <code>true</code>.</p>
+<p><strong>Regras:</strong> Opcional se o campo <a href="#7-statustermorecusacadastroindividualatencaobasica">statusTermoRecusaCadastroIndividualAtencaoBasica</a> = <code>true</code>.</p>
 
 <p><strong>Referências:</strong> <a href="#identificacaousuariocidadao">IdentificacaoUsuarioCidadao</a>.</p>
 
@@ -365,7 +365,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Não deve ser preenchido se o campo <a href="#6-statustermorecusacadastroindividualatencaobasica">statusTermoRecusaCadastroIndividualAtencaoBasica</a> = <code>true</code>.</p>
+<p><strong>Regras:</strong> Não deve ser preenchido se o campo <a href="#7-statustermorecusacadastroindividualatencaobasica">statusTermoRecusaCadastroIndividualAtencaoBasica</a> = <code>true</code>.</p>
 
 <p><strong>Referências:</strong> <a href="#informacoessociodemograficas">InformacoesSocioDemograficas</a></p>
 
@@ -1704,7 +1704,7 @@
 <p><strong>Regras:</strong> </p>
 
 <ul>
-<li>Apenas números;</li>
+<li>Apenas números.</li>
 <li>O preenchimento do campo é obrigatório apenas se o campo <a href="#6-nacionalidadecidadao">nacionalidadeCidadao</a> estiver preenchido como &quot;brasileira&quot; ou &quot;naturalizado&quot;.</li>
 </ul>
 
@@ -1757,7 +1757,7 @@
 <li>Se o campo <a href="#6-nacionalidadecidadao">nacionalidadeCidadao</a> for igual a <code>1 (Brasileira)</code>, este campo deve ser preenchido com <code>31 (BRASIL)</code>.</li>
 </ul>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/index.html#pa-s">País</a>.</p>
+<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/paises.html">País</a>.</p>
 
 <h3 id="14-racacorcidadao">#14 racaCorCidadao</h3>
 

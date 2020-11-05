@@ -71,6 +71,9 @@
 			<temperatura>36.5</temperatura>
 			<glicemia>198</glicemia>
 			<tipoGlicemia>2</tipoGlicemia>
+			<latitude>89.12345678</latitude>
+			<longitude>179.12345678</longitude>
+			<uuidOrigemCadastroDomiciliar>39ffaee0-9534-478e-9013-b79166da684l</uuidOrigemCadastroDomiciliar>
 		</visitasDomiciliares>
 		<visitasDomiciliares>
 			<turno>3</turno>
@@ -136,5 +139,5 @@
 		<versaoSistema>4.1.0</versaoSistema>
 		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:originadora>
-	<versao major="4" minor="1" revision="0" />
+	<versao major="4" minor="2" revision="0" />
 </ns3:dadoTransporteTransportXml>

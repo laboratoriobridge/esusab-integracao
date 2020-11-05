@@ -198,6 +198,34 @@
 			<sexo>0</sexo>
 			<dataHoraInicialAtendimento>1553108400000</dataHoraInicialAtendimento>
 			<dataHoraFinalAtendimento>1553110200000</dataHoraFinalAtendimento>
+			<resultadosExames>
+				<exame>0205010059</exame>
+				<dataSolicitacao>1549195200000</dataSolicitacao>
+				<dataRealizacao>1549195200000</dataRealizacao>
+				<dataResultado>1549195200000</dataResultado>
+				<resultadoExame>
+					<tipoResultado>4</tipoResultado>
+					<valorResultado>1597287600000</valorResultado>
+				</resultadoExame>
+			</resultadosExames>
+			<resultadosExames>
+				<exame>0205020143</exame>
+				<dataSolicitacao>1549195200000</dataSolicitacao>
+				<dataRealizacao>1549195200000</dataRealizacao>
+				<dataResultado>1549195200000</dataResultado>
+				<resultadoExame>
+					<tipoResultado>4</tipoResultado>
+					<valorResultado>1597287600000</valorResultado>
+				</resultadoExame>
+				<resultadoExame>
+					<tipoResultado>2</tipoResultado>
+					<valorResultado>5</valorResultado>
+				</resultadoExame>
+				<resultadoExame>
+					<tipoResultado>3</tipoResultado>
+					<valorResultado>25</valorResultado>
+				</resultadoExame>
+			</resultadosExames>
 		</atendimentosOdontologicos>
 		<headerTransport>
 			<lotacaoFormPrincipal>
@@ -230,5 +258,5 @@
 		<versaoSistema>4.1.0</versaoSistema>
 		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:originadora>
-	<versao major="4" minor="1" revision="0" />
+	<versao major="4" minor="2" revision="0" />
 </ns3:dadoTransporteTransportXml>

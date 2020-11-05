@@ -37,6 +37,8 @@
 			<pontoReferencia>UNIVERSIDADE</pontoReferencia>
 			<microArea>02</microArea>
 			<stForaArea>false</stForaArea>
+			<latitude>90.00000000</latitude>
+			<longitude>180.00000000</longitude>
 		</enderecoLocalPermanencia>
 		<familias>
 			<dataNascimentoResponsavel>978357600000</dataNascimentoResponsavel>
@@ -94,5 +96,5 @@
 		<versaoSistema>3.2.18</versaoSistema>
 		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:originadora>
-	<versao major="3" minor="2" revision="4" />
+	<versao major="4" minor="2" revision="0" />
 </ns3:dadoTransporteTransportXml>

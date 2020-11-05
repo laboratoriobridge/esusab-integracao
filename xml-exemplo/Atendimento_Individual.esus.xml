@@ -197,6 +197,34 @@
 			<condutas>1</condutas>
 			<dataHoraInicialAtendimento>1586098800000</dataHoraInicialAtendimento>
 			<dataHoraFinalAtendimento>1586102400000</dataHoraFinalAtendimento>
+			<resultadosExames>
+				<exame>0205010059</exame>
+				<dataSolicitacao>1586088000000</dataSolicitacao>
+				<dataRealizacao>1586088000000</dataRealizacao>
+				<dataResultado>1586088000000</dataResultado>
+				<resultadoExame>
+					<tipoResultado>4</tipoResultado>
+					<valorResultado>1597287600000</valorResultado>
+				</resultadoExame>
+			</resultadosExames>
+			<resultadosExames>
+				<exame>0205020143</exame>
+				<dataSolicitacao>1586088000000</dataSolicitacao> 
+				<dataRealizacao>1586088000000</dataRealizacao> 
+				<dataResultado>1586088000000</dataResultado>
+				<resultadoExame>
+					<tipoResultado>4</tipoResultado>
+					<valorResultado>1597287600000</valorResultado>
+				</resultadoExame>
+				<resultadoExame>
+					<tipoResultado>2</tipoResultado>
+					<valorResultado>5</valorResultado>
+				</resultadoExame>
+				<resultadoExame>
+					<tipoResultado>3</tipoResultado>
+					<valorResultado>25</valorResultado>
+				</resultadoExame>
+			</resultadosExames>
 		</atendimentosIndividuais>
 		<tpCdsOrigem>1</tpCdsOrigem>
 		<uuidFicha>0019615-edee6500-bf76-4691-b9c7-f7b1d550bc7a</uuidFicha>
@@ -217,5 +245,5 @@
 		<versaoSistema>4.1.0</versaoSistema>
 		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:originadora>
-	<versao major="4" minor="1" revision="0" />
+	<versao major="4" minor="2" revision="0" />
 </ns3:dadoTransporteTransportXml>

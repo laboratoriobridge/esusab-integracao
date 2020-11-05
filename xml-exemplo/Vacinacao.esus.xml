@@ -34,6 +34,19 @@
 				<dose>1</dose>
 				<lote>DEF01</lote>
 				<fabricante>BUILD SUSTAINABILITY</fabricante>
+				<stRegistroAnterior>false</stRegistroAnterior>
+			</vacinas>
+			<vacinas>
+				<imunobiologico>25</imunobiologico>
+				<dose>1</dose>
+				<stRegistroAnterior>true</stRegistroAnterior>
+				<dataRegistroAnterior>1495542619000</dataRegistroAnterior>
+			</vacinas>
+			<vacinas>
+				<imunobiologico>9</imunobiologico>
+				<dose>1</dose>
+				<stRegistroAnterior>true</stRegistroAnterior>
+				<dataRegistroAnterior>1495542619000</dataRegistroAnterior>
 			</vacinas>
 			<vacinas>
 				<imunobiologico>15</imunobiologico>
@@ -41,6 +54,7 @@
 				<dose>9</dose>
 				<lote>ABC</lote>
 				<fabricante>AMERICAN JOIN ULTIMATE</fabricante>
+				<stRegistroAnterior>false</stRegistroAnterior>
 			</vacinas>
 			<dataHoraInicialAtendimento>1551538800000</dataHoraInicialAtendimento>
 			<dataHoraFinalAtendimento>1551538800000</dataHoraFinalAtendimento>
@@ -62,6 +76,7 @@
 				<dose>1</dose>
 				<lote>DEF01</lote>
 				<fabricante>BUILD SUSTAINABILITY</fabricante>
+				<stRegistroAnterior>false</stRegistroAnterior>
 			</vacinas>
 			<vacinas>
 				<imunobiologico>15</imunobiologico>
@@ -69,6 +84,7 @@
 				<dose>9</dose>
 				<lote>ABC</lote>
 				<fabricante>AMERICAN JOIN ULTIMATE</fabricante>
+				<stRegistroAnterior>false</stRegistroAnterior>
 			</vacinas>
 			<dataHoraInicialAtendimento>1551538800000</dataHoraInicialAtendimento>
 			<dataHoraFinalAtendimento>1551538800000</dataHoraFinalAtendimento>
@@ -94,5 +110,5 @@
 		<versaoSistema>3.2.18</versaoSistema>
 		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:originadora>
-	<versao major="3" minor="2" revision="4" />
+	<versao major="4" minor="2" revision="0" />
 </ns3:dadoTransporteTransportXml>

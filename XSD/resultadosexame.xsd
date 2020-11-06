@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:resultadoExame="http://esus.ufsc.br/resultadoexame" targetNamespace="http://esus.ufsc.br/resultadosexame" version="1.0">
+
+  <xs:import namespace="http://esus.ufsc.br/resultadoexame" schemaLocation="resultadoexame.xsd"/>
+
+  <xs:complexType name="resultadosExameTransport">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="exame" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="dataSolicitacao" type="xs:long"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="dataRealizacao" type="xs:long"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="dataResultado" type="xs:long"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="resultadoExame" type="resultadoExame:resultadoExameTransport"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

@@ -3,26 +3,26 @@
 
   <xs:simpleType name="perguntaCriancasDeSeisVinteTresMesesEnumTransport">
     <xs:restriction base="xs:string">
-      <xs:enumeration value="SE_SIM_ESSA_COMIDA_FOI_OFERECIDA"/>
-      <xs:enumeration value="MACARRAO_INSTANTANEO_SALGADINHOS_BISCOITOS"/>
-      <xs:enumeration value="OUTRO_LEITE_QUE_NAO_LEITE_DO_PEITO"/>
-      <xs:enumeration value="IOGURTE"/>
-      <xs:enumeration value="SE_COMEU_COMIDA_DE_SAL_QUANTAS_VEZES"/>
-      <xs:enumeration value="SE_SIM_QUANTAS_VEZES"/>
-      <xs:enumeration value="ARROZ_BATATA_INHAME_MANDIOCA_FARINHA_MACARRAO"/>
-      <xs:enumeration value="ONTEM_A_CRIANCA_COMEU_FRUTA_INTEIRA_PEDACO_AMASSADO"/>
-      <xs:enumeration value="ONTEM_A_CRIANCA_COMEU_COMIDA_DE_SAL"/>
-      <xs:enumeration value="LEGUMES"/>
-      <xs:enumeration value="MINGAU_COM_LEITE"/>
-      <xs:enumeration value="HAMBURGUER_E_OU_EMBUTIDOS"/>
-      <xs:enumeration value="A_CRIANCA_ONTEM_TOMOU_LEITE_PEITO"/>
-      <xs:enumeration value="CARNE"/>
-      <xs:enumeration value="VEGETAL_OU_FRUTAS_COR_ALARANJADA_OU_FOLHAS_ESCURAS"/>
-      <xs:enumeration value="BEBIDAS_ADOCADAS"/>
-      <xs:enumeration value="FIGADO"/>
       <xs:enumeration value="FEIJAO"/>
-      <xs:enumeration value="VERDURA_DE_FOLHA"/>
+      <xs:enumeration value="SE_SIM_QUANTAS_VEZES"/>
+      <xs:enumeration value="OUTRO_LEITE_QUE_NAO_LEITE_DO_PEITO"/>
       <xs:enumeration value="BISCOITO_RECHEADO_DOCES_OU_GULOSEIMAS"/>
+      <xs:enumeration value="VEGETAL_OU_FRUTAS_COR_ALARANJADA_OU_FOLHAS_ESCURAS"/>
+      <xs:enumeration value="CARNE"/>
+      <xs:enumeration value="MINGAU_COM_LEITE"/>
+      <xs:enumeration value="MACARRAO_INSTANTANEO_SALGADINHOS_BISCOITOS"/>
+      <xs:enumeration value="BEBIDAS_ADOCADAS"/>
+      <xs:enumeration value="SE_SIM_ESSA_COMIDA_FOI_OFERECIDA"/>
+      <xs:enumeration value="A_CRIANCA_ONTEM_TOMOU_LEITE_PEITO"/>
+      <xs:enumeration value="SE_COMEU_COMIDA_DE_SAL_QUANTAS_VEZES"/>
+      <xs:enumeration value="IOGURTE"/>
+      <xs:enumeration value="LEGUMES"/>
+      <xs:enumeration value="ONTEM_A_CRIANCA_COMEU_FRUTA_INTEIRA_PEDACO_AMASSADO"/>
+      <xs:enumeration value="HAMBURGUER_E_OU_EMBUTIDOS"/>
+      <xs:enumeration value="VERDURA_DE_FOLHA"/>
+      <xs:enumeration value="ARROZ_BATATA_INHAME_MANDIOCA_FARINHA_MACARRAO"/>
+      <xs:enumeration value="ONTEM_A_CRIANCA_COMEU_COMIDA_DE_SAL"/>
+      <xs:enumeration value="FIGADO"/>
     </xs:restriction>
   </xs:simpleType>
 </xs:schema>

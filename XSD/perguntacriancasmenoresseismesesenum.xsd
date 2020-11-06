@@ -4,13 +4,13 @@
   <xs:simpleType name="perguntaCriancasMenoresSeisMesesEnumTransport">
     <xs:restriction base="xs:string">
       <xs:enumeration value="LEITE_VACA"/>
-      <xs:enumeration value="OUTROS_ALIMENTOS_BEBIDAS"/>
       <xs:enumeration value="FRUTA"/>
-      <xs:enumeration value="SUCO_FRUTA"/>
-      <xs:enumeration value="AGUA_CHA"/>
-      <xs:enumeration value="COMIDA_DE_SAL"/>
       <xs:enumeration value="MINGAU"/>
+      <xs:enumeration value="SUCO_FRUTA"/>
       <xs:enumeration value="A_CRIANCA_ONTEM_TOMOU_LEITE_DO_PEITO"/>
+      <xs:enumeration value="COMIDA_DE_SAL"/>
+      <xs:enumeration value="OUTROS_ALIMENTOS_BEBIDAS"/>
+      <xs:enumeration value="AGUA_CHA"/>
       <xs:enumeration value="FORMULA_INFANTIL"/>
     </xs:restriction>
   </xs:simpleType>

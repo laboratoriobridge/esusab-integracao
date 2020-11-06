@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fichaAtendimentoOdontologicoChild="http://esus.ufsc.br/fichaatendimentoodontologicochild" xmlns:fichaAtendimentoOdontologicoMaster="http://esus.ufsc.br/fichaatendimentoodontologicomaster" xmlns:lotacaoHeader="http://esus.ufsc.br/lotacaoheader" xmlns:procedimentoQuantidade="http://esus.ufsc.br/procedimentoquantidade" xmlns:variasLotacoesHeader="http://esus.ufsc.br/variaslotacoesheader" targetNamespace="http://esus.ufsc.br/fichaatendimentoodontologicomaster" version="1.0">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:encaminhamentoExterno="http://esus.ufsc.br/encaminhamentoexterno" xmlns:fichaAtendimentoOdontologicoChild="http://esus.ufsc.br/fichaatendimentoodontologicochild" xmlns:fichaAtendimentoOdontologicoMaster="http://esus.ufsc.br/fichaatendimentoodontologicomaster" xmlns:lotacaoHeader="http://esus.ufsc.br/lotacaoheader" xmlns:medicamento="http://esus.ufsc.br/medicamento" xmlns:procedimentoQuantidade="http://esus.ufsc.br/procedimentoquantidade" xmlns:resultadosExame="http://esus.ufsc.br/resultadosexame" xmlns:variasLotacoesHeader="http://esus.ufsc.br/variaslotacoesheader" targetNamespace="http://esus.ufsc.br/fichaatendimentoodontologicomaster" version="1.0">
 
   <xs:import namespace="http://esus.ufsc.br/procedimentoquantidade" schemaLocation="procedimentoquantidade.xsd"/>
+
+  <xs:import namespace="http://esus.ufsc.br/medicamento" schemaLocation="medicamento.xsd"/>
+
+  <xs:import namespace="http://esus.ufsc.br/encaminhamentoexterno" schemaLocation="encaminhamentoexterno.xsd"/>
+
+  <xs:import namespace="http://esus.ufsc.br/resultadosexame" schemaLocation="resultadosexame.xsd"/>
 
   <xs:import namespace="http://esus.ufsc.br/fichaatendimentoodontologicochild" schemaLocation="fichaatendimentoodontologicochild.xsd"/>
 

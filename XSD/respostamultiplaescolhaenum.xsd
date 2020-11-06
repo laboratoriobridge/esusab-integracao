@@ -3,12 +3,12 @@
 
   <xs:simpleType name="respostaMultiplaEscolhaEnumTransport">
     <xs:restriction base="xs:string">
+      <xs:enumeration value="CAFE_DA_MANHA"/>
+      <xs:enumeration value="LANCHE_DA_TARDE"/>
       <xs:enumeration value="CEIA"/>
+      <xs:enumeration value="LANCHE_DA_MANHA"/>
       <xs:enumeration value="ALMOCO"/>
       <xs:enumeration value="JANTAR"/>
-      <xs:enumeration value="LANCHE_DA_TARDE"/>
-      <xs:enumeration value="LANCHE_DA_MANHA"/>
-      <xs:enumeration value="CAFE_DA_MANHA"/>
     </xs:restriction>
   </xs:simpleType>
 </xs:schema>

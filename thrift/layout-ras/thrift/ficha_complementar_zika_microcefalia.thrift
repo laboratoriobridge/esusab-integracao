@@ -1,12 +1,10 @@
-include "./common.thrift"
+include "common/common.thrift"
 
-namespace java br.gov.saude.esusab.ras.complementarzika
-namespace php br.gov.saude.esusab.ras.complementarzika
-namespace delphi br.gov.saude.esusab.ras.complementarzika
-namespace csharp br.gov.saude.esusab.ras.complementarzika
-namespace rb br.gov.saude.esusab.ras.complementarzika
-namespace go br.gov.saude.esusab.ras.complementarzika
-namespace py br.gov.saude.esusab.ras.complementarzika
+namespace java br.gov.saude.esus.cds.transport.generated.thrift.complementarzikamicrocefalia
+namespace php br.gov.saude.esus.cds.transport.generated.thrift.complementarzikamicrocefalia
+namespace delphi br.gov.saude.esus.cds.transport.generated.thrift.complementarzikamicrocefalia
+namespace csharp br.gov.saude.esus.cds.transport.generated.thrift.complementarzikamicrocefalia
+namespace rb br.gov.saude.esus.cds.transport.generated.thrift.complementarzikamicrocefalia
 
 struct FichaComplementarZikaMicrocefaliaThrift {
 	1:optional common.UnicaLotacaoHeaderThrift headerTransport;

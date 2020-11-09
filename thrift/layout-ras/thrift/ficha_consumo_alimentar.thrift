@@ -1,12 +1,10 @@
-include "./common.thrift"
+include "common/common.thrift"
 
-namespace java br.gov.saude.esusab.ras.consumoalimentar
-namespace php br.gov.saude.esusab.ras.consumoalimentar
-namespace delphi br.gov.saude.esusab.ras.consumoalimentar
-namespace csharp br.gov.saude.esusab.ras.consumoalimentar
-namespace rb br.gov.saude.esusab.ras.consumoalimentar
-namespace go br.gov.saude.esusab.ras.consumoalimentar
-namespace py br.gov.saude.esusab.ras.consumoalimentar
+namespace java br.gov.saude.esus.cds.transport.generated.thrift.consumoalimentar
+namespace php br.gov.saude.esus.cds.transport.generated.thrift.consumoalimentar
+namespace delphi br.gov.saude.esus.cds.transport.generated.thrift.consumoalimentar
+namespace csharp br.gov.saude.esus.cds.transport.generated.thrift.consumoalimentar
+namespace rb br.gov.saude.esus.cds.transport.generated.thrift.consumoalimentar
 
 enum PerguntaCriancasMenoresSeisMesesEnumThrift {
 	A_CRIANCA_ONTEM_TOMOU_LEITE_DO_PEITO = 1,
@@ -106,5 +104,5 @@ struct FichaConsumoAlimentarThrift {
 	9:optional list<PerguntaQuestionarioCriancasComMaisDoisAnosThrift> perguntasQuestionarioCriancasComMaisDoisAnos;
 	10:required string uuidFicha;
 	11:optional i32 tpCdsOrigem;      
-	12:optional string cpfCidadao;    
+	12:optional string cpfCidadao;                       
 }

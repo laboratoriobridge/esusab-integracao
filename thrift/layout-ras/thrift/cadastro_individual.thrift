@@ -1,12 +1,10 @@
-include "./common.thrift"
+include "common/common.thrift"
 
-namespace java br.gov.saude.esusab.ras.cadastroindividual
-namespace php br.gov.saude.esusab.ras.cadastroindividual
-namespace delphi br.gov.saude.esusab.ras.cadastroindividual
-namespace csharp br.gov.saude.esusab.ras.cadastroindividual
-namespace rb br.gov.saude.esusab.ras.cadastroindividual
-namespace go br.gov.saude.esusab.ras.cadastroindividual
-namespace py br.gov.saude.esusab.ras.cadastroindividual
+namespace java br.gov.saude.esus.cds.transport.generated.thrift.cadastroindividual
+namespace php br.gov.saude.esus.cds.transport.generated.thrift.cadastroindividual
+namespace delphi br.gov.saude.esus.cds.transport.generated.thrift.cadastroindividual
+namespace csharp br.gov.saude.esus.cds.transport.generated.thrift.cadastroindividual
+namespace rb br.gov.saude.esus.cds.transport.generated.thrift.cadastroindividual
 
 struct CondicoesDeSaudeThrift {
 	1:optional string descricaoCausaInternacaoEm12Meses,
@@ -36,6 +34,7 @@ struct CondicoesDeSaudeThrift {
 	25:optional bool statusTeveDoencaCardiaca,
 	26:optional bool statusTeveInfarto,
 	27:optional bool statusTeveInternadoEm12Meses,
+	28:optional bool statusTratamentoPsiquicoOuProblemaMentalV2000,
 	29:optional bool statusUsaOutrasPraticasIntegrativasOuComplementares,
 	30:optional bool statusUsaPlantaMedicinais,
 	31:optional bool statusDiagnosticoMental
@@ -60,6 +59,7 @@ struct IdentificacaoUsuarioCidadaoThrift {
 	1:optional string nomeSocial,
 	2:optional string codigoIbgeMunicipioNascimento,
 	3:optional i64 dataNascimentoCidadao,
+	4:optional i64 dataNascimentoResponsavelV2000,
 	5:optional bool desconheceNomeMae,
 	6:optional string emailCidadao,
 	7:optional i64 nacionalidadeCidadao,
@@ -88,10 +88,12 @@ struct IdentificacaoUsuarioCidadaoThrift {
 struct InformacoesSocioDemograficasThrift {
 	1:optional list<i64> deficienciasCidadao,
 	2:optional i64 grauInstrucaoCidadao,
+	3:optional i64 motivoSaidaCidadaoV2000,
 	4:optional string ocupacaoCodigoCbo2002,
 	5:optional i64 orientacaoSexualCidadao,
 	6:optional string povoComunidadeTradicional,
 	7:optional i64 relacaoParentescoCidadao,
+	8:optional i64 responsavelPorCriancaV2000,
 	9:optional i64 situacaoMercadoTrabalhoCidadao,
 	10:optional bool statusDesejaInformarOrientacaoSexual,
 	11:optional bool statusFrequentaBenzedeira,
@@ -113,15 +115,18 @@ struct SaidaCidadaoCadastroThrift {
 
 struct CadastroIndividualThrift {
 	1:optional CondicoesDeSaudeThrift condicoesDeSaude,
+	2:optional common.HeaderCdsCadastroThrift dadosGeraisV2000,
 	3:optional EmSituacaoDeRuaThrift emSituacaoDeRua,
 	4:optional bool fichaAtualizada,
 	5:optional IdentificacaoUsuarioCidadaoThrift identificacaoUsuarioCidadao,
 	6:optional InformacoesSocioDemograficasThrift informacoesSocioDemograficas,
 	7:optional bool statusTermoRecusaCadastroIndividualAtencaoBasica,
 	8:optional i32 tpCdsOrigem,
-	9:required string uuid,
-	10:optional string uuidFichaOriginadora,
-	11:optional string uuidCidadao,
-	12:optional SaidaCidadaoCadastroThrift saidaCidadaoCadastro,
-	13:optional common.UnicaLotacaoHeaderThrift headerTransport
+	9:required string uuid
+	10:optional string uuidFichaOriginadora;
+	11:optional string uuidCidadao;
+	12:optional SaidaCidadaoCadastroThrift saidaCidadaoCadastro;
+	13:optional common.UnicaLotacaoHeaderThrift headerTransport;
+	14:optional bool statusCadastroIndividualInativo;
+	15:optional bool statusGeradoAutomaticamente;
 }

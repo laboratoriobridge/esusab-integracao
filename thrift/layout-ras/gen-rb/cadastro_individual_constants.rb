@@ -10,9 +10,15 @@ require 'cadastro_individual_types'
 module Br
   module Gov
     module Saude
-      module Esusab
-        module Ras
-          module Cadastroindividual
+      module Esus
+        module Cds
+          module Transport
+            module Generated
+              module Thrift
+                module Cadastroindividual
+                end
+              end
+            end
           end
         end
       end

@@ -9,274 +9,121 @@ require 'thrift'
 module Br
   module Gov
     module Saude
-      module Esus
-        module Cds
-          module Transport
-            module Generated
-              module Thrift
-                module Common
-                  class HeaderCdsCadastroThrift
-                    include ::Thrift::Struct, ::Thrift::Struct_Union
-                    CNESUNIDADESAUDE = 1
-                    CNSPROFISSIONAL = 2
-                    CODIGOIBGEMUNICIPIO = 3
-                    DATAATENDIMENTO = 4
-                    INEEQUIPE = 5
-                    MICROAREA = 6
+      module Esusab
+        module Ras
+          module Common
+            class LotacaoHeaderThrift
+              include ::Thrift::Struct, ::Thrift::Struct_Union
+              PROFISSIONALCNS = 1
+              CBOCODIGO_2002 = 2
+              CNES = 3
+              INE = 4
 
-                    FIELDS = {
-                      CNESUNIDADESAUDE => {:type => ::Thrift::Types::STRING, :name => 'cnesUnidadeSaude', :optional => true},
-                      CNSPROFISSIONAL => {:type => ::Thrift::Types::STRING, :name => 'cnsProfissional', :optional => true},
-                      CODIGOIBGEMUNICIPIO => {:type => ::Thrift::Types::STRING, :name => 'codigoIbgeMunicipio', :optional => true},
-                      DATAATENDIMENTO => {:type => ::Thrift::Types::I64, :name => 'dataAtendimento', :optional => true},
-                      INEEQUIPE => {:type => ::Thrift::Types::STRING, :name => 'ineEquipe', :optional => true},
-                      MICROAREA => {:type => ::Thrift::Types::I64, :name => 'microarea', :optional => true}
-                    }
+              FIELDS = {
+                PROFISSIONALCNS => {:type => ::Thrift::Types::STRING, :name => 'profissionalCNS', :optional => true},
+                CBOCODIGO_2002 => {:type => ::Thrift::Types::STRING, :name => 'cboCodigo_2002', :optional => true},
+                CNES => {:type => ::Thrift::Types::STRING, :name => 'cnes', :optional => true},
+                INE => {:type => ::Thrift::Types::STRING, :name => 'ine', :optional => true}
+              }
 
-                    def struct_fields; FIELDS; end
+              def struct_fields; FIELDS; end
 
-                    def validate
-                    end
-
-                    ::Thrift::Struct.generate_accessors self
-                  end
-
-                  # Representa um profissional
-                  class LotacaoHeaderThrift
-                    include ::Thrift::Struct, ::Thrift::Struct_Union
-                    PROFISSIONALCNS = 1
-                    CBOCODIGO_2002 = 2
-                    CNES = 3
-                    INE = 4
-
-                    FIELDS = {
-                      PROFISSIONALCNS => {:type => ::Thrift::Types::STRING, :name => 'profissionalCNS', :optional => true},
-                      CBOCODIGO_2002 => {:type => ::Thrift::Types::STRING, :name => 'cboCodigo_2002', :optional => true},
-                      CNES => {:type => ::Thrift::Types::STRING, :name => 'cnes', :optional => true},
-                      INE => {:type => ::Thrift::Types::STRING, :name => 'ine', :optional => true}
-                    }
-
-                    def struct_fields; FIELDS; end
-
-                    def validate
-                    end
-
-                    ::Thrift::Struct.generate_accessors self
-                  end
-
-                  class UnicaLotacaoHeaderThrift
-                    include ::Thrift::Struct, ::Thrift::Struct_Union
-                    PROFISSIONALCNS = 1
-                    CBOCODIGO_2002 = 2
-                    CNES = 3
-                    INE = 4
-                    DATAATENDIMENTO = 5
-                    CODIGOIBGEMUNICIPIO = 6
-
-                    FIELDS = {
-                      PROFISSIONALCNS => {:type => ::Thrift::Types::STRING, :name => 'profissionalCNS', :optional => true},
-                      CBOCODIGO_2002 => {:type => ::Thrift::Types::STRING, :name => 'cboCodigo_2002', :optional => true},
-                      CNES => {:type => ::Thrift::Types::STRING, :name => 'cnes', :optional => true},
-                      INE => {:type => ::Thrift::Types::STRING, :name => 'ine', :optional => true},
-                      DATAATENDIMENTO => {:type => ::Thrift::Types::I64, :name => 'dataAtendimento', :optional => true},
-                      CODIGOIBGEMUNICIPIO => {:type => ::Thrift::Types::STRING, :name => 'codigoIbgeMunicipio', :optional => true}
-                    }
-
-                    def struct_fields; FIELDS; end
-
-                    def validate
-                    end
-
-                    ::Thrift::Struct.generate_accessors self
-                  end
-
-                  class VariasLotacoesHeaderThrift
-                    include ::Thrift::Struct, ::Thrift::Struct_Union
-                    LOTACAOFORMPRINCIPALV2000 = 1
-                    PROFISSIONALCNS1V2000 = 2
-                    CBOCODIGO_2002_1V2000 = 3
-                    PROFISSIONALCNS2V2000 = 4
-                    CBOCODIGO_2002_2V2000 = 5
-                    LOTACAOFORMPRINCIPAL = 6
-                    LOTACAOFORMATENDIMENTOCOMPARTILHADO = 7
-                    DATAATENDIMENTO = 8
-                    CODIGOIBGEMUNICIPIO = 9
-
-                    FIELDS = {
-                      LOTACAOFORMPRINCIPALV2000 => {:type => ::Thrift::Types::STRUCT, :name => 'lotacaoFormPrincipalV2000', :class => ::Br::Gov::Saude::Esus::Cds::Transport::Generated::Thrift::Common::UnicaLotacaoHeaderThrift, :optional => true},
-                      PROFISSIONALCNS1V2000 => {:type => ::Thrift::Types::STRING, :name => 'profissionalCNS1v2000', :optional => true},
-                      CBOCODIGO_2002_1V2000 => {:type => ::Thrift::Types::STRING, :name => 'cboCodigo_2002_1v2000', :optional => true},
-                      PROFISSIONALCNS2V2000 => {:type => ::Thrift::Types::STRING, :name => 'profissionalCNS2v2000', :optional => true},
-                      CBOCODIGO_2002_2V2000 => {:type => ::Thrift::Types::STRING, :name => 'cboCodigo_2002_2v2000', :optional => true},
-                      LOTACAOFORMPRINCIPAL => {:type => ::Thrift::Types::STRUCT, :name => 'lotacaoFormPrincipal', :class => ::Br::Gov::Saude::Esus::Cds::Transport::Generated::Thrift::Common::LotacaoHeaderThrift, :optional => true},
-                      LOTACAOFORMATENDIMENTOCOMPARTILHADO => {:type => ::Thrift::Types::STRUCT, :name => 'lotacaoFormAtendimentoCompartilhado', :class => ::Br::Gov::Saude::Esus::Cds::Transport::Generated::Thrift::Common::LotacaoHeaderThrift, :optional => true},
-                      DATAATENDIMENTO => {:type => ::Thrift::Types::I64, :name => 'dataAtendimento', :optional => true},
-                      CODIGOIBGEMUNICIPIO => {:type => ::Thrift::Types::STRING, :name => 'codigoIbgeMunicipio', :optional => true}
-                    }
-
-                    def struct_fields; FIELDS; end
-
-                    def validate
-                    end
-
-                    ::Thrift::Struct.generate_accessors self
-                  end
-
-                  class EnderecoLocalPermanenciaThrift
-                    include ::Thrift::Struct, ::Thrift::Struct_Union
-                    BAIRRO = 1
-                    CEP = 2
-                    CODIGOIBGEMUNICIPIO = 3
-                    COMPLEMENTO = 4
-                    NOMELOGRADOURO = 5
-                    NUMERO = 6
-                    NUMERODNEUF = 7
-                    TELEFONECONTATO = 8
-                    TELEFONERESIDENCIA = 9
-                    TIPOLOGRADOURONUMERODNE = 10
-                    STSEMNUMERO = 11
-                    PONTOREFERENCIA = 12
-                    MICROAREA = 13
-                    STFORAAREA = 14
-                    LATITUDE = 15
-                    LONGITUDE = 16
-
-                    FIELDS = {
-                      BAIRRO => {:type => ::Thrift::Types::STRING, :name => 'bairro', :optional => true},
-                      CEP => {:type => ::Thrift::Types::STRING, :name => 'cep', :optional => true},
-                      CODIGOIBGEMUNICIPIO => {:type => ::Thrift::Types::STRING, :name => 'codigoIbgeMunicipio', :optional => true},
-                      COMPLEMENTO => {:type => ::Thrift::Types::STRING, :name => 'complemento', :optional => true},
-                      NOMELOGRADOURO => {:type => ::Thrift::Types::STRING, :name => 'nomeLogradouro', :optional => true},
-                      NUMERO => {:type => ::Thrift::Types::STRING, :name => 'numero', :optional => true},
-                      NUMERODNEUF => {:type => ::Thrift::Types::STRING, :name => 'numeroDneUf', :optional => true},
-                      TELEFONECONTATO => {:type => ::Thrift::Types::STRING, :name => 'telefoneContato', :optional => true},
-                      TELEFONERESIDENCIA => {:type => ::Thrift::Types::STRING, :name => 'telefoneResidencia', :optional => true},
-                      TIPOLOGRADOURONUMERODNE => {:type => ::Thrift::Types::STRING, :name => 'tipoLogradouroNumeroDne', :optional => true},
-                      STSEMNUMERO => {:type => ::Thrift::Types::BOOL, :name => 'stSemNumero', :optional => true},
-                      PONTOREFERENCIA => {:type => ::Thrift::Types::STRING, :name => 'pontoReferencia', :optional => true},
-                      MICROAREA => {:type => ::Thrift::Types::STRING, :name => 'microArea', :optional => true},
-                      STFORAAREA => {:type => ::Thrift::Types::BOOL, :name => 'stForaArea', :optional => true},
-                      LATITUDE => {:type => ::Thrift::Types::DOUBLE, :name => 'latitude', :optional => true},
-                      LONGITUDE => {:type => ::Thrift::Types::DOUBLE, :name => 'longitude', :optional => true}
-                    }
-
-                    def struct_fields; FIELDS; end
-
-                    def validate
-                    end
-
-                    ::Thrift::Struct.generate_accessors self
-                  end
-
-                  class MedicamentoThrift
-                    include ::Thrift::Struct, ::Thrift::Struct_Union
-                    CODIGOCATMAT = 1
-                    VIAADMINISTRACAO = 2
-                    DOSE = 3
-                    DOSEUNICA = 4
-                    USOCONTINUO = 5
-                    DOSEFREQUENCIATIPO = 6
-                    DOSEFREQUENCIA = 7
-                    DOSEFREQUENCIAQUANTIDADE = 8
-                    DOSEFREQUENCIAUNIDADEMEDIDA = 9
-                    DTINICIOTRATAMENTO = 10
-                    DURACAOTRATAMENTO = 11
-                    DURACAOTRATAMENTOMEDIDA = 12
-                    QUANTIDADERECEITADA = 13
-
-                    FIELDS = {
-                      CODIGOCATMAT => {:type => ::Thrift::Types::STRING, :name => 'codigoCatmat', :optional => true},
-                      VIAADMINISTRACAO => {:type => ::Thrift::Types::I64, :name => 'viaAdministracao', :optional => true},
-                      DOSE => {:type => ::Thrift::Types::STRING, :name => 'dose', :optional => true},
-                      DOSEUNICA => {:type => ::Thrift::Types::BOOL, :name => 'doseUnica', :optional => true},
-                      USOCONTINUO => {:type => ::Thrift::Types::BOOL, :name => 'usoContinuo', :optional => true},
-                      DOSEFREQUENCIATIPO => {:type => ::Thrift::Types::I64, :name => 'doseFrequenciaTipo', :optional => true},
-                      DOSEFREQUENCIA => {:type => ::Thrift::Types::STRING, :name => 'doseFrequencia', :optional => true},
-                      DOSEFREQUENCIAQUANTIDADE => {:type => ::Thrift::Types::I32, :name => 'doseFrequenciaQuantidade', :optional => true},
-                      DOSEFREQUENCIAUNIDADEMEDIDA => {:type => ::Thrift::Types::I64, :name => 'doseFrequenciaUnidadeMedida', :optional => true},
-                      DTINICIOTRATAMENTO => {:type => ::Thrift::Types::I64, :name => 'dtInicioTratamento', :optional => true},
-                      DURACAOTRATAMENTO => {:type => ::Thrift::Types::I32, :name => 'duracaoTratamento', :optional => true},
-                      DURACAOTRATAMENTOMEDIDA => {:type => ::Thrift::Types::I64, :name => 'duracaoTratamentoMedida', :optional => true},
-                      QUANTIDADERECEITADA => {:type => ::Thrift::Types::I32, :name => 'quantidadeReceitada', :optional => true}
-                    }
-
-                    def struct_fields; FIELDS; end
-
-                    def validate
-                    end
-
-                    ::Thrift::Struct.generate_accessors self
-                  end
-
-                  class EncaminhamentoExternoThrift
-                    include ::Thrift::Struct, ::Thrift::Struct_Union
-                    ESPECIALIDADE = 1
-                    HIPOTESEDIAGNOSTICOCID10 = 2
-                    HIPOTESEDIAGNOSTICOCIAP2 = 3
-                    CLASSIFICACAORISCO = 4
-
-                    FIELDS = {
-                      ESPECIALIDADE => {:type => ::Thrift::Types::I64, :name => 'especialidade', :optional => true},
-                      HIPOTESEDIAGNOSTICOCID10 => {:type => ::Thrift::Types::STRING, :name => 'hipoteseDiagnosticoCid10', :optional => true},
-                      HIPOTESEDIAGNOSTICOCIAP2 => {:type => ::Thrift::Types::STRING, :name => 'hipoteseDiagnosticoCiap2', :optional => true},
-                      CLASSIFICACAORISCO => {:type => ::Thrift::Types::I64, :name => 'classificacaoRisco', :optional => true}
-                    }
-
-                    def struct_fields; FIELDS; end
-
-                    def validate
-                    end
-
-                    ::Thrift::Struct.generate_accessors self
-                  end
-
-                  class ResultadoExameThrift
-                    include ::Thrift::Struct, ::Thrift::Struct_Union
-                    TIPORESULTADO = 1
-                    VALORRESULTADO = 2
-
-                    FIELDS = {
-                      TIPORESULTADO => {:type => ::Thrift::Types::I32, :name => 'tipoResultado', :optional => true},
-                      VALORRESULTADO => {:type => ::Thrift::Types::STRING, :name => 'valorResultado', :optional => true}
-                    }
-
-                    def struct_fields; FIELDS; end
-
-                    def validate
-                    end
-
-                    ::Thrift::Struct.generate_accessors self
-                  end
-
-                  class ResultadosExameThrift
-                    include ::Thrift::Struct, ::Thrift::Struct_Union
-                    EXAME = 1
-                    DATASOLICITACAO = 2
-                    DATAREALIZACAO = 3
-                    DATARESULTADO = 4
-                    RESULTADO = 5
-                    EXAMERESULTADOESPECIFICO = 6
-
-                    FIELDS = {
-                      EXAME => {:type => ::Thrift::Types::STRING, :name => 'exame', :optional => true},
-                      DATASOLICITACAO => {:type => ::Thrift::Types::I64, :name => 'dataSolicitacao', :optional => true},
-                      DATAREALIZACAO => {:type => ::Thrift::Types::I64, :name => 'dataRealizacao', :optional => true},
-                      DATARESULTADO => {:type => ::Thrift::Types::I64, :name => 'dataResultado', :optional => true},
-                      RESULTADO => {:type => ::Thrift::Types::STRING, :name => 'resultado', :optional => true},
-                      EXAMERESULTADOESPECIFICO => {:type => ::Thrift::Types::LIST, :name => 'exameResultadoEspecifico', :element => {:type => ::Thrift::Types::STRUCT, :class => ::Br::Gov::Saude::Esus::Cds::Transport::Generated::Thrift::Common::ResultadoExameThrift}, :optional => true}
-                    }
-
-                    def struct_fields; FIELDS; end
-
-                    def validate
-                    end
-
-                    ::Thrift::Struct.generate_accessors self
-                  end
-
-                end
+              def validate
               end
+
+              ::Thrift::Struct.generate_accessors self
             end
+
+            class UnicaLotacaoHeaderThrift
+              include ::Thrift::Struct, ::Thrift::Struct_Union
+              PROFISSIONALCNS = 1
+              CBOCODIGO_2002 = 2
+              CNES = 3
+              INE = 4
+              DATAATENDIMENTO = 5
+              CODIGOIBGEMUNICIPIO = 6
+
+              FIELDS = {
+                PROFISSIONALCNS => {:type => ::Thrift::Types::STRING, :name => 'profissionalCNS', :optional => true},
+                CBOCODIGO_2002 => {:type => ::Thrift::Types::STRING, :name => 'cboCodigo_2002', :optional => true},
+                CNES => {:type => ::Thrift::Types::STRING, :name => 'cnes', :optional => true},
+                INE => {:type => ::Thrift::Types::STRING, :name => 'ine', :optional => true},
+                DATAATENDIMENTO => {:type => ::Thrift::Types::I64, :name => 'dataAtendimento', :optional => true},
+                CODIGOIBGEMUNICIPIO => {:type => ::Thrift::Types::STRING, :name => 'codigoIbgeMunicipio', :optional => true}
+              }
+
+              def struct_fields; FIELDS; end
+
+              def validate
+              end
+
+              ::Thrift::Struct.generate_accessors self
+            end
+
+            class VariasLotacoesHeaderThrift
+              include ::Thrift::Struct, ::Thrift::Struct_Union
+              LOTACAOFORMPRINCIPAL = 6
+              LOTACAOFORMATENDIMENTOCOMPARTILHADO = 7
+              DATAATENDIMENTO = 8
+              CODIGOIBGEMUNICIPIO = 9
+
+              FIELDS = {
+                LOTACAOFORMPRINCIPAL => {:type => ::Thrift::Types::STRUCT, :name => 'lotacaoFormPrincipal', :class => ::Br::Gov::Saude::Esusab::Ras::Common::LotacaoHeaderThrift, :optional => true},
+                LOTACAOFORMATENDIMENTOCOMPARTILHADO => {:type => ::Thrift::Types::STRUCT, :name => 'lotacaoFormAtendimentoCompartilhado', :class => ::Br::Gov::Saude::Esusab::Ras::Common::LotacaoHeaderThrift, :optional => true},
+                DATAATENDIMENTO => {:type => ::Thrift::Types::I64, :name => 'dataAtendimento', :optional => true},
+                CODIGOIBGEMUNICIPIO => {:type => ::Thrift::Types::STRING, :name => 'codigoIbgeMunicipio', :optional => true}
+              }
+
+              def struct_fields; FIELDS; end
+
+              def validate
+              end
+
+              ::Thrift::Struct.generate_accessors self
+            end
+
+            class EnderecoLocalPermanenciaThrift
+              include ::Thrift::Struct, ::Thrift::Struct_Union
+              BAIRRO = 1
+              CEP = 2
+              CODIGOIBGEMUNICIPIO = 3
+              COMPLEMENTO = 4
+              NOMELOGRADOURO = 5
+              NUMERO = 6
+              NUMERODNEUF = 7
+              TELEFONECONTATO = 8
+              TELEFONERESIDENCIA = 9
+              TIPOLOGRADOURONUMERODNE = 10
+              STSEMNUMERO = 11
+              PONTOREFERENCIA = 12
+              MICROAREA = 13
+              STFORAAREA = 14
+
+              FIELDS = {
+                BAIRRO => {:type => ::Thrift::Types::STRING, :name => 'bairro', :optional => true},
+                CEP => {:type => ::Thrift::Types::STRING, :name => 'cep', :optional => true},
+                CODIGOIBGEMUNICIPIO => {:type => ::Thrift::Types::STRING, :name => 'codigoIbgeMunicipio', :optional => true},
+                COMPLEMENTO => {:type => ::Thrift::Types::STRING, :name => 'complemento', :optional => true},
+                NOMELOGRADOURO => {:type => ::Thrift::Types::STRING, :name => 'nomeLogradouro', :optional => true},
+                NUMERO => {:type => ::Thrift::Types::STRING, :name => 'numero', :optional => true},
+                NUMERODNEUF => {:type => ::Thrift::Types::STRING, :name => 'numeroDneUf', :optional => true},
+                TELEFONECONTATO => {:type => ::Thrift::Types::STRING, :name => 'telefoneContato', :optional => true},
+                TELEFONERESIDENCIA => {:type => ::Thrift::Types::STRING, :name => 'telefoneResidencia', :optional => true},
+                TIPOLOGRADOURONUMERODNE => {:type => ::Thrift::Types::STRING, :name => 'tipoLogradouroNumeroDne', :optional => true},
+                STSEMNUMERO => {:type => ::Thrift::Types::BOOL, :name => 'stSemNumero', :optional => true},
+                PONTOREFERENCIA => {:type => ::Thrift::Types::STRING, :name => 'pontoReferencia', :optional => true},
+                MICROAREA => {:type => ::Thrift::Types::STRING, :name => 'microArea', :optional => true},
+                STFORAAREA => {:type => ::Thrift::Types::BOOL, :name => 'stForaArea', :optional => true}
+              }
+
+              def struct_fields; FIELDS; end
+
+              def validate
+              end
+
+              ::Thrift::Struct.generate_accessors self
+            end
+
           end
         end
       end

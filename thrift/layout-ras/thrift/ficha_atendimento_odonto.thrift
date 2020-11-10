@@ -1,11 +1,12 @@
-include "common/common.thrift"
+include "./common.thrift"
 
-namespace java br.gov.saude.esus.cds.transport.generated.thrift.atendimentoodontologico
-namespace php br.gov.saude.esus.cds.transport.generated.thrift.atendimentoodontologico
-namespace delphi br.gov.saude.esus.cds.transport.generated.thrift.atendimentoodontologico
-namespace csharp br.gov.saude.esus.cds.transport.generated.thrift.atendimentoodontologico
-namespace rb br.gov.saude.esus.cds.transport.generated.thrift.atendimentoodontologico
-
+namespace java br.gov.saude.esusab.ras.atendodonto
+namespace php br.gov.saude.esusab.ras.atendodonto
+namespace delphi br.gov.saude.esusab.ras.atendodonto
+namespace csharp br.gov.saude.esusab.ras.atendodonto
+namespace rb br.gov.saude.esusab.ras.atendodonto
+namespace go br.gov.saude.esusab.ras.atendodonto
+namespace py br.gov.saude.esusab.ras.atendodonto
 
 struct ProcedimentoQuantidadeThrift {
 	1:optional string coMsProcedimento;
@@ -25,15 +26,11 @@ struct FichaAtendimentoOdontologicoChildThrift {
 	10:optional list<i64> tiposVigilanciaSaudeBucal;
 	11:optional list<i64> tiposConsultaOdonto;
 	12:optional list<ProcedimentoQuantidadeThrift> procedimentosRealizados;
-	13:optional list<ProcedimentoQuantidadeThrift> outrosSiaProcedimentosV321;
 	14:optional i64 sexo;
 	15:optional i64 turno;
 	16:optional i64 dataHoraInicialAtendimento;
 	17:optional i64 dataHoraFinalAtendimento;
 	18:optional string cpfCidadao;
-	19:optional list<common.MedicamentoThrift> medicamentos;
-	20:optional list<common.EncaminhamentoExternoThrift> encaminhamentos;
-	21:optional list<common.ResultadoExameThrift> resultadosExames;
 }
 
 struct FichaAtendimentoOdontologicoMasterThrift {
@@ -42,4 +39,3 @@ struct FichaAtendimentoOdontologicoMasterThrift {
 	3:optional list<FichaAtendimentoOdontologicoChildThrift> atendimentosOdontologicos;
 	4:optional i32 tpCdsOrigem;
 }
-

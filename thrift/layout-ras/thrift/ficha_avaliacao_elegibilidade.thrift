@@ -1,15 +1,16 @@
-include "common/common.thrift"
+include "./common.thrift"
 
-namespace java br.gov.saude.esus.cds.transport.generated.thrift.avaliacaoelegibilidade
-namespace php br.gov.saude.esus.cds.transport.generated.thrift.avaliacaoelegibilidade
-namespace delphi br.gov.saude.esus.cds.transport.generated.thrift.avaliacaoelegibilidade
-namespace csharp br.gov.saude.esus.cds.transport.generated.thrift.avaliacaoelegibilidade
-namespace rb br.gov.saude.esus.cds.transport.generated.thrift.avaliacaoelegibilidade
+namespace java br.gov.saude.esusab.ras.avaliacaoelegibilidade
+namespace php br.gov.saude.esusab.ras.avaliacaoelegibilidade
+namespace delphi br.gov.saude.esusab.ras.avaliacaoelegibilidade
+namespace csharp br.gov.saude.esusab.ras.avaliacaoelegibilidade
+namespace rb br.gov.saude.esusab.ras.avaliacaoelegibilidade
+namespace go br.gov.saude.esusab.ras.avaliacaoelegibilidade
+namespace py br.gov.saude.esusab.ras.avaliacaoelegibilidade
 
 struct FichaAvaliacaoElegibilidadeThrift {
 	1:required string uuidFicha;
 	2:optional i32 tpCdsOrigem;
-	3:optional common.UnicaLotacaoHeaderThrift headerTransportV200;
 	4:optional string cnsCidadao;
 	5:optional string nomeCidadao;
 	6:optional string nomeSocialCidadao;

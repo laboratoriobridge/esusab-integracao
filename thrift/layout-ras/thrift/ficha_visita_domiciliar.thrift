@@ -1,10 +1,12 @@
-include "common/common.thrift"
+include "./common.thrift"
 
-namespace java br.gov.saude.esus.cds.transport.generated.thrift.visitadomiciliar
-namespace php br.gov.saude.esus.cds.transport.generated.thrift.visitadomiciliar
-namespace delphi br.gov.saude.esus.cds.transport.generated.thrift.visitadomiciliar
-namespace csharp br.gov.saude.esus.cds.transport.generated.thrift.visitadomiciliar
-namespace rb br.gov.saude.esus.cds.transport.generated.thrift.visitadomiciliar
+namespace java br.gov.saude.esusab.ras.visitadomiciliar
+namespace php br.gov.saude.esusab.ras.visitadomiciliar
+namespace delphi br.gov.saude.esusab.ras.visitadomiciliar
+namespace csharp br.gov.saude.esusab.ras.visitadomiciliar
+namespace rb br.gov.saude.esusab.ras.visitadomiciliar
+namespace go br.gov.saude.esusab.ras.visitadomiciliar
+namespace py br.gov.saude.esusab.ras.visitadomiciliar
 
 struct FichaVisitaDomiciliarChildThrift {
 	1:optional i64 turno;
@@ -21,14 +23,6 @@ struct FichaVisitaDomiciliarChildThrift {
 	12:optional double pesoAcompanhamentoNutricional;
 	13:optional double alturaAcompanhamentoNutricional;
 	14:optional string cpfCidadao;
-	15:optional i32 pressaoSistolica;
-	16:optional i32 pressaoDiastolica;
-	17:optional double temperatura;
-	18:optional i64 tipoGlicemia;
-	19:optional i32 glicemia;
-	20:optional double latitude;
-	21:optional double longitude;
-	22:optional string uuidFcd;
 }
 
 struct FichaVisitaDomiciliarMasterThrift {

@@ -1,10 +1,12 @@
-include "common/common.thrift"
+include "./common.thrift"
 
-namespace java br.gov.saude.esus.cds.transport.generated.thrift.cadastrodomiciliar
-namespace php br.gov.saude.esus.cds.transport.generated.thrift.cadastrodomiciliar
-namespace delphi br.gov.saude.esus.cds.transport.generated.thrift.cadastrodomiciliar
-namespace csharp br.gov.saude.esus.cds.transport.generated.thrift.cadastrodomiciliar
-namespace rb br.gov.saude.esus.cds.transport.generated.thrift.cadastrodomiciliar
+namespace java br.gov.saude.esusab.ras.cadastrodomiciliar
+namespace php br.gov.saude.esusab.ras.cadastrodomiciliar
+namespace delphi br.gov.saude.esusab.ras.cadastrodomiciliar
+namespace csharp br.gov.saude.esusab.ras.cadastrodomiciliar
+namespace rb br.gov.saude.esusab.ras.cadastrodomiciliar
+namespace go br.gov.saude.esusab.ras.cadastrodomiciliar
+namespace py br.gov.saude.esusab.ras.cadastrodomiciliar
 
 struct InstituicaoPermanenciaThrift {
 	1:optional string nomeInstituicaoPermanencia,
@@ -45,7 +47,6 @@ struct FamiliaRowThrift {
 struct CadastroDomiciliarThrift {
 	1:optional list<i64> animaisNoDomicilio,
 	2:optional CondicaoMoradiaThrift condicaoMoradia,
-	3:optional common.HeaderCdsCadastroThrift dadosGeraisV2000,
 	4:optional common.EnderecoLocalPermanenciaThrift enderecoLocalPermanencia,
 	5:optional list<FamiliaRowThrift> familias,
 	6:optional bool fichaAtualizada,
@@ -53,10 +54,9 @@ struct CadastroDomiciliarThrift {
 	8:optional bool stAnimaisNoDomicilio,
 	9:optional bool statusTermoRecusa,
 	10:optional i32 tpCdsOrigem,
-	11:required string uuid
-	12:optional string uuidFichaOriginadora;
-	13:optional i64 tipoDeImovel;
-	14:optional InstituicaoPermanenciaThrift instituicaoPermanencia;
-	15:optional common.UnicaLotacaoHeaderThrift headerTransport;
-	16:optional bool statusGeradoAutomaticamente;
+	11:required string uuid,
+	12:optional string uuidFichaOriginadora,
+	13:optional i64 tipoDeImovel,
+	14:optional InstituicaoPermanenciaThrift instituicaoPermanencia,
+	15:optional common.UnicaLotacaoHeaderThrift headerTransport
 }

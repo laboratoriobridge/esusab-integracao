@@ -1,10 +1,12 @@
-include "common/common.thrift"
+include "./common.thrift"
 
-namespace java br.gov.saude.esus.cds.transport.generated.thrift.atendimentodomiciliar
-namespace php br.gov.saude.esus.cds.transport.generated.thrift.atendimentodomiciliar
-namespace delphi br.gov.saude.esus.cds.transport.generated.thrift.atendimentodomiciliar
-namespace csharp br.gov.saude.esus.cds.transport.generated.thrift.atendimentodomiciliar
-namespace rb br.gov.saude.esus.cds.transport.generated.thrift.atendimentodomiciliar
+namespace java br.gov.saude.esusab.ras.atenddomiciliar
+namespace php br.gov.saude.esusab.ras.atenddomiciliar
+namespace delphi br.gov.saude.esusab.ras.atenddomiciliar
+namespace csharp br.gov.saude.esusab.ras.atenddomiciliar
+namespace rb br.gov.saude.esusab.ras.atenddomiciliar
+namespace go br.gov.saude.esusab.ras.atenddomiciliar
+namespace py br.gov.saude.esusab.ras.atenddomiciliar
 
 struct FichaAtendimentoDomiciliarChildThrift {
 	1:optional i64 turno;
@@ -18,16 +20,13 @@ struct FichaAtendimentoDomiciliarChildThrift {
 	9:optional string cid;
 	10:optional string ciap;
 	11:optional list<string> procedimentos;
-	12:optional list<string> outrosProcedimentosV321;
 	13:optional i64 condutaDesfecho;
-	14:optional bool statusInicioAcompanhamentoPosObitoV200;
 	15:optional string cpfCidadao;
 }
 
 struct FichaAtendimentoDomiciliarMasterThrift {
 	1:required string uuidFicha;
 	2:optional i32 tpCdsOrigem;
-	3:optional common.UnicaLotacaoHeaderThrift headerTransportV200;
 	4:optional list<FichaAtendimentoDomiciliarChildThrift> atendimentosDomiciliares;
 	5:optional common.VariasLotacoesHeaderThrift headerTransport;
 }

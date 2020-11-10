@@ -1,12 +1,14 @@
-include "common/common.thrift"
+include "./common.thrift"
 
-namespace java br.gov.saude.esus.cds.transport.generated.thrift.atendimentoindividual
-namespace php br.gov.saude.esus.cds.transport.generated.thrift.atendimentoindividual
-namespace delphi br.gov.saude.esus.cds.transport.generated.thrift.atendimentoindividual
-namespace csharp br.gov.saude.esus.cds.transport.generated.thrift.atendimentoindividual
-namespace rb br.gov.saude.esus.cds.transport.generated.thrift.atendimentoindividual
+namespace java br.gov.saude.esusab.ras.atendindividual
+namespace php br.gov.saude.esusab.ras.atendindividual
+namespace delphi br.gov.saude.esusab.ras.atendindividual
+namespace csharp br.gov.saude.esusab.ras.atendindividual
+namespace rb br.gov.saude.esusab.ras.atendindividual
+namespace go br.gov.saude.esusab.ras.atendindividual
+namespace py br.gov.saude.esusab.ras.atendindividual
 
-struct OutrosSiaThrift {
+struct ExameThrift {
 	1:optional string codigoExame;
 	2:optional list<string> solicitadoAvaliado;
 }
@@ -34,9 +36,7 @@ struct FichaAtendimentoIndividualChildThrift {
 	12:optional i32 idadeGestacional;
 	13:optional i64 atencaoDomiciliarModalidade;
 	14:optional ProblemaCondicaoAvaliacaoAIThrift problemaCondicaoAvaliada;
-	15:optional list<string> examesSolicitadosV321;
-	16:optional list<string> examesAvaliadosV321;
-	17:optional list<OutrosSiaThrift> exame;
+	17:optional list<ExameThrift> exame;
 	18:optional bool vacinaEmDia;
 	19:optional i64 pic;
 	20:optional bool ficouEmObservacao;
@@ -50,9 +50,6 @@ struct FichaAtendimentoIndividualChildThrift {
 	28:optional i64 dataHoraInicialAtendimento;
 	29:optional i64 dataHoraFinalAtendimento;
 	30:optional string cpfCidadao;
-	31:optional list<common.MedicamentoThrift> medicamentos;
-	32:optional list<common.EncaminhamentoExternoThrift> encaminhamentos;
-	33:optional list<common.ResultadosExameThrift> resultadosExames;
 }
 
 struct FichaAtendimentoIndividualMasterThrift {
@@ -61,4 +58,3 @@ struct FichaAtendimentoIndividualMasterThrift {
 	3:required string uuidFicha;
 	4:optional i32 tpCdsOrigem;
 }
-

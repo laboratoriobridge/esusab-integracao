@@ -1,10 +1,12 @@
-include "common/common.thrift"
+include "./common.thrift"
 
-namespace java br.gov.saude.esus.cds.transport.generated.thrift.vacinacao
-namespace php br.gov.saude.esus.cds.transport.generated.thrift.vacinacao
-namespace delphi br.gov.saude.esus.cds.transport.generated.thrift.vacinacao
-namespace csharp br.gov.saude.esus.cds.transport.generated.thrift.vacinacao
-namespace rb br.gov.saude.esus.cds.transport.generated.thrift.vacinacao
+namespace java br.gov.saude.esusab.ras.vacinacao
+namespace php br.gov.saude.esusab.ras.vacinacao
+namespace delphi br.gov.saude.esusab.ras.vacinacao
+namespace csharp br.gov.saude.esusab.ras.vacinacao
+namespace rb br.gov.saude.esusab.ras.vacinacao
+namespace go br.gov.saude.esusab.ras.vacinacao
+namespace py br.gov.saude.esusab.ras.vacinacao
 
 struct VacinaRowThrift {
 	1:optional i64 imunobiologico;
@@ -12,8 +14,6 @@ struct VacinaRowThrift {
 	3:optional i64 dose;
 	4:optional string lote;
 	5:optional string fabricante;
-	6:optional bool stRegistroAnterior
-	7:optional i64 dataRegistroAnterior
 }
 
 struct FichaVacinacaoChildThrift {

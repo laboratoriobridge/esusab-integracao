@@ -36,6 +36,14 @@ class FichaVisitaDomiciliarChildThrift:
    - pesoAcompanhamentoNutricional
    - alturaAcompanhamentoNutricional
    - cpfCidadao
+   - pressaoSistolica
+   - pressaoDiastolica
+   - temperatura
+   - tipoGlicemia
+   - glicemia
+   - latitude
+   - longitude
+   - uuidFcd
   """
 
   thrift_spec = (
@@ -54,9 +62,17 @@ class FichaVisitaDomiciliarChildThrift:
     (12, TType.DOUBLE, 'pesoAcompanhamentoNutricional', None, None, ), # 12
     (13, TType.DOUBLE, 'alturaAcompanhamentoNutricional', None, None, ), # 13
     (14, TType.STRING, 'cpfCidadao', None, None, ), # 14
+    (15, TType.I32, 'pressaoSistolica', None, None, ), # 15
+    (16, TType.I32, 'pressaoDiastolica', None, None, ), # 16
+    (17, TType.DOUBLE, 'temperatura', None, None, ), # 17
+    (18, TType.I64, 'tipoGlicemia', None, None, ), # 18
+    (19, TType.I32, 'glicemia', None, None, ), # 19
+    (20, TType.DOUBLE, 'latitude', None, None, ), # 20
+    (21, TType.DOUBLE, 'longitude', None, None, ), # 21
+    (22, TType.STRING, 'uuidFcd', None, None, ), # 22
   )
 
-  def __init__(self, turno=None, numProntuario=None, cnsCidadao=None, dtNascimento=None, sexo=None, statusVisitaCompartilhadaOutroProfissional=None, motivosVisita=None, desfecho=None, microArea=None, stForaArea=None, tipoDeImovel=None, pesoAcompanhamentoNutricional=None, alturaAcompanhamentoNutricional=None, cpfCidadao=None,):
+  def __init__(self, turno=None, numProntuario=None, cnsCidadao=None, dtNascimento=None, sexo=None, statusVisitaCompartilhadaOutroProfissional=None, motivosVisita=None, desfecho=None, microArea=None, stForaArea=None, tipoDeImovel=None, pesoAcompanhamentoNutricional=None, alturaAcompanhamentoNutricional=None, cpfCidadao=None, pressaoSistolica=None, pressaoDiastolica=None, temperatura=None, tipoGlicemia=None, glicemia=None, latitude=None, longitude=None, uuidFcd=None,):
     self.turno = turno
     self.numProntuario = numProntuario
     self.cnsCidadao = cnsCidadao
@@ -71,6 +87,14 @@ class FichaVisitaDomiciliarChildThrift:
     self.pesoAcompanhamentoNutricional = pesoAcompanhamentoNutricional
     self.alturaAcompanhamentoNutricional = alturaAcompanhamentoNutricional
     self.cpfCidadao = cpfCidadao
+    self.pressaoSistolica = pressaoSistolica
+    self.pressaoDiastolica = pressaoDiastolica
+    self.temperatura = temperatura
+    self.tipoGlicemia = tipoGlicemia
+    self.glicemia = glicemia
+    self.latitude = latitude
+    self.longitude = longitude
+    self.uuidFcd = uuidFcd
 
   def read(self, iprot):
     if iprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None and fastbinary is not None:
@@ -156,6 +180,46 @@ class FichaVisitaDomiciliarChildThrift:
           self.cpfCidadao = iprot.readString()
         else:
           iprot.skip(ftype)
+      elif fid == 15:
+        if ftype == TType.I32:
+          self.pressaoSistolica = iprot.readI32()
+        else:
+          iprot.skip(ftype)
+      elif fid == 16:
+        if ftype == TType.I32:
+          self.pressaoDiastolica = iprot.readI32()
+        else:
+          iprot.skip(ftype)
+      elif fid == 17:
+        if ftype == TType.DOUBLE:
+          self.temperatura = iprot.readDouble()
+        else:
+          iprot.skip(ftype)
+      elif fid == 18:
+        if ftype == TType.I64:
+          self.tipoGlicemia = iprot.readI64()
+        else:
+          iprot.skip(ftype)
+      elif fid == 19:
+        if ftype == TType.I32:
+          self.glicemia = iprot.readI32()
+        else:
+          iprot.skip(ftype)
+      elif fid == 20:
+        if ftype == TType.DOUBLE:
+          self.latitude = iprot.readDouble()
+        else:
+          iprot.skip(ftype)
+      elif fid == 21:
+        if ftype == TType.DOUBLE:
+          self.longitude = iprot.readDouble()
+        else:
+          iprot.skip(ftype)
+      elif fid == 22:
+        if ftype == TType.STRING:
+          self.uuidFcd = iprot.readString()
+        else:
+          iprot.skip(ftype)
       else:
         iprot.skip(ftype)
       iprot.readFieldEnd()
@@ -225,6 +289,38 @@ class FichaVisitaDomiciliarChildThrift:
       oprot.writeFieldBegin('cpfCidadao', TType.STRING, 14)
       oprot.writeString(self.cpfCidadao)
       oprot.writeFieldEnd()
+    if self.pressaoSistolica is not None:
+      oprot.writeFieldBegin('pressaoSistolica', TType.I32, 15)
+      oprot.writeI32(self.pressaoSistolica)
+      oprot.writeFieldEnd()
+    if self.pressaoDiastolica is not None:
+      oprot.writeFieldBegin('pressaoDiastolica', TType.I32, 16)
+      oprot.writeI32(self.pressaoDiastolica)
+      oprot.writeFieldEnd()
+    if self.temperatura is not None:
+      oprot.writeFieldBegin('temperatura', TType.DOUBLE, 17)
+      oprot.writeDouble(self.temperatura)
+      oprot.writeFieldEnd()
+    if self.tipoGlicemia is not None:
+      oprot.writeFieldBegin('tipoGlicemia', TType.I64, 18)
+      oprot.writeI64(self.tipoGlicemia)
+      oprot.writeFieldEnd()
+    if self.glicemia is not None:
+      oprot.writeFieldBegin('glicemia', TType.I32, 19)
+      oprot.writeI32(self.glicemia)
+      oprot.writeFieldEnd()
+    if self.latitude is not None:
+      oprot.writeFieldBegin('latitude', TType.DOUBLE, 20)
+      oprot.writeDouble(self.latitude)
+      oprot.writeFieldEnd()
+    if self.longitude is not None:
+      oprot.writeFieldBegin('longitude', TType.DOUBLE, 21)
+      oprot.writeDouble(self.longitude)
+      oprot.writeFieldEnd()
+    if self.uuidFcd is not None:
+      oprot.writeFieldBegin('uuidFcd', TType.STRING, 22)
+      oprot.writeString(self.uuidFcd)
+      oprot.writeFieldEnd()
     oprot.writeFieldStop()
     oprot.writeStructEnd()
 
@@ -248,6 +344,14 @@ class FichaVisitaDomiciliarChildThrift:
     value = (value * 31) ^ hash(self.pesoAcompanhamentoNutricional)
     value = (value * 31) ^ hash(self.alturaAcompanhamentoNutricional)
     value = (value * 31) ^ hash(self.cpfCidadao)
+    value = (value * 31) ^ hash(self.pressaoSistolica)
+    value = (value * 31) ^ hash(self.pressaoDiastolica)
+    value = (value * 31) ^ hash(self.temperatura)
+    value = (value * 31) ^ hash(self.tipoGlicemia)
+    value = (value * 31) ^ hash(self.glicemia)
+    value = (value * 31) ^ hash(self.latitude)
+    value = (value * 31) ^ hash(self.longitude)
+    value = (value * 31) ^ hash(self.uuidFcd)
     return value
 
   def __repr__(self):

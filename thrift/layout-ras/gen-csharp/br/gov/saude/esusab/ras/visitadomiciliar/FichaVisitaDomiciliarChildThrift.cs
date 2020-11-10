@@ -37,6 +37,14 @@ namespace br.gov.saude.esusab.ras.visitadomiciliar
     private double _pesoAcompanhamentoNutricional;
     private double _alturaAcompanhamentoNutricional;
     private string _cpfCidadao;
+    private int _pressaoSistolica;
+    private int _pressaoDiastolica;
+    private double _temperatura;
+    private long _tipoGlicemia;
+    private int _glicemia;
+    private double _latitude;
+    private double _longitude;
+    private string _uuidFcd;
 
     public long Turno
     {
@@ -220,6 +228,110 @@ namespace br.gov.saude.esusab.ras.visitadomiciliar
       }
     }
 
+    public int PressaoSistolica
+    {
+      get
+      {
+        return _pressaoSistolica;
+      }
+      set
+      {
+        __isset.pressaoSistolica = true;
+        this._pressaoSistolica = value;
+      }
+    }
+
+    public int PressaoDiastolica
+    {
+      get
+      {
+        return _pressaoDiastolica;
+      }
+      set
+      {
+        __isset.pressaoDiastolica = true;
+        this._pressaoDiastolica = value;
+      }
+    }
+
+    public double Temperatura
+    {
+      get
+      {
+        return _temperatura;
+      }
+      set
+      {
+        __isset.temperatura = true;
+        this._temperatura = value;
+      }
+    }
+
+    public long TipoGlicemia
+    {
+      get
+      {
+        return _tipoGlicemia;
+      }
+      set
+      {
+        __isset.tipoGlicemia = true;
+        this._tipoGlicemia = value;
+      }
+    }
+
+    public int Glicemia
+    {
+      get
+      {
+        return _glicemia;
+      }
+      set
+      {
+        __isset.glicemia = true;
+        this._glicemia = value;
+      }
+    }
+
+    public double Latitude
+    {
+      get
+      {
+        return _latitude;
+      }
+      set
+      {
+        __isset.latitude = true;
+        this._latitude = value;
+      }
+    }
+
+    public double Longitude
+    {
+      get
+      {
+        return _longitude;
+      }
+      set
+      {
+        __isset.longitude = true;
+        this._longitude = value;
+      }
+    }
+
+    public string UuidFcd
+    {
+      get
+      {
+        return _uuidFcd;
+      }
+      set
+      {
+        __isset.uuidFcd = true;
+        this._uuidFcd = value;
+      }
+    }
+
 
     public Isset __isset;
     #if !SILVERLIGHT
@@ -240,6 +352,14 @@ namespace br.gov.saude.esusab.ras.visitadomiciliar
       public bool pesoAcompanhamentoNutricional;
       public bool alturaAcompanhamentoNutricional;
       public bool cpfCidadao;
+      public bool pressaoSistolica;
+      public bool pressaoDiastolica;
+      public bool temperatura;
+      public bool tipoGlicemia;
+      public bool glicemia;
+      public bool latitude;
+      public bool longitude;
+      public bool uuidFcd;
     }
 
     public FichaVisitaDomiciliarChildThrift() {
@@ -364,6 +484,62 @@ namespace br.gov.saude.esusab.ras.visitadomiciliar
             case 14:
               if (field.Type == TType.String) {
                 CpfCidadao = iprot.ReadString();
+              } else { 
+                TProtocolUtil.Skip(iprot, field.Type);
+              }
+              break;
+            case 15:
+              if (field.Type == TType.I32) {
+                PressaoSistolica = iprot.ReadI32();
+              } else { 
+                TProtocolUtil.Skip(iprot, field.Type);
+              }
+              break;
+            case 16:
+              if (field.Type == TType.I32) {
+                PressaoDiastolica = iprot.ReadI32();
+              } else { 
+                TProtocolUtil.Skip(iprot, field.Type);
+              }
+              break;
+            case 17:
+              if (field.Type == TType.Double) {
+                Temperatura = iprot.ReadDouble();
+              } else { 
+                TProtocolUtil.Skip(iprot, field.Type);
+              }
+              break;
+            case 18:
+              if (field.Type == TType.I64) {
+                TipoGlicemia = iprot.ReadI64();
+              } else { 
+                TProtocolUtil.Skip(iprot, field.Type);
+              }
+              break;
+            case 19:
+              if (field.Type == TType.I32) {
+                Glicemia = iprot.ReadI32();
+              } else { 
+                TProtocolUtil.Skip(iprot, field.Type);
+              }
+              break;
+            case 20:
+              if (field.Type == TType.Double) {
+                Latitude = iprot.ReadDouble();
+              } else { 
+                TProtocolUtil.Skip(iprot, field.Type);
+              }
+              break;
+            case 21:
+              if (field.Type == TType.Double) {
+                Longitude = iprot.ReadDouble();
+              } else { 
+                TProtocolUtil.Skip(iprot, field.Type);
+              }
+              break;
+            case 22:
+              if (field.Type == TType.String) {
+                UuidFcd = iprot.ReadString();
               } else { 
                 TProtocolUtil.Skip(iprot, field.Type);
               }
@@ -508,6 +684,70 @@ namespace br.gov.saude.esusab.ras.visitadomiciliar
           oprot.WriteString(CpfCidadao);
           oprot.WriteFieldEnd();
         }
+        if (__isset.pressaoSistolica) {
+          field.Name = "pressaoSistolica";
+          field.Type = TType.I32;
+          field.ID = 15;
+          oprot.WriteFieldBegin(field);
+          oprot.WriteI32(PressaoSistolica);
+          oprot.WriteFieldEnd();
+        }
+        if (__isset.pressaoDiastolica) {
+          field.Name = "pressaoDiastolica";
+          field.Type = TType.I32;
+          field.ID = 16;
+          oprot.WriteFieldBegin(field);
+          oprot.WriteI32(PressaoDiastolica);
+          oprot.WriteFieldEnd();
+        }
+        if (__isset.temperatura) {
+          field.Name = "temperatura";
+          field.Type = TType.Double;
+          field.ID = 17;
+          oprot.WriteFieldBegin(field);
+          oprot.WriteDouble(Temperatura);
+          oprot.WriteFieldEnd();
+        }
+        if (__isset.tipoGlicemia) {
+          field.Name = "tipoGlicemia";
+          field.Type = TType.I64;
+          field.ID = 18;
+          oprot.WriteFieldBegin(field);
+          oprot.WriteI64(TipoGlicemia);
+          oprot.WriteFieldEnd();
+        }
+        if (__isset.glicemia) {
+          field.Name = "glicemia";
+          field.Type = TType.I32;
+          field.ID = 19;
+          oprot.WriteFieldBegin(field);
+          oprot.WriteI32(Glicemia);
+          oprot.WriteFieldEnd();
+        }
+        if (__isset.latitude) {
+          field.Name = "latitude";
+          field.Type = TType.Double;
+          field.ID = 20;
+          oprot.WriteFieldBegin(field);
+          oprot.WriteDouble(Latitude);
+          oprot.WriteFieldEnd();
+        }
+        if (__isset.longitude) {
+          field.Name = "longitude";
+          field.Type = TType.Double;
+          field.ID = 21;
+          oprot.WriteFieldBegin(field);
+          oprot.WriteDouble(Longitude);
+          oprot.WriteFieldEnd();
+        }
+        if (UuidFcd != null && __isset.uuidFcd) {
+          field.Name = "uuidFcd";
+          field.Type = TType.String;
+          field.ID = 22;
+          oprot.WriteFieldBegin(field);
+          oprot.WriteString(UuidFcd);
+          oprot.WriteFieldEnd();
+        }
         oprot.WriteFieldStop();
         oprot.WriteStructEnd();
       }
@@ -603,6 +843,54 @@ namespace br.gov.saude.esusab.ras.visitadomiciliar
         __first = false;
         __sb.Append("CpfCidadao: ");
         __sb.Append(CpfCidadao);
+      }
+      if (__isset.pressaoSistolica) {
+        if(!__first) { __sb.Append(", "); }
+        __first = false;
+        __sb.Append("PressaoSistolica: ");
+        __sb.Append(PressaoSistolica);
+      }
+      if (__isset.pressaoDiastolica) {
+        if(!__first) { __sb.Append(", "); }
+        __first = false;
+        __sb.Append("PressaoDiastolica: ");
+        __sb.Append(PressaoDiastolica);
+      }
+      if (__isset.temperatura) {
+        if(!__first) { __sb.Append(", "); }
+        __first = false;
+        __sb.Append("Temperatura: ");
+        __sb.Append(Temperatura);
+      }
+      if (__isset.tipoGlicemia) {
+        if(!__first) { __sb.Append(", "); }
+        __first = false;
+        __sb.Append("TipoGlicemia: ");
+        __sb.Append(TipoGlicemia);
+      }
+      if (__isset.glicemia) {
+        if(!__first) { __sb.Append(", "); }
+        __first = false;
+        __sb.Append("Glicemia: ");
+        __sb.Append(Glicemia);
+      }
+      if (__isset.latitude) {
+        if(!__first) { __sb.Append(", "); }
+        __first = false;
+        __sb.Append("Latitude: ");
+        __sb.Append(Latitude);
+      }
+      if (__isset.longitude) {
+        if(!__first) { __sb.Append(", "); }
+        __first = false;
+        __sb.Append("Longitude: ");
+        __sb.Append(Longitude);
+      }
+      if (UuidFcd != null && __isset.uuidFcd) {
+        if(!__first) { __sb.Append(", "); }
+        __first = false;
+        __sb.Append("UuidFcd: ");
+        __sb.Append(UuidFcd);
       }
       __sb.Append(")");
       return __sb.ToString();

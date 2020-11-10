@@ -30,6 +30,10 @@ type
   IUnicaLotacaoHeaderThrift = interface;
   IVariasLotacoesHeaderThrift = interface;
   IEnderecoLocalPermanenciaThrift = interface;
+  IMedicamentoThrift = interface;
+  IEncaminhamentoExternoThrift = interface;
+  IResultadoExameThrift = interface;
+  IResultadosExameThrift = interface;
 
   ILotacaoHeaderThrift = interface(IBase)
     function GetProfissionalCNS: string;
@@ -306,6 +310,10 @@ type
     procedure SetMicroArea( const Value: string);
     function GetStForaArea: Boolean;
     procedure SetStForaArea( const Value: Boolean);
+    function GetLatitude: Double;
+    procedure SetLatitude( const Value: Double);
+    function GetLongitude: Double;
+    procedure SetLongitude( const Value: Double);
 
     property Bairro: string read GetBairro write SetBairro;
     property Cep: string read GetCep write SetCep;
@@ -321,6 +329,8 @@ type
     property PontoReferencia: string read GetPontoReferencia write SetPontoReferencia;
     property MicroArea: string read GetMicroArea write SetMicroArea;
     property StForaArea: Boolean read GetStForaArea write SetStForaArea;
+    property Latitude: Double read GetLatitude write SetLatitude;
+    property Longitude: Double read GetLongitude write SetLongitude;
 
     function Get__isset_Bairro: Boolean;
     function Get__isset_Cep: Boolean;
@@ -336,6 +346,8 @@ type
     function Get__isset_PontoReferencia: Boolean;
     function Get__isset_MicroArea: Boolean;
     function Get__isset_StForaArea: Boolean;
+    function Get__isset_Latitude: Boolean;
+    function Get__isset_Longitude: Boolean;
 
     property __isset_Bairro: Boolean read Get__isset_Bairro;
     property __isset_Cep: Boolean read Get__isset_Cep;
@@ -351,6 +363,8 @@ type
     property __isset_PontoReferencia: Boolean read Get__isset_PontoReferencia;
     property __isset_MicroArea: Boolean read Get__isset_MicroArea;
     property __isset_StForaArea: Boolean read Get__isset_StForaArea;
+    property __isset_Latitude: Boolean read Get__isset_Latitude;
+    property __isset_Longitude: Boolean read Get__isset_Longitude;
   end;
 
   TEnderecoLocalPermanenciaThriftImpl = class(TInterfacedObject, IBase, IEnderecoLocalPermanenciaThrift)
@@ -369,6 +383,8 @@ type
     FPontoReferencia: string;
     FMicroArea: string;
     FStForaArea: Boolean;
+    FLatitude: Double;
+    FLongitude: Double;
     
     F__isset_Bairro: Boolean;
     F__isset_Cep: Boolean;
@@ -384,6 +400,8 @@ type
     F__isset_PontoReferencia: Boolean;
     F__isset_MicroArea: Boolean;
     F__isset_StForaArea: Boolean;
+    F__isset_Latitude: Boolean;
+    F__isset_Longitude: Boolean;
     
     function GetBairro: string;
     procedure SetBairro( const Value: string);
@@ -413,6 +431,10 @@ type
     procedure SetMicroArea( const Value: string);
     function GetStForaArea: Boolean;
     procedure SetStForaArea( const Value: Boolean);
+    function GetLatitude: Double;
+    procedure SetLatitude( const Value: Double);
+    function GetLongitude: Double;
+    procedure SetLongitude( const Value: Double);
 
     function Get__isset_Bairro: Boolean;
     function Get__isset_Cep: Boolean;
@@ -428,6 +450,8 @@ type
     function Get__isset_PontoReferencia: Boolean;
     function Get__isset_MicroArea: Boolean;
     function Get__isset_StForaArea: Boolean;
+    function Get__isset_Latitude: Boolean;
+    function Get__isset_Longitude: Boolean;
   public
     constructor Create;
     destructor Destroy; override;
@@ -453,6 +477,8 @@ type
     property PontoReferencia: string read GetPontoReferencia write SetPontoReferencia;
     property MicroArea: string read GetMicroArea write SetMicroArea;
     property StForaArea: Boolean read GetStForaArea write SetStForaArea;
+    property Latitude: Double read GetLatitude write SetLatitude;
+    property Longitude: Double read GetLongitude write SetLongitude;
 
     // isset
     property __isset_Bairro: Boolean read Get__isset_Bairro;
@@ -469,6 +495,412 @@ type
     property __isset_PontoReferencia: Boolean read Get__isset_PontoReferencia;
     property __isset_MicroArea: Boolean read Get__isset_MicroArea;
     property __isset_StForaArea: Boolean read Get__isset_StForaArea;
+    property __isset_Latitude: Boolean read Get__isset_Latitude;
+    property __isset_Longitude: Boolean read Get__isset_Longitude;
+  end;
+
+  IMedicamentoThrift = interface(IBase)
+    function GetCodigoCatmat: string;
+    procedure SetCodigoCatmat( const Value: string);
+    function GetViaAdministracao: Int64;
+    procedure SetViaAdministracao( const Value: Int64);
+    function GetDose: string;
+    procedure SetDose( const Value: string);
+    function GetDoseUnica: Boolean;
+    procedure SetDoseUnica( const Value: Boolean);
+    function GetUsoContinuo: Boolean;
+    procedure SetUsoContinuo( const Value: Boolean);
+    function GetDoseFrequenciaTipo: Int64;
+    procedure SetDoseFrequenciaTipo( const Value: Int64);
+    function GetDoseFrequencia: string;
+    procedure SetDoseFrequencia( const Value: string);
+    function GetDoseFrequenciaQuantidade: Integer;
+    procedure SetDoseFrequenciaQuantidade( const Value: Integer);
+    function GetDoseFrequenciaUnidadeMedida: Int64;
+    procedure SetDoseFrequenciaUnidadeMedida( const Value: Int64);
+    function GetDtInicioTratamento: Int64;
+    procedure SetDtInicioTratamento( const Value: Int64);
+    function GetDuracaoTratamento: Integer;
+    procedure SetDuracaoTratamento( const Value: Integer);
+    function GetDuracaoTratamentoMedida: Int64;
+    procedure SetDuracaoTratamentoMedida( const Value: Int64);
+    function GetQuantidadeReceitada: Integer;
+    procedure SetQuantidadeReceitada( const Value: Integer);
+
+    property CodigoCatmat: string read GetCodigoCatmat write SetCodigoCatmat;
+    property ViaAdministracao: Int64 read GetViaAdministracao write SetViaAdministracao;
+    property Dose: string read GetDose write SetDose;
+    property DoseUnica: Boolean read GetDoseUnica write SetDoseUnica;
+    property UsoContinuo: Boolean read GetUsoContinuo write SetUsoContinuo;
+    property DoseFrequenciaTipo: Int64 read GetDoseFrequenciaTipo write SetDoseFrequenciaTipo;
+    property DoseFrequencia: string read GetDoseFrequencia write SetDoseFrequencia;
+    property DoseFrequenciaQuantidade: Integer read GetDoseFrequenciaQuantidade write SetDoseFrequenciaQuantidade;
+    property DoseFrequenciaUnidadeMedida: Int64 read GetDoseFrequenciaUnidadeMedida write SetDoseFrequenciaUnidadeMedida;
+    property DtInicioTratamento: Int64 read GetDtInicioTratamento write SetDtInicioTratamento;
+    property DuracaoTratamento: Integer read GetDuracaoTratamento write SetDuracaoTratamento;
+    property DuracaoTratamentoMedida: Int64 read GetDuracaoTratamentoMedida write SetDuracaoTratamentoMedida;
+    property QuantidadeReceitada: Integer read GetQuantidadeReceitada write SetQuantidadeReceitada;
+
+    function Get__isset_CodigoCatmat: Boolean;
+    function Get__isset_ViaAdministracao: Boolean;
+    function Get__isset_Dose: Boolean;
+    function Get__isset_DoseUnica: Boolean;
+    function Get__isset_UsoContinuo: Boolean;
+    function Get__isset_DoseFrequenciaTipo: Boolean;
+    function Get__isset_DoseFrequencia: Boolean;
+    function Get__isset_DoseFrequenciaQuantidade: Boolean;
+    function Get__isset_DoseFrequenciaUnidadeMedida: Boolean;
+    function Get__isset_DtInicioTratamento: Boolean;
+    function Get__isset_DuracaoTratamento: Boolean;
+    function Get__isset_DuracaoTratamentoMedida: Boolean;
+    function Get__isset_QuantidadeReceitada: Boolean;
+
+    property __isset_CodigoCatmat: Boolean read Get__isset_CodigoCatmat;
+    property __isset_ViaAdministracao: Boolean read Get__isset_ViaAdministracao;
+    property __isset_Dose: Boolean read Get__isset_Dose;
+    property __isset_DoseUnica: Boolean read Get__isset_DoseUnica;
+    property __isset_UsoContinuo: Boolean read Get__isset_UsoContinuo;
+    property __isset_DoseFrequenciaTipo: Boolean read Get__isset_DoseFrequenciaTipo;
+    property __isset_DoseFrequencia: Boolean read Get__isset_DoseFrequencia;
+    property __isset_DoseFrequenciaQuantidade: Boolean read Get__isset_DoseFrequenciaQuantidade;
+    property __isset_DoseFrequenciaUnidadeMedida: Boolean read Get__isset_DoseFrequenciaUnidadeMedida;
+    property __isset_DtInicioTratamento: Boolean read Get__isset_DtInicioTratamento;
+    property __isset_DuracaoTratamento: Boolean read Get__isset_DuracaoTratamento;
+    property __isset_DuracaoTratamentoMedida: Boolean read Get__isset_DuracaoTratamentoMedida;
+    property __isset_QuantidadeReceitada: Boolean read Get__isset_QuantidadeReceitada;
+  end;
+
+  TMedicamentoThriftImpl = class(TInterfacedObject, IBase, IMedicamentoThrift)
+  private
+    FCodigoCatmat: string;
+    FViaAdministracao: Int64;
+    FDose: string;
+    FDoseUnica: Boolean;
+    FUsoContinuo: Boolean;
+    FDoseFrequenciaTipo: Int64;
+    FDoseFrequencia: string;
+    FDoseFrequenciaQuantidade: Integer;
+    FDoseFrequenciaUnidadeMedida: Int64;
+    FDtInicioTratamento: Int64;
+    FDuracaoTratamento: Integer;
+    FDuracaoTratamentoMedida: Int64;
+    FQuantidadeReceitada: Integer;
+    
+    F__isset_CodigoCatmat: Boolean;
+    F__isset_ViaAdministracao: Boolean;
+    F__isset_Dose: Boolean;
+    F__isset_DoseUnica: Boolean;
+    F__isset_UsoContinuo: Boolean;
+    F__isset_DoseFrequenciaTipo: Boolean;
+    F__isset_DoseFrequencia: Boolean;
+    F__isset_DoseFrequenciaQuantidade: Boolean;
+    F__isset_DoseFrequenciaUnidadeMedida: Boolean;
+    F__isset_DtInicioTratamento: Boolean;
+    F__isset_DuracaoTratamento: Boolean;
+    F__isset_DuracaoTratamentoMedida: Boolean;
+    F__isset_QuantidadeReceitada: Boolean;
+    
+    function GetCodigoCatmat: string;
+    procedure SetCodigoCatmat( const Value: string);
+    function GetViaAdministracao: Int64;
+    procedure SetViaAdministracao( const Value: Int64);
+    function GetDose: string;
+    procedure SetDose( const Value: string);
+    function GetDoseUnica: Boolean;
+    procedure SetDoseUnica( const Value: Boolean);
+    function GetUsoContinuo: Boolean;
+    procedure SetUsoContinuo( const Value: Boolean);
+    function GetDoseFrequenciaTipo: Int64;
+    procedure SetDoseFrequenciaTipo( const Value: Int64);
+    function GetDoseFrequencia: string;
+    procedure SetDoseFrequencia( const Value: string);
+    function GetDoseFrequenciaQuantidade: Integer;
+    procedure SetDoseFrequenciaQuantidade( const Value: Integer);
+    function GetDoseFrequenciaUnidadeMedida: Int64;
+    procedure SetDoseFrequenciaUnidadeMedida( const Value: Int64);
+    function GetDtInicioTratamento: Int64;
+    procedure SetDtInicioTratamento( const Value: Int64);
+    function GetDuracaoTratamento: Integer;
+    procedure SetDuracaoTratamento( const Value: Integer);
+    function GetDuracaoTratamentoMedida: Int64;
+    procedure SetDuracaoTratamentoMedida( const Value: Int64);
+    function GetQuantidadeReceitada: Integer;
+    procedure SetQuantidadeReceitada( const Value: Integer);
+
+    function Get__isset_CodigoCatmat: Boolean;
+    function Get__isset_ViaAdministracao: Boolean;
+    function Get__isset_Dose: Boolean;
+    function Get__isset_DoseUnica: Boolean;
+    function Get__isset_UsoContinuo: Boolean;
+    function Get__isset_DoseFrequenciaTipo: Boolean;
+    function Get__isset_DoseFrequencia: Boolean;
+    function Get__isset_DoseFrequenciaQuantidade: Boolean;
+    function Get__isset_DoseFrequenciaUnidadeMedida: Boolean;
+    function Get__isset_DtInicioTratamento: Boolean;
+    function Get__isset_DuracaoTratamento: Boolean;
+    function Get__isset_DuracaoTratamentoMedida: Boolean;
+    function Get__isset_QuantidadeReceitada: Boolean;
+  public
+    constructor Create;
+    destructor Destroy; override;
+
+    function ToString: string; override;
+
+    // IBase
+    procedure Read( const iprot: IProtocol);
+    procedure Write( const oprot: IProtocol);
+
+    // Properties
+    property CodigoCatmat: string read GetCodigoCatmat write SetCodigoCatmat;
+    property ViaAdministracao: Int64 read GetViaAdministracao write SetViaAdministracao;
+    property Dose: string read GetDose write SetDose;
+    property DoseUnica: Boolean read GetDoseUnica write SetDoseUnica;
+    property UsoContinuo: Boolean read GetUsoContinuo write SetUsoContinuo;
+    property DoseFrequenciaTipo: Int64 read GetDoseFrequenciaTipo write SetDoseFrequenciaTipo;
+    property DoseFrequencia: string read GetDoseFrequencia write SetDoseFrequencia;
+    property DoseFrequenciaQuantidade: Integer read GetDoseFrequenciaQuantidade write SetDoseFrequenciaQuantidade;
+    property DoseFrequenciaUnidadeMedida: Int64 read GetDoseFrequenciaUnidadeMedida write SetDoseFrequenciaUnidadeMedida;
+    property DtInicioTratamento: Int64 read GetDtInicioTratamento write SetDtInicioTratamento;
+    property DuracaoTratamento: Integer read GetDuracaoTratamento write SetDuracaoTratamento;
+    property DuracaoTratamentoMedida: Int64 read GetDuracaoTratamentoMedida write SetDuracaoTratamentoMedida;
+    property QuantidadeReceitada: Integer read GetQuantidadeReceitada write SetQuantidadeReceitada;
+
+    // isset
+    property __isset_CodigoCatmat: Boolean read Get__isset_CodigoCatmat;
+    property __isset_ViaAdministracao: Boolean read Get__isset_ViaAdministracao;
+    property __isset_Dose: Boolean read Get__isset_Dose;
+    property __isset_DoseUnica: Boolean read Get__isset_DoseUnica;
+    property __isset_UsoContinuo: Boolean read Get__isset_UsoContinuo;
+    property __isset_DoseFrequenciaTipo: Boolean read Get__isset_DoseFrequenciaTipo;
+    property __isset_DoseFrequencia: Boolean read Get__isset_DoseFrequencia;
+    property __isset_DoseFrequenciaQuantidade: Boolean read Get__isset_DoseFrequenciaQuantidade;
+    property __isset_DoseFrequenciaUnidadeMedida: Boolean read Get__isset_DoseFrequenciaUnidadeMedida;
+    property __isset_DtInicioTratamento: Boolean read Get__isset_DtInicioTratamento;
+    property __isset_DuracaoTratamento: Boolean read Get__isset_DuracaoTratamento;
+    property __isset_DuracaoTratamentoMedida: Boolean read Get__isset_DuracaoTratamentoMedida;
+    property __isset_QuantidadeReceitada: Boolean read Get__isset_QuantidadeReceitada;
+  end;
+
+  IEncaminhamentoExternoThrift = interface(IBase)
+    function GetEspecialidade: Int64;
+    procedure SetEspecialidade( const Value: Int64);
+    function GetHipoteseDiagnosticoCid10: string;
+    procedure SetHipoteseDiagnosticoCid10( const Value: string);
+    function GetHipoteseDiagnosticoCiap2: string;
+    procedure SetHipoteseDiagnosticoCiap2( const Value: string);
+    function GetClassificacaoRisco: Int64;
+    procedure SetClassificacaoRisco( const Value: Int64);
+
+    property Especialidade: Int64 read GetEspecialidade write SetEspecialidade;
+    property HipoteseDiagnosticoCid10: string read GetHipoteseDiagnosticoCid10 write SetHipoteseDiagnosticoCid10;
+    property HipoteseDiagnosticoCiap2: string read GetHipoteseDiagnosticoCiap2 write SetHipoteseDiagnosticoCiap2;
+    property ClassificacaoRisco: Int64 read GetClassificacaoRisco write SetClassificacaoRisco;
+
+    function Get__isset_Especialidade: Boolean;
+    function Get__isset_HipoteseDiagnosticoCid10: Boolean;
+    function Get__isset_HipoteseDiagnosticoCiap2: Boolean;
+    function Get__isset_ClassificacaoRisco: Boolean;
+
+    property __isset_Especialidade: Boolean read Get__isset_Especialidade;
+    property __isset_HipoteseDiagnosticoCid10: Boolean read Get__isset_HipoteseDiagnosticoCid10;
+    property __isset_HipoteseDiagnosticoCiap2: Boolean read Get__isset_HipoteseDiagnosticoCiap2;
+    property __isset_ClassificacaoRisco: Boolean read Get__isset_ClassificacaoRisco;
+  end;
+
+  TEncaminhamentoExternoThriftImpl = class(TInterfacedObject, IBase, IEncaminhamentoExternoThrift)
+  private
+    FEspecialidade: Int64;
+    FHipoteseDiagnosticoCid10: string;
+    FHipoteseDiagnosticoCiap2: string;
+    FClassificacaoRisco: Int64;
+    
+    F__isset_Especialidade: Boolean;
+    F__isset_HipoteseDiagnosticoCid10: Boolean;
+    F__isset_HipoteseDiagnosticoCiap2: Boolean;
+    F__isset_ClassificacaoRisco: Boolean;
+    
+    function GetEspecialidade: Int64;
+    procedure SetEspecialidade( const Value: Int64);
+    function GetHipoteseDiagnosticoCid10: string;
+    procedure SetHipoteseDiagnosticoCid10( const Value: string);
+    function GetHipoteseDiagnosticoCiap2: string;
+    procedure SetHipoteseDiagnosticoCiap2( const Value: string);
+    function GetClassificacaoRisco: Int64;
+    procedure SetClassificacaoRisco( const Value: Int64);
+
+    function Get__isset_Especialidade: Boolean;
+    function Get__isset_HipoteseDiagnosticoCid10: Boolean;
+    function Get__isset_HipoteseDiagnosticoCiap2: Boolean;
+    function Get__isset_ClassificacaoRisco: Boolean;
+  public
+    constructor Create;
+    destructor Destroy; override;
+
+    function ToString: string; override;
+
+    // IBase
+    procedure Read( const iprot: IProtocol);
+    procedure Write( const oprot: IProtocol);
+
+    // Properties
+    property Especialidade: Int64 read GetEspecialidade write SetEspecialidade;
+    property HipoteseDiagnosticoCid10: string read GetHipoteseDiagnosticoCid10 write SetHipoteseDiagnosticoCid10;
+    property HipoteseDiagnosticoCiap2: string read GetHipoteseDiagnosticoCiap2 write SetHipoteseDiagnosticoCiap2;
+    property ClassificacaoRisco: Int64 read GetClassificacaoRisco write SetClassificacaoRisco;
+
+    // isset
+    property __isset_Especialidade: Boolean read Get__isset_Especialidade;
+    property __isset_HipoteseDiagnosticoCid10: Boolean read Get__isset_HipoteseDiagnosticoCid10;
+    property __isset_HipoteseDiagnosticoCiap2: Boolean read Get__isset_HipoteseDiagnosticoCiap2;
+    property __isset_ClassificacaoRisco: Boolean read Get__isset_ClassificacaoRisco;
+  end;
+
+  IResultadoExameThrift = interface(IBase)
+    function GetTipoResultado: Integer;
+    procedure SetTipoResultado( const Value: Integer);
+    function GetValorResultado: string;
+    procedure SetValorResultado( const Value: string);
+
+    property TipoResultado: Integer read GetTipoResultado write SetTipoResultado;
+    property ValorResultado: string read GetValorResultado write SetValorResultado;
+
+    function Get__isset_TipoResultado: Boolean;
+    function Get__isset_ValorResultado: Boolean;
+
+    property __isset_TipoResultado: Boolean read Get__isset_TipoResultado;
+    property __isset_ValorResultado: Boolean read Get__isset_ValorResultado;
+  end;
+
+  TResultadoExameThriftImpl = class(TInterfacedObject, IBase, IResultadoExameThrift)
+  private
+    FTipoResultado: Integer;
+    FValorResultado: string;
+    
+    F__isset_TipoResultado: Boolean;
+    F__isset_ValorResultado: Boolean;
+    
+    function GetTipoResultado: Integer;
+    procedure SetTipoResultado( const Value: Integer);
+    function GetValorResultado: string;
+    procedure SetValorResultado( const Value: string);
+
+    function Get__isset_TipoResultado: Boolean;
+    function Get__isset_ValorResultado: Boolean;
+  public
+    constructor Create;
+    destructor Destroy; override;
+
+    function ToString: string; override;
+
+    // IBase
+    procedure Read( const iprot: IProtocol);
+    procedure Write( const oprot: IProtocol);
+
+    // Properties
+    property TipoResultado: Integer read GetTipoResultado write SetTipoResultado;
+    property ValorResultado: string read GetValorResultado write SetValorResultado;
+
+    // isset
+    property __isset_TipoResultado: Boolean read Get__isset_TipoResultado;
+    property __isset_ValorResultado: Boolean read Get__isset_ValorResultado;
+  end;
+
+  IResultadosExameThrift = interface(IBase)
+    function GetExame: string;
+    procedure SetExame( const Value: string);
+    function GetDataSolicitacao: Int64;
+    procedure SetDataSolicitacao( const Value: Int64);
+    function GetDataRealizacao: Int64;
+    procedure SetDataRealizacao( const Value: Int64);
+    function GetDataResultado: Int64;
+    procedure SetDataResultado( const Value: Int64);
+    function GetResultado: string;
+    procedure SetResultado( const Value: string);
+    function GetExameResultadoEspecifico: IThriftList<IResultadoExameThrift>;
+    procedure SetExameResultadoEspecifico( const Value: IThriftList<IResultadoExameThrift>);
+
+    property Exame: string read GetExame write SetExame;
+    property DataSolicitacao: Int64 read GetDataSolicitacao write SetDataSolicitacao;
+    property DataRealizacao: Int64 read GetDataRealizacao write SetDataRealizacao;
+    property DataResultado: Int64 read GetDataResultado write SetDataResultado;
+    property Resultado: string read GetResultado write SetResultado;
+    property ExameResultadoEspecifico: IThriftList<IResultadoExameThrift> read GetExameResultadoEspecifico write SetExameResultadoEspecifico;
+
+    function Get__isset_Exame: Boolean;
+    function Get__isset_DataSolicitacao: Boolean;
+    function Get__isset_DataRealizacao: Boolean;
+    function Get__isset_DataResultado: Boolean;
+    function Get__isset_Resultado: Boolean;
+    function Get__isset_ExameResultadoEspecifico: Boolean;
+
+    property __isset_Exame: Boolean read Get__isset_Exame;
+    property __isset_DataSolicitacao: Boolean read Get__isset_DataSolicitacao;
+    property __isset_DataRealizacao: Boolean read Get__isset_DataRealizacao;
+    property __isset_DataResultado: Boolean read Get__isset_DataResultado;
+    property __isset_Resultado: Boolean read Get__isset_Resultado;
+    property __isset_ExameResultadoEspecifico: Boolean read Get__isset_ExameResultadoEspecifico;
+  end;
+
+  TResultadosExameThriftImpl = class(TInterfacedObject, IBase, IResultadosExameThrift)
+  private
+    FExame: string;
+    FDataSolicitacao: Int64;
+    FDataRealizacao: Int64;
+    FDataResultado: Int64;
+    FResultado: string;
+    FExameResultadoEspecifico: IThriftList<IResultadoExameThrift>;
+    
+    F__isset_Exame: Boolean;
+    F__isset_DataSolicitacao: Boolean;
+    F__isset_DataRealizacao: Boolean;
+    F__isset_DataResultado: Boolean;
+    F__isset_Resultado: Boolean;
+    F__isset_ExameResultadoEspecifico: Boolean;
+    
+    function GetExame: string;
+    procedure SetExame( const Value: string);
+    function GetDataSolicitacao: Int64;
+    procedure SetDataSolicitacao( const Value: Int64);
+    function GetDataRealizacao: Int64;
+    procedure SetDataRealizacao( const Value: Int64);
+    function GetDataResultado: Int64;
+    procedure SetDataResultado( const Value: Int64);
+    function GetResultado: string;
+    procedure SetResultado( const Value: string);
+    function GetExameResultadoEspecifico: IThriftList<IResultadoExameThrift>;
+    procedure SetExameResultadoEspecifico( const Value: IThriftList<IResultadoExameThrift>);
+
+    function Get__isset_Exame: Boolean;
+    function Get__isset_DataSolicitacao: Boolean;
+    function Get__isset_DataRealizacao: Boolean;
+    function Get__isset_DataResultado: Boolean;
+    function Get__isset_Resultado: Boolean;
+    function Get__isset_ExameResultadoEspecifico: Boolean;
+  public
+    constructor Create;
+    destructor Destroy; override;
+
+    function ToString: string; override;
+
+    // IBase
+    procedure Read( const iprot: IProtocol);
+    procedure Write( const oprot: IProtocol);
+
+    // Properties
+    property Exame: string read GetExame write SetExame;
+    property DataSolicitacao: Int64 read GetDataSolicitacao write SetDataSolicitacao;
+    property DataRealizacao: Int64 read GetDataRealizacao write SetDataRealizacao;
+    property DataResultado: Int64 read GetDataResultado write SetDataResultado;
+    property Resultado: string read GetResultado write SetResultado;
+    property ExameResultadoEspecifico: IThriftList<IResultadoExameThrift> read GetExameResultadoEspecifico write SetExameResultadoEspecifico;
+
+    // isset
+    property __isset_Exame: Boolean read Get__isset_Exame;
+    property __isset_DataSolicitacao: Boolean read Get__isset_DataSolicitacao;
+    property __isset_DataRealizacao: Boolean read Get__isset_DataRealizacao;
+    property __isset_DataResultado: Boolean read Get__isset_DataResultado;
+    property __isset_Resultado: Boolean read Get__isset_Resultado;
+    property __isset_ExameResultadoEspecifico: Boolean read Get__isset_ExameResultadoEspecifico;
   end;
 
 implementation
@@ -1476,6 +1908,38 @@ begin
   Result := F__isset_StForaArea;
 end;
 
+function TEnderecoLocalPermanenciaThriftImpl.GetLatitude: Double;
+begin
+  Result := FLatitude;
+end;
+
+procedure TEnderecoLocalPermanenciaThriftImpl.SetLatitude( const Value: Double);
+begin
+  F__isset_Latitude := True;
+  FLatitude := Value;
+end;
+
+function TEnderecoLocalPermanenciaThriftImpl.Get__isset_Latitude: Boolean;
+begin
+  Result := F__isset_Latitude;
+end;
+
+function TEnderecoLocalPermanenciaThriftImpl.GetLongitude: Double;
+begin
+  Result := FLongitude;
+end;
+
+procedure TEnderecoLocalPermanenciaThriftImpl.SetLongitude( const Value: Double);
+begin
+  F__isset_Longitude := True;
+  FLongitude := Value;
+end;
+
+function TEnderecoLocalPermanenciaThriftImpl.Get__isset_Longitude: Boolean;
+begin
+  Result := F__isset_Longitude;
+end;
+
 procedure TEnderecoLocalPermanenciaThriftImpl.Read( const iprot: IProtocol);
 var
   field_ : IField;
@@ -1615,6 +2079,24 @@ begin
           if (field_.Type_ = TType.Bool_) then
           begin
             StForaArea := iprot.ReadBool();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        15: begin
+          if (field_.Type_ = TType.Double_) then
+          begin
+            Latitude := iprot.ReadDouble();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        16: begin
+          if (field_.Type_ = TType.Double_) then
+          begin
+            Longitude := iprot.ReadDouble();
           end else
           begin
             TProtocolUtil.Skip(iprot, field_.Type_);
@@ -1767,6 +2249,24 @@ begin
     oprot.WriteBool(StForaArea);
     oprot.WriteFieldEnd();
   end;
+  if (__isset_Latitude) then
+  begin
+    field_.Name := 'latitude';
+    field_.Type_  := TType.Double_;
+    field_.ID := 15;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteDouble(Latitude);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_Longitude) then
+  begin
+    field_.Name := 'longitude';
+    field_.Type_  := TType.Double_;
+    field_.ID := 16;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteDouble(Longitude);
+    oprot.WriteFieldEnd();
+  end;
   oprot.WriteFieldStop();
   oprot.WriteStructEnd();
 end;
@@ -1863,11 +2363,1318 @@ begin
       _sb6.Append('StForaArea: ');
       _sb6.Append(StForaArea);
     end;
+    if (__isset_Latitude) then begin
+      if not _first7 then _sb6.Append(',');
+      _first7 := FALSE;
+      _sb6.Append('Latitude: ');
+      _sb6.Append(Latitude);
+    end;
+    if (__isset_Longitude) then begin
+      if not _first7 then _sb6.Append(',');
+      _first7 := FALSE;
+      _sb6.Append('Longitude: ');
+      _sb6.Append(Longitude);
+    end;
     _sb6.Append(')');
     Result := _sb6.ToString;
     if _first7 then {prevent warning};
   finally
     _sb6.Free;
+  end;
+end;
+
+constructor TMedicamentoThriftImpl.Create;
+begin
+  inherited;
+end;
+
+destructor TMedicamentoThriftImpl.Destroy;
+begin
+  inherited;
+end;
+
+function TMedicamentoThriftImpl.GetCodigoCatmat: string;
+begin
+  Result := FCodigoCatmat;
+end;
+
+procedure TMedicamentoThriftImpl.SetCodigoCatmat( const Value: string);
+begin
+  F__isset_CodigoCatmat := True;
+  FCodigoCatmat := Value;
+end;
+
+function TMedicamentoThriftImpl.Get__isset_CodigoCatmat: Boolean;
+begin
+  Result := F__isset_CodigoCatmat;
+end;
+
+function TMedicamentoThriftImpl.GetViaAdministracao: Int64;
+begin
+  Result := FViaAdministracao;
+end;
+
+procedure TMedicamentoThriftImpl.SetViaAdministracao( const Value: Int64);
+begin
+  F__isset_ViaAdministracao := True;
+  FViaAdministracao := Value;
+end;
+
+function TMedicamentoThriftImpl.Get__isset_ViaAdministracao: Boolean;
+begin
+  Result := F__isset_ViaAdministracao;
+end;
+
+function TMedicamentoThriftImpl.GetDose: string;
+begin
+  Result := FDose;
+end;
+
+procedure TMedicamentoThriftImpl.SetDose( const Value: string);
+begin
+  F__isset_Dose := True;
+  FDose := Value;
+end;
+
+function TMedicamentoThriftImpl.Get__isset_Dose: Boolean;
+begin
+  Result := F__isset_Dose;
+end;
+
+function TMedicamentoThriftImpl.GetDoseUnica: Boolean;
+begin
+  Result := FDoseUnica;
+end;
+
+procedure TMedicamentoThriftImpl.SetDoseUnica( const Value: Boolean);
+begin
+  F__isset_DoseUnica := True;
+  FDoseUnica := Value;
+end;
+
+function TMedicamentoThriftImpl.Get__isset_DoseUnica: Boolean;
+begin
+  Result := F__isset_DoseUnica;
+end;
+
+function TMedicamentoThriftImpl.GetUsoContinuo: Boolean;
+begin
+  Result := FUsoContinuo;
+end;
+
+procedure TMedicamentoThriftImpl.SetUsoContinuo( const Value: Boolean);
+begin
+  F__isset_UsoContinuo := True;
+  FUsoContinuo := Value;
+end;
+
+function TMedicamentoThriftImpl.Get__isset_UsoContinuo: Boolean;
+begin
+  Result := F__isset_UsoContinuo;
+end;
+
+function TMedicamentoThriftImpl.GetDoseFrequenciaTipo: Int64;
+begin
+  Result := FDoseFrequenciaTipo;
+end;
+
+procedure TMedicamentoThriftImpl.SetDoseFrequenciaTipo( const Value: Int64);
+begin
+  F__isset_DoseFrequenciaTipo := True;
+  FDoseFrequenciaTipo := Value;
+end;
+
+function TMedicamentoThriftImpl.Get__isset_DoseFrequenciaTipo: Boolean;
+begin
+  Result := F__isset_DoseFrequenciaTipo;
+end;
+
+function TMedicamentoThriftImpl.GetDoseFrequencia: string;
+begin
+  Result := FDoseFrequencia;
+end;
+
+procedure TMedicamentoThriftImpl.SetDoseFrequencia( const Value: string);
+begin
+  F__isset_DoseFrequencia := True;
+  FDoseFrequencia := Value;
+end;
+
+function TMedicamentoThriftImpl.Get__isset_DoseFrequencia: Boolean;
+begin
+  Result := F__isset_DoseFrequencia;
+end;
+
+function TMedicamentoThriftImpl.GetDoseFrequenciaQuantidade: Integer;
+begin
+  Result := FDoseFrequenciaQuantidade;
+end;
+
+procedure TMedicamentoThriftImpl.SetDoseFrequenciaQuantidade( const Value: Integer);
+begin
+  F__isset_DoseFrequenciaQuantidade := True;
+  FDoseFrequenciaQuantidade := Value;
+end;
+
+function TMedicamentoThriftImpl.Get__isset_DoseFrequenciaQuantidade: Boolean;
+begin
+  Result := F__isset_DoseFrequenciaQuantidade;
+end;
+
+function TMedicamentoThriftImpl.GetDoseFrequenciaUnidadeMedida: Int64;
+begin
+  Result := FDoseFrequenciaUnidadeMedida;
+end;
+
+procedure TMedicamentoThriftImpl.SetDoseFrequenciaUnidadeMedida( const Value: Int64);
+begin
+  F__isset_DoseFrequenciaUnidadeMedida := True;
+  FDoseFrequenciaUnidadeMedida := Value;
+end;
+
+function TMedicamentoThriftImpl.Get__isset_DoseFrequenciaUnidadeMedida: Boolean;
+begin
+  Result := F__isset_DoseFrequenciaUnidadeMedida;
+end;
+
+function TMedicamentoThriftImpl.GetDtInicioTratamento: Int64;
+begin
+  Result := FDtInicioTratamento;
+end;
+
+procedure TMedicamentoThriftImpl.SetDtInicioTratamento( const Value: Int64);
+begin
+  F__isset_DtInicioTratamento := True;
+  FDtInicioTratamento := Value;
+end;
+
+function TMedicamentoThriftImpl.Get__isset_DtInicioTratamento: Boolean;
+begin
+  Result := F__isset_DtInicioTratamento;
+end;
+
+function TMedicamentoThriftImpl.GetDuracaoTratamento: Integer;
+begin
+  Result := FDuracaoTratamento;
+end;
+
+procedure TMedicamentoThriftImpl.SetDuracaoTratamento( const Value: Integer);
+begin
+  F__isset_DuracaoTratamento := True;
+  FDuracaoTratamento := Value;
+end;
+
+function TMedicamentoThriftImpl.Get__isset_DuracaoTratamento: Boolean;
+begin
+  Result := F__isset_DuracaoTratamento;
+end;
+
+function TMedicamentoThriftImpl.GetDuracaoTratamentoMedida: Int64;
+begin
+  Result := FDuracaoTratamentoMedida;
+end;
+
+procedure TMedicamentoThriftImpl.SetDuracaoTratamentoMedida( const Value: Int64);
+begin
+  F__isset_DuracaoTratamentoMedida := True;
+  FDuracaoTratamentoMedida := Value;
+end;
+
+function TMedicamentoThriftImpl.Get__isset_DuracaoTratamentoMedida: Boolean;
+begin
+  Result := F__isset_DuracaoTratamentoMedida;
+end;
+
+function TMedicamentoThriftImpl.GetQuantidadeReceitada: Integer;
+begin
+  Result := FQuantidadeReceitada;
+end;
+
+procedure TMedicamentoThriftImpl.SetQuantidadeReceitada( const Value: Integer);
+begin
+  F__isset_QuantidadeReceitada := True;
+  FQuantidadeReceitada := Value;
+end;
+
+function TMedicamentoThriftImpl.Get__isset_QuantidadeReceitada: Boolean;
+begin
+  Result := F__isset_QuantidadeReceitada;
+end;
+
+procedure TMedicamentoThriftImpl.Read( const iprot: IProtocol);
+var
+  field_ : IField;
+  struc : IStruct;
+  tracker : IProtocolRecursionTracker;
+
+begin
+  tracker := iprot.NextRecursionLevel;
+  struc := iprot.ReadStructBegin;
+  try
+    while (true) do
+    begin
+      field_ := iprot.ReadFieldBegin();
+      if (field_.Type_ = TType.Stop) then
+      begin
+        Break;
+      end;
+      case field_.ID of
+        1: begin
+          if (field_.Type_ = TType.String_) then
+          begin
+            CodigoCatmat := iprot.ReadString();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        2: begin
+          if (field_.Type_ = TType.I64) then
+          begin
+            ViaAdministracao := iprot.ReadI64();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        3: begin
+          if (field_.Type_ = TType.String_) then
+          begin
+            Dose := iprot.ReadString();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        4: begin
+          if (field_.Type_ = TType.Bool_) then
+          begin
+            DoseUnica := iprot.ReadBool();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        5: begin
+          if (field_.Type_ = TType.Bool_) then
+          begin
+            UsoContinuo := iprot.ReadBool();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        6: begin
+          if (field_.Type_ = TType.I64) then
+          begin
+            DoseFrequenciaTipo := iprot.ReadI64();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        7: begin
+          if (field_.Type_ = TType.String_) then
+          begin
+            DoseFrequencia := iprot.ReadString();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        8: begin
+          if (field_.Type_ = TType.I32) then
+          begin
+            DoseFrequenciaQuantidade := iprot.ReadI32();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        9: begin
+          if (field_.Type_ = TType.I64) then
+          begin
+            DoseFrequenciaUnidadeMedida := iprot.ReadI64();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        10: begin
+          if (field_.Type_ = TType.I64) then
+          begin
+            DtInicioTratamento := iprot.ReadI64();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        11: begin
+          if (field_.Type_ = TType.I32) then
+          begin
+            DuracaoTratamento := iprot.ReadI32();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        12: begin
+          if (field_.Type_ = TType.I64) then
+          begin
+            DuracaoTratamentoMedida := iprot.ReadI64();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        13: begin
+          if (field_.Type_ = TType.I32) then
+          begin
+            QuantidadeReceitada := iprot.ReadI32();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end
+        else begin
+          TProtocolUtil.Skip(iprot, field_.Type_);
+        end;
+      end;
+      iprot.ReadFieldEnd;
+    end;
+  finally
+    iprot.ReadStructEnd;
+  end;
+end;
+
+procedure TMedicamentoThriftImpl.Write( const oprot: IProtocol);
+var
+  struc : IStruct;
+  field_ : IField;
+  tracker : IProtocolRecursionTracker;
+begin
+  tracker := oprot.NextRecursionLevel;
+  struc := TStructImpl.Create('MedicamentoThrift');
+  oprot.WriteStructBegin(struc);
+  field_ := TFieldImpl.Create;
+  if (__isset_CodigoCatmat) then
+  begin
+    field_.Name := 'codigoCatmat';
+    field_.Type_  := TType.String_;
+    field_.ID := 1;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteString(CodigoCatmat);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_ViaAdministracao) then
+  begin
+    field_.Name := 'viaAdministracao';
+    field_.Type_  := TType.I64;
+    field_.ID := 2;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteI64(ViaAdministracao);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_Dose) then
+  begin
+    field_.Name := 'dose';
+    field_.Type_  := TType.String_;
+    field_.ID := 3;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteString(Dose);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_DoseUnica) then
+  begin
+    field_.Name := 'doseUnica';
+    field_.Type_  := TType.Bool_;
+    field_.ID := 4;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteBool(DoseUnica);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_UsoContinuo) then
+  begin
+    field_.Name := 'usoContinuo';
+    field_.Type_  := TType.Bool_;
+    field_.ID := 5;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteBool(UsoContinuo);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_DoseFrequenciaTipo) then
+  begin
+    field_.Name := 'doseFrequenciaTipo';
+    field_.Type_  := TType.I64;
+    field_.ID := 6;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteI64(DoseFrequenciaTipo);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_DoseFrequencia) then
+  begin
+    field_.Name := 'doseFrequencia';
+    field_.Type_  := TType.String_;
+    field_.ID := 7;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteString(DoseFrequencia);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_DoseFrequenciaQuantidade) then
+  begin
+    field_.Name := 'doseFrequenciaQuantidade';
+    field_.Type_  := TType.I32;
+    field_.ID := 8;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteI32(DoseFrequenciaQuantidade);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_DoseFrequenciaUnidadeMedida) then
+  begin
+    field_.Name := 'doseFrequenciaUnidadeMedida';
+    field_.Type_  := TType.I64;
+    field_.ID := 9;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteI64(DoseFrequenciaUnidadeMedida);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_DtInicioTratamento) then
+  begin
+    field_.Name := 'dtInicioTratamento';
+    field_.Type_  := TType.I64;
+    field_.ID := 10;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteI64(DtInicioTratamento);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_DuracaoTratamento) then
+  begin
+    field_.Name := 'duracaoTratamento';
+    field_.Type_  := TType.I32;
+    field_.ID := 11;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteI32(DuracaoTratamento);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_DuracaoTratamentoMedida) then
+  begin
+    field_.Name := 'duracaoTratamentoMedida';
+    field_.Type_  := TType.I64;
+    field_.ID := 12;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteI64(DuracaoTratamentoMedida);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_QuantidadeReceitada) then
+  begin
+    field_.Name := 'quantidadeReceitada';
+    field_.Type_  := TType.I32;
+    field_.ID := 13;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteI32(QuantidadeReceitada);
+    oprot.WriteFieldEnd();
+  end;
+  oprot.WriteFieldStop();
+  oprot.WriteStructEnd();
+end;
+
+function TMedicamentoThriftImpl.ToString: string;
+var
+  _sb8 : TThriftStringBuilder;
+  _first9 : Boolean;
+begin
+  _sb8 := TThriftStringBuilder.Create('(');
+  try
+    _first9 := TRUE;
+    if (__isset_CodigoCatmat) then begin
+      if not _first9 then _sb8.Append(',');
+      _first9 := FALSE;
+      _sb8.Append('CodigoCatmat: ');
+      _sb8.Append(CodigoCatmat);
+    end;
+    if (__isset_ViaAdministracao) then begin
+      if not _first9 then _sb8.Append(',');
+      _first9 := FALSE;
+      _sb8.Append('ViaAdministracao: ');
+      _sb8.Append(ViaAdministracao);
+    end;
+    if (__isset_Dose) then begin
+      if not _first9 then _sb8.Append(',');
+      _first9 := FALSE;
+      _sb8.Append('Dose: ');
+      _sb8.Append(Dose);
+    end;
+    if (__isset_DoseUnica) then begin
+      if not _first9 then _sb8.Append(',');
+      _first9 := FALSE;
+      _sb8.Append('DoseUnica: ');
+      _sb8.Append(DoseUnica);
+    end;
+    if (__isset_UsoContinuo) then begin
+      if not _first9 then _sb8.Append(',');
+      _first9 := FALSE;
+      _sb8.Append('UsoContinuo: ');
+      _sb8.Append(UsoContinuo);
+    end;
+    if (__isset_DoseFrequenciaTipo) then begin
+      if not _first9 then _sb8.Append(',');
+      _first9 := FALSE;
+      _sb8.Append('DoseFrequenciaTipo: ');
+      _sb8.Append(DoseFrequenciaTipo);
+    end;
+    if (__isset_DoseFrequencia) then begin
+      if not _first9 then _sb8.Append(',');
+      _first9 := FALSE;
+      _sb8.Append('DoseFrequencia: ');
+      _sb8.Append(DoseFrequencia);
+    end;
+    if (__isset_DoseFrequenciaQuantidade) then begin
+      if not _first9 then _sb8.Append(',');
+      _first9 := FALSE;
+      _sb8.Append('DoseFrequenciaQuantidade: ');
+      _sb8.Append(DoseFrequenciaQuantidade);
+    end;
+    if (__isset_DoseFrequenciaUnidadeMedida) then begin
+      if not _first9 then _sb8.Append(',');
+      _first9 := FALSE;
+      _sb8.Append('DoseFrequenciaUnidadeMedida: ');
+      _sb8.Append(DoseFrequenciaUnidadeMedida);
+    end;
+    if (__isset_DtInicioTratamento) then begin
+      if not _first9 then _sb8.Append(',');
+      _first9 := FALSE;
+      _sb8.Append('DtInicioTratamento: ');
+      _sb8.Append(DtInicioTratamento);
+    end;
+    if (__isset_DuracaoTratamento) then begin
+      if not _first9 then _sb8.Append(',');
+      _first9 := FALSE;
+      _sb8.Append('DuracaoTratamento: ');
+      _sb8.Append(DuracaoTratamento);
+    end;
+    if (__isset_DuracaoTratamentoMedida) then begin
+      if not _first9 then _sb8.Append(',');
+      _first9 := FALSE;
+      _sb8.Append('DuracaoTratamentoMedida: ');
+      _sb8.Append(DuracaoTratamentoMedida);
+    end;
+    if (__isset_QuantidadeReceitada) then begin
+      if not _first9 then _sb8.Append(',');
+      _first9 := FALSE;
+      _sb8.Append('QuantidadeReceitada: ');
+      _sb8.Append(QuantidadeReceitada);
+    end;
+    _sb8.Append(')');
+    Result := _sb8.ToString;
+    if _first9 then {prevent warning};
+  finally
+    _sb8.Free;
+  end;
+end;
+
+constructor TEncaminhamentoExternoThriftImpl.Create;
+begin
+  inherited;
+end;
+
+destructor TEncaminhamentoExternoThriftImpl.Destroy;
+begin
+  inherited;
+end;
+
+function TEncaminhamentoExternoThriftImpl.GetEspecialidade: Int64;
+begin
+  Result := FEspecialidade;
+end;
+
+procedure TEncaminhamentoExternoThriftImpl.SetEspecialidade( const Value: Int64);
+begin
+  F__isset_Especialidade := True;
+  FEspecialidade := Value;
+end;
+
+function TEncaminhamentoExternoThriftImpl.Get__isset_Especialidade: Boolean;
+begin
+  Result := F__isset_Especialidade;
+end;
+
+function TEncaminhamentoExternoThriftImpl.GetHipoteseDiagnosticoCid10: string;
+begin
+  Result := FHipoteseDiagnosticoCid10;
+end;
+
+procedure TEncaminhamentoExternoThriftImpl.SetHipoteseDiagnosticoCid10( const Value: string);
+begin
+  F__isset_HipoteseDiagnosticoCid10 := True;
+  FHipoteseDiagnosticoCid10 := Value;
+end;
+
+function TEncaminhamentoExternoThriftImpl.Get__isset_HipoteseDiagnosticoCid10: Boolean;
+begin
+  Result := F__isset_HipoteseDiagnosticoCid10;
+end;
+
+function TEncaminhamentoExternoThriftImpl.GetHipoteseDiagnosticoCiap2: string;
+begin
+  Result := FHipoteseDiagnosticoCiap2;
+end;
+
+procedure TEncaminhamentoExternoThriftImpl.SetHipoteseDiagnosticoCiap2( const Value: string);
+begin
+  F__isset_HipoteseDiagnosticoCiap2 := True;
+  FHipoteseDiagnosticoCiap2 := Value;
+end;
+
+function TEncaminhamentoExternoThriftImpl.Get__isset_HipoteseDiagnosticoCiap2: Boolean;
+begin
+  Result := F__isset_HipoteseDiagnosticoCiap2;
+end;
+
+function TEncaminhamentoExternoThriftImpl.GetClassificacaoRisco: Int64;
+begin
+  Result := FClassificacaoRisco;
+end;
+
+procedure TEncaminhamentoExternoThriftImpl.SetClassificacaoRisco( const Value: Int64);
+begin
+  F__isset_ClassificacaoRisco := True;
+  FClassificacaoRisco := Value;
+end;
+
+function TEncaminhamentoExternoThriftImpl.Get__isset_ClassificacaoRisco: Boolean;
+begin
+  Result := F__isset_ClassificacaoRisco;
+end;
+
+procedure TEncaminhamentoExternoThriftImpl.Read( const iprot: IProtocol);
+var
+  field_ : IField;
+  struc : IStruct;
+  tracker : IProtocolRecursionTracker;
+
+begin
+  tracker := iprot.NextRecursionLevel;
+  struc := iprot.ReadStructBegin;
+  try
+    while (true) do
+    begin
+      field_ := iprot.ReadFieldBegin();
+      if (field_.Type_ = TType.Stop) then
+      begin
+        Break;
+      end;
+      case field_.ID of
+        1: begin
+          if (field_.Type_ = TType.I64) then
+          begin
+            Especialidade := iprot.ReadI64();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        2: begin
+          if (field_.Type_ = TType.String_) then
+          begin
+            HipoteseDiagnosticoCid10 := iprot.ReadString();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        3: begin
+          if (field_.Type_ = TType.String_) then
+          begin
+            HipoteseDiagnosticoCiap2 := iprot.ReadString();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        4: begin
+          if (field_.Type_ = TType.I64) then
+          begin
+            ClassificacaoRisco := iprot.ReadI64();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end
+        else begin
+          TProtocolUtil.Skip(iprot, field_.Type_);
+        end;
+      end;
+      iprot.ReadFieldEnd;
+    end;
+  finally
+    iprot.ReadStructEnd;
+  end;
+end;
+
+procedure TEncaminhamentoExternoThriftImpl.Write( const oprot: IProtocol);
+var
+  struc : IStruct;
+  field_ : IField;
+  tracker : IProtocolRecursionTracker;
+begin
+  tracker := oprot.NextRecursionLevel;
+  struc := TStructImpl.Create('EncaminhamentoExternoThrift');
+  oprot.WriteStructBegin(struc);
+  field_ := TFieldImpl.Create;
+  if (__isset_Especialidade) then
+  begin
+    field_.Name := 'especialidade';
+    field_.Type_  := TType.I64;
+    field_.ID := 1;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteI64(Especialidade);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_HipoteseDiagnosticoCid10) then
+  begin
+    field_.Name := 'hipoteseDiagnosticoCid10';
+    field_.Type_  := TType.String_;
+    field_.ID := 2;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteString(HipoteseDiagnosticoCid10);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_HipoteseDiagnosticoCiap2) then
+  begin
+    field_.Name := 'hipoteseDiagnosticoCiap2';
+    field_.Type_  := TType.String_;
+    field_.ID := 3;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteString(HipoteseDiagnosticoCiap2);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_ClassificacaoRisco) then
+  begin
+    field_.Name := 'classificacaoRisco';
+    field_.Type_  := TType.I64;
+    field_.ID := 4;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteI64(ClassificacaoRisco);
+    oprot.WriteFieldEnd();
+  end;
+  oprot.WriteFieldStop();
+  oprot.WriteStructEnd();
+end;
+
+function TEncaminhamentoExternoThriftImpl.ToString: string;
+var
+  _sb10 : TThriftStringBuilder;
+  _first11 : Boolean;
+begin
+  _sb10 := TThriftStringBuilder.Create('(');
+  try
+    _first11 := TRUE;
+    if (__isset_Especialidade) then begin
+      if not _first11 then _sb10.Append(',');
+      _first11 := FALSE;
+      _sb10.Append('Especialidade: ');
+      _sb10.Append(Especialidade);
+    end;
+    if (__isset_HipoteseDiagnosticoCid10) then begin
+      if not _first11 then _sb10.Append(',');
+      _first11 := FALSE;
+      _sb10.Append('HipoteseDiagnosticoCid10: ');
+      _sb10.Append(HipoteseDiagnosticoCid10);
+    end;
+    if (__isset_HipoteseDiagnosticoCiap2) then begin
+      if not _first11 then _sb10.Append(',');
+      _first11 := FALSE;
+      _sb10.Append('HipoteseDiagnosticoCiap2: ');
+      _sb10.Append(HipoteseDiagnosticoCiap2);
+    end;
+    if (__isset_ClassificacaoRisco) then begin
+      if not _first11 then _sb10.Append(',');
+      _first11 := FALSE;
+      _sb10.Append('ClassificacaoRisco: ');
+      _sb10.Append(ClassificacaoRisco);
+    end;
+    _sb10.Append(')');
+    Result := _sb10.ToString;
+    if _first11 then {prevent warning};
+  finally
+    _sb10.Free;
+  end;
+end;
+
+constructor TResultadoExameThriftImpl.Create;
+begin
+  inherited;
+end;
+
+destructor TResultadoExameThriftImpl.Destroy;
+begin
+  inherited;
+end;
+
+function TResultadoExameThriftImpl.GetTipoResultado: Integer;
+begin
+  Result := FTipoResultado;
+end;
+
+procedure TResultadoExameThriftImpl.SetTipoResultado( const Value: Integer);
+begin
+  F__isset_TipoResultado := True;
+  FTipoResultado := Value;
+end;
+
+function TResultadoExameThriftImpl.Get__isset_TipoResultado: Boolean;
+begin
+  Result := F__isset_TipoResultado;
+end;
+
+function TResultadoExameThriftImpl.GetValorResultado: string;
+begin
+  Result := FValorResultado;
+end;
+
+procedure TResultadoExameThriftImpl.SetValorResultado( const Value: string);
+begin
+  F__isset_ValorResultado := True;
+  FValorResultado := Value;
+end;
+
+function TResultadoExameThriftImpl.Get__isset_ValorResultado: Boolean;
+begin
+  Result := F__isset_ValorResultado;
+end;
+
+procedure TResultadoExameThriftImpl.Read( const iprot: IProtocol);
+var
+  field_ : IField;
+  struc : IStruct;
+  tracker : IProtocolRecursionTracker;
+
+begin
+  tracker := iprot.NextRecursionLevel;
+  struc := iprot.ReadStructBegin;
+  try
+    while (true) do
+    begin
+      field_ := iprot.ReadFieldBegin();
+      if (field_.Type_ = TType.Stop) then
+      begin
+        Break;
+      end;
+      case field_.ID of
+        1: begin
+          if (field_.Type_ = TType.I32) then
+          begin
+            TipoResultado := iprot.ReadI32();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        2: begin
+          if (field_.Type_ = TType.String_) then
+          begin
+            ValorResultado := iprot.ReadString();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end
+        else begin
+          TProtocolUtil.Skip(iprot, field_.Type_);
+        end;
+      end;
+      iprot.ReadFieldEnd;
+    end;
+  finally
+    iprot.ReadStructEnd;
+  end;
+end;
+
+procedure TResultadoExameThriftImpl.Write( const oprot: IProtocol);
+var
+  struc : IStruct;
+  field_ : IField;
+  tracker : IProtocolRecursionTracker;
+begin
+  tracker := oprot.NextRecursionLevel;
+  struc := TStructImpl.Create('ResultadoExameThrift');
+  oprot.WriteStructBegin(struc);
+  field_ := TFieldImpl.Create;
+  if (__isset_TipoResultado) then
+  begin
+    field_.Name := 'tipoResultado';
+    field_.Type_  := TType.I32;
+    field_.ID := 1;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteI32(TipoResultado);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_ValorResultado) then
+  begin
+    field_.Name := 'valorResultado';
+    field_.Type_  := TType.String_;
+    field_.ID := 2;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteString(ValorResultado);
+    oprot.WriteFieldEnd();
+  end;
+  oprot.WriteFieldStop();
+  oprot.WriteStructEnd();
+end;
+
+function TResultadoExameThriftImpl.ToString: string;
+var
+  _sb12 : TThriftStringBuilder;
+  _first13 : Boolean;
+begin
+  _sb12 := TThriftStringBuilder.Create('(');
+  try
+    _first13 := TRUE;
+    if (__isset_TipoResultado) then begin
+      if not _first13 then _sb12.Append(',');
+      _first13 := FALSE;
+      _sb12.Append('TipoResultado: ');
+      _sb12.Append(TipoResultado);
+    end;
+    if (__isset_ValorResultado) then begin
+      if not _first13 then _sb12.Append(',');
+      _first13 := FALSE;
+      _sb12.Append('ValorResultado: ');
+      _sb12.Append(ValorResultado);
+    end;
+    _sb12.Append(')');
+    Result := _sb12.ToString;
+    if _first13 then {prevent warning};
+  finally
+    _sb12.Free;
+  end;
+end;
+
+constructor TResultadosExameThriftImpl.Create;
+begin
+  inherited;
+end;
+
+destructor TResultadosExameThriftImpl.Destroy;
+begin
+  inherited;
+end;
+
+function TResultadosExameThriftImpl.GetExame: string;
+begin
+  Result := FExame;
+end;
+
+procedure TResultadosExameThriftImpl.SetExame( const Value: string);
+begin
+  F__isset_Exame := True;
+  FExame := Value;
+end;
+
+function TResultadosExameThriftImpl.Get__isset_Exame: Boolean;
+begin
+  Result := F__isset_Exame;
+end;
+
+function TResultadosExameThriftImpl.GetDataSolicitacao: Int64;
+begin
+  Result := FDataSolicitacao;
+end;
+
+procedure TResultadosExameThriftImpl.SetDataSolicitacao( const Value: Int64);
+begin
+  F__isset_DataSolicitacao := True;
+  FDataSolicitacao := Value;
+end;
+
+function TResultadosExameThriftImpl.Get__isset_DataSolicitacao: Boolean;
+begin
+  Result := F__isset_DataSolicitacao;
+end;
+
+function TResultadosExameThriftImpl.GetDataRealizacao: Int64;
+begin
+  Result := FDataRealizacao;
+end;
+
+procedure TResultadosExameThriftImpl.SetDataRealizacao( const Value: Int64);
+begin
+  F__isset_DataRealizacao := True;
+  FDataRealizacao := Value;
+end;
+
+function TResultadosExameThriftImpl.Get__isset_DataRealizacao: Boolean;
+begin
+  Result := F__isset_DataRealizacao;
+end;
+
+function TResultadosExameThriftImpl.GetDataResultado: Int64;
+begin
+  Result := FDataResultado;
+end;
+
+procedure TResultadosExameThriftImpl.SetDataResultado( const Value: Int64);
+begin
+  F__isset_DataResultado := True;
+  FDataResultado := Value;
+end;
+
+function TResultadosExameThriftImpl.Get__isset_DataResultado: Boolean;
+begin
+  Result := F__isset_DataResultado;
+end;
+
+function TResultadosExameThriftImpl.GetResultado: string;
+begin
+  Result := FResultado;
+end;
+
+procedure TResultadosExameThriftImpl.SetResultado( const Value: string);
+begin
+  F__isset_Resultado := True;
+  FResultado := Value;
+end;
+
+function TResultadosExameThriftImpl.Get__isset_Resultado: Boolean;
+begin
+  Result := F__isset_Resultado;
+end;
+
+function TResultadosExameThriftImpl.GetExameResultadoEspecifico: IThriftList<IResultadoExameThrift>;
+begin
+  Result := FExameResultadoEspecifico;
+end;
+
+procedure TResultadosExameThriftImpl.SetExameResultadoEspecifico( const Value: IThriftList<IResultadoExameThrift>);
+begin
+  F__isset_ExameResultadoEspecifico := True;
+  FExameResultadoEspecifico := Value;
+end;
+
+function TResultadosExameThriftImpl.Get__isset_ExameResultadoEspecifico: Boolean;
+begin
+  Result := F__isset_ExameResultadoEspecifico;
+end;
+
+procedure TResultadosExameThriftImpl.Read( const iprot: IProtocol);
+var
+  field_ : IField;
+  struc : IStruct;
+  tracker : IProtocolRecursionTracker;
+  _list14: IList;
+  _i15: Integer;
+  _elem16: IResultadoExameThrift;
+
+begin
+  tracker := iprot.NextRecursionLevel;
+  struc := iprot.ReadStructBegin;
+  try
+    while (true) do
+    begin
+      field_ := iprot.ReadFieldBegin();
+      if (field_.Type_ = TType.Stop) then
+      begin
+        Break;
+      end;
+      case field_.ID of
+        1: begin
+          if (field_.Type_ = TType.String_) then
+          begin
+            Exame := iprot.ReadString();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        2: begin
+          if (field_.Type_ = TType.I64) then
+          begin
+            DataSolicitacao := iprot.ReadI64();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        3: begin
+          if (field_.Type_ = TType.I64) then
+          begin
+            DataRealizacao := iprot.ReadI64();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        4: begin
+          if (field_.Type_ = TType.I64) then
+          begin
+            DataResultado := iprot.ReadI64();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        5: begin
+          if (field_.Type_ = TType.String_) then
+          begin
+            Resultado := iprot.ReadString();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        6: begin
+          if (field_.Type_ = TType.List) then
+          begin
+            ExameResultadoEspecifico := TThriftListImpl<IResultadoExameThrift>.Create;
+            _list14 := iprot.ReadListBegin();
+            for _i15 := 0 to _list14.Count - 1 do
+            begin
+              _elem16 := TResultadoExameThriftImpl.Create;
+              _elem16.Read(iprot);
+              ExameResultadoEspecifico.Add(_elem16);
+            end;
+            iprot.ReadListEnd();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end
+        else begin
+          TProtocolUtil.Skip(iprot, field_.Type_);
+        end;
+      end;
+      iprot.ReadFieldEnd;
+    end;
+  finally
+    iprot.ReadStructEnd;
+  end;
+end;
+
+procedure TResultadosExameThriftImpl.Write( const oprot: IProtocol);
+var
+  struc : IStruct;
+  field_ : IField;
+  tracker : IProtocolRecursionTracker;
+  list_17 : IList;
+  _iter18: IResultadoExameThrift;
+begin
+  tracker := oprot.NextRecursionLevel;
+  struc := TStructImpl.Create('ResultadosExameThrift');
+  oprot.WriteStructBegin(struc);
+  field_ := TFieldImpl.Create;
+  if (__isset_Exame) then
+  begin
+    field_.Name := 'exame';
+    field_.Type_  := TType.String_;
+    field_.ID := 1;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteString(Exame);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_DataSolicitacao) then
+  begin
+    field_.Name := 'dataSolicitacao';
+    field_.Type_  := TType.I64;
+    field_.ID := 2;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteI64(DataSolicitacao);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_DataRealizacao) then
+  begin
+    field_.Name := 'dataRealizacao';
+    field_.Type_  := TType.I64;
+    field_.ID := 3;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteI64(DataRealizacao);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_DataResultado) then
+  begin
+    field_.Name := 'dataResultado';
+    field_.Type_  := TType.I64;
+    field_.ID := 4;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteI64(DataResultado);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_Resultado) then
+  begin
+    field_.Name := 'resultado';
+    field_.Type_  := TType.String_;
+    field_.ID := 5;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteString(Resultado);
+    oprot.WriteFieldEnd();
+  end;
+  if (ExameResultadoEspecifico <> nil) and __isset_ExameResultadoEspecifico then
+  begin
+    field_.Name := 'exameResultadoEspecifico';
+    field_.Type_  := TType.List;
+    field_.ID := 6;
+    oprot.WriteFieldBegin(field_);
+    list_17 := TListImpl.Create(TType.Struct, ExameResultadoEspecifico.Count);
+    oprot.WriteListBegin( list_17);
+    for _iter18 in ExameResultadoEspecifico do
+    begin
+      _iter18.Write(oprot);
+    end;
+    oprot.WriteListEnd();
+    oprot.WriteFieldEnd();
+  end;
+  oprot.WriteFieldStop();
+  oprot.WriteStructEnd();
+end;
+
+function TResultadosExameThriftImpl.ToString: string;
+var
+  _sb19 : TThriftStringBuilder;
+  _first20 : Boolean;
+begin
+  _sb19 := TThriftStringBuilder.Create('(');
+  try
+    _first20 := TRUE;
+    if (__isset_Exame) then begin
+      if not _first20 then _sb19.Append(',');
+      _first20 := FALSE;
+      _sb19.Append('Exame: ');
+      _sb19.Append(Exame);
+    end;
+    if (__isset_DataSolicitacao) then begin
+      if not _first20 then _sb19.Append(',');
+      _first20 := FALSE;
+      _sb19.Append('DataSolicitacao: ');
+      _sb19.Append(DataSolicitacao);
+    end;
+    if (__isset_DataRealizacao) then begin
+      if not _first20 then _sb19.Append(',');
+      _first20 := FALSE;
+      _sb19.Append('DataRealizacao: ');
+      _sb19.Append(DataRealizacao);
+    end;
+    if (__isset_DataResultado) then begin
+      if not _first20 then _sb19.Append(',');
+      _first20 := FALSE;
+      _sb19.Append('DataResultado: ');
+      _sb19.Append(DataResultado);
+    end;
+    if (__isset_Resultado) then begin
+      if not _first20 then _sb19.Append(',');
+      _first20 := FALSE;
+      _sb19.Append('Resultado: ');
+      _sb19.Append(Resultado);
+    end;
+    if (ExameResultadoEspecifico <> nil) and __isset_ExameResultadoEspecifico then begin
+      if not _first20 then _sb19.Append(',');
+      _first20 := FALSE;
+      _sb19.Append('ExameResultadoEspecifico: ');
+      _sb19.Append(ExameResultadoEspecifico);
+    end;
+    _sb19.Append(')');
+    Result := _sb19.ToString;
+    if _first20 then {prevent warning};
+  finally
+    _sb19.Free;
   end;
 end;
 

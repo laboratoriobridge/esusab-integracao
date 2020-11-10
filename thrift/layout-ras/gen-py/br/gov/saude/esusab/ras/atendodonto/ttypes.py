@@ -117,6 +117,9 @@ class FichaAtendimentoOdontologicoChildThrift:
    - dataHoraInicialAtendimento
    - dataHoraFinalAtendimento
    - cpfCidadao
+   - medicamentos
+   - encaminhamentos
+   - resultadosExames
   """
 
   thrift_spec = (
@@ -139,9 +142,12 @@ class FichaAtendimentoOdontologicoChildThrift:
     (16, TType.I64, 'dataHoraInicialAtendimento', None, None, ), # 16
     (17, TType.I64, 'dataHoraFinalAtendimento', None, None, ), # 17
     (18, TType.STRING, 'cpfCidadao', None, None, ), # 18
+    (19, TType.LIST, 'medicamentos', (TType.STRUCT,(br.gov.saude.esusab.ras.common.ttypes.MedicamentoThrift, br.gov.saude.esusab.ras.common.ttypes.MedicamentoThrift.thrift_spec)), None, ), # 19
+    (20, TType.LIST, 'encaminhamentos', (TType.STRUCT,(br.gov.saude.esusab.ras.common.ttypes.EncaminhamentoExternoThrift, br.gov.saude.esusab.ras.common.ttypes.EncaminhamentoExternoThrift.thrift_spec)), None, ), # 20
+    (21, TType.LIST, 'resultadosExames', (TType.STRUCT,(br.gov.saude.esusab.ras.common.ttypes.ResultadoExameThrift, br.gov.saude.esusab.ras.common.ttypes.ResultadoExameThrift.thrift_spec)), None, ), # 21
   )
 
-  def __init__(self, dtNascimento=None, cnsCidadao=None, numProntuario=None, gestante=None, necessidadesEspeciais=None, localAtendimento=None, tipoAtendimento=None, tiposEncamOdonto=None, tiposFornecimOdonto=None, tiposVigilanciaSaudeBucal=None, tiposConsultaOdonto=None, procedimentosRealizados=None, sexo=None, turno=None, dataHoraInicialAtendimento=None, dataHoraFinalAtendimento=None, cpfCidadao=None,):
+  def __init__(self, dtNascimento=None, cnsCidadao=None, numProntuario=None, gestante=None, necessidadesEspeciais=None, localAtendimento=None, tipoAtendimento=None, tiposEncamOdonto=None, tiposFornecimOdonto=None, tiposVigilanciaSaudeBucal=None, tiposConsultaOdonto=None, procedimentosRealizados=None, sexo=None, turno=None, dataHoraInicialAtendimento=None, dataHoraFinalAtendimento=None, cpfCidadao=None, medicamentos=None, encaminhamentos=None, resultadosExames=None,):
     self.dtNascimento = dtNascimento
     self.cnsCidadao = cnsCidadao
     self.numProntuario = numProntuario
@@ -159,6 +165,9 @@ class FichaAtendimentoOdontologicoChildThrift:
     self.dataHoraInicialAtendimento = dataHoraInicialAtendimento
     self.dataHoraFinalAtendimento = dataHoraFinalAtendimento
     self.cpfCidadao = cpfCidadao
+    self.medicamentos = medicamentos
+    self.encaminhamentos = encaminhamentos
+    self.resultadosExames = resultadosExames
 
   def read(self, iprot):
     if iprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None and fastbinary is not None:
@@ -280,6 +289,39 @@ class FichaAtendimentoOdontologicoChildThrift:
           self.cpfCidadao = iprot.readString()
         else:
           iprot.skip(ftype)
+      elif fid == 19:
+        if ftype == TType.LIST:
+          self.medicamentos = []
+          (_etype33, _size30) = iprot.readListBegin()
+          for _i34 in xrange(_size30):
+            _elem35 = br.gov.saude.esusab.ras.common.ttypes.MedicamentoThrift()
+            _elem35.read(iprot)
+            self.medicamentos.append(_elem35)
+          iprot.readListEnd()
+        else:
+          iprot.skip(ftype)
+      elif fid == 20:
+        if ftype == TType.LIST:
+          self.encaminhamentos = []
+          (_etype39, _size36) = iprot.readListBegin()
+          for _i40 in xrange(_size36):
+            _elem41 = br.gov.saude.esusab.ras.common.ttypes.EncaminhamentoExternoThrift()
+            _elem41.read(iprot)
+            self.encaminhamentos.append(_elem41)
+          iprot.readListEnd()
+        else:
+          iprot.skip(ftype)
+      elif fid == 21:
+        if ftype == TType.LIST:
+          self.resultadosExames = []
+          (_etype45, _size42) = iprot.readListBegin()
+          for _i46 in xrange(_size42):
+            _elem47 = br.gov.saude.esusab.ras.common.ttypes.ResultadoExameThrift()
+            _elem47.read(iprot)
+            self.resultadosExames.append(_elem47)
+          iprot.readListEnd()
+        else:
+          iprot.skip(ftype)
       else:
         iprot.skip(ftype)
       iprot.readFieldEnd()
@@ -321,36 +363,36 @@ class FichaAtendimentoOdontologicoChildThrift:
     if self.tiposEncamOdonto is not None:
       oprot.writeFieldBegin('tiposEncamOdonto', TType.LIST, 8)
       oprot.writeListBegin(TType.I64, len(self.tiposEncamOdonto))
-      for iter30 in self.tiposEncamOdonto:
-        oprot.writeI64(iter30)
+      for iter48 in self.tiposEncamOdonto:
+        oprot.writeI64(iter48)
       oprot.writeListEnd()
       oprot.writeFieldEnd()
     if self.tiposFornecimOdonto is not None:
       oprot.writeFieldBegin('tiposFornecimOdonto', TType.LIST, 9)
       oprot.writeListBegin(TType.I64, len(self.tiposFornecimOdonto))
-      for iter31 in self.tiposFornecimOdonto:
-        oprot.writeI64(iter31)
+      for iter49 in self.tiposFornecimOdonto:
+        oprot.writeI64(iter49)
       oprot.writeListEnd()
       oprot.writeFieldEnd()
     if self.tiposVigilanciaSaudeBucal is not None:
       oprot.writeFieldBegin('tiposVigilanciaSaudeBucal', TType.LIST, 10)
       oprot.writeListBegin(TType.I64, len(self.tiposVigilanciaSaudeBucal))
-      for iter32 in self.tiposVigilanciaSaudeBucal:
-        oprot.writeI64(iter32)
+      for iter50 in self.tiposVigilanciaSaudeBucal:
+        oprot.writeI64(iter50)
       oprot.writeListEnd()
       oprot.writeFieldEnd()
     if self.tiposConsultaOdonto is not None:
       oprot.writeFieldBegin('tiposConsultaOdonto', TType.LIST, 11)
       oprot.writeListBegin(TType.I64, len(self.tiposConsultaOdonto))
-      for iter33 in self.tiposConsultaOdonto:
-        oprot.writeI64(iter33)
+      for iter51 in self.tiposConsultaOdonto:
+        oprot.writeI64(iter51)
       oprot.writeListEnd()
       oprot.writeFieldEnd()
     if self.procedimentosRealizados is not None:
       oprot.writeFieldBegin('procedimentosRealizados', TType.LIST, 12)
       oprot.writeListBegin(TType.STRUCT, len(self.procedimentosRealizados))
-      for iter34 in self.procedimentosRealizados:
-        iter34.write(oprot)
+      for iter52 in self.procedimentosRealizados:
+        iter52.write(oprot)
       oprot.writeListEnd()
       oprot.writeFieldEnd()
     if self.sexo is not None:
@@ -372,6 +414,27 @@ class FichaAtendimentoOdontologicoChildThrift:
     if self.cpfCidadao is not None:
       oprot.writeFieldBegin('cpfCidadao', TType.STRING, 18)
       oprot.writeString(self.cpfCidadao)
+      oprot.writeFieldEnd()
+    if self.medicamentos is not None:
+      oprot.writeFieldBegin('medicamentos', TType.LIST, 19)
+      oprot.writeListBegin(TType.STRUCT, len(self.medicamentos))
+      for iter53 in self.medicamentos:
+        iter53.write(oprot)
+      oprot.writeListEnd()
+      oprot.writeFieldEnd()
+    if self.encaminhamentos is not None:
+      oprot.writeFieldBegin('encaminhamentos', TType.LIST, 20)
+      oprot.writeListBegin(TType.STRUCT, len(self.encaminhamentos))
+      for iter54 in self.encaminhamentos:
+        iter54.write(oprot)
+      oprot.writeListEnd()
+      oprot.writeFieldEnd()
+    if self.resultadosExames is not None:
+      oprot.writeFieldBegin('resultadosExames', TType.LIST, 21)
+      oprot.writeListBegin(TType.STRUCT, len(self.resultadosExames))
+      for iter55 in self.resultadosExames:
+        iter55.write(oprot)
+      oprot.writeListEnd()
       oprot.writeFieldEnd()
     oprot.writeFieldStop()
     oprot.writeStructEnd()
@@ -399,6 +462,9 @@ class FichaAtendimentoOdontologicoChildThrift:
     value = (value * 31) ^ hash(self.dataHoraInicialAtendimento)
     value = (value * 31) ^ hash(self.dataHoraFinalAtendimento)
     value = (value * 31) ^ hash(self.cpfCidadao)
+    value = (value * 31) ^ hash(self.medicamentos)
+    value = (value * 31) ^ hash(self.encaminhamentos)
+    value = (value * 31) ^ hash(self.resultadosExames)
     return value
 
   def __repr__(self):
@@ -458,11 +524,11 @@ class FichaAtendimentoOdontologicoMasterThrift:
       elif fid == 3:
         if ftype == TType.LIST:
           self.atendimentosOdontologicos = []
-          (_etype38, _size35) = iprot.readListBegin()
-          for _i39 in xrange(_size35):
-            _elem40 = FichaAtendimentoOdontologicoChildThrift()
-            _elem40.read(iprot)
-            self.atendimentosOdontologicos.append(_elem40)
+          (_etype59, _size56) = iprot.readListBegin()
+          for _i60 in xrange(_size56):
+            _elem61 = FichaAtendimentoOdontologicoChildThrift()
+            _elem61.read(iprot)
+            self.atendimentosOdontologicos.append(_elem61)
           iprot.readListEnd()
         else:
           iprot.skip(ftype)
@@ -492,8 +558,8 @@ class FichaAtendimentoOdontologicoMasterThrift:
     if self.atendimentosOdontologicos is not None:
       oprot.writeFieldBegin('atendimentosOdontologicos', TType.LIST, 3)
       oprot.writeListBegin(TType.STRUCT, len(self.atendimentosOdontologicos))
-      for iter41 in self.atendimentosOdontologicos:
-        iter41.write(oprot)
+      for iter62 in self.atendimentosOdontologicos:
+        iter62.write(oprot)
       oprot.writeListEnd()
       oprot.writeFieldEnd()
     if self.tpCdsOrigem is not None:

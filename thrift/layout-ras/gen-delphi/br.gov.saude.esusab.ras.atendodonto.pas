@@ -116,6 +116,12 @@ type
     procedure SetDataHoraFinalAtendimento( const Value: Int64);
     function GetCpfCidadao: string;
     procedure SetCpfCidadao( const Value: string);
+    function GetMedicamentos: IThriftList<IMedicamentoThrift>;
+    procedure SetMedicamentos( const Value: IThriftList<IMedicamentoThrift>);
+    function GetEncaminhamentos: IThriftList<IEncaminhamentoExternoThrift>;
+    procedure SetEncaminhamentos( const Value: IThriftList<IEncaminhamentoExternoThrift>);
+    function GetResultadosExames: IThriftList<IResultadoExameThrift>;
+    procedure SetResultadosExames( const Value: IThriftList<IResultadoExameThrift>);
 
     property DtNascimento: Int64 read GetDtNascimento write SetDtNascimento;
     property CnsCidadao: string read GetCnsCidadao write SetCnsCidadao;
@@ -134,6 +140,9 @@ type
     property DataHoraInicialAtendimento: Int64 read GetDataHoraInicialAtendimento write SetDataHoraInicialAtendimento;
     property DataHoraFinalAtendimento: Int64 read GetDataHoraFinalAtendimento write SetDataHoraFinalAtendimento;
     property CpfCidadao: string read GetCpfCidadao write SetCpfCidadao;
+    property Medicamentos: IThriftList<IMedicamentoThrift> read GetMedicamentos write SetMedicamentos;
+    property Encaminhamentos: IThriftList<IEncaminhamentoExternoThrift> read GetEncaminhamentos write SetEncaminhamentos;
+    property ResultadosExames: IThriftList<IResultadoExameThrift> read GetResultadosExames write SetResultadosExames;
 
     function Get__isset_DtNascimento: Boolean;
     function Get__isset_CnsCidadao: Boolean;
@@ -152,6 +161,9 @@ type
     function Get__isset_DataHoraInicialAtendimento: Boolean;
     function Get__isset_DataHoraFinalAtendimento: Boolean;
     function Get__isset_CpfCidadao: Boolean;
+    function Get__isset_Medicamentos: Boolean;
+    function Get__isset_Encaminhamentos: Boolean;
+    function Get__isset_ResultadosExames: Boolean;
 
     property __isset_DtNascimento: Boolean read Get__isset_DtNascimento;
     property __isset_CnsCidadao: Boolean read Get__isset_CnsCidadao;
@@ -170,6 +182,9 @@ type
     property __isset_DataHoraInicialAtendimento: Boolean read Get__isset_DataHoraInicialAtendimento;
     property __isset_DataHoraFinalAtendimento: Boolean read Get__isset_DataHoraFinalAtendimento;
     property __isset_CpfCidadao: Boolean read Get__isset_CpfCidadao;
+    property __isset_Medicamentos: Boolean read Get__isset_Medicamentos;
+    property __isset_Encaminhamentos: Boolean read Get__isset_Encaminhamentos;
+    property __isset_ResultadosExames: Boolean read Get__isset_ResultadosExames;
   end;
 
   TFichaAtendimentoOdontologicoChildThriftImpl = class(TInterfacedObject, IBase, IFichaAtendimentoOdontologicoChildThrift)
@@ -191,6 +206,9 @@ type
     FDataHoraInicialAtendimento: Int64;
     FDataHoraFinalAtendimento: Int64;
     FCpfCidadao: string;
+    FMedicamentos: IThriftList<IMedicamentoThrift>;
+    FEncaminhamentos: IThriftList<IEncaminhamentoExternoThrift>;
+    FResultadosExames: IThriftList<IResultadoExameThrift>;
     
     F__isset_DtNascimento: Boolean;
     F__isset_CnsCidadao: Boolean;
@@ -209,6 +227,9 @@ type
     F__isset_DataHoraInicialAtendimento: Boolean;
     F__isset_DataHoraFinalAtendimento: Boolean;
     F__isset_CpfCidadao: Boolean;
+    F__isset_Medicamentos: Boolean;
+    F__isset_Encaminhamentos: Boolean;
+    F__isset_ResultadosExames: Boolean;
     
     function GetDtNascimento: Int64;
     procedure SetDtNascimento( const Value: Int64);
@@ -244,6 +265,12 @@ type
     procedure SetDataHoraFinalAtendimento( const Value: Int64);
     function GetCpfCidadao: string;
     procedure SetCpfCidadao( const Value: string);
+    function GetMedicamentos: IThriftList<IMedicamentoThrift>;
+    procedure SetMedicamentos( const Value: IThriftList<IMedicamentoThrift>);
+    function GetEncaminhamentos: IThriftList<IEncaminhamentoExternoThrift>;
+    procedure SetEncaminhamentos( const Value: IThriftList<IEncaminhamentoExternoThrift>);
+    function GetResultadosExames: IThriftList<IResultadoExameThrift>;
+    procedure SetResultadosExames( const Value: IThriftList<IResultadoExameThrift>);
 
     function Get__isset_DtNascimento: Boolean;
     function Get__isset_CnsCidadao: Boolean;
@@ -262,6 +289,9 @@ type
     function Get__isset_DataHoraInicialAtendimento: Boolean;
     function Get__isset_DataHoraFinalAtendimento: Boolean;
     function Get__isset_CpfCidadao: Boolean;
+    function Get__isset_Medicamentos: Boolean;
+    function Get__isset_Encaminhamentos: Boolean;
+    function Get__isset_ResultadosExames: Boolean;
   public
     constructor Create;
     destructor Destroy; override;
@@ -290,6 +320,9 @@ type
     property DataHoraInicialAtendimento: Int64 read GetDataHoraInicialAtendimento write SetDataHoraInicialAtendimento;
     property DataHoraFinalAtendimento: Int64 read GetDataHoraFinalAtendimento write SetDataHoraFinalAtendimento;
     property CpfCidadao: string read GetCpfCidadao write SetCpfCidadao;
+    property Medicamentos: IThriftList<IMedicamentoThrift> read GetMedicamentos write SetMedicamentos;
+    property Encaminhamentos: IThriftList<IEncaminhamentoExternoThrift> read GetEncaminhamentos write SetEncaminhamentos;
+    property ResultadosExames: IThriftList<IResultadoExameThrift> read GetResultadosExames write SetResultadosExames;
 
     // isset
     property __isset_DtNascimento: Boolean read Get__isset_DtNascimento;
@@ -309,6 +342,9 @@ type
     property __isset_DataHoraInicialAtendimento: Boolean read Get__isset_DataHoraInicialAtendimento;
     property __isset_DataHoraFinalAtendimento: Boolean read Get__isset_DataHoraFinalAtendimento;
     property __isset_CpfCidadao: Boolean read Get__isset_CpfCidadao;
+    property __isset_Medicamentos: Boolean read Get__isset_Medicamentos;
+    property __isset_Encaminhamentos: Boolean read Get__isset_Encaminhamentos;
+    property __isset_ResultadosExames: Boolean read Get__isset_ResultadosExames;
   end;
 
   IFichaAtendimentoOdontologicoMasterThrift = interface(IBase)
@@ -813,6 +849,54 @@ begin
   Result := F__isset_CpfCidadao;
 end;
 
+function TFichaAtendimentoOdontologicoChildThriftImpl.GetMedicamentos: IThriftList<IMedicamentoThrift>;
+begin
+  Result := FMedicamentos;
+end;
+
+procedure TFichaAtendimentoOdontologicoChildThriftImpl.SetMedicamentos( const Value: IThriftList<IMedicamentoThrift>);
+begin
+  F__isset_Medicamentos := True;
+  FMedicamentos := Value;
+end;
+
+function TFichaAtendimentoOdontologicoChildThriftImpl.Get__isset_Medicamentos: Boolean;
+begin
+  Result := F__isset_Medicamentos;
+end;
+
+function TFichaAtendimentoOdontologicoChildThriftImpl.GetEncaminhamentos: IThriftList<IEncaminhamentoExternoThrift>;
+begin
+  Result := FEncaminhamentos;
+end;
+
+procedure TFichaAtendimentoOdontologicoChildThriftImpl.SetEncaminhamentos( const Value: IThriftList<IEncaminhamentoExternoThrift>);
+begin
+  F__isset_Encaminhamentos := True;
+  FEncaminhamentos := Value;
+end;
+
+function TFichaAtendimentoOdontologicoChildThriftImpl.Get__isset_Encaminhamentos: Boolean;
+begin
+  Result := F__isset_Encaminhamentos;
+end;
+
+function TFichaAtendimentoOdontologicoChildThriftImpl.GetResultadosExames: IThriftList<IResultadoExameThrift>;
+begin
+  Result := FResultadosExames;
+end;
+
+procedure TFichaAtendimentoOdontologicoChildThriftImpl.SetResultadosExames( const Value: IThriftList<IResultadoExameThrift>);
+begin
+  F__isset_ResultadosExames := True;
+  FResultadosExames := Value;
+end;
+
+function TFichaAtendimentoOdontologicoChildThriftImpl.Get__isset_ResultadosExames: Boolean;
+begin
+  Result := F__isset_ResultadosExames;
+end;
+
 procedure TFichaAtendimentoOdontologicoChildThriftImpl.Read( const iprot: IProtocol);
 var
   field_ : IField;
@@ -833,6 +917,15 @@ var
   _list14: IList;
   _i15: Integer;
   _elem16: IProcedimentoQuantidadeThrift;
+  _list17: IList;
+  _i18: Integer;
+  _elem19: IMedicamentoThrift;
+  _list20: IList;
+  _i21: Integer;
+  _elem22: IEncaminhamentoExternoThrift;
+  _list23: IList;
+  _i24: Integer;
+  _elem25: IResultadoExameThrift;
 
 begin
   tracker := iprot.NextRecursionLevel;
@@ -1034,6 +1127,57 @@ begin
           begin
             TProtocolUtil.Skip(iprot, field_.Type_);
           end;
+        end;
+        19: begin
+          if (field_.Type_ = TType.List) then
+          begin
+            Medicamentos := TThriftListImpl<IMedicamentoThrift>.Create;
+            _list17 := iprot.ReadListBegin();
+            for _i18 := 0 to _list17.Count - 1 do
+            begin
+              _elem19 := TMedicamentoThriftImpl.Create;
+              _elem19.Read(iprot);
+              Medicamentos.Add(_elem19);
+            end;
+            iprot.ReadListEnd();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        20: begin
+          if (field_.Type_ = TType.List) then
+          begin
+            Encaminhamentos := TThriftListImpl<IEncaminhamentoExternoThrift>.Create;
+            _list20 := iprot.ReadListBegin();
+            for _i21 := 0 to _list20.Count - 1 do
+            begin
+              _elem22 := TEncaminhamentoExternoThriftImpl.Create;
+              _elem22.Read(iprot);
+              Encaminhamentos.Add(_elem22);
+            end;
+            iprot.ReadListEnd();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        21: begin
+          if (field_.Type_ = TType.List) then
+          begin
+            ResultadosExames := TThriftListImpl<IResultadoExameThrift>.Create;
+            _list23 := iprot.ReadListBegin();
+            for _i24 := 0 to _list23.Count - 1 do
+            begin
+              _elem25 := TResultadoExameThriftImpl.Create;
+              _elem25.Read(iprot);
+              ResultadosExames.Add(_elem25);
+            end;
+            iprot.ReadListEnd();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
         end
         else begin
           TProtocolUtil.Skip(iprot, field_.Type_);
@@ -1051,16 +1195,22 @@ var
   struc : IStruct;
   field_ : IField;
   tracker : IProtocolRecursionTracker;
-  list_17 : IList;
-  _iter18: Int64;
-  list_19 : IList;
-  _iter20: Int64;
-  list_21 : IList;
-  _iter22: Int64;
-  list_23 : IList;
-  _iter24: Int64;
-  list_25 : IList;
-  _iter26: IProcedimentoQuantidadeThrift;
+  list_26 : IList;
+  _iter27: Int64;
+  list_28 : IList;
+  _iter29: Int64;
+  list_30 : IList;
+  _iter31: Int64;
+  list_32 : IList;
+  _iter33: Int64;
+  list_34 : IList;
+  _iter35: IProcedimentoQuantidadeThrift;
+  list_36 : IList;
+  _iter37: IMedicamentoThrift;
+  list_38 : IList;
+  _iter39: IEncaminhamentoExternoThrift;
+  list_40 : IList;
+  _iter41: IResultadoExameThrift;
 begin
   tracker := oprot.NextRecursionLevel;
   struc := TStructImpl.Create('FichaAtendimentoOdontologicoChildThrift');
@@ -1135,11 +1285,11 @@ begin
     field_.Type_  := TType.List;
     field_.ID := 8;
     oprot.WriteFieldBegin(field_);
-    list_17 := TListImpl.Create(TType.I64, TiposEncamOdonto.Count);
-    oprot.WriteListBegin( list_17);
-    for _iter18 in TiposEncamOdonto do
+    list_26 := TListImpl.Create(TType.I64, TiposEncamOdonto.Count);
+    oprot.WriteListBegin( list_26);
+    for _iter27 in TiposEncamOdonto do
     begin
-      oprot.WriteI64(_iter18);
+      oprot.WriteI64(_iter27);
     end;
     oprot.WriteListEnd();
     oprot.WriteFieldEnd();
@@ -1150,11 +1300,11 @@ begin
     field_.Type_  := TType.List;
     field_.ID := 9;
     oprot.WriteFieldBegin(field_);
-    list_19 := TListImpl.Create(TType.I64, TiposFornecimOdonto.Count);
-    oprot.WriteListBegin( list_19);
-    for _iter20 in TiposFornecimOdonto do
+    list_28 := TListImpl.Create(TType.I64, TiposFornecimOdonto.Count);
+    oprot.WriteListBegin( list_28);
+    for _iter29 in TiposFornecimOdonto do
     begin
-      oprot.WriteI64(_iter20);
+      oprot.WriteI64(_iter29);
     end;
     oprot.WriteListEnd();
     oprot.WriteFieldEnd();
@@ -1165,11 +1315,11 @@ begin
     field_.Type_  := TType.List;
     field_.ID := 10;
     oprot.WriteFieldBegin(field_);
-    list_21 := TListImpl.Create(TType.I64, TiposVigilanciaSaudeBucal.Count);
-    oprot.WriteListBegin( list_21);
-    for _iter22 in TiposVigilanciaSaudeBucal do
+    list_30 := TListImpl.Create(TType.I64, TiposVigilanciaSaudeBucal.Count);
+    oprot.WriteListBegin( list_30);
+    for _iter31 in TiposVigilanciaSaudeBucal do
     begin
-      oprot.WriteI64(_iter22);
+      oprot.WriteI64(_iter31);
     end;
     oprot.WriteListEnd();
     oprot.WriteFieldEnd();
@@ -1180,11 +1330,11 @@ begin
     field_.Type_  := TType.List;
     field_.ID := 11;
     oprot.WriteFieldBegin(field_);
-    list_23 := TListImpl.Create(TType.I64, TiposConsultaOdonto.Count);
-    oprot.WriteListBegin( list_23);
-    for _iter24 in TiposConsultaOdonto do
+    list_32 := TListImpl.Create(TType.I64, TiposConsultaOdonto.Count);
+    oprot.WriteListBegin( list_32);
+    for _iter33 in TiposConsultaOdonto do
     begin
-      oprot.WriteI64(_iter24);
+      oprot.WriteI64(_iter33);
     end;
     oprot.WriteListEnd();
     oprot.WriteFieldEnd();
@@ -1195,11 +1345,11 @@ begin
     field_.Type_  := TType.List;
     field_.ID := 12;
     oprot.WriteFieldBegin(field_);
-    list_25 := TListImpl.Create(TType.Struct, ProcedimentosRealizados.Count);
-    oprot.WriteListBegin( list_25);
-    for _iter26 in ProcedimentosRealizados do
+    list_34 := TListImpl.Create(TType.Struct, ProcedimentosRealizados.Count);
+    oprot.WriteListBegin( list_34);
+    for _iter35 in ProcedimentosRealizados do
     begin
-      _iter26.Write(oprot);
+      _iter35.Write(oprot);
     end;
     oprot.WriteListEnd();
     oprot.WriteFieldEnd();
@@ -1249,125 +1399,188 @@ begin
     oprot.WriteString(CpfCidadao);
     oprot.WriteFieldEnd();
   end;
+  if (Medicamentos <> nil) and __isset_Medicamentos then
+  begin
+    field_.Name := 'medicamentos';
+    field_.Type_  := TType.List;
+    field_.ID := 19;
+    oprot.WriteFieldBegin(field_);
+    list_36 := TListImpl.Create(TType.Struct, Medicamentos.Count);
+    oprot.WriteListBegin( list_36);
+    for _iter37 in Medicamentos do
+    begin
+      _iter37.Write(oprot);
+    end;
+    oprot.WriteListEnd();
+    oprot.WriteFieldEnd();
+  end;
+  if (Encaminhamentos <> nil) and __isset_Encaminhamentos then
+  begin
+    field_.Name := 'encaminhamentos';
+    field_.Type_  := TType.List;
+    field_.ID := 20;
+    oprot.WriteFieldBegin(field_);
+    list_38 := TListImpl.Create(TType.Struct, Encaminhamentos.Count);
+    oprot.WriteListBegin( list_38);
+    for _iter39 in Encaminhamentos do
+    begin
+      _iter39.Write(oprot);
+    end;
+    oprot.WriteListEnd();
+    oprot.WriteFieldEnd();
+  end;
+  if (ResultadosExames <> nil) and __isset_ResultadosExames then
+  begin
+    field_.Name := 'resultadosExames';
+    field_.Type_  := TType.List;
+    field_.ID := 21;
+    oprot.WriteFieldBegin(field_);
+    list_40 := TListImpl.Create(TType.Struct, ResultadosExames.Count);
+    oprot.WriteListBegin( list_40);
+    for _iter41 in ResultadosExames do
+    begin
+      _iter41.Write(oprot);
+    end;
+    oprot.WriteListEnd();
+    oprot.WriteFieldEnd();
+  end;
   oprot.WriteFieldStop();
   oprot.WriteStructEnd();
 end;
 
 function TFichaAtendimentoOdontologicoChildThriftImpl.ToString: string;
 var
-  _sb27 : TThriftStringBuilder;
-  _first28 : Boolean;
+  _sb42 : TThriftStringBuilder;
+  _first43 : Boolean;
 begin
-  _sb27 := TThriftStringBuilder.Create('(');
+  _sb42 := TThriftStringBuilder.Create('(');
   try
-    _first28 := TRUE;
+    _first43 := TRUE;
     if (__isset_DtNascimento) then begin
-      if not _first28 then _sb27.Append(',');
-      _first28 := FALSE;
-      _sb27.Append('DtNascimento: ');
-      _sb27.Append(DtNascimento);
+      if not _first43 then _sb42.Append(',');
+      _first43 := FALSE;
+      _sb42.Append('DtNascimento: ');
+      _sb42.Append(DtNascimento);
     end;
     if (__isset_CnsCidadao) then begin
-      if not _first28 then _sb27.Append(',');
-      _first28 := FALSE;
-      _sb27.Append('CnsCidadao: ');
-      _sb27.Append(CnsCidadao);
+      if not _first43 then _sb42.Append(',');
+      _first43 := FALSE;
+      _sb42.Append('CnsCidadao: ');
+      _sb42.Append(CnsCidadao);
     end;
     if (__isset_NumProntuario) then begin
-      if not _first28 then _sb27.Append(',');
-      _first28 := FALSE;
-      _sb27.Append('NumProntuario: ');
-      _sb27.Append(NumProntuario);
+      if not _first43 then _sb42.Append(',');
+      _first43 := FALSE;
+      _sb42.Append('NumProntuario: ');
+      _sb42.Append(NumProntuario);
     end;
     if (__isset_Gestante) then begin
-      if not _first28 then _sb27.Append(',');
-      _first28 := FALSE;
-      _sb27.Append('Gestante: ');
-      _sb27.Append(Gestante);
+      if not _first43 then _sb42.Append(',');
+      _first43 := FALSE;
+      _sb42.Append('Gestante: ');
+      _sb42.Append(Gestante);
     end;
     if (__isset_NecessidadesEspeciais) then begin
-      if not _first28 then _sb27.Append(',');
-      _first28 := FALSE;
-      _sb27.Append('NecessidadesEspeciais: ');
-      _sb27.Append(NecessidadesEspeciais);
+      if not _first43 then _sb42.Append(',');
+      _first43 := FALSE;
+      _sb42.Append('NecessidadesEspeciais: ');
+      _sb42.Append(NecessidadesEspeciais);
     end;
     if (__isset_LocalAtendimento) then begin
-      if not _first28 then _sb27.Append(',');
-      _first28 := FALSE;
-      _sb27.Append('LocalAtendimento: ');
-      _sb27.Append(LocalAtendimento);
+      if not _first43 then _sb42.Append(',');
+      _first43 := FALSE;
+      _sb42.Append('LocalAtendimento: ');
+      _sb42.Append(LocalAtendimento);
     end;
     if (__isset_TipoAtendimento) then begin
-      if not _first28 then _sb27.Append(',');
-      _first28 := FALSE;
-      _sb27.Append('TipoAtendimento: ');
-      _sb27.Append(TipoAtendimento);
+      if not _first43 then _sb42.Append(',');
+      _first43 := FALSE;
+      _sb42.Append('TipoAtendimento: ');
+      _sb42.Append(TipoAtendimento);
     end;
     if (TiposEncamOdonto <> nil) and __isset_TiposEncamOdonto then begin
-      if not _first28 then _sb27.Append(',');
-      _first28 := FALSE;
-      _sb27.Append('TiposEncamOdonto: ');
-      _sb27.Append(TiposEncamOdonto);
+      if not _first43 then _sb42.Append(',');
+      _first43 := FALSE;
+      _sb42.Append('TiposEncamOdonto: ');
+      _sb42.Append(TiposEncamOdonto);
     end;
     if (TiposFornecimOdonto <> nil) and __isset_TiposFornecimOdonto then begin
-      if not _first28 then _sb27.Append(',');
-      _first28 := FALSE;
-      _sb27.Append('TiposFornecimOdonto: ');
-      _sb27.Append(TiposFornecimOdonto);
+      if not _first43 then _sb42.Append(',');
+      _first43 := FALSE;
+      _sb42.Append('TiposFornecimOdonto: ');
+      _sb42.Append(TiposFornecimOdonto);
     end;
     if (TiposVigilanciaSaudeBucal <> nil) and __isset_TiposVigilanciaSaudeBucal then begin
-      if not _first28 then _sb27.Append(',');
-      _first28 := FALSE;
-      _sb27.Append('TiposVigilanciaSaudeBucal: ');
-      _sb27.Append(TiposVigilanciaSaudeBucal);
+      if not _first43 then _sb42.Append(',');
+      _first43 := FALSE;
+      _sb42.Append('TiposVigilanciaSaudeBucal: ');
+      _sb42.Append(TiposVigilanciaSaudeBucal);
     end;
     if (TiposConsultaOdonto <> nil) and __isset_TiposConsultaOdonto then begin
-      if not _first28 then _sb27.Append(',');
-      _first28 := FALSE;
-      _sb27.Append('TiposConsultaOdonto: ');
-      _sb27.Append(TiposConsultaOdonto);
+      if not _first43 then _sb42.Append(',');
+      _first43 := FALSE;
+      _sb42.Append('TiposConsultaOdonto: ');
+      _sb42.Append(TiposConsultaOdonto);
     end;
     if (ProcedimentosRealizados <> nil) and __isset_ProcedimentosRealizados then begin
-      if not _first28 then _sb27.Append(',');
-      _first28 := FALSE;
-      _sb27.Append('ProcedimentosRealizados: ');
-      _sb27.Append(ProcedimentosRealizados);
+      if not _first43 then _sb42.Append(',');
+      _first43 := FALSE;
+      _sb42.Append('ProcedimentosRealizados: ');
+      _sb42.Append(ProcedimentosRealizados);
     end;
     if (__isset_Sexo) then begin
-      if not _first28 then _sb27.Append(',');
-      _first28 := FALSE;
-      _sb27.Append('Sexo: ');
-      _sb27.Append(Sexo);
+      if not _first43 then _sb42.Append(',');
+      _first43 := FALSE;
+      _sb42.Append('Sexo: ');
+      _sb42.Append(Sexo);
     end;
     if (__isset_Turno) then begin
-      if not _first28 then _sb27.Append(',');
-      _first28 := FALSE;
-      _sb27.Append('Turno: ');
-      _sb27.Append(Turno);
+      if not _first43 then _sb42.Append(',');
+      _first43 := FALSE;
+      _sb42.Append('Turno: ');
+      _sb42.Append(Turno);
     end;
     if (__isset_DataHoraInicialAtendimento) then begin
-      if not _first28 then _sb27.Append(',');
-      _first28 := FALSE;
-      _sb27.Append('DataHoraInicialAtendimento: ');
-      _sb27.Append(DataHoraInicialAtendimento);
+      if not _first43 then _sb42.Append(',');
+      _first43 := FALSE;
+      _sb42.Append('DataHoraInicialAtendimento: ');
+      _sb42.Append(DataHoraInicialAtendimento);
     end;
     if (__isset_DataHoraFinalAtendimento) then begin
-      if not _first28 then _sb27.Append(',');
-      _first28 := FALSE;
-      _sb27.Append('DataHoraFinalAtendimento: ');
-      _sb27.Append(DataHoraFinalAtendimento);
+      if not _first43 then _sb42.Append(',');
+      _first43 := FALSE;
+      _sb42.Append('DataHoraFinalAtendimento: ');
+      _sb42.Append(DataHoraFinalAtendimento);
     end;
     if (__isset_CpfCidadao) then begin
-      if not _first28 then _sb27.Append(',');
-      _first28 := FALSE;
-      _sb27.Append('CpfCidadao: ');
-      _sb27.Append(CpfCidadao);
+      if not _first43 then _sb42.Append(',');
+      _first43 := FALSE;
+      _sb42.Append('CpfCidadao: ');
+      _sb42.Append(CpfCidadao);
     end;
-    _sb27.Append(')');
-    Result := _sb27.ToString;
-    if _first28 then {prevent warning};
+    if (Medicamentos <> nil) and __isset_Medicamentos then begin
+      if not _first43 then _sb42.Append(',');
+      _first43 := FALSE;
+      _sb42.Append('Medicamentos: ');
+      _sb42.Append(Medicamentos);
+    end;
+    if (Encaminhamentos <> nil) and __isset_Encaminhamentos then begin
+      if not _first43 then _sb42.Append(',');
+      _first43 := FALSE;
+      _sb42.Append('Encaminhamentos: ');
+      _sb42.Append(Encaminhamentos);
+    end;
+    if (ResultadosExames <> nil) and __isset_ResultadosExames then begin
+      if not _first43 then _sb42.Append(',');
+      _first43 := FALSE;
+      _sb42.Append('ResultadosExames: ');
+      _sb42.Append(ResultadosExames);
+    end;
+    _sb42.Append(')');
+    Result := _sb42.ToString;
+    if _first43 then {prevent warning};
   finally
-    _sb27.Free;
+    _sb42.Free;
   end;
 end;
 
@@ -1445,9 +1658,9 @@ var
   struc : IStruct;
   tracker : IProtocolRecursionTracker;
   _req_isset_UuidFicha : Boolean;
-  _list29: IList;
-  _i30: Integer;
-  _elem31: IFichaAtendimentoOdontologicoChildThrift;
+  _list44: IList;
+  _i45: Integer;
+  _elem46: IFichaAtendimentoOdontologicoChildThrift;
 
 begin
   tracker := iprot.NextRecursionLevel;
@@ -1486,12 +1699,12 @@ begin
           if (field_.Type_ = TType.List) then
           begin
             AtendimentosOdontologicos := TThriftListImpl<IFichaAtendimentoOdontologicoChildThrift>.Create;
-            _list29 := iprot.ReadListBegin();
-            for _i30 := 0 to _list29.Count - 1 do
+            _list44 := iprot.ReadListBegin();
+            for _i45 := 0 to _list44.Count - 1 do
             begin
-              _elem31 := TFichaAtendimentoOdontologicoChildThriftImpl.Create;
-              _elem31.Read(iprot);
-              AtendimentosOdontologicos.Add(_elem31);
+              _elem46 := TFichaAtendimentoOdontologicoChildThriftImpl.Create;
+              _elem46.Read(iprot);
+              AtendimentosOdontologicos.Add(_elem46);
             end;
             iprot.ReadListEnd();
           end else
@@ -1526,8 +1739,8 @@ var
   struc : IStruct;
   field_ : IField;
   tracker : IProtocolRecursionTracker;
-  list_32 : IList;
-  _iter33: IFichaAtendimentoOdontologicoChildThrift;
+  list_47 : IList;
+  _iter48: IFichaAtendimentoOdontologicoChildThrift;
 begin
   tracker := oprot.NextRecursionLevel;
   struc := TStructImpl.Create('FichaAtendimentoOdontologicoMasterThrift');
@@ -1555,11 +1768,11 @@ begin
     field_.Type_  := TType.List;
     field_.ID := 3;
     oprot.WriteFieldBegin(field_);
-    list_32 := TListImpl.Create(TType.Struct, AtendimentosOdontologicos.Count);
-    oprot.WriteListBegin( list_32);
-    for _iter33 in AtendimentosOdontologicos do
+    list_47 := TListImpl.Create(TType.Struct, AtendimentosOdontologicos.Count);
+    oprot.WriteListBegin( list_47);
+    for _iter48 in AtendimentosOdontologicos do
     begin
-      _iter33.Write(oprot);
+      _iter48.Write(oprot);
     end;
     oprot.WriteListEnd();
     oprot.WriteFieldEnd();
@@ -1579,28 +1792,28 @@ end;
 
 function TFichaAtendimentoOdontologicoMasterThriftImpl.ToString: string;
 var
-  _sb34 : TThriftStringBuilder;
+  _sb49 : TThriftStringBuilder;
 begin
-  _sb34 := TThriftStringBuilder.Create('(');
+  _sb49 := TThriftStringBuilder.Create('(');
   try
-    _sb34.Append(', UuidFicha: ');
-    _sb34.Append(UuidFicha);
+    _sb49.Append(', UuidFicha: ');
+    _sb49.Append(UuidFicha);
     if (HeaderTransport <> nil) and __isset_HeaderTransport then begin
-      _sb34.Append(', HeaderTransport: ');
-      if (HeaderTransport = nil) then _sb34.Append('<null>') else _sb34.Append(HeaderTransport.ToString());
+      _sb49.Append(', HeaderTransport: ');
+      if (HeaderTransport = nil) then _sb49.Append('<null>') else _sb49.Append(HeaderTransport.ToString());
     end;
     if (AtendimentosOdontologicos <> nil) and __isset_AtendimentosOdontologicos then begin
-      _sb34.Append(', AtendimentosOdontologicos: ');
-      _sb34.Append(AtendimentosOdontologicos);
+      _sb49.Append(', AtendimentosOdontologicos: ');
+      _sb49.Append(AtendimentosOdontologicos);
     end;
     if (__isset_TpCdsOrigem) then begin
-      _sb34.Append(', TpCdsOrigem: ');
-      _sb34.Append(TpCdsOrigem);
+      _sb49.Append(', TpCdsOrigem: ');
+      _sb49.Append(TpCdsOrigem);
     end;
-    _sb34.Append(')');
-    Result := _sb34.ToString;
+    _sb49.Append(')');
+    Result := _sb49.ToString;
   finally
-    _sb34.Free;
+    _sb49.Free;
   end;
 end;
 

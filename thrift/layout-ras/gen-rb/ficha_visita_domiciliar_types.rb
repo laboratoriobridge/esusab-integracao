@@ -30,6 +30,14 @@ module Br
               PESOACOMPANHAMENTONUTRICIONAL = 12
               ALTURAACOMPANHAMENTONUTRICIONAL = 13
               CPFCIDADAO = 14
+              PRESSAOSISTOLICA = 15
+              PRESSAODIASTOLICA = 16
+              TEMPERATURA = 17
+              TIPOGLICEMIA = 18
+              GLICEMIA = 19
+              LATITUDE = 20
+              LONGITUDE = 21
+              UUIDFCD = 22
 
               FIELDS = {
                 TURNO => {:type => ::Thrift::Types::I64, :name => 'turno', :optional => true},
@@ -45,7 +53,15 @@ module Br
                 TIPODEIMOVEL => {:type => ::Thrift::Types::I64, :name => 'tipoDeImovel', :optional => true},
                 PESOACOMPANHAMENTONUTRICIONAL => {:type => ::Thrift::Types::DOUBLE, :name => 'pesoAcompanhamentoNutricional', :optional => true},
                 ALTURAACOMPANHAMENTONUTRICIONAL => {:type => ::Thrift::Types::DOUBLE, :name => 'alturaAcompanhamentoNutricional', :optional => true},
-                CPFCIDADAO => {:type => ::Thrift::Types::STRING, :name => 'cpfCidadao', :optional => true}
+                CPFCIDADAO => {:type => ::Thrift::Types::STRING, :name => 'cpfCidadao', :optional => true},
+                PRESSAOSISTOLICA => {:type => ::Thrift::Types::I32, :name => 'pressaoSistolica', :optional => true},
+                PRESSAODIASTOLICA => {:type => ::Thrift::Types::I32, :name => 'pressaoDiastolica', :optional => true},
+                TEMPERATURA => {:type => ::Thrift::Types::DOUBLE, :name => 'temperatura', :optional => true},
+                TIPOGLICEMIA => {:type => ::Thrift::Types::I64, :name => 'tipoGlicemia', :optional => true},
+                GLICEMIA => {:type => ::Thrift::Types::I32, :name => 'glicemia', :optional => true},
+                LATITUDE => {:type => ::Thrift::Types::DOUBLE, :name => 'latitude', :optional => true},
+                LONGITUDE => {:type => ::Thrift::Types::DOUBLE, :name => 'longitude', :optional => true},
+                UUIDFCD => {:type => ::Thrift::Types::STRING, :name => 'uuidFcd', :optional => true}
               }
 
               def struct_fields; FIELDS; end

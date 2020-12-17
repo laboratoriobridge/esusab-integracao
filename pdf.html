@@ -25,7 +25,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 4.0.3</span>
+        <span class="label">versão 4.0.4</span>
       
     </a>
 
@@ -137,7 +137,7 @@
 
       <li id="item-layout_ab" data-url="/ledi/documentacao/index.html">
         <label>
-          <input type="checkbox" value="layout_ab" checked="checked"> Layout e-SUS APS de Dados e Interface Versão 4.0.3
+          <input type="checkbox" value="layout_ab" checked="checked"> Layout e-SUS APS de Dados e Interface Versão 4.0.4
           <small>
             <a onclick="checkById('layout_ab', true); return false;">Marcar todos</a> |
             <a onclick="checkById('layout_ab', false); return false;">Desmarcar todos</a>
@@ -539,6 +539,22 @@
       </li>
     
 
+      <li id="item-validar_nome" data-url="/ledi/documentacao/regras/validar_nome.html">
+        <label>
+          <input type="checkbox" value="validar_nome" checked="checked"> Validar nome
+          <small>
+            <a onclick="checkById('validar_nome', true); return false;">Marcar todos</a> |
+            <a onclick="checkById('validar_nome', false); return false;">Desmarcar todos</a>
+          </small>
+        </label>
+
+        
+          
+
+        
+      </li>
+    
+
       <li id="item-grupo_cbo" data-url="/ledi/documentacao/regras/cbo.html">
         <label>
           <input type="checkbox" value="grupo_cbo" checked="checked"> Grupos de CBOs x Tipo de ficha
@@ -561,22 +577,6 @@
           <small>
             <a onclick="checkById('regras_vacinacao', true); return false;">Marcar todos</a> |
             <a onclick="checkById('regras_vacinacao', false); return false;">Desmarcar todos</a>
-          </small>
-        </label>
-
-        
-          
-
-        
-      </li>
-    
-
-      <li id="item-validar_nome" data-url="/ledi/documentacao/regras/validar_nome.html">
-        <label>
-          <input type="checkbox" value="validar_nome" checked="checked"> Validar nome
-          <small>
-            <a onclick="checkById('validar_nome', true); return false;">Marcar todos</a> |
-            <a onclick="checkById('validar_nome', false); return false;">Desmarcar todos</a>
           </small>
         </label>
 
@@ -611,7 +611,7 @@
 
       <li id="item-principais_alteracoes" data-url="/ledi/documentacao/principais_alteracoes.html">
         <label>
-          <input type="checkbox" value="principais_alteracoes" checked="checked"> Principais alterações da v4.0.2 para a v4.0.3
+          <input type="checkbox" value="principais_alteracoes" checked="checked"> Principais alterações da v4.0.3 para a v4.0.4
           <small>
             <a onclick="checkById('principais_alteracoes', true); return false;">Marcar todos</a> |
             <a onclick="checkById('principais_alteracoes', false); return false;">Desmarcar todos</a>
@@ -921,7 +921,7 @@
   
       <!-- Cria a lista de itens[páginas] que foram selecionados  -->
 
-  <li id="summary-layout_ab"><a href="#layout_ab">Layout e-SUS APS de Dados e Interface Versão 4.0.3</a></li>
+  <li id="summary-layout_ab"><a href="#layout_ab">Layout e-SUS APS de Dados e Interface Versão 4.0.4</a></li>
   
       <!-- Cria a lista de itens[páginas] que foram selecionados  -->
 
@@ -1090,6 +1090,13 @@
 
   
 
+  <li id="summary-validar_nome"><a href="#validar_nome">Validar nome</a></li>
+  
+      <!-- Cria a lista de itens[páginas] que foram selecionados  -->
+
+
+  
+
   <li id="summary-grupo_cbo"><a href="#grupo_cbo">Grupos de CBOs x Tipo de ficha</a></li>
   
       <!-- Cria a lista de itens[páginas] que foram selecionados  -->
@@ -1098,13 +1105,6 @@
   
 
   <li id="summary-regras_vacinacao"><a href="#regras_vacinacao">Regras de vacinação</a></li>
-  
-      <!-- Cria a lista de itens[páginas] que foram selecionados  -->
-
-
-  
-
-  <li id="summary-validar_nome"><a href="#validar_nome">Validar nome</a></li>
   
       <!-- Cria a lista de itens[páginas] que foram selecionados  -->
 
@@ -1121,7 +1121,7 @@
 
   
 
-  <li id="summary-principais_alteracoes"><a href="#principais_alteracoes">Principais alterações da v4.0.2 para a v4.0.3</a></li>
+  <li id="summary-principais_alteracoes"><a href="#principais_alteracoes">Principais alterações da v4.0.3 para a v4.0.4</a></li>
   
       <!-- Cria a lista de itens[páginas] que foram selecionados  -->
 
@@ -1318,7 +1318,11 @@
 </tr>
 <tr>
 <td>4.0.12 ou superior</td>
-<td><a href="/ledi/documentacao/index.html">LEDI APS 4.0.3</a></td>
+<td><a href="https://integracao.esusab.ufsc.br/v403/">LEDI APS 4.0.3</a></td>
+</tr>
+<tr>
+<td>4.0.16 ou superior</td>
+<td><a href="/ledi/documentacao/index.html">LEDI APS 4.0.4</a></td>
 </tr>
 </tbody></table>
 
@@ -1331,17 +1335,17 @@
         
     <div class="post pdf shown" id="layout_ab" data-url="/ledi/documentacao/index.html">
       <header class="post-header">
-        <h1 class="post-title">Layout e-SUS APS de Dados e Interface Versão 4.0.3</h1>
+        <h1 class="post-title">Layout e-SUS APS de Dados e Interface Versão 4.0.4</h1>
       </header>
 
       
 
       <article class="post-content">
-        <p>Esta documentação descreve as estruturas de dados, seus atributos e regras utilizadas no <strong>LEDI APS</strong> versão 4.0.3.</p>
+        <p>Esta documentação descreve as estruturas de dados, seus atributos e regras utilizadas no <strong>LEDI APS</strong> versão 4.0.4.</p>
 
-<p>A versão <strong>LEDI APS</strong> 4.0.3 é compatível com o sistema <strong>e-SUS APS PEC</strong> versão 4.0.12 ou superior.</p>
+<p>A versão <strong>LEDI APS</strong> 4.0.4 é compatível com o sistema <strong>e-SUS APS PEC</strong> versão 4.0.16 ou superior.</p>
 
-<p>Confira as principais alterações da V4.0.2 para a V4.0.3 <a href="/ledi/documentacao/principais_alteracoes.html">aqui</a>.</p>
+<p>Confira as principais alterações da V4.0.3 para a V4.0.4 <a href="/ledi/documentacao/principais_alteracoes.html">aqui</a>.</p>
 
       </article>
 
@@ -5814,9 +5818,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Somente as CBOs apresentadas na <a href="/ledi/documentacao/regras/cbo.html#ficha-de-atendimento-individual">Tabela 3 - CBOs que podem registrar ficha de atendimento individual</a> podem ser adicionadas no campo CBO do profissional principal.</p>
+<p><strong>Regra:</strong> Somente as CBOs apresentadas na <a href="/ledi/documentacao/regras/cbo.html#ficha-de-atendimento-individual">Tabela 3 - CBOs que podem registrar ficha de atendimento individual</a> podem ser adicionadas no campo CBO do profissional principal.</p>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#variaslotacoesheader">VariasLotacoesHeader</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#variaslotacoesheader">VariasLotacoesHeader</a>.</p>
 
 <h3 id="2-atendimentosindividuais">#2 atendimentosIndividuais</h3>
 
@@ -5838,7 +5842,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/estrutura_arquivos/#fichaatendimentoindividualchild">FichaAtendimentoIndividualChild</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/estrutura_arquivos/#fichaatendimentoindividualchild">FichaAtendimentoIndividualChild</a>.</p>
 
 <h3 id="3-uuidficha">#3 uuidFicha</h3>
 
@@ -5860,9 +5864,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> É recomendado concatenar o CNES na frente do UUID, de modo que os 7 dígitos (CNES) + 1 de hífen somados aos 36 (32 caracteres + 4 hífen) do UUID são a limitação de 44 bytes do campo. Formato canônico.</p>
+<p><strong>Regra:</strong> É recomendado concatenar o CNES na frente do UUID, de modo que os 7 dígitos (CNES) + 1 de hífen somados aos 36 (32 caracteres + 4 hífen) do UUID são a limitação de 44 bytes do campo. Formato canônico.</p>
 
-<p><strong>Referências:</strong> Para ver a referência sobre o UUID, acesse: <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">UUID Wikipedia</a>.</p>
+<p><strong>Referência:</strong> Para ver a referência sobre o UUID, acesse: <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">UUID Wikipedia</a>.</p>
 
 <h3 id="4-tpcdsorigem">#4 tpCdsOrigem</h3>
 
@@ -5884,7 +5888,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Utilizar valor 3 (sistemas terceiros).</p>
+<p><strong>Regra:</strong> Utilizar valor 3 (sistemas terceiros).</p>
 
 <h2 id="fichaatendimentoindividualchild">FichaAtendimentoIndividualChild</h2>
 
@@ -5908,7 +5912,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Apenas letras e números são aceitos.</p>
+<p><strong>Regra:</strong> Apenas letras e números são aceitos.</p>
 
 <h3 id="2-cns">#2 cns</h3>
 
@@ -5957,9 +5961,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Não pode ser posterior à <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a> e anterior à 130 anos a partir da <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>.</p>
+<p><strong>Regra:</strong> Não pode ser posterior à <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a> e anterior à 130 anos a partir da <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>.</p>
 
-<p><strong>Referências:</strong> A data deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
+<p><strong>Referência:</strong> A data deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
 
 <h3 id="4-localdeatendimento">#4 localDeAtendimento</h3>
 
@@ -5981,9 +5985,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Apenas valores de <code>1</code> a <code>10</code>.</p>
+<p><strong>Regra:</strong> Apenas valores de <code>1</code> a <code>10</code>.</p>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#localdeatendimento">LocalDeAtendimento</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#localdeatendimento">LocalDeAtendimento</a>.</p>
 
 <h3 id="5-sexo">#5 sexo</h3>
 
@@ -6005,7 +6009,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#sexo">Sexo</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#sexo">Sexo</a>.</p>
 
 <h3 id="6-turno">#6 turno</h3>
 
@@ -6027,7 +6031,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#turno">Turno</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#turno">Turno</a>.</p>
 
 <h3 id="7-tipoatendimento">#7 tipoAtendimento</h3>
 
@@ -6049,9 +6053,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Apenas as opções <code>1</code>, <code>2</code>, <code>4</code>, <code>5</code> ou <code>6</code> são aceitas.</p>
+<p><strong>Regra:</strong> Apenas as opções <code>1</code>, <code>2</code>, <code>4</code>, <code>5</code> ou <code>6</code> são aceitas.</p>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#tipodeatendimento">TipoDeAtendimento</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#tipodeatendimento">TipoDeAtendimento</a>.</p>
 
 <h3 id="8-pesoacompanhamentonutricional">#8 pesoAcompanhamentoNutricional</h3>
 
@@ -6129,7 +6133,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#aleitamentomaterno">AleitamentoMaterno</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#aleitamentomaterno">AleitamentoMaterno</a>.</p>
 
 <h3 id="11-dumdagestante">#11 dumDaGestante</h3>
 
@@ -6158,7 +6162,7 @@
 <li>Não pode ser superior à <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>.</li>
 </ul>
 
-<p><strong>Referências:</strong> <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch Wikipedia</a> em milissegundos.</p>
+<p><strong>Referência:</strong> <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch Wikipedia</a> em milissegundos.</p>
 
 <h3 id="12-idadegestacional">#12 idadeGestacional</h3>
 
@@ -6207,9 +6211,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Apenas valores de <code>1</code> a <code>3</code>.</p>
+<p><strong>Regra:</strong> Apenas valores de <code>1</code> a <code>3</code>.</p>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#modalidadead">ModalidadeAD</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#modalidadead">ModalidadeAD</a>.</p>
 
 <h3 id="14-problemacondicaoavaliada">#14 problemaCondicaoAvaliada</h3>
 
@@ -6231,7 +6235,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/estrutura_arquivos/#problemacondicaoavaliacaoai">ProblemaCondicaoAvaliacaoAI</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/estrutura_arquivos/#problemacondicaoavaliacaoai">ProblemaCondicaoAvaliacaoAI</a>.</p>
 
 <h3 id="17-exame">#17 exame</h3>
 
@@ -6253,7 +6257,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/estrutura_arquivos/#exame">Exames</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/estrutura_arquivos/#exame">Exames</a>.</p>
 
 <h3 id="18-vacinaemdia">#18 vacinaEmDia</h3>
 
@@ -6315,7 +6319,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#nasf">Nasf</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#nasf">Nasf</a>.</p>
 
 <h3 id="21-condutas">#21 condutas</h3>
 
@@ -6337,9 +6341,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Não deve conter duas condutas iguais.</p>
+<p><strong>Regra:</strong> Não deve conter duas condutas iguais.</p>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#condutaencaminhamento">CondutaEncaminhamento</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#condutaencaminhamento">CondutaEncaminhamento</a>.</p>
 
 <h3 id="22-stgravidezplanejada">#22 stGravidezPlanejada</h3>
 
@@ -6361,7 +6365,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Não pode ser preenchido quando <a href="/ledi/documentacao/estrutura_arquivos/#5-sexo">Sexo</a> = <code>0 (masculino)</code>.</p>
+<p><strong>Regra:</strong> Não pode ser preenchido quando <a href="/ledi/documentacao/estrutura_arquivos/#5-sexo">Sexo</a> = <code>0 (masculino)</code>.</p>
 
 <h3 id="23-nugestasprevias">#23 nuGestasPrevias</h3>
 
@@ -6383,7 +6387,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Não pode ser preenchido quando <a href="/ledi/documentacao/estrutura_arquivos/#5-sexo">Sexo</a> = <code>0 (masculino)</code>.</p>
+<p><strong>Regra:</strong> Não pode ser preenchido quando <a href="/ledi/documentacao/estrutura_arquivos/#5-sexo">Sexo</a> = <code>0 (masculino)</code>.</p>
 
 <h3 id="24-nupartos">#24 nuPartos</h3>
 
@@ -6405,7 +6409,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Não pode ser preenchido quando <a href="/ledi/documentacao/estrutura_arquivos/#5-sexo">Sexo</a> = <code>0 (masculino)</code>.</p>
+<p><strong>Regra:</strong> Não pode ser preenchido quando <a href="/ledi/documentacao/estrutura_arquivos/#5-sexo">Sexo</a> = <code>0 (masculino)</code>.</p>
 
 <h3 id="25-racionalidadesaude">#25 racionalidadeSaude</h3>
 
@@ -6427,7 +6431,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#racionalidadesaude">racionalidadeSaude</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#racionalidadesaude">racionalidadeSaude</a>.</p>
 
 <h3 id="26-perimetrocefalico">#26 perimetroCefalico</h3>
 
@@ -6484,7 +6488,7 @@
 <li>Não pode ser posterior à <a href="/ledi/documentacao/estrutura_arquivos/#28-datahorafinalatendimento">dataHoraFinalAtendimento</a> e à data atual.</li>
 </ul>
 
-<p><strong>Referências:</strong> Deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
+<p><strong>Referência:</strong> Deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
 
 <h3 id="28-datahorafinalatendimento">#28 dataHoraFinalAtendimento</h3>
 
@@ -6513,7 +6517,7 @@
 <li>Não pode ser posterior à data atual.</li>
 </ul>
 
-<p><strong>Referências:</strong> Deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
+<p><strong>Referência:</strong> Deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
 
 <h3 id="29-cpfcidadao">#29 cpfCidadao</h3>
 
@@ -6574,14 +6578,14 @@
 <p><strong>Referências:</strong></p>
 
 <ul>
-<li>Tabela do SIGTAP, competência 02/2019 disponível em: <a href="http://sigtap.datasus.gov.br/tabela-unificada/app/sec/procedimento/publicados/consultar">Tabela Unificada SIGTAP</a>;</li>
+<li>Tabela do SIGTAP, competência 09/2020 disponível em: <a href="http://sigtap.datasus.gov.br/tabela-unificada/app/sec/procedimento/publicados/consultar">Tabela Unificada SIGTAP</a>;</li>
 <li><a href="/ledi/documentacao/estrutura_arquivos/#listaexames">ListaExames</a>.</li>
 </ul>
 
 <p>Observações:</p>
 
 <ul>
-<li>Inserir o código do exame SIGTAP sem ponto ou hífen, ex: <code>0201010010</code>;</li>
+<li>Inserir o código do exame SIGTAP sem ponto ou hífen, ex: <code>0214010015</code>;</li>
 <li>Inserir o código do exame AB em caracteres maiúsculos, sem espaços, ex: <code>ABEX022</code>.</li>
 </ul>
 
@@ -6605,7 +6609,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#situacaoexame">SituacaoExame</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#situacaoexame">SituacaoExame</a>.</p>
 
 <h2 id="problemacondicaoavaliacaoai">ProblemaCondicaoAvaliacaoAI</h2>
 
@@ -7027,7 +7031,7 @@
 </tr>
 </tbody></table>
 
-<p><em>* Procedimentos pertencentes a competência <strong>02/2019</strong> do SIGTAP.</em></p>
+<p><em>* Procedimentos pertencentes a competência <strong>09/2020</strong> do SIGTAP.</em></p>
 
       </article>
 
@@ -7069,9 +7073,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> É recomendado concatenar o CNES na frente do UUID, de modo que os 7 dígitos (CNES) + 1 de hífen somados aos 36 (32 caracteres + 4 hífen) do UUID são a limitação de 44 bytes do campo. Formato canônico.</p>
+<p><strong>Regra:</strong> É recomendado concatenar o CNES na frente do UUID, de modo que os 7 dígitos (CNES) + 1 de hífen somados aos 36 (32 caracteres + 4 hífen) do UUID são a limitação de 44 bytes do campo. Formato canônico.</p>
 
-<p><strong>Referências:</strong> Para ver a referência sobre o UUID, acesse: <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">UUID Wikipedia</a>.</p>
+<p><strong>Referência:</strong> Para ver a referência sobre o UUID, acesse: <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">UUID Wikipedia</a>.</p>
 
 <h3 id="2-headertransport">#2 headerTransport</h3>
 
@@ -7093,9 +7097,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Somente as CBOs apresentadas na <a href="/ledi/documentacao/regras/cbo.html#ficha-de-atendimento-odontol-gico-individual">Tabela 4 - CBOs que podem registrar ficha de atendimento odontológico individual</a> podem ser adicionadas no campo CBO do profissional principal.</p>
+<p><strong>Regra:</strong> Somente as CBOs apresentadas na <a href="/ledi/documentacao/regras/cbo.html#ficha-de-atendimento-odontol-gico-individual">Tabela 4 - CBOs que podem registrar ficha de atendimento odontológico individual</a> podem ser adicionadas no campo CBO do profissional principal.</p>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#variaslotacoesheader">VariasLotacoesHeader</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#variaslotacoesheader">VariasLotacoesHeader</a>.</p>
 
 <h3 id="3-atendimentosodontologicos">#3 atendimentosOdontologicos</h3>
 
@@ -7117,7 +7121,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/estrutura_arquivos/#fichaatendimentoodontologicochild">FichaAtendimentoOdontologicoChild</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/estrutura_arquivos/#fichaatendimentoodontologicochild">FichaAtendimentoOdontologicoChild</a>.</p>
 
 <h3 id="4-tpcdsorigem">#4 tpCdsOrigem</h3>
 
@@ -7139,7 +7143,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Utilizar valor 3 (sistemas terceiros).</p>
+<p><strong>Regra:</strong> Utilizar valor 3 (sistemas terceiros).</p>
 
 <h2 id="fichaatendimentoodontologicochild">FichaAtendimentoOdontologicoChild</h2>
 
@@ -7163,9 +7167,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Não pode ser posterior à <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a> e anterior à 130 anos a partir da <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>.</p>
+<p><strong>Regra:</strong> Não pode ser posterior à <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a> e anterior à 130 anos a partir da <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>.</p>
 
-<p><strong>Referências:</strong> A data deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
+<p><strong>Referência:</strong> A data deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
 
 <h3 id="2-cnscidadao">#2 cnsCidadao</h3>
 
@@ -7194,7 +7198,7 @@
 <li>Não pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#18-cpfcidadao">cpfCidadao</a> for preenchido.</li>
 </ul>
 
-<p><strong>Referências:</strong> O algoritmo de validação está presente em <a href="/ledi/documentacao/regras/algoritmo_CNS.html">Validar CNS</a>.</p>
+<p><strong>Referência:</strong> O algoritmo de validação está presente em <a href="/ledi/documentacao/regras/algoritmo_CNS.html">Validar CNS</a>.</p>
 
 <h3 id="3-numprontuario">#3 numProntuario</h3>
 
@@ -7216,7 +7220,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Apenas letras e números são aceitos.</p>
+<p><strong>Regra:</strong> Apenas letras e números são aceitos.</p>
 
 <h3 id="4-gestante">#4 gestante</h3>
 
@@ -7280,9 +7284,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Apenas valores de <code>1</code> a <code>10</code>.</p>
+<p><strong>Regra:</strong> Apenas valores de <code>1</code> a <code>10</code>.</p>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#localdeatendimento">LocalDeAtendimento</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#localdeatendimento">LocalDeAtendimento</a>.</p>
 
 <h3 id="7-tipoatendimento">#7 tipoAtendimento</h3>
 
@@ -7304,9 +7308,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Apenas as opções <code>2</code>, <code>4</code>, <code>5</code> ou <code>6</code> são aceitas.</p>
+<p><strong>Regra:</strong> Apenas as opções <code>2</code>, <code>4</code>, <code>5</code> ou <code>6</code> são aceitas.</p>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#tipodeatendimento">TipoDeAtendimento</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#tipodeatendimento">TipoDeAtendimento</a>.</p>
 
 <h3 id="8-tiposencamodonto">#8 tiposEncamOdonto</h3>
 
@@ -7335,7 +7339,7 @@
 <li>A opção <code>17 - Alta do episódio</code> não pode ser selecionada se no campo <a href="/ledi/documentacao/estrutura_arquivos/#11-tiposconsultaodonto">tiposConsultaOdonto</a> for selecionada uma das opções <code>1 - Primeira consulta odontológica programática</code> ou <code>2 - Consulta de retorno em odontologia</code>.</li>
 </ul>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#condutaencaminhamentoodonto">CondutaEncaminhamentoOdonto</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#condutaencaminhamentoodonto">CondutaEncaminhamentoOdonto</a>.</p>
 
 <h3 id="9-tiposfornecimodonto">#9 tiposFornecimOdonto</h3>
 
@@ -7357,7 +7361,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#fornecimentoodonto">FornecimentoOdonto</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#fornecimentoodonto">FornecimentoOdonto</a>.</p>
 
 <h3 id="10-tiposvigilanciasaudebucal">#10 tiposVigilanciaSaudeBucal</h3>
 
@@ -7379,7 +7383,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#vigilanciaemsaudebucal">VigilanciaEmSaudeBucal</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#vigilanciaemsaudebucal">VigilanciaEmSaudeBucal</a>.</p>
 
 <h3 id="11-tiposconsultaodonto">#11 tiposConsultaOdonto</h3>
 
@@ -7455,7 +7459,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#sexo">Sexo</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#sexo">Sexo</a>.</p>
 
 <h3 id="15-turno">#15 turno</h3>
 
@@ -7477,7 +7481,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#turno">Turno</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#turno">Turno</a>.</p>
 
 <h3 id="16-datahorainicialatendimento">#16 dataHoraInicialAtendimento</h3>
 
@@ -7506,7 +7510,7 @@
 <li>Não pode ser posterior à <a href="/ledi/documentacao/estrutura_arquivos/#17-datahorafinalatendimento">dataHoraFinalAtendimento</a> e à data atual.</li>
 </ul>
 
-<p><strong>Referências:</strong> Deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
+<p><strong>Referência:</strong> Deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
 
 <h3 id="17-datahorafinalatendimento">#17 dataHoraFinalAtendimento</h3>
 
@@ -7535,7 +7539,7 @@
 <li>Não pode ser posterior à data atual.</li>
 </ul>
 
-<p><strong>Referências:</strong> Deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
+<p><strong>Referência:</strong> Deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
 
 <h3 id="18-cpfcidadao">#18 cpfCidadao</h3>
 
@@ -7590,7 +7594,7 @@
 
 <ul>
 <li>Não pode conter procedimentos repetidos;</li>
-<li>Podem ser informados os procedimentos pertencentes aos grupos <code>01 - Ações de promoção e prevenção em saúde</code>, <code>02 - Procedimentos com finalidade diagnóstica</code>, <code>03 - Procedimentos clínicos</code>, <code>04 - Procedimentos cirúrgicos</code> ou presentes na <a href="/ledi/documentacao/estrutura_arquivos/#listaprocedimentosrealizados">ListaProcedimentosRealizados</a>, neste caso, se não tiver uma referência no SIGTAP, deve ser informado o código <strong>AB</strong> do procedimento;</li>
+<li>Podem ser informados os procedimentos pertencentes aos grupos <code>01 - Ações de promoção e prevenção em saúde</code>, <code>02 - Procedimentos com finalidade diagnóstica</code>, <code>03 - Procedimentos clínicos</code>, <code>04 - Procedimentos cirúrgicos</code> ou presentes na <a href="/ledi/documentacao/estrutura_arquivos/#listaprocedimentosrealizados">ListaProcedimentosRealizados</a>. Neste caso, deve ser informado o respectivo código <strong>SIGTAP</strong> do procedimento;</li>
 <li><p>Além destes procedimentos, são permitidos os procedimentos pertencentes ao grupo <code>07 - Órteses, próteses e materiais especiais</code>:</p>
 
 <ul>
@@ -7611,16 +7615,11 @@
 <p><strong>Referências:</strong></p>
 
 <ul>
-<li>Tabela do SIGTAP, competência 02/2019 disponível em: <a href="http://sigtap.datasus.gov.br/tabela-unificada/app/sec/procedimento/publicados/consultar">Tabela Unificada SIGTAP</a>;</li>
+<li>Tabela do SIGTAP, competência 09/2020 disponível em: <a href="http://sigtap.datasus.gov.br/tabela-unificada/app/sec/procedimento/publicados/consultar">Tabela Unificada SIGTAP</a>;</li>
 <li><a href="/ledi/documentacao/estrutura_arquivos/#listaprocedimentosrealizados">ListaProcedimentosRealizados</a>.</li>
 </ul>
 
-<p>Observações:</p>
-
-<ul>
-<li>Inserir o código do procedimento SIGTAP sem ponto ou hífen, ex: <code>0201010010</code>;</li>
-<li>Inserir o código do procedimento AB em caracteres maiúsculos, sem espaços, ex: <code>ABPO015</code>.</li>
-</ul>
+<p><strong>Observação:</strong> Inserir o código do procedimento SIGTAP sem ponto ou hífen, ex: <code>0214010015</code>.</p>
 
 <h3 id="2-quantidade">#2 quantidade</h3>
 
@@ -7729,7 +7728,7 @@
 <td>ABPO014</td>
 </tr>
 <tr>
-<td>Não possui</td>
+<td>01.01.02.010-4</td>
 <td>Orientação de Higiene Bucal</td>
 <td>ABPO015</td>
 </tr>
@@ -7744,11 +7743,6 @@
 <td>ABPO017</td>
 </tr>
 <tr>
-<td>02.04.01.018-7</td>
-<td>Radiografia Periapical / Interproximal</td>
-<td>ABPO018</td>
-</tr>
-<tr>
 <td>03.07.03.005-9</td>
 <td>Raspagem alisamento e polimento supragengivais (por sextante)</td>
 <td>ABPO019</td>
@@ -7759,24 +7753,9 @@
 <td>ABPO020</td>
 </tr>
 <tr>
-<td>03.07.01.002-3</td>
-<td>Restauração de dente decíduo</td>
-<td>ABPO021</td>
-</tr>
-<tr>
 <td>03.07.01.003-1</td>
 <td>Restauração de dente permanente anterior</td>
 <td>ABPO022</td>
-</tr>
-<tr>
-<td>03.07.01.004-0</td>
-<td>Restauração de dente permanente posterior</td>
-<td>ABPO023</td>
-</tr>
-<tr>
-<td>03.01.10.015-2</td>
-<td>Retirada de pontos de cirurgias básicas (por paciente)</td>
-<td>ABPG018</td>
 </tr>
 <tr>
 <td>01.01.02.009-0</td>
@@ -7795,7 +7774,7 @@
 </tr>
 </tbody></table>
 
-<p><em>* Procedimentos pertencentes a competência <strong>02/2019</strong> do SIGTAP.</em></p>
+<p><em>* Procedimentos pertencentes a competência <strong>09/2020</strong> do SIGTAP.</em></p>
 
 <h2 id="lista-de-procedimentos-por-local-e-quantidade-m-xima-permitida">Lista de procedimentos por local e quantidade máxima permitida</h2>
 
@@ -7940,8 +7919,14 @@
 <td>32</td>
 </tr>
 <tr>
-<td>02.04.01.018-7</td>
-<td>RADIOGRAFIA PERI-APICAL INTERPROXIMAL (BITE-WING)</td>
+<td>02.04.01.021-7</td>
+<td>RADIOGRAFIA INTERPROXIMAL (BITE WING)</td>
+<td>Dente</td>
+<td>32</td>
+</tr>
+<tr>
+<td>02.04.01.022-5</td>
+<td>RADIOGRAFIA PERIAPICAL</td>
 <td>Dente</td>
 <td>32</td>
 </tr>
@@ -7952,20 +7937,56 @@
 <td>32</td>
 </tr>
 <tr>
-<td>03.07.01.002-3</td>
-<td>RESTAURAÇÃO DE DENTE DECÍDUO</td>
-<td>Dente</td>
-<td>32</td>
-</tr>
-<tr>
 <td>03.07.01.003-1</td>
 <td>RESTAURAÇÃO DE DENTE PERMANENTE ANTERIOR</td>
 <td>Dente</td>
 <td>32</td>
 </tr>
 <tr>
-<td>03.07.01.004-0</td>
-<td>RESTAURAÇÃO DE DENTE PERMANENTE POSTERIOR</td>
+<td>03.07.01.006-6</td>
+<td>TRATAMENTO INICIAL DO DENTE TRAUMATIZADO</td>
+<td>Dente</td>
+<td>32</td>
+</tr>
+<tr>
+<td>03.07.01.007-4</td>
+<td>TRATAMENTO RESTAURADOR ATRAUMÁTICO (TRA/ART)</td>
+<td>Dente</td>
+<td>32</td>
+</tr>
+<tr>
+<td>03.07.01.008-2</td>
+<td>RESTAURAÇÃO DE DENTE DECÍDUO POSTERIOR COM RESINA COMPOSTA</td>
+<td>Dente</td>
+<td>32</td>
+</tr>
+<tr>
+<td>03.07.01.009-0</td>
+<td>RESTAURAÇÃO DE DENTE DECÍDUO POSTERIOR COM AMÁLGAMA</td>
+<td>Dente</td>
+<td>32</td>
+</tr>
+<tr>
+<td>03.07.01.010-4</td>
+<td>RESTAURAÇÃO DE DENTE DECÍDUO POSTERIOR COM IONÔMERO DE VIDRO</td>
+<td>Dente</td>
+<td>32</td>
+</tr>
+<tr>
+<td>03.07.01.011-2</td>
+<td>RESTAURAÇÃO DE DENTE DECÍDUO ANTERIOR COM RESINA COMPOSTA</td>
+<td>Dente</td>
+<td>32</td>
+</tr>
+<tr>
+<td>03.07.01.012-0</td>
+<td>RESTAURAÇÃO DE DENTE PERMANENTE POSTERIOR COM RESINA COMPOSTA</td>
+<td>Dente</td>
+<td>32</td>
+</tr>
+<tr>
+<td>03.07.01.013-9</td>
+<td>REMOÇÃO/RESTAURAÇÃO COM AMÁLGAMA DE DENTE PERMANENTE POSTERIOR</td>
 <td>Dente</td>
 <td>32</td>
 </tr>
@@ -8150,12 +8171,6 @@
 <td>32</td>
 </tr>
 <tr>
-<td>03.07.03.001-6</td>
-<td>RASPAGEM ALISAMENTO E POLIMENTO SUPRAGENGIVAIS (POR SEXTANTE)</td>
-<td>Sextante</td>
-<td>6</td>
-</tr>
-<tr>
 <td>03.07.03.002-4</td>
 <td>RASPAGEM ALISAMENTO SUBGENGIVAIS (POR SEXTANTE)</td>
 <td>Sextante</td>
@@ -8166,6 +8181,12 @@
 <td>RASPAGEM ALISAMENTO E POLIMENTO SUPRAGENGIVAIS (POR SEXTANTE)</td>
 <td>Sextante</td>
 <td>6</td>
+</tr>
+<tr>
+<td>03.07.04.017-8</td>
+<td>MOLDAGEM DENTO-GENGIVAL COM FINALIDADE ORTODÔNTICA</td>
+<td>Arcada</td>
+<td>2</td>
 </tr>
 <tr>
 <td>04.14.02.003-0</td>
@@ -8191,9 +8212,15 @@
 <td>Sextante</td>
 <td>6</td>
 </tr>
+<tr>
+<td>04.14.02.043-0</td>
+<td>EXODONTIA DE DENTE SUPRANUMERÁRIO</td>
+<td>Dente</td>
+<td>32</td>
+</tr>
 </tbody></table>
 
-<p><em>* Procedimentos pertencentes a competência <strong>02/2019</strong> do SIGTAP.</em></p>
+<p><em>* Procedimentos pertencentes a competência <strong>09/2020</strong> do SIGTAP.</em></p>
 
       </article>
 
@@ -8235,9 +8262,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> É recomendado concatenar o CNES na frente do UUID, de modo que os 7 dígitos (CNES) + 1 de hífen somados aos 36 (32 caracteres + 4 hífen) do UUID são a limitação de 44 bytes do campo. Formato canônico.</p>
+<p><strong>Regra:</strong> É recomendado concatenar o CNES na frente do UUID, de modo que os 7 dígitos (CNES) + 1 de hífen somados aos 36 (32 caracteres + 4 hífen) do UUID são a limitação de 44 bytes do campo. Formato canônico.</p>
 
-<p><strong>Referências:</strong> <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">UUID Wikipedia</a>.</p>
+<p><strong>Referência:</strong> <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">UUID Wikipedia</a>.</p>
 
 <h3 id="2-outralocalidade">#2 outraLocalidade</h3>
 
@@ -8293,7 +8320,7 @@
 <li>É de preenchimento obrigatório se <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#18-pseeducacao">pseEducacao</a> = <code>true</code> ou <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#19-psesaude">pseSaude</a> = <code>true</code>.</li>
 </ul>
 
-<p><strong>Referências:</strong> Os números INEP das instituições de ensino podem ser obtidos a partir do <a href="http://portal.inep.gov.br/microdados">site do INEP</a>. Faça download do arquivo mais atual do &quot;Censo escolar&quot;. Na pasta &quot;Dados&quot; está contido o arquivo &quot;ESCOLAS.zip&quot;, que contém a tabela com os dados das instituições. O número INEP da instituição se encontra na coluna &quot;CO_ENTIDADE&quot; e o nome da instituição na coluna &quot;NO_ENTIDADE&quot;.</p>
+<p><strong>Referência:</strong> Os números INEP das instituições de ensino podem ser obtidos a partir do <a href="http://portal.inep.gov.br/microdados">site do INEP</a>. Faça download do arquivo mais atual do &quot;Censo escolar&quot;. Na pasta &quot;Dados&quot; está contido o arquivo &quot;ESCOLAS.zip&quot;, que contém a tabela com os dados das instituições. O número INEP da instituição se encontra na coluna &quot;CO_ENTIDADE&quot; e o nome da instituição na coluna &quot;NO_ENTIDADE&quot;.</p>
 
 <h3 id="4-numparticipantes">#4 numParticipantes</h3>
 
@@ -8369,13 +8396,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong></p>
+<p><strong>Regra:</strong> Não pode ser preenchido se <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#18-pseeducacao">pseEducacao</a> = <code>true</code> e <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#19-psesaude">pseSaude</a> = <code>false</code>.</p>
 
-<ul>
-<li>Não pode ser preenchido se <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#18-pseeducacao">pseEducacao</a> = <code>true</code> e <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#19-psesaude">pseSaude</a> = <code>false</code>.</li>
-</ul>
-
-<p><strong>Referências:</strong>   <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#profissionalcborowitem">ProfissionalCboRowItem</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#profissionalcborowitem">ProfissionalCboRowItem</a>.</p>
 
 <h3 id="7-atividadetipo">#7 atividadeTipo</h3>
 
@@ -8408,11 +8431,10 @@
 <li><code>03 - Reunião intersetorial / Conselho local de saúde / Controle social</code>;</li>
 <li><code>05 - Atendimento em grupo</code>.</li>
 </ul></li>
+<li><p>Não podem ser selecionados se <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#18-pseeducacao">pseEducacao</a> = <code>true</code> e <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#19-psesaude">pseSaude</a> = <code>false</code>.</p></li>
 </ul>
 
-<p>Não podem ser selecionados se <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#18-pseeducacao">pseEducacao</a> = <code>true</code> e <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#19-psesaude">pseSaude</a> = <code>false</code>.</p>
-
-<p><strong>Referências</strong>: <a href="/ledi/documentacao/referencias/dicionario.html#tipoatividadecoletiva">TipoAtividadeColetiva</a>.</p>
+<p><strong>Referência</strong>: <a href="/ledi/documentacao/referencias/dicionario.html#tipoatividadecoletiva">TipoAtividadeColetiva</a>.</p>
 
 <h3 id="8-temasparareuniao">#8 temasParaReuniao</h3>
 
@@ -8442,7 +8464,7 @@
 <li>Não pode ser preenchido se <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#18-pseeducacao">pseEducacao</a> = <code>true</code> e <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#19-psesaude">pseSaude</a> = <code>false</code>.</li>
 </ul>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#temasparareuniao">TemasParaReuniao</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#temasparareuniao">TemasParaReuniao</a>.</p>
 
 <h3 id="9-publicoalvo">#9 publicoAlvo</h3>
 
@@ -8471,7 +8493,7 @@
 <li>Não pode ser preenchido se <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#7-atividadetipo">atividadeTipo</a> for <code>1</code>, <code>2</code> ou <code>3</code>.</li>
 </ul>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#publicoalvo">PublicoAlvo</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#publicoalvo">PublicoAlvo</a>.</p>
 
 <h3 id="10-participantes">#10    participantes</h3>
 
@@ -8493,9 +8515,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> É de preenchimento obrigatório se <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#7-atividadetipo">atividadeTipo</a> for <code>5</code> ou <code>6</code>.</p>
+<p><strong>Regra:</strong> É de preenchimento obrigatório se <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#7-atividadetipo">atividadeTipo</a> for <code>5</code> ou <code>6</code>.</p>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#participanterowitem">ParticipanteRowItem</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#participanterowitem">ParticipanteRowItem</a>.</p>
 
 <h3 id="11-tbcdsorigem">#11    tbCdsOrigem</h3>
 
@@ -8517,7 +8539,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Observações</strong>: Utilizar valor 3 (sistemas terceiros).</p>
+<p><strong>Observação</strong>: Utilizar valor 3 (sistemas terceiros).</p>
 
 <h3 id="12-cneslocalatividade">#12    cnesLocalAtividade</h3>
 
@@ -8566,9 +8588,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Só pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#17-praticasemsaude">praticasEmSaude</a> possuir o valor <code>30</code>.</p>
+<p><strong>Regra:</strong> Só pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#17-praticasemsaude">praticasEmSaude</a> possuir o valor <code>30</code>.</p>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#outroprocedimentocoletivo">OutroProcedimentoColetivo</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#outroprocedimentocoletivo">OutroProcedimentoColetivo</a>.</p>
 
 <h3 id="14-turno">#14    turno</h3>
 
@@ -8590,7 +8612,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#turno">Turno</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#turno">Turno</a>.</p>
 
 <h3 id="15-headertransport">#15 headerTransport</h3>
 
@@ -8612,9 +8634,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Somente as CBOs apresentadas na <a href="/ledi/documentacao/regras/cbo.html#ficha-de-atividade-coletiva">Tabela 5 - CBOs que podem registrar ficha de atividade coletiva</a> podem ser adicionadas no campo CBO do profissional.</p>
+<p><strong>Regra:</strong> Somente as CBOs apresentadas na <a href="/ledi/documentacao/regras/cbo.html#ficha-de-atividade-coletiva">Tabela 5 - CBOs que podem registrar ficha de atividade coletiva</a> podem ser adicionadas no campo CBO do profissional.</p>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#unicalotacaoheader">UnicaLotacaoHeader</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#unicalotacaoheader">UnicaLotacaoHeader</a>.</p>
 
 <h3 id="16-temasparasaude">#16    temasParaSaude</h3>
 
@@ -8644,7 +8666,7 @@
 <li>Se <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#16-temasparasaude">temasParaSaude</a> = <code>18 - Semana saúde na escola</code>, torna-se obrigatório o preenchimento de <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#18-pseeducacao">pseEducacao</a> ou <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#19-psesaude">pseSaude</a>.</li>
 </ul>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#temasparasaude">TemasParaSaude</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#temasparasaude">TemasParaSaude</a>.</p>
 
 <h3 id="17-praticasemsaude">#17    praticasEmSaude</h3>
 
@@ -8688,7 +8710,7 @@
 
 <p>Não podem ser selecionados se <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#18-pseeducacao">pseEducacao</a> = <code>true</code> e <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#19-psesaude">pseSaude</a> = <code>false</code>.</p>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#praticasemsaude">PraticasEmSaude</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#praticasemsaude">PraticasEmSaude</a>.</p>
 
 <h3 id="18-pseeducacao">#18    pseEducacao</h3>
 
@@ -8782,7 +8804,7 @@
 <li>Não pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#9-cpfparticipante">cpfParticipante</a> for preenchido.</li>
 </ul>
 
-<p><strong>Referências:</strong> O algoritmo de validação está presente em <a href="/ledi/documentacao/regras/algoritmo_CNS.html">Validar CNS</a>.</p>
+<p><strong>Referência:</strong> O algoritmo de validação está presente em <a href="/ledi/documentacao/regras/algoritmo_CNS.html">Validar CNS</a>.</p>
 
 <h3 id="2-datanascimento">#2 dataNascimento</h3>
 
@@ -8804,9 +8826,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Não pode ser posterior a <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a> e anterior a 130 anos a partir da <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>.</p>
+<p><strong>Regra:</strong> Não pode ser posterior a <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a> e anterior a 130 anos a partir da <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>.</p>
 
-<p><strong>Referências:</strong> A data deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos . Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
+<p><strong>Referência:</strong> A data deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos . Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
 
 <h3 id="3-avaliacaoalterada">#3 avaliacaoAlterada</h3>
 
@@ -8904,7 +8926,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Não deve ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#17-praticasemsaude">praticasEmSaude</a> for diferente de <code>25</code>, <code>26</code>, <code>27</code> ou <code>28</code> (referentes ao PNCT).</p>
+<p><strong>Regra:</strong> Não deve ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#17-praticasemsaude">praticasEmSaude</a> for diferente de <code>25</code>, <code>26</code>, <code>27</code> ou <code>28</code> (referentes ao PNCT).</p>
 
 <h3 id="7-abandonougrupo">#7 abandonouGrupo</h3>
 
@@ -8926,7 +8948,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Não deve ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#17-praticasemsaude">praticasEmSaude</a> for diferente de <code>25</code>, <code>26</code>, <code>27</code> ou <code>28</code> (referentes ao PNCT).</p>
+<p><strong>Regra:</strong> Não deve ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#17-praticasemsaude">praticasEmSaude</a> for diferente de <code>25</code>, <code>26</code>, <code>27</code> ou <code>28</code> (referentes ao PNCT).</p>
 
 <h2 id="8-sexo">#8  sexo</h2>
 
@@ -8948,7 +8970,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#sexo">Sexo</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#sexo">Sexo</a>.</p>
 
 <h3 id="9-cpfparticipante">#9 cpfParticipante</h3>
 
@@ -9000,11 +9022,11 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> CNS validado de acordo com o algoritmo.</p>
+<p><strong>Regra:</strong> CNS validado de acordo com o algoritmo.</p>
 
-<p><strong>Referências:</strong> O algoritmo de validação está presente em <a href="/ledi/documentacao/regras/algoritmo_CNS.html">Validar CNS</a>.</p>
+<p><strong>Referência:</strong> O algoritmo de validação está presente em <a href="/ledi/documentacao/regras/algoritmo_CNS.html">Validar CNS</a>.</p>
 
-<p>Observações: Esta entidade é utilizada para representar os profissionais que participaram da atividade coletiva</p>
+<p><strong>Observação:</strong> Esta entidade é utilizada para representar os profissionais que participaram da atividade coletiva</p>
 
 <h3 id="2-codigocbo2002">#2 codigoCbo2002</h3>
 
@@ -9026,9 +9048,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/cbo_disponiveis.html">Lista com todas as CBOs</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/cbo_disponiveis.html">Lista com todas as CBOs</a>.</p>
 
-<p>Observações: Esta entidade é utilizada para representar os profissionais que participaram da atividade coletiva.</p>
+<p><strong>Observação:</strong> Esta entidade é utilizada para representar os profissionais que participaram da atividade coletiva.</p>
 
 <h2 id="outroprocedimentocoletivo">OutroProcedimentoColetivo</h2>
 
@@ -9045,6 +9067,10 @@
 <tr>
 <td>01.01.01.002-8</td>
 <td>ATIVIDADE EDUCATIVA / ORIENTAÇÃO EM GRUPO NA ATENÇÃO ESPECIALIZADA</td>
+</tr>
+<tr>
+<td>01.01.02.011-2</td>
+<td>AÇÃO COLETIVA DE PREVENÇÃO DE CÂNCER BUCAL</td>
 </tr>
 <tr>
 <td>01.01.02.002-3</td>
@@ -9154,9 +9180,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> É recomendado concatenar o CNES na frente do UUID, de modo que os 7 dígitos (CNES) + 1 de hífen somados aos 36 (32 caracteres + 4 hífen) do UUID são a limitação de 44 bytes do campo. Formato canônico.</p>
+<p><strong>Regra:</strong> É recomendado concatenar o CNES na frente do UUID, de modo que os 7 dígitos (CNES) + 1 de hífen somados aos 36 (32 caracteres + 4 hífen) do UUID são a limitação de 44 bytes do campo. Formato canônico.</p>
 
-<p><strong>Referências:</strong> Para ver a referência sobre o UUID, acesse <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">UUID Wikipedia</a>.</p>
+<p><strong>Referência:</strong> Para ver a referência sobre o UUID, acesse <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">UUID Wikipedia</a>.</p>
 
 <h3 id="2-tpcdsorigem">#2 tpCdsOrigem</h3>
 
@@ -9178,7 +9204,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Utilizar valor <code>3 (sistemas terceiros)</code>.</p>
+<p><strong>Regra:</strong> Utilizar valor <code>3 (sistemas terceiros)</code>.</p>
 
 <h3 id="3-headertransport">#3 headerTransport</h3>
 
@@ -9200,9 +9226,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Somente as CBOs apresentadas na <a href="/ledi/documentacao/regras/cbo.html#ficha-de-procedimentos">Tabela 6 - CBOs que podem registrar ficha de procedimento</a> podem ser adicionadas no campo CBO do profissional.</p>
+<p><strong>Regra:</strong> Somente as CBOs apresentadas na <a href="/ledi/documentacao/regras/cbo.html#ficha-de-procedimentos">Tabela 6 - CBOs que podem registrar ficha de procedimento</a> podem ser adicionadas no campo CBO do profissional.</p>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#unicalotacaoheader">UnicaLotacaoHeader</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#unicalotacaoheader">UnicaLotacaoHeader</a>.</p>
 
 <h3 id="4-atendprocedimentos">#4 atendProcedimentos</h3>
 
@@ -9224,9 +9250,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/estrutura_arquivos/#fichaprocedimentochild">FichaProcedimentoChild</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/estrutura_arquivos/#fichaprocedimentochild">FichaProcedimentoChild</a>.</p>
 
-<p>Observação: É requerido pelo menos um dentre os itens <code>#4</code> a <code>#11</code>.</p>
+<p><strong>Observação:</strong> É requerido pelo menos um dentre os itens <code>#4</code> a <code>#11</code>.</p>
 
 <h3 id="5-numtotalafericaopa">#5 numTotalAfericaoPa</h3>
 
@@ -9466,7 +9492,7 @@
 <li>Não pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#12-cpfcidadao">cpfCidadao</a> for preenchido.</li>
 </ul>
 
-<p><strong>Referências:</strong> O algoritmo de validação está presente em <a href="/ledi/documentacao/regras/algoritmo_CNS.html">Validar CNS</a>.</p>
+<p><strong>Referência:</strong> O algoritmo de validação está presente em <a href="/ledi/documentacao/regras/algoritmo_CNS.html">Validar CNS</a>.</p>
 
 <h3 id="3-dtnascimento">#3 dtNascimento</h3>
 
@@ -9490,7 +9516,7 @@
 
 <p><strong>Regras:</strong> Não pode ser posterior à <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a> e anterior a 130 anos a partir da <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>.</p>
 
-<p><strong>Referências:</strong> A data deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos . Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
+<p><strong>Referência:</strong> A data deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos . Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
 
 <h3 id="4-sexo">#4 sexo</h3>
 
@@ -9512,7 +9538,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#sexo">Sexo</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#sexo">Sexo</a>.</p>
 
 <h3 id="5-localatendimento">#5 localAtendimento</h3>
 
@@ -9534,9 +9560,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Apenas valores de <code>1</code> a <code>10</code>.</p>
+<p><strong>Regra:</strong> Apenas valores de <code>1</code> a <code>10</code>.</p>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#localdeatendimento">LocalDeAtendimento</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#localdeatendimento">LocalDeAtendimento</a>.</p>
 
 <h3 id="6-turno">#6 turno</h3>
 
@@ -9558,7 +9584,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#turno">Turno</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#turno">Turno</a>.</p>
 
 <h3 id="7-statusescutainicialorientacao">#7 statusEscutaInicialOrientacao</h3>
 
@@ -9612,15 +9638,15 @@
 <p><strong>Referências:</strong></p>
 
 <ul>
-<li>Tabela do SIGTAP, competência 02/2019 disponível em: <a href="http://sigtap.datasus.gov.br/tabela-unificada/app/sec/procedimento/publicados/consultar">Tabela Unificada SIGTAP</a>;</li>
+<li>Tabela do SIGTAP, competência 09/2020 disponível em: <a href="http://sigtap.datasus.gov.br/tabela-unificada/app/sec/procedimento/publicados/consultar">Tabela Unificada SIGTAP</a>;</li>
 <li><a href="/ledi/documentacao/estrutura_arquivos/#procedimentos-da-ficha">Procedimentos da Ficha</a>.</li>
 </ul>
 
-<p>Observação:</p>
+<p><strong>Observações:</strong></p>
 
 <ul>
-<li>Inserir o código do procedimento SIGTAP sem ponto ou hífen, ex: <code>0201010010</code>;</li>
-<li>Inserir o código do procedimento AB em caracteres maiúsculos, sem espaços, ex: <code>ABPG040</code>.</li>
+<li>Inserir o código do procedimento SIGTAP sem ponto ou hífen, ex: <code>0214010015</code>;</li>
+<li>Inserir o código do procedimento AB em caracteres maiúsculos, sem espaços, ex: <code>ABEX022</code>.</li>
 </ul>
 
 <h3 id="10-datahorainicialatendimento">#10 dataHoraInicialAtendimento</h3>
@@ -9650,7 +9676,7 @@
 <li>Não pode ser posterior à <a href="/ledi/documentacao/estrutura_arquivos/#11-datahorafinalatendimento">dataHoraFinalAtendimento</a> e à data atual.</li>
 </ul>
 
-<p><strong>Referências:</strong> Deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
+<p><strong>Referência:</strong> Deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
 
 <h3 id="11-datahorafinalatendimento">#11 dataHoraFinalAtendimento</h3>
 
@@ -9679,7 +9705,7 @@
 <li>Não pode ser posterior à data atual.</li>
 </ul>
 
-<p><strong>Referências:</strong> Deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
+<p><strong>Referência:</strong> Deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
 
 <h3 id="12-cpfcidadao">#12 cpfCidadao</h3>
 
@@ -9748,7 +9774,7 @@
 <td>ABPG006</td>
 </tr>
 <tr>
-<td>04.01.01.002-3</td>
+<td>03.01.10.027-6</td>
 <td>Curativo especial</td>
 <td>ABPG007</td>
 </tr>
@@ -9833,7 +9859,7 @@
 <td>ABPG022</td>
 </tr>
 <tr>
-<td>Não possui</td>
+<td>02.14.01.015-5</td>
 <td>Teste rápido para dosagem de proteinúria</td>
 <td>ABPG040</td>
 </tr>
@@ -9853,17 +9879,17 @@
 <td>ABPG026</td>
 </tr>
 <tr>
-<td>03.01.10.002-0</td>
+<td>03.01.10.021-7</td>
 <td>Administração de medicamentos via Oral</td>
 <td>ABPG027</td>
 </tr>
 <tr>
-<td>03.01.10.002-0</td>
+<td>03.01.10.020-9</td>
 <td>Administração de medicamentos via Intramuscular</td>
 <td>ABPG028</td>
 </tr>
 <tr>
-<td>03.01.10.002-0</td>
+<td>03.01.10.019-5</td>
 <td>Administração de medicamentos via Endovenosa</td>
 <td>ABPG029</td>
 </tr>
@@ -9873,43 +9899,43 @@
 <td>ABPG030</td>
 </tr>
 <tr>
-<td>03.01.10.002-0</td>
+<td>03.01.10.023-3</td>
 <td>Administração de medicamentos via Tópica</td>
 <td>ABPG031</td>
 </tr>
 <tr>
-<td>03.01.10.002-0</td>
+<td>03.01.10.024-1</td>
 <td>Administração de Penicilina para tratamento de sífilis</td>
 <td>ABPG032</td>
 </tr>
 <tr>
-<td>03.01.10.002-0</td>
+<td>03.01.10.022-5</td>
 <td>Administração de medicamentos via Subcutânea (SC)</td>
 <td>ABPG041</td>
 </tr>
 <tr>
-<td>04.01.01.002-3</td>
+<td>03.01.10.028-4</td>
 <td>Curativo simples</td>
 <td>ABPG035</td>
 </tr>
 <tr>
-<td>Não possui</td>
+<td>03.01.10.025-0</td>
 <td>Aferição de temperatura</td>
 <td>ABPG034</td>
 </tr>
 <tr>
-<td>Não possui</td>
+<td>01.01.04.007-5</td>
 <td>Medição de altura</td>
 <td>ABPG038</td>
 </tr>
 <tr>
-<td>Não possui</td>
+<td>01.01.04.008-3</td>
 <td>Medição de peso</td>
 <td>ABPG039</td>
 </tr>
 </tbody></table>
 
-<p><em>* Procedimentos pertencentes a competência <strong>02/2019</strong> do SIGTAP.</em></p>
+<p><em>* Procedimentos pertencentes a competência <strong>09/2020</strong> do SIGTAP.</em></p>
 
       </article>
 
@@ -9951,9 +9977,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> É recomendado concatenar o CNES na frente do UUID, de modo que os 7 dígitos (CNES) + 1 de hífen somados aos 36 (32 caracteres + 4 hífen) do UUID são a limitação de 44 bytes do campo. Formato canônico.</p>
+<p><strong>Regra:</strong> É recomendado concatenar o CNES na frente do UUID, de modo que os 7 dígitos (CNES) + 1 de hífen somados aos 36 (32 caracteres + 4 hífen) do UUID são a limitação de 44 bytes do campo. Formato canônico.</p>
 
-<p><strong>Referências:</strong> Para ver a referência sobre o UUID, acesse <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">UUID Wikipedia</a>.</p>
+<p><strong>Referência:</strong> Para ver a referência sobre o UUID, acesse <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">UUID Wikipedia</a>.</p>
 
 <h3 id="2-tpcdsorigem">#2 tpCdsOrigem</h3>
 
@@ -9975,7 +10001,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Utilizar valor 3 (sistemas terceiros).</p>
+<p><strong>Regra:</strong> Utilizar valor 3 (sistemas terceiros).</p>
 
 <h3 id="3-headertransport">#3 headerTransport</h3>
 
@@ -9997,9 +10023,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Somente as CBOs apresentadas na <a href="/ledi/documentacao/regras/cbo.html#ficha-de-visita-domiciliar-e-territorial">Tabela 7 - CBOs que podem registrar ficha de visita domiciliar e territorial</a> podem ser adicionadas no campo CBO do profissional.</p>
+<p><strong>Regra:</strong> Somente as CBOs apresentadas na <a href="/ledi/documentacao/regras/cbo.html#ficha-de-visita-domiciliar-e-territorial">Tabela 7 - CBOs que podem registrar ficha de visita domiciliar e territorial</a> podem ser adicionadas no campo CBO do profissional.</p>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#unicalotacaoheader">UnicaLotacaoHeader</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#unicalotacaoheader">UnicaLotacaoHeader</a>.</p>
 
 <h3 id="4-visitasdomiciliares">#4 visitasDomiciliares</h3>
 
@@ -10021,7 +10047,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/estrutura_arquivos/#fichavisitadomiciliarchild">FichaVisitaDomiciliarChild</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/estrutura_arquivos/#fichavisitadomiciliarchild">FichaVisitaDomiciliarChild</a>.</p>
 
 <h2 id="fichavisitadomiciliarchild">FichaVisitaDomiciliarChild</h2>
 
@@ -10045,7 +10071,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#turno">Turno</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#turno">Turno</a>.</p>
 
 <h3 id="2-numprontuario">#2 numProntuario</h3>
 
@@ -10103,7 +10129,7 @@
 <li>Não pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#14-cpfcidadao">cpfCidadao</a> for preenchido.</li>
 </ul>
 
-<p><strong>Referências:</strong> O algoritmo de validação está presente em <a href="/ledi/documentacao/regras/algoritmo_CNS.html">Validar CNS</a>.</p>
+<p><strong>Referência:</strong> O algoritmo de validação está presente em <a href="/ledi/documentacao/regras/algoritmo_CNS.html">Validar CNS</a>.</p>
 
 <h3 id="4-dtnascimento">#4 dtNascimento</h3>
 
@@ -10141,7 +10167,7 @@
 </ul></li>
 </ul>
 
-<p><strong>Referências:</strong> A data deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos . Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
+<p><strong>Referência:</strong> A data deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos . Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
 
 <h3 id="5-sexo">#5 sexo</h3>
 
@@ -10178,7 +10204,7 @@
 </ul></li>
 </ul>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#sexo">Sexo</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#sexo">Sexo</a>.</p>
 
 <h3 id="6-statusvisitacompartilhadaoutroprofissional">#6 statusVisitaCompartilhadaOutroProfissional</h3>
 
@@ -10239,7 +10265,7 @@
 <li><p>As opções <code>5 (Gestante)</code> e <code>6 (Puérpera)</code> não podem ser informadas se o <a href="/ledi/documentacao/estrutura_arquivos/#5-sexo">Sexo</a> = <code>0 (masculino)</code>.</p></li>
 </ul>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#motivovisita">MotivoVisita</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#motivovisita">MotivoVisita</a>.</p>
 
 <h3 id="8-desfecho">#8 desfecho</h3>
 
@@ -10261,7 +10287,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#desfecho">Desfecho</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#desfecho">Desfecho</a>.</p>
 
 <h3 id="9-microarea">#9 microarea</h3>
 
@@ -10283,7 +10309,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Não deve ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#10-stforaarea">stForaArea</a> = <code>true</code>. Caso contrário, o preenchimento é obrigatório.</p>
+<p><strong>Regra:</strong> Não deve ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#10-stforaarea">stForaArea</a> = <code>true</code>. Caso contrário, o preenchimento é obrigatório.</p>
 
 <h3 id="10-stforaarea">#10 stForaArea</h3>
 
@@ -10325,7 +10351,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#tipodeimovel">tipoDeImovel</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#tipodeimovel">tipoDeImovel</a>.</p>
 
 <h3 id="12-pesoacompanhamentonutricional">#12 pesoAcompanhamentoNutricional</h3>
 
@@ -10456,9 +10482,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Somente as CBOs apresentadas na <a href="/ledi/documentacao/regras/cbo.html#marcadores-de-consumo-alimentar">Tabela 8 - CBOs que podem registrar marcadores de consumo alimentar</a> podem ser adicionadas no campo CBO do profissional.</p>
+<p><strong>Regra:</strong> Somente as CBOs apresentadas na <a href="/ledi/documentacao/regras/cbo.html#marcadores-de-consumo-alimentar">Tabela 8 - CBOs que podem registrar marcadores de consumo alimentar</a> podem ser adicionadas no campo CBO do profissional.</p>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#unicalotacaoheader">UnicaLotacaoHeader</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#unicalotacaoheader">UnicaLotacaoHeader</a>.</p>
 
 <h3 id="2-cnscidadao">#2 cnsCidadao</h3>
 
@@ -10480,14 +10506,14 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong></p>
+<p><strong>Regra:</strong></p>
 
 <ul>
 <li>CNS validado de acordo com o algoritmo;</li>
 <li>Não pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#12-cpfcidadao">cpfCidadao</a> for preenchido.</li>
 </ul>
 
-<p><strong>Referências:</strong> O algoritmo de validação está presente em <a href="/ledi/documentacao/regras/algoritmo_CNS.html">Validar CNS</a>.</p>
+<p><strong>Referência:</strong> O algoritmo de validação está presente em <a href="/ledi/documentacao/regras/algoritmo_CNS.html">Validar CNS</a>.</p>
 
 <h3 id="3-identificacaousuario">#3 identificacaoUsuario</h3>
 
@@ -10509,7 +10535,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> As regras de validação de um nome estão descritas em <a href="/ledi/documentacao/regras/validar_nome.html">Validar nome</a>.</p>
+<p><strong>Regra:</strong> As regras de validação de um nome estão descritas em <a href="/ledi/documentacao/regras/validar_nome.html">Validar nome</a>.</p>
 
 <h3 id="4-datanascimento">#4 dataNascimento</h3>
 
@@ -10531,9 +10557,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Não pode ser posterior a <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a> e anterior a 130 anos a partir da <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>.</p>
+<p><strong>Regra:</strong> Não pode ser posterior a <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a> e anterior a 130 anos a partir da <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>.</p>
 
-<p><strong>Referências:</strong> A data deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos . Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
+<p><strong>Referência:</strong> A data deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos . Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
 
 <h3 id="5-sexo">#5 sexo</h3>
 
@@ -10577,7 +10603,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Apenas valores de <code>1</code> a <code>10</code>.</p>
+<p><strong>Regra:</strong> Apenas valores de <code>1</code> a <code>10</code>.</p>
 
 <p><strong>Referência</strong>: <a href="/ledi/documentacao/referencias/dicionario.html#localdeatendimento">LocalDeAtendimento</a>.</p>
 
@@ -10601,11 +10627,11 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Requerido se <a href="/ledi/documentacao/estrutura_arquivos/#4-datanascimento">dataNascimento</a> &lt; 6 meses a partir da <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>.</p>
+<p><strong>Regra:</strong> Requerido se <a href="/ledi/documentacao/estrutura_arquivos/#4-datanascimento">dataNascimento</a> &lt; 6 meses a partir da <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>.</p>
 
 <p><strong>Referência</strong>: <a href="/ledi/documentacao/estrutura_arquivos/#perguntaquestionariocriancasmenoresseismeses">PerguntaQuestionarioCriancasMenoresSeisMeses</a>.</p>
 
-<p>Observações: Os campos <code>#7</code>, <code>#8</code> e <code>#9</code> são mutuamente exclusivos, isto é, um e apenas um deles deve não ser nulo.</p>
+<p><strong>Observação:</strong> Os campos <code>#7</code>, <code>#8</code> e <code>#9</code> são mutuamente exclusivos, isto é, um e apenas um deles deve não ser nulo.</p>
 
 <h3 id="8-perguntasquestionariocriancasdeseisvintetresmeses">#8 perguntasQuestionarioCriancasDeSeisVinteTresMeses</h3>
 
@@ -10627,11 +10653,11 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Requerido se <a href="/ledi/documentacao/estrutura_arquivos/#4-datanascimento">dataNascimento</a> &gt;= 6 meses e &lt;= 23 meses a partir da <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>.</p>
+<p><strong>Regra:</strong> Requerido se <a href="/ledi/documentacao/estrutura_arquivos/#4-datanascimento">dataNascimento</a> &gt;= 6 meses e &lt;= 23 meses a partir da <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>.</p>
 
 <p><strong>Referência</strong>: <a href="/ledi/documentacao/estrutura_arquivos/#perguntaquestionariocriancasdeseisvintetresmeses">PerguntaQuestionarioCriancasDeSeisVinteTresMeses</a>.</p>
 
-<p>Observações: Os campos <code>#7</code>, <code>#8</code> e <code>#9</code> são mutuamente exclusivos, isto é, um e apenas um deles deve não ser nulo.</p>
+<p><strong>Observação:</strong> Os campos <code>#7</code>, <code>#8</code> e <code>#9</code> são mutuamente exclusivos, isto é, um e apenas um deles deve não ser nulo.</p>
 
 <h3 id="9-perguntasquestionariocriancascommaisdoisanos">#9 perguntasQuestionarioCriancasComMaisDoisAnos</h3>
 
@@ -10653,11 +10679,11 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Requerido se <a href="/ledi/documentacao/estrutura_arquivos/#4-datanascimento">dataNascimento</a> &gt;= 24 meses a partir da <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>.</p>
+<p><strong>Regra:</strong> Requerido se <a href="/ledi/documentacao/estrutura_arquivos/#4-datanascimento">dataNascimento</a> &gt;= 24 meses a partir da <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>.</p>
 
 <p><strong>Referência</strong>: <a href="/ledi/documentacao/estrutura_arquivos/#perguntaquestionariocriancascommaisdoisanos">PerguntaQuestionarioCriancasComMaisDoisAnos</a>.</p>
 
-<p>Observações: Os campos <code>#7</code>, <code>#8</code> e <code>#9</code> são mutuamente exclusivos, isto é, um e apenas um deles deve não ser nulo.</p>
+<p><strong>Observação:</strong> Os campos <code>#7</code>, <code>#8</code> e <code>#9</code> são mutuamente exclusivos, isto é, um e apenas um deles deve não ser nulo.</p>
 
 <h3 id="10-uuidficha">#10 uuidFicha</h3>
 
@@ -10679,7 +10705,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> É recomendado concatenar o CNES na frente do UUID, de modo que os 7 dígitos (CNES) + 1 de hífen somados aos 36 (32 caracteres + 4 hífen) do UUID são a limitação de 44 bytes do campo. Formato canônico.</p>
+<p><strong>Regra:</strong> É recomendado concatenar o CNES na frente do UUID, de modo que os 7 dígitos (CNES) + 1 de hífen somados aos 36 (32 caracteres + 4 hífen) do UUID são a limitação de 44 bytes do campo. Formato canônico.</p>
 
 <p><strong>Referência</strong>: Para ver a referência sobre o UUID, acesse: <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">UUID Wikipedia</a>.</p>
 
@@ -10703,7 +10729,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Utilizar valor 3 (sistemas terceiros).</p>
+<p><strong>Regra:</strong> Utilizar valor 3 (sistemas terceiros).</p>
 
 <h3 id="12-cpfcidadao">#12 cpfCidadao</h3>
 
@@ -10754,9 +10780,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Obrigatório caso a <a href="/ledi/documentacao/estrutura_arquivos/#4-datanascimento">dataNascimento</a> seja menos que 6 meses anterior à <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>.</p>
+<p><strong>Regra:</strong> Obrigatório caso a <a href="/ledi/documentacao/estrutura_arquivos/#4-datanascimento">dataNascimento</a> seja menos que 6 meses anterior à <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>.</p>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/estrutura_arquivos/#perguntacriancasmenoresseismesesenum">PerguntaCriancasMenoresSeisMesesEnum</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/estrutura_arquivos/#perguntacriancasmenoresseismesesenum">PerguntaCriancasMenoresSeisMesesEnum</a>.</p>
 
 <h3 id="2-respostaunicaescolha">#2 respostaUnicaEscolha</h3>
 
@@ -10778,9 +10804,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Obrigatório caso a <a href="/ledi/documentacao/estrutura_arquivos/#4-datanascimento">dataNascimento</a> seja menos que 6 meses anterior à <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>.</p>
+<p><strong>Regra:</strong> Obrigatório caso a <a href="/ledi/documentacao/estrutura_arquivos/#4-datanascimento">dataNascimento</a> seja menos que 6 meses anterior à <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>.</p>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/estrutura_arquivos/#respostaunicaescolhaenum">RespostaUnicaEscolhaEnum</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/estrutura_arquivos/#respostaunicaescolhaenum">RespostaUnicaEscolhaEnum</a>.</p>
 
 <h2 id="perguntaquestionariocriancasdeseisvintetresmeses">PerguntaQuestionarioCriancasDeSeisVinteTresMeses</h2>
 
@@ -10806,9 +10832,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Obrigatório caso a <a href="/ledi/documentacao/estrutura_arquivos/#4-datanascimento">dataNascimento</a> seja menos que 23 meses e mais que 6 meses anterior à <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>.</p>
+<p><strong>Regra:</strong> Obrigatório caso a <a href="/ledi/documentacao/estrutura_arquivos/#4-datanascimento">dataNascimento</a> seja menos que 23 meses e mais que 6 meses anterior à <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>.</p>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/estrutura_arquivos/#perguntacriancasdeseisvintetresmesesenum">PerguntaCriancasDeSeisVinteTresMesesEnum</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/estrutura_arquivos/#perguntacriancasdeseisvintetresmesesenum">PerguntaCriancasDeSeisVinteTresMesesEnum</a>.</p>
 
 <p><a name = "#2-respostaunicaescolhacriancasdeseisvintetresmeses"></a></p>
 
@@ -10832,9 +10858,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Obrigatório caso a <a href="/ledi/documentacao/estrutura_arquivos/#4-datanascimento">dataNascimento</a> seja menos que 24 meses e mais que 6 meses anterior à <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>.</p>
+<p><strong>Regra:</strong> Obrigatório caso a <a href="/ledi/documentacao/estrutura_arquivos/#4-datanascimento">dataNascimento</a> seja menos que 24 meses e mais que 6 meses anterior à <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>.</p>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/estrutura_arquivos/#respostaunicaescolhaenum">RespostaUnicaEscolhaEnum</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/estrutura_arquivos/#respostaunicaescolhaenum">RespostaUnicaEscolhaEnum</a>.</p>
 
 <h2 id="perguntaquestionariocriancascommaisdoisanos">PerguntaQuestionarioCriancasComMaisDoisAnos</h2>
 
@@ -10860,9 +10886,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Obrigatório caso a <a href="/ledi/documentacao/estrutura_arquivos/#4-datanascimento">dataNascimento</a> seja mais que 24 meses anterior à <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>.</p>
+<p><strong>Regra:</strong> Obrigatório caso a <a href="/ledi/documentacao/estrutura_arquivos/#4-datanascimento">dataNascimento</a> seja mais que 24 meses anterior à <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>.</p>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/estrutura_arquivos/#perguntacriancascommaisdoisanosenum">PerguntaCriancasComMaisDoisAnosEnum</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/estrutura_arquivos/#perguntacriancascommaisdoisanosenum">PerguntaCriancasComMaisDoisAnosEnum</a>.</p>
 
 <p><a name = "#2-respostaunicaescolhacriancascommaisdoisanos"></a></p>
 
@@ -10886,11 +10912,11 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Obrigatório caso a <a href="/ledi/documentacao/estrutura_arquivos/#4-datanascimento">dataNascimento</a> seja mais que 24 meses anterior à <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>.</p>
+<p><strong>Regra:</strong> Obrigatório caso a <a href="/ledi/documentacao/estrutura_arquivos/#4-datanascimento">dataNascimento</a> seja mais que 24 meses anterior à <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>.</p>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/estrutura_arquivos/#respostaunicaescolhaenum">RespostaUnicaEscolhaEnum</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/estrutura_arquivos/#respostaunicaescolhaenum">RespostaUnicaEscolhaEnum</a>.</p>
 
-<p>Observações: Os campos <code>#2</code> e <code>#3</code> são mutuamente exclusivos, isto é, um e apenas um deles deve não ser nulo.</p>
+<p><strong>Observação:</strong> Os campos <code>#2</code> e <code>#3</code> são mutuamente exclusivos, isto é, um e apenas um deles deve não ser nulo.</p>
 
 <h3 id="3-respostamultiplaescolha">#3 respostaMultiplaEscolha</h3>
 
@@ -10919,9 +10945,9 @@
 <li>Pode ser preenchido somente se a pergunta for 12L.</li>
 </ul>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/estrutura_arquivos/#respostamultiplaescolhaenum">RespostaMultiplaEscolhaEnum</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/estrutura_arquivos/#respostamultiplaescolhaenum">RespostaMultiplaEscolhaEnum</a>.</p>
 
-<p>Observações: Os campos <code>#2</code> e <code>#3</code> são mutuamente exclusivos, isto é, um e apenas um deles deve não ser nulo.</p>
+<p><strong>Observação:</strong> Os campos <code>#2</code> e <code>#3</code> são mutuamente exclusivos, isto é, um e apenas um deles deve não ser nulo.</p>
 
 <h2 id="perguntacriancasmenoresseismesesenum">PerguntaCriancasMenoresSeisMesesEnum</h2>
 
@@ -11274,9 +11300,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> É recomendado concatenar o CNES na frente do UUID, de modo que os 7 dígitos (CNES) + 1 de hífen somados aos 36 (32 caracteres + 4 hífen) do UUID são a limitação de 44 bytes do campo. Formato canônico.</p>
+<p><strong>Regra:</strong> É recomendado concatenar o CNES na frente do UUID, de modo que os 7 dígitos (CNES) + 1 de hífen somados aos 36 (32 caracteres + 4 hífen) do UUID são a limitação de 44 bytes do campo. Formato canônico.</p>
 
-<p><strong>Referências:</strong>  <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">Wikipedia UUID</a>.</p>
+<p><strong>Referência:</strong>  <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">Wikipedia UUID</a>.</p>
 
 <h3 id="2-tpcdsorigem">#2 tpCdsOrigem</h3>
 
@@ -11328,7 +11354,7 @@
 <li>Este campo é de preenchimento obrigatório apenas se o campo <a href="/ledi/documentacao/estrutura_arquivos/#36-cpfcidadao">cpfCidadao</a> não estiver preenchido.</li>
 </ul>
 
-<p><strong>Referências:</strong> O algoritmo de validação está presente em <a href="/ledi/documentacao/regras/algoritmo_CNS.html">Validar CNS</a>.</p>
+<p><strong>Referência:</strong> O algoritmo de validação está presente em <a href="/ledi/documentacao/regras/algoritmo_CNS.html">Validar CNS</a>.</p>
 
 <h3 id="4-nomecidadao">#4 nomeCidadao</h3>
 
@@ -11377,7 +11403,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Somente texto e apóstrofo (<code>&#39;</code>).</p>
+<p><strong>Regra:</strong> Somente texto e apóstrofo (<code>&#39;</code>).</p>
 
 <h3 id="6-datanascimentocidadao">#6 dataNascimentoCidadao</h3>
 
@@ -11397,9 +11423,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Não pode ser posterior a <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a> e anterior a 130 anos a partir da <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>.</p>
+<p><strong>Regra:</strong> Não pode ser posterior a <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a> e anterior a 130 anos a partir da <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>.</p>
 
-<p><strong>Referências:</strong> A data deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos . Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
+<p><strong>Referência:</strong> A data deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos . Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
 
 <h3 id="7-sexocidadao">#7 sexoCidadao</h3>
 
@@ -11421,7 +11447,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#sexo">Sexo</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#sexo">Sexo</a>.</p>
 
 <h3 id="8-racacorcidadao">#8 racaCorCidadao</h3>
 
@@ -11443,9 +11469,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> É de preenchimento obrigatório caso <a href="/ledi/documentacao/estrutura_arquivos/#22-conclusaodestinoelegivel">conclusaoDestinoElegivel</a> = <code>1 (Admissão na própria EMAD)</code> e <a href="/ledi/documentacao/estrutura_arquivos/#17-atencaodomiciliarmodalidade">atencaoDomiciliarModalidade</a> = <code>1 (AD1)</code>, <code>2 (AD2)</code> ou <code>3 (AD3)</code>.</p>
+<p><strong>Regra:</strong> É de preenchimento obrigatório caso <a href="/ledi/documentacao/estrutura_arquivos/#22-conclusaodestinoelegivel">conclusaoDestinoElegivel</a> = <code>1 (Admissão na própria EMAD)</code> e <a href="/ledi/documentacao/estrutura_arquivos/#17-atencaodomiciliarmodalidade">atencaoDomiciliarModalidade</a> = <code>1 (AD1)</code>, <code>2 (AD2)</code> ou <code>3 (AD3)</code>.</p>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#racacor">RacaCor</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#racacor">RacaCor</a>.</p>
 
 <h3 id="9-nomemaecidadao">#9 nomeMaeCidadao</h3>
 
@@ -11515,9 +11541,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Só pode ser preenchido se <a href="/ledi/documentacao/estrutura_arquivos/#12-nacionalidadecidadao">nacionalidadeCidadao</a> = <code>1 (brasileiro)</code>. Neste caso é de preenchimento obrigatório.</p>
+<p><strong>Regra:</strong> Só pode ser preenchido se <a href="/ledi/documentacao/estrutura_arquivos/#12-nacionalidadecidadao">nacionalidadeCidadao</a> = <code>1 (brasileiro)</code>. Neste caso é de preenchimento obrigatório.</p>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/municipios.html">Municípios</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/municipios.html">Municípios</a>.</p>
 
 <h3 id="12-nacionalidadecidadao">#12 nacionalidadeCidadao</h3>
 
@@ -11539,9 +11565,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> É de preenchimento obrigatório caso <a href="/ledi/documentacao/estrutura_arquivos/#22-conclusaodestinoelegivel">conclusaoDestinoElegivel</a> = <code>1 (Admissão na própria EMAD)</code> e <a href="/ledi/documentacao/estrutura_arquivos/#17-atencaodomiciliarmodalidade">atencaoDomiciliarModalidade</a> = <code>1 (AD1)</code>, <code>2 (AD2)</code> ou <code>3 (AD3)</code>.</p>
+<p><strong>Regra:</strong>  É de preenchimento obrigatório caso <a href="/ledi/documentacao/estrutura_arquivos/#22-conclusaodestinoelegivel">conclusaoDestinoElegivel</a> = <code>1 (Admissão na própria EMAD)</code> e <a href="/ledi/documentacao/estrutura_arquivos/#17-atencaodomiciliarmodalidade">atencaoDomiciliarModalidade</a> = <code>1 (AD1)</code>, <code>2 (AD2)</code> ou <code>3 (AD3)</code>.</p>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#nacionalidade">Nacionalidade</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#nacionalidade">Nacionalidade</a>.</p>
 
 <h3 id="13-emailcidadao">#13 emailCidadao</h3>
 
@@ -11585,7 +11611,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Apenas números.</p>
+<p><strong>Regra:</strong> Apenas números.</p>
 
 <h3 id="15-endereco">#15 endereco</h3>
 
@@ -11607,9 +11633,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> É de preenchimento obrigatório caso <a href="/ledi/documentacao/estrutura_arquivos/#22-conclusaodestinoelegivel">conclusaoDestinoElegivel</a> = <code>1 (Admissão na própria EMAD)</code> e <a href="/ledi/documentacao/estrutura_arquivos/#17-atencaodomiciliarmodalidade">atencaoDomiciliarModalidade</a> = <code>1 (AD1)</code>, <code>2 (AD2)</code> ou <code>3 (AD3)</code>.</p>
+<p><strong>Regra:</strong>  É de preenchimento obrigatório caso <a href="/ledi/documentacao/estrutura_arquivos/#22-conclusaodestinoelegivel">conclusaoDestinoElegivel</a> = <code>1 (Admissão na própria EMAD)</code> e <a href="/ledi/documentacao/estrutura_arquivos/#17-atencaodomiciliarmodalidade">atencaoDomiciliarModalidade</a> = <code>1 (AD1)</code>, <code>2 (AD2)</code> ou <code>3 (AD3)</code>.</p>
 
-<p><strong>Referências:</strong>   <a href="/ledi/documentacao/estrutura_arquivos/#enderecolocalpermanencia">EnderecoLocalPermanencia</a>.</p>
+<p><strong>Referência:</strong>    <a href="/ledi/documentacao/estrutura_arquivos/#enderecolocalpermanencia">EnderecoLocalPermanencia</a>.</p>
 
 <h3 id="16-atencaodomiciliarprocedencia">#16 atencaoDomiciliarProcedencia</h3>
 
@@ -11631,7 +11657,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#atencaodomiciliarprocedencia">AtencaoDomiciliarProcedencia</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#atencaodomiciliarprocedencia">AtencaoDomiciliarProcedencia</a>.</p>
 
 <h3 id="17-atencaodomiciliarmodalidade">#17 atencaoDomiciliarModalidade</h3>
 
@@ -11653,7 +11679,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#modalidadead">ModalidadeAD</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#modalidadead">ModalidadeAD</a>.</p>
 
 <h3 id="18-condicoesavaliadas">#18 condicoesAvaliadas</h3>
 
@@ -11675,7 +11701,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/estrutura_arquivos/#condi-es-avaliadas">Condições Avaliadas</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/estrutura_arquivos/#condi-es-avaliadas">Condições Avaliadas</a>.</p>
 
 <h3 id="19-cid10principal">#19 cid10Principal</h3>
 
@@ -11778,11 +11804,11 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Só pode ser preenchido se <a href="/ledi/documentacao/estrutura_arquivos/#17-atencaodomiciliarmodalidade">atencaoDomiciliarModalidade</a> for diferente de <code>4 (inelegível)</code>.</p>
+<p><strong>Regra:</strong> Só pode ser preenchido se <a href="/ledi/documentacao/estrutura_arquivos/#17-atencaodomiciliarmodalidade">atencaoDomiciliarModalidade</a> for diferente de <code>4 (inelegível)</code>.</p>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#conclusaodestinoelegivel">ConclusaoDestinoElegivel</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#conclusaodestinoelegivel">ConclusaoDestinoElegivel</a>.</p>
 
-<p>Observações: Os campos <code>#22</code> e <code>#23</code> são mutuamente exclusivos.</p>
+<p><strong>Observação:</strong> Os campos <code>#22</code> e <code>#23</code> são mutuamente exclusivos.</p>
 
 <h3 id="23-conclusaodestinoinelegivel">#23 conclusaoDestinoInelegivel</h3>
 
@@ -11804,11 +11830,11 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Só pode ser preenchido se <a href="/ledi/documentacao/estrutura_arquivos/#17-atencaodomiciliarmodalidade">atencaoDomiciliarModalidade</a> for igual a <code>4 (Inelegível)</code>.</p>
+<p><strong>Regra:</strong> Só pode ser preenchido se <a href="/ledi/documentacao/estrutura_arquivos/#17-atencaodomiciliarmodalidade">atencaoDomiciliarModalidade</a> for igual a <code>4 (Inelegível)</code>.</p>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#conclusaodestinoinelegivel">ConclusaoDestinoInelegivel</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#conclusaodestinoinelegivel">ConclusaoDestinoInelegivel</a>.</p>
 
-<p>Observações: Os campos <code>#22</code> e <code>#23</code> são mutuamente exclusivos.</p>
+<p><strong>Observação:</strong> Os campos <code>#22</code> e <code>#23</code> são mutuamente exclusivos.</p>
 
 <h3 id="24-cuidadorcidadao">#24 cuidadorCidadao</h3>
 
@@ -11830,7 +11856,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#cuidadorcidadao">CuidadorCidadao</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#cuidadorcidadao">CuidadorCidadao</a>.</p>
 
 <h3 id="25-turno">#25 turno</h3>
 
@@ -11852,7 +11878,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#turno">Turno</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#turno">Turno</a>.</p>
 
 <h3 id="26-headertransport">#26 headerTransport</h3>
 
@@ -11874,9 +11900,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Somente as CBOs apresentadas na <a href="/ledi/documentacao/regras/cbo.html#ficha-de-avalia-o-de-elegibilidade">Tabela 9 - CBOs que podem registrar ficha de avaliação de elegibilidade</a> podem ser adicionadas no campo CBO do profissional principal.</p>
+<p><strong>Regra:</strong> Somente as CBOs apresentadas na <a href="/ledi/documentacao/regras/cbo.html#ficha-de-avalia-o-de-elegibilidade">Tabela 9 - CBOs que podem registrar ficha de avaliação de elegibilidade</a> podem ser adicionadas no campo CBO do profissional principal.</p>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#variaslotacoesheader">VariasLotacoesHeader</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#variaslotacoesheader">VariasLotacoesHeader</a>.</p>
 
 <h3 id="27-nomepaicidadao">#27 nomePaiCidadao</h3>
 
@@ -11974,7 +12000,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Só deve ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#12-nacionalidadecidadao">nacionalidadeCidadao</a> = <code>2</code>. Neste caso o preenchimento é obrigatório.</p>
+<p><strong>Regra:</strong> Só deve ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#12-nacionalidadecidadao">nacionalidadeCidadao</a> = <code>2</code>. Neste caso o preenchimento é obrigatório.</p>
 
 <h3 id="31-dtentradabrasil">#31 dtEntradaBrasil</h3>
 
@@ -12031,7 +12057,7 @@
 <li>Se o campo <a href="/ledi/documentacao/estrutura_arquivos/#12-nacionalidadecidadao">nacionalidadeCidadao</a> for igual a <code>1 (Brasileira)</code>, este campo deve ser preenchido com <code>31 (BRASIL)</code>.</li>
 </ul>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/paises.html">País</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/paises.html">País</a>.</p>
 
 <h2 id="33-etnia">#33 etnia</h2>
 
@@ -12053,9 +12079,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Só deve ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#8-racacorcidadao">racaCorCidadao</a> = <code>5</code>. Neste caso o preenchimento é obrigatório.</p>
+<p><strong>Regra:</strong> Só deve ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#8-racacorcidadao">racaCorCidadao</a> = <code>5</code>. Neste caso o preenchimento é obrigatório.</p>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#etnia">etnia</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#etnia">etnia</a>.</p>
 
 <h3 id="34-cnscuidador">#34 cnsCuidador</h3>
 
@@ -12085,7 +12111,7 @@
 <li>Não pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#37-cpfcuidador">cpfCuidador</a> for preenchido.</li>
 </ul>
 
-<p><strong>Referências:</strong> O algoritmo de validação está presente em <a href="/ledi/documentacao/regras/algoritmo_CNS.html">Validar CNS</a>.</p>
+<p><strong>Referência:</strong> O algoritmo de validação está presente em <a href="/ledi/documentacao/regras/algoritmo_CNS.html">Validar CNS</a>.</p>
 
 <h3 id="36-cpfcidadao">#36 cpfCidadao</h3>
 
@@ -12165,7 +12191,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> É de preenchimento obrigatório caso <a href="/ledi/documentacao/estrutura_arquivos/#22-conclusaodestinoelegivel">conclusaoDestinoElegivel</a> = <code>1 (Admissão na própria EMAD)</code> e <a href="/ledi/documentacao/estrutura_arquivos/#17-atencaodomiciliarmodalidade">atencaoDomiciliarModalidade</a> = <code>1 (AD1)</code>, <code>2 (AD2)</code> ou <code>3 (AD3)</code>.</p>
+<p><strong>Regra:</strong> É de preenchimento obrigatório caso <a href="/ledi/documentacao/estrutura_arquivos/#22-conclusaodestinoelegivel">conclusaoDestinoElegivel</a> = <code>1 (Admissão na própria EMAD)</code> e <a href="/ledi/documentacao/estrutura_arquivos/#17-atencaodomiciliarmodalidade">atencaoDomiciliarModalidade</a> = <code>1 (AD1)</code>, <code>2 (AD2)</code> ou <code>3 (AD3)</code>.</p>
 
 <h3 id="2-cep">#2 cep</h3>
 
@@ -12187,7 +12213,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong></p>
+<p><strong>Regra:</strong></p>
 
 <ul>
 <li>Apenas números;</li>
@@ -12214,9 +12240,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> É de preenchimento obrigatório caso <a href="/ledi/documentacao/estrutura_arquivos/#22-conclusaodestinoelegivel">conclusaoDestinoElegivel</a> = <code>1 (Admissão na própria EMAD)</code> e <a href="/ledi/documentacao/estrutura_arquivos/#17-atencaodomiciliarmodalidade">atencaoDomiciliarModalidade</a> = <code>1 (AD1)</code>, <code>2 (AD2)</code> ou <code>3 (AD3)</code>.</p>
+<p><strong>Regra:</strong> É de preenchimento obrigatório caso <a href="/ledi/documentacao/estrutura_arquivos/#22-conclusaodestinoelegivel">conclusaoDestinoElegivel</a> = <code>1 (Admissão na própria EMAD)</code> e <a href="/ledi/documentacao/estrutura_arquivos/#17-atencaodomiciliarmodalidade">atencaoDomiciliarModalidade</a> = <code>1 (AD1)</code>, <code>2 (AD2)</code> ou <code>3 (AD3)</code>.</p>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/municipios.html">Municipios</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/municipios.html">Municipios</a>.</p>
 
 <h3 id="4-complemento">#4 complemento</h3>
 
@@ -12258,7 +12284,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> É de preenchimento obrigatório caso <a href="/ledi/documentacao/estrutura_arquivos/#22-conclusaodestinoelegivel">conclusaoDestinoElegivel</a> = <code>1 (Admissão na própria EMAD)</code> e <a href="/ledi/documentacao/estrutura_arquivos/#17-atencaodomiciliarmodalidade">atencaoDomiciliarModalidade</a> = <code>1 (AD1)</code>, <code>2 (AD2)</code> ou <code>3 (AD3)</code>.</p>
+<p><strong>Regra:</strong> É de preenchimento obrigatório caso <a href="/ledi/documentacao/estrutura_arquivos/#22-conclusaodestinoelegivel">conclusaoDestinoElegivel</a> = <code>1 (Admissão na própria EMAD)</code> e <a href="/ledi/documentacao/estrutura_arquivos/#17-atencaodomiciliarmodalidade">atencaoDomiciliarModalidade</a> = <code>1 (AD1)</code>, <code>2 (AD2)</code> ou <code>3 (AD3)</code>.</p>
 
 <h3 id="6-numero">#6 numero</h3>
 
@@ -12308,9 +12334,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> É de preenchimento obrigatório caso <a href="/ledi/documentacao/estrutura_arquivos/#22-conclusaodestinoelegivel">conclusaoDestinoElegivel</a> = <code>1 (Admissão na própria EMAD)</code> e <a href="/ledi/documentacao/estrutura_arquivos/#17-atencaodomiciliarmodalidade">atencaoDomiciliarModalidade</a> = <code>1 (AD1)</code>, <code>2 (AD2)</code> ou <code>3 (AD3)</code>.</p>
+<p><strong>Regra:</strong> É de preenchimento obrigatório caso <a href="/ledi/documentacao/estrutura_arquivos/#22-conclusaodestinoelegivel">conclusaoDestinoElegivel</a> = <code>1 (Admissão na própria EMAD)</code> e <a href="/ledi/documentacao/estrutura_arquivos/#17-atencaodomiciliarmodalidade">atencaoDomiciliarModalidade</a> = <code>1 (AD1)</code>, <code>2 (AD2)</code> ou <code>3 (AD3)</code>.</p>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/uf.html">Estados</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/uf.html">Estados</a>.</p>
 
 <h3 id="8-telefonecontato">#8 telefoneContato</h3>
 
@@ -12339,7 +12365,7 @@
 <li>Este campo não é de preenchimento obrigatório caso o campo <a href="/ledi/documentacao/estrutura_arquivos/#9-telefoneresidencia">telefoneResidencia</a> estiver preenchido.</li>
 </ul>
 
-<p>Observações: Mínimo 10 dígitos, máximo 11 (DDD + 8 ou 9).</p>
+<p><strong>Observação:</strong> Mínimo 10 dígitos, máximo 11 (DDD + 8 ou 9).</p>
 
 <h3 id="9-telefoneresidencia">#9 telefoneResidencia</h3>
 
@@ -12368,7 +12394,7 @@
 <li>Este campo não é de preenchimento obrigatório caso o campo <a href="/ledi/documentacao/estrutura_arquivos/#8-telefonecontato">telefoneContato</a> estiver preenchido.</li>
 </ul>
 
-<p>Observações: Mínimo 10 dígitos, máximo 11 (DDD + 8 ou 9).</p>
+<p><strong>Observação:</strong> Mínimo 10 dígitos, máximo 11 (DDD + 8 ou 9).</p>
 
 <h3 id="10-tipologradouronumerodne">#10 tipoLogradouroNumeroDne</h3>
 
@@ -12397,7 +12423,7 @@
 <li>É de preenchimento obrigatório caso <a href="/ledi/documentacao/estrutura_arquivos/#22-conclusaodestinoelegivel">conclusaoDestinoElegivel</a> = <code>1 (Admissão na própria EMAD)</code> e <a href="/ledi/documentacao/estrutura_arquivos/#17-atencaodomiciliarmodalidade">atencaoDomiciliarModalidade</a> = <code>1 (AD1)</code>, <code>2 (AD2)</code> ou <code>3 (AD3)</code>.</li>
 </ul>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/uf.html#tipo-de-logradouro">TipoLogradouro</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/uf.html#tipo-de-logradouro">TipoLogradouro</a>.</p>
 
 <h3 id="11-stsemnumero">#11 stSemNumero</h3>
 
@@ -12585,9 +12611,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> É recomendado concatenar o CNES na frente do UUID, de modo que os 7 dígitos (CNES) + 1 de hífen somados aos 36 (32 caracteres + 4 hífen) do UUID são a limitação de 44 bytes do campo.</p>
+<p><strong>Regra:</strong> É recomendado concatenar o CNES na frente do UUID, de modo que os 7 dígitos (CNES) + 1 de hífen somados aos 36 (32 caracteres + 4 hífen) do UUID são a limitação de 44 bytes do campo.</p>
 
-<p><strong>Referências:</strong> Formato canônico.    Para ver a referência sobre o UUID, acesse: <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">UUID Wikipedia</a>.</p>
+<p><strong>Referência:</strong> Formato canônico. Para ver a referência sobre o UUID, acesse: <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">UUID Wikipedia</a>.</p>
 
 <h3 id="2-tpcdsorigem">#2 tpCdsOrigem</h3>
 
@@ -12609,7 +12635,7 @@
 </tr>
 </tbody></table>
 
-<p>Observações: Utilizar valor 3 (sistemas terceiros).</p>
+<p>Observação: Utilizar valor 3 (sistemas terceiros).</p>
 
 <h3 id="3-atendimentosdomiciliares">#3 atendimentosDomiciliares</h3>
 
@@ -12631,7 +12657,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/estrutura_arquivos/#fichaatendimentodomiciliarchild">FichaAtendimentoDomiciliarChild</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/estrutura_arquivos/#fichaatendimentodomiciliarchild">FichaAtendimentoDomiciliarChild</a>.</p>
 
 <h3 id="4-headertransport">#4 headerTransport</h3>
 
@@ -12653,9 +12679,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Somente as CBOs apresentadas na <a href="/ledi/documentacao/regras/cbo.html#ficha-de-atendimento-domiciliar">Tabela 10 - CBOs que podem registrar ficha de atendimento domiciliar</a> podem ser adicionadas no campo CBO do profissional principal.</p>
+<p><strong>Regra:</strong> Somente as CBOs apresentadas na <a href="/ledi/documentacao/regras/cbo.html#ficha-de-atendimento-domiciliar">Tabela 10 - CBOs que podem registrar ficha de atendimento domiciliar</a> podem ser adicionadas no campo CBO do profissional principal.</p>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#variaslotacoesheader">VariasLotacoesHeader</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#variaslotacoesheader">VariasLotacoesHeader</a>.</p>
 
 <h2 id="fichaatendimentodomiciliarchild">FichaAtendimentoDomiciliarChild</h2>
 
@@ -12679,7 +12705,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#turno">Turno</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#turno">Turno</a>.</p>
 
 <h3 id="2-cnscidadao">#2 cnsCidadao</h3>
 
@@ -12708,7 +12734,7 @@
 <li>Não pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#15-cpfcidadao">cpfCidadao</a> for preenchido.</li>
 </ul>
 
-<p><strong>Referências:</strong> O algoritmo de validação está presente em <a href="/ledi/documentacao/regras/algoritmo_CNS.html">Validar CNS</a>.</p>
+<p><strong>Referência:</strong> O algoritmo de validação está presente em <a href="/ledi/documentacao/regras/algoritmo_CNS.html">Validar CNS</a>.</p>
 
 <h3 id="3-datanascimento">#3 dataNascimento</h3>
 
@@ -12730,9 +12756,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Não pode ser posterior à <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a> e anterior à 130 anos a partir da <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>.</p>
+<p><strong>Regra:</strong> Não pode ser posterior à <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a> e anterior à 130 anos a partir da <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>.</p>
 
-<p><strong>Referências:</strong> A data deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos . Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
+<p><strong>Referência:</strong> A data deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos . Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
 
 <h3 id="4-sexo">#4 sexo</h3>
 
@@ -12754,7 +12780,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Referências:</strong>   <a href="/ledi/documentacao/referencias/dicionario.html#sexo">Sexo</a>.</p>
+<p><strong>Referência:</strong>    <a href="/ledi/documentacao/referencias/dicionario.html#sexo">Sexo</a>.</p>
 
 <h3 id="5-localdeatendimento">#5 localDeAtendimento</h3>
 
@@ -12776,7 +12802,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#localdeatendimento">LocalDeAtendimento</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#localdeatendimento">LocalDeAtendimento</a>.</p>
 
 <h3 id="6-atencaodomiciliarmodalidade">#6 atencaoDomiciliarModalidade</h3>
 
@@ -12805,7 +12831,7 @@
 <li>Não pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#7-tipoatendimento">tipoAtendimento</a> = <code>9 - Visita domiciliar pós-óbito</code>.</li>
 </ul>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#modalidadead">ModalidadeAD</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#modalidadead">ModalidadeAD</a>.</p>
 
 <h3 id="7-tipoatendimento">#7 tipoAtendimento</h3>
 
@@ -12827,9 +12853,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Apenas as opções <code>7</code>, <code>8</code> ou <code>9</code> são aceitas.</p>
+<p><strong>Regra:</strong> Apenas as opções <code>7</code>, <code>8</code> ou <code>9</code> são aceitas.</p>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#tipodeatendimento">TipoDeAtendimento</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#tipodeatendimento">TipoDeAtendimento</a>.</p>
 
 <h3 id="8-condicoesavaliadas">#8 condicoesAvaliadas</h3>
 
@@ -12851,9 +12877,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Não pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#7-tipoatendimento">tipoAtendimento</a> = <code>9 - Visita domiciliar pós-óbito</code>.</p>
+<p><strong>Regra:</strong> Não pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#7-tipoatendimento">tipoAtendimento</a> = <code>9 - Visita domiciliar pós-óbito</code>.</p>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/estrutura_arquivos/#condi-es-avaliadas">Condições Avaliadas</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/estrutura_arquivos/#condi-es-avaliadas">Condições Avaliadas</a>.</p>
 
 <h3 id="9-cid">#9 cid</h3>
 
@@ -12933,9 +12959,9 @@
 <li>Não pode ser preenchido com o procedimento <code>03.01.05.010-4 - Visita domiciliar pós-óbito</code>. Esta informação deve ser registrada através do campo <a href="/ledi/documentacao/estrutura_arquivos/#7-tipoatendimento">tipoAtendimento</a>, opção <code>9 - Visita domiciliar pós-óbito</code>.</li>
 </ul>
 
-<p><strong>Referências:</strong> Tabela do SIGTAP, competência 02/2019 disponível em: <a href="http://sigtap.datasus.gov.br/tabela-unificada/app/sec/procedimento/publicados/consultar">Tabela Unificada SIGTAP</a>.</p>
+<p><strong>Referência:</strong> Tabela do SIGTAP, competência 09/2020 disponível em: <a href="http://sigtap.datasus.gov.br/tabela-unificada/app/sec/procedimento/publicados/consultar">Tabela Unificada SIGTAP</a>.</p>
 
-<p>Observação: Inserir o código do procedimento SIGTAP sem ponto ou hífen, ex: <code>0201010010</code>.</p>
+<p>Observação: Inserir o código do procedimento SIGTAP sem ponto ou hífen, ex: <code>0214010015</code>.</p>
 
 <h3 id="13-condutadesfecho">#13 condutaDesfecho</h3>
 
@@ -12957,7 +12983,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#condutadesfecho">CondutaDesfecho</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#condutadesfecho">CondutaDesfecho</a>.</p>
 
 <h3 id="15-cpfcidadao">#15 cpfCidadao</h3>
 
@@ -13132,9 +13158,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Somente as CBOs apresentadas na <a href="/ledi/documentacao/regras/cbo.html#ficha-complementar-s-ndrome-neurol-gica-por-zika-microcefalia">Tabela 11 - CBOs que podem registrar ficha complementar - Síndrome neurológica por Zika / Microcefalia</a> podem ser adicionadas no campo CBO do profissional.</p>
+<p><strong>Regra:</strong> Somente as CBOs apresentadas na <a href="/ledi/documentacao/regras/cbo.html#ficha-complementar-s-ndrome-neurol-gica-por-zika-microcefalia">Tabela 11 - CBOs que podem registrar ficha complementar - Síndrome neurológica por Zika / Microcefalia</a> podem ser adicionadas no campo CBO do profissional.</p>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#unicalotacaoheader">UnicaLotacaoHeader</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#unicalotacaoheader">UnicaLotacaoHeader</a>.</p>
 
 <h3 id="2-uuidficha">#2 uuidFicha</h3>
 
@@ -13156,9 +13182,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> É recomendado concatenar o CNES na frente do UUID, de modo que os 7 dígitos (CNES) + 1 de hífen somados aos 36 (32 caracteres + 4 hífen) do UUID são a limitação de 44 bytes do campo. Formato canônico.</p>
+<p><strong>Regra:</strong> É recomendado concatenar o CNES na frente do UUID, de modo que os 7 dígitos (CNES) + 1 de hífen somados aos 36 (32 caracteres + 4 hífen) do UUID são a limitação de 44 bytes do campo. Formato canônico.</p>
 
-<p><strong>Referências:</strong> <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">UUID Wikipedia</a>.</p>
+<p><strong>Referência:</strong> <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">UUID Wikipedia</a>.</p>
 
 <h3 id="3-tpcdsorigem">#3 tpCdsOrigem</h3>
 
@@ -13202,7 +13228,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#turno">Turno</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#turno">Turno</a>.</p>
 
 <h3 id="5-cnscidadao">#5 cnsCidadao</h3>
 
@@ -13231,7 +13257,7 @@
 <li>Não pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#19-cpfcidadao">cpfCidadao</a> for preenchido.</li>
 </ul>
 
-<p><strong>Referências:</strong> O algoritmo de validação está presente em <a href="/ledi/documentacao/regras/algoritmo_CNS.html">Validar CNS</a>.</p>
+<p><strong>Referência:</strong> O algoritmo de validação está presente em <a href="/ledi/documentacao/regras/algoritmo_CNS.html">Validar CNS</a>.</p>
 
 <h3 id="6-cnsresponsavelfamiliar">#6 cnsResponsavelFamiliar</h3>
 
@@ -13260,7 +13286,7 @@
 <li>Não pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#20-cpfresponsavelfamiliar">cpfResponsavelFamiliar</a> for preenchido.</li>
 </ul>
 
-<p><strong>Referências:</strong> O algoritmo de validação está presente em <a href="/ledi/documentacao/regras/algoritmo_CNS.html">Validar CNS</a>.</p>
+<p><strong>Referência:</strong> O algoritmo de validação está presente em <a href="/ledi/documentacao/regras/algoritmo_CNS.html">Validar CNS</a>.</p>
 
 <h3 id="7-datarealizacaotesteolhinho">#7 dataRealizacaoTesteOlhinho</h3>
 
@@ -13289,7 +13315,7 @@
 <li>Se este campo for preenchido, o campo <a href="/ledi/documentacao/estrutura_arquivos/#8-coresultadotesteolhinho">coResultadoTesteOlhinho</a> é obrigatório.</li>
 </ul>
 
-<p><strong>Referências:</strong> A data deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos . Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
+<p><strong>Referência:</strong> A data deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos . Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
 
 <h3 id="8-coresultadotesteolhinho">#8 coResultadoTesteOlhinho</h3>
 
@@ -13318,7 +13344,7 @@
 <li>Se este campo for preenchido, o campo <a href="/ledi/documentacao/estrutura_arquivos/#7-datarealizacaotesteolhinho">dataRealizacaoTesteOlhinho</a> é obrigatório.</li>
 </ul>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#testeolhinho">testeOlhinho</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#testeolhinho">testeOlhinho</a>.</p>
 
 <h3 id="9-datarealizacaoexamefundoolho">#9 dataRealizacaoExameFundoOlho</h3>
 
@@ -13349,7 +13375,7 @@
 
 <p><strong>Referências:</strong></p>
 
-<p><strong>1.</strong> O código deste exame é compatível com a competência 02/2019 da tabela do SIGTAP, disponível em: <a href="http://sigtap.datasus.gov.br/tabela-unificada/app/sec/procedimento/publicados/consultar">Tabela unificada SIGTAP</a>.</p>
+<p><strong>1.</strong> O código deste exame é compatível com a competência 09/2020 da tabela do SIGTAP, disponível em: <a href="http://sigtap.datasus.gov.br/tabela-unificada/app/sec/procedimento/publicados/consultar">Tabela unificada SIGTAP</a>.</p>
 
 <p><strong>2.</strong> A data deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos . Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
 
@@ -13380,7 +13406,7 @@
 <li>Se este campo for preenchido, o campo <a href="/ledi/documentacao/estrutura_arquivos/#9-datarealizacaoexamefundoolho">dataRealizacaoExameFundoOlho</a> é obrigatório.</li>
 </ul>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#examefundoolho">exameFundoOlho</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#examefundoolho">exameFundoOlho</a>.</p>
 
 <h3 id="11-datarealizacaotesteorelhinha">#11 dataRealizacaoTesteOrelhinha</h3>
 
@@ -13411,7 +13437,7 @@
 
 <p><strong>Referências:</strong></p>
 
-<p><strong>1.</strong> O código deste exame é compatível com a competência 02/2019 da tabela do SIGTAP, disponível em: <a href="http://sigtap.datasus.gov.br/tabela-unificada/app/sec/procedimento/publicados/consultar">Tabela unificada SIGTAP</a>.</p>
+<p><strong>1.</strong> O código deste exame é compatível com a competência 09/2020 da tabela do SIGTAP, disponível em: <a href="http://sigtap.datasus.gov.br/tabela-unificada/app/sec/procedimento/publicados/consultar">Tabela unificada SIGTAP</a>.</p>
 
 <p><strong>2.</strong> A data deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos . Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
 
@@ -13442,7 +13468,7 @@
 <li>Se este campo for preenchido, o campo <a href="/ledi/documentacao/estrutura_arquivos/#11-datarealizacaotesteorelhinha">dataRealizacaoTesteOrelhinha</a> é obrigatório.</li>
 </ul>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#testeorelhinha">testeOrelhinha</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#testeorelhinha">testeOrelhinha</a>.</p>
 
 <h3 id="13-datarealizacaoustransfontanela">#13 dataRealizacaoUSTransfontanela</h3>
 
@@ -13473,7 +13499,7 @@
 
 <p><strong>Referências:</strong></p>
 
-<p><strong>1.</strong> O código deste exame é compatível com a competência 02/2019 da tabela do SIGTAP, disponível em: <a href="http://sigtap.datasus.gov.br/tabela-unificada/app/sec/procedimento/publicados/consultar">Tabela unificada SIGTAP</a>.</p>
+<p><strong>1.</strong> O código deste exame é compatível com a competência 09/2020 da tabela do SIGTAP, disponível em: <a href="http://sigtap.datasus.gov.br/tabela-unificada/app/sec/procedimento/publicados/consultar">Tabela unificada SIGTAP</a>.</p>
 
 <p><strong>2.</strong> A data deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos . Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
 
@@ -13504,7 +13530,7 @@
 <li>Se este campo for preenchido, o campo <a href="/ledi/documentacao/estrutura_arquivos/#13-datarealizacaoustransfontanela">dataRealizacaoUSTransfontanela</a> é obrigatório.</li>
 </ul>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#ustransfontanela">usTransfontanela</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#ustransfontanela">usTransfontanela</a>.</p>
 
 <h3 id="15-datarealizacaotomografiacomputadorizada">#15 dataRealizacaoTomografiaComputadorizada</h3>
 
@@ -13535,7 +13561,7 @@
 
 <p><strong>Referências:</strong></p>
 
-<p><strong>1.</strong> O código deste exame é compatível com a competência 02/2019 da tabela do SIGTAP, disponível em: <a href="http://sigtap.datasus.gov.br/tabela-unificada/app/sec/procedimento/publicados/consultar">Tabela unificada SIGTAP</a>.</p>
+<p><strong>1.</strong> O código deste exame é compatível com a competência 09/2020 da tabela do SIGTAP, disponível em: <a href="http://sigtap.datasus.gov.br/tabela-unificada/app/sec/procedimento/publicados/consultar">Tabela unificada SIGTAP</a>.</p>
 
 <p><strong>2.</strong> A data deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos . Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
 
@@ -13566,7 +13592,7 @@
 <li>Se este campo for preenchido, o campo <a href="/ledi/documentacao/estrutura_arquivos/#15-datarealizacaotomografiacomputadorizada">dataRealizacaoTomografiaComputadorizada</a> é obrigatório.</li>
 </ul>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#tomografiacomputadorizada">tomografiaComputadorizada</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#tomografiacomputadorizada">tomografiaComputadorizada</a>.</p>
 
 <h3 id="17-datarealizacaoressonanciamagnetica">#17 dataRealizacaoRessonanciaMagnetica</h3>
 
@@ -13597,7 +13623,7 @@
 
 <p><strong>Referências:</strong></p>
 
-<p><strong>1.</strong> O código deste exame é compatível com a competência 02/2019 da tabela do SIGTAP, disponível em: <a href="http://sigtap.datasus.gov.br/tabela-unificada/app/sec/procedimento/publicados/consultar">Tabela unificada SIGTAP</a>.</p>
+<p><strong>1.</strong> O código deste exame é compatível com a competência 09/2020 da tabela do SIGTAP, disponível em: <a href="http://sigtap.datasus.gov.br/tabela-unificada/app/sec/procedimento/publicados/consultar">Tabela unificada SIGTAP</a>.</p>
 
 <p><strong>2.</strong> A data deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos . Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
 
@@ -13628,7 +13654,7 @@
 <li>Se este campo for preenchido, o campo <a href="/ledi/documentacao/estrutura_arquivos/#17-datarealizacaoressonanciamagnetica">dataRealizacaoRessonanciaMagnetica</a> é obrigatório.</li>
 </ul>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#ressonanciamagnetica">ressonanciaMagnetica</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#ressonanciamagnetica">ressonanciaMagnetica</a>.</p>
 
 <h3 id="19-cpfcidadao">#19 cpfCidadao</h3>
 
@@ -13724,9 +13750,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> É recomendado concatenar o CNES na frente do UUID, de modo que os 7 dígitos (CNES) + 1 de hífen somados aos 36 (32 caracteres + 4 hífen) do UUID são a limitação de 44 bytes do campo. Formato canônico.</p>
+<p><strong>Regra:</strong> É recomendado concatenar o CNES na frente do UUID, de modo que os 7 dígitos (CNES) + 1 de hífen somados aos 36 (32 caracteres + 4 hífen) do UUID são a limitação de 44 bytes do campo. Formato canônico.</p>
 
-<p><strong>Referências:</strong> Para ver a referência sobre o UUID, acesse <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">UUID Wikipedia</a>.</p>
+<p><strong>Referência:</strong> Para ver a referência sobre o UUID, acesse <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">UUID Wikipedia</a>.</p>
 
 <h3 id="2-tpcdsorigem">#2 tpCdsOrigem</h3>
 
@@ -13748,7 +13774,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Utilizar valor 3 (sistemas terceiros).</p>
+<p><strong>Regra:</strong> Utilizar valor 3 (sistemas terceiros).</p>
 
 <h3 id="3-headertransport">#3 headerTransport</h3>
 
@@ -13770,8 +13796,9 @@
 </tr>
 </tbody></table>
 
-<p>Regras: Somente as CBOs apresentadas na <a href="/ledi/documentacao/regras/cbo.html#ficha-de-vacina-o">Tabela 12 - CBOs que podem registrar ficha de vacinação</a> podem ser adicionadas no campo CBO do profissional.
-<strong>Referências:</strong> <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#unicalotacaoheader">UnicaLotacaoHeader</a>.</p>
+<p><strong>Regra:</strong> Somente as CBOs apresentadas na <a href="/ledi/documentacao/regras/cbo.html#ficha-de-vacina-o">Tabela 12 - CBOs que podem registrar ficha de vacinação</a> podem ser adicionadas no campo CBO do profissional.</p>
+
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#unicalotacaoheader">UnicaLotacaoHeader</a>.</p>
 
 <h3 id="4-vacinacoes">#4 vacinacoes</h3>
 
@@ -13793,7 +13820,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/estrutura_arquivos/#fichavacinacaochild">FichaVacinacaoChild</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/estrutura_arquivos/#fichavacinacaochild">FichaVacinacaoChild</a>.</p>
 
 <h2 id="fichavacinacaochild">FichaVacinacaoChild</h2>
 
@@ -13817,7 +13844,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#turno">Turno</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#turno">Turno</a>.</p>
 
 <h3 id="2-numprontuario">#2 numProntuario</h3>
 
@@ -13866,7 +13893,7 @@
 <li>Não pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#14-cpfcidadao">cpfCidadao</a> for preenchido.</li>
 </ul>
 
-<p><strong>Referências:</strong> O algoritmo de validação está presente em <a href="/ledi/documentacao/regras/algoritmo_CNS.html">Validar CNS</a>.</p>
+<p><strong>Referência:</strong> O algoritmo de validação está presente em <a href="/ledi/documentacao/regras/algoritmo_CNS.html">Validar CNS</a>.</p>
 
 <h3 id="4-dtnascimento">#4 dtNascimento</h3>
 
@@ -13888,9 +13915,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Não pode ser posterior à <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a> e anterior à 130 anos a partir da <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>.</p>
+<p><strong>Regra:</strong> Não pode ser posterior à <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a> e anterior à 130 anos a partir da <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>.</p>
 
-<p><strong>Referências:</strong> A data deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos . Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
+<p><strong>Referência:</strong> A data deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos . Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
 
 <h3 id="5-sexo">#5 sexo</h3>
 
@@ -13912,7 +13939,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#sexo">Sexo</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#sexo">Sexo</a>.</p>
 
 <h3 id="6-localatendimento">#6 localAtendimento</h3>
 
@@ -13934,9 +13961,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Apenas valores de <code>1</code> a <code>10</code>.</p>
+<p><strong>Regra:</strong> Apenas valores de <code>1</code> a <code>10</code>.</p>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#localdeatendimento">LocalDeAtendimento</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#localdeatendimento">LocalDeAtendimento</a>.</p>
 
 <h3 id="7-viajante">#7 viajante</h3>
 
@@ -14059,9 +14086,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/estrutura_arquivos/#vacinarowthrift">VacinaRowThrift</a>.</p>
+<p><strong>Regra:</strong> Deve estar de acordo com os relacionamentos de Imunobiológico x Estratégia x Dose definidos na tabela <a href="/ledi/documentacao/regras/valdidar_regras_vacinacao.html">Regras de vacinação</a>.</p>
 
-<p><strong>Regras:</strong> Deve estar de acordo com os relacionamentos de Imunobiológico x Estratégia x Dose definidos na tabela <a href="/ledi/documentacao/regras/valdidar_regras_vacinacao.html">Regras de vacinação</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/estrutura_arquivos/#vacinarowthrift">VacinaRowThrift</a>.</p>
 
 <h3 id="12-datahorainicialatendimento">#12 dataHoraInicialAtendimento</h3>
 
@@ -14090,7 +14117,7 @@
 <li>Não pode ser posterior à <a href="/ledi/documentacao/estrutura_arquivos/#13-datahorafinalatendimento">dataHoraFinalAtendimento</a> e à data atual.</li>
 </ul>
 
-<p><strong>Referências:</strong> Deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
+<p><strong>Referência:</strong> Deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
 
 <h3 id="13-datahorafinalatendimento">#13 dataHoraFinalAtendimento</h3>
 
@@ -14119,7 +14146,7 @@
 <li>Não pode ser posterior à data atual.</li>
 </ul>
 
-<p><strong>Referências:</strong> Deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
+<p><strong>Referência:</strong> Deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
 
 <h3 id="14-cpfcidadao">#14 cpfCidadao</h3>
 
@@ -14170,7 +14197,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#imunobiologico">Imunobiologico</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#imunobiologico">Imunobiologico</a>.</p>
 
 <h3 id="2-estrategiavacinacao">#2 estrategiaVacinacao</h3>
 
@@ -14192,7 +14219,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#estrategiavacinacao">EstrategiaVacinacao</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#estrategiavacinacao">EstrategiaVacinacao</a>.</p>
 
 <h3 id="3-dose">#3 dose</h3>
 
@@ -14214,7 +14241,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#dose">Dose</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#dose">Dose</a>.</p>
 
 <h3 id="4-lote">#4 lote</h3>
 
@@ -14236,7 +14263,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Apenas <code>letras</code>, <code>números</code>, <code>/</code>, <code>.</code> e <code>-</code>.</p>
+<p><strong>Regra:</strong> Apenas <code>letras</code>, <code>números</code>, <code>/</code>, <code>.</code> e <code>-</code>.</p>
 
 <h3 id="5-fabricante">#5 fabricante</h3>
 
@@ -14258,7 +14285,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Apenas <code>letras</code>, <code>números</code>, <code>/</code>, <code>.</code>, <code>espaço simples</code> e <code>-</code>.</p>
+<p><strong>Regra:</strong> Apenas <code>letras</code>, <code>números</code>, <code>/</code>, <code>.</code>, <code>espaço simples</code> e <code>-</code>.</p>
 
       </article>
 
@@ -14292,31 +14319,8 @@
 <li><a href="/ledi/documentacao/referencias/dicionario.html">Dicionário de dados</a>;</li>
 <li><a href="http://www.sbmfc.org.br/default.asp?paginaId=72">Classificação Internacional de Atenção Primária - Segunda Edição (CIAP2)</a>;</li>
 <li><a href="https://rts.saude.gov.br/#/cid">Classificação Internacional de Doenças - Versão 10</a>;</li>
-<li><p>Procedimentos: Compatível com a competência do <a href="http://sigtap.datasus.gov.br/tabela-unificada/app/sec/inicio.jsp">SIGTAP</a> <a href="https://www.in.gov.br/materia/-/asset_publisher/Kujrw0TZC2Mb/content/id/69661773/do1-2019-04-02-portaria-n-183-de-5-de-fevereiro-de-2019--69661722">02/2019</a>.</p>
-
-<ul>
-<li><strong>OBS:</strong><br>
-
-<ul>
-<li>Foram adicionados os procedimentos da competência 06/2020:
-
-<ul>
-<li>02.14.01.016-3 TESTE RÁPIDO PARA DETECÇÃO DE SARS-COV-2;</li>
-<li>02.13.01.072-0 PESQUISA DE SARS-COV-2 POR RT - PCR.</li>
-</ul></li>
-<li>Foram adicionados os procedimentos da competência 08/2020:<br>
-
-<ul>
-<li>03.01.01.025-0 TELECONSULTA NA ATENÇÃO PRIMÁRIA;<br></li>
-<li>03.01.01.028-5 AVALIAÇÃO DO ESTÁGIO DE MATURAÇÃO SEXUAL; </li>
-<li>03.01.10.026-8 PREPARAÇÃO PARA O ELETROCARDIOGRAMA; </li>
-<li>01.01.02.012-0 ORIENTAÇÃO DE HIGIENIZAÇÃO DE PRÓTESES DENTÁRIAS;<br></li>
-<li>03.07.01.007-4 TRATAMENTO RESTAURADOR ATRAUMÁTICO (TRA/ART);</li>
-<li>01.01.01.009-5 PREVENÇÃO AO COVID-19 NAS ESCOLAS.</li>
-</ul></li>
-</ul></li>
-</ul></li>
-<li><p>Os números INEP das instituições de ensino podem ser obtidos a partir do <a href="http://portal.inep.gov.br/microdados">site do INEP</a>. Faça download do arquivo mais atual do &quot;Censo escolar&quot;. Na pasta &quot;Dados&quot; está contido o arquivo &quot;ESCOLAS.zip&quot;, que contém a tabela com os dados das instituições. O número INEP da instituição se encontra na coluna &quot;CO_ENTIDADE&quot; e o nome da instituição na coluna &quot;NO_ENTIDADE&quot;.</p></li>
+<li>Procedimentos: Compatível com a competência do <a href="http://sigtap.datasus.gov.br/tabela-unificada/app/sec/inicio.jsp">SIGTAP</a> 09/2020;</li>
+<li>Os números INEP das instituições de ensino podem ser obtidos a partir do <a href="http://portal.inep.gov.br/microdados">site do INEP</a>. Faça download do arquivo mais atual do &quot;Censo escolar&quot;. Na pasta &quot;Dados&quot; está contido o arquivo &quot;ESCOLAS.zip&quot;, que contém a tabela com os dados das instituições. O número INEP da instituição se encontra na coluna &quot;CO_ENTIDADE&quot; e o nome da instituição na coluna &quot;NO_ENTIDADE&quot;.</li>
 </ul>
 
       </article>
@@ -44633,7 +44637,7 @@
 <td>revision</td>
 <td>Integer</td>
 <td>Sim</td>
-<td>Valor único = 3</td>
+<td>Valor único = 4</td>
 </tr>
 </tbody></table>
 
@@ -44797,6 +44801,10 @@
 </tr>
 <tr>
 <td>515140</td>
+<td>AGENTE DE COMBATE ÀS ENDEMIAS</td>
+</tr>
+<tr>
+<td>5151F1</td>
 <td>AGENTE DE COMBATE ÀS ENDEMIAS</td>
 </tr>
 <tr>
@@ -49716,6 +49724,10 @@
 <td>MÉDICO PSIQUIATRA</td>
 </tr>
 <tr>
+<td>225355</td>
+<td>MÉDICO RADIOLOGISTA INTERVENCIONISTA</td>
+</tr>
+<tr>
 <td>225330</td>
 <td>MÉDICO RADIOTERAPEUTA</td>
 </tr>
@@ -50301,6 +50313,10 @@
 </tr>
 <tr>
 <td>226305</td>
+<td>MUSICOTERAPEUTA</td>
+</tr>
+<tr>
+<td>223915</td>
 <td>MUSICOTERAPEUTA</td>
 </tr>
 <tr>
@@ -53072,6 +53088,10 @@
 <td>SALVA-VIDAS</td>
 </tr>
 <tr>
+<td>131225</td>
+<td>SANITARISTA</td>
+</tr>
+<tr>
 <td>1312C1</td>
 <td>SANITARISTA</td>
 </tr>
@@ -54454,6 +54474,10 @@
 <tr>
 <td>322125</td>
 <td>TERAPEUTA HOLÍSTICO</td>
+</tr>
+<tr>
+<td>322525</td>
+<td>TERAPÊUTA HOLÍSTICO</td>
 </tr>
 <tr>
 <td>223905</td>
@@ -59688,6 +59712,49 @@
     <span class="o">}</span>
 
 </code></pre></div>
+      </article>
+
+      <div class="pdf-separator"></div>
+    </div>
+
+    
+        
+
+    
+
+    <div class="post pdf shown" id="validar_nome" data-url="/ledi/documentacao/regras/validar_nome.html">
+      <header class="post-header">
+        <h1 class="post-title">Validar nome</h1>
+      </header>
+
+      
+
+      <article class="post-content">
+        <p>Essas regras foram baseadas nas regras oficiais definidas pelo CADSUS na Especificação Técnica para integração PIX/PDQ
+<a href="/ledi/documentacao/regras/Especificacao_CADSUS.pdf" title="Clique para visualizar o documento de Especificação Técnica para integração PIX/PDQ">
+    <img src="/ledi/documentacao/regras/img/pdf.jpg" width="20" height="20"/>
+</a></p>
+
+<p>No documento essa regras são definidas na <strong>RN002. Informação do “Nome do Usuário”</strong>. Nem todas as regras do manual são implementadas no PEC.</p>
+
+<h3 id="1-regras-aplicadas">1. Regras aplicadas</h3>
+
+<p><strong>1. </strong> A informação deve conter pelo menos três caracteres;</p>
+
+<p><strong>2. </strong> A informação que contiver um único termo, não entrará na base de dados (Ex: JOAQUIM);</p>
+
+<p><strong>3. </strong> A informação não deve permitir a inserção de espaço duplicado;</p>
+
+<p><strong>4. </strong> A informação deve ser padronizada para letra maiúscula, ou seja, letras minúsculas deverão ser convertidas para maiúsculas (Ex: Maria da Paz é convertida para MARIA DA PAZ);</p>
+
+<p><strong>5. </strong> A informação só pode conter letras do alfabeto romano (incluindo K, W, Y), além dos acentos gráficos (agudo, circunflexo, til e trema) e do caractere apóstrofo (‘), para possibilitar a inserção de nomes como JOÃO D’ÁVILA, sendo vedada a utilização de outros caracteres especiais;</p>
+
+<p><strong>6. </strong> A informação que contiver o primeiro e segundo termos com apenas um caractere em cada um deles não entrará na base de dados (Ex. A A DA SILVA);</p>
+
+<p><strong>7. </strong> A informação que contiver apenas dois termos, ambos com apenas dois caracteres, não entrará na base de dados;</p>
+
+<p>As outras regras da especificação que não são citadas acima, serão validadas apenas pelo serviço do CADSUS, no módulo de cidadão, no momento em que o cadastro for enviado ao serviço PIX do CADSUS.</p>
+
       </article>
 
       <div class="pdf-separator"></div>
@@ -67902,49 +67969,6 @@
 
     
 
-    <div class="post pdf shown" id="validar_nome" data-url="/ledi/documentacao/regras/validar_nome.html">
-      <header class="post-header">
-        <h1 class="post-title">Validar nome</h1>
-      </header>
-
-      
-
-      <article class="post-content">
-        <p>Essas regras foram baseadas nas regras oficiais definidas pelo CADSUS na Especificação Técnica para integração PIX/PDQ
-<a href="/ledi/documentacao/regras/Especificacao_CADSUS.pdf" title="Clique para visualizar o documento de Especificação Técnica para integração PIX/PDQ">
-    <img src="/ledi/documentacao/regras/img/pdf.jpg" width="20" height="20"/>
-</a></p>
-
-<p>No documento essa regras são definidas na <strong>RN002. Informação do “Nome do Usuário”</strong>. Nem todas as regras do manual são implementadas no PEC.</p>
-
-<h3 id="1-regras-aplicadas">1. Regras aplicadas</h3>
-
-<p><strong>1. </strong> A informação deve conter pelo menos três caracteres;</p>
-
-<p><strong>2. </strong> A informação que contiver um único termo, não entrará na base de dados (Ex: JOAQUIM);</p>
-
-<p><strong>3. </strong> A informação não deve permitir a inserção de espaço duplicado;</p>
-
-<p><strong>4. </strong> A informação deve ser padronizada para letra maiúscula, ou seja, letras minúsculas deverão ser convertidas para maiúsculas (Ex: Maria da Paz é convertida para MARIA DA PAZ);</p>
-
-<p><strong>5. </strong> A informação só pode conter letras do alfabeto romano (incluindo K, W, Y), além dos acentos gráficos (agudo, circunflexo, til e trema) e do caractere apóstrofo (‘), para possibilitar a inserção de nomes como JOÃO D’ÁVILA, sendo vedada a utilização de outros caracteres especiais;</p>
-
-<p><strong>6. </strong> A informação que contiver o primeiro e segundo termos com apenas um caractere em cada um deles não entrará na base de dados (Ex. A A DA SILVA);</p>
-
-<p><strong>7. </strong> A informação que contiver apenas dois termos, ambos com apenas dois caracteres, não entrará na base de dados;</p>
-
-<p>As outras regras da especificação que não são citadas acima, serão validadas apenas pelo serviço do CADSUS, no módulo de cidadão, no momento em que o cadastro for enviado ao serviço PIX do CADSUS.</p>
-
-      </article>
-
-      <div class="pdf-separator"></div>
-    </div>
-
-    
-        
-
-    
-
 
     
 
@@ -68373,17 +68397,27 @@
 
     <div class="post pdf shown" id="principais_alteracoes" data-url="/ledi/documentacao/principais_alteracoes.html">
       <header class="post-header">
-        <h1 class="post-title">Principais alterações da v4.0.2 para a v4.0.3</h1>
+        <h1 class="post-title">Principais alterações da v4.0.3 para a v4.0.4</h1>
       </header>
 
       
 
       <article class="post-content">
-        <p>Este documento relata as principais alterações em relação à versão 4.0.2 do LEDI APS:</p>
+        <p>Este documento relata as principais alterações em relação à versão 4.0.3 do LEDI APS:</p>
 
-<h3 id="1-ficha-de-atividade-coletiva">1. Ficha de Atividade Coletiva</h3>
+<h3 id="1-atualiza-o-da-compet-ncia-sigtap">1. Atualização da competência SIGTAP</h3>
 
-<p>Inclusão do procedimento 01.01.01.009-5 - PREVENÇÃO AO COVID-19 NAS ESCOLAS no campo <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#13-procedimento">#13 procedimento</a>.</p>
+<p><strong>1. </strong> Competência SIGTAP atualizado para <strong>09/2020</strong>.</p>
+
+<h3 id="2-ficha-de-procedimentos">2. Ficha de procedimentos</h3>
+
+<p><strong>2. </strong> Alteração na relação entre os procedimentos AB e SIGTAP presentes na tabela <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fp.html#procedimentos-da-ficha">Procedimentos da Ficha</a>.</p>
+
+<h3 id="3-ficha-de-atendimento-odontol-gico-individual">3. Ficha de Atendimento odontológico individual</h3>
+
+<p><strong>3. </strong> Alteração na relação entre os procedimentos AB e SIGTAP presentes na tabela <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fao.html#listaprocedimentosrealizados">ListaProcedimentosRealizados</a>.</p>
+
+<p><strong>4. </strong> Atualização da <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fao.html#lista-de-procedimentos-por-local-e-quantidade-m-xima-permitida">Lista de procedimentos por local e quantidade máxima permitida</a>.</p>
 
       </article>
 

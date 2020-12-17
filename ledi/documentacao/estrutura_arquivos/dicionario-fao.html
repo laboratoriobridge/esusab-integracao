@@ -25,7 +25,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 4.0.3</span>
+        <span class="label">versão 4.0.4</span>
       
     </a>
 
@@ -75,7 +75,7 @@
           
         
           
-            <li><a title="Layout e-SUS APS de Dados e Interface Versão 4.0.3" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 4.0.3</a></li>
+            <li><a title="Layout e-SUS APS de Dados e Interface Versão 4.0.4" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 4.0.4</a></li>
           
         
           
@@ -115,9 +115,9 @@
   <ul>
     
       <li>
-        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 4.0.3" href="/ledi/documentacao/index.html" class="back-link">
+        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 4.0.4" href="/ledi/documentacao/index.html" class="back-link">
           <i class="icon icon-back"></i> Voltar
-          <small>(Layout e-SUS APS de Dados e Interface Versão 4.0.3)</small>
+          <small>(Layout e-SUS APS de Dados e Interface Versão 4.0.4)</small>
         </a>
       </li>
     
@@ -243,7 +243,7 @@
     <p class="post-meta">
       <a class="btn" href="/pdf.html?include=/ledi/documentacao/estrutura_arquivos/dicionario-fao.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 06/10/2020</span>
+        <span class="label" title="Data da última modificação">Alterado em 17/12/2020</span>
       
     </p>
   </header>
@@ -271,9 +271,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> É recomendado concatenar o CNES na frente do UUID, de modo que os 7 dígitos (CNES) + 1 de hífen somados aos 36 (32 caracteres + 4 hífen) do UUID são a limitação de 44 bytes do campo. Formato canônico.</p>
+<p><strong>Regra:</strong> É recomendado concatenar o CNES na frente do UUID, de modo que os 7 dígitos (CNES) + 1 de hífen somados aos 36 (32 caracteres + 4 hífen) do UUID são a limitação de 44 bytes do campo. Formato canônico.</p>
 
-<p><strong>Referências:</strong> Para ver a referência sobre o UUID, acesse: <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">UUID Wikipedia</a>.</p>
+<p><strong>Referência:</strong> Para ver a referência sobre o UUID, acesse: <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">UUID Wikipedia</a>.</p>
 
 <h3 id="2-headertransport">#2 headerTransport</h3>
 
@@ -295,9 +295,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Somente as CBOs apresentadas na <a href="/ledi/documentacao/regras/cbo.html#ficha-de-atendimento-odontol-gico-individual">Tabela 4 - CBOs que podem registrar ficha de atendimento odontológico individual</a> podem ser adicionadas no campo CBO do profissional principal.</p>
+<p><strong>Regra:</strong> Somente as CBOs apresentadas na <a href="/ledi/documentacao/regras/cbo.html#ficha-de-atendimento-odontol-gico-individual">Tabela 4 - CBOs que podem registrar ficha de atendimento odontológico individual</a> podem ser adicionadas no campo CBO do profissional principal.</p>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#variaslotacoesheader">VariasLotacoesHeader</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#variaslotacoesheader">VariasLotacoesHeader</a>.</p>
 
 <h3 id="3-atendimentosodontologicos">#3 atendimentosOdontologicos</h3>
 
@@ -319,7 +319,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Referências:</strong> <a href="#fichaatendimentoodontologicochild">FichaAtendimentoOdontologicoChild</a>.</p>
+<p><strong>Referência:</strong> <a href="#fichaatendimentoodontologicochild">FichaAtendimentoOdontologicoChild</a>.</p>
 
 <h3 id="4-tpcdsorigem">#4 tpCdsOrigem</h3>
 
@@ -341,7 +341,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Utilizar valor 3 (sistemas terceiros).</p>
+<p><strong>Regra:</strong> Utilizar valor 3 (sistemas terceiros).</p>
 
 <h2 id="fichaatendimentoodontologicochild">FichaAtendimentoOdontologicoChild</h2>
 
@@ -365,9 +365,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Não pode ser posterior à <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a> e anterior à 130 anos a partir da <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>.</p>
+<p><strong>Regra:</strong> Não pode ser posterior à <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a> e anterior à 130 anos a partir da <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>.</p>
 
-<p><strong>Referências:</strong> A data deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
+<p><strong>Referência:</strong> A data deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
 
 <h3 id="2-cnscidadao">#2 cnsCidadao</h3>
 
@@ -396,7 +396,7 @@
 <li>Não pode ser preenchido se o campo <a href="#18-cpfcidadao">cpfCidadao</a> for preenchido.</li>
 </ul>
 
-<p><strong>Referências:</strong> O algoritmo de validação está presente em <a href="/ledi/documentacao/regras/algoritmo_CNS.html">Validar CNS</a>.</p>
+<p><strong>Referência:</strong> O algoritmo de validação está presente em <a href="/ledi/documentacao/regras/algoritmo_CNS.html">Validar CNS</a>.</p>
 
 <h3 id="3-numprontuario">#3 numProntuario</h3>
 
@@ -418,7 +418,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Apenas letras e números são aceitos.</p>
+<p><strong>Regra:</strong> Apenas letras e números são aceitos.</p>
 
 <h3 id="4-gestante">#4 gestante</h3>
 
@@ -482,9 +482,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Apenas valores de <code>1</code> a <code>10</code>.</p>
+<p><strong>Regra:</strong> Apenas valores de <code>1</code> a <code>10</code>.</p>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#localdeatendimento">LocalDeAtendimento</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#localdeatendimento">LocalDeAtendimento</a>.</p>
 
 <h3 id="7-tipoatendimento">#7 tipoAtendimento</h3>
 
@@ -506,9 +506,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Apenas as opções <code>2</code>, <code>4</code>, <code>5</code> ou <code>6</code> são aceitas.</p>
+<p><strong>Regra:</strong> Apenas as opções <code>2</code>, <code>4</code>, <code>5</code> ou <code>6</code> são aceitas.</p>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#tipodeatendimento">TipoDeAtendimento</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#tipodeatendimento">TipoDeAtendimento</a>.</p>
 
 <h3 id="8-tiposencamodonto">#8 tiposEncamOdonto</h3>
 
@@ -537,7 +537,7 @@
 <li>A opção <code>17 - Alta do episódio</code> não pode ser selecionada se no campo <a href="#11-tiposconsultaodonto">tiposConsultaOdonto</a> for selecionada uma das opções <code>1 - Primeira consulta odontológica programática</code> ou <code>2 - Consulta de retorno em odontologia</code>.</li>
 </ul>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#condutaencaminhamentoodonto">CondutaEncaminhamentoOdonto</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#condutaencaminhamentoodonto">CondutaEncaminhamentoOdonto</a>.</p>
 
 <h3 id="9-tiposfornecimodonto">#9 tiposFornecimOdonto</h3>
 
@@ -559,7 +559,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#fornecimentoodonto">FornecimentoOdonto</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#fornecimentoodonto">FornecimentoOdonto</a>.</p>
 
 <h3 id="10-tiposvigilanciasaudebucal">#10 tiposVigilanciaSaudeBucal</h3>
 
@@ -581,7 +581,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#vigilanciaemsaudebucal">VigilanciaEmSaudeBucal</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#vigilanciaemsaudebucal">VigilanciaEmSaudeBucal</a>.</p>
 
 <h3 id="11-tiposconsultaodonto">#11 tiposConsultaOdonto</h3>
 
@@ -657,7 +657,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#sexo">Sexo</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#sexo">Sexo</a>.</p>
 
 <h3 id="15-turno">#15 turno</h3>
 
@@ -679,7 +679,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#turno">Turno</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#turno">Turno</a>.</p>
 
 <h3 id="16-datahorainicialatendimento">#16 dataHoraInicialAtendimento</h3>
 
@@ -708,7 +708,7 @@
 <li>Não pode ser posterior à <a href="#17-datahorafinalatendimento">dataHoraFinalAtendimento</a> e à data atual.</li>
 </ul>
 
-<p><strong>Referências:</strong> Deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
+<p><strong>Referência:</strong> Deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
 
 <h3 id="17-datahorafinalatendimento">#17 dataHoraFinalAtendimento</h3>
 
@@ -737,7 +737,7 @@
 <li>Não pode ser posterior à data atual.</li>
 </ul>
 
-<p><strong>Referências:</strong> Deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
+<p><strong>Referência:</strong> Deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
 
 <h3 id="18-cpfcidadao">#18 cpfCidadao</h3>
 
@@ -792,7 +792,7 @@
 
 <ul>
 <li>Não pode conter procedimentos repetidos;</li>
-<li>Podem ser informados os procedimentos pertencentes aos grupos <code>01 - Ações de promoção e prevenção em saúde</code>, <code>02 - Procedimentos com finalidade diagnóstica</code>, <code>03 - Procedimentos clínicos</code>, <code>04 - Procedimentos cirúrgicos</code> ou presentes na <a href="#listaprocedimentosrealizados">ListaProcedimentosRealizados</a>, neste caso, se não tiver uma referência no SIGTAP, deve ser informado o código <strong>AB</strong> do procedimento;</li>
+<li>Podem ser informados os procedimentos pertencentes aos grupos <code>01 - Ações de promoção e prevenção em saúde</code>, <code>02 - Procedimentos com finalidade diagnóstica</code>, <code>03 - Procedimentos clínicos</code>, <code>04 - Procedimentos cirúrgicos</code> ou presentes na <a href="#listaprocedimentosrealizados">ListaProcedimentosRealizados</a>. Neste caso, deve ser informado o respectivo código <strong>SIGTAP</strong> do procedimento;</li>
 <li><p>Além destes procedimentos, são permitidos os procedimentos pertencentes ao grupo <code>07 - Órteses, próteses e materiais especiais</code>:</p>
 
 <ul>
@@ -813,16 +813,11 @@
 <p><strong>Referências:</strong></p>
 
 <ul>
-<li>Tabela do SIGTAP, competência 02/2019 disponível em: <a href="http://sigtap.datasus.gov.br/tabela-unificada/app/sec/procedimento/publicados/consultar">Tabela Unificada SIGTAP</a>;</li>
+<li>Tabela do SIGTAP, competência 09/2020 disponível em: <a href="http://sigtap.datasus.gov.br/tabela-unificada/app/sec/procedimento/publicados/consultar">Tabela Unificada SIGTAP</a>;</li>
 <li><a href="#listaprocedimentosrealizados">ListaProcedimentosRealizados</a>.</li>
 </ul>
 
-<p>Observações:</p>
-
-<ul>
-<li>Inserir o código do procedimento SIGTAP sem ponto ou hífen, ex: <code>0201010010</code>;</li>
-<li>Inserir o código do procedimento AB em caracteres maiúsculos, sem espaços, ex: <code>ABPO015</code>.</li>
-</ul>
+<p><strong>Observação:</strong> Inserir o código do procedimento SIGTAP sem ponto ou hífen, ex: <code>0214010015</code>.</p>
 
 <h3 id="2-quantidade">#2 quantidade</h3>
 
@@ -931,7 +926,7 @@
 <td>ABPO014</td>
 </tr>
 <tr>
-<td>Não possui</td>
+<td>01.01.02.010-4</td>
 <td>Orientação de Higiene Bucal</td>
 <td>ABPO015</td>
 </tr>
@@ -946,11 +941,6 @@
 <td>ABPO017</td>
 </tr>
 <tr>
-<td>02.04.01.018-7</td>
-<td>Radiografia Periapical / Interproximal</td>
-<td>ABPO018</td>
-</tr>
-<tr>
 <td>03.07.03.005-9</td>
 <td>Raspagem alisamento e polimento supragengivais (por sextante)</td>
 <td>ABPO019</td>
@@ -961,24 +951,9 @@
 <td>ABPO020</td>
 </tr>
 <tr>
-<td>03.07.01.002-3</td>
-<td>Restauração de dente decíduo</td>
-<td>ABPO021</td>
-</tr>
-<tr>
 <td>03.07.01.003-1</td>
 <td>Restauração de dente permanente anterior</td>
 <td>ABPO022</td>
-</tr>
-<tr>
-<td>03.07.01.004-0</td>
-<td>Restauração de dente permanente posterior</td>
-<td>ABPO023</td>
-</tr>
-<tr>
-<td>03.01.10.015-2</td>
-<td>Retirada de pontos de cirurgias básicas (por paciente)</td>
-<td>ABPG018</td>
 </tr>
 <tr>
 <td>01.01.02.009-0</td>
@@ -997,7 +972,7 @@
 </tr>
 </tbody></table>
 
-<p><em>* Procedimentos pertencentes a competência <strong>02/2019</strong> do SIGTAP.</em></p>
+<p><em>* Procedimentos pertencentes a competência <strong>09/2020</strong> do SIGTAP.</em></p>
 
 <h2 id="lista-de-procedimentos-por-local-e-quantidade-m-xima-permitida">Lista de procedimentos por local e quantidade máxima permitida</h2>
 
@@ -1142,8 +1117,14 @@
 <td>32</td>
 </tr>
 <tr>
-<td>02.04.01.018-7</td>
-<td>RADIOGRAFIA PERI-APICAL INTERPROXIMAL (BITE-WING)</td>
+<td>02.04.01.021-7</td>
+<td>RADIOGRAFIA INTERPROXIMAL (BITE WING)</td>
+<td>Dente</td>
+<td>32</td>
+</tr>
+<tr>
+<td>02.04.01.022-5</td>
+<td>RADIOGRAFIA PERIAPICAL</td>
 <td>Dente</td>
 <td>32</td>
 </tr>
@@ -1154,20 +1135,56 @@
 <td>32</td>
 </tr>
 <tr>
-<td>03.07.01.002-3</td>
-<td>RESTAURAÇÃO DE DENTE DECÍDUO</td>
-<td>Dente</td>
-<td>32</td>
-</tr>
-<tr>
 <td>03.07.01.003-1</td>
 <td>RESTAURAÇÃO DE DENTE PERMANENTE ANTERIOR</td>
 <td>Dente</td>
 <td>32</td>
 </tr>
 <tr>
-<td>03.07.01.004-0</td>
-<td>RESTAURAÇÃO DE DENTE PERMANENTE POSTERIOR</td>
+<td>03.07.01.006-6</td>
+<td>TRATAMENTO INICIAL DO DENTE TRAUMATIZADO</td>
+<td>Dente</td>
+<td>32</td>
+</tr>
+<tr>
+<td>03.07.01.007-4</td>
+<td>TRATAMENTO RESTAURADOR ATRAUMÁTICO (TRA/ART)</td>
+<td>Dente</td>
+<td>32</td>
+</tr>
+<tr>
+<td>03.07.01.008-2</td>
+<td>RESTAURAÇÃO DE DENTE DECÍDUO POSTERIOR COM RESINA COMPOSTA</td>
+<td>Dente</td>
+<td>32</td>
+</tr>
+<tr>
+<td>03.07.01.009-0</td>
+<td>RESTAURAÇÃO DE DENTE DECÍDUO POSTERIOR COM AMÁLGAMA</td>
+<td>Dente</td>
+<td>32</td>
+</tr>
+<tr>
+<td>03.07.01.010-4</td>
+<td>RESTAURAÇÃO DE DENTE DECÍDUO POSTERIOR COM IONÔMERO DE VIDRO</td>
+<td>Dente</td>
+<td>32</td>
+</tr>
+<tr>
+<td>03.07.01.011-2</td>
+<td>RESTAURAÇÃO DE DENTE DECÍDUO ANTERIOR COM RESINA COMPOSTA</td>
+<td>Dente</td>
+<td>32</td>
+</tr>
+<tr>
+<td>03.07.01.012-0</td>
+<td>RESTAURAÇÃO DE DENTE PERMANENTE POSTERIOR COM RESINA COMPOSTA</td>
+<td>Dente</td>
+<td>32</td>
+</tr>
+<tr>
+<td>03.07.01.013-9</td>
+<td>REMOÇÃO/RESTAURAÇÃO COM AMÁLGAMA DE DENTE PERMANENTE POSTERIOR</td>
 <td>Dente</td>
 <td>32</td>
 </tr>
@@ -1352,12 +1369,6 @@
 <td>32</td>
 </tr>
 <tr>
-<td>03.07.03.001-6</td>
-<td>RASPAGEM ALISAMENTO E POLIMENTO SUPRAGENGIVAIS (POR SEXTANTE)</td>
-<td>Sextante</td>
-<td>6</td>
-</tr>
-<tr>
 <td>03.07.03.002-4</td>
 <td>RASPAGEM ALISAMENTO SUBGENGIVAIS (POR SEXTANTE)</td>
 <td>Sextante</td>
@@ -1368,6 +1379,12 @@
 <td>RASPAGEM ALISAMENTO E POLIMENTO SUPRAGENGIVAIS (POR SEXTANTE)</td>
 <td>Sextante</td>
 <td>6</td>
+</tr>
+<tr>
+<td>03.07.04.017-8</td>
+<td>MOLDAGEM DENTO-GENGIVAL COM FINALIDADE ORTODÔNTICA</td>
+<td>Arcada</td>
+<td>2</td>
 </tr>
 <tr>
 <td>04.14.02.003-0</td>
@@ -1393,9 +1410,15 @@
 <td>Sextante</td>
 <td>6</td>
 </tr>
+<tr>
+<td>04.14.02.043-0</td>
+<td>EXODONTIA DE DENTE SUPRANUMERÁRIO</td>
+<td>Dente</td>
+<td>32</td>
+</tr>
 </tbody></table>
 
-<p><em>* Procedimentos pertencentes a competência <strong>02/2019</strong> do SIGTAP.</em></p>
+<p><em>* Procedimentos pertencentes a competência <strong>09/2020</strong> do SIGTAP.</em></p>
 
   </article>
 

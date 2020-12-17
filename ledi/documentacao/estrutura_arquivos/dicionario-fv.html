@@ -25,7 +25,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 4.0.3</span>
+        <span class="label">versão 4.0.4</span>
       
     </a>
 
@@ -75,7 +75,7 @@
           
         
           
-            <li><a title="Layout e-SUS APS de Dados e Interface Versão 4.0.3" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 4.0.3</a></li>
+            <li><a title="Layout e-SUS APS de Dados e Interface Versão 4.0.4" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 4.0.4</a></li>
           
         
           
@@ -115,9 +115,9 @@
   <ul>
     
       <li>
-        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 4.0.3" href="/ledi/documentacao/index.html" class="back-link">
+        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 4.0.4" href="/ledi/documentacao/index.html" class="back-link">
           <i class="icon icon-back"></i> Voltar
-          <small>(Layout e-SUS APS de Dados e Interface Versão 4.0.3)</small>
+          <small>(Layout e-SUS APS de Dados e Interface Versão 4.0.4)</small>
         </a>
       </li>
     
@@ -243,7 +243,7 @@
     <p class="post-meta">
       <a class="btn" href="/pdf.html?include=/ledi/documentacao/estrutura_arquivos/dicionario-fv.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 25/09/2020</span>
+        <span class="label" title="Data da última modificação">Alterado em 17/12/2020</span>
       
     </p>
   </header>
@@ -271,9 +271,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> É recomendado concatenar o CNES na frente do UUID, de modo que os 7 dígitos (CNES) + 1 de hífen somados aos 36 (32 caracteres + 4 hífen) do UUID são a limitação de 44 bytes do campo. Formato canônico.</p>
+<p><strong>Regra:</strong> É recomendado concatenar o CNES na frente do UUID, de modo que os 7 dígitos (CNES) + 1 de hífen somados aos 36 (32 caracteres + 4 hífen) do UUID são a limitação de 44 bytes do campo. Formato canônico.</p>
 
-<p><strong>Referências:</strong> Para ver a referência sobre o UUID, acesse <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">UUID Wikipedia</a>.</p>
+<p><strong>Referência:</strong> Para ver a referência sobre o UUID, acesse <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">UUID Wikipedia</a>.</p>
 
 <h3 id="2-tpcdsorigem">#2 tpCdsOrigem</h3>
 
@@ -295,7 +295,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Utilizar valor 3 (sistemas terceiros).</p>
+<p><strong>Regra:</strong> Utilizar valor 3 (sistemas terceiros).</p>
 
 <h3 id="3-headertransport">#3 headerTransport</h3>
 
@@ -317,8 +317,9 @@
 </tr>
 </tbody></table>
 
-<p>Regras: Somente as CBOs apresentadas na <a href="/ledi/documentacao/regras/cbo.html#ficha-de-vacina-o">Tabela 12 - CBOs que podem registrar ficha de vacinação</a> podem ser adicionadas no campo CBO do profissional.
-<strong>Referências:</strong> <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#unicalotacaoheader">UnicaLotacaoHeader</a>.</p>
+<p><strong>Regra:</strong> Somente as CBOs apresentadas na <a href="/ledi/documentacao/regras/cbo.html#ficha-de-vacina-o">Tabela 12 - CBOs que podem registrar ficha de vacinação</a> podem ser adicionadas no campo CBO do profissional.</p>
+
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#unicalotacaoheader">UnicaLotacaoHeader</a>.</p>
 
 <h3 id="4-vacinacoes">#4 vacinacoes</h3>
 
@@ -340,7 +341,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Referências:</strong> <a href="#fichavacinacaochild">FichaVacinacaoChild</a>.</p>
+<p><strong>Referência:</strong> <a href="#fichavacinacaochild">FichaVacinacaoChild</a>.</p>
 
 <h2 id="fichavacinacaochild">FichaVacinacaoChild</h2>
 
@@ -364,7 +365,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#turno">Turno</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#turno">Turno</a>.</p>
 
 <h3 id="2-numprontuario">#2 numProntuario</h3>
 
@@ -413,7 +414,7 @@
 <li>Não pode ser preenchido se o campo <a href="#14-cpfcidadao">cpfCidadao</a> for preenchido.</li>
 </ul>
 
-<p><strong>Referências:</strong> O algoritmo de validação está presente em <a href="/ledi/documentacao/regras/algoritmo_CNS.html">Validar CNS</a>.</p>
+<p><strong>Referência:</strong> O algoritmo de validação está presente em <a href="/ledi/documentacao/regras/algoritmo_CNS.html">Validar CNS</a>.</p>
 
 <h3 id="4-dtnascimento">#4 dtNascimento</h3>
 
@@ -435,9 +436,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Não pode ser posterior à <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a> e anterior à 130 anos a partir da <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>.</p>
+<p><strong>Regra:</strong> Não pode ser posterior à <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a> e anterior à 130 anos a partir da <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>.</p>
 
-<p><strong>Referências:</strong> A data deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos . Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
+<p><strong>Referência:</strong> A data deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos . Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
 
 <h3 id="5-sexo">#5 sexo</h3>
 
@@ -459,7 +460,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#sexo">Sexo</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#sexo">Sexo</a>.</p>
 
 <h3 id="6-localatendimento">#6 localAtendimento</h3>
 
@@ -481,9 +482,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Apenas valores de <code>1</code> a <code>10</code>.</p>
+<p><strong>Regra:</strong> Apenas valores de <code>1</code> a <code>10</code>.</p>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#localdeatendimento">LocalDeAtendimento</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#localdeatendimento">LocalDeAtendimento</a>.</p>
 
 <h3 id="7-viajante">#7 viajante</h3>
 
@@ -606,9 +607,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Referências:</strong> <a href="#vacinarowthrift">VacinaRowThrift</a>.</p>
+<p><strong>Regra:</strong> Deve estar de acordo com os relacionamentos de Imunobiológico x Estratégia x Dose definidos na tabela <a href="/ledi/documentacao/regras/valdidar_regras_vacinacao.html">Regras de vacinação</a>.</p>
 
-<p><strong>Regras:</strong> Deve estar de acordo com os relacionamentos de Imunobiológico x Estratégia x Dose definidos na tabela <a href="/ledi/documentacao/regras/valdidar_regras_vacinacao.html">Regras de vacinação</a>.</p>
+<p><strong>Referência:</strong> <a href="#vacinarowthrift">VacinaRowThrift</a>.</p>
 
 <h3 id="12-datahorainicialatendimento">#12 dataHoraInicialAtendimento</h3>
 
@@ -637,7 +638,7 @@
 <li>Não pode ser posterior à <a href="#13-datahorafinalatendimento">dataHoraFinalAtendimento</a> e à data atual.</li>
 </ul>
 
-<p><strong>Referências:</strong> Deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
+<p><strong>Referência:</strong> Deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
 
 <h3 id="13-datahorafinalatendimento">#13 dataHoraFinalAtendimento</h3>
 
@@ -666,7 +667,7 @@
 <li>Não pode ser posterior à data atual.</li>
 </ul>
 
-<p><strong>Referências:</strong> Deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
+<p><strong>Referência:</strong> Deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
 
 <h3 id="14-cpfcidadao">#14 cpfCidadao</h3>
 
@@ -717,7 +718,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#imunobiologico">Imunobiologico</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#imunobiologico">Imunobiologico</a>.</p>
 
 <h3 id="2-estrategiavacinacao">#2 estrategiaVacinacao</h3>
 
@@ -739,7 +740,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#estrategiavacinacao">EstrategiaVacinacao</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#estrategiavacinacao">EstrategiaVacinacao</a>.</p>
 
 <h3 id="3-dose">#3 dose</h3>
 
@@ -761,7 +762,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#dose">Dose</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#dose">Dose</a>.</p>
 
 <h3 id="4-lote">#4 lote</h3>
 
@@ -783,7 +784,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Apenas <code>letras</code>, <code>números</code>, <code>/</code>, <code>.</code> e <code>-</code>.</p>
+<p><strong>Regra:</strong> Apenas <code>letras</code>, <code>números</code>, <code>/</code>, <code>.</code> e <code>-</code>.</p>
 
 <h3 id="5-fabricante">#5 fabricante</h3>
 
@@ -805,7 +806,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Apenas <code>letras</code>, <code>números</code>, <code>/</code>, <code>.</code>, <code>espaço simples</code> e <code>-</code>.</p>
+<p><strong>Regra:</strong> Apenas <code>letras</code>, <code>números</code>, <code>/</code>, <code>.</code>, <code>espaço simples</code> e <code>-</code>.</p>
 
   </article>
 

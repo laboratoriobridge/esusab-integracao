@@ -25,7 +25,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 4.0.3</span>
+        <span class="label">versão 4.0.4</span>
       
     </a>
 
@@ -75,7 +75,7 @@
           
         
           
-            <li><a title="Layout e-SUS APS de Dados e Interface Versão 4.0.3" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 4.0.3</a></li>
+            <li><a title="Layout e-SUS APS de Dados e Interface Versão 4.0.4" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 4.0.4</a></li>
           
         
           
@@ -115,9 +115,9 @@
   <ul>
     
       <li>
-        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 4.0.3" href="/ledi/documentacao/index.html" class="back-link">
+        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 4.0.4" href="/ledi/documentacao/index.html" class="back-link">
           <i class="icon icon-back"></i> Voltar
-          <small>(Layout e-SUS APS de Dados e Interface Versão 4.0.3)</small>
+          <small>(Layout e-SUS APS de Dados e Interface Versão 4.0.4)</small>
         </a>
       </li>
     
@@ -243,7 +243,7 @@
     <p class="post-meta">
       <a class="btn" href="/pdf.html?include=/ledi/documentacao/estrutura_arquivos/dicionario-fac.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 06/10/2020</span>
+        <span class="label" title="Data da última modificação">Alterado em 17/12/2020</span>
       
     </p>
   </header>
@@ -271,9 +271,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> É recomendado concatenar o CNES na frente do UUID, de modo que os 7 dígitos (CNES) + 1 de hífen somados aos 36 (32 caracteres + 4 hífen) do UUID são a limitação de 44 bytes do campo. Formato canônico.</p>
+<p><strong>Regra:</strong> É recomendado concatenar o CNES na frente do UUID, de modo que os 7 dígitos (CNES) + 1 de hífen somados aos 36 (32 caracteres + 4 hífen) do UUID são a limitação de 44 bytes do campo. Formato canônico.</p>
 
-<p><strong>Referências:</strong> <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">UUID Wikipedia</a>.</p>
+<p><strong>Referência:</strong> <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">UUID Wikipedia</a>.</p>
 
 <h3 id="2-outralocalidade">#2 outraLocalidade</h3>
 
@@ -329,7 +329,7 @@
 <li>É de preenchimento obrigatório se <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#18-pseeducacao">pseEducacao</a> = <code>true</code> ou <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#19-psesaude">pseSaude</a> = <code>true</code>.</li>
 </ul>
 
-<p><strong>Referências:</strong> Os números INEP das instituições de ensino podem ser obtidos a partir do <a href="http://portal.inep.gov.br/microdados">site do INEP</a>. Faça download do arquivo mais atual do &quot;Censo escolar&quot;. Na pasta &quot;Dados&quot; está contido o arquivo &quot;ESCOLAS.zip&quot;, que contém a tabela com os dados das instituições. O número INEP da instituição se encontra na coluna &quot;CO_ENTIDADE&quot; e o nome da instituição na coluna &quot;NO_ENTIDADE&quot;.</p>
+<p><strong>Referência:</strong> Os números INEP das instituições de ensino podem ser obtidos a partir do <a href="http://portal.inep.gov.br/microdados">site do INEP</a>. Faça download do arquivo mais atual do &quot;Censo escolar&quot;. Na pasta &quot;Dados&quot; está contido o arquivo &quot;ESCOLAS.zip&quot;, que contém a tabela com os dados das instituições. O número INEP da instituição se encontra na coluna &quot;CO_ENTIDADE&quot; e o nome da instituição na coluna &quot;NO_ENTIDADE&quot;.</p>
 
 <h3 id="4-numparticipantes">#4 numParticipantes</h3>
 
@@ -405,13 +405,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong></p>
+<p><strong>Regra:</strong> Não pode ser preenchido se <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#18-pseeducacao">pseEducacao</a> = <code>true</code> e <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#19-psesaude">pseSaude</a> = <code>false</code>.</p>
 
-<ul>
-<li>Não pode ser preenchido se <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#18-pseeducacao">pseEducacao</a> = <code>true</code> e <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#19-psesaude">pseSaude</a> = <code>false</code>.</li>
-</ul>
-
-<p><strong>Referências:</strong>   <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#profissionalcborowitem">ProfissionalCboRowItem</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#profissionalcborowitem">ProfissionalCboRowItem</a>.</p>
 
 <h3 id="7-atividadetipo">#7 atividadeTipo</h3>
 
@@ -444,11 +440,10 @@
 <li><code>03 - Reunião intersetorial / Conselho local de saúde / Controle social</code>;</li>
 <li><code>05 - Atendimento em grupo</code>.</li>
 </ul></li>
+<li><p>Não podem ser selecionados se <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#18-pseeducacao">pseEducacao</a> = <code>true</code> e <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#19-psesaude">pseSaude</a> = <code>false</code>.</p></li>
 </ul>
 
-<p>Não podem ser selecionados se <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#18-pseeducacao">pseEducacao</a> = <code>true</code> e <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#19-psesaude">pseSaude</a> = <code>false</code>.</p>
-
-<p><strong>Referências</strong>: <a href="/ledi/documentacao/referencias/dicionario.html#tipoatividadecoletiva">TipoAtividadeColetiva</a>.</p>
+<p><strong>Referência</strong>: <a href="/ledi/documentacao/referencias/dicionario.html#tipoatividadecoletiva">TipoAtividadeColetiva</a>.</p>
 
 <h3 id="8-temasparareuniao">#8 temasParaReuniao</h3>
 
@@ -478,7 +473,7 @@
 <li>Não pode ser preenchido se <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#18-pseeducacao">pseEducacao</a> = <code>true</code> e <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#19-psesaude">pseSaude</a> = <code>false</code>.</li>
 </ul>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#temasparareuniao">TemasParaReuniao</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#temasparareuniao">TemasParaReuniao</a>.</p>
 
 <h3 id="9-publicoalvo">#9 publicoAlvo</h3>
 
@@ -507,7 +502,7 @@
 <li>Não pode ser preenchido se <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#7-atividadetipo">atividadeTipo</a> for <code>1</code>, <code>2</code> ou <code>3</code>.</li>
 </ul>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#publicoalvo">PublicoAlvo</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#publicoalvo">PublicoAlvo</a>.</p>
 
 <h3 id="10-participantes">#10    participantes</h3>
 
@@ -529,9 +524,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> É de preenchimento obrigatório se <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#7-atividadetipo">atividadeTipo</a> for <code>5</code> ou <code>6</code>.</p>
+<p><strong>Regra:</strong> É de preenchimento obrigatório se <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#7-atividadetipo">atividadeTipo</a> for <code>5</code> ou <code>6</code>.</p>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#participanterowitem">ParticipanteRowItem</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#participanterowitem">ParticipanteRowItem</a>.</p>
 
 <h3 id="11-tbcdsorigem">#11    tbCdsOrigem</h3>
 
@@ -553,7 +548,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Observações</strong>: Utilizar valor 3 (sistemas terceiros).</p>
+<p><strong>Observação</strong>: Utilizar valor 3 (sistemas terceiros).</p>
 
 <h3 id="12-cneslocalatividade">#12    cnesLocalAtividade</h3>
 
@@ -602,9 +597,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Só pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#17-praticasemsaude">praticasEmSaude</a> possuir o valor <code>30</code>.</p>
+<p><strong>Regra:</strong> Só pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#17-praticasemsaude">praticasEmSaude</a> possuir o valor <code>30</code>.</p>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#outroprocedimentocoletivo">OutroProcedimentoColetivo</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#outroprocedimentocoletivo">OutroProcedimentoColetivo</a>.</p>
 
 <h3 id="14-turno">#14    turno</h3>
 
@@ -626,7 +621,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#turno">Turno</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#turno">Turno</a>.</p>
 
 <h3 id="15-headertransport">#15 headerTransport</h3>
 
@@ -648,9 +643,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Somente as CBOs apresentadas na <a href="/ledi/documentacao/regras/cbo.html#ficha-de-atividade-coletiva">Tabela 5 - CBOs que podem registrar ficha de atividade coletiva</a> podem ser adicionadas no campo CBO do profissional.</p>
+<p><strong>Regra:</strong> Somente as CBOs apresentadas na <a href="/ledi/documentacao/regras/cbo.html#ficha-de-atividade-coletiva">Tabela 5 - CBOs que podem registrar ficha de atividade coletiva</a> podem ser adicionadas no campo CBO do profissional.</p>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#unicalotacaoheader">UnicaLotacaoHeader</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#unicalotacaoheader">UnicaLotacaoHeader</a>.</p>
 
 <h3 id="16-temasparasaude">#16    temasParaSaude</h3>
 
@@ -680,7 +675,7 @@
 <li>Se <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#16-temasparasaude">temasParaSaude</a> = <code>18 - Semana saúde na escola</code>, torna-se obrigatório o preenchimento de <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#18-pseeducacao">pseEducacao</a> ou <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#19-psesaude">pseSaude</a>.</li>
 </ul>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#temasparasaude">TemasParaSaude</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#temasparasaude">TemasParaSaude</a>.</p>
 
 <h3 id="17-praticasemsaude">#17    praticasEmSaude</h3>
 
@@ -724,7 +719,7 @@
 
 <p>Não podem ser selecionados se <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#18-pseeducacao">pseEducacao</a> = <code>true</code> e <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#19-psesaude">pseSaude</a> = <code>false</code>.</p>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#praticasemsaude">PraticasEmSaude</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#praticasemsaude">PraticasEmSaude</a>.</p>
 
 <h3 id="18-pseeducacao">#18    pseEducacao</h3>
 
@@ -818,7 +813,7 @@
 <li>Não pode ser preenchido se o campo <a href="#9-cpfparticipante">cpfParticipante</a> for preenchido.</li>
 </ul>
 
-<p><strong>Referências:</strong> O algoritmo de validação está presente em <a href="/ledi/documentacao/regras/algoritmo_CNS.html">Validar CNS</a>.</p>
+<p><strong>Referência:</strong> O algoritmo de validação está presente em <a href="/ledi/documentacao/regras/algoritmo_CNS.html">Validar CNS</a>.</p>
 
 <h3 id="2-datanascimento">#2 dataNascimento</h3>
 
@@ -840,9 +835,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Não pode ser posterior a <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a> e anterior a 130 anos a partir da <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>.</p>
+<p><strong>Regra:</strong> Não pode ser posterior a <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a> e anterior a 130 anos a partir da <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>.</p>
 
-<p><strong>Referências:</strong> A data deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos . Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
+<p><strong>Referência:</strong> A data deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos . Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
 
 <h3 id="3-avaliacaoalterada">#3 avaliacaoAlterada</h3>
 
@@ -940,7 +935,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Não deve ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#17-praticasemsaude">praticasEmSaude</a> for diferente de <code>25</code>, <code>26</code>, <code>27</code> ou <code>28</code> (referentes ao PNCT).</p>
+<p><strong>Regra:</strong> Não deve ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#17-praticasemsaude">praticasEmSaude</a> for diferente de <code>25</code>, <code>26</code>, <code>27</code> ou <code>28</code> (referentes ao PNCT).</p>
 
 <h3 id="7-abandonougrupo">#7 abandonouGrupo</h3>
 
@@ -962,7 +957,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Não deve ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#17-praticasemsaude">praticasEmSaude</a> for diferente de <code>25</code>, <code>26</code>, <code>27</code> ou <code>28</code> (referentes ao PNCT).</p>
+<p><strong>Regra:</strong> Não deve ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#17-praticasemsaude">praticasEmSaude</a> for diferente de <code>25</code>, <code>26</code>, <code>27</code> ou <code>28</code> (referentes ao PNCT).</p>
 
 <h2 id="8-sexo">#8  sexo</h2>
 
@@ -984,7 +979,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#sexo">Sexo</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#sexo">Sexo</a>.</p>
 
 <h3 id="9-cpfparticipante">#9 cpfParticipante</h3>
 
@@ -1036,11 +1031,11 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> CNS validado de acordo com o algoritmo.</p>
+<p><strong>Regra:</strong> CNS validado de acordo com o algoritmo.</p>
 
-<p><strong>Referências:</strong> O algoritmo de validação está presente em <a href="/ledi/documentacao/regras/algoritmo_CNS.html">Validar CNS</a>.</p>
+<p><strong>Referência:</strong> O algoritmo de validação está presente em <a href="/ledi/documentacao/regras/algoritmo_CNS.html">Validar CNS</a>.</p>
 
-<p>Observações: Esta entidade é utilizada para representar os profissionais que participaram da atividade coletiva</p>
+<p><strong>Observação:</strong> Esta entidade é utilizada para representar os profissionais que participaram da atividade coletiva</p>
 
 <h3 id="2-codigocbo2002">#2 codigoCbo2002</h3>
 
@@ -1062,9 +1057,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/cbo_disponiveis.html">Lista com todas as CBOs</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/cbo_disponiveis.html">Lista com todas as CBOs</a>.</p>
 
-<p>Observações: Esta entidade é utilizada para representar os profissionais que participaram da atividade coletiva.</p>
+<p><strong>Observação:</strong> Esta entidade é utilizada para representar os profissionais que participaram da atividade coletiva.</p>
 
 <h2 id="outroprocedimentocoletivo">OutroProcedimentoColetivo</h2>
 
@@ -1081,6 +1076,10 @@
 <tr>
 <td>01.01.01.002-8</td>
 <td>ATIVIDADE EDUCATIVA / ORIENTAÇÃO EM GRUPO NA ATENÇÃO ESPECIALIZADA</td>
+</tr>
+<tr>
+<td>01.01.02.011-2</td>
+<td>AÇÃO COLETIVA DE PREVENÇÃO DE CÂNCER BUCAL</td>
 </tr>
 <tr>
 <td>01.01.02.002-3</td>

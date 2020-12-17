@@ -25,7 +25,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 4.0.3</span>
+        <span class="label">versão 4.0.4</span>
       
     </a>
 
@@ -75,7 +75,7 @@
           
         
           
-            <li><a title="Layout e-SUS APS de Dados e Interface Versão 4.0.3" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 4.0.3</a></li>
+            <li><a title="Layout e-SUS APS de Dados e Interface Versão 4.0.4" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 4.0.4</a></li>
           
         
           
@@ -115,9 +115,9 @@
   <ul>
     
       <li>
-        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 4.0.3" href="/ledi/documentacao/index.html" class="back-link">
+        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 4.0.4" href="/ledi/documentacao/index.html" class="back-link">
           <i class="icon icon-back"></i> Voltar
-          <small>(Layout e-SUS APS de Dados e Interface Versão 4.0.3)</small>
+          <small>(Layout e-SUS APS de Dados e Interface Versão 4.0.4)</small>
         </a>
       </li>
     
@@ -243,7 +243,7 @@
     <p class="post-meta">
       <a class="btn" href="/pdf.html?include=/ledi/documentacao/estrutura_arquivos/dicionario-fai.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 06/10/2020</span>
+        <span class="label" title="Data da última modificação">Alterado em 17/12/2020</span>
       
     </p>
   </header>
@@ -271,9 +271,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Somente as CBOs apresentadas na <a href="/ledi/documentacao/regras/cbo.html#ficha-de-atendimento-individual">Tabela 3 - CBOs que podem registrar ficha de atendimento individual</a> podem ser adicionadas no campo CBO do profissional principal.</p>
+<p><strong>Regra:</strong> Somente as CBOs apresentadas na <a href="/ledi/documentacao/regras/cbo.html#ficha-de-atendimento-individual">Tabela 3 - CBOs que podem registrar ficha de atendimento individual</a> podem ser adicionadas no campo CBO do profissional principal.</p>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#variaslotacoesheader">VariasLotacoesHeader</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#variaslotacoesheader">VariasLotacoesHeader</a>.</p>
 
 <h3 id="2-atendimentosindividuais">#2 atendimentosIndividuais</h3>
 
@@ -295,7 +295,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Referências:</strong> <a href="#fichaatendimentoindividualchild">FichaAtendimentoIndividualChild</a>.</p>
+<p><strong>Referência:</strong> <a href="#fichaatendimentoindividualchild">FichaAtendimentoIndividualChild</a>.</p>
 
 <h3 id="3-uuidficha">#3 uuidFicha</h3>
 
@@ -317,9 +317,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> É recomendado concatenar o CNES na frente do UUID, de modo que os 7 dígitos (CNES) + 1 de hífen somados aos 36 (32 caracteres + 4 hífen) do UUID são a limitação de 44 bytes do campo. Formato canônico.</p>
+<p><strong>Regra:</strong> É recomendado concatenar o CNES na frente do UUID, de modo que os 7 dígitos (CNES) + 1 de hífen somados aos 36 (32 caracteres + 4 hífen) do UUID são a limitação de 44 bytes do campo. Formato canônico.</p>
 
-<p><strong>Referências:</strong> Para ver a referência sobre o UUID, acesse: <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">UUID Wikipedia</a>.</p>
+<p><strong>Referência:</strong> Para ver a referência sobre o UUID, acesse: <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">UUID Wikipedia</a>.</p>
 
 <h3 id="4-tpcdsorigem">#4 tpCdsOrigem</h3>
 
@@ -341,7 +341,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Utilizar valor 3 (sistemas terceiros).</p>
+<p><strong>Regra:</strong> Utilizar valor 3 (sistemas terceiros).</p>
 
 <h2 id="fichaatendimentoindividualchild">FichaAtendimentoIndividualChild</h2>
 
@@ -365,7 +365,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Apenas letras e números são aceitos.</p>
+<p><strong>Regra:</strong> Apenas letras e números são aceitos.</p>
 
 <h3 id="2-cns">#2 cns</h3>
 
@@ -414,9 +414,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Não pode ser posterior à <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a> e anterior à 130 anos a partir da <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>.</p>
+<p><strong>Regra:</strong> Não pode ser posterior à <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a> e anterior à 130 anos a partir da <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>.</p>
 
-<p><strong>Referências:</strong> A data deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
+<p><strong>Referência:</strong> A data deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
 
 <h3 id="4-localdeatendimento">#4 localDeAtendimento</h3>
 
@@ -438,9 +438,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Apenas valores de <code>1</code> a <code>10</code>.</p>
+<p><strong>Regra:</strong> Apenas valores de <code>1</code> a <code>10</code>.</p>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#localdeatendimento">LocalDeAtendimento</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#localdeatendimento">LocalDeAtendimento</a>.</p>
 
 <h3 id="5-sexo">#5 sexo</h3>
 
@@ -462,7 +462,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#sexo">Sexo</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#sexo">Sexo</a>.</p>
 
 <h3 id="6-turno">#6 turno</h3>
 
@@ -484,7 +484,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#turno">Turno</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#turno">Turno</a>.</p>
 
 <h3 id="7-tipoatendimento">#7 tipoAtendimento</h3>
 
@@ -506,9 +506,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Apenas as opções <code>1</code>, <code>2</code>, <code>4</code>, <code>5</code> ou <code>6</code> são aceitas.</p>
+<p><strong>Regra:</strong> Apenas as opções <code>1</code>, <code>2</code>, <code>4</code>, <code>5</code> ou <code>6</code> são aceitas.</p>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#tipodeatendimento">TipoDeAtendimento</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#tipodeatendimento">TipoDeAtendimento</a>.</p>
 
 <h3 id="8-pesoacompanhamentonutricional">#8 pesoAcompanhamentoNutricional</h3>
 
@@ -586,7 +586,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#aleitamentomaterno">AleitamentoMaterno</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#aleitamentomaterno">AleitamentoMaterno</a>.</p>
 
 <h3 id="11-dumdagestante">#11 dumDaGestante</h3>
 
@@ -615,7 +615,7 @@
 <li>Não pode ser superior à <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>.</li>
 </ul>
 
-<p><strong>Referências:</strong> <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch Wikipedia</a> em milissegundos.</p>
+<p><strong>Referência:</strong> <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch Wikipedia</a> em milissegundos.</p>
 
 <h3 id="12-idadegestacional">#12 idadeGestacional</h3>
 
@@ -664,9 +664,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Apenas valores de <code>1</code> a <code>3</code>.</p>
+<p><strong>Regra:</strong> Apenas valores de <code>1</code> a <code>3</code>.</p>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#modalidadead">ModalidadeAD</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#modalidadead">ModalidadeAD</a>.</p>
 
 <h3 id="14-problemacondicaoavaliada">#14 problemaCondicaoAvaliada</h3>
 
@@ -688,7 +688,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Referências:</strong> <a href="#problemacondicaoavaliacaoai">ProblemaCondicaoAvaliacaoAI</a>.</p>
+<p><strong>Referência:</strong> <a href="#problemacondicaoavaliacaoai">ProblemaCondicaoAvaliacaoAI</a>.</p>
 
 <h3 id="17-exame">#17 exame</h3>
 
@@ -710,7 +710,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Referências:</strong> <a href="#exame">Exames</a>.</p>
+<p><strong>Referência:</strong> <a href="#exame">Exames</a>.</p>
 
 <h3 id="18-vacinaemdia">#18 vacinaEmDia</h3>
 
@@ -772,7 +772,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#nasf">Nasf</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#nasf">Nasf</a>.</p>
 
 <h3 id="21-condutas">#21 condutas</h3>
 
@@ -794,9 +794,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Não deve conter duas condutas iguais.</p>
+<p><strong>Regra:</strong> Não deve conter duas condutas iguais.</p>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#condutaencaminhamento">CondutaEncaminhamento</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#condutaencaminhamento">CondutaEncaminhamento</a>.</p>
 
 <h3 id="22-stgravidezplanejada">#22 stGravidezPlanejada</h3>
 
@@ -818,7 +818,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Não pode ser preenchido quando <a href="#5-sexo">Sexo</a> = <code>0 (masculino)</code>.</p>
+<p><strong>Regra:</strong> Não pode ser preenchido quando <a href="#5-sexo">Sexo</a> = <code>0 (masculino)</code>.</p>
 
 <h3 id="23-nugestasprevias">#23 nuGestasPrevias</h3>
 
@@ -840,7 +840,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Não pode ser preenchido quando <a href="#5-sexo">Sexo</a> = <code>0 (masculino)</code>.</p>
+<p><strong>Regra:</strong> Não pode ser preenchido quando <a href="#5-sexo">Sexo</a> = <code>0 (masculino)</code>.</p>
 
 <h3 id="24-nupartos">#24 nuPartos</h3>
 
@@ -862,7 +862,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Não pode ser preenchido quando <a href="#5-sexo">Sexo</a> = <code>0 (masculino)</code>.</p>
+<p><strong>Regra:</strong> Não pode ser preenchido quando <a href="#5-sexo">Sexo</a> = <code>0 (masculino)</code>.</p>
 
 <h3 id="25-racionalidadesaude">#25 racionalidadeSaude</h3>
 
@@ -884,7 +884,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#racionalidadesaude">racionalidadeSaude</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#racionalidadesaude">racionalidadeSaude</a>.</p>
 
 <h3 id="26-perimetrocefalico">#26 perimetroCefalico</h3>
 
@@ -941,7 +941,7 @@
 <li>Não pode ser posterior à <a href="#28-datahorafinalatendimento">dataHoraFinalAtendimento</a> e à data atual.</li>
 </ul>
 
-<p><strong>Referências:</strong> Deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
+<p><strong>Referência:</strong> Deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
 
 <h3 id="28-datahorafinalatendimento">#28 dataHoraFinalAtendimento</h3>
 
@@ -970,7 +970,7 @@
 <li>Não pode ser posterior à data atual.</li>
 </ul>
 
-<p><strong>Referências:</strong> Deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
+<p><strong>Referência:</strong> Deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
 
 <h3 id="29-cpfcidadao">#29 cpfCidadao</h3>
 
@@ -1031,14 +1031,14 @@
 <p><strong>Referências:</strong></p>
 
 <ul>
-<li>Tabela do SIGTAP, competência 02/2019 disponível em: <a href="http://sigtap.datasus.gov.br/tabela-unificada/app/sec/procedimento/publicados/consultar">Tabela Unificada SIGTAP</a>;</li>
+<li>Tabela do SIGTAP, competência 09/2020 disponível em: <a href="http://sigtap.datasus.gov.br/tabela-unificada/app/sec/procedimento/publicados/consultar">Tabela Unificada SIGTAP</a>;</li>
 <li><a href="#listaexames">ListaExames</a>.</li>
 </ul>
 
 <p>Observações:</p>
 
 <ul>
-<li>Inserir o código do exame SIGTAP sem ponto ou hífen, ex: <code>0201010010</code>;</li>
+<li>Inserir o código do exame SIGTAP sem ponto ou hífen, ex: <code>0214010015</code>;</li>
 <li>Inserir o código do exame AB em caracteres maiúsculos, sem espaços, ex: <code>ABEX022</code>.</li>
 </ul>
 
@@ -1062,7 +1062,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#situacaoexame">SituacaoExame</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#situacaoexame">SituacaoExame</a>.</p>
 
 <h2 id="problemacondicaoavaliacaoai">ProblemaCondicaoAvaliacaoAI</h2>
 
@@ -1484,7 +1484,7 @@
 </tr>
 </tbody></table>
 
-<p><em>* Procedimentos pertencentes a competência <strong>02/2019</strong> do SIGTAP.</em></p>
+<p><em>* Procedimentos pertencentes a competência <strong>09/2020</strong> do SIGTAP.</em></p>
 
   </article>
 

@@ -25,7 +25,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 4.0.3</span>
+        <span class="label">versão 4.0.4</span>
       
     </a>
 
@@ -75,7 +75,7 @@
           
         
           
-            <li><a title="Layout e-SUS APS de Dados e Interface Versão 4.0.3" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 4.0.3</a></li>
+            <li><a title="Layout e-SUS APS de Dados e Interface Versão 4.0.4" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 4.0.4</a></li>
           
         
           
@@ -115,9 +115,9 @@
   <ul>
     
       <li>
-        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 4.0.3" href="/ledi/documentacao/index.html" class="back-link">
+        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 4.0.4" href="/ledi/documentacao/index.html" class="back-link">
           <i class="icon icon-back"></i> Voltar
-          <small>(Layout e-SUS APS de Dados e Interface Versão 4.0.3)</small>
+          <small>(Layout e-SUS APS de Dados e Interface Versão 4.0.4)</small>
         </a>
       </li>
     
@@ -243,7 +243,7 @@
     <p class="post-meta">
       <a class="btn" href="/pdf.html?include=/ledi/documentacao/estrutura_arquivos/dicionario-fp.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 10/01/2020</span>
+        <span class="label" title="Data da última modificação">Alterado em 17/12/2020</span>
       
     </p>
   </header>
@@ -271,9 +271,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> É recomendado concatenar o CNES na frente do UUID, de modo que os 7 dígitos (CNES) + 1 de hífen somados aos 36 (32 caracteres + 4 hífen) do UUID são a limitação de 44 bytes do campo. Formato canônico.</p>
+<p><strong>Regra:</strong> É recomendado concatenar o CNES na frente do UUID, de modo que os 7 dígitos (CNES) + 1 de hífen somados aos 36 (32 caracteres + 4 hífen) do UUID são a limitação de 44 bytes do campo. Formato canônico.</p>
 
-<p><strong>Referências:</strong> Para ver a referência sobre o UUID, acesse <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">UUID Wikipedia</a>.</p>
+<p><strong>Referência:</strong> Para ver a referência sobre o UUID, acesse <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">UUID Wikipedia</a>.</p>
 
 <h3 id="2-tpcdsorigem">#2 tpCdsOrigem</h3>
 
@@ -295,7 +295,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Utilizar valor <code>3 (sistemas terceiros)</code>.</p>
+<p><strong>Regra:</strong> Utilizar valor <code>3 (sistemas terceiros)</code>.</p>
 
 <h3 id="3-headertransport">#3 headerTransport</h3>
 
@@ -317,9 +317,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Somente as CBOs apresentadas na <a href="/ledi/documentacao/regras/cbo.html#ficha-de-procedimentos">Tabela 6 - CBOs que podem registrar ficha de procedimento</a> podem ser adicionadas no campo CBO do profissional.</p>
+<p><strong>Regra:</strong> Somente as CBOs apresentadas na <a href="/ledi/documentacao/regras/cbo.html#ficha-de-procedimentos">Tabela 6 - CBOs que podem registrar ficha de procedimento</a> podem ser adicionadas no campo CBO do profissional.</p>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#unicalotacaoheader">UnicaLotacaoHeader</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#unicalotacaoheader">UnicaLotacaoHeader</a>.</p>
 
 <h3 id="4-atendprocedimentos">#4 atendProcedimentos</h3>
 
@@ -341,9 +341,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Referências:</strong> <a href="#fichaprocedimentochild">FichaProcedimentoChild</a>.</p>
+<p><strong>Referência:</strong> <a href="#fichaprocedimentochild">FichaProcedimentoChild</a>.</p>
 
-<p>Observação: É requerido pelo menos um dentre os itens <code>#4</code> a <code>#11</code>.</p>
+<p><strong>Observação:</strong> É requerido pelo menos um dentre os itens <code>#4</code> a <code>#11</code>.</p>
 
 <h3 id="5-numtotalafericaopa">#5 numTotalAfericaoPa</h3>
 
@@ -583,7 +583,7 @@
 <li>Não pode ser preenchido se o campo <a href="#12-cpfcidadao">cpfCidadao</a> for preenchido.</li>
 </ul>
 
-<p><strong>Referências:</strong> O algoritmo de validação está presente em <a href="/ledi/documentacao/regras/algoritmo_CNS.html">Validar CNS</a>.</p>
+<p><strong>Referência:</strong> O algoritmo de validação está presente em <a href="/ledi/documentacao/regras/algoritmo_CNS.html">Validar CNS</a>.</p>
 
 <h3 id="3-dtnascimento">#3 dtNascimento</h3>
 
@@ -607,7 +607,7 @@
 
 <p><strong>Regras:</strong> Não pode ser posterior à <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a> e anterior a 130 anos a partir da <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>.</p>
 
-<p><strong>Referências:</strong> A data deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos . Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
+<p><strong>Referência:</strong> A data deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos . Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
 
 <h3 id="4-sexo">#4 sexo</h3>
 
@@ -629,7 +629,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#sexo">Sexo</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#sexo">Sexo</a>.</p>
 
 <h3 id="5-localatendimento">#5 localAtendimento</h3>
 
@@ -651,9 +651,9 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> Apenas valores de <code>1</code> a <code>10</code>.</p>
+<p><strong>Regra:</strong> Apenas valores de <code>1</code> a <code>10</code>.</p>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#localdeatendimento">LocalDeAtendimento</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#localdeatendimento">LocalDeAtendimento</a>.</p>
 
 <h3 id="6-turno">#6 turno</h3>
 
@@ -675,7 +675,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#turno">Turno</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#turno">Turno</a>.</p>
 
 <h3 id="7-statusescutainicialorientacao">#7 statusEscutaInicialOrientacao</h3>
 
@@ -729,15 +729,15 @@
 <p><strong>Referências:</strong></p>
 
 <ul>
-<li>Tabela do SIGTAP, competência 02/2019 disponível em: <a href="http://sigtap.datasus.gov.br/tabela-unificada/app/sec/procedimento/publicados/consultar">Tabela Unificada SIGTAP</a>;</li>
+<li>Tabela do SIGTAP, competência 09/2020 disponível em: <a href="http://sigtap.datasus.gov.br/tabela-unificada/app/sec/procedimento/publicados/consultar">Tabela Unificada SIGTAP</a>;</li>
 <li><a href="#procedimentos-da-ficha">Procedimentos da Ficha</a>.</li>
 </ul>
 
-<p>Observação:</p>
+<p><strong>Observações:</strong></p>
 
 <ul>
-<li>Inserir o código do procedimento SIGTAP sem ponto ou hífen, ex: <code>0201010010</code>;</li>
-<li>Inserir o código do procedimento AB em caracteres maiúsculos, sem espaços, ex: <code>ABPG040</code>.</li>
+<li>Inserir o código do procedimento SIGTAP sem ponto ou hífen, ex: <code>0214010015</code>;</li>
+<li>Inserir o código do procedimento AB em caracteres maiúsculos, sem espaços, ex: <code>ABEX022</code>.</li>
 </ul>
 
 <h3 id="10-datahorainicialatendimento">#10 dataHoraInicialAtendimento</h3>
@@ -767,7 +767,7 @@
 <li>Não pode ser posterior à <a href="#11-datahorafinalatendimento">dataHoraFinalAtendimento</a> e à data atual.</li>
 </ul>
 
-<p><strong>Referências:</strong> Deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
+<p><strong>Referência:</strong> Deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
 
 <h3 id="11-datahorafinalatendimento">#11 dataHoraFinalAtendimento</h3>
 
@@ -796,7 +796,7 @@
 <li>Não pode ser posterior à data atual.</li>
 </ul>
 
-<p><strong>Referências:</strong> Deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
+<p><strong>Referência:</strong> Deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
 
 <h3 id="12-cpfcidadao">#12 cpfCidadao</h3>
 
@@ -865,7 +865,7 @@
 <td>ABPG006</td>
 </tr>
 <tr>
-<td>04.01.01.002-3</td>
+<td>03.01.10.027-6</td>
 <td>Curativo especial</td>
 <td>ABPG007</td>
 </tr>
@@ -950,7 +950,7 @@
 <td>ABPG022</td>
 </tr>
 <tr>
-<td>Não possui</td>
+<td>02.14.01.015-5</td>
 <td>Teste rápido para dosagem de proteinúria</td>
 <td>ABPG040</td>
 </tr>
@@ -970,17 +970,17 @@
 <td>ABPG026</td>
 </tr>
 <tr>
-<td>03.01.10.002-0</td>
+<td>03.01.10.021-7</td>
 <td>Administração de medicamentos via Oral</td>
 <td>ABPG027</td>
 </tr>
 <tr>
-<td>03.01.10.002-0</td>
+<td>03.01.10.020-9</td>
 <td>Administração de medicamentos via Intramuscular</td>
 <td>ABPG028</td>
 </tr>
 <tr>
-<td>03.01.10.002-0</td>
+<td>03.01.10.019-5</td>
 <td>Administração de medicamentos via Endovenosa</td>
 <td>ABPG029</td>
 </tr>
@@ -990,43 +990,43 @@
 <td>ABPG030</td>
 </tr>
 <tr>
-<td>03.01.10.002-0</td>
+<td>03.01.10.023-3</td>
 <td>Administração de medicamentos via Tópica</td>
 <td>ABPG031</td>
 </tr>
 <tr>
-<td>03.01.10.002-0</td>
+<td>03.01.10.024-1</td>
 <td>Administração de Penicilina para tratamento de sífilis</td>
 <td>ABPG032</td>
 </tr>
 <tr>
-<td>03.01.10.002-0</td>
+<td>03.01.10.022-5</td>
 <td>Administração de medicamentos via Subcutânea (SC)</td>
 <td>ABPG041</td>
 </tr>
 <tr>
-<td>04.01.01.002-3</td>
+<td>03.01.10.028-4</td>
 <td>Curativo simples</td>
 <td>ABPG035</td>
 </tr>
 <tr>
-<td>Não possui</td>
+<td>03.01.10.025-0</td>
 <td>Aferição de temperatura</td>
 <td>ABPG034</td>
 </tr>
 <tr>
-<td>Não possui</td>
+<td>01.01.04.007-5</td>
 <td>Medição de altura</td>
 <td>ABPG038</td>
 </tr>
 <tr>
-<td>Não possui</td>
+<td>01.01.04.008-3</td>
 <td>Medição de peso</td>
 <td>ABPG039</td>
 </tr>
 </tbody></table>
 
-<p><em>* Procedimentos pertencentes a competência <strong>02/2019</strong> do SIGTAP.</em></p>
+<p><em>* Procedimentos pertencentes a competência <strong>09/2020</strong> do SIGTAP.</em></p>
 
   </article>
 

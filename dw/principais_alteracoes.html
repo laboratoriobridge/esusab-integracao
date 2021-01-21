@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Data Warehouse Relatórios e-SUS APS PEC</title>
-  <meta name="description" content="Esta seção descreve a estrutura de Data Warehouse (DW) onde são armazenados os dados para a geração dos relatórios.">
+  <title>Principais alterações entre versões</title>
+  <meta name="description" content="Este documento relata as principais alterações entre as versões do DW.">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="/dw/">
+  <link rel="canonical" href="/dw/principais_alteracoes.html">
   <link rel="icon" type="image/png" href="/img/logo-esus.png">
 </head>
 
@@ -74,6 +74,10 @@
             <li><a title="Data Warehouse Relatórios e-SUS APS PEC" href="/dw/index.html">Data Warehouse Relatórios e-SUS APS PEC</a></li>
           
         
+          
+            <li><a title="Principais alterações entre versões" href="/dw/principais_alteracoes.html">Principais alterações entre versões</a></li>
+          
+        
 
       
     </ol>
@@ -114,7 +118,7 @@
       <a class="open" title="Data Warehouse Relatórios e-SUS APS PEC" href="/dw/index.html">Data Warehouse Relatórios e-SUS APS PEC</a>
       <ul>
         
-          <li >
+          <li class="active">
           
             <a title="Principais alterações entre versões" href="/dw/principais_alteracoes.html">
               Principais alterações entre versões
@@ -150,9 +154,9 @@
           <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Data Warehouse Relatórios e-SUS APS PEC</h1>
+    <h1 class="post-title">Principais alterações entre versões</h1>
     <p class="post-meta">
-      <a class="btn" href="/pdf.html?include=/dw/index.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
+      <a class="btn" href="/pdf.html?include=/dw/principais_alteracoes.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
         <span class="label" title="Data da última modificação">Alterado em 21/01/2021</span>
       
@@ -160,15 +164,42 @@
   </header>
 
   <article class="post-content">
-    <p>Esta seção descreve a estrutura de Data Warehouse (DW) onde são armazenados os dados para a geração dos relatórios.</p>
+    <p>Este documento relata as principais alterações entre as versões do DW.</p>
 
-<p>O DW é uma base de dados contendo vários componentes. Possui uma arquitetura multidimensional, onde encontram-se as <a href="/dw/dimensoes.html">Dimensões</a> e <a href="/dw/fatos/index.html">Fatos</a>. Estas estruturas são alguns dos elementos do DW, são dependentes entre si e permitem o armazenamento dos dados.</p>
+<h3 id="1-principais-altera-es-da-v4-0-0-para-a-v4-1-2">1. Principais alterações da v4.0.0 para a v4.1.2:</h3>
 
-<p>Através de um sistema de <a href="https://pt.wikipedia.org/wiki/Extract,_transform,_load">ETL</a>, as informações são extraídas de arquivos conforme descritos na estrutura <a href="/ledi/index.html">Layout e-SUS APS de Dados e Interface</a> e armazenadas nas tabelas Fatos e Dimensões.</p>
+<p><strong>1. </strong> No contexto de <a href="/dw/fatos/atendimento_individual.html">Atendimento individual</a> foram incluídas as estruturas de dados para registro das informações de prescrição de medicamentos e encaminhamentos. Estas informações estão armazenadas nas tabelas:</p>
 
-<p>As Dimensões possuem características descritivas dentro do DW. São responsáveis por qualificar as informações provenientes das tabelas Fatos. As tabelas Fatos possuem características quantitativa dentro do DW. A partir delas, são extraídas métricas que são cruzadas com os dados das Dimensões, gerando informações significativas para a avaliação do usuário. Todos os dados históricos no DW ficam armazenadas nas tabelas Fatos.</p>
+<ul>
+<li><code>tb_fat_atd_ind_medicamentos</code>;</li>
+<li><code>tb_fat_atd_ind_encaminhamentos</code>.</li>
+</ul>
 
-<p>Com exceção dos relatórios Operacionais, todos os outros modelos de relatórios do e-SUS APS PEC utilizam esta estrutura de Data Warehouse.</p>
+<p><strong>2. </strong> No contexto de <a href="/dw/fatos/atendimento_odontologico_individual.html">Atendimento odontológico individual</a> foram incluídas as estruturas de dados para registro das informações de prescrição de medicamentos e encaminhamentos. Estas informações estão armazenadas nas tabelas:</p>
+
+<ul>
+<li><code>tb_fat_atend_odonto_medicamentos</code>;</li>
+<li><code>tb_fat_atend_odonto_encaminhamentos</code>.</li>
+</ul>
+
+<p><strong>3. </strong> No contexto de <a href="/dw/fatos/visita_domiciliar.html">Visita domiciliar</a> foram adicionados os campos <code>nu_medicao_pressao_arterial</code>, <code>nu_medicao_temperatura</code>, <code>co_dim_tipo_glicemia</code> e <code>nu_medicao_glicemia</code>. Além destes campos, também foi criada a tabela de dimensão <a href="/dw/dimensoes.html#tb\_dim\_tipo\_glicemia">tb_dim_tipo_glicemia</a>.</p>
+
+<p><strong>4. </strong> Para contextualizar as informações das tabelas <code>tb_fat_atd_ind_medicamentos</code> e <code>tb_fat_atend_odonto_medicamentos</code>, foram criadas as seguintes tabelas de dimensões:</p>
+
+<ul>
+<li><a href="/dw/dimensoes.html#tb\_dim\_catmat">tb_dim_catmat</a>;</li>
+<li><a href="/dw/dimensoes.html#tb\_dim\_via\_administracao">tb_dim_via_administracao</a>;</li>
+<li><a href="/dw/dimensoes.html#tb\_dim\_dose\_frequencia">tb_dim_dose_frequencia</a>;</li>
+<li><a href="/dw/dimensoes.html#tb\_dim\_dose\_frequencia\_medida">tb_dim_dose_frequencia_medida</a>;</li>
+<li><a href="/dw/dimensoes.html#tb\_dim\_duracao\_tratamento\_med">tb_dim_duracao_tratamento_med</a>.</li>
+</ul>
+
+<p><strong>5. </strong> Para contextualizar as informações das tabelas <code>tb_fat_atd_ind_encaminhamentos</code> e <code>tb_fat_atend_odonto_encaminhamentos</code>, foram criadas as seguintes tabelas de dimensões:</p>
+
+<ul>
+<li><a href="/dw/dimensoes.html#tb\_dim\_especialidade">tb_dim_especialidade</a>;</li>
+<li><a href="/dw/dimensoes.html#tb\_dim\_classificacao\_risc\_enc">tb_dim_classificacao_risc_enc</a>.</li>
+</ul>
 
   </article>
 

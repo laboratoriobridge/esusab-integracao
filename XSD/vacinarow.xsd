@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://esus.ufsc.br/vacinarow" version="1.0">
-
   <xs:complexType name="vacinaRowTransport">
     <xs:sequence>
       <xs:element maxOccurs="1" minOccurs="0" name="imunobiologico" type="xs:long"/>
@@ -8,6 +7,7 @@
       <xs:element maxOccurs="1" minOccurs="0" name="dose" type="xs:long"/>
       <xs:element maxOccurs="1" minOccurs="0" name="lote" type="xs:string"/>
       <xs:element maxOccurs="1" minOccurs="0" name="fabricante" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="grupoAtendimento" type="xs:long"/>
     </xs:sequence>
   </xs:complexType>
 </xs:schema>

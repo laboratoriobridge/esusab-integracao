@@ -4,10 +4,11 @@
 package atividadecoletiva
 
 import (
-	"br/gov/saude/esusab/ras/common"
 	"bytes"
 	"fmt"
 	"git.apache.org/thrift.git/lib/go/thrift"
+	"br/gov/saude/esusab/ras/common"
+
 )
 
 // (needed to ensure safety because of naive import list construction.)
@@ -16,7 +17,7 @@ var _ = fmt.Printf
 var _ = bytes.Equal
 
 var _ = common.GoUnusedProtection__
-var GoUnusedProtection__ int
+var GoUnusedProtection__ int;
 
 // Attributes:
 //  - CnsParticipante
@@ -29,611 +30,528 @@ var GoUnusedProtection__ int
 //  - Sexo
 //  - CpfParticipante
 type ParticipanteRowItemThrift struct {
-	CnsParticipante   *string  `thrift:"cnsParticipante,1" json:"cnsParticipante,omitempty"`
-	DataNascimento    *int64   `thrift:"dataNascimento,2" json:"dataNascimento,omitempty"`
-	AvaliacaoAlterada *bool    `thrift:"avaliacaoAlterada,3" json:"avaliacaoAlterada,omitempty"`
-	Peso              *float64 `thrift:"peso,4" json:"peso,omitempty"`
-	Altura            *float64 `thrift:"altura,5" json:"altura,omitempty"`
-	CessouHabitoFumar *bool    `thrift:"cessouHabitoFumar,6" json:"cessouHabitoFumar,omitempty"`
-	AbandonouGrupo    *bool    `thrift:"abandonouGrupo,7" json:"abandonouGrupo,omitempty"`
-	Sexo              *int64   `thrift:"sexo,8" json:"sexo,omitempty"`
-	CpfParticipante   *string  `thrift:"cpfParticipante,9" json:"cpfParticipante,omitempty"`
+  CnsParticipante *string `thrift:"cnsParticipante,1" json:"cnsParticipante,omitempty"`
+  DataNascimento *int64 `thrift:"dataNascimento,2" json:"dataNascimento,omitempty"`
+  AvaliacaoAlterada *bool `thrift:"avaliacaoAlterada,3" json:"avaliacaoAlterada,omitempty"`
+  Peso *float64 `thrift:"peso,4" json:"peso,omitempty"`
+  Altura *float64 `thrift:"altura,5" json:"altura,omitempty"`
+  CessouHabitoFumar *bool `thrift:"cessouHabitoFumar,6" json:"cessouHabitoFumar,omitempty"`
+  AbandonouGrupo *bool `thrift:"abandonouGrupo,7" json:"abandonouGrupo,omitempty"`
+  Sexo *int64 `thrift:"sexo,8" json:"sexo,omitempty"`
+  CpfParticipante *string `thrift:"cpfParticipante,9" json:"cpfParticipante,omitempty"`
 }
 
 func NewParticipanteRowItemThrift() *ParticipanteRowItemThrift {
-	return &ParticipanteRowItemThrift{}
+  return &ParticipanteRowItemThrift{}
 }
 
 var ParticipanteRowItemThrift_CnsParticipante_DEFAULT string
-
 func (p *ParticipanteRowItemThrift) GetCnsParticipante() string {
-	if !p.IsSetCnsParticipante() {
-		return ParticipanteRowItemThrift_CnsParticipante_DEFAULT
-	}
-	return *p.CnsParticipante
+  if !p.IsSetCnsParticipante() {
+    return ParticipanteRowItemThrift_CnsParticipante_DEFAULT
+  }
+return *p.CnsParticipante
 }
-
 var ParticipanteRowItemThrift_DataNascimento_DEFAULT int64
-
 func (p *ParticipanteRowItemThrift) GetDataNascimento() int64 {
-	if !p.IsSetDataNascimento() {
-		return ParticipanteRowItemThrift_DataNascimento_DEFAULT
-	}
-	return *p.DataNascimento
+  if !p.IsSetDataNascimento() {
+    return ParticipanteRowItemThrift_DataNascimento_DEFAULT
+  }
+return *p.DataNascimento
 }
-
 var ParticipanteRowItemThrift_AvaliacaoAlterada_DEFAULT bool
-
 func (p *ParticipanteRowItemThrift) GetAvaliacaoAlterada() bool {
-	if !p.IsSetAvaliacaoAlterada() {
-		return ParticipanteRowItemThrift_AvaliacaoAlterada_DEFAULT
-	}
-	return *p.AvaliacaoAlterada
+  if !p.IsSetAvaliacaoAlterada() {
+    return ParticipanteRowItemThrift_AvaliacaoAlterada_DEFAULT
+  }
+return *p.AvaliacaoAlterada
 }
-
 var ParticipanteRowItemThrift_Peso_DEFAULT float64
-
 func (p *ParticipanteRowItemThrift) GetPeso() float64 {
-	if !p.IsSetPeso() {
-		return ParticipanteRowItemThrift_Peso_DEFAULT
-	}
-	return *p.Peso
+  if !p.IsSetPeso() {
+    return ParticipanteRowItemThrift_Peso_DEFAULT
+  }
+return *p.Peso
 }
-
 var ParticipanteRowItemThrift_Altura_DEFAULT float64
-
 func (p *ParticipanteRowItemThrift) GetAltura() float64 {
-	if !p.IsSetAltura() {
-		return ParticipanteRowItemThrift_Altura_DEFAULT
-	}
-	return *p.Altura
+  if !p.IsSetAltura() {
+    return ParticipanteRowItemThrift_Altura_DEFAULT
+  }
+return *p.Altura
 }
-
 var ParticipanteRowItemThrift_CessouHabitoFumar_DEFAULT bool
-
 func (p *ParticipanteRowItemThrift) GetCessouHabitoFumar() bool {
-	if !p.IsSetCessouHabitoFumar() {
-		return ParticipanteRowItemThrift_CessouHabitoFumar_DEFAULT
-	}
-	return *p.CessouHabitoFumar
+  if !p.IsSetCessouHabitoFumar() {
+    return ParticipanteRowItemThrift_CessouHabitoFumar_DEFAULT
+  }
+return *p.CessouHabitoFumar
 }
-
 var ParticipanteRowItemThrift_AbandonouGrupo_DEFAULT bool
-
 func (p *ParticipanteRowItemThrift) GetAbandonouGrupo() bool {
-	if !p.IsSetAbandonouGrupo() {
-		return ParticipanteRowItemThrift_AbandonouGrupo_DEFAULT
-	}
-	return *p.AbandonouGrupo
+  if !p.IsSetAbandonouGrupo() {
+    return ParticipanteRowItemThrift_AbandonouGrupo_DEFAULT
+  }
+return *p.AbandonouGrupo
 }
-
 var ParticipanteRowItemThrift_Sexo_DEFAULT int64
-
 func (p *ParticipanteRowItemThrift) GetSexo() int64 {
-	if !p.IsSetSexo() {
-		return ParticipanteRowItemThrift_Sexo_DEFAULT
-	}
-	return *p.Sexo
+  if !p.IsSetSexo() {
+    return ParticipanteRowItemThrift_Sexo_DEFAULT
+  }
+return *p.Sexo
 }
-
 var ParticipanteRowItemThrift_CpfParticipante_DEFAULT string
-
 func (p *ParticipanteRowItemThrift) GetCpfParticipante() string {
-	if !p.IsSetCpfParticipante() {
-		return ParticipanteRowItemThrift_CpfParticipante_DEFAULT
-	}
-	return *p.CpfParticipante
+  if !p.IsSetCpfParticipante() {
+    return ParticipanteRowItemThrift_CpfParticipante_DEFAULT
+  }
+return *p.CpfParticipante
 }
 func (p *ParticipanteRowItemThrift) IsSetCnsParticipante() bool {
-	return p.CnsParticipante != nil
+  return p.CnsParticipante != nil
 }
 
 func (p *ParticipanteRowItemThrift) IsSetDataNascimento() bool {
-	return p.DataNascimento != nil
+  return p.DataNascimento != nil
 }
 
 func (p *ParticipanteRowItemThrift) IsSetAvaliacaoAlterada() bool {
-	return p.AvaliacaoAlterada != nil
+  return p.AvaliacaoAlterada != nil
 }
 
 func (p *ParticipanteRowItemThrift) IsSetPeso() bool {
-	return p.Peso != nil
+  return p.Peso != nil
 }
 
 func (p *ParticipanteRowItemThrift) IsSetAltura() bool {
-	return p.Altura != nil
+  return p.Altura != nil
 }
 
 func (p *ParticipanteRowItemThrift) IsSetCessouHabitoFumar() bool {
-	return p.CessouHabitoFumar != nil
+  return p.CessouHabitoFumar != nil
 }
 
 func (p *ParticipanteRowItemThrift) IsSetAbandonouGrupo() bool {
-	return p.AbandonouGrupo != nil
+  return p.AbandonouGrupo != nil
 }
 
 func (p *ParticipanteRowItemThrift) IsSetSexo() bool {
-	return p.Sexo != nil
+  return p.Sexo != nil
 }
 
 func (p *ParticipanteRowItemThrift) IsSetCpfParticipante() bool {
-	return p.CpfParticipante != nil
+  return p.CpfParticipante != nil
 }
 
 func (p *ParticipanteRowItemThrift) Read(iprot thrift.TProtocol) error {
-	if _, err := iprot.ReadStructBegin(); err != nil {
-		return thrift.PrependError(fmt.Sprintf("%T read error: ", p), err)
-	}
+  if _, err := iprot.ReadStructBegin(); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T read error: ", p), err)
+  }
 
-	for {
-		_, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
-		if err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T field %d read error: ", p, fieldId), err)
-		}
-		if fieldTypeId == thrift.STOP {
-			break
-		}
-		switch fieldId {
-		case 1:
-			if err := p.readField1(iprot); err != nil {
-				return err
-			}
-		case 2:
-			if err := p.readField2(iprot); err != nil {
-				return err
-			}
-		case 3:
-			if err := p.readField3(iprot); err != nil {
-				return err
-			}
-		case 4:
-			if err := p.readField4(iprot); err != nil {
-				return err
-			}
-		case 5:
-			if err := p.readField5(iprot); err != nil {
-				return err
-			}
-		case 6:
-			if err := p.readField6(iprot); err != nil {
-				return err
-			}
-		case 7:
-			if err := p.readField7(iprot); err != nil {
-				return err
-			}
-		case 8:
-			if err := p.readField8(iprot); err != nil {
-				return err
-			}
-		case 9:
-			if err := p.readField9(iprot); err != nil {
-				return err
-			}
-		default:
-			if err := iprot.Skip(fieldTypeId); err != nil {
-				return err
-			}
-		}
-		if err := iprot.ReadFieldEnd(); err != nil {
-			return err
-		}
-	}
-	if err := iprot.ReadStructEnd(); err != nil {
-		return thrift.PrependError(fmt.Sprintf("%T read struct end error: ", p), err)
-	}
-	return nil
+
+  for {
+    _, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
+    if err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T field %d read error: ", p, fieldId), err)
+    }
+    if fieldTypeId == thrift.STOP { break; }
+    switch fieldId {
+    case 1:
+      if err := p.readField1(iprot); err != nil {
+        return err
+      }
+    case 2:
+      if err := p.readField2(iprot); err != nil {
+        return err
+      }
+    case 3:
+      if err := p.readField3(iprot); err != nil {
+        return err
+      }
+    case 4:
+      if err := p.readField4(iprot); err != nil {
+        return err
+      }
+    case 5:
+      if err := p.readField5(iprot); err != nil {
+        return err
+      }
+    case 6:
+      if err := p.readField6(iprot); err != nil {
+        return err
+      }
+    case 7:
+      if err := p.readField7(iprot); err != nil {
+        return err
+      }
+    case 8:
+      if err := p.readField8(iprot); err != nil {
+        return err
+      }
+    case 9:
+      if err := p.readField9(iprot); err != nil {
+        return err
+      }
+    default:
+      if err := iprot.Skip(fieldTypeId); err != nil {
+        return err
+      }
+    }
+    if err := iprot.ReadFieldEnd(); err != nil {
+      return err
+    }
+  }
+  if err := iprot.ReadStructEnd(); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T read struct end error: ", p), err)
+  }
+  return nil
 }
 
-func (p *ParticipanteRowItemThrift) readField1(iprot thrift.TProtocol) error {
-	if v, err := iprot.ReadString(); err != nil {
-		return thrift.PrependError("error reading field 1: ", err)
-	} else {
-		p.CnsParticipante = &v
-	}
-	return nil
+func (p *ParticipanteRowItemThrift)  readField1(iprot thrift.TProtocol) error {
+  if v, err := iprot.ReadString(); err != nil {
+  return thrift.PrependError("error reading field 1: ", err)
+} else {
+  p.CnsParticipante = &v
+}
+  return nil
 }
 
-func (p *ParticipanteRowItemThrift) readField2(iprot thrift.TProtocol) error {
-	if v, err := iprot.ReadI64(); err != nil {
-		return thrift.PrependError("error reading field 2: ", err)
-	} else {
-		p.DataNascimento = &v
-	}
-	return nil
+func (p *ParticipanteRowItemThrift)  readField2(iprot thrift.TProtocol) error {
+  if v, err := iprot.ReadI64(); err != nil {
+  return thrift.PrependError("error reading field 2: ", err)
+} else {
+  p.DataNascimento = &v
+}
+  return nil
 }
 
-func (p *ParticipanteRowItemThrift) readField3(iprot thrift.TProtocol) error {
-	if v, err := iprot.ReadBool(); err != nil {
-		return thrift.PrependError("error reading field 3: ", err)
-	} else {
-		p.AvaliacaoAlterada = &v
-	}
-	return nil
+func (p *ParticipanteRowItemThrift)  readField3(iprot thrift.TProtocol) error {
+  if v, err := iprot.ReadBool(); err != nil {
+  return thrift.PrependError("error reading field 3: ", err)
+} else {
+  p.AvaliacaoAlterada = &v
+}
+  return nil
 }
 
-func (p *ParticipanteRowItemThrift) readField4(iprot thrift.TProtocol) error {
-	if v, err := iprot.ReadDouble(); err != nil {
-		return thrift.PrependError("error reading field 4: ", err)
-	} else {
-		p.Peso = &v
-	}
-	return nil
+func (p *ParticipanteRowItemThrift)  readField4(iprot thrift.TProtocol) error {
+  if v, err := iprot.ReadDouble(); err != nil {
+  return thrift.PrependError("error reading field 4: ", err)
+} else {
+  p.Peso = &v
+}
+  return nil
 }
 
-func (p *ParticipanteRowItemThrift) readField5(iprot thrift.TProtocol) error {
-	if v, err := iprot.ReadDouble(); err != nil {
-		return thrift.PrependError("error reading field 5: ", err)
-	} else {
-		p.Altura = &v
-	}
-	return nil
+func (p *ParticipanteRowItemThrift)  readField5(iprot thrift.TProtocol) error {
+  if v, err := iprot.ReadDouble(); err != nil {
+  return thrift.PrependError("error reading field 5: ", err)
+} else {
+  p.Altura = &v
+}
+  return nil
 }
 
-func (p *ParticipanteRowItemThrift) readField6(iprot thrift.TProtocol) error {
-	if v, err := iprot.ReadBool(); err != nil {
-		return thrift.PrependError("error reading field 6: ", err)
-	} else {
-		p.CessouHabitoFumar = &v
-	}
-	return nil
+func (p *ParticipanteRowItemThrift)  readField6(iprot thrift.TProtocol) error {
+  if v, err := iprot.ReadBool(); err != nil {
+  return thrift.PrependError("error reading field 6: ", err)
+} else {
+  p.CessouHabitoFumar = &v
+}
+  return nil
 }
 
-func (p *ParticipanteRowItemThrift) readField7(iprot thrift.TProtocol) error {
-	if v, err := iprot.ReadBool(); err != nil {
-		return thrift.PrependError("error reading field 7: ", err)
-	} else {
-		p.AbandonouGrupo = &v
-	}
-	return nil
+func (p *ParticipanteRowItemThrift)  readField7(iprot thrift.TProtocol) error {
+  if v, err := iprot.ReadBool(); err != nil {
+  return thrift.PrependError("error reading field 7: ", err)
+} else {
+  p.AbandonouGrupo = &v
+}
+  return nil
 }
 
-func (p *ParticipanteRowItemThrift) readField8(iprot thrift.TProtocol) error {
-	if v, err := iprot.ReadI64(); err != nil {
-		return thrift.PrependError("error reading field 8: ", err)
-	} else {
-		p.Sexo = &v
-	}
-	return nil
+func (p *ParticipanteRowItemThrift)  readField8(iprot thrift.TProtocol) error {
+  if v, err := iprot.ReadI64(); err != nil {
+  return thrift.PrependError("error reading field 8: ", err)
+} else {
+  p.Sexo = &v
+}
+  return nil
 }
 
-func (p *ParticipanteRowItemThrift) readField9(iprot thrift.TProtocol) error {
-	if v, err := iprot.ReadString(); err != nil {
-		return thrift.PrependError("error reading field 9: ", err)
-	} else {
-		p.CpfParticipante = &v
-	}
-	return nil
+func (p *ParticipanteRowItemThrift)  readField9(iprot thrift.TProtocol) error {
+  if v, err := iprot.ReadString(); err != nil {
+  return thrift.PrependError("error reading field 9: ", err)
+} else {
+  p.CpfParticipante = &v
+}
+  return nil
 }
 
 func (p *ParticipanteRowItemThrift) Write(oprot thrift.TProtocol) error {
-	if err := oprot.WriteStructBegin("ParticipanteRowItemThrift"); err != nil {
-		return thrift.PrependError(fmt.Sprintf("%T write struct begin error: ", p), err)
-	}
-	if err := p.writeField1(oprot); err != nil {
-		return err
-	}
-	if err := p.writeField2(oprot); err != nil {
-		return err
-	}
-	if err := p.writeField3(oprot); err != nil {
-		return err
-	}
-	if err := p.writeField4(oprot); err != nil {
-		return err
-	}
-	if err := p.writeField5(oprot); err != nil {
-		return err
-	}
-	if err := p.writeField6(oprot); err != nil {
-		return err
-	}
-	if err := p.writeField7(oprot); err != nil {
-		return err
-	}
-	if err := p.writeField8(oprot); err != nil {
-		return err
-	}
-	if err := p.writeField9(oprot); err != nil {
-		return err
-	}
-	if err := oprot.WriteFieldStop(); err != nil {
-		return thrift.PrependError("write field stop error: ", err)
-	}
-	if err := oprot.WriteStructEnd(); err != nil {
-		return thrift.PrependError("write struct stop error: ", err)
-	}
-	return nil
+  if err := oprot.WriteStructBegin("ParticipanteRowItemThrift"); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T write struct begin error: ", p), err) }
+  if err := p.writeField1(oprot); err != nil { return err }
+  if err := p.writeField2(oprot); err != nil { return err }
+  if err := p.writeField3(oprot); err != nil { return err }
+  if err := p.writeField4(oprot); err != nil { return err }
+  if err := p.writeField5(oprot); err != nil { return err }
+  if err := p.writeField6(oprot); err != nil { return err }
+  if err := p.writeField7(oprot); err != nil { return err }
+  if err := p.writeField8(oprot); err != nil { return err }
+  if err := p.writeField9(oprot); err != nil { return err }
+  if err := oprot.WriteFieldStop(); err != nil {
+    return thrift.PrependError("write field stop error: ", err) }
+  if err := oprot.WriteStructEnd(); err != nil {
+    return thrift.PrependError("write struct stop error: ", err) }
+  return nil
 }
 
 func (p *ParticipanteRowItemThrift) writeField1(oprot thrift.TProtocol) (err error) {
-	if p.IsSetCnsParticipante() {
-		if err := oprot.WriteFieldBegin("cnsParticipante", thrift.STRING, 1); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field begin error 1:cnsParticipante: ", p), err)
-		}
-		if err := oprot.WriteString(string(*p.CnsParticipante)); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T.cnsParticipante (1) field write error: ", p), err)
-		}
-		if err := oprot.WriteFieldEnd(); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field end error 1:cnsParticipante: ", p), err)
-		}
-	}
-	return err
+  if p.IsSetCnsParticipante() {
+    if err := oprot.WriteFieldBegin("cnsParticipante", thrift.STRING, 1); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field begin error 1:cnsParticipante: ", p), err) }
+    if err := oprot.WriteString(string(*p.CnsParticipante)); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T.cnsParticipante (1) field write error: ", p), err) }
+    if err := oprot.WriteFieldEnd(); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field end error 1:cnsParticipante: ", p), err) }
+  }
+  return err
 }
 
 func (p *ParticipanteRowItemThrift) writeField2(oprot thrift.TProtocol) (err error) {
-	if p.IsSetDataNascimento() {
-		if err := oprot.WriteFieldBegin("dataNascimento", thrift.I64, 2); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field begin error 2:dataNascimento: ", p), err)
-		}
-		if err := oprot.WriteI64(int64(*p.DataNascimento)); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T.dataNascimento (2) field write error: ", p), err)
-		}
-		if err := oprot.WriteFieldEnd(); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field end error 2:dataNascimento: ", p), err)
-		}
-	}
-	return err
+  if p.IsSetDataNascimento() {
+    if err := oprot.WriteFieldBegin("dataNascimento", thrift.I64, 2); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field begin error 2:dataNascimento: ", p), err) }
+    if err := oprot.WriteI64(int64(*p.DataNascimento)); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T.dataNascimento (2) field write error: ", p), err) }
+    if err := oprot.WriteFieldEnd(); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field end error 2:dataNascimento: ", p), err) }
+  }
+  return err
 }
 
 func (p *ParticipanteRowItemThrift) writeField3(oprot thrift.TProtocol) (err error) {
-	if p.IsSetAvaliacaoAlterada() {
-		if err := oprot.WriteFieldBegin("avaliacaoAlterada", thrift.BOOL, 3); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field begin error 3:avaliacaoAlterada: ", p), err)
-		}
-		if err := oprot.WriteBool(bool(*p.AvaliacaoAlterada)); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T.avaliacaoAlterada (3) field write error: ", p), err)
-		}
-		if err := oprot.WriteFieldEnd(); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field end error 3:avaliacaoAlterada: ", p), err)
-		}
-	}
-	return err
+  if p.IsSetAvaliacaoAlterada() {
+    if err := oprot.WriteFieldBegin("avaliacaoAlterada", thrift.BOOL, 3); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field begin error 3:avaliacaoAlterada: ", p), err) }
+    if err := oprot.WriteBool(bool(*p.AvaliacaoAlterada)); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T.avaliacaoAlterada (3) field write error: ", p), err) }
+    if err := oprot.WriteFieldEnd(); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field end error 3:avaliacaoAlterada: ", p), err) }
+  }
+  return err
 }
 
 func (p *ParticipanteRowItemThrift) writeField4(oprot thrift.TProtocol) (err error) {
-	if p.IsSetPeso() {
-		if err := oprot.WriteFieldBegin("peso", thrift.DOUBLE, 4); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field begin error 4:peso: ", p), err)
-		}
-		if err := oprot.WriteDouble(float64(*p.Peso)); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T.peso (4) field write error: ", p), err)
-		}
-		if err := oprot.WriteFieldEnd(); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field end error 4:peso: ", p), err)
-		}
-	}
-	return err
+  if p.IsSetPeso() {
+    if err := oprot.WriteFieldBegin("peso", thrift.DOUBLE, 4); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field begin error 4:peso: ", p), err) }
+    if err := oprot.WriteDouble(float64(*p.Peso)); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T.peso (4) field write error: ", p), err) }
+    if err := oprot.WriteFieldEnd(); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field end error 4:peso: ", p), err) }
+  }
+  return err
 }
 
 func (p *ParticipanteRowItemThrift) writeField5(oprot thrift.TProtocol) (err error) {
-	if p.IsSetAltura() {
-		if err := oprot.WriteFieldBegin("altura", thrift.DOUBLE, 5); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field begin error 5:altura: ", p), err)
-		}
-		if err := oprot.WriteDouble(float64(*p.Altura)); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T.altura (5) field write error: ", p), err)
-		}
-		if err := oprot.WriteFieldEnd(); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field end error 5:altura: ", p), err)
-		}
-	}
-	return err
+  if p.IsSetAltura() {
+    if err := oprot.WriteFieldBegin("altura", thrift.DOUBLE, 5); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field begin error 5:altura: ", p), err) }
+    if err := oprot.WriteDouble(float64(*p.Altura)); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T.altura (5) field write error: ", p), err) }
+    if err := oprot.WriteFieldEnd(); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field end error 5:altura: ", p), err) }
+  }
+  return err
 }
 
 func (p *ParticipanteRowItemThrift) writeField6(oprot thrift.TProtocol) (err error) {
-	if p.IsSetCessouHabitoFumar() {
-		if err := oprot.WriteFieldBegin("cessouHabitoFumar", thrift.BOOL, 6); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field begin error 6:cessouHabitoFumar: ", p), err)
-		}
-		if err := oprot.WriteBool(bool(*p.CessouHabitoFumar)); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T.cessouHabitoFumar (6) field write error: ", p), err)
-		}
-		if err := oprot.WriteFieldEnd(); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field end error 6:cessouHabitoFumar: ", p), err)
-		}
-	}
-	return err
+  if p.IsSetCessouHabitoFumar() {
+    if err := oprot.WriteFieldBegin("cessouHabitoFumar", thrift.BOOL, 6); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field begin error 6:cessouHabitoFumar: ", p), err) }
+    if err := oprot.WriteBool(bool(*p.CessouHabitoFumar)); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T.cessouHabitoFumar (6) field write error: ", p), err) }
+    if err := oprot.WriteFieldEnd(); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field end error 6:cessouHabitoFumar: ", p), err) }
+  }
+  return err
 }
 
 func (p *ParticipanteRowItemThrift) writeField7(oprot thrift.TProtocol) (err error) {
-	if p.IsSetAbandonouGrupo() {
-		if err := oprot.WriteFieldBegin("abandonouGrupo", thrift.BOOL, 7); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field begin error 7:abandonouGrupo: ", p), err)
-		}
-		if err := oprot.WriteBool(bool(*p.AbandonouGrupo)); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T.abandonouGrupo (7) field write error: ", p), err)
-		}
-		if err := oprot.WriteFieldEnd(); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field end error 7:abandonouGrupo: ", p), err)
-		}
-	}
-	return err
+  if p.IsSetAbandonouGrupo() {
+    if err := oprot.WriteFieldBegin("abandonouGrupo", thrift.BOOL, 7); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field begin error 7:abandonouGrupo: ", p), err) }
+    if err := oprot.WriteBool(bool(*p.AbandonouGrupo)); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T.abandonouGrupo (7) field write error: ", p), err) }
+    if err := oprot.WriteFieldEnd(); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field end error 7:abandonouGrupo: ", p), err) }
+  }
+  return err
 }
 
 func (p *ParticipanteRowItemThrift) writeField8(oprot thrift.TProtocol) (err error) {
-	if p.IsSetSexo() {
-		if err := oprot.WriteFieldBegin("sexo", thrift.I64, 8); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field begin error 8:sexo: ", p), err)
-		}
-		if err := oprot.WriteI64(int64(*p.Sexo)); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T.sexo (8) field write error: ", p), err)
-		}
-		if err := oprot.WriteFieldEnd(); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field end error 8:sexo: ", p), err)
-		}
-	}
-	return err
+  if p.IsSetSexo() {
+    if err := oprot.WriteFieldBegin("sexo", thrift.I64, 8); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field begin error 8:sexo: ", p), err) }
+    if err := oprot.WriteI64(int64(*p.Sexo)); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T.sexo (8) field write error: ", p), err) }
+    if err := oprot.WriteFieldEnd(); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field end error 8:sexo: ", p), err) }
+  }
+  return err
 }
 
 func (p *ParticipanteRowItemThrift) writeField9(oprot thrift.TProtocol) (err error) {
-	if p.IsSetCpfParticipante() {
-		if err := oprot.WriteFieldBegin("cpfParticipante", thrift.STRING, 9); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field begin error 9:cpfParticipante: ", p), err)
-		}
-		if err := oprot.WriteString(string(*p.CpfParticipante)); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T.cpfParticipante (9) field write error: ", p), err)
-		}
-		if err := oprot.WriteFieldEnd(); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field end error 9:cpfParticipante: ", p), err)
-		}
-	}
-	return err
+  if p.IsSetCpfParticipante() {
+    if err := oprot.WriteFieldBegin("cpfParticipante", thrift.STRING, 9); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field begin error 9:cpfParticipante: ", p), err) }
+    if err := oprot.WriteString(string(*p.CpfParticipante)); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T.cpfParticipante (9) field write error: ", p), err) }
+    if err := oprot.WriteFieldEnd(); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field end error 9:cpfParticipante: ", p), err) }
+  }
+  return err
 }
 
 func (p *ParticipanteRowItemThrift) String() string {
-	if p == nil {
-		return "<nil>"
-	}
-	return fmt.Sprintf("ParticipanteRowItemThrift(%+v)", *p)
+  if p == nil {
+    return "<nil>"
+  }
+  return fmt.Sprintf("ParticipanteRowItemThrift(%+v)", *p)
 }
 
 // Attributes:
 //  - CnsProfissional
 //  - CodigoCbo2002
 type ProfissionalCboRowItemThrift struct {
-	CnsProfissional *string `thrift:"cnsProfissional,1" json:"cnsProfissional,omitempty"`
-	CodigoCbo2002   *string `thrift:"codigoCbo2002,2" json:"codigoCbo2002,omitempty"`
+  CnsProfissional *string `thrift:"cnsProfissional,1" json:"cnsProfissional,omitempty"`
+  CodigoCbo2002 *string `thrift:"codigoCbo2002,2" json:"codigoCbo2002,omitempty"`
 }
 
 func NewProfissionalCboRowItemThrift() *ProfissionalCboRowItemThrift {
-	return &ProfissionalCboRowItemThrift{}
+  return &ProfissionalCboRowItemThrift{}
 }
 
 var ProfissionalCboRowItemThrift_CnsProfissional_DEFAULT string
-
 func (p *ProfissionalCboRowItemThrift) GetCnsProfissional() string {
-	if !p.IsSetCnsProfissional() {
-		return ProfissionalCboRowItemThrift_CnsProfissional_DEFAULT
-	}
-	return *p.CnsProfissional
+  if !p.IsSetCnsProfissional() {
+    return ProfissionalCboRowItemThrift_CnsProfissional_DEFAULT
+  }
+return *p.CnsProfissional
 }
-
 var ProfissionalCboRowItemThrift_CodigoCbo2002_DEFAULT string
-
 func (p *ProfissionalCboRowItemThrift) GetCodigoCbo2002() string {
-	if !p.IsSetCodigoCbo2002() {
-		return ProfissionalCboRowItemThrift_CodigoCbo2002_DEFAULT
-	}
-	return *p.CodigoCbo2002
+  if !p.IsSetCodigoCbo2002() {
+    return ProfissionalCboRowItemThrift_CodigoCbo2002_DEFAULT
+  }
+return *p.CodigoCbo2002
 }
 func (p *ProfissionalCboRowItemThrift) IsSetCnsProfissional() bool {
-	return p.CnsProfissional != nil
+  return p.CnsProfissional != nil
 }
 
 func (p *ProfissionalCboRowItemThrift) IsSetCodigoCbo2002() bool {
-	return p.CodigoCbo2002 != nil
+  return p.CodigoCbo2002 != nil
 }
 
 func (p *ProfissionalCboRowItemThrift) Read(iprot thrift.TProtocol) error {
-	if _, err := iprot.ReadStructBegin(); err != nil {
-		return thrift.PrependError(fmt.Sprintf("%T read error: ", p), err)
-	}
+  if _, err := iprot.ReadStructBegin(); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T read error: ", p), err)
+  }
 
-	for {
-		_, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
-		if err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T field %d read error: ", p, fieldId), err)
-		}
-		if fieldTypeId == thrift.STOP {
-			break
-		}
-		switch fieldId {
-		case 1:
-			if err := p.readField1(iprot); err != nil {
-				return err
-			}
-		case 2:
-			if err := p.readField2(iprot); err != nil {
-				return err
-			}
-		default:
-			if err := iprot.Skip(fieldTypeId); err != nil {
-				return err
-			}
-		}
-		if err := iprot.ReadFieldEnd(); err != nil {
-			return err
-		}
-	}
-	if err := iprot.ReadStructEnd(); err != nil {
-		return thrift.PrependError(fmt.Sprintf("%T read struct end error: ", p), err)
-	}
-	return nil
+
+  for {
+    _, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
+    if err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T field %d read error: ", p, fieldId), err)
+    }
+    if fieldTypeId == thrift.STOP { break; }
+    switch fieldId {
+    case 1:
+      if err := p.readField1(iprot); err != nil {
+        return err
+      }
+    case 2:
+      if err := p.readField2(iprot); err != nil {
+        return err
+      }
+    default:
+      if err := iprot.Skip(fieldTypeId); err != nil {
+        return err
+      }
+    }
+    if err := iprot.ReadFieldEnd(); err != nil {
+      return err
+    }
+  }
+  if err := iprot.ReadStructEnd(); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T read struct end error: ", p), err)
+  }
+  return nil
 }
 
-func (p *ProfissionalCboRowItemThrift) readField1(iprot thrift.TProtocol) error {
-	if v, err := iprot.ReadString(); err != nil {
-		return thrift.PrependError("error reading field 1: ", err)
-	} else {
-		p.CnsProfissional = &v
-	}
-	return nil
+func (p *ProfissionalCboRowItemThrift)  readField1(iprot thrift.TProtocol) error {
+  if v, err := iprot.ReadString(); err != nil {
+  return thrift.PrependError("error reading field 1: ", err)
+} else {
+  p.CnsProfissional = &v
+}
+  return nil
 }
 
-func (p *ProfissionalCboRowItemThrift) readField2(iprot thrift.TProtocol) error {
-	if v, err := iprot.ReadString(); err != nil {
-		return thrift.PrependError("error reading field 2: ", err)
-	} else {
-		p.CodigoCbo2002 = &v
-	}
-	return nil
+func (p *ProfissionalCboRowItemThrift)  readField2(iprot thrift.TProtocol) error {
+  if v, err := iprot.ReadString(); err != nil {
+  return thrift.PrependError("error reading field 2: ", err)
+} else {
+  p.CodigoCbo2002 = &v
+}
+  return nil
 }
 
 func (p *ProfissionalCboRowItemThrift) Write(oprot thrift.TProtocol) error {
-	if err := oprot.WriteStructBegin("ProfissionalCboRowItemThrift"); err != nil {
-		return thrift.PrependError(fmt.Sprintf("%T write struct begin error: ", p), err)
-	}
-	if err := p.writeField1(oprot); err != nil {
-		return err
-	}
-	if err := p.writeField2(oprot); err != nil {
-		return err
-	}
-	if err := oprot.WriteFieldStop(); err != nil {
-		return thrift.PrependError("write field stop error: ", err)
-	}
-	if err := oprot.WriteStructEnd(); err != nil {
-		return thrift.PrependError("write struct stop error: ", err)
-	}
-	return nil
+  if err := oprot.WriteStructBegin("ProfissionalCboRowItemThrift"); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T write struct begin error: ", p), err) }
+  if err := p.writeField1(oprot); err != nil { return err }
+  if err := p.writeField2(oprot); err != nil { return err }
+  if err := oprot.WriteFieldStop(); err != nil {
+    return thrift.PrependError("write field stop error: ", err) }
+  if err := oprot.WriteStructEnd(); err != nil {
+    return thrift.PrependError("write struct stop error: ", err) }
+  return nil
 }
 
 func (p *ProfissionalCboRowItemThrift) writeField1(oprot thrift.TProtocol) (err error) {
-	if p.IsSetCnsProfissional() {
-		if err := oprot.WriteFieldBegin("cnsProfissional", thrift.STRING, 1); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field begin error 1:cnsProfissional: ", p), err)
-		}
-		if err := oprot.WriteString(string(*p.CnsProfissional)); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T.cnsProfissional (1) field write error: ", p), err)
-		}
-		if err := oprot.WriteFieldEnd(); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field end error 1:cnsProfissional: ", p), err)
-		}
-	}
-	return err
+  if p.IsSetCnsProfissional() {
+    if err := oprot.WriteFieldBegin("cnsProfissional", thrift.STRING, 1); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field begin error 1:cnsProfissional: ", p), err) }
+    if err := oprot.WriteString(string(*p.CnsProfissional)); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T.cnsProfissional (1) field write error: ", p), err) }
+    if err := oprot.WriteFieldEnd(); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field end error 1:cnsProfissional: ", p), err) }
+  }
+  return err
 }
 
 func (p *ProfissionalCboRowItemThrift) writeField2(oprot thrift.TProtocol) (err error) {
-	if p.IsSetCodigoCbo2002() {
-		if err := oprot.WriteFieldBegin("codigoCbo2002", thrift.STRING, 2); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field begin error 2:codigoCbo2002: ", p), err)
-		}
-		if err := oprot.WriteString(string(*p.CodigoCbo2002)); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T.codigoCbo2002 (2) field write error: ", p), err)
-		}
-		if err := oprot.WriteFieldEnd(); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field end error 2:codigoCbo2002: ", p), err)
-		}
-	}
-	return err
+  if p.IsSetCodigoCbo2002() {
+    if err := oprot.WriteFieldBegin("codigoCbo2002", thrift.STRING, 2); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field begin error 2:codigoCbo2002: ", p), err) }
+    if err := oprot.WriteString(string(*p.CodigoCbo2002)); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T.codigoCbo2002 (2) field write error: ", p), err) }
+    if err := oprot.WriteFieldEnd(); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field end error 2:codigoCbo2002: ", p), err) }
+  }
+  return err
 }
 
 func (p *ProfissionalCboRowItemThrift) String() string {
-	if p == nil {
-		return "<nil>"
-	}
-	return fmt.Sprintf("ProfissionalCboRowItemThrift(%+v)", *p)
+  if p == nil {
+    return "<nil>"
+  }
+  return fmt.Sprintf("ProfissionalCboRowItemThrift(%+v)", *p)
 }
 
 // Attributes:
@@ -657,1014 +575,889 @@ func (p *ProfissionalCboRowItemThrift) String() string {
 //  - PseEducacao
 //  - PseSaude
 type FichaAtividadeColetivaThrift struct {
-	UuidFicha string `thrift:"uuidFicha,1,required" json:"uuidFicha"`
-	// unused fields # 2 to 3
-	OutraLocalidade *string `thrift:"outraLocalidade,4" json:"outraLocalidade,omitempty"`
-	// unused fields # 5 to 6
-	Inep *int64 `thrift:"inep,7" json:"inep,omitempty"`
-	// unused fields # 8 to 10
-	NumParticipantes       *int32                          `thrift:"numParticipantes,11" json:"numParticipantes,omitempty"`
-	NumAvaliacoesAlteradas *int32                          `thrift:"numAvaliacoesAlteradas,12" json:"numAvaliacoesAlteradas,omitempty"`
-	Profissionais          []*ProfissionalCboRowItemThrift `thrift:"profissionais,13" json:"profissionais,omitempty"`
-	AtividadeTipo          *int64                          `thrift:"atividadeTipo,14" json:"atividadeTipo,omitempty"`
-	TemasParaReuniao       []int64                         `thrift:"temasParaReuniao,15" json:"temasParaReuniao,omitempty"`
-	PublicoAlvo            []int64                         `thrift:"publicoAlvo,16" json:"publicoAlvo,omitempty"`
-	// unused field # 17
-	Participantes []*ParticipanteRowItemThrift `thrift:"participantes,18" json:"participantes,omitempty"`
-	TbCdsOrigem   *int32                       `thrift:"tbCdsOrigem,19" json:"tbCdsOrigem,omitempty"`
-	// unused field # 20
-	CnesLocalAtividade *string                          `thrift:"cnesLocalAtividade,21" json:"cnesLocalAtividade,omitempty"`
-	Procedimento       *string                          `thrift:"procedimento,22" json:"procedimento,omitempty"`
-	Turno              *int64                           `thrift:"turno,23" json:"turno,omitempty"`
-	HeaderTransport    *common.UnicaLotacaoHeaderThrift `thrift:"headerTransport,24" json:"headerTransport,omitempty"`
-	TemasParaSaude     []int64                          `thrift:"temasParaSaude,25" json:"temasParaSaude,omitempty"`
-	PraticasEmSaude    []int64                          `thrift:"praticasEmSaude,26" json:"praticasEmSaude,omitempty"`
-	PseEducacao        *bool                            `thrift:"pseEducacao,27" json:"pseEducacao,omitempty"`
-	PseSaude           *bool                            `thrift:"pseSaude,28" json:"pseSaude,omitempty"`
+  UuidFicha string `thrift:"uuidFicha,1,required" json:"uuidFicha"`
+  // unused fields # 2 to 3
+  OutraLocalidade *string `thrift:"outraLocalidade,4" json:"outraLocalidade,omitempty"`
+  // unused fields # 5 to 6
+  Inep *int64 `thrift:"inep,7" json:"inep,omitempty"`
+  // unused fields # 8 to 10
+  NumParticipantes *int32 `thrift:"numParticipantes,11" json:"numParticipantes,omitempty"`
+  NumAvaliacoesAlteradas *int32 `thrift:"numAvaliacoesAlteradas,12" json:"numAvaliacoesAlteradas,omitempty"`
+  Profissionais []*ProfissionalCboRowItemThrift `thrift:"profissionais,13" json:"profissionais,omitempty"`
+  AtividadeTipo *int64 `thrift:"atividadeTipo,14" json:"atividadeTipo,omitempty"`
+  TemasParaReuniao []int64 `thrift:"temasParaReuniao,15" json:"temasParaReuniao,omitempty"`
+  PublicoAlvo []int64 `thrift:"publicoAlvo,16" json:"publicoAlvo,omitempty"`
+  // unused field # 17
+  Participantes []*ParticipanteRowItemThrift `thrift:"participantes,18" json:"participantes,omitempty"`
+  TbCdsOrigem *int32 `thrift:"tbCdsOrigem,19" json:"tbCdsOrigem,omitempty"`
+  // unused field # 20
+  CnesLocalAtividade *string `thrift:"cnesLocalAtividade,21" json:"cnesLocalAtividade,omitempty"`
+  Procedimento *string `thrift:"procedimento,22" json:"procedimento,omitempty"`
+  Turno *int64 `thrift:"turno,23" json:"turno,omitempty"`
+  HeaderTransport *common.UnicaLotacaoHeaderThrift `thrift:"headerTransport,24" json:"headerTransport,omitempty"`
+  TemasParaSaude []int64 `thrift:"temasParaSaude,25" json:"temasParaSaude,omitempty"`
+  PraticasEmSaude []int64 `thrift:"praticasEmSaude,26" json:"praticasEmSaude,omitempty"`
+  PseEducacao *bool `thrift:"pseEducacao,27" json:"pseEducacao,omitempty"`
+  PseSaude *bool `thrift:"pseSaude,28" json:"pseSaude,omitempty"`
 }
 
 func NewFichaAtividadeColetivaThrift() *FichaAtividadeColetivaThrift {
-	return &FichaAtividadeColetivaThrift{}
+  return &FichaAtividadeColetivaThrift{}
 }
+
 
 func (p *FichaAtividadeColetivaThrift) GetUuidFicha() string {
-	return p.UuidFicha
+  return p.UuidFicha
 }
-
 var FichaAtividadeColetivaThrift_OutraLocalidade_DEFAULT string
-
 func (p *FichaAtividadeColetivaThrift) GetOutraLocalidade() string {
-	if !p.IsSetOutraLocalidade() {
-		return FichaAtividadeColetivaThrift_OutraLocalidade_DEFAULT
-	}
-	return *p.OutraLocalidade
+  if !p.IsSetOutraLocalidade() {
+    return FichaAtividadeColetivaThrift_OutraLocalidade_DEFAULT
+  }
+return *p.OutraLocalidade
 }
-
 var FichaAtividadeColetivaThrift_Inep_DEFAULT int64
-
 func (p *FichaAtividadeColetivaThrift) GetInep() int64 {
-	if !p.IsSetInep() {
-		return FichaAtividadeColetivaThrift_Inep_DEFAULT
-	}
-	return *p.Inep
+  if !p.IsSetInep() {
+    return FichaAtividadeColetivaThrift_Inep_DEFAULT
+  }
+return *p.Inep
 }
-
 var FichaAtividadeColetivaThrift_NumParticipantes_DEFAULT int32
-
 func (p *FichaAtividadeColetivaThrift) GetNumParticipantes() int32 {
-	if !p.IsSetNumParticipantes() {
-		return FichaAtividadeColetivaThrift_NumParticipantes_DEFAULT
-	}
-	return *p.NumParticipantes
+  if !p.IsSetNumParticipantes() {
+    return FichaAtividadeColetivaThrift_NumParticipantes_DEFAULT
+  }
+return *p.NumParticipantes
 }
-
 var FichaAtividadeColetivaThrift_NumAvaliacoesAlteradas_DEFAULT int32
-
 func (p *FichaAtividadeColetivaThrift) GetNumAvaliacoesAlteradas() int32 {
-	if !p.IsSetNumAvaliacoesAlteradas() {
-		return FichaAtividadeColetivaThrift_NumAvaliacoesAlteradas_DEFAULT
-	}
-	return *p.NumAvaliacoesAlteradas
+  if !p.IsSetNumAvaliacoesAlteradas() {
+    return FichaAtividadeColetivaThrift_NumAvaliacoesAlteradas_DEFAULT
+  }
+return *p.NumAvaliacoesAlteradas
 }
-
 var FichaAtividadeColetivaThrift_Profissionais_DEFAULT []*ProfissionalCboRowItemThrift
 
 func (p *FichaAtividadeColetivaThrift) GetProfissionais() []*ProfissionalCboRowItemThrift {
-	return p.Profissionais
+  return p.Profissionais
 }
-
 var FichaAtividadeColetivaThrift_AtividadeTipo_DEFAULT int64
-
 func (p *FichaAtividadeColetivaThrift) GetAtividadeTipo() int64 {
-	if !p.IsSetAtividadeTipo() {
-		return FichaAtividadeColetivaThrift_AtividadeTipo_DEFAULT
-	}
-	return *p.AtividadeTipo
+  if !p.IsSetAtividadeTipo() {
+    return FichaAtividadeColetivaThrift_AtividadeTipo_DEFAULT
+  }
+return *p.AtividadeTipo
 }
-
 var FichaAtividadeColetivaThrift_TemasParaReuniao_DEFAULT []int64
 
 func (p *FichaAtividadeColetivaThrift) GetTemasParaReuniao() []int64 {
-	return p.TemasParaReuniao
+  return p.TemasParaReuniao
 }
-
 var FichaAtividadeColetivaThrift_PublicoAlvo_DEFAULT []int64
 
 func (p *FichaAtividadeColetivaThrift) GetPublicoAlvo() []int64 {
-	return p.PublicoAlvo
+  return p.PublicoAlvo
 }
-
 var FichaAtividadeColetivaThrift_Participantes_DEFAULT []*ParticipanteRowItemThrift
 
 func (p *FichaAtividadeColetivaThrift) GetParticipantes() []*ParticipanteRowItemThrift {
-	return p.Participantes
+  return p.Participantes
 }
-
 var FichaAtividadeColetivaThrift_TbCdsOrigem_DEFAULT int32
-
 func (p *FichaAtividadeColetivaThrift) GetTbCdsOrigem() int32 {
-	if !p.IsSetTbCdsOrigem() {
-		return FichaAtividadeColetivaThrift_TbCdsOrigem_DEFAULT
-	}
-	return *p.TbCdsOrigem
+  if !p.IsSetTbCdsOrigem() {
+    return FichaAtividadeColetivaThrift_TbCdsOrigem_DEFAULT
+  }
+return *p.TbCdsOrigem
 }
-
 var FichaAtividadeColetivaThrift_CnesLocalAtividade_DEFAULT string
-
 func (p *FichaAtividadeColetivaThrift) GetCnesLocalAtividade() string {
-	if !p.IsSetCnesLocalAtividade() {
-		return FichaAtividadeColetivaThrift_CnesLocalAtividade_DEFAULT
-	}
-	return *p.CnesLocalAtividade
+  if !p.IsSetCnesLocalAtividade() {
+    return FichaAtividadeColetivaThrift_CnesLocalAtividade_DEFAULT
+  }
+return *p.CnesLocalAtividade
 }
-
 var FichaAtividadeColetivaThrift_Procedimento_DEFAULT string
-
 func (p *FichaAtividadeColetivaThrift) GetProcedimento() string {
-	if !p.IsSetProcedimento() {
-		return FichaAtividadeColetivaThrift_Procedimento_DEFAULT
-	}
-	return *p.Procedimento
+  if !p.IsSetProcedimento() {
+    return FichaAtividadeColetivaThrift_Procedimento_DEFAULT
+  }
+return *p.Procedimento
 }
-
 var FichaAtividadeColetivaThrift_Turno_DEFAULT int64
-
 func (p *FichaAtividadeColetivaThrift) GetTurno() int64 {
-	if !p.IsSetTurno() {
-		return FichaAtividadeColetivaThrift_Turno_DEFAULT
-	}
-	return *p.Turno
+  if !p.IsSetTurno() {
+    return FichaAtividadeColetivaThrift_Turno_DEFAULT
+  }
+return *p.Turno
 }
-
 var FichaAtividadeColetivaThrift_HeaderTransport_DEFAULT *common.UnicaLotacaoHeaderThrift
-
 func (p *FichaAtividadeColetivaThrift) GetHeaderTransport() *common.UnicaLotacaoHeaderThrift {
-	if !p.IsSetHeaderTransport() {
-		return FichaAtividadeColetivaThrift_HeaderTransport_DEFAULT
-	}
-	return p.HeaderTransport
+  if !p.IsSetHeaderTransport() {
+    return FichaAtividadeColetivaThrift_HeaderTransport_DEFAULT
+  }
+return p.HeaderTransport
 }
-
 var FichaAtividadeColetivaThrift_TemasParaSaude_DEFAULT []int64
 
 func (p *FichaAtividadeColetivaThrift) GetTemasParaSaude() []int64 {
-	return p.TemasParaSaude
+  return p.TemasParaSaude
 }
-
 var FichaAtividadeColetivaThrift_PraticasEmSaude_DEFAULT []int64
 
 func (p *FichaAtividadeColetivaThrift) GetPraticasEmSaude() []int64 {
-	return p.PraticasEmSaude
+  return p.PraticasEmSaude
 }
-
 var FichaAtividadeColetivaThrift_PseEducacao_DEFAULT bool
-
 func (p *FichaAtividadeColetivaThrift) GetPseEducacao() bool {
-	if !p.IsSetPseEducacao() {
-		return FichaAtividadeColetivaThrift_PseEducacao_DEFAULT
-	}
-	return *p.PseEducacao
+  if !p.IsSetPseEducacao() {
+    return FichaAtividadeColetivaThrift_PseEducacao_DEFAULT
+  }
+return *p.PseEducacao
 }
-
 var FichaAtividadeColetivaThrift_PseSaude_DEFAULT bool
-
 func (p *FichaAtividadeColetivaThrift) GetPseSaude() bool {
-	if !p.IsSetPseSaude() {
-		return FichaAtividadeColetivaThrift_PseSaude_DEFAULT
-	}
-	return *p.PseSaude
+  if !p.IsSetPseSaude() {
+    return FichaAtividadeColetivaThrift_PseSaude_DEFAULT
+  }
+return *p.PseSaude
 }
 func (p *FichaAtividadeColetivaThrift) IsSetOutraLocalidade() bool {
-	return p.OutraLocalidade != nil
+  return p.OutraLocalidade != nil
 }
 
 func (p *FichaAtividadeColetivaThrift) IsSetInep() bool {
-	return p.Inep != nil
+  return p.Inep != nil
 }
 
 func (p *FichaAtividadeColetivaThrift) IsSetNumParticipantes() bool {
-	return p.NumParticipantes != nil
+  return p.NumParticipantes != nil
 }
 
 func (p *FichaAtividadeColetivaThrift) IsSetNumAvaliacoesAlteradas() bool {
-	return p.NumAvaliacoesAlteradas != nil
+  return p.NumAvaliacoesAlteradas != nil
 }
 
 func (p *FichaAtividadeColetivaThrift) IsSetProfissionais() bool {
-	return p.Profissionais != nil
+  return p.Profissionais != nil
 }
 
 func (p *FichaAtividadeColetivaThrift) IsSetAtividadeTipo() bool {
-	return p.AtividadeTipo != nil
+  return p.AtividadeTipo != nil
 }
 
 func (p *FichaAtividadeColetivaThrift) IsSetTemasParaReuniao() bool {
-	return p.TemasParaReuniao != nil
+  return p.TemasParaReuniao != nil
 }
 
 func (p *FichaAtividadeColetivaThrift) IsSetPublicoAlvo() bool {
-	return p.PublicoAlvo != nil
+  return p.PublicoAlvo != nil
 }
 
 func (p *FichaAtividadeColetivaThrift) IsSetParticipantes() bool {
-	return p.Participantes != nil
+  return p.Participantes != nil
 }
 
 func (p *FichaAtividadeColetivaThrift) IsSetTbCdsOrigem() bool {
-	return p.TbCdsOrigem != nil
+  return p.TbCdsOrigem != nil
 }
 
 func (p *FichaAtividadeColetivaThrift) IsSetCnesLocalAtividade() bool {
-	return p.CnesLocalAtividade != nil
+  return p.CnesLocalAtividade != nil
 }
 
 func (p *FichaAtividadeColetivaThrift) IsSetProcedimento() bool {
-	return p.Procedimento != nil
+  return p.Procedimento != nil
 }
 
 func (p *FichaAtividadeColetivaThrift) IsSetTurno() bool {
-	return p.Turno != nil
+  return p.Turno != nil
 }
 
 func (p *FichaAtividadeColetivaThrift) IsSetHeaderTransport() bool {
-	return p.HeaderTransport != nil
+  return p.HeaderTransport != nil
 }
 
 func (p *FichaAtividadeColetivaThrift) IsSetTemasParaSaude() bool {
-	return p.TemasParaSaude != nil
+  return p.TemasParaSaude != nil
 }
 
 func (p *FichaAtividadeColetivaThrift) IsSetPraticasEmSaude() bool {
-	return p.PraticasEmSaude != nil
+  return p.PraticasEmSaude != nil
 }
 
 func (p *FichaAtividadeColetivaThrift) IsSetPseEducacao() bool {
-	return p.PseEducacao != nil
+  return p.PseEducacao != nil
 }
 
 func (p *FichaAtividadeColetivaThrift) IsSetPseSaude() bool {
-	return p.PseSaude != nil
+  return p.PseSaude != nil
 }
 
 func (p *FichaAtividadeColetivaThrift) Read(iprot thrift.TProtocol) error {
-	if _, err := iprot.ReadStructBegin(); err != nil {
-		return thrift.PrependError(fmt.Sprintf("%T read error: ", p), err)
-	}
+  if _, err := iprot.ReadStructBegin(); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T read error: ", p), err)
+  }
 
-	var issetUuidFicha bool = false
+  var issetUuidFicha bool = false;
 
-	for {
-		_, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
-		if err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T field %d read error: ", p, fieldId), err)
-		}
-		if fieldTypeId == thrift.STOP {
-			break
-		}
-		switch fieldId {
-		case 1:
-			if err := p.readField1(iprot); err != nil {
-				return err
-			}
-			issetUuidFicha = true
-		case 4:
-			if err := p.readField4(iprot); err != nil {
-				return err
-			}
-		case 7:
-			if err := p.readField7(iprot); err != nil {
-				return err
-			}
-		case 11:
-			if err := p.readField11(iprot); err != nil {
-				return err
-			}
-		case 12:
-			if err := p.readField12(iprot); err != nil {
-				return err
-			}
-		case 13:
-			if err := p.readField13(iprot); err != nil {
-				return err
-			}
-		case 14:
-			if err := p.readField14(iprot); err != nil {
-				return err
-			}
-		case 15:
-			if err := p.readField15(iprot); err != nil {
-				return err
-			}
-		case 16:
-			if err := p.readField16(iprot); err != nil {
-				return err
-			}
-		case 18:
-			if err := p.readField18(iprot); err != nil {
-				return err
-			}
-		case 19:
-			if err := p.readField19(iprot); err != nil {
-				return err
-			}
-		case 21:
-			if err := p.readField21(iprot); err != nil {
-				return err
-			}
-		case 22:
-			if err := p.readField22(iprot); err != nil {
-				return err
-			}
-		case 23:
-			if err := p.readField23(iprot); err != nil {
-				return err
-			}
-		case 24:
-			if err := p.readField24(iprot); err != nil {
-				return err
-			}
-		case 25:
-			if err := p.readField25(iprot); err != nil {
-				return err
-			}
-		case 26:
-			if err := p.readField26(iprot); err != nil {
-				return err
-			}
-		case 27:
-			if err := p.readField27(iprot); err != nil {
-				return err
-			}
-		case 28:
-			if err := p.readField28(iprot); err != nil {
-				return err
-			}
-		default:
-			if err := iprot.Skip(fieldTypeId); err != nil {
-				return err
-			}
-		}
-		if err := iprot.ReadFieldEnd(); err != nil {
-			return err
-		}
-	}
-	if err := iprot.ReadStructEnd(); err != nil {
-		return thrift.PrependError(fmt.Sprintf("%T read struct end error: ", p), err)
-	}
-	if !issetUuidFicha {
-		return thrift.NewTProtocolExceptionWithType(thrift.INVALID_DATA, fmt.Errorf("Required field UuidFicha is not set"))
-	}
-	return nil
+  for {
+    _, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
+    if err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T field %d read error: ", p, fieldId), err)
+    }
+    if fieldTypeId == thrift.STOP { break; }
+    switch fieldId {
+    case 1:
+      if err := p.readField1(iprot); err != nil {
+        return err
+      }
+      issetUuidFicha = true
+    case 4:
+      if err := p.readField4(iprot); err != nil {
+        return err
+      }
+    case 7:
+      if err := p.readField7(iprot); err != nil {
+        return err
+      }
+    case 11:
+      if err := p.readField11(iprot); err != nil {
+        return err
+      }
+    case 12:
+      if err := p.readField12(iprot); err != nil {
+        return err
+      }
+    case 13:
+      if err := p.readField13(iprot); err != nil {
+        return err
+      }
+    case 14:
+      if err := p.readField14(iprot); err != nil {
+        return err
+      }
+    case 15:
+      if err := p.readField15(iprot); err != nil {
+        return err
+      }
+    case 16:
+      if err := p.readField16(iprot); err != nil {
+        return err
+      }
+    case 18:
+      if err := p.readField18(iprot); err != nil {
+        return err
+      }
+    case 19:
+      if err := p.readField19(iprot); err != nil {
+        return err
+      }
+    case 21:
+      if err := p.readField21(iprot); err != nil {
+        return err
+      }
+    case 22:
+      if err := p.readField22(iprot); err != nil {
+        return err
+      }
+    case 23:
+      if err := p.readField23(iprot); err != nil {
+        return err
+      }
+    case 24:
+      if err := p.readField24(iprot); err != nil {
+        return err
+      }
+    case 25:
+      if err := p.readField25(iprot); err != nil {
+        return err
+      }
+    case 26:
+      if err := p.readField26(iprot); err != nil {
+        return err
+      }
+    case 27:
+      if err := p.readField27(iprot); err != nil {
+        return err
+      }
+    case 28:
+      if err := p.readField28(iprot); err != nil {
+        return err
+      }
+    default:
+      if err := iprot.Skip(fieldTypeId); err != nil {
+        return err
+      }
+    }
+    if err := iprot.ReadFieldEnd(); err != nil {
+      return err
+    }
+  }
+  if err := iprot.ReadStructEnd(); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T read struct end error: ", p), err)
+  }
+  if !issetUuidFicha{
+    return thrift.NewTProtocolExceptionWithType(thrift.INVALID_DATA, fmt.Errorf("Required field UuidFicha is not set"));
+  }
+  return nil
 }
 
-func (p *FichaAtividadeColetivaThrift) readField1(iprot thrift.TProtocol) error {
-	if v, err := iprot.ReadString(); err != nil {
-		return thrift.PrependError("error reading field 1: ", err)
-	} else {
-		p.UuidFicha = v
-	}
-	return nil
+func (p *FichaAtividadeColetivaThrift)  readField1(iprot thrift.TProtocol) error {
+  if v, err := iprot.ReadString(); err != nil {
+  return thrift.PrependError("error reading field 1: ", err)
+} else {
+  p.UuidFicha = v
+}
+  return nil
 }
 
-func (p *FichaAtividadeColetivaThrift) readField4(iprot thrift.TProtocol) error {
-	if v, err := iprot.ReadString(); err != nil {
-		return thrift.PrependError("error reading field 4: ", err)
-	} else {
-		p.OutraLocalidade = &v
-	}
-	return nil
+func (p *FichaAtividadeColetivaThrift)  readField4(iprot thrift.TProtocol) error {
+  if v, err := iprot.ReadString(); err != nil {
+  return thrift.PrependError("error reading field 4: ", err)
+} else {
+  p.OutraLocalidade = &v
+}
+  return nil
 }
 
-func (p *FichaAtividadeColetivaThrift) readField7(iprot thrift.TProtocol) error {
-	if v, err := iprot.ReadI64(); err != nil {
-		return thrift.PrependError("error reading field 7: ", err)
-	} else {
-		p.Inep = &v
-	}
-	return nil
+func (p *FichaAtividadeColetivaThrift)  readField7(iprot thrift.TProtocol) error {
+  if v, err := iprot.ReadI64(); err != nil {
+  return thrift.PrependError("error reading field 7: ", err)
+} else {
+  p.Inep = &v
+}
+  return nil
 }
 
-func (p *FichaAtividadeColetivaThrift) readField11(iprot thrift.TProtocol) error {
-	if v, err := iprot.ReadI32(); err != nil {
-		return thrift.PrependError("error reading field 11: ", err)
-	} else {
-		p.NumParticipantes = &v
-	}
-	return nil
+func (p *FichaAtividadeColetivaThrift)  readField11(iprot thrift.TProtocol) error {
+  if v, err := iprot.ReadI32(); err != nil {
+  return thrift.PrependError("error reading field 11: ", err)
+} else {
+  p.NumParticipantes = &v
+}
+  return nil
 }
 
-func (p *FichaAtividadeColetivaThrift) readField12(iprot thrift.TProtocol) error {
-	if v, err := iprot.ReadI32(); err != nil {
-		return thrift.PrependError("error reading field 12: ", err)
-	} else {
-		p.NumAvaliacoesAlteradas = &v
-	}
-	return nil
+func (p *FichaAtividadeColetivaThrift)  readField12(iprot thrift.TProtocol) error {
+  if v, err := iprot.ReadI32(); err != nil {
+  return thrift.PrependError("error reading field 12: ", err)
+} else {
+  p.NumAvaliacoesAlteradas = &v
+}
+  return nil
 }
 
-func (p *FichaAtividadeColetivaThrift) readField13(iprot thrift.TProtocol) error {
-	_, size, err := iprot.ReadListBegin()
-	if err != nil {
-		return thrift.PrependError("error reading list begin: ", err)
-	}
-	tSlice := make([]*ProfissionalCboRowItemThrift, 0, size)
-	p.Profissionais = tSlice
-	for i := 0; i < size; i++ {
-		_elem0 := &ProfissionalCboRowItemThrift{}
-		if err := _elem0.Read(iprot); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T error reading struct: ", _elem0), err)
-		}
-		p.Profissionais = append(p.Profissionais, _elem0)
-	}
-	if err := iprot.ReadListEnd(); err != nil {
-		return thrift.PrependError("error reading list end: ", err)
-	}
-	return nil
+func (p *FichaAtividadeColetivaThrift)  readField13(iprot thrift.TProtocol) error {
+  _, size, err := iprot.ReadListBegin()
+  if err != nil {
+    return thrift.PrependError("error reading list begin: ", err)
+  }
+  tSlice := make([]*ProfissionalCboRowItemThrift, 0, size)
+  p.Profissionais =  tSlice
+  for i := 0; i < size; i ++ {
+    _elem0 := &ProfissionalCboRowItemThrift{}
+    if err := _elem0.Read(iprot); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T error reading struct: ", _elem0), err)
+    }
+    p.Profissionais = append(p.Profissionais, _elem0)
+  }
+  if err := iprot.ReadListEnd(); err != nil {
+    return thrift.PrependError("error reading list end: ", err)
+  }
+  return nil
 }
 
-func (p *FichaAtividadeColetivaThrift) readField14(iprot thrift.TProtocol) error {
-	if v, err := iprot.ReadI64(); err != nil {
-		return thrift.PrependError("error reading field 14: ", err)
-	} else {
-		p.AtividadeTipo = &v
-	}
-	return nil
+func (p *FichaAtividadeColetivaThrift)  readField14(iprot thrift.TProtocol) error {
+  if v, err := iprot.ReadI64(); err != nil {
+  return thrift.PrependError("error reading field 14: ", err)
+} else {
+  p.AtividadeTipo = &v
+}
+  return nil
 }
 
-func (p *FichaAtividadeColetivaThrift) readField15(iprot thrift.TProtocol) error {
-	_, size, err := iprot.ReadListBegin()
-	if err != nil {
-		return thrift.PrependError("error reading list begin: ", err)
-	}
-	tSlice := make([]int64, 0, size)
-	p.TemasParaReuniao = tSlice
-	for i := 0; i < size; i++ {
-		var _elem1 int64
-		if v, err := iprot.ReadI64(); err != nil {
-			return thrift.PrependError("error reading field 0: ", err)
-		} else {
-			_elem1 = v
-		}
-		p.TemasParaReuniao = append(p.TemasParaReuniao, _elem1)
-	}
-	if err := iprot.ReadListEnd(); err != nil {
-		return thrift.PrependError("error reading list end: ", err)
-	}
-	return nil
+func (p *FichaAtividadeColetivaThrift)  readField15(iprot thrift.TProtocol) error {
+  _, size, err := iprot.ReadListBegin()
+  if err != nil {
+    return thrift.PrependError("error reading list begin: ", err)
+  }
+  tSlice := make([]int64, 0, size)
+  p.TemasParaReuniao =  tSlice
+  for i := 0; i < size; i ++ {
+var _elem1 int64
+    if v, err := iprot.ReadI64(); err != nil {
+    return thrift.PrependError("error reading field 0: ", err)
+} else {
+    _elem1 = v
+}
+    p.TemasParaReuniao = append(p.TemasParaReuniao, _elem1)
+  }
+  if err := iprot.ReadListEnd(); err != nil {
+    return thrift.PrependError("error reading list end: ", err)
+  }
+  return nil
 }
 
-func (p *FichaAtividadeColetivaThrift) readField16(iprot thrift.TProtocol) error {
-	_, size, err := iprot.ReadListBegin()
-	if err != nil {
-		return thrift.PrependError("error reading list begin: ", err)
-	}
-	tSlice := make([]int64, 0, size)
-	p.PublicoAlvo = tSlice
-	for i := 0; i < size; i++ {
-		var _elem2 int64
-		if v, err := iprot.ReadI64(); err != nil {
-			return thrift.PrependError("error reading field 0: ", err)
-		} else {
-			_elem2 = v
-		}
-		p.PublicoAlvo = append(p.PublicoAlvo, _elem2)
-	}
-	if err := iprot.ReadListEnd(); err != nil {
-		return thrift.PrependError("error reading list end: ", err)
-	}
-	return nil
+func (p *FichaAtividadeColetivaThrift)  readField16(iprot thrift.TProtocol) error {
+  _, size, err := iprot.ReadListBegin()
+  if err != nil {
+    return thrift.PrependError("error reading list begin: ", err)
+  }
+  tSlice := make([]int64, 0, size)
+  p.PublicoAlvo =  tSlice
+  for i := 0; i < size; i ++ {
+var _elem2 int64
+    if v, err := iprot.ReadI64(); err != nil {
+    return thrift.PrependError("error reading field 0: ", err)
+} else {
+    _elem2 = v
+}
+    p.PublicoAlvo = append(p.PublicoAlvo, _elem2)
+  }
+  if err := iprot.ReadListEnd(); err != nil {
+    return thrift.PrependError("error reading list end: ", err)
+  }
+  return nil
 }
 
-func (p *FichaAtividadeColetivaThrift) readField18(iprot thrift.TProtocol) error {
-	_, size, err := iprot.ReadListBegin()
-	if err != nil {
-		return thrift.PrependError("error reading list begin: ", err)
-	}
-	tSlice := make([]*ParticipanteRowItemThrift, 0, size)
-	p.Participantes = tSlice
-	for i := 0; i < size; i++ {
-		_elem3 := &ParticipanteRowItemThrift{}
-		if err := _elem3.Read(iprot); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T error reading struct: ", _elem3), err)
-		}
-		p.Participantes = append(p.Participantes, _elem3)
-	}
-	if err := iprot.ReadListEnd(); err != nil {
-		return thrift.PrependError("error reading list end: ", err)
-	}
-	return nil
+func (p *FichaAtividadeColetivaThrift)  readField18(iprot thrift.TProtocol) error {
+  _, size, err := iprot.ReadListBegin()
+  if err != nil {
+    return thrift.PrependError("error reading list begin: ", err)
+  }
+  tSlice := make([]*ParticipanteRowItemThrift, 0, size)
+  p.Participantes =  tSlice
+  for i := 0; i < size; i ++ {
+    _elem3 := &ParticipanteRowItemThrift{}
+    if err := _elem3.Read(iprot); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T error reading struct: ", _elem3), err)
+    }
+    p.Participantes = append(p.Participantes, _elem3)
+  }
+  if err := iprot.ReadListEnd(); err != nil {
+    return thrift.PrependError("error reading list end: ", err)
+  }
+  return nil
 }
 
-func (p *FichaAtividadeColetivaThrift) readField19(iprot thrift.TProtocol) error {
-	if v, err := iprot.ReadI32(); err != nil {
-		return thrift.PrependError("error reading field 19: ", err)
-	} else {
-		p.TbCdsOrigem = &v
-	}
-	return nil
+func (p *FichaAtividadeColetivaThrift)  readField19(iprot thrift.TProtocol) error {
+  if v, err := iprot.ReadI32(); err != nil {
+  return thrift.PrependError("error reading field 19: ", err)
+} else {
+  p.TbCdsOrigem = &v
+}
+  return nil
 }
 
-func (p *FichaAtividadeColetivaThrift) readField21(iprot thrift.TProtocol) error {
-	if v, err := iprot.ReadString(); err != nil {
-		return thrift.PrependError("error reading field 21: ", err)
-	} else {
-		p.CnesLocalAtividade = &v
-	}
-	return nil
+func (p *FichaAtividadeColetivaThrift)  readField21(iprot thrift.TProtocol) error {
+  if v, err := iprot.ReadString(); err != nil {
+  return thrift.PrependError("error reading field 21: ", err)
+} else {
+  p.CnesLocalAtividade = &v
+}
+  return nil
 }
 
-func (p *FichaAtividadeColetivaThrift) readField22(iprot thrift.TProtocol) error {
-	if v, err := iprot.ReadString(); err != nil {
-		return thrift.PrependError("error reading field 22: ", err)
-	} else {
-		p.Procedimento = &v
-	}
-	return nil
+func (p *FichaAtividadeColetivaThrift)  readField22(iprot thrift.TProtocol) error {
+  if v, err := iprot.ReadString(); err != nil {
+  return thrift.PrependError("error reading field 22: ", err)
+} else {
+  p.Procedimento = &v
+}
+  return nil
 }
 
-func (p *FichaAtividadeColetivaThrift) readField23(iprot thrift.TProtocol) error {
-	if v, err := iprot.ReadI64(); err != nil {
-		return thrift.PrependError("error reading field 23: ", err)
-	} else {
-		p.Turno = &v
-	}
-	return nil
+func (p *FichaAtividadeColetivaThrift)  readField23(iprot thrift.TProtocol) error {
+  if v, err := iprot.ReadI64(); err != nil {
+  return thrift.PrependError("error reading field 23: ", err)
+} else {
+  p.Turno = &v
+}
+  return nil
 }
 
-func (p *FichaAtividadeColetivaThrift) readField24(iprot thrift.TProtocol) error {
-	p.HeaderTransport = &common.UnicaLotacaoHeaderThrift{}
-	if err := p.HeaderTransport.Read(iprot); err != nil {
-		return thrift.PrependError(fmt.Sprintf("%T error reading struct: ", p.HeaderTransport), err)
-	}
-	return nil
+func (p *FichaAtividadeColetivaThrift)  readField24(iprot thrift.TProtocol) error {
+  p.HeaderTransport = &common.UnicaLotacaoHeaderThrift{}
+  if err := p.HeaderTransport.Read(iprot); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T error reading struct: ", p.HeaderTransport), err)
+  }
+  return nil
 }
 
-func (p *FichaAtividadeColetivaThrift) readField25(iprot thrift.TProtocol) error {
-	_, size, err := iprot.ReadListBegin()
-	if err != nil {
-		return thrift.PrependError("error reading list begin: ", err)
-	}
-	tSlice := make([]int64, 0, size)
-	p.TemasParaSaude = tSlice
-	for i := 0; i < size; i++ {
-		var _elem4 int64
-		if v, err := iprot.ReadI64(); err != nil {
-			return thrift.PrependError("error reading field 0: ", err)
-		} else {
-			_elem4 = v
-		}
-		p.TemasParaSaude = append(p.TemasParaSaude, _elem4)
-	}
-	if err := iprot.ReadListEnd(); err != nil {
-		return thrift.PrependError("error reading list end: ", err)
-	}
-	return nil
+func (p *FichaAtividadeColetivaThrift)  readField25(iprot thrift.TProtocol) error {
+  _, size, err := iprot.ReadListBegin()
+  if err != nil {
+    return thrift.PrependError("error reading list begin: ", err)
+  }
+  tSlice := make([]int64, 0, size)
+  p.TemasParaSaude =  tSlice
+  for i := 0; i < size; i ++ {
+var _elem4 int64
+    if v, err := iprot.ReadI64(); err != nil {
+    return thrift.PrependError("error reading field 0: ", err)
+} else {
+    _elem4 = v
+}
+    p.TemasParaSaude = append(p.TemasParaSaude, _elem4)
+  }
+  if err := iprot.ReadListEnd(); err != nil {
+    return thrift.PrependError("error reading list end: ", err)
+  }
+  return nil
 }
 
-func (p *FichaAtividadeColetivaThrift) readField26(iprot thrift.TProtocol) error {
-	_, size, err := iprot.ReadListBegin()
-	if err != nil {
-		return thrift.PrependError("error reading list begin: ", err)
-	}
-	tSlice := make([]int64, 0, size)
-	p.PraticasEmSaude = tSlice
-	for i := 0; i < size; i++ {
-		var _elem5 int64
-		if v, err := iprot.ReadI64(); err != nil {
-			return thrift.PrependError("error reading field 0: ", err)
-		} else {
-			_elem5 = v
-		}
-		p.PraticasEmSaude = append(p.PraticasEmSaude, _elem5)
-	}
-	if err := iprot.ReadListEnd(); err != nil {
-		return thrift.PrependError("error reading list end: ", err)
-	}
-	return nil
+func (p *FichaAtividadeColetivaThrift)  readField26(iprot thrift.TProtocol) error {
+  _, size, err := iprot.ReadListBegin()
+  if err != nil {
+    return thrift.PrependError("error reading list begin: ", err)
+  }
+  tSlice := make([]int64, 0, size)
+  p.PraticasEmSaude =  tSlice
+  for i := 0; i < size; i ++ {
+var _elem5 int64
+    if v, err := iprot.ReadI64(); err != nil {
+    return thrift.PrependError("error reading field 0: ", err)
+} else {
+    _elem5 = v
+}
+    p.PraticasEmSaude = append(p.PraticasEmSaude, _elem5)
+  }
+  if err := iprot.ReadListEnd(); err != nil {
+    return thrift.PrependError("error reading list end: ", err)
+  }
+  return nil
 }
 
-func (p *FichaAtividadeColetivaThrift) readField27(iprot thrift.TProtocol) error {
-	if v, err := iprot.ReadBool(); err != nil {
-		return thrift.PrependError("error reading field 27: ", err)
-	} else {
-		p.PseEducacao = &v
-	}
-	return nil
+func (p *FichaAtividadeColetivaThrift)  readField27(iprot thrift.TProtocol) error {
+  if v, err := iprot.ReadBool(); err != nil {
+  return thrift.PrependError("error reading field 27: ", err)
+} else {
+  p.PseEducacao = &v
+}
+  return nil
 }
 
-func (p *FichaAtividadeColetivaThrift) readField28(iprot thrift.TProtocol) error {
-	if v, err := iprot.ReadBool(); err != nil {
-		return thrift.PrependError("error reading field 28: ", err)
-	} else {
-		p.PseSaude = &v
-	}
-	return nil
+func (p *FichaAtividadeColetivaThrift)  readField28(iprot thrift.TProtocol) error {
+  if v, err := iprot.ReadBool(); err != nil {
+  return thrift.PrependError("error reading field 28: ", err)
+} else {
+  p.PseSaude = &v
+}
+  return nil
 }
 
 func (p *FichaAtividadeColetivaThrift) Write(oprot thrift.TProtocol) error {
-	if err := oprot.WriteStructBegin("FichaAtividadeColetivaThrift"); err != nil {
-		return thrift.PrependError(fmt.Sprintf("%T write struct begin error: ", p), err)
-	}
-	if err := p.writeField1(oprot); err != nil {
-		return err
-	}
-	if err := p.writeField4(oprot); err != nil {
-		return err
-	}
-	if err := p.writeField7(oprot); err != nil {
-		return err
-	}
-	if err := p.writeField11(oprot); err != nil {
-		return err
-	}
-	if err := p.writeField12(oprot); err != nil {
-		return err
-	}
-	if err := p.writeField13(oprot); err != nil {
-		return err
-	}
-	if err := p.writeField14(oprot); err != nil {
-		return err
-	}
-	if err := p.writeField15(oprot); err != nil {
-		return err
-	}
-	if err := p.writeField16(oprot); err != nil {
-		return err
-	}
-	if err := p.writeField18(oprot); err != nil {
-		return err
-	}
-	if err := p.writeField19(oprot); err != nil {
-		return err
-	}
-	if err := p.writeField21(oprot); err != nil {
-		return err
-	}
-	if err := p.writeField22(oprot); err != nil {
-		return err
-	}
-	if err := p.writeField23(oprot); err != nil {
-		return err
-	}
-	if err := p.writeField24(oprot); err != nil {
-		return err
-	}
-	if err := p.writeField25(oprot); err != nil {
-		return err
-	}
-	if err := p.writeField26(oprot); err != nil {
-		return err
-	}
-	if err := p.writeField27(oprot); err != nil {
-		return err
-	}
-	if err := p.writeField28(oprot); err != nil {
-		return err
-	}
-	if err := oprot.WriteFieldStop(); err != nil {
-		return thrift.PrependError("write field stop error: ", err)
-	}
-	if err := oprot.WriteStructEnd(); err != nil {
-		return thrift.PrependError("write struct stop error: ", err)
-	}
-	return nil
+  if err := oprot.WriteStructBegin("FichaAtividadeColetivaThrift"); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T write struct begin error: ", p), err) }
+  if err := p.writeField1(oprot); err != nil { return err }
+  if err := p.writeField4(oprot); err != nil { return err }
+  if err := p.writeField7(oprot); err != nil { return err }
+  if err := p.writeField11(oprot); err != nil { return err }
+  if err := p.writeField12(oprot); err != nil { return err }
+  if err := p.writeField13(oprot); err != nil { return err }
+  if err := p.writeField14(oprot); err != nil { return err }
+  if err := p.writeField15(oprot); err != nil { return err }
+  if err := p.writeField16(oprot); err != nil { return err }
+  if err := p.writeField18(oprot); err != nil { return err }
+  if err := p.writeField19(oprot); err != nil { return err }
+  if err := p.writeField21(oprot); err != nil { return err }
+  if err := p.writeField22(oprot); err != nil { return err }
+  if err := p.writeField23(oprot); err != nil { return err }
+  if err := p.writeField24(oprot); err != nil { return err }
+  if err := p.writeField25(oprot); err != nil { return err }
+  if err := p.writeField26(oprot); err != nil { return err }
+  if err := p.writeField27(oprot); err != nil { return err }
+  if err := p.writeField28(oprot); err != nil { return err }
+  if err := oprot.WriteFieldStop(); err != nil {
+    return thrift.PrependError("write field stop error: ", err) }
+  if err := oprot.WriteStructEnd(); err != nil {
+    return thrift.PrependError("write struct stop error: ", err) }
+  return nil
 }
 
 func (p *FichaAtividadeColetivaThrift) writeField1(oprot thrift.TProtocol) (err error) {
-	if err := oprot.WriteFieldBegin("uuidFicha", thrift.STRING, 1); err != nil {
-		return thrift.PrependError(fmt.Sprintf("%T write field begin error 1:uuidFicha: ", p), err)
-	}
-	if err := oprot.WriteString(string(p.UuidFicha)); err != nil {
-		return thrift.PrependError(fmt.Sprintf("%T.uuidFicha (1) field write error: ", p), err)
-	}
-	if err := oprot.WriteFieldEnd(); err != nil {
-		return thrift.PrependError(fmt.Sprintf("%T write field end error 1:uuidFicha: ", p), err)
-	}
-	return err
+  if err := oprot.WriteFieldBegin("uuidFicha", thrift.STRING, 1); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T write field begin error 1:uuidFicha: ", p), err) }
+  if err := oprot.WriteString(string(p.UuidFicha)); err != nil {
+  return thrift.PrependError(fmt.Sprintf("%T.uuidFicha (1) field write error: ", p), err) }
+  if err := oprot.WriteFieldEnd(); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T write field end error 1:uuidFicha: ", p), err) }
+  return err
 }
 
 func (p *FichaAtividadeColetivaThrift) writeField4(oprot thrift.TProtocol) (err error) {
-	if p.IsSetOutraLocalidade() {
-		if err := oprot.WriteFieldBegin("outraLocalidade", thrift.STRING, 4); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field begin error 4:outraLocalidade: ", p), err)
-		}
-		if err := oprot.WriteString(string(*p.OutraLocalidade)); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T.outraLocalidade (4) field write error: ", p), err)
-		}
-		if err := oprot.WriteFieldEnd(); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field end error 4:outraLocalidade: ", p), err)
-		}
-	}
-	return err
+  if p.IsSetOutraLocalidade() {
+    if err := oprot.WriteFieldBegin("outraLocalidade", thrift.STRING, 4); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field begin error 4:outraLocalidade: ", p), err) }
+    if err := oprot.WriteString(string(*p.OutraLocalidade)); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T.outraLocalidade (4) field write error: ", p), err) }
+    if err := oprot.WriteFieldEnd(); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field end error 4:outraLocalidade: ", p), err) }
+  }
+  return err
 }
 
 func (p *FichaAtividadeColetivaThrift) writeField7(oprot thrift.TProtocol) (err error) {
-	if p.IsSetInep() {
-		if err := oprot.WriteFieldBegin("inep", thrift.I64, 7); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field begin error 7:inep: ", p), err)
-		}
-		if err := oprot.WriteI64(int64(*p.Inep)); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T.inep (7) field write error: ", p), err)
-		}
-		if err := oprot.WriteFieldEnd(); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field end error 7:inep: ", p), err)
-		}
-	}
-	return err
+  if p.IsSetInep() {
+    if err := oprot.WriteFieldBegin("inep", thrift.I64, 7); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field begin error 7:inep: ", p), err) }
+    if err := oprot.WriteI64(int64(*p.Inep)); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T.inep (7) field write error: ", p), err) }
+    if err := oprot.WriteFieldEnd(); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field end error 7:inep: ", p), err) }
+  }
+  return err
 }
 
 func (p *FichaAtividadeColetivaThrift) writeField11(oprot thrift.TProtocol) (err error) {
-	if p.IsSetNumParticipantes() {
-		if err := oprot.WriteFieldBegin("numParticipantes", thrift.I32, 11); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field begin error 11:numParticipantes: ", p), err)
-		}
-		if err := oprot.WriteI32(int32(*p.NumParticipantes)); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T.numParticipantes (11) field write error: ", p), err)
-		}
-		if err := oprot.WriteFieldEnd(); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field end error 11:numParticipantes: ", p), err)
-		}
-	}
-	return err
+  if p.IsSetNumParticipantes() {
+    if err := oprot.WriteFieldBegin("numParticipantes", thrift.I32, 11); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field begin error 11:numParticipantes: ", p), err) }
+    if err := oprot.WriteI32(int32(*p.NumParticipantes)); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T.numParticipantes (11) field write error: ", p), err) }
+    if err := oprot.WriteFieldEnd(); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field end error 11:numParticipantes: ", p), err) }
+  }
+  return err
 }
 
 func (p *FichaAtividadeColetivaThrift) writeField12(oprot thrift.TProtocol) (err error) {
-	if p.IsSetNumAvaliacoesAlteradas() {
-		if err := oprot.WriteFieldBegin("numAvaliacoesAlteradas", thrift.I32, 12); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field begin error 12:numAvaliacoesAlteradas: ", p), err)
-		}
-		if err := oprot.WriteI32(int32(*p.NumAvaliacoesAlteradas)); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T.numAvaliacoesAlteradas (12) field write error: ", p), err)
-		}
-		if err := oprot.WriteFieldEnd(); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field end error 12:numAvaliacoesAlteradas: ", p), err)
-		}
-	}
-	return err
+  if p.IsSetNumAvaliacoesAlteradas() {
+    if err := oprot.WriteFieldBegin("numAvaliacoesAlteradas", thrift.I32, 12); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field begin error 12:numAvaliacoesAlteradas: ", p), err) }
+    if err := oprot.WriteI32(int32(*p.NumAvaliacoesAlteradas)); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T.numAvaliacoesAlteradas (12) field write error: ", p), err) }
+    if err := oprot.WriteFieldEnd(); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field end error 12:numAvaliacoesAlteradas: ", p), err) }
+  }
+  return err
 }
 
 func (p *FichaAtividadeColetivaThrift) writeField13(oprot thrift.TProtocol) (err error) {
-	if p.IsSetProfissionais() {
-		if err := oprot.WriteFieldBegin("profissionais", thrift.LIST, 13); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field begin error 13:profissionais: ", p), err)
-		}
-		if err := oprot.WriteListBegin(thrift.STRUCT, len(p.Profissionais)); err != nil {
-			return thrift.PrependError("error writing list begin: ", err)
-		}
-		for _, v := range p.Profissionais {
-			if err := v.Write(oprot); err != nil {
-				return thrift.PrependError(fmt.Sprintf("%T error writing struct: ", v), err)
-			}
-		}
-		if err := oprot.WriteListEnd(); err != nil {
-			return thrift.PrependError("error writing list end: ", err)
-		}
-		if err := oprot.WriteFieldEnd(); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field end error 13:profissionais: ", p), err)
-		}
-	}
-	return err
+  if p.IsSetProfissionais() {
+    if err := oprot.WriteFieldBegin("profissionais", thrift.LIST, 13); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field begin error 13:profissionais: ", p), err) }
+    if err := oprot.WriteListBegin(thrift.STRUCT, len(p.Profissionais)); err != nil {
+      return thrift.PrependError("error writing list begin: ", err)
+    }
+    for _, v := range p.Profissionais {
+      if err := v.Write(oprot); err != nil {
+        return thrift.PrependError(fmt.Sprintf("%T error writing struct: ", v), err)
+      }
+    }
+    if err := oprot.WriteListEnd(); err != nil {
+      return thrift.PrependError("error writing list end: ", err)
+    }
+    if err := oprot.WriteFieldEnd(); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field end error 13:profissionais: ", p), err) }
+  }
+  return err
 }
 
 func (p *FichaAtividadeColetivaThrift) writeField14(oprot thrift.TProtocol) (err error) {
-	if p.IsSetAtividadeTipo() {
-		if err := oprot.WriteFieldBegin("atividadeTipo", thrift.I64, 14); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field begin error 14:atividadeTipo: ", p), err)
-		}
-		if err := oprot.WriteI64(int64(*p.AtividadeTipo)); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T.atividadeTipo (14) field write error: ", p), err)
-		}
-		if err := oprot.WriteFieldEnd(); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field end error 14:atividadeTipo: ", p), err)
-		}
-	}
-	return err
+  if p.IsSetAtividadeTipo() {
+    if err := oprot.WriteFieldBegin("atividadeTipo", thrift.I64, 14); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field begin error 14:atividadeTipo: ", p), err) }
+    if err := oprot.WriteI64(int64(*p.AtividadeTipo)); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T.atividadeTipo (14) field write error: ", p), err) }
+    if err := oprot.WriteFieldEnd(); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field end error 14:atividadeTipo: ", p), err) }
+  }
+  return err
 }
 
 func (p *FichaAtividadeColetivaThrift) writeField15(oprot thrift.TProtocol) (err error) {
-	if p.IsSetTemasParaReuniao() {
-		if err := oprot.WriteFieldBegin("temasParaReuniao", thrift.LIST, 15); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field begin error 15:temasParaReuniao: ", p), err)
-		}
-		if err := oprot.WriteListBegin(thrift.I64, len(p.TemasParaReuniao)); err != nil {
-			return thrift.PrependError("error writing list begin: ", err)
-		}
-		for _, v := range p.TemasParaReuniao {
-			if err := oprot.WriteI64(int64(v)); err != nil {
-				return thrift.PrependError(fmt.Sprintf("%T. (0) field write error: ", p), err)
-			}
-		}
-		if err := oprot.WriteListEnd(); err != nil {
-			return thrift.PrependError("error writing list end: ", err)
-		}
-		if err := oprot.WriteFieldEnd(); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field end error 15:temasParaReuniao: ", p), err)
-		}
-	}
-	return err
+  if p.IsSetTemasParaReuniao() {
+    if err := oprot.WriteFieldBegin("temasParaReuniao", thrift.LIST, 15); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field begin error 15:temasParaReuniao: ", p), err) }
+    if err := oprot.WriteListBegin(thrift.I64, len(p.TemasParaReuniao)); err != nil {
+      return thrift.PrependError("error writing list begin: ", err)
+    }
+    for _, v := range p.TemasParaReuniao {
+      if err := oprot.WriteI64(int64(v)); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T. (0) field write error: ", p), err) }
+    }
+    if err := oprot.WriteListEnd(); err != nil {
+      return thrift.PrependError("error writing list end: ", err)
+    }
+    if err := oprot.WriteFieldEnd(); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field end error 15:temasParaReuniao: ", p), err) }
+  }
+  return err
 }
 
 func (p *FichaAtividadeColetivaThrift) writeField16(oprot thrift.TProtocol) (err error) {
-	if p.IsSetPublicoAlvo() {
-		if err := oprot.WriteFieldBegin("publicoAlvo", thrift.LIST, 16); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field begin error 16:publicoAlvo: ", p), err)
-		}
-		if err := oprot.WriteListBegin(thrift.I64, len(p.PublicoAlvo)); err != nil {
-			return thrift.PrependError("error writing list begin: ", err)
-		}
-		for _, v := range p.PublicoAlvo {
-			if err := oprot.WriteI64(int64(v)); err != nil {
-				return thrift.PrependError(fmt.Sprintf("%T. (0) field write error: ", p), err)
-			}
-		}
-		if err := oprot.WriteListEnd(); err != nil {
-			return thrift.PrependError("error writing list end: ", err)
-		}
-		if err := oprot.WriteFieldEnd(); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field end error 16:publicoAlvo: ", p), err)
-		}
-	}
-	return err
+  if p.IsSetPublicoAlvo() {
+    if err := oprot.WriteFieldBegin("publicoAlvo", thrift.LIST, 16); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field begin error 16:publicoAlvo: ", p), err) }
+    if err := oprot.WriteListBegin(thrift.I64, len(p.PublicoAlvo)); err != nil {
+      return thrift.PrependError("error writing list begin: ", err)
+    }
+    for _, v := range p.PublicoAlvo {
+      if err := oprot.WriteI64(int64(v)); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T. (0) field write error: ", p), err) }
+    }
+    if err := oprot.WriteListEnd(); err != nil {
+      return thrift.PrependError("error writing list end: ", err)
+    }
+    if err := oprot.WriteFieldEnd(); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field end error 16:publicoAlvo: ", p), err) }
+  }
+  return err
 }
 
 func (p *FichaAtividadeColetivaThrift) writeField18(oprot thrift.TProtocol) (err error) {
-	if p.IsSetParticipantes() {
-		if err := oprot.WriteFieldBegin("participantes", thrift.LIST, 18); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field begin error 18:participantes: ", p), err)
-		}
-		if err := oprot.WriteListBegin(thrift.STRUCT, len(p.Participantes)); err != nil {
-			return thrift.PrependError("error writing list begin: ", err)
-		}
-		for _, v := range p.Participantes {
-			if err := v.Write(oprot); err != nil {
-				return thrift.PrependError(fmt.Sprintf("%T error writing struct: ", v), err)
-			}
-		}
-		if err := oprot.WriteListEnd(); err != nil {
-			return thrift.PrependError("error writing list end: ", err)
-		}
-		if err := oprot.WriteFieldEnd(); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field end error 18:participantes: ", p), err)
-		}
-	}
-	return err
+  if p.IsSetParticipantes() {
+    if err := oprot.WriteFieldBegin("participantes", thrift.LIST, 18); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field begin error 18:participantes: ", p), err) }
+    if err := oprot.WriteListBegin(thrift.STRUCT, len(p.Participantes)); err != nil {
+      return thrift.PrependError("error writing list begin: ", err)
+    }
+    for _, v := range p.Participantes {
+      if err := v.Write(oprot); err != nil {
+        return thrift.PrependError(fmt.Sprintf("%T error writing struct: ", v), err)
+      }
+    }
+    if err := oprot.WriteListEnd(); err != nil {
+      return thrift.PrependError("error writing list end: ", err)
+    }
+    if err := oprot.WriteFieldEnd(); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field end error 18:participantes: ", p), err) }
+  }
+  return err
 }
 
 func (p *FichaAtividadeColetivaThrift) writeField19(oprot thrift.TProtocol) (err error) {
-	if p.IsSetTbCdsOrigem() {
-		if err := oprot.WriteFieldBegin("tbCdsOrigem", thrift.I32, 19); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field begin error 19:tbCdsOrigem: ", p), err)
-		}
-		if err := oprot.WriteI32(int32(*p.TbCdsOrigem)); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T.tbCdsOrigem (19) field write error: ", p), err)
-		}
-		if err := oprot.WriteFieldEnd(); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field end error 19:tbCdsOrigem: ", p), err)
-		}
-	}
-	return err
+  if p.IsSetTbCdsOrigem() {
+    if err := oprot.WriteFieldBegin("tbCdsOrigem", thrift.I32, 19); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field begin error 19:tbCdsOrigem: ", p), err) }
+    if err := oprot.WriteI32(int32(*p.TbCdsOrigem)); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T.tbCdsOrigem (19) field write error: ", p), err) }
+    if err := oprot.WriteFieldEnd(); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field end error 19:tbCdsOrigem: ", p), err) }
+  }
+  return err
 }
 
 func (p *FichaAtividadeColetivaThrift) writeField21(oprot thrift.TProtocol) (err error) {
-	if p.IsSetCnesLocalAtividade() {
-		if err := oprot.WriteFieldBegin("cnesLocalAtividade", thrift.STRING, 21); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field begin error 21:cnesLocalAtividade: ", p), err)
-		}
-		if err := oprot.WriteString(string(*p.CnesLocalAtividade)); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T.cnesLocalAtividade (21) field write error: ", p), err)
-		}
-		if err := oprot.WriteFieldEnd(); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field end error 21:cnesLocalAtividade: ", p), err)
-		}
-	}
-	return err
+  if p.IsSetCnesLocalAtividade() {
+    if err := oprot.WriteFieldBegin("cnesLocalAtividade", thrift.STRING, 21); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field begin error 21:cnesLocalAtividade: ", p), err) }
+    if err := oprot.WriteString(string(*p.CnesLocalAtividade)); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T.cnesLocalAtividade (21) field write error: ", p), err) }
+    if err := oprot.WriteFieldEnd(); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field end error 21:cnesLocalAtividade: ", p), err) }
+  }
+  return err
 }
 
 func (p *FichaAtividadeColetivaThrift) writeField22(oprot thrift.TProtocol) (err error) {
-	if p.IsSetProcedimento() {
-		if err := oprot.WriteFieldBegin("procedimento", thrift.STRING, 22); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field begin error 22:procedimento: ", p), err)
-		}
-		if err := oprot.WriteString(string(*p.Procedimento)); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T.procedimento (22) field write error: ", p), err)
-		}
-		if err := oprot.WriteFieldEnd(); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field end error 22:procedimento: ", p), err)
-		}
-	}
-	return err
+  if p.IsSetProcedimento() {
+    if err := oprot.WriteFieldBegin("procedimento", thrift.STRING, 22); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field begin error 22:procedimento: ", p), err) }
+    if err := oprot.WriteString(string(*p.Procedimento)); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T.procedimento (22) field write error: ", p), err) }
+    if err := oprot.WriteFieldEnd(); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field end error 22:procedimento: ", p), err) }
+  }
+  return err
 }
 
 func (p *FichaAtividadeColetivaThrift) writeField23(oprot thrift.TProtocol) (err error) {
-	if p.IsSetTurno() {
-		if err := oprot.WriteFieldBegin("turno", thrift.I64, 23); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field begin error 23:turno: ", p), err)
-		}
-		if err := oprot.WriteI64(int64(*p.Turno)); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T.turno (23) field write error: ", p), err)
-		}
-		if err := oprot.WriteFieldEnd(); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field end error 23:turno: ", p), err)
-		}
-	}
-	return err
+  if p.IsSetTurno() {
+    if err := oprot.WriteFieldBegin("turno", thrift.I64, 23); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field begin error 23:turno: ", p), err) }
+    if err := oprot.WriteI64(int64(*p.Turno)); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T.turno (23) field write error: ", p), err) }
+    if err := oprot.WriteFieldEnd(); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field end error 23:turno: ", p), err) }
+  }
+  return err
 }
 
 func (p *FichaAtividadeColetivaThrift) writeField24(oprot thrift.TProtocol) (err error) {
-	if p.IsSetHeaderTransport() {
-		if err := oprot.WriteFieldBegin("headerTransport", thrift.STRUCT, 24); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field begin error 24:headerTransport: ", p), err)
-		}
-		if err := p.HeaderTransport.Write(oprot); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T error writing struct: ", p.HeaderTransport), err)
-		}
-		if err := oprot.WriteFieldEnd(); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field end error 24:headerTransport: ", p), err)
-		}
-	}
-	return err
+  if p.IsSetHeaderTransport() {
+    if err := oprot.WriteFieldBegin("headerTransport", thrift.STRUCT, 24); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field begin error 24:headerTransport: ", p), err) }
+    if err := p.HeaderTransport.Write(oprot); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T error writing struct: ", p.HeaderTransport), err)
+    }
+    if err := oprot.WriteFieldEnd(); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field end error 24:headerTransport: ", p), err) }
+  }
+  return err
 }
 
 func (p *FichaAtividadeColetivaThrift) writeField25(oprot thrift.TProtocol) (err error) {
-	if p.IsSetTemasParaSaude() {
-		if err := oprot.WriteFieldBegin("temasParaSaude", thrift.LIST, 25); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field begin error 25:temasParaSaude: ", p), err)
-		}
-		if err := oprot.WriteListBegin(thrift.I64, len(p.TemasParaSaude)); err != nil {
-			return thrift.PrependError("error writing list begin: ", err)
-		}
-		for _, v := range p.TemasParaSaude {
-			if err := oprot.WriteI64(int64(v)); err != nil {
-				return thrift.PrependError(fmt.Sprintf("%T. (0) field write error: ", p), err)
-			}
-		}
-		if err := oprot.WriteListEnd(); err != nil {
-			return thrift.PrependError("error writing list end: ", err)
-		}
-		if err := oprot.WriteFieldEnd(); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field end error 25:temasParaSaude: ", p), err)
-		}
-	}
-	return err
+  if p.IsSetTemasParaSaude() {
+    if err := oprot.WriteFieldBegin("temasParaSaude", thrift.LIST, 25); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field begin error 25:temasParaSaude: ", p), err) }
+    if err := oprot.WriteListBegin(thrift.I64, len(p.TemasParaSaude)); err != nil {
+      return thrift.PrependError("error writing list begin: ", err)
+    }
+    for _, v := range p.TemasParaSaude {
+      if err := oprot.WriteI64(int64(v)); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T. (0) field write error: ", p), err) }
+    }
+    if err := oprot.WriteListEnd(); err != nil {
+      return thrift.PrependError("error writing list end: ", err)
+    }
+    if err := oprot.WriteFieldEnd(); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field end error 25:temasParaSaude: ", p), err) }
+  }
+  return err
 }
 
 func (p *FichaAtividadeColetivaThrift) writeField26(oprot thrift.TProtocol) (err error) {
-	if p.IsSetPraticasEmSaude() {
-		if err := oprot.WriteFieldBegin("praticasEmSaude", thrift.LIST, 26); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field begin error 26:praticasEmSaude: ", p), err)
-		}
-		if err := oprot.WriteListBegin(thrift.I64, len(p.PraticasEmSaude)); err != nil {
-			return thrift.PrependError("error writing list begin: ", err)
-		}
-		for _, v := range p.PraticasEmSaude {
-			if err := oprot.WriteI64(int64(v)); err != nil {
-				return thrift.PrependError(fmt.Sprintf("%T. (0) field write error: ", p), err)
-			}
-		}
-		if err := oprot.WriteListEnd(); err != nil {
-			return thrift.PrependError("error writing list end: ", err)
-		}
-		if err := oprot.WriteFieldEnd(); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field end error 26:praticasEmSaude: ", p), err)
-		}
-	}
-	return err
+  if p.IsSetPraticasEmSaude() {
+    if err := oprot.WriteFieldBegin("praticasEmSaude", thrift.LIST, 26); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field begin error 26:praticasEmSaude: ", p), err) }
+    if err := oprot.WriteListBegin(thrift.I64, len(p.PraticasEmSaude)); err != nil {
+      return thrift.PrependError("error writing list begin: ", err)
+    }
+    for _, v := range p.PraticasEmSaude {
+      if err := oprot.WriteI64(int64(v)); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T. (0) field write error: ", p), err) }
+    }
+    if err := oprot.WriteListEnd(); err != nil {
+      return thrift.PrependError("error writing list end: ", err)
+    }
+    if err := oprot.WriteFieldEnd(); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field end error 26:praticasEmSaude: ", p), err) }
+  }
+  return err
 }
 
 func (p *FichaAtividadeColetivaThrift) writeField27(oprot thrift.TProtocol) (err error) {
-	if p.IsSetPseEducacao() {
-		if err := oprot.WriteFieldBegin("pseEducacao", thrift.BOOL, 27); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field begin error 27:pseEducacao: ", p), err)
-		}
-		if err := oprot.WriteBool(bool(*p.PseEducacao)); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T.pseEducacao (27) field write error: ", p), err)
-		}
-		if err := oprot.WriteFieldEnd(); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field end error 27:pseEducacao: ", p), err)
-		}
-	}
-	return err
+  if p.IsSetPseEducacao() {
+    if err := oprot.WriteFieldBegin("pseEducacao", thrift.BOOL, 27); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field begin error 27:pseEducacao: ", p), err) }
+    if err := oprot.WriteBool(bool(*p.PseEducacao)); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T.pseEducacao (27) field write error: ", p), err) }
+    if err := oprot.WriteFieldEnd(); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field end error 27:pseEducacao: ", p), err) }
+  }
+  return err
 }
 
 func (p *FichaAtividadeColetivaThrift) writeField28(oprot thrift.TProtocol) (err error) {
-	if p.IsSetPseSaude() {
-		if err := oprot.WriteFieldBegin("pseSaude", thrift.BOOL, 28); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field begin error 28:pseSaude: ", p), err)
-		}
-		if err := oprot.WriteBool(bool(*p.PseSaude)); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T.pseSaude (28) field write error: ", p), err)
-		}
-		if err := oprot.WriteFieldEnd(); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field end error 28:pseSaude: ", p), err)
-		}
-	}
-	return err
+  if p.IsSetPseSaude() {
+    if err := oprot.WriteFieldBegin("pseSaude", thrift.BOOL, 28); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field begin error 28:pseSaude: ", p), err) }
+    if err := oprot.WriteBool(bool(*p.PseSaude)); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T.pseSaude (28) field write error: ", p), err) }
+    if err := oprot.WriteFieldEnd(); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field end error 28:pseSaude: ", p), err) }
+  }
+  return err
 }
 
 func (p *FichaAtividadeColetivaThrift) String() string {
-	if p == nil {
-		return "<nil>"
-	}
-	return fmt.Sprintf("FichaAtividadeColetivaThrift(%+v)", *p)
+  if p == nil {
+    return "<nil>"
+  }
+  return fmt.Sprintf("FichaAtividadeColetivaThrift(%+v)", *p)
 }
+

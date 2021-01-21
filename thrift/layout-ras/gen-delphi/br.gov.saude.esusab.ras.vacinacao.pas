@@ -42,24 +42,29 @@ type
     procedure SetLote( const Value: string);
     function GetFabricante: string;
     procedure SetFabricante( const Value: string);
+    function GetGrupoAtendimento: Int64;
+    procedure SetGrupoAtendimento( const Value: Int64);
 
     property Imunobiologico: Int64 read GetImunobiologico write SetImunobiologico;
     property EstrategiaVacinacao: Int64 read GetEstrategiaVacinacao write SetEstrategiaVacinacao;
     property Dose: Int64 read GetDose write SetDose;
     property Lote: string read GetLote write SetLote;
     property Fabricante: string read GetFabricante write SetFabricante;
+    property GrupoAtendimento: Int64 read GetGrupoAtendimento write SetGrupoAtendimento;
 
     function Get__isset_Imunobiologico: Boolean;
     function Get__isset_EstrategiaVacinacao: Boolean;
     function Get__isset_Dose: Boolean;
     function Get__isset_Lote: Boolean;
     function Get__isset_Fabricante: Boolean;
+    function Get__isset_GrupoAtendimento: Boolean;
 
     property __isset_Imunobiologico: Boolean read Get__isset_Imunobiologico;
     property __isset_EstrategiaVacinacao: Boolean read Get__isset_EstrategiaVacinacao;
     property __isset_Dose: Boolean read Get__isset_Dose;
     property __isset_Lote: Boolean read Get__isset_Lote;
     property __isset_Fabricante: Boolean read Get__isset_Fabricante;
+    property __isset_GrupoAtendimento: Boolean read Get__isset_GrupoAtendimento;
   end;
 
   TVacinaRowThriftImpl = class(TInterfacedObject, IBase, IVacinaRowThrift)
@@ -69,12 +74,14 @@ type
     FDose: Int64;
     FLote: string;
     FFabricante: string;
+    FGrupoAtendimento: Int64;
     
     F__isset_Imunobiologico: Boolean;
     F__isset_EstrategiaVacinacao: Boolean;
     F__isset_Dose: Boolean;
     F__isset_Lote: Boolean;
     F__isset_Fabricante: Boolean;
+    F__isset_GrupoAtendimento: Boolean;
     
     function GetImunobiologico: Int64;
     procedure SetImunobiologico( const Value: Int64);
@@ -86,12 +93,15 @@ type
     procedure SetLote( const Value: string);
     function GetFabricante: string;
     procedure SetFabricante( const Value: string);
+    function GetGrupoAtendimento: Int64;
+    procedure SetGrupoAtendimento( const Value: Int64);
 
     function Get__isset_Imunobiologico: Boolean;
     function Get__isset_EstrategiaVacinacao: Boolean;
     function Get__isset_Dose: Boolean;
     function Get__isset_Lote: Boolean;
     function Get__isset_Fabricante: Boolean;
+    function Get__isset_GrupoAtendimento: Boolean;
   public
     constructor Create;
     destructor Destroy; override;
@@ -108,6 +118,7 @@ type
     property Dose: Int64 read GetDose write SetDose;
     property Lote: string read GetLote write SetLote;
     property Fabricante: string read GetFabricante write SetFabricante;
+    property GrupoAtendimento: Int64 read GetGrupoAtendimento write SetGrupoAtendimento;
 
     // isset
     property __isset_Imunobiologico: Boolean read Get__isset_Imunobiologico;
@@ -115,6 +126,7 @@ type
     property __isset_Dose: Boolean read Get__isset_Dose;
     property __isset_Lote: Boolean read Get__isset_Lote;
     property __isset_Fabricante: Boolean read Get__isset_Fabricante;
+    property __isset_GrupoAtendimento: Boolean read Get__isset_GrupoAtendimento;
   end;
 
   IFichaVacinacaoChildThrift = interface(IBase)
@@ -472,6 +484,22 @@ begin
   Result := F__isset_Fabricante;
 end;
 
+function TVacinaRowThriftImpl.GetGrupoAtendimento: Int64;
+begin
+  Result := FGrupoAtendimento;
+end;
+
+procedure TVacinaRowThriftImpl.SetGrupoAtendimento( const Value: Int64);
+begin
+  F__isset_GrupoAtendimento := True;
+  FGrupoAtendimento := Value;
+end;
+
+function TVacinaRowThriftImpl.Get__isset_GrupoAtendimento: Boolean;
+begin
+  Result := F__isset_GrupoAtendimento;
+end;
+
 procedure TVacinaRowThriftImpl.Read( const iprot: IProtocol);
 var
   field_ : IField;
@@ -530,6 +558,15 @@ begin
           if (field_.Type_ = TType.String_) then
           begin
             Fabricante := iprot.ReadString();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        6: begin
+          if (field_.Type_ = TType.I64) then
+          begin
+            GrupoAtendimento := iprot.ReadI64();
           end else
           begin
             TProtocolUtil.Skip(iprot, field_.Type_);
@@ -601,6 +638,15 @@ begin
     oprot.WriteString(Fabricante);
     oprot.WriteFieldEnd();
   end;
+  if (__isset_GrupoAtendimento) then
+  begin
+    field_.Name := 'grupoAtendimento';
+    field_.Type_  := TType.I64;
+    field_.ID := 6;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteI64(GrupoAtendimento);
+    oprot.WriteFieldEnd();
+  end;
   oprot.WriteFieldStop();
   oprot.WriteStructEnd();
 end;
@@ -642,6 +688,12 @@ begin
       _first1 := FALSE;
       _sb0.Append('Fabricante: ');
       _sb0.Append(Fabricante);
+    end;
+    if (__isset_GrupoAtendimento) then begin
+      if not _first1 then _sb0.Append(',');
+      _first1 := FALSE;
+      _sb0.Append('GrupoAtendimento: ');
+      _sb0.Append(GrupoAtendimento);
     end;
     _sb0.Append(')');
     Result := _sb0.ToString;

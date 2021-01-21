@@ -28,6 +28,7 @@ namespace br.gov.saude.esusab.ras.vacinacao
     private long _dose;
     private string _lote;
     private string _fabricante;
+    private long _grupoAtendimento;
 
     public long Imunobiologico
     {
@@ -94,6 +95,19 @@ namespace br.gov.saude.esusab.ras.vacinacao
       }
     }
 
+    public long GrupoAtendimento
+    {
+      get
+      {
+        return _grupoAtendimento;
+      }
+      set
+      {
+        __isset.grupoAtendimento = true;
+        this._grupoAtendimento = value;
+      }
+    }
+
 
     public Isset __isset;
     #if !SILVERLIGHT
@@ -105,6 +119,7 @@ namespace br.gov.saude.esusab.ras.vacinacao
       public bool dose;
       public bool lote;
       public bool fabricante;
+      public bool grupoAtendimento;
     }
 
     public VacinaRowThrift() {
@@ -156,6 +171,13 @@ namespace br.gov.saude.esusab.ras.vacinacao
             case 5:
               if (field.Type == TType.String) {
                 Fabricante = iprot.ReadString();
+              } else { 
+                TProtocolUtil.Skip(iprot, field.Type);
+              }
+              break;
+            case 6:
+              if (field.Type == TType.I64) {
+                GrupoAtendimento = iprot.ReadI64();
               } else { 
                 TProtocolUtil.Skip(iprot, field.Type);
               }
@@ -221,6 +243,14 @@ namespace br.gov.saude.esusab.ras.vacinacao
           oprot.WriteString(Fabricante);
           oprot.WriteFieldEnd();
         }
+        if (__isset.grupoAtendimento) {
+          field.Name = "grupoAtendimento";
+          field.Type = TType.I64;
+          field.ID = 6;
+          oprot.WriteFieldBegin(field);
+          oprot.WriteI64(GrupoAtendimento);
+          oprot.WriteFieldEnd();
+        }
         oprot.WriteFieldStop();
         oprot.WriteStructEnd();
       }
@@ -262,6 +292,12 @@ namespace br.gov.saude.esusab.ras.vacinacao
         __first = false;
         __sb.Append("Fabricante: ");
         __sb.Append(Fabricante);
+      }
+      if (__isset.grupoAtendimento) {
+        if(!__first) { __sb.Append(", "); }
+        __first = false;
+        __sb.Append("GrupoAtendimento: ");
+        __sb.Append(GrupoAtendimento);
       }
       __sb.Append(")");
       return __sb.ToString();

@@ -25,7 +25,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 4.0.4</span>
+        <span class="label">versão 4.1.2</span>
       
     </a>
 
@@ -75,7 +75,7 @@
           
         
           
-            <li><a title="Layout e-SUS APS de Dados e Interface Versão 4.0.4" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 4.0.4</a></li>
+            <li><a title="Layout e-SUS APS de Dados e Interface Versão 4.1.2" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 4.1.2</a></li>
           
         
           
@@ -115,9 +115,9 @@
   <ul>
     
       <li>
-        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 4.0.4" href="/ledi/documentacao/index.html" class="back-link">
+        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 4.1.2" href="/ledi/documentacao/index.html" class="back-link">
           <i class="icon icon-back"></i> Voltar
-          <small>(Layout e-SUS APS de Dados e Interface Versão 4.0.4)</small>
+          <small>(Layout e-SUS APS de Dados e Interface Versão 4.1.2)</small>
         </a>
       </li>
     
@@ -243,7 +243,7 @@
     <p class="post-meta">
       <a class="btn" href="/pdf.html?include=/ledi/documentacao/estrutura_arquivos/dicionario-fvd.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 17/12/2020</span>
+        <span class="label" title="Data da última modificação">Alterado em 14/01/2021</span>
       
     </p>
   </header>
@@ -735,6 +735,152 @@
 <li>Para visita periódica ou visita domiciliar para controle vetorial preencher este campo com o CPF do responsável familiar;</li>
 <li>Não pode ser preenchido se o campo <a href="#3-cnscidadao">cnsCidadao</a> for preenchido.</li>
 </ul>
+
+<h3 id="15-pressaosistolica">#15 pressaoSistolica</h3>
+
+<p>Pressão sistólica do cidadão.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Integer</td>
+<td>Não</td>
+<td>0</td>
+<td>3</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> </p>
+
+<ul>
+<li>Caso este campo seja preenchido, torna-se obrigatório o preenchimento do campo <a href="#16-pressaodiastolica">pressaoDiastolica</a>;</li>
+<li>Valor mínimo 0 e máximo 999;</li>
+<li>Não deve ser preenchido se o campo <a href="#11-tipodeimovel">tipoDeImovel</a> = <code>02</code> comércio, <code>03</code> terreno baldio, <code>04</code> Ponto Estratégico, <code>05</code> Escola, <code>06</code> Creche ou <code>12</code> Estabelecimento religioso;</li>
+<li>Não deve ser preenchido caso o campo <a href="#8-desfecho">desfecho</a> = <code>3</code> Ausente ou <code>2</code> Visita Recusada.</li>
+</ul>
+
+<h3 id="16-pressaodiastolica">#16 pressaoDiastolica</h3>
+
+<p>Pressão diastólica do cidadão.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Integer</td>
+<td>Não</td>
+<td>0</td>
+<td>3</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> </p>
+
+<ul>
+<li>Caso este campo seja preenchido, torna-se obrigatório o preenchimento do campo <a href="#15-pressaosistolica">pressaoSistolica</a>.</li>
+<li>Valor mínimo 0 e máximo 999;</li>
+<li>Não deve ser preenchido se o campo <a href="#11-tipodeimovel">tipoDeImovel</a> = <code>02</code> comércio, <code>03</code> terreno baldio, <code>04</code> Ponto Estratégico, <code>05</code> Escola, <code>06</code> Creche ou <code>12</code> Estabelecimento religioso;</li>
+<li>Não deve ser preenchido caso o campo <a href="#8-desfecho">desfecho</a> = <code>3</code> Ausente ou <code>2</code> Visita Recusada.</li>
+</ul>
+
+<h3 id="17-temperatura">#17 temperatura</h3>
+
+<p>Aferição de temperatura do cidadão.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Double</td>
+<td>Não</td>
+<td>0</td>
+<td>4</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> </p>
+
+<ul>
+<li>Este campo só aceita valores entre 20 e 45;</li>
+<li>Máximo de 1 casa decimal;</li>
+<li>Não deve ser preenchido se o campo <a href="#11-tipodeimovel">tipoDeImovel</a> = <code>02</code> comércio, <code>03</code> terreno baldio, <code>04</code> Ponto Estratégico, <code>05</code> Escola, <code>06</code> Creche ou <code>12</code> Estabelecimento religioso;</li>
+<li>Não deve ser preenchido caso o campo <a href="#8-desfecho">desfecho</a> = <code>3</code> Ausente ou <code>2</code> Visita Recusada.</li>
+</ul>
+
+<h3 id="18-glicemia">#18 glicemia</h3>
+
+<p>Glicemia capilar do cidadão.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Integer</td>
+<td>Condicional</td>
+<td>0</td>
+<td>3</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> </p>
+
+<ul>
+<li>Este campo só aceita valores entre 0 e 800;</li>
+<li>Caso este campo seja preenchido, torna-se obrigatório o preenchimento do campo <a href="#19-tipoglicemia">tipoGlicemia</a>;</li>
+<li>Não deve ser preenchido se o campo <a href="#11-tipodeimovel">tipoDeImovel</a> = <code>02</code> comércio, <code>03</code> terreno baldio, <code>04</code> Ponto Estratégico, <code>05</code> Escola, <code>06</code> Creche ou <code>12</code> Estabelecimento religioso;</li>
+<li>Não deve ser preenchido caso o campo <a href="#8-desfecho">desfecho</a> = <code>3</code> Ausente ou <code>2</code> Visita Recusada.</li>
+</ul>
+
+<h3 id="19-tipoglicemia">#19 tipoGlicemia</h3>
+
+<p>Momento da coleta da glicemia capilar do cidadão.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Integer</td>
+<td>Condicional</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> </p>
+
+<ul>
+<li>Caso este campo seja preenchido, torna-se obrigatório o preenchimento do campo <a href="#18-glicemia">glicemia</a>;</li>
+<li>Não deve ser preenchido se o campo <a href="#11-tipodeimovel">tipoDeImovel</a> = <code>02</code> comércio, <code>03</code> terreno baldio, <code>04</code> Ponto Estratégico, <code>05</code> Escola, <code>06</code> Creche ou <code>12</code> Estabelecimento religioso;</li>
+<li>Não deve ser preenchido caso o campo <a href="#8-desfecho">desfecho</a> = <code>3</code> Ausente ou <code>2</code> Visita Recusada.</li>
+</ul>
+
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#momentocoletaglicemia">momentoColetaGlicemia</a>.</p>
 
   </article>
 

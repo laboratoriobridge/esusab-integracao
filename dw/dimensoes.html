@@ -25,7 +25,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 4.0.4</span>
+        <span class="label">versão 4.1.2</span>
       
     </a>
 
@@ -71,7 +71,7 @@
       
         
           
-            <li><a title="Data Warehouse Relatórios e-SUS AB PEC" href="/dw/index.html">Data Warehouse Relatórios e-SUS AB PEC</a></li>
+            <li><a title="Data Warehouse Relatórios e-SUS APS PEC" href="/dw/index.html">Data Warehouse Relatórios e-SUS APS PEC</a></li>
           
         
           
@@ -115,8 +115,15 @@
     
 
     <li>
-      <a class="open" title="Data Warehouse Relatórios e-SUS AB PEC" href="/dw/index.html">Data Warehouse Relatórios e-SUS AB PEC</a>
+      <a class="open" title="Data Warehouse Relatórios e-SUS APS PEC" href="/dw/index.html">Data Warehouse Relatórios e-SUS APS PEC</a>
       <ul>
+        
+          <li >
+          
+            <a title="Principais alterações entre versões" href="/dw/principais_alteracoes.html">
+              Principais alterações entre versões
+            </a>
+          </li>
         
           <li class="active">
           
@@ -151,13 +158,13 @@
     <p class="post-meta">
       <a class="btn" href="/pdf.html?include=/dw/dimensoes.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 01/11/2019</span>
+        <span class="label" title="Data da última modificação">Alterado em 21/01/2021</span>
       
     </p>
   </header>
 
   <article class="post-content">
-    <p>O nome das tabelas de <strong>Dimensão</strong> é formado pelo prefixo &quot;<strong>tb_dim_</strong>&quot; seguido do nome da respectiva dimensão, por exemplo: <strong>tb_dim_racionalidade_saude</strong>. Neste contexto, existem algumas tabelas com o objetivo de organizar a estrutura dos relatórios do sistema e-SUS AB PEC, conforme apresentadas na Tabela 1. Porém, nada impede que elas possam ser utilizadas também para construir relatórios dinâmicos.</p>
+    <p>O nome das tabelas de <strong>Dimensão</strong> é formado pelo prefixo &quot;<strong>tb_dim_</strong>&quot; seguido do nome da respectiva dimensão, por exemplo: <strong>tb_dim_racionalidade_saude</strong>. Neste contexto, existem algumas tabelas com o objetivo de organizar a estrutura dos relatórios do sistema e-SUS APS PEC, conforme apresentadas na Tabela 1. Porém, nada impede que elas possam ser utilizadas também para construir relatórios dinâmicos.</p>
 
 <table><thead>
 <tr>
@@ -167,7 +174,7 @@
 </thead><tbody>
 <tr>
 <td>tb_dim_agrupador_filtro</td>
-<td>Utilizada para organização e apresentação da tela de filtros dos relatórios do e-SUS AB PEC.</td>
+<td>Utilizada para organização e apresentação da tela de filtros dos relatórios do e-SUS APS PEC.</td>
 </tr>
 <tr>
 <td>tb_dim_cidadao_pec_grupo</td>
@@ -187,7 +194,7 @@
 
 <p>Outras tabelas apresentam as informações que darão sentido aos identificadores existentes nas tabelas <strong>Fatos</strong>. Portanto, muitas delas apresentam registros predefinidos, geralmente determinados pelo <a href="/ledi/index.html">Layout e-SUS APS de Dados e Interface</a> (conforme apresentadas na Tabela 2) e incluem também o registro &quot;Não informado&quot;. Além destas características, algumas tabelas podem apresentar a coluna <strong>st_registro_valido</strong>.</p>
 
-<p>A coluna <strong>st_registro_valido</strong> é utilizada para identificar se o respectivo registro está completo na tabela do DW. Isto ocorre durante o processamento inicial dos dados. Caso o identificador não exista na tabela, o mesmo é inserido. Neste momento, apenas o identificador existe no DW, então a coluna &quot;st_registro_valido&quot; é marcada com o valor &quot;inválido&quot; para que seja reprocessado novamente e adicionadas as informações complementares (geralmente nome ou descrição). Este reprocessamento realiza a busca na base de dados do e-SUS AB PEC e, encontrando o identificador, inclui as demais informações e marca o registro como &quot;válido&quot;.</p>
+<p>A coluna <strong>st_registro_valido</strong> é utilizada para identificar se o respectivo registro está completo na tabela do DW. Isto ocorre durante o processamento inicial dos dados. Caso o identificador não exista na tabela, o mesmo é inserido. Neste momento, apenas o identificador existe no DW, então a coluna &quot;st_registro_valido&quot; é marcada com o valor &quot;null&quot; para que seja reprocessado novamente e adicionadas as informações complementares (geralmente nome ou descrição). Este reprocessamento realiza a busca na base de dados do e-SUS APS PEC e, encontrando o identificador, inclui as demais informações e marca o registro como &quot;válido&quot; (valor 1).</p>
 
 <table><thead>
 <tr>
@@ -196,228 +203,272 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>tb_dim_aleitamento</td>
+<td><a name="tb\_dim\_aleitamento"></a> tb_dim_aleitamento</td>
 <td><a href="/ledi/documentacao/referencias/dicionario.html#aleitamentomaterno">Aleitamento materno</a></td>
 </tr>
 <tr>
-<td>tb_dim_cbo</td>
+<td><a name="tb\_dim\_catmat"></a>tb_dim_catmat</td>
+<td><a href="/ledi/documentacao/referencias/tabela_catmat.html">Tabela de medicamentos CATMAT</a></td>
+</tr>
+<tr>
+<td><a name="tb\_dim\_cbo"></a>tb_dim_cbo</td>
 <td>Qualquer registro pertencente à lista de <a href="/ledi/documentacao/referencias/cbo_disponiveis.html">CBO</a> pode existir nesta tabela</td>
 </tr>
 <tr>
-<td>tb_dim_cds_tipo_origem</td>
-<td>Contém a informação de qual sistema gerou a informação. As opções são apresentadas na <a href="/dw/dimensoes.html#tabela-tb_dim_cds_tipo_origem">Tabela Sistema de Origem</a></td>
-</tr>
-<tr>
-<td>tb_dim_ciap</td>
+<td><a name="tb\_dim\_ciap"></a>tb_dim_ciap</td>
 <td><a href="/ledi/documentacao/referencias/index.html">Classificação Internacional de Atenção Primária - Segunda Edição (CIAP2)</a></td>
 </tr>
 <tr>
-<td>tb_dim_cid</td>
+<td><a name="tb\_dim\_cid"></a>tb_dim_cid</td>
 <td><a href="/ledi/documentacao/referencias/index.html">Classificação Internacional de Doenças - Versão 10</a></td>
 </tr>
 <tr>
-<td>tb_dim_cuidador</td>
+<td><a name="tb\_dim\_classificacao\_risc\_enc"></a>tb_dim_classificacao_risc_enc</td>
+<td><a href="/ledi/documentacao/referencias/dicionario.html#classificacaorisco">Classificação de risco do encaminhamento</a></td>
+</tr>
+<tr>
+<td><a name="tb\_dim\_conduta\_ad"></a>tb_dim_conduta_ad</td>
+<td><a href="/ledi/documentacao/referencias/dicionario.html#condutadesfecho">Conduta</a></td>
+</tr>
+<tr>
+<td><a name="tb\_dim\_cuidador"></a>tb_dim_cuidador</td>
 <td><a href="/ledi/documentacao/referencias/dicionario.html#cuidadorcidadao">Cuidador do cidadão</a></td>
 </tr>
 <tr>
-<td>tb_dim_desfecho_visita</td>
+<td><a name="tb\_dim\_desfecho\_visita"></a>tb_dim_desfecho_visita</td>
 <td><a href="/ledi/documentacao/referencias/dicionario.html#desfecho">Desfecho</a></td>
 </tr>
 <tr>
-<td>tb_dim_dose_imunobiologico</td>
+<td><a name="tb\_dim\_dose\_frequencia"></a>tb_dim_dose_frequencia</td>
+<td><a href="/ledi/documentacao/referencias/dicionario.html#dosefrequenciatipo">Tipo da frequência da dose</a></td>
+</tr>
+<tr>
+<td><a name="tb\_dim\_dose\_frequencia\_medida"></a>tb_dim_dose_frequencia_medida</td>
+<td><a href="/ledi/documentacao/referencias/dicionario.html#dosefrequenciaunidademedida">Unidade de medida da frequência da dose</a></td>
+</tr>
+<tr>
+<td><a name="tb\_dim\_dose\_imunobiologico"></a>tb_dim_dose_imunobiologico</td>
 <td><a href="/ledi/documentacao/referencias/dicionario.html#dose">Dose de imunobiológico</a></td>
 </tr>
 <tr>
-<td>tb_dim_equipe</td>
+<td><a name="tb\_dim\_duracao\_tratamento\_med"></a>tb_dim_duracao_tratamento_med</td>
+<td><a href="/ledi/documentacao/referencias/dicionario.html#duracaotratamentomedida">Unidade de medida da duração do tratamento</a></td>
+</tr>
+<tr>
+<td><a name="tb\_dim\_equipe"></a>tb_dim_equipe</td>
 <td>-</td>
 </tr>
 <tr>
-<td>tb_dim_estrategia_vacinacao</td>
+<td><a name="tb\_dim\_especialidade"></a>tb_dim_especialidade</td>
+<td>As informações desta tabela estão presentes em <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#especialidadeencaminhamentoatendimentoindividual">Especialidades - Atendimento Individual</a> e <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fao.html#especialidadeencaminhamentoatendimentoodontol-gico">Especialidades - Atendimento Odontológico</a></td>
+</tr>
+<tr>
+<td><a name="tb\_dim\_estrategia\_vacinacao"></a>tb_dim_estrategia_vacinacao</td>
 <td><a href="/ledi/documentacao/referencias/dicionario.html#estrategiavacinacao">Estratégia de vacinação</a></td>
 </tr>
 <tr>
-<td>tb_dim_etnia</td>
+<td><a name="tb\_dim\_etnia"></a>tb_dim_etnia</td>
 <td><a href="/ledi/documentacao/referencias/dicionario.html#etnia">Etnia</a></td>
 </tr>
 <tr>
-<td>tb_dim_faixa_etaria</td>
+<td><a name="tb\_dim\_faixa\_etaria"></a>tb_dim_faixa_etaria</td>
 <td>Apresenta as informações conforme <a href="/dw/dimensoes.html#tabela-tb_dim_faixa_etaria">Tabela de Faixa Etária</a></td>
 </tr>
 <tr>
-<td>tb_dim_frequencia_alimentacao</td>
+<td><a name="tb\_dim\_forma\_farmaceutica"></a>tb_dim_forma_farmaceutica</td>
+<td>Apresenta as informações conforme a coluna <strong>Forma farmacêutica</strong> da tabela <a href="/ledi/documentacao/referencias/tabela_catmat.html">Tabela de medicamentos CATMAT</a></td>
+</tr>
+<tr>
+<td><a name="tb\_dim\_frequencia\_alimentacao"></a>tb_dim_frequencia_alimentacao</td>
 <td><a href="/ledi/documentacao/referencias/dicionario.html#quantasvezesalimentacao">Quantas vezes se alimenta ao dia?</a></td>
 </tr>
 <tr>
-<td>tb_dim_identidade_genero</td>
+<td><a name="tb\_dim\_identidade\_genero"></a>tb_dim_identidade_genero</td>
 <td><a href="/ledi/documentacao/referencias/dicionario.html#identidadegenerocidadao">Identidade de gênero</a></td>
 </tr>
 <tr>
-<td>tb_dim_imunobiologico</td>
+<td><a name="tb\_dim\_imunobiologico"></a>tb_dim_imunobiologico</td>
 <td><a href="/ledi/documentacao/referencias/dicionario.html#imunobiologico">Imunobiológico</a></td>
 </tr>
 <tr>
-<td>tb_dim_local_atendimento</td>
+<td><a name="tb\_dim\_inep"></a>tb_dim_inep</td>
+<td><a href="/ledi/documentacao/referencias/index.html">Inep</a></td>
+</tr>
+<tr>
+<td><a name="tb\_dim\_local\_atendimento"></a>tb_dim_local_atendimento</td>
 <td><a href="/ledi/documentacao/referencias/dicionario.html#localdeatendimento">Local de atendimento</a></td>
 </tr>
 <tr>
-<td>tb_dim_modalidade_ad</td>
+<td><a name="tb\_dim\_modalidade\_ad"></a>tb_dim_modalidade_ad</td>
 <td><a href="/ledi/documentacao/referencias/dicionario.html#modalidadead">Modalidade AD</a></td>
 </tr>
 <tr>
-<td>tb_dim_municipio</td>
+<td><a name="tb\_dim\_municipio"></a>tb_dim_municipio</td>
 <td><a href="/ledi/documentacao/referencias/municipios.html">Municípios</a></td>
 </tr>
 <tr>
-<td>tb_dim_nacionalidade</td>
+<td><a name="tb\_dim\_nacionalidade"></a>tb_dim_nacionalidade</td>
 <td><a href="/ledi/documentacao/referencias/dicionario.html#nacionalidade">Nacionalidade</a></td>
 </tr>
 <tr>
-<td>tb_dim_pais</td>
+<td><a name="tb\_dim\_pais"></a>tb_dim_pais</td>
 <td><a href="/ledi/documentacao/referencias/paises.html">Países</a></td>
 </tr>
 <tr>
-<td>tb_dim_pic</td>
+<td><a name="tb\_dim\_pic"></a>tb_dim_pic</td>
 <td><a href="https://integracao.esusab.ufsc.br/v20/docs/dicionario/dicionario.html#praticasintegrativascomplementares">Práticas integrativas complementares</a></td>
 </tr>
 <tr>
-<td>tb_dim_procedencia_origem</td>
+<td><a name="tb\_dim\_procedencia\_origem"></a>tb_dim_procedencia_origem</td>
 <td><a href="/ledi/documentacao/referencias/dicionario.html#atencaodomiciliarprocedencia">Procedência</a></td>
 </tr>
 <tr>
-<td>tb_dim_procedimento</td>
+<td><a name="tb\_dim\_procedimento"></a>tb_dim_procedimento</td>
 <td><a href="/ledi/documentacao/referencias/index.html">Tabela Unificada SIGTAP</a></td>
 </tr>
 <tr>
-<td>tb_dim_profissional</td>
+<td><a name="tb\_dim\_profissional"></a>tb_dim_profissional</td>
 <td>-</td>
 </tr>
 <tr>
-<td>tb_dim_raca_cor</td>
+<td><a name="tb\_dim\_raca\_cor"></a>tb_dim_raca_cor</td>
 <td><a href="/ledi/documentacao/referencias/dicionario.html#racacor">Raça / Cor</a></td>
 </tr>
 <tr>
-<td>tb_dim_racionalidade_saude</td>
+<td><a name="tb\_dim\_racionalidade\_saude"></a>tb_dim_racionalidade_saude</td>
 <td><a href="/ledi/documentacao/referencias/dicionario.html#racionalidadesaude">Racionalidade em saúde</a></td>
 </tr>
 <tr>
-<td>tb_dim_sexo</td>
+<td><a name="tb\_dim\_sexo"></a>tb_dim_sexo</td>
 <td><a href="/ledi/documentacao/referencias/dicionario.html#sexo">Sexo</a> <br> Desconsiderar a opção &quot;Ignorado&quot;</td>
 </tr>
 <tr>
-<td>tb_dim_situacao_trabalho</td>
+<td><a name="tb\_dim\_situacao\_trabalho"></a>tb_dim_situacao_trabalho</td>
 <td><a href="/ledi/documentacao/referencias/dicionario.html#situacaomercadotrabalho">Situação no mercado de trabalho</a></td>
 </tr>
 <tr>
-<td>tb_dim_tempo_morador_rua</td>
+<td><a name="tb\_dim\_tempo\_morador\_rua"></a>tb_dim_tempo_morador_rua</td>
 <td><a href="/ledi/documentacao/referencias/dicionario.html#temposituacaoderua">Tempo em situação de rua</a></td>
 </tr>
 <tr>
-<td>tb_dim_tipo_abastecimento_agua</td>
+<td><a name="tb\_dim\_tipo\_abastecimento\_agua"></a>tb_dim_tipo_abastecimento_agua</td>
 <td><a href="/ledi/documentacao/referencias/dicionario.html#abastecimentodeagua">Abastecimento de água</a></td>
 </tr>
 <tr>
-<td>tb_dim_tipo_acesso_domicilio</td>
+<td><a name="tb\_dim\_tipo\_acesso\_domicilio"></a>tb_dim_tipo_acesso_domicilio</td>
 <td><a href="/ledi/documentacao/referencias/dicionario.html#tipodeacessoaodomicilio">Tipo de acesso ao domicílio</a></td>
 </tr>
 <tr>
-<td>tb_dim_tipo_atendimento</td>
+<td><a name="tb\_dim\_tipo\_atendimento"></a>tb_dim_tipo_atendimento</td>
 <td><a href="/ledi/documentacao/referencias/dicionario.html#tipodeatendimento">Tipo de atendimento</a> <br> Também apresenta a opção &quot;Consultas&quot;. A coluna co_dim_tipo_atendimento_pai referencia o registro pai, utilizado para agrupamento da informação / visualização hierárquica</td>
 </tr>
 <tr>
-<td>tb_dim_tipo_atividade</td>
+<td><a name="tb\_dim\_tipo\_atividade"></a>tb_dim_tipo_atividade</td>
 <td><a href="/ledi/documentacao/referencias/dicionario.html#tipoatividadecoletiva">Atividade</a></td>
 </tr>
 <tr>
-<td>tb_dim_tipo_condicao_peso</td>
+<td><a name="tb\_dim\_tipo\_condicao\_peso"></a>tb_dim_tipo_condicao_peso</td>
 <td><a href="/ledi/documentacao/referencias/dicionario.html#consideracaopeso">Sobre seu peso, você se considera?</a></td>
 </tr>
 <tr>
-<td>tb_dim_tipo_consulta</td>
+<td><a name="tb\_dim\_tipo\_consulta\_odonto"></a>tb_dim_tipo_consulta_odonto</td>
 <td><a href="/ledi/documentacao/referencias/dicionario.html#tipodeconsultaodonto">Tipo de consulta</a> <br> Para manter a compatibilidade com versões anteriores, também apresenta as opções &quot;Consulta de conclusão de tratamento&quot; e &quot;Não se aplica (NA)&quot;</td>
 </tr>
 <tr>
-<td>tb_dim_tipo_destino_lixo</td>
+<td><a name="tb\_dim\_tipo\_destino\_lixo"></a>tb_dim_tipo_destino_lixo</td>
 <td><a href="/ledi/documentacao/referencias/dicionario.html#destinodolixo">Destino do lixo</a></td>
 </tr>
 <tr>
-<td>tb_dim_tipo_domicilio</td>
+<td><a name="tb\_dim\_tipo\_domicilio"></a>tb_dim_tipo_domicilio</td>
 <td><a href="/ledi/documentacao/referencias/dicionario.html#tipodedomicilio">Tipo de domicílio</a></td>
 </tr>
 <tr>
-<td>tb_dim_tipo_elegibilidade</td>
+<td><a name="tb\_dim\_tipo\_elegibilidade"></a>tb_dim_tipo_elegibilidade</td>
 <td><a href="/ledi/documentacao/referencias/dicionario.html#conclusaodestinoelegivel">Elegível</a></td>
 </tr>
 <tr>
-<td>tb_dim_tipo_escoamento_sanitar</td>
+<td><a name="tb\_dim\_tipo\_escoamento\_sanitar"></a>tb_dim_tipo_escoamento_sanitar</td>
 <td><a href="/ledi/documentacao/referencias/dicionario.html#formadeescoamentodobanheiroousanitario">Forma de escoamento do banheiro ou sanitário</a></td>
 </tr>
 <tr>
-<td>tb_dim_tipo_escolaridade</td>
+<td><a name="tb\_dim\_tipo\_escolaridade"></a>tb_dim_tipo_escolaridade</td>
 <td><a href="/ledi/documentacao/referencias/dicionario.html#cursomaiselevado">Qual é o curso mais elevado que frequenta ou frequentou?</a></td>
 </tr>
 <tr>
-<td>tb_dim_tipo_ficha</td>
+<td><a name="tb\_dim\_tipo\_ficha"></a>tb_dim_tipo_ficha</td>
 <td><a href="/ledi/documentacao/referencias/dicionario.html#tipodadoserializado">Tipo de ficha</a> <br> Também apresenta as opções &quot;AD resumo&quot; e &quot;ESUS PEC Atendimento&quot;</td>
 </tr>
 <tr>
-<td>tb_dim_tipo_imovel</td>
+<td><a name="tb\_dim\_tipo\_glicemia"></a>tb_dim_tipo_glicemia</td>
+<td><a href="/ledi/documentacao/referencias/dicionario.html#momentocoletaglicemia">Tipo de glicemia</a></td>
+</tr>
+<tr>
+<td><a name="tb\_dim\_tipo\_imovel"></a>tb_dim_tipo_imovel</td>
 <td><a href="/ledi/documentacao/referencias/dicionario.html#tipodeimovel">Tipo de imóvel</a></td>
 </tr>
 <tr>
-<td>tb_dim_tipo_localizacao</td>
+<td><a name="tb\_dim\_tipo\_localizacao"></a>tb_dim_tipo_localizacao</td>
 <td><a href="/ledi/documentacao/referencias/dicionario.html#localizacaodamoradia">Localização</a></td>
 </tr>
 <tr>
-<td>tb_dim_tipo_logradouro</td>
+<td><a name="tb\_dim\_tipo\_logradouro"></a>tb_dim_tipo_logradouro</td>
 <td><a href="/ledi/documentacao/referencias/uf.html#tipo-de-logradouro">Tipo de logradouro</a></td>
 </tr>
 <tr>
-<td>tb_dim_tipo_material_parede</td>
+<td><a name="tb\_dim\_tipo\_material\_parede"></a>tb_dim_tipo_material_parede</td>
 <td><a href="/ledi/documentacao/referencias/dicionario.html#materialpredominantenaconstrucao">Material predominante na construção das paredes externas de seu domicílio</a></td>
 </tr>
 <tr>
-<td>tb_dim_tipo_orientacao_sexual</td>
+<td><a name="tb\_dim\_tipo\_orientacao\_sexual"></a>tb_dim_tipo_orientacao_sexual</td>
 <td><a href="/ledi/documentacao/referencias/dicionario.html#orientacaosexual">Orientação sexual</a></td>
 </tr>
 <tr>
-<td>tb_dim_tipo_origem_dado_transp</td>
+<td><a name="tb\_dim\_tipo\_origem"></a>tb_dim_tipo_origem</td>
+<td>Contém a informação de qual sistema gerou a informação. As opções são apresentadas na <a href="/dw/dimensoes.html#tabela-tb_dim_tipo_origem">Tabela Sistema de Origem</a></td>
+</tr>
+<tr>
+<td><a name="tb\_dim\_tipo\_origem\_dado\_transp"></a>tb_dim_tipo_origem_dado_transp</td>
 <td>Apresenta a informação de qual forma o dado foi registrado na base, conforme apresentado na <a href="/dw/dimensoes.html#tabela-tb_dim_tipo_origem_dado_transp">Tabela Origem da Ficha</a></td>
 </tr>
 <tr>
-<td>tb_dim_tipo_parentesco</td>
+<td><a name="tb\_dim\_tipo\_parentesco"></a>tb_dim_tipo_parentesco</td>
 <td><a href="/ledi/documentacao/referencias/dicionario.html#relacaoparentesco">Relação de parentesco com o responsável familiar</a></td>
 </tr>
 <tr>
-<td>tb_dim_tipo_posse_terra</td>
+<td><a name="tb\_dim\_tipo\_posse\_terra"></a>tb_dim_tipo_posse_terra</td>
 <td><a href="/ledi/documentacao/referencias/dicionario.html#condicaodeposseeusodaterra">Em caso de área de produção rural: condição de posse e uso da terra</a></td>
 </tr>
 <tr>
-<td>tb_dim_tipo_renda_familiar</td>
+<td><a name="tb\_dim\_tipo\_renda\_familiar"></a>tb_dim_tipo_renda_familiar</td>
 <td><a href="/ledi/documentacao/referencias/dicionario.html#rendafamiliar">Renda familiar (sal. mínimo)</a></td>
 </tr>
 <tr>
-<td>tb_dim_tipo_saida_cadastro</td>
+<td><a name="tb\_dim\_tipo\_saida\_cadastro"></a>tb_dim_tipo_saida_cadastro</td>
 <td><a href="/ledi/documentacao/referencias/dicionario.html#motivosaida">Saída do cidadão do cadastro</a></td>
 </tr>
 <tr>
-<td>tb_dim_tipo_situacao_moradia</td>
+<td><a name="tb\_dim\_tipo\_situacao\_moradia"></a>tb_dim_tipo_situacao_moradia</td>
 <td><a href="/ledi/documentacao/referencias/dicionario.html#situacaodemoradia">Situação de moradia / Posse da terra</a></td>
 </tr>
 <tr>
-<td>tb_dim_tipo_tratamento_agua</td>
+<td><a name="tb\_dim\_tipo\_tratamento\_agua"></a>tb_dim_tipo_tratamento_agua</td>
 <td><a href="/ledi/documentacao/referencias/dicionario.html#aguaconsumodomicilio">Água para consumo no domicílio</a></td>
 </tr>
 <tr>
-<td>tb_dim_turno</td>
+<td><a name="tb\_dim\_turno"></a>tb_dim_turno</td>
 <td><a href="/ledi/documentacao/referencias/dicionario.html#turno">Turno</a></td>
 </tr>
 <tr>
-<td>tb_dim_uf</td>
+<td><a name="tb\_dim\_uf"></a>tb_dim_uf</td>
 <td><a href="/ledi/documentacao/referencias/uf.html#uf">Unidade federativa</a></td>
 </tr>
 <tr>
-<td>tb_dim_unidade_saude</td>
+<td><a name="tb\_dim\_unidade\_saude"></a>tb_dim_unidade_saude</td>
 <td>-</td>
+</tr>
+<tr>
+<td><a name="tb\_dim\_via\_administracao"></a>tb_dim_via_administracao</td>
+<td><a href="/ledi/documentacao/referencias/dicionario.html#viaadministracao">Via de administração</a></td>
 </tr>
 </tbody></table>
 
@@ -427,7 +478,7 @@
 
 <p>O anexo 1 apresenta as tabelas dimensão pertencentes a estrutura do Data Warehouse que não estão definidas no <a href="/ledi/index.html">Layout e-SUS APS de Dados e Interface</a>.</p>
 
-<h2 id="tabela-tb_dim_cds_tipo_origem">Tabela tb_dim_cds_tipo_origem</h2>
+<h2 id="tabela-tb_dim_tipo_origem">Tabela tb_dim_tipo_origem</h2>
 
 <table><thead>
 <tr>
@@ -449,27 +500,27 @@
 <tr>
 <td>1</td>
 <td>Online</td>
-<td>A origem da informação é de um sistema de CDS que opera em modo Online (e-SUS AB CDS)</td>
+<td>A origem da informação é de um sistema de CDS que opera em modo Online (e-SUS APS CDS)</td>
 </tr>
 <tr>
 <td>2</td>
 <td>PEC</td>
-<td>A origem da informação é de um sistema de prontuário eletrônico (e-SUS AB PEC)</td>
+<td>A origem da informação é de um sistema de prontuário eletrônico (e-SUS APS PEC)</td>
 </tr>
 <tr>
 <td>3</td>
 <td>Externo</td>
-<td>A origem da informação é de um sistema terceiro e foi importado no e-SUS AB PEC através do <a href="/ledi/index.html">LEDI</a></td>
+<td>A origem da informação é de um sistema terceiro e foi importado no e-SUS APS PEC através do <a href="/ledi/index.html">LEDI</a></td>
 </tr>
 <tr>
 <td>4</td>
 <td>Android_ACS</td>
-<td>A origem da informação é de um aplicativo e-SUS AB Território que está integrado ao e-SUS AB PEC</td>
+<td>A origem da informação é de um aplicativo e-SUS Território que está integrado ao e-SUS APS PEC</td>
 </tr>
 <tr>
 <td>5</td>
 <td>Android_AC</td>
-<td>A origem da informação é de um aplicativo e-SUS Atividade Coletiva que está integrado ao e-SUS AB PEC</td>
+<td>A origem da informação é de um aplicativo e-SUS Atividade Coletiva que está integrado ao e-SUS APS PEC</td>
 </tr>
 </tbody></table>
 
@@ -616,7 +667,7 @@
 <tr>
 <td>2</td>
 <td>Recebido online</td>
-<td>Transmitido de outro e-SUS AB PEC para esta aplicação</td>
+<td>Transmitido de outro e-SUS APS PEC para esta aplicação</td>
 </tr>
 <tr>
 <td>3</td>
@@ -626,12 +677,12 @@
 <tr>
 <td>4</td>
 <td>Originado em versão anterior à 1.3.00</td>
-<td>Dados gerados por qualquer sistema e-SUS AB cuja versão era inferior à 1.3.00</td>
+<td>Dados gerados por qualquer sistema e-SUS APS cuja versão era inferior à 1.3.00</td>
 </tr>
 <tr>
 <td>5</td>
 <td>ACS</td>
-<td>Transmitido de um aplicativo e-SUS AB Território para esta aplicação</td>
+<td>Transmitido de um aplicativo e-SUS Território para esta aplicação</td>
 </tr>
 <tr>
 <td>6</td>

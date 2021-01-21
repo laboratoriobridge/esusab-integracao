@@ -25,7 +25,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 4.0.4</span>
+        <span class="label">versão 4.1.2</span>
       
     </a>
 
@@ -75,7 +75,7 @@
           
         
           
-            <li><a title="Layout e-SUS APS de Dados e Interface Versão 4.0.4" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 4.0.4</a></li>
+            <li><a title="Layout e-SUS APS de Dados e Interface Versão 4.1.2" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 4.1.2</a></li>
           
         
           
@@ -115,9 +115,9 @@
   <ul>
     
       <li>
-        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 4.0.4" href="/ledi/documentacao/index.html" class="back-link">
+        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 4.1.2" href="/ledi/documentacao/index.html" class="back-link">
           <i class="icon icon-back"></i> Voltar
-          <small>(Layout e-SUS APS de Dados e Interface Versão 4.0.4)</small>
+          <small>(Layout e-SUS APS de Dados e Interface Versão 4.1.2)</small>
         </a>
       </li>
     
@@ -243,7 +243,7 @@
     <p class="post-meta">
       <a class="btn" href="/pdf.html?include=/ledi/documentacao/estrutura_arquivos/dicionario-fai.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 17/12/2020</span>
+        <span class="label" title="Data da última modificação">Alterado em 14/01/2021</span>
       
     </p>
   </header>
@@ -999,6 +999,58 @@
 <li>Não pode ser preenchido se o campo <a href="#2-cns">cns</a> for preenchido.</li>
 </ul>
 
+<h3 id="30-medicamentos">#30 Medicamentos</h3>
+
+<p>Lista de medicamentos prescritos durante o atendimento.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>List&lt;medicamentos&gt;</td>
+<td>Não</td>
+<td>0</td>
+<td>15</td>
+</tr>
+</tbody></table>
+
+<p><strong>Referência:</strong> <a href="#medicamentos">medicamentos</a>.</p>
+
+<h3 id="31-encaminhamentos">#31 Encaminhamentos</h3>
+
+<p>Lista com os encaminhamentos realizados durante o atendimento.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>List&lt;encaminhamentos&gt;</td>
+<td>Não</td>
+<td>0</td>
+<td>10</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> </p>
+
+<ul>
+<li>Não pode ter itens duplicados na lista. Serão considerados duplicados os itens que tiverem a mesma <a href="#1-especialidade">especialidade</a> e <a href="#2-hipotesediagnosticocid10">hipoteseDiagnosticoCID10</a> ou a mesma <a href="#1-especialidade">especialidade</a> e <a href="#3-hipotesediagnosticociap2">hipoteseDiagnosticoCIAP2</a>;</li>
+<li>Todos os encaminhamentos devem ser preenchidos somente com CID10 ou com CIAP2, de acordo com a <a href="/ledi/documentacao/regras/cbo.html#ficha-de-atendimento-individual">Tabela 3 - CBOs que podem registrar ficha de atendimento individual</a>;</li>
+<li>Ao preencher este grupo, é obrigatório o preenchimento do campo <a href="#21-condutas">condutas</a> com o valor <code>4 - Encaminhamento para serviço especializado</code>.</li>
+</ul>
+
+<p><strong>Referência:</strong> <a href="#encaminhamentos">encaminhamentos</a>.</p>
+
 <h2 id="exame">Exame</h2>
 
 <h3 id="1-codigoexame">#1 codigoExame</h3>
@@ -1213,6 +1265,433 @@
 <li>Deve ser apresentada somente CID10 permitida para o <a href="#5-sexo">Sexo</a> do cidadão;</li>
 <li>É requerido o preenchimento de pelo menos um dos itens de <code>#1</code> a <code>#5</code>.</li>
 </ul>
+
+<h2 id="medicamentos">Medicamentos</h2>
+
+<h3 id="1-codigocatmat">#1 codigoCatmat</h3>
+
+<p>Código identificador do medicamento/princípio ativo.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Sim</td>
+<td>-</td>
+<td>20</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> Deve ser preenchido com o valor presente na coluna <strong>Código CATMAT</strong> da <a href="/ledi/documentacao/referencias/tabela_catmat.html">Tabela de Medicamentos CATMAT</a>.</p>
+
+<h3 id="2-viaadministracao">#2 viaAdministracao</h3>
+
+<p>A via em que o medicamento/princípio ativo entrará em contato com o organismo.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Integer</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#viaadministracao">viaAdministracao</a>.</p>
+
+<h3 id="3-dose">#3 dose</h3>
+
+<p>Dose em que o medicamento/princípio ativo deve ser administrado.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Sim</td>
+<td>-</td>
+<td>100</td>
+</tr>
+</tbody></table>
+
+<h3 id="4-doseunica">#4 doseUnica</h3>
+
+<p>Indica que será uma única dose.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> Este campo só pode ser marcado como &quot;Verdadeiro&quot; caso o campo <a href="#5-usocontinuo">usoContinuo</a> estiver marcado com a opção &quot;Falso&quot;.</p>
+
+<h3 id="5-usocontinuo">#5 usoContinuo</h3>
+
+<p>Indica que é de uso contínuo.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> Este campo só pode ser marcado como &quot;Verdadeiro&quot; caso o campo <a href="#4-doseunica">doseUnica</a> estiver marcado com a opção &quot;Falso&quot;.</p>
+
+<h3 id="6-dosefrequenciatipo">#6 doseFrequenciaTipo</h3>
+
+<p>Tipo da frequência da dose.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Integer</td>
+<td>Condicional</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> </p>
+
+<ul>
+<li>Não pode ser preenchido caso o campo <a href="#4-doseunica">doseUnica</a> estiver marcado como &quot;Verdadeiro&quot;;</li>
+<li>Caso o campo <a href="#4-doseunica">doseUnica</a> estiver marcado como &quot;Falso&quot;, este campo é de preenchimento obrigatório.</li>
+</ul>
+
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#dosefrequenciatipo">doseFrequenciaTipo</a>.</p>
+
+<h3 id="7-dosefrequencia">#7 doseFrequencia</h3>
+
+<p>Refere-se ao valor do tipo de frequência da dose.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Integer</td>
+<td>Condicional</td>
+<td>-</td>
+<td>99</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Não pode ser preenchido caso o campo <a href="#4-doseunica">doseUnica</a> estiver marcado como &quot;Verdadeiro&quot;;</li>
+<li>Se o campo <a href="#6-dosefrequenciatipo">doseFrequenciaTipo</a> = <code>1 - Turno</code>, então deve ser preenchido com um valor conforme <a href="/ledi/documentacao/referencias/dicionario.html#turno">turno</a>, complementando a informação com o preenchimento dos campos <a href="#8-dosefrequenciaquantidade">doseFrequenciaQuantidade</a> e <a href="#9-dosefrequenciaunidademedida">doseFrequenciaUnidadeMedida</a>;</li>
+<li>Se o campo <a href="#6-dosefrequenciatipo">doseFrequenciaTipo</a> = <code>2 - Frequência</code>, então deve ser preenchido com o <strong>número de vezes</strong> que a dose deverá ser administrada, complementando a informação com o preenchimento dos campos <a href="#8-dosefrequenciaquantidade">doseFrequenciaQuantidade</a> e <a href="#9-dosefrequenciaunidademedida">doseFrequenciaUnidadeMedida</a>;</li>
+<li>Se o campo <a href="#6-dosefrequenciatipo">doseFrequenciaTipo</a> = <code>3 - Intervalo</code>, então deve ser preenchido com o <strong>intervalo de horas</strong> que a dose deverá ser administrada.</li>
+</ul>
+
+<h3 id="8-dosefrequenciaquantidade">#8 doseFrequenciaQuantidade</h3>
+
+<p>Refere-se à periodicidade em que a dose será administrada.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Integer</td>
+<td>Condicional</td>
+<td>-</td>
+<td>999</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Não pode ser preenchido caso o campo <a href="#4-doseunica">doseUnica</a> estiver marcado como &quot;Verdadeiro&quot;;</li>
+<li>Não pode ser preenchido caso o campo <a href="#6-dosefrequenciatipo">doseFrequenciaTipo</a> = <code>3 - Intervalo</code>;</li>
+<li>É de preenchimento obrigatório caso o campo <a href="#6-dosefrequenciatipo">doseFrequenciaTipo</a> for <code>1 - Turno</code> ou <code>2 - Frequência</code>.</li>
+</ul>
+
+<h3 id="9-dosefrequenciaunidademedida">#9 doseFrequenciaUnidadeMedida</h3>
+
+<p>Unidade de tempo associada à quantidade da frequência da dose.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Integer</td>
+<td>Condicional</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Não pode ser preenchido caso o campo <a href="#4-doseunica">doseUnica</a> estiver marcado como &quot;Verdadeiro&quot;;</li>
+<li>Não pode ser preenchido caso o campo <a href="#6-dosefrequenciatipo">doseFrequenciaTipo</a> = <code>3 - Intervalo</code>;</li>
+<li>É de preenchimento obrigatório caso o campo <a href="#6-dosefrequenciatipo">doseFrequenciaTipo</a> for <code>1 - Turno</code> ou <code>2 - Frequência</code>.</li>
+</ul>
+
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#dosefrequenciaunidademedida">doseFrequenciaUnidadeMedida</a>.</p>
+
+<h3 id="10-dtiniciotratamento">#10 dtInicioTratamento</h3>
+
+<p>Data de início do tratamento.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> Não pode ser anterior à <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>.</p>
+
+<p><strong>Referência:</strong> A data deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
+
+<h3 id="11-duracaotratamento">#11 duracaoTratamento</h3>
+
+<p>Tempo de duração do tratamento.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Integer</td>
+<td>Condicional</td>
+<td>-</td>
+<td>999</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Não pode ser preenchido caso o campo <a href="#4-doseunica">doseUnica</a> estiver marcado como &quot;Verdadeiro&quot;;</li>
+<li>Não pode ser preenchido caso o campo <a href="#12-duracaotratamentomedida">duracaoTratamentoMedida</a> = <code>4 - Indeterminado</code>;</li>
+<li>O valor deste campo deve ser maior que o valor do campo <a href="#8-dosefrequenciaquantidade">doseFrequenciaQuantidade</a>, respeitando as devidas unidades de medidas.</li>
+</ul>
+
+<h3 id="12-duracaotratamentomedida">#12 duracaoTratamentoMedida</h3>
+
+<p>Unidade de medida para o tempo de duração do tratamento.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Integer</td>
+<td>Condicional</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> Não pode ser preenchido caso o campo <a href="#4-doseunica">doseUnica</a> estiver marcado como &quot;Verdadeiro&quot;.</p>
+
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#duracaotratamentomedida">duracaoTratamentoMedida</a>.</p>
+
+<h3 id="13-quantidadereceitada">#13 quantidadeReceitada</h3>
+
+<p>Quantidade receitada do medicamento/princípio ativo.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Integer</td>
+<td>Sim</td>
+<td>1</td>
+<td>999</td>
+</tr>
+</tbody></table>
+
+<h2 id="encaminhamentos">Encaminhamentos</h2>
+
+<h3 id="1-especialidade">#1 especialidade</h3>
+
+<p>Especialidade em que o cidadão será encaminhado.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Integer</td>
+<td>Sim</td>
+<td>--</td>
+<td>--</td>
+</tr>
+</tbody></table>
+
+<p><strong>Referência:</strong> <a href="#especialidadeencaminhamentoatendimentoindividual">especialidadeEncaminhamentoAtendimentoIndividual</a>.</p>
+
+<h3 id="2-hipotesediagnosticocid10">#2 hipoteseDiagnosticoCID10</h3>
+
+<p>Hipótese/diagnóstico do encaminhamento com relação à tabela CID10.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Condicional</td>
+<td>--</td>
+<td>--</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Este campo só poderá ser preenchido caso o profissional for habilitado a informar CID10 conforme apresentado na tabela <a href="/ledi/documentacao/regras/cbo.html#ficha-de-atendimento-individual">Tabela 3 - CBOs que podem registrar ficha de atendimento individual</a>;</li>
+<li>Deve ser preenchida somente CID10 permitida para o <a href="#5-sexo">Sexo</a> do cidadão;</li>
+<li>Não pode ser preenchido se o campo <a href="#3-hipotesediagnosticociap2">hipoteseDiagnosticoCIAP2</a> for preenchido;</li>
+<li>Este campo é de preenchimento obrigatório apenas se o campo <a href="#3-hipotesediagnosticociap2">hipoteseDiagnosticoCIAP2</a> não estiver preenchido.</li>
+</ul>
+
+<h3 id="3-hipotesediagnosticociap2">#3 hipoteseDiagnosticoCIAP2</h3>
+
+<p>Hipótese/diagnóstico do encaminhamento com relação à tabela CIAP2.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Condicional</td>
+<td>--</td>
+<td>--</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Este campo só deverá ser preenchido caso o profissional <strong>não</strong> for habilitado a informar CID10 conforme apresentado na tabela <a href="/ledi/documentacao/regras/cbo.html#ficha-de-atendimento-individual">Tabela 3 - CBOs que podem registrar ficha de atendimento individual</a>;</li>
+<li>Deve ser preenchida somente CIAP2 permitida para o <a href="#5-sexo">Sexo</a> do cidadão;</li>
+<li>Deve conter somente CIAP2 que possuem relação com uma CID10, conforme listado na planilha <a href="/ledi/documentacao/referencias/relacao_ciap_cid.html">CIAP2 x CID10 mais frequentes</a>;</li>
+<li>Não pode ser preenchido se o campo <a href="#2-hipotesediagnosticocid10">hipoteseDiagnosticoCID10</a> for preenchido;</li>
+<li>Este campo é de preenchimento obrigatório apenas se o campo <a href="#2-hipotesediagnosticocid10">hipoteseDiagnosticoCID10</a> não estiver preenchido.</li>
+</ul>
+
+<h3 id="4-classificacaorisco">#4 classificacaoRisco</h3>
+
+<p>Refere-se à classificação de risco.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Integer</td>
+<td>Sim</td>
+<td>--</td>
+<td>--</td>
+</tr>
+</tbody></table>
+
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#classificacaorisco">classificacaoRisco</a>.</p>
 
 <h2 id="listaciapcondicaoavaliada">ListaCiapCondicaoAvaliada</h2>
 
@@ -1484,7 +1963,265 @@
 </tr>
 </tbody></table>
 
-<p><em>* Procedimentos pertencentes a competência <strong>09/2020</strong> do SIGTAP.</em></p>
+<p><em>* Procedimentos pertencentes a competência <strong>02/2019</strong> do SIGTAP.</em></p>
+
+<h2 id="especialidadeencaminhamentoatendimentoindividual">especialidadeEncaminhamentoAtendimentoIndividual</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Especialidade</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1</td>
+<td>CONSULTA EM ACUPUNTURA</td>
+</tr>
+<tr>
+<td>2</td>
+<td>CONSULTA EM ALERGIA E IMUNOLOGIA</td>
+</tr>
+<tr>
+<td>3</td>
+<td>CONSULTA EM ANESTESIOLOGIA</td>
+</tr>
+<tr>
+<td>4</td>
+<td>CONSULTA EM ANGIOLOGIA</td>
+</tr>
+<tr>
+<td>5</td>
+<td>CONSULTA EM CIRURGIA ONCOLÓGICA</td>
+</tr>
+<tr>
+<td>6</td>
+<td>CONSULTA EM CARDIOLOGIA</td>
+</tr>
+<tr>
+<td>7</td>
+<td>CONSULTA EM CIRURGIA CARDÍACA</td>
+</tr>
+<tr>
+<td>8</td>
+<td>CONSULTA EM CIRURGIA GERAL</td>
+</tr>
+<tr>
+<td>9</td>
+<td>CONSULTA EM CIRURGIA REPARADORA</td>
+</tr>
+<tr>
+<td>10</td>
+<td>CONSULTA EM CIRURGIA PEDIÁTRICA</td>
+</tr>
+<tr>
+<td>11</td>
+<td>CONSULTA EM CIRURGIA PLÁSTICA</td>
+</tr>
+<tr>
+<td>12</td>
+<td>CONSULTA EM CIRURGIA TORÁCICA</td>
+</tr>
+<tr>
+<td>13</td>
+<td>CONSULTA EM DERMATOLOGIA</td>
+</tr>
+<tr>
+<td>14</td>
+<td>CONSULTA MÉDICA EM SAÚDE DO TRABALHADOR</td>
+</tr>
+<tr>
+<td>15</td>
+<td>CONSULTA EM CIRURGIA VASCULAR</td>
+</tr>
+<tr>
+<td>16</td>
+<td>CONSULTA EM ENDOCRINOLOGIA</td>
+</tr>
+<tr>
+<td>17</td>
+<td>CONSULTA EM FISIATRIA</td>
+</tr>
+<tr>
+<td>18</td>
+<td>CONSULTA EM GASTROENTEROLOGIA</td>
+</tr>
+<tr>
+<td>19</td>
+<td>CONSULTA EM CLÍNICA GERAL</td>
+</tr>
+<tr>
+<td>20</td>
+<td>CONSULTA EM GENÉTICA MÉDICA</td>
+</tr>
+<tr>
+<td>21</td>
+<td>CONSULTA EM GERIATRIA</td>
+</tr>
+<tr>
+<td>22</td>
+<td>CONSULTA EM GINECOLOGIA E OBSTETRÍCIA</td>
+</tr>
+<tr>
+<td>23</td>
+<td>CONSULTA EM CIRURGIA GINECOLÓGICA</td>
+</tr>
+<tr>
+<td>24</td>
+<td>CONSULTA EM UROGINECOLOGIA</td>
+</tr>
+<tr>
+<td>25</td>
+<td>CONSULTA EM HEMATOLOGIA</td>
+</tr>
+<tr>
+<td>26</td>
+<td>CONSULTA EM HOMEOPATIA</td>
+</tr>
+<tr>
+<td>27</td>
+<td>CONSULTA EM INFECTOLOGIA</td>
+</tr>
+<tr>
+<td>28</td>
+<td>CONSULTA EM MASTOLOGIA</td>
+</tr>
+<tr>
+<td>29</td>
+<td>CONSULTA EM NEFROLOGIA</td>
+</tr>
+<tr>
+<td>30</td>
+<td>CONSULTA EM CIRURGIA NEUROLÓGICA</td>
+</tr>
+<tr>
+<td>31</td>
+<td>CONSULTA EM NEUROLOGIA</td>
+</tr>
+<tr>
+<td>32</td>
+<td>CONSULTA EM NEUROPEDIATRIA</td>
+</tr>
+<tr>
+<td>33</td>
+<td>CONSULTA EM NUTROLOGIA</td>
+</tr>
+<tr>
+<td>34</td>
+<td>CONSULTA EM OFTALMOLOGIA</td>
+</tr>
+<tr>
+<td>35</td>
+<td>CONSULTA EM CIRURGIA OFTALMOLÓGICA</td>
+</tr>
+<tr>
+<td>36</td>
+<td>CONSULTA EM ONCOLOGIA</td>
+</tr>
+<tr>
+<td>37</td>
+<td>CONSULTA EM ORTOPEDIA</td>
+</tr>
+<tr>
+<td>38</td>
+<td>CONSULTA EM TRAUMATOLOGIA</td>
+</tr>
+<tr>
+<td>39</td>
+<td>CONSULTA EM CIRURGIA ORTOPÉDICA</td>
+</tr>
+<tr>
+<td>40</td>
+<td>CONSULTA EM OTORRINOLARINGOLOGIA</td>
+</tr>
+<tr>
+<td>41</td>
+<td>CONSULTA EM CIRURGIA OTORRINOLARINGOLOGIA</td>
+</tr>
+<tr>
+<td>42</td>
+<td>CONSULTA EM PROCTOLOGIA</td>
+</tr>
+<tr>
+<td>43</td>
+<td>CONSULTA EM PEDIATRIA</td>
+</tr>
+<tr>
+<td>44</td>
+<td>CONSULTA EM NEONATOLOGIA</td>
+</tr>
+<tr>
+<td>45</td>
+<td>CONSULTA EM PNEUMOLOGIA</td>
+</tr>
+<tr>
+<td>46</td>
+<td>CONSULTA EM TISIOLOGIA</td>
+</tr>
+<tr>
+<td>47</td>
+<td>CONSULTA EM PSIQUIATRIA</td>
+</tr>
+<tr>
+<td>48</td>
+<td>CONSULTA EM REUMATOLOGIA</td>
+</tr>
+<tr>
+<td>49</td>
+<td>CONSULTA EM UROLOGIA</td>
+</tr>
+<tr>
+<td>50</td>
+<td>CONSULTA EM ANDROLOGIA</td>
+</tr>
+<tr>
+<td>51</td>
+<td>CONSULTA EM CIRURGIA UROLÓGICA</td>
+</tr>
+<tr>
+<td>52</td>
+<td>CONSULTA EM CIRURGIA POSTECTOMIA</td>
+</tr>
+<tr>
+<td>53</td>
+<td>CONSULTA EM HEPATOLOGIA</td>
+</tr>
+<tr>
+<td>54</td>
+<td>CONSULTA EM REABILITAÇÃO FÍSICA</td>
+</tr>
+<tr>
+<td>55</td>
+<td>CONSULTA EM FISIOTERAPIA</td>
+</tr>
+<tr>
+<td>56</td>
+<td>CONSULTA EM NUTRIÇÃO</td>
+</tr>
+<tr>
+<td>57</td>
+<td>CONSULTA EM FONOAUDIOLOGIA</td>
+</tr>
+<tr>
+<td>58</td>
+<td>CONSULTA EM TERAPIA OCUPACIONAL</td>
+</tr>
+<tr>
+<td>59</td>
+<td>CONSULTA EM PSICOLOGIA</td>
+</tr>
+<tr>
+<td>60</td>
+<td>CONSULTA EM SEXOLOGIA</td>
+</tr>
+<tr>
+<td>61</td>
+<td>CONSULTA EM ASSISTENCIA SOCIAL</td>
+</tr>
+<tr>
+<td>62</td>
+<td>CONSULTA EM ODONTOLOGIA</td>
+</tr>
+</tbody></table>
 
   </article>
 

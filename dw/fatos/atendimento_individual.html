@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Atendimento individual</title>
-  <meta name="description" content="Esta estratégia de negócio refere-se aos registros de Atendimentos Individuais e está centrada na tb_fat_atendimento_individual.">
+  <meta name="description" content="Esta estratégia de negócio refere-se aos registros de Atendimentos Individuais e está centrada na tb_fat_atendimento_individual. Neste registro o campo nu_pr...">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="/dw/fatos/atendimento_individual.html">
@@ -25,7 +25,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 4.0.4</span>
+        <span class="label">versão 4.1.2</span>
       
     </a>
 
@@ -71,7 +71,7 @@
       
         
           
-            <li><a title="Data Warehouse Relatórios e-SUS AB PEC" href="/dw/index.html">Data Warehouse Relatórios e-SUS AB PEC</a></li>
+            <li><a title="Data Warehouse Relatórios e-SUS APS PEC" href="/dw/index.html">Data Warehouse Relatórios e-SUS APS PEC</a></li>
           
         
           
@@ -111,9 +111,9 @@
   <ul>
     
       <li>
-        <a title="Voltar para Data Warehouse Relatórios e-SUS AB PEC" href="/dw/index.html" class="back-link">
+        <a title="Voltar para Data Warehouse Relatórios e-SUS APS PEC" href="/dw/index.html" class="back-link">
           <i class="icon icon-back"></i> Voltar
-          <small>(Data Warehouse Relatórios e-SUS AB PEC)</small>
+          <small>(Data Warehouse Relatórios e-SUS APS PEC)</small>
         </a>
       </li>
     
@@ -225,15 +225,21 @@
     <p class="post-meta">
       <a class="btn" href="/pdf.html?include=/dw/fatos/atendimento_individual.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 01/11/2019</span>
+        <span class="label" title="Data da última modificação">Alterado em 14/01/2021</span>
       
     </p>
   </header>
 
   <article class="post-content">
-    <p>Esta estratégia de negócio refere-se aos registros de <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html">Atendimentos Individuais</a> e está centrada na <strong>tb_fat_atendimento_individual</strong>.</p>
+    <p>Esta estratégia de negócio refere-se aos registros de <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html">Atendimentos Individuais</a> e está centrada na <strong>tb_fat_atendimento_individual</strong>. Neste registro o campo <em>nu_prontuario</em> é criptografado. </p>
 
-<p>Os <strong>problemas / condições de saúde</strong> estão armazenados na <strong>tb_fat_atd_ind_problemas</strong>. Já os <strong>exames</strong> solicitados e/ou avaliados estão armazenados na <strong>tb_fat_atd_ind_procedimentos</strong>. Estas duas tabelas são interligadas com a <strong>tb_fat_atendimento_individual</strong> através da coluna <strong>co_fat_atd_ind</strong>.</p>
+<p><strong>1. </strong>Os <strong>problemas / condições de saúde</strong> estão armazenados na <strong>tb_fat_atd_ind_problemas</strong>. Esta tabela é interligada com a <strong>tb_fat_atendimento_individual</strong> através da coluna <strong>co_fat_atd_ind</strong>.</p>
+
+<p><strong>2. </strong> Os <strong>exames</strong> solicitados e/ou avaliados estão armazenados na <strong>tb_fat_atd_ind_procedimentos</strong>. Esta tabela é interligada com a <strong>tb_fat_atendimento_individual</strong> através da coluna <strong>co_fat_atd_ind</strong>.</p>
+
+<p><strong>3. </strong> As informações das <strong>prescrições de medicamentos</strong> estão armazenadas na <strong>tb_fat_atd_ind_medicamentos</strong>. Esta tabela é interligada com a <strong>tb_fat_atendimento_individual</strong> através da coluna <strong>co_fat_atd_ind</strong>.</p>
+
+<p><strong>4. </strong> As informações dos <strong>encaminhamentos</strong> estão armazenadas na <strong>tb_fat_atd_ind_encaminhamentos</strong>. Esta tabela é interligada com a <strong>tb_fat_atendimento_individual</strong> através da coluna <strong>co_fat_atd_ind</strong>.</p>
 
 <table><thead>
 <tr>

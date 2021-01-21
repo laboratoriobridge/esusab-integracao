@@ -40,6 +40,10 @@ class VacinaRowThrift {
    * @var string
    */
   public $fabricante = null;
+  /**
+   * @var int
+   */
+  public $grupoAtendimento = null;
 
   public function __construct($vals=null) {
     if (!isset(self::$_TSPEC)) {
@@ -64,6 +68,10 @@ class VacinaRowThrift {
           'var' => 'fabricante',
           'type' => TType::STRING,
           ),
+        6 => array(
+          'var' => 'grupoAtendimento',
+          'type' => TType::I64,
+          ),
         );
     }
     if (is_array($vals)) {
@@ -81,6 +89,9 @@ class VacinaRowThrift {
       }
       if (isset($vals['fabricante'])) {
         $this->fabricante = $vals['fabricante'];
+      }
+      if (isset($vals['grupoAtendimento'])) {
+        $this->grupoAtendimento = $vals['grupoAtendimento'];
       }
     }
   }
@@ -139,6 +150,13 @@ class VacinaRowThrift {
             $xfer += $input->skip($ftype);
           }
           break;
+        case 6:
+          if ($ftype == TType::I64) {
+            $xfer += $input->readI64($this->grupoAtendimento);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
         default:
           $xfer += $input->skip($ftype);
           break;
@@ -175,6 +193,11 @@ class VacinaRowThrift {
     if ($this->fabricante !== null) {
       $xfer += $output->writeFieldBegin('fabricante', TType::STRING, 5);
       $xfer += $output->writeString($this->fabricante);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->grupoAtendimento !== null) {
+      $xfer += $output->writeFieldBegin('grupoAtendimento', TType::I64, 6);
+      $xfer += $output->writeI64($this->grupoAtendimento);
       $xfer += $output->writeFieldEnd();
     }
     $xfer += $output->writeFieldStop();

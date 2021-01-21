@@ -27,6 +27,7 @@ class VacinaRowThrift:
    - dose
    - lote
    - fabricante
+   - grupoAtendimento
   """
 
   thrift_spec = (
@@ -36,14 +37,16 @@ class VacinaRowThrift:
     (3, TType.I64, 'dose', None, None, ), # 3
     (4, TType.STRING, 'lote', None, None, ), # 4
     (5, TType.STRING, 'fabricante', None, None, ), # 5
+    (6, TType.I64, 'grupoAtendimento', None, None, ), # 6
   )
 
-  def __init__(self, imunobiologico=None, estrategiaVacinacao=None, dose=None, lote=None, fabricante=None,):
+  def __init__(self, imunobiologico=None, estrategiaVacinacao=None, dose=None, lote=None, fabricante=None, grupoAtendimento=None,):
     self.imunobiologico = imunobiologico
     self.estrategiaVacinacao = estrategiaVacinacao
     self.dose = dose
     self.lote = lote
     self.fabricante = fabricante
+    self.grupoAtendimento = grupoAtendimento
 
   def read(self, iprot):
     if iprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None and fastbinary is not None:
@@ -79,6 +82,11 @@ class VacinaRowThrift:
           self.fabricante = iprot.readString()
         else:
           iprot.skip(ftype)
+      elif fid == 6:
+        if ftype == TType.I64:
+          self.grupoAtendimento = iprot.readI64()
+        else:
+          iprot.skip(ftype)
       else:
         iprot.skip(ftype)
       iprot.readFieldEnd()
@@ -109,6 +117,10 @@ class VacinaRowThrift:
       oprot.writeFieldBegin('fabricante', TType.STRING, 5)
       oprot.writeString(self.fabricante)
       oprot.writeFieldEnd()
+    if self.grupoAtendimento is not None:
+      oprot.writeFieldBegin('grupoAtendimento', TType.I64, 6)
+      oprot.writeI64(self.grupoAtendimento)
+      oprot.writeFieldEnd()
     oprot.writeFieldStop()
     oprot.writeStructEnd()
 
@@ -123,6 +135,7 @@ class VacinaRowThrift:
     value = (value * 31) ^ hash(self.dose)
     value = (value * 31) ^ hash(self.lote)
     value = (value * 31) ^ hash(self.fabricante)
+    value = (value * 31) ^ hash(self.grupoAtendimento)
     return value
 
   def __repr__(self):

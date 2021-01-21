@@ -14,6 +14,7 @@ struct VacinaRowThrift {
 	3:optional i64 dose;
 	4:optional string lote;
 	5:optional string fabricante;
+	6:optional i64 grupoAtendimento;
 }
 
 struct FichaVacinacaoChildThrift {

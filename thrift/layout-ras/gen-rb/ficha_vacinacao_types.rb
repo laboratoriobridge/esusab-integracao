@@ -21,13 +21,15 @@ module Br
               DOSE = 3
               LOTE = 4
               FABRICANTE = 5
+              GRUPOATENDIMENTO = 6
 
               FIELDS = {
                 IMUNOBIOLOGICO => {:type => ::Thrift::Types::I64, :name => 'imunobiologico', :optional => true},
                 ESTRATEGIAVACINACAO => {:type => ::Thrift::Types::I64, :name => 'estrategiaVacinacao', :optional => true},
                 DOSE => {:type => ::Thrift::Types::I64, :name => 'dose', :optional => true},
                 LOTE => {:type => ::Thrift::Types::STRING, :name => 'lote', :optional => true},
-                FABRICANTE => {:type => ::Thrift::Types::STRING, :name => 'fabricante', :optional => true}
+                FABRICANTE => {:type => ::Thrift::Types::STRING, :name => 'fabricante', :optional => true},
+                GRUPOATENDIMENTO => {:type => ::Thrift::Types::I64, :name => 'grupoAtendimento', :optional => true}
               }
 
               def struct_fields; FIELDS; end

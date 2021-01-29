@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://esus.ufsc.br/encaminhamentoexterno" version="1.0">
+
+  <xs:complexType name="encaminhamentoExternoTransport">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="especialidade" type="xs:long"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="hipoteseDiagnosticoCid10" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="hipoteseDiagnosticoCiap2" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="classificacaoRisco" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

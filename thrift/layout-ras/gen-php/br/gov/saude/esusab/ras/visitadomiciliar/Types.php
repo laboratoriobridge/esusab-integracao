@@ -76,6 +76,26 @@ class FichaVisitaDomiciliarChildThrift {
    * @var string
    */
   public $cpfCidadao = null;
+  /**
+   * @var int
+   */
+  public $pressaoSistolica = null;
+  /**
+   * @var int
+   */
+  public $pressaoDiastolica = null;
+  /**
+   * @var double
+   */
+  public $temperatura = null;
+  /**
+   * @var int
+   */
+  public $tipoGlicemia = null;
+  /**
+   * @var int
+   */
+  public $glicemia = null;
 
   public function __construct($vals=null) {
     if (!isset(self::$_TSPEC)) {
@@ -140,6 +160,26 @@ class FichaVisitaDomiciliarChildThrift {
           'var' => 'cpfCidadao',
           'type' => TType::STRING,
           ),
+        15 => array(
+          'var' => 'pressaoSistolica',
+          'type' => TType::I32,
+          ),
+        16 => array(
+          'var' => 'pressaoDiastolica',
+          'type' => TType::I32,
+          ),
+        17 => array(
+          'var' => 'temperatura',
+          'type' => TType::DOUBLE,
+          ),
+        18 => array(
+          'var' => 'tipoGlicemia',
+          'type' => TType::I64,
+          ),
+        19 => array(
+          'var' => 'glicemia',
+          'type' => TType::I32,
+          ),
         );
     }
     if (is_array($vals)) {
@@ -184,6 +224,21 @@ class FichaVisitaDomiciliarChildThrift {
       }
       if (isset($vals['cpfCidadao'])) {
         $this->cpfCidadao = $vals['cpfCidadao'];
+      }
+      if (isset($vals['pressaoSistolica'])) {
+        $this->pressaoSistolica = $vals['pressaoSistolica'];
+      }
+      if (isset($vals['pressaoDiastolica'])) {
+        $this->pressaoDiastolica = $vals['pressaoDiastolica'];
+      }
+      if (isset($vals['temperatura'])) {
+        $this->temperatura = $vals['temperatura'];
+      }
+      if (isset($vals['tipoGlicemia'])) {
+        $this->tipoGlicemia = $vals['tipoGlicemia'];
+      }
+      if (isset($vals['glicemia'])) {
+        $this->glicemia = $vals['glicemia'];
       }
     }
   }
@@ -315,6 +370,41 @@ class FichaVisitaDomiciliarChildThrift {
             $xfer += $input->skip($ftype);
           }
           break;
+        case 15:
+          if ($ftype == TType::I32) {
+            $xfer += $input->readI32($this->pressaoSistolica);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 16:
+          if ($ftype == TType::I32) {
+            $xfer += $input->readI32($this->pressaoDiastolica);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 17:
+          if ($ftype == TType::DOUBLE) {
+            $xfer += $input->readDouble($this->temperatura);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 18:
+          if ($ftype == TType::I64) {
+            $xfer += $input->readI64($this->tipoGlicemia);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 19:
+          if ($ftype == TType::I32) {
+            $xfer += $input->readI32($this->glicemia);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
         default:
           $xfer += $input->skip($ftype);
           break;
@@ -408,6 +498,31 @@ class FichaVisitaDomiciliarChildThrift {
     if ($this->cpfCidadao !== null) {
       $xfer += $output->writeFieldBegin('cpfCidadao', TType::STRING, 14);
       $xfer += $output->writeString($this->cpfCidadao);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->pressaoSistolica !== null) {
+      $xfer += $output->writeFieldBegin('pressaoSistolica', TType::I32, 15);
+      $xfer += $output->writeI32($this->pressaoSistolica);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->pressaoDiastolica !== null) {
+      $xfer += $output->writeFieldBegin('pressaoDiastolica', TType::I32, 16);
+      $xfer += $output->writeI32($this->pressaoDiastolica);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->temperatura !== null) {
+      $xfer += $output->writeFieldBegin('temperatura', TType::DOUBLE, 17);
+      $xfer += $output->writeDouble($this->temperatura);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->tipoGlicemia !== null) {
+      $xfer += $output->writeFieldBegin('tipoGlicemia', TType::I64, 18);
+      $xfer += $output->writeI64($this->tipoGlicemia);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->glicemia !== null) {
+      $xfer += $output->writeFieldBegin('glicemia', TType::I32, 19);
+      $xfer += $output->writeI32($this->glicemia);
       $xfer += $output->writeFieldEnd();
     }
     $xfer += $output->writeFieldStop();

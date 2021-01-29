@@ -2534,6 +2534,14 @@ class CadastroIndividualThrift {
    * @var \br\gov\saude\esusab\ras\common\UnicaLotacaoHeaderThrift
    */
   public $headerTransport = null;
+  /**
+   * @var bool
+   */
+  public $statusCadastroIndividualInativo = null;
+  /**
+   * @var bool
+   */
+  public $statusGeradoAutomaticamente = null;
 
   public function __construct($vals=null) {
     if (!isset(self::$_TSPEC)) {
@@ -2592,6 +2600,14 @@ class CadastroIndividualThrift {
           'type' => TType::STRUCT,
           'class' => '\br\gov\saude\esusab\ras\common\UnicaLotacaoHeaderThrift',
           ),
+        14 => array(
+          'var' => 'statusCadastroIndividualInativo',
+          'type' => TType::BOOL,
+          ),
+        15 => array(
+          'var' => 'statusGeradoAutomaticamente',
+          'type' => TType::BOOL,
+          ),
         );
     }
     if (is_array($vals)) {
@@ -2630,6 +2646,12 @@ class CadastroIndividualThrift {
       }
       if (isset($vals['headerTransport'])) {
         $this->headerTransport = $vals['headerTransport'];
+      }
+      if (isset($vals['statusCadastroIndividualInativo'])) {
+        $this->statusCadastroIndividualInativo = $vals['statusCadastroIndividualInativo'];
+      }
+      if (isset($vals['statusGeradoAutomaticamente'])) {
+        $this->statusGeradoAutomaticamente = $vals['statusGeradoAutomaticamente'];
       }
     }
   }
@@ -2743,6 +2765,20 @@ class CadastroIndividualThrift {
             $xfer += $input->skip($ftype);
           }
           break;
+        case 14:
+          if ($ftype == TType::BOOL) {
+            $xfer += $input->readBool($this->statusCadastroIndividualInativo);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 15:
+          if ($ftype == TType::BOOL) {
+            $xfer += $input->readBool($this->statusGeradoAutomaticamente);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
         default:
           $xfer += $input->skip($ftype);
           break;
@@ -2832,6 +2868,16 @@ class CadastroIndividualThrift {
       }
       $xfer += $output->writeFieldBegin('headerTransport', TType::STRUCT, 13);
       $xfer += $this->headerTransport->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->statusCadastroIndividualInativo !== null) {
+      $xfer += $output->writeFieldBegin('statusCadastroIndividualInativo', TType::BOOL, 14);
+      $xfer += $output->writeBool($this->statusCadastroIndividualInativo);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->statusGeradoAutomaticamente !== null) {
+      $xfer += $output->writeFieldBegin('statusGeradoAutomaticamente', TType::BOOL, 15);
+      $xfer += $output->writeBool($this->statusGeradoAutomaticamente);
       $xfer += $output->writeFieldEnd();
     }
     $xfer += $output->writeFieldStop();

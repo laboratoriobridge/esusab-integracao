@@ -51,6 +51,8 @@ namespace br.gov.saude.esusab.ras.atendindividual
     private long _dataHoraInicialAtendimento;
     private long _dataHoraFinalAtendimento;
     private string _cpfCidadao;
+    private List<br.gov.saude.esusab.ras.common.MedicamentoThrift> _medicamentos;
+    private List<br.gov.saude.esusab.ras.common.EncaminhamentoExternoThrift> _encaminhamentos;
 
     public string NumeroProntuario
     {
@@ -416,6 +418,32 @@ namespace br.gov.saude.esusab.ras.atendindividual
       }
     }
 
+    public List<br.gov.saude.esusab.ras.common.MedicamentoThrift> Medicamentos
+    {
+      get
+      {
+        return _medicamentos;
+      }
+      set
+      {
+        __isset.medicamentos = true;
+        this._medicamentos = value;
+      }
+    }
+
+    public List<br.gov.saude.esusab.ras.common.EncaminhamentoExternoThrift> Encaminhamentos
+    {
+      get
+      {
+        return _encaminhamentos;
+      }
+      set
+      {
+        __isset.encaminhamentos = true;
+        this._encaminhamentos = value;
+      }
+    }
+
 
     public Isset __isset;
     #if !SILVERLIGHT
@@ -450,6 +478,8 @@ namespace br.gov.saude.esusab.ras.atendindividual
       public bool dataHoraInicialAtendimento;
       public bool dataHoraFinalAtendimento;
       public bool cpfCidadao;
+      public bool medicamentos;
+      public bool encaminhamentos;
     }
 
     public FichaAtendimentoIndividualChildThrift() {
@@ -698,6 +728,42 @@ namespace br.gov.saude.esusab.ras.atendindividual
                 TProtocolUtil.Skip(iprot, field.Type);
               }
               break;
+            case 31:
+              if (field.Type == TType.List) {
+                {
+                  Medicamentos = new List<br.gov.saude.esusab.ras.common.MedicamentoThrift>();
+                  TList _list17 = iprot.ReadListBegin();
+                  for( int _i18 = 0; _i18 < _list17.Count; ++_i18)
+                  {
+                    br.gov.saude.esusab.ras.common.MedicamentoThrift _elem19;
+                    _elem19 = new br.gov.saude.esusab.ras.common.MedicamentoThrift();
+                    _elem19.Read(iprot);
+                    Medicamentos.Add(_elem19);
+                  }
+                  iprot.ReadListEnd();
+                }
+              } else { 
+                TProtocolUtil.Skip(iprot, field.Type);
+              }
+              break;
+            case 32:
+              if (field.Type == TType.List) {
+                {
+                  Encaminhamentos = new List<br.gov.saude.esusab.ras.common.EncaminhamentoExternoThrift>();
+                  TList _list20 = iprot.ReadListBegin();
+                  for( int _i21 = 0; _i21 < _list20.Count; ++_i21)
+                  {
+                    br.gov.saude.esusab.ras.common.EncaminhamentoExternoThrift _elem22;
+                    _elem22 = new br.gov.saude.esusab.ras.common.EncaminhamentoExternoThrift();
+                    _elem22.Read(iprot);
+                    Encaminhamentos.Add(_elem22);
+                  }
+                  iprot.ReadListEnd();
+                }
+              } else { 
+                TProtocolUtil.Skip(iprot, field.Type);
+              }
+              break;
             default: 
               TProtocolUtil.Skip(iprot, field.Type);
               break;
@@ -838,9 +904,9 @@ namespace br.gov.saude.esusab.ras.atendindividual
           oprot.WriteFieldBegin(field);
           {
             oprot.WriteListBegin(new TList(TType.Struct, Exame.Count));
-            foreach (ExameThrift _iter17 in Exame)
+            foreach (ExameThrift _iter23 in Exame)
             {
-              _iter17.Write(oprot);
+              _iter23.Write(oprot);
             }
             oprot.WriteListEnd();
           }
@@ -877,9 +943,9 @@ namespace br.gov.saude.esusab.ras.atendindividual
           oprot.WriteFieldBegin(field);
           {
             oprot.WriteListBegin(new TList(TType.I64, Nasfs.Count));
-            foreach (long _iter18 in Nasfs)
+            foreach (long _iter24 in Nasfs)
             {
-              oprot.WriteI64(_iter18);
+              oprot.WriteI64(_iter24);
             }
             oprot.WriteListEnd();
           }
@@ -892,9 +958,9 @@ namespace br.gov.saude.esusab.ras.atendindividual
           oprot.WriteFieldBegin(field);
           {
             oprot.WriteListBegin(new TList(TType.I64, Condutas.Count));
-            foreach (long _iter19 in Condutas)
+            foreach (long _iter25 in Condutas)
             {
-              oprot.WriteI64(_iter19);
+              oprot.WriteI64(_iter25);
             }
             oprot.WriteListEnd();
           }
@@ -962,6 +1028,36 @@ namespace br.gov.saude.esusab.ras.atendindividual
           field.ID = 30;
           oprot.WriteFieldBegin(field);
           oprot.WriteString(CpfCidadao);
+          oprot.WriteFieldEnd();
+        }
+        if (Medicamentos != null && __isset.medicamentos) {
+          field.Name = "medicamentos";
+          field.Type = TType.List;
+          field.ID = 31;
+          oprot.WriteFieldBegin(field);
+          {
+            oprot.WriteListBegin(new TList(TType.Struct, Medicamentos.Count));
+            foreach (br.gov.saude.esusab.ras.common.MedicamentoThrift _iter26 in Medicamentos)
+            {
+              _iter26.Write(oprot);
+            }
+            oprot.WriteListEnd();
+          }
+          oprot.WriteFieldEnd();
+        }
+        if (Encaminhamentos != null && __isset.encaminhamentos) {
+          field.Name = "encaminhamentos";
+          field.Type = TType.List;
+          field.ID = 32;
+          oprot.WriteFieldBegin(field);
+          {
+            oprot.WriteListBegin(new TList(TType.Struct, Encaminhamentos.Count));
+            foreach (br.gov.saude.esusab.ras.common.EncaminhamentoExternoThrift _iter27 in Encaminhamentos)
+            {
+              _iter27.Write(oprot);
+            }
+            oprot.WriteListEnd();
+          }
           oprot.WriteFieldEnd();
         }
         oprot.WriteFieldStop();
@@ -1143,6 +1239,18 @@ namespace br.gov.saude.esusab.ras.atendindividual
         __first = false;
         __sb.Append("CpfCidadao: ");
         __sb.Append(CpfCidadao);
+      }
+      if (Medicamentos != null && __isset.medicamentos) {
+        if(!__first) { __sb.Append(", "); }
+        __first = false;
+        __sb.Append("Medicamentos: ");
+        __sb.Append(Medicamentos);
+      }
+      if (Encaminhamentos != null && __isset.encaminhamentos) {
+        if(!__first) { __sb.Append(", "); }
+        __first = false;
+        __sb.Append("Encaminhamentos: ");
+        __sb.Append(Encaminhamentos);
       }
       __sb.Append(")");
       return __sb.ToString();

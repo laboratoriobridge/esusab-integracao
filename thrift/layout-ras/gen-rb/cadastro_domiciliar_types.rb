@@ -126,6 +126,7 @@ module Br
               TIPODEIMOVEL = 13
               INSTITUICAOPERMANENCIA = 14
               HEADERTRANSPORT = 15
+              STATUSGERADOAUTOMATICAMENTE = 16
 
               FIELDS = {
                 ANIMAISNODOMICILIO => {:type => ::Thrift::Types::LIST, :name => 'animaisNoDomicilio', :element => {:type => ::Thrift::Types::I64}, :optional => true},
@@ -141,7 +142,8 @@ module Br
                 UUIDFICHAORIGINADORA => {:type => ::Thrift::Types::STRING, :name => 'uuidFichaOriginadora', :optional => true},
                 TIPODEIMOVEL => {:type => ::Thrift::Types::I64, :name => 'tipoDeImovel', :optional => true},
                 INSTITUICAOPERMANENCIA => {:type => ::Thrift::Types::STRUCT, :name => 'instituicaoPermanencia', :class => ::Br::Gov::Saude::Esusab::Ras::Cadastrodomiciliar::InstituicaoPermanenciaThrift, :optional => true},
-                HEADERTRANSPORT => {:type => ::Thrift::Types::STRUCT, :name => 'headerTransport', :class => ::Br::Gov::Saude::Esusab::Ras::Common::UnicaLotacaoHeaderThrift, :optional => true}
+                HEADERTRANSPORT => {:type => ::Thrift::Types::STRUCT, :name => 'headerTransport', :class => ::Br::Gov::Saude::Esusab::Ras::Common::UnicaLotacaoHeaderThrift, :optional => true},
+                STATUSGERADOAUTOMATICAMENTE => {:type => ::Thrift::Types::BOOL, :name => 'statusGeradoAutomaticamente', :optional => true}
               }
 
               def struct_fields; FIELDS; end

@@ -23,6 +23,11 @@ struct FichaVisitaDomiciliarChildThrift {
 	12:optional double pesoAcompanhamentoNutricional;
 	13:optional double alturaAcompanhamentoNutricional;
 	14:optional string cpfCidadao;
+	15:optional i32 pressaoSistolica;
+	16:optional i32 pressaoDiastolica;
+	17:optional double temperatura;
+	18:optional i64 tipoGlicemia;
+	19:optional i32 glicemia;
 }
 
 struct FichaVisitaDomiciliarMasterThrift {

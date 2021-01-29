@@ -465,6 +465,8 @@ func (p *ProblemaCondicaoAvaliacaoAIThrift) String() string {
 //  - DataHoraInicialAtendimento
 //  - DataHoraFinalAtendimento
 //  - CpfCidadao
+//  - Medicamentos
+//  - Encaminhamentos
 type FichaAtendimentoIndividualChildThrift struct {
   NumeroProntuario *string `thrift:"numeroProntuario,1" json:"numeroProntuario,omitempty"`
   Cns *string `thrift:"cns,2" json:"cns,omitempty"`
@@ -495,6 +497,8 @@ type FichaAtendimentoIndividualChildThrift struct {
   DataHoraInicialAtendimento *int64 `thrift:"dataHoraInicialAtendimento,28" json:"dataHoraInicialAtendimento,omitempty"`
   DataHoraFinalAtendimento *int64 `thrift:"dataHoraFinalAtendimento,29" json:"dataHoraFinalAtendimento,omitempty"`
   CpfCidadao *string `thrift:"cpfCidadao,30" json:"cpfCidadao,omitempty"`
+  Medicamentos []*common.MedicamentoThrift `thrift:"medicamentos,31" json:"medicamentos,omitempty"`
+  Encaminhamentos []*common.EncaminhamentoExternoThrift `thrift:"encaminhamentos,32" json:"encaminhamentos,omitempty"`
 }
 
 func NewFichaAtendimentoIndividualChildThrift() *FichaAtendimentoIndividualChildThrift {
@@ -691,6 +695,16 @@ func (p *FichaAtendimentoIndividualChildThrift) GetCpfCidadao() string {
   }
 return *p.CpfCidadao
 }
+var FichaAtendimentoIndividualChildThrift_Medicamentos_DEFAULT []*common.MedicamentoThrift
+
+func (p *FichaAtendimentoIndividualChildThrift) GetMedicamentos() []*common.MedicamentoThrift {
+  return p.Medicamentos
+}
+var FichaAtendimentoIndividualChildThrift_Encaminhamentos_DEFAULT []*common.EncaminhamentoExternoThrift
+
+func (p *FichaAtendimentoIndividualChildThrift) GetEncaminhamentos() []*common.EncaminhamentoExternoThrift {
+  return p.Encaminhamentos
+}
 func (p *FichaAtendimentoIndividualChildThrift) IsSetNumeroProntuario() bool {
   return p.NumeroProntuario != nil
 }
@@ -801,6 +815,14 @@ func (p *FichaAtendimentoIndividualChildThrift) IsSetDataHoraFinalAtendimento() 
 
 func (p *FichaAtendimentoIndividualChildThrift) IsSetCpfCidadao() bool {
   return p.CpfCidadao != nil
+}
+
+func (p *FichaAtendimentoIndividualChildThrift) IsSetMedicamentos() bool {
+  return p.Medicamentos != nil
+}
+
+func (p *FichaAtendimentoIndividualChildThrift) IsSetEncaminhamentos() bool {
+  return p.Encaminhamentos != nil
 }
 
 func (p *FichaAtendimentoIndividualChildThrift) Read(iprot thrift.TProtocol) error {
@@ -926,6 +948,14 @@ func (p *FichaAtendimentoIndividualChildThrift) Read(iprot thrift.TProtocol) err
       }
     case 30:
       if err := p.readField30(iprot); err != nil {
+        return err
+      }
+    case 31:
+      if err := p.readField31(iprot); err != nil {
+        return err
+      }
+    case 32:
+      if err := p.readField32(iprot); err != nil {
         return err
       }
     default:
@@ -1231,6 +1261,46 @@ func (p *FichaAtendimentoIndividualChildThrift)  readField30(iprot thrift.TProto
   return nil
 }
 
+func (p *FichaAtendimentoIndividualChildThrift)  readField31(iprot thrift.TProtocol) error {
+  _, size, err := iprot.ReadListBegin()
+  if err != nil {
+    return thrift.PrependError("error reading list begin: ", err)
+  }
+  tSlice := make([]*common.MedicamentoThrift, 0, size)
+  p.Medicamentos =  tSlice
+  for i := 0; i < size; i ++ {
+    _elem5 := &common.MedicamentoThrift{}
+    if err := _elem5.Read(iprot); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T error reading struct: ", _elem5), err)
+    }
+    p.Medicamentos = append(p.Medicamentos, _elem5)
+  }
+  if err := iprot.ReadListEnd(); err != nil {
+    return thrift.PrependError("error reading list end: ", err)
+  }
+  return nil
+}
+
+func (p *FichaAtendimentoIndividualChildThrift)  readField32(iprot thrift.TProtocol) error {
+  _, size, err := iprot.ReadListBegin()
+  if err != nil {
+    return thrift.PrependError("error reading list begin: ", err)
+  }
+  tSlice := make([]*common.EncaminhamentoExternoThrift, 0, size)
+  p.Encaminhamentos =  tSlice
+  for i := 0; i < size; i ++ {
+    _elem6 := &common.EncaminhamentoExternoThrift{}
+    if err := _elem6.Read(iprot); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T error reading struct: ", _elem6), err)
+    }
+    p.Encaminhamentos = append(p.Encaminhamentos, _elem6)
+  }
+  if err := iprot.ReadListEnd(); err != nil {
+    return thrift.PrependError("error reading list end: ", err)
+  }
+  return nil
+}
+
 func (p *FichaAtendimentoIndividualChildThrift) Write(oprot thrift.TProtocol) error {
   if err := oprot.WriteStructBegin("FichaAtendimentoIndividualChildThrift"); err != nil {
     return thrift.PrependError(fmt.Sprintf("%T write struct begin error: ", p), err) }
@@ -1262,6 +1332,8 @@ func (p *FichaAtendimentoIndividualChildThrift) Write(oprot thrift.TProtocol) er
   if err := p.writeField28(oprot); err != nil { return err }
   if err := p.writeField29(oprot); err != nil { return err }
   if err := p.writeField30(oprot); err != nil { return err }
+  if err := p.writeField31(oprot); err != nil { return err }
+  if err := p.writeField32(oprot); err != nil { return err }
   if err := oprot.WriteFieldStop(); err != nil {
     return thrift.PrependError("write field stop error: ", err) }
   if err := oprot.WriteStructEnd(); err != nil {
@@ -1631,6 +1703,48 @@ func (p *FichaAtendimentoIndividualChildThrift) writeField30(oprot thrift.TProto
   return err
 }
 
+func (p *FichaAtendimentoIndividualChildThrift) writeField31(oprot thrift.TProtocol) (err error) {
+  if p.IsSetMedicamentos() {
+    if err := oprot.WriteFieldBegin("medicamentos", thrift.LIST, 31); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field begin error 31:medicamentos: ", p), err) }
+    if err := oprot.WriteListBegin(thrift.STRUCT, len(p.Medicamentos)); err != nil {
+      return thrift.PrependError("error writing list begin: ", err)
+    }
+    for _, v := range p.Medicamentos {
+      if err := v.Write(oprot); err != nil {
+        return thrift.PrependError(fmt.Sprintf("%T error writing struct: ", v), err)
+      }
+    }
+    if err := oprot.WriteListEnd(); err != nil {
+      return thrift.PrependError("error writing list end: ", err)
+    }
+    if err := oprot.WriteFieldEnd(); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field end error 31:medicamentos: ", p), err) }
+  }
+  return err
+}
+
+func (p *FichaAtendimentoIndividualChildThrift) writeField32(oprot thrift.TProtocol) (err error) {
+  if p.IsSetEncaminhamentos() {
+    if err := oprot.WriteFieldBegin("encaminhamentos", thrift.LIST, 32); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field begin error 32:encaminhamentos: ", p), err) }
+    if err := oprot.WriteListBegin(thrift.STRUCT, len(p.Encaminhamentos)); err != nil {
+      return thrift.PrependError("error writing list begin: ", err)
+    }
+    for _, v := range p.Encaminhamentos {
+      if err := v.Write(oprot); err != nil {
+        return thrift.PrependError(fmt.Sprintf("%T error writing struct: ", v), err)
+      }
+    }
+    if err := oprot.WriteListEnd(); err != nil {
+      return thrift.PrependError("error writing list end: ", err)
+    }
+    if err := oprot.WriteFieldEnd(); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field end error 32:encaminhamentos: ", p), err) }
+  }
+  return err
+}
+
 func (p *FichaAtendimentoIndividualChildThrift) String() string {
   if p == nil {
     return "<nil>"
@@ -1754,11 +1868,11 @@ func (p *FichaAtendimentoIndividualMasterThrift)  readField2(iprot thrift.TProto
   tSlice := make([]*FichaAtendimentoIndividualChildThrift, 0, size)
   p.AtendimentosIndividuais =  tSlice
   for i := 0; i < size; i ++ {
-    _elem5 := &FichaAtendimentoIndividualChildThrift{}
-    if err := _elem5.Read(iprot); err != nil {
-      return thrift.PrependError(fmt.Sprintf("%T error reading struct: ", _elem5), err)
+    _elem7 := &FichaAtendimentoIndividualChildThrift{}
+    if err := _elem7.Read(iprot); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T error reading struct: ", _elem7), err)
     }
-    p.AtendimentosIndividuais = append(p.AtendimentosIndividuais, _elem5)
+    p.AtendimentosIndividuais = append(p.AtendimentosIndividuais, _elem7)
   }
   if err := iprot.ReadListEnd(); err != nil {
     return thrift.PrependError("error reading list end: ", err)

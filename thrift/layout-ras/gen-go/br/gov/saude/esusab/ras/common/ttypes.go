@@ -17,6 +17,293 @@ var _ = bytes.Equal
 var GoUnusedProtection__ int;
 
 // Attributes:
+//  - CnesUnidadeSaude
+//  - CnsProfissional
+//  - CodigoIbgeMunicipio
+//  - DataAtendimento
+//  - IneEquipe
+//  - Microarea
+type HeaderCdsCadastroThrift struct {
+  CnesUnidadeSaude *string `thrift:"cnesUnidadeSaude,1" json:"cnesUnidadeSaude,omitempty"`
+  CnsProfissional *string `thrift:"cnsProfissional,2" json:"cnsProfissional,omitempty"`
+  CodigoIbgeMunicipio *string `thrift:"codigoIbgeMunicipio,3" json:"codigoIbgeMunicipio,omitempty"`
+  DataAtendimento *int64 `thrift:"dataAtendimento,4" json:"dataAtendimento,omitempty"`
+  IneEquipe *string `thrift:"ineEquipe,5" json:"ineEquipe,omitempty"`
+  Microarea *int64 `thrift:"microarea,6" json:"microarea,omitempty"`
+}
+
+func NewHeaderCdsCadastroThrift() *HeaderCdsCadastroThrift {
+  return &HeaderCdsCadastroThrift{}
+}
+
+var HeaderCdsCadastroThrift_CnesUnidadeSaude_DEFAULT string
+func (p *HeaderCdsCadastroThrift) GetCnesUnidadeSaude() string {
+  if !p.IsSetCnesUnidadeSaude() {
+    return HeaderCdsCadastroThrift_CnesUnidadeSaude_DEFAULT
+  }
+return *p.CnesUnidadeSaude
+}
+var HeaderCdsCadastroThrift_CnsProfissional_DEFAULT string
+func (p *HeaderCdsCadastroThrift) GetCnsProfissional() string {
+  if !p.IsSetCnsProfissional() {
+    return HeaderCdsCadastroThrift_CnsProfissional_DEFAULT
+  }
+return *p.CnsProfissional
+}
+var HeaderCdsCadastroThrift_CodigoIbgeMunicipio_DEFAULT string
+func (p *HeaderCdsCadastroThrift) GetCodigoIbgeMunicipio() string {
+  if !p.IsSetCodigoIbgeMunicipio() {
+    return HeaderCdsCadastroThrift_CodigoIbgeMunicipio_DEFAULT
+  }
+return *p.CodigoIbgeMunicipio
+}
+var HeaderCdsCadastroThrift_DataAtendimento_DEFAULT int64
+func (p *HeaderCdsCadastroThrift) GetDataAtendimento() int64 {
+  if !p.IsSetDataAtendimento() {
+    return HeaderCdsCadastroThrift_DataAtendimento_DEFAULT
+  }
+return *p.DataAtendimento
+}
+var HeaderCdsCadastroThrift_IneEquipe_DEFAULT string
+func (p *HeaderCdsCadastroThrift) GetIneEquipe() string {
+  if !p.IsSetIneEquipe() {
+    return HeaderCdsCadastroThrift_IneEquipe_DEFAULT
+  }
+return *p.IneEquipe
+}
+var HeaderCdsCadastroThrift_Microarea_DEFAULT int64
+func (p *HeaderCdsCadastroThrift) GetMicroarea() int64 {
+  if !p.IsSetMicroarea() {
+    return HeaderCdsCadastroThrift_Microarea_DEFAULT
+  }
+return *p.Microarea
+}
+func (p *HeaderCdsCadastroThrift) IsSetCnesUnidadeSaude() bool {
+  return p.CnesUnidadeSaude != nil
+}
+
+func (p *HeaderCdsCadastroThrift) IsSetCnsProfissional() bool {
+  return p.CnsProfissional != nil
+}
+
+func (p *HeaderCdsCadastroThrift) IsSetCodigoIbgeMunicipio() bool {
+  return p.CodigoIbgeMunicipio != nil
+}
+
+func (p *HeaderCdsCadastroThrift) IsSetDataAtendimento() bool {
+  return p.DataAtendimento != nil
+}
+
+func (p *HeaderCdsCadastroThrift) IsSetIneEquipe() bool {
+  return p.IneEquipe != nil
+}
+
+func (p *HeaderCdsCadastroThrift) IsSetMicroarea() bool {
+  return p.Microarea != nil
+}
+
+func (p *HeaderCdsCadastroThrift) Read(iprot thrift.TProtocol) error {
+  if _, err := iprot.ReadStructBegin(); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T read error: ", p), err)
+  }
+
+
+  for {
+    _, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
+    if err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T field %d read error: ", p, fieldId), err)
+    }
+    if fieldTypeId == thrift.STOP { break; }
+    switch fieldId {
+    case 1:
+      if err := p.readField1(iprot); err != nil {
+        return err
+      }
+    case 2:
+      if err := p.readField2(iprot); err != nil {
+        return err
+      }
+    case 3:
+      if err := p.readField3(iprot); err != nil {
+        return err
+      }
+    case 4:
+      if err := p.readField4(iprot); err != nil {
+        return err
+      }
+    case 5:
+      if err := p.readField5(iprot); err != nil {
+        return err
+      }
+    case 6:
+      if err := p.readField6(iprot); err != nil {
+        return err
+      }
+    default:
+      if err := iprot.Skip(fieldTypeId); err != nil {
+        return err
+      }
+    }
+    if err := iprot.ReadFieldEnd(); err != nil {
+      return err
+    }
+  }
+  if err := iprot.ReadStructEnd(); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T read struct end error: ", p), err)
+  }
+  return nil
+}
+
+func (p *HeaderCdsCadastroThrift)  readField1(iprot thrift.TProtocol) error {
+  if v, err := iprot.ReadString(); err != nil {
+  return thrift.PrependError("error reading field 1: ", err)
+} else {
+  p.CnesUnidadeSaude = &v
+}
+  return nil
+}
+
+func (p *HeaderCdsCadastroThrift)  readField2(iprot thrift.TProtocol) error {
+  if v, err := iprot.ReadString(); err != nil {
+  return thrift.PrependError("error reading field 2: ", err)
+} else {
+  p.CnsProfissional = &v
+}
+  return nil
+}
+
+func (p *HeaderCdsCadastroThrift)  readField3(iprot thrift.TProtocol) error {
+  if v, err := iprot.ReadString(); err != nil {
+  return thrift.PrependError("error reading field 3: ", err)
+} else {
+  p.CodigoIbgeMunicipio = &v
+}
+  return nil
+}
+
+func (p *HeaderCdsCadastroThrift)  readField4(iprot thrift.TProtocol) error {
+  if v, err := iprot.ReadI64(); err != nil {
+  return thrift.PrependError("error reading field 4: ", err)
+} else {
+  p.DataAtendimento = &v
+}
+  return nil
+}
+
+func (p *HeaderCdsCadastroThrift)  readField5(iprot thrift.TProtocol) error {
+  if v, err := iprot.ReadString(); err != nil {
+  return thrift.PrependError("error reading field 5: ", err)
+} else {
+  p.IneEquipe = &v
+}
+  return nil
+}
+
+func (p *HeaderCdsCadastroThrift)  readField6(iprot thrift.TProtocol) error {
+  if v, err := iprot.ReadI64(); err != nil {
+  return thrift.PrependError("error reading field 6: ", err)
+} else {
+  p.Microarea = &v
+}
+  return nil
+}
+
+func (p *HeaderCdsCadastroThrift) Write(oprot thrift.TProtocol) error {
+  if err := oprot.WriteStructBegin("HeaderCdsCadastroThrift"); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T write struct begin error: ", p), err) }
+  if err := p.writeField1(oprot); err != nil { return err }
+  if err := p.writeField2(oprot); err != nil { return err }
+  if err := p.writeField3(oprot); err != nil { return err }
+  if err := p.writeField4(oprot); err != nil { return err }
+  if err := p.writeField5(oprot); err != nil { return err }
+  if err := p.writeField6(oprot); err != nil { return err }
+  if err := oprot.WriteFieldStop(); err != nil {
+    return thrift.PrependError("write field stop error: ", err) }
+  if err := oprot.WriteStructEnd(); err != nil {
+    return thrift.PrependError("write struct stop error: ", err) }
+  return nil
+}
+
+func (p *HeaderCdsCadastroThrift) writeField1(oprot thrift.TProtocol) (err error) {
+  if p.IsSetCnesUnidadeSaude() {
+    if err := oprot.WriteFieldBegin("cnesUnidadeSaude", thrift.STRING, 1); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field begin error 1:cnesUnidadeSaude: ", p), err) }
+    if err := oprot.WriteString(string(*p.CnesUnidadeSaude)); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T.cnesUnidadeSaude (1) field write error: ", p), err) }
+    if err := oprot.WriteFieldEnd(); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field end error 1:cnesUnidadeSaude: ", p), err) }
+  }
+  return err
+}
+
+func (p *HeaderCdsCadastroThrift) writeField2(oprot thrift.TProtocol) (err error) {
+  if p.IsSetCnsProfissional() {
+    if err := oprot.WriteFieldBegin("cnsProfissional", thrift.STRING, 2); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field begin error 2:cnsProfissional: ", p), err) }
+    if err := oprot.WriteString(string(*p.CnsProfissional)); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T.cnsProfissional (2) field write error: ", p), err) }
+    if err := oprot.WriteFieldEnd(); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field end error 2:cnsProfissional: ", p), err) }
+  }
+  return err
+}
+
+func (p *HeaderCdsCadastroThrift) writeField3(oprot thrift.TProtocol) (err error) {
+  if p.IsSetCodigoIbgeMunicipio() {
+    if err := oprot.WriteFieldBegin("codigoIbgeMunicipio", thrift.STRING, 3); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field begin error 3:codigoIbgeMunicipio: ", p), err) }
+    if err := oprot.WriteString(string(*p.CodigoIbgeMunicipio)); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T.codigoIbgeMunicipio (3) field write error: ", p), err) }
+    if err := oprot.WriteFieldEnd(); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field end error 3:codigoIbgeMunicipio: ", p), err) }
+  }
+  return err
+}
+
+func (p *HeaderCdsCadastroThrift) writeField4(oprot thrift.TProtocol) (err error) {
+  if p.IsSetDataAtendimento() {
+    if err := oprot.WriteFieldBegin("dataAtendimento", thrift.I64, 4); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field begin error 4:dataAtendimento: ", p), err) }
+    if err := oprot.WriteI64(int64(*p.DataAtendimento)); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T.dataAtendimento (4) field write error: ", p), err) }
+    if err := oprot.WriteFieldEnd(); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field end error 4:dataAtendimento: ", p), err) }
+  }
+  return err
+}
+
+func (p *HeaderCdsCadastroThrift) writeField5(oprot thrift.TProtocol) (err error) {
+  if p.IsSetIneEquipe() {
+    if err := oprot.WriteFieldBegin("ineEquipe", thrift.STRING, 5); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field begin error 5:ineEquipe: ", p), err) }
+    if err := oprot.WriteString(string(*p.IneEquipe)); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T.ineEquipe (5) field write error: ", p), err) }
+    if err := oprot.WriteFieldEnd(); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field end error 5:ineEquipe: ", p), err) }
+  }
+  return err
+}
+
+func (p *HeaderCdsCadastroThrift) writeField6(oprot thrift.TProtocol) (err error) {
+  if p.IsSetMicroarea() {
+    if err := oprot.WriteFieldBegin("microarea", thrift.I64, 6); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field begin error 6:microarea: ", p), err) }
+    if err := oprot.WriteI64(int64(*p.Microarea)); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T.microarea (6) field write error: ", p), err) }
+    if err := oprot.WriteFieldEnd(); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field end error 6:microarea: ", p), err) }
+  }
+  return err
+}
+
+func (p *HeaderCdsCadastroThrift) String() string {
+  if p == nil {
+    return "<nil>"
+  }
+  return fmt.Sprintf("HeaderCdsCadastroThrift(%+v)", *p)
+}
+
+// Attributes:
 //  - ProfissionalCNS
 //  - CboCodigo_2002
 //  - Cnes
@@ -1319,5 +1606,774 @@ func (p *EnderecoLocalPermanenciaThrift) String() string {
     return "<nil>"
   }
   return fmt.Sprintf("EnderecoLocalPermanenciaThrift(%+v)", *p)
+}
+
+// Attributes:
+//  - CodigoCatmat
+//  - ViaAdministracao
+//  - Dose
+//  - DoseUnica
+//  - UsoContinuo
+//  - DoseFrequenciaTipo
+//  - DoseFrequencia
+//  - DoseFrequenciaQuantidade
+//  - DoseFrequenciaUnidadeMedida
+//  - DtInicioTratamento
+//  - DuracaoTratamento
+//  - DuracaoTratamentoMedida
+//  - QuantidadeReceitada
+type MedicamentoThrift struct {
+  CodigoCatmat *string `thrift:"codigoCatmat,1" json:"codigoCatmat,omitempty"`
+  ViaAdministracao *int64 `thrift:"viaAdministracao,2" json:"viaAdministracao,omitempty"`
+  Dose *string `thrift:"dose,3" json:"dose,omitempty"`
+  DoseUnica *bool `thrift:"doseUnica,4" json:"doseUnica,omitempty"`
+  UsoContinuo *bool `thrift:"usoContinuo,5" json:"usoContinuo,omitempty"`
+  DoseFrequenciaTipo *int64 `thrift:"doseFrequenciaTipo,6" json:"doseFrequenciaTipo,omitempty"`
+  DoseFrequencia *string `thrift:"doseFrequencia,7" json:"doseFrequencia,omitempty"`
+  DoseFrequenciaQuantidade *int32 `thrift:"doseFrequenciaQuantidade,8" json:"doseFrequenciaQuantidade,omitempty"`
+  DoseFrequenciaUnidadeMedida *int64 `thrift:"doseFrequenciaUnidadeMedida,9" json:"doseFrequenciaUnidadeMedida,omitempty"`
+  DtInicioTratamento *int64 `thrift:"dtInicioTratamento,10" json:"dtInicioTratamento,omitempty"`
+  DuracaoTratamento *int32 `thrift:"duracaoTratamento,11" json:"duracaoTratamento,omitempty"`
+  DuracaoTratamentoMedida *int64 `thrift:"duracaoTratamentoMedida,12" json:"duracaoTratamentoMedida,omitempty"`
+  QuantidadeReceitada *int32 `thrift:"quantidadeReceitada,13" json:"quantidadeReceitada,omitempty"`
+}
+
+func NewMedicamentoThrift() *MedicamentoThrift {
+  return &MedicamentoThrift{}
+}
+
+var MedicamentoThrift_CodigoCatmat_DEFAULT string
+func (p *MedicamentoThrift) GetCodigoCatmat() string {
+  if !p.IsSetCodigoCatmat() {
+    return MedicamentoThrift_CodigoCatmat_DEFAULT
+  }
+return *p.CodigoCatmat
+}
+var MedicamentoThrift_ViaAdministracao_DEFAULT int64
+func (p *MedicamentoThrift) GetViaAdministracao() int64 {
+  if !p.IsSetViaAdministracao() {
+    return MedicamentoThrift_ViaAdministracao_DEFAULT
+  }
+return *p.ViaAdministracao
+}
+var MedicamentoThrift_Dose_DEFAULT string
+func (p *MedicamentoThrift) GetDose() string {
+  if !p.IsSetDose() {
+    return MedicamentoThrift_Dose_DEFAULT
+  }
+return *p.Dose
+}
+var MedicamentoThrift_DoseUnica_DEFAULT bool
+func (p *MedicamentoThrift) GetDoseUnica() bool {
+  if !p.IsSetDoseUnica() {
+    return MedicamentoThrift_DoseUnica_DEFAULT
+  }
+return *p.DoseUnica
+}
+var MedicamentoThrift_UsoContinuo_DEFAULT bool
+func (p *MedicamentoThrift) GetUsoContinuo() bool {
+  if !p.IsSetUsoContinuo() {
+    return MedicamentoThrift_UsoContinuo_DEFAULT
+  }
+return *p.UsoContinuo
+}
+var MedicamentoThrift_DoseFrequenciaTipo_DEFAULT int64
+func (p *MedicamentoThrift) GetDoseFrequenciaTipo() int64 {
+  if !p.IsSetDoseFrequenciaTipo() {
+    return MedicamentoThrift_DoseFrequenciaTipo_DEFAULT
+  }
+return *p.DoseFrequenciaTipo
+}
+var MedicamentoThrift_DoseFrequencia_DEFAULT string
+func (p *MedicamentoThrift) GetDoseFrequencia() string {
+  if !p.IsSetDoseFrequencia() {
+    return MedicamentoThrift_DoseFrequencia_DEFAULT
+  }
+return *p.DoseFrequencia
+}
+var MedicamentoThrift_DoseFrequenciaQuantidade_DEFAULT int32
+func (p *MedicamentoThrift) GetDoseFrequenciaQuantidade() int32 {
+  if !p.IsSetDoseFrequenciaQuantidade() {
+    return MedicamentoThrift_DoseFrequenciaQuantidade_DEFAULT
+  }
+return *p.DoseFrequenciaQuantidade
+}
+var MedicamentoThrift_DoseFrequenciaUnidadeMedida_DEFAULT int64
+func (p *MedicamentoThrift) GetDoseFrequenciaUnidadeMedida() int64 {
+  if !p.IsSetDoseFrequenciaUnidadeMedida() {
+    return MedicamentoThrift_DoseFrequenciaUnidadeMedida_DEFAULT
+  }
+return *p.DoseFrequenciaUnidadeMedida
+}
+var MedicamentoThrift_DtInicioTratamento_DEFAULT int64
+func (p *MedicamentoThrift) GetDtInicioTratamento() int64 {
+  if !p.IsSetDtInicioTratamento() {
+    return MedicamentoThrift_DtInicioTratamento_DEFAULT
+  }
+return *p.DtInicioTratamento
+}
+var MedicamentoThrift_DuracaoTratamento_DEFAULT int32
+func (p *MedicamentoThrift) GetDuracaoTratamento() int32 {
+  if !p.IsSetDuracaoTratamento() {
+    return MedicamentoThrift_DuracaoTratamento_DEFAULT
+  }
+return *p.DuracaoTratamento
+}
+var MedicamentoThrift_DuracaoTratamentoMedida_DEFAULT int64
+func (p *MedicamentoThrift) GetDuracaoTratamentoMedida() int64 {
+  if !p.IsSetDuracaoTratamentoMedida() {
+    return MedicamentoThrift_DuracaoTratamentoMedida_DEFAULT
+  }
+return *p.DuracaoTratamentoMedida
+}
+var MedicamentoThrift_QuantidadeReceitada_DEFAULT int32
+func (p *MedicamentoThrift) GetQuantidadeReceitada() int32 {
+  if !p.IsSetQuantidadeReceitada() {
+    return MedicamentoThrift_QuantidadeReceitada_DEFAULT
+  }
+return *p.QuantidadeReceitada
+}
+func (p *MedicamentoThrift) IsSetCodigoCatmat() bool {
+  return p.CodigoCatmat != nil
+}
+
+func (p *MedicamentoThrift) IsSetViaAdministracao() bool {
+  return p.ViaAdministracao != nil
+}
+
+func (p *MedicamentoThrift) IsSetDose() bool {
+  return p.Dose != nil
+}
+
+func (p *MedicamentoThrift) IsSetDoseUnica() bool {
+  return p.DoseUnica != nil
+}
+
+func (p *MedicamentoThrift) IsSetUsoContinuo() bool {
+  return p.UsoContinuo != nil
+}
+
+func (p *MedicamentoThrift) IsSetDoseFrequenciaTipo() bool {
+  return p.DoseFrequenciaTipo != nil
+}
+
+func (p *MedicamentoThrift) IsSetDoseFrequencia() bool {
+  return p.DoseFrequencia != nil
+}
+
+func (p *MedicamentoThrift) IsSetDoseFrequenciaQuantidade() bool {
+  return p.DoseFrequenciaQuantidade != nil
+}
+
+func (p *MedicamentoThrift) IsSetDoseFrequenciaUnidadeMedida() bool {
+  return p.DoseFrequenciaUnidadeMedida != nil
+}
+
+func (p *MedicamentoThrift) IsSetDtInicioTratamento() bool {
+  return p.DtInicioTratamento != nil
+}
+
+func (p *MedicamentoThrift) IsSetDuracaoTratamento() bool {
+  return p.DuracaoTratamento != nil
+}
+
+func (p *MedicamentoThrift) IsSetDuracaoTratamentoMedida() bool {
+  return p.DuracaoTratamentoMedida != nil
+}
+
+func (p *MedicamentoThrift) IsSetQuantidadeReceitada() bool {
+  return p.QuantidadeReceitada != nil
+}
+
+func (p *MedicamentoThrift) Read(iprot thrift.TProtocol) error {
+  if _, err := iprot.ReadStructBegin(); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T read error: ", p), err)
+  }
+
+
+  for {
+    _, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
+    if err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T field %d read error: ", p, fieldId), err)
+    }
+    if fieldTypeId == thrift.STOP { break; }
+    switch fieldId {
+    case 1:
+      if err := p.readField1(iprot); err != nil {
+        return err
+      }
+    case 2:
+      if err := p.readField2(iprot); err != nil {
+        return err
+      }
+    case 3:
+      if err := p.readField3(iprot); err != nil {
+        return err
+      }
+    case 4:
+      if err := p.readField4(iprot); err != nil {
+        return err
+      }
+    case 5:
+      if err := p.readField5(iprot); err != nil {
+        return err
+      }
+    case 6:
+      if err := p.readField6(iprot); err != nil {
+        return err
+      }
+    case 7:
+      if err := p.readField7(iprot); err != nil {
+        return err
+      }
+    case 8:
+      if err := p.readField8(iprot); err != nil {
+        return err
+      }
+    case 9:
+      if err := p.readField9(iprot); err != nil {
+        return err
+      }
+    case 10:
+      if err := p.readField10(iprot); err != nil {
+        return err
+      }
+    case 11:
+      if err := p.readField11(iprot); err != nil {
+        return err
+      }
+    case 12:
+      if err := p.readField12(iprot); err != nil {
+        return err
+      }
+    case 13:
+      if err := p.readField13(iprot); err != nil {
+        return err
+      }
+    default:
+      if err := iprot.Skip(fieldTypeId); err != nil {
+        return err
+      }
+    }
+    if err := iprot.ReadFieldEnd(); err != nil {
+      return err
+    }
+  }
+  if err := iprot.ReadStructEnd(); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T read struct end error: ", p), err)
+  }
+  return nil
+}
+
+func (p *MedicamentoThrift)  readField1(iprot thrift.TProtocol) error {
+  if v, err := iprot.ReadString(); err != nil {
+  return thrift.PrependError("error reading field 1: ", err)
+} else {
+  p.CodigoCatmat = &v
+}
+  return nil
+}
+
+func (p *MedicamentoThrift)  readField2(iprot thrift.TProtocol) error {
+  if v, err := iprot.ReadI64(); err != nil {
+  return thrift.PrependError("error reading field 2: ", err)
+} else {
+  p.ViaAdministracao = &v
+}
+  return nil
+}
+
+func (p *MedicamentoThrift)  readField3(iprot thrift.TProtocol) error {
+  if v, err := iprot.ReadString(); err != nil {
+  return thrift.PrependError("error reading field 3: ", err)
+} else {
+  p.Dose = &v
+}
+  return nil
+}
+
+func (p *MedicamentoThrift)  readField4(iprot thrift.TProtocol) error {
+  if v, err := iprot.ReadBool(); err != nil {
+  return thrift.PrependError("error reading field 4: ", err)
+} else {
+  p.DoseUnica = &v
+}
+  return nil
+}
+
+func (p *MedicamentoThrift)  readField5(iprot thrift.TProtocol) error {
+  if v, err := iprot.ReadBool(); err != nil {
+  return thrift.PrependError("error reading field 5: ", err)
+} else {
+  p.UsoContinuo = &v
+}
+  return nil
+}
+
+func (p *MedicamentoThrift)  readField6(iprot thrift.TProtocol) error {
+  if v, err := iprot.ReadI64(); err != nil {
+  return thrift.PrependError("error reading field 6: ", err)
+} else {
+  p.DoseFrequenciaTipo = &v
+}
+  return nil
+}
+
+func (p *MedicamentoThrift)  readField7(iprot thrift.TProtocol) error {
+  if v, err := iprot.ReadString(); err != nil {
+  return thrift.PrependError("error reading field 7: ", err)
+} else {
+  p.DoseFrequencia = &v
+}
+  return nil
+}
+
+func (p *MedicamentoThrift)  readField8(iprot thrift.TProtocol) error {
+  if v, err := iprot.ReadI32(); err != nil {
+  return thrift.PrependError("error reading field 8: ", err)
+} else {
+  p.DoseFrequenciaQuantidade = &v
+}
+  return nil
+}
+
+func (p *MedicamentoThrift)  readField9(iprot thrift.TProtocol) error {
+  if v, err := iprot.ReadI64(); err != nil {
+  return thrift.PrependError("error reading field 9: ", err)
+} else {
+  p.DoseFrequenciaUnidadeMedida = &v
+}
+  return nil
+}
+
+func (p *MedicamentoThrift)  readField10(iprot thrift.TProtocol) error {
+  if v, err := iprot.ReadI64(); err != nil {
+  return thrift.PrependError("error reading field 10: ", err)
+} else {
+  p.DtInicioTratamento = &v
+}
+  return nil
+}
+
+func (p *MedicamentoThrift)  readField11(iprot thrift.TProtocol) error {
+  if v, err := iprot.ReadI32(); err != nil {
+  return thrift.PrependError("error reading field 11: ", err)
+} else {
+  p.DuracaoTratamento = &v
+}
+  return nil
+}
+
+func (p *MedicamentoThrift)  readField12(iprot thrift.TProtocol) error {
+  if v, err := iprot.ReadI64(); err != nil {
+  return thrift.PrependError("error reading field 12: ", err)
+} else {
+  p.DuracaoTratamentoMedida = &v
+}
+  return nil
+}
+
+func (p *MedicamentoThrift)  readField13(iprot thrift.TProtocol) error {
+  if v, err := iprot.ReadI32(); err != nil {
+  return thrift.PrependError("error reading field 13: ", err)
+} else {
+  p.QuantidadeReceitada = &v
+}
+  return nil
+}
+
+func (p *MedicamentoThrift) Write(oprot thrift.TProtocol) error {
+  if err := oprot.WriteStructBegin("MedicamentoThrift"); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T write struct begin error: ", p), err) }
+  if err := p.writeField1(oprot); err != nil { return err }
+  if err := p.writeField2(oprot); err != nil { return err }
+  if err := p.writeField3(oprot); err != nil { return err }
+  if err := p.writeField4(oprot); err != nil { return err }
+  if err := p.writeField5(oprot); err != nil { return err }
+  if err := p.writeField6(oprot); err != nil { return err }
+  if err := p.writeField7(oprot); err != nil { return err }
+  if err := p.writeField8(oprot); err != nil { return err }
+  if err := p.writeField9(oprot); err != nil { return err }
+  if err := p.writeField10(oprot); err != nil { return err }
+  if err := p.writeField11(oprot); err != nil { return err }
+  if err := p.writeField12(oprot); err != nil { return err }
+  if err := p.writeField13(oprot); err != nil { return err }
+  if err := oprot.WriteFieldStop(); err != nil {
+    return thrift.PrependError("write field stop error: ", err) }
+  if err := oprot.WriteStructEnd(); err != nil {
+    return thrift.PrependError("write struct stop error: ", err) }
+  return nil
+}
+
+func (p *MedicamentoThrift) writeField1(oprot thrift.TProtocol) (err error) {
+  if p.IsSetCodigoCatmat() {
+    if err := oprot.WriteFieldBegin("codigoCatmat", thrift.STRING, 1); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field begin error 1:codigoCatmat: ", p), err) }
+    if err := oprot.WriteString(string(*p.CodigoCatmat)); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T.codigoCatmat (1) field write error: ", p), err) }
+    if err := oprot.WriteFieldEnd(); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field end error 1:codigoCatmat: ", p), err) }
+  }
+  return err
+}
+
+func (p *MedicamentoThrift) writeField2(oprot thrift.TProtocol) (err error) {
+  if p.IsSetViaAdministracao() {
+    if err := oprot.WriteFieldBegin("viaAdministracao", thrift.I64, 2); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field begin error 2:viaAdministracao: ", p), err) }
+    if err := oprot.WriteI64(int64(*p.ViaAdministracao)); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T.viaAdministracao (2) field write error: ", p), err) }
+    if err := oprot.WriteFieldEnd(); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field end error 2:viaAdministracao: ", p), err) }
+  }
+  return err
+}
+
+func (p *MedicamentoThrift) writeField3(oprot thrift.TProtocol) (err error) {
+  if p.IsSetDose() {
+    if err := oprot.WriteFieldBegin("dose", thrift.STRING, 3); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field begin error 3:dose: ", p), err) }
+    if err := oprot.WriteString(string(*p.Dose)); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T.dose (3) field write error: ", p), err) }
+    if err := oprot.WriteFieldEnd(); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field end error 3:dose: ", p), err) }
+  }
+  return err
+}
+
+func (p *MedicamentoThrift) writeField4(oprot thrift.TProtocol) (err error) {
+  if p.IsSetDoseUnica() {
+    if err := oprot.WriteFieldBegin("doseUnica", thrift.BOOL, 4); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field begin error 4:doseUnica: ", p), err) }
+    if err := oprot.WriteBool(bool(*p.DoseUnica)); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T.doseUnica (4) field write error: ", p), err) }
+    if err := oprot.WriteFieldEnd(); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field end error 4:doseUnica: ", p), err) }
+  }
+  return err
+}
+
+func (p *MedicamentoThrift) writeField5(oprot thrift.TProtocol) (err error) {
+  if p.IsSetUsoContinuo() {
+    if err := oprot.WriteFieldBegin("usoContinuo", thrift.BOOL, 5); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field begin error 5:usoContinuo: ", p), err) }
+    if err := oprot.WriteBool(bool(*p.UsoContinuo)); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T.usoContinuo (5) field write error: ", p), err) }
+    if err := oprot.WriteFieldEnd(); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field end error 5:usoContinuo: ", p), err) }
+  }
+  return err
+}
+
+func (p *MedicamentoThrift) writeField6(oprot thrift.TProtocol) (err error) {
+  if p.IsSetDoseFrequenciaTipo() {
+    if err := oprot.WriteFieldBegin("doseFrequenciaTipo", thrift.I64, 6); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field begin error 6:doseFrequenciaTipo: ", p), err) }
+    if err := oprot.WriteI64(int64(*p.DoseFrequenciaTipo)); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T.doseFrequenciaTipo (6) field write error: ", p), err) }
+    if err := oprot.WriteFieldEnd(); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field end error 6:doseFrequenciaTipo: ", p), err) }
+  }
+  return err
+}
+
+func (p *MedicamentoThrift) writeField7(oprot thrift.TProtocol) (err error) {
+  if p.IsSetDoseFrequencia() {
+    if err := oprot.WriteFieldBegin("doseFrequencia", thrift.STRING, 7); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field begin error 7:doseFrequencia: ", p), err) }
+    if err := oprot.WriteString(string(*p.DoseFrequencia)); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T.doseFrequencia (7) field write error: ", p), err) }
+    if err := oprot.WriteFieldEnd(); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field end error 7:doseFrequencia: ", p), err) }
+  }
+  return err
+}
+
+func (p *MedicamentoThrift) writeField8(oprot thrift.TProtocol) (err error) {
+  if p.IsSetDoseFrequenciaQuantidade() {
+    if err := oprot.WriteFieldBegin("doseFrequenciaQuantidade", thrift.I32, 8); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field begin error 8:doseFrequenciaQuantidade: ", p), err) }
+    if err := oprot.WriteI32(int32(*p.DoseFrequenciaQuantidade)); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T.doseFrequenciaQuantidade (8) field write error: ", p), err) }
+    if err := oprot.WriteFieldEnd(); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field end error 8:doseFrequenciaQuantidade: ", p), err) }
+  }
+  return err
+}
+
+func (p *MedicamentoThrift) writeField9(oprot thrift.TProtocol) (err error) {
+  if p.IsSetDoseFrequenciaUnidadeMedida() {
+    if err := oprot.WriteFieldBegin("doseFrequenciaUnidadeMedida", thrift.I64, 9); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field begin error 9:doseFrequenciaUnidadeMedida: ", p), err) }
+    if err := oprot.WriteI64(int64(*p.DoseFrequenciaUnidadeMedida)); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T.doseFrequenciaUnidadeMedida (9) field write error: ", p), err) }
+    if err := oprot.WriteFieldEnd(); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field end error 9:doseFrequenciaUnidadeMedida: ", p), err) }
+  }
+  return err
+}
+
+func (p *MedicamentoThrift) writeField10(oprot thrift.TProtocol) (err error) {
+  if p.IsSetDtInicioTratamento() {
+    if err := oprot.WriteFieldBegin("dtInicioTratamento", thrift.I64, 10); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field begin error 10:dtInicioTratamento: ", p), err) }
+    if err := oprot.WriteI64(int64(*p.DtInicioTratamento)); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T.dtInicioTratamento (10) field write error: ", p), err) }
+    if err := oprot.WriteFieldEnd(); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field end error 10:dtInicioTratamento: ", p), err) }
+  }
+  return err
+}
+
+func (p *MedicamentoThrift) writeField11(oprot thrift.TProtocol) (err error) {
+  if p.IsSetDuracaoTratamento() {
+    if err := oprot.WriteFieldBegin("duracaoTratamento", thrift.I32, 11); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field begin error 11:duracaoTratamento: ", p), err) }
+    if err := oprot.WriteI32(int32(*p.DuracaoTratamento)); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T.duracaoTratamento (11) field write error: ", p), err) }
+    if err := oprot.WriteFieldEnd(); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field end error 11:duracaoTratamento: ", p), err) }
+  }
+  return err
+}
+
+func (p *MedicamentoThrift) writeField12(oprot thrift.TProtocol) (err error) {
+  if p.IsSetDuracaoTratamentoMedida() {
+    if err := oprot.WriteFieldBegin("duracaoTratamentoMedida", thrift.I64, 12); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field begin error 12:duracaoTratamentoMedida: ", p), err) }
+    if err := oprot.WriteI64(int64(*p.DuracaoTratamentoMedida)); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T.duracaoTratamentoMedida (12) field write error: ", p), err) }
+    if err := oprot.WriteFieldEnd(); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field end error 12:duracaoTratamentoMedida: ", p), err) }
+  }
+  return err
+}
+
+func (p *MedicamentoThrift) writeField13(oprot thrift.TProtocol) (err error) {
+  if p.IsSetQuantidadeReceitada() {
+    if err := oprot.WriteFieldBegin("quantidadeReceitada", thrift.I32, 13); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field begin error 13:quantidadeReceitada: ", p), err) }
+    if err := oprot.WriteI32(int32(*p.QuantidadeReceitada)); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T.quantidadeReceitada (13) field write error: ", p), err) }
+    if err := oprot.WriteFieldEnd(); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field end error 13:quantidadeReceitada: ", p), err) }
+  }
+  return err
+}
+
+func (p *MedicamentoThrift) String() string {
+  if p == nil {
+    return "<nil>"
+  }
+  return fmt.Sprintf("MedicamentoThrift(%+v)", *p)
+}
+
+// Attributes:
+//  - Especialidade
+//  - HipoteseDiagnosticoCid10
+//  - HipoteseDiagnosticoCiap2
+//  - ClassificacaoRisco
+type EncaminhamentoExternoThrift struct {
+  Especialidade *int64 `thrift:"especialidade,1" json:"especialidade,omitempty"`
+  HipoteseDiagnosticoCid10 *string `thrift:"hipoteseDiagnosticoCid10,2" json:"hipoteseDiagnosticoCid10,omitempty"`
+  HipoteseDiagnosticoCiap2 *string `thrift:"hipoteseDiagnosticoCiap2,3" json:"hipoteseDiagnosticoCiap2,omitempty"`
+  ClassificacaoRisco *int64 `thrift:"classificacaoRisco,4" json:"classificacaoRisco,omitempty"`
+}
+
+func NewEncaminhamentoExternoThrift() *EncaminhamentoExternoThrift {
+  return &EncaminhamentoExternoThrift{}
+}
+
+var EncaminhamentoExternoThrift_Especialidade_DEFAULT int64
+func (p *EncaminhamentoExternoThrift) GetEspecialidade() int64 {
+  if !p.IsSetEspecialidade() {
+    return EncaminhamentoExternoThrift_Especialidade_DEFAULT
+  }
+return *p.Especialidade
+}
+var EncaminhamentoExternoThrift_HipoteseDiagnosticoCid10_DEFAULT string
+func (p *EncaminhamentoExternoThrift) GetHipoteseDiagnosticoCid10() string {
+  if !p.IsSetHipoteseDiagnosticoCid10() {
+    return EncaminhamentoExternoThrift_HipoteseDiagnosticoCid10_DEFAULT
+  }
+return *p.HipoteseDiagnosticoCid10
+}
+var EncaminhamentoExternoThrift_HipoteseDiagnosticoCiap2_DEFAULT string
+func (p *EncaminhamentoExternoThrift) GetHipoteseDiagnosticoCiap2() string {
+  if !p.IsSetHipoteseDiagnosticoCiap2() {
+    return EncaminhamentoExternoThrift_HipoteseDiagnosticoCiap2_DEFAULT
+  }
+return *p.HipoteseDiagnosticoCiap2
+}
+var EncaminhamentoExternoThrift_ClassificacaoRisco_DEFAULT int64
+func (p *EncaminhamentoExternoThrift) GetClassificacaoRisco() int64 {
+  if !p.IsSetClassificacaoRisco() {
+    return EncaminhamentoExternoThrift_ClassificacaoRisco_DEFAULT
+  }
+return *p.ClassificacaoRisco
+}
+func (p *EncaminhamentoExternoThrift) IsSetEspecialidade() bool {
+  return p.Especialidade != nil
+}
+
+func (p *EncaminhamentoExternoThrift) IsSetHipoteseDiagnosticoCid10() bool {
+  return p.HipoteseDiagnosticoCid10 != nil
+}
+
+func (p *EncaminhamentoExternoThrift) IsSetHipoteseDiagnosticoCiap2() bool {
+  return p.HipoteseDiagnosticoCiap2 != nil
+}
+
+func (p *EncaminhamentoExternoThrift) IsSetClassificacaoRisco() bool {
+  return p.ClassificacaoRisco != nil
+}
+
+func (p *EncaminhamentoExternoThrift) Read(iprot thrift.TProtocol) error {
+  if _, err := iprot.ReadStructBegin(); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T read error: ", p), err)
+  }
+
+
+  for {
+    _, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
+    if err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T field %d read error: ", p, fieldId), err)
+    }
+    if fieldTypeId == thrift.STOP { break; }
+    switch fieldId {
+    case 1:
+      if err := p.readField1(iprot); err != nil {
+        return err
+      }
+    case 2:
+      if err := p.readField2(iprot); err != nil {
+        return err
+      }
+    case 3:
+      if err := p.readField3(iprot); err != nil {
+        return err
+      }
+    case 4:
+      if err := p.readField4(iprot); err != nil {
+        return err
+      }
+    default:
+      if err := iprot.Skip(fieldTypeId); err != nil {
+        return err
+      }
+    }
+    if err := iprot.ReadFieldEnd(); err != nil {
+      return err
+    }
+  }
+  if err := iprot.ReadStructEnd(); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T read struct end error: ", p), err)
+  }
+  return nil
+}
+
+func (p *EncaminhamentoExternoThrift)  readField1(iprot thrift.TProtocol) error {
+  if v, err := iprot.ReadI64(); err != nil {
+  return thrift.PrependError("error reading field 1: ", err)
+} else {
+  p.Especialidade = &v
+}
+  return nil
+}
+
+func (p *EncaminhamentoExternoThrift)  readField2(iprot thrift.TProtocol) error {
+  if v, err := iprot.ReadString(); err != nil {
+  return thrift.PrependError("error reading field 2: ", err)
+} else {
+  p.HipoteseDiagnosticoCid10 = &v
+}
+  return nil
+}
+
+func (p *EncaminhamentoExternoThrift)  readField3(iprot thrift.TProtocol) error {
+  if v, err := iprot.ReadString(); err != nil {
+  return thrift.PrependError("error reading field 3: ", err)
+} else {
+  p.HipoteseDiagnosticoCiap2 = &v
+}
+  return nil
+}
+
+func (p *EncaminhamentoExternoThrift)  readField4(iprot thrift.TProtocol) error {
+  if v, err := iprot.ReadI64(); err != nil {
+  return thrift.PrependError("error reading field 4: ", err)
+} else {
+  p.ClassificacaoRisco = &v
+}
+  return nil
+}
+
+func (p *EncaminhamentoExternoThrift) Write(oprot thrift.TProtocol) error {
+  if err := oprot.WriteStructBegin("EncaminhamentoExternoThrift"); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T write struct begin error: ", p), err) }
+  if err := p.writeField1(oprot); err != nil { return err }
+  if err := p.writeField2(oprot); err != nil { return err }
+  if err := p.writeField3(oprot); err != nil { return err }
+  if err := p.writeField4(oprot); err != nil { return err }
+  if err := oprot.WriteFieldStop(); err != nil {
+    return thrift.PrependError("write field stop error: ", err) }
+  if err := oprot.WriteStructEnd(); err != nil {
+    return thrift.PrependError("write struct stop error: ", err) }
+  return nil
+}
+
+func (p *EncaminhamentoExternoThrift) writeField1(oprot thrift.TProtocol) (err error) {
+  if p.IsSetEspecialidade() {
+    if err := oprot.WriteFieldBegin("especialidade", thrift.I64, 1); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field begin error 1:especialidade: ", p), err) }
+    if err := oprot.WriteI64(int64(*p.Especialidade)); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T.especialidade (1) field write error: ", p), err) }
+    if err := oprot.WriteFieldEnd(); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field end error 1:especialidade: ", p), err) }
+  }
+  return err
+}
+
+func (p *EncaminhamentoExternoThrift) writeField2(oprot thrift.TProtocol) (err error) {
+  if p.IsSetHipoteseDiagnosticoCid10() {
+    if err := oprot.WriteFieldBegin("hipoteseDiagnosticoCid10", thrift.STRING, 2); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field begin error 2:hipoteseDiagnosticoCid10: ", p), err) }
+    if err := oprot.WriteString(string(*p.HipoteseDiagnosticoCid10)); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T.hipoteseDiagnosticoCid10 (2) field write error: ", p), err) }
+    if err := oprot.WriteFieldEnd(); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field end error 2:hipoteseDiagnosticoCid10: ", p), err) }
+  }
+  return err
+}
+
+func (p *EncaminhamentoExternoThrift) writeField3(oprot thrift.TProtocol) (err error) {
+  if p.IsSetHipoteseDiagnosticoCiap2() {
+    if err := oprot.WriteFieldBegin("hipoteseDiagnosticoCiap2", thrift.STRING, 3); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field begin error 3:hipoteseDiagnosticoCiap2: ", p), err) }
+    if err := oprot.WriteString(string(*p.HipoteseDiagnosticoCiap2)); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T.hipoteseDiagnosticoCiap2 (3) field write error: ", p), err) }
+    if err := oprot.WriteFieldEnd(); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field end error 3:hipoteseDiagnosticoCiap2: ", p), err) }
+  }
+  return err
+}
+
+func (p *EncaminhamentoExternoThrift) writeField4(oprot thrift.TProtocol) (err error) {
+  if p.IsSetClassificacaoRisco() {
+    if err := oprot.WriteFieldBegin("classificacaoRisco", thrift.I64, 4); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field begin error 4:classificacaoRisco: ", p), err) }
+    if err := oprot.WriteI64(int64(*p.ClassificacaoRisco)); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T.classificacaoRisco (4) field write error: ", p), err) }
+    if err := oprot.WriteFieldEnd(); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field end error 4:classificacaoRisco: ", p), err) }
+  }
+  return err
+}
+
+func (p *EncaminhamentoExternoThrift) String() string {
+  if p == nil {
+    return "<nil>"
+  }
+  return fmt.Sprintf("EncaminhamentoExternoThrift(%+v)", *p)
 }
 

@@ -3866,6 +3866,8 @@ func (p *SaidaCidadaoCadastroThrift) String() string {
 //  - UuidCidadao
 //  - SaidaCidadaoCadastro
 //  - HeaderTransport
+//  - StatusCadastroIndividualInativo
+//  - StatusGeradoAutomaticamente
 type CadastroIndividualThrift struct {
   CondicoesDeSaude *CondicoesDeSaudeThrift `thrift:"condicoesDeSaude,1" json:"condicoesDeSaude,omitempty"`
   // unused field # 2
@@ -3880,6 +3882,8 @@ type CadastroIndividualThrift struct {
   UuidCidadao *string `thrift:"uuidCidadao,11" json:"uuidCidadao,omitempty"`
   SaidaCidadaoCadastro *SaidaCidadaoCadastroThrift `thrift:"saidaCidadaoCadastro,12" json:"saidaCidadaoCadastro,omitempty"`
   HeaderTransport *common.UnicaLotacaoHeaderThrift `thrift:"headerTransport,13" json:"headerTransport,omitempty"`
+  StatusCadastroIndividualInativo *bool `thrift:"statusCadastroIndividualInativo,14" json:"statusCadastroIndividualInativo,omitempty"`
+  StatusGeradoAutomaticamente *bool `thrift:"statusGeradoAutomaticamente,15" json:"statusGeradoAutomaticamente,omitempty"`
 }
 
 func NewCadastroIndividualThrift() *CadastroIndividualThrift {
@@ -3967,6 +3971,20 @@ func (p *CadastroIndividualThrift) GetHeaderTransport() *common.UnicaLotacaoHead
   }
 return p.HeaderTransport
 }
+var CadastroIndividualThrift_StatusCadastroIndividualInativo_DEFAULT bool
+func (p *CadastroIndividualThrift) GetStatusCadastroIndividualInativo() bool {
+  if !p.IsSetStatusCadastroIndividualInativo() {
+    return CadastroIndividualThrift_StatusCadastroIndividualInativo_DEFAULT
+  }
+return *p.StatusCadastroIndividualInativo
+}
+var CadastroIndividualThrift_StatusGeradoAutomaticamente_DEFAULT bool
+func (p *CadastroIndividualThrift) GetStatusGeradoAutomaticamente() bool {
+  if !p.IsSetStatusGeradoAutomaticamente() {
+    return CadastroIndividualThrift_StatusGeradoAutomaticamente_DEFAULT
+  }
+return *p.StatusGeradoAutomaticamente
+}
 func (p *CadastroIndividualThrift) IsSetCondicoesDeSaude() bool {
   return p.CondicoesDeSaude != nil
 }
@@ -4009,6 +4027,14 @@ func (p *CadastroIndividualThrift) IsSetSaidaCidadaoCadastro() bool {
 
 func (p *CadastroIndividualThrift) IsSetHeaderTransport() bool {
   return p.HeaderTransport != nil
+}
+
+func (p *CadastroIndividualThrift) IsSetStatusCadastroIndividualInativo() bool {
+  return p.StatusCadastroIndividualInativo != nil
+}
+
+func (p *CadastroIndividualThrift) IsSetStatusGeradoAutomaticamente() bool {
+  return p.StatusGeradoAutomaticamente != nil
 }
 
 func (p *CadastroIndividualThrift) Read(iprot thrift.TProtocol) error {
@@ -4072,6 +4098,14 @@ func (p *CadastroIndividualThrift) Read(iprot thrift.TProtocol) error {
       }
     case 13:
       if err := p.readField13(iprot); err != nil {
+        return err
+      }
+    case 14:
+      if err := p.readField14(iprot); err != nil {
+        return err
+      }
+    case 15:
+      if err := p.readField15(iprot); err != nil {
         return err
       }
     default:
@@ -4194,6 +4228,24 @@ func (p *CadastroIndividualThrift)  readField13(iprot thrift.TProtocol) error {
   return nil
 }
 
+func (p *CadastroIndividualThrift)  readField14(iprot thrift.TProtocol) error {
+  if v, err := iprot.ReadBool(); err != nil {
+  return thrift.PrependError("error reading field 14: ", err)
+} else {
+  p.StatusCadastroIndividualInativo = &v
+}
+  return nil
+}
+
+func (p *CadastroIndividualThrift)  readField15(iprot thrift.TProtocol) error {
+  if v, err := iprot.ReadBool(); err != nil {
+  return thrift.PrependError("error reading field 15: ", err)
+} else {
+  p.StatusGeradoAutomaticamente = &v
+}
+  return nil
+}
+
 func (p *CadastroIndividualThrift) Write(oprot thrift.TProtocol) error {
   if err := oprot.WriteStructBegin("CadastroIndividualThrift"); err != nil {
     return thrift.PrependError(fmt.Sprintf("%T write struct begin error: ", p), err) }
@@ -4209,6 +4261,8 @@ func (p *CadastroIndividualThrift) Write(oprot thrift.TProtocol) error {
   if err := p.writeField11(oprot); err != nil { return err }
   if err := p.writeField12(oprot); err != nil { return err }
   if err := p.writeField13(oprot); err != nil { return err }
+  if err := p.writeField14(oprot); err != nil { return err }
+  if err := p.writeField15(oprot); err != nil { return err }
   if err := oprot.WriteFieldStop(); err != nil {
     return thrift.PrependError("write field stop error: ", err) }
   if err := oprot.WriteStructEnd(); err != nil {
@@ -4360,6 +4414,30 @@ func (p *CadastroIndividualThrift) writeField13(oprot thrift.TProtocol) (err err
     }
     if err := oprot.WriteFieldEnd(); err != nil {
       return thrift.PrependError(fmt.Sprintf("%T write field end error 13:headerTransport: ", p), err) }
+  }
+  return err
+}
+
+func (p *CadastroIndividualThrift) writeField14(oprot thrift.TProtocol) (err error) {
+  if p.IsSetStatusCadastroIndividualInativo() {
+    if err := oprot.WriteFieldBegin("statusCadastroIndividualInativo", thrift.BOOL, 14); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field begin error 14:statusCadastroIndividualInativo: ", p), err) }
+    if err := oprot.WriteBool(bool(*p.StatusCadastroIndividualInativo)); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T.statusCadastroIndividualInativo (14) field write error: ", p), err) }
+    if err := oprot.WriteFieldEnd(); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field end error 14:statusCadastroIndividualInativo: ", p), err) }
+  }
+  return err
+}
+
+func (p *CadastroIndividualThrift) writeField15(oprot thrift.TProtocol) (err error) {
+  if p.IsSetStatusGeradoAutomaticamente() {
+    if err := oprot.WriteFieldBegin("statusGeradoAutomaticamente", thrift.BOOL, 15); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field begin error 15:statusGeradoAutomaticamente: ", p), err) }
+    if err := oprot.WriteBool(bool(*p.StatusGeradoAutomaticamente)); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T.statusGeradoAutomaticamente (15) field write error: ", p), err) }
+    if err := oprot.WriteFieldEnd(); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field end error 15:statusGeradoAutomaticamente: ", p), err) }
   }
   return err
 }

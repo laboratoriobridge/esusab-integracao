@@ -1246,6 +1246,7 @@ func (p *FamiliaRowThrift) String() string {
 //  - TipoDeImovel
 //  - InstituicaoPermanencia
 //  - HeaderTransport
+//  - StatusGeradoAutomaticamente
 type CadastroDomiciliarThrift struct {
   AnimaisNoDomicilio []int64 `thrift:"animaisNoDomicilio,1" json:"animaisNoDomicilio,omitempty"`
   CondicaoMoradia *CondicaoMoradiaThrift `thrift:"condicaoMoradia,2" json:"condicaoMoradia,omitempty"`
@@ -1262,6 +1263,7 @@ type CadastroDomiciliarThrift struct {
   TipoDeImovel *int64 `thrift:"tipoDeImovel,13" json:"tipoDeImovel,omitempty"`
   InstituicaoPermanencia *InstituicaoPermanenciaThrift `thrift:"instituicaoPermanencia,14" json:"instituicaoPermanencia,omitempty"`
   HeaderTransport *common.UnicaLotacaoHeaderThrift `thrift:"headerTransport,15" json:"headerTransport,omitempty"`
+  StatusGeradoAutomaticamente *bool `thrift:"statusGeradoAutomaticamente,16" json:"statusGeradoAutomaticamente,omitempty"`
 }
 
 func NewCadastroDomiciliarThrift() *CadastroDomiciliarThrift {
@@ -1359,6 +1361,13 @@ func (p *CadastroDomiciliarThrift) GetHeaderTransport() *common.UnicaLotacaoHead
   }
 return p.HeaderTransport
 }
+var CadastroDomiciliarThrift_StatusGeradoAutomaticamente_DEFAULT bool
+func (p *CadastroDomiciliarThrift) GetStatusGeradoAutomaticamente() bool {
+  if !p.IsSetStatusGeradoAutomaticamente() {
+    return CadastroDomiciliarThrift_StatusGeradoAutomaticamente_DEFAULT
+  }
+return *p.StatusGeradoAutomaticamente
+}
 func (p *CadastroDomiciliarThrift) IsSetAnimaisNoDomicilio() bool {
   return p.AnimaisNoDomicilio != nil
 }
@@ -1409,6 +1418,10 @@ func (p *CadastroDomiciliarThrift) IsSetInstituicaoPermanencia() bool {
 
 func (p *CadastroDomiciliarThrift) IsSetHeaderTransport() bool {
   return p.HeaderTransport != nil
+}
+
+func (p *CadastroDomiciliarThrift) IsSetStatusGeradoAutomaticamente() bool {
+  return p.StatusGeradoAutomaticamente != nil
 }
 
 func (p *CadastroDomiciliarThrift) Read(iprot thrift.TProtocol) error {
@@ -1480,6 +1493,10 @@ func (p *CadastroDomiciliarThrift) Read(iprot thrift.TProtocol) error {
       }
     case 15:
       if err := p.readField15(iprot); err != nil {
+        return err
+      }
+    case 16:
+      if err := p.readField16(iprot); err != nil {
         return err
       }
     default:
@@ -1646,6 +1663,15 @@ func (p *CadastroDomiciliarThrift)  readField15(iprot thrift.TProtocol) error {
   return nil
 }
 
+func (p *CadastroDomiciliarThrift)  readField16(iprot thrift.TProtocol) error {
+  if v, err := iprot.ReadBool(); err != nil {
+  return thrift.PrependError("error reading field 16: ", err)
+} else {
+  p.StatusGeradoAutomaticamente = &v
+}
+  return nil
+}
+
 func (p *CadastroDomiciliarThrift) Write(oprot thrift.TProtocol) error {
   if err := oprot.WriteStructBegin("CadastroDomiciliarThrift"); err != nil {
     return thrift.PrependError(fmt.Sprintf("%T write struct begin error: ", p), err) }
@@ -1663,6 +1689,7 @@ func (p *CadastroDomiciliarThrift) Write(oprot thrift.TProtocol) error {
   if err := p.writeField13(oprot); err != nil { return err }
   if err := p.writeField14(oprot); err != nil { return err }
   if err := p.writeField15(oprot); err != nil { return err }
+  if err := p.writeField16(oprot); err != nil { return err }
   if err := oprot.WriteFieldStop(); err != nil {
     return thrift.PrependError("write field stop error: ", err) }
   if err := oprot.WriteStructEnd(); err != nil {
@@ -1853,6 +1880,18 @@ func (p *CadastroDomiciliarThrift) writeField15(oprot thrift.TProtocol) (err err
     }
     if err := oprot.WriteFieldEnd(); err != nil {
       return thrift.PrependError(fmt.Sprintf("%T write field end error 15:headerTransport: ", p), err) }
+  }
+  return err
+}
+
+func (p *CadastroDomiciliarThrift) writeField16(oprot thrift.TProtocol) (err error) {
+  if p.IsSetStatusGeradoAutomaticamente() {
+    if err := oprot.WriteFieldBegin("statusGeradoAutomaticamente", thrift.BOOL, 16); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field begin error 16:statusGeradoAutomaticamente: ", p), err) }
+    if err := oprot.WriteBool(bool(*p.StatusGeradoAutomaticamente)); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T.statusGeradoAutomaticamente (16) field write error: ", p), err) }
+    if err := oprot.WriteFieldEnd(); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field end error 16:statusGeradoAutomaticamente: ", p), err) }
   }
   return err
 }

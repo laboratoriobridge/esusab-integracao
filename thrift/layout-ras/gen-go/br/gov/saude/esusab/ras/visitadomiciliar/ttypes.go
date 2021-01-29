@@ -34,6 +34,11 @@ var GoUnusedProtection__ int;
 //  - PesoAcompanhamentoNutricional
 //  - AlturaAcompanhamentoNutricional
 //  - CpfCidadao
+//  - PressaoSistolica
+//  - PressaoDiastolica
+//  - Temperatura
+//  - TipoGlicemia
+//  - Glicemia
 type FichaVisitaDomiciliarChildThrift struct {
   Turno *int64 `thrift:"turno,1" json:"turno,omitempty"`
   NumProntuario *string `thrift:"numProntuario,2" json:"numProntuario,omitempty"`
@@ -49,6 +54,11 @@ type FichaVisitaDomiciliarChildThrift struct {
   PesoAcompanhamentoNutricional *float64 `thrift:"pesoAcompanhamentoNutricional,12" json:"pesoAcompanhamentoNutricional,omitempty"`
   AlturaAcompanhamentoNutricional *float64 `thrift:"alturaAcompanhamentoNutricional,13" json:"alturaAcompanhamentoNutricional,omitempty"`
   CpfCidadao *string `thrift:"cpfCidadao,14" json:"cpfCidadao,omitempty"`
+  PressaoSistolica *int32 `thrift:"pressaoSistolica,15" json:"pressaoSistolica,omitempty"`
+  PressaoDiastolica *int32 `thrift:"pressaoDiastolica,16" json:"pressaoDiastolica,omitempty"`
+  Temperatura *float64 `thrift:"temperatura,17" json:"temperatura,omitempty"`
+  TipoGlicemia *int64 `thrift:"tipoGlicemia,18" json:"tipoGlicemia,omitempty"`
+  Glicemia *int32 `thrift:"glicemia,19" json:"glicemia,omitempty"`
 }
 
 func NewFichaVisitaDomiciliarChildThrift() *FichaVisitaDomiciliarChildThrift {
@@ -151,6 +161,41 @@ func (p *FichaVisitaDomiciliarChildThrift) GetCpfCidadao() string {
   }
 return *p.CpfCidadao
 }
+var FichaVisitaDomiciliarChildThrift_PressaoSistolica_DEFAULT int32
+func (p *FichaVisitaDomiciliarChildThrift) GetPressaoSistolica() int32 {
+  if !p.IsSetPressaoSistolica() {
+    return FichaVisitaDomiciliarChildThrift_PressaoSistolica_DEFAULT
+  }
+return *p.PressaoSistolica
+}
+var FichaVisitaDomiciliarChildThrift_PressaoDiastolica_DEFAULT int32
+func (p *FichaVisitaDomiciliarChildThrift) GetPressaoDiastolica() int32 {
+  if !p.IsSetPressaoDiastolica() {
+    return FichaVisitaDomiciliarChildThrift_PressaoDiastolica_DEFAULT
+  }
+return *p.PressaoDiastolica
+}
+var FichaVisitaDomiciliarChildThrift_Temperatura_DEFAULT float64
+func (p *FichaVisitaDomiciliarChildThrift) GetTemperatura() float64 {
+  if !p.IsSetTemperatura() {
+    return FichaVisitaDomiciliarChildThrift_Temperatura_DEFAULT
+  }
+return *p.Temperatura
+}
+var FichaVisitaDomiciliarChildThrift_TipoGlicemia_DEFAULT int64
+func (p *FichaVisitaDomiciliarChildThrift) GetTipoGlicemia() int64 {
+  if !p.IsSetTipoGlicemia() {
+    return FichaVisitaDomiciliarChildThrift_TipoGlicemia_DEFAULT
+  }
+return *p.TipoGlicemia
+}
+var FichaVisitaDomiciliarChildThrift_Glicemia_DEFAULT int32
+func (p *FichaVisitaDomiciliarChildThrift) GetGlicemia() int32 {
+  if !p.IsSetGlicemia() {
+    return FichaVisitaDomiciliarChildThrift_Glicemia_DEFAULT
+  }
+return *p.Glicemia
+}
 func (p *FichaVisitaDomiciliarChildThrift) IsSetTurno() bool {
   return p.Turno != nil
 }
@@ -205,6 +250,26 @@ func (p *FichaVisitaDomiciliarChildThrift) IsSetAlturaAcompanhamentoNutricional(
 
 func (p *FichaVisitaDomiciliarChildThrift) IsSetCpfCidadao() bool {
   return p.CpfCidadao != nil
+}
+
+func (p *FichaVisitaDomiciliarChildThrift) IsSetPressaoSistolica() bool {
+  return p.PressaoSistolica != nil
+}
+
+func (p *FichaVisitaDomiciliarChildThrift) IsSetPressaoDiastolica() bool {
+  return p.PressaoDiastolica != nil
+}
+
+func (p *FichaVisitaDomiciliarChildThrift) IsSetTemperatura() bool {
+  return p.Temperatura != nil
+}
+
+func (p *FichaVisitaDomiciliarChildThrift) IsSetTipoGlicemia() bool {
+  return p.TipoGlicemia != nil
+}
+
+func (p *FichaVisitaDomiciliarChildThrift) IsSetGlicemia() bool {
+  return p.Glicemia != nil
 }
 
 func (p *FichaVisitaDomiciliarChildThrift) Read(iprot thrift.TProtocol) error {
@@ -274,6 +339,26 @@ func (p *FichaVisitaDomiciliarChildThrift) Read(iprot thrift.TProtocol) error {
       }
     case 14:
       if err := p.readField14(iprot); err != nil {
+        return err
+      }
+    case 15:
+      if err := p.readField15(iprot); err != nil {
+        return err
+      }
+    case 16:
+      if err := p.readField16(iprot); err != nil {
+        return err
+      }
+    case 17:
+      if err := p.readField17(iprot); err != nil {
+        return err
+      }
+    case 18:
+      if err := p.readField18(iprot); err != nil {
+        return err
+      }
+    case 19:
+      if err := p.readField19(iprot); err != nil {
         return err
       }
     default:
@@ -430,6 +515,51 @@ func (p *FichaVisitaDomiciliarChildThrift)  readField14(iprot thrift.TProtocol) 
   return nil
 }
 
+func (p *FichaVisitaDomiciliarChildThrift)  readField15(iprot thrift.TProtocol) error {
+  if v, err := iprot.ReadI32(); err != nil {
+  return thrift.PrependError("error reading field 15: ", err)
+} else {
+  p.PressaoSistolica = &v
+}
+  return nil
+}
+
+func (p *FichaVisitaDomiciliarChildThrift)  readField16(iprot thrift.TProtocol) error {
+  if v, err := iprot.ReadI32(); err != nil {
+  return thrift.PrependError("error reading field 16: ", err)
+} else {
+  p.PressaoDiastolica = &v
+}
+  return nil
+}
+
+func (p *FichaVisitaDomiciliarChildThrift)  readField17(iprot thrift.TProtocol) error {
+  if v, err := iprot.ReadDouble(); err != nil {
+  return thrift.PrependError("error reading field 17: ", err)
+} else {
+  p.Temperatura = &v
+}
+  return nil
+}
+
+func (p *FichaVisitaDomiciliarChildThrift)  readField18(iprot thrift.TProtocol) error {
+  if v, err := iprot.ReadI64(); err != nil {
+  return thrift.PrependError("error reading field 18: ", err)
+} else {
+  p.TipoGlicemia = &v
+}
+  return nil
+}
+
+func (p *FichaVisitaDomiciliarChildThrift)  readField19(iprot thrift.TProtocol) error {
+  if v, err := iprot.ReadI32(); err != nil {
+  return thrift.PrependError("error reading field 19: ", err)
+} else {
+  p.Glicemia = &v
+}
+  return nil
+}
+
 func (p *FichaVisitaDomiciliarChildThrift) Write(oprot thrift.TProtocol) error {
   if err := oprot.WriteStructBegin("FichaVisitaDomiciliarChildThrift"); err != nil {
     return thrift.PrependError(fmt.Sprintf("%T write struct begin error: ", p), err) }
@@ -447,6 +577,11 @@ func (p *FichaVisitaDomiciliarChildThrift) Write(oprot thrift.TProtocol) error {
   if err := p.writeField12(oprot); err != nil { return err }
   if err := p.writeField13(oprot); err != nil { return err }
   if err := p.writeField14(oprot); err != nil { return err }
+  if err := p.writeField15(oprot); err != nil { return err }
+  if err := p.writeField16(oprot); err != nil { return err }
+  if err := p.writeField17(oprot); err != nil { return err }
+  if err := p.writeField18(oprot); err != nil { return err }
+  if err := p.writeField19(oprot); err != nil { return err }
   if err := oprot.WriteFieldStop(); err != nil {
     return thrift.PrependError("write field stop error: ", err) }
   if err := oprot.WriteStructEnd(); err != nil {
@@ -626,6 +761,66 @@ func (p *FichaVisitaDomiciliarChildThrift) writeField14(oprot thrift.TProtocol) 
     return thrift.PrependError(fmt.Sprintf("%T.cpfCidadao (14) field write error: ", p), err) }
     if err := oprot.WriteFieldEnd(); err != nil {
       return thrift.PrependError(fmt.Sprintf("%T write field end error 14:cpfCidadao: ", p), err) }
+  }
+  return err
+}
+
+func (p *FichaVisitaDomiciliarChildThrift) writeField15(oprot thrift.TProtocol) (err error) {
+  if p.IsSetPressaoSistolica() {
+    if err := oprot.WriteFieldBegin("pressaoSistolica", thrift.I32, 15); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field begin error 15:pressaoSistolica: ", p), err) }
+    if err := oprot.WriteI32(int32(*p.PressaoSistolica)); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T.pressaoSistolica (15) field write error: ", p), err) }
+    if err := oprot.WriteFieldEnd(); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field end error 15:pressaoSistolica: ", p), err) }
+  }
+  return err
+}
+
+func (p *FichaVisitaDomiciliarChildThrift) writeField16(oprot thrift.TProtocol) (err error) {
+  if p.IsSetPressaoDiastolica() {
+    if err := oprot.WriteFieldBegin("pressaoDiastolica", thrift.I32, 16); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field begin error 16:pressaoDiastolica: ", p), err) }
+    if err := oprot.WriteI32(int32(*p.PressaoDiastolica)); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T.pressaoDiastolica (16) field write error: ", p), err) }
+    if err := oprot.WriteFieldEnd(); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field end error 16:pressaoDiastolica: ", p), err) }
+  }
+  return err
+}
+
+func (p *FichaVisitaDomiciliarChildThrift) writeField17(oprot thrift.TProtocol) (err error) {
+  if p.IsSetTemperatura() {
+    if err := oprot.WriteFieldBegin("temperatura", thrift.DOUBLE, 17); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field begin error 17:temperatura: ", p), err) }
+    if err := oprot.WriteDouble(float64(*p.Temperatura)); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T.temperatura (17) field write error: ", p), err) }
+    if err := oprot.WriteFieldEnd(); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field end error 17:temperatura: ", p), err) }
+  }
+  return err
+}
+
+func (p *FichaVisitaDomiciliarChildThrift) writeField18(oprot thrift.TProtocol) (err error) {
+  if p.IsSetTipoGlicemia() {
+    if err := oprot.WriteFieldBegin("tipoGlicemia", thrift.I64, 18); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field begin error 18:tipoGlicemia: ", p), err) }
+    if err := oprot.WriteI64(int64(*p.TipoGlicemia)); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T.tipoGlicemia (18) field write error: ", p), err) }
+    if err := oprot.WriteFieldEnd(); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field end error 18:tipoGlicemia: ", p), err) }
+  }
+  return err
+}
+
+func (p *FichaVisitaDomiciliarChildThrift) writeField19(oprot thrift.TProtocol) (err error) {
+  if p.IsSetGlicemia() {
+    if err := oprot.WriteFieldBegin("glicemia", thrift.I32, 19); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field begin error 19:glicemia: ", p), err) }
+    if err := oprot.WriteI32(int32(*p.Glicemia)); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T.glicemia (19) field write error: ", p), err) }
+    if err := oprot.WriteFieldEnd(); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field end error 19:glicemia: ", p), err) }
   }
   return err
 }

@@ -12,6 +12,32 @@ module Br
       module Esusab
         module Ras
           module Common
+            class HeaderCdsCadastroThrift
+              include ::Thrift::Struct, ::Thrift::Struct_Union
+              CNESUNIDADESAUDE = 1
+              CNSPROFISSIONAL = 2
+              CODIGOIBGEMUNICIPIO = 3
+              DATAATENDIMENTO = 4
+              INEEQUIPE = 5
+              MICROAREA = 6
+
+              FIELDS = {
+                CNESUNIDADESAUDE => {:type => ::Thrift::Types::STRING, :name => 'cnesUnidadeSaude', :optional => true},
+                CNSPROFISSIONAL => {:type => ::Thrift::Types::STRING, :name => 'cnsProfissional', :optional => true},
+                CODIGOIBGEMUNICIPIO => {:type => ::Thrift::Types::STRING, :name => 'codigoIbgeMunicipio', :optional => true},
+                DATAATENDIMENTO => {:type => ::Thrift::Types::I64, :name => 'dataAtendimento', :optional => true},
+                INEEQUIPE => {:type => ::Thrift::Types::STRING, :name => 'ineEquipe', :optional => true},
+                MICROAREA => {:type => ::Thrift::Types::I64, :name => 'microarea', :optional => true}
+              }
+
+              def struct_fields; FIELDS; end
+
+              def validate
+              end
+
+              ::Thrift::Struct.generate_accessors self
+            end
+
             class LotacaoHeaderThrift
               include ::Thrift::Struct, ::Thrift::Struct_Union
               PROFISSIONALCNS = 1
@@ -114,6 +140,68 @@ module Br
                 PONTOREFERENCIA => {:type => ::Thrift::Types::STRING, :name => 'pontoReferencia', :optional => true},
                 MICROAREA => {:type => ::Thrift::Types::STRING, :name => 'microArea', :optional => true},
                 STFORAAREA => {:type => ::Thrift::Types::BOOL, :name => 'stForaArea', :optional => true}
+              }
+
+              def struct_fields; FIELDS; end
+
+              def validate
+              end
+
+              ::Thrift::Struct.generate_accessors self
+            end
+
+            class MedicamentoThrift
+              include ::Thrift::Struct, ::Thrift::Struct_Union
+              CODIGOCATMAT = 1
+              VIAADMINISTRACAO = 2
+              DOSE = 3
+              DOSEUNICA = 4
+              USOCONTINUO = 5
+              DOSEFREQUENCIATIPO = 6
+              DOSEFREQUENCIA = 7
+              DOSEFREQUENCIAQUANTIDADE = 8
+              DOSEFREQUENCIAUNIDADEMEDIDA = 9
+              DTINICIOTRATAMENTO = 10
+              DURACAOTRATAMENTO = 11
+              DURACAOTRATAMENTOMEDIDA = 12
+              QUANTIDADERECEITADA = 13
+
+              FIELDS = {
+                CODIGOCATMAT => {:type => ::Thrift::Types::STRING, :name => 'codigoCatmat', :optional => true},
+                VIAADMINISTRACAO => {:type => ::Thrift::Types::I64, :name => 'viaAdministracao', :optional => true},
+                DOSE => {:type => ::Thrift::Types::STRING, :name => 'dose', :optional => true},
+                DOSEUNICA => {:type => ::Thrift::Types::BOOL, :name => 'doseUnica', :optional => true},
+                USOCONTINUO => {:type => ::Thrift::Types::BOOL, :name => 'usoContinuo', :optional => true},
+                DOSEFREQUENCIATIPO => {:type => ::Thrift::Types::I64, :name => 'doseFrequenciaTipo', :optional => true},
+                DOSEFREQUENCIA => {:type => ::Thrift::Types::STRING, :name => 'doseFrequencia', :optional => true},
+                DOSEFREQUENCIAQUANTIDADE => {:type => ::Thrift::Types::I32, :name => 'doseFrequenciaQuantidade', :optional => true},
+                DOSEFREQUENCIAUNIDADEMEDIDA => {:type => ::Thrift::Types::I64, :name => 'doseFrequenciaUnidadeMedida', :optional => true},
+                DTINICIOTRATAMENTO => {:type => ::Thrift::Types::I64, :name => 'dtInicioTratamento', :optional => true},
+                DURACAOTRATAMENTO => {:type => ::Thrift::Types::I32, :name => 'duracaoTratamento', :optional => true},
+                DURACAOTRATAMENTOMEDIDA => {:type => ::Thrift::Types::I64, :name => 'duracaoTratamentoMedida', :optional => true},
+                QUANTIDADERECEITADA => {:type => ::Thrift::Types::I32, :name => 'quantidadeReceitada', :optional => true}
+              }
+
+              def struct_fields; FIELDS; end
+
+              def validate
+              end
+
+              ::Thrift::Struct.generate_accessors self
+            end
+
+            class EncaminhamentoExternoThrift
+              include ::Thrift::Struct, ::Thrift::Struct_Union
+              ESPECIALIDADE = 1
+              HIPOTESEDIAGNOSTICOCID10 = 2
+              HIPOTESEDIAGNOSTICOCIAP2 = 3
+              CLASSIFICACAORISCO = 4
+
+              FIELDS = {
+                ESPECIALIDADE => {:type => ::Thrift::Types::I64, :name => 'especialidade', :optional => true},
+                HIPOTESEDIAGNOSTICOCID10 => {:type => ::Thrift::Types::STRING, :name => 'hipoteseDiagnosticoCid10', :optional => true},
+                HIPOTESEDIAGNOSTICOCIAP2 => {:type => ::Thrift::Types::STRING, :name => 'hipoteseDiagnosticoCiap2', :optional => true},
+                CLASSIFICACAORISCO => {:type => ::Thrift::Types::I64, :name => 'classificacaoRisco', :optional => true}
               }
 
               def struct_fields; FIELDS; end

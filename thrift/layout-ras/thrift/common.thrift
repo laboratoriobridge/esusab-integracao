@@ -7,6 +7,15 @@ namespace rb br.gov.saude.esusab.ras.common
 namespace go br.gov.saude.esusab.ras.common
 namespace py br.gov.saude.esusab.ras.common
 
+struct HeaderCdsCadastroThrift {
+	1:optional string cnesUnidadeSaude,
+	2:optional string cnsProfissional,
+	3:optional string codigoIbgeMunicipio,
+	4:optional i64 dataAtendimento,
+	5:optional string ineEquipe,
+	6:optional i64 microarea;
+}
+
 struct LotacaoHeaderThrift{
 	1:optional string profissionalCNS;
 
@@ -54,4 +63,27 @@ struct EnderecoLocalPermanenciaThrift {
 	12:optional string pontoReferencia,
 	13:optional string microArea,
 	14:optional bool stForaArea;
+}
+
+struct MedicamentoThrift {
+	1:optional string codigoCatmat,
+	2:optional i64 viaAdministracao,
+	3:optional string dose,
+	4:optional bool doseUnica,
+	5:optional bool usoContinuo,
+	6:optional i64 doseFrequenciaTipo,
+	7:optional string doseFrequencia,
+	8:optional i32 doseFrequenciaQuantidade,
+	9:optional i64 doseFrequenciaUnidadeMedida,
+	10:optional i64 dtInicioTratamento,
+	11:optional i32 duracaoTratamento,
+	12:optional i64 duracaoTratamentoMedida,
+	13:optional i32 quantidadeReceitada;
+}
+
+struct EncaminhamentoExternoThrift {
+	1:optional i64 especialidade,
+	2:optional string hipoteseDiagnosticoCid10,
+	3:optional string hipoteseDiagnosticoCiap2,
+	4:optional i64 classificacaoRisco;
 }

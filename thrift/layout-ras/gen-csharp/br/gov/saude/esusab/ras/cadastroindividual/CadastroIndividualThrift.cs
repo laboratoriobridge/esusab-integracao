@@ -34,6 +34,8 @@ namespace br.gov.saude.esusab.ras.cadastroindividual
     private string _uuidCidadao;
     private SaidaCidadaoCadastroThrift _saidaCidadaoCadastro;
     private br.gov.saude.esusab.ras.common.UnicaLotacaoHeaderThrift _headerTransport;
+    private bool _statusCadastroIndividualInativo;
+    private bool _statusGeradoAutomaticamente;
 
     public CondicoesDeSaudeThrift CondicoesDeSaude
     {
@@ -180,6 +182,32 @@ namespace br.gov.saude.esusab.ras.cadastroindividual
       }
     }
 
+    public bool StatusCadastroIndividualInativo
+    {
+      get
+      {
+        return _statusCadastroIndividualInativo;
+      }
+      set
+      {
+        __isset.statusCadastroIndividualInativo = true;
+        this._statusCadastroIndividualInativo = value;
+      }
+    }
+
+    public bool StatusGeradoAutomaticamente
+    {
+      get
+      {
+        return _statusGeradoAutomaticamente;
+      }
+      set
+      {
+        __isset.statusGeradoAutomaticamente = true;
+        this._statusGeradoAutomaticamente = value;
+      }
+    }
+
 
     public Isset __isset;
     #if !SILVERLIGHT
@@ -197,6 +225,8 @@ namespace br.gov.saude.esusab.ras.cadastroindividual
       public bool uuidCidadao;
       public bool saidaCidadaoCadastro;
       public bool headerTransport;
+      public bool statusCadastroIndividualInativo;
+      public bool statusGeradoAutomaticamente;
     }
 
     public CadastroIndividualThrift() {
@@ -309,6 +339,20 @@ namespace br.gov.saude.esusab.ras.cadastroindividual
               if (field.Type == TType.Struct) {
                 HeaderTransport = new br.gov.saude.esusab.ras.common.UnicaLotacaoHeaderThrift();
                 HeaderTransport.Read(iprot);
+              } else { 
+                TProtocolUtil.Skip(iprot, field.Type);
+              }
+              break;
+            case 14:
+              if (field.Type == TType.Bool) {
+                StatusCadastroIndividualInativo = iprot.ReadBool();
+              } else { 
+                TProtocolUtil.Skip(iprot, field.Type);
+              }
+              break;
+            case 15:
+              if (field.Type == TType.Bool) {
+                StatusGeradoAutomaticamente = iprot.ReadBool();
               } else { 
                 TProtocolUtil.Skip(iprot, field.Type);
               }
@@ -430,6 +474,22 @@ namespace br.gov.saude.esusab.ras.cadastroindividual
           HeaderTransport.Write(oprot);
           oprot.WriteFieldEnd();
         }
+        if (__isset.statusCadastroIndividualInativo) {
+          field.Name = "statusCadastroIndividualInativo";
+          field.Type = TType.Bool;
+          field.ID = 14;
+          oprot.WriteFieldBegin(field);
+          oprot.WriteBool(StatusCadastroIndividualInativo);
+          oprot.WriteFieldEnd();
+        }
+        if (__isset.statusGeradoAutomaticamente) {
+          field.Name = "statusGeradoAutomaticamente";
+          field.Type = TType.Bool;
+          field.ID = 15;
+          oprot.WriteFieldBegin(field);
+          oprot.WriteBool(StatusGeradoAutomaticamente);
+          oprot.WriteFieldEnd();
+        }
         oprot.WriteFieldStop();
         oprot.WriteStructEnd();
       }
@@ -502,6 +562,14 @@ namespace br.gov.saude.esusab.ras.cadastroindividual
       if (HeaderTransport != null && __isset.headerTransport) {
         __sb.Append(", HeaderTransport: ");
         __sb.Append(HeaderTransport== null ? "<null>" : HeaderTransport.ToString());
+      }
+      if (__isset.statusCadastroIndividualInativo) {
+        __sb.Append(", StatusCadastroIndividualInativo: ");
+        __sb.Append(StatusCadastroIndividualInativo);
+      }
+      if (__isset.statusGeradoAutomaticamente) {
+        __sb.Append(", StatusGeradoAutomaticamente: ");
+        __sb.Append(StatusGeradoAutomaticamente);
       }
       __sb.Append(")");
       return __sb.ToString();

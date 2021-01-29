@@ -31,6 +31,8 @@ struct FichaAtendimentoOdontologicoChildThrift {
 	16:optional i64 dataHoraInicialAtendimento;
 	17:optional i64 dataHoraFinalAtendimento;
 	18:optional string cpfCidadao;
+	19:optional list<common.MedicamentoThrift> medicamentos;
+	20:optional list<common.EncaminhamentoExternoThrift> encaminhamentos;
 }
 
 struct FichaAtendimentoOdontologicoMasterThrift {

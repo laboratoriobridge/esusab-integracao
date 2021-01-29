@@ -86,6 +86,8 @@ module Br
               DATAHORAINICIALATENDIMENTO = 28
               DATAHORAFINALATENDIMENTO = 29
               CPFCIDADAO = 30
+              MEDICAMENTOS = 31
+              ENCAMINHAMENTOS = 32
 
               FIELDS = {
                 NUMEROPRONTUARIO => {:type => ::Thrift::Types::STRING, :name => 'numeroProntuario', :optional => true},
@@ -115,7 +117,9 @@ module Br
                 PERIMETROCEFALICO => {:type => ::Thrift::Types::DOUBLE, :name => 'perimetroCefalico', :optional => true},
                 DATAHORAINICIALATENDIMENTO => {:type => ::Thrift::Types::I64, :name => 'dataHoraInicialAtendimento', :optional => true},
                 DATAHORAFINALATENDIMENTO => {:type => ::Thrift::Types::I64, :name => 'dataHoraFinalAtendimento', :optional => true},
-                CPFCIDADAO => {:type => ::Thrift::Types::STRING, :name => 'cpfCidadao', :optional => true}
+                CPFCIDADAO => {:type => ::Thrift::Types::STRING, :name => 'cpfCidadao', :optional => true},
+                MEDICAMENTOS => {:type => ::Thrift::Types::LIST, :name => 'medicamentos', :element => {:type => ::Thrift::Types::STRUCT, :class => ::Br::Gov::Saude::Esusab::Ras::Common::MedicamentoThrift}, :optional => true},
+                ENCAMINHAMENTOS => {:type => ::Thrift::Types::LIST, :name => 'encaminhamentos', :element => {:type => ::Thrift::Types::STRUCT, :class => ::Br::Gov::Saude::Esusab::Ras::Common::EncaminhamentoExternoThrift}, :optional => true}
               }
 
               def struct_fields; FIELDS; end

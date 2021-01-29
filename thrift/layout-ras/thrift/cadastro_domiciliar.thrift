@@ -58,5 +58,6 @@ struct CadastroDomiciliarThrift {
 	12:optional string uuidFichaOriginadora,
 	13:optional i64 tipoDeImovel,
 	14:optional InstituicaoPermanenciaThrift instituicaoPermanencia,
-	15:optional common.UnicaLotacaoHeaderThrift headerTransport
+	15:optional common.UnicaLotacaoHeaderThrift headerTransport,
+	16:optional bool statusGeradoAutomaticamente;
 }

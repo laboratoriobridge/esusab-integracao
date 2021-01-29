@@ -274,6 +274,8 @@ module Br
               UUIDCIDADAO = 11
               SAIDACIDADAOCADASTRO = 12
               HEADERTRANSPORT = 13
+              STATUSCADASTROINDIVIDUALINATIVO = 14
+              STATUSGERADOAUTOMATICAMENTE = 15
 
               FIELDS = {
                 CONDICOESDESAUDE => {:type => ::Thrift::Types::STRUCT, :name => 'condicoesDeSaude', :class => ::Br::Gov::Saude::Esusab::Ras::Cadastroindividual::CondicoesDeSaudeThrift, :optional => true},
@@ -287,7 +289,9 @@ module Br
                 UUIDFICHAORIGINADORA => {:type => ::Thrift::Types::STRING, :name => 'uuidFichaOriginadora', :optional => true},
                 UUIDCIDADAO => {:type => ::Thrift::Types::STRING, :name => 'uuidCidadao', :optional => true},
                 SAIDACIDADAOCADASTRO => {:type => ::Thrift::Types::STRUCT, :name => 'saidaCidadaoCadastro', :class => ::Br::Gov::Saude::Esusab::Ras::Cadastroindividual::SaidaCidadaoCadastroThrift, :optional => true},
-                HEADERTRANSPORT => {:type => ::Thrift::Types::STRUCT, :name => 'headerTransport', :class => ::Br::Gov::Saude::Esusab::Ras::Common::UnicaLotacaoHeaderThrift, :optional => true}
+                HEADERTRANSPORT => {:type => ::Thrift::Types::STRUCT, :name => 'headerTransport', :class => ::Br::Gov::Saude::Esusab::Ras::Common::UnicaLotacaoHeaderThrift, :optional => true},
+                STATUSCADASTROINDIVIDUALINATIVO => {:type => ::Thrift::Types::BOOL, :name => 'statusCadastroIndividualInativo', :optional => true},
+                STATUSGERADOAUTOMATICAMENTE => {:type => ::Thrift::Types::BOOL, :name => 'statusGeradoAutomaticamente', :optional => true}
               }
 
               def struct_fields; FIELDS; end

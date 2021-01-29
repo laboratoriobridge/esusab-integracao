@@ -853,6 +853,10 @@ class CadastroDomiciliarThrift {
    * @var \br\gov\saude\esusab\ras\common\UnicaLotacaoHeaderThrift
    */
   public $headerTransport = null;
+  /**
+   * @var bool
+   */
+  public $statusGeradoAutomaticamente = null;
 
   public function __construct($vals=null) {
     if (!isset(self::$_TSPEC)) {
@@ -926,6 +930,10 @@ class CadastroDomiciliarThrift {
           'type' => TType::STRUCT,
           'class' => '\br\gov\saude\esusab\ras\common\UnicaLotacaoHeaderThrift',
           ),
+        16 => array(
+          'var' => 'statusGeradoAutomaticamente',
+          'type' => TType::BOOL,
+          ),
         );
     }
     if (is_array($vals)) {
@@ -970,6 +978,9 @@ class CadastroDomiciliarThrift {
       }
       if (isset($vals['headerTransport'])) {
         $this->headerTransport = $vals['headerTransport'];
+      }
+      if (isset($vals['statusGeradoAutomaticamente'])) {
+        $this->statusGeradoAutomaticamente = $vals['statusGeradoAutomaticamente'];
       }
     }
   }
@@ -1116,6 +1127,13 @@ class CadastroDomiciliarThrift {
             $xfer += $input->skip($ftype);
           }
           break;
+        case 16:
+          if ($ftype == TType::BOOL) {
+            $xfer += $input->readBool($this->statusGeradoAutomaticamente);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
         default:
           $xfer += $input->skip($ftype);
           break;
@@ -1233,6 +1251,11 @@ class CadastroDomiciliarThrift {
       }
       $xfer += $output->writeFieldBegin('headerTransport', TType::STRUCT, 15);
       $xfer += $this->headerTransport->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->statusGeradoAutomaticamente !== null) {
+      $xfer += $output->writeFieldBegin('statusGeradoAutomaticamente', TType::BOOL, 16);
+      $xfer += $output->writeBool($this->statusGeradoAutomaticamente);
       $xfer += $output->writeFieldEnd();
     }
     $xfer += $output->writeFieldStop();

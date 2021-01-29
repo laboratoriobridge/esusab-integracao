@@ -123,5 +123,7 @@ struct CadastroIndividualThrift {
 	10:optional string uuidFichaOriginadora,
 	11:optional string uuidCidadao,
 	12:optional SaidaCidadaoCadastroThrift saidaCidadaoCadastro,
-	13:optional common.UnicaLotacaoHeaderThrift headerTransport
+	13:optional common.UnicaLotacaoHeaderThrift headerTransport,
+	14:optional bool statusCadastroIndividualInativo,
+	15:optional bool statusGeradoAutomaticamente;
 }

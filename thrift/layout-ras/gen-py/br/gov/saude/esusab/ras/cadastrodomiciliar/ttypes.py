@@ -543,6 +543,7 @@ class CadastroDomiciliarThrift:
    - tipoDeImovel
    - instituicaoPermanencia
    - headerTransport
+   - statusGeradoAutomaticamente
   """
 
   thrift_spec = (
@@ -562,9 +563,10 @@ class CadastroDomiciliarThrift:
     (13, TType.I64, 'tipoDeImovel', None, None, ), # 13
     (14, TType.STRUCT, 'instituicaoPermanencia', (InstituicaoPermanenciaThrift, InstituicaoPermanenciaThrift.thrift_spec), None, ), # 14
     (15, TType.STRUCT, 'headerTransport', (br.gov.saude.esusab.ras.common.ttypes.UnicaLotacaoHeaderThrift, br.gov.saude.esusab.ras.common.ttypes.UnicaLotacaoHeaderThrift.thrift_spec), None, ), # 15
+    (16, TType.BOOL, 'statusGeradoAutomaticamente', None, None, ), # 16
   )
 
-  def __init__(self, animaisNoDomicilio=None, condicaoMoradia=None, enderecoLocalPermanencia=None, familias=None, fichaAtualizada=None, quantosAnimaisNoDomicilio=None, stAnimaisNoDomicilio=None, statusTermoRecusa=None, tpCdsOrigem=None, uuid=None, uuidFichaOriginadora=None, tipoDeImovel=None, instituicaoPermanencia=None, headerTransport=None,):
+  def __init__(self, animaisNoDomicilio=None, condicaoMoradia=None, enderecoLocalPermanencia=None, familias=None, fichaAtualizada=None, quantosAnimaisNoDomicilio=None, stAnimaisNoDomicilio=None, statusTermoRecusa=None, tpCdsOrigem=None, uuid=None, uuidFichaOriginadora=None, tipoDeImovel=None, instituicaoPermanencia=None, headerTransport=None, statusGeradoAutomaticamente=None,):
     self.animaisNoDomicilio = animaisNoDomicilio
     self.condicaoMoradia = condicaoMoradia
     self.enderecoLocalPermanencia = enderecoLocalPermanencia
@@ -579,6 +581,7 @@ class CadastroDomiciliarThrift:
     self.tipoDeImovel = tipoDeImovel
     self.instituicaoPermanencia = instituicaoPermanencia
     self.headerTransport = headerTransport
+    self.statusGeradoAutomaticamente = statusGeradoAutomaticamente
 
   def read(self, iprot):
     if iprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None and fastbinary is not None:
@@ -674,6 +677,11 @@ class CadastroDomiciliarThrift:
           self.headerTransport.read(iprot)
         else:
           iprot.skip(ftype)
+      elif fid == 16:
+        if ftype == TType.BOOL:
+          self.statusGeradoAutomaticamente = iprot.readBool()
+        else:
+          iprot.skip(ftype)
       else:
         iprot.skip(ftype)
       iprot.readFieldEnd()
@@ -746,6 +754,10 @@ class CadastroDomiciliarThrift:
       oprot.writeFieldBegin('headerTransport', TType.STRUCT, 15)
       self.headerTransport.write(oprot)
       oprot.writeFieldEnd()
+    if self.statusGeradoAutomaticamente is not None:
+      oprot.writeFieldBegin('statusGeradoAutomaticamente', TType.BOOL, 16)
+      oprot.writeBool(self.statusGeradoAutomaticamente)
+      oprot.writeFieldEnd()
     oprot.writeFieldStop()
     oprot.writeStructEnd()
 
@@ -771,6 +783,7 @@ class CadastroDomiciliarThrift:
     value = (value * 31) ^ hash(self.tipoDeImovel)
     value = (value * 31) ^ hash(self.instituicaoPermanencia)
     value = (value * 31) ^ hash(self.headerTransport)
+    value = (value * 31) ^ hash(self.statusGeradoAutomaticamente)
     return value
 
   def __repr__(self):

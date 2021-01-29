@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fichaAtendimentoOdontologicoChild="http://esus.ufsc.br/fichaatendimentoodontologicochild" xmlns:fichaAtendimentoOdontologicoMaster="http://esus.ufsc.br/fichaatendimentoodontologicomaster" xmlns:lotacaoHeader="http://esus.ufsc.br/lotacaoheader" xmlns:procedimentoQuantidade="http://esus.ufsc.br/procedimentoquantidade" xmlns:variasLotacoesHeader="http://esus.ufsc.br/variaslotacoesheader" targetNamespace="http://esus.ufsc.br/fichaatendimentoodontologicomaster" version="1.0">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fichaAtendimentoOdontologicoChild="http://esus.ufsc.br/fichaatendimentoodontologicochild"
+           xmlns:fichaAtendimentoOdontologicoMaster="http://esus.ufsc.br/fichaatendimentoodontologicomaster"
+           xmlns:variasLotacoesHeader="http://esus.ufsc.br/variaslotacoesheader" targetNamespace="http://esus.ufsc.br/fichaatendimentoodontologicomaster" version="1.0">
 
   <xs:import namespace="http://esus.ufsc.br/procedimentoquantidade" schemaLocation="procedimentoquantidade.xsd"/>
 

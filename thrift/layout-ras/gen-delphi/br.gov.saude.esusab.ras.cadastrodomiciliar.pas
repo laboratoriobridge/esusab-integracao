@@ -463,6 +463,8 @@ type
     procedure SetInstituicaoPermanencia( const Value: IInstituicaoPermanenciaThrift);
     function GetHeaderTransport: IUnicaLotacaoHeaderThrift;
     procedure SetHeaderTransport( const Value: IUnicaLotacaoHeaderThrift);
+    function GetStatusGeradoAutomaticamente: Boolean;
+    procedure SetStatusGeradoAutomaticamente( const Value: Boolean);
 
     property AnimaisNoDomicilio: IThriftList<Int64> read GetAnimaisNoDomicilio write SetAnimaisNoDomicilio;
     property CondicaoMoradia: ICondicaoMoradiaThrift read GetCondicaoMoradia write SetCondicaoMoradia;
@@ -478,6 +480,7 @@ type
     property TipoDeImovel: Int64 read GetTipoDeImovel write SetTipoDeImovel;
     property InstituicaoPermanencia: IInstituicaoPermanenciaThrift read GetInstituicaoPermanencia write SetInstituicaoPermanencia;
     property HeaderTransport: IUnicaLotacaoHeaderThrift read GetHeaderTransport write SetHeaderTransport;
+    property StatusGeradoAutomaticamente: Boolean read GetStatusGeradoAutomaticamente write SetStatusGeradoAutomaticamente;
 
     function Get__isset_AnimaisNoDomicilio: Boolean;
     function Get__isset_CondicaoMoradia: Boolean;
@@ -492,6 +495,7 @@ type
     function Get__isset_TipoDeImovel: Boolean;
     function Get__isset_InstituicaoPermanencia: Boolean;
     function Get__isset_HeaderTransport: Boolean;
+    function Get__isset_StatusGeradoAutomaticamente: Boolean;
 
     property __isset_AnimaisNoDomicilio: Boolean read Get__isset_AnimaisNoDomicilio;
     property __isset_CondicaoMoradia: Boolean read Get__isset_CondicaoMoradia;
@@ -506,6 +510,7 @@ type
     property __isset_TipoDeImovel: Boolean read Get__isset_TipoDeImovel;
     property __isset_InstituicaoPermanencia: Boolean read Get__isset_InstituicaoPermanencia;
     property __isset_HeaderTransport: Boolean read Get__isset_HeaderTransport;
+    property __isset_StatusGeradoAutomaticamente: Boolean read Get__isset_StatusGeradoAutomaticamente;
   end;
 
   TCadastroDomiciliarThriftImpl = class(TInterfacedObject, IBase, ICadastroDomiciliarThrift)
@@ -524,6 +529,7 @@ type
     FTipoDeImovel: Int64;
     FInstituicaoPermanencia: IInstituicaoPermanenciaThrift;
     FHeaderTransport: IUnicaLotacaoHeaderThrift;
+    FStatusGeradoAutomaticamente: Boolean;
     
     F__isset_AnimaisNoDomicilio: Boolean;
     F__isset_CondicaoMoradia: Boolean;
@@ -538,6 +544,7 @@ type
     F__isset_TipoDeImovel: Boolean;
     F__isset_InstituicaoPermanencia: Boolean;
     F__isset_HeaderTransport: Boolean;
+    F__isset_StatusGeradoAutomaticamente: Boolean;
     
     function GetAnimaisNoDomicilio: IThriftList<Int64>;
     procedure SetAnimaisNoDomicilio( const Value: IThriftList<Int64>);
@@ -567,6 +574,8 @@ type
     procedure SetInstituicaoPermanencia( const Value: IInstituicaoPermanenciaThrift);
     function GetHeaderTransport: IUnicaLotacaoHeaderThrift;
     procedure SetHeaderTransport( const Value: IUnicaLotacaoHeaderThrift);
+    function GetStatusGeradoAutomaticamente: Boolean;
+    procedure SetStatusGeradoAutomaticamente( const Value: Boolean);
 
     function Get__isset_AnimaisNoDomicilio: Boolean;
     function Get__isset_CondicaoMoradia: Boolean;
@@ -581,6 +590,7 @@ type
     function Get__isset_TipoDeImovel: Boolean;
     function Get__isset_InstituicaoPermanencia: Boolean;
     function Get__isset_HeaderTransport: Boolean;
+    function Get__isset_StatusGeradoAutomaticamente: Boolean;
   public
     constructor Create;
     destructor Destroy; override;
@@ -606,6 +616,7 @@ type
     property TipoDeImovel: Int64 read GetTipoDeImovel write SetTipoDeImovel;
     property InstituicaoPermanencia: IInstituicaoPermanenciaThrift read GetInstituicaoPermanencia write SetInstituicaoPermanencia;
     property HeaderTransport: IUnicaLotacaoHeaderThrift read GetHeaderTransport write SetHeaderTransport;
+    property StatusGeradoAutomaticamente: Boolean read GetStatusGeradoAutomaticamente write SetStatusGeradoAutomaticamente;
 
     // isset
     property __isset_AnimaisNoDomicilio: Boolean read Get__isset_AnimaisNoDomicilio;
@@ -621,6 +632,7 @@ type
     property __isset_TipoDeImovel: Boolean read Get__isset_TipoDeImovel;
     property __isset_InstituicaoPermanencia: Boolean read Get__isset_InstituicaoPermanencia;
     property __isset_HeaderTransport: Boolean read Get__isset_HeaderTransport;
+    property __isset_StatusGeradoAutomaticamente: Boolean read Get__isset_StatusGeradoAutomaticamente;
   end;
 
 implementation
@@ -2140,6 +2152,22 @@ begin
   Result := F__isset_HeaderTransport;
 end;
 
+function TCadastroDomiciliarThriftImpl.GetStatusGeradoAutomaticamente: Boolean;
+begin
+  Result := FStatusGeradoAutomaticamente;
+end;
+
+procedure TCadastroDomiciliarThriftImpl.SetStatusGeradoAutomaticamente( const Value: Boolean);
+begin
+  F__isset_StatusGeradoAutomaticamente := True;
+  FStatusGeradoAutomaticamente := Value;
+end;
+
+function TCadastroDomiciliarThriftImpl.Get__isset_StatusGeradoAutomaticamente: Boolean;
+begin
+  Result := F__isset_StatusGeradoAutomaticamente;
+end;
+
 procedure TCadastroDomiciliarThriftImpl.Read( const iprot: IProtocol);
 var
   field_ : IField;
@@ -2311,6 +2339,15 @@ begin
           begin
             TProtocolUtil.Skip(iprot, field_.Type_);
           end;
+        end;
+        16: begin
+          if (field_.Type_ = TType.Bool_) then
+          begin
+            StatusGeradoAutomaticamente := iprot.ReadBool();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
         end
         else begin
           TProtocolUtil.Skip(iprot, field_.Type_);
@@ -2475,6 +2512,15 @@ begin
     HeaderTransport.Write(oprot);
     oprot.WriteFieldEnd();
   end;
+  if (__isset_StatusGeradoAutomaticamente) then
+  begin
+    field_.Name := 'statusGeradoAutomaticamente';
+    field_.Type_  := TType.Bool_;
+    field_.ID := 16;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteBool(StatusGeradoAutomaticamente);
+    oprot.WriteFieldEnd();
+  end;
   oprot.WriteFieldStop();
   oprot.WriteStructEnd();
 end;
@@ -2559,6 +2605,10 @@ begin
     if (HeaderTransport <> nil) and __isset_HeaderTransport then begin
       _sb16.Append(', HeaderTransport: ');
       if (HeaderTransport = nil) then _sb16.Append('<null>') else _sb16.Append(HeaderTransport.ToString());
+    end;
+    if (__isset_StatusGeradoAutomaticamente) then begin
+      _sb16.Append(', StatusGeradoAutomaticamente: ');
+      _sb16.Append(StatusGeradoAutomaticamente);
     end;
     _sb16.Append(')');
     Result := _sb16.ToString;

@@ -186,6 +186,14 @@ class FichaAtendimentoOdontologicoChildThrift {
    * @var string
    */
   public $cpfCidadao = null;
+  /**
+   * @var \br\gov\saude\esusab\ras\common\MedicamentoThrift[]
+   */
+  public $medicamentos = null;
+  /**
+   * @var \br\gov\saude\esusab\ras\common\EncaminhamentoExternoThrift[]
+   */
+  public $encaminhamentos = null;
 
   public function __construct($vals=null) {
     if (!isset(self::$_TSPEC)) {
@@ -279,6 +287,24 @@ class FichaAtendimentoOdontologicoChildThrift {
           'var' => 'cpfCidadao',
           'type' => TType::STRING,
           ),
+        19 => array(
+          'var' => 'medicamentos',
+          'type' => TType::LST,
+          'etype' => TType::STRUCT,
+          'elem' => array(
+            'type' => TType::STRUCT,
+            'class' => '\br\gov\saude\esusab\ras\common\MedicamentoThrift',
+            ),
+          ),
+        20 => array(
+          'var' => 'encaminhamentos',
+          'type' => TType::LST,
+          'etype' => TType::STRUCT,
+          'elem' => array(
+            'type' => TType::STRUCT,
+            'class' => '\br\gov\saude\esusab\ras\common\EncaminhamentoExternoThrift',
+            ),
+          ),
         );
     }
     if (is_array($vals)) {
@@ -332,6 +358,12 @@ class FichaAtendimentoOdontologicoChildThrift {
       }
       if (isset($vals['cpfCidadao'])) {
         $this->cpfCidadao = $vals['cpfCidadao'];
+      }
+      if (isset($vals['medicamentos'])) {
+        $this->medicamentos = $vals['medicamentos'];
+      }
+      if (isset($vals['encaminhamentos'])) {
+        $this->encaminhamentos = $vals['encaminhamentos'];
       }
     }
   }
@@ -525,6 +557,42 @@ class FichaAtendimentoOdontologicoChildThrift {
             $xfer += $input->skip($ftype);
           }
           break;
+        case 19:
+          if ($ftype == TType::LST) {
+            $this->medicamentos = array();
+            $_size30 = 0;
+            $_etype33 = 0;
+            $xfer += $input->readListBegin($_etype33, $_size30);
+            for ($_i34 = 0; $_i34 < $_size30; ++$_i34)
+            {
+              $elem35 = null;
+              $elem35 = new \br\gov\saude\esusab\ras\common\MedicamentoThrift();
+              $xfer += $elem35->read($input);
+              $this->medicamentos []= $elem35;
+            }
+            $xfer += $input->readListEnd();
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 20:
+          if ($ftype == TType::LST) {
+            $this->encaminhamentos = array();
+            $_size36 = 0;
+            $_etype39 = 0;
+            $xfer += $input->readListBegin($_etype39, $_size36);
+            for ($_i40 = 0; $_i40 < $_size36; ++$_i40)
+            {
+              $elem41 = null;
+              $elem41 = new \br\gov\saude\esusab\ras\common\EncaminhamentoExternoThrift();
+              $xfer += $elem41->read($input);
+              $this->encaminhamentos []= $elem41;
+            }
+            $xfer += $input->readListEnd();
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
         default:
           $xfer += $input->skip($ftype);
           break;
@@ -581,9 +649,9 @@ class FichaAtendimentoOdontologicoChildThrift {
       {
         $output->writeListBegin(TType::I64, count($this->tiposEncamOdonto));
         {
-          foreach ($this->tiposEncamOdonto as $iter30)
+          foreach ($this->tiposEncamOdonto as $iter42)
           {
-            $xfer += $output->writeI64($iter30);
+            $xfer += $output->writeI64($iter42);
           }
         }
         $output->writeListEnd();
@@ -598,9 +666,9 @@ class FichaAtendimentoOdontologicoChildThrift {
       {
         $output->writeListBegin(TType::I64, count($this->tiposFornecimOdonto));
         {
-          foreach ($this->tiposFornecimOdonto as $iter31)
+          foreach ($this->tiposFornecimOdonto as $iter43)
           {
-            $xfer += $output->writeI64($iter31);
+            $xfer += $output->writeI64($iter43);
           }
         }
         $output->writeListEnd();
@@ -615,9 +683,9 @@ class FichaAtendimentoOdontologicoChildThrift {
       {
         $output->writeListBegin(TType::I64, count($this->tiposVigilanciaSaudeBucal));
         {
-          foreach ($this->tiposVigilanciaSaudeBucal as $iter32)
+          foreach ($this->tiposVigilanciaSaudeBucal as $iter44)
           {
-            $xfer += $output->writeI64($iter32);
+            $xfer += $output->writeI64($iter44);
           }
         }
         $output->writeListEnd();
@@ -632,9 +700,9 @@ class FichaAtendimentoOdontologicoChildThrift {
       {
         $output->writeListBegin(TType::I64, count($this->tiposConsultaOdonto));
         {
-          foreach ($this->tiposConsultaOdonto as $iter33)
+          foreach ($this->tiposConsultaOdonto as $iter45)
           {
-            $xfer += $output->writeI64($iter33);
+            $xfer += $output->writeI64($iter45);
           }
         }
         $output->writeListEnd();
@@ -649,9 +717,9 @@ class FichaAtendimentoOdontologicoChildThrift {
       {
         $output->writeListBegin(TType::STRUCT, count($this->procedimentosRealizados));
         {
-          foreach ($this->procedimentosRealizados as $iter34)
+          foreach ($this->procedimentosRealizados as $iter46)
           {
-            $xfer += $iter34->write($output);
+            $xfer += $iter46->write($output);
           }
         }
         $output->writeListEnd();
@@ -681,6 +749,40 @@ class FichaAtendimentoOdontologicoChildThrift {
     if ($this->cpfCidadao !== null) {
       $xfer += $output->writeFieldBegin('cpfCidadao', TType::STRING, 18);
       $xfer += $output->writeString($this->cpfCidadao);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->medicamentos !== null) {
+      if (!is_array($this->medicamentos)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('medicamentos', TType::LST, 19);
+      {
+        $output->writeListBegin(TType::STRUCT, count($this->medicamentos));
+        {
+          foreach ($this->medicamentos as $iter47)
+          {
+            $xfer += $iter47->write($output);
+          }
+        }
+        $output->writeListEnd();
+      }
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->encaminhamentos !== null) {
+      if (!is_array($this->encaminhamentos)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('encaminhamentos', TType::LST, 20);
+      {
+        $output->writeListBegin(TType::STRUCT, count($this->encaminhamentos));
+        {
+          foreach ($this->encaminhamentos as $iter48)
+          {
+            $xfer += $iter48->write($output);
+          }
+        }
+        $output->writeListEnd();
+      }
       $xfer += $output->writeFieldEnd();
     }
     $xfer += $output->writeFieldStop();
@@ -790,15 +892,15 @@ class FichaAtendimentoOdontologicoMasterThrift {
         case 3:
           if ($ftype == TType::LST) {
             $this->atendimentosOdontologicos = array();
-            $_size35 = 0;
-            $_etype38 = 0;
-            $xfer += $input->readListBegin($_etype38, $_size35);
-            for ($_i39 = 0; $_i39 < $_size35; ++$_i39)
+            $_size49 = 0;
+            $_etype52 = 0;
+            $xfer += $input->readListBegin($_etype52, $_size49);
+            for ($_i53 = 0; $_i53 < $_size49; ++$_i53)
             {
-              $elem40 = null;
-              $elem40 = new \br\gov\saude\esusab\ras\atendodonto\FichaAtendimentoOdontologicoChildThrift();
-              $xfer += $elem40->read($input);
-              $this->atendimentosOdontologicos []= $elem40;
+              $elem54 = null;
+              $elem54 = new \br\gov\saude\esusab\ras\atendodonto\FichaAtendimentoOdontologicoChildThrift();
+              $xfer += $elem54->read($input);
+              $this->atendimentosOdontologicos []= $elem54;
             }
             $xfer += $input->readListEnd();
           } else {
@@ -846,9 +948,9 @@ class FichaAtendimentoOdontologicoMasterThrift {
       {
         $output->writeListBegin(TType::STRUCT, count($this->atendimentosOdontologicos));
         {
-          foreach ($this->atendimentosOdontologicos as $iter41)
+          foreach ($this->atendimentosOdontologicos as $iter55)
           {
-            $xfer += $iter41->write($output);
+            $xfer += $iter55->write($output);
           }
         }
         $output->writeListEnd();

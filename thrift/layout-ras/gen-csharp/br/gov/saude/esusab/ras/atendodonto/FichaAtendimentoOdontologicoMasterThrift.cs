@@ -122,13 +122,13 @@ namespace br.gov.saude.esusab.ras.atendodonto
               if (field.Type == TType.List) {
                 {
                   AtendimentosOdontologicos = new List<FichaAtendimentoOdontologicoChildThrift>();
-                  TList _list20 = iprot.ReadListBegin();
-                  for( int _i21 = 0; _i21 < _list20.Count; ++_i21)
+                  TList _list28 = iprot.ReadListBegin();
+                  for( int _i29 = 0; _i29 < _list28.Count; ++_i29)
                   {
-                    FichaAtendimentoOdontologicoChildThrift _elem22;
-                    _elem22 = new FichaAtendimentoOdontologicoChildThrift();
-                    _elem22.Read(iprot);
-                    AtendimentosOdontologicos.Add(_elem22);
+                    FichaAtendimentoOdontologicoChildThrift _elem30;
+                    _elem30 = new FichaAtendimentoOdontologicoChildThrift();
+                    _elem30.Read(iprot);
+                    AtendimentosOdontologicos.Add(_elem30);
                   }
                   iprot.ReadListEnd();
                 }
@@ -187,9 +187,9 @@ namespace br.gov.saude.esusab.ras.atendodonto
           oprot.WriteFieldBegin(field);
           {
             oprot.WriteListBegin(new TList(TType.Struct, AtendimentosOdontologicos.Count));
-            foreach (FichaAtendimentoOdontologicoChildThrift _iter23 in AtendimentosOdontologicos)
+            foreach (FichaAtendimentoOdontologicoChildThrift _iter31 in AtendimentosOdontologicos)
             {
-              _iter23.Write(oprot);
+              _iter31.Write(oprot);
             }
             oprot.WriteListEnd();
           }

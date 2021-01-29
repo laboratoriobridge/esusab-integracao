@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:exame="http://esus.ufsc.br/exame" xmlns:fichaAtendimentoIndividualChild="http://esus.ufsc.br/fichaatendimentoindividualchild" xmlns:fichaAtendimentoIndividualMaster="http://esus.ufsc.br/fichaatendimentoindividualmaster" xmlns:lotacaoHeader="http://esus.ufsc.br/lotacaoheader" xmlns:problemaCondicaoAvaliacaoAI="http://esus.ufsc.br/problemacondicaoavaliacaoai" xmlns:variasLotacoesHeader="http://esus.ufsc.br/variaslotacoesheader" targetNamespace="http://esus.ufsc.br/fichaatendimentoindividualmaster" version="1.0">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fichaAtendimentoIndividualChild="http://esus.ufsc.br/fichaatendimentoindividualchild"
+           xmlns:fichaAtendimentoIndividualMaster="http://esus.ufsc.br/fichaatendimentoindividualmaster"
+           xmlns:variasLotacoesHeader="http://esus.ufsc.br/variaslotacoesheader" targetNamespace="http://esus.ufsc.br/fichaatendimentoindividualmaster" version="1.0">
 
   <xs:import namespace="http://esus.ufsc.br/lotacaoheader" schemaLocation="lotacaoheader.xsd"/>
 

@@ -25,7 +25,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 4.1.3</span>
+        <span class="label">versão 4.1.4</span>
       
     </a>
 
@@ -137,7 +137,7 @@
 
       <li id="item-layout_ab" data-url="/ledi/documentacao/index.html">
         <label>
-          <input type="checkbox" value="layout_ab" checked="checked"> Layout e-SUS APS de Dados e Interface Versão 4.1.3
+          <input type="checkbox" value="layout_ab" checked="checked"> Layout e-SUS APS de Dados e Interface Versão 4.1.4
           <small>
             <a onclick="checkById('layout_ab', true); return false;">Marcar todos</a> |
             <a onclick="checkById('layout_ab', false); return false;">Desmarcar todos</a>
@@ -643,7 +643,7 @@
 
       <li id="item-principais_alteracoes" data-url="/ledi/documentacao/principais_alteracoes.html">
         <label>
-          <input type="checkbox" value="principais_alteracoes" checked="checked"> Principais alterações da v4.1.2 para a v4.1.3
+          <input type="checkbox" value="principais_alteracoes" checked="checked"> Principais alterações da v4.1.3 para a v4.1.4
           <small>
             <a onclick="checkById('principais_alteracoes', true); return false;">Marcar todos</a> |
             <a onclick="checkById('principais_alteracoes', false); return false;">Desmarcar todos</a>
@@ -969,7 +969,7 @@
   
       <!-- Cria a lista de itens[páginas] que foram selecionados  -->
 
-  <li id="summary-layout_ab"><a href="#layout_ab">Layout e-SUS APS de Dados e Interface Versão 4.1.3</a></li>
+  <li id="summary-layout_ab"><a href="#layout_ab">Layout e-SUS APS de Dados e Interface Versão 4.1.4</a></li>
   
       <!-- Cria a lista de itens[páginas] que foram selecionados  -->
 
@@ -1183,7 +1183,7 @@
 
   
 
-  <li id="summary-principais_alteracoes"><a href="#principais_alteracoes">Principais alterações da v4.1.2 para a v4.1.3</a></li>
+  <li id="summary-principais_alteracoes"><a href="#principais_alteracoes">Principais alterações da v4.1.3 para a v4.1.4</a></li>
   
       <!-- Cria a lista de itens[páginas] que foram selecionados  -->
 
@@ -1399,7 +1399,11 @@
 </tr>
 <tr>
 <td>4.1.8 ou superior</td>
-<td><a href="/ledi/documentacao/index.html">LEDI APS 4.1.3</a></td>
+<td><a href="https://integracao.esusab.ufsc.br/v413/">LEDI APS 4.1.3</a></td>
+</tr>
+<tr>
+<td>4.1.10 ou superior</td>
+<td><a href="/ledi/documentacao/index.html">LEDI APS 4.1.4</a></td>
 </tr>
 </tbody></table>
 
@@ -1412,17 +1416,17 @@
         
     <div class="post pdf shown" id="layout_ab" data-url="/ledi/documentacao/index.html">
       <header class="post-header">
-        <h1 class="post-title">Layout e-SUS APS de Dados e Interface Versão 4.1.3</h1>
+        <h1 class="post-title">Layout e-SUS APS de Dados e Interface Versão 4.1.4</h1>
       </header>
 
       
 
       <article class="post-content">
-        <p>Esta documentação descreve as estruturas de dados, seus atributos e regras utilizadas no <strong>LEDI APS</strong> versão 4.1.3.</p>
+        <p>Esta documentação descreve as estruturas de dados, seus atributos e regras utilizadas no <strong>LEDI APS</strong> versão 4.1.4.</p>
 
-<p>A versão <strong>LEDI APS</strong> 4.1.3 é compatível com o sistema <strong>PEC e-SUS APS</strong> versão 4.1.8 ou superior.</p>
+<p>A versão <strong>LEDI APS</strong> 4.1.4 é compatível com o sistema <strong>PEC e-SUS APS</strong> versão 4.1.10 ou superior.</p>
 
-<p>Confira as principais alterações da V4.1.2 para a V4.1.3 <a href="/ledi/documentacao/principais_alteracoes.html">aqui</a>.</p>
+<p>Confira as principais alterações da V4.1.3 para a V4.1.4 <a href="/ledi/documentacao/principais_alteracoes.html">aqui</a>.</p>
 
       </article>
 
@@ -15778,7 +15782,15 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regra:</strong> Apenas <code>letras</code>, <code>números</code>, <code>/</code>, <code>.</code>, <code>espaço simples</code> e <code>-</code>.</p>
+<p><strong>Regras:</strong> </p>
+
+<ul>
+<li>Apenas <code>letras</code>, <code>números</code>, <code>/</code>, <code>.</code>, <code>espaço simples</code> e <code>-</code>;</li>
+<li>Se o campo <a href="/ledi/documentacao/estrutura_arquivos/#1-imunobiologico">Imunobiológico</a> = <code>85</code>, o campo deve ser preenchido com o valor = <code>OXFORD-ASTRAZENECA</code>;</li>
+<li>Se o campo <a href="/ledi/documentacao/estrutura_arquivos/#1-imunobiologico">Imunobiológico</a> = <code>86</code>, o campo deve ser preenchido com o valor = <code>SINOVAC/BUTANTAN</code>;</li>
+<li>Se o campo <a href="/ledi/documentacao/estrutura_arquivos/#1-imunobiologico">Imunobiológico</a> = <code>87</code>, o campo deve ser preenchido com o valor = <code>PFIZER/BIONTECH</code>;</li>
+<li>Se o campo <a href="/ledi/documentacao/estrutura_arquivos/#1-imunobiologico">Imunobiológico</a> = <code>88</code>, o campo deve ser preenchido com o valor = <code>JANSSEN-CILAG</code>.</li>
+</ul>
 
 <h3 id="6-grupoatendimento">#6 grupoAtendimento</h3>
 
@@ -46156,7 +46168,7 @@
 <td>revision</td>
 <td>Integer</td>
 <td>Sim</td>
-<td>Valor único = 3</td>
+<td>Valor único = 4</td>
 </tr>
 </tbody></table>
 
@@ -99093,17 +99105,17 @@
 
     <div class="post pdf shown" id="principais_alteracoes" data-url="/ledi/documentacao/principais_alteracoes.html">
       <header class="post-header">
-        <h1 class="post-title">Principais alterações da v4.1.2 para a v4.1.3</h1>
+        <h1 class="post-title">Principais alterações da v4.1.3 para a v4.1.4</h1>
       </header>
 
       
 
       <article class="post-content">
-        <p>Este documento relata as principais alterações em relação à versão v4.1.2 do LEDI APS:</p>
+        <p>Este documento relata as principais alterações em relação à versão v4.1.3 do LEDI APS:</p>
 
 <h3 id="1-ficha-de-vacina-o">1. Ficha de Vacinação</h3>
 
-<p>Foi adicionado o campo <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fv.html#6-grupoatendimento">grupoAtendimento</a>.</p>
+<p>Foram adicionadas novas regras de validação no campo <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fv.html#5-fabricante">Fabricante</a>.</p>
 
       </article>
 

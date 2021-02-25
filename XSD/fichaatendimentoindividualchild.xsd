@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:exame="http://esus.ufsc.br/exame" xmlns:problemaCondicaoAvaliacaoAI="http://esus.ufsc.br/problemacondicaoavaliacaoai" targetNamespace="http://esus.ufsc.br/fichaatendimentoindividualchild" version="1.0">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:encaminhamentoExterno="http://esus.ufsc.br/encaminhamentoexterno" xmlns:exame="http://esus.ufsc.br/exame" xmlns:medicamento="http://esus.ufsc.br/medicamento" xmlns:problemaCondicaoAvaliacaoAI="http://esus.ufsc.br/problemacondicaoavaliacaoai" targetNamespace="http://esus.ufsc.br/fichaatendimentoindividualchild" version="1.0">
 
   <xs:import namespace="http://esus.ufsc.br/problemacondicaoavaliacaoai" schemaLocation="problemacondicaoavaliacaoai.xsd"/>
 
   <xs:import namespace="http://esus.ufsc.br/exame" schemaLocation="exame.xsd"/>
+
+  <xs:import namespace="http://esus.ufsc.br/medicamento" schemaLocation="medicamento.xsd"/>
+
+  <xs:import namespace="http://esus.ufsc.br/encaminhamentoexterno" schemaLocation="encaminhamentoexterno.xsd"/>
 
   <xs:complexType name="fichaAtendimentoIndividualChildTransport">
     <xs:sequence>
@@ -34,6 +38,8 @@
       <xs:element maxOccurs="1" minOccurs="0" name="perimetroCefalico" type="xs:double"/>
       <xs:element maxOccurs="1" minOccurs="0" name="dataHoraInicialAtendimento" type="xs:long"/>
       <xs:element maxOccurs="1" minOccurs="0" name="dataHoraFinalAtendimento" type="xs:long"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="medicamentos" type="medicamento:medicamentoTransport"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="encaminhamentos" type="encaminhamentoExterno:encaminhamentoExternoTransport"/>
     </xs:sequence>
   </xs:complexType>
 </xs:schema>

@@ -3,17 +3,17 @@
 
   <xs:simpleType name="respostaUnicaEscolhaEnumTransport">
     <xs:restriction base="xs:string">
-      <xs:enumeration value="AMASSADA"/>
       <xs:enumeration value="NAO_SABE"/>
-      <xs:enumeration value="SIM"/>
-      <xs:enumeration value="DUAS_VEZES"/>
-      <xs:enumeration value="UMA_VEZ"/>
-      <xs:enumeration value="NAO"/>
+      <xs:enumeration value="TRES_VEZES_OU_MAIS"/>
+      <xs:enumeration value="AMASSADA"/>
       <xs:enumeration value="LIQUIDIFICADA"/>
+      <xs:enumeration value="UMA_VEZ"/>
+      <xs:enumeration value="SO_O_CALDO"/>
       <xs:enumeration value="EM_PEDACOS"/>
       <xs:enumeration value="PASSADA_NA_PENEIRA"/>
-      <xs:enumeration value="SO_O_CALDO"/>
-      <xs:enumeration value="TRES_VEZES_OU_MAIS"/>
+      <xs:enumeration value="DUAS_VEZES"/>
+      <xs:enumeration value="SIM"/>
+      <xs:enumeration value="NAO"/>
     </xs:restriction>
   </xs:simpleType>
 </xs:schema>

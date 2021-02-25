@@ -3,15 +3,15 @@
 
   <xs:simpleType name="perguntaCriancasComMaisDoisAnosEnumTransport">
     <xs:restriction base="xs:string">
-      <xs:enumeration value="FEIJAO"/>
-      <xs:enumeration value="VERDURAS_E_OU_LEGUMES"/>
-      <xs:enumeration value="BEBIDAS_ADOCADAS"/>
-      <xs:enumeration value="HAMBURGUER_E_OU_EMBUTIDOS"/>
       <xs:enumeration value="QUAIS_REFEICOES_VOCE_FAZ_AO_LONGO_DO_DIA"/>
+      <xs:enumeration value="FRUTAS_FRESCAS"/>
+      <xs:enumeration value="BEBIDAS_ADOCADAS"/>
+      <xs:enumeration value="MACARRAO_INSTANTANEO_SALGADINHOS_BISCOITOS"/>
+      <xs:enumeration value="HAMBURGUER_E_OU_EMBUTIDOS"/>
+      <xs:enumeration value="FEIJAO"/>
       <xs:enumeration value="VOCE_TEM_COSTUME_DE_REALIZAR_AS_REFEICOES_ASSISTINDO_TV_MEXENDO_NO_COMPUTADOR_E_OU_CELULAR"/>
       <xs:enumeration value="BISCOITO_RECHEADO_DOCES_OU_GULOSEIMAS"/>
-      <xs:enumeration value="MACARRAO_INSTANTANEO_SALGADINHOS_BISCOITOS"/>
-      <xs:enumeration value="FRUTAS_FRESCAS"/>
+      <xs:enumeration value="VERDURAS_E_OU_LEGUMES"/>
     </xs:restriction>
   </xs:simpleType>
 </xs:schema>

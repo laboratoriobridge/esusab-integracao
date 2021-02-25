@@ -230,5 +230,5 @@
 		<versaoSistema>4.1.0</versaoSistema>
 		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:originadora>
-	<versao major="4" minor="1" revision="0" />
+	<versao major="4" minor="1" revision="2" />
 </ns3:dadoTransporteTransportXml>

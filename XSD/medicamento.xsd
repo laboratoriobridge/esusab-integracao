@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://esus.ufsc.br/medicamento" version="1.0">
+
+  <xs:complexType name="medicamentoTransport">
+    <xs:sequence>
+      <xs:element maxOccurs="1" name="codigoCatmat" type="xs:string"/>
+      <xs:element maxOccurs="1" name="viaAdministracao" type="xs:long"/>
+      <xs:element maxOccurs="1" name="dose" type="xs:string"/>
+      <xs:element maxOccurs="1" name="doseUnica" type="xs:boolean"/>
+      <xs:element maxOccurs="1" name="usoContinuo" type="xs:boolean"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="doseFrequenciaTipo" type="xs:long"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="doseFrequencia" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="doseFrequenciaQuantidade" type="xs:int"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="doseFrequenciaUnidadeMedida" type="xs:long"/>
+      <xs:element maxOccurs="1" name="dtInicioTratamento" type="xs:long"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="duracaoTratamento" type="xs:int"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="duracaoTratamentoMedida" type="xs:long"/>
+      <xs:element maxOccurs="1" name="quantidadeReceitada" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

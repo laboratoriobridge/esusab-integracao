@@ -25,7 +25,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 4.1.4</span>
+        <span class="label">versão 4.2.0</span>
       
     </a>
 
@@ -75,7 +75,7 @@
           
         
           
-            <li><a title="Layout e-SUS APS de Dados e Interface Versão 4.1.4" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 4.1.4</a></li>
+            <li><a title="Layout e-SUS APS de Dados e Interface Versão 4.2.0" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 4.2.0</a></li>
           
         
           
@@ -115,9 +115,9 @@
   <ul>
     
       <li>
-        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 4.1.4" href="/ledi/documentacao/index.html" class="back-link">
+        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 4.2.0" href="/ledi/documentacao/index.html" class="back-link">
           <i class="icon icon-back"></i> Voltar
-          <small>(Layout e-SUS APS de Dados e Interface Versão 4.1.4)</small>
+          <small>(Layout e-SUS APS de Dados e Interface Versão 4.2.0)</small>
         </a>
       </li>
     
@@ -243,7 +243,7 @@
     <p class="post-meta">
       <a class="btn" href="/pdf.html?include=/ledi/documentacao/estrutura_arquivos/dicionario-fv.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 18/02/2021</span>
+        <span class="label" title="Data da última modificação">Alterado em 29/04/2021</span>
       
     </p>
   </header>
@@ -508,7 +508,7 @@
 
 <h3 id="8-comunicantehanseniase">#8 comunicanteHanseniase</h3>
 
-<p>Marcador que indica se o cidadão é comunicante de hanseníese.</p>
+<p>Marcador que indica se o cidadão é comunicante de hanseníase.</p>
 
 <table><thead>
 <tr>
@@ -607,7 +607,13 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regra:</strong> Deve estar de acordo com os relacionamentos de Imunobiológico x Estratégia x Dose definidos na tabela <a href="/ledi/documentacao/regras/valdidar_regras_vacinacao.html">Regras de vacinação</a>.</p>
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Não pode ter <a href="#1-imunobiologico">imunobiológicos</a> repetidos se o campo <a href="#7-stregistroanterior">stRegistroAnterior</a> = <code>false</code>;</li>
+<li>Quando o campo <a href="#7-stregistroanterior">stRegistroAnterior</a> = <code>false</code>, o registro da vacina deve estar de acordo com os relacionamentos de Imunobiológico x Estratégia x Dose definidos na tabela <a href="/ledi/documentacao/regras/valdidar_regras_vacinacao.html">Regras de vacinação</a>;</li>
+<li>Quando o campo <a href="#7-stregistroanterior">stRegistroAnterior</a> = <code>true</code>, o registro da vacina não irá considerar os relacionamentos de Imunobiológico x Estratégia x Dose definidos na tabela <a href="/ledi/documentacao/regras/valdidar_regras_vacinacao.html">Regras de vacinação</a>.</li>
+</ul>
 
 <p><strong>Referência:</strong> <a href="#vacinarowthrift">VacinaRowThrift</a>.</p>
 
@@ -736,11 +742,18 @@
 </thead><tbody>
 <tr>
 <td>Long</td>
-<td>Sim</td>
+<td>Condicional</td>
 <td>-</td>
 <td>-</td>
 </tr>
 </tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>É de preenchimento obrigatório se o campo <a href="#7-stregistroanterior">stRegistroAnterior</a> = <code>false</code>;</li>
+<li>Não pode ser preenchido se o campo <a href="#7-stregistroanterior">stRegistroAnterior</a> = <code>true</code>.</li>
+</ul>
 
 <p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#estrategiavacinacao">EstrategiaVacinacao</a>.</p>
 
@@ -780,13 +793,18 @@
 </thead><tbody>
 <tr>
 <td>String</td>
-<td>Sim</td>
+<td>Condicional</td>
 <td>1</td>
 <td>30</td>
 </tr>
 </tbody></table>
 
-<p><strong>Regra:</strong> Apenas <code>letras</code>, <code>números</code>, <code>/</code>, <code>.</code> e <code>-</code>.</p>
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Apenas <code>letras</code>, <code>números</code>, <code>/</code>, <code>.</code> e <code>-</code>;</li>
+<li>É de preenchimento obrigatório se o campo <a href="#7-stregistroanterior">stRegistroAnterior</a> = <code>false</code>.</li>
+</ul>
 
 <h3 id="5-fabricante">#5 fabricante</h3>
 
@@ -802,16 +820,17 @@
 </thead><tbody>
 <tr>
 <td>String</td>
-<td>Sim</td>
+<td>Condicional</td>
 <td>1</td>
 <td>60</td>
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> </p>
+<p><strong>Regras:</strong></p>
 
 <ul>
 <li>Apenas <code>letras</code>, <code>números</code>, <code>/</code>, <code>.</code>, <code>espaço simples</code> e <code>-</code>;</li>
+<li>É de preenchimento obrigatório se o campo <a href="#7-stregistroanterior">stRegistroAnterior</a> = <code>false</code>;</li>
 <li>Se o campo <a href="#1-imunobiologico">Imunobiológico</a> = <code>85</code>, o campo deve ser preenchido com o valor = <code>OXFORD-ASTRAZENECA</code>;</li>
 <li>Se o campo <a href="#1-imunobiologico">Imunobiológico</a> = <code>86</code>, o campo deve ser preenchido com o valor = <code>SINOVAC/BUTANTAN</code>;</li>
 <li>Se o campo <a href="#1-imunobiologico">Imunobiológico</a> = <code>87</code>, o campo deve ser preenchido com o valor = <code>PFIZER/BIONTECH</code>;</li>
@@ -838,9 +857,64 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regra:</strong> Só pode ser preenchido se o campo <a href="#2-estrategiavacinacao">estrategiaVacinacao</a> = <code>5</code> (Campanha). Neste caso o preenchimento é obrigatório.</p>
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Só pode ser preenchido se o campo <a href="#2-estrategiavacinacao">estrategiaVacinacao</a> = <code>5</code> (Campanha). Neste caso o preenchimento é obrigatório;</li>
+<li>Não pode ser preenchido se o campo <a href="#7-stregistroanterior">stRegistroAnterior</a> = <code>true</code>.</li>
+</ul>
 
 <p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#grupodeatendimento">Grupo de Atendimento</a>.</p>
+
+<h3 id="7-stregistroanterior">#7 stRegistroAnterior</h3>
+
+<p>Indica se o imunobiológico foi aplicado em um atendimento anterior.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h3 id="8-dataregistroanterior">#8 dataRegistroAnterior</h3>
+
+<p>Data em que o registro anterior foi realizado.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Condicional</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>É de preenchimento obrigatório se o campo <a href="#7-stregistroanterior">stRegistroAnterior</a> = <code>true</code>;</li>
+<li>Não pode ser preenchido se o campo <a href="#7-stregistroanterior">stRegistroAnterior</a> = <code>false</code>;</li>
+<li>Não pode ser posterior à <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a> e anterior à <a href="#4-dtnascimento">dtNascimento</a>.</li>
+</ul>
+
+<p><strong>Referência:</strong> Deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
 
   </article>
 

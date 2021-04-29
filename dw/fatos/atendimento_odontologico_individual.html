@@ -25,7 +25,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 4.1.4</span>
+        <span class="label">versão 4.2.0</span>
       
     </a>
 
@@ -225,7 +225,7 @@
     <p class="post-meta">
       <a class="btn" href="/pdf.html?include=/dw/fatos/atendimento_odontologico_individual.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 18/02/2021</span>
+        <span class="label" title="Data da última modificação">Alterado em 29/04/2021</span>
       
     </p>
   </header>
@@ -233,13 +233,17 @@
   <article class="post-content">
     <p>Esta estratégia de negócio refere-se aos registros de <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fao.html">Atendimentos Odontológicos</a> e está centrada na <strong>tb_fat_atendimento_odonto</strong>. Neste registro o campo <em>nu_prontuario</em> é criptografado. </p>
 
-<p><strong>1. </strong>Os <strong>problemas / condições de saúde</strong> avaliados estão armazenados na <strong>tb_fat_atend_odonto_problemas</strong>. Esta tabela é interligadas com a <strong>tb_fat_atendimento_odonto</strong> através da coluna <strong>co_fat_atd_odnt</strong>.</p>
+<p><strong>1. </strong>Os <strong>problemas / condições de saúde</strong> avaliados estão armazenados na <strong>tb_fat_atend_odonto_problemas</strong>.</p>
 
-<p><strong>2. </strong> Os <strong>procedimentos odontológicos realizados</strong> estão armazenados na <strong>tb_fat_atend_odonto_proced</strong>. Esta tabela é interligadas com a <strong>tb_fat_atendimento_odonto</strong> através da coluna <strong>co_fat_atd_odnt</strong>.</p>
+<p><strong>2. </strong> Os <strong>procedimentos odontológicos realizados</strong> estão armazenados na <strong>tb_fat_atend_odonto_proced</strong>.</p>
 
-<p><strong>3. </strong> As informações das <strong>prescrições de medicamentos</strong> estão armazenadas na <strong>tb_fat_atend_odonto_medicamentos</strong>. Esta tabela é interligadas com a <strong>tb_fat_atendimento_odonto</strong> através da coluna <strong>co_fat_atd_odnt</strong>.</p>
+<p><strong>3. </strong> Os <strong>exames</strong> com resultados estruturados, conforme apresentados na <a href="/ledi/documentacao/referencias/exames_estruturados.html">Lista de exames com resultado estruturado</a>, estão armazenados na <strong>tb_fat_atend_odonto_exames</strong>.</p>
 
-<p><strong>4. </strong> As informações dos <strong>encaminhamentos</strong> estão armazenadas na <strong>tb_fat_atend_odonto_encaminhamentos</strong>. Esta tabela é interligadas com a <strong>tb_fat_atendimento_odonto</strong> através da coluna <strong>co_fat_atd_odnt</strong>.</p>
+<p><strong>4. </strong> As informações das <strong>prescrições de medicamentos</strong> estão armazenadas na <strong>tb_fat_atend_odonto_medicamentos</strong>.</p>
+
+<p><strong>5. </strong> As informações dos <strong>encaminhamentos</strong> estão armazenadas na <strong>tb_fat_atend_odonto_encaminhamentos</strong>.</p>
+
+<p><strong>6. </strong> Todas as tabelas relacionadas com a <strong>tb_fat_atendimento_odonto</strong> são interligadas através da coluna <strong>co_fat_atd_odnt</strong>.</p>
 
 <table><thead>
 <tr>

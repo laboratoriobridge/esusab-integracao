@@ -170,6 +170,7 @@ func (p *ProcedimentoQuantidadeThrift) String() string {
 //  - CpfCidadao
 //  - Medicamentos
 //  - Encaminhamentos
+//  - ResultadosExames
 type FichaAtendimentoOdontologicoChildThrift struct {
   DtNascimento *int64 `thrift:"dtNascimento,1" json:"dtNascimento,omitempty"`
   CnsCidadao *string `thrift:"cnsCidadao,2" json:"cnsCidadao,omitempty"`
@@ -191,6 +192,7 @@ type FichaAtendimentoOdontologicoChildThrift struct {
   CpfCidadao *string `thrift:"cpfCidadao,18" json:"cpfCidadao,omitempty"`
   Medicamentos []*common.MedicamentoThrift `thrift:"medicamentos,19" json:"medicamentos,omitempty"`
   Encaminhamentos []*common.EncaminhamentoExternoThrift `thrift:"encaminhamentos,20" json:"encaminhamentos,omitempty"`
+  ResultadosExames []*common.ResultadosExameThrift `thrift:"resultadosExames,21" json:"resultadosExames,omitempty"`
 }
 
 func NewFichaAtendimentoOdontologicoChildThrift() *FichaAtendimentoOdontologicoChildThrift {
@@ -316,6 +318,11 @@ var FichaAtendimentoOdontologicoChildThrift_Encaminhamentos_DEFAULT []*common.En
 func (p *FichaAtendimentoOdontologicoChildThrift) GetEncaminhamentos() []*common.EncaminhamentoExternoThrift {
   return p.Encaminhamentos
 }
+var FichaAtendimentoOdontologicoChildThrift_ResultadosExames_DEFAULT []*common.ResultadosExameThrift
+
+func (p *FichaAtendimentoOdontologicoChildThrift) GetResultadosExames() []*common.ResultadosExameThrift {
+  return p.ResultadosExames
+}
 func (p *FichaAtendimentoOdontologicoChildThrift) IsSetDtNascimento() bool {
   return p.DtNascimento != nil
 }
@@ -390,6 +397,10 @@ func (p *FichaAtendimentoOdontologicoChildThrift) IsSetMedicamentos() bool {
 
 func (p *FichaAtendimentoOdontologicoChildThrift) IsSetEncaminhamentos() bool {
   return p.Encaminhamentos != nil
+}
+
+func (p *FichaAtendimentoOdontologicoChildThrift) IsSetResultadosExames() bool {
+  return p.ResultadosExames != nil
 }
 
 func (p *FichaAtendimentoOdontologicoChildThrift) Read(iprot thrift.TProtocol) error {
@@ -479,6 +490,10 @@ func (p *FichaAtendimentoOdontologicoChildThrift) Read(iprot thrift.TProtocol) e
       }
     case 20:
       if err := p.readField20(iprot); err != nil {
+        return err
+      }
+    case 21:
+      if err := p.readField21(iprot); err != nil {
         return err
       }
     default:
@@ -752,6 +767,26 @@ func (p *FichaAtendimentoOdontologicoChildThrift)  readField20(iprot thrift.TPro
   return nil
 }
 
+func (p *FichaAtendimentoOdontologicoChildThrift)  readField21(iprot thrift.TProtocol) error {
+  _, size, err := iprot.ReadListBegin()
+  if err != nil {
+    return thrift.PrependError("error reading list begin: ", err)
+  }
+  tSlice := make([]*common.ResultadosExameThrift, 0, size)
+  p.ResultadosExames =  tSlice
+  for i := 0; i < size; i ++ {
+    _elem7 := &common.ResultadosExameThrift{}
+    if err := _elem7.Read(iprot); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T error reading struct: ", _elem7), err)
+    }
+    p.ResultadosExames = append(p.ResultadosExames, _elem7)
+  }
+  if err := iprot.ReadListEnd(); err != nil {
+    return thrift.PrependError("error reading list end: ", err)
+  }
+  return nil
+}
+
 func (p *FichaAtendimentoOdontologicoChildThrift) Write(oprot thrift.TProtocol) error {
   if err := oprot.WriteStructBegin("FichaAtendimentoOdontologicoChildThrift"); err != nil {
     return thrift.PrependError(fmt.Sprintf("%T write struct begin error: ", p), err) }
@@ -774,6 +809,7 @@ func (p *FichaAtendimentoOdontologicoChildThrift) Write(oprot thrift.TProtocol) 
   if err := p.writeField18(oprot); err != nil { return err }
   if err := p.writeField19(oprot); err != nil { return err }
   if err := p.writeField20(oprot); err != nil { return err }
+  if err := p.writeField21(oprot); err != nil { return err }
   if err := oprot.WriteFieldStop(); err != nil {
     return thrift.PrependError("write field stop error: ", err) }
   if err := oprot.WriteStructEnd(); err != nil {
@@ -1068,6 +1104,27 @@ func (p *FichaAtendimentoOdontologicoChildThrift) writeField20(oprot thrift.TPro
   return err
 }
 
+func (p *FichaAtendimentoOdontologicoChildThrift) writeField21(oprot thrift.TProtocol) (err error) {
+  if p.IsSetResultadosExames() {
+    if err := oprot.WriteFieldBegin("resultadosExames", thrift.LIST, 21); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field begin error 21:resultadosExames: ", p), err) }
+    if err := oprot.WriteListBegin(thrift.STRUCT, len(p.ResultadosExames)); err != nil {
+      return thrift.PrependError("error writing list begin: ", err)
+    }
+    for _, v := range p.ResultadosExames {
+      if err := v.Write(oprot); err != nil {
+        return thrift.PrependError(fmt.Sprintf("%T error writing struct: ", v), err)
+      }
+    }
+    if err := oprot.WriteListEnd(); err != nil {
+      return thrift.PrependError("error writing list end: ", err)
+    }
+    if err := oprot.WriteFieldEnd(); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field end error 21:resultadosExames: ", p), err) }
+  }
+  return err
+}
+
 func (p *FichaAtendimentoOdontologicoChildThrift) String() string {
   if p == nil {
     return "<nil>"
@@ -1200,11 +1257,11 @@ func (p *FichaAtendimentoOdontologicoMasterThrift)  readField3(iprot thrift.TPro
   tSlice := make([]*FichaAtendimentoOdontologicoChildThrift, 0, size)
   p.AtendimentosOdontologicos =  tSlice
   for i := 0; i < size; i ++ {
-    _elem7 := &FichaAtendimentoOdontologicoChildThrift{}
-    if err := _elem7.Read(iprot); err != nil {
-      return thrift.PrependError(fmt.Sprintf("%T error reading struct: ", _elem7), err)
+    _elem8 := &FichaAtendimentoOdontologicoChildThrift{}
+    if err := _elem8.Read(iprot); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T error reading struct: ", _elem8), err)
     }
-    p.AtendimentosOdontologicos = append(p.AtendimentosOdontologicos, _elem7)
+    p.AtendimentosOdontologicos = append(p.AtendimentosOdontologicos, _elem8)
   }
   if err := iprot.ReadListEnd(); err != nil {
     return thrift.PrependError("error reading list end: ", err)

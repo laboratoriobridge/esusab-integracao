@@ -39,6 +39,9 @@ var GoUnusedProtection__ int;
 //  - Temperatura
 //  - TipoGlicemia
 //  - Glicemia
+//  - Latitude
+//  - Longitude
+//  - UuidOrigemCadastroDomiciliar
 type FichaVisitaDomiciliarChildThrift struct {
   Turno *int64 `thrift:"turno,1" json:"turno,omitempty"`
   NumProntuario *string `thrift:"numProntuario,2" json:"numProntuario,omitempty"`
@@ -59,6 +62,9 @@ type FichaVisitaDomiciliarChildThrift struct {
   Temperatura *float64 `thrift:"temperatura,17" json:"temperatura,omitempty"`
   TipoGlicemia *int64 `thrift:"tipoGlicemia,18" json:"tipoGlicemia,omitempty"`
   Glicemia *int32 `thrift:"glicemia,19" json:"glicemia,omitempty"`
+  Latitude *float64 `thrift:"latitude,20" json:"latitude,omitempty"`
+  Longitude *float64 `thrift:"longitude,21" json:"longitude,omitempty"`
+  UuidOrigemCadastroDomiciliar *string `thrift:"uuidOrigemCadastroDomiciliar,22" json:"uuidOrigemCadastroDomiciliar,omitempty"`
 }
 
 func NewFichaVisitaDomiciliarChildThrift() *FichaVisitaDomiciliarChildThrift {
@@ -196,6 +202,27 @@ func (p *FichaVisitaDomiciliarChildThrift) GetGlicemia() int32 {
   }
 return *p.Glicemia
 }
+var FichaVisitaDomiciliarChildThrift_Latitude_DEFAULT float64
+func (p *FichaVisitaDomiciliarChildThrift) GetLatitude() float64 {
+  if !p.IsSetLatitude() {
+    return FichaVisitaDomiciliarChildThrift_Latitude_DEFAULT
+  }
+return *p.Latitude
+}
+var FichaVisitaDomiciliarChildThrift_Longitude_DEFAULT float64
+func (p *FichaVisitaDomiciliarChildThrift) GetLongitude() float64 {
+  if !p.IsSetLongitude() {
+    return FichaVisitaDomiciliarChildThrift_Longitude_DEFAULT
+  }
+return *p.Longitude
+}
+var FichaVisitaDomiciliarChildThrift_UuidOrigemCadastroDomiciliar_DEFAULT string
+func (p *FichaVisitaDomiciliarChildThrift) GetUuidOrigemCadastroDomiciliar() string {
+  if !p.IsSetUuidOrigemCadastroDomiciliar() {
+    return FichaVisitaDomiciliarChildThrift_UuidOrigemCadastroDomiciliar_DEFAULT
+  }
+return *p.UuidOrigemCadastroDomiciliar
+}
 func (p *FichaVisitaDomiciliarChildThrift) IsSetTurno() bool {
   return p.Turno != nil
 }
@@ -270,6 +297,18 @@ func (p *FichaVisitaDomiciliarChildThrift) IsSetTipoGlicemia() bool {
 
 func (p *FichaVisitaDomiciliarChildThrift) IsSetGlicemia() bool {
   return p.Glicemia != nil
+}
+
+func (p *FichaVisitaDomiciliarChildThrift) IsSetLatitude() bool {
+  return p.Latitude != nil
+}
+
+func (p *FichaVisitaDomiciliarChildThrift) IsSetLongitude() bool {
+  return p.Longitude != nil
+}
+
+func (p *FichaVisitaDomiciliarChildThrift) IsSetUuidOrigemCadastroDomiciliar() bool {
+  return p.UuidOrigemCadastroDomiciliar != nil
 }
 
 func (p *FichaVisitaDomiciliarChildThrift) Read(iprot thrift.TProtocol) error {
@@ -359,6 +398,18 @@ func (p *FichaVisitaDomiciliarChildThrift) Read(iprot thrift.TProtocol) error {
       }
     case 19:
       if err := p.readField19(iprot); err != nil {
+        return err
+      }
+    case 20:
+      if err := p.readField20(iprot); err != nil {
+        return err
+      }
+    case 21:
+      if err := p.readField21(iprot); err != nil {
+        return err
+      }
+    case 22:
+      if err := p.readField22(iprot); err != nil {
         return err
       }
     default:
@@ -560,6 +611,33 @@ func (p *FichaVisitaDomiciliarChildThrift)  readField19(iprot thrift.TProtocol) 
   return nil
 }
 
+func (p *FichaVisitaDomiciliarChildThrift)  readField20(iprot thrift.TProtocol) error {
+  if v, err := iprot.ReadDouble(); err != nil {
+  return thrift.PrependError("error reading field 20: ", err)
+} else {
+  p.Latitude = &v
+}
+  return nil
+}
+
+func (p *FichaVisitaDomiciliarChildThrift)  readField21(iprot thrift.TProtocol) error {
+  if v, err := iprot.ReadDouble(); err != nil {
+  return thrift.PrependError("error reading field 21: ", err)
+} else {
+  p.Longitude = &v
+}
+  return nil
+}
+
+func (p *FichaVisitaDomiciliarChildThrift)  readField22(iprot thrift.TProtocol) error {
+  if v, err := iprot.ReadString(); err != nil {
+  return thrift.PrependError("error reading field 22: ", err)
+} else {
+  p.UuidOrigemCadastroDomiciliar = &v
+}
+  return nil
+}
+
 func (p *FichaVisitaDomiciliarChildThrift) Write(oprot thrift.TProtocol) error {
   if err := oprot.WriteStructBegin("FichaVisitaDomiciliarChildThrift"); err != nil {
     return thrift.PrependError(fmt.Sprintf("%T write struct begin error: ", p), err) }
@@ -582,6 +660,9 @@ func (p *FichaVisitaDomiciliarChildThrift) Write(oprot thrift.TProtocol) error {
   if err := p.writeField17(oprot); err != nil { return err }
   if err := p.writeField18(oprot); err != nil { return err }
   if err := p.writeField19(oprot); err != nil { return err }
+  if err := p.writeField20(oprot); err != nil { return err }
+  if err := p.writeField21(oprot); err != nil { return err }
+  if err := p.writeField22(oprot); err != nil { return err }
   if err := oprot.WriteFieldStop(); err != nil {
     return thrift.PrependError("write field stop error: ", err) }
   if err := oprot.WriteStructEnd(); err != nil {
@@ -821,6 +902,42 @@ func (p *FichaVisitaDomiciliarChildThrift) writeField19(oprot thrift.TProtocol) 
     return thrift.PrependError(fmt.Sprintf("%T.glicemia (19) field write error: ", p), err) }
     if err := oprot.WriteFieldEnd(); err != nil {
       return thrift.PrependError(fmt.Sprintf("%T write field end error 19:glicemia: ", p), err) }
+  }
+  return err
+}
+
+func (p *FichaVisitaDomiciliarChildThrift) writeField20(oprot thrift.TProtocol) (err error) {
+  if p.IsSetLatitude() {
+    if err := oprot.WriteFieldBegin("latitude", thrift.DOUBLE, 20); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field begin error 20:latitude: ", p), err) }
+    if err := oprot.WriteDouble(float64(*p.Latitude)); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T.latitude (20) field write error: ", p), err) }
+    if err := oprot.WriteFieldEnd(); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field end error 20:latitude: ", p), err) }
+  }
+  return err
+}
+
+func (p *FichaVisitaDomiciliarChildThrift) writeField21(oprot thrift.TProtocol) (err error) {
+  if p.IsSetLongitude() {
+    if err := oprot.WriteFieldBegin("longitude", thrift.DOUBLE, 21); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field begin error 21:longitude: ", p), err) }
+    if err := oprot.WriteDouble(float64(*p.Longitude)); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T.longitude (21) field write error: ", p), err) }
+    if err := oprot.WriteFieldEnd(); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field end error 21:longitude: ", p), err) }
+  }
+  return err
+}
+
+func (p *FichaVisitaDomiciliarChildThrift) writeField22(oprot thrift.TProtocol) (err error) {
+  if p.IsSetUuidOrigemCadastroDomiciliar() {
+    if err := oprot.WriteFieldBegin("uuidOrigemCadastroDomiciliar", thrift.STRING, 22); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field begin error 22:uuidOrigemCadastroDomiciliar: ", p), err) }
+    if err := oprot.WriteString(string(*p.UuidOrigemCadastroDomiciliar)); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T.uuidOrigemCadastroDomiciliar (22) field write error: ", p), err) }
+    if err := oprot.WriteFieldEnd(); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field end error 22:uuidOrigemCadastroDomiciliar: ", p), err) }
   }
   return err
 }

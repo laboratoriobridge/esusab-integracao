@@ -28,6 +28,8 @@ class VacinaRowThrift:
    - lote
    - fabricante
    - grupoAtendimento
+   - stRegistroAnterior
+   - dataRegistroAnterior
   """
 
   thrift_spec = (
@@ -38,15 +40,19 @@ class VacinaRowThrift:
     (4, TType.STRING, 'lote', None, None, ), # 4
     (5, TType.STRING, 'fabricante', None, None, ), # 5
     (6, TType.I64, 'grupoAtendimento', None, None, ), # 6
+    (7, TType.BOOL, 'stRegistroAnterior', None, None, ), # 7
+    (8, TType.I64, 'dataRegistroAnterior', None, None, ), # 8
   )
 
-  def __init__(self, imunobiologico=None, estrategiaVacinacao=None, dose=None, lote=None, fabricante=None, grupoAtendimento=None,):
+  def __init__(self, imunobiologico=None, estrategiaVacinacao=None, dose=None, lote=None, fabricante=None, grupoAtendimento=None, stRegistroAnterior=None, dataRegistroAnterior=None,):
     self.imunobiologico = imunobiologico
     self.estrategiaVacinacao = estrategiaVacinacao
     self.dose = dose
     self.lote = lote
     self.fabricante = fabricante
     self.grupoAtendimento = grupoAtendimento
+    self.stRegistroAnterior = stRegistroAnterior
+    self.dataRegistroAnterior = dataRegistroAnterior
 
   def read(self, iprot):
     if iprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None and fastbinary is not None:
@@ -87,6 +93,16 @@ class VacinaRowThrift:
           self.grupoAtendimento = iprot.readI64()
         else:
           iprot.skip(ftype)
+      elif fid == 7:
+        if ftype == TType.BOOL:
+          self.stRegistroAnterior = iprot.readBool()
+        else:
+          iprot.skip(ftype)
+      elif fid == 8:
+        if ftype == TType.I64:
+          self.dataRegistroAnterior = iprot.readI64()
+        else:
+          iprot.skip(ftype)
       else:
         iprot.skip(ftype)
       iprot.readFieldEnd()
@@ -121,6 +137,14 @@ class VacinaRowThrift:
       oprot.writeFieldBegin('grupoAtendimento', TType.I64, 6)
       oprot.writeI64(self.grupoAtendimento)
       oprot.writeFieldEnd()
+    if self.stRegistroAnterior is not None:
+      oprot.writeFieldBegin('stRegistroAnterior', TType.BOOL, 7)
+      oprot.writeBool(self.stRegistroAnterior)
+      oprot.writeFieldEnd()
+    if self.dataRegistroAnterior is not None:
+      oprot.writeFieldBegin('dataRegistroAnterior', TType.I64, 8)
+      oprot.writeI64(self.dataRegistroAnterior)
+      oprot.writeFieldEnd()
     oprot.writeFieldStop()
     oprot.writeStructEnd()
 
@@ -136,6 +160,8 @@ class VacinaRowThrift:
     value = (value * 31) ^ hash(self.lote)
     value = (value * 31) ^ hash(self.fabricante)
     value = (value * 31) ^ hash(self.grupoAtendimento)
+    value = (value * 31) ^ hash(self.stRegistroAnterior)
+    value = (value * 31) ^ hash(self.dataRegistroAnterior)
     return value
 
   def __repr__(self):

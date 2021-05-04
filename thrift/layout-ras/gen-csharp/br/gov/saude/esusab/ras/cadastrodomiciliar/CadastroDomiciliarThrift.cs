@@ -37,6 +37,8 @@ namespace br.gov.saude.esusab.ras.cadastrodomiciliar
     private InstituicaoPermanenciaThrift _instituicaoPermanencia;
     private br.gov.saude.esusab.ras.common.UnicaLotacaoHeaderThrift _headerTransport;
     private bool _statusGeradoAutomaticamente;
+    private double _latitude;
+    private double _longitude;
 
     public List<long> AnimaisNoDomicilio
     {
@@ -222,6 +224,32 @@ namespace br.gov.saude.esusab.ras.cadastrodomiciliar
       }
     }
 
+    public double Latitude
+    {
+      get
+      {
+        return _latitude;
+      }
+      set
+      {
+        __isset.latitude = true;
+        this._latitude = value;
+      }
+    }
+
+    public double Longitude
+    {
+      get
+      {
+        return _longitude;
+      }
+      set
+      {
+        __isset.longitude = true;
+        this._longitude = value;
+      }
+    }
+
 
     public Isset __isset;
     #if !SILVERLIGHT
@@ -242,6 +270,8 @@ namespace br.gov.saude.esusab.ras.cadastrodomiciliar
       public bool instituicaoPermanencia;
       public bool headerTransport;
       public bool statusGeradoAutomaticamente;
+      public bool latitude;
+      public bool longitude;
     }
 
     public CadastroDomiciliarThrift() {
@@ -394,6 +424,20 @@ namespace br.gov.saude.esusab.ras.cadastrodomiciliar
             case 16:
               if (field.Type == TType.Bool) {
                 StatusGeradoAutomaticamente = iprot.ReadBool();
+              } else { 
+                TProtocolUtil.Skip(iprot, field.Type);
+              }
+              break;
+            case 17:
+              if (field.Type == TType.Double) {
+                Latitude = iprot.ReadDouble();
+              } else { 
+                TProtocolUtil.Skip(iprot, field.Type);
+              }
+              break;
+            case 18:
+              if (field.Type == TType.Double) {
+                Longitude = iprot.ReadDouble();
               } else { 
                 TProtocolUtil.Skip(iprot, field.Type);
               }
@@ -553,6 +597,22 @@ namespace br.gov.saude.esusab.ras.cadastrodomiciliar
           oprot.WriteBool(StatusGeradoAutomaticamente);
           oprot.WriteFieldEnd();
         }
+        if (__isset.latitude) {
+          field.Name = "latitude";
+          field.Type = TType.Double;
+          field.ID = 17;
+          oprot.WriteFieldBegin(field);
+          oprot.WriteDouble(Latitude);
+          oprot.WriteFieldEnd();
+        }
+        if (__isset.longitude) {
+          field.Name = "longitude";
+          field.Type = TType.Double;
+          field.ID = 18;
+          oprot.WriteFieldBegin(field);
+          oprot.WriteDouble(Longitude);
+          oprot.WriteFieldEnd();
+        }
         oprot.WriteFieldStop();
         oprot.WriteStructEnd();
       }
@@ -641,6 +701,14 @@ namespace br.gov.saude.esusab.ras.cadastrodomiciliar
       if (__isset.statusGeradoAutomaticamente) {
         __sb.Append(", StatusGeradoAutomaticamente: ");
         __sb.Append(StatusGeradoAutomaticamente);
+      }
+      if (__isset.latitude) {
+        __sb.Append(", Latitude: ");
+        __sb.Append(Latitude);
+      }
+      if (__isset.longitude) {
+        __sb.Append(", Longitude: ");
+        __sb.Append(Longitude);
       }
       __sb.Append(")");
       return __sb.ToString();

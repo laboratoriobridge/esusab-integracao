@@ -1050,3 +1050,220 @@ class EncaminhamentoExternoThrift:
 
   def __ne__(self, other):
     return not (self == other)
+
+class ResultadoExameThrift:
+  """
+  Attributes:
+   - tipoResultado
+   - valorResultado
+  """
+
+  thrift_spec = (
+    None, # 0
+    (1, TType.I32, 'tipoResultado', None, None, ), # 1
+    (2, TType.STRING, 'valorResultado', None, None, ), # 2
+  )
+
+  def __init__(self, tipoResultado=None, valorResultado=None,):
+    self.tipoResultado = tipoResultado
+    self.valorResultado = valorResultado
+
+  def read(self, iprot):
+    if iprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None and fastbinary is not None:
+      fastbinary.decode_binary(self, iprot.trans, (self.__class__, self.thrift_spec))
+      return
+    iprot.readStructBegin()
+    while True:
+      (fname, ftype, fid) = iprot.readFieldBegin()
+      if ftype == TType.STOP:
+        break
+      if fid == 1:
+        if ftype == TType.I32:
+          self.tipoResultado = iprot.readI32()
+        else:
+          iprot.skip(ftype)
+      elif fid == 2:
+        if ftype == TType.STRING:
+          self.valorResultado = iprot.readString()
+        else:
+          iprot.skip(ftype)
+      else:
+        iprot.skip(ftype)
+      iprot.readFieldEnd()
+    iprot.readStructEnd()
+
+  def write(self, oprot):
+    if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      return
+    oprot.writeStructBegin('ResultadoExameThrift')
+    if self.tipoResultado is not None:
+      oprot.writeFieldBegin('tipoResultado', TType.I32, 1)
+      oprot.writeI32(self.tipoResultado)
+      oprot.writeFieldEnd()
+    if self.valorResultado is not None:
+      oprot.writeFieldBegin('valorResultado', TType.STRING, 2)
+      oprot.writeString(self.valorResultado)
+      oprot.writeFieldEnd()
+    oprot.writeFieldStop()
+    oprot.writeStructEnd()
+
+  def validate(self):
+    return
+
+
+  def __hash__(self):
+    value = 17
+    value = (value * 31) ^ hash(self.tipoResultado)
+    value = (value * 31) ^ hash(self.valorResultado)
+    return value
+
+  def __repr__(self):
+    L = ['%s=%r' % (key, value)
+      for key, value in self.__dict__.iteritems()]
+    return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+  def __eq__(self, other):
+    return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+  def __ne__(self, other):
+    return not (self == other)
+
+class ResultadosExameThrift:
+  """
+  Attributes:
+   - exame
+   - dataSolicitacao
+   - dataRealizacao
+   - dataResultado
+   - resultado
+   - exameResultadoEspecifico
+  """
+
+  thrift_spec = (
+    None, # 0
+    (1, TType.STRING, 'exame', None, None, ), # 1
+    (2, TType.I64, 'dataSolicitacao', None, None, ), # 2
+    (3, TType.I64, 'dataRealizacao', None, None, ), # 3
+    (4, TType.I64, 'dataResultado', None, None, ), # 4
+    (5, TType.STRING, 'resultado', None, None, ), # 5
+    (6, TType.LIST, 'exameResultadoEspecifico', (TType.STRUCT,(ResultadoExameThrift, ResultadoExameThrift.thrift_spec)), None, ), # 6
+  )
+
+  def __init__(self, exame=None, dataSolicitacao=None, dataRealizacao=None, dataResultado=None, resultado=None, exameResultadoEspecifico=None,):
+    self.exame = exame
+    self.dataSolicitacao = dataSolicitacao
+    self.dataRealizacao = dataRealizacao
+    self.dataResultado = dataResultado
+    self.resultado = resultado
+    self.exameResultadoEspecifico = exameResultadoEspecifico
+
+  def read(self, iprot):
+    if iprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None and fastbinary is not None:
+      fastbinary.decode_binary(self, iprot.trans, (self.__class__, self.thrift_spec))
+      return
+    iprot.readStructBegin()
+    while True:
+      (fname, ftype, fid) = iprot.readFieldBegin()
+      if ftype == TType.STOP:
+        break
+      if fid == 1:
+        if ftype == TType.STRING:
+          self.exame = iprot.readString()
+        else:
+          iprot.skip(ftype)
+      elif fid == 2:
+        if ftype == TType.I64:
+          self.dataSolicitacao = iprot.readI64()
+        else:
+          iprot.skip(ftype)
+      elif fid == 3:
+        if ftype == TType.I64:
+          self.dataRealizacao = iprot.readI64()
+        else:
+          iprot.skip(ftype)
+      elif fid == 4:
+        if ftype == TType.I64:
+          self.dataResultado = iprot.readI64()
+        else:
+          iprot.skip(ftype)
+      elif fid == 5:
+        if ftype == TType.STRING:
+          self.resultado = iprot.readString()
+        else:
+          iprot.skip(ftype)
+      elif fid == 6:
+        if ftype == TType.LIST:
+          self.exameResultadoEspecifico = []
+          (_etype3, _size0) = iprot.readListBegin()
+          for _i4 in xrange(_size0):
+            _elem5 = ResultadoExameThrift()
+            _elem5.read(iprot)
+            self.exameResultadoEspecifico.append(_elem5)
+          iprot.readListEnd()
+        else:
+          iprot.skip(ftype)
+      else:
+        iprot.skip(ftype)
+      iprot.readFieldEnd()
+    iprot.readStructEnd()
+
+  def write(self, oprot):
+    if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      return
+    oprot.writeStructBegin('ResultadosExameThrift')
+    if self.exame is not None:
+      oprot.writeFieldBegin('exame', TType.STRING, 1)
+      oprot.writeString(self.exame)
+      oprot.writeFieldEnd()
+    if self.dataSolicitacao is not None:
+      oprot.writeFieldBegin('dataSolicitacao', TType.I64, 2)
+      oprot.writeI64(self.dataSolicitacao)
+      oprot.writeFieldEnd()
+    if self.dataRealizacao is not None:
+      oprot.writeFieldBegin('dataRealizacao', TType.I64, 3)
+      oprot.writeI64(self.dataRealizacao)
+      oprot.writeFieldEnd()
+    if self.dataResultado is not None:
+      oprot.writeFieldBegin('dataResultado', TType.I64, 4)
+      oprot.writeI64(self.dataResultado)
+      oprot.writeFieldEnd()
+    if self.resultado is not None:
+      oprot.writeFieldBegin('resultado', TType.STRING, 5)
+      oprot.writeString(self.resultado)
+      oprot.writeFieldEnd()
+    if self.exameResultadoEspecifico is not None:
+      oprot.writeFieldBegin('exameResultadoEspecifico', TType.LIST, 6)
+      oprot.writeListBegin(TType.STRUCT, len(self.exameResultadoEspecifico))
+      for iter6 in self.exameResultadoEspecifico:
+        iter6.write(oprot)
+      oprot.writeListEnd()
+      oprot.writeFieldEnd()
+    oprot.writeFieldStop()
+    oprot.writeStructEnd()
+
+  def validate(self):
+    return
+
+
+  def __hash__(self):
+    value = 17
+    value = (value * 31) ^ hash(self.exame)
+    value = (value * 31) ^ hash(self.dataSolicitacao)
+    value = (value * 31) ^ hash(self.dataRealizacao)
+    value = (value * 31) ^ hash(self.dataResultado)
+    value = (value * 31) ^ hash(self.resultado)
+    value = (value * 31) ^ hash(self.exameResultadoEspecifico)
+    return value
+
+  def __repr__(self):
+    L = ['%s=%r' % (key, value)
+      for key, value in self.__dict__.iteritems()]
+    return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+  def __eq__(self, other):
+    return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+  def __ne__(self, other):
+    return not (self == other)

@@ -212,6 +212,50 @@ module Br
               ::Thrift::Struct.generate_accessors self
             end
 
+            class ResultadoExameThrift
+              include ::Thrift::Struct, ::Thrift::Struct_Union
+              TIPORESULTADO = 1
+              VALORRESULTADO = 2
+
+              FIELDS = {
+                TIPORESULTADO => {:type => ::Thrift::Types::I32, :name => 'tipoResultado', :optional => true},
+                VALORRESULTADO => {:type => ::Thrift::Types::STRING, :name => 'valorResultado', :optional => true}
+              }
+
+              def struct_fields; FIELDS; end
+
+              def validate
+              end
+
+              ::Thrift::Struct.generate_accessors self
+            end
+
+            class ResultadosExameThrift
+              include ::Thrift::Struct, ::Thrift::Struct_Union
+              EXAME = 1
+              DATASOLICITACAO = 2
+              DATAREALIZACAO = 3
+              DATARESULTADO = 4
+              RESULTADO = 5
+              EXAMERESULTADOESPECIFICO = 6
+
+              FIELDS = {
+                EXAME => {:type => ::Thrift::Types::STRING, :name => 'exame', :optional => true},
+                DATASOLICITACAO => {:type => ::Thrift::Types::I64, :name => 'dataSolicitacao', :optional => true},
+                DATAREALIZACAO => {:type => ::Thrift::Types::I64, :name => 'dataRealizacao', :optional => true},
+                DATARESULTADO => {:type => ::Thrift::Types::I64, :name => 'dataResultado', :optional => true},
+                RESULTADO => {:type => ::Thrift::Types::STRING, :name => 'resultado', :optional => true},
+                EXAMERESULTADOESPECIFICO => {:type => ::Thrift::Types::LIST, :name => 'exameResultadoEspecifico', :element => {:type => ::Thrift::Types::STRUCT, :class => ::Br::Gov::Saude::Esusab::Ras::Common::ResultadoExameThrift}, :optional => true}
+              }
+
+              def struct_fields; FIELDS; end
+
+              def validate
+              end
+
+              ::Thrift::Struct.generate_accessors self
+            end
+
           end
         end
       end

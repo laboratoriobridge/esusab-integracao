@@ -96,6 +96,18 @@ class FichaVisitaDomiciliarChildThrift {
    * @var int
    */
   public $glicemia = null;
+  /**
+   * @var double
+   */
+  public $latitude = null;
+  /**
+   * @var double
+   */
+  public $longitude = null;
+  /**
+   * @var string
+   */
+  public $uuidOrigemCadastroDomiciliar = null;
 
   public function __construct($vals=null) {
     if (!isset(self::$_TSPEC)) {
@@ -180,6 +192,18 @@ class FichaVisitaDomiciliarChildThrift {
           'var' => 'glicemia',
           'type' => TType::I32,
           ),
+        20 => array(
+          'var' => 'latitude',
+          'type' => TType::DOUBLE,
+          ),
+        21 => array(
+          'var' => 'longitude',
+          'type' => TType::DOUBLE,
+          ),
+        22 => array(
+          'var' => 'uuidOrigemCadastroDomiciliar',
+          'type' => TType::STRING,
+          ),
         );
     }
     if (is_array($vals)) {
@@ -239,6 +263,15 @@ class FichaVisitaDomiciliarChildThrift {
       }
       if (isset($vals['glicemia'])) {
         $this->glicemia = $vals['glicemia'];
+      }
+      if (isset($vals['latitude'])) {
+        $this->latitude = $vals['latitude'];
+      }
+      if (isset($vals['longitude'])) {
+        $this->longitude = $vals['longitude'];
+      }
+      if (isset($vals['uuidOrigemCadastroDomiciliar'])) {
+        $this->uuidOrigemCadastroDomiciliar = $vals['uuidOrigemCadastroDomiciliar'];
       }
     }
   }
@@ -405,6 +438,27 @@ class FichaVisitaDomiciliarChildThrift {
             $xfer += $input->skip($ftype);
           }
           break;
+        case 20:
+          if ($ftype == TType::DOUBLE) {
+            $xfer += $input->readDouble($this->latitude);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 21:
+          if ($ftype == TType::DOUBLE) {
+            $xfer += $input->readDouble($this->longitude);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 22:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->uuidOrigemCadastroDomiciliar);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
         default:
           $xfer += $input->skip($ftype);
           break;
@@ -523,6 +577,21 @@ class FichaVisitaDomiciliarChildThrift {
     if ($this->glicemia !== null) {
       $xfer += $output->writeFieldBegin('glicemia', TType::I32, 19);
       $xfer += $output->writeI32($this->glicemia);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->latitude !== null) {
+      $xfer += $output->writeFieldBegin('latitude', TType::DOUBLE, 20);
+      $xfer += $output->writeDouble($this->latitude);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->longitude !== null) {
+      $xfer += $output->writeFieldBegin('longitude', TType::DOUBLE, 21);
+      $xfer += $output->writeDouble($this->longitude);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->uuidOrigemCadastroDomiciliar !== null) {
+      $xfer += $output->writeFieldBegin('uuidOrigemCadastroDomiciliar', TType::STRING, 22);
+      $xfer += $output->writeString($this->uuidOrigemCadastroDomiciliar);
       $xfer += $output->writeFieldEnd();
     }
     $xfer += $output->writeFieldStop();

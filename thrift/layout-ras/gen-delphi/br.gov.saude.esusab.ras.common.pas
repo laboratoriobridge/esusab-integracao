@@ -33,6 +33,8 @@ type
   IEnderecoLocalPermanenciaThrift = interface;
   IMedicamentoThrift = interface;
   IEncaminhamentoExternoThrift = interface;
+  IResultadoExameThrift = interface;
+  IResultadosExameThrift = interface;
 
   IHeaderCdsCadastroThrift = interface(IBase)
     function GetCnesUnidadeSaude: string;
@@ -826,6 +828,154 @@ type
     property __isset_HipoteseDiagnosticoCid10: Boolean read Get__isset_HipoteseDiagnosticoCid10;
     property __isset_HipoteseDiagnosticoCiap2: Boolean read Get__isset_HipoteseDiagnosticoCiap2;
     property __isset_ClassificacaoRisco: Boolean read Get__isset_ClassificacaoRisco;
+  end;
+
+  IResultadoExameThrift = interface(IBase)
+    function GetTipoResultado: Integer;
+    procedure SetTipoResultado( const Value: Integer);
+    function GetValorResultado: string;
+    procedure SetValorResultado( const Value: string);
+
+    property TipoResultado: Integer read GetTipoResultado write SetTipoResultado;
+    property ValorResultado: string read GetValorResultado write SetValorResultado;
+
+    function Get__isset_TipoResultado: Boolean;
+    function Get__isset_ValorResultado: Boolean;
+
+    property __isset_TipoResultado: Boolean read Get__isset_TipoResultado;
+    property __isset_ValorResultado: Boolean read Get__isset_ValorResultado;
+  end;
+
+  TResultadoExameThriftImpl = class(TInterfacedObject, IBase, IResultadoExameThrift)
+  private
+    FTipoResultado: Integer;
+    FValorResultado: string;
+    
+    F__isset_TipoResultado: Boolean;
+    F__isset_ValorResultado: Boolean;
+    
+    function GetTipoResultado: Integer;
+    procedure SetTipoResultado( const Value: Integer);
+    function GetValorResultado: string;
+    procedure SetValorResultado( const Value: string);
+
+    function Get__isset_TipoResultado: Boolean;
+    function Get__isset_ValorResultado: Boolean;
+  public
+    constructor Create;
+    destructor Destroy; override;
+
+    function ToString: string; override;
+
+    // IBase
+    procedure Read( const iprot: IProtocol);
+    procedure Write( const oprot: IProtocol);
+
+    // Properties
+    property TipoResultado: Integer read GetTipoResultado write SetTipoResultado;
+    property ValorResultado: string read GetValorResultado write SetValorResultado;
+
+    // isset
+    property __isset_TipoResultado: Boolean read Get__isset_TipoResultado;
+    property __isset_ValorResultado: Boolean read Get__isset_ValorResultado;
+  end;
+
+  IResultadosExameThrift = interface(IBase)
+    function GetExame: string;
+    procedure SetExame( const Value: string);
+    function GetDataSolicitacao: Int64;
+    procedure SetDataSolicitacao( const Value: Int64);
+    function GetDataRealizacao: Int64;
+    procedure SetDataRealizacao( const Value: Int64);
+    function GetDataResultado: Int64;
+    procedure SetDataResultado( const Value: Int64);
+    function GetResultado: string;
+    procedure SetResultado( const Value: string);
+    function GetExameResultadoEspecifico: IThriftList<IResultadoExameThrift>;
+    procedure SetExameResultadoEspecifico( const Value: IThriftList<IResultadoExameThrift>);
+
+    property Exame: string read GetExame write SetExame;
+    property DataSolicitacao: Int64 read GetDataSolicitacao write SetDataSolicitacao;
+    property DataRealizacao: Int64 read GetDataRealizacao write SetDataRealizacao;
+    property DataResultado: Int64 read GetDataResultado write SetDataResultado;
+    property Resultado: string read GetResultado write SetResultado;
+    property ExameResultadoEspecifico: IThriftList<IResultadoExameThrift> read GetExameResultadoEspecifico write SetExameResultadoEspecifico;
+
+    function Get__isset_Exame: Boolean;
+    function Get__isset_DataSolicitacao: Boolean;
+    function Get__isset_DataRealizacao: Boolean;
+    function Get__isset_DataResultado: Boolean;
+    function Get__isset_Resultado: Boolean;
+    function Get__isset_ExameResultadoEspecifico: Boolean;
+
+    property __isset_Exame: Boolean read Get__isset_Exame;
+    property __isset_DataSolicitacao: Boolean read Get__isset_DataSolicitacao;
+    property __isset_DataRealizacao: Boolean read Get__isset_DataRealizacao;
+    property __isset_DataResultado: Boolean read Get__isset_DataResultado;
+    property __isset_Resultado: Boolean read Get__isset_Resultado;
+    property __isset_ExameResultadoEspecifico: Boolean read Get__isset_ExameResultadoEspecifico;
+  end;
+
+  TResultadosExameThriftImpl = class(TInterfacedObject, IBase, IResultadosExameThrift)
+  private
+    FExame: string;
+    FDataSolicitacao: Int64;
+    FDataRealizacao: Int64;
+    FDataResultado: Int64;
+    FResultado: string;
+    FExameResultadoEspecifico: IThriftList<IResultadoExameThrift>;
+    
+    F__isset_Exame: Boolean;
+    F__isset_DataSolicitacao: Boolean;
+    F__isset_DataRealizacao: Boolean;
+    F__isset_DataResultado: Boolean;
+    F__isset_Resultado: Boolean;
+    F__isset_ExameResultadoEspecifico: Boolean;
+    
+    function GetExame: string;
+    procedure SetExame( const Value: string);
+    function GetDataSolicitacao: Int64;
+    procedure SetDataSolicitacao( const Value: Int64);
+    function GetDataRealizacao: Int64;
+    procedure SetDataRealizacao( const Value: Int64);
+    function GetDataResultado: Int64;
+    procedure SetDataResultado( const Value: Int64);
+    function GetResultado: string;
+    procedure SetResultado( const Value: string);
+    function GetExameResultadoEspecifico: IThriftList<IResultadoExameThrift>;
+    procedure SetExameResultadoEspecifico( const Value: IThriftList<IResultadoExameThrift>);
+
+    function Get__isset_Exame: Boolean;
+    function Get__isset_DataSolicitacao: Boolean;
+    function Get__isset_DataRealizacao: Boolean;
+    function Get__isset_DataResultado: Boolean;
+    function Get__isset_Resultado: Boolean;
+    function Get__isset_ExameResultadoEspecifico: Boolean;
+  public
+    constructor Create;
+    destructor Destroy; override;
+
+    function ToString: string; override;
+
+    // IBase
+    procedure Read( const iprot: IProtocol);
+    procedure Write( const oprot: IProtocol);
+
+    // Properties
+    property Exame: string read GetExame write SetExame;
+    property DataSolicitacao: Int64 read GetDataSolicitacao write SetDataSolicitacao;
+    property DataRealizacao: Int64 read GetDataRealizacao write SetDataRealizacao;
+    property DataResultado: Int64 read GetDataResultado write SetDataResultado;
+    property Resultado: string read GetResultado write SetResultado;
+    property ExameResultadoEspecifico: IThriftList<IResultadoExameThrift> read GetExameResultadoEspecifico write SetExameResultadoEspecifico;
+
+    // isset
+    property __isset_Exame: Boolean read Get__isset_Exame;
+    property __isset_DataSolicitacao: Boolean read Get__isset_DataSolicitacao;
+    property __isset_DataRealizacao: Boolean read Get__isset_DataRealizacao;
+    property __isset_DataResultado: Boolean read Get__isset_DataResultado;
+    property __isset_Resultado: Boolean read Get__isset_Resultado;
+    property __isset_ExameResultadoEspecifico: Boolean read Get__isset_ExameResultadoEspecifico;
   end;
 
 implementation
@@ -3352,6 +3502,483 @@ begin
     if _first13 then {prevent warning};
   finally
     _sb12.Free;
+  end;
+end;
+
+constructor TResultadoExameThriftImpl.Create;
+begin
+  inherited;
+end;
+
+destructor TResultadoExameThriftImpl.Destroy;
+begin
+  inherited;
+end;
+
+function TResultadoExameThriftImpl.GetTipoResultado: Integer;
+begin
+  Result := FTipoResultado;
+end;
+
+procedure TResultadoExameThriftImpl.SetTipoResultado( const Value: Integer);
+begin
+  F__isset_TipoResultado := True;
+  FTipoResultado := Value;
+end;
+
+function TResultadoExameThriftImpl.Get__isset_TipoResultado: Boolean;
+begin
+  Result := F__isset_TipoResultado;
+end;
+
+function TResultadoExameThriftImpl.GetValorResultado: string;
+begin
+  Result := FValorResultado;
+end;
+
+procedure TResultadoExameThriftImpl.SetValorResultado( const Value: string);
+begin
+  F__isset_ValorResultado := True;
+  FValorResultado := Value;
+end;
+
+function TResultadoExameThriftImpl.Get__isset_ValorResultado: Boolean;
+begin
+  Result := F__isset_ValorResultado;
+end;
+
+procedure TResultadoExameThriftImpl.Read( const iprot: IProtocol);
+var
+  field_ : IField;
+  struc : IStruct;
+  tracker : IProtocolRecursionTracker;
+
+begin
+  tracker := iprot.NextRecursionLevel;
+  struc := iprot.ReadStructBegin;
+  try
+    while (true) do
+    begin
+      field_ := iprot.ReadFieldBegin();
+      if (field_.Type_ = TType.Stop) then
+      begin
+        Break;
+      end;
+      case field_.ID of
+        1: begin
+          if (field_.Type_ = TType.I32) then
+          begin
+            TipoResultado := iprot.ReadI32();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        2: begin
+          if (field_.Type_ = TType.String_) then
+          begin
+            ValorResultado := iprot.ReadString();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end
+        else begin
+          TProtocolUtil.Skip(iprot, field_.Type_);
+        end;
+      end;
+      iprot.ReadFieldEnd;
+    end;
+  finally
+    iprot.ReadStructEnd;
+  end;
+end;
+
+procedure TResultadoExameThriftImpl.Write( const oprot: IProtocol);
+var
+  struc : IStruct;
+  field_ : IField;
+  tracker : IProtocolRecursionTracker;
+begin
+  tracker := oprot.NextRecursionLevel;
+  struc := TStructImpl.Create('ResultadoExameThrift');
+  oprot.WriteStructBegin(struc);
+  field_ := TFieldImpl.Create;
+  if (__isset_TipoResultado) then
+  begin
+    field_.Name := 'tipoResultado';
+    field_.Type_  := TType.I32;
+    field_.ID := 1;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteI32(TipoResultado);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_ValorResultado) then
+  begin
+    field_.Name := 'valorResultado';
+    field_.Type_  := TType.String_;
+    field_.ID := 2;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteString(ValorResultado);
+    oprot.WriteFieldEnd();
+  end;
+  oprot.WriteFieldStop();
+  oprot.WriteStructEnd();
+end;
+
+function TResultadoExameThriftImpl.ToString: string;
+var
+  _sb14 : TThriftStringBuilder;
+  _first15 : Boolean;
+begin
+  _sb14 := TThriftStringBuilder.Create('(');
+  try
+    _first15 := TRUE;
+    if (__isset_TipoResultado) then begin
+      if not _first15 then _sb14.Append(',');
+      _first15 := FALSE;
+      _sb14.Append('TipoResultado: ');
+      _sb14.Append(TipoResultado);
+    end;
+    if (__isset_ValorResultado) then begin
+      if not _first15 then _sb14.Append(',');
+      _first15 := FALSE;
+      _sb14.Append('ValorResultado: ');
+      _sb14.Append(ValorResultado);
+    end;
+    _sb14.Append(')');
+    Result := _sb14.ToString;
+    if _first15 then {prevent warning};
+  finally
+    _sb14.Free;
+  end;
+end;
+
+constructor TResultadosExameThriftImpl.Create;
+begin
+  inherited;
+end;
+
+destructor TResultadosExameThriftImpl.Destroy;
+begin
+  inherited;
+end;
+
+function TResultadosExameThriftImpl.GetExame: string;
+begin
+  Result := FExame;
+end;
+
+procedure TResultadosExameThriftImpl.SetExame( const Value: string);
+begin
+  F__isset_Exame := True;
+  FExame := Value;
+end;
+
+function TResultadosExameThriftImpl.Get__isset_Exame: Boolean;
+begin
+  Result := F__isset_Exame;
+end;
+
+function TResultadosExameThriftImpl.GetDataSolicitacao: Int64;
+begin
+  Result := FDataSolicitacao;
+end;
+
+procedure TResultadosExameThriftImpl.SetDataSolicitacao( const Value: Int64);
+begin
+  F__isset_DataSolicitacao := True;
+  FDataSolicitacao := Value;
+end;
+
+function TResultadosExameThriftImpl.Get__isset_DataSolicitacao: Boolean;
+begin
+  Result := F__isset_DataSolicitacao;
+end;
+
+function TResultadosExameThriftImpl.GetDataRealizacao: Int64;
+begin
+  Result := FDataRealizacao;
+end;
+
+procedure TResultadosExameThriftImpl.SetDataRealizacao( const Value: Int64);
+begin
+  F__isset_DataRealizacao := True;
+  FDataRealizacao := Value;
+end;
+
+function TResultadosExameThriftImpl.Get__isset_DataRealizacao: Boolean;
+begin
+  Result := F__isset_DataRealizacao;
+end;
+
+function TResultadosExameThriftImpl.GetDataResultado: Int64;
+begin
+  Result := FDataResultado;
+end;
+
+procedure TResultadosExameThriftImpl.SetDataResultado( const Value: Int64);
+begin
+  F__isset_DataResultado := True;
+  FDataResultado := Value;
+end;
+
+function TResultadosExameThriftImpl.Get__isset_DataResultado: Boolean;
+begin
+  Result := F__isset_DataResultado;
+end;
+
+function TResultadosExameThriftImpl.GetResultado: string;
+begin
+  Result := FResultado;
+end;
+
+procedure TResultadosExameThriftImpl.SetResultado( const Value: string);
+begin
+  F__isset_Resultado := True;
+  FResultado := Value;
+end;
+
+function TResultadosExameThriftImpl.Get__isset_Resultado: Boolean;
+begin
+  Result := F__isset_Resultado;
+end;
+
+function TResultadosExameThriftImpl.GetExameResultadoEspecifico: IThriftList<IResultadoExameThrift>;
+begin
+  Result := FExameResultadoEspecifico;
+end;
+
+procedure TResultadosExameThriftImpl.SetExameResultadoEspecifico( const Value: IThriftList<IResultadoExameThrift>);
+begin
+  F__isset_ExameResultadoEspecifico := True;
+  FExameResultadoEspecifico := Value;
+end;
+
+function TResultadosExameThriftImpl.Get__isset_ExameResultadoEspecifico: Boolean;
+begin
+  Result := F__isset_ExameResultadoEspecifico;
+end;
+
+procedure TResultadosExameThriftImpl.Read( const iprot: IProtocol);
+var
+  field_ : IField;
+  struc : IStruct;
+  tracker : IProtocolRecursionTracker;
+  _list16: IList;
+  _i17: Integer;
+  _elem18: IResultadoExameThrift;
+
+begin
+  tracker := iprot.NextRecursionLevel;
+  struc := iprot.ReadStructBegin;
+  try
+    while (true) do
+    begin
+      field_ := iprot.ReadFieldBegin();
+      if (field_.Type_ = TType.Stop) then
+      begin
+        Break;
+      end;
+      case field_.ID of
+        1: begin
+          if (field_.Type_ = TType.String_) then
+          begin
+            Exame := iprot.ReadString();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        2: begin
+          if (field_.Type_ = TType.I64) then
+          begin
+            DataSolicitacao := iprot.ReadI64();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        3: begin
+          if (field_.Type_ = TType.I64) then
+          begin
+            DataRealizacao := iprot.ReadI64();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        4: begin
+          if (field_.Type_ = TType.I64) then
+          begin
+            DataResultado := iprot.ReadI64();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        5: begin
+          if (field_.Type_ = TType.String_) then
+          begin
+            Resultado := iprot.ReadString();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        6: begin
+          if (field_.Type_ = TType.List) then
+          begin
+            ExameResultadoEspecifico := TThriftListImpl<IResultadoExameThrift>.Create;
+            _list16 := iprot.ReadListBegin();
+            for _i17 := 0 to _list16.Count - 1 do
+            begin
+              _elem18 := TResultadoExameThriftImpl.Create;
+              _elem18.Read(iprot);
+              ExameResultadoEspecifico.Add(_elem18);
+            end;
+            iprot.ReadListEnd();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end
+        else begin
+          TProtocolUtil.Skip(iprot, field_.Type_);
+        end;
+      end;
+      iprot.ReadFieldEnd;
+    end;
+  finally
+    iprot.ReadStructEnd;
+  end;
+end;
+
+procedure TResultadosExameThriftImpl.Write( const oprot: IProtocol);
+var
+  struc : IStruct;
+  field_ : IField;
+  tracker : IProtocolRecursionTracker;
+  list_19 : IList;
+  _iter20: IResultadoExameThrift;
+begin
+  tracker := oprot.NextRecursionLevel;
+  struc := TStructImpl.Create('ResultadosExameThrift');
+  oprot.WriteStructBegin(struc);
+  field_ := TFieldImpl.Create;
+  if (__isset_Exame) then
+  begin
+    field_.Name := 'exame';
+    field_.Type_  := TType.String_;
+    field_.ID := 1;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteString(Exame);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_DataSolicitacao) then
+  begin
+    field_.Name := 'dataSolicitacao';
+    field_.Type_  := TType.I64;
+    field_.ID := 2;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteI64(DataSolicitacao);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_DataRealizacao) then
+  begin
+    field_.Name := 'dataRealizacao';
+    field_.Type_  := TType.I64;
+    field_.ID := 3;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteI64(DataRealizacao);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_DataResultado) then
+  begin
+    field_.Name := 'dataResultado';
+    field_.Type_  := TType.I64;
+    field_.ID := 4;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteI64(DataResultado);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_Resultado) then
+  begin
+    field_.Name := 'resultado';
+    field_.Type_  := TType.String_;
+    field_.ID := 5;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteString(Resultado);
+    oprot.WriteFieldEnd();
+  end;
+  if (ExameResultadoEspecifico <> nil) and __isset_ExameResultadoEspecifico then
+  begin
+    field_.Name := 'exameResultadoEspecifico';
+    field_.Type_  := TType.List;
+    field_.ID := 6;
+    oprot.WriteFieldBegin(field_);
+    list_19 := TListImpl.Create(TType.Struct, ExameResultadoEspecifico.Count);
+    oprot.WriteListBegin( list_19);
+    for _iter20 in ExameResultadoEspecifico do
+    begin
+      _iter20.Write(oprot);
+    end;
+    oprot.WriteListEnd();
+    oprot.WriteFieldEnd();
+  end;
+  oprot.WriteFieldStop();
+  oprot.WriteStructEnd();
+end;
+
+function TResultadosExameThriftImpl.ToString: string;
+var
+  _sb21 : TThriftStringBuilder;
+  _first22 : Boolean;
+begin
+  _sb21 := TThriftStringBuilder.Create('(');
+  try
+    _first22 := TRUE;
+    if (__isset_Exame) then begin
+      if not _first22 then _sb21.Append(',');
+      _first22 := FALSE;
+      _sb21.Append('Exame: ');
+      _sb21.Append(Exame);
+    end;
+    if (__isset_DataSolicitacao) then begin
+      if not _first22 then _sb21.Append(',');
+      _first22 := FALSE;
+      _sb21.Append('DataSolicitacao: ');
+      _sb21.Append(DataSolicitacao);
+    end;
+    if (__isset_DataRealizacao) then begin
+      if not _first22 then _sb21.Append(',');
+      _first22 := FALSE;
+      _sb21.Append('DataRealizacao: ');
+      _sb21.Append(DataRealizacao);
+    end;
+    if (__isset_DataResultado) then begin
+      if not _first22 then _sb21.Append(',');
+      _first22 := FALSE;
+      _sb21.Append('DataResultado: ');
+      _sb21.Append(DataResultado);
+    end;
+    if (__isset_Resultado) then begin
+      if not _first22 then _sb21.Append(',');
+      _first22 := FALSE;
+      _sb21.Append('Resultado: ');
+      _sb21.Append(Resultado);
+    end;
+    if (ExameResultadoEspecifico <> nil) and __isset_ExameResultadoEspecifico then begin
+      if not _first22 then _sb21.Append(',');
+      _first22 := FALSE;
+      _sb21.Append('ExameResultadoEspecifico: ');
+      _sb21.Append(ExameResultadoEspecifico);
+    end;
+    _sb21.Append(')');
+    Result := _sb21.ToString;
+    if _first22 then {prevent warning};
+  finally
+    _sb21.Free;
   end;
 end;
 

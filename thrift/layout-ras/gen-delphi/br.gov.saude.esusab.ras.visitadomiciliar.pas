@@ -69,6 +69,12 @@ type
     procedure SetTipoGlicemia( const Value: Int64);
     function GetGlicemia: Integer;
     procedure SetGlicemia( const Value: Integer);
+    function GetLatitude: Double;
+    procedure SetLatitude( const Value: Double);
+    function GetLongitude: Double;
+    procedure SetLongitude( const Value: Double);
+    function GetUuidOrigemCadastroDomiciliar: string;
+    procedure SetUuidOrigemCadastroDomiciliar( const Value: string);
 
     property Turno: Int64 read GetTurno write SetTurno;
     property NumProntuario: string read GetNumProntuario write SetNumProntuario;
@@ -89,6 +95,9 @@ type
     property Temperatura: Double read GetTemperatura write SetTemperatura;
     property TipoGlicemia: Int64 read GetTipoGlicemia write SetTipoGlicemia;
     property Glicemia: Integer read GetGlicemia write SetGlicemia;
+    property Latitude: Double read GetLatitude write SetLatitude;
+    property Longitude: Double read GetLongitude write SetLongitude;
+    property UuidOrigemCadastroDomiciliar: string read GetUuidOrigemCadastroDomiciliar write SetUuidOrigemCadastroDomiciliar;
 
     function Get__isset_Turno: Boolean;
     function Get__isset_NumProntuario: Boolean;
@@ -109,6 +118,9 @@ type
     function Get__isset_Temperatura: Boolean;
     function Get__isset_TipoGlicemia: Boolean;
     function Get__isset_Glicemia: Boolean;
+    function Get__isset_Latitude: Boolean;
+    function Get__isset_Longitude: Boolean;
+    function Get__isset_UuidOrigemCadastroDomiciliar: Boolean;
 
     property __isset_Turno: Boolean read Get__isset_Turno;
     property __isset_NumProntuario: Boolean read Get__isset_NumProntuario;
@@ -129,6 +141,9 @@ type
     property __isset_Temperatura: Boolean read Get__isset_Temperatura;
     property __isset_TipoGlicemia: Boolean read Get__isset_TipoGlicemia;
     property __isset_Glicemia: Boolean read Get__isset_Glicemia;
+    property __isset_Latitude: Boolean read Get__isset_Latitude;
+    property __isset_Longitude: Boolean read Get__isset_Longitude;
+    property __isset_UuidOrigemCadastroDomiciliar: Boolean read Get__isset_UuidOrigemCadastroDomiciliar;
   end;
 
   TFichaVisitaDomiciliarChildThriftImpl = class(TInterfacedObject, IBase, IFichaVisitaDomiciliarChildThrift)
@@ -152,6 +167,9 @@ type
     FTemperatura: Double;
     FTipoGlicemia: Int64;
     FGlicemia: Integer;
+    FLatitude: Double;
+    FLongitude: Double;
+    FUuidOrigemCadastroDomiciliar: string;
     
     F__isset_Turno: Boolean;
     F__isset_NumProntuario: Boolean;
@@ -172,6 +190,9 @@ type
     F__isset_Temperatura: Boolean;
     F__isset_TipoGlicemia: Boolean;
     F__isset_Glicemia: Boolean;
+    F__isset_Latitude: Boolean;
+    F__isset_Longitude: Boolean;
+    F__isset_UuidOrigemCadastroDomiciliar: Boolean;
     
     function GetTurno: Int64;
     procedure SetTurno( const Value: Int64);
@@ -211,6 +232,12 @@ type
     procedure SetTipoGlicemia( const Value: Int64);
     function GetGlicemia: Integer;
     procedure SetGlicemia( const Value: Integer);
+    function GetLatitude: Double;
+    procedure SetLatitude( const Value: Double);
+    function GetLongitude: Double;
+    procedure SetLongitude( const Value: Double);
+    function GetUuidOrigemCadastroDomiciliar: string;
+    procedure SetUuidOrigemCadastroDomiciliar( const Value: string);
 
     function Get__isset_Turno: Boolean;
     function Get__isset_NumProntuario: Boolean;
@@ -231,6 +258,9 @@ type
     function Get__isset_Temperatura: Boolean;
     function Get__isset_TipoGlicemia: Boolean;
     function Get__isset_Glicemia: Boolean;
+    function Get__isset_Latitude: Boolean;
+    function Get__isset_Longitude: Boolean;
+    function Get__isset_UuidOrigemCadastroDomiciliar: Boolean;
   public
     constructor Create;
     destructor Destroy; override;
@@ -261,6 +291,9 @@ type
     property Temperatura: Double read GetTemperatura write SetTemperatura;
     property TipoGlicemia: Int64 read GetTipoGlicemia write SetTipoGlicemia;
     property Glicemia: Integer read GetGlicemia write SetGlicemia;
+    property Latitude: Double read GetLatitude write SetLatitude;
+    property Longitude: Double read GetLongitude write SetLongitude;
+    property UuidOrigemCadastroDomiciliar: string read GetUuidOrigemCadastroDomiciliar write SetUuidOrigemCadastroDomiciliar;
 
     // isset
     property __isset_Turno: Boolean read Get__isset_Turno;
@@ -282,6 +315,9 @@ type
     property __isset_Temperatura: Boolean read Get__isset_Temperatura;
     property __isset_TipoGlicemia: Boolean read Get__isset_TipoGlicemia;
     property __isset_Glicemia: Boolean read Get__isset_Glicemia;
+    property __isset_Latitude: Boolean read Get__isset_Latitude;
+    property __isset_Longitude: Boolean read Get__isset_Longitude;
+    property __isset_UuidOrigemCadastroDomiciliar: Boolean read Get__isset_UuidOrigemCadastroDomiciliar;
   end;
 
   IFichaVisitaDomiciliarMasterThrift = interface(IBase)
@@ -669,6 +705,54 @@ begin
   Result := F__isset_Glicemia;
 end;
 
+function TFichaVisitaDomiciliarChildThriftImpl.GetLatitude: Double;
+begin
+  Result := FLatitude;
+end;
+
+procedure TFichaVisitaDomiciliarChildThriftImpl.SetLatitude( const Value: Double);
+begin
+  F__isset_Latitude := True;
+  FLatitude := Value;
+end;
+
+function TFichaVisitaDomiciliarChildThriftImpl.Get__isset_Latitude: Boolean;
+begin
+  Result := F__isset_Latitude;
+end;
+
+function TFichaVisitaDomiciliarChildThriftImpl.GetLongitude: Double;
+begin
+  Result := FLongitude;
+end;
+
+procedure TFichaVisitaDomiciliarChildThriftImpl.SetLongitude( const Value: Double);
+begin
+  F__isset_Longitude := True;
+  FLongitude := Value;
+end;
+
+function TFichaVisitaDomiciliarChildThriftImpl.Get__isset_Longitude: Boolean;
+begin
+  Result := F__isset_Longitude;
+end;
+
+function TFichaVisitaDomiciliarChildThriftImpl.GetUuidOrigemCadastroDomiciliar: string;
+begin
+  Result := FUuidOrigemCadastroDomiciliar;
+end;
+
+procedure TFichaVisitaDomiciliarChildThriftImpl.SetUuidOrigemCadastroDomiciliar( const Value: string);
+begin
+  F__isset_UuidOrigemCadastroDomiciliar := True;
+  FUuidOrigemCadastroDomiciliar := Value;
+end;
+
+function TFichaVisitaDomiciliarChildThriftImpl.Get__isset_UuidOrigemCadastroDomiciliar: Boolean;
+begin
+  Result := F__isset_UuidOrigemCadastroDomiciliar;
+end;
+
 procedure TFichaVisitaDomiciliarChildThriftImpl.Read( const iprot: IProtocol);
 var
   field_ : IField;
@@ -863,6 +947,33 @@ begin
           if (field_.Type_ = TType.I32) then
           begin
             Glicemia := iprot.ReadI32();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        20: begin
+          if (field_.Type_ = TType.Double_) then
+          begin
+            Latitude := iprot.ReadDouble();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        21: begin
+          if (field_.Type_ = TType.Double_) then
+          begin
+            Longitude := iprot.ReadDouble();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        22: begin
+          if (field_.Type_ = TType.String_) then
+          begin
+            UuidOrigemCadastroDomiciliar := iprot.ReadString();
           end else
           begin
             TProtocolUtil.Skip(iprot, field_.Type_);
@@ -1068,6 +1179,33 @@ begin
     oprot.WriteI32(Glicemia);
     oprot.WriteFieldEnd();
   end;
+  if (__isset_Latitude) then
+  begin
+    field_.Name := 'latitude';
+    field_.Type_  := TType.Double_;
+    field_.ID := 20;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteDouble(Latitude);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_Longitude) then
+  begin
+    field_.Name := 'longitude';
+    field_.Type_  := TType.Double_;
+    field_.ID := 21;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteDouble(Longitude);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_UuidOrigemCadastroDomiciliar) then
+  begin
+    field_.Name := 'uuidOrigemCadastroDomiciliar';
+    field_.Type_  := TType.String_;
+    field_.ID := 22;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteString(UuidOrigemCadastroDomiciliar);
+    oprot.WriteFieldEnd();
+  end;
   oprot.WriteFieldStop();
   oprot.WriteStructEnd();
 end;
@@ -1193,6 +1331,24 @@ begin
       _first6 := FALSE;
       _sb5.Append('Glicemia: ');
       _sb5.Append(Glicemia);
+    end;
+    if (__isset_Latitude) then begin
+      if not _first6 then _sb5.Append(',');
+      _first6 := FALSE;
+      _sb5.Append('Latitude: ');
+      _sb5.Append(Latitude);
+    end;
+    if (__isset_Longitude) then begin
+      if not _first6 then _sb5.Append(',');
+      _first6 := FALSE;
+      _sb5.Append('Longitude: ');
+      _sb5.Append(Longitude);
+    end;
+    if (__isset_UuidOrigemCadastroDomiciliar) then begin
+      if not _first6 then _sb5.Append(',');
+      _first6 := FALSE;
+      _sb5.Append('UuidOrigemCadastroDomiciliar: ');
+      _sb5.Append(UuidOrigemCadastroDomiciliar);
     end;
     _sb5.Append(')');
     Result := _sb5.ToString;

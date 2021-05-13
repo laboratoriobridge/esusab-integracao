@@ -37,9 +37,9 @@
 			<pontoReferencia>UNIVERSIDADE</pontoReferencia>
 			<microArea>02</microArea>
 			<stForaArea>false</stForaArea>
-			<latitude>90.00000000</latitude>
-			<longitude>180.00000000</longitude>
 		</enderecoLocalPermanencia>
+		<latitude>89.12345678</latitude>
+		<longitude>179.12345678</longitude>
 		<familias>
 			<dataNascimentoResponsavel>978357600000</dataNascimentoResponsavel>
 			<numeroCnsResponsavel>119141073230003</numeroCnsResponsavel>

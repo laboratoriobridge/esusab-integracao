@@ -25,7 +25,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 4.1.4</span>
+        <span class="label">versão 4.2.0</span>
       
     </a>
 
@@ -137,7 +137,7 @@
 
       <li id="item-layout_ab" data-url="/ledi/documentacao/index.html">
         <label>
-          <input type="checkbox" value="layout_ab" checked="checked"> Layout e-SUS APS de Dados e Interface Versão 4.1.4
+          <input type="checkbox" value="layout_ab" checked="checked"> Layout e-SUS APS de Dados e Interface Versão 4.2.0
           <small>
             <a onclick="checkById('layout_ab', true); return false;">Marcar todos</a> |
             <a onclick="checkById('layout_ab', false); return false;">Desmarcar todos</a>
@@ -534,6 +534,22 @@
         
       </li>
     
+
+      <li id="item-exames_estruturados" data-url="/ledi/documentacao/referencias/exames_estruturados.html">
+        <label>
+          <input type="checkbox" value="exames_estruturados" checked="checked"> Lista de exames com resultado estruturado
+          <small>
+            <a onclick="checkById('exames_estruturados', true); return false;">Marcar todos</a> |
+            <a onclick="checkById('exames_estruturados', false); return false;">Desmarcar todos</a>
+          </small>
+        </label>
+
+        
+          
+
+        
+      </li>
+    
   </ul>
 
 
@@ -643,7 +659,7 @@
 
       <li id="item-principais_alteracoes" data-url="/ledi/documentacao/principais_alteracoes.html">
         <label>
-          <input type="checkbox" value="principais_alteracoes" checked="checked"> Principais alterações da v4.1.3 para a v4.1.4
+          <input type="checkbox" value="principais_alteracoes" checked="checked"> Principais alterações da v4.1.4 para a v4.2.0
           <small>
             <a onclick="checkById('principais_alteracoes', true); return false;">Marcar todos</a> |
             <a onclick="checkById('principais_alteracoes', false); return false;">Desmarcar todos</a>
@@ -969,7 +985,7 @@
   
       <!-- Cria a lista de itens[páginas] que foram selecionados  -->
 
-  <li id="summary-layout_ab"><a href="#layout_ab">Layout e-SUS APS de Dados e Interface Versão 4.1.4</a></li>
+  <li id="summary-layout_ab"><a href="#layout_ab">Layout e-SUS APS de Dados e Interface Versão 4.2.0</a></li>
   
       <!-- Cria a lista de itens[páginas] que foram selecionados  -->
 
@@ -1138,6 +1154,13 @@
 
   
 
+  <li id="summary-exames_estruturados"><a href="#exames_estruturados">Lista de exames com resultado estruturado</a></li>
+  
+      <!-- Cria a lista de itens[páginas] que foram selecionados  -->
+
+
+  
+
 
   
 
@@ -1183,7 +1206,7 @@
 
   
 
-  <li id="summary-principais_alteracoes"><a href="#principais_alteracoes">Principais alterações da v4.1.3 para a v4.1.4</a></li>
+  <li id="summary-principais_alteracoes"><a href="#principais_alteracoes">Principais alterações da v4.1.4 para a v4.2.0</a></li>
   
       <!-- Cria a lista de itens[páginas] que foram selecionados  -->
 
@@ -1403,7 +1426,11 @@
 </tr>
 <tr>
 <td>4.1.10 ou superior</td>
-<td><a href="/ledi/documentacao/index.html">LEDI APS 4.1.4</a></td>
+<td><a href="https://integracao.esusab.ufsc.br/v414/">LEDI APS 4.1.4</a></td>
+</tr>
+<tr>
+<td>4.2.1 ou superior</td>
+<td><a href="/ledi/documentacao/index.html">LEDI APS 4.2.0</a></td>
 </tr>
 </tbody></table>
 
@@ -1416,17 +1443,17 @@
         
     <div class="post pdf shown" id="layout_ab" data-url="/ledi/documentacao/index.html">
       <header class="post-header">
-        <h1 class="post-title">Layout e-SUS APS de Dados e Interface Versão 4.1.4</h1>
+        <h1 class="post-title">Layout e-SUS APS de Dados e Interface Versão 4.2.0</h1>
       </header>
 
       
 
       <article class="post-content">
-        <p>Esta documentação descreve as estruturas de dados, seus atributos e regras utilizadas no <strong>LEDI APS</strong> versão 4.1.4.</p>
+        <p>Esta documentação descreve as estruturas de dados, seus atributos e regras utilizadas no <strong>LEDI APS</strong> versão 4.2.0.</p>
 
-<p>A versão <strong>LEDI APS</strong> 4.1.4 é compatível com o sistema <strong>PEC e-SUS APS</strong> versão 4.1.10 ou superior.</p>
+<p>A versão <strong>LEDI APS</strong> 4.2.0 é compatível com o sistema <strong>PEC e-SUS APS</strong> versão 4.2.1 ou superior.</p>
 
-<p>Confira as principais alterações da V4.1.3 para a V4.1.4 <a href="/ledi/documentacao/principais_alteracoes.html">aqui</a>.</p>
+<p>Confira as principais alterações da V4.1.4 para a V4.2.0 <a href="/ledi/documentacao/principais_alteracoes.html">aqui</a>.</p>
 
       </article>
 
@@ -4925,6 +4952,60 @@
 
 <p><strong>Referências:</strong> <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#unicalotacaoheader">UnicaLotacaoHeader</a>.</p>
 
+<h3 id="15-latitude">#15 latitude</h3>
+
+<p>Informação da latitude do imóvel.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Double</td>
+<td>Condicional</td>
+<td>-</td>
+<td>10</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>É de preenchimento obrigatório se o campo <a href="/ledi/documentacao/estrutura_arquivos/#16-longitude">longitude</a> for preenchido;</li>
+<li>Os valores são limitados por -90 a 90 e apresentam até 8 casas decimais.</li>
+</ul>
+
+<h3 id="16-longitude">#16 longitude</h3>
+
+<p>Informação da longitude do imóvel.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Double</td>
+<td>Condicional</td>
+<td>-</td>
+<td>11</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>É de preenchimento obrigatório se o campo <a href="/ledi/documentacao/estrutura_arquivos/#15-latitude">latitude</a> for preenchido;</li>
+<li>Os valores são limitados por -180 a 180 e apresentam até 8 casas decimais.</li>
+</ul>
+
 <h2 id="enderecolocalpermanencia">EnderecoLocalPermanencia</h2>
 
 <h3 id="1-bairro">#1 bairro</h3>
@@ -5188,7 +5269,7 @@
 </tr>
 </tbody></table>
 
-<h3 id="13-microarea">#13 microarea</h3>
+<h3 id="13-microarea">#13 microArea</h3>
 
 <p>Microárea na qual o cidadão se encontra.</p>
 
@@ -6685,6 +6766,28 @@
 
 <p><strong>Referência:</strong> <a href="/ledi/documentacao/estrutura_arquivos/#encaminhamentos">encaminhamentos</a>.</p>
 
+<h3 id="32-resultadosexames">#32 resultadosExames</h3>
+
+<p>Lista de exames e seus resultados.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>List&lt;resultadosExames&gt;</td>
+<td>Não</td>
+<td>0</td>
+<td>10</td>
+</tr>
+</tbody></table>
+
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/estrutura_arquivos/#resultadosexames">resultadosExames</a>.</p>
+
 <h2 id="exame">Exame</h2>
 
 <h3 id="1-codigoexame">#1 codigoExame</h3>
@@ -7326,6 +7429,233 @@
 </tbody></table>
 
 <p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#classificacaorisco">classificacaoRisco</a>.</p>
+
+<h2 id="resultadosexames">ResultadosExames</h2>
+
+<h3 id="1-exame">#1 exame</h3>
+
+<p>Código do exame.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Somente é permitido exames presentes na <a href="/ledi/documentacao/referencias/exames_estruturados.html">Lista de exames com resultado estruturado</a>;</li>
+<li>Se o exame não tiver uma referência no SIGTAP, deve ser informado o código <strong>AB</strong> do exame.</li>
+</ul>
+
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/exames_estruturados.html">Lista de exames com resultado estruturado</a>.</p>
+
+<p>Observações:</p>
+
+<ul>
+<li>Inserir o código do exame SIGTAP sem ponto ou hífen, ex: <code>0211070270</code>;</li>
+<li>Inserir o código do exame AB em caracteres maiúsculos, sem espaços, ex: <code>ABEX022</code>.</li>
+</ul>
+
+<h3 id="2-datasolicitacao">#2 dataSolicitacao</h3>
+
+<p>Refere-se à data da solicitação do exame específico.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Não</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Não pode ser posterior à <a href="/ledi/documentacao/estrutura_arquivos/#27-datahorainicialatendimento">dataHoraInicialAtendimento</a>;</li>
+<li>Não pode ser anterior à <a href="/ledi/documentacao/estrutura_arquivos/#3-datanascimento">dataNascimento</a>.</li>
+</ul>
+
+<p><strong>Referência:</strong> A data deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
+
+<h3 id="3-datarealizacao">#3 dataRealizacao</h3>
+
+<p>Refere-se à data da realização do exame específico.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Não pode ser posterior à <a href="/ledi/documentacao/estrutura_arquivos/#27-datahorainicialatendimento">dataHoraInicialAtendimento</a>;</li>
+<li>Não pode ser anterior à <a href="/ledi/documentacao/estrutura_arquivos/#2-datasolicitacao">dataSolicitacao</a>;</li>
+<li>Não pode ser anterior à <a href="/ledi/documentacao/estrutura_arquivos/#3-datanascimento">dataNascimento</a>.</li>
+</ul>
+
+<p><strong>Referência:</strong> A data deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
+
+<h3 id="4-dataresultado">#4 dataResultado</h3>
+
+<p>Refere-se à data do resultado do exame específico.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Não</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Não pode ser posterior à <a href="/ledi/documentacao/estrutura_arquivos/#27-datahorainicialatendimento">dataHoraInicialAtendimento</a>;</li>
+<li>Não pode ser anterior à <a href="/ledi/documentacao/estrutura_arquivos/#3-datarealizacao">dataRealizacao</a>;</li>
+<li>Não pode ser anterior à <a href="/ledi/documentacao/estrutura_arquivos/#3-datanascimento">dataNascimento</a>.</li>
+</ul>
+
+<p><strong>Referência:</strong> A data deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
+
+<h3 id="5-resultadoexame">#5 resultadoExame</h3>
+
+<p>Refere-se ao resultado do exame.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>List&lt;resultadoExame&gt;</td>
+<td>Sim</td>
+<td>1</td>
+<td>3</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Para os exames <code>02.05.02.014-3 - Ultrassonografia obstétrica (ABEX024)</code>, <code>02.05.02.015-1 - Ultrassonografia obstétrica c/ doppler colorido e pulsado</code> e <code>02.05.01.005-9 - Ultrassonografia doppler de fluxo obstétrico</code> o campo <code>tipoResultado</code> deve ser preenchido pelo menos com o valor <code>3 - Semanas</code> ou <code>4 - Data</code> e não pode ser informado o <code>tipoResultado</code> = <code>1 - Valor</code>;</li>
+<li>Para os demais exames da <a href="/ledi/documentacao/referencias/exames_estruturados.html">Lista de exames com resultado estruturado</a> somente poderá ser informado o <code>tipoResultado</code> = <code>1 - Valor</code>.</li>
+</ul>
+
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/estrutura_arquivos/#resultadoexame">resultadoExame</a>.</p>
+
+<h2 id="resultadoexame">resultadoExame</h2>
+
+<h3 id="1-tiporesultado">#1 tipoResultado</h3>
+
+<p>Refere-se ao nome do campo que apresentará o resultado.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Integer</td>
+<td>Sim</td>
+<td>--</td>
+<td>--</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> Deve ser preenchido com o respectivo valor da coluna <strong>Estrutura do resultado do exame</strong> da <a href="/ledi/documentacao/referencias/exames_estruturados.html">Lista de exames com resultado estruturado</a> correspondente ao <a href="/ledi/documentacao/estrutura_arquivos/#1-exame">exame</a>.</p>
+
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#tiporesultadoexame">tipoResultadoExame</a>.</p>
+
+<h3 id="2-valorresultado">#2 valorResultado</h3>
+
+<p>Refere-se ao resultado do exame propriamente dito e está relacionado com a informação do campo <a href="/ledi/documentacao/estrutura_arquivos/#1-tiporesultado">tipoResultado</a>.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Sim</td>
+<td>--</td>
+<td>--</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Se o campo <a href="/ledi/documentacao/estrutura_arquivos/#1-tiporesultado">tipoResultado</a> for igual a <code>1 - Valor</code> e o valor do campo <a href="/ledi/documentacao/estrutura_arquivos/#1-exame">exame</a> for:
+
+<ul>
+<li><code>0202010503 ou ABEX008</code>, então preencher com os valores de <code>0,00 a 20,00</code>;</li>
+<li><code>0211070270, 0211070149 ou ABEX020</code>, então preencher com os valores da tabela <a href="/ledi/documentacao/referencias/dicionario.html#testeorelhinha">testeOrelhinha</a>;</li>
+<li><code>0205020178</code>, então preencher com os valores da tabela <a href="/ledi/documentacao/referencias/dicionario.html#ustransfontanela">usTransfontanela</a>;</li>
+<li><code>0206010079</code>, então preencher com os valores da tabela <a href="/ledi/documentacao/referencias/dicionario.html#tomografiacomputadorizada">tomografiaComputadorizada</a>;</li>
+<li><code>0207010064</code>, então preencher com os valores da tabela <a href="/ledi/documentacao/referencias/dicionario.html#ressonanciamagnetica">ressonanciaMagnetica</a>;</li>
+<li><code>0211060100 ou ABPG013</code>, então preencher com os valores da tabela <a href="/ledi/documentacao/referencias/dicionario.html#examefundoolho">exameFundoOlho</a>;</li>
+<li><code>ABEX022</code>, então preencher com os valores da tabela <a href="/ledi/documentacao/referencias/dicionario.html#testeolhinho">testeOlhinho</a>;</li>
+<li><code>0202010295 ou ABEX002</code>, então preencher com os valores de <code>1 a 10000</code>;</li>
+<li><code>0202010279 ou ABEX007</code>, então preencher com os valores de <code>1 a 1000</code>;</li>
+<li><code>0202010287 ou ABEX009</code>, então preencher com os valores de <code>1 a 5000</code>;</li>
+<li><code>0202010678</code>, então preencher com os valores de <code>1 a 4000</code>;</li>
+<li><code>0202010317 ou ABEX003</code>, então preencher com os valores de <code>0,1 a 500,0</code>;</li>
+<li><code>0202050025</code>, então preencher com os valores de <code>0,001 a 100,000</code>.</li>
+</ul></li>
+<li>Se o campo <a href="/ledi/documentacao/estrutura_arquivos/#1-tiporesultado">tipoResultado</a> for igual a <code>2 - Dias</code> e o valor do campo <a href="/ledi/documentacao/estrutura_arquivos/#1-exame">exame</a> for <code>02.05.02.014-3 (ABEX024)</code>, <code>02.05.02.015-1</code> ou <code>02.05.01.005-9</code>, este campo deve ser preenchido com valores de <code>0 a 6</code>;</li>
+<li>Se o campo <a href="/ledi/documentacao/estrutura_arquivos/#1-tiporesultado">tipoResultado</a> for igual a <code>3 - Semanas</code> e o valor do campo <a href="/ledi/documentacao/estrutura_arquivos/#1-exame">exame</a> for <code>02.05.02.014-3 (ABEX024)</code>, <code>02.05.02.015-1</code> ou <code>02.05.01.005-9</code>, este campo deve ser preenchido com valores de <code>0 a 42</code>; </li>
+<li>Se o campo <a href="/ledi/documentacao/estrutura_arquivos/#1-tiporesultado">tipoResultado</a> for igual a <code>4 - Data</code> e o valor do campo <a href="/ledi/documentacao/estrutura_arquivos/#1-exame">exame</a> for <code>02.05.02.014-3 (ABEX024)</code>, <code>02.05.02.015-1</code> ou <code>02.05.01.005-9</code>, este campo deve ser preenchido com uma data seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a> e a data não pode ser anterior à <a href="/ledi/documentacao/estrutura_arquivos/#3-datarealizacao">dataRealizacao</a>.</li>
+</ul>
 
 <h2 id="listaciapcondicaoavaliada">ListaCiapCondicaoAvaliada</h2>
 
@@ -8443,6 +8773,28 @@
 
 <p><strong>Referência:</strong> <a href="/ledi/documentacao/estrutura_arquivos/#encaminhamentos">Encaminhamentos</a>.</p>
 
+<h3 id="21-resultadosexames">#21 resultadosExames</h3>
+
+<p>Lista de exames e seus resultados.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>List&lt;resultadosExames&gt;</td>
+<td>Não</td>
+<td>0</td>
+<td>10</td>
+</tr>
+</tbody></table>
+
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/estrutura_arquivos/#resultadosexames">resultadosExames</a>.</p>
+
 <h2 id="procedimentoquantidade">ProcedimentoQuantidade</h2>
 
 <h3 id="1-comsprocedimento">#1 coMsProcedimento</h3>
@@ -8914,6 +9266,233 @@
 </tbody></table>
 
 <p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#classificacaorisco">classificacaoRisco</a>.</p>
+
+<h2 id="resultadosexames">ResultadosExames</h2>
+
+<h3 id="1-exame">#1 exame</h3>
+
+<p>Código do exame.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Somente é permitido exames presentes na <a href="/ledi/documentacao/referencias/exames_estruturados.html">Lista de exames com resultado estruturado</a>;</li>
+<li>Se o exame não tiver uma referência no SIGTAP, deve ser informado o código <strong>AB</strong> do exame.</li>
+</ul>
+
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/exames_estruturados.html">Lista de exames com resultado estruturado</a>.</p>
+
+<p>Observações:</p>
+
+<ul>
+<li>Inserir o código do exame SIGTAP sem ponto ou hífen, ex: <code>0211070270</code>;</li>
+<li>Inserir o código do exame AB em caracteres maiúsculos, sem espaços, ex: <code>ABEX022</code>.</li>
+</ul>
+
+<h3 id="2-datasolicitacao">#2 dataSolicitacao</h3>
+
+<p>Refere-se à data da solicitação do exame específico.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Não</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Não pode ser posterior à <a href="/ledi/documentacao/estrutura_arquivos/#16-datahorainicialatendimento">dataHoraInicialAtendimento</a>;</li>
+<li>Não pode ser anterior à <a href="/ledi/documentacao/estrutura_arquivos/#1-dtnascimento">dtNascimento</a>.</li>
+</ul>
+
+<p><strong>Referência:</strong> A data deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
+
+<h3 id="3-datarealizacao">#3 dataRealizacao</h3>
+
+<p>Refere-se à data da realização do exame específico.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Não pode ser posterior à <a href="/ledi/documentacao/estrutura_arquivos/#16-datahorainicialatendimento">dataHoraInicialAtendimento</a>;</li>
+<li>Não pode ser anterior à <a href="/ledi/documentacao/estrutura_arquivos/#2-datasolicitacao">dataSolicitacao</a>;</li>
+<li>Não pode ser anterior à <a href="/ledi/documentacao/estrutura_arquivos/#1-dtnascimento">dtNascimento</a>.</li>
+</ul>
+
+<p><strong>Referência:</strong> A data deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
+
+<h3 id="4-dataresultado">#4 dataResultado</h3>
+
+<p>Refere-se à data do resultado do exame específico.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Não</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Não pode ser posterior à <a href="/ledi/documentacao/estrutura_arquivos/#16-datahorainicialatendimento">dataHoraInicialAtendimento</a>;</li>
+<li>Não pode ser anterior à <a href="/ledi/documentacao/estrutura_arquivos/#3-datarealizacao">dataRealizacao</a>;</li>
+<li>Não pode ser anterior à <a href="/ledi/documentacao/estrutura_arquivos/#1-dtnascimento">dtNascimento</a>.</li>
+</ul>
+
+<p><strong>Referência:</strong> A data deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
+
+<h3 id="5-resultadoexame">#5 resultadoExame</h3>
+
+<p>Refere-se ao resultado do exame.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>List&lt;resultadoExame&gt;</td>
+<td>Sim</td>
+<td>1</td>
+<td>3</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Para os exames <code>02.05.02.014-3 - Ultrassonografia obstétrica (ABEX024)</code>, <code>02.05.02.015-1 - Ultrassonografia obstétrica c/ doppler colorido e pulsado</code> e <code>02.05.01.005-9 - Ultrassonografia doppler de fluxo obstétrico</code> o campo <code>tipoResultado</code> deve ser preenchido pelo menos com o valor <code>3 - Semanas</code> ou <code>4 - Data</code> e não pode ser informado o <code>tipoResultado</code> = <code>1 - Valor</code>;</li>
+<li>Para os demais exames da <a href="/ledi/documentacao/referencias/exames_estruturados.html">Lista de exames com resultado estruturado</a> somente poderá ser informado o <code>tipoResultado</code> = <code>1 - Valor</code>.</li>
+</ul>
+
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/estrutura_arquivos/#resultadoexame">resultadoExame</a>.</p>
+
+<h2 id="resultadoexame">resultadoExame</h2>
+
+<h3 id="1-tiporesultado">#1 tipoResultado</h3>
+
+<p>Refere-se ao nome do campo que apresentará o resultado.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Integer</td>
+<td>Sim</td>
+<td>--</td>
+<td>--</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> Deve ser preenchido com o respectivo valor da coluna <strong>Estrutura do resultado do exame</strong> da <a href="/ledi/documentacao/referencias/exames_estruturados.html">Lista de exames com resultado estruturado</a> correspondente ao <a href="/ledi/documentacao/estrutura_arquivos/#1-exame">exame</a>.</p>
+
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#tiporesultadoexame">tipoResultadoExame</a>.</p>
+
+<h3 id="2-valorresultado">#2 valorResultado</h3>
+
+<p>Refere-se ao resultado do exame propriamente dito e está relacionado com a informação do campo <a href="/ledi/documentacao/estrutura_arquivos/#1-tiporesultado">tipoResultado</a>.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Sim</td>
+<td>--</td>
+<td>--</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Se o campo <a href="/ledi/documentacao/estrutura_arquivos/#1-tiporesultado">tipoResultado</a> for igual a <code>1 - Valor</code> e o valor do campo <a href="/ledi/documentacao/estrutura_arquivos/#1-exame">exame</a> for:
+
+<ul>
+<li><code>0202010503 ou ABEX008</code>, então preencher com os valores de <code>0,00 a 20,00</code>;</li>
+<li><code>0211070270, 0211070149 ou ABEX020</code>, então preencher com os valores da tabela <a href="/ledi/documentacao/referencias/dicionario.html#testeorelhinha">testeOrelhinha</a>;</li>
+<li><code>0205020178</code>, então preencher com os valores da tabela <a href="/ledi/documentacao/referencias/dicionario.html#ustransfontanela">usTransfontanela</a>;</li>
+<li><code>0206010079</code>, então preencher com os valores da tabela <a href="/ledi/documentacao/referencias/dicionario.html#tomografiacomputadorizada">tomografiaComputadorizada</a>;</li>
+<li><code>0207010064</code>, então preencher com os valores da tabela <a href="/ledi/documentacao/referencias/dicionario.html#ressonanciamagnetica">ressonanciaMagnetica</a>;</li>
+<li><code>0211060100 ou ABPG013</code>, então preencher com os valores da tabela <a href="/ledi/documentacao/referencias/dicionario.html#examefundoolho">exameFundoOlho</a>;</li>
+<li><code>ABEX022</code>, então preencher com os valores da tabela <a href="/ledi/documentacao/referencias/dicionario.html#testeolhinho">testeOlhinho</a>;</li>
+<li><code>0202010295 ou ABEX002</code>, então preencher com os valores de <code>1 a 10000</code>;</li>
+<li><code>0202010279 ou ABEX007</code>, então preencher com os valores de <code>1 a 1000</code>;</li>
+<li><code>0202010287 ou ABEX009</code>, então preencher com os valores de <code>1 a 5000</code>;</li>
+<li><code>0202010678</code>, então preencher com os valores de <code>1 a 4000</code>;</li>
+<li><code>0202010317 ou ABEX003</code>, então preencher com os valores de <code>0,1 a 500,0</code>;</li>
+<li><code>0202050025</code>, então preencher com os valores de <code>0,001 a 100,000</code>.</li>
+</ul></li>
+<li>Se o campo <a href="/ledi/documentacao/estrutura_arquivos/#1-tiporesultado">tipoResultado</a> for igual a <code>2 - Dias</code> e o valor do campo <a href="/ledi/documentacao/estrutura_arquivos/#1-exame">exame</a> for <code>02.05.02.014-3 (ABEX024)</code>, <code>02.05.02.015-1</code> ou <code>02.05.01.005-9</code>, este campo deve ser preenchido com valores de <code>0 a 6</code>;</li>
+<li>Se o campo <a href="/ledi/documentacao/estrutura_arquivos/#1-tiporesultado">tipoResultado</a> for igual a <code>3 - Semanas</code> e o valor do campo <a href="/ledi/documentacao/estrutura_arquivos/#1-exame">exame</a> for <code>02.05.02.014-3 (ABEX024)</code>, <code>02.05.02.015-1</code> ou <code>02.05.01.005-9</code>, este campo deve ser preenchido com valores de <code>0 a 42</code>; </li>
+<li>Se o campo <a href="/ledi/documentacao/estrutura_arquivos/#1-tiporesultado">tipoResultado</a> for igual a <code>4 - Data</code> e o valor do campo <a href="/ledi/documentacao/estrutura_arquivos/#1-exame">exame</a> for <code>02.05.02.014-3 (ABEX024)</code>, <code>02.05.02.015-1</code> ou <code>02.05.01.005-9</code>, este campo deve ser preenchido com uma data seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a> e a data não pode ser anterior à <a href="/ledi/documentacao/estrutura_arquivos/#3-datarealizacao">dataRealizacao</a>.</li>
+</ul>
 
 <h2 id="listaprocedimentosrealizados">ListaProcedimentosRealizados</h2>
 
@@ -11931,6 +12510,84 @@
 </ul>
 
 <p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#momentocoletaglicemia">momentoColetaGlicemia</a>.</p>
+
+<h3 id="20-latitude">#20 latitude</h3>
+
+<p>Informação da latitude do imóvel onde a visita foi realizada.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Double</td>
+<td>Condicional</td>
+<td>-</td>
+<td>10</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras</strong></p>
+
+<ul>
+<li>É de preenchimento obrigatório se o campo <a href="/ledi/documentacao/estrutura_arquivos/#21-longitude">longitude</a> for preenchido;</li>
+<li>Os valores são limitados por -90 a 90 e apresentam até 8 casas decimais.</li>
+</ul>
+
+<h3 id="21-longitude">#21 longitude</h3>
+
+<p>Informação da longitude do imóvel onde a visita foi realizada.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Double</td>
+<td>Condicional</td>
+<td>-</td>
+<td>11</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>É de preenchimento obrigatório se o campo <a href="/ledi/documentacao/estrutura_arquivos/#20-latitude">latitude</a> for preenchido;</li>
+<li>Os valores são limitados por -180 a 180 e apresentam até 8 casas decimais.</li>
+</ul>
+
+<h3 id="22-uuidorigemcadastrodomiciliar">#22 uuidOrigemCadastroDomiciliar</h3>
+
+<p>Código UUID Origem da ficha de cadastro domiciliar onde a visita foi realizada.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Não</td>
+<td>36</td>
+<td>44</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> Quando preenchido, deverá ser informado o valor do campo <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fcd.html#11-uuidfichaoriginadora">UUID origem da ficha de cadastro domiciliar</a> pertencente à <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fcd.html">Ficha de Cadastro Domiciliar e Territorial</a>.</p>
+
+<p><strong>Referência:</strong> Para ver a referência sobre o UUID, acesse: <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">UUID Wikipedia</a>.</p>
 
       </article>
 
@@ -15482,7 +16139,7 @@
 
 <h3 id="8-comunicantehanseniase">#8 comunicanteHanseniase</h3>
 
-<p>Marcador que indica se o cidadão é comunicante de hanseníese.</p>
+<p>Marcador que indica se o cidadão é comunicante de hanseníase.</p>
 
 <table><thead>
 <tr>
@@ -15581,7 +16238,13 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regra:</strong> Deve estar de acordo com os relacionamentos de Imunobiológico x Estratégia x Dose definidos na tabela <a href="/ledi/documentacao/regras/valdidar_regras_vacinacao.html">Regras de vacinação</a>.</p>
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Não pode ter <a href="/ledi/documentacao/estrutura_arquivos/#1-imunobiologico">imunobiológicos</a> repetidos se o campo <a href="/ledi/documentacao/estrutura_arquivos/#7-stregistroanterior">stRegistroAnterior</a> = <code>false</code>;</li>
+<li>Quando o campo <a href="/ledi/documentacao/estrutura_arquivos/#7-stregistroanterior">stRegistroAnterior</a> = <code>false</code>, o registro da vacina deve estar de acordo com os relacionamentos de Imunobiológico x Estratégia x Dose definidos na tabela <a href="/ledi/documentacao/regras/valdidar_regras_vacinacao.html">Regras de vacinação</a>;</li>
+<li>Quando o campo <a href="/ledi/documentacao/estrutura_arquivos/#7-stregistroanterior">stRegistroAnterior</a> = <code>true</code>, o registro da vacina não irá considerar os relacionamentos de Imunobiológico x Estratégia x Dose definidos na tabela <a href="/ledi/documentacao/regras/valdidar_regras_vacinacao.html">Regras de vacinação</a>.</li>
+</ul>
 
 <p><strong>Referência:</strong> <a href="/ledi/documentacao/estrutura_arquivos/#vacinarowthrift">VacinaRowThrift</a>.</p>
 
@@ -15710,11 +16373,18 @@
 </thead><tbody>
 <tr>
 <td>Long</td>
-<td>Sim</td>
+<td>Condicional</td>
 <td>-</td>
 <td>-</td>
 </tr>
 </tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>É de preenchimento obrigatório se o campo <a href="/ledi/documentacao/estrutura_arquivos/#7-stregistroanterior">stRegistroAnterior</a> = <code>false</code>;</li>
+<li>Não pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#7-stregistroanterior">stRegistroAnterior</a> = <code>true</code>.</li>
+</ul>
 
 <p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#estrategiavacinacao">EstrategiaVacinacao</a>.</p>
 
@@ -15754,13 +16424,18 @@
 </thead><tbody>
 <tr>
 <td>String</td>
-<td>Sim</td>
+<td>Condicional</td>
 <td>1</td>
 <td>30</td>
 </tr>
 </tbody></table>
 
-<p><strong>Regra:</strong> Apenas <code>letras</code>, <code>números</code>, <code>/</code>, <code>.</code> e <code>-</code>.</p>
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Apenas <code>letras</code>, <code>números</code>, <code>/</code>, <code>.</code> e <code>-</code>;</li>
+<li>É de preenchimento obrigatório se o campo <a href="/ledi/documentacao/estrutura_arquivos/#7-stregistroanterior">stRegistroAnterior</a> = <code>false</code>.</li>
+</ul>
 
 <h3 id="5-fabricante">#5 fabricante</h3>
 
@@ -15776,16 +16451,17 @@
 </thead><tbody>
 <tr>
 <td>String</td>
-<td>Sim</td>
+<td>Condicional</td>
 <td>1</td>
 <td>60</td>
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> </p>
+<p><strong>Regras:</strong></p>
 
 <ul>
 <li>Apenas <code>letras</code>, <code>números</code>, <code>/</code>, <code>.</code>, <code>espaço simples</code> e <code>-</code>;</li>
+<li>É de preenchimento obrigatório se o campo <a href="/ledi/documentacao/estrutura_arquivos/#7-stregistroanterior">stRegistroAnterior</a> = <code>false</code>;</li>
 <li>Se o campo <a href="/ledi/documentacao/estrutura_arquivos/#1-imunobiologico">Imunobiológico</a> = <code>85</code>, o campo deve ser preenchido com o valor = <code>OXFORD-ASTRAZENECA</code>;</li>
 <li>Se o campo <a href="/ledi/documentacao/estrutura_arquivos/#1-imunobiologico">Imunobiológico</a> = <code>86</code>, o campo deve ser preenchido com o valor = <code>SINOVAC/BUTANTAN</code>;</li>
 <li>Se o campo <a href="/ledi/documentacao/estrutura_arquivos/#1-imunobiologico">Imunobiológico</a> = <code>87</code>, o campo deve ser preenchido com o valor = <code>PFIZER/BIONTECH</code>;</li>
@@ -15812,9 +16488,64 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regra:</strong> Só pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#2-estrategiavacinacao">estrategiaVacinacao</a> = <code>5</code> (Campanha). Neste caso o preenchimento é obrigatório.</p>
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Só pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#2-estrategiavacinacao">estrategiaVacinacao</a> = <code>5</code> (Campanha). Neste caso o preenchimento é obrigatório;</li>
+<li>Não pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#7-stregistroanterior">stRegistroAnterior</a> = <code>true</code>.</li>
+</ul>
 
 <p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#grupodeatendimento">Grupo de Atendimento</a>.</p>
+
+<h3 id="7-stregistroanterior">#7 stRegistroAnterior</h3>
+
+<p>Indica se o imunobiológico foi aplicado em um atendimento anterior.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h3 id="8-dataregistroanterior">#8 dataRegistroAnterior</h3>
+
+<p>Data em que o registro anterior foi realizado.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Condicional</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>É de preenchimento obrigatório se o campo <a href="/ledi/documentacao/estrutura_arquivos/#7-stregistroanterior">stRegistroAnterior</a> = <code>true</code>;</li>
+<li>Não pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#7-stregistroanterior">stRegistroAnterior</a> = <code>false</code>;</li>
+<li>Não pode ser posterior à <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a> e anterior à <a href="/ledi/documentacao/estrutura_arquivos/#4-dtnascimento">dtNascimento</a>.</li>
+</ul>
+
+<p><strong>Referência:</strong> Deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
 
       </article>
 
@@ -15848,6 +16579,7 @@
 <li><a href="/ledi/documentacao/referencias/dicionario.html">Dicionário de dados</a>;</li>
 <li><a href="/ledi/documentacao/referencias/tabela_catmat.html">Tabela de Medicamentos CATMAT</a>;</li>
 <li><a href="/ledi/documentacao/referencias/relacao_ciap_cid.html">Relação entre CIAP2 e CID10</a>;</li>
+<li><a href="/ledi/documentacao/referencias/exames_estruturados.html">Lista de exames com resultado estruturado</a>;</li>
 <li><a href="http://www.sbmfc.org.br/default.asp?paginaId=72">Classificação Internacional de Atenção Primária - Segunda Edição (CIAP2)</a>;</li>
 <li><a href="https://rts.saude.gov.br/#/cid">Classificação Internacional de Doenças - Versão 10</a>;</li>
 <li>Procedimentos: Compatível com a competência do <a href="http://sigtap.datasus.gov.br/tabela-unificada/app/sec/inicio.jsp">SIGTAP</a> 09/2020;</li>
@@ -46162,13 +46894,13 @@
 <td>minor</td>
 <td>Integer</td>
 <td>Sim</td>
-<td>Valor único = 1</td>
+<td>Valor único = 2</td>
 </tr>
 <tr>
 <td>revision</td>
 <td>Integer</td>
 <td>Sim</td>
-<td>Valor único = 4</td>
+<td>Valor único = 0</td>
 </tr>
 </tbody></table>
 
@@ -57877,6 +58609,10 @@
 <td>Soro botrópico/laquético</td>
 </tr>
 <tr>
+<td>13</td>
+<td>Meningocócica AC</td>
+</tr>
+<tr>
 <td>14</td>
 <td>Febre amarela</td>
 </tr>
@@ -57929,6 +58665,10 @@
 <td>Pneumocócica 10V</td>
 </tr>
 <tr>
+<td>27</td>
+<td>Soro latrodectus</td>
+</tr>
+<tr>
 <td>28</td>
 <td>Poliomielite oral (Bivalente)</td>
 </tr>
@@ -57973,6 +58713,14 @@
 <td>Soro botulínico trivalente</td>
 </tr>
 <tr>
+<td>39</td>
+<td>DTP / Hib</td>
+</tr>
+<tr>
+<td>40</td>
+<td>Pneumocócica 7V</td>
+</tr>
+<tr>
 <td>41</td>
 <td>Meningocócica conjugada C</td>
 </tr>
@@ -57983,6 +58731,10 @@
 <tr>
 <td>43</td>
 <td>Hexavalente</td>
+</tr>
+<tr>
+<td>44</td>
+<td>Influenza H1N1</td>
 </tr>
 <tr>
 <td>45</td>
@@ -58013,6 +58765,10 @@
 <td>Tríplice bacteriana acelular (adulto)- dTpa</td>
 </tr>
 <tr>
+<td>58</td>
+<td>Tríplice acelular / poliomelite inativada</td>
+</tr>
+<tr>
 <td>59</td>
 <td>Pneumocócica 13V</td>
 </tr>
@@ -58021,12 +58777,20 @@
 <td>HPV Bivalente</td>
 </tr>
 <tr>
+<td>61</td>
+<td>Toxóide Tetânico</td>
+</tr>
+<tr>
 <td>62</td>
 <td>Hepatite AeB (pediátrica)</td>
 </tr>
 <tr>
 <td>63</td>
 <td>Hepatite AeB (uso adulto)</td>
+</tr>
+<tr>
+<td>64</td>
+<td>Influenza ID</td>
 </tr>
 <tr>
 <td>65</td>
@@ -58043,6 +58807,22 @@
 <tr>
 <td>69</td>
 <td>Soro botulínico bivalente</td>
+</tr>
+<tr>
+<td>70</td>
+<td>Sarampo</td>
+</tr>
+<tr>
+<td>71</td>
+<td>Rubéola</td>
+</tr>
+<tr>
+<td>72</td>
+<td>Gripe Sazonal</td>
+</tr>
+<tr>
+<td>73</td>
+<td>Quádrupla viral</td>
 </tr>
 <tr>
 <td>74</td>
@@ -62629,6 +63409,37 @@
 <tr>
 <td>99</td>
 <td>Estudante</td>
+</tr>
+</tbody></table>
+
+<h2 id="tiporesultadoexame">tipoResultadoExame</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1</td>
+<td>Valor</td>
+<td>Usado quando o resultado do exame é um número</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Dias</td>
+<td>Usado quando o resultado do exame é apresentado em quantidade de dias</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Semanas</td>
+<td>Usado quando o resultado do exame é apresentado em quantidade de semanas</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Data</td>
+<td>Usado quando o resultado do exame é uma data</td>
 </tr>
 </tbody></table>
 
@@ -87153,7 +87964,7 @@
 </tr>
 <tr>
 <td>H78</td>
-<td>FIBRILAÇÃO/FLUTTER AURICULAR/ATRIAL</td>
+<td>TRAUMATISMO SUPERFICIAL DO OUVIDO</td>
 <td>S004</td>
 <td>TRAUMATISMO SUPERFICIAL DO OUVIDO</td>
 </tr>
@@ -90146,6 +90957,178 @@
 <td>PROBLEMAS RELACIONADOS COM OUTRAS CIRCUNSTÂNCIAS PSICOSSOCIAIS</td>
 </tr>
 </tbody></table>
+
+      </article>
+
+      <div class="pdf-separator"></div>
+    </div>
+
+    
+        
+
+    
+
+    <div class="post pdf shown" id="exames_estruturados" data-url="/ledi/documentacao/referencias/exames_estruturados.html">
+      <header class="post-header">
+        <h1 class="post-title">Lista de exames com resultado estruturado</h1>
+      </header>
+
+      
+
+      <article class="post-content">
+        <p>Este documento apresenta a lista de exames que possuem resultados estruturados. Esta lista é utilizado na <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#32-resultadosexames">Ficha de Atendimento Individual</a> e na <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fao.html#21-resultadosexames">Ficha de Atendimento Odontológico Individual</a>.</p>
+
+<h2 id="tabela-de-exames-com-resultado-estruturado">Tabela de exames com resultado estruturado</h2>
+
+<table><thead>
+<tr>
+<th>Código SIGTAP*</th>
+<th>Descrição SIGTAP</th>
+<th>Código AB correspondente</th>
+<th>Descrição AB</th>
+<th>Estrutura do resultado do exame</th>
+<th>Unidade Medida</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>02.02.01.050-3</td>
+<td>Dosagem de hemoglobina glicosilada</td>
+<td>ABEX008</td>
+<td>Hemoglobina glicada</td>
+<td><a href="/ledi/documentacao/referencias/dicionario.html#tiporesultadoexame">tipoResultadoExame</a> &gt; <code>1 - Valor</code></td>
+<td>%</td>
+</tr>
+<tr>
+<td>02.11.07.027-0</td>
+<td>Potencial evocado auditivo p/ triagem auditiva (teste da orelhinha)</td>
+<td>-</td>
+<td>-</td>
+<td><a href="/ledi/documentacao/referencias/dicionario.html#tiporesultadoexame">tipoResultadoExame</a> &gt; <code>1 - Valor</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td>02.11.07.014-9</td>
+<td>Emissões otoacústicas evocadas p/ triagem auditiva (teste da orelhinha)</td>
+<td>ABEX020</td>
+<td>Teste da orelhinha (EOA)</td>
+<td><a href="/ledi/documentacao/referencias/dicionario.html#tiporesultadoexame">tipoResultadoExame</a> &gt; <code>1 - Valor</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td>02.05.02.017-8</td>
+<td>Ultrassonografia transfontanela</td>
+<td>-</td>
+<td>-</td>
+<td><a href="/ledi/documentacao/referencias/dicionario.html#tiporesultadoexame">tipoResultadoExame</a> &gt; <code>1 - Valor</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td>02.06.01.007-9</td>
+<td>Tomografia computadorizada do crânio</td>
+<td>-</td>
+<td>-</td>
+<td><a href="/ledi/documentacao/referencias/dicionario.html#tiporesultadoexame">tipoResultadoExame</a> &gt; <code>1 - Valor</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td>02.07.01.006-4</td>
+<td>Ressonância magnética de crânio</td>
+<td>-</td>
+<td>-</td>
+<td><a href="/ledi/documentacao/referencias/dicionario.html#tiporesultadoexame">tipoResultadoExame</a> &gt; <code>1 - Valor</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td>02.11.06.010-0</td>
+<td>Fundoscopia</td>
+<td>ABPG013</td>
+<td>Exame de fundo de olho (fundoscopia)</td>
+<td><a href="/ledi/documentacao/referencias/dicionario.html#tiporesultadoexame">tipoResultadoExame</a> &gt; <code>1 - Valor</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td>-</td>
+<td>-</td>
+<td>ABEX022</td>
+<td>Teste do olhinho (TRV)</td>
+<td><a href="/ledi/documentacao/referencias/dicionario.html#tiporesultadoexame">tipoResultadoExame</a> &gt; <code>1 - Valor</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td>02.05.02.014-3</td>
+<td>Ultrassonografia obstétrica</td>
+<td>ABEX024</td>
+<td>Ultrassonografia obstétrica</td>
+<td><a href="/ledi/documentacao/referencias/dicionario.html#tiporesultadoexame">tipoResultadoExame</a> &gt; <code>3 - Semanas</code> <br> <a href="/ledi/documentacao/referencias/dicionario.html#tiporesultadoexame">tipoResultadoExame</a> &gt; <code>2 - Dias</code> <br> <a href="/ledi/documentacao/referencias/dicionario.html#tiporesultadoexame">tipoResultadoExame</a> &gt; <code>4 - Data</code></td>
+<td>Semanas / dias / DPP eco</td>
+</tr>
+<tr>
+<td>02.05.02.015-1</td>
+<td>ultrassonografia obstétrica c/ doppler colorido e pulsado</td>
+<td>-</td>
+<td>-</td>
+<td><a href="/ledi/documentacao/referencias/dicionario.html#tiporesultadoexame">tipoResultadoExame</a> &gt; <code>3 - Semanas</code> <br> <a href="/ledi/documentacao/referencias/dicionario.html#tiporesultadoexame">tipoResultadoExame</a> &gt; <code>2 - Dias</code> <br> <a href="/ledi/documentacao/referencias/dicionario.html#tiporesultadoexame">tipoResultadoExame</a> &gt; <code>4 - Data</code></td>
+<td>Semanas / dias / DPP eco</td>
+</tr>
+<tr>
+<td>02.05.01.005-9</td>
+<td>Ultrassonografia doppler de fluxo obstétrico</td>
+<td>-</td>
+<td>-</td>
+<td><a href="/ledi/documentacao/referencias/dicionario.html#tiporesultadoexame">tipoResultadoExame</a> &gt; <code>3 - Semanas</code> <br> <a href="/ledi/documentacao/referencias/dicionario.html#tiporesultadoexame">tipoResultadoExame</a> &gt; <code>2 - Dias</code> <br> <a href="/ledi/documentacao/referencias/dicionario.html#tiporesultadoexame">tipoResultadoExame</a> &gt; <code>4 - Data</code></td>
+<td>Semanas / dias / DPP eco</td>
+</tr>
+<tr>
+<td>02.02.01.029-5</td>
+<td>Dosagem de colesterol total</td>
+<td>ABEX002</td>
+<td>Colesterol total</td>
+<td><a href="/ledi/documentacao/referencias/dicionario.html#tiporesultadoexame">tipoResultadoExame</a> &gt; <code>1 - Valor</code></td>
+<td>mg/dL</td>
+</tr>
+<tr>
+<td>02.02.01.027-9</td>
+<td>Dosagem de colesterol HDL</td>
+<td>ABEX007</td>
+<td>HDL</td>
+<td><a href="/ledi/documentacao/referencias/dicionario.html#tiporesultadoexame">tipoResultadoExame</a> &gt; <code>1 - Valor</code></td>
+<td>mg/dL</td>
+</tr>
+<tr>
+<td>02.02.01.028-7</td>
+<td>Dosagem de colesterol LDL</td>
+<td>ABEX009</td>
+<td>LDL</td>
+<td><a href="/ledi/documentacao/referencias/dicionario.html#tiporesultadoexame">tipoResultadoExame</a> &gt; <code>1 - Valor</code></td>
+<td>mg/dL</td>
+</tr>
+<tr>
+<td>02.02.01.067-8</td>
+<td>Dosagem de triglicerídeos</td>
+<td>-</td>
+<td>-</td>
+<td><a href="/ledi/documentacao/referencias/dicionario.html#tiporesultadoexame">tipoResultadoExame</a> &gt; <code>1 - Valor</code></td>
+<td>mg/dL</td>
+</tr>
+<tr>
+<td>02.02.01.031-7</td>
+<td>Dosagem de creatinina</td>
+<td>ABEX003</td>
+<td>Creatinina</td>
+<td><a href="/ledi/documentacao/referencias/dicionario.html#tiporesultadoexame">tipoResultadoExame</a> &gt; <code>1 - Valor</code></td>
+<td>mg/dL</td>
+</tr>
+<tr>
+<td>02.02.05.002-5</td>
+<td>Clearance de creatinina</td>
+<td>-</td>
+<td>-</td>
+<td><a href="/ledi/documentacao/referencias/dicionario.html#tiporesultadoexame">tipoResultadoExame</a> &gt; <code>1 - Valor</code></td>
+<td>mL/min/1,73 m²</td>
+</tr>
+</tbody></table>
+
+<p><em>* Procedimentos pertencentes a competência <strong>09/2020</strong> do SIGTAP.</em></p>
 
       </article>
 
@@ -98784,6 +99767,11 @@
 <td>EncaminhamentosThrift</td>
 <td>encaminhamentos.xsd</td>
 </tr>
+<tr>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#resultadosexames">ResultadosExames</a></td>
+<td>ResultadosExamesThrift</td>
+<td>resultadosexames.xsd</td>
+</tr>
 </tbody></table>
 
 <h2 id="ficha-de-atendimento-odontol-gico">Ficha de Atendimento Odontológico</h2>
@@ -98819,6 +99807,11 @@
 <td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fao.html#encaminhamentos">Encaminhamentos</a></td>
 <td>EncaminhamentosThrift</td>
 <td>encaminhamentos.xsd</td>
+</tr>
+<tr>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fao.html#resultadosexames">ResultadosExames</a></td>
+<td>ResultadosExamesThrift</td>
+<td>resultadosexames.xsd</td>
 </tr>
 </tbody></table>
 
@@ -99105,17 +100098,33 @@
 
     <div class="post pdf shown" id="principais_alteracoes" data-url="/ledi/documentacao/principais_alteracoes.html">
       <header class="post-header">
-        <h1 class="post-title">Principais alterações da v4.1.3 para a v4.1.4</h1>
+        <h1 class="post-title">Principais alterações da v4.1.4 para a v4.2.0</h1>
       </header>
 
       
 
       <article class="post-content">
-        <p>Este documento relata as principais alterações em relação à versão v4.1.3 do LEDI APS:</p>
+        <p>Este documento relata as principais alterações em relação à versão v4.1.4 do LEDI APS:</p>
 
-<h3 id="1-ficha-de-vacina-o">1. Ficha de Vacinação</h3>
+<h3 id="1-ficha-de-atendimento-individual">1. Ficha de Atendimento Individual</h3>
 
-<p>Foram adicionadas novas regras de validação no campo <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fv.html#5-fabricante">Fabricante</a>.</p>
+<p>Foi adicionado o grupo de informação <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#resultadosexames">ResultadosExames</a>.</p>
+
+<h3 id="2-ficha-de-atendimento-odontol-gico-individual">2. Ficha de Atendimento Odontológico Individual</h3>
+
+<p>Foi adicionado o grupo de informação <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fao.html#resultadosexames">ResultadosExames</a>.</p>
+
+<h3 id="3-ficha-de-visita-domiciliar-e-territorial">3. Ficha de Visita Domiciliar e Territorial</h3>
+
+<p>Foram adicionados os campos <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fvd.html#20-latitude">latitude</a>, <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fvd.html#21-longitude">longitude</a> e <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fvd.html#22-uuidorigemcadastrodomiciliar">uuidOrigemCadastroDomiciliar</a>.</p>
+
+<h3 id="4-ficha-de-cadastro-domiciliar-e-territorial">4. Ficha de Cadastro Domiciliar e Territorial</h3>
+
+<p>Foram adicionados os campos <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fcd.html#15-latitude">latitude</a> e <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fcd.html#16-longitude">longitude</a>.</p>
+
+<h3 id="5-ficha-de-vacina-o">5. Ficha de Vacinação</h3>
+
+<p>Foram adicionados os campos <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fv.html#7-stregistroanterior">stRegistroAnterior</a> e <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fv.html#8-dataregistroanterior">dataRegistroAnterior</a> e regras de preenchimento para o registro anterior de vacinação.</p>
 
       </article>
 
@@ -99168,13 +100177,28 @@
       <article class="post-content">
         <p>Este documento relata as principais alterações entre as versões do DW.</p>
 
-<h3 id="1-principais-altera-es-da-v4-1-2-para-a-v4-1-3">1. Principais alterações da v4.1.2 para a v4.1.3:</h3>
+<h3 id="1-principais-altera-es-da-v4-1-4-para-a-v4-2-0">1. Principais alterações da v4.1.4 para a v4.2.0:</h3>
 
-<p><strong>1. </strong> No contexto de <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fv.html">Ficha de Vacinação</a> foram incluídas as estruturas de dados para registro da informação de grupo de atendimento. Esta informação está armazenada na tabela: <code>tb_fat_vacinacao_vacina</code>.</p>
+<p><strong>1. </strong> No contexto de <a href="/dw/fatos/atendimento_individual.html">Atendimento individual</a> e <a href="/dw/fatos/atendimento_odontologico_individual.html">Atendimento odontológico individual</a> foram incluídas as estruturas de dados para registro das informações de resultados de exames. Estas informações estão armazenadas nas tabelas:</p>
+
+<ul>
+<li><code>tb_fat_atd_ind_exames</code>;</li>
+<li><code>tb_fat_atend_odonto_exames</code>.</li>
+</ul>
+
+<p><strong>2. </strong> No contexto de <a href="/dw/fatos/cadastro_domiciliar.html">Cadastro domiciliar</a> foram incluídos os campos <code>nu_latitude</code> e <code>nu_longitude</code>.</p>
+
+<p><strong>3. </strong> No contexto de <a href="/dw/fatos/visita_domiciliar.html">Visita domiciliar</a> foram incluídos os campos <code>nu_latitude</code>, <code>nu_longitude</code> e <code>co_uuid_origem_fcd</code>.</p>
+
+<p><strong>4. </strong> No contexto de <a href="/dw/fatos/vacinacao.html">Vacinação</a> foram incluídos os campos <code>st_registro_anterior</code> e <code>co_dim_tempo_vacina_aplicada</code>.</p>
+
+<h3 id="2-principais-altera-es-da-v4-1-2-para-a-v4-1-4">2. Principais alterações da v4.1.2 para a v4.1.4:</h3>
+
+<p><strong>1. </strong> No contexto de <a href="/dw/fatos/vacinacao.html">Vacinação</a> foram incluídas as estruturas de dados para registro da informação de grupo de atendimento. Esta informação está armazenada na tabela: <code>tb_fat_vacinacao_vacina</code>.</p>
 
 <p><strong>2. </strong> Para contextualizar as informações da tabela <code>tb_fat_vacinacao_vacina</code>, foi criada a seguinte tabela de dimensão: <code>tb_dim_grupo_atendimento</code>.</p>
 
-<h3 id="2-principais-altera-es-da-v4-0-0-para-a-v4-1-2">2. Principais alterações da v4.0.0 para a v4.1.2:</h3>
+<h3 id="3-principais-altera-es-da-v4-0-0-para-a-v4-1-2">3. Principais alterações da v4.0.0 para a v4.1.2:</h3>
 
 <p><strong>1. </strong> No contexto de <a href="/dw/fatos/atendimento_individual.html">Atendimento individual</a> foram incluídas as estruturas de dados para registro das informações de prescrição de medicamentos e encaminhamentos. Estas informações estão armazenadas nas tabelas:</p>
 
@@ -100039,13 +101063,17 @@
       <article class="post-content">
         <p>Esta estratégia de negócio refere-se aos registros de <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html">Atendimentos Individuais</a> e está centrada na <strong>tb_fat_atendimento_individual</strong>. Neste registro o campo <em>nu_prontuario</em> é criptografado. </p>
 
-<p><strong>1. </strong>Os <strong>problemas / condições de saúde</strong> estão armazenados na <strong>tb_fat_atd_ind_problemas</strong>. Esta tabela é interligada com a <strong>tb_fat_atendimento_individual</strong> através da coluna <strong>co_fat_atd_ind</strong>.</p>
+<p><strong>1. </strong> Os <strong>problemas / condições de saúde</strong> estão armazenados na <strong>tb_fat_atd_ind_problemas</strong>.</p>
 
-<p><strong>2. </strong> Os <strong>exames</strong> solicitados e/ou avaliados estão armazenados na <strong>tb_fat_atd_ind_procedimentos</strong>. Esta tabela é interligada com a <strong>tb_fat_atendimento_individual</strong> através da coluna <strong>co_fat_atd_ind</strong>.</p>
+<p><strong>2. </strong> Os <strong>exames</strong> solicitados e/ou avaliados estão armazenados na <strong>tb_fat_atd_ind_procedimentos</strong>.</p>
 
-<p><strong>3. </strong> As informações das <strong>prescrições de medicamentos</strong> estão armazenadas na <strong>tb_fat_atd_ind_medicamentos</strong>. Esta tabela é interligada com a <strong>tb_fat_atendimento_individual</strong> através da coluna <strong>co_fat_atd_ind</strong>.</p>
+<p><strong>3. </strong> Os <strong>exames</strong> com resultados estruturados, conforme apresentados na <a href="/ledi/documentacao/referencias/exames_estruturados.html">Lista de exames com resultado estruturado</a>, estão armazenados na <strong>tb_fat_atd_ind_exames</strong>.</p>
 
-<p><strong>4. </strong> As informações dos <strong>encaminhamentos</strong> estão armazenadas na <strong>tb_fat_atd_ind_encaminhamentos</strong>. Esta tabela é interligada com a <strong>tb_fat_atendimento_individual</strong> através da coluna <strong>co_fat_atd_ind</strong>.</p>
+<p><strong>4. </strong> As informações das <strong>prescrições de medicamentos</strong> estão armazenadas na <strong>tb_fat_atd_ind_medicamentos</strong>.</p>
+
+<p><strong>5. </strong> As informações dos <strong>encaminhamentos</strong> estão armazenadas na <strong>tb_fat_atd_ind_encaminhamentos</strong>.</p>
+
+<p><strong>6. </strong> Todas as tabelas relacionadas com a <strong>tb_fat_atendimento_individual</strong> são interligadas através da coluna <strong>co_fat_atd_ind</strong>.</p>
 
 <table><thead>
 <tr>
@@ -100093,13 +101121,17 @@
       <article class="post-content">
         <p>Esta estratégia de negócio refere-se aos registros de <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fao.html">Atendimentos Odontológicos</a> e está centrada na <strong>tb_fat_atendimento_odonto</strong>. Neste registro o campo <em>nu_prontuario</em> é criptografado. </p>
 
-<p><strong>1. </strong>Os <strong>problemas / condições de saúde</strong> avaliados estão armazenados na <strong>tb_fat_atend_odonto_problemas</strong>. Esta tabela é interligadas com a <strong>tb_fat_atendimento_odonto</strong> através da coluna <strong>co_fat_atd_odnt</strong>.</p>
+<p><strong>1. </strong>Os <strong>problemas / condições de saúde</strong> avaliados estão armazenados na <strong>tb_fat_atend_odonto_problemas</strong>.</p>
 
-<p><strong>2. </strong> Os <strong>procedimentos odontológicos realizados</strong> estão armazenados na <strong>tb_fat_atend_odonto_proced</strong>. Esta tabela é interligadas com a <strong>tb_fat_atendimento_odonto</strong> através da coluna <strong>co_fat_atd_odnt</strong>.</p>
+<p><strong>2. </strong> Os <strong>procedimentos odontológicos realizados</strong> estão armazenados na <strong>tb_fat_atend_odonto_proced</strong>.</p>
 
-<p><strong>3. </strong> As informações das <strong>prescrições de medicamentos</strong> estão armazenadas na <strong>tb_fat_atend_odonto_medicamentos</strong>. Esta tabela é interligadas com a <strong>tb_fat_atendimento_odonto</strong> através da coluna <strong>co_fat_atd_odnt</strong>.</p>
+<p><strong>3. </strong> Os <strong>exames</strong> com resultados estruturados, conforme apresentados na <a href="/ledi/documentacao/referencias/exames_estruturados.html">Lista de exames com resultado estruturado</a>, estão armazenados na <strong>tb_fat_atend_odonto_exames</strong>.</p>
 
-<p><strong>4. </strong> As informações dos <strong>encaminhamentos</strong> estão armazenadas na <strong>tb_fat_atend_odonto_encaminhamentos</strong>. Esta tabela é interligadas com a <strong>tb_fat_atendimento_odonto</strong> através da coluna <strong>co_fat_atd_odnt</strong>.</p>
+<p><strong>4. </strong> As informações das <strong>prescrições de medicamentos</strong> estão armazenadas na <strong>tb_fat_atend_odonto_medicamentos</strong>.</p>
+
+<p><strong>5. </strong> As informações dos <strong>encaminhamentos</strong> estão armazenadas na <strong>tb_fat_atend_odonto_encaminhamentos</strong>.</p>
+
+<p><strong>6. </strong> Todas as tabelas relacionadas com a <strong>tb_fat_atendimento_odonto</strong> são interligadas através da coluna <strong>co_fat_atd_odnt</strong>.</p>
 
 <table><thead>
 <tr>
@@ -100276,7 +101308,8 @@
 <ul>
 <li><strong>st_mot_vis_busca_ativa</strong>: responsável por identificar se alguma opção do grupo <strong>Busca ativa</strong> foi selecionada;</li>
 <li><strong>st_mot_vis_acompanhamento</strong>: responsável por identificar se alguma opção do grupo <strong>Acompanhamento</strong> foi selecionada;</li>
-<li><strong>st_mot_vis_ctrl_ambnte_vetor</strong>: até a versão 2.0, esta opção era única. A partir da versão 2.1, esta coluna foi transformada em um agrupador, responsável por identificar se alguma opção do grupo <strong>Controle ambiental / vetorial</strong> foi selecionada.</li>
+<li><strong>st_mot_vis_ctrl_ambnte_vetor</strong>: até a versão 2.0, esta opção era única. A partir da versão 2.1, esta coluna foi transformada em um agrupador, responsável por identificar se alguma opção do grupo <strong>Controle ambiental / vetorial</strong> foi selecionada;</li>
+<li><strong>co_uuid_origem_fcd</strong>: responsável por armazenar a informação de qual domicílio recebeu a visita. Corresponde ao campo <strong>nu_uuid_ficha_origem</strong> da tabela <strong>tb_fat_cad_domiciliar</strong>.</li>
 </ul>
 
       </article>

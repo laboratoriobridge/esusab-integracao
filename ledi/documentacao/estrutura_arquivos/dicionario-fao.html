@@ -25,7 +25,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 4.1.4</span>
+        <span class="label">versão 4.2.0</span>
       
     </a>
 
@@ -75,7 +75,7 @@
           
         
           
-            <li><a title="Layout e-SUS APS de Dados e Interface Versão 4.1.4" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 4.1.4</a></li>
+            <li><a title="Layout e-SUS APS de Dados e Interface Versão 4.2.0" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 4.2.0</a></li>
           
         
           
@@ -115,9 +115,9 @@
   <ul>
     
       <li>
-        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 4.1.4" href="/ledi/documentacao/index.html" class="back-link">
+        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 4.2.0" href="/ledi/documentacao/index.html" class="back-link">
           <i class="icon icon-back"></i> Voltar
-          <small>(Layout e-SUS APS de Dados e Interface Versão 4.1.4)</small>
+          <small>(Layout e-SUS APS de Dados e Interface Versão 4.2.0)</small>
         </a>
       </li>
     
@@ -243,7 +243,7 @@
     <p class="post-meta">
       <a class="btn" href="/pdf.html?include=/ledi/documentacao/estrutura_arquivos/dicionario-fao.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 18/02/2021</span>
+        <span class="label" title="Data da última modificação">Alterado em 30/04/2021</span>
       
     </p>
   </header>
@@ -817,6 +817,28 @@
 
 <p><strong>Referência:</strong> <a href="#encaminhamentos">Encaminhamentos</a>.</p>
 
+<h3 id="21-resultadosexames">#21 resultadosExames</h3>
+
+<p>Lista de exames e seus resultados.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>List&lt;resultadosExames&gt;</td>
+<td>Não</td>
+<td>0</td>
+<td>10</td>
+</tr>
+</tbody></table>
+
+<p><strong>Referência:</strong> <a href="#resultadosexames">resultadosExames</a>.</p>
+
 <h2 id="procedimentoquantidade">ProcedimentoQuantidade</h2>
 
 <h3 id="1-comsprocedimento">#1 coMsProcedimento</h3>
@@ -1288,6 +1310,233 @@
 </tbody></table>
 
 <p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#classificacaorisco">classificacaoRisco</a>.</p>
+
+<h2 id="resultadosexames">ResultadosExames</h2>
+
+<h3 id="1-exame">#1 exame</h3>
+
+<p>Código do exame.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Somente é permitido exames presentes na <a href="/ledi/documentacao/referencias/exames_estruturados.html">Lista de exames com resultado estruturado</a>;</li>
+<li>Se o exame não tiver uma referência no SIGTAP, deve ser informado o código <strong>AB</strong> do exame.</li>
+</ul>
+
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/exames_estruturados.html">Lista de exames com resultado estruturado</a>.</p>
+
+<p>Observações:</p>
+
+<ul>
+<li>Inserir o código do exame SIGTAP sem ponto ou hífen, ex: <code>0211070270</code>;</li>
+<li>Inserir o código do exame AB em caracteres maiúsculos, sem espaços, ex: <code>ABEX022</code>.</li>
+</ul>
+
+<h3 id="2-datasolicitacao">#2 dataSolicitacao</h3>
+
+<p>Refere-se à data da solicitação do exame específico.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Não</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Não pode ser posterior à <a href="#16-datahorainicialatendimento">dataHoraInicialAtendimento</a>;</li>
+<li>Não pode ser anterior à <a href="#1-dtnascimento">dtNascimento</a>.</li>
+</ul>
+
+<p><strong>Referência:</strong> A data deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
+
+<h3 id="3-datarealizacao">#3 dataRealizacao</h3>
+
+<p>Refere-se à data da realização do exame específico.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Não pode ser posterior à <a href="#16-datahorainicialatendimento">dataHoraInicialAtendimento</a>;</li>
+<li>Não pode ser anterior à <a href="#2-datasolicitacao">dataSolicitacao</a>;</li>
+<li>Não pode ser anterior à <a href="#1-dtnascimento">dtNascimento</a>.</li>
+</ul>
+
+<p><strong>Referência:</strong> A data deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
+
+<h3 id="4-dataresultado">#4 dataResultado</h3>
+
+<p>Refere-se à data do resultado do exame específico.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Não</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Não pode ser posterior à <a href="#16-datahorainicialatendimento">dataHoraInicialAtendimento</a>;</li>
+<li>Não pode ser anterior à <a href="#3-datarealizacao">dataRealizacao</a>;</li>
+<li>Não pode ser anterior à <a href="#1-dtnascimento">dtNascimento</a>.</li>
+</ul>
+
+<p><strong>Referência:</strong> A data deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
+
+<h3 id="5-resultadoexame">#5 resultadoExame</h3>
+
+<p>Refere-se ao resultado do exame.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>List&lt;resultadoExame&gt;</td>
+<td>Sim</td>
+<td>1</td>
+<td>3</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Para os exames <code>02.05.02.014-3 - Ultrassonografia obstétrica (ABEX024)</code>, <code>02.05.02.015-1 - Ultrassonografia obstétrica c/ doppler colorido e pulsado</code> e <code>02.05.01.005-9 - Ultrassonografia doppler de fluxo obstétrico</code> o campo <code>tipoResultado</code> deve ser preenchido pelo menos com o valor <code>3 - Semanas</code> ou <code>4 - Data</code> e não pode ser informado o <code>tipoResultado</code> = <code>1 - Valor</code>;</li>
+<li>Para os demais exames da <a href="/ledi/documentacao/referencias/exames_estruturados.html">Lista de exames com resultado estruturado</a> somente poderá ser informado o <code>tipoResultado</code> = <code>1 - Valor</code>.</li>
+</ul>
+
+<p><strong>Referência:</strong> <a href="#resultadoexame">resultadoExame</a>.</p>
+
+<h2 id="resultadoexame">resultadoExame</h2>
+
+<h3 id="1-tiporesultado">#1 tipoResultado</h3>
+
+<p>Refere-se ao nome do campo que apresentará o resultado.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Integer</td>
+<td>Sim</td>
+<td>--</td>
+<td>--</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> Deve ser preenchido com o respectivo valor da coluna <strong>Estrutura do resultado do exame</strong> da <a href="/ledi/documentacao/referencias/exames_estruturados.html">Lista de exames com resultado estruturado</a> correspondente ao <a href="#1-exame">exame</a>.</p>
+
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#tiporesultadoexame">tipoResultadoExame</a>.</p>
+
+<h3 id="2-valorresultado">#2 valorResultado</h3>
+
+<p>Refere-se ao resultado do exame propriamente dito e está relacionado com a informação do campo <a href="#1-tiporesultado">tipoResultado</a>.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Sim</td>
+<td>--</td>
+<td>--</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Se o campo <a href="#1-tiporesultado">tipoResultado</a> for igual a <code>1 - Valor</code> e o valor do campo <a href="#1-exame">exame</a> for:
+
+<ul>
+<li><code>0202010503 ou ABEX008</code>, então preencher com os valores de <code>0,00 a 20,00</code>;</li>
+<li><code>0211070270, 0211070149 ou ABEX020</code>, então preencher com os valores da tabela <a href="/ledi/documentacao/referencias/dicionario.html#testeorelhinha">testeOrelhinha</a>;</li>
+<li><code>0205020178</code>, então preencher com os valores da tabela <a href="/ledi/documentacao/referencias/dicionario.html#ustransfontanela">usTransfontanela</a>;</li>
+<li><code>0206010079</code>, então preencher com os valores da tabela <a href="/ledi/documentacao/referencias/dicionario.html#tomografiacomputadorizada">tomografiaComputadorizada</a>;</li>
+<li><code>0207010064</code>, então preencher com os valores da tabela <a href="/ledi/documentacao/referencias/dicionario.html#ressonanciamagnetica">ressonanciaMagnetica</a>;</li>
+<li><code>0211060100 ou ABPG013</code>, então preencher com os valores da tabela <a href="/ledi/documentacao/referencias/dicionario.html#examefundoolho">exameFundoOlho</a>;</li>
+<li><code>ABEX022</code>, então preencher com os valores da tabela <a href="/ledi/documentacao/referencias/dicionario.html#testeolhinho">testeOlhinho</a>;</li>
+<li><code>0202010295 ou ABEX002</code>, então preencher com os valores de <code>1 a 10000</code>;</li>
+<li><code>0202010279 ou ABEX007</code>, então preencher com os valores de <code>1 a 1000</code>;</li>
+<li><code>0202010287 ou ABEX009</code>, então preencher com os valores de <code>1 a 5000</code>;</li>
+<li><code>0202010678</code>, então preencher com os valores de <code>1 a 4000</code>;</li>
+<li><code>0202010317 ou ABEX003</code>, então preencher com os valores de <code>0,1 a 500,0</code>;</li>
+<li><code>0202050025</code>, então preencher com os valores de <code>0,001 a 100,000</code>.</li>
+</ul></li>
+<li>Se o campo <a href="#1-tiporesultado">tipoResultado</a> for igual a <code>2 - Dias</code> e o valor do campo <a href="#1-exame">exame</a> for <code>02.05.02.014-3 (ABEX024)</code>, <code>02.05.02.015-1</code> ou <code>02.05.01.005-9</code>, este campo deve ser preenchido com valores de <code>0 a 6</code>;</li>
+<li>Se o campo <a href="#1-tiporesultado">tipoResultado</a> for igual a <code>3 - Semanas</code> e o valor do campo <a href="#1-exame">exame</a> for <code>02.05.02.014-3 (ABEX024)</code>, <code>02.05.02.015-1</code> ou <code>02.05.01.005-9</code>, este campo deve ser preenchido com valores de <code>0 a 42</code>; </li>
+<li>Se o campo <a href="#1-tiporesultado">tipoResultado</a> for igual a <code>4 - Data</code> e o valor do campo <a href="#1-exame">exame</a> for <code>02.05.02.014-3 (ABEX024)</code>, <code>02.05.02.015-1</code> ou <code>02.05.01.005-9</code>, este campo deve ser preenchido com uma data seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a> e a data não pode ser anterior à <a href="#3-datarealizacao">dataRealizacao</a>.</li>
+</ul>
 
 <h2 id="listaprocedimentosrealizados">ListaProcedimentosRealizados</h2>
 

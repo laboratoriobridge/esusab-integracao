@@ -25,7 +25,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 4.1.4</span>
+        <span class="label">versão 4.2.0</span>
       
     </a>
 
@@ -75,7 +75,7 @@
           
         
           
-            <li><a title="Layout e-SUS APS de Dados e Interface Versão 4.1.4" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 4.1.4</a></li>
+            <li><a title="Layout e-SUS APS de Dados e Interface Versão 4.2.0" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 4.2.0</a></li>
           
         
           
@@ -115,9 +115,9 @@
   <ul>
     
       <li>
-        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 4.1.4" href="/ledi/documentacao/index.html" class="back-link">
+        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 4.2.0" href="/ledi/documentacao/index.html" class="back-link">
           <i class="icon icon-back"></i> Voltar
-          <small>(Layout e-SUS APS de Dados e Interface Versão 4.1.4)</small>
+          <small>(Layout e-SUS APS de Dados e Interface Versão 4.2.0)</small>
         </a>
       </li>
     
@@ -182,6 +182,13 @@
             </a>
           </li>
         
+          <li >
+          
+            <a title="Lista de exames com resultado estruturado" href="/ledi/documentacao/referencias/exames_estruturados.html">
+              Lista de exames com resultado estruturado
+            </a>
+          </li>
+        
       </ul>
     </li>
   </ul>
@@ -201,7 +208,7 @@
     <p class="post-meta">
       <a class="btn" href="/pdf.html?include=/ledi/documentacao/referencias/dicionario.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 18/02/2021</span>
+        <span class="label" title="Data da última modificação">Alterado em 29/04/2021</span>
       
     </p>
   </header>
@@ -1412,6 +1419,10 @@
 <td>Soro botrópico/laquético</td>
 </tr>
 <tr>
+<td>13</td>
+<td>Meningocócica AC</td>
+</tr>
+<tr>
 <td>14</td>
 <td>Febre amarela</td>
 </tr>
@@ -1464,6 +1475,10 @@
 <td>Pneumocócica 10V</td>
 </tr>
 <tr>
+<td>27</td>
+<td>Soro latrodectus</td>
+</tr>
+<tr>
 <td>28</td>
 <td>Poliomielite oral (Bivalente)</td>
 </tr>
@@ -1508,6 +1523,14 @@
 <td>Soro botulínico trivalente</td>
 </tr>
 <tr>
+<td>39</td>
+<td>DTP / Hib</td>
+</tr>
+<tr>
+<td>40</td>
+<td>Pneumocócica 7V</td>
+</tr>
+<tr>
 <td>41</td>
 <td>Meningocócica conjugada C</td>
 </tr>
@@ -1518,6 +1541,10 @@
 <tr>
 <td>43</td>
 <td>Hexavalente</td>
+</tr>
+<tr>
+<td>44</td>
+<td>Influenza H1N1</td>
 </tr>
 <tr>
 <td>45</td>
@@ -1548,6 +1575,10 @@
 <td>Tríplice bacteriana acelular (adulto)- dTpa</td>
 </tr>
 <tr>
+<td>58</td>
+<td>Tríplice acelular / poliomelite inativada</td>
+</tr>
+<tr>
 <td>59</td>
 <td>Pneumocócica 13V</td>
 </tr>
@@ -1556,12 +1587,20 @@
 <td>HPV Bivalente</td>
 </tr>
 <tr>
+<td>61</td>
+<td>Toxóide Tetânico</td>
+</tr>
+<tr>
 <td>62</td>
 <td>Hepatite AeB (pediátrica)</td>
 </tr>
 <tr>
 <td>63</td>
 <td>Hepatite AeB (uso adulto)</td>
+</tr>
+<tr>
+<td>64</td>
+<td>Influenza ID</td>
 </tr>
 <tr>
 <td>65</td>
@@ -1578,6 +1617,22 @@
 <tr>
 <td>69</td>
 <td>Soro botulínico bivalente</td>
+</tr>
+<tr>
+<td>70</td>
+<td>Sarampo</td>
+</tr>
+<tr>
+<td>71</td>
+<td>Rubéola</td>
+</tr>
+<tr>
+<td>72</td>
+<td>Gripe Sazonal</td>
+</tr>
+<tr>
+<td>73</td>
+<td>Quádrupla viral</td>
 </tr>
 <tr>
 <td>74</td>
@@ -6164,6 +6219,37 @@
 <tr>
 <td>99</td>
 <td>Estudante</td>
+</tr>
+</tbody></table>
+
+<h2 id="tiporesultadoexame">tipoResultadoExame</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1</td>
+<td>Valor</td>
+<td>Usado quando o resultado do exame é um número</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Dias</td>
+<td>Usado quando o resultado do exame é apresentado em quantidade de dias</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Semanas</td>
+<td>Usado quando o resultado do exame é apresentado em quantidade de semanas</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Data</td>
+<td>Usado quando o resultado do exame é uma data</td>
 </tr>
 </tbody></table>
 

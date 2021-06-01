@@ -25,7 +25,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 4.1.4</span>
+        <span class="label">versão 4.2.0</span>
       
     </a>
 
@@ -75,7 +75,7 @@
           
         
           
-            <li><a title="Layout e-SUS APS de Dados e Interface Versão 4.1.4" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 4.1.4</a></li>
+            <li><a title="Layout e-SUS APS de Dados e Interface Versão 4.2.0" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 4.2.0</a></li>
           
         
           
@@ -115,9 +115,9 @@
   <ul>
     
       <li>
-        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 4.1.4" href="/ledi/documentacao/index.html" class="back-link">
+        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 4.2.0" href="/ledi/documentacao/index.html" class="back-link">
           <i class="icon icon-back"></i> Voltar
-          <small>(Layout e-SUS APS de Dados e Interface Versão 4.1.4)</small>
+          <small>(Layout e-SUS APS de Dados e Interface Versão 4.2.0)</small>
         </a>
       </li>
     
@@ -243,7 +243,7 @@
     <p class="post-meta">
       <a class="btn" href="/pdf.html?include=/ledi/documentacao/estrutura_arquivos/dicionario-fvd.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 18/02/2021</span>
+        <span class="label" title="Data da última modificação">Alterado em 29/04/2021</span>
       
     </p>
   </header>
@@ -881,6 +881,84 @@
 </ul>
 
 <p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#momentocoletaglicemia">momentoColetaGlicemia</a>.</p>
+
+<h3 id="20-latitude">#20 latitude</h3>
+
+<p>Informação da latitude do imóvel onde a visita foi realizada.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Double</td>
+<td>Condicional</td>
+<td>-</td>
+<td>10</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras</strong></p>
+
+<ul>
+<li>É de preenchimento obrigatório se o campo <a href="#21-longitude">longitude</a> for preenchido;</li>
+<li>Os valores são limitados por -90 a 90 e apresentam até 8 casas decimais.</li>
+</ul>
+
+<h3 id="21-longitude">#21 longitude</h3>
+
+<p>Informação da longitude do imóvel onde a visita foi realizada.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Double</td>
+<td>Condicional</td>
+<td>-</td>
+<td>11</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>É de preenchimento obrigatório se o campo <a href="#20-latitude">latitude</a> for preenchido;</li>
+<li>Os valores são limitados por -180 a 180 e apresentam até 8 casas decimais.</li>
+</ul>
+
+<h3 id="22-uuidorigemcadastrodomiciliar">#22 uuidOrigemCadastroDomiciliar</h3>
+
+<p>Código UUID Origem da ficha de cadastro domiciliar onde a visita foi realizada.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Não</td>
+<td>36</td>
+<td>44</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> Quando preenchido, deverá ser informado o valor do campo <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fcd.html#11-uuidfichaoriginadora">UUID origem da ficha de cadastro domiciliar</a> pertencente à <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fcd.html">Ficha de Cadastro Domiciliar e Territorial</a>.</p>
+
+<p><strong>Referência:</strong> Para ver a referência sobre o UUID, acesse: <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">UUID Wikipedia</a>.</p>
 
   </article>
 

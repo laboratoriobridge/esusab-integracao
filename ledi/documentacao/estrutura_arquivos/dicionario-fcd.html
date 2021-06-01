@@ -25,7 +25,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 4.1.4</span>
+        <span class="label">versão 4.2.0</span>
       
     </a>
 
@@ -75,7 +75,7 @@
           
         
           
-            <li><a title="Layout e-SUS APS de Dados e Interface Versão 4.1.4" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 4.1.4</a></li>
+            <li><a title="Layout e-SUS APS de Dados e Interface Versão 4.2.0" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 4.2.0</a></li>
           
         
           
@@ -115,9 +115,9 @@
   <ul>
     
       <li>
-        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 4.1.4" href="/ledi/documentacao/index.html" class="back-link">
+        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 4.2.0" href="/ledi/documentacao/index.html" class="back-link">
           <i class="icon icon-back"></i> Voltar
-          <small>(Layout e-SUS APS de Dados e Interface Versão 4.1.4)</small>
+          <small>(Layout e-SUS APS de Dados e Interface Versão 4.2.0)</small>
         </a>
       </li>
     
@@ -243,7 +243,7 @@
     <p class="post-meta">
       <a class="btn" href="/pdf.html?include=/ledi/documentacao/estrutura_arquivos/dicionario-fcd.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 14/01/2021</span>
+        <span class="label" title="Data da última modificação">Alterado em 29/04/2021</span>
       
     </p>
   </header>
@@ -608,6 +608,60 @@
 
 <p><strong>Referências:</strong> <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#unicalotacaoheader">UnicaLotacaoHeader</a>.</p>
 
+<h3 id="15-latitude">#15 latitude</h3>
+
+<p>Informação da latitude do imóvel.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Double</td>
+<td>Condicional</td>
+<td>-</td>
+<td>10</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>É de preenchimento obrigatório se o campo <a href="#16-longitude">longitude</a> for preenchido;</li>
+<li>Os valores são limitados por -90 a 90 e apresentam até 8 casas decimais.</li>
+</ul>
+
+<h3 id="16-longitude">#16 longitude</h3>
+
+<p>Informação da longitude do imóvel.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Double</td>
+<td>Condicional</td>
+<td>-</td>
+<td>11</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>É de preenchimento obrigatório se o campo <a href="#15-latitude">latitude</a> for preenchido;</li>
+<li>Os valores são limitados por -180 a 180 e apresentam até 8 casas decimais.</li>
+</ul>
+
 <h2 id="enderecolocalpermanencia">EnderecoLocalPermanencia</h2>
 
 <h3 id="1-bairro">#1 bairro</h3>
@@ -871,7 +925,7 @@
 </tr>
 </tbody></table>
 
-<h3 id="13-microarea">#13 microarea</h3>
+<h3 id="13-microarea">#13 microArea</h3>
 
 <p>Microárea na qual o cidadão se encontra.</p>
 

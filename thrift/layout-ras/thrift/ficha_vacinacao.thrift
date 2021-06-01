@@ -15,6 +15,8 @@ struct VacinaRowThrift {
 	4:optional string lote;
 	5:optional string fabricante;
 	6:optional i64 grupoAtendimento;
+	7:optional bool stRegistroAnterior
+	8:optional i64 dataRegistroAnterior
 }
 
 struct FichaVacinacaoChildThrift {

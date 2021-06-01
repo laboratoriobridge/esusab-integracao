@@ -29,6 +29,8 @@ namespace br.gov.saude.esusab.ras.vacinacao
     private string _lote;
     private string _fabricante;
     private long _grupoAtendimento;
+    private bool _stRegistroAnterior;
+    private long _dataRegistroAnterior;
 
     public long Imunobiologico
     {
@@ -108,6 +110,32 @@ namespace br.gov.saude.esusab.ras.vacinacao
       }
     }
 
+    public bool StRegistroAnterior
+    {
+      get
+      {
+        return _stRegistroAnterior;
+      }
+      set
+      {
+        __isset.stRegistroAnterior = true;
+        this._stRegistroAnterior = value;
+      }
+    }
+
+    public long DataRegistroAnterior
+    {
+      get
+      {
+        return _dataRegistroAnterior;
+      }
+      set
+      {
+        __isset.dataRegistroAnterior = true;
+        this._dataRegistroAnterior = value;
+      }
+    }
+
 
     public Isset __isset;
     #if !SILVERLIGHT
@@ -120,6 +148,8 @@ namespace br.gov.saude.esusab.ras.vacinacao
       public bool lote;
       public bool fabricante;
       public bool grupoAtendimento;
+      public bool stRegistroAnterior;
+      public bool dataRegistroAnterior;
     }
 
     public VacinaRowThrift() {
@@ -178,6 +208,20 @@ namespace br.gov.saude.esusab.ras.vacinacao
             case 6:
               if (field.Type == TType.I64) {
                 GrupoAtendimento = iprot.ReadI64();
+              } else { 
+                TProtocolUtil.Skip(iprot, field.Type);
+              }
+              break;
+            case 7:
+              if (field.Type == TType.Bool) {
+                StRegistroAnterior = iprot.ReadBool();
+              } else { 
+                TProtocolUtil.Skip(iprot, field.Type);
+              }
+              break;
+            case 8:
+              if (field.Type == TType.I64) {
+                DataRegistroAnterior = iprot.ReadI64();
               } else { 
                 TProtocolUtil.Skip(iprot, field.Type);
               }
@@ -251,6 +295,22 @@ namespace br.gov.saude.esusab.ras.vacinacao
           oprot.WriteI64(GrupoAtendimento);
           oprot.WriteFieldEnd();
         }
+        if (__isset.stRegistroAnterior) {
+          field.Name = "stRegistroAnterior";
+          field.Type = TType.Bool;
+          field.ID = 7;
+          oprot.WriteFieldBegin(field);
+          oprot.WriteBool(StRegistroAnterior);
+          oprot.WriteFieldEnd();
+        }
+        if (__isset.dataRegistroAnterior) {
+          field.Name = "dataRegistroAnterior";
+          field.Type = TType.I64;
+          field.ID = 8;
+          oprot.WriteFieldBegin(field);
+          oprot.WriteI64(DataRegistroAnterior);
+          oprot.WriteFieldEnd();
+        }
         oprot.WriteFieldStop();
         oprot.WriteStructEnd();
       }
@@ -298,6 +358,18 @@ namespace br.gov.saude.esusab.ras.vacinacao
         __first = false;
         __sb.Append("GrupoAtendimento: ");
         __sb.Append(GrupoAtendimento);
+      }
+      if (__isset.stRegistroAnterior) {
+        if(!__first) { __sb.Append(", "); }
+        __first = false;
+        __sb.Append("StRegistroAnterior: ");
+        __sb.Append(StRegistroAnterior);
+      }
+      if (__isset.dataRegistroAnterior) {
+        if(!__first) { __sb.Append(", "); }
+        __first = false;
+        __sb.Append("DataRegistroAnterior: ");
+        __sb.Append(DataRegistroAnterior);
       }
       __sb.Append(")");
       return __sb.ToString();

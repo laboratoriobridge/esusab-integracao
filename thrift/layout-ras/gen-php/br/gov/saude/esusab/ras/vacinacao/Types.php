@@ -44,6 +44,14 @@ class VacinaRowThrift {
    * @var int
    */
   public $grupoAtendimento = null;
+  /**
+   * @var bool
+   */
+  public $stRegistroAnterior = null;
+  /**
+   * @var int
+   */
+  public $dataRegistroAnterior = null;
 
   public function __construct($vals=null) {
     if (!isset(self::$_TSPEC)) {
@@ -72,6 +80,14 @@ class VacinaRowThrift {
           'var' => 'grupoAtendimento',
           'type' => TType::I64,
           ),
+        7 => array(
+          'var' => 'stRegistroAnterior',
+          'type' => TType::BOOL,
+          ),
+        8 => array(
+          'var' => 'dataRegistroAnterior',
+          'type' => TType::I64,
+          ),
         );
     }
     if (is_array($vals)) {
@@ -92,6 +108,12 @@ class VacinaRowThrift {
       }
       if (isset($vals['grupoAtendimento'])) {
         $this->grupoAtendimento = $vals['grupoAtendimento'];
+      }
+      if (isset($vals['stRegistroAnterior'])) {
+        $this->stRegistroAnterior = $vals['stRegistroAnterior'];
+      }
+      if (isset($vals['dataRegistroAnterior'])) {
+        $this->dataRegistroAnterior = $vals['dataRegistroAnterior'];
       }
     }
   }
@@ -157,6 +179,20 @@ class VacinaRowThrift {
             $xfer += $input->skip($ftype);
           }
           break;
+        case 7:
+          if ($ftype == TType::BOOL) {
+            $xfer += $input->readBool($this->stRegistroAnterior);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 8:
+          if ($ftype == TType::I64) {
+            $xfer += $input->readI64($this->dataRegistroAnterior);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
         default:
           $xfer += $input->skip($ftype);
           break;
@@ -198,6 +234,16 @@ class VacinaRowThrift {
     if ($this->grupoAtendimento !== null) {
       $xfer += $output->writeFieldBegin('grupoAtendimento', TType::I64, 6);
       $xfer += $output->writeI64($this->grupoAtendimento);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->stRegistroAnterior !== null) {
+      $xfer += $output->writeFieldBegin('stRegistroAnterior', TType::BOOL, 7);
+      $xfer += $output->writeBool($this->stRegistroAnterior);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->dataRegistroAnterior !== null) {
+      $xfer += $output->writeFieldBegin('dataRegistroAnterior', TType::I64, 8);
+      $xfer += $output->writeI64($this->dataRegistroAnterior);
       $xfer += $output->writeFieldEnd();
     }
     $xfer += $output->writeFieldStop();

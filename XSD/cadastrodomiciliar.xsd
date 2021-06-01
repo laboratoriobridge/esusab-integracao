@@ -18,6 +18,8 @@
       <xs:element maxOccurs="unbounded" minOccurs="0" name="animaisNoDomicilio" type="xs:long"/>
       <xs:element maxOccurs="1" minOccurs="0" name="condicaoMoradia" type="condicaoMoradia:condicaoMoradiaTransport"/>
       <xs:element maxOccurs="1" minOccurs="0" name="enderecoLocalPermanencia" type="enderecoLocalPermanencia:enderecoLocalPermanenciaTransport"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="latitude" type="xs:double"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="longitude" type="xs:double"/>
       <xs:element maxOccurs="unbounded" minOccurs="0" name="familias" type="familiaRow:familiaRowTransport"/>
       <xs:element maxOccurs="1" minOccurs="0" name="fichaAtualizada" type="xs:boolean"/>
       <xs:element maxOccurs="1" minOccurs="0" name="quantosAnimaisNoDomicilio" type="xs:string"/>

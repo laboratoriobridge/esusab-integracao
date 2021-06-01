@@ -42,6 +42,9 @@ namespace br.gov.saude.esusab.ras.visitadomiciliar
     private double _temperatura;
     private long _tipoGlicemia;
     private int _glicemia;
+    private double _latitude;
+    private double _longitude;
+    private string _uuidOrigemCadastroDomiciliar;
 
     public long Turno
     {
@@ -290,6 +293,45 @@ namespace br.gov.saude.esusab.ras.visitadomiciliar
       }
     }
 
+    public double Latitude
+    {
+      get
+      {
+        return _latitude;
+      }
+      set
+      {
+        __isset.latitude = true;
+        this._latitude = value;
+      }
+    }
+
+    public double Longitude
+    {
+      get
+      {
+        return _longitude;
+      }
+      set
+      {
+        __isset.longitude = true;
+        this._longitude = value;
+      }
+    }
+
+    public string UuidOrigemCadastroDomiciliar
+    {
+      get
+      {
+        return _uuidOrigemCadastroDomiciliar;
+      }
+      set
+      {
+        __isset.uuidOrigemCadastroDomiciliar = true;
+        this._uuidOrigemCadastroDomiciliar = value;
+      }
+    }
+
 
     public Isset __isset;
     #if !SILVERLIGHT
@@ -315,6 +357,9 @@ namespace br.gov.saude.esusab.ras.visitadomiciliar
       public bool temperatura;
       public bool tipoGlicemia;
       public bool glicemia;
+      public bool latitude;
+      public bool longitude;
+      public bool uuidOrigemCadastroDomiciliar;
     }
 
     public FichaVisitaDomiciliarChildThrift() {
@@ -474,6 +519,27 @@ namespace br.gov.saude.esusab.ras.visitadomiciliar
             case 19:
               if (field.Type == TType.I32) {
                 Glicemia = iprot.ReadI32();
+              } else { 
+                TProtocolUtil.Skip(iprot, field.Type);
+              }
+              break;
+            case 20:
+              if (field.Type == TType.Double) {
+                Latitude = iprot.ReadDouble();
+              } else { 
+                TProtocolUtil.Skip(iprot, field.Type);
+              }
+              break;
+            case 21:
+              if (field.Type == TType.Double) {
+                Longitude = iprot.ReadDouble();
+              } else { 
+                TProtocolUtil.Skip(iprot, field.Type);
+              }
+              break;
+            case 22:
+              if (field.Type == TType.String) {
+                UuidOrigemCadastroDomiciliar = iprot.ReadString();
               } else { 
                 TProtocolUtil.Skip(iprot, field.Type);
               }
@@ -658,6 +724,30 @@ namespace br.gov.saude.esusab.ras.visitadomiciliar
           oprot.WriteI32(Glicemia);
           oprot.WriteFieldEnd();
         }
+        if (__isset.latitude) {
+          field.Name = "latitude";
+          field.Type = TType.Double;
+          field.ID = 20;
+          oprot.WriteFieldBegin(field);
+          oprot.WriteDouble(Latitude);
+          oprot.WriteFieldEnd();
+        }
+        if (__isset.longitude) {
+          field.Name = "longitude";
+          field.Type = TType.Double;
+          field.ID = 21;
+          oprot.WriteFieldBegin(field);
+          oprot.WriteDouble(Longitude);
+          oprot.WriteFieldEnd();
+        }
+        if (UuidOrigemCadastroDomiciliar != null && __isset.uuidOrigemCadastroDomiciliar) {
+          field.Name = "uuidOrigemCadastroDomiciliar";
+          field.Type = TType.String;
+          field.ID = 22;
+          oprot.WriteFieldBegin(field);
+          oprot.WriteString(UuidOrigemCadastroDomiciliar);
+          oprot.WriteFieldEnd();
+        }
         oprot.WriteFieldStop();
         oprot.WriteStructEnd();
       }
@@ -783,6 +873,24 @@ namespace br.gov.saude.esusab.ras.visitadomiciliar
         __first = false;
         __sb.Append("Glicemia: ");
         __sb.Append(Glicemia);
+      }
+      if (__isset.latitude) {
+        if(!__first) { __sb.Append(", "); }
+        __first = false;
+        __sb.Append("Latitude: ");
+        __sb.Append(Latitude);
+      }
+      if (__isset.longitude) {
+        if(!__first) { __sb.Append(", "); }
+        __first = false;
+        __sb.Append("Longitude: ");
+        __sb.Append(Longitude);
+      }
+      if (UuidOrigemCadastroDomiciliar != null && __isset.uuidOrigemCadastroDomiciliar) {
+        if(!__first) { __sb.Append(", "); }
+        __first = false;
+        __sb.Append("UuidOrigemCadastroDomiciliar: ");
+        __sb.Append(UuidOrigemCadastroDomiciliar);
       }
       __sb.Append(")");
       return __sb.ToString();

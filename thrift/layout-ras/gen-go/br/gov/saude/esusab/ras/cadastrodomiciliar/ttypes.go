@@ -1247,6 +1247,8 @@ func (p *FamiliaRowThrift) String() string {
 //  - InstituicaoPermanencia
 //  - HeaderTransport
 //  - StatusGeradoAutomaticamente
+//  - Latitude
+//  - Longitude
 type CadastroDomiciliarThrift struct {
   AnimaisNoDomicilio []int64 `thrift:"animaisNoDomicilio,1" json:"animaisNoDomicilio,omitempty"`
   CondicaoMoradia *CondicaoMoradiaThrift `thrift:"condicaoMoradia,2" json:"condicaoMoradia,omitempty"`
@@ -1264,6 +1266,8 @@ type CadastroDomiciliarThrift struct {
   InstituicaoPermanencia *InstituicaoPermanenciaThrift `thrift:"instituicaoPermanencia,14" json:"instituicaoPermanencia,omitempty"`
   HeaderTransport *common.UnicaLotacaoHeaderThrift `thrift:"headerTransport,15" json:"headerTransport,omitempty"`
   StatusGeradoAutomaticamente *bool `thrift:"statusGeradoAutomaticamente,16" json:"statusGeradoAutomaticamente,omitempty"`
+  Latitude *float64 `thrift:"latitude,17" json:"latitude,omitempty"`
+  Longitude *float64 `thrift:"longitude,18" json:"longitude,omitempty"`
 }
 
 func NewCadastroDomiciliarThrift() *CadastroDomiciliarThrift {
@@ -1368,6 +1372,20 @@ func (p *CadastroDomiciliarThrift) GetStatusGeradoAutomaticamente() bool {
   }
 return *p.StatusGeradoAutomaticamente
 }
+var CadastroDomiciliarThrift_Latitude_DEFAULT float64
+func (p *CadastroDomiciliarThrift) GetLatitude() float64 {
+  if !p.IsSetLatitude() {
+    return CadastroDomiciliarThrift_Latitude_DEFAULT
+  }
+return *p.Latitude
+}
+var CadastroDomiciliarThrift_Longitude_DEFAULT float64
+func (p *CadastroDomiciliarThrift) GetLongitude() float64 {
+  if !p.IsSetLongitude() {
+    return CadastroDomiciliarThrift_Longitude_DEFAULT
+  }
+return *p.Longitude
+}
 func (p *CadastroDomiciliarThrift) IsSetAnimaisNoDomicilio() bool {
   return p.AnimaisNoDomicilio != nil
 }
@@ -1422,6 +1440,14 @@ func (p *CadastroDomiciliarThrift) IsSetHeaderTransport() bool {
 
 func (p *CadastroDomiciliarThrift) IsSetStatusGeradoAutomaticamente() bool {
   return p.StatusGeradoAutomaticamente != nil
+}
+
+func (p *CadastroDomiciliarThrift) IsSetLatitude() bool {
+  return p.Latitude != nil
+}
+
+func (p *CadastroDomiciliarThrift) IsSetLongitude() bool {
+  return p.Longitude != nil
 }
 
 func (p *CadastroDomiciliarThrift) Read(iprot thrift.TProtocol) error {
@@ -1497,6 +1523,14 @@ func (p *CadastroDomiciliarThrift) Read(iprot thrift.TProtocol) error {
       }
     case 16:
       if err := p.readField16(iprot); err != nil {
+        return err
+      }
+    case 17:
+      if err := p.readField17(iprot); err != nil {
+        return err
+      }
+    case 18:
+      if err := p.readField18(iprot); err != nil {
         return err
       }
     default:
@@ -1672,6 +1706,24 @@ func (p *CadastroDomiciliarThrift)  readField16(iprot thrift.TProtocol) error {
   return nil
 }
 
+func (p *CadastroDomiciliarThrift)  readField17(iprot thrift.TProtocol) error {
+  if v, err := iprot.ReadDouble(); err != nil {
+  return thrift.PrependError("error reading field 17: ", err)
+} else {
+  p.Latitude = &v
+}
+  return nil
+}
+
+func (p *CadastroDomiciliarThrift)  readField18(iprot thrift.TProtocol) error {
+  if v, err := iprot.ReadDouble(); err != nil {
+  return thrift.PrependError("error reading field 18: ", err)
+} else {
+  p.Longitude = &v
+}
+  return nil
+}
+
 func (p *CadastroDomiciliarThrift) Write(oprot thrift.TProtocol) error {
   if err := oprot.WriteStructBegin("CadastroDomiciliarThrift"); err != nil {
     return thrift.PrependError(fmt.Sprintf("%T write struct begin error: ", p), err) }
@@ -1690,6 +1742,8 @@ func (p *CadastroDomiciliarThrift) Write(oprot thrift.TProtocol) error {
   if err := p.writeField14(oprot); err != nil { return err }
   if err := p.writeField15(oprot); err != nil { return err }
   if err := p.writeField16(oprot); err != nil { return err }
+  if err := p.writeField17(oprot); err != nil { return err }
+  if err := p.writeField18(oprot); err != nil { return err }
   if err := oprot.WriteFieldStop(); err != nil {
     return thrift.PrependError("write field stop error: ", err) }
   if err := oprot.WriteStructEnd(); err != nil {
@@ -1892,6 +1946,30 @@ func (p *CadastroDomiciliarThrift) writeField16(oprot thrift.TProtocol) (err err
     return thrift.PrependError(fmt.Sprintf("%T.statusGeradoAutomaticamente (16) field write error: ", p), err) }
     if err := oprot.WriteFieldEnd(); err != nil {
       return thrift.PrependError(fmt.Sprintf("%T write field end error 16:statusGeradoAutomaticamente: ", p), err) }
+  }
+  return err
+}
+
+func (p *CadastroDomiciliarThrift) writeField17(oprot thrift.TProtocol) (err error) {
+  if p.IsSetLatitude() {
+    if err := oprot.WriteFieldBegin("latitude", thrift.DOUBLE, 17); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field begin error 17:latitude: ", p), err) }
+    if err := oprot.WriteDouble(float64(*p.Latitude)); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T.latitude (17) field write error: ", p), err) }
+    if err := oprot.WriteFieldEnd(); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field end error 17:latitude: ", p), err) }
+  }
+  return err
+}
+
+func (p *CadastroDomiciliarThrift) writeField18(oprot thrift.TProtocol) (err error) {
+  if p.IsSetLongitude() {
+    if err := oprot.WriteFieldBegin("longitude", thrift.DOUBLE, 18); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field begin error 18:longitude: ", p), err) }
+    if err := oprot.WriteDouble(float64(*p.Longitude)); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T.longitude (18) field write error: ", p), err) }
+    if err := oprot.WriteFieldEnd(); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field end error 18:longitude: ", p), err) }
   }
   return err
 }

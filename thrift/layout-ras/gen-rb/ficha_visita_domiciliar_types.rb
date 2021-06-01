@@ -35,6 +35,9 @@ module Br
               TEMPERATURA = 17
               TIPOGLICEMIA = 18
               GLICEMIA = 19
+              LATITUDE = 20
+              LONGITUDE = 21
+              UUIDORIGEMCADASTRODOMICILIAR = 22
 
               FIELDS = {
                 TURNO => {:type => ::Thrift::Types::I64, :name => 'turno', :optional => true},
@@ -55,7 +58,10 @@ module Br
                 PRESSAODIASTOLICA => {:type => ::Thrift::Types::I32, :name => 'pressaoDiastolica', :optional => true},
                 TEMPERATURA => {:type => ::Thrift::Types::DOUBLE, :name => 'temperatura', :optional => true},
                 TIPOGLICEMIA => {:type => ::Thrift::Types::I64, :name => 'tipoGlicemia', :optional => true},
-                GLICEMIA => {:type => ::Thrift::Types::I32, :name => 'glicemia', :optional => true}
+                GLICEMIA => {:type => ::Thrift::Types::I32, :name => 'glicemia', :optional => true},
+                LATITUDE => {:type => ::Thrift::Types::DOUBLE, :name => 'latitude', :optional => true},
+                LONGITUDE => {:type => ::Thrift::Types::DOUBLE, :name => 'longitude', :optional => true},
+                UUIDORIGEMCADASTRODOMICILIAR => {:type => ::Thrift::Types::STRING, :name => 'uuidOrigemCadastroDomiciliar', :optional => true}
               }
 
               def struct_fields; FIELDS; end

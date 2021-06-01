@@ -22,6 +22,8 @@ module Br
               LOTE = 4
               FABRICANTE = 5
               GRUPOATENDIMENTO = 6
+              STREGISTROANTERIOR = 7
+              DATAREGISTROANTERIOR = 8
 
               FIELDS = {
                 IMUNOBIOLOGICO => {:type => ::Thrift::Types::I64, :name => 'imunobiologico', :optional => true},
@@ -29,7 +31,9 @@ module Br
                 DOSE => {:type => ::Thrift::Types::I64, :name => 'dose', :optional => true},
                 LOTE => {:type => ::Thrift::Types::STRING, :name => 'lote', :optional => true},
                 FABRICANTE => {:type => ::Thrift::Types::STRING, :name => 'fabricante', :optional => true},
-                GRUPOATENDIMENTO => {:type => ::Thrift::Types::I64, :name => 'grupoAtendimento', :optional => true}
+                GRUPOATENDIMENTO => {:type => ::Thrift::Types::I64, :name => 'grupoAtendimento', :optional => true},
+                STREGISTROANTERIOR => {:type => ::Thrift::Types::BOOL, :name => 'stRegistroAnterior', :optional => true},
+                DATAREGISTROANTERIOR => {:type => ::Thrift::Types::I64, :name => 'dataRegistroAnterior', :optional => true}
               }
 
               def struct_fields; FIELDS; end

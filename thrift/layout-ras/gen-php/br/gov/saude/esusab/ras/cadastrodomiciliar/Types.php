@@ -857,6 +857,14 @@ class CadastroDomiciliarThrift {
    * @var bool
    */
   public $statusGeradoAutomaticamente = null;
+  /**
+   * @var double
+   */
+  public $latitude = null;
+  /**
+   * @var double
+   */
+  public $longitude = null;
 
   public function __construct($vals=null) {
     if (!isset(self::$_TSPEC)) {
@@ -934,6 +942,14 @@ class CadastroDomiciliarThrift {
           'var' => 'statusGeradoAutomaticamente',
           'type' => TType::BOOL,
           ),
+        17 => array(
+          'var' => 'latitude',
+          'type' => TType::DOUBLE,
+          ),
+        18 => array(
+          'var' => 'longitude',
+          'type' => TType::DOUBLE,
+          ),
         );
     }
     if (is_array($vals)) {
@@ -981,6 +997,12 @@ class CadastroDomiciliarThrift {
       }
       if (isset($vals['statusGeradoAutomaticamente'])) {
         $this->statusGeradoAutomaticamente = $vals['statusGeradoAutomaticamente'];
+      }
+      if (isset($vals['latitude'])) {
+        $this->latitude = $vals['latitude'];
+      }
+      if (isset($vals['longitude'])) {
+        $this->longitude = $vals['longitude'];
       }
     }
   }
@@ -1134,6 +1156,20 @@ class CadastroDomiciliarThrift {
             $xfer += $input->skip($ftype);
           }
           break;
+        case 17:
+          if ($ftype == TType::DOUBLE) {
+            $xfer += $input->readDouble($this->latitude);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 18:
+          if ($ftype == TType::DOUBLE) {
+            $xfer += $input->readDouble($this->longitude);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
         default:
           $xfer += $input->skip($ftype);
           break;
@@ -1256,6 +1292,16 @@ class CadastroDomiciliarThrift {
     if ($this->statusGeradoAutomaticamente !== null) {
       $xfer += $output->writeFieldBegin('statusGeradoAutomaticamente', TType::BOOL, 16);
       $xfer += $output->writeBool($this->statusGeradoAutomaticamente);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->latitude !== null) {
+      $xfer += $output->writeFieldBegin('latitude', TType::DOUBLE, 17);
+      $xfer += $output->writeDouble($this->latitude);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->longitude !== null) {
+      $xfer += $output->writeFieldBegin('longitude', TType::DOUBLE, 18);
+      $xfer += $output->writeDouble($this->longitude);
       $xfer += $output->writeFieldEnd();
     }
     $xfer += $output->writeFieldStop();

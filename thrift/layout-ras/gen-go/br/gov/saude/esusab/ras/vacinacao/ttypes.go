@@ -26,6 +26,8 @@ var GoUnusedProtection__ int;
 //  - Lote
 //  - Fabricante
 //  - GrupoAtendimento
+//  - StRegistroAnterior
+//  - DataRegistroAnterior
 type VacinaRowThrift struct {
   Imunobiologico *int64 `thrift:"imunobiologico,1" json:"imunobiologico,omitempty"`
   EstrategiaVacinacao *int64 `thrift:"estrategiaVacinacao,2" json:"estrategiaVacinacao,omitempty"`
@@ -33,6 +35,8 @@ type VacinaRowThrift struct {
   Lote *string `thrift:"lote,4" json:"lote,omitempty"`
   Fabricante *string `thrift:"fabricante,5" json:"fabricante,omitempty"`
   GrupoAtendimento *int64 `thrift:"grupoAtendimento,6" json:"grupoAtendimento,omitempty"`
+  StRegistroAnterior *bool `thrift:"stRegistroAnterior,7" json:"stRegistroAnterior,omitempty"`
+  DataRegistroAnterior *int64 `thrift:"dataRegistroAnterior,8" json:"dataRegistroAnterior,omitempty"`
 }
 
 func NewVacinaRowThrift() *VacinaRowThrift {
@@ -81,6 +85,20 @@ func (p *VacinaRowThrift) GetGrupoAtendimento() int64 {
   }
 return *p.GrupoAtendimento
 }
+var VacinaRowThrift_StRegistroAnterior_DEFAULT bool
+func (p *VacinaRowThrift) GetStRegistroAnterior() bool {
+  if !p.IsSetStRegistroAnterior() {
+    return VacinaRowThrift_StRegistroAnterior_DEFAULT
+  }
+return *p.StRegistroAnterior
+}
+var VacinaRowThrift_DataRegistroAnterior_DEFAULT int64
+func (p *VacinaRowThrift) GetDataRegistroAnterior() int64 {
+  if !p.IsSetDataRegistroAnterior() {
+    return VacinaRowThrift_DataRegistroAnterior_DEFAULT
+  }
+return *p.DataRegistroAnterior
+}
 func (p *VacinaRowThrift) IsSetImunobiologico() bool {
   return p.Imunobiologico != nil
 }
@@ -103,6 +121,14 @@ func (p *VacinaRowThrift) IsSetFabricante() bool {
 
 func (p *VacinaRowThrift) IsSetGrupoAtendimento() bool {
   return p.GrupoAtendimento != nil
+}
+
+func (p *VacinaRowThrift) IsSetStRegistroAnterior() bool {
+  return p.StRegistroAnterior != nil
+}
+
+func (p *VacinaRowThrift) IsSetDataRegistroAnterior() bool {
+  return p.DataRegistroAnterior != nil
 }
 
 func (p *VacinaRowThrift) Read(iprot thrift.TProtocol) error {
@@ -140,6 +166,14 @@ func (p *VacinaRowThrift) Read(iprot thrift.TProtocol) error {
       }
     case 6:
       if err := p.readField6(iprot); err != nil {
+        return err
+      }
+    case 7:
+      if err := p.readField7(iprot); err != nil {
+        return err
+      }
+    case 8:
+      if err := p.readField8(iprot); err != nil {
         return err
       }
     default:
@@ -211,6 +245,24 @@ func (p *VacinaRowThrift)  readField6(iprot thrift.TProtocol) error {
   return nil
 }
 
+func (p *VacinaRowThrift)  readField7(iprot thrift.TProtocol) error {
+  if v, err := iprot.ReadBool(); err != nil {
+  return thrift.PrependError("error reading field 7: ", err)
+} else {
+  p.StRegistroAnterior = &v
+}
+  return nil
+}
+
+func (p *VacinaRowThrift)  readField8(iprot thrift.TProtocol) error {
+  if v, err := iprot.ReadI64(); err != nil {
+  return thrift.PrependError("error reading field 8: ", err)
+} else {
+  p.DataRegistroAnterior = &v
+}
+  return nil
+}
+
 func (p *VacinaRowThrift) Write(oprot thrift.TProtocol) error {
   if err := oprot.WriteStructBegin("VacinaRowThrift"); err != nil {
     return thrift.PrependError(fmt.Sprintf("%T write struct begin error: ", p), err) }
@@ -220,6 +272,8 @@ func (p *VacinaRowThrift) Write(oprot thrift.TProtocol) error {
   if err := p.writeField4(oprot); err != nil { return err }
   if err := p.writeField5(oprot); err != nil { return err }
   if err := p.writeField6(oprot); err != nil { return err }
+  if err := p.writeField7(oprot); err != nil { return err }
+  if err := p.writeField8(oprot); err != nil { return err }
   if err := oprot.WriteFieldStop(); err != nil {
     return thrift.PrependError("write field stop error: ", err) }
   if err := oprot.WriteStructEnd(); err != nil {
@@ -295,6 +349,30 @@ func (p *VacinaRowThrift) writeField6(oprot thrift.TProtocol) (err error) {
     return thrift.PrependError(fmt.Sprintf("%T.grupoAtendimento (6) field write error: ", p), err) }
     if err := oprot.WriteFieldEnd(); err != nil {
       return thrift.PrependError(fmt.Sprintf("%T write field end error 6:grupoAtendimento: ", p), err) }
+  }
+  return err
+}
+
+func (p *VacinaRowThrift) writeField7(oprot thrift.TProtocol) (err error) {
+  if p.IsSetStRegistroAnterior() {
+    if err := oprot.WriteFieldBegin("stRegistroAnterior", thrift.BOOL, 7); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field begin error 7:stRegistroAnterior: ", p), err) }
+    if err := oprot.WriteBool(bool(*p.StRegistroAnterior)); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T.stRegistroAnterior (7) field write error: ", p), err) }
+    if err := oprot.WriteFieldEnd(); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field end error 7:stRegistroAnterior: ", p), err) }
+  }
+  return err
+}
+
+func (p *VacinaRowThrift) writeField8(oprot thrift.TProtocol) (err error) {
+  if p.IsSetDataRegistroAnterior() {
+    if err := oprot.WriteFieldBegin("dataRegistroAnterior", thrift.I64, 8); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field begin error 8:dataRegistroAnterior: ", p), err) }
+    if err := oprot.WriteI64(int64(*p.DataRegistroAnterior)); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T.dataRegistroAnterior (8) field write error: ", p), err) }
+    if err := oprot.WriteFieldEnd(); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field end error 8:dataRegistroAnterior: ", p), err) }
   }
   return err
 }

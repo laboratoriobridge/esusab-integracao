@@ -1136,8 +1136,7 @@ class ResultadosExameThrift:
    - dataSolicitacao
    - dataRealizacao
    - dataResultado
-   - resultado
-   - exameResultadoEspecifico
+   - resultadoExame
   """
 
   thrift_spec = (
@@ -1146,17 +1145,16 @@ class ResultadosExameThrift:
     (2, TType.I64, 'dataSolicitacao', None, None, ), # 2
     (3, TType.I64, 'dataRealizacao', None, None, ), # 3
     (4, TType.I64, 'dataResultado', None, None, ), # 4
-    (5, TType.STRING, 'resultado', None, None, ), # 5
-    (6, TType.LIST, 'exameResultadoEspecifico', (TType.STRUCT,(ResultadoExameThrift, ResultadoExameThrift.thrift_spec)), None, ), # 6
+    None, # 5
+    (6, TType.LIST, 'resultadoExame', (TType.STRUCT,(ResultadoExameThrift, ResultadoExameThrift.thrift_spec)), None, ), # 6
   )
 
-  def __init__(self, exame=None, dataSolicitacao=None, dataRealizacao=None, dataResultado=None, resultado=None, exameResultadoEspecifico=None,):
+  def __init__(self, exame=None, dataSolicitacao=None, dataRealizacao=None, dataResultado=None, resultadoExame=None,):
     self.exame = exame
     self.dataSolicitacao = dataSolicitacao
     self.dataRealizacao = dataRealizacao
     self.dataResultado = dataResultado
-    self.resultado = resultado
-    self.exameResultadoEspecifico = exameResultadoEspecifico
+    self.resultadoExame = resultadoExame
 
   def read(self, iprot):
     if iprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None and fastbinary is not None:
@@ -1187,19 +1185,14 @@ class ResultadosExameThrift:
           self.dataResultado = iprot.readI64()
         else:
           iprot.skip(ftype)
-      elif fid == 5:
-        if ftype == TType.STRING:
-          self.resultado = iprot.readString()
-        else:
-          iprot.skip(ftype)
       elif fid == 6:
         if ftype == TType.LIST:
-          self.exameResultadoEspecifico = []
+          self.resultadoExame = []
           (_etype3, _size0) = iprot.readListBegin()
           for _i4 in xrange(_size0):
             _elem5 = ResultadoExameThrift()
             _elem5.read(iprot)
-            self.exameResultadoEspecifico.append(_elem5)
+            self.resultadoExame.append(_elem5)
           iprot.readListEnd()
         else:
           iprot.skip(ftype)
@@ -1229,14 +1222,10 @@ class ResultadosExameThrift:
       oprot.writeFieldBegin('dataResultado', TType.I64, 4)
       oprot.writeI64(self.dataResultado)
       oprot.writeFieldEnd()
-    if self.resultado is not None:
-      oprot.writeFieldBegin('resultado', TType.STRING, 5)
-      oprot.writeString(self.resultado)
-      oprot.writeFieldEnd()
-    if self.exameResultadoEspecifico is not None:
-      oprot.writeFieldBegin('exameResultadoEspecifico', TType.LIST, 6)
-      oprot.writeListBegin(TType.STRUCT, len(self.exameResultadoEspecifico))
-      for iter6 in self.exameResultadoEspecifico:
+    if self.resultadoExame is not None:
+      oprot.writeFieldBegin('resultadoExame', TType.LIST, 6)
+      oprot.writeListBegin(TType.STRUCT, len(self.resultadoExame))
+      for iter6 in self.resultadoExame:
         iter6.write(oprot)
       oprot.writeListEnd()
       oprot.writeFieldEnd()
@@ -1253,8 +1242,7 @@ class ResultadosExameThrift:
     value = (value * 31) ^ hash(self.dataSolicitacao)
     value = (value * 31) ^ hash(self.dataRealizacao)
     value = (value * 31) ^ hash(self.dataResultado)
-    value = (value * 31) ^ hash(self.resultado)
-    value = (value * 31) ^ hash(self.exameResultadoEspecifico)
+    value = (value * 31) ^ hash(self.resultadoExame)
     return value
 
   def __repr__(self):

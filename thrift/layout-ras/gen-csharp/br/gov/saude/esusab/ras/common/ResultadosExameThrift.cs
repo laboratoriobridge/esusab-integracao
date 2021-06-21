@@ -27,8 +27,7 @@ namespace br.gov.saude.esusab.ras.common
     private long _dataSolicitacao;
     private long _dataRealizacao;
     private long _dataResultado;
-    private string _resultado;
-    private List<ResultadoExameThrift> _exameResultadoEspecifico;
+    private List<ResultadoExameThrift> _resultadoExame;
 
     public string Exame
     {
@@ -82,29 +81,16 @@ namespace br.gov.saude.esusab.ras.common
       }
     }
 
-    public string Resultado
+    public List<ResultadoExameThrift> ResultadoExame
     {
       get
       {
-        return _resultado;
+        return _resultadoExame;
       }
       set
       {
-        __isset.resultado = true;
-        this._resultado = value;
-      }
-    }
-
-    public List<ResultadoExameThrift> ExameResultadoEspecifico
-    {
-      get
-      {
-        return _exameResultadoEspecifico;
-      }
-      set
-      {
-        __isset.exameResultadoEspecifico = true;
-        this._exameResultadoEspecifico = value;
+        __isset.resultadoExame = true;
+        this._resultadoExame = value;
       }
     }
 
@@ -118,8 +104,7 @@ namespace br.gov.saude.esusab.ras.common
       public bool dataSolicitacao;
       public bool dataRealizacao;
       public bool dataResultado;
-      public bool resultado;
-      public bool exameResultadoEspecifico;
+      public bool resultadoExame;
     }
 
     public ResultadosExameThrift() {
@@ -168,24 +153,17 @@ namespace br.gov.saude.esusab.ras.common
                 TProtocolUtil.Skip(iprot, field.Type);
               }
               break;
-            case 5:
-              if (field.Type == TType.String) {
-                Resultado = iprot.ReadString();
-              } else { 
-                TProtocolUtil.Skip(iprot, field.Type);
-              }
-              break;
             case 6:
               if (field.Type == TType.List) {
                 {
-                  ExameResultadoEspecifico = new List<ResultadoExameThrift>();
+                  ResultadoExame = new List<ResultadoExameThrift>();
                   TList _list0 = iprot.ReadListBegin();
                   for( int _i1 = 0; _i1 < _list0.Count; ++_i1)
                   {
                     ResultadoExameThrift _elem2;
                     _elem2 = new ResultadoExameThrift();
                     _elem2.Read(iprot);
-                    ExameResultadoEspecifico.Add(_elem2);
+                    ResultadoExame.Add(_elem2);
                   }
                   iprot.ReadListEnd();
                 }
@@ -246,22 +224,14 @@ namespace br.gov.saude.esusab.ras.common
           oprot.WriteI64(DataResultado);
           oprot.WriteFieldEnd();
         }
-        if (Resultado != null && __isset.resultado) {
-          field.Name = "resultado";
-          field.Type = TType.String;
-          field.ID = 5;
-          oprot.WriteFieldBegin(field);
-          oprot.WriteString(Resultado);
-          oprot.WriteFieldEnd();
-        }
-        if (ExameResultadoEspecifico != null && __isset.exameResultadoEspecifico) {
-          field.Name = "exameResultadoEspecifico";
+        if (ResultadoExame != null && __isset.resultadoExame) {
+          field.Name = "resultadoExame";
           field.Type = TType.List;
           field.ID = 6;
           oprot.WriteFieldBegin(field);
           {
-            oprot.WriteListBegin(new TList(TType.Struct, ExameResultadoEspecifico.Count));
-            foreach (ResultadoExameThrift _iter3 in ExameResultadoEspecifico)
+            oprot.WriteListBegin(new TList(TType.Struct, ResultadoExame.Count));
+            foreach (ResultadoExameThrift _iter3 in ResultadoExame)
             {
               _iter3.Write(oprot);
             }
@@ -305,17 +275,11 @@ namespace br.gov.saude.esusab.ras.common
         __sb.Append("DataResultado: ");
         __sb.Append(DataResultado);
       }
-      if (Resultado != null && __isset.resultado) {
+      if (ResultadoExame != null && __isset.resultadoExame) {
         if(!__first) { __sb.Append(", "); }
         __first = false;
-        __sb.Append("Resultado: ");
-        __sb.Append(Resultado);
-      }
-      if (ExameResultadoEspecifico != null && __isset.exameResultadoEspecifico) {
-        if(!__first) { __sb.Append(", "); }
-        __first = false;
-        __sb.Append("ExameResultadoEspecifico: ");
-        __sb.Append(ExameResultadoEspecifico);
+        __sb.Append("ResultadoExame: ");
+        __sb.Append(ResultadoExame);
       }
       __sb.Append(")");
       return __sb.ToString();

@@ -2513,15 +2513,14 @@ func (p *ResultadoExameThrift) String() string {
 //  - DataSolicitacao
 //  - DataRealizacao
 //  - DataResultado
-//  - Resultado
-//  - ExameResultadoEspecifico
+//  - ResultadoExame
 type ResultadosExameThrift struct {
   Exame *string `thrift:"exame,1" json:"exame,omitempty"`
   DataSolicitacao *int64 `thrift:"dataSolicitacao,2" json:"dataSolicitacao,omitempty"`
   DataRealizacao *int64 `thrift:"dataRealizacao,3" json:"dataRealizacao,omitempty"`
   DataResultado *int64 `thrift:"dataResultado,4" json:"dataResultado,omitempty"`
-  Resultado *string `thrift:"resultado,5" json:"resultado,omitempty"`
-  ExameResultadoEspecifico []*ResultadoExameThrift `thrift:"exameResultadoEspecifico,6" json:"exameResultadoEspecifico,omitempty"`
+  // unused field # 5
+  ResultadoExame []*ResultadoExameThrift `thrift:"resultadoExame,6" json:"resultadoExame,omitempty"`
 }
 
 func NewResultadosExameThrift() *ResultadosExameThrift {
@@ -2556,17 +2555,10 @@ func (p *ResultadosExameThrift) GetDataResultado() int64 {
   }
 return *p.DataResultado
 }
-var ResultadosExameThrift_Resultado_DEFAULT string
-func (p *ResultadosExameThrift) GetResultado() string {
-  if !p.IsSetResultado() {
-    return ResultadosExameThrift_Resultado_DEFAULT
-  }
-return *p.Resultado
-}
-var ResultadosExameThrift_ExameResultadoEspecifico_DEFAULT []*ResultadoExameThrift
+var ResultadosExameThrift_ResultadoExame_DEFAULT []*ResultadoExameThrift
 
-func (p *ResultadosExameThrift) GetExameResultadoEspecifico() []*ResultadoExameThrift {
-  return p.ExameResultadoEspecifico
+func (p *ResultadosExameThrift) GetResultadoExame() []*ResultadoExameThrift {
+  return p.ResultadoExame
 }
 func (p *ResultadosExameThrift) IsSetExame() bool {
   return p.Exame != nil
@@ -2584,12 +2576,8 @@ func (p *ResultadosExameThrift) IsSetDataResultado() bool {
   return p.DataResultado != nil
 }
 
-func (p *ResultadosExameThrift) IsSetResultado() bool {
-  return p.Resultado != nil
-}
-
-func (p *ResultadosExameThrift) IsSetExameResultadoEspecifico() bool {
-  return p.ExameResultadoEspecifico != nil
+func (p *ResultadosExameThrift) IsSetResultadoExame() bool {
+  return p.ResultadoExame != nil
 }
 
 func (p *ResultadosExameThrift) Read(iprot thrift.TProtocol) error {
@@ -2619,10 +2607,6 @@ func (p *ResultadosExameThrift) Read(iprot thrift.TProtocol) error {
       }
     case 4:
       if err := p.readField4(iprot); err != nil {
-        return err
-      }
-    case 5:
-      if err := p.readField5(iprot); err != nil {
         return err
       }
     case 6:
@@ -2680,28 +2664,19 @@ func (p *ResultadosExameThrift)  readField4(iprot thrift.TProtocol) error {
   return nil
 }
 
-func (p *ResultadosExameThrift)  readField5(iprot thrift.TProtocol) error {
-  if v, err := iprot.ReadString(); err != nil {
-  return thrift.PrependError("error reading field 5: ", err)
-} else {
-  p.Resultado = &v
-}
-  return nil
-}
-
 func (p *ResultadosExameThrift)  readField6(iprot thrift.TProtocol) error {
   _, size, err := iprot.ReadListBegin()
   if err != nil {
     return thrift.PrependError("error reading list begin: ", err)
   }
   tSlice := make([]*ResultadoExameThrift, 0, size)
-  p.ExameResultadoEspecifico =  tSlice
+  p.ResultadoExame =  tSlice
   for i := 0; i < size; i ++ {
     _elem0 := &ResultadoExameThrift{}
     if err := _elem0.Read(iprot); err != nil {
       return thrift.PrependError(fmt.Sprintf("%T error reading struct: ", _elem0), err)
     }
-    p.ExameResultadoEspecifico = append(p.ExameResultadoEspecifico, _elem0)
+    p.ResultadoExame = append(p.ResultadoExame, _elem0)
   }
   if err := iprot.ReadListEnd(); err != nil {
     return thrift.PrependError("error reading list end: ", err)
@@ -2716,7 +2691,6 @@ func (p *ResultadosExameThrift) Write(oprot thrift.TProtocol) error {
   if err := p.writeField2(oprot); err != nil { return err }
   if err := p.writeField3(oprot); err != nil { return err }
   if err := p.writeField4(oprot); err != nil { return err }
-  if err := p.writeField5(oprot); err != nil { return err }
   if err := p.writeField6(oprot); err != nil { return err }
   if err := oprot.WriteFieldStop(); err != nil {
     return thrift.PrependError("write field stop error: ", err) }
@@ -2773,26 +2747,14 @@ func (p *ResultadosExameThrift) writeField4(oprot thrift.TProtocol) (err error) 
   return err
 }
 
-func (p *ResultadosExameThrift) writeField5(oprot thrift.TProtocol) (err error) {
-  if p.IsSetResultado() {
-    if err := oprot.WriteFieldBegin("resultado", thrift.STRING, 5); err != nil {
-      return thrift.PrependError(fmt.Sprintf("%T write field begin error 5:resultado: ", p), err) }
-    if err := oprot.WriteString(string(*p.Resultado)); err != nil {
-    return thrift.PrependError(fmt.Sprintf("%T.resultado (5) field write error: ", p), err) }
-    if err := oprot.WriteFieldEnd(); err != nil {
-      return thrift.PrependError(fmt.Sprintf("%T write field end error 5:resultado: ", p), err) }
-  }
-  return err
-}
-
 func (p *ResultadosExameThrift) writeField6(oprot thrift.TProtocol) (err error) {
-  if p.IsSetExameResultadoEspecifico() {
-    if err := oprot.WriteFieldBegin("exameResultadoEspecifico", thrift.LIST, 6); err != nil {
-      return thrift.PrependError(fmt.Sprintf("%T write field begin error 6:exameResultadoEspecifico: ", p), err) }
-    if err := oprot.WriteListBegin(thrift.STRUCT, len(p.ExameResultadoEspecifico)); err != nil {
+  if p.IsSetResultadoExame() {
+    if err := oprot.WriteFieldBegin("resultadoExame", thrift.LIST, 6); err != nil {
+      return thrift.PrependError(fmt.Sprintf("%T write field begin error 6:resultadoExame: ", p), err) }
+    if err := oprot.WriteListBegin(thrift.STRUCT, len(p.ResultadoExame)); err != nil {
       return thrift.PrependError("error writing list begin: ", err)
     }
-    for _, v := range p.ExameResultadoEspecifico {
+    for _, v := range p.ResultadoExame {
       if err := v.Write(oprot); err != nil {
         return thrift.PrependError(fmt.Sprintf("%T error writing struct: ", v), err)
       }
@@ -2801,7 +2763,7 @@ func (p *ResultadosExameThrift) writeField6(oprot thrift.TProtocol) (err error) 
       return thrift.PrependError("error writing list end: ", err)
     }
     if err := oprot.WriteFieldEnd(); err != nil {
-      return thrift.PrependError(fmt.Sprintf("%T write field end error 6:exameResultadoEspecifico: ", p), err) }
+      return thrift.PrependError(fmt.Sprintf("%T write field end error 6:resultadoExame: ", p), err) }
   }
   return err
 }

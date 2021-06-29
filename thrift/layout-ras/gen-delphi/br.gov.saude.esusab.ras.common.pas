@@ -889,31 +889,26 @@ type
     procedure SetDataRealizacao( const Value: Int64);
     function GetDataResultado: Int64;
     procedure SetDataResultado( const Value: Int64);
-    function GetResultado: string;
-    procedure SetResultado( const Value: string);
-    function GetExameResultadoEspecifico: IThriftList<IResultadoExameThrift>;
-    procedure SetExameResultadoEspecifico( const Value: IThriftList<IResultadoExameThrift>);
+    function GetResultadoExame: IThriftList<IResultadoExameThrift>;
+    procedure SetResultadoExame( const Value: IThriftList<IResultadoExameThrift>);
 
     property Exame: string read GetExame write SetExame;
     property DataSolicitacao: Int64 read GetDataSolicitacao write SetDataSolicitacao;
     property DataRealizacao: Int64 read GetDataRealizacao write SetDataRealizacao;
     property DataResultado: Int64 read GetDataResultado write SetDataResultado;
-    property Resultado: string read GetResultado write SetResultado;
-    property ExameResultadoEspecifico: IThriftList<IResultadoExameThrift> read GetExameResultadoEspecifico write SetExameResultadoEspecifico;
+    property ResultadoExame: IThriftList<IResultadoExameThrift> read GetResultadoExame write SetResultadoExame;
 
     function Get__isset_Exame: Boolean;
     function Get__isset_DataSolicitacao: Boolean;
     function Get__isset_DataRealizacao: Boolean;
     function Get__isset_DataResultado: Boolean;
-    function Get__isset_Resultado: Boolean;
-    function Get__isset_ExameResultadoEspecifico: Boolean;
+    function Get__isset_ResultadoExame: Boolean;
 
     property __isset_Exame: Boolean read Get__isset_Exame;
     property __isset_DataSolicitacao: Boolean read Get__isset_DataSolicitacao;
     property __isset_DataRealizacao: Boolean read Get__isset_DataRealizacao;
     property __isset_DataResultado: Boolean read Get__isset_DataResultado;
-    property __isset_Resultado: Boolean read Get__isset_Resultado;
-    property __isset_ExameResultadoEspecifico: Boolean read Get__isset_ExameResultadoEspecifico;
+    property __isset_ResultadoExame: Boolean read Get__isset_ResultadoExame;
   end;
 
   TResultadosExameThriftImpl = class(TInterfacedObject, IBase, IResultadosExameThrift)
@@ -922,15 +917,13 @@ type
     FDataSolicitacao: Int64;
     FDataRealizacao: Int64;
     FDataResultado: Int64;
-    FResultado: string;
-    FExameResultadoEspecifico: IThriftList<IResultadoExameThrift>;
+    FResultadoExame: IThriftList<IResultadoExameThrift>;
     
     F__isset_Exame: Boolean;
     F__isset_DataSolicitacao: Boolean;
     F__isset_DataRealizacao: Boolean;
     F__isset_DataResultado: Boolean;
-    F__isset_Resultado: Boolean;
-    F__isset_ExameResultadoEspecifico: Boolean;
+    F__isset_ResultadoExame: Boolean;
     
     function GetExame: string;
     procedure SetExame( const Value: string);
@@ -940,17 +933,14 @@ type
     procedure SetDataRealizacao( const Value: Int64);
     function GetDataResultado: Int64;
     procedure SetDataResultado( const Value: Int64);
-    function GetResultado: string;
-    procedure SetResultado( const Value: string);
-    function GetExameResultadoEspecifico: IThriftList<IResultadoExameThrift>;
-    procedure SetExameResultadoEspecifico( const Value: IThriftList<IResultadoExameThrift>);
+    function GetResultadoExame: IThriftList<IResultadoExameThrift>;
+    procedure SetResultadoExame( const Value: IThriftList<IResultadoExameThrift>);
 
     function Get__isset_Exame: Boolean;
     function Get__isset_DataSolicitacao: Boolean;
     function Get__isset_DataRealizacao: Boolean;
     function Get__isset_DataResultado: Boolean;
-    function Get__isset_Resultado: Boolean;
-    function Get__isset_ExameResultadoEspecifico: Boolean;
+    function Get__isset_ResultadoExame: Boolean;
   public
     constructor Create;
     destructor Destroy; override;
@@ -966,16 +956,14 @@ type
     property DataSolicitacao: Int64 read GetDataSolicitacao write SetDataSolicitacao;
     property DataRealizacao: Int64 read GetDataRealizacao write SetDataRealizacao;
     property DataResultado: Int64 read GetDataResultado write SetDataResultado;
-    property Resultado: string read GetResultado write SetResultado;
-    property ExameResultadoEspecifico: IThriftList<IResultadoExameThrift> read GetExameResultadoEspecifico write SetExameResultadoEspecifico;
+    property ResultadoExame: IThriftList<IResultadoExameThrift> read GetResultadoExame write SetResultadoExame;
 
     // isset
     property __isset_Exame: Boolean read Get__isset_Exame;
     property __isset_DataSolicitacao: Boolean read Get__isset_DataSolicitacao;
     property __isset_DataRealizacao: Boolean read Get__isset_DataRealizacao;
     property __isset_DataResultado: Boolean read Get__isset_DataResultado;
-    property __isset_Resultado: Boolean read Get__isset_Resultado;
-    property __isset_ExameResultadoEspecifico: Boolean read Get__isset_ExameResultadoEspecifico;
+    property __isset_ResultadoExame: Boolean read Get__isset_ResultadoExame;
   end;
 
 implementation
@@ -3728,36 +3716,20 @@ begin
   Result := F__isset_DataResultado;
 end;
 
-function TResultadosExameThriftImpl.GetResultado: string;
+function TResultadosExameThriftImpl.GetResultadoExame: IThriftList<IResultadoExameThrift>;
 begin
-  Result := FResultado;
+  Result := FResultadoExame;
 end;
 
-procedure TResultadosExameThriftImpl.SetResultado( const Value: string);
+procedure TResultadosExameThriftImpl.SetResultadoExame( const Value: IThriftList<IResultadoExameThrift>);
 begin
-  F__isset_Resultado := True;
-  FResultado := Value;
+  F__isset_ResultadoExame := True;
+  FResultadoExame := Value;
 end;
 
-function TResultadosExameThriftImpl.Get__isset_Resultado: Boolean;
+function TResultadosExameThriftImpl.Get__isset_ResultadoExame: Boolean;
 begin
-  Result := F__isset_Resultado;
-end;
-
-function TResultadosExameThriftImpl.GetExameResultadoEspecifico: IThriftList<IResultadoExameThrift>;
-begin
-  Result := FExameResultadoEspecifico;
-end;
-
-procedure TResultadosExameThriftImpl.SetExameResultadoEspecifico( const Value: IThriftList<IResultadoExameThrift>);
-begin
-  F__isset_ExameResultadoEspecifico := True;
-  FExameResultadoEspecifico := Value;
-end;
-
-function TResultadosExameThriftImpl.Get__isset_ExameResultadoEspecifico: Boolean;
-begin
-  Result := F__isset_ExameResultadoEspecifico;
+  Result := F__isset_ResultadoExame;
 end;
 
 procedure TResultadosExameThriftImpl.Read( const iprot: IProtocol);
@@ -3817,25 +3789,16 @@ begin
             TProtocolUtil.Skip(iprot, field_.Type_);
           end;
         end;
-        5: begin
-          if (field_.Type_ = TType.String_) then
-          begin
-            Resultado := iprot.ReadString();
-          end else
-          begin
-            TProtocolUtil.Skip(iprot, field_.Type_);
-          end;
-        end;
         6: begin
           if (field_.Type_ = TType.List) then
           begin
-            ExameResultadoEspecifico := TThriftListImpl<IResultadoExameThrift>.Create;
+            ResultadoExame := TThriftListImpl<IResultadoExameThrift>.Create;
             _list16 := iprot.ReadListBegin();
             for _i17 := 0 to _list16.Count - 1 do
             begin
               _elem18 := TResultadoExameThriftImpl.Create;
               _elem18.Read(iprot);
-              ExameResultadoEspecifico.Add(_elem18);
+              ResultadoExame.Add(_elem18);
             end;
             iprot.ReadListEnd();
           end else
@@ -3902,24 +3865,15 @@ begin
     oprot.WriteI64(DataResultado);
     oprot.WriteFieldEnd();
   end;
-  if (__isset_Resultado) then
+  if (ResultadoExame <> nil) and __isset_ResultadoExame then
   begin
-    field_.Name := 'resultado';
-    field_.Type_  := TType.String_;
-    field_.ID := 5;
-    oprot.WriteFieldBegin(field_);
-    oprot.WriteString(Resultado);
-    oprot.WriteFieldEnd();
-  end;
-  if (ExameResultadoEspecifico <> nil) and __isset_ExameResultadoEspecifico then
-  begin
-    field_.Name := 'exameResultadoEspecifico';
+    field_.Name := 'resultadoExame';
     field_.Type_  := TType.List;
     field_.ID := 6;
     oprot.WriteFieldBegin(field_);
-    list_19 := TListImpl.Create(TType.Struct, ExameResultadoEspecifico.Count);
+    list_19 := TListImpl.Create(TType.Struct, ResultadoExame.Count);
     oprot.WriteListBegin( list_19);
-    for _iter20 in ExameResultadoEspecifico do
+    for _iter20 in ResultadoExame do
     begin
       _iter20.Write(oprot);
     end;
@@ -3962,17 +3916,11 @@ begin
       _sb21.Append('DataResultado: ');
       _sb21.Append(DataResultado);
     end;
-    if (__isset_Resultado) then begin
+    if (ResultadoExame <> nil) and __isset_ResultadoExame then begin
       if not _first22 then _sb21.Append(',');
       _first22 := FALSE;
-      _sb21.Append('Resultado: ');
-      _sb21.Append(Resultado);
-    end;
-    if (ExameResultadoEspecifico <> nil) and __isset_ExameResultadoEspecifico then begin
-      if not _first22 then _sb21.Append(',');
-      _first22 := FALSE;
-      _sb21.Append('ExameResultadoEspecifico: ');
-      _sb21.Append(ExameResultadoEspecifico);
+      _sb21.Append('ResultadoExame: ');
+      _sb21.Append(ResultadoExame);
     end;
     _sb21.Append(')');
     Result := _sb21.ToString;

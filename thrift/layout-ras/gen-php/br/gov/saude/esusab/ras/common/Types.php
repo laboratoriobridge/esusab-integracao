@@ -1682,13 +1682,9 @@ class ResultadosExameThrift {
    */
   public $dataResultado = null;
   /**
-   * @var string
-   */
-  public $resultado = null;
-  /**
    * @var \br\gov\saude\esusab\ras\common\ResultadoExameThrift[]
    */
-  public $exameResultadoEspecifico = null;
+  public $resultadoExame = null;
 
   public function __construct($vals=null) {
     if (!isset(self::$_TSPEC)) {
@@ -1709,12 +1705,8 @@ class ResultadosExameThrift {
           'var' => 'dataResultado',
           'type' => TType::I64,
           ),
-        5 => array(
-          'var' => 'resultado',
-          'type' => TType::STRING,
-          ),
         6 => array(
-          'var' => 'exameResultadoEspecifico',
+          'var' => 'resultadoExame',
           'type' => TType::LST,
           'etype' => TType::STRUCT,
           'elem' => array(
@@ -1737,11 +1729,8 @@ class ResultadosExameThrift {
       if (isset($vals['dataResultado'])) {
         $this->dataResultado = $vals['dataResultado'];
       }
-      if (isset($vals['resultado'])) {
-        $this->resultado = $vals['resultado'];
-      }
-      if (isset($vals['exameResultadoEspecifico'])) {
-        $this->exameResultadoEspecifico = $vals['exameResultadoEspecifico'];
+      if (isset($vals['resultadoExame'])) {
+        $this->resultadoExame = $vals['resultadoExame'];
       }
     }
   }
@@ -1793,16 +1782,9 @@ class ResultadosExameThrift {
             $xfer += $input->skip($ftype);
           }
           break;
-        case 5:
-          if ($ftype == TType::STRING) {
-            $xfer += $input->readString($this->resultado);
-          } else {
-            $xfer += $input->skip($ftype);
-          }
-          break;
         case 6:
           if ($ftype == TType::LST) {
-            $this->exameResultadoEspecifico = array();
+            $this->resultadoExame = array();
             $_size0 = 0;
             $_etype3 = 0;
             $xfer += $input->readListBegin($_etype3, $_size0);
@@ -1811,7 +1793,7 @@ class ResultadosExameThrift {
               $elem5 = null;
               $elem5 = new \br\gov\saude\esusab\ras\common\ResultadoExameThrift();
               $xfer += $elem5->read($input);
-              $this->exameResultadoEspecifico []= $elem5;
+              $this->resultadoExame []= $elem5;
             }
             $xfer += $input->readListEnd();
           } else {
@@ -1851,20 +1833,15 @@ class ResultadosExameThrift {
       $xfer += $output->writeI64($this->dataResultado);
       $xfer += $output->writeFieldEnd();
     }
-    if ($this->resultado !== null) {
-      $xfer += $output->writeFieldBegin('resultado', TType::STRING, 5);
-      $xfer += $output->writeString($this->resultado);
-      $xfer += $output->writeFieldEnd();
-    }
-    if ($this->exameResultadoEspecifico !== null) {
-      if (!is_array($this->exameResultadoEspecifico)) {
+    if ($this->resultadoExame !== null) {
+      if (!is_array($this->resultadoExame)) {
         throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
       }
-      $xfer += $output->writeFieldBegin('exameResultadoEspecifico', TType::LST, 6);
+      $xfer += $output->writeFieldBegin('resultadoExame', TType::LST, 6);
       {
-        $output->writeListBegin(TType::STRUCT, count($this->exameResultadoEspecifico));
+        $output->writeListBegin(TType::STRUCT, count($this->resultadoExame));
         {
-          foreach ($this->exameResultadoEspecifico as $iter6)
+          foreach ($this->resultadoExame as $iter6)
           {
             $xfer += $iter6->write($output);
           }

@@ -98,6 +98,5 @@ struct ResultadosExameThrift {
     2:optional i64 dataSolicitacao;
     3:optional i64 dataRealizacao;
     4:optional i64 dataResultado;
-    5:optional string resultado;
-    6:optional list<ResultadoExameThrift> exameResultadoEspecifico;
+    6:optional list<ResultadoExameThrift> resultadoExame;
 }

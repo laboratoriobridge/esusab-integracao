@@ -25,7 +25,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 4.2.0</span>
+        <span class="label">versão 4.2.1</span>
       
     </a>
 
@@ -137,7 +137,7 @@
 
       <li id="item-layout_ab" data-url="/ledi/documentacao/index.html">
         <label>
-          <input type="checkbox" value="layout_ab" checked="checked"> Layout e-SUS APS de Dados e Interface Versão 4.2.0
+          <input type="checkbox" value="layout_ab" checked="checked"> Layout e-SUS APS de Dados e Interface Versão 4.2.1
           <small>
             <a onclick="checkById('layout_ab', true); return false;">Marcar todos</a> |
             <a onclick="checkById('layout_ab', false); return false;">Desmarcar todos</a>
@@ -659,7 +659,7 @@
 
       <li id="item-principais_alteracoes" data-url="/ledi/documentacao/principais_alteracoes.html">
         <label>
-          <input type="checkbox" value="principais_alteracoes" checked="checked"> Principais alterações da v4.1.4 para a v4.2.0
+          <input type="checkbox" value="principais_alteracoes" checked="checked"> Principais alterações da v4.2.0 para a v4.2.1
           <small>
             <a onclick="checkById('principais_alteracoes', true); return false;">Marcar todos</a> |
             <a onclick="checkById('principais_alteracoes', false); return false;">Desmarcar todos</a>
@@ -985,7 +985,7 @@
   
       <!-- Cria a lista de itens[páginas] que foram selecionados  -->
 
-  <li id="summary-layout_ab"><a href="#layout_ab">Layout e-SUS APS de Dados e Interface Versão 4.2.0</a></li>
+  <li id="summary-layout_ab"><a href="#layout_ab">Layout e-SUS APS de Dados e Interface Versão 4.2.1</a></li>
   
       <!-- Cria a lista de itens[páginas] que foram selecionados  -->
 
@@ -1206,7 +1206,7 @@
 
   
 
-  <li id="summary-principais_alteracoes"><a href="#principais_alteracoes">Principais alterações da v4.1.4 para a v4.2.0</a></li>
+  <li id="summary-principais_alteracoes"><a href="#principais_alteracoes">Principais alterações da v4.2.0 para a v4.2.1</a></li>
   
       <!-- Cria a lista de itens[páginas] que foram selecionados  -->
 
@@ -1430,7 +1430,11 @@
 </tr>
 <tr>
 <td>4.2.1 ou superior</td>
-<td><a href="/ledi/documentacao/index.html">LEDI APS 4.2.0</a></td>
+<td><a href="https://integracao.esusab.ufsc.br/v420/">LEDI APS 4.2.0</a></td>
+</tr>
+<tr>
+<td>4.2.6 ou superior</td>
+<td><a href="/ledi/documentacao/index.html">LEDI APS 4.2.1</a></td>
 </tr>
 </tbody></table>
 
@@ -1443,17 +1447,17 @@
         
     <div class="post pdf shown" id="layout_ab" data-url="/ledi/documentacao/index.html">
       <header class="post-header">
-        <h1 class="post-title">Layout e-SUS APS de Dados e Interface Versão 4.2.0</h1>
+        <h1 class="post-title">Layout e-SUS APS de Dados e Interface Versão 4.2.1</h1>
       </header>
 
       
 
       <article class="post-content">
-        <p>Esta documentação descreve as estruturas de dados, seus atributos e regras utilizadas no <strong>LEDI APS</strong> versão 4.2.0.</p>
+        <p>Esta documentação descreve as estruturas de dados, seus atributos e regras utilizadas no <strong>LEDI APS</strong> versão 4.2.1</p>
 
-<p>A versão <strong>LEDI APS</strong> 4.2.0 é compatível com o sistema <strong>PEC e-SUS APS</strong> versão 4.2.1 ou superior.</p>
+<p>A versão <strong>LEDI APS</strong> 4.2.1 é compatível com o sistema <strong>PEC e-SUS APS</strong> versão 4.2.6 ou superior.</p>
 
-<p>Confira as principais alterações da V4.1.4 para a V4.2.0 <a href="/ledi/documentacao/principais_alteracoes.html">aqui</a>.</p>
+<p>Confira as principais alterações da V4.2.0 para a V4.2.1 <a href="/ledi/documentacao/principais_alteracoes.html">aqui</a>.</p>
 
       </article>
 
@@ -4214,35 +4218,6 @@
 
 <p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#orientacaosexual">OrientacaoSexual</a>.</p>
 
-<h3 id="5-povocomunidadetradicional">#5 povoComunidadeTradicional</h3>
-
-<p>Nome da comunidade tradicional que o cidadão pertence.</p>
-
-<table><thead>
-<tr>
-<th>Tipo</th>
-<th>Obrigatório</th>
-<th>Mínimo</th>
-<th>Máximo</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>String</td>
-<td>Não</td>
-<td>0</td>
-<td>100</td>
-</tr>
-</tbody></table>
-
-<p><strong>Regras:</strong></p>
-
-<ul>
-<li>Não deve ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#11-statusmembropovocomunidadetradicional">statusMembroPovoComunidadeTradicional</a> = <code>false</code>;</li>
-<li>Se a informação for diferente das opções de referência, preencher com a opção <code>OUTROS</code>.</li>
-</ul>
-
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#povocomunidadetradicional">povoComunidadeTradicional</a>.</p>
-
 <h3 id="6-relacaoparentescocidadao">#6 relacaoParentescoCidadao</h3>
 
 <p>Código da relação de parentesco com o responsável familiar.</p>
@@ -4495,7 +4470,31 @@
 
 <p><strong>Regras:</strong> Não pode ser preenchido se a <a href="/ledi/documentacao/estrutura_arquivos/#3-datanascimentocidadao">dataNascimentoCidadao</a> for maior ou igual a 10 anos a partir da <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>.</p>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#responsavelcrianca">ResponsavelCrianca</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#responsavelcrianca">ResponsavelCrianca</a>.</p>
+
+<h3 id="18-copovocomunidadetradicional">#18 coPovoComunidadeTradicional</h3>
+
+<p>Código do povo ou comunidade tradicional que o cidadão pertence.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Não</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> Não deve ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#11-statusmembropovocomunidadetradicional">statusMembroPovoComunidadeTradicional</a> = <code>false</code>.</p>
+
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#povocomunidadetradicional">povoComunidadeTradicional</a>.</p>
 
 <h2 id="saidacidadaocadastro">SaidaCidadaoCadastro</h2>
 
@@ -10055,6 +10054,12 @@
 <tr>
 <td>04.14.02.037-5</td>
 <td>TRATAMENTO CIRÚRGICO PERIODONTAL (POR SEXTANTE)</td>
+<td>Sextante</td>
+<td>6</td>
+</tr>
+<tr>
+<td>03.07.03.003-2</td>
+<td>RASPAGEM CORONO-RADICULAR (POR SEXTANTE)</td>
 <td>Sextante</td>
 <td>6</td>
 </tr>
@@ -46900,7 +46905,7 @@
 <td>revision</td>
 <td>Integer</td>
 <td>Sim</td>
-<td>Valor único = 0</td>
+<td>Valor único = 1</td>
 </tr>
 </tbody></table>
 
@@ -62791,74 +62796,165 @@
 
 <table><thead>
 <tr>
+<th>Código</th>
 <th>Descrição</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>AGROEXTRATIVISTAS</td>
+<td>157</td>
+<td>Agroextrativistas</td>
 </tr>
 <tr>
-<td>CAATINGUEIROS</td>
+<td>158</td>
+<td>Caatingueiros</td>
 </tr>
 <tr>
-<td>CAIÇARAS</td>
+<td>159</td>
+<td>Caiçaras</td>
 </tr>
 <tr>
-<td>CERRADO</td>
+<td>160</td>
+<td>Cerrado</td>
 </tr>
 <tr>
-<td>CIGANOS</td>
+<td>161</td>
+<td>Ciganos</td>
 </tr>
 <tr>
-<td>COMUNIDADES DE FUNDO E FECHO DE PASTO</td>
+<td>162</td>
+<td>Comunidades de fundo e fecho de pasto</td>
 </tr>
 <tr>
-<td>EXTRATIVISTAS</td>
+<td>163</td>
+<td>Extrativistas</td>
 </tr>
 <tr>
-<td>FAXINALENSES</td>
+<td>164</td>
+<td>Faxinalenses</td>
 </tr>
 <tr>
-<td>GERAIZEIROS</td>
+<td>165</td>
+<td>Geraizeiros</td>
 </tr>
 <tr>
-<td>MARISQUEIROS</td>
+<td>166</td>
+<td>Marisqueiros</td>
 </tr>
 <tr>
-<td>PANTANEIROS</td>
+<td>167</td>
+<td>Pantaneiros</td>
 </tr>
 <tr>
-<td>PESCADORES ARTESANAIS</td>
+<td>168</td>
+<td>Pescadores artesanais</td>
 </tr>
 <tr>
-<td>POMERANOS</td>
+<td>169</td>
+<td>Pomeranos</td>
 </tr>
 <tr>
-<td>POVOS INDÍGENAS</td>
+<td>170</td>
+<td>Povos indígenas</td>
 </tr>
 <tr>
-<td>POVOS QUILOMBOLAS</td>
+<td>171</td>
+<td>Povos quilombolas</td>
 </tr>
 <tr>
-<td>QUEBRADEIRAS DE COCO BABAÇU</td>
+<td>172</td>
+<td>Quebradeiras de coco babaçu</td>
 </tr>
 <tr>
-<td>RETIREIROS</td>
+<td>173</td>
+<td>Retireiros</td>
 </tr>
 <tr>
-<td>RIBEIRINHOS</td>
+<td>174</td>
+<td>Ribeirinhos</td>
 </tr>
 <tr>
-<td>SERINGUEIROS</td>
+<td>175</td>
+<td>Seringueiros</td>
 </tr>
 <tr>
-<td>TERREIRO / MATRIZ AFRICANA</td>
+<td>176</td>
+<td>Povos de terreiro / Matriz africana</td>
 </tr>
 <tr>
-<td>VAZANTEIROS</td>
+<td>177</td>
+<td>Vazanteiros</td>
 </tr>
 <tr>
-<td>OUTROS</td>
+<td>178</td>
+<td>Outros</td>
+</tr>
+<tr>
+<td>179</td>
+<td>Acampada</td>
+</tr>
+<tr>
+<td>180</td>
+<td>Andirobeiras</td>
+</tr>
+<tr>
+<td>181</td>
+<td>Apátridas</td>
+</tr>
+<tr>
+<td>182</td>
+<td>Assentada</td>
+</tr>
+<tr>
+<td>183</td>
+<td>Camponeses</td>
+</tr>
+<tr>
+<td>184</td>
+<td>Castanheiras</td>
+</tr>
+<tr>
+<td>185</td>
+<td>Catadores de mangaba</td>
+</tr>
+<tr>
+<td>186</td>
+<td>Isqueiros</td>
+</tr>
+<tr>
+<td>187</td>
+<td>Jangadeiros</td>
+</tr>
+<tr>
+<td>188</td>
+<td>Migrantes</td>
+</tr>
+<tr>
+<td>189</td>
+<td>Morroquianos</td>
+</tr>
+<tr>
+<td>190</td>
+<td>Populações atingidas por barragens</td>
+</tr>
+<tr>
+<td>191</td>
+<td>População circense</td>
+</tr>
+<tr>
+<td>192</td>
+<td>Refugiados</td>
+</tr>
+<tr>
+<td>193</td>
+<td>Trabalhadores rurais assalariados</td>
+</tr>
+<tr>
+<td>194</td>
+<td>Trabalhadores rurais temporários</td>
+</tr>
+<tr>
+<td>195</td>
+<td>Varjeiros</td>
 </tr>
 </tbody></table>
 
@@ -100098,33 +100194,17 @@
 
     <div class="post pdf shown" id="principais_alteracoes" data-url="/ledi/documentacao/principais_alteracoes.html">
       <header class="post-header">
-        <h1 class="post-title">Principais alterações da v4.1.4 para a v4.2.0</h1>
+        <h1 class="post-title">Principais alterações da v4.2.0 para a v4.2.1</h1>
       </header>
 
       
 
       <article class="post-content">
-        <p>Este documento relata as principais alterações em relação à versão v4.1.4 do LEDI APS:</p>
+        <p>Este documento relata as principais alterações em relação à versão v4.2.0 do LEDI APS:</p>
 
-<h3 id="1-ficha-de-atendimento-individual">1. Ficha de Atendimento Individual</h3>
+<h3 id="1-inclus-o-de-povos-e-comunidades-tradicionais-na-ficha-de-cadastro-individual">1. Inclusão de Povos e Comunidades Tradicionais na Ficha de Cadastro Individual.</h3>
 
-<p>Foi adicionado o grupo de informação <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#resultadosexames">ResultadosExames</a>.</p>
-
-<h3 id="2-ficha-de-atendimento-odontol-gico-individual">2. Ficha de Atendimento Odontológico Individual</h3>
-
-<p>Foi adicionado o grupo de informação <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fao.html#resultadosexames">ResultadosExames</a>.</p>
-
-<h3 id="3-ficha-de-visita-domiciliar-e-territorial">3. Ficha de Visita Domiciliar e Territorial</h3>
-
-<p>Foram adicionados os campos <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fvd.html#20-latitude">latitude</a>, <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fvd.html#21-longitude">longitude</a> e <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fvd.html#22-uuidorigemcadastrodomiciliar">uuidOrigemCadastroDomiciliar</a>.</p>
-
-<h3 id="4-ficha-de-cadastro-domiciliar-e-territorial">4. Ficha de Cadastro Domiciliar e Territorial</h3>
-
-<p>Foram adicionados os campos <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fcd.html#15-latitude">latitude</a> e <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fcd.html#16-longitude">longitude</a>.</p>
-
-<h3 id="5-ficha-de-vacina-o">5. Ficha de Vacinação</h3>
-
-<p>Foram adicionados os campos <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fv.html#7-stregistroanterior">stRegistroAnterior</a> e <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fv.html#8-dataregistroanterior">dataRegistroAnterior</a> e regras de preenchimento para o registro anterior de vacinação.</p>
+<p><strong>1. </strong> Foi adicionado o campo codificado <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#18-copovocomunidadetradicional">coPovoComunidadeTradicional</a> e removido o campo de texto <code>povoComunidadeTradicional</code>.</p>
 
       </article>
 
@@ -100177,28 +100257,32 @@
       <article class="post-content">
         <p>Este documento relata as principais alterações entre as versões do DW.</p>
 
-<h3 id="1-principais-altera-es-da-v4-1-4-para-a-v4-2-0">1. Principais alterações da v4.1.4 para a v4.2.0:</h3>
+<h3 id="1-principais-altera-es-da-v4-2-0-para-a-v4-2-1">1. Principais alterações da v4.2.0 para a v4.2.1:</h3>
 
-<p><strong>1. </strong> No contexto de <a href="/dw/fatos/atendimento_individual.html">Atendimento individual</a> e <a href="/dw/fatos/atendimento_odontologico_individual.html">Atendimento odontológico individual</a> foram incluídas as estruturas de dados para registro das informações de resultados de exames. Estas informações estão armazenadas nas tabelas:</p>
+<p><strong>1. </strong> No contexto de <a href="/dw/fatos/cadastro_individual.html">Cadastro individual</a> foi incluído o campo <code>co_dim_povo_comunidade_tradicional</code>. Além deste campo, também foi criada a tabela de dimensão <a href="/dw/dimensoes.html#tb\_dim\_povo\_comunidade\_tradicional">tb_dim_povo_comunidade_tradicional</a>.</p>
+
+<h3 id="2-principais-altera-es-da-v4-1-4-para-a-v4-2-0">2. Principais alterações da v4.1.4 para a v4.2.0:</h3>
+
+<p><strong>2. </strong> No contexto de <a href="/dw/fatos/atendimento_individual.html">Atendimento individual</a> e <a href="/dw/fatos/atendimento_odontologico_individual.html">Atendimento odontológico individual</a> foram incluídas as estruturas de dados para registro das informações de resultados de exames. Estas informações estão armazenadas nas tabelas:</p>
 
 <ul>
 <li><code>tb_fat_atd_ind_exames</code>;</li>
 <li><code>tb_fat_atend_odonto_exames</code>.</li>
 </ul>
 
-<p><strong>2. </strong> No contexto de <a href="/dw/fatos/cadastro_domiciliar.html">Cadastro domiciliar</a> foram incluídos os campos <code>nu_latitude</code> e <code>nu_longitude</code>.</p>
+<p><strong>3. </strong> No contexto de <a href="/dw/fatos/cadastro_domiciliar.html">Cadastro domiciliar</a> foram incluídos os campos <code>nu_latitude</code> e <code>nu_longitude</code>.</p>
 
-<p><strong>3. </strong> No contexto de <a href="/dw/fatos/visita_domiciliar.html">Visita domiciliar</a> foram incluídos os campos <code>nu_latitude</code>, <code>nu_longitude</code> e <code>co_uuid_origem_fcd</code>.</p>
+<p><strong>4. </strong> No contexto de <a href="/dw/fatos/visita_domiciliar.html">Visita domiciliar</a> foram incluídos os campos <code>nu_latitude</code>, <code>nu_longitude</code> e <code>co_uuid_origem_fcd</code>.</p>
 
-<p><strong>4. </strong> No contexto de <a href="/dw/fatos/vacinacao.html">Vacinação</a> foram incluídos os campos <code>st_registro_anterior</code> e <code>co_dim_tempo_vacina_aplicada</code>.</p>
+<p><strong>5. </strong> No contexto de <a href="/dw/fatos/vacinacao.html">Vacinação</a> foram incluídos os campos <code>st_registro_anterior</code> e <code>co_dim_tempo_vacina_aplicada</code>.</p>
 
-<h3 id="2-principais-altera-es-da-v4-1-2-para-a-v4-1-4">2. Principais alterações da v4.1.2 para a v4.1.4:</h3>
+<h3 id="3-principais-altera-es-da-v4-1-2-para-a-v4-1-4">3. Principais alterações da v4.1.2 para a v4.1.4:</h3>
 
 <p><strong>1. </strong> No contexto de <a href="/dw/fatos/vacinacao.html">Vacinação</a> foram incluídas as estruturas de dados para registro da informação de grupo de atendimento. Esta informação está armazenada na tabela: <code>tb_fat_vacinacao_vacina</code>.</p>
 
 <p><strong>2. </strong> Para contextualizar as informações da tabela <code>tb_fat_vacinacao_vacina</code>, foi criada a seguinte tabela de dimensão: <code>tb_dim_grupo_atendimento</code>.</p>
 
-<h3 id="3-principais-altera-es-da-v4-0-0-para-a-v4-1-2">3. Principais alterações da v4.0.0 para a v4.1.2:</h3>
+<h3 id="4-principais-altera-es-da-v4-0-0-para-a-v4-1-2">4. Principais alterações da v4.0.0 para a v4.1.2:</h3>
 
 <p><strong>1. </strong> No contexto de <a href="/dw/fatos/atendimento_individual.html">Atendimento individual</a> foram incluídas as estruturas de dados para registro das informações de prescrição de medicamentos e encaminhamentos. Estas informações estão armazenadas nas tabelas:</p>
 
@@ -100408,6 +100492,10 @@
 <tr>
 <td><a name="tb\_dim\_pic"></a>tb_dim_pic</td>
 <td><a href="https://integracao.esusab.ufsc.br/v20/docs/dicionario/dicionario.html#praticasintegrativascomplementares">Práticas integrativas complementares</a></td>
+</tr>
+<tr>
+<td><a name="tb\_dim\_povo\_comunidade\_tradicional"></a>tb_dim_povo_comunidade_tradicional</td>
+<td><a href="/ledi/documentacao/referencias/dicionario.html#povocomunidadetradicional">Povo ou Comunidade Tradicional</a></td>
 </tr>
 <tr>
 <td><a name="tb\_dim\_procedencia\_origem"></a>tb_dim_procedencia_origem</td>

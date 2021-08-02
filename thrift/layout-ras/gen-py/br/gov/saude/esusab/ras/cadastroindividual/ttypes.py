@@ -1108,7 +1108,7 @@ class InformacoesSocioDemograficasThrift:
    - grauInstrucaoCidadao
    - ocupacaoCodigoCbo2002
    - orientacaoSexualCidadao
-   - povoComunidadeTradicional
+   - povoComunidadeTradicionalV420
    - relacaoParentescoCidadao
    - situacaoMercadoTrabalhoCidadao
    - statusDesejaInformarOrientacaoSexual
@@ -1121,6 +1121,7 @@ class InformacoesSocioDemograficasThrift:
    - identidadeGeneroCidadao
    - statusDesejaInformarIdentidadeGenero
    - responsavelPorCrianca
+   - coPovoComunidadeTradicional
   """
 
   thrift_spec = (
@@ -1130,7 +1131,7 @@ class InformacoesSocioDemograficasThrift:
     None, # 3
     (4, TType.STRING, 'ocupacaoCodigoCbo2002', None, None, ), # 4
     (5, TType.I64, 'orientacaoSexualCidadao', None, None, ), # 5
-    (6, TType.STRING, 'povoComunidadeTradicional', None, None, ), # 6
+    (6, TType.STRING, 'povoComunidadeTradicionalV420', None, None, ), # 6
     (7, TType.I64, 'relacaoParentescoCidadao', None, None, ), # 7
     None, # 8
     (9, TType.I64, 'situacaoMercadoTrabalhoCidadao', None, None, ), # 9
@@ -1144,14 +1145,15 @@ class InformacoesSocioDemograficasThrift:
     (17, TType.I64, 'identidadeGeneroCidadao', None, None, ), # 17
     (18, TType.BOOL, 'statusDesejaInformarIdentidadeGenero', None, None, ), # 18
     (19, TType.LIST, 'responsavelPorCrianca', (TType.I64,None), None, ), # 19
+    (20, TType.I64, 'coPovoComunidadeTradicional', None, None, ), # 20
   )
 
-  def __init__(self, deficienciasCidadao=None, grauInstrucaoCidadao=None, ocupacaoCodigoCbo2002=None, orientacaoSexualCidadao=None, povoComunidadeTradicional=None, relacaoParentescoCidadao=None, situacaoMercadoTrabalhoCidadao=None, statusDesejaInformarOrientacaoSexual=None, statusFrequentaBenzedeira=None, statusFrequentaEscola=None, statusMembroPovoComunidadeTradicional=None, statusParticipaGrupoComunitario=None, statusPossuiPlanoSaudePrivado=None, statusTemAlgumaDeficiencia=None, identidadeGeneroCidadao=None, statusDesejaInformarIdentidadeGenero=None, responsavelPorCrianca=None,):
+  def __init__(self, deficienciasCidadao=None, grauInstrucaoCidadao=None, ocupacaoCodigoCbo2002=None, orientacaoSexualCidadao=None, povoComunidadeTradicionalV420=None, relacaoParentescoCidadao=None, situacaoMercadoTrabalhoCidadao=None, statusDesejaInformarOrientacaoSexual=None, statusFrequentaBenzedeira=None, statusFrequentaEscola=None, statusMembroPovoComunidadeTradicional=None, statusParticipaGrupoComunitario=None, statusPossuiPlanoSaudePrivado=None, statusTemAlgumaDeficiencia=None, identidadeGeneroCidadao=None, statusDesejaInformarIdentidadeGenero=None, responsavelPorCrianca=None, coPovoComunidadeTradicional=None,):
     self.deficienciasCidadao = deficienciasCidadao
     self.grauInstrucaoCidadao = grauInstrucaoCidadao
     self.ocupacaoCodigoCbo2002 = ocupacaoCodigoCbo2002
     self.orientacaoSexualCidadao = orientacaoSexualCidadao
-    self.povoComunidadeTradicional = povoComunidadeTradicional
+    self.povoComunidadeTradicionalV420 = povoComunidadeTradicionalV420
     self.relacaoParentescoCidadao = relacaoParentescoCidadao
     self.situacaoMercadoTrabalhoCidadao = situacaoMercadoTrabalhoCidadao
     self.statusDesejaInformarOrientacaoSexual = statusDesejaInformarOrientacaoSexual
@@ -1164,6 +1166,7 @@ class InformacoesSocioDemograficasThrift:
     self.identidadeGeneroCidadao = identidadeGeneroCidadao
     self.statusDesejaInformarIdentidadeGenero = statusDesejaInformarIdentidadeGenero
     self.responsavelPorCrianca = responsavelPorCrianca
+    self.coPovoComunidadeTradicional = coPovoComunidadeTradicional
 
   def read(self, iprot):
     if iprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None and fastbinary is not None:
@@ -1201,7 +1204,7 @@ class InformacoesSocioDemograficasThrift:
           iprot.skip(ftype)
       elif fid == 6:
         if ftype == TType.STRING:
-          self.povoComunidadeTradicional = iprot.readString()
+          self.povoComunidadeTradicionalV420 = iprot.readString()
         else:
           iprot.skip(ftype)
       elif fid == 7:
@@ -1269,6 +1272,11 @@ class InformacoesSocioDemograficasThrift:
           iprot.readListEnd()
         else:
           iprot.skip(ftype)
+      elif fid == 20:
+        if ftype == TType.I64:
+          self.coPovoComunidadeTradicional = iprot.readI64()
+        else:
+          iprot.skip(ftype)
       else:
         iprot.skip(ftype)
       iprot.readFieldEnd()
@@ -1298,9 +1306,9 @@ class InformacoesSocioDemograficasThrift:
       oprot.writeFieldBegin('orientacaoSexualCidadao', TType.I64, 5)
       oprot.writeI64(self.orientacaoSexualCidadao)
       oprot.writeFieldEnd()
-    if self.povoComunidadeTradicional is not None:
-      oprot.writeFieldBegin('povoComunidadeTradicional', TType.STRING, 6)
-      oprot.writeString(self.povoComunidadeTradicional)
+    if self.povoComunidadeTradicionalV420 is not None:
+      oprot.writeFieldBegin('povoComunidadeTradicionalV420', TType.STRING, 6)
+      oprot.writeString(self.povoComunidadeTradicionalV420)
       oprot.writeFieldEnd()
     if self.relacaoParentescoCidadao is not None:
       oprot.writeFieldBegin('relacaoParentescoCidadao', TType.I64, 7)
@@ -1353,6 +1361,10 @@ class InformacoesSocioDemograficasThrift:
         oprot.writeI64(iter48)
       oprot.writeListEnd()
       oprot.writeFieldEnd()
+    if self.coPovoComunidadeTradicional is not None:
+      oprot.writeFieldBegin('coPovoComunidadeTradicional', TType.I64, 20)
+      oprot.writeI64(self.coPovoComunidadeTradicional)
+      oprot.writeFieldEnd()
     oprot.writeFieldStop()
     oprot.writeStructEnd()
 
@@ -1366,7 +1378,7 @@ class InformacoesSocioDemograficasThrift:
     value = (value * 31) ^ hash(self.grauInstrucaoCidadao)
     value = (value * 31) ^ hash(self.ocupacaoCodigoCbo2002)
     value = (value * 31) ^ hash(self.orientacaoSexualCidadao)
-    value = (value * 31) ^ hash(self.povoComunidadeTradicional)
+    value = (value * 31) ^ hash(self.povoComunidadeTradicionalV420)
     value = (value * 31) ^ hash(self.relacaoParentescoCidadao)
     value = (value * 31) ^ hash(self.situacaoMercadoTrabalhoCidadao)
     value = (value * 31) ^ hash(self.statusDesejaInformarOrientacaoSexual)
@@ -1379,6 +1391,7 @@ class InformacoesSocioDemograficasThrift:
     value = (value * 31) ^ hash(self.identidadeGeneroCidadao)
     value = (value * 31) ^ hash(self.statusDesejaInformarIdentidadeGenero)
     value = (value * 31) ^ hash(self.responsavelPorCrianca)
+    value = (value * 31) ^ hash(self.coPovoComunidadeTradicional)
     return value
 
   def __repr__(self):

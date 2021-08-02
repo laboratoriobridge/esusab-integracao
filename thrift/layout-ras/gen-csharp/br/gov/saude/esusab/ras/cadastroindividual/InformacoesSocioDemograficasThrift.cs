@@ -27,7 +27,7 @@ namespace br.gov.saude.esusab.ras.cadastroindividual
     private long _grauInstrucaoCidadao;
     private string _ocupacaoCodigoCbo2002;
     private long _orientacaoSexualCidadao;
-    private string _povoComunidadeTradicional;
+    private string _povoComunidadeTradicionalV420;
     private long _relacaoParentescoCidadao;
     private long _situacaoMercadoTrabalhoCidadao;
     private bool _statusDesejaInformarOrientacaoSexual;
@@ -40,6 +40,7 @@ namespace br.gov.saude.esusab.ras.cadastroindividual
     private long _identidadeGeneroCidadao;
     private bool _statusDesejaInformarIdentidadeGenero;
     private List<long> _responsavelPorCrianca;
+    private long _coPovoComunidadeTradicional;
 
     public List<long> DeficienciasCidadao
     {
@@ -93,16 +94,16 @@ namespace br.gov.saude.esusab.ras.cadastroindividual
       }
     }
 
-    public string PovoComunidadeTradicional
+    public string PovoComunidadeTradicionalV420
     {
       get
       {
-        return _povoComunidadeTradicional;
+        return _povoComunidadeTradicionalV420;
       }
       set
       {
-        __isset.povoComunidadeTradicional = true;
-        this._povoComunidadeTradicional = value;
+        __isset.povoComunidadeTradicionalV420 = true;
+        this._povoComunidadeTradicionalV420 = value;
       }
     }
 
@@ -262,6 +263,19 @@ namespace br.gov.saude.esusab.ras.cadastroindividual
       }
     }
 
+    public long CoPovoComunidadeTradicional
+    {
+      get
+      {
+        return _coPovoComunidadeTradicional;
+      }
+      set
+      {
+        __isset.coPovoComunidadeTradicional = true;
+        this._coPovoComunidadeTradicional = value;
+      }
+    }
+
 
     public Isset __isset;
     #if !SILVERLIGHT
@@ -272,7 +286,7 @@ namespace br.gov.saude.esusab.ras.cadastroindividual
       public bool grauInstrucaoCidadao;
       public bool ocupacaoCodigoCbo2002;
       public bool orientacaoSexualCidadao;
-      public bool povoComunidadeTradicional;
+      public bool povoComunidadeTradicionalV420;
       public bool relacaoParentescoCidadao;
       public bool situacaoMercadoTrabalhoCidadao;
       public bool statusDesejaInformarOrientacaoSexual;
@@ -285,6 +299,7 @@ namespace br.gov.saude.esusab.ras.cadastroindividual
       public bool identidadeGeneroCidadao;
       public bool statusDesejaInformarIdentidadeGenero;
       public bool responsavelPorCrianca;
+      public bool coPovoComunidadeTradicional;
     }
 
     public InformacoesSocioDemograficasThrift() {
@@ -345,7 +360,7 @@ namespace br.gov.saude.esusab.ras.cadastroindividual
               break;
             case 6:
               if (field.Type == TType.String) {
-                PovoComunidadeTradicional = iprot.ReadString();
+                PovoComunidadeTradicionalV420 = iprot.ReadString();
               } else { 
                 TProtocolUtil.Skip(iprot, field.Type);
               }
@@ -444,6 +459,13 @@ namespace br.gov.saude.esusab.ras.cadastroindividual
                 TProtocolUtil.Skip(iprot, field.Type);
               }
               break;
+            case 20:
+              if (field.Type == TType.I64) {
+                CoPovoComunidadeTradicional = iprot.ReadI64();
+              } else { 
+                TProtocolUtil.Skip(iprot, field.Type);
+              }
+              break;
             default: 
               TProtocolUtil.Skip(iprot, field.Type);
               break;
@@ -504,12 +526,12 @@ namespace br.gov.saude.esusab.ras.cadastroindividual
           oprot.WriteI64(OrientacaoSexualCidadao);
           oprot.WriteFieldEnd();
         }
-        if (PovoComunidadeTradicional != null && __isset.povoComunidadeTradicional) {
-          field.Name = "povoComunidadeTradicional";
+        if (PovoComunidadeTradicionalV420 != null && __isset.povoComunidadeTradicionalV420) {
+          field.Name = "povoComunidadeTradicionalV420";
           field.Type = TType.String;
           field.ID = 6;
           oprot.WriteFieldBegin(field);
-          oprot.WriteString(PovoComunidadeTradicional);
+          oprot.WriteString(PovoComunidadeTradicionalV420);
           oprot.WriteFieldEnd();
         }
         if (__isset.relacaoParentescoCidadao) {
@@ -615,6 +637,14 @@ namespace br.gov.saude.esusab.ras.cadastroindividual
           }
           oprot.WriteFieldEnd();
         }
+        if (__isset.coPovoComunidadeTradicional) {
+          field.Name = "coPovoComunidadeTradicional";
+          field.Type = TType.I64;
+          field.ID = 20;
+          oprot.WriteFieldBegin(field);
+          oprot.WriteI64(CoPovoComunidadeTradicional);
+          oprot.WriteFieldEnd();
+        }
         oprot.WriteFieldStop();
         oprot.WriteStructEnd();
       }
@@ -651,11 +681,11 @@ namespace br.gov.saude.esusab.ras.cadastroindividual
         __sb.Append("OrientacaoSexualCidadao: ");
         __sb.Append(OrientacaoSexualCidadao);
       }
-      if (PovoComunidadeTradicional != null && __isset.povoComunidadeTradicional) {
+      if (PovoComunidadeTradicionalV420 != null && __isset.povoComunidadeTradicionalV420) {
         if(!__first) { __sb.Append(", "); }
         __first = false;
-        __sb.Append("PovoComunidadeTradicional: ");
-        __sb.Append(PovoComunidadeTradicional);
+        __sb.Append("PovoComunidadeTradicionalV420: ");
+        __sb.Append(PovoComunidadeTradicionalV420);
       }
       if (__isset.relacaoParentescoCidadao) {
         if(!__first) { __sb.Append(", "); }
@@ -728,6 +758,12 @@ namespace br.gov.saude.esusab.ras.cadastroindividual
         __first = false;
         __sb.Append("ResponsavelPorCrianca: ");
         __sb.Append(ResponsavelPorCrianca);
+      }
+      if (__isset.coPovoComunidadeTradicional) {
+        if(!__first) { __sb.Append(", "); }
+        __first = false;
+        __sb.Append("CoPovoComunidadeTradicional: ");
+        __sb.Append(CoPovoComunidadeTradicional);
       }
       __sb.Append(")");
       return __sb.ToString();

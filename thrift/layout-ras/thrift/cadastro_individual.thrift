@@ -90,7 +90,7 @@ struct InformacoesSocioDemograficasThrift {
 	2:optional i64 grauInstrucaoCidadao,
 	4:optional string ocupacaoCodigoCbo2002,
 	5:optional i64 orientacaoSexualCidadao,
-	6:optional string povoComunidadeTradicional,
+	6:optional string povoComunidadeTradicionalV420,
 	7:optional i64 relacaoParentescoCidadao,
 	9:optional i64 situacaoMercadoTrabalhoCidadao,
 	10:optional bool statusDesejaInformarOrientacaoSexual,
@@ -102,7 +102,8 @@ struct InformacoesSocioDemograficasThrift {
 	16:optional bool statusTemAlgumaDeficiencia,
 	17:optional i64 identidadeGeneroCidadao,
 	18:optional bool statusDesejaInformarIdentidadeGenero,
-	19:optional list<i64> responsavelPorCrianca;
+	19:optional list<i64> responsavelPorCrianca,
+	20:optional i64 coPovoComunidadeTradicional;
 }
 
 struct SaidaCidadaoCadastroThrift {

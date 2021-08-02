@@ -90,7 +90,6 @@ struct InformacoesSocioDemograficasThrift {
 	2:optional i64 grauInstrucaoCidadao,
 	4:optional string ocupacaoCodigoCbo2002,
 	5:optional i64 orientacaoSexualCidadao,
-	6:optional string povoComunidadeTradicionalV420,
 	7:optional i64 relacaoParentescoCidadao,
 	9:optional i64 situacaoMercadoTrabalhoCidadao,
 	10:optional bool statusDesejaInformarOrientacaoSexual,

@@ -1887,10 +1887,6 @@ class InformacoesSocioDemograficasThrift {
    */
   public $orientacaoSexualCidadao = null;
   /**
-   * @var string
-   */
-  public $povoComunidadeTradicionalV420 = null;
-  /**
    * @var int
    */
   public $relacaoParentescoCidadao = null;
@@ -1966,10 +1962,6 @@ class InformacoesSocioDemograficasThrift {
           'var' => 'orientacaoSexualCidadao',
           'type' => TType::I64,
           ),
-        6 => array(
-          'var' => 'povoComunidadeTradicionalV420',
-          'type' => TType::STRING,
-          ),
         7 => array(
           'var' => 'relacaoParentescoCidadao',
           'type' => TType::I64,
@@ -2040,9 +2032,6 @@ class InformacoesSocioDemograficasThrift {
       }
       if (isset($vals['orientacaoSexualCidadao'])) {
         $this->orientacaoSexualCidadao = $vals['orientacaoSexualCidadao'];
-      }
-      if (isset($vals['povoComunidadeTradicionalV420'])) {
-        $this->povoComunidadeTradicionalV420 = $vals['povoComunidadeTradicionalV420'];
       }
       if (isset($vals['relacaoParentescoCidadao'])) {
         $this->relacaoParentescoCidadao = $vals['relacaoParentescoCidadao'];
@@ -2139,13 +2128,6 @@ class InformacoesSocioDemograficasThrift {
         case 5:
           if ($ftype == TType::I64) {
             $xfer += $input->readI64($this->orientacaoSexualCidadao);
-          } else {
-            $xfer += $input->skip($ftype);
-          }
-          break;
-        case 6:
-          if ($ftype == TType::STRING) {
-            $xfer += $input->readString($this->povoComunidadeTradicionalV420);
           } else {
             $xfer += $input->skip($ftype);
           }
@@ -2294,11 +2276,6 @@ class InformacoesSocioDemograficasThrift {
     if ($this->orientacaoSexualCidadao !== null) {
       $xfer += $output->writeFieldBegin('orientacaoSexualCidadao', TType::I64, 5);
       $xfer += $output->writeI64($this->orientacaoSexualCidadao);
-      $xfer += $output->writeFieldEnd();
-    }
-    if ($this->povoComunidadeTradicionalV420 !== null) {
-      $xfer += $output->writeFieldBegin('povoComunidadeTradicionalV420', TType::STRING, 6);
-      $xfer += $output->writeString($this->povoComunidadeTradicionalV420);
       $xfer += $output->writeFieldEnd();
     }
     if ($this->relacaoParentescoCidadao !== null) {

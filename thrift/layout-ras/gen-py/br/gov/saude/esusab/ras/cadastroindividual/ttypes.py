@@ -1108,7 +1108,6 @@ class InformacoesSocioDemograficasThrift:
    - grauInstrucaoCidadao
    - ocupacaoCodigoCbo2002
    - orientacaoSexualCidadao
-   - povoComunidadeTradicionalV420
    - relacaoParentescoCidadao
    - situacaoMercadoTrabalhoCidadao
    - statusDesejaInformarOrientacaoSexual
@@ -1131,7 +1130,7 @@ class InformacoesSocioDemograficasThrift:
     None, # 3
     (4, TType.STRING, 'ocupacaoCodigoCbo2002', None, None, ), # 4
     (5, TType.I64, 'orientacaoSexualCidadao', None, None, ), # 5
-    (6, TType.STRING, 'povoComunidadeTradicionalV420', None, None, ), # 6
+    None, # 6
     (7, TType.I64, 'relacaoParentescoCidadao', None, None, ), # 7
     None, # 8
     (9, TType.I64, 'situacaoMercadoTrabalhoCidadao', None, None, ), # 9
@@ -1148,12 +1147,11 @@ class InformacoesSocioDemograficasThrift:
     (20, TType.I64, 'coPovoComunidadeTradicional', None, None, ), # 20
   )
 
-  def __init__(self, deficienciasCidadao=None, grauInstrucaoCidadao=None, ocupacaoCodigoCbo2002=None, orientacaoSexualCidadao=None, povoComunidadeTradicionalV420=None, relacaoParentescoCidadao=None, situacaoMercadoTrabalhoCidadao=None, statusDesejaInformarOrientacaoSexual=None, statusFrequentaBenzedeira=None, statusFrequentaEscola=None, statusMembroPovoComunidadeTradicional=None, statusParticipaGrupoComunitario=None, statusPossuiPlanoSaudePrivado=None, statusTemAlgumaDeficiencia=None, identidadeGeneroCidadao=None, statusDesejaInformarIdentidadeGenero=None, responsavelPorCrianca=None, coPovoComunidadeTradicional=None,):
+  def __init__(self, deficienciasCidadao=None, grauInstrucaoCidadao=None, ocupacaoCodigoCbo2002=None, orientacaoSexualCidadao=None, relacaoParentescoCidadao=None, situacaoMercadoTrabalhoCidadao=None, statusDesejaInformarOrientacaoSexual=None, statusFrequentaBenzedeira=None, statusFrequentaEscola=None, statusMembroPovoComunidadeTradicional=None, statusParticipaGrupoComunitario=None, statusPossuiPlanoSaudePrivado=None, statusTemAlgumaDeficiencia=None, identidadeGeneroCidadao=None, statusDesejaInformarIdentidadeGenero=None, responsavelPorCrianca=None, coPovoComunidadeTradicional=None,):
     self.deficienciasCidadao = deficienciasCidadao
     self.grauInstrucaoCidadao = grauInstrucaoCidadao
     self.ocupacaoCodigoCbo2002 = ocupacaoCodigoCbo2002
     self.orientacaoSexualCidadao = orientacaoSexualCidadao
-    self.povoComunidadeTradicionalV420 = povoComunidadeTradicionalV420
     self.relacaoParentescoCidadao = relacaoParentescoCidadao
     self.situacaoMercadoTrabalhoCidadao = situacaoMercadoTrabalhoCidadao
     self.statusDesejaInformarOrientacaoSexual = statusDesejaInformarOrientacaoSexual
@@ -1200,11 +1198,6 @@ class InformacoesSocioDemograficasThrift:
       elif fid == 5:
         if ftype == TType.I64:
           self.orientacaoSexualCidadao = iprot.readI64()
-        else:
-          iprot.skip(ftype)
-      elif fid == 6:
-        if ftype == TType.STRING:
-          self.povoComunidadeTradicionalV420 = iprot.readString()
         else:
           iprot.skip(ftype)
       elif fid == 7:
@@ -1306,10 +1299,6 @@ class InformacoesSocioDemograficasThrift:
       oprot.writeFieldBegin('orientacaoSexualCidadao', TType.I64, 5)
       oprot.writeI64(self.orientacaoSexualCidadao)
       oprot.writeFieldEnd()
-    if self.povoComunidadeTradicionalV420 is not None:
-      oprot.writeFieldBegin('povoComunidadeTradicionalV420', TType.STRING, 6)
-      oprot.writeString(self.povoComunidadeTradicionalV420)
-      oprot.writeFieldEnd()
     if self.relacaoParentescoCidadao is not None:
       oprot.writeFieldBegin('relacaoParentescoCidadao', TType.I64, 7)
       oprot.writeI64(self.relacaoParentescoCidadao)
@@ -1378,7 +1367,6 @@ class InformacoesSocioDemograficasThrift:
     value = (value * 31) ^ hash(self.grauInstrucaoCidadao)
     value = (value * 31) ^ hash(self.ocupacaoCodigoCbo2002)
     value = (value * 31) ^ hash(self.orientacaoSexualCidadao)
-    value = (value * 31) ^ hash(self.povoComunidadeTradicionalV420)
     value = (value * 31) ^ hash(self.relacaoParentescoCidadao)
     value = (value * 31) ^ hash(self.situacaoMercadoTrabalhoCidadao)
     value = (value * 31) ^ hash(self.statusDesejaInformarOrientacaoSexual)

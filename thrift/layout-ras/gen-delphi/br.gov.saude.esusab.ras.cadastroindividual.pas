@@ -937,8 +937,6 @@ type
     procedure SetOcupacaoCodigoCbo2002( const Value: string);
     function GetOrientacaoSexualCidadao: Int64;
     procedure SetOrientacaoSexualCidadao( const Value: Int64);
-    function GetPovoComunidadeTradicionalV420: string;
-    procedure SetPovoComunidadeTradicionalV420( const Value: string);
     function GetRelacaoParentescoCidadao: Int64;
     procedure SetRelacaoParentescoCidadao( const Value: Int64);
     function GetSituacaoMercadoTrabalhoCidadao: Int64;
@@ -970,7 +968,6 @@ type
     property GrauInstrucaoCidadao: Int64 read GetGrauInstrucaoCidadao write SetGrauInstrucaoCidadao;
     property OcupacaoCodigoCbo2002: string read GetOcupacaoCodigoCbo2002 write SetOcupacaoCodigoCbo2002;
     property OrientacaoSexualCidadao: Int64 read GetOrientacaoSexualCidadao write SetOrientacaoSexualCidadao;
-    property PovoComunidadeTradicionalV420: string read GetPovoComunidadeTradicionalV420 write SetPovoComunidadeTradicionalV420;
     property RelacaoParentescoCidadao: Int64 read GetRelacaoParentescoCidadao write SetRelacaoParentescoCidadao;
     property SituacaoMercadoTrabalhoCidadao: Int64 read GetSituacaoMercadoTrabalhoCidadao write SetSituacaoMercadoTrabalhoCidadao;
     property StatusDesejaInformarOrientacaoSexual: Boolean read GetStatusDesejaInformarOrientacaoSexual write SetStatusDesejaInformarOrientacaoSexual;
@@ -989,7 +986,6 @@ type
     function Get__isset_GrauInstrucaoCidadao: Boolean;
     function Get__isset_OcupacaoCodigoCbo2002: Boolean;
     function Get__isset_OrientacaoSexualCidadao: Boolean;
-    function Get__isset_PovoComunidadeTradicionalV420: Boolean;
     function Get__isset_RelacaoParentescoCidadao: Boolean;
     function Get__isset_SituacaoMercadoTrabalhoCidadao: Boolean;
     function Get__isset_StatusDesejaInformarOrientacaoSexual: Boolean;
@@ -1008,7 +1004,6 @@ type
     property __isset_GrauInstrucaoCidadao: Boolean read Get__isset_GrauInstrucaoCidadao;
     property __isset_OcupacaoCodigoCbo2002: Boolean read Get__isset_OcupacaoCodigoCbo2002;
     property __isset_OrientacaoSexualCidadao: Boolean read Get__isset_OrientacaoSexualCidadao;
-    property __isset_PovoComunidadeTradicionalV420: Boolean read Get__isset_PovoComunidadeTradicionalV420;
     property __isset_RelacaoParentescoCidadao: Boolean read Get__isset_RelacaoParentescoCidadao;
     property __isset_SituacaoMercadoTrabalhoCidadao: Boolean read Get__isset_SituacaoMercadoTrabalhoCidadao;
     property __isset_StatusDesejaInformarOrientacaoSexual: Boolean read Get__isset_StatusDesejaInformarOrientacaoSexual;
@@ -1030,7 +1025,6 @@ type
     FGrauInstrucaoCidadao: Int64;
     FOcupacaoCodigoCbo2002: string;
     FOrientacaoSexualCidadao: Int64;
-    FPovoComunidadeTradicionalV420: string;
     FRelacaoParentescoCidadao: Int64;
     FSituacaoMercadoTrabalhoCidadao: Int64;
     FStatusDesejaInformarOrientacaoSexual: Boolean;
@@ -1049,7 +1043,6 @@ type
     F__isset_GrauInstrucaoCidadao: Boolean;
     F__isset_OcupacaoCodigoCbo2002: Boolean;
     F__isset_OrientacaoSexualCidadao: Boolean;
-    F__isset_PovoComunidadeTradicionalV420: Boolean;
     F__isset_RelacaoParentescoCidadao: Boolean;
     F__isset_SituacaoMercadoTrabalhoCidadao: Boolean;
     F__isset_StatusDesejaInformarOrientacaoSexual: Boolean;
@@ -1072,8 +1065,6 @@ type
     procedure SetOcupacaoCodigoCbo2002( const Value: string);
     function GetOrientacaoSexualCidadao: Int64;
     procedure SetOrientacaoSexualCidadao( const Value: Int64);
-    function GetPovoComunidadeTradicionalV420: string;
-    procedure SetPovoComunidadeTradicionalV420( const Value: string);
     function GetRelacaoParentescoCidadao: Int64;
     procedure SetRelacaoParentescoCidadao( const Value: Int64);
     function GetSituacaoMercadoTrabalhoCidadao: Int64;
@@ -1105,7 +1096,6 @@ type
     function Get__isset_GrauInstrucaoCidadao: Boolean;
     function Get__isset_OcupacaoCodigoCbo2002: Boolean;
     function Get__isset_OrientacaoSexualCidadao: Boolean;
-    function Get__isset_PovoComunidadeTradicionalV420: Boolean;
     function Get__isset_RelacaoParentescoCidadao: Boolean;
     function Get__isset_SituacaoMercadoTrabalhoCidadao: Boolean;
     function Get__isset_StatusDesejaInformarOrientacaoSexual: Boolean;
@@ -1134,7 +1124,6 @@ type
     property GrauInstrucaoCidadao: Int64 read GetGrauInstrucaoCidadao write SetGrauInstrucaoCidadao;
     property OcupacaoCodigoCbo2002: string read GetOcupacaoCodigoCbo2002 write SetOcupacaoCodigoCbo2002;
     property OrientacaoSexualCidadao: Int64 read GetOrientacaoSexualCidadao write SetOrientacaoSexualCidadao;
-    property PovoComunidadeTradicionalV420: string read GetPovoComunidadeTradicionalV420 write SetPovoComunidadeTradicionalV420;
     property RelacaoParentescoCidadao: Int64 read GetRelacaoParentescoCidadao write SetRelacaoParentescoCidadao;
     property SituacaoMercadoTrabalhoCidadao: Int64 read GetSituacaoMercadoTrabalhoCidadao write SetSituacaoMercadoTrabalhoCidadao;
     property StatusDesejaInformarOrientacaoSexual: Boolean read GetStatusDesejaInformarOrientacaoSexual write SetStatusDesejaInformarOrientacaoSexual;
@@ -1154,7 +1143,6 @@ type
     property __isset_GrauInstrucaoCidadao: Boolean read Get__isset_GrauInstrucaoCidadao;
     property __isset_OcupacaoCodigoCbo2002: Boolean read Get__isset_OcupacaoCodigoCbo2002;
     property __isset_OrientacaoSexualCidadao: Boolean read Get__isset_OrientacaoSexualCidadao;
-    property __isset_PovoComunidadeTradicionalV420: Boolean read Get__isset_PovoComunidadeTradicionalV420;
     property __isset_RelacaoParentescoCidadao: Boolean read Get__isset_RelacaoParentescoCidadao;
     property __isset_SituacaoMercadoTrabalhoCidadao: Boolean read Get__isset_SituacaoMercadoTrabalhoCidadao;
     property __isset_StatusDesejaInformarOrientacaoSexual: Boolean read Get__isset_StatusDesejaInformarOrientacaoSexual;
@@ -4514,22 +4502,6 @@ begin
   Result := F__isset_OrientacaoSexualCidadao;
 end;
 
-function TInformacoesSocioDemograficasThriftImpl.GetPovoComunidadeTradicionalV420: string;
-begin
-  Result := FPovoComunidadeTradicionalV420;
-end;
-
-procedure TInformacoesSocioDemograficasThriftImpl.SetPovoComunidadeTradicionalV420( const Value: string);
-begin
-  F__isset_PovoComunidadeTradicionalV420 := True;
-  FPovoComunidadeTradicionalV420 := Value;
-end;
-
-function TInformacoesSocioDemograficasThriftImpl.Get__isset_PovoComunidadeTradicionalV420: Boolean;
-begin
-  Result := F__isset_PovoComunidadeTradicionalV420;
-end;
-
 function TInformacoesSocioDemograficasThriftImpl.GetRelacaoParentescoCidadao: Int64;
 begin
   Result := FRelacaoParentescoCidadao;
@@ -4805,15 +4777,6 @@ begin
             TProtocolUtil.Skip(iprot, field_.Type_);
           end;
         end;
-        6: begin
-          if (field_.Type_ = TType.String_) then
-          begin
-            PovoComunidadeTradicionalV420 := iprot.ReadString();
-          end else
-          begin
-            TProtocolUtil.Skip(iprot, field_.Type_);
-          end;
-        end;
         7: begin
           if (field_.Type_ = TType.I64) then
           begin
@@ -5005,15 +4968,6 @@ begin
     oprot.WriteI64(OrientacaoSexualCidadao);
     oprot.WriteFieldEnd();
   end;
-  if (__isset_PovoComunidadeTradicionalV420) then
-  begin
-    field_.Name := 'povoComunidadeTradicionalV420';
-    field_.Type_  := TType.String_;
-    field_.ID := 6;
-    oprot.WriteFieldBegin(field_);
-    oprot.WriteString(PovoComunidadeTradicionalV420);
-    oprot.WriteFieldEnd();
-  end;
   if (__isset_RelacaoParentescoCidadao) then
   begin
     field_.Name := 'relacaoParentescoCidadao';
@@ -5172,12 +5126,6 @@ begin
       _first42 := FALSE;
       _sb41.Append('OrientacaoSexualCidadao: ');
       _sb41.Append(OrientacaoSexualCidadao);
-    end;
-    if (__isset_PovoComunidadeTradicionalV420) then begin
-      if not _first42 then _sb41.Append(',');
-      _first42 := FALSE;
-      _sb41.Append('PovoComunidadeTradicionalV420: ');
-      _sb41.Append(PovoComunidadeTradicionalV420);
     end;
     if (__isset_RelacaoParentescoCidadao) then begin
       if not _first42 then _sb41.Append(',');

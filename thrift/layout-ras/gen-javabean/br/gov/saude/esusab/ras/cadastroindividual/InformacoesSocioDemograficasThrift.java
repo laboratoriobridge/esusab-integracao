@@ -42,7 +42,6 @@ public class InformacoesSocioDemograficasThrift implements org.apache.thrift.TBa
   private static final org.apache.thrift.protocol.TField GRAU_INSTRUCAO_CIDADAO_FIELD_DESC = new org.apache.thrift.protocol.TField("grauInstrucaoCidadao", org.apache.thrift.protocol.TType.I64, (short)2);
   private static final org.apache.thrift.protocol.TField OCUPACAO_CODIGO_CBO2002_FIELD_DESC = new org.apache.thrift.protocol.TField("ocupacaoCodigoCbo2002", org.apache.thrift.protocol.TType.STRING, (short)4);
   private static final org.apache.thrift.protocol.TField ORIENTACAO_SEXUAL_CIDADAO_FIELD_DESC = new org.apache.thrift.protocol.TField("orientacaoSexualCidadao", org.apache.thrift.protocol.TType.I64, (short)5);
-  private static final org.apache.thrift.protocol.TField POVO_COMUNIDADE_TRADICIONAL_V420_FIELD_DESC = new org.apache.thrift.protocol.TField("povoComunidadeTradicionalV420", org.apache.thrift.protocol.TType.STRING, (short)6);
   private static final org.apache.thrift.protocol.TField RELACAO_PARENTESCO_CIDADAO_FIELD_DESC = new org.apache.thrift.protocol.TField("relacaoParentescoCidadao", org.apache.thrift.protocol.TType.I64, (short)7);
   private static final org.apache.thrift.protocol.TField SITUACAO_MERCADO_TRABALHO_CIDADAO_FIELD_DESC = new org.apache.thrift.protocol.TField("situacaoMercadoTrabalhoCidadao", org.apache.thrift.protocol.TType.I64, (short)9);
   private static final org.apache.thrift.protocol.TField STATUS_DESEJA_INFORMAR_ORIENTACAO_SEXUAL_FIELD_DESC = new org.apache.thrift.protocol.TField("statusDesejaInformarOrientacaoSexual", org.apache.thrift.protocol.TType.BOOL, (short)10);
@@ -67,7 +66,6 @@ public class InformacoesSocioDemograficasThrift implements org.apache.thrift.TBa
   private long grauInstrucaoCidadao; // optional
   private String ocupacaoCodigoCbo2002; // optional
   private long orientacaoSexualCidadao; // optional
-  private String povoComunidadeTradicionalV420; // optional
   private long relacaoParentescoCidadao; // optional
   private long situacaoMercadoTrabalhoCidadao; // optional
   private boolean statusDesejaInformarOrientacaoSexual; // optional
@@ -88,7 +86,6 @@ public class InformacoesSocioDemograficasThrift implements org.apache.thrift.TBa
     GRAU_INSTRUCAO_CIDADAO((short)2, "grauInstrucaoCidadao"),
     OCUPACAO_CODIGO_CBO2002((short)4, "ocupacaoCodigoCbo2002"),
     ORIENTACAO_SEXUAL_CIDADAO((short)5, "orientacaoSexualCidadao"),
-    POVO_COMUNIDADE_TRADICIONAL_V420((short)6, "povoComunidadeTradicionalV420"),
     RELACAO_PARENTESCO_CIDADAO((short)7, "relacaoParentescoCidadao"),
     SITUACAO_MERCADO_TRABALHO_CIDADAO((short)9, "situacaoMercadoTrabalhoCidadao"),
     STATUS_DESEJA_INFORMAR_ORIENTACAO_SEXUAL((short)10, "statusDesejaInformarOrientacaoSexual"),
@@ -124,8 +121,6 @@ public class InformacoesSocioDemograficasThrift implements org.apache.thrift.TBa
           return OCUPACAO_CODIGO_CBO2002;
         case 5: // ORIENTACAO_SEXUAL_CIDADAO
           return ORIENTACAO_SEXUAL_CIDADAO;
-        case 6: // POVO_COMUNIDADE_TRADICIONAL_V420
-          return POVO_COMUNIDADE_TRADICIONAL_V420;
         case 7: // RELACAO_PARENTESCO_CIDADAO
           return RELACAO_PARENTESCO_CIDADAO;
         case 9: // SITUACAO_MERCADO_TRABALHO_CIDADAO
@@ -207,7 +202,7 @@ public class InformacoesSocioDemograficasThrift implements org.apache.thrift.TBa
   private static final int __STATUSDESEJAINFORMARIDENTIDADEGENERO_ISSET_ID = 12;
   private static final int __COPOVOCOMUNIDADETRADICIONAL_ISSET_ID = 13;
   private short __isset_bitfield = 0;
-  private static final _Fields optionals[] = {_Fields.DEFICIENCIAS_CIDADAO,_Fields.GRAU_INSTRUCAO_CIDADAO,_Fields.OCUPACAO_CODIGO_CBO2002,_Fields.ORIENTACAO_SEXUAL_CIDADAO,_Fields.POVO_COMUNIDADE_TRADICIONAL_V420,_Fields.RELACAO_PARENTESCO_CIDADAO,_Fields.SITUACAO_MERCADO_TRABALHO_CIDADAO,_Fields.STATUS_DESEJA_INFORMAR_ORIENTACAO_SEXUAL,_Fields.STATUS_FREQUENTA_BENZEDEIRA,_Fields.STATUS_FREQUENTA_ESCOLA,_Fields.STATUS_MEMBRO_POVO_COMUNIDADE_TRADICIONAL,_Fields.STATUS_PARTICIPA_GRUPO_COMUNITARIO,_Fields.STATUS_POSSUI_PLANO_SAUDE_PRIVADO,_Fields.STATUS_TEM_ALGUMA_DEFICIENCIA,_Fields.IDENTIDADE_GENERO_CIDADAO,_Fields.STATUS_DESEJA_INFORMAR_IDENTIDADE_GENERO,_Fields.RESPONSAVEL_POR_CRIANCA,_Fields.CO_POVO_COMUNIDADE_TRADICIONAL};
+  private static final _Fields optionals[] = {_Fields.DEFICIENCIAS_CIDADAO,_Fields.GRAU_INSTRUCAO_CIDADAO,_Fields.OCUPACAO_CODIGO_CBO2002,_Fields.ORIENTACAO_SEXUAL_CIDADAO,_Fields.RELACAO_PARENTESCO_CIDADAO,_Fields.SITUACAO_MERCADO_TRABALHO_CIDADAO,_Fields.STATUS_DESEJA_INFORMAR_ORIENTACAO_SEXUAL,_Fields.STATUS_FREQUENTA_BENZEDEIRA,_Fields.STATUS_FREQUENTA_ESCOLA,_Fields.STATUS_MEMBRO_POVO_COMUNIDADE_TRADICIONAL,_Fields.STATUS_PARTICIPA_GRUPO_COMUNITARIO,_Fields.STATUS_POSSUI_PLANO_SAUDE_PRIVADO,_Fields.STATUS_TEM_ALGUMA_DEFICIENCIA,_Fields.IDENTIDADE_GENERO_CIDADAO,_Fields.STATUS_DESEJA_INFORMAR_IDENTIDADE_GENERO,_Fields.RESPONSAVEL_POR_CRIANCA,_Fields.CO_POVO_COMUNIDADE_TRADICIONAL};
   public static final Map<_Fields, org.apache.thrift.meta_data.FieldMetaData> metaDataMap;
   static {
     Map<_Fields, org.apache.thrift.meta_data.FieldMetaData> tmpMap = new EnumMap<_Fields, org.apache.thrift.meta_data.FieldMetaData>(_Fields.class);
@@ -220,8 +215,6 @@ public class InformacoesSocioDemograficasThrift implements org.apache.thrift.TBa
         new org.apache.thrift.meta_data.FieldValueMetaData(org.apache.thrift.protocol.TType.STRING)));
     tmpMap.put(_Fields.ORIENTACAO_SEXUAL_CIDADAO, new org.apache.thrift.meta_data.FieldMetaData("orientacaoSexualCidadao", org.apache.thrift.TFieldRequirementType.OPTIONAL, 
         new org.apache.thrift.meta_data.FieldValueMetaData(org.apache.thrift.protocol.TType.I64)));
-    tmpMap.put(_Fields.POVO_COMUNIDADE_TRADICIONAL_V420, new org.apache.thrift.meta_data.FieldMetaData("povoComunidadeTradicionalV420", org.apache.thrift.TFieldRequirementType.OPTIONAL, 
-        new org.apache.thrift.meta_data.FieldValueMetaData(org.apache.thrift.protocol.TType.STRING)));
     tmpMap.put(_Fields.RELACAO_PARENTESCO_CIDADAO, new org.apache.thrift.meta_data.FieldMetaData("relacaoParentescoCidadao", org.apache.thrift.TFieldRequirementType.OPTIONAL, 
         new org.apache.thrift.meta_data.FieldValueMetaData(org.apache.thrift.protocol.TType.I64)));
     tmpMap.put(_Fields.SITUACAO_MERCADO_TRABALHO_CIDADAO, new org.apache.thrift.meta_data.FieldMetaData("situacaoMercadoTrabalhoCidadao", org.apache.thrift.TFieldRequirementType.OPTIONAL, 
@@ -270,9 +263,6 @@ public class InformacoesSocioDemograficasThrift implements org.apache.thrift.TBa
       this.ocupacaoCodigoCbo2002 = other.ocupacaoCodigoCbo2002;
     }
     this.orientacaoSexualCidadao = other.orientacaoSexualCidadao;
-    if (other.isSetPovoComunidadeTradicionalV420()) {
-      this.povoComunidadeTradicionalV420 = other.povoComunidadeTradicionalV420;
-    }
     this.relacaoParentescoCidadao = other.relacaoParentescoCidadao;
     this.situacaoMercadoTrabalhoCidadao = other.situacaoMercadoTrabalhoCidadao;
     this.statusDesejaInformarOrientacaoSexual = other.statusDesejaInformarOrientacaoSexual;
@@ -303,7 +293,6 @@ public class InformacoesSocioDemograficasThrift implements org.apache.thrift.TBa
     this.ocupacaoCodigoCbo2002 = null;
     setOrientacaoSexualCidadaoIsSet(false);
     this.orientacaoSexualCidadao = 0;
-    this.povoComunidadeTradicionalV420 = null;
     setRelacaoParentescoCidadaoIsSet(false);
     this.relacaoParentescoCidadao = 0;
     setSituacaoMercadoTrabalhoCidadaoIsSet(false);
@@ -434,29 +423,6 @@ public class InformacoesSocioDemograficasThrift implements org.apache.thrift.TBa
 
   public void setOrientacaoSexualCidadaoIsSet(boolean value) {
     __isset_bitfield = EncodingUtils.setBit(__isset_bitfield, __ORIENTACAOSEXUALCIDADAO_ISSET_ID, value);
-  }
-
-  public String getPovoComunidadeTradicionalV420() {
-    return this.povoComunidadeTradicionalV420;
-  }
-
-  public void setPovoComunidadeTradicionalV420(String povoComunidadeTradicionalV420) {
-    this.povoComunidadeTradicionalV420 = povoComunidadeTradicionalV420;
-  }
-
-  public void unsetPovoComunidadeTradicionalV420() {
-    this.povoComunidadeTradicionalV420 = null;
-  }
-
-  /** Returns true if field povoComunidadeTradicionalV420 is set (has been assigned a value) and false otherwise */
-  public boolean isSetPovoComunidadeTradicionalV420() {
-    return this.povoComunidadeTradicionalV420 != null;
-  }
-
-  public void setPovoComunidadeTradicionalV420IsSet(boolean value) {
-    if (!value) {
-      this.povoComunidadeTradicionalV420 = null;
-    }
   }
 
   public long getRelacaoParentescoCidadao() {
@@ -795,14 +761,6 @@ public class InformacoesSocioDemograficasThrift implements org.apache.thrift.TBa
       }
       break;
 
-    case POVO_COMUNIDADE_TRADICIONAL_V420:
-      if (value == null) {
-        unsetPovoComunidadeTradicionalV420();
-      } else {
-        setPovoComunidadeTradicionalV420((String)value);
-      }
-      break;
-
     case RELACAO_PARENTESCO_CIDADAO:
       if (value == null) {
         unsetRelacaoParentescoCidadao();
@@ -924,9 +882,6 @@ public class InformacoesSocioDemograficasThrift implements org.apache.thrift.TBa
     case ORIENTACAO_SEXUAL_CIDADAO:
       return getOrientacaoSexualCidadao();
 
-    case POVO_COMUNIDADE_TRADICIONAL_V420:
-      return getPovoComunidadeTradicionalV420();
-
     case RELACAO_PARENTESCO_CIDADAO:
       return getRelacaoParentescoCidadao();
 
@@ -985,8 +940,6 @@ public class InformacoesSocioDemograficasThrift implements org.apache.thrift.TBa
       return isSetOcupacaoCodigoCbo2002();
     case ORIENTACAO_SEXUAL_CIDADAO:
       return isSetOrientacaoSexualCidadao();
-    case POVO_COMUNIDADE_TRADICIONAL_V420:
-      return isSetPovoComunidadeTradicionalV420();
     case RELACAO_PARENTESCO_CIDADAO:
       return isSetRelacaoParentescoCidadao();
     case SITUACAO_MERCADO_TRABALHO_CIDADAO:
@@ -1063,15 +1016,6 @@ public class InformacoesSocioDemograficasThrift implements org.apache.thrift.TBa
       if (!(this_present_orientacaoSexualCidadao && that_present_orientacaoSexualCidadao))
         return false;
       if (this.orientacaoSexualCidadao != that.orientacaoSexualCidadao)
-        return false;
-    }
-
-    boolean this_present_povoComunidadeTradicionalV420 = true && this.isSetPovoComunidadeTradicionalV420();
-    boolean that_present_povoComunidadeTradicionalV420 = true && that.isSetPovoComunidadeTradicionalV420();
-    if (this_present_povoComunidadeTradicionalV420 || that_present_povoComunidadeTradicionalV420) {
-      if (!(this_present_povoComunidadeTradicionalV420 && that_present_povoComunidadeTradicionalV420))
-        return false;
-      if (!this.povoComunidadeTradicionalV420.equals(that.povoComunidadeTradicionalV420))
         return false;
     }
 
@@ -1219,11 +1163,6 @@ public class InformacoesSocioDemograficasThrift implements org.apache.thrift.TBa
     if (present_orientacaoSexualCidadao)
       list.add(orientacaoSexualCidadao);
 
-    boolean present_povoComunidadeTradicionalV420 = true && (isSetPovoComunidadeTradicionalV420());
-    list.add(present_povoComunidadeTradicionalV420);
-    if (present_povoComunidadeTradicionalV420)
-      list.add(povoComunidadeTradicionalV420);
-
     boolean present_relacaoParentescoCidadao = true && (isSetRelacaoParentescoCidadao());
     list.add(present_relacaoParentescoCidadao);
     if (present_relacaoParentescoCidadao)
@@ -1336,16 +1275,6 @@ public class InformacoesSocioDemograficasThrift implements org.apache.thrift.TBa
     }
     if (isSetOrientacaoSexualCidadao()) {
       lastComparison = org.apache.thrift.TBaseHelper.compareTo(this.orientacaoSexualCidadao, other.orientacaoSexualCidadao);
-      if (lastComparison != 0) {
-        return lastComparison;
-      }
-    }
-    lastComparison = Boolean.valueOf(isSetPovoComunidadeTradicionalV420()).compareTo(other.isSetPovoComunidadeTradicionalV420());
-    if (lastComparison != 0) {
-      return lastComparison;
-    }
-    if (isSetPovoComunidadeTradicionalV420()) {
-      lastComparison = org.apache.thrift.TBaseHelper.compareTo(this.povoComunidadeTradicionalV420, other.povoComunidadeTradicionalV420);
       if (lastComparison != 0) {
         return lastComparison;
       }
@@ -1531,16 +1460,6 @@ public class InformacoesSocioDemograficasThrift implements org.apache.thrift.TBa
       sb.append(this.orientacaoSexualCidadao);
       first = false;
     }
-    if (isSetPovoComunidadeTradicionalV420()) {
-      if (!first) sb.append(", ");
-      sb.append("povoComunidadeTradicionalV420:");
-      if (this.povoComunidadeTradicionalV420 == null) {
-        sb.append("null");
-      } else {
-        sb.append(this.povoComunidadeTradicionalV420);
-      }
-      first = false;
-    }
     if (isSetRelacaoParentescoCidadao()) {
       if (!first) sb.append(", ");
       sb.append("relacaoParentescoCidadao:");
@@ -1710,14 +1629,6 @@ public class InformacoesSocioDemograficasThrift implements org.apache.thrift.TBa
               org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
             }
             break;
-          case 6: // POVO_COMUNIDADE_TRADICIONAL_V420
-            if (schemeField.type == org.apache.thrift.protocol.TType.STRING) {
-              struct.povoComunidadeTradicionalV420 = iprot.readString();
-              struct.setPovoComunidadeTradicionalV420IsSet(true);
-            } else { 
-              org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
-            }
-            break;
           case 7: // RELACAO_PARENTESCO_CIDADAO
             if (schemeField.type == org.apache.thrift.protocol.TType.I64) {
               struct.relacaoParentescoCidadao = iprot.readI64();
@@ -1876,13 +1787,6 @@ public class InformacoesSocioDemograficasThrift implements org.apache.thrift.TBa
         oprot.writeI64(struct.orientacaoSexualCidadao);
         oprot.writeFieldEnd();
       }
-      if (struct.povoComunidadeTradicionalV420 != null) {
-        if (struct.isSetPovoComunidadeTradicionalV420()) {
-          oprot.writeFieldBegin(POVO_COMUNIDADE_TRADICIONAL_V420_FIELD_DESC);
-          oprot.writeString(struct.povoComunidadeTradicionalV420);
-          oprot.writeFieldEnd();
-        }
-      }
       if (struct.isSetRelacaoParentescoCidadao()) {
         oprot.writeFieldBegin(RELACAO_PARENTESCO_CIDADAO_FIELD_DESC);
         oprot.writeI64(struct.relacaoParentescoCidadao);
@@ -1987,49 +1891,46 @@ public class InformacoesSocioDemograficasThrift implements org.apache.thrift.TBa
       if (struct.isSetOrientacaoSexualCidadao()) {
         optionals.set(3);
       }
-      if (struct.isSetPovoComunidadeTradicionalV420()) {
+      if (struct.isSetRelacaoParentescoCidadao()) {
         optionals.set(4);
       }
-      if (struct.isSetRelacaoParentescoCidadao()) {
+      if (struct.isSetSituacaoMercadoTrabalhoCidadao()) {
         optionals.set(5);
       }
-      if (struct.isSetSituacaoMercadoTrabalhoCidadao()) {
+      if (struct.isSetStatusDesejaInformarOrientacaoSexual()) {
         optionals.set(6);
       }
-      if (struct.isSetStatusDesejaInformarOrientacaoSexual()) {
+      if (struct.isSetStatusFrequentaBenzedeira()) {
         optionals.set(7);
       }
-      if (struct.isSetStatusFrequentaBenzedeira()) {
+      if (struct.isSetStatusFrequentaEscola()) {
         optionals.set(8);
       }
-      if (struct.isSetStatusFrequentaEscola()) {
+      if (struct.isSetStatusMembroPovoComunidadeTradicional()) {
         optionals.set(9);
       }
-      if (struct.isSetStatusMembroPovoComunidadeTradicional()) {
+      if (struct.isSetStatusParticipaGrupoComunitario()) {
         optionals.set(10);
       }
-      if (struct.isSetStatusParticipaGrupoComunitario()) {
+      if (struct.isSetStatusPossuiPlanoSaudePrivado()) {
         optionals.set(11);
       }
-      if (struct.isSetStatusPossuiPlanoSaudePrivado()) {
+      if (struct.isSetStatusTemAlgumaDeficiencia()) {
         optionals.set(12);
       }
-      if (struct.isSetStatusTemAlgumaDeficiencia()) {
+      if (struct.isSetIdentidadeGeneroCidadao()) {
         optionals.set(13);
       }
-      if (struct.isSetIdentidadeGeneroCidadao()) {
+      if (struct.isSetStatusDesejaInformarIdentidadeGenero()) {
         optionals.set(14);
       }
-      if (struct.isSetStatusDesejaInformarIdentidadeGenero()) {
+      if (struct.isSetResponsavelPorCrianca()) {
         optionals.set(15);
       }
-      if (struct.isSetResponsavelPorCrianca()) {
+      if (struct.isSetCoPovoComunidadeTradicional()) {
         optionals.set(16);
       }
-      if (struct.isSetCoPovoComunidadeTradicional()) {
-        optionals.set(17);
-      }
-      oprot.writeBitSet(optionals, 18);
+      oprot.writeBitSet(optionals, 17);
       if (struct.isSetDeficienciasCidadao()) {
         {
           oprot.writeI32(struct.deficienciasCidadao.size());
@@ -2047,9 +1948,6 @@ public class InformacoesSocioDemograficasThrift implements org.apache.thrift.TBa
       }
       if (struct.isSetOrientacaoSexualCidadao()) {
         oprot.writeI64(struct.orientacaoSexualCidadao);
-      }
-      if (struct.isSetPovoComunidadeTradicionalV420()) {
-        oprot.writeString(struct.povoComunidadeTradicionalV420);
       }
       if (struct.isSetRelacaoParentescoCidadao()) {
         oprot.writeI64(struct.relacaoParentescoCidadao);
@@ -2101,7 +1999,7 @@ public class InformacoesSocioDemograficasThrift implements org.apache.thrift.TBa
     @Override
     public void read(org.apache.thrift.protocol.TProtocol prot, InformacoesSocioDemograficasThrift struct) throws org.apache.thrift.TException {
       TTupleProtocol iprot = (TTupleProtocol) prot;
-      BitSet incoming = iprot.readBitSet(18);
+      BitSet incoming = iprot.readBitSet(17);
       if (incoming.get(0)) {
         {
           org.apache.thrift.protocol.TList _list50 = new org.apache.thrift.protocol.TList(org.apache.thrift.protocol.TType.I64, iprot.readI32());
@@ -2128,54 +2026,50 @@ public class InformacoesSocioDemograficasThrift implements org.apache.thrift.TBa
         struct.setOrientacaoSexualCidadaoIsSet(true);
       }
       if (incoming.get(4)) {
-        struct.povoComunidadeTradicionalV420 = iprot.readString();
-        struct.setPovoComunidadeTradicionalV420IsSet(true);
-      }
-      if (incoming.get(5)) {
         struct.relacaoParentescoCidadao = iprot.readI64();
         struct.setRelacaoParentescoCidadaoIsSet(true);
       }
-      if (incoming.get(6)) {
+      if (incoming.get(5)) {
         struct.situacaoMercadoTrabalhoCidadao = iprot.readI64();
         struct.setSituacaoMercadoTrabalhoCidadaoIsSet(true);
       }
-      if (incoming.get(7)) {
+      if (incoming.get(6)) {
         struct.statusDesejaInformarOrientacaoSexual = iprot.readBool();
         struct.setStatusDesejaInformarOrientacaoSexualIsSet(true);
       }
-      if (incoming.get(8)) {
+      if (incoming.get(7)) {
         struct.statusFrequentaBenzedeira = iprot.readBool();
         struct.setStatusFrequentaBenzedeiraIsSet(true);
       }
-      if (incoming.get(9)) {
+      if (incoming.get(8)) {
         struct.statusFrequentaEscola = iprot.readBool();
         struct.setStatusFrequentaEscolaIsSet(true);
       }
-      if (incoming.get(10)) {
+      if (incoming.get(9)) {
         struct.statusMembroPovoComunidadeTradicional = iprot.readBool();
         struct.setStatusMembroPovoComunidadeTradicionalIsSet(true);
       }
-      if (incoming.get(11)) {
+      if (incoming.get(10)) {
         struct.statusParticipaGrupoComunitario = iprot.readBool();
         struct.setStatusParticipaGrupoComunitarioIsSet(true);
       }
-      if (incoming.get(12)) {
+      if (incoming.get(11)) {
         struct.statusPossuiPlanoSaudePrivado = iprot.readBool();
         struct.setStatusPossuiPlanoSaudePrivadoIsSet(true);
       }
-      if (incoming.get(13)) {
+      if (incoming.get(12)) {
         struct.statusTemAlgumaDeficiencia = iprot.readBool();
         struct.setStatusTemAlgumaDeficienciaIsSet(true);
       }
-      if (incoming.get(14)) {
+      if (incoming.get(13)) {
         struct.identidadeGeneroCidadao = iprot.readI64();
         struct.setIdentidadeGeneroCidadaoIsSet(true);
       }
-      if (incoming.get(15)) {
+      if (incoming.get(14)) {
         struct.statusDesejaInformarIdentidadeGenero = iprot.readBool();
         struct.setStatusDesejaInformarIdentidadeGeneroIsSet(true);
       }
-      if (incoming.get(16)) {
+      if (incoming.get(15)) {
         {
           org.apache.thrift.protocol.TList _list53 = new org.apache.thrift.protocol.TList(org.apache.thrift.protocol.TType.I64, iprot.readI32());
           struct.responsavelPorCrianca = new ArrayList<Long>(_list53.size);
@@ -2188,7 +2082,7 @@ public class InformacoesSocioDemograficasThrift implements org.apache.thrift.TBa
         }
         struct.setResponsavelPorCriancaIsSet(true);
       }
-      if (incoming.get(17)) {
+      if (incoming.get(16)) {
         struct.coPovoComunidadeTradicional = iprot.readI64();
         struct.setCoPovoComunidadeTradicionalIsSet(true);
       }

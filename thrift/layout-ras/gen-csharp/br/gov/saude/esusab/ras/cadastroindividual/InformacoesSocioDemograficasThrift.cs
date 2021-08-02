@@ -27,7 +27,6 @@ namespace br.gov.saude.esusab.ras.cadastroindividual
     private long _grauInstrucaoCidadao;
     private string _ocupacaoCodigoCbo2002;
     private long _orientacaoSexualCidadao;
-    private string _povoComunidadeTradicionalV420;
     private long _relacaoParentescoCidadao;
     private long _situacaoMercadoTrabalhoCidadao;
     private bool _statusDesejaInformarOrientacaoSexual;
@@ -91,19 +90,6 @@ namespace br.gov.saude.esusab.ras.cadastroindividual
       {
         __isset.orientacaoSexualCidadao = true;
         this._orientacaoSexualCidadao = value;
-      }
-    }
-
-    public string PovoComunidadeTradicionalV420
-    {
-      get
-      {
-        return _povoComunidadeTradicionalV420;
-      }
-      set
-      {
-        __isset.povoComunidadeTradicionalV420 = true;
-        this._povoComunidadeTradicionalV420 = value;
       }
     }
 
@@ -286,7 +272,6 @@ namespace br.gov.saude.esusab.ras.cadastroindividual
       public bool grauInstrucaoCidadao;
       public bool ocupacaoCodigoCbo2002;
       public bool orientacaoSexualCidadao;
-      public bool povoComunidadeTradicionalV420;
       public bool relacaoParentescoCidadao;
       public bool situacaoMercadoTrabalhoCidadao;
       public bool statusDesejaInformarOrientacaoSexual;
@@ -354,13 +339,6 @@ namespace br.gov.saude.esusab.ras.cadastroindividual
             case 5:
               if (field.Type == TType.I64) {
                 OrientacaoSexualCidadao = iprot.ReadI64();
-              } else { 
-                TProtocolUtil.Skip(iprot, field.Type);
-              }
-              break;
-            case 6:
-              if (field.Type == TType.String) {
-                PovoComunidadeTradicionalV420 = iprot.ReadString();
               } else { 
                 TProtocolUtil.Skip(iprot, field.Type);
               }
@@ -526,14 +504,6 @@ namespace br.gov.saude.esusab.ras.cadastroindividual
           oprot.WriteI64(OrientacaoSexualCidadao);
           oprot.WriteFieldEnd();
         }
-        if (PovoComunidadeTradicionalV420 != null && __isset.povoComunidadeTradicionalV420) {
-          field.Name = "povoComunidadeTradicionalV420";
-          field.Type = TType.String;
-          field.ID = 6;
-          oprot.WriteFieldBegin(field);
-          oprot.WriteString(PovoComunidadeTradicionalV420);
-          oprot.WriteFieldEnd();
-        }
         if (__isset.relacaoParentescoCidadao) {
           field.Name = "relacaoParentescoCidadao";
           field.Type = TType.I64;
@@ -680,12 +650,6 @@ namespace br.gov.saude.esusab.ras.cadastroindividual
         __first = false;
         __sb.Append("OrientacaoSexualCidadao: ");
         __sb.Append(OrientacaoSexualCidadao);
-      }
-      if (PovoComunidadeTradicionalV420 != null && __isset.povoComunidadeTradicionalV420) {
-        if(!__first) { __sb.Append(", "); }
-        __first = false;
-        __sb.Append("PovoComunidadeTradicionalV420: ");
-        __sb.Append(PovoComunidadeTradicionalV420);
       }
       if (__isset.relacaoParentescoCidadao) {
         if(!__first) { __sb.Append(", "); }

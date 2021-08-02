@@ -2932,7 +2932,6 @@ func (p *IdentificacaoUsuarioCidadaoThrift) String() string {
 //  - GrauInstrucaoCidadao
 //  - OcupacaoCodigoCbo2002
 //  - OrientacaoSexualCidadao
-//  - PovoComunidadeTradicionalV420
 //  - RelacaoParentescoCidadao
 //  - SituacaoMercadoTrabalhoCidadao
 //  - StatusDesejaInformarOrientacaoSexual
@@ -2952,7 +2951,7 @@ type InformacoesSocioDemograficasThrift struct {
   // unused field # 3
   OcupacaoCodigoCbo2002 *string `thrift:"ocupacaoCodigoCbo2002,4" json:"ocupacaoCodigoCbo2002,omitempty"`
   OrientacaoSexualCidadao *int64 `thrift:"orientacaoSexualCidadao,5" json:"orientacaoSexualCidadao,omitempty"`
-  PovoComunidadeTradicionalV420 *string `thrift:"povoComunidadeTradicionalV420,6" json:"povoComunidadeTradicionalV420,omitempty"`
+  // unused field # 6
   RelacaoParentescoCidadao *int64 `thrift:"relacaoParentescoCidadao,7" json:"relacaoParentescoCidadao,omitempty"`
   // unused field # 8
   SituacaoMercadoTrabalhoCidadao *int64 `thrift:"situacaoMercadoTrabalhoCidadao,9" json:"situacaoMercadoTrabalhoCidadao,omitempty"`
@@ -2998,13 +2997,6 @@ func (p *InformacoesSocioDemograficasThrift) GetOrientacaoSexualCidadao() int64 
     return InformacoesSocioDemograficasThrift_OrientacaoSexualCidadao_DEFAULT
   }
 return *p.OrientacaoSexualCidadao
-}
-var InformacoesSocioDemograficasThrift_PovoComunidadeTradicionalV420_DEFAULT string
-func (p *InformacoesSocioDemograficasThrift) GetPovoComunidadeTradicionalV420() string {
-  if !p.IsSetPovoComunidadeTradicionalV420() {
-    return InformacoesSocioDemograficasThrift_PovoComunidadeTradicionalV420_DEFAULT
-  }
-return *p.PovoComunidadeTradicionalV420
 }
 var InformacoesSocioDemograficasThrift_RelacaoParentescoCidadao_DEFAULT int64
 func (p *InformacoesSocioDemograficasThrift) GetRelacaoParentescoCidadao() int64 {
@@ -3111,10 +3103,6 @@ func (p *InformacoesSocioDemograficasThrift) IsSetOrientacaoSexualCidadao() bool
   return p.OrientacaoSexualCidadao != nil
 }
 
-func (p *InformacoesSocioDemograficasThrift) IsSetPovoComunidadeTradicionalV420() bool {
-  return p.PovoComunidadeTradicionalV420 != nil
-}
-
 func (p *InformacoesSocioDemograficasThrift) IsSetRelacaoParentescoCidadao() bool {
   return p.RelacaoParentescoCidadao != nil
 }
@@ -3194,10 +3182,6 @@ func (p *InformacoesSocioDemograficasThrift) Read(iprot thrift.TProtocol) error 
       }
     case 5:
       if err := p.readField5(iprot); err != nil {
-        return err
-      }
-    case 6:
-      if err := p.readField6(iprot); err != nil {
         return err
       }
     case 7:
@@ -3312,15 +3296,6 @@ func (p *InformacoesSocioDemograficasThrift)  readField5(iprot thrift.TProtocol)
   return thrift.PrependError("error reading field 5: ", err)
 } else {
   p.OrientacaoSexualCidadao = &v
-}
-  return nil
-}
-
-func (p *InformacoesSocioDemograficasThrift)  readField6(iprot thrift.TProtocol) error {
-  if v, err := iprot.ReadString(); err != nil {
-  return thrift.PrependError("error reading field 6: ", err)
-} else {
-  p.PovoComunidadeTradicionalV420 = &v
 }
   return nil
 }
@@ -3462,7 +3437,6 @@ func (p *InformacoesSocioDemograficasThrift) Write(oprot thrift.TProtocol) error
   if err := p.writeField2(oprot); err != nil { return err }
   if err := p.writeField4(oprot); err != nil { return err }
   if err := p.writeField5(oprot); err != nil { return err }
-  if err := p.writeField6(oprot); err != nil { return err }
   if err := p.writeField7(oprot); err != nil { return err }
   if err := p.writeField9(oprot); err != nil { return err }
   if err := p.writeField10(oprot); err != nil { return err }
@@ -3535,18 +3509,6 @@ func (p *InformacoesSocioDemograficasThrift) writeField5(oprot thrift.TProtocol)
     return thrift.PrependError(fmt.Sprintf("%T.orientacaoSexualCidadao (5) field write error: ", p), err) }
     if err := oprot.WriteFieldEnd(); err != nil {
       return thrift.PrependError(fmt.Sprintf("%T write field end error 5:orientacaoSexualCidadao: ", p), err) }
-  }
-  return err
-}
-
-func (p *InformacoesSocioDemograficasThrift) writeField6(oprot thrift.TProtocol) (err error) {
-  if p.IsSetPovoComunidadeTradicionalV420() {
-    if err := oprot.WriteFieldBegin("povoComunidadeTradicionalV420", thrift.STRING, 6); err != nil {
-      return thrift.PrependError(fmt.Sprintf("%T write field begin error 6:povoComunidadeTradicionalV420: ", p), err) }
-    if err := oprot.WriteString(string(*p.PovoComunidadeTradicionalV420)); err != nil {
-    return thrift.PrependError(fmt.Sprintf("%T.povoComunidadeTradicionalV420 (6) field write error: ", p), err) }
-    if err := oprot.WriteFieldEnd(); err != nil {
-      return thrift.PrependError(fmt.Sprintf("%T write field end error 6:povoComunidadeTradicionalV420: ", p), err) }
   }
   return err
 }

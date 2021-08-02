@@ -198,7 +198,6 @@ module Br
               GRAUINSTRUCAOCIDADAO = 2
               OCUPACAOCODIGOCBO2002 = 4
               ORIENTACAOSEXUALCIDADAO = 5
-              POVOCOMUNIDADETRADICIONALV420 = 6
               RELACAOPARENTESCOCIDADAO = 7
               SITUACAOMERCADOTRABALHOCIDADAO = 9
               STATUSDESEJAINFORMARORIENTACAOSEXUAL = 10
@@ -218,7 +217,6 @@ module Br
                 GRAUINSTRUCAOCIDADAO => {:type => ::Thrift::Types::I64, :name => 'grauInstrucaoCidadao', :optional => true},
                 OCUPACAOCODIGOCBO2002 => {:type => ::Thrift::Types::STRING, :name => 'ocupacaoCodigoCbo2002', :optional => true},
                 ORIENTACAOSEXUALCIDADAO => {:type => ::Thrift::Types::I64, :name => 'orientacaoSexualCidadao', :optional => true},
-                POVOCOMUNIDADETRADICIONALV420 => {:type => ::Thrift::Types::STRING, :name => 'povoComunidadeTradicionalV420', :optional => true},
                 RELACAOPARENTESCOCIDADAO => {:type => ::Thrift::Types::I64, :name => 'relacaoParentescoCidadao', :optional => true},
                 SITUACAOMERCADOTRABALHOCIDADAO => {:type => ::Thrift::Types::I64, :name => 'situacaoMercadoTrabalhoCidadao', :optional => true},
                 STATUSDESEJAINFORMARORIENTACAOSEXUAL => {:type => ::Thrift::Types::BOOL, :name => 'statusDesejaInformarOrientacaoSexual', :optional => true},

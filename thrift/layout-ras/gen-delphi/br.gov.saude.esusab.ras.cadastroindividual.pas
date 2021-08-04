@@ -937,8 +937,6 @@ type
     procedure SetOcupacaoCodigoCbo2002( const Value: string);
     function GetOrientacaoSexualCidadao: Int64;
     procedure SetOrientacaoSexualCidadao( const Value: Int64);
-    function GetPovoComunidadeTradicional: string;
-    procedure SetPovoComunidadeTradicional( const Value: string);
     function GetRelacaoParentescoCidadao: Int64;
     procedure SetRelacaoParentescoCidadao( const Value: Int64);
     function GetSituacaoMercadoTrabalhoCidadao: Int64;
@@ -963,12 +961,13 @@ type
     procedure SetStatusDesejaInformarIdentidadeGenero( const Value: Boolean);
     function GetResponsavelPorCrianca: IThriftList<Int64>;
     procedure SetResponsavelPorCrianca( const Value: IThriftList<Int64>);
+    function GetCoPovoComunidadeTradicional: Int64;
+    procedure SetCoPovoComunidadeTradicional( const Value: Int64);
 
     property DeficienciasCidadao: IThriftList<Int64> read GetDeficienciasCidadao write SetDeficienciasCidadao;
     property GrauInstrucaoCidadao: Int64 read GetGrauInstrucaoCidadao write SetGrauInstrucaoCidadao;
     property OcupacaoCodigoCbo2002: string read GetOcupacaoCodigoCbo2002 write SetOcupacaoCodigoCbo2002;
     property OrientacaoSexualCidadao: Int64 read GetOrientacaoSexualCidadao write SetOrientacaoSexualCidadao;
-    property PovoComunidadeTradicional: string read GetPovoComunidadeTradicional write SetPovoComunidadeTradicional;
     property RelacaoParentescoCidadao: Int64 read GetRelacaoParentescoCidadao write SetRelacaoParentescoCidadao;
     property SituacaoMercadoTrabalhoCidadao: Int64 read GetSituacaoMercadoTrabalhoCidadao write SetSituacaoMercadoTrabalhoCidadao;
     property StatusDesejaInformarOrientacaoSexual: Boolean read GetStatusDesejaInformarOrientacaoSexual write SetStatusDesejaInformarOrientacaoSexual;
@@ -981,12 +980,12 @@ type
     property IdentidadeGeneroCidadao: Int64 read GetIdentidadeGeneroCidadao write SetIdentidadeGeneroCidadao;
     property StatusDesejaInformarIdentidadeGenero: Boolean read GetStatusDesejaInformarIdentidadeGenero write SetStatusDesejaInformarIdentidadeGenero;
     property ResponsavelPorCrianca: IThriftList<Int64> read GetResponsavelPorCrianca write SetResponsavelPorCrianca;
+    property CoPovoComunidadeTradicional: Int64 read GetCoPovoComunidadeTradicional write SetCoPovoComunidadeTradicional;
 
     function Get__isset_DeficienciasCidadao: Boolean;
     function Get__isset_GrauInstrucaoCidadao: Boolean;
     function Get__isset_OcupacaoCodigoCbo2002: Boolean;
     function Get__isset_OrientacaoSexualCidadao: Boolean;
-    function Get__isset_PovoComunidadeTradicional: Boolean;
     function Get__isset_RelacaoParentescoCidadao: Boolean;
     function Get__isset_SituacaoMercadoTrabalhoCidadao: Boolean;
     function Get__isset_StatusDesejaInformarOrientacaoSexual: Boolean;
@@ -999,12 +998,12 @@ type
     function Get__isset_IdentidadeGeneroCidadao: Boolean;
     function Get__isset_StatusDesejaInformarIdentidadeGenero: Boolean;
     function Get__isset_ResponsavelPorCrianca: Boolean;
+    function Get__isset_CoPovoComunidadeTradicional: Boolean;
 
     property __isset_DeficienciasCidadao: Boolean read Get__isset_DeficienciasCidadao;
     property __isset_GrauInstrucaoCidadao: Boolean read Get__isset_GrauInstrucaoCidadao;
     property __isset_OcupacaoCodigoCbo2002: Boolean read Get__isset_OcupacaoCodigoCbo2002;
     property __isset_OrientacaoSexualCidadao: Boolean read Get__isset_OrientacaoSexualCidadao;
-    property __isset_PovoComunidadeTradicional: Boolean read Get__isset_PovoComunidadeTradicional;
     property __isset_RelacaoParentescoCidadao: Boolean read Get__isset_RelacaoParentescoCidadao;
     property __isset_SituacaoMercadoTrabalhoCidadao: Boolean read Get__isset_SituacaoMercadoTrabalhoCidadao;
     property __isset_StatusDesejaInformarOrientacaoSexual: Boolean read Get__isset_StatusDesejaInformarOrientacaoSexual;
@@ -1017,6 +1016,7 @@ type
     property __isset_IdentidadeGeneroCidadao: Boolean read Get__isset_IdentidadeGeneroCidadao;
     property __isset_StatusDesejaInformarIdentidadeGenero: Boolean read Get__isset_StatusDesejaInformarIdentidadeGenero;
     property __isset_ResponsavelPorCrianca: Boolean read Get__isset_ResponsavelPorCrianca;
+    property __isset_CoPovoComunidadeTradicional: Boolean read Get__isset_CoPovoComunidadeTradicional;
   end;
 
   TInformacoesSocioDemograficasThriftImpl = class(TInterfacedObject, IBase, IInformacoesSocioDemograficasThrift)
@@ -1025,7 +1025,6 @@ type
     FGrauInstrucaoCidadao: Int64;
     FOcupacaoCodigoCbo2002: string;
     FOrientacaoSexualCidadao: Int64;
-    FPovoComunidadeTradicional: string;
     FRelacaoParentescoCidadao: Int64;
     FSituacaoMercadoTrabalhoCidadao: Int64;
     FStatusDesejaInformarOrientacaoSexual: Boolean;
@@ -1038,12 +1037,12 @@ type
     FIdentidadeGeneroCidadao: Int64;
     FStatusDesejaInformarIdentidadeGenero: Boolean;
     FResponsavelPorCrianca: IThriftList<Int64>;
+    FCoPovoComunidadeTradicional: Int64;
     
     F__isset_DeficienciasCidadao: Boolean;
     F__isset_GrauInstrucaoCidadao: Boolean;
     F__isset_OcupacaoCodigoCbo2002: Boolean;
     F__isset_OrientacaoSexualCidadao: Boolean;
-    F__isset_PovoComunidadeTradicional: Boolean;
     F__isset_RelacaoParentescoCidadao: Boolean;
     F__isset_SituacaoMercadoTrabalhoCidadao: Boolean;
     F__isset_StatusDesejaInformarOrientacaoSexual: Boolean;
@@ -1056,6 +1055,7 @@ type
     F__isset_IdentidadeGeneroCidadao: Boolean;
     F__isset_StatusDesejaInformarIdentidadeGenero: Boolean;
     F__isset_ResponsavelPorCrianca: Boolean;
+    F__isset_CoPovoComunidadeTradicional: Boolean;
     
     function GetDeficienciasCidadao: IThriftList<Int64>;
     procedure SetDeficienciasCidadao( const Value: IThriftList<Int64>);
@@ -1065,8 +1065,6 @@ type
     procedure SetOcupacaoCodigoCbo2002( const Value: string);
     function GetOrientacaoSexualCidadao: Int64;
     procedure SetOrientacaoSexualCidadao( const Value: Int64);
-    function GetPovoComunidadeTradicional: string;
-    procedure SetPovoComunidadeTradicional( const Value: string);
     function GetRelacaoParentescoCidadao: Int64;
     procedure SetRelacaoParentescoCidadao( const Value: Int64);
     function GetSituacaoMercadoTrabalhoCidadao: Int64;
@@ -1091,12 +1089,13 @@ type
     procedure SetStatusDesejaInformarIdentidadeGenero( const Value: Boolean);
     function GetResponsavelPorCrianca: IThriftList<Int64>;
     procedure SetResponsavelPorCrianca( const Value: IThriftList<Int64>);
+    function GetCoPovoComunidadeTradicional: Int64;
+    procedure SetCoPovoComunidadeTradicional( const Value: Int64);
 
     function Get__isset_DeficienciasCidadao: Boolean;
     function Get__isset_GrauInstrucaoCidadao: Boolean;
     function Get__isset_OcupacaoCodigoCbo2002: Boolean;
     function Get__isset_OrientacaoSexualCidadao: Boolean;
-    function Get__isset_PovoComunidadeTradicional: Boolean;
     function Get__isset_RelacaoParentescoCidadao: Boolean;
     function Get__isset_SituacaoMercadoTrabalhoCidadao: Boolean;
     function Get__isset_StatusDesejaInformarOrientacaoSexual: Boolean;
@@ -1109,6 +1108,7 @@ type
     function Get__isset_IdentidadeGeneroCidadao: Boolean;
     function Get__isset_StatusDesejaInformarIdentidadeGenero: Boolean;
     function Get__isset_ResponsavelPorCrianca: Boolean;
+    function Get__isset_CoPovoComunidadeTradicional: Boolean;
   public
     constructor Create;
     destructor Destroy; override;
@@ -1124,7 +1124,6 @@ type
     property GrauInstrucaoCidadao: Int64 read GetGrauInstrucaoCidadao write SetGrauInstrucaoCidadao;
     property OcupacaoCodigoCbo2002: string read GetOcupacaoCodigoCbo2002 write SetOcupacaoCodigoCbo2002;
     property OrientacaoSexualCidadao: Int64 read GetOrientacaoSexualCidadao write SetOrientacaoSexualCidadao;
-    property PovoComunidadeTradicional: string read GetPovoComunidadeTradicional write SetPovoComunidadeTradicional;
     property RelacaoParentescoCidadao: Int64 read GetRelacaoParentescoCidadao write SetRelacaoParentescoCidadao;
     property SituacaoMercadoTrabalhoCidadao: Int64 read GetSituacaoMercadoTrabalhoCidadao write SetSituacaoMercadoTrabalhoCidadao;
     property StatusDesejaInformarOrientacaoSexual: Boolean read GetStatusDesejaInformarOrientacaoSexual write SetStatusDesejaInformarOrientacaoSexual;
@@ -1137,13 +1136,13 @@ type
     property IdentidadeGeneroCidadao: Int64 read GetIdentidadeGeneroCidadao write SetIdentidadeGeneroCidadao;
     property StatusDesejaInformarIdentidadeGenero: Boolean read GetStatusDesejaInformarIdentidadeGenero write SetStatusDesejaInformarIdentidadeGenero;
     property ResponsavelPorCrianca: IThriftList<Int64> read GetResponsavelPorCrianca write SetResponsavelPorCrianca;
+    property CoPovoComunidadeTradicional: Int64 read GetCoPovoComunidadeTradicional write SetCoPovoComunidadeTradicional;
 
     // isset
     property __isset_DeficienciasCidadao: Boolean read Get__isset_DeficienciasCidadao;
     property __isset_GrauInstrucaoCidadao: Boolean read Get__isset_GrauInstrucaoCidadao;
     property __isset_OcupacaoCodigoCbo2002: Boolean read Get__isset_OcupacaoCodigoCbo2002;
     property __isset_OrientacaoSexualCidadao: Boolean read Get__isset_OrientacaoSexualCidadao;
-    property __isset_PovoComunidadeTradicional: Boolean read Get__isset_PovoComunidadeTradicional;
     property __isset_RelacaoParentescoCidadao: Boolean read Get__isset_RelacaoParentescoCidadao;
     property __isset_SituacaoMercadoTrabalhoCidadao: Boolean read Get__isset_SituacaoMercadoTrabalhoCidadao;
     property __isset_StatusDesejaInformarOrientacaoSexual: Boolean read Get__isset_StatusDesejaInformarOrientacaoSexual;
@@ -1156,6 +1155,7 @@ type
     property __isset_IdentidadeGeneroCidadao: Boolean read Get__isset_IdentidadeGeneroCidadao;
     property __isset_StatusDesejaInformarIdentidadeGenero: Boolean read Get__isset_StatusDesejaInformarIdentidadeGenero;
     property __isset_ResponsavelPorCrianca: Boolean read Get__isset_ResponsavelPorCrianca;
+    property __isset_CoPovoComunidadeTradicional: Boolean read Get__isset_CoPovoComunidadeTradicional;
   end;
 
   ISaidaCidadaoCadastroThrift = interface(IBase)
@@ -4502,22 +4502,6 @@ begin
   Result := F__isset_OrientacaoSexualCidadao;
 end;
 
-function TInformacoesSocioDemograficasThriftImpl.GetPovoComunidadeTradicional: string;
-begin
-  Result := FPovoComunidadeTradicional;
-end;
-
-procedure TInformacoesSocioDemograficasThriftImpl.SetPovoComunidadeTradicional( const Value: string);
-begin
-  F__isset_PovoComunidadeTradicional := True;
-  FPovoComunidadeTradicional := Value;
-end;
-
-function TInformacoesSocioDemograficasThriftImpl.Get__isset_PovoComunidadeTradicional: Boolean;
-begin
-  Result := F__isset_PovoComunidadeTradicional;
-end;
-
 function TInformacoesSocioDemograficasThriftImpl.GetRelacaoParentescoCidadao: Int64;
 begin
   Result := FRelacaoParentescoCidadao;
@@ -4710,6 +4694,22 @@ begin
   Result := F__isset_ResponsavelPorCrianca;
 end;
 
+function TInformacoesSocioDemograficasThriftImpl.GetCoPovoComunidadeTradicional: Int64;
+begin
+  Result := FCoPovoComunidadeTradicional;
+end;
+
+procedure TInformacoesSocioDemograficasThriftImpl.SetCoPovoComunidadeTradicional( const Value: Int64);
+begin
+  F__isset_CoPovoComunidadeTradicional := True;
+  FCoPovoComunidadeTradicional := Value;
+end;
+
+function TInformacoesSocioDemograficasThriftImpl.Get__isset_CoPovoComunidadeTradicional: Boolean;
+begin
+  Result := F__isset_CoPovoComunidadeTradicional;
+end;
+
 procedure TInformacoesSocioDemograficasThriftImpl.Read( const iprot: IProtocol);
 var
   field_ : IField;
@@ -4772,15 +4772,6 @@ begin
           if (field_.Type_ = TType.I64) then
           begin
             OrientacaoSexualCidadao := iprot.ReadI64();
-          end else
-          begin
-            TProtocolUtil.Skip(iprot, field_.Type_);
-          end;
-        end;
-        6: begin
-          if (field_.Type_ = TType.String_) then
-          begin
-            PovoComunidadeTradicional := iprot.ReadString();
           end else
           begin
             TProtocolUtil.Skip(iprot, field_.Type_);
@@ -4900,6 +4891,15 @@ begin
           begin
             TProtocolUtil.Skip(iprot, field_.Type_);
           end;
+        end;
+        20: begin
+          if (field_.Type_ = TType.I64) then
+          begin
+            CoPovoComunidadeTradicional := iprot.ReadI64();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
         end
         else begin
           TProtocolUtil.Skip(iprot, field_.Type_);
@@ -4966,15 +4966,6 @@ begin
     field_.ID := 5;
     oprot.WriteFieldBegin(field_);
     oprot.WriteI64(OrientacaoSexualCidadao);
-    oprot.WriteFieldEnd();
-  end;
-  if (__isset_PovoComunidadeTradicional) then
-  begin
-    field_.Name := 'povoComunidadeTradicional';
-    field_.Type_  := TType.String_;
-    field_.ID := 6;
-    oprot.WriteFieldBegin(field_);
-    oprot.WriteString(PovoComunidadeTradicional);
     oprot.WriteFieldEnd();
   end;
   if (__isset_RelacaoParentescoCidadao) then
@@ -5091,6 +5082,15 @@ begin
     oprot.WriteListEnd();
     oprot.WriteFieldEnd();
   end;
+  if (__isset_CoPovoComunidadeTradicional) then
+  begin
+    field_.Name := 'coPovoComunidadeTradicional';
+    field_.Type_  := TType.I64;
+    field_.ID := 20;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteI64(CoPovoComunidadeTradicional);
+    oprot.WriteFieldEnd();
+  end;
   oprot.WriteFieldStop();
   oprot.WriteStructEnd();
 end;
@@ -5126,12 +5126,6 @@ begin
       _first42 := FALSE;
       _sb41.Append('OrientacaoSexualCidadao: ');
       _sb41.Append(OrientacaoSexualCidadao);
-    end;
-    if (__isset_PovoComunidadeTradicional) then begin
-      if not _first42 then _sb41.Append(',');
-      _first42 := FALSE;
-      _sb41.Append('PovoComunidadeTradicional: ');
-      _sb41.Append(PovoComunidadeTradicional);
     end;
     if (__isset_RelacaoParentescoCidadao) then begin
       if not _first42 then _sb41.Append(',');
@@ -5204,6 +5198,12 @@ begin
       _first42 := FALSE;
       _sb41.Append('ResponsavelPorCrianca: ');
       _sb41.Append(ResponsavelPorCrianca);
+    end;
+    if (__isset_CoPovoComunidadeTradicional) then begin
+      if not _first42 then _sb41.Append(',');
+      _first42 := FALSE;
+      _sb41.Append('CoPovoComunidadeTradicional: ');
+      _sb41.Append(CoPovoComunidadeTradicional);
     end;
     _sb41.Append(')');
     Result := _sb41.ToString;

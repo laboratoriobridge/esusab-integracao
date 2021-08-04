@@ -80,7 +80,6 @@
 			<grauInstrucaoCidadao>55</grauInstrucaoCidadao>
 			<ocupacaoCodigoCbo2002>252105</ocupacaoCodigoCbo2002>
 			<orientacaoSexualCidadao>148</orientacaoSexualCidadao>
-			<povoComunidadeTradicional>CERRADO</povoComunidadeTradicional>
 			<situacaoMercadoTrabalhoCidadao>66</situacaoMercadoTrabalhoCidadao>
 			<statusDesejaInformarOrientacaoSexual>true</statusDesejaInformarOrientacaoSexual>
 			<statusFrequentaBenzedeira>true</statusFrequentaBenzedeira>
@@ -91,6 +90,7 @@
 			<statusTemAlgumaDeficiencia>true</statusTemAlgumaDeficiencia>
 			<identidadeGeneroCidadao>151</identidadeGeneroCidadao>
 			<statusDesejaInformarIdentidadeGenero>true</statusDesejaInformarIdentidadeGenero>
+			<coPovoComunidadeTradicional>175</coPovoComunidadeTradicional>
 		</informacoesSocioDemograficas>
 		<saidaCidadaoCadastro />
 		<statusTermoRecusaCadastroIndividualAtencaoBasica>false</statusTermoRecusaCadastroIndividualAtencaoBasica>
@@ -122,5 +122,5 @@
 		<versaoSistema>3.2.18</versaoSistema>
 		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:originadora>
-	<versao major="3" minor="2" revision="4" />
+	<versao major="4" minor="2" revision="1" />
 </ns3:dadoTransporteTransportXml>

@@ -1887,10 +1887,6 @@ class InformacoesSocioDemograficasThrift {
    */
   public $orientacaoSexualCidadao = null;
   /**
-   * @var string
-   */
-  public $povoComunidadeTradicional = null;
-  /**
    * @var int
    */
   public $relacaoParentescoCidadao = null;
@@ -1938,6 +1934,10 @@ class InformacoesSocioDemograficasThrift {
    * @var int[]
    */
   public $responsavelPorCrianca = null;
+  /**
+   * @var int
+   */
+  public $coPovoComunidadeTradicional = null;
 
   public function __construct($vals=null) {
     if (!isset(self::$_TSPEC)) {
@@ -1961,10 +1961,6 @@ class InformacoesSocioDemograficasThrift {
         5 => array(
           'var' => 'orientacaoSexualCidadao',
           'type' => TType::I64,
-          ),
-        6 => array(
-          'var' => 'povoComunidadeTradicional',
-          'type' => TType::STRING,
           ),
         7 => array(
           'var' => 'relacaoParentescoCidadao',
@@ -2018,6 +2014,10 @@ class InformacoesSocioDemograficasThrift {
             'type' => TType::I64,
             ),
           ),
+        20 => array(
+          'var' => 'coPovoComunidadeTradicional',
+          'type' => TType::I64,
+          ),
         );
     }
     if (is_array($vals)) {
@@ -2032,9 +2032,6 @@ class InformacoesSocioDemograficasThrift {
       }
       if (isset($vals['orientacaoSexualCidadao'])) {
         $this->orientacaoSexualCidadao = $vals['orientacaoSexualCidadao'];
-      }
-      if (isset($vals['povoComunidadeTradicional'])) {
-        $this->povoComunidadeTradicional = $vals['povoComunidadeTradicional'];
       }
       if (isset($vals['relacaoParentescoCidadao'])) {
         $this->relacaoParentescoCidadao = $vals['relacaoParentescoCidadao'];
@@ -2071,6 +2068,9 @@ class InformacoesSocioDemograficasThrift {
       }
       if (isset($vals['responsavelPorCrianca'])) {
         $this->responsavelPorCrianca = $vals['responsavelPorCrianca'];
+      }
+      if (isset($vals['coPovoComunidadeTradicional'])) {
+        $this->coPovoComunidadeTradicional = $vals['coPovoComunidadeTradicional'];
       }
     }
   }
@@ -2128,13 +2128,6 @@ class InformacoesSocioDemograficasThrift {
         case 5:
           if ($ftype == TType::I64) {
             $xfer += $input->readI64($this->orientacaoSexualCidadao);
-          } else {
-            $xfer += $input->skip($ftype);
-          }
-          break;
-        case 6:
-          if ($ftype == TType::STRING) {
-            $xfer += $input->readString($this->povoComunidadeTradicional);
           } else {
             $xfer += $input->skip($ftype);
           }
@@ -2233,6 +2226,13 @@ class InformacoesSocioDemograficasThrift {
             $xfer += $input->skip($ftype);
           }
           break;
+        case 20:
+          if ($ftype == TType::I64) {
+            $xfer += $input->readI64($this->coPovoComunidadeTradicional);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
         default:
           $xfer += $input->skip($ftype);
           break;
@@ -2276,11 +2276,6 @@ class InformacoesSocioDemograficasThrift {
     if ($this->orientacaoSexualCidadao !== null) {
       $xfer += $output->writeFieldBegin('orientacaoSexualCidadao', TType::I64, 5);
       $xfer += $output->writeI64($this->orientacaoSexualCidadao);
-      $xfer += $output->writeFieldEnd();
-    }
-    if ($this->povoComunidadeTradicional !== null) {
-      $xfer += $output->writeFieldBegin('povoComunidadeTradicional', TType::STRING, 6);
-      $xfer += $output->writeString($this->povoComunidadeTradicional);
       $xfer += $output->writeFieldEnd();
     }
     if ($this->relacaoParentescoCidadao !== null) {
@@ -2353,6 +2348,11 @@ class InformacoesSocioDemograficasThrift {
         }
         $output->writeListEnd();
       }
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->coPovoComunidadeTradicional !== null) {
+      $xfer += $output->writeFieldBegin('coPovoComunidadeTradicional', TType::I64, 20);
+      $xfer += $output->writeI64($this->coPovoComunidadeTradicional);
       $xfer += $output->writeFieldEnd();
     }
     $xfer += $output->writeFieldStop();

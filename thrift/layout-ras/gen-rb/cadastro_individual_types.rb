@@ -198,7 +198,6 @@ module Br
               GRAUINSTRUCAOCIDADAO = 2
               OCUPACAOCODIGOCBO2002 = 4
               ORIENTACAOSEXUALCIDADAO = 5
-              POVOCOMUNIDADETRADICIONAL = 6
               RELACAOPARENTESCOCIDADAO = 7
               SITUACAOMERCADOTRABALHOCIDADAO = 9
               STATUSDESEJAINFORMARORIENTACAOSEXUAL = 10
@@ -211,13 +210,13 @@ module Br
               IDENTIDADEGENEROCIDADAO = 17
               STATUSDESEJAINFORMARIDENTIDADEGENERO = 18
               RESPONSAVELPORCRIANCA = 19
+              COPOVOCOMUNIDADETRADICIONAL = 20
 
               FIELDS = {
                 DEFICIENCIASCIDADAO => {:type => ::Thrift::Types::LIST, :name => 'deficienciasCidadao', :element => {:type => ::Thrift::Types::I64}, :optional => true},
                 GRAUINSTRUCAOCIDADAO => {:type => ::Thrift::Types::I64, :name => 'grauInstrucaoCidadao', :optional => true},
                 OCUPACAOCODIGOCBO2002 => {:type => ::Thrift::Types::STRING, :name => 'ocupacaoCodigoCbo2002', :optional => true},
                 ORIENTACAOSEXUALCIDADAO => {:type => ::Thrift::Types::I64, :name => 'orientacaoSexualCidadao', :optional => true},
-                POVOCOMUNIDADETRADICIONAL => {:type => ::Thrift::Types::STRING, :name => 'povoComunidadeTradicional', :optional => true},
                 RELACAOPARENTESCOCIDADAO => {:type => ::Thrift::Types::I64, :name => 'relacaoParentescoCidadao', :optional => true},
                 SITUACAOMERCADOTRABALHOCIDADAO => {:type => ::Thrift::Types::I64, :name => 'situacaoMercadoTrabalhoCidadao', :optional => true},
                 STATUSDESEJAINFORMARORIENTACAOSEXUAL => {:type => ::Thrift::Types::BOOL, :name => 'statusDesejaInformarOrientacaoSexual', :optional => true},
@@ -229,7 +228,8 @@ module Br
                 STATUSTEMALGUMADEFICIENCIA => {:type => ::Thrift::Types::BOOL, :name => 'statusTemAlgumaDeficiencia', :optional => true},
                 IDENTIDADEGENEROCIDADAO => {:type => ::Thrift::Types::I64, :name => 'identidadeGeneroCidadao', :optional => true},
                 STATUSDESEJAINFORMARIDENTIDADEGENERO => {:type => ::Thrift::Types::BOOL, :name => 'statusDesejaInformarIdentidadeGenero', :optional => true},
-                RESPONSAVELPORCRIANCA => {:type => ::Thrift::Types::LIST, :name => 'responsavelPorCrianca', :element => {:type => ::Thrift::Types::I64}, :optional => true}
+                RESPONSAVELPORCRIANCA => {:type => ::Thrift::Types::LIST, :name => 'responsavelPorCrianca', :element => {:type => ::Thrift::Types::I64}, :optional => true},
+                COPOVOCOMUNIDADETRADICIONAL => {:type => ::Thrift::Types::I64, :name => 'coPovoComunidadeTradicional', :optional => true}
               }
 
               def struct_fields; FIELDS; end

@@ -25,7 +25,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 4.2.1</span>
+        <span class="label">versão 4.2.3</span>
       
     </a>
 
@@ -158,7 +158,7 @@
     <p class="post-meta">
       <a class="btn" href="/pdf.html?include=/dw/principais_alteracoes.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 05/07/2021</span>
+        <span class="label" title="Data da última modificação">Alterado em 28/09/2021</span>
       
     </p>
   </header>
@@ -166,32 +166,38 @@
   <article class="post-content">
     <p>Este documento relata as principais alterações entre as versões do DW.</p>
 
-<h3 id="1-principais-altera-es-da-v4-2-0-para-a-v4-2-1">1. Principais alterações da v4.2.0 para a v4.2.1:</h3>
+<h3 id="1-principais-altera-es-da-v4-2-1-para-a-v4-2-3">1. Principais alterações da v4.2.1 para a v4.2.3:</h3>
+
+<p><strong>1. </strong> No contexto de <a href="/dw/fatos/procedimentos.html">Procedimentos</a> foram incluídos os campos <code>nu\_peso</code> e <code>nu\_altura</code>.</p>
+
+<p><strong>2. </strong> No contexto de <a href="/dw/fatos/atendimento_odontologico_individual.html">Atendimento odontológico individual</a> foram incluídos os campos <code>nu\_peso</code> e <code>nu\_altura</code>.</p>
+
+<h3 id="2-principais-altera-es-da-v4-2-0-para-a-v4-2-1">2. Principais alterações da v4.2.0 para a v4.2.1:</h3>
 
 <p><strong>1. </strong> No contexto de <a href="/dw/fatos/cadastro_individual.html">Cadastro individual</a> foi incluído o campo <code>co_dim_povo_comunidade_tradicional</code>. Além deste campo, também foi criada a tabela de dimensão <a href="/dw/dimensoes.html#tb\_dim\_povo\_comunidade\_tradicional">tb_dim_povo_comunidade_tradicional</a>.</p>
 
-<h3 id="2-principais-altera-es-da-v4-1-4-para-a-v4-2-0">2. Principais alterações da v4.1.4 para a v4.2.0:</h3>
+<h3 id="3-principais-altera-es-da-v4-1-4-para-a-v4-2-0">3. Principais alterações da v4.1.4 para a v4.2.0:</h3>
 
-<p><strong>2. </strong> No contexto de <a href="/dw/fatos/atendimento_individual.html">Atendimento individual</a> e <a href="/dw/fatos/atendimento_odontologico_individual.html">Atendimento odontológico individual</a> foram incluídas as estruturas de dados para registro das informações de resultados de exames. Estas informações estão armazenadas nas tabelas:</p>
+<p><strong>1. </strong> No contexto de <a href="/dw/fatos/atendimento_individual.html">Atendimento individual</a> e <a href="/dw/fatos/atendimento_odontologico_individual.html">Atendimento odontológico individual</a> foram incluídas as estruturas de dados para registro das informações de resultados de exames. Estas informações estão armazenadas nas tabelas:</p>
 
 <ul>
 <li><code>tb_fat_atd_ind_exames</code>;</li>
 <li><code>tb_fat_atend_odonto_exames</code>.</li>
 </ul>
 
-<p><strong>3. </strong> No contexto de <a href="/dw/fatos/cadastro_domiciliar.html">Cadastro domiciliar</a> foram incluídos os campos <code>nu_latitude</code> e <code>nu_longitude</code>.</p>
+<p><strong>2. </strong> No contexto de <a href="/dw/fatos/cadastro_domiciliar.html">Cadastro domiciliar</a> foram incluídos os campos <code>nu_latitude</code> e <code>nu_longitude</code>.</p>
 
-<p><strong>4. </strong> No contexto de <a href="/dw/fatos/visita_domiciliar.html">Visita domiciliar</a> foram incluídos os campos <code>nu_latitude</code>, <code>nu_longitude</code> e <code>co_uuid_origem_fcd</code>.</p>
+<p><strong>3. </strong> No contexto de <a href="/dw/fatos/visita_domiciliar.html">Visita domiciliar</a> foram incluídos os campos <code>nu_latitude</code>, <code>nu_longitude</code> e <code>co_uuid_origem_fcd</code>.</p>
 
-<p><strong>5. </strong> No contexto de <a href="/dw/fatos/vacinacao.html">Vacinação</a> foram incluídos os campos <code>st_registro_anterior</code> e <code>co_dim_tempo_vacina_aplicada</code>.</p>
+<p><strong>4. </strong> No contexto de <a href="/dw/fatos/vacinacao.html">Vacinação</a> foram incluídos os campos <code>st_registro_anterior</code> e <code>co_dim_tempo_vacina_aplicada</code>.</p>
 
-<h3 id="3-principais-altera-es-da-v4-1-2-para-a-v4-1-4">3. Principais alterações da v4.1.2 para a v4.1.4:</h3>
+<h3 id="4-principais-altera-es-da-v4-1-2-para-a-v4-1-4">4. Principais alterações da v4.1.2 para a v4.1.4:</h3>
 
 <p><strong>1. </strong> No contexto de <a href="/dw/fatos/vacinacao.html">Vacinação</a> foram incluídas as estruturas de dados para registro da informação de grupo de atendimento. Esta informação está armazenada na tabela: <code>tb_fat_vacinacao_vacina</code>.</p>
 
 <p><strong>2. </strong> Para contextualizar as informações da tabela <code>tb_fat_vacinacao_vacina</code>, foi criada a seguinte tabela de dimensão: <code>tb_dim_grupo_atendimento</code>.</p>
 
-<h3 id="4-principais-altera-es-da-v4-0-0-para-a-v4-1-2">4. Principais alterações da v4.0.0 para a v4.1.2:</h3>
+<h3 id="5-principais-altera-es-da-v4-0-0-para-a-v4-1-2">5. Principais alterações da v4.0.0 para a v4.1.2:</h3>
 
 <p><strong>1. </strong> No contexto de <a href="/dw/fatos/atendimento_individual.html">Atendimento individual</a> foram incluídas as estruturas de dados para registro das informações de prescrição de medicamentos e encaminhamentos. Estas informações estão armazenadas nas tabelas:</p>
 

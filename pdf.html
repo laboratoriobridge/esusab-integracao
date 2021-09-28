@@ -25,7 +25,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 4.2.1</span>
+        <span class="label">versão 4.2.3</span>
       
     </a>
 
@@ -137,7 +137,7 @@
 
       <li id="item-layout_ab" data-url="/ledi/documentacao/index.html">
         <label>
-          <input type="checkbox" value="layout_ab" checked="checked"> Layout e-SUS APS de Dados e Interface Versão 4.2.1
+          <input type="checkbox" value="layout_ab" checked="checked"> Layout e-SUS APS de Dados e Interface Versão 4.2.3
           <small>
             <a onclick="checkById('layout_ab', true); return false;">Marcar todos</a> |
             <a onclick="checkById('layout_ab', false); return false;">Desmarcar todos</a>
@@ -659,7 +659,7 @@
 
       <li id="item-principais_alteracoes" data-url="/ledi/documentacao/principais_alteracoes.html">
         <label>
-          <input type="checkbox" value="principais_alteracoes" checked="checked"> Principais alterações da v4.2.0 para a v4.2.1
+          <input type="checkbox" value="principais_alteracoes" checked="checked"> Principais alterações da v4.2.1 para a v4.2.3
           <small>
             <a onclick="checkById('principais_alteracoes', true); return false;">Marcar todos</a> |
             <a onclick="checkById('principais_alteracoes', false); return false;">Desmarcar todos</a>
@@ -985,7 +985,7 @@
   
       <!-- Cria a lista de itens[páginas] que foram selecionados  -->
 
-  <li id="summary-layout_ab"><a href="#layout_ab">Layout e-SUS APS de Dados e Interface Versão 4.2.1</a></li>
+  <li id="summary-layout_ab"><a href="#layout_ab">Layout e-SUS APS de Dados e Interface Versão 4.2.3</a></li>
   
       <!-- Cria a lista de itens[páginas] que foram selecionados  -->
 
@@ -1206,7 +1206,7 @@
 
   
 
-  <li id="summary-principais_alteracoes"><a href="#principais_alteracoes">Principais alterações da v4.2.0 para a v4.2.1</a></li>
+  <li id="summary-principais_alteracoes"><a href="#principais_alteracoes">Principais alterações da v4.2.1 para a v4.2.3</a></li>
   
       <!-- Cria a lista de itens[páginas] que foram selecionados  -->
 
@@ -1434,7 +1434,11 @@
 </tr>
 <tr>
 <td>4.2.6 ou superior</td>
-<td><a href="/ledi/documentacao/index.html">LEDI APS 4.2.1</a></td>
+<td><a href="https://integracao.esusab.ufsc.br/v421/">LEDI APS 4.2.1</a></td>
+</tr>
+<tr>
+<td>4.2.9 ou superior</td>
+<td><a href="/ledi/documentacao/index.html">LEDI APS 4.2.3</a></td>
 </tr>
 </tbody></table>
 
@@ -1447,17 +1451,17 @@
         
     <div class="post pdf shown" id="layout_ab" data-url="/ledi/documentacao/index.html">
       <header class="post-header">
-        <h1 class="post-title">Layout e-SUS APS de Dados e Interface Versão 4.2.1</h1>
+        <h1 class="post-title">Layout e-SUS APS de Dados e Interface Versão 4.2.3</h1>
       </header>
 
       
 
       <article class="post-content">
-        <p>Esta documentação descreve as estruturas de dados, seus atributos e regras utilizadas no <strong>LEDI APS</strong> versão 4.2.1</p>
+        <p>Esta documentação descreve as estruturas de dados, seus atributos e regras utilizadas no <strong>LEDI APS</strong> versão 4.2.3.</p>
 
-<p>A versão <strong>LEDI APS</strong> 4.2.1 é compatível com o sistema <strong>PEC e-SUS APS</strong> versão 4.2.6 ou superior.</p>
+<p>A versão <strong>LEDI APS</strong> 4.2.3 é compatível com o sistema <strong>PEC e-SUS APS</strong> versão 4.2.9 ou superior.</p>
 
-<p>Confira as principais alterações da V4.2.0 para a V4.2.1 <a href="/ledi/documentacao/principais_alteracoes.html">aqui</a>.</p>
+<p>Confira as principais alterações da V4.2.1 para a V4.2.3 <a href="/ledi/documentacao/principais_alteracoes.html">aqui</a>.</p>
 
       </article>
 
@@ -7637,7 +7641,7 @@
 <li>Se o campo <a href="/ledi/documentacao/estrutura_arquivos/#1-tiporesultado">tipoResultado</a> for igual a <code>1 - Valor</code> e o valor do campo <a href="/ledi/documentacao/estrutura_arquivos/#1-exame">exame</a> for:
 
 <ul>
-<li><code>0202010503 ou ABEX008</code>, então preencher com os valores de <code>0,00 a 20,00</code>;</li>
+<li><code>0202010503 ou ABEX008</code>, então preencher com os valores de <code>0,00 a 100</code>;</li>
 <li><code>0211070270, 0211070149 ou ABEX020</code>, então preencher com os valores da tabela <a href="/ledi/documentacao/referencias/dicionario.html#testeorelhinha">testeOrelhinha</a>;</li>
 <li><code>0205020178</code>, então preencher com os valores da tabela <a href="/ledi/documentacao/referencias/dicionario.html#ustransfontanela">usTransfontanela</a>;</li>
 <li><code>0206010079</code>, então preencher com os valores da tabela <a href="/ledi/documentacao/referencias/dicionario.html#tomografiacomputadorizada">tomografiaComputadorizada</a>;</li>
@@ -7645,11 +7649,11 @@
 <li><code>0211060100 ou ABPG013</code>, então preencher com os valores da tabela <a href="/ledi/documentacao/referencias/dicionario.html#examefundoolho">exameFundoOlho</a>;</li>
 <li><code>ABEX022</code>, então preencher com os valores da tabela <a href="/ledi/documentacao/referencias/dicionario.html#testeolhinho">testeOlhinho</a>;</li>
 <li><code>0202010295 ou ABEX002</code>, então preencher com os valores de <code>1 a 10000</code>;</li>
-<li><code>0202010279 ou ABEX007</code>, então preencher com os valores de <code>1 a 1000</code>;</li>
-<li><code>0202010287 ou ABEX009</code>, então preencher com os valores de <code>1 a 5000</code>;</li>
-<li><code>0202010678</code>, então preencher com os valores de <code>1 a 4000</code>;</li>
+<li><code>0202010279 ou ABEX007</code>, então preencher com os valores de <code>1 a 10000</code>;</li>
+<li><code>0202010287 ou ABEX009</code>, então preencher com os valores de <code>1 a 10000</code>;</li>
+<li><code>0202010678</code>, então preencher com os valores de <code>1 a 10000</code>;</li>
 <li><code>0202010317 ou ABEX003</code>, então preencher com os valores de <code>0,1 a 500,0</code>;</li>
-<li><code>0202050025</code>, então preencher com os valores de <code>0,001 a 100,000</code>.</li>
+<li><code>0202050025</code>, então preencher com os valores de <code>0,001 a 1000</code>.</li>
 </ul></li>
 <li>Se o campo <a href="/ledi/documentacao/estrutura_arquivos/#1-tiporesultado">tipoResultado</a> for igual a <code>2 - Dias</code> e o valor do campo <a href="/ledi/documentacao/estrutura_arquivos/#1-exame">exame</a> for <code>02.05.02.014-3 (ABEX024)</code>, <code>02.05.02.015-1</code> ou <code>02.05.01.005-9</code>, este campo deve ser preenchido com valores de <code>0 a 6</code>;</li>
 <li>Se o campo <a href="/ledi/documentacao/estrutura_arquivos/#1-tiporesultado">tipoResultado</a> for igual a <code>3 - Semanas</code> e o valor do campo <a href="/ledi/documentacao/estrutura_arquivos/#1-exame">exame</a> for <code>02.05.02.014-3 (ABEX024)</code>, <code>02.05.02.015-1</code> ou <code>02.05.01.005-9</code>, este campo deve ser preenchido com valores de <code>0 a 42</code>; </li>
@@ -8794,6 +8798,62 @@
 
 <p><strong>Referência:</strong> <a href="/ledi/documentacao/estrutura_arquivos/#resultadosexames">resultadosExames</a>.</p>
 
+<h3 id="22-pesoacompanhamentonutricional">#22 pesoAcompanhamentoNutricional</h3>
+
+<p>Peso do cidadão em quilogramas.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Double</td>
+<td>Não</td>
+<td>1</td>
+<td>7</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Apenas números e ponto (<code>.</code>);</li>
+<li>Máximo de 3 casas decimais;</li>
+<li>Valor mínimo 0.5 e máximo 500.</li>
+</ul>
+
+<h3 id="23-alturaacompanhamentonutricional">#23 alturaAcompanhamentoNutricional</h3>
+
+<p>Altura do cidadão em centímetros.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Double</td>
+<td>Não</td>
+<td>2</td>
+<td>5</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Apenas números e ponto (<code>.</code>);</li>
+<li>Máximo de 1 casa decimal;</li>
+<li>Valor mínimo 20 e máximo 250.</li>
+</ul>
+
 <h2 id="procedimentoquantidade">ProcedimentoQuantidade</h2>
 
 <h3 id="1-comsprocedimento">#1 coMsProcedimento</h3>
@@ -9474,7 +9534,7 @@
 <li>Se o campo <a href="/ledi/documentacao/estrutura_arquivos/#1-tiporesultado">tipoResultado</a> for igual a <code>1 - Valor</code> e o valor do campo <a href="/ledi/documentacao/estrutura_arquivos/#1-exame">exame</a> for:
 
 <ul>
-<li><code>0202010503 ou ABEX008</code>, então preencher com os valores de <code>0,00 a 20,00</code>;</li>
+<li><code>0202010503 ou ABEX008</code>, então preencher com os valores de <code>0,00 a 100</code>;</li>
 <li><code>0211070270, 0211070149 ou ABEX020</code>, então preencher com os valores da tabela <a href="/ledi/documentacao/referencias/dicionario.html#testeorelhinha">testeOrelhinha</a>;</li>
 <li><code>0205020178</code>, então preencher com os valores da tabela <a href="/ledi/documentacao/referencias/dicionario.html#ustransfontanela">usTransfontanela</a>;</li>
 <li><code>0206010079</code>, então preencher com os valores da tabela <a href="/ledi/documentacao/referencias/dicionario.html#tomografiacomputadorizada">tomografiaComputadorizada</a>;</li>
@@ -9482,11 +9542,11 @@
 <li><code>0211060100 ou ABPG013</code>, então preencher com os valores da tabela <a href="/ledi/documentacao/referencias/dicionario.html#examefundoolho">exameFundoOlho</a>;</li>
 <li><code>ABEX022</code>, então preencher com os valores da tabela <a href="/ledi/documentacao/referencias/dicionario.html#testeolhinho">testeOlhinho</a>;</li>
 <li><code>0202010295 ou ABEX002</code>, então preencher com os valores de <code>1 a 10000</code>;</li>
-<li><code>0202010279 ou ABEX007</code>, então preencher com os valores de <code>1 a 1000</code>;</li>
-<li><code>0202010287 ou ABEX009</code>, então preencher com os valores de <code>1 a 5000</code>;</li>
-<li><code>0202010678</code>, então preencher com os valores de <code>1 a 4000</code>;</li>
+<li><code>0202010279 ou ABEX007</code>, então preencher com os valores de <code>1 a 10000</code>;</li>
+<li><code>0202010287 ou ABEX009</code>, então preencher com os valores de <code>1 a 10000</code>;</li>
+<li><code>0202010678</code>, então preencher com os valores de <code>1 a 10000</code>;</li>
 <li><code>0202010317 ou ABEX003</code>, então preencher com os valores de <code>0,1 a 500,0</code>;</li>
-<li><code>0202050025</code>, então preencher com os valores de <code>0,001 a 100,000</code>.</li>
+<li><code>0202050025</code>, então preencher com os valores de <code>0,001 a 1000</code>.</li>
 </ul></li>
 <li>Se o campo <a href="/ledi/documentacao/estrutura_arquivos/#1-tiporesultado">tipoResultado</a> for igual a <code>2 - Dias</code> e o valor do campo <a href="/ledi/documentacao/estrutura_arquivos/#1-exame">exame</a> for <code>02.05.02.014-3 (ABEX024)</code>, <code>02.05.02.015-1</code> ou <code>02.05.01.005-9</code>, este campo deve ser preenchido com valores de <code>0 a 6</code>;</li>
 <li>Se o campo <a href="/ledi/documentacao/estrutura_arquivos/#1-tiporesultado">tipoResultado</a> for igual a <code>3 - Semanas</code> e o valor do campo <a href="/ledi/documentacao/estrutura_arquivos/#1-exame">exame</a> for <code>02.05.02.014-3 (ABEX024)</code>, <code>02.05.02.015-1</code> ou <code>02.05.01.005-9</code>, este campo deve ser preenchido com valores de <code>0 a 42</code>; </li>
@@ -10245,10 +10305,10 @@
 
 <ul>
 <li>Preencher somente um dos campos: <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#2-outralocalidade">outraLocalidade</a>, <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#3-inep">inep</a> ou <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#12-cneslocalatividade">cnesLocalAtivade</a>;</li>
-<li>É de preenchimento obrigatório se <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#18-pseeducacao">pseEducacao</a> = <code>true</code> ou <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#19-psesaude">pseSaude</a> = <code>true</code>.</li>
+<li>É de preenchimento obrigatório se <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#18-pseeducacao">pseEducacao</a> = <code>true</code> ou <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#19-psesaude">pseSaude</a> = <code>true</code>;</li>
 </ul>
 
-<p><strong>Referência:</strong> Os números INEP das instituições de ensino podem ser obtidos a partir do <a href="http://portal.inep.gov.br/microdados">site do INEP</a>. Faça download do arquivo mais atual do &quot;Censo escolar&quot;. Na pasta &quot;Dados&quot; está contido o arquivo &quot;ESCOLAS.zip&quot;, que contém a tabela com os dados das instituições. O número INEP da instituição se encontra na coluna &quot;CO_ENTIDADE&quot; e o nome da instituição na coluna &quot;NO_ENTIDADE&quot;.</p>
+<p><strong>Referência:</strong> Os números INEP das instituições de ensino podem ser obtidos a partir do <a href="http://portal.inep.gov.br/microdados">site do INEP</a>. Faça download do arquivo do <strong>Censo escolar de 2020</strong>. Na pasta &quot;Dados&quot; está contido o arquivo &quot;ESCOLAS.CSV&quot;, que contém a tabela com os dados das instituições. O número INEP da instituição se encontra na coluna &quot;CO_ENTIDADE&quot;.</p>
 
 <h3 id="4-numparticipantes">#4 numParticipantes</h3>
 
@@ -11660,6 +11720,62 @@
 <ul>
 <li>Somente CPF válido será aceito;</li>
 <li>Não pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#2-cnscidadao">cnsCidadao</a> for preenchido.</li>
+</ul>
+
+<h3 id="13-pesoacompanhamentonutricional">#13 pesoAcompanhamentoNutricional</h3>
+
+<p>Peso do cidadão em quilogramas.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Double</td>
+<td>Não</td>
+<td>1</td>
+<td>7</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Apenas números e ponto (<code>.</code>);</li>
+<li>Máximo de 3 casas decimais;</li>
+<li>Valor mínimo 0.5 e máximo 500.</li>
+</ul>
+
+<h3 id="14-alturaacompanhamentonutricional">#14 alturaAcompanhamentoNutricional</h3>
+
+<p>Altura do cidadão em centímetros.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Double</td>
+<td>Não</td>
+<td>2</td>
+<td>5</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Apenas números e ponto (<code>.</code>);</li>
+<li>Máximo de 1 casa decimal;</li>
+<li>Valor mínimo 20 e máximo 250.</li>
 </ul>
 
 <h2 id="procedimentos-da-ficha">Procedimentos da Ficha</h2>
@@ -16497,7 +16613,8 @@
 
 <ul>
 <li>Só pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#2-estrategiavacinacao">estrategiaVacinacao</a> = <code>5</code> (Campanha). Neste caso o preenchimento é obrigatório;</li>
-<li>Não pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#7-stregistroanterior">stRegistroAnterior</a> = <code>true</code>.</li>
+<li>Não pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#7-stregistroanterior">stRegistroAnterior</a> = <code>true</code>;</li>
+<li>Deve ser preenchido com a informação da coluna <strong>Código SIPNI</strong> presente na tabela de referência.</li>
 </ul>
 
 <p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#grupodeatendimento">Grupo de Atendimento</a>.</p>
@@ -16588,7 +16705,7 @@
 <li><a href="http://www.sbmfc.org.br/default.asp?paginaId=72">Classificação Internacional de Atenção Primária - Segunda Edição (CIAP2)</a>;</li>
 <li><a href="https://rts.saude.gov.br/#/cid">Classificação Internacional de Doenças - Versão 10</a>;</li>
 <li>Procedimentos: Compatível com a competência do <a href="http://sigtap.datasus.gov.br/tabela-unificada/app/sec/inicio.jsp">SIGTAP</a> 09/2020;</li>
-<li>Os números INEP das instituições de ensino podem ser obtidos a partir do <a href="http://portal.inep.gov.br/microdados">site do INEP</a>. Faça download do arquivo mais atual do &quot;Censo escolar&quot;. Na pasta &quot;Dados&quot; está contido o arquivo &quot;ESCOLAS.zip&quot;, que contém a tabela com os dados das instituições. O número INEP da instituição se encontra na coluna &quot;CO_ENTIDADE&quot; e o nome da instituição na coluna &quot;NO_ENTIDADE&quot;.</li>
+<li>A tabela do INEP está atualizada com o <strong>censo 2020</strong>. Pode ser obtida a partir do <a href="http://portal.inep.gov.br/microdados">site do INEP</a>. Faça download do arquivo mais atual do &quot;Censo escolar&quot;. Na pasta &quot;Dados&quot; está contido o arquivo &quot;ESCOLAS.CSV&quot;, que contém a tabela com os dados das instituições. O número INEP da instituição se encontra na coluna &quot;CO_ENTIDADE&quot; e o nome da instituição na coluna &quot;NO_ENTIDADE&quot;.</li>
 </ul>
 
       </article>
@@ -46905,7 +47022,7 @@
 <td>revision</td>
 <td>Integer</td>
 <td>Sim</td>
-<td>Valor único = 1</td>
+<td>Valor único = 3</td>
 </tr>
 </tbody></table>
 
@@ -63212,299 +63329,443 @@
 <tr>
 <th>Código SIPNI</th>
 <th>Descrição</th>
+<th>Ref RNDS</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>5</td>
 <td>Quilombola</td>
+<td>000601</td>
 </tr>
 <tr>
 <td>6</td>
-<td>Privado de Liberdade</td>
+<td>População Privada de Liberdade</td>
+<td>001501</td>
 </tr>
 <tr>
 <td>10</td>
-<td>Outros</td>
+<td>Outros Grupos</td>
+<td>999999</td>
 </tr>
 <tr>
 <td>13</td>
-<td>Func. do Sistema Prisional</td>
+<td>Funcionário do Sistema de Privação de Liberdade</td>
+<td>001401</td>
 </tr>
 <tr>
 <td>31</td>
 <td>Caminhoneiro</td>
+<td>001002</td>
 </tr>
 <tr>
 <td>32</td>
 <td>Coletivo Rodoviário Passageiros Urbano e de Longo Curso</td>
+<td>001003</td>
 </tr>
 <tr>
 <td>33</td>
-<td>Portuário</td>
+<td>Trabalhadores Portuários</td>
+<td>001301</td>
 </tr>
 <tr>
 <td>34</td>
-<td>Anemia Falciforme</td>
+<td>Hemoglobinopatia grave</td>
+<td>000101</td>
 </tr>
 <tr>
 <td>35</td>
-<td>Câncer</td>
+<td>Neoplasias</td>
+<td>000102</td>
 </tr>
 <tr>
 <td>36</td>
-<td>Diabetes</td>
+<td>Diabetes Mellitus</td>
+<td>000103</td>
 </tr>
 <tr>
 <td>37</td>
-<td>Portador de DPOC</td>
+<td>Pneumopatias Crônicas Graves</td>
+<td>000104</td>
 </tr>
 <tr>
 <td>38</td>
-<td>Doença Renal</td>
+<td>Doença Renal Crônica</td>
+<td>000105</td>
 </tr>
 <tr>
 <td>39</td>
-<td>Doenças Cardio-Cerebrovasculares</td>
+<td>Doenças Cardiovasculares e Cerebrovasculares</td>
+<td>000106</td>
 </tr>
 <tr>
 <td>40</td>
-<td>Hipertensão Grave</td>
+<td>Hipertensão de difícil controle ou com complicações/lesão de órgão alvo</td>
+<td>000107</td>
 </tr>
 <tr>
 <td>41</td>
 <td>Indivíduos Transplantados de Órgão Sólido</td>
+<td>000108</td>
 </tr>
 <tr>
 <td>42</td>
-<td>Obesidade Grave</td>
+<td>Obesidade Grave (Imc≥40)</td>
+<td>000109</td>
 </tr>
 <tr>
 <td>43</td>
-<td>60 a 64 Anos</td>
+<td>Pessoas de 18 a 64 anos</td>
+<td>000201</td>
 </tr>
 <tr>
 <td>44</td>
-<td>65 a 69 Anos</td>
+<td>Pessoas de 65 a 69 anos</td>
+<td>000202</td>
 </tr>
 <tr>
 <td>45</td>
-<td>70 a 74 Anos</td>
+<td>Pessoas de 70 a 74 anos</td>
+<td>000203</td>
 </tr>
 <tr>
 <td>46</td>
-<td>75 a 79 Anos</td>
+<td>Pessoas de 75 a 79 anos</td>
+<td>000204</td>
 </tr>
 <tr>
 <td>47</td>
-<td>80 anos ou Mais</td>
+<td>Pessoas de 80 anos ou mais</td>
+<td>000205</td>
 </tr>
 <tr>
 <td>48</td>
-<td>Idosos Institucionalizados</td>
+<td>Pessoas de 60 anos ou mais, institucionalizadas</td>
+<td>000301</td>
 </tr>
 <tr>
 <td>49</td>
-<td>Marinha</td>
+<td>Marinha do Brasil - MB</td>
+<td>000401</td>
 </tr>
 <tr>
 <td>50</td>
-<td>Exército</td>
+<td>Exército Brasileiro - EB</td>
+<td>000402</td>
 </tr>
 <tr>
 <td>51</td>
-<td>Força Aérea</td>
+<td>Força Aérea Brasileira - FAB</td>
+<td>000403</td>
 </tr>
 <tr>
 <td>52</td>
 <td>Bombeiro Civil</td>
+<td>000501</td>
 </tr>
 <tr>
 <td>53</td>
 <td>Bombeiro Militar</td>
+<td>000502</td>
 </tr>
 <tr>
 <td>54</td>
 <td>Guarda Municipal</td>
+<td>000503</td>
 </tr>
 <tr>
 <td>55</td>
-<td>Policial Rod. Federal</td>
+<td>Policial Rodoviário Federal</td>
+<td>000504</td>
 </tr>
 <tr>
 <td>56</td>
 <td>Policial Civil</td>
+<td>000505</td>
 </tr>
 <tr>
 <td>57</td>
 <td>Policial Federal</td>
+<td>000506</td>
 </tr>
 <tr>
 <td>58</td>
 <td>Policial Militar</td>
+<td>000507</td>
 </tr>
 <tr>
 <td>59</td>
 <td>Ribeirinha</td>
+<td>000602</td>
 </tr>
 <tr>
 <td>60</td>
-<td>Povos indígenas</td>
+<td>Povos indígenas em terras indígenas</td>
+<td>000701</td>
 </tr>
 <tr>
 <td>61</td>
 <td>Ensino Básico</td>
+<td>000801</td>
 </tr>
 <tr>
 <td>62</td>
 <td>Ensino Superior</td>
+<td>000802</td>
 </tr>
 <tr>
 <td>63</td>
 <td>Auxiliar de Veterinário</td>
+<td>000901</td>
 </tr>
 <tr>
 <td>64</td>
 <td>Biólogo</td>
+<td>000902</td>
 </tr>
 <tr>
 <td>65</td>
 <td>Biomédico</td>
+<td>000903</td>
 </tr>
 <tr>
 <td>66</td>
 <td>Cozinheiro e Auxiliares</td>
+<td>000904</td>
 </tr>
 <tr>
 <td>67</td>
 <td>Cuidador de Idosos</td>
+<td>000905</td>
 </tr>
 <tr>
 <td>68</td>
 <td>Doula/Parteira</td>
+<td>000906</td>
 </tr>
 <tr>
 <td>69</td>
 <td>Enfermeiro(a)</td>
+<td>000907</td>
 </tr>
 <tr>
 <td>70</td>
 <td>Farmacêutico</td>
+<td>000908</td>
 </tr>
 <tr>
 <td>71</td>
 <td>Fisioterapeutas</td>
+<td>000909</td>
 </tr>
 <tr>
 <td>72</td>
 <td>Fonoaudiólogo</td>
+<td>000910</td>
 </tr>
 <tr>
 <td>73</td>
-<td>Funcionário do Sist. funerário</td>
+<td>Funcionário do Sistema Funerário que tenham contato com cadáveres potencialmente contaminados</td>
+<td>000911</td>
 </tr>
 <tr>
 <td>74</td>
 <td>Médico</td>
+<td>000912</td>
 </tr>
 <tr>
 <td>75</td>
-<td>Med. Veterinário</td>
+<td>Médico Veterinário</td>
+<td>000913</td>
 </tr>
 <tr>
 <td>76</td>
 <td>Motorista de Ambulância</td>
+<td>000914</td>
 </tr>
 <tr>
 <td>77</td>
 <td>Nutricionista</td>
+<td>000915</td>
 </tr>
 <tr>
 <td>78</td>
 <td>Odontologista</td>
+<td>000916</td>
 </tr>
 <tr>
 <td>79</td>
-<td>Aux. limpeza</td>
+<td>Profissionais e Auxiliares de limpeza</td>
+<td>000917</td>
 </tr>
 <tr>
 <td>80</td>
-<td>Educador Físico</td>
+<td>Profissionais de Educação Física</td>
+<td>000918</td>
 </tr>
 <tr>
 <td>81</td>
 <td>Psicólogo</td>
+<td>000919</td>
 </tr>
 <tr>
 <td>82</td>
 <td>Recepcionista</td>
+<td>000920</td>
 </tr>
 <tr>
 <td>83</td>
 <td>Segurança</td>
+<td>000921</td>
 </tr>
 <tr>
 <td>84</td>
 <td>Assistente Social</td>
+<td>000922</td>
 </tr>
 <tr>
 <td>85</td>
-<td>Téc. de Enfermagem</td>
+<td>Técnico de Enfermagem</td>
+<td>000923</td>
 </tr>
 <tr>
 <td>86</td>
 <td>Técnico de Veterinário</td>
+<td>000924</td>
 </tr>
 <tr>
 <td>87</td>
-<td>Terapeuta Ocup.</td>
+<td>Terapeuta Ocupacional</td>
+<td>000925</td>
 </tr>
 <tr>
 <td>88</td>
-<td>Prof. Transporte Aéreo Coletivo</td>
+<td>Aéreo</td>
+<td>001001</td>
 </tr>
 <tr>
 <td>89</td>
 <td>Ferroviário</td>
+<td>001004</td>
 </tr>
 <tr>
 <td>90</td>
 <td>Metroviário</td>
+<td>001005</td>
 </tr>
 <tr>
 <td>91</td>
 <td>Aquaviário</td>
+<td>001006</td>
 </tr>
 <tr>
 <td>92</td>
-<td>Portador de Deficiência Instituc.</td>
+<td>Pessoas com Deficiência Institucionalizadas</td>
+<td>001101</td>
 </tr>
 <tr>
 <td>93</td>
-<td>Deficiência Grave</td>
+<td>Pessoas com Deficiência Permanente</td>
+<td>001102</td>
 </tr>
 <tr>
 <td>94</td>
-<td>Situação de Rua</td>
+<td>Pessoas em Situação de Rua</td>
+<td>001201</td>
 </tr>
 <tr>
 <td>95</td>
-<td>Trab. industriais</td>
+<td>Trabalhadores Industriais</td>
+<td>001601</td>
 </tr>
 <tr>
 <td>96</td>
 <td>Síndrome de Down</td>
+<td>000110</td>
 </tr>
 <tr>
 <td>97</td>
-<td>Aux.de Enfermagem</td>
+<td>Auxiliar de Enfermagem</td>
+<td>000927</td>
 </tr>
 <tr>
 <td>98</td>
-<td>Téc. de Odontologia</td>
+<td>Técnico de Odontologia</td>
+<td>000928</td>
 </tr>
 <tr>
 <td>99</td>
-<td>Estudante</td>
+<td>Acadêmicos/estudantes em estágio em estabelecimentos de saúde</td>
+<td>000929</td>
+</tr>
+<tr>
+<td>100</td>
+<td>Outros Imunocomprometidos</td>
+<td>000111</td>
+</tr>
+<tr>
+<td>101</td>
+<td>Indivíduos Transplantados de Medula Óssea</td>
+<td>000112</td>
+</tr>
+<tr>
+<td>102</td>
+<td>Cirrose hepática</td>
+<td>000114</td>
+</tr>
+<tr>
+<td>103</td>
+<td>Doença neurológica crônica</td>
+<td>000115</td>
+</tr>
+<tr>
+<td>104</td>
+<td>Doença cardiovascular</td>
+<td>000116</td>
+</tr>
+<tr>
+<td>105</td>
+<td>Pessoas de 12 a 17 anos</td>
+<td>000206</td>
+</tr>
+<tr>
+<td>106</td>
+<td>Outros profissionais de saúde</td>
+<td>000926</td>
+</tr>
+<tr>
+<td>107</td>
+<td>Agente de Combate a Endemias - ACE</td>
+<td>000930</td>
+</tr>
+<tr>
+<td>108</td>
+<td>Agente Comunitário de Saúde - ACS</td>
+<td>000931</td>
+</tr>
+<tr>
+<td>109</td>
+<td>Auxiliar em Saúde Bucal - ASB</td>
+<td>000932</td>
+</tr>
+<tr>
+<td>110</td>
+<td>Técnico em Saúde Bucal - TSB</td>
+<td>000933</td>
+</tr>
+<tr>
+<td>111</td>
+<td>Trabalhadores de limpeza urbana e manejo de resíduos sólidos</td>
+<td>001701</td>
+</tr>
+<tr>
+<td>112</td>
+<td>Gestante</td>
+<td>001801</td>
+</tr>
+<tr>
+<td>113</td>
+<td>Puérpera</td>
+<td>001901</td>
 </tr>
 </tbody></table>
 
@@ -95501,6 +95762,18 @@
 <td>D2</td>
 </tr>
 <tr>
+<td>COV19 Oxford - AstraZeneca Covishield</td>
+<td>Covid-19 - Covishield - Oxford/AstraZeneca</td>
+<td>CAMPANHA</td>
+<td>REF</td>
+</tr>
+<tr>
+<td>COV19 Oxford - AstraZeneca Covishield</td>
+<td>Covid-19 - Covishield - Oxford/AstraZeneca</td>
+<td>CAMPANHA</td>
+<td>DA</td>
+</tr>
+<tr>
 <td>COV19 Coronavac - Sinovac/Butantan</td>
 <td>Covid-19 - Coronavac - Sinovac/Butantan</td>
 <td>CAMPANHA</td>
@@ -95523,12 +95796,36 @@
 <td>Covid-19 - BNT162b2 - BioNTech/Fosun Pharma/Pfizer</td>
 <td>CAMPANHA</td>
 <td>D2</td>
+</tr>
+<tr>
+<td>COV19 Biontech - Pfizer</td>
+<td>Covid-19 - BNT162b2 - BioNTech/Fosun Pharma/Pfizer</td>
+<td>CAMPANHA</td>
+<td>REF</td>
+</tr>
+<tr>
+<td>COV19 Biontech - Pfizer</td>
+<td>Covid-19 - BNT162b2 - BioNTech/Fosun Pharma/Pfizer</td>
+<td>CAMPANHA</td>
+<td>DA</td>
 </tr>
 <tr>
 <td>COV19 Janssen - Cilag</td>
 <td>Covid-19 - Ad26.COV2.S - Janssen-Cilag</td>
 <td>CAMPANHA</td>
 <td>D</td>
+</tr>
+<tr>
+<td>COV19 Janssen - Cilag</td>
+<td>Covid-19 - Ad26.COV2.S - Janssen-Cilag</td>
+<td>CAMPANHA</td>
+<td>REF</td>
+</tr>
+<tr>
+<td>COV19 Janssen - Cilag</td>
+<td>Covid-19 - Ad26.COV2.S - Janssen-Cilag</td>
+<td>CAMPANHA</td>
+<td>DA</td>
 </tr>
 <tr>
 <td>Dengue</td>
@@ -100194,17 +100491,57 @@
 
     <div class="post pdf shown" id="principais_alteracoes" data-url="/ledi/documentacao/principais_alteracoes.html">
       <header class="post-header">
-        <h1 class="post-title">Principais alterações da v4.2.0 para a v4.2.1</h1>
+        <h1 class="post-title">Principais alterações da v4.2.1 para a v4.2.3</h1>
       </header>
 
       
 
       <article class="post-content">
-        <p>Este documento relata as principais alterações em relação à versão v4.2.0 do LEDI APS:</p>
+        <p>Este documento relata as principais alterações em relação à versão v4.2.1 do LEDI APS:</p>
 
-<h3 id="1-inclus-o-de-povos-e-comunidades-tradicionais-na-ficha-de-cadastro-individual">1. Inclusão de Povos e Comunidades Tradicionais na Ficha de Cadastro Individual.</h3>
+<h3 id="1-atualiza-o-da-tabela-de-refer-ncia-do-inep">1. Atualização da tabela de referência do INEP</h3>
 
-<p><strong>1. </strong> Foi adicionado o campo codificado <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#18-copovocomunidadetradicional">coPovoComunidadeTradicional</a> e removido o campo de texto <code>povoComunidadeTradicional</code>.</p>
+<p><strong>1. </strong> A tabela de referência foi atualizada conforme o censo de 2020.</p>
+
+<h3 id="2-ficha-de-vacina-o">2. Ficha de Vacinação</h3>
+
+<p><strong>2. </strong> Foi atualizada a <a href="/ledi/documentacao/referencias/dicionario.html#grupodeatendimento">tabela de referência</a> para o campo <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fv.html#6-grupoatendimento">grupoAtendimento</a>.</p>
+
+<h3 id="3-ficha-de-procedimentos">3. Ficha de Procedimentos</h3>
+
+<p><strong>3. </strong> Foram incluídos os campos <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fp.html#13-pesoacompanhamentonutricional">pesoAcompanhamentoNutricional</a> e <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fp.html#14-alturaacompanhamentonutricional">alturaAcompanhamentoNutricional</a>.</p>
+
+<h3 id="4-ficha-de-atendimento-odontol-gico-individual">4. Ficha de Atendimento Odontológico Individual</h3>
+
+<p><strong>4. </strong> Foram incluídos os campos <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fao.html#22-pesoacompanhamentonutricional">pesoAcompanhamentoNutricional</a> e <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fao.html#23-alturaacompanhamentonutricional">alturaAcompanhamentoNutricional</a>.</p>
+
+<h3 id="5-inclus-o-da-cid-10-do-covid-19">5. Inclusão da CID-10 do Covid-19</h3>
+
+<p><strong>5. </strong> Inclusão da CID-10 <code>U07.2 - COVID-19, VÍRUS NÃO IDENTIFICADO</code>.</p>
+
+<p><strong>6. </strong> Inclusão da CID-10 <code>U09.9 - CONDIÇÃO DE SAÚDE POSTERIOR À COVID-19, NÃO ESPECIFICADA</code>.</p>
+
+<p><strong>7. </strong> Inclusão da CID-10 <code>U10.9 - SÍNDROME INFLAMATÓRIA MULTISSISTÊMICA ASSOCIADA À COVID-19, NÃO ESPECIFICADA</code>.</p>
+
+<h3 id="6-inclus-o-de-dose-de-refor-o-para-covid-19">6. Inclusão de dose de reforço para Covid-19</h3>
+
+<p><strong>8. </strong> Inclusão de dose de Reforço (REF) e dose Adicional (DA) para os seguintes imunobiológicos:</p>
+
+<ul>
+<li>COV19 Oxford - AstraZeneca Covishield;</li>
+<li>COV19 Biontech - Pfizer;</li>
+<li>COV19 Janssen - Cilag.</li>
+</ul>
+
+<h3 id="7-atualiza-o-dos-valores-limites-para-os-exames-com-resultados-espec-ficos">7. Atualização dos valores limites para os exames com resultados específicos</h3>
+
+<p><strong>9. </strong> Foram atualizados os valores limites para os <a href="/ledi/documentacao/referencias/exames_estruturados.html">exames com resultados específicos</a> registrados a partir da <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#resultadosexames">Ficha de Atendimento Individual</a> e na <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fao.html#resultadosexames">Ficha de Atendimento Odontológico Individual</a>:</p>
+
+<ul>
+<li><code>Dosagem de colesterol HDL</code>, <code>Dosagem de colesterol LDL</code> e <code>Dosagem de triglicerídeos</code> aumentaram o valor máximo permitido para 10000;</li>
+<li><code>Dosagem de creatinina</code> aumentou o valor máximo permitido para 1000;</li>
+<li><code>Dosagem de hemoglobina glicosilada</code> aumentou o valor máximo permitido para 100.</li>
+</ul>
 
       </article>
 
@@ -100257,32 +100594,38 @@
       <article class="post-content">
         <p>Este documento relata as principais alterações entre as versões do DW.</p>
 
-<h3 id="1-principais-altera-es-da-v4-2-0-para-a-v4-2-1">1. Principais alterações da v4.2.0 para a v4.2.1:</h3>
+<h3 id="1-principais-altera-es-da-v4-2-1-para-a-v4-2-3">1. Principais alterações da v4.2.1 para a v4.2.3:</h3>
+
+<p><strong>1. </strong> No contexto de <a href="/dw/fatos/procedimentos.html">Procedimentos</a> foram incluídos os campos <code>nu\_peso</code> e <code>nu\_altura</code>.</p>
+
+<p><strong>2. </strong> No contexto de <a href="/dw/fatos/atendimento_odontologico_individual.html">Atendimento odontológico individual</a> foram incluídos os campos <code>nu\_peso</code> e <code>nu\_altura</code>.</p>
+
+<h3 id="2-principais-altera-es-da-v4-2-0-para-a-v4-2-1">2. Principais alterações da v4.2.0 para a v4.2.1:</h3>
 
 <p><strong>1. </strong> No contexto de <a href="/dw/fatos/cadastro_individual.html">Cadastro individual</a> foi incluído o campo <code>co_dim_povo_comunidade_tradicional</code>. Além deste campo, também foi criada a tabela de dimensão <a href="/dw/dimensoes.html#tb\_dim\_povo\_comunidade\_tradicional">tb_dim_povo_comunidade_tradicional</a>.</p>
 
-<h3 id="2-principais-altera-es-da-v4-1-4-para-a-v4-2-0">2. Principais alterações da v4.1.4 para a v4.2.0:</h3>
+<h3 id="3-principais-altera-es-da-v4-1-4-para-a-v4-2-0">3. Principais alterações da v4.1.4 para a v4.2.0:</h3>
 
-<p><strong>2. </strong> No contexto de <a href="/dw/fatos/atendimento_individual.html">Atendimento individual</a> e <a href="/dw/fatos/atendimento_odontologico_individual.html">Atendimento odontológico individual</a> foram incluídas as estruturas de dados para registro das informações de resultados de exames. Estas informações estão armazenadas nas tabelas:</p>
+<p><strong>1. </strong> No contexto de <a href="/dw/fatos/atendimento_individual.html">Atendimento individual</a> e <a href="/dw/fatos/atendimento_odontologico_individual.html">Atendimento odontológico individual</a> foram incluídas as estruturas de dados para registro das informações de resultados de exames. Estas informações estão armazenadas nas tabelas:</p>
 
 <ul>
 <li><code>tb_fat_atd_ind_exames</code>;</li>
 <li><code>tb_fat_atend_odonto_exames</code>.</li>
 </ul>
 
-<p><strong>3. </strong> No contexto de <a href="/dw/fatos/cadastro_domiciliar.html">Cadastro domiciliar</a> foram incluídos os campos <code>nu_latitude</code> e <code>nu_longitude</code>.</p>
+<p><strong>2. </strong> No contexto de <a href="/dw/fatos/cadastro_domiciliar.html">Cadastro domiciliar</a> foram incluídos os campos <code>nu_latitude</code> e <code>nu_longitude</code>.</p>
 
-<p><strong>4. </strong> No contexto de <a href="/dw/fatos/visita_domiciliar.html">Visita domiciliar</a> foram incluídos os campos <code>nu_latitude</code>, <code>nu_longitude</code> e <code>co_uuid_origem_fcd</code>.</p>
+<p><strong>3. </strong> No contexto de <a href="/dw/fatos/visita_domiciliar.html">Visita domiciliar</a> foram incluídos os campos <code>nu_latitude</code>, <code>nu_longitude</code> e <code>co_uuid_origem_fcd</code>.</p>
 
-<p><strong>5. </strong> No contexto de <a href="/dw/fatos/vacinacao.html">Vacinação</a> foram incluídos os campos <code>st_registro_anterior</code> e <code>co_dim_tempo_vacina_aplicada</code>.</p>
+<p><strong>4. </strong> No contexto de <a href="/dw/fatos/vacinacao.html">Vacinação</a> foram incluídos os campos <code>st_registro_anterior</code> e <code>co_dim_tempo_vacina_aplicada</code>.</p>
 
-<h3 id="3-principais-altera-es-da-v4-1-2-para-a-v4-1-4">3. Principais alterações da v4.1.2 para a v4.1.4:</h3>
+<h3 id="4-principais-altera-es-da-v4-1-2-para-a-v4-1-4">4. Principais alterações da v4.1.2 para a v4.1.4:</h3>
 
 <p><strong>1. </strong> No contexto de <a href="/dw/fatos/vacinacao.html">Vacinação</a> foram incluídas as estruturas de dados para registro da informação de grupo de atendimento. Esta informação está armazenada na tabela: <code>tb_fat_vacinacao_vacina</code>.</p>
 
 <p><strong>2. </strong> Para contextualizar as informações da tabela <code>tb_fat_vacinacao_vacina</code>, foi criada a seguinte tabela de dimensão: <code>tb_dim_grupo_atendimento</code>.</p>
 
-<h3 id="4-principais-altera-es-da-v4-0-0-para-a-v4-1-2">4. Principais alterações da v4.0.0 para a v4.1.2:</h3>
+<h3 id="5-principais-altera-es-da-v4-0-0-para-a-v4-1-2">5. Principais alterações da v4.0.0 para a v4.1.2:</h3>
 
 <p><strong>1. </strong> No contexto de <a href="/dw/fatos/atendimento_individual.html">Atendimento individual</a> foram incluídas as estruturas de dados para registro das informações de prescrição de medicamentos e encaminhamentos. Estas informações estão armazenadas nas tabelas:</p>
 

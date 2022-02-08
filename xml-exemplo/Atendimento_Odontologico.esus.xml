@@ -77,6 +77,8 @@
 				<hipoteseDiagnosticoCid10>O03</hipoteseDiagnosticoCid10>
 				<classificacaoRisco>1</classificacaoRisco>
 			</encaminhamentos>
+			<pesoAcompanhamentoNutricional>2.5</pesoAcompanhamentoNutricional>
+			<alturaAcompanhamentoNutricional>20.3</alturaAcompanhamentoNutricional>
 		</atendimentosOdontologicos>
 		<atendimentosOdontologicos>
 			<numProntuario>4321</numProntuario>
@@ -129,6 +131,8 @@
 			<sexo>1</sexo>
 			<dataHoraInicialAtendimento>1549378800000</dataHoraInicialAtendimento>
 			<dataHoraFinalAtendimento>1549378800000</dataHoraFinalAtendimento>
+			<pesoAcompanhamentoNutricional>2.5</pesoAcompanhamentoNutricional>
+			<alturaAcompanhamentoNutricional>20.3</alturaAcompanhamentoNutricional>
 		</atendimentosOdontologicos>
 		<atendimentosOdontologicos>
 			<numProntuario>123</numProntuario>
@@ -157,6 +161,8 @@
 			<sexo>1</sexo>
 			<dataHoraInicialAtendimento>1553094000000</dataHoraInicialAtendimento>
 			<dataHoraFinalAtendimento>1553097000000</dataHoraFinalAtendimento>
+			<pesoAcompanhamentoNutricional>2.5</pesoAcompanhamentoNutricional>
+			<alturaAcompanhamentoNutricional>20.3</alturaAcompanhamentoNutricional>
 		</atendimentosOdontologicos>
 		<atendimentosOdontologicos>
 			<numProntuario>123</numProntuario>
@@ -185,6 +191,8 @@
 			<sexo>1</sexo>
 			<dataHoraInicialAtendimento>1553094000000</dataHoraInicialAtendimento>
 			<dataHoraFinalAtendimento>1553097000000</dataHoraFinalAtendimento>
+			<pesoAcompanhamentoNutricional>2.5</pesoAcompanhamentoNutricional>
+			<alturaAcompanhamentoNutricional>20.3</alturaAcompanhamentoNutricional>
 		</atendimentosOdontologicos>
 		<atendimentosOdontologicos>
 			<dtNascimento>1115305200000</dtNascimento>
@@ -226,6 +234,8 @@
 					<valorResultado>25</valorResultado>
 				</resultadoExame>
 			</resultadosExames>
+			<pesoAcompanhamentoNutricional>2.5</pesoAcompanhamentoNutricional>
+			<alturaAcompanhamentoNutricional>20.3</alturaAcompanhamentoNutricional>
 		</atendimentosOdontologicos>
 		<headerTransport>
 			<lotacaoFormPrincipal>

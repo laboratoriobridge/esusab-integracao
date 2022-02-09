@@ -25,7 +25,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 4.3.2</span>
+        <span class="label">versão 4.3.3</span>
       
     </a>
 
@@ -137,7 +137,7 @@
 
       <li id="item-layout_ab" data-url="/ledi/documentacao/index.html">
         <label>
-          <input type="checkbox" value="layout_ab" checked="checked"> Layout e-SUS APS de Dados e Interface Versão 4.3.2
+          <input type="checkbox" value="layout_ab" checked="checked"> Layout e-SUS APS de Dados e Interface Versão 4.3.3
           <small>
             <a onclick="checkById('layout_ab', true); return false;">Marcar todos</a> |
             <a onclick="checkById('layout_ab', false); return false;">Desmarcar todos</a>
@@ -659,7 +659,7 @@
 
       <li id="item-principais_alteracoes" data-url="/ledi/documentacao/principais_alteracoes.html">
         <label>
-          <input type="checkbox" value="principais_alteracoes" checked="checked"> Principais alterações da v4.3.1 para a v4.3.2
+          <input type="checkbox" value="principais_alteracoes" checked="checked"> Principais alterações da v4.3.2 para a v4.3.3
           <small>
             <a onclick="checkById('principais_alteracoes', true); return false;">Marcar todos</a> |
             <a onclick="checkById('principais_alteracoes', false); return false;">Desmarcar todos</a>
@@ -985,7 +985,7 @@
   
       <!-- Cria a lista de itens[páginas] que foram selecionados  -->
 
-  <li id="summary-layout_ab"><a href="#layout_ab">Layout e-SUS APS de Dados e Interface Versão 4.3.2</a></li>
+  <li id="summary-layout_ab"><a href="#layout_ab">Layout e-SUS APS de Dados e Interface Versão 4.3.3</a></li>
   
       <!-- Cria a lista de itens[páginas] que foram selecionados  -->
 
@@ -1206,7 +1206,7 @@
 
   
 
-  <li id="summary-principais_alteracoes"><a href="#principais_alteracoes">Principais alterações da v4.3.1 para a v4.3.2</a></li>
+  <li id="summary-principais_alteracoes"><a href="#principais_alteracoes">Principais alterações da v4.3.2 para a v4.3.3</a></li>
   
       <!-- Cria a lista de itens[páginas] que foram selecionados  -->
 
@@ -1446,7 +1446,11 @@
 </tr>
 <tr>
 <td>4.3.9 ou superior</td>
-<td><a href="/ledi/documentacao/index.html">LEDI APS 4.3.2</a></td>
+<td><a href="https://integracao.esusab.ufsc.br/v432/">LEDI APS 4.3.2</a></td>
+</tr>
+<tr>
+<td>4.3.12 ou superior</td>
+<td><a href="/ledi/documentacao/index.html">LEDI APS 4.3.3</a></td>
 </tr>
 </tbody></table>
 
@@ -1459,17 +1463,17 @@
         
     <div class="post pdf shown" id="layout_ab" data-url="/ledi/documentacao/index.html">
       <header class="post-header">
-        <h1 class="post-title">Layout e-SUS APS de Dados e Interface Versão 4.3.2</h1>
+        <h1 class="post-title">Layout e-SUS APS de Dados e Interface Versão 4.3.3</h1>
       </header>
 
       
 
       <article class="post-content">
-        <p>Esta documentação descreve as estruturas de dados, seus atributos e regras utilizadas no <strong>LEDI APS</strong> versão 4.3.2.</p>
+        <p>Esta documentação descreve as estruturas de dados, seus atributos e regras utilizadas no <strong>LEDI APS</strong> versão 4.3.3.</p>
 
-<p>A versão <strong>LEDI APS</strong> 4.3.2 é compatível com o sistema <strong>PEC e-SUS APS</strong> versão 4.3.9 ou superior.</p>
+<p>A versão <strong>LEDI APS</strong> 4.3.3 é compatível com o sistema <strong>PEC e-SUS APS</strong> versão 4.3.12 ou superior.</p>
 
-<p>Confira as principais alterações da V4.3.1 para a V4.3.2 <a href="/ledi/documentacao/principais_alteracoes.html">aqui</a>.</p>
+<p>Confira as principais alterações da V4.3.2 para a V4.3.3 <a href="/ledi/documentacao/principais_alteracoes.html">aqui</a>.</p>
 
       </article>
 
@@ -16595,6 +16599,7 @@
 <li>Se o campo <a href="/ledi/documentacao/estrutura_arquivos/#1-imunobiologico">Imunobiológico</a> = <code>86</code>, o campo deve ser preenchido com o valor = <code>SINOVAC/BUTANTAN</code>;</li>
 <li>Se o campo <a href="/ledi/documentacao/estrutura_arquivos/#1-imunobiologico">Imunobiológico</a> = <code>87</code>, o campo deve ser preenchido com o valor = <code>PFIZER/BIONTECH</code>;</li>
 <li>Se o campo <a href="/ledi/documentacao/estrutura_arquivos/#1-imunobiologico">Imunobiológico</a> = <code>88</code>, o campo deve ser preenchido com o valor = <code>JANSSEN-CILAG</code>.</li>
+<li>Se o campo <a href="/ledi/documentacao/estrutura_arquivos/#1-imunobiologico">Imunobiológico</a> = <code>99</code>, o campo deve ser preenchido com o valor = <code>COMIRNATY-PFIZER/BIONTECH</code>.</li>
 </ul>
 
 <h3 id="6-grupoatendimento">#6 grupoAtendimento</h3>
@@ -47030,7 +47035,7 @@
 <td>revision</td>
 <td>Integer</td>
 <td>Sim</td>
-<td>Valor único = 2</td>
+<td>Valor único = 3</td>
 </tr>
 </tbody></table>
 
@@ -59066,6 +59071,11 @@
 <td>Covid-19 - Ad26.COV2.S - Janssen-Cilag</td>
 <td>COV19-JAN</td>
 </tr>
+<tr>
+<td>99</td>
+<td>Covid-19 - Pfizer (Comirnaty) - Pediátrica</td>
+<td>COV19-PFZ-Pediátrica</td>
+</tr>
 </tbody></table>
 
 <h2 id="localdeatendimento">LocalDeAtendimento</h2>
@@ -63838,6 +63848,26 @@
 <td>113</td>
 <td>Puérpera</td>
 <td>001901</td>
+</tr>
+<tr>
+<td>114</td>
+<td>Pessoas de 5 a 11 anos</td>
+<td>000207</td>
+</tr>
+<tr>
+<td>115</td>
+<td>Crianças quilombolas</td>
+<td>000603</td>
+</tr>
+<tr>
+<td>116</td>
+<td>Crianças ribeirinhas</td>
+<td>000604</td>
+</tr>
+<tr>
+<td>117</td>
+<td>Crianças indígenas</td>
+<td>000702</td>
 </tr>
 </tbody></table>
 
@@ -95900,6 +95930,18 @@
 <td>DA</td>
 </tr>
 <tr>
+<td>COV19 Pfizer - Comirnaty Pediátrica</td>
+<td>Covid-19 - Pfizer (Comirnaty) - Pediátrica</td>
+<td>CAMPANHA</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>COV19 Pfizer - Comirnaty Pediátrica</td>
+<td>Covid-19 - Pfizer (Comirnaty) - Pediátrica</td>
+<td>CAMPANHA</td>
+<td>D2</td>
+</tr>
+<tr>
 <td>Dengue</td>
 <td>Vacina Dengue 1, 2, 3 e 4 (recomb e atenuada)</td>
 <td>INTENSIFICAÇÃO</td>
@@ -100593,17 +100635,26 @@
 
     <div class="post pdf shown" id="principais_alteracoes" data-url="/ledi/documentacao/principais_alteracoes.html">
       <header class="post-header">
-        <h1 class="post-title">Principais alterações da v4.3.1 para a v4.3.2</h1>
+        <h1 class="post-title">Principais alterações da v4.3.2 para a v4.3.3</h1>
       </header>
 
       
 
       <article class="post-content">
-        <p>Este documento relata as principais alterações em relação à versão v4.3.1 do LEDI APS:</p>
+        <p>Este documento relata as principais alterações em relação à versão v4.3.2 do LEDI APS:</p>
 
-<h3 id="1-inclus-o-do-procedimento-sigtap-01-01-04-009-1">1. Inclusão do procedimento SIGTAP 01.01.04.009-1.</h3>
+<h3 id="1-inclus-es-no-atendimento-de-vacina-o">1. Inclusões no atendimento de vacinação.</h3>
 
-<p><strong>1. </strong> Inclusão do procedimento administrativo SIGTAP 01.01.04.009-1 - DISPENSAÇÃO DE SUPLEMENTO DE MICRONUTRIENTES EM PÓ - NUTRISUS.</p>
+<p><strong>1. </strong> Inclusão dos seguintes grupos de atendimento nos registro de atendimentos de vacinação:</p>
+
+<ul>
+<li>Pessoas de 5 a 11 anos;</li>
+<li>Crianças quilombolas;</li>
+<li>Crianças ribeirinhas;</li>
+<li>Crianças indígenas.</li>
+</ul>
+
+<p><strong>2. </strong> Inclusão do imunobiológico Covid-19 - Pfizer (Comirnaty) - Pediátrica.</p>
 
       </article>
 

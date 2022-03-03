@@ -53,6 +53,10 @@ type
     procedure SetDataHoraFinalAtendimento( const Value: Int64);
     function GetCpfCidadao: string;
     procedure SetCpfCidadao( const Value: string);
+    function GetPesoAcompanhamentoNutricional: Double;
+    procedure SetPesoAcompanhamentoNutricional( const Value: Double);
+    function GetAlturaAcompanhamentoNutricional: Double;
+    procedure SetAlturaAcompanhamentoNutricional( const Value: Double);
 
     property NumProntuario: string read GetNumProntuario write SetNumProntuario;
     property CnsCidadao: string read GetCnsCidadao write SetCnsCidadao;
@@ -65,6 +69,8 @@ type
     property DataHoraInicialAtendimento: Int64 read GetDataHoraInicialAtendimento write SetDataHoraInicialAtendimento;
     property DataHoraFinalAtendimento: Int64 read GetDataHoraFinalAtendimento write SetDataHoraFinalAtendimento;
     property CpfCidadao: string read GetCpfCidadao write SetCpfCidadao;
+    property PesoAcompanhamentoNutricional: Double read GetPesoAcompanhamentoNutricional write SetPesoAcompanhamentoNutricional;
+    property AlturaAcompanhamentoNutricional: Double read GetAlturaAcompanhamentoNutricional write SetAlturaAcompanhamentoNutricional;
 
     function Get__isset_NumProntuario: Boolean;
     function Get__isset_CnsCidadao: Boolean;
@@ -77,6 +83,8 @@ type
     function Get__isset_DataHoraInicialAtendimento: Boolean;
     function Get__isset_DataHoraFinalAtendimento: Boolean;
     function Get__isset_CpfCidadao: Boolean;
+    function Get__isset_PesoAcompanhamentoNutricional: Boolean;
+    function Get__isset_AlturaAcompanhamentoNutricional: Boolean;
 
     property __isset_NumProntuario: Boolean read Get__isset_NumProntuario;
     property __isset_CnsCidadao: Boolean read Get__isset_CnsCidadao;
@@ -89,6 +97,8 @@ type
     property __isset_DataHoraInicialAtendimento: Boolean read Get__isset_DataHoraInicialAtendimento;
     property __isset_DataHoraFinalAtendimento: Boolean read Get__isset_DataHoraFinalAtendimento;
     property __isset_CpfCidadao: Boolean read Get__isset_CpfCidadao;
+    property __isset_PesoAcompanhamentoNutricional: Boolean read Get__isset_PesoAcompanhamentoNutricional;
+    property __isset_AlturaAcompanhamentoNutricional: Boolean read Get__isset_AlturaAcompanhamentoNutricional;
   end;
 
   TFichaProcedimentoChildThriftImpl = class(TInterfacedObject, IBase, IFichaProcedimentoChildThrift)
@@ -104,6 +114,8 @@ type
     FDataHoraInicialAtendimento: Int64;
     FDataHoraFinalAtendimento: Int64;
     FCpfCidadao: string;
+    FPesoAcompanhamentoNutricional: Double;
+    FAlturaAcompanhamentoNutricional: Double;
     
     F__isset_NumProntuario: Boolean;
     F__isset_CnsCidadao: Boolean;
@@ -116,6 +128,8 @@ type
     F__isset_DataHoraInicialAtendimento: Boolean;
     F__isset_DataHoraFinalAtendimento: Boolean;
     F__isset_CpfCidadao: Boolean;
+    F__isset_PesoAcompanhamentoNutricional: Boolean;
+    F__isset_AlturaAcompanhamentoNutricional: Boolean;
     
     function GetNumProntuario: string;
     procedure SetNumProntuario( const Value: string);
@@ -139,6 +153,10 @@ type
     procedure SetDataHoraFinalAtendimento( const Value: Int64);
     function GetCpfCidadao: string;
     procedure SetCpfCidadao( const Value: string);
+    function GetPesoAcompanhamentoNutricional: Double;
+    procedure SetPesoAcompanhamentoNutricional( const Value: Double);
+    function GetAlturaAcompanhamentoNutricional: Double;
+    procedure SetAlturaAcompanhamentoNutricional( const Value: Double);
 
     function Get__isset_NumProntuario: Boolean;
     function Get__isset_CnsCidadao: Boolean;
@@ -151,6 +169,8 @@ type
     function Get__isset_DataHoraInicialAtendimento: Boolean;
     function Get__isset_DataHoraFinalAtendimento: Boolean;
     function Get__isset_CpfCidadao: Boolean;
+    function Get__isset_PesoAcompanhamentoNutricional: Boolean;
+    function Get__isset_AlturaAcompanhamentoNutricional: Boolean;
   public
     constructor Create;
     destructor Destroy; override;
@@ -173,6 +193,8 @@ type
     property DataHoraInicialAtendimento: Int64 read GetDataHoraInicialAtendimento write SetDataHoraInicialAtendimento;
     property DataHoraFinalAtendimento: Int64 read GetDataHoraFinalAtendimento write SetDataHoraFinalAtendimento;
     property CpfCidadao: string read GetCpfCidadao write SetCpfCidadao;
+    property PesoAcompanhamentoNutricional: Double read GetPesoAcompanhamentoNutricional write SetPesoAcompanhamentoNutricional;
+    property AlturaAcompanhamentoNutricional: Double read GetAlturaAcompanhamentoNutricional write SetAlturaAcompanhamentoNutricional;
 
     // isset
     property __isset_NumProntuario: Boolean read Get__isset_NumProntuario;
@@ -186,6 +208,8 @@ type
     property __isset_DataHoraInicialAtendimento: Boolean read Get__isset_DataHoraInicialAtendimento;
     property __isset_DataHoraFinalAtendimento: Boolean read Get__isset_DataHoraFinalAtendimento;
     property __isset_CpfCidadao: Boolean read Get__isset_CpfCidadao;
+    property __isset_PesoAcompanhamentoNutricional: Boolean read Get__isset_PesoAcompanhamentoNutricional;
+    property __isset_AlturaAcompanhamentoNutricional: Boolean read Get__isset_AlturaAcompanhamentoNutricional;
   end;
 
   IFichaProcedimentoMasterThrift = interface(IBase)
@@ -529,6 +553,38 @@ begin
   Result := F__isset_CpfCidadao;
 end;
 
+function TFichaProcedimentoChildThriftImpl.GetPesoAcompanhamentoNutricional: Double;
+begin
+  Result := FPesoAcompanhamentoNutricional;
+end;
+
+procedure TFichaProcedimentoChildThriftImpl.SetPesoAcompanhamentoNutricional( const Value: Double);
+begin
+  F__isset_PesoAcompanhamentoNutricional := True;
+  FPesoAcompanhamentoNutricional := Value;
+end;
+
+function TFichaProcedimentoChildThriftImpl.Get__isset_PesoAcompanhamentoNutricional: Boolean;
+begin
+  Result := F__isset_PesoAcompanhamentoNutricional;
+end;
+
+function TFichaProcedimentoChildThriftImpl.GetAlturaAcompanhamentoNutricional: Double;
+begin
+  Result := FAlturaAcompanhamentoNutricional;
+end;
+
+procedure TFichaProcedimentoChildThriftImpl.SetAlturaAcompanhamentoNutricional( const Value: Double);
+begin
+  F__isset_AlturaAcompanhamentoNutricional := True;
+  FAlturaAcompanhamentoNutricional := Value;
+end;
+
+function TFichaProcedimentoChildThriftImpl.Get__isset_AlturaAcompanhamentoNutricional: Boolean;
+begin
+  Result := F__isset_AlturaAcompanhamentoNutricional;
+end;
+
 procedure TFichaProcedimentoChildThriftImpl.Read( const iprot: IProtocol);
 var
   field_ : IField;
@@ -651,6 +707,24 @@ begin
           if (field_.Type_ = TType.String_) then
           begin
             CpfCidadao := iprot.ReadString();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        13: begin
+          if (field_.Type_ = TType.Double_) then
+          begin
+            PesoAcompanhamentoNutricional := iprot.ReadDouble();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        14: begin
+          if (field_.Type_ = TType.Double_) then
+          begin
+            AlturaAcompanhamentoNutricional := iprot.ReadDouble();
           end else
           begin
             TProtocolUtil.Skip(iprot, field_.Type_);
@@ -784,6 +858,24 @@ begin
     oprot.WriteString(CpfCidadao);
     oprot.WriteFieldEnd();
   end;
+  if (__isset_PesoAcompanhamentoNutricional) then
+  begin
+    field_.Name := 'pesoAcompanhamentoNutricional';
+    field_.Type_  := TType.Double_;
+    field_.ID := 13;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteDouble(PesoAcompanhamentoNutricional);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_AlturaAcompanhamentoNutricional) then
+  begin
+    field_.Name := 'alturaAcompanhamentoNutricional';
+    field_.Type_  := TType.Double_;
+    field_.ID := 14;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteDouble(AlturaAcompanhamentoNutricional);
+    oprot.WriteFieldEnd();
+  end;
   oprot.WriteFieldStop();
   oprot.WriteStructEnd();
 end;
@@ -861,6 +953,18 @@ begin
       _first6 := FALSE;
       _sb5.Append('CpfCidadao: ');
       _sb5.Append(CpfCidadao);
+    end;
+    if (__isset_PesoAcompanhamentoNutricional) then begin
+      if not _first6 then _sb5.Append(',');
+      _first6 := FALSE;
+      _sb5.Append('PesoAcompanhamentoNutricional: ');
+      _sb5.Append(PesoAcompanhamentoNutricional);
+    end;
+    if (__isset_AlturaAcompanhamentoNutricional) then begin
+      if not _first6 then _sb5.Append(',');
+      _first6 := FALSE;
+      _sb5.Append('AlturaAcompanhamentoNutricional: ');
+      _sb5.Append(AlturaAcompanhamentoNutricional);
     end;
     _sb5.Append(')');
     Result := _sb5.ToString;

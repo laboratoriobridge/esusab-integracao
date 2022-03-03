@@ -1,4 +1,4 @@
-LANGS="java:beans php delphi csharp rb go py"
+LANGS="java:beans php delphi csharp rb go py js:node"
 
 for LANG in $LANGS
 do

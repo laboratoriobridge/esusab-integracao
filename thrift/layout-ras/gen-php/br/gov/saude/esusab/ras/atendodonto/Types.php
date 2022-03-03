@@ -198,6 +198,14 @@ class FichaAtendimentoOdontologicoChildThrift {
    * @var \br\gov\saude\esusab\ras\common\ResultadosExameThrift[]
    */
   public $resultadosExames = null;
+  /**
+   * @var double
+   */
+  public $pesoAcompanhamentoNutricional = null;
+  /**
+   * @var double
+   */
+  public $alturaAcompanhamentoNutricional = null;
 
   public function __construct($vals=null) {
     if (!isset(self::$_TSPEC)) {
@@ -318,6 +326,14 @@ class FichaAtendimentoOdontologicoChildThrift {
             'class' => '\br\gov\saude\esusab\ras\common\ResultadosExameThrift',
             ),
           ),
+        22 => array(
+          'var' => 'pesoAcompanhamentoNutricional',
+          'type' => TType::DOUBLE,
+          ),
+        23 => array(
+          'var' => 'alturaAcompanhamentoNutricional',
+          'type' => TType::DOUBLE,
+          ),
         );
     }
     if (is_array($vals)) {
@@ -380,6 +396,12 @@ class FichaAtendimentoOdontologicoChildThrift {
       }
       if (isset($vals['resultadosExames'])) {
         $this->resultadosExames = $vals['resultadosExames'];
+      }
+      if (isset($vals['pesoAcompanhamentoNutricional'])) {
+        $this->pesoAcompanhamentoNutricional = $vals['pesoAcompanhamentoNutricional'];
+      }
+      if (isset($vals['alturaAcompanhamentoNutricional'])) {
+        $this->alturaAcompanhamentoNutricional = $vals['alturaAcompanhamentoNutricional'];
       }
     }
   }
@@ -627,6 +649,20 @@ class FichaAtendimentoOdontologicoChildThrift {
             $xfer += $input->skip($ftype);
           }
           break;
+        case 22:
+          if ($ftype == TType::DOUBLE) {
+            $xfer += $input->readDouble($this->pesoAcompanhamentoNutricional);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 23:
+          if ($ftype == TType::DOUBLE) {
+            $xfer += $input->readDouble($this->alturaAcompanhamentoNutricional);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
         default:
           $xfer += $input->skip($ftype);
           break;
@@ -834,6 +870,16 @@ class FichaAtendimentoOdontologicoChildThrift {
         }
         $output->writeListEnd();
       }
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->pesoAcompanhamentoNutricional !== null) {
+      $xfer += $output->writeFieldBegin('pesoAcompanhamentoNutricional', TType::DOUBLE, 22);
+      $xfer += $output->writeDouble($this->pesoAcompanhamentoNutricional);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->alturaAcompanhamentoNutricional !== null) {
+      $xfer += $output->writeFieldBegin('alturaAcompanhamentoNutricional', TType::DOUBLE, 23);
+      $xfer += $output->writeDouble($this->alturaAcompanhamentoNutricional);
       $xfer += $output->writeFieldEnd();
     }
     $xfer += $output->writeFieldStop();

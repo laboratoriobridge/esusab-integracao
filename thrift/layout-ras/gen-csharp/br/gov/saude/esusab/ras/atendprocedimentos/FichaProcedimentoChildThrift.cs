@@ -34,6 +34,8 @@ namespace br.gov.saude.esusab.ras.atendprocedimentos
     private long _dataHoraInicialAtendimento;
     private long _dataHoraFinalAtendimento;
     private string _cpfCidadao;
+    private double _pesoAcompanhamentoNutricional;
+    private double _alturaAcompanhamentoNutricional;
 
     public string NumProntuario
     {
@@ -178,6 +180,32 @@ namespace br.gov.saude.esusab.ras.atendprocedimentos
       }
     }
 
+    public double PesoAcompanhamentoNutricional
+    {
+      get
+      {
+        return _pesoAcompanhamentoNutricional;
+      }
+      set
+      {
+        __isset.pesoAcompanhamentoNutricional = true;
+        this._pesoAcompanhamentoNutricional = value;
+      }
+    }
+
+    public double AlturaAcompanhamentoNutricional
+    {
+      get
+      {
+        return _alturaAcompanhamentoNutricional;
+      }
+      set
+      {
+        __isset.alturaAcompanhamentoNutricional = true;
+        this._alturaAcompanhamentoNutricional = value;
+      }
+    }
+
 
     public Isset __isset;
     #if !SILVERLIGHT
@@ -195,6 +223,8 @@ namespace br.gov.saude.esusab.ras.atendprocedimentos
       public bool dataHoraInicialAtendimento;
       public bool dataHoraFinalAtendimento;
       public bool cpfCidadao;
+      public bool pesoAcompanhamentoNutricional;
+      public bool alturaAcompanhamentoNutricional;
     }
 
     public FichaProcedimentoChildThrift() {
@@ -298,6 +328,20 @@ namespace br.gov.saude.esusab.ras.atendprocedimentos
             case 12:
               if (field.Type == TType.String) {
                 CpfCidadao = iprot.ReadString();
+              } else { 
+                TProtocolUtil.Skip(iprot, field.Type);
+              }
+              break;
+            case 13:
+              if (field.Type == TType.Double) {
+                PesoAcompanhamentoNutricional = iprot.ReadDouble();
+              } else { 
+                TProtocolUtil.Skip(iprot, field.Type);
+              }
+              break;
+            case 14:
+              if (field.Type == TType.Double) {
+                AlturaAcompanhamentoNutricional = iprot.ReadDouble();
               } else { 
                 TProtocolUtil.Skip(iprot, field.Type);
               }
@@ -418,6 +462,22 @@ namespace br.gov.saude.esusab.ras.atendprocedimentos
           oprot.WriteString(CpfCidadao);
           oprot.WriteFieldEnd();
         }
+        if (__isset.pesoAcompanhamentoNutricional) {
+          field.Name = "pesoAcompanhamentoNutricional";
+          field.Type = TType.Double;
+          field.ID = 13;
+          oprot.WriteFieldBegin(field);
+          oprot.WriteDouble(PesoAcompanhamentoNutricional);
+          oprot.WriteFieldEnd();
+        }
+        if (__isset.alturaAcompanhamentoNutricional) {
+          field.Name = "alturaAcompanhamentoNutricional";
+          field.Type = TType.Double;
+          field.ID = 14;
+          oprot.WriteFieldBegin(field);
+          oprot.WriteDouble(AlturaAcompanhamentoNutricional);
+          oprot.WriteFieldEnd();
+        }
         oprot.WriteFieldStop();
         oprot.WriteStructEnd();
       }
@@ -495,6 +555,18 @@ namespace br.gov.saude.esusab.ras.atendprocedimentos
         __first = false;
         __sb.Append("CpfCidadao: ");
         __sb.Append(CpfCidadao);
+      }
+      if (__isset.pesoAcompanhamentoNutricional) {
+        if(!__first) { __sb.Append(", "); }
+        __first = false;
+        __sb.Append("PesoAcompanhamentoNutricional: ");
+        __sb.Append(PesoAcompanhamentoNutricional);
+      }
+      if (__isset.alturaAcompanhamentoNutricional) {
+        if(!__first) { __sb.Append(", "); }
+        __first = false;
+        __sb.Append("AlturaAcompanhamentoNutricional: ");
+        __sb.Append(AlturaAcompanhamentoNutricional);
       }
       __sb.Append(")");
       return __sb.ToString();

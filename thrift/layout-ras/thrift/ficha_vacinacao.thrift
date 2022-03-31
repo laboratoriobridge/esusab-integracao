@@ -17,6 +17,7 @@ struct VacinaRowThrift {
 	6:optional i64 grupoAtendimento;
 	7:optional bool stRegistroAnterior
 	8:optional i64 dataRegistroAnterior
+	9:optional bool stAplicadoExterior
 }
 
 struct FichaVacinacaoChildThrift {

@@ -52,6 +52,10 @@ class VacinaRowThrift {
    * @var int
    */
   public $dataRegistroAnterior = null;
+  /**
+   * @var bool
+   */
+  public $stAplicadoExterior = null;
 
   public function __construct($vals=null) {
     if (!isset(self::$_TSPEC)) {
@@ -88,6 +92,10 @@ class VacinaRowThrift {
           'var' => 'dataRegistroAnterior',
           'type' => TType::I64,
           ),
+        9 => array(
+          'var' => 'stAplicadoExterior',
+          'type' => TType::BOOL,
+          ),
         );
     }
     if (is_array($vals)) {
@@ -114,6 +122,9 @@ class VacinaRowThrift {
       }
       if (isset($vals['dataRegistroAnterior'])) {
         $this->dataRegistroAnterior = $vals['dataRegistroAnterior'];
+      }
+      if (isset($vals['stAplicadoExterior'])) {
+        $this->stAplicadoExterior = $vals['stAplicadoExterior'];
       }
     }
   }
@@ -193,6 +204,13 @@ class VacinaRowThrift {
             $xfer += $input->skip($ftype);
           }
           break;
+        case 9:
+          if ($ftype == TType::BOOL) {
+            $xfer += $input->readBool($this->stAplicadoExterior);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
         default:
           $xfer += $input->skip($ftype);
           break;
@@ -244,6 +262,11 @@ class VacinaRowThrift {
     if ($this->dataRegistroAnterior !== null) {
       $xfer += $output->writeFieldBegin('dataRegistroAnterior', TType::I64, 8);
       $xfer += $output->writeI64($this->dataRegistroAnterior);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->stAplicadoExterior !== null) {
+      $xfer += $output->writeFieldBegin('stAplicadoExterior', TType::BOOL, 9);
+      $xfer += $output->writeBool($this->stAplicadoExterior);
       $xfer += $output->writeFieldEnd();
     }
     $xfer += $output->writeFieldStop();

@@ -20,6 +20,7 @@ VacinaRowThrift = module.exports.VacinaRowThrift = function(args) {
   this.grupoAtendimento = null;
   this.stRegistroAnterior = null;
   this.dataRegistroAnterior = null;
+  this.stAplicadoExterior = null;
   if (args) {
     if (args.imunobiologico !== undefined && args.imunobiologico !== null) {
       this.imunobiologico = args.imunobiologico;
@@ -44,6 +45,9 @@ VacinaRowThrift = module.exports.VacinaRowThrift = function(args) {
     }
     if (args.dataRegistroAnterior !== undefined && args.dataRegistroAnterior !== null) {
       this.dataRegistroAnterior = args.dataRegistroAnterior;
+    }
+    if (args.stAplicadoExterior !== undefined && args.stAplicadoExterior !== null) {
+      this.stAplicadoExterior = args.stAplicadoExterior;
     }
   }
 };
@@ -117,6 +121,13 @@ VacinaRowThrift.prototype.read = function(input) {
         input.skip(ftype);
       }
       break;
+      case 9:
+      if (ftype == Thrift.Type.BOOL) {
+        this.stAplicadoExterior = input.readBool();
+      } else {
+        input.skip(ftype);
+      }
+      break;
       default:
         input.skip(ftype);
     }
@@ -166,6 +177,11 @@ VacinaRowThrift.prototype.write = function(output) {
   if (this.dataRegistroAnterior !== null && this.dataRegistroAnterior !== undefined) {
     output.writeFieldBegin('dataRegistroAnterior', Thrift.Type.I64, 8);
     output.writeI64(this.dataRegistroAnterior);
+    output.writeFieldEnd();
+  }
+  if (this.stAplicadoExterior !== null && this.stAplicadoExterior !== undefined) {
+    output.writeFieldBegin('stAplicadoExterior', Thrift.Type.BOOL, 9);
+    output.writeBool(this.stAplicadoExterior);
     output.writeFieldEnd();
   }
   output.writeFieldStop();

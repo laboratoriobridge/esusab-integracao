@@ -94,6 +94,7 @@
 				<fabricante>PFIZER/BIONTECH</fabricante>
 				<grupoAtendimento>11</grupoAtendimento>
 				<stRegistroAnterior>false</stRegistroAnterior>
+				<stAplicadoExterior>true</stAplicadoExterior>
 			</vacinas>
 			<dataHoraInicialAtendimento>1551538800000</dataHoraInicialAtendimento>
 			<dataHoraFinalAtendimento>1551538800000</dataHoraFinalAtendimento>

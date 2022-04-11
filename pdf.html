@@ -25,7 +25,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 4.3.3</span>
+        <span class="label">versão 4.3.4</span>
       
     </a>
 
@@ -137,7 +137,7 @@
 
       <li id="item-layout_ab" data-url="/ledi/documentacao/index.html">
         <label>
-          <input type="checkbox" value="layout_ab" checked="checked"> Layout e-SUS APS de Dados e Interface Versão 4.3.3
+          <input type="checkbox" value="layout_ab" checked="checked"> Layout e-SUS APS de Dados e Interface Versão 4.3.4
           <small>
             <a onclick="checkById('layout_ab', true); return false;">Marcar todos</a> |
             <a onclick="checkById('layout_ab', false); return false;">Desmarcar todos</a>
@@ -619,7 +619,7 @@
       </li>
     
 
-      <li id="item-regras_vacinacao" data-url="/ledi/documentacao/regras/valdidar_regras_vacinacao.html">
+      <li id="item-regras_vacinacao" data-url="/ledi/documentacao/regras/validar_regras_vacinacao.html">
         <label>
           <input type="checkbox" value="regras_vacinacao" checked="checked"> Regras de vacinação
           <small>
@@ -659,7 +659,7 @@
 
       <li id="item-principais_alteracoes" data-url="/ledi/documentacao/principais_alteracoes.html">
         <label>
-          <input type="checkbox" value="principais_alteracoes" checked="checked"> Principais alterações da v4.3.2 para a v4.3.3
+          <input type="checkbox" value="principais_alteracoes" checked="checked"> Principais alterações da v4.3.3 para a v4.3.4
           <small>
             <a onclick="checkById('principais_alteracoes', true); return false;">Marcar todos</a> |
             <a onclick="checkById('principais_alteracoes', false); return false;">Desmarcar todos</a>
@@ -985,7 +985,7 @@
   
       <!-- Cria a lista de itens[páginas] que foram selecionados  -->
 
-  <li id="summary-layout_ab"><a href="#layout_ab">Layout e-SUS APS de Dados e Interface Versão 4.3.3</a></li>
+  <li id="summary-layout_ab"><a href="#layout_ab">Layout e-SUS APS de Dados e Interface Versão 4.3.4</a></li>
   
       <!-- Cria a lista de itens[páginas] que foram selecionados  -->
 
@@ -1206,7 +1206,7 @@
 
   
 
-  <li id="summary-principais_alteracoes"><a href="#principais_alteracoes">Principais alterações da v4.3.2 para a v4.3.3</a></li>
+  <li id="summary-principais_alteracoes"><a href="#principais_alteracoes">Principais alterações da v4.3.3 para a v4.3.4</a></li>
   
       <!-- Cria a lista de itens[páginas] que foram selecionados  -->
 
@@ -1450,7 +1450,11 @@
 </tr>
 <tr>
 <td>4.3.12 ou superior</td>
-<td><a href="/ledi/documentacao/index.html">LEDI APS 4.3.3</a></td>
+<td><a href="https://integracao.esusab.ufsc.br/v433/">LEDI APS 4.3.3</a></td>
+</tr>
+<tr>
+<td>4.5.3 ou superior</td>
+<td><a href="/ledi/documentacao/index.html">LEDI APS 4.3.4</a></td>
 </tr>
 </tbody></table>
 
@@ -1463,17 +1467,17 @@
         
     <div class="post pdf shown" id="layout_ab" data-url="/ledi/documentacao/index.html">
       <header class="post-header">
-        <h1 class="post-title">Layout e-SUS APS de Dados e Interface Versão 4.3.3</h1>
+        <h1 class="post-title">Layout e-SUS APS de Dados e Interface Versão 4.3.4</h1>
       </header>
 
       
 
       <article class="post-content">
-        <p>Esta documentação descreve as estruturas de dados, seus atributos e regras utilizadas no <strong>LEDI APS</strong> versão 4.3.3.</p>
+        <p>Esta documentação descreve as estruturas de dados, seus atributos e regras utilizadas no <strong>LEDI APS</strong> versão 4.3.4.</p>
 
-<p>A versão <strong>LEDI APS</strong> 4.3.3 é compatível com o sistema <strong>PEC e-SUS APS</strong> versão 4.3.12 ou superior.</p>
+<p>A versão <strong>LEDI APS</strong> 4.3.4 é compatível com o sistema <strong>PEC e-SUS APS</strong> versão 4.5.3 ou superior.</p>
 
-<p>Confira as principais alterações da V4.3.2 para a V4.3.3 <a href="/ledi/documentacao/principais_alteracoes.html">aqui</a>.</p>
+<p>Confira as principais alterações da V4.3.3 para a V4.3.4 <a href="/ledi/documentacao/principais_alteracoes.html">aqui</a>.</p>
 
       </article>
 
@@ -16375,8 +16379,8 @@
 
 <ul>
 <li>Não pode ter <a href="/ledi/documentacao/estrutura_arquivos/#1-imunobiologico">imunobiológicos</a> repetidos se o campo <a href="/ledi/documentacao/estrutura_arquivos/#7-stregistroanterior">stRegistroAnterior</a> = <code>false</code>;</li>
-<li>Quando o campo <a href="/ledi/documentacao/estrutura_arquivos/#7-stregistroanterior">stRegistroAnterior</a> = <code>false</code>, o registro da vacina deve estar de acordo com os relacionamentos de Imunobiológico x Estratégia x Dose definidos na tabela <a href="/ledi/documentacao/regras/valdidar_regras_vacinacao.html">Regras de vacinação</a>;</li>
-<li>Quando o campo <a href="/ledi/documentacao/estrutura_arquivos/#7-stregistroanterior">stRegistroAnterior</a> = <code>true</code>, o registro da vacina não irá considerar os relacionamentos de Imunobiológico x Estratégia x Dose definidos na tabela <a href="/ledi/documentacao/regras/valdidar_regras_vacinacao.html">Regras de vacinação</a>.</li>
+<li>Quando o campo <a href="/ledi/documentacao/estrutura_arquivos/#7-stregistroanterior">stRegistroAnterior</a> = <code>false</code>, o registro da vacina deve estar de acordo com os relacionamentos de Imunobiológico x Estratégia x Dose definidos na tabela <a href="/ledi/documentacao/regras/validar_regras_vacinacao.html">Regras de vacinação</a>;</li>
+<li>Quando o campo <a href="/ledi/documentacao/estrutura_arquivos/#7-stregistroanterior">stRegistroAnterior</a> = <code>true</code>, o registro da vacina não irá considerar os relacionamentos de Imunobiológico x Estratégia x Dose definidos na tabela <a href="/ledi/documentacao/regras/validar_regras_vacinacao.html">Regras de vacinação</a>.</li>
 </ul>
 
 <p><strong>Referência:</strong> <a href="/ledi/documentacao/estrutura_arquivos/#vacinarowthrift">VacinaRowThrift</a>.</p>
@@ -16488,7 +16492,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regra:</strong> Se o <a href="/ledi/documentacao/referencias/dicionario.html#imunobiologico">imunobiologico</a> for igual a <code>85</code>, <code>86</code>, <code>87</code> ou <code>88</code> é obrigatório o preenchimento do <a href="/ledi/documentacao/estrutura_arquivos/#3-cnscidadao">cnsCidadao</a> ou do <a href="/ledi/documentacao/estrutura_arquivos/#14-cpfcidadao">cpfCidadao</a>.</p>
+<p><strong>Regra:</strong> Se o <a href="/ledi/documentacao/referencias/dicionario.html#imunobiologico">imunobiologico</a> for igual a <code>85</code>, <code>86</code>, <code>87</code>, <code>88</code>, <code>89</code>, <code>95</code>, <code>96</code>, <code>97</code>, <code>98</code> ou <code>99</code> é obrigatório o preenchimento do <a href="/ledi/documentacao/estrutura_arquivos/#3-cnscidadao">cnsCidadao</a> ou do <a href="/ledi/documentacao/estrutura_arquivos/#14-cpfcidadao">cpfCidadao</a>.</p>
 
 <p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#imunobiologico">Imunobiologico</a>.</p>
 
@@ -16516,7 +16520,8 @@
 
 <ul>
 <li>É de preenchimento obrigatório se o campo <a href="/ledi/documentacao/estrutura_arquivos/#7-stregistroanterior">stRegistroAnterior</a> = <code>false</code>;</li>
-<li>Não pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#7-stregistroanterior">stRegistroAnterior</a> = <code>true</code>.</li>
+<li>Se o campo <a href="/ledi/documentacao/estrutura_arquivos/#7-stregistroanterior">stRegistroAnterior</a> = <code>true</code>, não é de preenchimento obrigatório e pode ser preenchido somente com o valor <code>11 - Pesquisa</code>;</li>
+<li>Este campo deverá preenchido com o valor da coluna <strong>Código e-SUS APS</strong> da <a href="/ledi/documentacao/referencias/dicionario.html#estrategiavacinacao">tabela de referência</a>.</li>
 </ul>
 
 <p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#estrategiavacinacao">EstrategiaVacinacao</a>.</p>
@@ -16598,7 +16603,12 @@
 <li>Se o campo <a href="/ledi/documentacao/estrutura_arquivos/#1-imunobiologico">Imunobiológico</a> = <code>85</code>, o campo deve ser preenchido com o valor = <code>OXFORD-ASTRAZENECA</code>;</li>
 <li>Se o campo <a href="/ledi/documentacao/estrutura_arquivos/#1-imunobiologico">Imunobiológico</a> = <code>86</code>, o campo deve ser preenchido com o valor = <code>SINOVAC/BUTANTAN</code>;</li>
 <li>Se o campo <a href="/ledi/documentacao/estrutura_arquivos/#1-imunobiologico">Imunobiológico</a> = <code>87</code>, o campo deve ser preenchido com o valor = <code>PFIZER/BIONTECH</code>;</li>
-<li>Se o campo <a href="/ledi/documentacao/estrutura_arquivos/#1-imunobiologico">Imunobiológico</a> = <code>88</code>, o campo deve ser preenchido com o valor = <code>JANSSEN-CILAG</code>.</li>
+<li>Se o campo <a href="/ledi/documentacao/estrutura_arquivos/#1-imunobiologico">Imunobiológico</a> = <code>88</code>, o campo deve ser preenchido com o valor = <code>JANSSEN-CILAG</code>;</li>
+<li>Se o campo <a href="/ledi/documentacao/estrutura_arquivos/#1-imunobiologico">Imunobiológico</a> = <code>89</code>, o campo deve ser preenchido com o valor = <code>ASTRAZENECA-ChAdOx1-S</code>;</li>
+<li>Se o campo <a href="/ledi/documentacao/estrutura_arquivos/#1-imunobiologico">Imunobiológico</a> = <code>95</code>, o campo deve ser preenchido com o valor = <code>GAMALEYA-SPUTNIK-V</code>;</li>
+<li>Se o campo <a href="/ledi/documentacao/estrutura_arquivos/#1-imunobiologico">Imunobiológico</a> = <code>96</code>, o campo deve ser preenchido com o valor = <code>BHARAT-COVAXIN</code>;</li>
+<li>Se o campo <a href="/ledi/documentacao/estrutura_arquivos/#1-imunobiologico">Imunobiológico</a> = <code>97</code>, o campo deve ser preenchido com o valor = <code>MODERNA</code>;</li>
+<li>Se o campo <a href="/ledi/documentacao/estrutura_arquivos/#1-imunobiologico">Imunobiológico</a> = <code>98</code>, o campo deve ser preenchido com o valor = <code>SINOVAC-CORONAVAC</code>;</li>
 <li>Se o campo <a href="/ledi/documentacao/estrutura_arquivos/#1-imunobiologico">Imunobiológico</a> = <code>99</code>, o campo deve ser preenchido com o valor = <code>COMIRNATY-PFIZER/BIONTECH</code>.</li>
 </ul>
 
@@ -16625,7 +16635,7 @@
 <p><strong>Regras:</strong></p>
 
 <ul>
-<li>Só pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#2-estrategiavacinacao">estrategiaVacinacao</a> = <code>5</code> (Campanha). Neste caso o preenchimento é obrigatório;</li>
+<li>Só pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#2-estrategiavacinacao">estrategiaVacinacao</a> = <code>5</code> (Campanha indiscriminada). Neste caso o preenchimento é obrigatório;</li>
 <li>Não pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#7-stregistroanterior">stRegistroAnterior</a> = <code>true</code>;</li>
 <li>Deve ser preenchido com a informação da coluna <strong>Código SIPNI</strong> presente na tabela de referência.</li>
 </ul>
@@ -16681,6 +16691,28 @@
 </ul>
 
 <p><strong>Referência:</strong> Deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
+
+<h3 id="9-staplicadoexterior">#9 stAplicadoExterior</h3>
+
+<p>Utilizado para identificar se o cidadão foi vacinado no exterior.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Condicional</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> Só pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#7-stregistroanterior">stRegistroAnterior</a> = <code>true</code> e o campo <a href="/ledi/documentacao/estrutura_arquivos/#1-imunobiologico">Imunobiológico</a> receber um dos valores <code>85</code>, <code>86</code>, <code>87</code>, <code>88</code>, <code>89</code>, <code>95</code>, <code>96</code>, <code>97</code>, <code>98</code> ou <code>99</code>, pertencentes aos imunobiológicos de COVID-19. Nestas condições, é de preenchimento obrigatório.</p>
 
       </article>
 
@@ -47035,7 +47067,7 @@
 <td>revision</td>
 <td>Integer</td>
 <td>Sim</td>
-<td>Valor único = 3</td>
+<td>Valor único = 4</td>
 </tr>
 </tbody></table>
 
@@ -58578,45 +58610,45 @@
 
 <table><thead>
 <tr>
-<th>Código</th>
+<th>Código e-SUS APS</th>
 <th>Descrição</th>
-<th>Observações</th>
+<th>Código RNDS</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>1</td>
 <td>Rotina</td>
-<td>-</td>
+<td>1</td>
 </tr>
 <tr>
 <td>2</td>
 <td>Especial</td>
-<td>-</td>
+<td>2</td>
 </tr>
 <tr>
 <td>3</td>
 <td>Bloqueio</td>
-<td>-</td>
+<td>3</td>
 </tr>
 <tr>
 <td>4</td>
 <td>Intensificação</td>
-<td>-</td>
+<td>4</td>
 </tr>
 <tr>
 <td>5</td>
-<td>Campanha</td>
-<td>-</td>
+<td>Campanha indiscriminada</td>
+<td>5</td>
 </tr>
 <tr>
 <td>7</td>
 <td>Soroterapia</td>
-<td>-</td>
+<td>7</td>
 </tr>
 <tr>
+<td>11</td>
+<td>Pesquisa</td>
 <td>10</td>
-<td>Multivacinação</td>
-<td>-</td>
 </tr>
 </tbody></table>
 
@@ -59070,6 +59102,31 @@
 <td>88</td>
 <td>Covid-19 - Ad26.COV2.S - Janssen-Cilag</td>
 <td>COV19-JAN</td>
+</tr>
+<tr>
+<td>89</td>
+<td>Covid-19 - ASTRAZENECA - ChAdOx1-S, recombinante</td>
+<td>COVID-19 ASTRAZENECA - ChAdOx1-S</td>
+</tr>
+<tr>
+<td>95</td>
+<td>Covid-19 - GAMALEYA - SPUTNIK V recombinante</td>
+<td>COVID-19 GAMALEYA - SPUTNIK V</td>
+</tr>
+<tr>
+<td>96</td>
+<td>Covid-19 - COVID-19 BHARAT - COVAXIN inativada</td>
+<td>COVID-19 BHARAT - COVAXIN</td>
+</tr>
+<tr>
+<td>97</td>
+<td>Covid-19 - MODERNA RNAm</td>
+<td>COVID-19 MODERNA</td>
+</tr>
+<tr>
+<td>98</td>
+<td>Covid-19 - SINOVAC - CORONAVAC inativada</td>
+<td>COVID-19 SINOVAC - CORONAVAC</td>
 </tr>
 <tr>
 <td>99</td>
@@ -59604,7 +59661,7 @@
 </tr>
 <tr>
 <td>19</td>
-<td>Agravos negligenciados</td>
+<td>Agravos e Doenças Negligenciadas</td>
 <td>-</td>
 </tr>
 <tr>
@@ -59624,7 +59681,7 @@
 </tr>
 <tr>
 <td>7</td>
-<td>Dependência química / tabaco / álcool / outras drogas</td>
+<td>Prevenção ao uso de álcool, tabaco e outras drogas</td>
 <td>-</td>
 </tr>
 <tr>
@@ -91616,7 +91673,7 @@
 <li><a href="/ledi/documentacao/regras/algoritmo_CNS.html">Validar CNS</a>;</li>
 <li><a href="/ledi/documentacao/regras/validar_nome.html">Validar nome</a>;</li>
 <li><a href="/ledi/documentacao/regras/cbo.html">Grupos de CBOs x Tipo de ficha</a>;</li>
-<li><a href="/ledi/documentacao/regras/valdidar_regras_vacinacao.html">Regras de vacinação</a>.</li>
+<li><a href="/ledi/documentacao/regras/validar_regras_vacinacao.html">Regras de vacinação</a>.</li>
 </ul>
 
       </article>
@@ -95781,7 +95838,7 @@
 
     
 
-    <div class="post pdf shown" id="regras_vacinacao" data-url="/ledi/documentacao/regras/valdidar_regras_vacinacao.html">
+    <div class="post pdf shown" id="regras_vacinacao" data-url="/ledi/documentacao/regras/validar_regras_vacinacao.html">
       <header class="post-header">
         <h1 class="post-title">Regras de vacinação</h1>
       </header>
@@ -95789,7 +95846,9 @@
       
 
       <article class="post-content">
-        <table><thead>
+        <p>Na tabela abaixo, é possível visualizar os imunobiológicos que podem ser registradas com atendimento corrente. Caso o imunobiológico não esteja nessa tabela só pode ser enviado como um Registro Anterior (RA).</p>
+
+<table><thead>
 <tr>
 <th>Sigla</th>
 <th>Imunobiológico</th>
@@ -95807,18 +95866,6 @@
 <td>BCG</td>
 <td>BCG</td>
 <td>INTENSIFICAÇÃO</td>
-<td>REV</td>
-</tr>
-<tr>
-<td>BCG</td>
-<td>BCG</td>
-<td>MULTIVACINAÇÃO</td>
-<td>DU</td>
-</tr>
-<tr>
-<td>BCG</td>
-<td>BCG</td>
-<td>MULTIVACINAÇÃO</td>
 <td>REV</td>
 </tr>
 <tr>
@@ -95868,6 +95915,12 @@
 <td>Covid-19 - Covishield - Oxford/AstraZeneca</td>
 <td>CAMPANHA</td>
 <td>REF</td>
+</tr>
+<tr>
+<td>COV19 Oxford - AstraZeneca Covishield</td>
+<td>Covid-19 - Covishield - Oxford/AstraZeneca</td>
+<td>CAMPANHA</td>
+<td>R2</td>
 </tr>
 <tr>
 <td>COV19 Oxford - AstraZeneca Covishield</td>
@@ -95904,6 +95957,12 @@
 <td>Covid-19 - BNT162b2 - BioNTech/Fosun Pharma/Pfizer</td>
 <td>CAMPANHA</td>
 <td>REF</td>
+</tr>
+<tr>
+<td>COV19 Biontech - Pfizer</td>
+<td>Covid-19 - BNT162b2 - BioNTech/Fosun Pharma/Pfizer</td>
+<td>CAMPANHA</td>
+<td>R2</td>
 </tr>
 <tr>
 <td>COV19 Biontech - Pfizer</td>
@@ -95927,6 +95986,12 @@
 <td>COV19 Janssen - Cilag</td>
 <td>Covid-19 - Ad26.COV2.S - Janssen-Cilag</td>
 <td>CAMPANHA</td>
+<td>R2</td>
+</tr>
+<tr>
+<td>COV19 Janssen - Cilag</td>
+<td>Covid-19 - Ad26.COV2.S - Janssen-Cilag</td>
+<td>CAMPANHA</td>
 <td>DA</td>
 </tr>
 <tr>
@@ -95962,24 +96027,6 @@
 <tr>
 <td>Dengue</td>
 <td>Vacina Dengue 1, 2, 3 e 4 (recomb e atenuada)</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D1</td>
-</tr>
-<tr>
-<td>Dengue</td>
-<td>Vacina Dengue 1, 2, 3 e 4 (recomb e atenuada)</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D2</td>
-</tr>
-<tr>
-<td>Dengue</td>
-<td>Vacina Dengue 1, 2, 3 e 4 (recomb e atenuada)</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D3</td>
-</tr>
-<tr>
-<td>Dengue</td>
-<td>Vacina Dengue 1, 2, 3 e 4 (recomb e atenuada)</td>
 <td>ROTINA</td>
 <td>D1</td>
 </tr>
@@ -96041,30 +96088,6 @@
 <td>dT</td>
 <td>Dupla adulto</td>
 <td>INTENSIFICAÇÃO</td>
-<td>REF</td>
-</tr>
-<tr>
-<td>dT</td>
-<td>Dupla adulto</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D1</td>
-</tr>
-<tr>
-<td>dT</td>
-<td>Dupla adulto</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D2</td>
-</tr>
-<tr>
-<td>dT</td>
-<td>Dupla adulto</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D3</td>
-</tr>
-<tr>
-<td>dT</td>
-<td>Dupla adulto</td>
-<td>MULTIVACINAÇÃO</td>
 <td>REF</td>
 </tr>
 <tr>
@@ -96179,36 +96202,6 @@
 <td>DTP</td>
 <td>Tríplice bacteriana</td>
 <td>INTENSIFICAÇÃO</td>
-<td>R2</td>
-</tr>
-<tr>
-<td>DTP</td>
-<td>Tríplice bacteriana</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D1</td>
-</tr>
-<tr>
-<td>DTP</td>
-<td>Tríplice bacteriana</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D2</td>
-</tr>
-<tr>
-<td>DTP</td>
-<td>Tríplice bacteriana</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D3</td>
-</tr>
-<tr>
-<td>DTP</td>
-<td>Tríplice bacteriana</td>
-<td>MULTIVACINAÇÃO</td>
-<td>R1</td>
-</tr>
-<tr>
-<td>DTP</td>
-<td>Tríplice bacteriana</td>
-<td>MULTIVACINAÇÃO</td>
 <td>R2</td>
 </tr>
 <tr>
@@ -96328,30 +96321,6 @@
 <tr>
 <td>dTpa adulto</td>
 <td>Tríplice bacteriana acelular (adulto) - dTpa</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D1</td>
-</tr>
-<tr>
-<td>dTpa adulto</td>
-<td>Tríplice bacteriana acelular (adulto) - dTpa</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D2</td>
-</tr>
-<tr>
-<td>dTpa adulto</td>
-<td>Tríplice bacteriana acelular (adulto) - dTpa</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D3</td>
-</tr>
-<tr>
-<td>dTpa adulto</td>
-<td>Tríplice bacteriana acelular (adulto) - dTpa</td>
-<td>MULTIVACINAÇÃO</td>
-<td>R1</td>
-</tr>
-<tr>
-<td>dTpa adulto</td>
-<td>Tríplice bacteriana acelular (adulto) - dTpa</td>
 <td>ROTINA</td>
 <td>D1</td>
 </tr>
@@ -96450,24 +96419,6 @@
 <td>Febre amarela</td>
 <td>INTENSIFICAÇÃO</td>
 <td>REV</td>
-</tr>
-<tr>
-<td>FA</td>
-<td>Febre amarela</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D1</td>
-</tr>
-<tr>
-<td>FA</td>
-<td>Febre amarela</td>
-<td>MULTIVACINAÇÃO</td>
-<td>DU</td>
-</tr>
-<tr>
-<td>FA</td>
-<td>Febre amarela</td>
-<td>MULTIVACINAÇÃO</td>
-<td>REF</td>
 </tr>
 <tr>
 <td>FA</td>
@@ -96622,12 +96573,6 @@
 <tr>
 <td>HAped</td>
 <td>Hepatite A Pediátrica</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D1</td>
-</tr>
-<tr>
-<td>HAped</td>
-<td>Hepatite A Pediátrica</td>
 <td>ROTINA</td>
 <td>D1</td>
 </tr>
@@ -96730,42 +96675,6 @@
 <tr>
 <td>HB</td>
 <td>Hepatite B</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D</td>
-</tr>
-<tr>
-<td>HB</td>
-<td>Hepatite B</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D1</td>
-</tr>
-<tr>
-<td>HB</td>
-<td>Hepatite B</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D2</td>
-</tr>
-<tr>
-<td>HB</td>
-<td>Hepatite B</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D3</td>
-</tr>
-<tr>
-<td>HB</td>
-<td>Hepatite B</td>
-<td>MULTIVACINAÇÃO</td>
-<td>REF</td>
-</tr>
-<tr>
-<td>HB</td>
-<td>Hepatite B</td>
-<td>MULTIVACINAÇÃO</td>
-<td>REV</td>
-</tr>
-<tr>
-<td>HB</td>
-<td>Hepatite B</td>
 <td>ROTINA</td>
 <td>D</td>
 </tr>
@@ -96875,24 +96784,6 @@
 <td>HPV Quadri</td>
 <td>HPV Quadrivalente</td>
 <td>ESPECIAL</td>
-<td>D3</td>
-</tr>
-<tr>
-<td>HPV Quadri</td>
-<td>HPV Quadrivalente</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D1</td>
-</tr>
-<tr>
-<td>HPV Quadri</td>
-<td>HPV Quadrivalente</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D2</td>
-</tr>
-<tr>
-<td>HPV Quadri</td>
-<td>HPV Quadrivalente</td>
-<td>MULTIVACINAÇÃO</td>
 <td>D3</td>
 </tr>
 <tr>
@@ -97294,18 +97185,6 @@
 <tr>
 <td>MenACWY</td>
 <td>Meningocócica ACWY</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D</td>
-</tr>
-<tr>
-<td>MenACWY</td>
-<td>Meningocócica ACWY</td>
-<td>MULTIVACINAÇÃO</td>
-<td>REF</td>
-</tr>
-<tr>
-<td>MenACWY</td>
-<td>Meningocócica ACWY</td>
 <td>ROTINA</td>
 <td>D</td>
 </tr>
@@ -97432,36 +97311,6 @@
 <tr>
 <td>Men Conj C</td>
 <td>Meningocócica conjugada C</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D1</td>
-</tr>
-<tr>
-<td>Men Conj C</td>
-<td>Meningocócica conjugada C</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D2</td>
-</tr>
-<tr>
-<td>Men Conj C</td>
-<td>Meningocócica conjugada C</td>
-<td>MULTIVACINAÇÃO</td>
-<td>DU</td>
-</tr>
-<tr>
-<td>Men Conj C</td>
-<td>Meningocócica conjugada C</td>
-<td>MULTIVACINAÇÃO</td>
-<td>R1</td>
-</tr>
-<tr>
-<td>Men Conj C</td>
-<td>Meningocócica conjugada C</td>
-<td>MULTIVACINAÇÃO</td>
-<td>R2</td>
-</tr>
-<tr>
-<td>Men Conj C</td>
-<td>Meningocócica conjugada C</td>
 <td>ROTINA</td>
 <td>D1</td>
 </tr>
@@ -97547,36 +97396,6 @@
 <td>Penta</td>
 <td>DTP / HB / Hib</td>
 <td>INTENSIFICAÇÃO</td>
-<td>R2</td>
-</tr>
-<tr>
-<td>Penta</td>
-<td>DTP / HB / Hib</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D1</td>
-</tr>
-<tr>
-<td>Penta</td>
-<td>DTP / HB / Hib</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D2</td>
-</tr>
-<tr>
-<td>Penta</td>
-<td>DTP / HB / Hib</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D3</td>
-</tr>
-<tr>
-<td>Penta</td>
-<td>DTP / HB / Hib</td>
-<td>MULTIVACINAÇÃO</td>
-<td>R1</td>
-</tr>
-<tr>
-<td>Penta</td>
-<td>DTP / HB / Hib</td>
-<td>MULTIVACINAÇÃO</td>
 <td>R2</td>
 </tr>
 <tr>
@@ -97727,36 +97546,6 @@
 <td>Pncc10V</td>
 <td>Pneumocócica 10V</td>
 <td>INTENSIFICAÇÃO</td>
-<td>REF</td>
-</tr>
-<tr>
-<td>Pncc10V</td>
-<td>Pneumocócica 10V</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D1</td>
-</tr>
-<tr>
-<td>Pncc10V</td>
-<td>Pneumocócica 10V</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D2</td>
-</tr>
-<tr>
-<td>Pncc10V</td>
-<td>Pneumocócica 10V</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D3</td>
-</tr>
-<tr>
-<td>Pncc10V</td>
-<td>Pneumocócica 10V</td>
-<td>MULTIVACINAÇÃO</td>
-<td>DU</td>
-</tr>
-<tr>
-<td>Pncc10V</td>
-<td>Pneumocócica 10V</td>
-<td>MULTIVACINAÇÃO</td>
 <td>REF</td>
 </tr>
 <tr>
@@ -97836,18 +97625,6 @@
 <td>Pneumocócica 23V</td>
 <td>ESPECIAL</td>
 <td>REV</td>
-</tr>
-<tr>
-<td>Pncc23V</td>
-<td>Pneumocócica 23V</td>
-<td>MULTIVACINAÇÃO</td>
-<td>DA</td>
-</tr>
-<tr>
-<td>Pncc23V</td>
-<td>Pneumocócica 23V</td>
-<td>MULTIVACINAÇÃO</td>
-<td>DI</td>
 </tr>
 <tr>
 <td>Pncc23V</td>
@@ -99064,18 +98841,6 @@
 <tr>
 <td>SCR</td>
 <td>Tríplice viral</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D1</td>
-</tr>
-<tr>
-<td>SCR</td>
-<td>Tríplice viral</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D2</td>
-</tr>
-<tr>
-<td>SCR</td>
-<td>Tríplice viral</td>
 <td>ROTINA</td>
 <td>D1</td>
 </tr>
@@ -99736,12 +99501,6 @@
 <tr>
 <td>SR</td>
 <td>Dupla viral</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D</td>
-</tr>
-<tr>
-<td>SR</td>
-<td>Dupla viral</td>
 <td>ROTINA</td>
 <td>D</td>
 </tr>
@@ -99755,12 +99514,6 @@
 <td>Tetra Viral</td>
 <td>Tetra Viral</td>
 <td>INTENSIFICAÇÃO</td>
-<td>DU</td>
-</tr>
-<tr>
-<td>Tetra Viral</td>
-<td>Tetra Viral</td>
-<td>MULTIVACINAÇÃO</td>
 <td>DU</td>
 </tr>
 <tr>
@@ -99808,18 +99561,6 @@
 <tr>
 <td>VARC</td>
 <td>Varicela (atenuada)</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D1</td>
-</tr>
-<tr>
-<td>VARC</td>
-<td>Varicela (atenuada)</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D2</td>
-</tr>
-<tr>
-<td>VARC</td>
-<td>Varicela (atenuada)</td>
 <td>ROTINA</td>
 <td>D1</td>
 </tr>
@@ -99828,42 +99569,6 @@
 <td>Varicela (atenuada)</td>
 <td>ROTINA</td>
 <td>D2</td>
-</tr>
-<tr>
-<td>Vero</td>
-<td>Raiva em cultivo celular Vero</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D1</td>
-</tr>
-<tr>
-<td>Vero</td>
-<td>Raiva em cultivo celular Vero</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D2</td>
-</tr>
-<tr>
-<td>Vero</td>
-<td>Raiva em cultivo celular Vero</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D3</td>
-</tr>
-<tr>
-<td>Vero</td>
-<td>Raiva em cultivo celular Vero</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D4</td>
-</tr>
-<tr>
-<td>Vero</td>
-<td>Raiva em cultivo celular Vero</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D5</td>
-</tr>
-<tr>
-<td>Vero</td>
-<td>Raiva em cultivo celular Vero</td>
-<td>MULTIVACINAÇÃO</td>
-<td>REV</td>
 </tr>
 <tr>
 <td>Vero</td>
@@ -99970,24 +99675,6 @@
 <tr>
 <td>VIP</td>
 <td>Poliomielite inativada</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D1</td>
-</tr>
-<tr>
-<td>VIP</td>
-<td>Poliomielite inativada</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D2</td>
-</tr>
-<tr>
-<td>VIP</td>
-<td>Poliomielite inativada</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D3</td>
-</tr>
-<tr>
-<td>VIP</td>
-<td>Poliomielite inativada</td>
 <td>ROTINA</td>
 <td>D1</td>
 </tr>
@@ -100072,36 +99759,6 @@
 <tr>
 <td>VOP</td>
 <td>Poliomielite oral (Bivalente)</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D1</td>
-</tr>
-<tr>
-<td>VOP</td>
-<td>Poliomielite oral (Bivalente)</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D2</td>
-</tr>
-<tr>
-<td>VOP</td>
-<td>Poliomielite oral (Bivalente)</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D3</td>
-</tr>
-<tr>
-<td>VOP</td>
-<td>Poliomielite oral (Bivalente)</td>
-<td>MULTIVACINAÇÃO</td>
-<td>R1</td>
-</tr>
-<tr>
-<td>VOP</td>
-<td>Poliomielite oral (Bivalente)</td>
-<td>MULTIVACINAÇÃO</td>
-<td>R2</td>
-</tr>
-<tr>
-<td>VOP</td>
-<td>Poliomielite oral (Bivalente)</td>
 <td>ROTINA</td>
 <td>D1</td>
 </tr>
@@ -100139,18 +99796,6 @@
 <td>VRH</td>
 <td>Vacina rotavírus humano</td>
 <td>INTENSIFICAÇÃO</td>
-<td>D2</td>
-</tr>
-<tr>
-<td>VRH</td>
-<td>Vacina rotavírus humano</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D1</td>
-</tr>
-<tr>
-<td>VRH</td>
-<td>Vacina rotavírus humano</td>
-<td>MULTIVACINAÇÃO</td>
 <td>D2</td>
 </tr>
 <tr>
@@ -100635,26 +100280,46 @@
 
     <div class="post pdf shown" id="principais_alteracoes" data-url="/ledi/documentacao/principais_alteracoes.html">
       <header class="post-header">
-        <h1 class="post-title">Principais alterações da v4.3.2 para a v4.3.3</h1>
+        <h1 class="post-title">Principais alterações da v4.3.3 para a v4.3.4</h1>
       </header>
 
       
 
       <article class="post-content">
-        <p>Este documento relata as principais alterações em relação à versão v4.3.2 do LEDI APS:</p>
+        <p>Este documento relata as principais alterações em relação à versão v4.3.3 do LEDI APS:</p>
 
-<h3 id="1-inclus-es-no-atendimento-de-vacina-o">1. Inclusões no atendimento de vacinação.</h3>
+<h3 id="1-atualiza-es-na-ficha-de-vacina-o">1. Atualizações na Ficha de Vacinação</h3>
 
-<p><strong>1. </strong> Inclusão dos seguintes grupos de atendimento nos registro de atendimentos de vacinação:</p>
+<p><strong>1. </strong> Inclusão do campo <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fv.html#9-staplicadoexterior">#9 stAplicadoExterior</a>.</p>
 
 <ul>
-<li>Pessoas de 5 a 11 anos;</li>
-<li>Crianças quilombolas;</li>
-<li>Crianças ribeirinhas;</li>
-<li>Crianças indígenas.</li>
+<li>Campo disponível somente para o registro anterior de imunobiológico de COVID-19. Utilizado para identificar se o cidadão foi vacinado no exterior.</li>
 </ul>
 
-<p><strong>2. </strong> Inclusão do imunobiológico Covid-19 - Pfizer (Comirnaty) - Pediátrica.</p>
+<p><strong>2. </strong> Alterações no campo <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fv.html#2-estrategiavacinacao">#2 estrategiaVacinacao</a>.</p>
+
+<ul>
+<li>Inclusão da estratégia de vacinação &quot;Pesquisa&quot;;</li>
+<li>Exclusão da estratégia de vacinação &quot;Multivacinação&quot;;</li>
+<li>Este campo deverá ser preenchido com o valor da coluna &quot;Código e-SUS APS&quot; da <a href="/ledi/documentacao/referencias/dicionario.html#estrategiavacinacao">tabela de referência</a>.</li>
+</ul>
+
+<p><strong>3. </strong> Alterações na tabela <a href="/ledi/documentacao/regras/validar_regras_vacinacao.html">Regras de vacinação</a>:</p>
+
+<ul>
+<li>Exclusão dos registros de estratégia &quot;Multivacinação&quot;;</li>
+<li>Inclusão da 2ª dose de reforço para os imunobiológicos &quot;Covid-19 - Covishield - Oxford/AstraZeneca&quot;, &quot;Covid-19 - BNT162b2 - BioNTech/Fosun Pharma/Pfizer&quot; e &quot;Covid-19 - Ad26.COV2.S - Janssen-Cilag&quot;.</li>
+</ul>
+
+<p><strong>4. </strong> Inclusão de imunobiológicos da <a href="/ledi/documentacao/referencias/dicionario.html#imunobiologico">Tabela de imunobiológicos</a>:</p>
+
+<ul>
+<li>89 - Covid-19 - ASTRAZENECA - ChAdOx1-S, recombinante;</li>
+<li>95 - Covid-19 - GAMALEYA - SPUTNIK V recombinante;</li>
+<li>96 - Covid-19 - COVID-19 BHARAT - COVAXIN inativada;</li>
+<li>97 - Covid-19 - MODERNA RNAm;</li>
+<li>98 - Covid-19 - SINOVAC - CORONAVAC inativada.</li>
+</ul>
 
       </article>
 

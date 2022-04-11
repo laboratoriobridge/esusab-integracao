@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Principais alterações da v4.3.2 para a v4.3.3</title>
-  <meta name="description" content="Este documento relata as principais alterações em relação à versão v4.3.2 do LEDI APS:">
+  <title>Principais alterações da v4.3.3 para a v4.3.4</title>
+  <meta name="description" content="Este documento relata as principais alterações em relação à versão v4.3.3 do LEDI APS:">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="/ledi/documentacao/principais_alteracoes.html">
@@ -25,7 +25,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 4.3.3</span>
+        <span class="label">versão 4.3.4</span>
       
     </a>
 
@@ -75,11 +75,11 @@
           
         
           
-            <li><a title="Layout e-SUS APS de Dados e Interface Versão 4.3.3" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 4.3.3</a></li>
+            <li><a title="Layout e-SUS APS de Dados e Interface Versão 4.3.4" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 4.3.4</a></li>
           
         
           
-            <li><a title="Principais alterações da v4.3.2 para a v4.3.3" href="/ledi/documentacao/principais_alteracoes.html">Principais alterações da v4.3.2 para a v4.3.3</a></li>
+            <li><a title="Principais alterações da v4.3.3 para a v4.3.4" href="/ledi/documentacao/principais_alteracoes.html">Principais alterações da v4.3.3 para a v4.3.4</a></li>
           
         
 
@@ -119,7 +119,7 @@
     
 
     <li>
-      <a class="open" title="Layout e-SUS APS de Dados e Interface Versão 4.3.3" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 4.3.3</a>
+      <a class="open" title="Layout e-SUS APS de Dados e Interface Versão 4.3.4" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 4.3.4</a>
       <ul>
         
           <li  class="has-subitems">
@@ -152,8 +152,8 @@
         
           <li class="active">
           
-            <a title="Principais alterações da v4.3.2 para a v4.3.3" href="/ledi/documentacao/principais_alteracoes.html">
-              Principais alterações da v4.3.2 para a v4.3.3
+            <a title="Principais alterações da v4.3.3 para a v4.3.4" href="/ledi/documentacao/principais_alteracoes.html">
+              Principais alterações da v4.3.3 para a v4.3.4
             </a>
           </li>
         
@@ -172,7 +172,7 @@
           <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Principais alterações da v4.3.2 para a v4.3.3</h1>
+    <h1 class="post-title">Principais alterações da v4.3.3 para a v4.3.4</h1>
     <p class="post-meta">
       <a class="btn" href="/pdf.html?include=/ledi/documentacao/principais_alteracoes.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
@@ -182,20 +182,40 @@
   </header>
 
   <article class="post-content">
-    <p>Este documento relata as principais alterações em relação à versão v4.3.2 do LEDI APS:</p>
+    <p>Este documento relata as principais alterações em relação à versão v4.3.3 do LEDI APS:</p>
 
-<h3 id="1-inclus-es-no-atendimento-de-vacina-o">1. Inclusões no atendimento de vacinação.</h3>
+<h3 id="1-atualiza-es-na-ficha-de-vacina-o">1. Atualizações na Ficha de Vacinação</h3>
 
-<p><strong>1. </strong> Inclusão dos seguintes grupos de atendimento nos registro de atendimentos de vacinação:</p>
+<p><strong>1. </strong> Inclusão do campo <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fv.html#9-staplicadoexterior">#9 stAplicadoExterior</a>.</p>
 
 <ul>
-<li>Pessoas de 5 a 11 anos;</li>
-<li>Crianças quilombolas;</li>
-<li>Crianças ribeirinhas;</li>
-<li>Crianças indígenas.</li>
+<li>Campo disponível somente para o registro anterior de imunobiológico de COVID-19. Utilizado para identificar se o cidadão foi vacinado no exterior.</li>
 </ul>
 
-<p><strong>2. </strong> Inclusão do imunobiológico Covid-19 - Pfizer (Comirnaty) - Pediátrica.</p>
+<p><strong>2. </strong> Alterações no campo <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fv.html#2-estrategiavacinacao">#2 estrategiaVacinacao</a>.</p>
+
+<ul>
+<li>Inclusão da estratégia de vacinação &quot;Pesquisa&quot;;</li>
+<li>Exclusão da estratégia de vacinação &quot;Multivacinação&quot;;</li>
+<li>Este campo deverá ser preenchido com o valor da coluna &quot;Código e-SUS APS&quot; da <a href="/ledi/documentacao/referencias/dicionario.html#estrategiavacinacao">tabela de referência</a>.</li>
+</ul>
+
+<p><strong>3. </strong> Alterações na tabela <a href="/ledi/documentacao/regras/validar_regras_vacinacao.html">Regras de vacinação</a>:</p>
+
+<ul>
+<li>Exclusão dos registros de estratégia &quot;Multivacinação&quot;;</li>
+<li>Inclusão da 2ª dose de reforço para os imunobiológicos &quot;Covid-19 - Covishield - Oxford/AstraZeneca&quot;, &quot;Covid-19 - BNT162b2 - BioNTech/Fosun Pharma/Pfizer&quot; e &quot;Covid-19 - Ad26.COV2.S - Janssen-Cilag&quot;.</li>
+</ul>
+
+<p><strong>4. </strong> Inclusão de imunobiológicos da <a href="/ledi/documentacao/referencias/dicionario.html#imunobiologico">Tabela de imunobiológicos</a>:</p>
+
+<ul>
+<li>89 - Covid-19 - ASTRAZENECA - ChAdOx1-S, recombinante;</li>
+<li>95 - Covid-19 - GAMALEYA - SPUTNIK V recombinante;</li>
+<li>96 - Covid-19 - COVID-19 BHARAT - COVAXIN inativada;</li>
+<li>97 - Covid-19 - MODERNA RNAm;</li>
+<li>98 - Covid-19 - SINOVAC - CORONAVAC inativada.</li>
+</ul>
 
   </article>
 

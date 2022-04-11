@@ -25,7 +25,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 4.3.3</span>
+        <span class="label">versão 4.3.4</span>
       
     </a>
 
@@ -75,7 +75,7 @@
           
         
           
-            <li><a title="Layout e-SUS APS de Dados e Interface Versão 4.3.3" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 4.3.3</a></li>
+            <li><a title="Layout e-SUS APS de Dados e Interface Versão 4.3.4" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 4.3.4</a></li>
           
         
           
@@ -115,9 +115,9 @@
   <ul>
     
       <li>
-        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 4.3.3" href="/ledi/documentacao/index.html" class="back-link">
+        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 4.3.4" href="/ledi/documentacao/index.html" class="back-link">
           <i class="icon icon-back"></i> Voltar
-          <small>(Layout e-SUS APS de Dados e Interface Versão 4.3.3)</small>
+          <small>(Layout e-SUS APS de Dados e Interface Versão 4.3.4)</small>
         </a>
       </li>
     
@@ -611,8 +611,8 @@
 
 <ul>
 <li>Não pode ter <a href="#1-imunobiologico">imunobiológicos</a> repetidos se o campo <a href="#7-stregistroanterior">stRegistroAnterior</a> = <code>false</code>;</li>
-<li>Quando o campo <a href="#7-stregistroanterior">stRegistroAnterior</a> = <code>false</code>, o registro da vacina deve estar de acordo com os relacionamentos de Imunobiológico x Estratégia x Dose definidos na tabela <a href="/ledi/documentacao/regras/valdidar_regras_vacinacao.html">Regras de vacinação</a>;</li>
-<li>Quando o campo <a href="#7-stregistroanterior">stRegistroAnterior</a> = <code>true</code>, o registro da vacina não irá considerar os relacionamentos de Imunobiológico x Estratégia x Dose definidos na tabela <a href="/ledi/documentacao/regras/valdidar_regras_vacinacao.html">Regras de vacinação</a>.</li>
+<li>Quando o campo <a href="#7-stregistroanterior">stRegistroAnterior</a> = <code>false</code>, o registro da vacina deve estar de acordo com os relacionamentos de Imunobiológico x Estratégia x Dose definidos na tabela <a href="/ledi/documentacao/regras/validar_regras_vacinacao.html">Regras de vacinação</a>;</li>
+<li>Quando o campo <a href="#7-stregistroanterior">stRegistroAnterior</a> = <code>true</code>, o registro da vacina não irá considerar os relacionamentos de Imunobiológico x Estratégia x Dose definidos na tabela <a href="/ledi/documentacao/regras/validar_regras_vacinacao.html">Regras de vacinação</a>.</li>
 </ul>
 
 <p><strong>Referência:</strong> <a href="#vacinarowthrift">VacinaRowThrift</a>.</p>
@@ -724,7 +724,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regra:</strong> Se o <a href="/ledi/documentacao/referencias/dicionario.html#imunobiologico">imunobiologico</a> for igual a <code>85</code>, <code>86</code>, <code>87</code> ou <code>88</code> é obrigatório o preenchimento do <a href="#3-cnscidadao">cnsCidadao</a> ou do <a href="#14-cpfcidadao">cpfCidadao</a>.</p>
+<p><strong>Regra:</strong> Se o <a href="/ledi/documentacao/referencias/dicionario.html#imunobiologico">imunobiologico</a> for igual a <code>85</code>, <code>86</code>, <code>87</code>, <code>88</code>, <code>89</code>, <code>95</code>, <code>96</code>, <code>97</code>, <code>98</code> ou <code>99</code> é obrigatório o preenchimento do <a href="#3-cnscidadao">cnsCidadao</a> ou do <a href="#14-cpfcidadao">cpfCidadao</a>.</p>
 
 <p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#imunobiologico">Imunobiologico</a>.</p>
 
@@ -752,7 +752,8 @@
 
 <ul>
 <li>É de preenchimento obrigatório se o campo <a href="#7-stregistroanterior">stRegistroAnterior</a> = <code>false</code>;</li>
-<li>Não pode ser preenchido se o campo <a href="#7-stregistroanterior">stRegistroAnterior</a> = <code>true</code>.</li>
+<li>Se o campo <a href="#7-stregistroanterior">stRegistroAnterior</a> = <code>true</code>, não é de preenchimento obrigatório e pode ser preenchido somente com o valor <code>11 - Pesquisa</code>;</li>
+<li>Este campo deverá preenchido com o valor da coluna <strong>Código e-SUS APS</strong> da <a href="/ledi/documentacao/referencias/dicionario.html#estrategiavacinacao">tabela de referência</a>.</li>
 </ul>
 
 <p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#estrategiavacinacao">EstrategiaVacinacao</a>.</p>
@@ -834,7 +835,12 @@
 <li>Se o campo <a href="#1-imunobiologico">Imunobiológico</a> = <code>85</code>, o campo deve ser preenchido com o valor = <code>OXFORD-ASTRAZENECA</code>;</li>
 <li>Se o campo <a href="#1-imunobiologico">Imunobiológico</a> = <code>86</code>, o campo deve ser preenchido com o valor = <code>SINOVAC/BUTANTAN</code>;</li>
 <li>Se o campo <a href="#1-imunobiologico">Imunobiológico</a> = <code>87</code>, o campo deve ser preenchido com o valor = <code>PFIZER/BIONTECH</code>;</li>
-<li>Se o campo <a href="#1-imunobiologico">Imunobiológico</a> = <code>88</code>, o campo deve ser preenchido com o valor = <code>JANSSEN-CILAG</code>.</li>
+<li>Se o campo <a href="#1-imunobiologico">Imunobiológico</a> = <code>88</code>, o campo deve ser preenchido com o valor = <code>JANSSEN-CILAG</code>;</li>
+<li>Se o campo <a href="#1-imunobiologico">Imunobiológico</a> = <code>89</code>, o campo deve ser preenchido com o valor = <code>ASTRAZENECA-ChAdOx1-S</code>;</li>
+<li>Se o campo <a href="#1-imunobiologico">Imunobiológico</a> = <code>95</code>, o campo deve ser preenchido com o valor = <code>GAMALEYA-SPUTNIK-V</code>;</li>
+<li>Se o campo <a href="#1-imunobiologico">Imunobiológico</a> = <code>96</code>, o campo deve ser preenchido com o valor = <code>BHARAT-COVAXIN</code>;</li>
+<li>Se o campo <a href="#1-imunobiologico">Imunobiológico</a> = <code>97</code>, o campo deve ser preenchido com o valor = <code>MODERNA</code>;</li>
+<li>Se o campo <a href="#1-imunobiologico">Imunobiológico</a> = <code>98</code>, o campo deve ser preenchido com o valor = <code>SINOVAC-CORONAVAC</code>;</li>
 <li>Se o campo <a href="#1-imunobiologico">Imunobiológico</a> = <code>99</code>, o campo deve ser preenchido com o valor = <code>COMIRNATY-PFIZER/BIONTECH</code>.</li>
 </ul>
 
@@ -861,7 +867,7 @@
 <p><strong>Regras:</strong></p>
 
 <ul>
-<li>Só pode ser preenchido se o campo <a href="#2-estrategiavacinacao">estrategiaVacinacao</a> = <code>5</code> (Campanha). Neste caso o preenchimento é obrigatório;</li>
+<li>Só pode ser preenchido se o campo <a href="#2-estrategiavacinacao">estrategiaVacinacao</a> = <code>5</code> (Campanha indiscriminada). Neste caso o preenchimento é obrigatório;</li>
 <li>Não pode ser preenchido se o campo <a href="#7-stregistroanterior">stRegistroAnterior</a> = <code>true</code>;</li>
 <li>Deve ser preenchido com a informação da coluna <strong>Código SIPNI</strong> presente na tabela de referência.</li>
 </ul>
@@ -917,6 +923,28 @@
 </ul>
 
 <p><strong>Referência:</strong> Deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
+
+<h3 id="9-staplicadoexterior">#9 stAplicadoExterior</h3>
+
+<p>Utilizado para identificar se o cidadão foi vacinado no exterior.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Condicional</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> Só pode ser preenchido se o campo <a href="#7-stregistroanterior">stRegistroAnterior</a> = <code>true</code> e o campo <a href="#1-imunobiologico">Imunobiológico</a> receber um dos valores <code>85</code>, <code>86</code>, <code>87</code>, <code>88</code>, <code>89</code>, <code>95</code>, <code>96</code>, <code>97</code>, <code>98</code> ou <code>99</code>, pertencentes aos imunobiológicos de COVID-19. Nestas condições, é de preenchimento obrigatório.</p>
 
   </article>
 

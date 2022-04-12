@@ -92,8 +92,17 @@
 				<dose>1</dose>
 				<lote>ABC</lote>
 				<fabricante>PFIZER/BIONTECH</fabricante>
-				<grupoAtendimento>11</grupoAtendimento>
+				<grupoAtendimento>5</grupoAtendimento>
 				<stRegistroAnterior>false</stRegistroAnterior>
+			</vacinas>
+			<vacinas>
+				<imunobiologico>87</imunobiologico>
+				<estrategiaVacinacao>11</estrategiaVacinacao>
+				<dose>1</dose>
+				<lote>ABC</lote>
+				<fabricante>PFIZER/BIONTECH</fabricante>
+				<stRegistroAnterior>true</stRegistroAnterior>
+				<dataRegistroAnterior>1495542619000</dataRegistroAnterior>
 				<stAplicadoExterior>true</stAplicadoExterior>
 			</vacinas>
 			<dataHoraInicialAtendimento>1551538800000</dataHoraInicialAtendimento>

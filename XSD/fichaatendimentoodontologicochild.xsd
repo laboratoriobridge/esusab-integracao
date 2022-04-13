@@ -33,6 +33,8 @@
       <xs:element maxOccurs="unbounded" minOccurs="0" name="medicamentos" type="medicamento:medicamentoTransport"/>
       <xs:element maxOccurs="unbounded" minOccurs="0" name="encaminhamentos" type="encaminhamentoExterno:encaminhamentoExternoTransport"/>
       <xs:element maxOccurs="unbounded" minOccurs="0" name="resultadosExames" type="resultadosExame:resultadosExameTransport"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="pesoAcompanhamentoNutricional" type="xs:double"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="alturaAcompanhamentoNutricional" type="xs:double"/>
     </xs:sequence>
   </xs:complexType>
 </xs:schema>

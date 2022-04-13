@@ -31,6 +31,7 @@ namespace br.gov.saude.esusab.ras.vacinacao
     private long _grupoAtendimento;
     private bool _stRegistroAnterior;
     private long _dataRegistroAnterior;
+    private bool _stAplicadoExterior;
 
     public long Imunobiologico
     {
@@ -136,6 +137,19 @@ namespace br.gov.saude.esusab.ras.vacinacao
       }
     }
 
+    public bool StAplicadoExterior
+    {
+      get
+      {
+        return _stAplicadoExterior;
+      }
+      set
+      {
+        __isset.stAplicadoExterior = true;
+        this._stAplicadoExterior = value;
+      }
+    }
+
 
     public Isset __isset;
     #if !SILVERLIGHT
@@ -150,6 +164,7 @@ namespace br.gov.saude.esusab.ras.vacinacao
       public bool grupoAtendimento;
       public bool stRegistroAnterior;
       public bool dataRegistroAnterior;
+      public bool stAplicadoExterior;
     }
 
     public VacinaRowThrift() {
@@ -222,6 +237,13 @@ namespace br.gov.saude.esusab.ras.vacinacao
             case 8:
               if (field.Type == TType.I64) {
                 DataRegistroAnterior = iprot.ReadI64();
+              } else { 
+                TProtocolUtil.Skip(iprot, field.Type);
+              }
+              break;
+            case 9:
+              if (field.Type == TType.Bool) {
+                StAplicadoExterior = iprot.ReadBool();
               } else { 
                 TProtocolUtil.Skip(iprot, field.Type);
               }
@@ -311,6 +333,14 @@ namespace br.gov.saude.esusab.ras.vacinacao
           oprot.WriteI64(DataRegistroAnterior);
           oprot.WriteFieldEnd();
         }
+        if (__isset.stAplicadoExterior) {
+          field.Name = "stAplicadoExterior";
+          field.Type = TType.Bool;
+          field.ID = 9;
+          oprot.WriteFieldBegin(field);
+          oprot.WriteBool(StAplicadoExterior);
+          oprot.WriteFieldEnd();
+        }
         oprot.WriteFieldStop();
         oprot.WriteStructEnd();
       }
@@ -370,6 +400,12 @@ namespace br.gov.saude.esusab.ras.vacinacao
         __first = false;
         __sb.Append("DataRegistroAnterior: ");
         __sb.Append(DataRegistroAnterior);
+      }
+      if (__isset.stAplicadoExterior) {
+        if(!__first) { __sb.Append(", "); }
+        __first = false;
+        __sb.Append("StAplicadoExterior: ");
+        __sb.Append(StAplicadoExterior);
       }
       __sb.Append(")");
       return __sb.ToString();

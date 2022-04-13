@@ -92,8 +92,18 @@
 				<dose>1</dose>
 				<lote>ABC</lote>
 				<fabricante>PFIZER/BIONTECH</fabricante>
-				<grupoAtendimento>11</grupoAtendimento>
+				<grupoAtendimento>5</grupoAtendimento>
 				<stRegistroAnterior>false</stRegistroAnterior>
+			</vacinas>
+			<vacinas>
+				<imunobiologico>87</imunobiologico>
+				<estrategiaVacinacao>11</estrategiaVacinacao>
+				<dose>1</dose>
+				<lote>ABC</lote>
+				<fabricante>PFIZER/BIONTECH</fabricante>
+				<stRegistroAnterior>true</stRegistroAnterior>
+				<dataRegistroAnterior>1495542619000</dataRegistroAnterior>
+				<stAplicadoExterior>true</stAplicadoExterior>
 			</vacinas>
 			<dataHoraInicialAtendimento>1551538800000</dataHoraInicialAtendimento>
 			<dataHoraFinalAtendimento>1551538800000</dataHoraFinalAtendimento>
@@ -119,5 +129,5 @@
 		<versaoSistema>3.2.18</versaoSistema>
 		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:originadora>
-	<versao major="4" minor="2" revision="0" />
+	<versao major="4" minor="3" revision="4" />
 </ns3:dadoTransporteTransportXml>

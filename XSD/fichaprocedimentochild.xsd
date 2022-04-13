@@ -14,6 +14,8 @@
       <xs:element maxOccurs="unbounded" minOccurs="0" name="procedimentos" type="xs:string"/>
       <xs:element maxOccurs="1" minOccurs="0" name="dataHoraInicialAtendimento" type="xs:long"/>
       <xs:element maxOccurs="1" minOccurs="0" name="dataHoraFinalAtendimento" type="xs:long"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="pesoAcompanhamentoNutricional" type="xs:double"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="alturaAcompanhamentoNutricional" type="xs:double"/>
     </xs:sequence>
   </xs:complexType>
 </xs:schema>

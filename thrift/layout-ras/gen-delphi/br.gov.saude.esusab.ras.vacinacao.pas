@@ -48,6 +48,8 @@ type
     procedure SetStRegistroAnterior( const Value: Boolean);
     function GetDataRegistroAnterior: Int64;
     procedure SetDataRegistroAnterior( const Value: Int64);
+    function GetStAplicadoExterior: Boolean;
+    procedure SetStAplicadoExterior( const Value: Boolean);
 
     property Imunobiologico: Int64 read GetImunobiologico write SetImunobiologico;
     property EstrategiaVacinacao: Int64 read GetEstrategiaVacinacao write SetEstrategiaVacinacao;
@@ -57,6 +59,7 @@ type
     property GrupoAtendimento: Int64 read GetGrupoAtendimento write SetGrupoAtendimento;
     property StRegistroAnterior: Boolean read GetStRegistroAnterior write SetStRegistroAnterior;
     property DataRegistroAnterior: Int64 read GetDataRegistroAnterior write SetDataRegistroAnterior;
+    property StAplicadoExterior: Boolean read GetStAplicadoExterior write SetStAplicadoExterior;
 
     function Get__isset_Imunobiologico: Boolean;
     function Get__isset_EstrategiaVacinacao: Boolean;
@@ -66,6 +69,7 @@ type
     function Get__isset_GrupoAtendimento: Boolean;
     function Get__isset_StRegistroAnterior: Boolean;
     function Get__isset_DataRegistroAnterior: Boolean;
+    function Get__isset_StAplicadoExterior: Boolean;
 
     property __isset_Imunobiologico: Boolean read Get__isset_Imunobiologico;
     property __isset_EstrategiaVacinacao: Boolean read Get__isset_EstrategiaVacinacao;
@@ -75,6 +79,7 @@ type
     property __isset_GrupoAtendimento: Boolean read Get__isset_GrupoAtendimento;
     property __isset_StRegistroAnterior: Boolean read Get__isset_StRegistroAnterior;
     property __isset_DataRegistroAnterior: Boolean read Get__isset_DataRegistroAnterior;
+    property __isset_StAplicadoExterior: Boolean read Get__isset_StAplicadoExterior;
   end;
 
   TVacinaRowThriftImpl = class(TInterfacedObject, IBase, IVacinaRowThrift)
@@ -87,6 +92,7 @@ type
     FGrupoAtendimento: Int64;
     FStRegistroAnterior: Boolean;
     FDataRegistroAnterior: Int64;
+    FStAplicadoExterior: Boolean;
     
     F__isset_Imunobiologico: Boolean;
     F__isset_EstrategiaVacinacao: Boolean;
@@ -96,6 +102,7 @@ type
     F__isset_GrupoAtendimento: Boolean;
     F__isset_StRegistroAnterior: Boolean;
     F__isset_DataRegistroAnterior: Boolean;
+    F__isset_StAplicadoExterior: Boolean;
     
     function GetImunobiologico: Int64;
     procedure SetImunobiologico( const Value: Int64);
@@ -113,6 +120,8 @@ type
     procedure SetStRegistroAnterior( const Value: Boolean);
     function GetDataRegistroAnterior: Int64;
     procedure SetDataRegistroAnterior( const Value: Int64);
+    function GetStAplicadoExterior: Boolean;
+    procedure SetStAplicadoExterior( const Value: Boolean);
 
     function Get__isset_Imunobiologico: Boolean;
     function Get__isset_EstrategiaVacinacao: Boolean;
@@ -122,6 +131,7 @@ type
     function Get__isset_GrupoAtendimento: Boolean;
     function Get__isset_StRegistroAnterior: Boolean;
     function Get__isset_DataRegistroAnterior: Boolean;
+    function Get__isset_StAplicadoExterior: Boolean;
   public
     constructor Create;
     destructor Destroy; override;
@@ -141,6 +151,7 @@ type
     property GrupoAtendimento: Int64 read GetGrupoAtendimento write SetGrupoAtendimento;
     property StRegistroAnterior: Boolean read GetStRegistroAnterior write SetStRegistroAnterior;
     property DataRegistroAnterior: Int64 read GetDataRegistroAnterior write SetDataRegistroAnterior;
+    property StAplicadoExterior: Boolean read GetStAplicadoExterior write SetStAplicadoExterior;
 
     // isset
     property __isset_Imunobiologico: Boolean read Get__isset_Imunobiologico;
@@ -151,6 +162,7 @@ type
     property __isset_GrupoAtendimento: Boolean read Get__isset_GrupoAtendimento;
     property __isset_StRegistroAnterior: Boolean read Get__isset_StRegistroAnterior;
     property __isset_DataRegistroAnterior: Boolean read Get__isset_DataRegistroAnterior;
+    property __isset_StAplicadoExterior: Boolean read Get__isset_StAplicadoExterior;
   end;
 
   IFichaVacinacaoChildThrift = interface(IBase)
@@ -556,6 +568,22 @@ begin
   Result := F__isset_DataRegistroAnterior;
 end;
 
+function TVacinaRowThriftImpl.GetStAplicadoExterior: Boolean;
+begin
+  Result := FStAplicadoExterior;
+end;
+
+procedure TVacinaRowThriftImpl.SetStAplicadoExterior( const Value: Boolean);
+begin
+  F__isset_StAplicadoExterior := True;
+  FStAplicadoExterior := Value;
+end;
+
+function TVacinaRowThriftImpl.Get__isset_StAplicadoExterior: Boolean;
+begin
+  Result := F__isset_StAplicadoExterior;
+end;
+
 procedure TVacinaRowThriftImpl.Read( const iprot: IProtocol);
 var
   field_ : IField;
@@ -641,6 +669,15 @@ begin
           if (field_.Type_ = TType.I64) then
           begin
             DataRegistroAnterior := iprot.ReadI64();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        9: begin
+          if (field_.Type_ = TType.Bool_) then
+          begin
+            StAplicadoExterior := iprot.ReadBool();
           end else
           begin
             TProtocolUtil.Skip(iprot, field_.Type_);
@@ -739,6 +776,15 @@ begin
     oprot.WriteI64(DataRegistroAnterior);
     oprot.WriteFieldEnd();
   end;
+  if (__isset_StAplicadoExterior) then
+  begin
+    field_.Name := 'stAplicadoExterior';
+    field_.Type_  := TType.Bool_;
+    field_.ID := 9;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteBool(StAplicadoExterior);
+    oprot.WriteFieldEnd();
+  end;
   oprot.WriteFieldStop();
   oprot.WriteStructEnd();
 end;
@@ -798,6 +844,12 @@ begin
       _first1 := FALSE;
       _sb0.Append('DataRegistroAnterior: ');
       _sb0.Append(DataRegistroAnterior);
+    end;
+    if (__isset_StAplicadoExterior) then begin
+      if not _first1 then _sb0.Append(',');
+      _first1 := FALSE;
+      _sb0.Append('StAplicadoExterior: ');
+      _sb0.Append(StAplicadoExterior);
     end;
     _sb0.Append(')');
     Result := _sb0.ToString;

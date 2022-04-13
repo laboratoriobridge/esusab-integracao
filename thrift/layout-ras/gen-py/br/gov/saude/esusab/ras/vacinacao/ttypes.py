@@ -30,6 +30,7 @@ class VacinaRowThrift:
    - grupoAtendimento
    - stRegistroAnterior
    - dataRegistroAnterior
+   - stAplicadoExterior
   """
 
   thrift_spec = (
@@ -42,9 +43,10 @@ class VacinaRowThrift:
     (6, TType.I64, 'grupoAtendimento', None, None, ), # 6
     (7, TType.BOOL, 'stRegistroAnterior', None, None, ), # 7
     (8, TType.I64, 'dataRegistroAnterior', None, None, ), # 8
+    (9, TType.BOOL, 'stAplicadoExterior', None, None, ), # 9
   )
 
-  def __init__(self, imunobiologico=None, estrategiaVacinacao=None, dose=None, lote=None, fabricante=None, grupoAtendimento=None, stRegistroAnterior=None, dataRegistroAnterior=None,):
+  def __init__(self, imunobiologico=None, estrategiaVacinacao=None, dose=None, lote=None, fabricante=None, grupoAtendimento=None, stRegistroAnterior=None, dataRegistroAnterior=None, stAplicadoExterior=None,):
     self.imunobiologico = imunobiologico
     self.estrategiaVacinacao = estrategiaVacinacao
     self.dose = dose
@@ -53,6 +55,7 @@ class VacinaRowThrift:
     self.grupoAtendimento = grupoAtendimento
     self.stRegistroAnterior = stRegistroAnterior
     self.dataRegistroAnterior = dataRegistroAnterior
+    self.stAplicadoExterior = stAplicadoExterior
 
   def read(self, iprot):
     if iprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None and fastbinary is not None:
@@ -103,6 +106,11 @@ class VacinaRowThrift:
           self.dataRegistroAnterior = iprot.readI64()
         else:
           iprot.skip(ftype)
+      elif fid == 9:
+        if ftype == TType.BOOL:
+          self.stAplicadoExterior = iprot.readBool()
+        else:
+          iprot.skip(ftype)
       else:
         iprot.skip(ftype)
       iprot.readFieldEnd()
@@ -145,6 +153,10 @@ class VacinaRowThrift:
       oprot.writeFieldBegin('dataRegistroAnterior', TType.I64, 8)
       oprot.writeI64(self.dataRegistroAnterior)
       oprot.writeFieldEnd()
+    if self.stAplicadoExterior is not None:
+      oprot.writeFieldBegin('stAplicadoExterior', TType.BOOL, 9)
+      oprot.writeBool(self.stAplicadoExterior)
+      oprot.writeFieldEnd()
     oprot.writeFieldStop()
     oprot.writeStructEnd()
 
@@ -162,6 +174,7 @@ class VacinaRowThrift:
     value = (value * 31) ^ hash(self.grupoAtendimento)
     value = (value * 31) ^ hash(self.stRegistroAnterior)
     value = (value * 31) ^ hash(self.dataRegistroAnterior)
+    value = (value * 31) ^ hash(self.stAplicadoExterior)
     return value
 
   def __repr__(self):

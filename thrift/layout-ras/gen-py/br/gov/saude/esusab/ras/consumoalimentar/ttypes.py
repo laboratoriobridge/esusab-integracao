@@ -484,7 +484,6 @@ class FichaConsumoAlimentarThrift:
   Attributes:
    - headerTransport
    - cnsCidadao
-   - identificacaoUsuario
    - dataNascimento
    - sexo
    - localAtendimento
@@ -500,7 +499,7 @@ class FichaConsumoAlimentarThrift:
     None, # 0
     (1, TType.STRUCT, 'headerTransport', (br.gov.saude.esusab.ras.common.ttypes.UnicaLotacaoHeaderThrift, br.gov.saude.esusab.ras.common.ttypes.UnicaLotacaoHeaderThrift.thrift_spec), None, ), # 1
     (2, TType.STRING, 'cnsCidadao', None, None, ), # 2
-    (3, TType.STRING, 'identificacaoUsuario', None, None, ), # 3
+    None, # 3
     (4, TType.I64, 'dataNascimento', None, None, ), # 4
     (5, TType.I64, 'sexo', None, None, ), # 5
     (6, TType.I64, 'localAtendimento', None, None, ), # 6
@@ -512,10 +511,9 @@ class FichaConsumoAlimentarThrift:
     (12, TType.STRING, 'cpfCidadao', None, None, ), # 12
   )
 
-  def __init__(self, headerTransport=None, cnsCidadao=None, identificacaoUsuario=None, dataNascimento=None, sexo=None, localAtendimento=None, perguntasQuestionarioCriancasMenoresSeisMeses=None, perguntasQuestionarioCriancasDeSeisVinteTresMeses=None, perguntasQuestionarioCriancasComMaisDoisAnos=None, uuidFicha=None, tpCdsOrigem=None, cpfCidadao=None,):
+  def __init__(self, headerTransport=None, cnsCidadao=None, dataNascimento=None, sexo=None, localAtendimento=None, perguntasQuestionarioCriancasMenoresSeisMeses=None, perguntasQuestionarioCriancasDeSeisVinteTresMeses=None, perguntasQuestionarioCriancasComMaisDoisAnos=None, uuidFicha=None, tpCdsOrigem=None, cpfCidadao=None,):
     self.headerTransport = headerTransport
     self.cnsCidadao = cnsCidadao
-    self.identificacaoUsuario = identificacaoUsuario
     self.dataNascimento = dataNascimento
     self.sexo = sexo
     self.localAtendimento = localAtendimento
@@ -544,11 +542,6 @@ class FichaConsumoAlimentarThrift:
       elif fid == 2:
         if ftype == TType.STRING:
           self.cnsCidadao = iprot.readString()
-        else:
-          iprot.skip(ftype)
-      elif fid == 3:
-        if ftype == TType.STRING:
-          self.identificacaoUsuario = iprot.readString()
         else:
           iprot.skip(ftype)
       elif fid == 4:
@@ -632,10 +625,6 @@ class FichaConsumoAlimentarThrift:
       oprot.writeFieldBegin('cnsCidadao', TType.STRING, 2)
       oprot.writeString(self.cnsCidadao)
       oprot.writeFieldEnd()
-    if self.identificacaoUsuario is not None:
-      oprot.writeFieldBegin('identificacaoUsuario', TType.STRING, 3)
-      oprot.writeString(self.identificacaoUsuario)
-      oprot.writeFieldEnd()
     if self.dataNascimento is not None:
       oprot.writeFieldBegin('dataNascimento', TType.I64, 4)
       oprot.writeI64(self.dataNascimento)
@@ -694,7 +683,6 @@ class FichaConsumoAlimentarThrift:
     value = 17
     value = (value * 31) ^ hash(self.headerTransport)
     value = (value * 31) ^ hash(self.cnsCidadao)
-    value = (value * 31) ^ hash(self.identificacaoUsuario)
     value = (value * 31) ^ hash(self.dataNascimento)
     value = (value * 31) ^ hash(self.sexo)
     value = (value * 31) ^ hash(self.localAtendimento)

@@ -4,11 +4,10 @@
 package atendindividual
 
 import (
+	"br/gov/saude/esusab/ras/common"
 	"bytes"
 	"fmt"
 	"git.apache.org/thrift.git/lib/go/thrift"
-	"br/gov/saude/esusab/ras/common"
-
 )
 
 // (needed to ensure safety because of naive import list construction.)
@@ -20,4 +19,3 @@ var _ = common.GoUnusedProtection__
 
 func init() {
 }
-

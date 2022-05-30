@@ -315,7 +315,6 @@ PerguntaQuestionarioCriancasComMaisDoisAnosThrift.prototype.write = function(out
 FichaConsumoAlimentarThrift = module.exports.FichaConsumoAlimentarThrift = function(args) {
   this.headerTransport = null;
   this.cnsCidadao = null;
-  this.identificacaoUsuario = null;
   this.dataNascimento = null;
   this.sexo = null;
   this.localAtendimento = null;
@@ -331,9 +330,6 @@ FichaConsumoAlimentarThrift = module.exports.FichaConsumoAlimentarThrift = funct
     }
     if (args.cnsCidadao !== undefined && args.cnsCidadao !== null) {
       this.cnsCidadao = args.cnsCidadao;
-    }
-    if (args.identificacaoUsuario !== undefined && args.identificacaoUsuario !== null) {
-      this.identificacaoUsuario = args.identificacaoUsuario;
     }
     if (args.dataNascimento !== undefined && args.dataNascimento !== null) {
       this.dataNascimento = args.dataNascimento;
@@ -391,13 +387,6 @@ FichaConsumoAlimentarThrift.prototype.read = function(input) {
       case 2:
       if (ftype == Thrift.Type.STRING) {
         this.cnsCidadao = input.readString();
-      } else {
-        input.skip(ftype);
-      }
-      break;
-      case 3:
-      if (ftype == Thrift.Type.STRING) {
-        this.identificacaoUsuario = input.readString();
       } else {
         input.skip(ftype);
       }
@@ -526,11 +515,6 @@ FichaConsumoAlimentarThrift.prototype.write = function(output) {
   if (this.cnsCidadao !== null && this.cnsCidadao !== undefined) {
     output.writeFieldBegin('cnsCidadao', Thrift.Type.STRING, 2);
     output.writeString(this.cnsCidadao);
-    output.writeFieldEnd();
-  }
-  if (this.identificacaoUsuario !== null && this.identificacaoUsuario !== undefined) {
-    output.writeFieldBegin('identificacaoUsuario', Thrift.Type.STRING, 3);
-    output.writeString(this.identificacaoUsuario);
     output.writeFieldEnd();
   }
   if (this.dataNascimento !== null && this.dataNascimento !== undefined) {

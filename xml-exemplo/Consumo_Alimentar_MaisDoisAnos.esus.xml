@@ -16,7 +16,6 @@
 			<codigoIbgeMunicipio>4205407</codigoIbgeMunicipio>
 		</headerTransport>
 		<cpfCidadao>31422733521</cpfCidadao>
-		<identificacaoUsuario>JOÃO SANTOS</identificacaoUsuario>
 		<dataNascimento>1012658400000</dataNascimento>
 		<sexo>0</sexo>
 		<localAtendimento>2</localAtendimento>
@@ -68,7 +67,7 @@
 		<nomeOuRazaoSocial>ADMINISTRADOR INSTALAÇÃO</nomeOuRazaoSocial>
 		<fone>8216756527</fone>
 		<email>prof@esus.br</email>
-		<versaoSistema>3.2.18</versaoSistema>
+		<versaoSistema>4.3.6</versaoSistema>
 		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:remetente>
 	<ns2:originadora>
@@ -78,8 +77,8 @@
 		<nomeOuRazaoSocial>ADMINISTRADOR INSTALAÇÃO</nomeOuRazaoSocial>
 		<fone>8216756527</fone>
 		<email>prof@esus.br</email>
-		<versaoSistema>3.2.18</versaoSistema>
+		<versaoSistema>4.3.6</versaoSistema>
 		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:originadora>
-	<versao major="3" minor="2" revision="4" />
+	<versao major="4" minor="3" revision="5" />
 </ns3:dadoTransporteTransportXml>

@@ -507,10 +507,6 @@ class FichaConsumoAlimentarThrift {
    */
   public $cnsCidadao = null;
   /**
-   * @var string
-   */
-  public $identificacaoUsuario = null;
-  /**
    * @var int
    */
   public $dataNascimento = null;
@@ -557,10 +553,6 @@ class FichaConsumoAlimentarThrift {
           ),
         2 => array(
           'var' => 'cnsCidadao',
-          'type' => TType::STRING,
-          ),
-        3 => array(
-          'var' => 'identificacaoUsuario',
           'type' => TType::STRING,
           ),
         4 => array(
@@ -623,9 +615,6 @@ class FichaConsumoAlimentarThrift {
       if (isset($vals['cnsCidadao'])) {
         $this->cnsCidadao = $vals['cnsCidadao'];
       }
-      if (isset($vals['identificacaoUsuario'])) {
-        $this->identificacaoUsuario = $vals['identificacaoUsuario'];
-      }
       if (isset($vals['dataNascimento'])) {
         $this->dataNascimento = $vals['dataNascimento'];
       }
@@ -686,13 +675,6 @@ class FichaConsumoAlimentarThrift {
         case 2:
           if ($ftype == TType::STRING) {
             $xfer += $input->readString($this->cnsCidadao);
-          } else {
-            $xfer += $input->skip($ftype);
-          }
-          break;
-        case 3:
-          if ($ftype == TType::STRING) {
-            $xfer += $input->readString($this->identificacaoUsuario);
           } else {
             $xfer += $input->skip($ftype);
           }
@@ -817,11 +799,6 @@ class FichaConsumoAlimentarThrift {
     if ($this->cnsCidadao !== null) {
       $xfer += $output->writeFieldBegin('cnsCidadao', TType::STRING, 2);
       $xfer += $output->writeString($this->cnsCidadao);
-      $xfer += $output->writeFieldEnd();
-    }
-    if ($this->identificacaoUsuario !== null) {
-      $xfer += $output->writeFieldBegin('identificacaoUsuario', TType::STRING, 3);
-      $xfer += $output->writeString($this->identificacaoUsuario);
       $xfer += $output->writeFieldEnd();
     }
     if ($this->dataNascimento !== null) {

@@ -172,7 +172,6 @@ module Br
               include ::Thrift::Struct, ::Thrift::Struct_Union
               HEADERTRANSPORT = 1
               CNSCIDADAO = 2
-              IDENTIFICACAOUSUARIO = 3
               DATANASCIMENTO = 4
               SEXO = 5
               LOCALATENDIMENTO = 6
@@ -186,7 +185,6 @@ module Br
               FIELDS = {
                 HEADERTRANSPORT => {:type => ::Thrift::Types::STRUCT, :name => 'headerTransport', :class => ::Br::Gov::Saude::Esusab::Ras::Common::UnicaLotacaoHeaderThrift, :optional => true},
                 CNSCIDADAO => {:type => ::Thrift::Types::STRING, :name => 'cnsCidadao', :optional => true},
-                IDENTIFICACAOUSUARIO => {:type => ::Thrift::Types::STRING, :name => 'identificacaoUsuario', :optional => true},
                 DATANASCIMENTO => {:type => ::Thrift::Types::I64, :name => 'dataNascimento', :optional => true},
                 SEXO => {:type => ::Thrift::Types::I64, :name => 'sexo', :optional => true},
                 LOCALATENDIMENTO => {:type => ::Thrift::Types::I64, :name => 'localAtendimento', :optional => true},

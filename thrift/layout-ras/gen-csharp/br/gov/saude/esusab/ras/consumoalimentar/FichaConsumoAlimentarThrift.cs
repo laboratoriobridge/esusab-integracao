@@ -25,7 +25,6 @@ namespace br.gov.saude.esusab.ras.consumoalimentar
   {
     private br.gov.saude.esusab.ras.common.UnicaLotacaoHeaderThrift _headerTransport;
     private string _cnsCidadao;
-    private string _identificacaoUsuario;
     private long _dataNascimento;
     private long _sexo;
     private long _localAtendimento;
@@ -58,19 +57,6 @@ namespace br.gov.saude.esusab.ras.consumoalimentar
       {
         __isset.cnsCidadao = true;
         this._cnsCidadao = value;
-      }
-    }
-
-    public string IdentificacaoUsuario
-    {
-      get
-      {
-        return _identificacaoUsuario;
-      }
-      set
-      {
-        __isset.identificacaoUsuario = true;
-        this._identificacaoUsuario = value;
       }
     }
 
@@ -188,7 +174,6 @@ namespace br.gov.saude.esusab.ras.consumoalimentar
     public struct Isset {
       public bool headerTransport;
       public bool cnsCidadao;
-      public bool identificacaoUsuario;
       public bool dataNascimento;
       public bool sexo;
       public bool localAtendimento;
@@ -233,13 +218,6 @@ namespace br.gov.saude.esusab.ras.consumoalimentar
             case 2:
               if (field.Type == TType.String) {
                 CnsCidadao = iprot.ReadString();
-              } else { 
-                TProtocolUtil.Skip(iprot, field.Type);
-              }
-              break;
-            case 3:
-              if (field.Type == TType.String) {
-                IdentificacaoUsuario = iprot.ReadString();
               } else { 
                 TProtocolUtil.Skip(iprot, field.Type);
               }
@@ -380,14 +358,6 @@ namespace br.gov.saude.esusab.ras.consumoalimentar
           oprot.WriteString(CnsCidadao);
           oprot.WriteFieldEnd();
         }
-        if (IdentificacaoUsuario != null && __isset.identificacaoUsuario) {
-          field.Name = "identificacaoUsuario";
-          field.Type = TType.String;
-          field.ID = 3;
-          oprot.WriteFieldBegin(field);
-          oprot.WriteString(IdentificacaoUsuario);
-          oprot.WriteFieldEnd();
-        }
         if (__isset.dataNascimento) {
           field.Name = "dataNascimento";
           field.Type = TType.I64;
@@ -502,12 +472,6 @@ namespace br.gov.saude.esusab.ras.consumoalimentar
         __first = false;
         __sb.Append("CnsCidadao: ");
         __sb.Append(CnsCidadao);
-      }
-      if (IdentificacaoUsuario != null && __isset.identificacaoUsuario) {
-        if(!__first) { __sb.Append(", "); }
-        __first = false;
-        __sb.Append("IdentificacaoUsuario: ");
-        __sb.Append(IdentificacaoUsuario);
       }
       if (__isset.dataNascimento) {
         if(!__first) { __sb.Append(", "); }

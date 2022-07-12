@@ -97,8 +97,7 @@ struct PerguntaQuestionarioCriancasComMaisDoisAnosThrift {
 struct FichaConsumoAlimentarThrift {
 	1:optional common.UnicaLotacaoHeaderThrift headerTransport;
 	2:optional string cnsCidadao;                       
-	3:optional string identificacaoUsuario;
-	4:optional i64 dataNascimento;              
+	4:optional i64 dataNascimento;
 	5:optional i64 sexo;
 	6:optional i64 localAtendimento;
 	7:optional list<PerguntaQuestionarioCriancasMenoresSeisMesesThrift> perguntasQuestionarioCriancasMenoresSeisMeses;

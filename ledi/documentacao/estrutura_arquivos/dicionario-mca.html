@@ -25,7 +25,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 4.3.4</span>
+        <span class="label">versão 4.3.5</span>
       
     </a>
 
@@ -75,7 +75,7 @@
           
         
           
-            <li><a title="Layout e-SUS APS de Dados e Interface Versão 4.3.4" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 4.3.4</a></li>
+            <li><a title="Layout e-SUS APS de Dados e Interface Versão 4.3.5" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 4.3.5</a></li>
           
         
           
@@ -115,9 +115,9 @@
   <ul>
     
       <li>
-        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 4.3.4" href="/ledi/documentacao/index.html" class="back-link">
+        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 4.3.5" href="/ledi/documentacao/index.html" class="back-link">
           <i class="icon icon-back"></i> Voltar
-          <small>(Layout e-SUS APS de Dados e Interface Versão 4.3.4)</small>
+          <small>(Layout e-SUS APS de Dados e Interface Versão 4.3.5)</small>
         </a>
       </li>
     
@@ -289,7 +289,7 @@
 </thead><tbody>
 <tr>
 <td>String</td>
-<td>Não</td>
+<td>Condicional</td>
 <td>15</td>
 <td>15</td>
 </tr>
@@ -298,33 +298,12 @@
 <p><strong>Regra:</strong></p>
 
 <ul>
-<li>CNS validado de acordo com o algoritmo;</li>
+<li>Validado por algoritmo;</li>
 <li>Não pode ser preenchido se o campo <a href="#12-cpfcidadao">cpfCidadao</a> for preenchido.</li>
+<li>Este campo é de preenchimento obrigatório apenas se o campo <a href="#12-cpfcidadao">cpfCidadao</a> não estiver preenchido.</li>
 </ul>
 
 <p><strong>Referência:</strong> O algoritmo de validação está presente em <a href="/ledi/documentacao/regras/algoritmo_CNS.html">Validar CNS</a>.</p>
-
-<h3 id="3-identificacaousuario">#3 identificacaoUsuario</h3>
-
-<p>Nome do cidadão.</p>
-
-<table><thead>
-<tr>
-<th>Tipo</th>
-<th>Obrigatório</th>
-<th>Mínimo</th>
-<th>Máximo</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>String</td>
-<td>Sim</td>
-<td>3</td>
-<td>70</td>
-</tr>
-</tbody></table>
-
-<p><strong>Regra:</strong> As regras de validação de um nome estão descritas em <a href="/ledi/documentacao/regras/validar_nome.html">Validar nome</a>.</p>
 
 <h3 id="4-datanascimento">#4 dataNascimento</h3>
 
@@ -534,7 +513,7 @@
 </thead><tbody>
 <tr>
 <td>String</td>
-<td>Não</td>
+<td>Condicional</td>
 <td>11</td>
 <td>11</td>
 </tr>
@@ -545,6 +524,7 @@
 <ul>
 <li>Somente CPF válido será aceito;</li>
 <li>Não pode ser preenchido se o campo <a href="#2-cnscidadao">cnsCidadao</a> for preenchido.</li>
+<li>Este campo é de preenchimento obrigatório apenas se o campo <a href="#2-cnscidadao">cnsCidadao</a> não estiver preenchido.</li>
 </ul>
 
 <h2 id="perguntaquestionariocriancasmenoresseismeses">PerguntaQuestionarioCriancasMenoresSeisMeses</h2>

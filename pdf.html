@@ -25,7 +25,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 4.3.5</span>
+        <span class="label">versão 4.3.6</span>
       
     </a>
 
@@ -137,7 +137,7 @@
 
       <li id="item-layout_ab" data-url="/ledi/documentacao/index.html">
         <label>
-          <input type="checkbox" value="layout_ab" checked="checked"> Layout e-SUS APS de Dados e Interface Versão 4.3.5
+          <input type="checkbox" value="layout_ab" checked="checked"> Layout e-SUS APS de Dados e Interface Versão 4.3.6
           <small>
             <a onclick="checkById('layout_ab', true); return false;">Marcar todos</a> |
             <a onclick="checkById('layout_ab', false); return false;">Desmarcar todos</a>
@@ -659,7 +659,7 @@
 
       <li id="item-principais_alteracoes" data-url="/ledi/documentacao/principais_alteracoes.html">
         <label>
-          <input type="checkbox" value="principais_alteracoes" checked="checked"> Principais alterações da v4.3.4 para a v4.3.5
+          <input type="checkbox" value="principais_alteracoes" checked="checked"> Principais alterações da v4.3.5 para a v4.3.6
           <small>
             <a onclick="checkById('principais_alteracoes', true); return false;">Marcar todos</a> |
             <a onclick="checkById('principais_alteracoes', false); return false;">Desmarcar todos</a>
@@ -985,7 +985,7 @@
   
       <!-- Cria a lista de itens[páginas] que foram selecionados  -->
 
-  <li id="summary-layout_ab"><a href="#layout_ab">Layout e-SUS APS de Dados e Interface Versão 4.3.5</a></li>
+  <li id="summary-layout_ab"><a href="#layout_ab">Layout e-SUS APS de Dados e Interface Versão 4.3.6</a></li>
   
       <!-- Cria a lista de itens[páginas] que foram selecionados  -->
 
@@ -1206,7 +1206,7 @@
 
   
 
-  <li id="summary-principais_alteracoes"><a href="#principais_alteracoes">Principais alterações da v4.3.4 para a v4.3.5</a></li>
+  <li id="summary-principais_alteracoes"><a href="#principais_alteracoes">Principais alterações da v4.3.5 para a v4.3.6</a></li>
   
       <!-- Cria a lista de itens[páginas] que foram selecionados  -->
 
@@ -1458,7 +1458,11 @@
 </tr>
 <tr>
 <td>4.5.10 ou superior</td>
-<td><a href="/ledi/documentacao/index.html">LEDI APS 4.3.5</a></td>
+<td><a href="https://integracao.esusab.ufsc.br/v435/">LEDI APS 4.3.5</a></td>
+</tr>
+<tr>
+<td>4.5.12 ou superior</td>
+<td><a href="/ledi/documentacao/index.html">LEDI APS 4.3.6</a></td>
 </tr>
 </tbody></table>
 
@@ -1471,17 +1475,17 @@
         
     <div class="post pdf shown" id="layout_ab" data-url="/ledi/documentacao/index.html">
       <header class="post-header">
-        <h1 class="post-title">Layout e-SUS APS de Dados e Interface Versão 4.3.5</h1>
+        <h1 class="post-title">Layout e-SUS APS de Dados e Interface Versão 4.3.6</h1>
       </header>
 
       
 
       <article class="post-content">
-        <p>Esta documentação descreve as estruturas de dados, seus atributos e regras utilizadas no <strong>LEDI APS</strong> versão 4.3.5.</p>
+        <p>Esta documentação descreve as estruturas de dados, seus atributos e regras utilizadas no <strong>LEDI APS</strong> versão 4.3.6.</p>
 
-<p>A versão <strong>LEDI APS</strong> 4.3.5 é compatível com o sistema <strong>PEC e-SUS APS</strong> versão 4.5.10 ou superior.</p>
+<p>A versão <strong>LEDI APS</strong> 4.3.6 é compatível com o sistema <strong>PEC e-SUS APS</strong> versão 4.5.12 ou superior.</p>
 
-<p>Confira as principais alterações da V4.3.4 para a V4.3.5 <a href="/ledi/documentacao/principais_alteracoes.html">aqui</a>.</p>
+<p>Confira as principais alterações da V4.3.5 para a V4.3.6 <a href="/ledi/documentacao/principais_alteracoes.html">aqui</a>.</p>
 
       </article>
 
@@ -4724,7 +4728,7 @@
 <p><strong>Regras:</strong></p>
 
 <ul>
-<li>Se o campo <a href="/ledi/documentacao/estrutura_arquivos/#12-tipodeimovel">tipoDeImovel</a> for diferente de <code>01</code> Domicílio, todas as famílias cadastradas devem ter o campo <a href="/ledi/documentacao/estrutura_arquivos/#7-stmudanca">stMudanca</a> = <code>true</code>;</li>
+<li>Só pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#12-tipodeimovel">tipoDeImovel</a> = <code>01</code> Domicílio;</li>
 <li>Não podem ser cadastradas famílias com o mesmo <a href="/ledi/documentacao/estrutura_arquivos/#2-numerocnsresponsavel">numeroCnsResponsavel</a>;</li>
 <li>Não pode ser preenchido caso o campo <a href="/ledi/documentacao/estrutura_arquivos/#8-statustermorecusa">statusTermoRecusa</a> = <code>true</code>.</li>
 </ul>
@@ -47463,7 +47467,7 @@
 <td>revision</td>
 <td>Integer</td>
 <td>Sim</td>
-<td>Valor único = 5</td>
+<td>Valor único = 6</td>
 </tr>
 </tbody></table>
 
@@ -64321,6 +64325,11 @@
 <td>117</td>
 <td>Crianças indígenas</td>
 <td>000702</td>
+</tr>
+<tr>
+<td>118</td>
+<td>Pessoas de 3 a 4 anos</td>
+<td>000208</td>
 </tr>
 </tbody></table>
 
@@ -92664,7 +92673,7 @@
 <td>PROFESSOR DE EDUCAÇÃO FÍSICA NO ENSINO SUPERIOR</td>
 </tr>
 <tr>
-<td>2241E1</td>
+<td>224140</td>
 <td>PROFISSIONAL DE EDUCAÇÃO FÍSICA NA SAÚDE</td>
 </tr>
 <tr>
@@ -93140,7 +93149,7 @@
 <td>PROFESSOR DE EDUCAÇÃO FÍSICA NO ENSINO SUPERIOR</td>
 </tr>
 <tr>
-<td>2241E1</td>
+<td>224140</td>
 <td>PROFISSIONAL DE EDUCAÇÃO FÍSICA NA SAÚDE</td>
 </tr>
 <tr>
@@ -93499,7 +93508,7 @@
 <td>NÃO</td>
 </tr>
 <tr>
-<td>2241E1</td>
+<td>224140</td>
 <td>PROFISSIONAL DE EDUCAÇÃO FÍSICA NA SAÚDE</td>
 <td>NÃO</td>
 </tr>
@@ -94065,7 +94074,7 @@
 <td>PROFESSOR DE EDUCAÇÃO FÍSICA NO ENSINO SUPERIOR</td>
 </tr>
 <tr>
-<td>2241E1</td>
+<td>224140</td>
 <td>PROFISSIONAL DE EDUCAÇÃO FÍSICA NA SAÚDE</td>
 </tr>
 <tr>
@@ -94417,7 +94426,7 @@
 <td>PEDAGOGO</td>
 </tr>
 <tr>
-<td>2241E1</td>
+<td>224140</td>
 <td>PROFISSIONAL DE EDUCAÇÃO FÍSICA NA SAÚDE</td>
 </tr>
 <tr>
@@ -94885,7 +94894,7 @@
 <td>PROFESSOR DE EDUCAÇÃO FÍSICA NO ENSINO SUPERIOR</td>
 </tr>
 <tr>
-<td>2241E1</td>
+<td>224140</td>
 <td>PROFISSIONAL DE EDUCAÇÃO FÍSICA NA SAÚDE</td>
 </tr>
 <tr>
@@ -95813,7 +95822,7 @@
 <td>OSTEOPATA</td>
 </tr>
 <tr>
-<td>2241E1</td>
+<td>224140</td>
 <td>PROFISSIONAL DE EDUCAÇÃO FÍSICA NA SAÚDE</td>
 </tr>
 <tr>
@@ -96277,6 +96286,120 @@
 <td>REV</td>
 </tr>
 <tr>
+<td>COV19-AZE</td>
+<td>Covid-19 - Covishield - Oxford/AstraZeneca</td>
+<td>CAMPANHA INDISCRIMINADA</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>COV19-AZE</td>
+<td>Covid-19 - Covishield - Oxford/AstraZeneca</td>
+<td>CAMPANHA INDISCRIMINADA</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>COV19-AZE</td>
+<td>Covid-19 - Covishield - Oxford/AstraZeneca</td>
+<td>CAMPANHA INDISCRIMINADA</td>
+<td>DA</td>
+</tr>
+<tr>
+<td>COV19-AZE</td>
+<td>Covid-19 - Covishield - Oxford/AstraZeneca</td>
+<td>CAMPANHA INDISCRIMINADA</td>
+<td>R2</td>
+</tr>
+<tr>
+<td>COV19-AZE</td>
+<td>Covid-19 - Covishield - Oxford/AstraZeneca</td>
+<td>CAMPANHA INDISCRIMINADA</td>
+<td>REF</td>
+</tr>
+<tr>
+<td>COV19-JAN</td>
+<td>Covid-19 - Ad26.COV2.S - Janssen-Cilag</td>
+<td>CAMPANHA INDISCRIMINADA</td>
+<td>D</td>
+</tr>
+<tr>
+<td>COV19-JAN</td>
+<td>Covid-19 - Ad26.COV2.S - Janssen-Cilag</td>
+<td>CAMPANHA INDISCRIMINADA</td>
+<td>DA</td>
+</tr>
+<tr>
+<td>COV19-JAN</td>
+<td>Covid-19 - Ad26.COV2.S - Janssen-Cilag</td>
+<td>CAMPANHA INDISCRIMINADA</td>
+<td>R2</td>
+</tr>
+<tr>
+<td>COV19-JAN</td>
+<td>Covid-19 - Ad26.COV2.S - Janssen-Cilag</td>
+<td>CAMPANHA INDISCRIMINADA</td>
+<td>REF</td>
+</tr>
+<tr>
+<td>COV19-PFZ</td>
+<td>Covid-19 - BNT162b2 - BioNTech/Fosun Pharma/Pfizer</td>
+<td>CAMPANHA INDISCRIMINADA</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>COV19-PFZ</td>
+<td>Covid-19 - BNT162b2 - BioNTech/Fosun Pharma/Pfizer</td>
+<td>CAMPANHA INDISCRIMINADA</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>COV19-PFZ</td>
+<td>Covid-19 - BNT162b2 - BioNTech/Fosun Pharma/Pfizer</td>
+<td>CAMPANHA INDISCRIMINADA</td>
+<td>DA</td>
+</tr>
+<tr>
+<td>COV19-PFZ</td>
+<td>Covid-19 - BNT162b2 - BioNTech/Fosun Pharma/Pfizer</td>
+<td>CAMPANHA INDISCRIMINADA</td>
+<td>R2</td>
+</tr>
+<tr>
+<td>COV19-PFZ</td>
+<td>Covid-19 - BNT162b2 - BioNTech/Fosun Pharma/Pfizer</td>
+<td>CAMPANHA INDISCRIMINADA</td>
+<td>REF</td>
+</tr>
+<tr>
+<td>COV19-PFZ-Pediátrica</td>
+<td>Covid-19 - Pfizer (Comirnaty) - Pediátrica</td>
+<td>CAMPANHA INDISCRIMINADA</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>COV19-PFZ-Pediátrica</td>
+<td>Covid-19 - Pfizer (Comirnaty) - Pediátrica</td>
+<td>CAMPANHA INDISCRIMINADA</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>COV19-VAC</td>
+<td>Covid-19 - Coronavac - Sinovac/Butantan</td>
+<td>CAMPANHA INDISCRIMINADA</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>COV19-VAC</td>
+<td>Covid-19 - Coronavac - Sinovac/Butantan</td>
+<td>CAMPANHA INDISCRIMINADA</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>COV19-VAC</td>
+<td>Covid-19 - Coronavac - Sinovac/Butantan</td>
+<td>CAMPANHA INDISCRIMINADA</td>
+<td>REF</td>
+</tr>
+<tr>
 <td>Cólera</td>
 <td>Cólera oral</td>
 <td>ESPECIAL</td>
@@ -96295,222 +96418,6 @@
 <td>REV</td>
 </tr>
 <tr>
-<td>COV19 Oxford - AstraZeneca Covishield</td>
-<td>Covid-19 - Covishield - Oxford/AstraZeneca</td>
-<td>CAMPANHA</td>
-<td>D1</td>
-</tr>
-<tr>
-<td>COV19 Oxford - AstraZeneca Covishield</td>
-<td>Covid-19 - Covishield - Oxford/AstraZeneca</td>
-<td>CAMPANHA</td>
-<td>D2</td>
-</tr>
-<tr>
-<td>COV19 Oxford - AstraZeneca Covishield</td>
-<td>Covid-19 - Covishield - Oxford/AstraZeneca</td>
-<td>CAMPANHA</td>
-<td>REF</td>
-</tr>
-<tr>
-<td>COV19 Oxford - AstraZeneca Covishield</td>
-<td>Covid-19 - Covishield - Oxford/AstraZeneca</td>
-<td>CAMPANHA</td>
-<td>R2</td>
-</tr>
-<tr>
-<td>COV19 Oxford - AstraZeneca Covishield</td>
-<td>Covid-19 - Covishield - Oxford/AstraZeneca</td>
-<td>CAMPANHA</td>
-<td>DA</td>
-</tr>
-<tr>
-<td>COV19 Coronavac - Sinovac/Butantan</td>
-<td>Covid-19 - Coronavac - Sinovac/Butantan</td>
-<td>CAMPANHA</td>
-<td>D1</td>
-</tr>
-<tr>
-<td>COV19 Coronavac - Sinovac/Butantan</td>
-<td>Covid-19 - Coronavac - Sinovac/Butantan</td>
-<td>CAMPANHA</td>
-<td>D2</td>
-</tr>
-<tr>
-<td>COV19 Biontech - Pfizer</td>
-<td>Covid-19 - BNT162b2 - BioNTech/Fosun Pharma/Pfizer</td>
-<td>CAMPANHA</td>
-<td>D1</td>
-</tr>
-<tr>
-<td>COV19 Biontech - Pfizer</td>
-<td>Covid-19 - BNT162b2 - BioNTech/Fosun Pharma/Pfizer</td>
-<td>CAMPANHA</td>
-<td>D2</td>
-</tr>
-<tr>
-<td>COV19 Biontech - Pfizer</td>
-<td>Covid-19 - BNT162b2 - BioNTech/Fosun Pharma/Pfizer</td>
-<td>CAMPANHA</td>
-<td>REF</td>
-</tr>
-<tr>
-<td>COV19 Biontech - Pfizer</td>
-<td>Covid-19 - BNT162b2 - BioNTech/Fosun Pharma/Pfizer</td>
-<td>CAMPANHA</td>
-<td>R2</td>
-</tr>
-<tr>
-<td>COV19 Biontech - Pfizer</td>
-<td>Covid-19 - BNT162b2 - BioNTech/Fosun Pharma/Pfizer</td>
-<td>CAMPANHA</td>
-<td>DA</td>
-</tr>
-<tr>
-<td>COV19 Janssen - Cilag</td>
-<td>Covid-19 - Ad26.COV2.S - Janssen-Cilag</td>
-<td>CAMPANHA</td>
-<td>D</td>
-</tr>
-<tr>
-<td>COV19 Janssen - Cilag</td>
-<td>Covid-19 - Ad26.COV2.S - Janssen-Cilag</td>
-<td>CAMPANHA</td>
-<td>REF</td>
-</tr>
-<tr>
-<td>COV19 Janssen - Cilag</td>
-<td>Covid-19 - Ad26.COV2.S - Janssen-Cilag</td>
-<td>CAMPANHA</td>
-<td>R2</td>
-</tr>
-<tr>
-<td>COV19 Janssen - Cilag</td>
-<td>Covid-19 - Ad26.COV2.S - Janssen-Cilag</td>
-<td>CAMPANHA</td>
-<td>DA</td>
-</tr>
-<tr>
-<td>COV19 Pfizer - Comirnaty Pediátrica</td>
-<td>Covid-19 - Pfizer (Comirnaty) - Pediátrica</td>
-<td>CAMPANHA</td>
-<td>D1</td>
-</tr>
-<tr>
-<td>COV19 Pfizer - Comirnaty Pediátrica</td>
-<td>Covid-19 - Pfizer (Comirnaty) - Pediátrica</td>
-<td>CAMPANHA</td>
-<td>D2</td>
-</tr>
-<tr>
-<td>Dengue</td>
-<td>Vacina Dengue 1, 2, 3 e 4 (recomb e atenuada)</td>
-<td>INTENSIFICAÇÃO</td>
-<td>D1</td>
-</tr>
-<tr>
-<td>Dengue</td>
-<td>Vacina Dengue 1, 2, 3 e 4 (recomb e atenuada)</td>
-<td>INTENSIFICAÇÃO</td>
-<td>D2</td>
-</tr>
-<tr>
-<td>Dengue</td>
-<td>Vacina Dengue 1, 2, 3 e 4 (recomb e atenuada)</td>
-<td>INTENSIFICAÇÃO</td>
-<td>D3</td>
-</tr>
-<tr>
-<td>Dengue</td>
-<td>Vacina Dengue 1, 2, 3 e 4 (recomb e atenuada)</td>
-<td>ROTINA</td>
-<td>D1</td>
-</tr>
-<tr>
-<td>Dengue</td>
-<td>Vacina Dengue 1, 2, 3 e 4 (recomb e atenuada)</td>
-<td>ROTINA</td>
-<td>D2</td>
-</tr>
-<tr>
-<td>Dengue</td>
-<td>Vacina Dengue 1, 2, 3 e 4 (recomb e atenuada)</td>
-<td>ROTINA</td>
-<td>D3</td>
-</tr>
-<tr>
-<td>dT</td>
-<td>Dupla adulto</td>
-<td>BLOQUEIO</td>
-<td>D1</td>
-</tr>
-<tr>
-<td>dT</td>
-<td>Dupla adulto</td>
-<td>BLOQUEIO</td>
-<td>D2</td>
-</tr>
-<tr>
-<td>dT</td>
-<td>Dupla adulto</td>
-<td>BLOQUEIO</td>
-<td>D3</td>
-</tr>
-<tr>
-<td>dT</td>
-<td>Dupla adulto</td>
-<td>BLOQUEIO</td>
-<td>REF</td>
-</tr>
-<tr>
-<td>dT</td>
-<td>Dupla adulto</td>
-<td>INTENSIFICAÇÃO</td>
-<td>D1</td>
-</tr>
-<tr>
-<td>dT</td>
-<td>Dupla adulto</td>
-<td>INTENSIFICAÇÃO</td>
-<td>D2</td>
-</tr>
-<tr>
-<td>dT</td>
-<td>Dupla adulto</td>
-<td>INTENSIFICAÇÃO</td>
-<td>D3</td>
-</tr>
-<tr>
-<td>dT</td>
-<td>Dupla adulto</td>
-<td>INTENSIFICAÇÃO</td>
-<td>REF</td>
-</tr>
-<tr>
-<td>dT</td>
-<td>Dupla adulto</td>
-<td>ROTINA</td>
-<td>D1</td>
-</tr>
-<tr>
-<td>dT</td>
-<td>Dupla adulto</td>
-<td>ROTINA</td>
-<td>D2</td>
-</tr>
-<tr>
-<td>dT</td>
-<td>Dupla adulto</td>
-<td>ROTINA</td>
-<td>D3</td>
-</tr>
-<tr>
-<td>dT</td>
-<td>Dupla adulto</td>
-<td>ROTINA</td>
-<td>REF</td>
-</tr>
-<tr>
 <td>DT</td>
 <td>Dupla infantil</td>
 <td>ESPECIAL</td>
@@ -96661,82 +96568,40 @@
 <td>R2</td>
 </tr>
 <tr>
-<td>dTpa adulto</td>
-<td>Tríplice bacteriana acelular (adulto) - dTpa</td>
-<td>ESPECIAL</td>
+<td>Dengue</td>
+<td>Vacina Dengue 1, 2, 3 e 4 (recomb e atenuada)</td>
+<td>INTENSIFICAÇÃO</td>
 <td>D1</td>
 </tr>
 <tr>
-<td>dTpa adulto</td>
-<td>Tríplice bacteriana acelular (adulto) - dTpa</td>
-<td>ESPECIAL</td>
+<td>Dengue</td>
+<td>Vacina Dengue 1, 2, 3 e 4 (recomb e atenuada)</td>
+<td>INTENSIFICAÇÃO</td>
 <td>D2</td>
 </tr>
 <tr>
-<td>dTpa adulto</td>
-<td>Tríplice bacteriana acelular (adulto) - dTpa</td>
-<td>ESPECIAL</td>
+<td>Dengue</td>
+<td>Vacina Dengue 1, 2, 3 e 4 (recomb e atenuada)</td>
+<td>INTENSIFICAÇÃO</td>
 <td>D3</td>
 </tr>
 <tr>
-<td>dTpa adulto</td>
-<td>Tríplice bacteriana acelular (adulto) - dTpa</td>
-<td>ESPECIAL</td>
-<td>DU</td>
-</tr>
-<tr>
-<td>dTpa adulto</td>
-<td>Tríplice bacteriana acelular (adulto) - dTpa</td>
-<td>ESPECIAL</td>
-<td>R1</td>
-</tr>
-<tr>
-<td>dTpa adulto</td>
-<td>Tríplice bacteriana acelular (adulto) - dTpa</td>
-<td>ESPECIAL</td>
-<td>R2</td>
-</tr>
-<tr>
-<td>dTpa adulto</td>
-<td>Tríplice bacteriana acelular (adulto) - dTpa</td>
-<td>ESPECIAL</td>
-<td>R3</td>
-</tr>
-<tr>
-<td>dTpa adulto</td>
-<td>Tríplice bacteriana acelular (adulto) - dTpa</td>
-<td>ESPECIAL</td>
-<td>R4</td>
-</tr>
-<tr>
-<td>dTpa adulto</td>
-<td>Tríplice bacteriana acelular (adulto) - dTpa</td>
-<td>ESPECIAL</td>
-<td>R5</td>
-</tr>
-<tr>
-<td>dTpa adulto</td>
-<td>Tríplice bacteriana acelular (adulto) - dTpa</td>
+<td>Dengue</td>
+<td>Vacina Dengue 1, 2, 3 e 4 (recomb e atenuada)</td>
 <td>ROTINA</td>
 <td>D1</td>
 </tr>
 <tr>
-<td>dTpa adulto</td>
-<td>Tríplice bacteriana acelular (adulto) - dTpa</td>
+<td>Dengue</td>
+<td>Vacina Dengue 1, 2, 3 e 4 (recomb e atenuada)</td>
 <td>ROTINA</td>
 <td>D2</td>
 </tr>
 <tr>
-<td>dTpa adulto</td>
-<td>Tríplice bacteriana acelular (adulto) - dTpa</td>
+<td>Dengue</td>
+<td>Vacina Dengue 1, 2, 3 e 4 (recomb e atenuada)</td>
 <td>ROTINA</td>
 <td>D3</td>
-</tr>
-<tr>
-<td>dTpa adulto</td>
-<td>Tríplice bacteriana acelular (adulto) - dTpa</td>
-<td>ROTINA</td>
-<td>R1</td>
 </tr>
 <tr>
 <td>Embrião</td>
@@ -96861,19 +96726,19 @@
 <tr>
 <td>FLU3V</td>
 <td>Influenza Trivalente</td>
-<td>CAMPANHA</td>
+<td>CAMPANHA INDISCRIMINADA</td>
 <td>D1</td>
 </tr>
 <tr>
 <td>FLU3V</td>
 <td>Influenza Trivalente</td>
-<td>CAMPANHA</td>
+<td>CAMPANHA INDISCRIMINADA</td>
 <td>D2</td>
 </tr>
 <tr>
 <td>FLU3V</td>
 <td>Influenza Trivalente</td>
-<td>CAMPANHA</td>
+<td>CAMPANHA INDISCRIMINADA</td>
 <td>DU</td>
 </tr>
 <tr>
@@ -96893,6 +96758,18 @@
 <td>Influenza Trivalente</td>
 <td>ESPECIAL</td>
 <td>DU</td>
+</tr>
+<tr>
+<td>FTp</td>
+<td>Febre tifóide (polissacarídica)</td>
+<td>ESPECIAL</td>
+<td>DU</td>
+</tr>
+<tr>
+<td>FTp</td>
+<td>Febre tifóide (polissacarídica)</td>
+<td>ESPECIAL</td>
+<td>REV</td>
 </tr>
 <tr>
 <td>Fta</td>
@@ -96915,18 +96792,6 @@
 <tr>
 <td>Fta</td>
 <td>Febre tifóide (atenuada)</td>
-<td>ESPECIAL</td>
-<td>REV</td>
-</tr>
-<tr>
-<td>FTp</td>
-<td>Febre tifóide (polissacarídica)</td>
-<td>ESPECIAL</td>
-<td>DU</td>
-</tr>
-<tr>
-<td>FTp</td>
-<td>Febre tifóide (polissacarídica)</td>
 <td>ESPECIAL</td>
 <td>REV</td>
 </tr>
@@ -97135,6 +97000,42 @@
 <td>R2</td>
 </tr>
 <tr>
+<td>HPV Quadri</td>
+<td>HPV Quadrivalente</td>
+<td>ESPECIAL</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>HPV Quadri</td>
+<td>HPV Quadrivalente</td>
+<td>ESPECIAL</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>HPV Quadri</td>
+<td>HPV Quadrivalente</td>
+<td>ESPECIAL</td>
+<td>D3</td>
+</tr>
+<tr>
+<td>HPV Quadri</td>
+<td>HPV Quadrivalente</td>
+<td>ROTINA</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>HPV Quadri</td>
+<td>HPV Quadrivalente</td>
+<td>ROTINA</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>HPV Quadri</td>
+<td>HPV Quadrivalente</td>
+<td>ROTINA</td>
+<td>D3</td>
+</tr>
+<tr>
 <td>Hib</td>
 <td>Haemophilus tipo b</td>
 <td>ESPECIAL</td>
@@ -97165,42 +97066,6 @@
 <td>R1</td>
 </tr>
 <tr>
-<td>HPV Quadri</td>
-<td>HPV Quadrivalente</td>
-<td>ESPECIAL</td>
-<td>D1</td>
-</tr>
-<tr>
-<td>HPV Quadri</td>
-<td>HPV Quadrivalente</td>
-<td>ESPECIAL</td>
-<td>D2</td>
-</tr>
-<tr>
-<td>HPV Quadri</td>
-<td>HPV Quadrivalente</td>
-<td>ESPECIAL</td>
-<td>D3</td>
-</tr>
-<tr>
-<td>HPV Quadri</td>
-<td>HPV Quadrivalente</td>
-<td>ROTINA</td>
-<td>D1</td>
-</tr>
-<tr>
-<td>HPV Quadri</td>
-<td>HPV Quadrivalente</td>
-<td>ROTINA</td>
-<td>D2</td>
-</tr>
-<tr>
-<td>HPV Quadri</td>
-<td>HPV Quadrivalente</td>
-<td>ROTINA</td>
-<td>D3</td>
-</tr>
-<tr>
 <td>IGHB</td>
 <td>Imunoglobulina anti hepatite B</td>
 <td>ESPECIAL</td>
@@ -97517,6 +97382,150 @@
 <td>Imunoglobulina anti varicela zoster</td>
 <td>ESPECIAL</td>
 <td>T5</td>
+</tr>
+<tr>
+<td>Men Conj C</td>
+<td>Meningocócica conjugada C</td>
+<td>BLOQUEIO</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>Men Conj C</td>
+<td>Meningocócica conjugada C</td>
+<td>BLOQUEIO</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>Men Conj C</td>
+<td>Meningocócica conjugada C</td>
+<td>BLOQUEIO</td>
+<td>DU</td>
+</tr>
+<tr>
+<td>Men Conj C</td>
+<td>Meningocócica conjugada C</td>
+<td>BLOQUEIO</td>
+<td>R1</td>
+</tr>
+<tr>
+<td>Men Conj C</td>
+<td>Meningocócica conjugada C</td>
+<td>BLOQUEIO</td>
+<td>R2</td>
+</tr>
+<tr>
+<td>Men Conj C</td>
+<td>Meningocócica conjugada C</td>
+<td>ESPECIAL</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>Men Conj C</td>
+<td>Meningocócica conjugada C</td>
+<td>ESPECIAL</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>Men Conj C</td>
+<td>Meningocócica conjugada C</td>
+<td>ESPECIAL</td>
+<td>DU</td>
+</tr>
+<tr>
+<td>Men Conj C</td>
+<td>Meningocócica conjugada C</td>
+<td>ESPECIAL</td>
+<td>R1</td>
+</tr>
+<tr>
+<td>Men Conj C</td>
+<td>Meningocócica conjugada C</td>
+<td>ESPECIAL</td>
+<td>R2</td>
+</tr>
+<tr>
+<td>Men Conj C</td>
+<td>Meningocócica conjugada C</td>
+<td>ESPECIAL</td>
+<td>R3</td>
+</tr>
+<tr>
+<td>Men Conj C</td>
+<td>Meningocócica conjugada C</td>
+<td>ESPECIAL</td>
+<td>R4</td>
+</tr>
+<tr>
+<td>Men Conj C</td>
+<td>Meningocócica conjugada C</td>
+<td>ESPECIAL</td>
+<td>R5</td>
+</tr>
+<tr>
+<td>Men Conj C</td>
+<td>Meningocócica conjugada C</td>
+<td>ESPECIAL</td>
+<td>R6</td>
+</tr>
+<tr>
+<td>Men Conj C</td>
+<td>Meningocócica conjugada C</td>
+<td>INTENSIFICAÇÃO</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>Men Conj C</td>
+<td>Meningocócica conjugada C</td>
+<td>INTENSIFICAÇÃO</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>Men Conj C</td>
+<td>Meningocócica conjugada C</td>
+<td>INTENSIFICAÇÃO</td>
+<td>DU</td>
+</tr>
+<tr>
+<td>Men Conj C</td>
+<td>Meningocócica conjugada C</td>
+<td>INTENSIFICAÇÃO</td>
+<td>R1</td>
+</tr>
+<tr>
+<td>Men Conj C</td>
+<td>Meningocócica conjugada C</td>
+<td>INTENSIFICAÇÃO</td>
+<td>R2</td>
+</tr>
+<tr>
+<td>Men Conj C</td>
+<td>Meningocócica conjugada C</td>
+<td>ROTINA</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>Men Conj C</td>
+<td>Meningocócica conjugada C</td>
+<td>ROTINA</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>Men Conj C</td>
+<td>Meningocócica conjugada C</td>
+<td>ROTINA</td>
+<td>DU</td>
+</tr>
+<tr>
+<td>Men Conj C</td>
+<td>Meningocócica conjugada C</td>
+<td>ROTINA</td>
+<td>R1</td>
+</tr>
+<tr>
+<td>Men Conj C</td>
+<td>Meningocócica conjugada C</td>
+<td>ROTINA</td>
+<td>R2</td>
 </tr>
 <tr>
 <td>MenACWY</td>
@@ -97591,147 +97600,33 @@
 <td>REF</td>
 </tr>
 <tr>
-<td>Men Conj C</td>
-<td>Meningocócica conjugada C</td>
-<td>BLOQUEIO</td>
-<td>D1</td>
-</tr>
-<tr>
-<td>Men Conj C</td>
-<td>Meningocócica conjugada C</td>
-<td>BLOQUEIO</td>
-<td>D2</td>
-</tr>
-<tr>
-<td>Men Conj C</td>
-<td>Meningocócica conjugada C</td>
-<td>BLOQUEIO</td>
-<td>DU</td>
-</tr>
-<tr>
-<td>Men Conj C</td>
-<td>Meningocócica conjugada C</td>
-<td>BLOQUEIO</td>
-<td>R1</td>
-</tr>
-<tr>
-<td>Men Conj C</td>
-<td>Meningocócica conjugada C</td>
-<td>BLOQUEIO</td>
-<td>R2</td>
-</tr>
-<tr>
-<td>Men Conj C</td>
-<td>Meningocócica conjugada C</td>
+<td>PENTAinativada</td>
+<td>DTPa / Hib / Polio Inativa</td>
 <td>ESPECIAL</td>
 <td>D1</td>
 </tr>
 <tr>
-<td>Men Conj C</td>
-<td>Meningocócica conjugada C</td>
+<td>PENTAinativada</td>
+<td>DTPa / Hib / Polio Inativa</td>
 <td>ESPECIAL</td>
 <td>D2</td>
 </tr>
 <tr>
-<td>Men Conj C</td>
-<td>Meningocócica conjugada C</td>
+<td>PENTAinativada</td>
+<td>DTPa / Hib / Polio Inativa</td>
 <td>ESPECIAL</td>
-<td>DU</td>
+<td>D3</td>
 </tr>
 <tr>
-<td>Men Conj C</td>
-<td>Meningocócica conjugada C</td>
+<td>PENTAinativada</td>
+<td>DTPa / Hib / Polio Inativa</td>
 <td>ESPECIAL</td>
 <td>R1</td>
 </tr>
 <tr>
-<td>Men Conj C</td>
-<td>Meningocócica conjugada C</td>
+<td>PENTAinativada</td>
+<td>DTPa / Hib / Polio Inativa</td>
 <td>ESPECIAL</td>
-<td>R2</td>
-</tr>
-<tr>
-<td>Men Conj C</td>
-<td>Meningocócica conjugada C</td>
-<td>ESPECIAL</td>
-<td>R3</td>
-</tr>
-<tr>
-<td>Men Conj C</td>
-<td>Meningocócica conjugada C</td>
-<td>ESPECIAL</td>
-<td>R4</td>
-</tr>
-<tr>
-<td>Men Conj C</td>
-<td>Meningocócica conjugada C</td>
-<td>ESPECIAL</td>
-<td>R5</td>
-</tr>
-<tr>
-<td>Men Conj C</td>
-<td>Meningocócica conjugada C</td>
-<td>ESPECIAL</td>
-<td>R6</td>
-</tr>
-<tr>
-<td>Men Conj C</td>
-<td>Meningocócica conjugada C</td>
-<td>INTENSIFICAÇÃO</td>
-<td>D1</td>
-</tr>
-<tr>
-<td>Men Conj C</td>
-<td>Meningocócica conjugada C</td>
-<td>INTENSIFICAÇÃO</td>
-<td>D2</td>
-</tr>
-<tr>
-<td>Men Conj C</td>
-<td>Meningocócica conjugada C</td>
-<td>INTENSIFICAÇÃO</td>
-<td>DU</td>
-</tr>
-<tr>
-<td>Men Conj C</td>
-<td>Meningocócica conjugada C</td>
-<td>INTENSIFICAÇÃO</td>
-<td>R1</td>
-</tr>
-<tr>
-<td>Men Conj C</td>
-<td>Meningocócica conjugada C</td>
-<td>INTENSIFICAÇÃO</td>
-<td>R2</td>
-</tr>
-<tr>
-<td>Men Conj C</td>
-<td>Meningocócica conjugada C</td>
-<td>ROTINA</td>
-<td>D1</td>
-</tr>
-<tr>
-<td>Men Conj C</td>
-<td>Meningocócica conjugada C</td>
-<td>ROTINA</td>
-<td>D2</td>
-</tr>
-<tr>
-<td>Men Conj C</td>
-<td>Meningocócica conjugada C</td>
-<td>ROTINA</td>
-<td>DU</td>
-</tr>
-<tr>
-<td>Men Conj C</td>
-<td>Meningocócica conjugada C</td>
-<td>ROTINA</td>
-<td>R1</td>
-</tr>
-<tr>
-<td>Men Conj C</td>
-<td>Meningocócica conjugada C</td>
-<td>ROTINA</td>
 <td>R2</td>
 </tr>
 <tr>
@@ -97822,36 +97717,6 @@
 <td>Penta</td>
 <td>DTP / HB / Hib</td>
 <td>ROTINA</td>
-<td>R2</td>
-</tr>
-<tr>
-<td>PENTAinativada</td>
-<td>DTPa/Hib/Polio Inativa</td>
-<td>ESPECIAL</td>
-<td>D1</td>
-</tr>
-<tr>
-<td>PENTAinativada</td>
-<td>DTPa/Hib/Polio Inativa</td>
-<td>ESPECIAL</td>
-<td>D2</td>
-</tr>
-<tr>
-<td>PENTAinativada</td>
-<td>DTPa/Hib/Polio Inativa</td>
-<td>ESPECIAL</td>
-<td>D3</td>
-</tr>
-<tr>
-<td>PENTAinativada</td>
-<td>DTPa/Hib/Polio Inativa</td>
-<td>ESPECIAL</td>
-<td>R1</td>
-</tr>
-<tr>
-<td>PENTAinativada</td>
-<td>DTPa/Hib/Polio Inativa</td>
-<td>ESPECIAL</td>
 <td>R2</td>
 </tr>
 <tr>
@@ -99195,25 +99060,25 @@
 <tr>
 <td>SCR</td>
 <td>Tríplice viral</td>
-<td>CAMPANHA</td>
+<td>CAMPANHA INDISCRIMINADA</td>
 <td>D</td>
 </tr>
 <tr>
 <td>SCR</td>
 <td>Tríplice viral</td>
-<td>CAMPANHA</td>
+<td>CAMPANHA INDISCRIMINADA</td>
 <td>D1</td>
 </tr>
 <tr>
 <td>SCR</td>
 <td>Tríplice viral</td>
-<td>CAMPANHA</td>
+<td>CAMPANHA INDISCRIMINADA</td>
 <td>D2</td>
 </tr>
 <tr>
 <td>SCR</td>
 <td>Tríplice viral</td>
-<td>CAMPANHA</td>
+<td>CAMPANHA INDISCRIMINADA</td>
 <td>DU</td>
 </tr>
 <tr>
@@ -99963,6 +99828,210 @@
 <tr>
 <td>VARC</td>
 <td>Varicela (atenuada)</td>
+<td>ROTINA</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>VIP</td>
+<td>Poliomielite inativada</td>
+<td>BLOQUEIO</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>VIP</td>
+<td>Poliomielite inativada</td>
+<td>BLOQUEIO</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>VIP</td>
+<td>Poliomielite inativada</td>
+<td>BLOQUEIO</td>
+<td>D3</td>
+</tr>
+<tr>
+<td>VIP</td>
+<td>Poliomielite inativada</td>
+<td>ESPECIAL</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>VIP</td>
+<td>Poliomielite inativada</td>
+<td>ESPECIAL</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>VIP</td>
+<td>Poliomielite inativada</td>
+<td>ESPECIAL</td>
+<td>D3</td>
+</tr>
+<tr>
+<td>VIP</td>
+<td>Poliomielite inativada</td>
+<td>ESPECIAL</td>
+<td>R1</td>
+</tr>
+<tr>
+<td>VIP</td>
+<td>Poliomielite inativada</td>
+<td>ESPECIAL</td>
+<td>R2</td>
+</tr>
+<tr>
+<td>VIP</td>
+<td>Poliomielite inativada</td>
+<td>INTENSIFICAÇÃO</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>VIP</td>
+<td>Poliomielite inativada</td>
+<td>INTENSIFICAÇÃO</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>VIP</td>
+<td>Poliomielite inativada</td>
+<td>INTENSIFICAÇÃO</td>
+<td>D3</td>
+</tr>
+<tr>
+<td>VIP</td>
+<td>Poliomielite inativada</td>
+<td>ROTINA</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>VIP</td>
+<td>Poliomielite inativada</td>
+<td>ROTINA</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>VIP</td>
+<td>Poliomielite inativada</td>
+<td>ROTINA</td>
+<td>D3</td>
+</tr>
+<tr>
+<td>VOP</td>
+<td>Poliomielite oral (Bivalente)</td>
+<td>CAMPANHA INDISCRIMINADA</td>
+<td>D</td>
+</tr>
+<tr>
+<td>VOP</td>
+<td>Poliomielite oral (Bivalente)</td>
+<td>CAMPANHA INDISCRIMINADA</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>VOP</td>
+<td>Poliomielite oral (Bivalente)</td>
+<td>CAMPANHA INDISCRIMINADA</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>VOP</td>
+<td>Poliomielite oral (Bivalente)</td>
+<td>CAMPANHA INDISCRIMINADA</td>
+<td>D3</td>
+</tr>
+<tr>
+<td>VOP</td>
+<td>Poliomielite oral (Bivalente)</td>
+<td>CAMPANHA INDISCRIMINADA</td>
+<td>R1</td>
+</tr>
+<tr>
+<td>VOP</td>
+<td>Poliomielite oral (Bivalente)</td>
+<td>CAMPANHA INDISCRIMINADA</td>
+<td>R2</td>
+</tr>
+<tr>
+<td>VOP</td>
+<td>Poliomielite oral (Bivalente)</td>
+<td>INTENSIFICAÇÃO</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>VOP</td>
+<td>Poliomielite oral (Bivalente)</td>
+<td>INTENSIFICAÇÃO</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>VOP</td>
+<td>Poliomielite oral (Bivalente)</td>
+<td>INTENSIFICAÇÃO</td>
+<td>D3</td>
+</tr>
+<tr>
+<td>VOP</td>
+<td>Poliomielite oral (Bivalente)</td>
+<td>INTENSIFICAÇÃO</td>
+<td>R1</td>
+</tr>
+<tr>
+<td>VOP</td>
+<td>Poliomielite oral (Bivalente)</td>
+<td>INTENSIFICAÇÃO</td>
+<td>R2</td>
+</tr>
+<tr>
+<td>VOP</td>
+<td>Poliomielite oral (Bivalente)</td>
+<td>ROTINA</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>VOP</td>
+<td>Poliomielite oral (Bivalente)</td>
+<td>ROTINA</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>VOP</td>
+<td>Poliomielite oral (Bivalente)</td>
+<td>ROTINA</td>
+<td>D3</td>
+</tr>
+<tr>
+<td>VOP</td>
+<td>Poliomielite oral (Bivalente)</td>
+<td>ROTINA</td>
+<td>R1</td>
+</tr>
+<tr>
+<td>VOP</td>
+<td>Poliomielite oral (Bivalente)</td>
+<td>ROTINA</td>
+<td>R2</td>
+</tr>
+<tr>
+<td>VRH</td>
+<td>Vacina rotavírus humano</td>
+<td>INTENSIFICAÇÃO</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>VRH</td>
+<td>Vacina rotavírus humano</td>
+<td>INTENSIFICAÇÃO</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>VRH</td>
+<td>Vacina rotavírus humano</td>
+<td>ROTINA</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>VRH</td>
+<td>Vacina rotavírus humano</td>
 <td>ROTINA</td>
 <td>D2</td>
 </tr>
@@ -100003,208 +100072,154 @@
 <td>REV</td>
 </tr>
 <tr>
-<td>VIP</td>
-<td>Poliomielite inativada</td>
+<td>dT</td>
+<td>Dupla adulto</td>
 <td>BLOQUEIO</td>
 <td>D1</td>
 </tr>
 <tr>
-<td>VIP</td>
-<td>Poliomielite inativada</td>
+<td>dT</td>
+<td>Dupla adulto</td>
 <td>BLOQUEIO</td>
 <td>D2</td>
 </tr>
 <tr>
-<td>VIP</td>
-<td>Poliomielite inativada</td>
+<td>dT</td>
+<td>Dupla adulto</td>
 <td>BLOQUEIO</td>
 <td>D3</td>
 </tr>
 <tr>
-<td>VIP</td>
-<td>Poliomielite inativada</td>
+<td>dT</td>
+<td>Dupla adulto</td>
+<td>BLOQUEIO</td>
+<td>REF</td>
+</tr>
+<tr>
+<td>dT</td>
+<td>Dupla adulto</td>
+<td>INTENSIFICAÇÃO</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>dT</td>
+<td>Dupla adulto</td>
+<td>INTENSIFICAÇÃO</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>dT</td>
+<td>Dupla adulto</td>
+<td>INTENSIFICAÇÃO</td>
+<td>D3</td>
+</tr>
+<tr>
+<td>dT</td>
+<td>Dupla adulto</td>
+<td>INTENSIFICAÇÃO</td>
+<td>REF</td>
+</tr>
+<tr>
+<td>dT</td>
+<td>Dupla adulto</td>
+<td>ROTINA</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>dT</td>
+<td>Dupla adulto</td>
+<td>ROTINA</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>dT</td>
+<td>Dupla adulto</td>
+<td>ROTINA</td>
+<td>D3</td>
+</tr>
+<tr>
+<td>dT</td>
+<td>Dupla adulto</td>
+<td>ROTINA</td>
+<td>REF</td>
+</tr>
+<tr>
+<td>dTpa adulto</td>
+<td>Tríplice bacteriana acelular (adulto) - dTpa</td>
 <td>ESPECIAL</td>
 <td>D1</td>
 </tr>
 <tr>
-<td>VIP</td>
-<td>Poliomielite inativada</td>
+<td>dTpa adulto</td>
+<td>Tríplice bacteriana acelular (adulto) - dTpa</td>
 <td>ESPECIAL</td>
 <td>D2</td>
 </tr>
 <tr>
-<td>VIP</td>
-<td>Poliomielite inativada</td>
+<td>dTpa adulto</td>
+<td>Tríplice bacteriana acelular (adulto) - dTpa</td>
 <td>ESPECIAL</td>
 <td>D3</td>
 </tr>
 <tr>
-<td>VIP</td>
-<td>Poliomielite inativada</td>
+<td>dTpa adulto</td>
+<td>Tríplice bacteriana acelular (adulto) - dTpa</td>
+<td>ESPECIAL</td>
+<td>DU</td>
+</tr>
+<tr>
+<td>dTpa adulto</td>
+<td>Tríplice bacteriana acelular (adulto) - dTpa</td>
 <td>ESPECIAL</td>
 <td>R1</td>
 </tr>
 <tr>
-<td>VIP</td>
-<td>Poliomielite inativada</td>
+<td>dTpa adulto</td>
+<td>Tríplice bacteriana acelular (adulto) - dTpa</td>
 <td>ESPECIAL</td>
 <td>R2</td>
 </tr>
 <tr>
-<td>VIP</td>
-<td>Poliomielite inativada</td>
-<td>INTENSIFICAÇÃO</td>
-<td>D1</td>
+<td>dTpa adulto</td>
+<td>Tríplice bacteriana acelular (adulto) - dTpa</td>
+<td>ESPECIAL</td>
+<td>R3</td>
 </tr>
 <tr>
-<td>VIP</td>
-<td>Poliomielite inativada</td>
-<td>INTENSIFICAÇÃO</td>
-<td>D2</td>
+<td>dTpa adulto</td>
+<td>Tríplice bacteriana acelular (adulto) - dTpa</td>
+<td>ESPECIAL</td>
+<td>R4</td>
 </tr>
 <tr>
-<td>VIP</td>
-<td>Poliomielite inativada</td>
-<td>INTENSIFICAÇÃO</td>
-<td>D3</td>
+<td>dTpa adulto</td>
+<td>Tríplice bacteriana acelular (adulto) - dTpa</td>
+<td>ESPECIAL</td>
+<td>R5</td>
 </tr>
 <tr>
-<td>VIP</td>
-<td>Poliomielite inativada</td>
+<td>dTpa adulto</td>
+<td>Tríplice bacteriana acelular (adulto) - dTpa</td>
 <td>ROTINA</td>
 <td>D1</td>
 </tr>
 <tr>
-<td>VIP</td>
-<td>Poliomielite inativada</td>
+<td>dTpa adulto</td>
+<td>Tríplice bacteriana acelular (adulto) - dTpa</td>
 <td>ROTINA</td>
 <td>D2</td>
 </tr>
 <tr>
-<td>VIP</td>
-<td>Poliomielite inativada</td>
+<td>dTpa adulto</td>
+<td>Tríplice bacteriana acelular (adulto) - dTpa</td>
 <td>ROTINA</td>
 <td>D3</td>
 </tr>
 <tr>
-<td>VOP</td>
-<td>Poliomielite oral (Bivalente)</td>
-<td>CAMPANHA</td>
-<td>D</td>
-</tr>
-<tr>
-<td>VOP</td>
-<td>Poliomielite oral (Bivalente)</td>
-<td>CAMPANHA</td>
-<td>D1</td>
-</tr>
-<tr>
-<td>VOP</td>
-<td>Poliomielite oral (Bivalente)</td>
-<td>CAMPANHA</td>
-<td>D2</td>
-</tr>
-<tr>
-<td>VOP</td>
-<td>Poliomielite oral (Bivalente)</td>
-<td>CAMPANHA</td>
-<td>D3</td>
-</tr>
-<tr>
-<td>VOP</td>
-<td>Poliomielite oral (Bivalente)</td>
-<td>CAMPANHA</td>
-<td>R1</td>
-</tr>
-<tr>
-<td>VOP</td>
-<td>Poliomielite oral (Bivalente)</td>
-<td>CAMPANHA</td>
-<td>R2</td>
-</tr>
-<tr>
-<td>VOP</td>
-<td>Poliomielite oral (Bivalente)</td>
-<td>INTENSIFICAÇÃO</td>
-<td>D1</td>
-</tr>
-<tr>
-<td>VOP</td>
-<td>Poliomielite oral (Bivalente)</td>
-<td>INTENSIFICAÇÃO</td>
-<td>D2</td>
-</tr>
-<tr>
-<td>VOP</td>
-<td>Poliomielite oral (Bivalente)</td>
-<td>INTENSIFICAÇÃO</td>
-<td>D3</td>
-</tr>
-<tr>
-<td>VOP</td>
-<td>Poliomielite oral (Bivalente)</td>
-<td>INTENSIFICAÇÃO</td>
-<td>R1</td>
-</tr>
-<tr>
-<td>VOP</td>
-<td>Poliomielite oral (Bivalente)</td>
-<td>INTENSIFICAÇÃO</td>
-<td>R2</td>
-</tr>
-<tr>
-<td>VOP</td>
-<td>Poliomielite oral (Bivalente)</td>
-<td>ROTINA</td>
-<td>D1</td>
-</tr>
-<tr>
-<td>VOP</td>
-<td>Poliomielite oral (Bivalente)</td>
-<td>ROTINA</td>
-<td>D2</td>
-</tr>
-<tr>
-<td>VOP</td>
-<td>Poliomielite oral (Bivalente)</td>
-<td>ROTINA</td>
-<td>D3</td>
-</tr>
-<tr>
-<td>VOP</td>
-<td>Poliomielite oral (Bivalente)</td>
+<td>dTpa adulto</td>
+<td>Tríplice bacteriana acelular (adulto) - dTpa</td>
 <td>ROTINA</td>
 <td>R1</td>
-</tr>
-<tr>
-<td>VOP</td>
-<td>Poliomielite oral (Bivalente)</td>
-<td>ROTINA</td>
-<td>R2</td>
-</tr>
-<tr>
-<td>VRH</td>
-<td>Vacina rotavírus humano</td>
-<td>INTENSIFICAÇÃO</td>
-<td>D1</td>
-</tr>
-<tr>
-<td>VRH</td>
-<td>Vacina rotavírus humano</td>
-<td>INTENSIFICAÇÃO</td>
-<td>D2</td>
-</tr>
-<tr>
-<td>VRH</td>
-<td>Vacina rotavírus humano</td>
-<td>ROTINA</td>
-<td>D1</td>
-</tr>
-<tr>
-<td>VRH</td>
-<td>Vacina rotavírus humano</td>
-<td>ROTINA</td>
-<td>D2</td>
 </tr>
 </tbody></table>
 
@@ -100676,35 +100691,29 @@
 
     <div class="post pdf shown" id="principais_alteracoes" data-url="/ledi/documentacao/principais_alteracoes.html">
       <header class="post-header">
-        <h1 class="post-title">Principais alterações da v4.3.4 para a v4.3.5</h1>
+        <h1 class="post-title">Principais alterações da v4.3.5 para a v4.3.6</h1>
       </header>
 
       
 
       <article class="post-content">
-        <p>Este documento relata as principais alterações em relação à versão v4.3.4 do LEDI APS:</p>
+        <p>Este documento relata as principais alterações em relação à versão v4.3.5 do LEDI APS:</p>
 
-<h3 id="1-atualiza-es-nos-marcadores-de-consumo-alimentar">1. Atualizações nos Marcadores de Consumo Alimentar</h3>
+<h3 id="1-inclus-o-do-procedimento-sigtap-03-01-07-021-0">1. Inclusão do procedimento SIGTAP 03.01.07.021-0</h3>
 
-<p><strong>1. </strong> Remoção do campo &quot;#3 identificacaoUsuario&quot;.</p>
+<p><strong>1. </strong> Inclusão do procedimento de média complexidade SIGTAP 03.01.07.021-0 - REABILITAÇÃO DE PACIENTES PÓS COVID-19.</p>
 
-<p><strong>2. </strong> Alterações na obrigatoriedade dos campos <a href="/ledi/documentacao/estrutura_arquivos/dicionario-mca.html#2-cnscidadao">#2 cnsCidadao</a> e <a href="/ledi/documentacao/estrutura_arquivos/dicionario-mca.html#12-cpfcidadao">#12 cpfCidadao</a>:</p>
+<h3 id="2-inclus-o-do-procedimento-sigtap-03-01-07-022-9">2. Inclusão do procedimento SIGTAP 03.01.07.022-9</h3>
 
-<ul>
-<li>É obrigatório preencher ou o CNS do cidadão ou o CPF do cidadão.</li>
-</ul>
+<p><strong>2. </strong> Inclusão do procedimento de média complexidade SIGTAP 03.01.07.022-9 - REABILITAÇÃO CARDIORRESPIRATÓRIA DE PACIENTES PÓS COVID-19.</p>
 
-<h3 id="2-atualiza-es-da-tabela-do-inep">2. Atualizações da tabela do INEP</h3>
+<h3 id="3-disponibiliza-o-da-vacina-covid-19-sinovac-coronavac-inativada-no-calend-rio-vacinal">3. Disponibilização da Vacina COVID-19 SINOVAC - CORONAVAC inativada no calendário vacinal</h3>
 
-<p><strong>3. </strong> Foi realizada a atualização da tabela do INEP com base nos dados do censo escolar 2021, disponível para download através do <a href="https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/microdados/censo-escolar">site do INEP</a>.</p>
+<p><strong>3. </strong> Foi incluído a Vacina COVID-19 SINOVAC - CORONAVAC inativada, para registrar aplicações de doses em cidadãos em faixa etária maior ou igual 3 anos. </p>
 
-<h3 id="3-atualiza-es-da-tabela-de-pa-ses">3. Atualizações da tabela de países</h3>
+<h3 id="4-inclus-o-de-grupo-de-atendimento-para-pessoas-de-3-a-4-anos">4. Inclusão de Grupo de Atendimento para Pessoas de 3 a 4 anos</h3>
 
-<p><strong>4. </strong> Atualização da tabela de países com inclusão de novos registros. A tabela completa pode ser conferida através <a href="/ledi/documentacao/referencias/paises.html">deste link</a>.</p>
-
-<h3 id="4-atualiza-o-do-cbo-224140-profissional-de-educa-o-f-sica-na-sa-de">4. Atualização do CBO 224140 - Profissional de Educação Física na Saúde</h3>
-
-<p><strong>5. </strong> Atualização do CBO provisório 2241E1 para o permanente 224140 do profissional de educação física na saúde, conforme a <a href="https://www.in.gov.br/en/web/dou/-/portaria-n-15-de-7-de-janeiro-de-2022-373605767">portaria Nº 15, de 7 de janeiro de 2022</a>.</p>
+<p><strong>4. </strong> Foi incluído uma nova opção &quot;Pessoas de 3 a 4 anos&quot; no grupo de atendimento de registro de aplicação de vacina.</p>
 
       </article>
 

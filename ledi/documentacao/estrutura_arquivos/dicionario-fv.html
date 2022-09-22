@@ -25,7 +25,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 4.3.7</span>
+        <span class="label">versão 4.3.8</span>
       
     </a>
 
@@ -75,7 +75,7 @@
           
         
           
-            <li><a title="Layout e-SUS APS de Dados e Interface Versão 4.3.7" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 4.3.7</a></li>
+            <li><a title="Layout e-SUS APS de Dados e Interface Versão 4.3.8" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 4.3.8</a></li>
           
         
           
@@ -115,9 +115,9 @@
   <ul>
     
       <li>
-        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 4.3.7" href="/ledi/documentacao/index.html" class="back-link">
+        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 4.3.8" href="/ledi/documentacao/index.html" class="back-link">
           <i class="icon icon-back"></i> Voltar
-          <small>(Layout e-SUS APS de Dados e Interface Versão 4.3.7)</small>
+          <small>(Layout e-SUS APS de Dados e Interface Versão 4.3.8)</small>
         </a>
       </li>
     
@@ -243,7 +243,7 @@
     <p class="post-meta">
       <a class="btn" href="/pdf.html?include=/ledi/documentacao/estrutura_arquivos/dicionario-fv.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 29/08/2022</span>
+        <span class="label" title="Data da última modificação">Alterado em 09/09/2022</span>
       
     </p>
   </header>
@@ -527,10 +527,10 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> </p>
+<p><strong>Regras:</strong></p>
 
 <ul>
-<li>O campo somente pode ser preenchido se for registrada uma vacinação com o imunobiológico <code>15 - BCG</code>; </li>
+<li>O campo somente pode ser preenchido se for registrada uma vacinação com o imunobiológico <code>15 - BCG</code>;</li>
 <li>O campo é de preenchimento obrigatório quando for registrada uma vacinação com o imunobiológico <code>15 - BCG</code>.</li>
 </ul>
 
@@ -559,7 +559,8 @@
 <ul>
 <li>Quando o <a href="#5-sexo">Sexo</a> = <code>0 (masculino)</code> o campo deve receber o valor 0 (false);</li>
 <li>Quando o <a href="#5-sexo">Sexo</a> = <code>1 (feminino)</code> o campo pode receber o valor 0 (false) ou 1 (true);</li>
-<li>Não pode ser preenchido ser for marcado o campo <a href="#10-puerpera">puerpera</a>.</li>
+<li>Não pode ser preenchido com valor 1 (true) se o campo <a href="#10-puerpera">puerpera</a> for marcado;</li>
+<li>Este campo não pode ser enviado como NULL.</li>
 </ul>
 
 <h3 id="10-puerpera">#10 puerpera</h3>
@@ -587,7 +588,8 @@
 <ul>
 <li>Quando o <a href="#5-sexo">Sexo</a> = <code>0 (masculino)</code> o campo deve receber o valor 0 (false);</li>
 <li>Quando o <a href="#5-sexo">Sexo</a> = <code>1 (feminino)</code> o campo pode receber o valor 0 (false) ou 1 (true);</li>
-<li>Não pode ser preenchido ser for marcado o campo <a href="#9-gestante">gestante</a>.</li>
+<li>Não pode ser preenchido com valor 1 (true) se o campo <a href="#9-gestante">gestante</a> for marcado;</li>
+<li>Este campo não pode ser enviado como NULL.</li>
 </ul>
 
 <h3 id="11-vacinas">#11 vacinas</h3>
@@ -698,7 +700,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> </p>
+<p><strong>Regras:</strong></p>
 
 <ul>
 <li>Somente CPF válido será aceito;</li>

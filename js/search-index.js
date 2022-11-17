@@ -138,8 +138,8 @@ const SEARCH_DOCS = {
     
       
         "ledi-documentacao-index": {
-          "title" : "Layout e-SUS APS de Dados e Interface Versão 4.3.9",
-          "content": "Esta documentação descreve as estruturas de dados, seus atributos e regras utilizadas no LEDI APS versão 4.3.9.\n\nA versão LEDI APS 4.3.9 é compatível com o sistema PEC e-SUS APS versão 5.0.11 ou superior.\n\nConfira as principais alterações da V4.3.8 para a V4.3.9 aqui.\n",
+          "title" : "Layout e-SUS APS de Dados e Interface Versão 4.3.10",
+          "content": "Esta documentação descreve as estruturas de dados, seus atributos e regras utilizadas no LEDI APS versão 4.3.10.\n\nA versão LEDI APS 4.3.10 é compatível com o sistema PEC e-SUS APS versão 5.0.14 ou superior.\n\nConfira as principais alterações da V4.3.9 para a V4.3.10 aqui.\n",
           "url": "/ledi/documentacao/index.html"
         }
         
@@ -147,8 +147,8 @@ const SEARCH_DOCS = {
     
       
         "ledi-documentacao-principais-alteracoes": {
-          "title" : "Principais alterações da v4.3.8 para a v4.3.9",
-          "content": "Este documento relata as principais alterações em relação à versão v4.3.8 do LEDI APS:\n\n1. Inclusão do procedimento SIGTAP 03.01.01.038-2\n\n1.  Inclusão do procedimento clínico 03.01.01.038-2 - ESTRATIFICAÇÃO DO RISCO CARDIOVASCULAR.\n\n2. Alteração das descrições dos povos e comunidades tradicionais da ficha de cadastro individual\n\n2.  Foram atualizadas as opções disponíveis no campo coPovoComunidadeTradicional, conforme apresentadas na tabela de povoComunidadeTradicional.\n",
+          "title" : "Principais alterações da v4.3.9 para a v4.3.10",
+          "content": "Este documento relata as principais alterações em relação à versão v4.3.9 do LEDI APS:\n\n1. Inclusão dos procedimentos SIGTAP:\n\n1.  Inclusão do procedimento administrativo 03.01.01.036-6 - CONSULTA DE PRÉ-NATAL DE GESTANTE ALTO RISCO.\n\n2.  Inclusão do procedimento administrativo 03.01.01.037-4 - CONSULTA DE ACOMPANHAMENTO DE RECÉM-NASCIDOS E CRIANÇA, PRIORITARIAMENTE, EGRESSA DE UNIDADE NEONATAL.\n\n3.  Inclusão do procedimento clínico 02.02.03.129-2 - DOSAGEM DE ANTI-BETA-2-GLICOPROTEÍNA I - IGM.\n",
           "url": "/ledi/documentacao/principais_alteracoes.html"
         }
         
@@ -238,7 +238,7 @@ const SEARCH_DOCS = {
       
         "ledi-documentacao-referencias-versao": {
           "title" : "Versão",
-          "content": "Observação: Indica a versão do dado a ser transportado. A versão do dado não necessariamente reflete a versão do sistema.\n\n\n\nColuna\nTipo\nObrigatório\nRegra\n\n\n\nmajor\nInteger\nSim\nValor único = 4\n\n\nminor\nInteger\nSim\nValor único = 3\n\n\nrevision\nInteger\nSim\nValor único = 9\n\n\n",
+          "content": "Observação: Indica a versão do dado a ser transportado. A versão do dado não necessariamente reflete a versão do sistema.\n\n\n\nColuna\nTipo\nObrigatório\nRegra\n\n\n\nmajor\nInteger\nSim\nValor único = 4\n\n\nminor\nInteger\nSim\nValor único = 3\n\n\nrevision\nInteger\nSim\nValor único = 10\n\n\n",
           "url": "/ledi/documentacao/referencias/versao.html"
         }
         
@@ -301,7 +301,7 @@ const SEARCH_DOCS = {
       
         "ledi-index": {
           "title" : "Layout e-SUS APS de Dados e Interface",
-          "content": "Este documento descreve os atributos utilizados no LEDI APS:\n\n\nO LEDI APS é uma camada abstrata que especifica as informações, e seus formatos, que são aceitos no envio de dados de sistemas próprios para o PEC e-SUS APS;\nO LEDI APS pode ser implementado utilizando XML ou Apache Thrift;\nPossui versionamento independente, podendo não corresponder com a respectiva versão do sistema PEC e-SUS APS. A Tabela 1 apresenta a compatibilidade entre as versões do LEDI APS e do PEC e-SUS APS.\n\n\nTabela 1. Compatibilidade entre as versões do LEDI APS e PEC e-SUS APS\n\n\n\nVersão PEC e-SUS APS\nVersão do LEDI APS compatível\n\n\n\n5.0.11 ou superior\nLEDI APS 4.3.9\n\n\n5.0.9 ou superior\nLEDI APS 4.3.8\n\n\n4.5.13 ou superior\nLEDI APS 4.3.7\n\n\n4.5.12 ou superior\nLEDI APS 4.3.6\n\n\n4.5.10 ou superior\nLEDI APS 4.3.5\n\n\n4.5.3 ou superior\nLEDI APS 4.3.4\n\n\n4.3.12 ou superior\nLEDI APS 4.3.3\n\n\n4.3.9 ou superior\nLEDI APS 4.3.2\n\n\n4.3.8 ou superior\nLEDI APS 4.3.1\n\n\n4.2.9 ou superior\nLEDI APS 4.2.3\n\n\n4.2.6 ou superior\nLEDI APS 4.2.1\n\n\n4.2.1 ou superior\nLEDI APS 4.2.0\n\n\n4.1.10 ou superior\nLEDI APS 4.1.4\n\n\n4.1.8 ou superior\nLEDI APS 4.1.3\n\n\n4.1.7 ou superior\nLEDI APS 4.1.2\n\n\n4.0.16 ou superior\nLEDI APS 4.0.4\n\n\n4.0.12 ou superior\nLEDI APS 4.0.3\n\n\n4.0.11 ou superior\nLEDI APS 4.0.2\n\n\n3.2.25 ou superior\nLEDI APS 4.0.1\n\n\n3.2.23 ou superior\nLEDI APS 4.0.0\n\n\n3.2.20 ou superior\nLEDI APS 3.2.4\n\n\n3.2.18 ou superior\nLEDI APS 3.2.2\n\n\n3.2.12 ou superior\nLEDI APS 3.2.1\n\n\n3.0.13 ou superior\nLEDI APS 3.0.1\n\n\n3.0.00 ou superior\nLEDI APS 3.0.0\n\n\n2.2.00 ou superior\nLEDI APS 2.2.0\n\n\n2.1.07 ou superior\nLEDI APS 2.1.1\n\n\n2.1.00 ou superior\nLEDI APS 2.1.0\n\n\n2.0.00 ou superior\nLEDI APS 2.0.0\n\n\n",
+          "content": "Este documento descreve os atributos utilizados no LEDI APS:\n\n\nO LEDI APS é uma camada abstrata que especifica as informações, e seus formatos, que são aceitos no envio de dados de sistemas próprios para o PEC e-SUS APS;\nO LEDI APS pode ser implementado utilizando XML ou Apache Thrift;\nPossui versionamento independente, podendo não corresponder com a respectiva versão do sistema PEC e-SUS APS. A Tabela 1 apresenta a compatibilidade entre as versões do LEDI APS e do PEC e-SUS APS.\n\n\nTabela 1. Compatibilidade entre as versões do LEDI APS e PEC e-SUS APS\n\n\n\nVersão PEC e-SUS APS\nVersão do LEDI APS compatível\n\n\n\n5.0.14 ou superior\nLEDI APS 4.3.10\n\n\n5.0.11 ou superior\nLEDI APS 4.3.9\n\n\n5.0.9 ou superior\nLEDI APS 4.3.8\n\n\n4.5.13 ou superior\nLEDI APS 4.3.7\n\n\n4.5.12 ou superior\nLEDI APS 4.3.6\n\n\n4.5.10 ou superior\nLEDI APS 4.3.5\n\n\n4.5.3 ou superior\nLEDI APS 4.3.4\n\n\n4.3.12 ou superior\nLEDI APS 4.3.3\n\n\n4.3.9 ou superior\nLEDI APS 4.3.2\n\n\n4.3.8 ou superior\nLEDI APS 4.3.1\n\n\n4.2.9 ou superior\nLEDI APS 4.2.3\n\n\n4.2.6 ou superior\nLEDI APS 4.2.1\n\n\n4.2.1 ou superior\nLEDI APS 4.2.0\n\n\n4.1.10 ou superior\nLEDI APS 4.1.4\n\n\n4.1.8 ou superior\nLEDI APS 4.1.3\n\n\n4.1.7 ou superior\nLEDI APS 4.1.2\n\n\n4.0.16 ou superior\nLEDI APS 4.0.4\n\n\n4.0.12 ou superior\nLEDI APS 4.0.3\n\n\n4.0.11 ou superior\nLEDI APS 4.0.2\n\n\n3.2.25 ou superior\nLEDI APS 4.0.1\n\n\n3.2.23 ou superior\nLEDI APS 4.0.0\n\n\n3.2.20 ou superior\nLEDI APS 3.2.4\n\n\n3.2.18 ou superior\nLEDI APS 3.2.2\n\n\n3.2.12 ou superior\nLEDI APS 3.2.1\n\n\n3.0.13 ou superior\nLEDI APS 3.0.1\n\n\n3.0.00 ou superior\nLEDI APS 3.0.0\n\n\n2.2.00 ou superior\nLEDI APS 2.2.0\n\n\n2.1.07 ou superior\nLEDI APS 2.1.1\n\n\n2.1.00 ou superior\nLEDI APS 2.1.0\n\n\n2.0.00 ou superior\nLEDI APS 2.0.0\n\n\n",
           "url": "/ledi/index.html"
         }
         

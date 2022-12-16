@@ -25,7 +25,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 4.4.0</span>
+        <span class="label">versão 4.4.1</span>
       
     </a>
 
@@ -137,7 +137,7 @@
 
       <li id="item-layout_ab" data-url="/ledi/documentacao/index.html">
         <label>
-          <input type="checkbox" value="layout_ab" checked="checked"> Layout e-SUS APS de Dados e Interface Versão 4.4.0
+          <input type="checkbox" value="layout_ab" checked="checked"> Layout e-SUS APS de Dados e Interface Versão 4.4.1
           <small>
             <a onclick="checkById('layout_ab', true); return false;">Marcar todos</a> |
             <a onclick="checkById('layout_ab', false); return false;">Desmarcar todos</a>
@@ -659,7 +659,7 @@
 
       <li id="item-principais_alteracoes" data-url="/ledi/documentacao/principais_alteracoes.html">
         <label>
-          <input type="checkbox" value="principais_alteracoes" checked="checked"> Principais alterações da v4.3.9 para a v4.4.0
+          <input type="checkbox" value="principais_alteracoes" checked="checked"> Principais alterações da v4.4.0 para a v4.4.1
           <small>
             <a onclick="checkById('principais_alteracoes', true); return false;">Marcar todos</a> |
             <a onclick="checkById('principais_alteracoes', false); return false;">Desmarcar todos</a>
@@ -985,7 +985,7 @@
   
       <!-- Cria a lista de itens[páginas] que foram selecionados  -->
 
-  <li id="summary-layout_ab"><a href="#layout_ab">Layout e-SUS APS de Dados e Interface Versão 4.4.0</a></li>
+  <li id="summary-layout_ab"><a href="#layout_ab">Layout e-SUS APS de Dados e Interface Versão 4.4.1</a></li>
   
       <!-- Cria a lista de itens[páginas] que foram selecionados  -->
 
@@ -1206,7 +1206,7 @@
 
   
 
-  <li id="summary-principais_alteracoes"><a href="#principais_alteracoes">Principais alterações da v4.3.9 para a v4.4.0</a></li>
+  <li id="summary-principais_alteracoes"><a href="#principais_alteracoes">Principais alterações da v4.4.0 para a v4.4.1</a></li>
   
       <!-- Cria a lista de itens[páginas] que foram selecionados  -->
 
@@ -1361,8 +1361,12 @@
 </tr>
 </thead><tbody>
 <tr>
+<td>5.0.16 ou superior</td>
+<td><a href="/ledi/documentacao/index.html">LEDI APS 4.4.1</a></td>
+</tr>
+<tr>
 <td>5.0.14 ou superior</td>
-<td><a href="/ledi/documentacao/index.html">LEDI APS 4.4.0</a></td>
+<td><a href="https://integracao.esusab.ufsc.br/v440/">LEDI APS 4.4.0</a></td>
 </tr>
 <tr>
 <td>5.0.11 ou superior</td>
@@ -1491,17 +1495,17 @@
         
     <div class="post pdf shown" id="layout_ab" data-url="/ledi/documentacao/index.html">
       <header class="post-header">
-        <h1 class="post-title">Layout e-SUS APS de Dados e Interface Versão 4.4.0</h1>
+        <h1 class="post-title">Layout e-SUS APS de Dados e Interface Versão 4.4.1</h1>
       </header>
 
       
 
       <article class="post-content">
-        <p>Esta documentação descreve as estruturas de dados, seus atributos e regras utilizadas no <strong>LEDI APS</strong> versão 4.4.0.</p>
+        <p>Esta documentação descreve as estruturas de dados, seus atributos e regras utilizadas no <strong>LEDI APS</strong> versão 4.4.1.</p>
 
-<p>A versão <strong>LEDI APS</strong> 4.4.0 é compatível com o sistema <strong>PEC e-SUS APS</strong> versão 5.0.14 ou superior.</p>
+<p>A versão <strong>LEDI APS</strong> 4.4.1 é compatível com o sistema <strong>PEC e-SUS APS</strong> versão 5.0.16 ou superior.</p>
 
-<p>Confira as principais alterações da V4.3.9 para a V4.4.0 <a href="/ledi/documentacao/principais_alteracoes.html">aqui</a>.</p>
+<p>Confira as principais alterações da V4.4.0 para a V4.4.1 <a href="/ledi/documentacao/principais_alteracoes.html">aqui</a>.</p>
 
       </article>
 
@@ -47487,7 +47491,7 @@
 <td>revision</td>
 <td>Integer</td>
 <td>Sim</td>
-<td>Valor único = 0</td>
+<td>Valor único = 1</td>
 </tr>
 </tbody></table>
 
@@ -59553,6 +59557,11 @@
 <td>Covid-19 - Pfizer (Comirnaty) - Pediátrica</td>
 <td>COV19-PFZ-Pediátrica</td>
 </tr>
+<tr>
+<td>102</td>
+<td>Covid-19 - Pfizer (Comirnaty) - Pediátrica - p/ menores de 5 anos</td>
+<td>COV19-PFZ-Ped-Menor-5a</td>
+</tr>
 </tbody></table>
 
 <h2 id="localdeatendimento">LocalDeAtendimento</h2>
@@ -64334,6 +64343,11 @@
 <td>118</td>
 <td>Pessoas de 3 a 4 anos</td>
 <td>000208</td>
+</tr>
+<tr>
+<td>119</td>
+<td>Pessoas de 6 meses a 2 anos</td>
+<td>000209</td>
 </tr>
 </tbody></table>
 
@@ -96404,6 +96418,24 @@
 <td>D2</td>
 </tr>
 <tr>
+<td>COV19-PFZ-Ped-Menor-5a</td>
+<td>Covid-19 - Pfizer (Comirnaty) - Pediátrica - p/ menores de 5 anos</td>
+<td>CAMPANHA INDISCRIMINADA</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>COV19-PFZ-Ped-Menor-5a</td>
+<td>Covid-19 - Pfizer (Comirnaty) - Pediátrica - p/ menores de 5 anos</td>
+<td>CAMPANHA INDISCRIMINADA</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>COV19-PFZ-Ped-Menor-5a</td>
+<td>Covid-19 - Pfizer (Comirnaty) - Pediátrica - p/ menores de 5 anos</td>
+<td>CAMPANHA INDISCRIMINADA</td>
+<td>D3</td>
+</tr>
+<tr>
 <td>COV19-VAC</td>
 <td>Covid-19 - Coronavac - Sinovac/Butantan</td>
 <td>CAMPANHA INDISCRIMINADA</td>
@@ -100725,21 +100757,21 @@
 
     <div class="post pdf shown" id="principais_alteracoes" data-url="/ledi/documentacao/principais_alteracoes.html">
       <header class="post-header">
-        <h1 class="post-title">Principais alterações da v4.3.9 para a v4.4.0</h1>
+        <h1 class="post-title">Principais alterações da v4.4.0 para a v4.4.1</h1>
       </header>
 
       
 
       <article class="post-content">
-        <p>Este documento relata as principais alterações em relação à versão v4.3.9 do LEDI APS:</p>
+        <p>Este documento relata as principais alterações em relação à versão v4.4.0 do LEDI APS:</p>
 
-<h3 id="1-inclus-o-dos-procedimentos-sigtap">1. Inclusão dos procedimentos SIGTAP:</h3>
+<h3 id="1-inclus-o-de-imunobiol-gico">1. Inclusão de imunobiológico:</h3>
 
-<p><strong>1. </strong> Inclusão do procedimento administrativo 03.01.01.036-6 - CONSULTA DE PRÉ-NATAL DE GESTANTE ALTO RISCO.</p>
+<p><strong>1. </strong> Foi adicionado o imunobiológico Vacina Covid-19 - Pfizer (Comirnaty) - Pediátrica - p/ menores de 5 anos, com esquema vacinal de 3 doses.</p>
 
-<p><strong>2. </strong> Inclusão do procedimento administrativo 03.01.01.037-4 - CONSULTA DE ACOMPANHAMENTO DE RECÉM-NASCIDOS E CRIANÇA, PRIORITARIAMENTE, EGRESSA DE UNIDADE NEONATAL.</p>
+<h3 id="2-inclus-o-de-grupo-de-atendimento">2. Inclusão de Grupo de Atendimento:</h3>
 
-<p><strong>3. </strong> Inclusão do procedimento clínico 02.02.03.129-2 - DOSAGEM DE ANTI-BETA-2-GLICOPROTEÍNA I - IGM.</p>
+<p><strong>2. </strong> Incluído um novo Grupo de atendimento para campanhas de imunização, chamado de &quot;Pessoas de 6 meses a 2 anos&quot;.</p>
 
       </article>
 

@@ -9,7 +9,7 @@
 	<ns4:fichaAtendimentoIndividualMasterTransport>
 		<headerTransport>
 			<lotacaoFormPrincipal>
-				<profissionalCNS>898001161481488</profissionalCNS>
+				<profissionalCNS>700609923387762</profissionalCNS>
 				<cboCodigo_2002>225142</cboCodigo_2002>
 				<cnes>0019615</cnes>
 				<ine>0000471828</ine>
@@ -226,7 +226,7 @@
 				</resultadoExame>
 			</resultadosExames>
 		</atendimentosIndividuais>
-		<tpCdsOrigem>1</tpCdsOrigem>
+		<tpCdsOrigem>3</tpCdsOrigem>
 		<uuidFicha>0019615-edee6500-bf76-4691-b9c7-f7b1d550bc7a</uuidFicha>
 	</ns4:fichaAtendimentoIndividualMasterTransport>
 	<ns2:remetente>
@@ -234,7 +234,7 @@
 		<uuidInstalacao>TREINAMENTO</uuidInstalacao>
 		<cpfOuCnpj>01234567890</cpfOuCnpj>
 		<nomeOuRazaoSocial>ADMINISTRADOR INSTALAÇÃO</nomeOuRazaoSocial>
-		<versaoSistema>4.1.0</versaoSistema>
+		<versaoSistema>5.0.16</versaoSistema>
 		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:remetente>
 	<ns2:originadora>
@@ -242,8 +242,8 @@
 		<uuidInstalacao>TREINAMENTO</uuidInstalacao>
 		<cpfOuCnpj>01234567890</cpfOuCnpj>
 		<nomeOuRazaoSocial>ADMINISTRADOR INSTALAÇÃO</nomeOuRazaoSocial>
-		<versaoSistema>4.1.0</versaoSistema>
+		<versaoSistema>5.0.16</versaoSistema>
 		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:originadora>
-	<versao major="4" minor="2" revision="0" />
+	<versao major="4" minor="4" revision="1" />
 </ns3:dadoTransporteTransportXml>

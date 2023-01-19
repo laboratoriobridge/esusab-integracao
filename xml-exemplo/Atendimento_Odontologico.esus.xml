@@ -8,7 +8,7 @@
 	<numLote>3</numLote>
 	<ns4:fichaAtendimentoOdontologicoMasterTransport>
 		<uuidFicha>0019615-ef3cd1a5-c9fc-4742-835d-a9586b36bf8c</uuidFicha>
-		<tpCdsOrigem>1</tpCdsOrigem>
+		<tpCdsOrigem>3</tpCdsOrigem>
 		<atendimentosOdontologicos>
 			<cnsCidadao>119141073230003</cnsCidadao>
 			<dtNascimento>662742000000</dtNascimento>
@@ -239,7 +239,7 @@
 		</atendimentosOdontologicos>
 		<headerTransport>
 			<lotacaoFormPrincipal>
-				<profissionalCNS>898001161481488</profissionalCNS>
+				<profissionalCNS>700609923387762</profissionalCNS>
 				<cboCodigo_2002>223208</cboCodigo_2002>
 				<cnes>0019615</cnes>
 				<ine>0000471828</ine>
@@ -255,7 +255,7 @@
 		<nomeOuRazaoSocial>ADMINISTRADOR INSTALAÇÃO</nomeOuRazaoSocial>
 		<fone>8216756527</fone>
 		<email>prof@esus.br</email>
-		<versaoSistema>4.1.0</versaoSistema>
+		<versaoSistema>5.0.16</versaoSistema>
 		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:remetente>
 	<ns2:originadora>
@@ -265,8 +265,8 @@
 		<nomeOuRazaoSocial>ADMINISTRADOR INSTALAÇÃO</nomeOuRazaoSocial>
 		<fone>8216756527</fone>
 		<email>prof@esus.br</email>
-		<versaoSistema>4.1.0</versaoSistema>
+		<versaoSistema>5.0.16</versaoSistema>
 		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:originadora>
-	<versao major="4" minor="2" revision="3" />
+	<versao major="4" minor="4" revision="1" />
 </ns3:dadoTransporteTransportXml>

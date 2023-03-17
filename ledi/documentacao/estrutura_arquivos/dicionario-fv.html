@@ -25,7 +25,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 4.4.2</span>
+        <span class="label">versão 4.4.3</span>
       
     </a>
 
@@ -75,7 +75,7 @@
           
         
           
-            <li><a title="Layout e-SUS APS de Dados e Interface Versão 4.4.2" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 4.4.2</a></li>
+            <li><a title="Layout e-SUS APS de Dados e Interface Versão 4.4.3" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 4.4.3</a></li>
           
         
           
@@ -115,9 +115,9 @@
   <ul>
     
       <li>
-        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 4.4.2" href="/ledi/documentacao/index.html" class="back-link">
+        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 4.4.3" href="/ledi/documentacao/index.html" class="back-link">
           <i class="icon icon-back"></i> Voltar
-          <small>(Layout e-SUS APS de Dados e Interface Versão 4.4.2)</small>
+          <small>(Layout e-SUS APS de Dados e Interface Versão 4.4.3)</small>
         </a>
       </li>
     
@@ -243,7 +243,7 @@
     <p class="post-meta">
       <a class="btn" href="/pdf.html?include=/ledi/documentacao/estrutura_arquivos/dicionario-fv.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 22/09/2022</span>
+        <span class="label" title="Data da última modificação">Alterado em 17/03/2023</span>
       
     </p>
   </header>
@@ -845,7 +845,7 @@
 <li>Se o campo <a href="#1-imunobiologico">Imunobiológico</a> = <code>96</code>, o campo deve ser preenchido com o valor = <code>BHARAT-COVAXIN</code>;</li>
 <li>Se o campo <a href="#1-imunobiologico">Imunobiológico</a> = <code>97</code>, o campo deve ser preenchido com o valor = <code>MODERNA</code>;</li>
 <li>Se o campo <a href="#1-imunobiologico">Imunobiológico</a> = <code>98</code>, o campo deve ser preenchido com o valor = <code>SINOVAC-CORONAVAC</code>;</li>
-<li>Se o campo <a href="#1-imunobiologico">Imunobiológico</a> = <code>99</code>, o campo deve ser preenchido com o valor = <code>COMIRNATY-PFIZER/BIONTECH</code>.</li>
+<li>Se o campo <a href="#1-imunobiologico">Imunobiológico</a> = <code>99</code>, <code>102</code> ou <code>103</code> o campo deve ser preenchido com o valor = <code>COMIRNATY-PFIZER/BIONTECH</code>.</li>
 </ul>
 
 <h3 id="6-grupoatendimento">#6 grupoAtendimento</h3>
@@ -871,7 +871,7 @@
 <p><strong>Regras:</strong></p>
 
 <ul>
-<li>Só pode ser preenchido se o campo <a href="#2-estrategiavacinacao">estrategiaVacinacao</a> = <code>5</code> (Campanha indiscriminada). Neste caso o preenchimento é obrigatório;</li>
+<li>Só pode ser preenchido se o campo <a href="#2-estrategiavacinacao">estrategiaVacinacao</a> = <code>5</code> (Campanha indiscriminada) ou <code>6</code> (Campanha seletiva). Neste caso o preenchimento é obrigatório;</li>
 <li>Não pode ser preenchido se o campo <a href="#7-stregistroanterior">stRegistroAnterior</a> = <code>true</code>;</li>
 <li>Deve ser preenchido com a informação da coluna <strong>Código SIPNI</strong> presente na tabela de referência.</li>
 </ul>
@@ -948,7 +948,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regra:</strong> Só pode ser preenchido se o campo <a href="#7-stregistroanterior">stRegistroAnterior</a> = <code>true</code> e o campo <a href="#1-imunobiologico">Imunobiológico</a> receber um dos valores <code>85</code>, <code>86</code>, <code>87</code>, <code>88</code>, <code>89</code>, <code>95</code>, <code>96</code>, <code>97</code>, <code>98</code> ou <code>99</code>, pertencentes aos imunobiológicos de COVID-19. Nestas condições, é de preenchimento obrigatório.</p>
+<p><strong>Regra:</strong> Só pode ser preenchido se o campo <a href="#7-stregistroanterior">stRegistroAnterior</a> = <code>true</code> e o campo <a href="#1-imunobiologico">Imunobiológico</a> receber um dos valores <code>85</code>, <code>86</code>, <code>87</code>, <code>88</code>, <code>89</code>, <code>95</code>, <code>96</code>, <code>97</code>, <code>98</code>, <code>99</code>, <code>102</code> ou <code>103</code> pertencentes aos imunobiológicos de COVID-19. Nestas condições, é de preenchimento obrigatório.</p>
 
   </article>
 

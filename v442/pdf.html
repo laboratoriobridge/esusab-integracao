@@ -25,7 +25,7 @@
       <img src="/v442/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 4.4.3</span>
+        <span class="label">versão 4.4.2</span>
       
     </a>
 
@@ -137,7 +137,7 @@
 
       <li id="item-layout_ab" data-url="/ledi/documentacao/index.html">
         <label>
-          <input type="checkbox" value="layout_ab" checked="checked"> Layout e-SUS APS de Dados e Interface Versão 4.4.3
+          <input type="checkbox" value="layout_ab" checked="checked"> Layout e-SUS APS de Dados e Interface Versão 4.4.2
           <small>
             <a onclick="checkById('layout_ab', true); return false;">Marcar todos</a> |
             <a onclick="checkById('layout_ab', false); return false;">Desmarcar todos</a>
@@ -659,7 +659,7 @@
 
       <li id="item-principais_alteracoes" data-url="/ledi/documentacao/principais_alteracoes.html">
         <label>
-          <input type="checkbox" value="principais_alteracoes" checked="checked"> Principais alterações da v4.4.2 para a v4.4.3
+          <input type="checkbox" value="principais_alteracoes" checked="checked"> Principais alterações da v4.4.1 para a v4.4.2
           <small>
             <a onclick="checkById('principais_alteracoes', true); return false;">Marcar todos</a> |
             <a onclick="checkById('principais_alteracoes', false); return false;">Desmarcar todos</a>
@@ -985,7 +985,7 @@
   
       <!-- Cria a lista de itens[páginas] que foram selecionados  -->
 
-  <li id="summary-layout_ab"><a href="#layout_ab">Layout e-SUS APS de Dados e Interface Versão 4.4.3</a></li>
+  <li id="summary-layout_ab"><a href="#layout_ab">Layout e-SUS APS de Dados e Interface Versão 4.4.2</a></li>
   
       <!-- Cria a lista de itens[páginas] que foram selecionados  -->
 
@@ -1206,7 +1206,7 @@
 
   
 
-  <li id="summary-principais_alteracoes"><a href="#principais_alteracoes">Principais alterações da v4.4.2 para a v4.4.3</a></li>
+  <li id="summary-principais_alteracoes"><a href="#principais_alteracoes">Principais alterações da v4.4.1 para a v4.4.2</a></li>
   
       <!-- Cria a lista de itens[páginas] que foram selecionados  -->
 
@@ -1361,12 +1361,8 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>5.0.20 ou superior</td>
-<td><a href="/v442/ledi/documentacao/index.html">LEDI APS 4.4.3</a></td>
-</tr>
-<tr>
 <td>5.0.17 ou superior</td>
-<td><a href="https://integracao.esusab.ufsc.br/v442/">LEDI APS 4.4.2</a></td>
+<td><a href="/v442/ledi/documentacao/index.html">LEDI APS 4.4.2</a></td>
 </tr>
 <tr>
 <td>5.0.16 ou superior</td>
@@ -1503,17 +1499,17 @@
         
     <div class="post pdf shown" id="layout_ab" data-url="/ledi/documentacao/index.html">
       <header class="post-header">
-        <h1 class="post-title">Layout e-SUS APS de Dados e Interface Versão 4.4.3</h1>
+        <h1 class="post-title">Layout e-SUS APS de Dados e Interface Versão 4.4.2</h1>
       </header>
 
       
 
       <article class="post-content">
-        <p>Esta documentação descreve as estruturas de dados, seus atributos e regras utilizadas no <strong>LEDI APS</strong> versão 4.4.3.</p>
+        <p>Esta documentação descreve as estruturas de dados, seus atributos e regras utilizadas no <strong>LEDI APS</strong> versão 4.4.2.</p>
 
-<p>A versão <strong>LEDI APS</strong> 4.4.3 é compatível com o sistema <strong>PEC e-SUS APS</strong> versão 5.0.20 ou superior.</p>
+<p>A versão <strong>LEDI APS</strong> 4.4.2 é compatível com o sistema <strong>PEC e-SUS APS</strong> versão 5.0.17 ou superior.</p>
 
-<p>Confira as principais alterações da V4.4.2 para a V4.4.3 <a href="/v442/ledi/documentacao/principais_alteracoes.html">aqui</a>.</p>
+<p>Confira as principais alterações da V4.4.1 para a V4.4.2 <a href="/v442/ledi/documentacao/principais_alteracoes.html">aqui</a>.</p>
 
       </article>
 
@@ -16655,7 +16651,7 @@
 <p><strong>Regras:</strong></p>
 
 <ul>
-<li>Só pode ser preenchido se o campo <a href="/v442/ledi/documentacao/estrutura_arquivos/#2-estrategiavacinacao">estrategiaVacinacao</a> = <code>5</code> (Campanha indiscriminada) ou <code>6</code> (Campanha seletiva). Neste caso o preenchimento é obrigatório;</li>
+<li>Só pode ser preenchido se o campo <a href="/v442/ledi/documentacao/estrutura_arquivos/#2-estrategiavacinacao">estrategiaVacinacao</a> = <code>5</code> (Campanha indiscriminada). Neste caso o preenchimento é obrigatório;</li>
 <li>Não pode ser preenchido se o campo <a href="/v442/ledi/documentacao/estrutura_arquivos/#7-stregistroanterior">stRegistroAnterior</a> = <code>true</code>;</li>
 <li>Deve ser preenchido com a informação da coluna <strong>Código SIPNI</strong> presente na tabela de referência.</li>
 </ul>
@@ -47499,7 +47495,7 @@
 <td>revision</td>
 <td>Integer</td>
 <td>Sim</td>
-<td>Valor único = 3</td>
+<td>Valor único = 2</td>
 </tr>
 </tbody></table>
 
@@ -59073,11 +59069,6 @@
 <td>5</td>
 </tr>
 <tr>
-<td>6</td>
-<td>Campanha seletiva</td>
-<td>6</td>
-</tr>
-<tr>
 <td>7</td>
 <td>Soroterapia</td>
 <td>7</td>
@@ -59522,28 +59513,28 @@
 </tr>
 <tr>
 <td>85</td>
-<td>Covid-19-recombinante, AstraZeneca/Fiocruz (Covishield)</td>
-<td>COV19-AZE - COVISHIELD</td>
+<td>Covid-19 - Covishield - Oxford/Astrazeneca</td>
+<td>COV19-AZE</td>
 </tr>
 <tr>
 <td>86</td>
-<td>Covid-19-inativada, Sinovac/Butantan (Coronavac)</td>
+<td>Covid-19 - Coronavac - Sinovac/Butantan</td>
 <td>COV19-VAC</td>
 </tr>
 <tr>
 <td>87</td>
-<td>Covid-19-RNAm, Pfizer (Comirnaty)</td>
+<td>Covid-19 - BNT162b2 - BioNTech/Fosun Pharma/Pfizer</td>
 <td>COV19-PFZ</td>
 </tr>
 <tr>
 <td>88</td>
-<td>Covid-19-recombinante, Janssen (Ad26.COV2.S)</td>
+<td>Covid-19 - Ad26.COV2.S - Janssen-Cilag</td>
 <td>COV19-JAN</td>
 </tr>
 <tr>
 <td>89</td>
-<td>Covid-19-recombinante, AstraZeneca/Covax (ChAdOx1-S)</td>
-<td>COV19-AZE - ChAdOx1-S</td>
+<td>Covid-19 - ASTRAZENECA - ChAdOx1-S, recombinante</td>
+<td>COVID-19 ASTRAZENECA - ChAdOx1-S</td>
 </tr>
 <tr>
 <td>95</td>
@@ -59562,13 +59553,13 @@
 </tr>
 <tr>
 <td>98</td>
-<td>Covid-19-inativada, Sinovac (Coronavac)</td>
-<td>COV19-INA</td>
+<td>Covid-19 - SINOVAC - CORONAVAC inativada</td>
+<td>COVID-19 SINOVAC - CORONAVAC</td>
 </tr>
 <tr>
 <td>99</td>
-<td>Covid-19-RNAm, Pfizer (Comirnaty) pediátrica</td>
-<td>COV19-PFZ-PEDIÁTRICA</td>
+<td>Covid-19 - Pfizer (Comirnaty) - Pediátrica</td>
+<td>COV19-PFZ-Pediátrica</td>
 </tr>
 <tr>
 <td>100</td>
@@ -59582,13 +59573,13 @@
 </tr>
 <tr>
 <td>102</td>
-<td>Covid-19-RNAm, Pfizer (Comirnaty) pediátrica menor de 5 anos</td>
-<td>COV19-PFZ-PED-MENOR-5A</td>
+<td>Covid-19 - Pfizer (Comirnaty) - Pediátrica - p/ menores de 5 anos</td>
+<td>COV19-PFZ-Ped-Menor-5a</td>
 </tr>
 <tr>
 <td>103</td>
-<td>Covid-19-RNAm, Pfizer (Comirnaty) bivalente</td>
-<td>COV19-PFZ-BIVALENTE</td>
+<td>Covid-19 - Pfizer (Comirnaty) - Bivalente</td>
+<td>COV19-PFZ-Bivalente</td>
 </tr>
 </tbody></table>
 
@@ -63907,605 +63898,475 @@
 
 <table><thead>
 <tr>
-<th>Código</th>
+<th>Código SIPNI</th>
 <th>Descrição</th>
-<th>Código RNDS</th>
-<th>Situação</th>
+<th>Ref RNDS</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>5</td>
-<td>QUILOMBOLA</td>
+<td>Quilombola</td>
 <td>000601</td>
-<td>Ativo</td>
 </tr>
 <tr>
 <td>6</td>
-<td>POPULAÇÃO PRIVADA DE LIBERDADE</td>
+<td>População Privada de Liberdade</td>
 <td>001501</td>
-<td>Ativo</td>
 </tr>
 <tr>
 <td>10</td>
-<td>OUTROS GRUPOS</td>
+<td>Outros Grupos</td>
 <td>999999</td>
-<td>Inativo</td>
 </tr>
 <tr>
 <td>13</td>
-<td>FUNCIONÁRIO DO SISTEMA DE PRIVAÇÃO DE LIBERDADE</td>
+<td>Funcionário do Sistema de Privação de Liberdade</td>
 <td>001401</td>
-<td>Ativo</td>
 </tr>
 <tr>
 <td>31</td>
-<td>CAMINHONEIRO</td>
+<td>Caminhoneiro</td>
 <td>001002</td>
-<td>Ativo</td>
 </tr>
 <tr>
 <td>32</td>
-<td>COLETIVO RODOVIÁRIO PASSAGEIROS URBANO E DE LONGO CURSO</td>
+<td>Coletivo Rodoviário Passageiros Urbano e de Longo Curso</td>
 <td>001003</td>
-<td>Ativo</td>
 </tr>
 <tr>
 <td>33</td>
-<td>TRABALHADORES PORTUÁRIOS</td>
+<td>Trabalhadores Portuários</td>
 <td>001301</td>
-<td>Ativo</td>
 </tr>
 <tr>
 <td>34</td>
-<td>HEMOGLOBINOPATIA GRAVE</td>
+<td>Hemoglobinopatia grave</td>
 <td>000101</td>
-<td>Ativo</td>
 </tr>
 <tr>
 <td>35</td>
-<td>NEOPLASIAS</td>
+<td>Neoplasias</td>
 <td>000102</td>
-<td>Inativo</td>
 </tr>
 <tr>
 <td>36</td>
-<td>DIABETES MELLITUS</td>
+<td>Diabetes Mellitus</td>
 <td>000103</td>
-<td>Ativo</td>
 </tr>
 <tr>
 <td>37</td>
-<td>PNEUMOPATIAS CRÔNICAS GRAVES</td>
+<td>Pneumopatias Crônicas Graves</td>
 <td>000104</td>
-<td>Ativo</td>
 </tr>
 <tr>
 <td>38</td>
-<td>DOENÇA RENAL CRÔNICA</td>
+<td>Doença Renal Crônica</td>
 <td>000105</td>
-<td>Ativo</td>
 </tr>
 <tr>
 <td>39</td>
-<td>DOENÇAS CARDIOVASCULARES E CEREBROVASCULARES</td>
+<td>Doenças Cardiovasculares e Cerebrovasculares</td>
 <td>000106</td>
-<td>Inativo</td>
 </tr>
 <tr>
 <td>40</td>
-<td>HIPERTENSÃO DE DIFÍCIL CONTROLE OU COM COMPLICAÇÕES/LESÃO DE ÓRGÃO ALVO</td>
+<td>Hipertensão de difícil controle ou com complicações/lesão de órgão alvo</td>
 <td>000107</td>
-<td>Ativo</td>
 </tr>
 <tr>
 <td>41</td>
-<td>INDIVÍDUOS TRANSPLANTADOS DE ÓRGÃO SÓLIDO</td>
+<td>Indivíduos Transplantados de Órgão Sólido</td>
 <td>000108</td>
-<td>Inativo</td>
 </tr>
 <tr>
 <td>42</td>
-<td>OBESIDADE GRAVE (IMC≥40)</td>
+<td>Obesidade Grave (Imc≥40)</td>
 <td>000109</td>
-<td>Ativo</td>
 </tr>
 <tr>
 <td>43</td>
-<td>PESSOAS DE 18 A 64 ANOS</td>
+<td>Pessoas de 18 a 64 anos</td>
 <td>000201</td>
-<td>Inativo</td>
 </tr>
 <tr>
 <td>44</td>
-<td>PESSOAS DE 65 A 69 ANOS</td>
+<td>Pessoas de 65 a 69 anos</td>
 <td>000202</td>
-<td>Inativo</td>
 </tr>
 <tr>
 <td>45</td>
-<td>PESSOAS DE 70 A 74 ANOS</td>
+<td>Pessoas de 70 a 74 anos</td>
 <td>000203</td>
-<td>Inativo</td>
 </tr>
 <tr>
 <td>46</td>
-<td>PESSOAS DE 75 A 79 ANOS</td>
+<td>Pessoas de 75 a 79 anos</td>
 <td>000204</td>
-<td>Inativo</td>
 </tr>
 <tr>
 <td>47</td>
-<td>PESSOAS DE 80 ANOS OU MAIS</td>
+<td>Pessoas de 80 anos ou mais</td>
 <td>000205</td>
-<td>Inativo</td>
 </tr>
 <tr>
 <td>48</td>
-<td>PESSOAS DE 60 ANOS OU MAIS, INSTITUCIONALIZADAS</td>
+<td>Pessoas de 60 anos ou mais, institucionalizadas</td>
 <td>000301</td>
-<td>Inativo</td>
 </tr>
 <tr>
 <td>49</td>
-<td>MARINHA DO BRASIL - MB</td>
+<td>Marinha do Brasil - MB</td>
 <td>000401</td>
-<td>Ativo</td>
 </tr>
 <tr>
 <td>50</td>
-<td>EXÉRCITO BRASILEIRO - EB</td>
+<td>Exército Brasileiro - EB</td>
 <td>000402</td>
-<td>Ativo</td>
 </tr>
 <tr>
 <td>51</td>
-<td>FORÇA AÉREA BRASILEIRA - FAB</td>
+<td>Força Aérea Brasileira - FAB</td>
 <td>000403</td>
-<td>Ativo</td>
 </tr>
 <tr>
 <td>52</td>
-<td>BOMBEIRO CIVIL</td>
+<td>Bombeiro Civil</td>
 <td>000501</td>
-<td>Ativo</td>
 </tr>
 <tr>
 <td>53</td>
-<td>BOMBEIRO MILITAR</td>
+<td>Bombeiro Militar</td>
 <td>000502</td>
-<td>Ativo</td>
 </tr>
 <tr>
 <td>54</td>
-<td>GUARDA MUNICIPAL</td>
+<td>Guarda Municipal</td>
 <td>000503</td>
-<td>Ativo</td>
 </tr>
 <tr>
 <td>55</td>
-<td>POLICIAL RODOVIÁRIO FEDERAL</td>
+<td>Policial Rodoviário Federal</td>
 <td>000504</td>
-<td>Ativo</td>
 </tr>
 <tr>
 <td>56</td>
-<td>POLICIAL CIVIL</td>
+<td>Policial Civil</td>
 <td>000505</td>
-<td>Ativo</td>
 </tr>
 <tr>
 <td>57</td>
-<td>POLICIAL FEDERAL</td>
+<td>Policial Federal</td>
 <td>000506</td>
-<td>Ativo</td>
 </tr>
 <tr>
 <td>58</td>
-<td>POLICIAL MILITAR</td>
+<td>Policial Militar</td>
 <td>000507</td>
-<td>Ativo</td>
 </tr>
 <tr>
 <td>59</td>
-<td>RIBEIRINHA</td>
+<td>Ribeirinha</td>
 <td>000602</td>
-<td>Ativo</td>
 </tr>
 <tr>
 <td>60</td>
-<td>POVOS INDÍGENAS EM TERRAS INDÍGENAS</td>
+<td>Povos indígenas em terras indígenas</td>
 <td>000701</td>
-<td>Inativo</td>
 </tr>
 <tr>
 <td>61</td>
-<td>ENSINO BÁSICO</td>
+<td>Ensino Básico</td>
 <td>000801</td>
-<td>Ativo</td>
 </tr>
 <tr>
 <td>62</td>
-<td>ENSINO SUPERIOR</td>
+<td>Ensino Superior</td>
 <td>000802</td>
-<td>Ativo</td>
 </tr>
 <tr>
 <td>63</td>
-<td>AUXILIAR DE VETERINÁRIO</td>
+<td>Auxiliar de Veterinário</td>
 <td>000901</td>
-<td>Ativo</td>
 </tr>
 <tr>
 <td>64</td>
-<td>BIÓLOGO</td>
+<td>Biólogo</td>
 <td>000902</td>
-<td>Ativo</td>
 </tr>
 <tr>
 <td>65</td>
-<td>BIOMÉDICO</td>
+<td>Biomédico</td>
 <td>000903</td>
-<td>Ativo</td>
 </tr>
 <tr>
 <td>66</td>
-<td>COZINHEIRO E AUXILIARES</td>
+<td>Cozinheiro e Auxiliares</td>
 <td>000904</td>
-<td>Ativo</td>
 </tr>
 <tr>
 <td>67</td>
-<td>CUIDADOR DE IDOSOS</td>
+<td>Cuidador de Idosos</td>
 <td>000905</td>
-<td>Ativo</td>
 </tr>
 <tr>
 <td>68</td>
-<td>DOULA/PARTEIRA</td>
+<td>Doula/Parteira</td>
 <td>000906</td>
-<td>Ativo</td>
 </tr>
 <tr>
 <td>69</td>
-<td>ENFERMEIRO(A)</td>
+<td>Enfermeiro(a)</td>
 <td>000907</td>
-<td>Ativo</td>
 </tr>
 <tr>
 <td>70</td>
-<td>FARMACÊUTICO</td>
+<td>Farmacêutico</td>
 <td>000908</td>
-<td>Ativo</td>
 </tr>
 <tr>
 <td>71</td>
-<td>FISIOTERAPEUTAS</td>
+<td>Fisioterapeutas</td>
 <td>000909</td>
-<td>Ativo</td>
 </tr>
 <tr>
 <td>72</td>
-<td>FONOAUDIÓLOGO</td>
+<td>Fonoaudiólogo</td>
 <td>000910</td>
-<td>Ativo</td>
 </tr>
 <tr>
 <td>73</td>
-<td>FUNCIONÁRIO DO SISTEMA FUNERÁRIO QUE TENHAM CONTATO COM CADÁVERES POTENCIALMENTE CONTAMINADOS</td>
+<td>Funcionário do Sistema Funerário que tenham contato com cadáveres potencialmente contaminados</td>
 <td>000911</td>
-<td>Ativo</td>
 </tr>
 <tr>
 <td>74</td>
-<td>MÉDICO</td>
+<td>Médico</td>
 <td>000912</td>
-<td>Ativo</td>
 </tr>
 <tr>
 <td>75</td>
-<td>MÉDICO VETERINÁRIO</td>
+<td>Médico Veterinário</td>
 <td>000913</td>
-<td>Ativo</td>
 </tr>
 <tr>
 <td>76</td>
-<td>MOTORISTA DE AMBULÂNCIA</td>
+<td>Motorista de Ambulância</td>
 <td>000914</td>
-<td>Ativo</td>
 </tr>
 <tr>
 <td>77</td>
-<td>NUTRICIONISTA</td>
+<td>Nutricionista</td>
 <td>000915</td>
-<td>Ativo</td>
 </tr>
 <tr>
 <td>78</td>
-<td>ODONTOLOGISTA</td>
+<td>Odontologista</td>
 <td>000916</td>
-<td>Ativo</td>
 </tr>
 <tr>
 <td>79</td>
-<td>PROFISSIONAIS E AUXILIARES DE LIMPEZA</td>
+<td>Profissionais e Auxiliares de limpeza</td>
 <td>000917</td>
-<td>Ativo</td>
 </tr>
 <tr>
 <td>80</td>
-<td>PROFISSIONAIS DE EDUCAÇÃO FÍSICA</td>
+<td>Profissionais de Educação Física</td>
 <td>000918</td>
-<td>Ativo</td>
 </tr>
 <tr>
 <td>81</td>
-<td>PSICÓLOGO</td>
+<td>Psicólogo</td>
 <td>000919</td>
-<td>Ativo</td>
 </tr>
 <tr>
 <td>82</td>
-<td>RECEPCIONISTA</td>
+<td>Recepcionista</td>
 <td>000920</td>
-<td>Ativo</td>
 </tr>
 <tr>
 <td>83</td>
-<td>SEGURANÇA</td>
+<td>Segurança</td>
 <td>000921</td>
-<td>Ativo</td>
 </tr>
 <tr>
 <td>84</td>
-<td>ASSISTENTE SOCIAL</td>
+<td>Assistente Social</td>
 <td>000922</td>
-<td>Ativo</td>
 </tr>
 <tr>
 <td>85</td>
-<td>TÉCNICO DE ENFERMAGEM</td>
+<td>Técnico de Enfermagem</td>
 <td>000923</td>
-<td>Ativo</td>
 </tr>
 <tr>
 <td>86</td>
-<td>TÉCNICO DE VETERINÁRIO</td>
+<td>Técnico de Veterinário</td>
 <td>000924</td>
-<td>Ativo</td>
 </tr>
 <tr>
 <td>87</td>
-<td>TERAPEUTA OCUPACIONAL</td>
+<td>Terapeuta Ocupacional</td>
 <td>000925</td>
-<td>Ativo</td>
 </tr>
 <tr>
 <td>88</td>
-<td>AÉREO</td>
+<td>Aéreo</td>
 <td>001001</td>
-<td>Ativo</td>
 </tr>
 <tr>
 <td>89</td>
-<td>FERROVIÁRIO</td>
+<td>Ferroviário</td>
 <td>001004</td>
-<td>Ativo</td>
 </tr>
 <tr>
 <td>90</td>
-<td>METROVIÁRIO</td>
+<td>Metroviário</td>
 <td>001005</td>
-<td>Ativo</td>
 </tr>
 <tr>
 <td>91</td>
-<td>AQUAVIÁRIO</td>
+<td>Aquaviário</td>
 <td>001006</td>
-<td>Ativo</td>
 </tr>
 <tr>
 <td>92</td>
-<td>PESSOAS COM DEFICIÊNCIA INSTITUCIONALIZADAS</td>
+<td>Pessoas com Deficiência Institucionalizadas</td>
 <td>001101</td>
-<td>Ativo</td>
 </tr>
 <tr>
 <td>93</td>
-<td>PESSOAS COM DEFICIÊNCIA PERMANENTE</td>
+<td>Pessoas com Deficiência Permanente</td>
 <td>001102</td>
-<td>Ativo</td>
 </tr>
 <tr>
 <td>94</td>
-<td>PESSOAS EM SITUAÇÃO DE RUA</td>
+<td>Pessoas em Situação de Rua</td>
 <td>001201</td>
-<td>Ativo</td>
 </tr>
 <tr>
 <td>95</td>
-<td>TRABALHADORES INDUSTRIAIS</td>
+<td>Trabalhadores Industriais</td>
 <td>001601</td>
-<td>Ativo</td>
 </tr>
 <tr>
 <td>96</td>
-<td>SÍNDROME DE DOWN</td>
+<td>Síndrome de Down</td>
 <td>000110</td>
-<td>Ativo</td>
 </tr>
 <tr>
 <td>97</td>
-<td>AUXILIAR DE ENFERMAGEM</td>
+<td>Auxiliar de Enfermagem</td>
 <td>000927</td>
-<td>Ativo</td>
 </tr>
 <tr>
 <td>98</td>
-<td>TÉCNICO DE ODONTOLOGIA</td>
+<td>Técnico de Odontologia</td>
 <td>000928</td>
-<td>Ativo</td>
 </tr>
 <tr>
 <td>99</td>
-<td>ACADÊMICOS/ESTUDANTES EM ESTÁGIO EM ESTABELECIMENTOS DE SAÚDE</td>
+<td>Acadêmicos/estudantes em estágio em estabelecimentos de saúde</td>
 <td>000929</td>
-<td>Ativo</td>
 </tr>
 <tr>
 <td>100</td>
-<td>OUTROS IMUNOCOMPROMETIDOS</td>
+<td>Outros Imunocomprometidos</td>
 <td>000111</td>
-<td>Inativo</td>
 </tr>
 <tr>
 <td>101</td>
-<td>INDIVÍDUOS TRANSPLANTADOS DE MEDULA ÓSSEA</td>
+<td>Indivíduos Transplantados de Medula Óssea</td>
 <td>000112</td>
-<td>Inativo</td>
 </tr>
 <tr>
 <td>102</td>
-<td>CIRROSE HEPÁTICA</td>
+<td>Cirrose hepática</td>
 <td>000114</td>
-<td>Ativo</td>
 </tr>
 <tr>
 <td>103</td>
-<td>DOENÇA NEUROLÓGICA CRÔNICA</td>
+<td>Doença neurológica crônica</td>
 <td>000115</td>
-<td>Ativo</td>
 </tr>
 <tr>
 <td>104</td>
-<td>DOENÇA CARDIOVASCULAR</td>
+<td>Doença cardiovascular</td>
 <td>000116</td>
-<td>Ativo</td>
 </tr>
 <tr>
 <td>105</td>
-<td>PESSOAS DE 12 A 17 ANOS</td>
+<td>Pessoas de 12 a 17 anos</td>
 <td>000206</td>
-<td>Inativo</td>
 </tr>
 <tr>
 <td>106</td>
-<td>OUTROS PROFISSIONAIS DE SAÚDE</td>
+<td>Outros profissionais de saúde</td>
 <td>000926</td>
-<td>Inativo</td>
 </tr>
 <tr>
 <td>107</td>
-<td>AGENTE DE COMBATE A ENDEMIAS - ACE</td>
+<td>Agente de Combate a Endemias - ACE</td>
 <td>000930</td>
-<td>Ativo</td>
 </tr>
 <tr>
 <td>108</td>
-<td>AGENTE COMUNITÁRIO DE SAÚDE - ACS</td>
+<td>Agente Comunitário de Saúde - ACS</td>
 <td>000931</td>
-<td>Ativo</td>
 </tr>
 <tr>
 <td>109</td>
-<td>AUXILIAR EM SAÚDE BUCAL - ASB</td>
+<td>Auxiliar em Saúde Bucal - ASB</td>
 <td>000932</td>
-<td>Ativo</td>
 </tr>
 <tr>
 <td>110</td>
-<td>TÉCNICO EM SAÚDE BUCAL - TSB</td>
+<td>Técnico em Saúde Bucal - TSB</td>
 <td>000933</td>
-<td>Ativo</td>
 </tr>
 <tr>
 <td>111</td>
-<td>TRABALHADORES DE LIMPEZA URBANA E MANEJO DE RESÍDUOS SÓLIDOS</td>
+<td>Trabalhadores de limpeza urbana e manejo de resíduos sólidos</td>
 <td>001701</td>
-<td>Ativo</td>
 </tr>
 <tr>
 <td>112</td>
-<td>GESTANTE</td>
+<td>Gestante</td>
 <td>001801</td>
-<td>Ativo</td>
 </tr>
 <tr>
 <td>113</td>
-<td>PUÉRPERA</td>
+<td>Puérpera</td>
 <td>001901</td>
-<td>Ativo</td>
 </tr>
 <tr>
 <td>114</td>
-<td>PESSOAS DE 5 A 11 ANOS</td>
+<td>Pessoas de 5 a 11 anos</td>
 <td>000207</td>
-<td>Inativo</td>
 </tr>
 <tr>
 <td>115</td>
-<td>CRIANÇAS QUILOMBOLAS</td>
+<td>Crianças quilombolas</td>
 <td>000603</td>
-<td>Inativo</td>
 </tr>
 <tr>
 <td>116</td>
-<td>CRIANÇAS RIBEIRINHAS</td>
+<td>Crianças ribeirinhas</td>
 <td>000604</td>
-<td>Inativo</td>
 </tr>
 <tr>
 <td>117</td>
-<td>CRIANÇAS INDÍGENAS</td>
+<td>Crianças indígenas</td>
 <td>000702</td>
-<td>Inativo</td>
 </tr>
 <tr>
 <td>118</td>
-<td>PESSOAS DE 3 A 4 ANOS</td>
+<td>Pessoas de 3 a 4 anos</td>
 <td>000208</td>
-<td>Inativo</td>
 </tr>
 <tr>
 <td>119</td>
-<td>PESSOAS DE 6 MESES A 2 ANOS</td>
+<td>Pessoas de 6 meses a 2 anos</td>
 <td>000209</td>
-<td>Inativo</td>
-</tr>
-<tr>
-<td>120</td>
-<td>IMUNOCOMPROMETIDOS</td>
-<td>000117</td>
-<td>Ativo</td>
-</tr>
-<tr>
-<td>121</td>
-<td>FAIXA ETÁRIA</td>
-<td>000210</td>
-<td>Ativo</td>
-</tr>
-<tr>
-<td>122</td>
-<td>POVOS INDÍGENAS VIVENDO EM TERRAS INDÍGENAS</td>
-<td>000703</td>
-<td>Ativo</td>
-</tr>
-<tr>
-<td>123</td>
-<td>POVOS INDÍGENAS VIVENDO FORA DAS TERRAS INDÍGENAS</td>
-<td>000704</td>
-<td>Ativo</td>
-</tr>
-<tr>
-<td>124</td>
-<td>ADOLESCENTES CUMPRINDO MEDIDAS SOCIOEDUCATIVAS</td>
-<td>001502</td>
-<td>Ativo</td>
-</tr>
-<tr>
-<td>125</td>
-<td>PESSOAS INSTITUCIONALIZADAS</td>
-<td>000302</td>
-<td>Ativo</td>
 </tr>
 </tbody></table>
 
@@ -96452,18 +96313,6 @@
 <tr>
 <td>BCG</td>
 <td>BCG</td>
-<td>MULTIVACINAÇÃO</td>
-<td>DU</td>
-</tr>
-<tr>
-<td>BCG</td>
-<td>BCG</td>
-<td>MULTIVACINAÇÃO</td>
-<td>REV</td>
-</tr>
-<tr>
-<td>BCG</td>
-<td>BCG</td>
 <td>ROTINA</td>
 <td>DU</td>
 </tr>
@@ -96474,478 +96323,178 @@
 <td>REV</td>
 </tr>
 <tr>
-<td>COV19-AZE - COVISHIELD</td>
-<td>Covid-19-recombinante, AstraZeneca/Fiocruz (Covishield)</td>
-<td>CAMPANHA SELETIVA</td>
+<td>COV19-AZE</td>
+<td>Covid-19 - Covishield - Oxford/AstraZeneca</td>
+<td>CAMPANHA INDISCRIMINADA</td>
 <td>D1</td>
 </tr>
 <tr>
-<td>COV19-AZE - COVISHIELD</td>
-<td>Covid-19-recombinante, AstraZeneca/Fiocruz (Covishield)</td>
-<td>CAMPANHA SELETIVA</td>
-<td>D1REV</td>
-</tr>
-<tr>
-<td>COV19-AZE - COVISHIELD</td>
-<td>Covid-19-recombinante, AstraZeneca/Fiocruz (Covishield)</td>
-<td>CAMPANHA SELETIVA</td>
+<td>COV19-AZE</td>
+<td>Covid-19 - Covishield - Oxford/AstraZeneca</td>
+<td>CAMPANHA INDISCRIMINADA</td>
 <td>D2</td>
 </tr>
 <tr>
-<td>COV19-AZE - COVISHIELD</td>
-<td>Covid-19-recombinante, AstraZeneca/Fiocruz (Covishield)</td>
-<td>CAMPANHA SELETIVA</td>
-<td>D2REV</td>
+<td>COV19-AZE</td>
+<td>Covid-19 - Covishield - Oxford/AstraZeneca</td>
+<td>CAMPANHA INDISCRIMINADA</td>
+<td>DA</td>
 </tr>
 <tr>
-<td>COV19-AZE - COVISHIELD</td>
-<td>Covid-19-recombinante, AstraZeneca/Fiocruz (Covishield)</td>
-<td>CAMPANHA SELETIVA</td>
-<td>D3</td>
-</tr>
-<tr>
-<td>COV19-AZE - COVISHIELD</td>
-<td>Covid-19-recombinante, AstraZeneca/Fiocruz (Covishield)</td>
-<td>CAMPANHA SELETIVA</td>
-<td>D3REV</td>
-</tr>
-<tr>
-<td>COV19-AZE - COVISHIELD</td>
-<td>Covid-19-recombinante, AstraZeneca/Fiocruz (Covishield)</td>
-<td>CAMPANHA SELETIVA</td>
-<td>D4REV</td>
-</tr>
-<tr>
-<td>COV19-AZE - COVISHIELD</td>
-<td>Covid-19-recombinante, AstraZeneca/Fiocruz (Covishield)</td>
-<td>CAMPANHA SELETIVA</td>
-<td>D5REV</td>
-</tr>
-<tr>
-<td>COV19-AZE - COVISHIELD</td>
-<td>Covid-19-recombinante, AstraZeneca/Fiocruz (Covishield)</td>
-<td>CAMPANHA SELETIVA</td>
-<td>R1</td>
-</tr>
-<tr>
-<td>COV19-AZE - COVISHIELD</td>
-<td>Covid-19-recombinante, AstraZeneca/Fiocruz (Covishield)</td>
-<td>CAMPANHA SELETIVA</td>
+<td>COV19-AZE</td>
+<td>Covid-19 - Covishield - Oxford/AstraZeneca</td>
+<td>CAMPANHA INDISCRIMINADA</td>
 <td>R2</td>
 </tr>
 <tr>
-<td>COV19-AZE - COVISHIELD</td>
-<td>Covid-19-recombinante, AstraZeneca/Fiocruz (Covishield)</td>
-<td>CAMPANHA SELETIVA</td>
-<td>REV</td>
+<td>COV19-AZE</td>
+<td>Covid-19 - Covishield - Oxford/AstraZeneca</td>
+<td>CAMPANHA INDISCRIMINADA</td>
+<td>R3</td>
 </tr>
 <tr>
-<td>COV19-AZE - ChAdOx1-S</td>
-<td>Covid-19-recombinante, AstraZeneca/Covax (ChAdOx1-S)</td>
-<td>CAMPANHA SELETIVA</td>
-<td>D1</td>
-</tr>
-<tr>
-<td>COV19-AZE - ChAdOx1-S</td>
-<td>Covid-19-recombinante, AstraZeneca/Covax (ChAdOx1-S)</td>
-<td>CAMPANHA SELETIVA</td>
-<td>D1REV</td>
-</tr>
-<tr>
-<td>COV19-AZE - ChAdOx1-S</td>
-<td>Covid-19-recombinante, AstraZeneca/Covax (ChAdOx1-S)</td>
-<td>CAMPANHA SELETIVA</td>
-<td>D2</td>
-</tr>
-<tr>
-<td>COV19-AZE - ChAdOx1-S</td>
-<td>Covid-19-recombinante, AstraZeneca/Covax (ChAdOx1-S)</td>
-<td>CAMPANHA SELETIVA</td>
-<td>D2REV</td>
-</tr>
-<tr>
-<td>COV19-AZE - ChAdOx1-S</td>
-<td>Covid-19-recombinante, AstraZeneca/Covax (ChAdOx1-S)</td>
-<td>CAMPANHA SELETIVA</td>
-<td>D3</td>
-</tr>
-<tr>
-<td>COV19-AZE - ChAdOx1-S</td>
-<td>Covid-19-recombinante, AstraZeneca/Covax (ChAdOx1-S)</td>
-<td>CAMPANHA SELETIVA</td>
-<td>D3REV</td>
-</tr>
-<tr>
-<td>COV19-AZE - ChAdOx1-S</td>
-<td>Covid-19-recombinante, AstraZeneca/Covax (ChAdOx1-S)</td>
-<td>CAMPANHA SELETIVA</td>
-<td>D4REV</td>
-</tr>
-<tr>
-<td>COV19-AZE - ChAdOx1-S</td>
-<td>Covid-19-recombinante, AstraZeneca/Covax (ChAdOx1-S)</td>
-<td>CAMPANHA SELETIVA</td>
-<td>D5REV</td>
-</tr>
-<tr>
-<td>COV19-AZE - ChAdOx1-S</td>
-<td>Covid-19-recombinante, AstraZeneca/Covax (ChAdOx1-S)</td>
-<td>CAMPANHA SELETIVA</td>
-<td>R1</td>
-</tr>
-<tr>
-<td>COV19-AZE - ChAdOx1-S</td>
-<td>Covid-19-recombinante, AstraZeneca/Covax (ChAdOx1-S)</td>
-<td>CAMPANHA SELETIVA</td>
-<td>R2</td>
-</tr>
-<tr>
-<td>COV19-AZE - ChAdOx1-S</td>
-<td>Covid-19-recombinante, AstraZeneca/Covax (ChAdOx1-S)</td>
-<td>CAMPANHA SELETIVA</td>
-<td>REV</td>
-</tr>
-<tr>
-<td>COV19-INA</td>
-<td>Covid-19-inativada, Sinovac (Coronavac)</td>
-<td>CAMPANHA SELETIVA</td>
-<td>D1</td>
-</tr>
-<tr>
-<td>COV19-INA</td>
-<td>Covid-19-inativada, Sinovac (Coronavac)</td>
-<td>CAMPANHA SELETIVA</td>
-<td>D1REV</td>
-</tr>
-<tr>
-<td>COV19-INA</td>
-<td>Covid-19-inativada, Sinovac (Coronavac)</td>
-<td>CAMPANHA SELETIVA</td>
-<td>D2</td>
-</tr>
-<tr>
-<td>COV19-INA</td>
-<td>Covid-19-inativada, Sinovac (Coronavac)</td>
-<td>CAMPANHA SELETIVA</td>
-<td>D2REV</td>
-</tr>
-<tr>
-<td>COV19-INA</td>
-<td>Covid-19-inativada, Sinovac (Coronavac)</td>
-<td>CAMPANHA SELETIVA</td>
-<td>D3</td>
-</tr>
-<tr>
-<td>COV19-INA</td>
-<td>Covid-19-inativada, Sinovac (Coronavac)</td>
-<td>CAMPANHA SELETIVA</td>
-<td>D3REV</td>
-</tr>
-<tr>
-<td>COV19-INA</td>
-<td>Covid-19-inativada, Sinovac (Coronavac)</td>
-<td>CAMPANHA SELETIVA</td>
-<td>D4REV</td>
-</tr>
-<tr>
-<td>COV19-INA</td>
-<td>Covid-19-inativada, Sinovac (Coronavac)</td>
-<td>CAMPANHA SELETIVA</td>
-<td>D5REV</td>
-</tr>
-<tr>
-<td>COV19-INA</td>
-<td>Covid-19-inativada, Sinovac (Coronavac)</td>
-<td>CAMPANHA SELETIVA</td>
-<td>R1</td>
-</tr>
-<tr>
-<td>COV19-INA</td>
-<td>Covid-19-inativada, Sinovac (Coronavac)</td>
-<td>CAMPANHA SELETIVA</td>
-<td>R2</td>
-</tr>
-<tr>
-<td>COV19-INA</td>
-<td>Covid-19-inativada, Sinovac (Coronavac)</td>
-<td>CAMPANHA SELETIVA</td>
-<td>REV</td>
+<td>COV19-AZE</td>
+<td>Covid-19 - Covishield - Oxford/AstraZeneca</td>
+<td>CAMPANHA INDISCRIMINADA</td>
+<td>REF</td>
 </tr>
 <tr>
 <td>COV19-JAN</td>
-<td>Covid-19-recombinante, Janssen (Ad26.COV2.S)</td>
-<td>CAMPANHA SELETIVA</td>
-<td>D1</td>
+<td>Covid-19 - Ad26.COV2.S - Janssen-Cilag</td>
+<td>CAMPANHA INDISCRIMINADA</td>
+<td>D</td>
 </tr>
 <tr>
 <td>COV19-JAN</td>
-<td>Covid-19-recombinante, Janssen (Ad26.COV2.S)</td>
-<td>CAMPANHA SELETIVA</td>
-<td>D1REV</td>
+<td>Covid-19 - Ad26.COV2.S - Janssen-Cilag</td>
+<td>CAMPANHA INDISCRIMINADA</td>
+<td>DA</td>
 </tr>
 <tr>
 <td>COV19-JAN</td>
-<td>Covid-19-recombinante, Janssen (Ad26.COV2.S)</td>
-<td>CAMPANHA SELETIVA</td>
-<td>D2</td>
-</tr>
-<tr>
-<td>COV19-JAN</td>
-<td>Covid-19-recombinante, Janssen (Ad26.COV2.S)</td>
-<td>CAMPANHA SELETIVA</td>
-<td>D2REV</td>
-</tr>
-<tr>
-<td>COV19-JAN</td>
-<td>Covid-19-recombinante, Janssen (Ad26.COV2.S)</td>
-<td>CAMPANHA SELETIVA</td>
-<td>D3</td>
-</tr>
-<tr>
-<td>COV19-JAN</td>
-<td>Covid-19-recombinante, Janssen (Ad26.COV2.S)</td>
-<td>CAMPANHA SELETIVA</td>
-<td>D3REV</td>
-</tr>
-<tr>
-<td>COV19-JAN</td>
-<td>Covid-19-recombinante, Janssen (Ad26.COV2.S)</td>
-<td>CAMPANHA SELETIVA</td>
-<td>D4REV</td>
-</tr>
-<tr>
-<td>COV19-JAN</td>
-<td>Covid-19-recombinante, Janssen (Ad26.COV2.S)</td>
-<td>CAMPANHA SELETIVA</td>
-<td>D5REV</td>
-</tr>
-<tr>
-<td>COV19-JAN</td>
-<td>Covid-19-recombinante, Janssen (Ad26.COV2.S)</td>
-<td>CAMPANHA SELETIVA</td>
-<td>R1</td>
-</tr>
-<tr>
-<td>COV19-JAN</td>
-<td>Covid-19-recombinante, Janssen (Ad26.COV2.S)</td>
-<td>CAMPANHA SELETIVA</td>
+<td>Covid-19 - Ad26.COV2.S - Janssen-Cilag</td>
+<td>CAMPANHA INDISCRIMINADA</td>
 <td>R2</td>
 </tr>
 <tr>
 <td>COV19-JAN</td>
-<td>Covid-19-recombinante, Janssen (Ad26.COV2.S)</td>
-<td>CAMPANHA SELETIVA</td>
-<td>REV</td>
+<td>Covid-19 - Ad26.COV2.S - Janssen-Cilag</td>
+<td>CAMPANHA INDISCRIMINADA</td>
+<td>R3</td>
+</tr>
+<tr>
+<td>COV19-JAN</td>
+<td>Covid-19 - Ad26.COV2.S - Janssen-Cilag</td>
+<td>CAMPANHA INDISCRIMINADA</td>
+<td>REF</td>
 </tr>
 <tr>
 <td>COV19-PFZ</td>
-<td>Covid-19-RNAm, Pfizer (Comirnaty)</td>
-<td>CAMPANHA SELETIVA</td>
+<td>Covid-19 - BNT162b2 - BioNTech/Fosun Pharma/Pfizer</td>
+<td>CAMPANHA INDISCRIMINADA</td>
 <td>D1</td>
 </tr>
 <tr>
 <td>COV19-PFZ</td>
-<td>Covid-19-RNAm, Pfizer (Comirnaty)</td>
-<td>CAMPANHA SELETIVA</td>
-<td>D1REV</td>
-</tr>
-<tr>
-<td>COV19-PFZ</td>
-<td>Covid-19-RNAm, Pfizer (Comirnaty)</td>
-<td>CAMPANHA SELETIVA</td>
+<td>Covid-19 - BNT162b2 - BioNTech/Fosun Pharma/Pfizer</td>
+<td>CAMPANHA INDISCRIMINADA</td>
 <td>D2</td>
 </tr>
 <tr>
 <td>COV19-PFZ</td>
-<td>Covid-19-RNAm, Pfizer (Comirnaty)</td>
-<td>CAMPANHA SELETIVA</td>
-<td>D2REV</td>
+<td>Covid-19 - BNT162b2 - BioNTech/Fosun Pharma/Pfizer</td>
+<td>CAMPANHA INDISCRIMINADA</td>
+<td>DA</td>
 </tr>
 <tr>
 <td>COV19-PFZ</td>
-<td>Covid-19-RNAm, Pfizer (Comirnaty)</td>
-<td>CAMPANHA SELETIVA</td>
-<td>D3</td>
-</tr>
-<tr>
-<td>COV19-PFZ</td>
-<td>Covid-19-RNAm, Pfizer (Comirnaty)</td>
-<td>CAMPANHA SELETIVA</td>
-<td>D3REV</td>
-</tr>
-<tr>
-<td>COV19-PFZ</td>
-<td>Covid-19-RNAm, Pfizer (Comirnaty)</td>
-<td>CAMPANHA SELETIVA</td>
-<td>D4REV</td>
-</tr>
-<tr>
-<td>COV19-PFZ</td>
-<td>Covid-19-RNAm, Pfizer (Comirnaty)</td>
-<td>CAMPANHA SELETIVA</td>
-<td>D5REV</td>
-</tr>
-<tr>
-<td>COV19-PFZ</td>
-<td>Covid-19-RNAm, Pfizer (Comirnaty)</td>
-<td>CAMPANHA SELETIVA</td>
-<td>R1</td>
-</tr>
-<tr>
-<td>COV19-PFZ</td>
-<td>Covid-19-RNAm, Pfizer (Comirnaty)</td>
-<td>CAMPANHA SELETIVA</td>
+<td>Covid-19 - BNT162b2 - BioNTech/Fosun Pharma/Pfizer</td>
+<td>CAMPANHA INDISCRIMINADA</td>
 <td>R2</td>
 </tr>
 <tr>
 <td>COV19-PFZ</td>
-<td>Covid-19-RNAm, Pfizer (Comirnaty)</td>
-<td>CAMPANHA SELETIVA</td>
-<td>REV</td>
+<td>Covid-19 - BNT162b2 - BioNTech/Fosun Pharma/Pfizer</td>
+<td>CAMPANHA INDISCRIMINADA</td>
+<td>R3</td>
 </tr>
 <tr>
-<td>COV19-PFZ-Bivalente</td>
-<td>Covid-19-RNAm, Pfizer (Comirnaty) bivalente</td>
-<td>CAMPANHA SELETIVA</td>
+<td>COV19-PFZ</td>
+<td>Covid-19 - BNT162b2 - BioNTech/Fosun Pharma/Pfizer</td>
+<td>CAMPANHA INDISCRIMINADA</td>
+<td>REF</td>
+</tr>
+<tr>
+<td>COV19-PFZ-Pediátrica</td>
+<td>Covid-19 - Pfizer (Comirnaty) - Pediátrica</td>
+<td>CAMPANHA INDISCRIMINADA</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>COV19-PFZ-Pediátrica</td>
+<td>Covid-19 - Pfizer (Comirnaty) - Pediátrica</td>
+<td>CAMPANHA INDISCRIMINADA</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>COV19-PFZ-Pediátrica</td>
+<td>Covid-19 - Pfizer (Comirnaty) - Pediátrica</td>
+<td>CAMPANHA INDISCRIMINADA</td>
 <td>REF</td>
 </tr>
 <tr>
 <td>COV19-PFZ-Ped-Menor-5a</td>
-<td>Covid-19-RNAm, Pfizer (Comirnaty) pediátrica menor de 5 anos</td>
-<td>CAMPANHA SELETIVA</td>
+<td>Covid-19 - Pfizer (Comirnaty) - Pediátrica - p/ menores de 5 anos</td>
+<td>CAMPANHA INDISCRIMINADA</td>
 <td>D1</td>
 </tr>
 <tr>
 <td>COV19-PFZ-Ped-Menor-5a</td>
-<td>Covid-19-RNAm, Pfizer (Comirnaty) pediátrica menor de 5 anos</td>
-<td>CAMPANHA SELETIVA</td>
+<td>Covid-19 - Pfizer (Comirnaty) - Pediátrica - p/ menores de 5 anos</td>
+<td>CAMPANHA INDISCRIMINADA</td>
 <td>D2</td>
 </tr>
 <tr>
 <td>COV19-PFZ-Ped-Menor-5a</td>
-<td>Covid-19-RNAm, Pfizer (Comirnaty) pediátrica menor de 5 anos</td>
-<td>CAMPANHA SELETIVA</td>
+<td>Covid-19 - Pfizer (Comirnaty) - Pediátrica - p/ menores de 5 anos</td>
+<td>CAMPANHA INDISCRIMINADA</td>
 <td>D3</td>
 </tr>
 <tr>
-<td>COV19-PFZ-Pediátrica</td>
-<td>Covid-19-RNAm, Pfizer (Comirnaty) pediátrica</td>
-<td>CAMPANHA SELETIVA</td>
-<td>D1</td>
-</tr>
-<tr>
-<td>COV19-PFZ-Pediátrica</td>
-<td>Covid-19-RNAm, Pfizer (Comirnaty) pediátrica</td>
-<td>CAMPANHA SELETIVA</td>
-<td>D1REV</td>
-</tr>
-<tr>
-<td>COV19-PFZ-Pediátrica</td>
-<td>Covid-19-RNAm, Pfizer (Comirnaty) pediátrica</td>
-<td>CAMPANHA SELETIVA</td>
-<td>D2</td>
-</tr>
-<tr>
-<td>COV19-PFZ-Pediátrica</td>
-<td>Covid-19-RNAm, Pfizer (Comirnaty) pediátrica</td>
-<td>CAMPANHA SELETIVA</td>
-<td>D2REV</td>
-</tr>
-<tr>
-<td>COV19-PFZ-Pediátrica</td>
-<td>Covid-19-RNAm, Pfizer (Comirnaty) pediátrica</td>
-<td>CAMPANHA SELETIVA</td>
-<td>D3</td>
-</tr>
-<tr>
-<td>COV19-PFZ-Pediátrica</td>
-<td>Covid-19-RNAm, Pfizer (Comirnaty) pediátrica</td>
-<td>CAMPANHA SELETIVA</td>
-<td>D3REV</td>
-</tr>
-<tr>
-<td>COV19-PFZ-Pediátrica</td>
-<td>Covid-19-RNAm, Pfizer (Comirnaty) pediátrica</td>
-<td>CAMPANHA SELETIVA</td>
-<td>D4REV</td>
-</tr>
-<tr>
-<td>COV19-PFZ-Pediátrica</td>
-<td>Covid-19-RNAm, Pfizer (Comirnaty) pediátrica</td>
-<td>CAMPANHA SELETIVA</td>
-<td>R1</td>
-</tr>
-<tr>
-<td>COV19-PFZ-Pediátrica</td>
-<td>Covid-19-RNAm, Pfizer (Comirnaty) pediátrica</td>
-<td>CAMPANHA SELETIVA</td>
-<td>REV</td>
+<td>COV19-PFZ-Bivalente</td>
+<td>Covid-19 - Pfizer (Comirnaty) - Bivalente</td>
+<td>CAMPANHA INDISCRIMINADA</td>
+<td>REF</td>
 </tr>
 <tr>
 <td>COV19-VAC</td>
-<td>Covid-19-inativada, Sinovac/Butantan (Coronavac)</td>
-<td>CAMPANHA SELETIVA</td>
+<td>Covid-19 - Coronavac - Sinovac/Butantan</td>
+<td>CAMPANHA INDISCRIMINADA</td>
 <td>D1</td>
 </tr>
 <tr>
 <td>COV19-VAC</td>
-<td>Covid-19-inativada, Sinovac/Butantan (Coronavac)</td>
-<td>CAMPANHA SELETIVA</td>
-<td>D1REV</td>
-</tr>
-<tr>
-<td>COV19-VAC</td>
-<td>Covid-19-inativada, Sinovac/Butantan (Coronavac)</td>
-<td>CAMPANHA SELETIVA</td>
+<td>Covid-19 - Coronavac - Sinovac/Butantan</td>
+<td>CAMPANHA INDISCRIMINADA</td>
 <td>D2</td>
 </tr>
 <tr>
 <td>COV19-VAC</td>
-<td>Covid-19-inativada, Sinovac/Butantan (Coronavac)</td>
-<td>CAMPANHA SELETIVA</td>
-<td>D2REV</td>
+<td>Covid-19 - Coronavac - Sinovac/Butantan</td>
+<td>CAMPANHA INDISCRIMINADA</td>
+<td>REF</td>
 </tr>
 <tr>
-<td>COV19-VAC</td>
-<td>Covid-19-inativada, Sinovac/Butantan (Coronavac)</td>
-<td>CAMPANHA SELETIVA</td>
-<td>D3</td>
+<td>COV19-INA</td>
+<td>Vacina COVID-19 SINOVAC - CORONAVAC inativada</td>
+<td>CAMPANHA INDISCRIMINADA</td>
+<td>D1</td>
 </tr>
 <tr>
-<td>COV19-VAC</td>
-<td>Covid-19-inativada, Sinovac/Butantan (Coronavac)</td>
-<td>CAMPANHA SELETIVA</td>
-<td>D3REV</td>
-</tr>
-<tr>
-<td>COV19-VAC</td>
-<td>Covid-19-inativada, Sinovac/Butantan (Coronavac)</td>
-<td>CAMPANHA SELETIVA</td>
-<td>D4REV</td>
-</tr>
-<tr>
-<td>COV19-VAC</td>
-<td>Covid-19-inativada, Sinovac/Butantan (Coronavac)</td>
-<td>CAMPANHA SELETIVA</td>
-<td>D5REV</td>
-</tr>
-<tr>
-<td>COV19-VAC</td>
-<td>Covid-19-inativada, Sinovac/Butantan (Coronavac)</td>
-<td>CAMPANHA SELETIVA</td>
-<td>R1</td>
-</tr>
-<tr>
-<td>COV19-VAC</td>
-<td>Covid-19-inativada, Sinovac/Butantan (Coronavac)</td>
-<td>CAMPANHA SELETIVA</td>
-<td>R2</td>
-</tr>
-<tr>
-<td>COV19-VAC</td>
-<td>Covid-19-inativada, Sinovac/Butantan (Coronavac)</td>
-<td>CAMPANHA SELETIVA</td>
-<td>REV</td>
+<td>COV19-INA</td>
+<td>Vacina COVID-19 SINOVAC - CORONAVAC inativada</td>
+<td>CAMPANHA INDISCRIMINADA</td>
+<td>D2</td>
 </tr>
 <tr>
 <td>Cólera</td>
@@ -97058,36 +96607,6 @@
 <tr>
 <td>DTP</td>
 <td>Tríplice bacteriana</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D1</td>
-</tr>
-<tr>
-<td>DTP</td>
-<td>Tríplice bacteriana</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D2</td>
-</tr>
-<tr>
-<td>DTP</td>
-<td>Tríplice bacteriana</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D3</td>
-</tr>
-<tr>
-<td>DTP</td>
-<td>Tríplice bacteriana</td>
-<td>MULTIVACINAÇÃO</td>
-<td>R1</td>
-</tr>
-<tr>
-<td>DTP</td>
-<td>Tríplice bacteriana</td>
-<td>MULTIVACINAÇÃO</td>
-<td>R2</td>
-</tr>
-<tr>
-<td>DTP</td>
-<td>Tríplice bacteriana</td>
 <td>ROTINA</td>
 <td>D1</td>
 </tr>
@@ -97161,24 +96680,6 @@
 <td>Dengue</td>
 <td>Vacina Dengue 1, 2, 3 e 4 (recomb e atenuada)</td>
 <td>INTENSIFICAÇÃO</td>
-<td>D3</td>
-</tr>
-<tr>
-<td>Dengue</td>
-<td>Vacina Dengue 1, 2, 3 e 4 (recomb e atenuada)</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D1</td>
-</tr>
-<tr>
-<td>Dengue</td>
-<td>Vacina Dengue 1, 2, 3 e 4 (recomb e atenuada)</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D2</td>
-</tr>
-<tr>
-<td>Dengue</td>
-<td>Vacina Dengue 1, 2, 3 e 4 (recomb e atenuada)</td>
-<td>MULTIVACINAÇÃO</td>
 <td>D3</td>
 </tr>
 <tr>
@@ -97276,24 +96777,6 @@
 <td>Febre amarela</td>
 <td>INTENSIFICAÇÃO</td>
 <td>REV</td>
-</tr>
-<tr>
-<td>FA</td>
-<td>Febre amarela</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D1</td>
-</tr>
-<tr>
-<td>FA</td>
-<td>Febre amarela</td>
-<td>MULTIVACINAÇÃO</td>
-<td>DU</td>
-</tr>
-<tr>
-<td>FA</td>
-<td>Febre amarela</td>
-<td>MULTIVACINAÇÃO</td>
-<td>REF</td>
 </tr>
 <tr>
 <td>FA</td>
@@ -97448,12 +96931,6 @@
 <tr>
 <td>HAped</td>
 <td>Hepatite A Pediátrica</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D1</td>
-</tr>
-<tr>
-<td>HAped</td>
-<td>Hepatite A Pediátrica</td>
 <td>ROTINA</td>
 <td>D1</td>
 </tr>
@@ -97556,42 +97033,6 @@
 <tr>
 <td>HB</td>
 <td>Hepatite B</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D</td>
-</tr>
-<tr>
-<td>HB</td>
-<td>Hepatite B</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D1</td>
-</tr>
-<tr>
-<td>HB</td>
-<td>Hepatite B</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D2</td>
-</tr>
-<tr>
-<td>HB</td>
-<td>Hepatite B</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D3</td>
-</tr>
-<tr>
-<td>HB</td>
-<td>Hepatite B</td>
-<td>MULTIVACINAÇÃO</td>
-<td>REF</td>
-</tr>
-<tr>
-<td>HB</td>
-<td>Hepatite B</td>
-<td>MULTIVACINAÇÃO</td>
-<td>REV</td>
-</tr>
-<tr>
-<td>HB</td>
-<td>Hepatite B</td>
 <td>ROTINA</td>
 <td>D</td>
 </tr>
@@ -97671,24 +97112,6 @@
 <td>HPV Quadri</td>
 <td>HPV Quadrivalente</td>
 <td>ESPECIAL</td>
-<td>D3</td>
-</tr>
-<tr>
-<td>HPV Quadri</td>
-<td>HPV Quadrivalente</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D1</td>
-</tr>
-<tr>
-<td>HPV Quadri</td>
-<td>HPV Quadrivalente</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D2</td>
-</tr>
-<tr>
-<td>HPV Quadri</td>
-<td>HPV Quadrivalente</td>
-<td>MULTIVACINAÇÃO</td>
 <td>D3</td>
 </tr>
 <tr>
@@ -98174,36 +97597,6 @@
 <tr>
 <td>Men Conj C</td>
 <td>Meningocócica conjugada C</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D1</td>
-</tr>
-<tr>
-<td>Men Conj C</td>
-<td>Meningocócica conjugada C</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D2</td>
-</tr>
-<tr>
-<td>Men Conj C</td>
-<td>Meningocócica conjugada C</td>
-<td>MULTIVACINAÇÃO</td>
-<td>DU</td>
-</tr>
-<tr>
-<td>Men Conj C</td>
-<td>Meningocócica conjugada C</td>
-<td>MULTIVACINAÇÃO</td>
-<td>R1</td>
-</tr>
-<tr>
-<td>Men Conj C</td>
-<td>Meningocócica conjugada C</td>
-<td>MULTIVACINAÇÃO</td>
-<td>R2</td>
-</tr>
-<tr>
-<td>Men Conj C</td>
-<td>Meningocócica conjugada C</td>
 <td>ROTINA</td>
 <td>D1</td>
 </tr>
@@ -98294,18 +97687,6 @@
 <tr>
 <td>MenACWY</td>
 <td>Meningocócica ACWY</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D</td>
-</tr>
-<tr>
-<td>MenACWY</td>
-<td>Meningocócica ACWY</td>
-<td>MULTIVACINAÇÃO</td>
-<td>REF</td>
-</tr>
-<tr>
-<td>MenACWY</td>
-<td>Meningocócica ACWY</td>
 <td>ROTINA</td>
 <td>D</td>
 </tr>
@@ -98408,36 +97789,6 @@
 <tr>
 <td>Penta</td>
 <td>DTP / HB / Hib</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D1</td>
-</tr>
-<tr>
-<td>Penta</td>
-<td>DTP / HB / Hib</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D2</td>
-</tr>
-<tr>
-<td>Penta</td>
-<td>DTP / HB / Hib</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D3</td>
-</tr>
-<tr>
-<td>Penta</td>
-<td>DTP / HB / Hib</td>
-<td>MULTIVACINAÇÃO</td>
-<td>R1</td>
-</tr>
-<tr>
-<td>Penta</td>
-<td>DTP / HB / Hib</td>
-<td>MULTIVACINAÇÃO</td>
-<td>R2</td>
-</tr>
-<tr>
-<td>Penta</td>
-<td>DTP / HB / Hib</td>
 <td>ROTINA</td>
 <td>D1</td>
 </tr>
@@ -98553,36 +97904,6 @@
 <td>Pncc10V</td>
 <td>Pneumocócica 10V</td>
 <td>INTENSIFICAÇÃO</td>
-<td>REF</td>
-</tr>
-<tr>
-<td>Pncc10V</td>
-<td>Pneumocócica 10V</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D1</td>
-</tr>
-<tr>
-<td>Pncc10V</td>
-<td>Pneumocócica 10V</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D2</td>
-</tr>
-<tr>
-<td>Pncc10V</td>
-<td>Pneumocócica 10V</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D3</td>
-</tr>
-<tr>
-<td>Pncc10V</td>
-<td>Pneumocócica 10V</td>
-<td>MULTIVACINAÇÃO</td>
-<td>DU</td>
-</tr>
-<tr>
-<td>Pncc10V</td>
-<td>Pneumocócica 10V</td>
-<td>MULTIVACINAÇÃO</td>
 <td>REF</td>
 </tr>
 <tr>
@@ -98662,18 +97983,6 @@
 <td>Pneumocócica 23V</td>
 <td>ESPECIAL</td>
 <td>REV</td>
-</tr>
-<tr>
-<td>Pncc23V</td>
-<td>Pneumocócica 23V</td>
-<td>MULTIVACINAÇÃO</td>
-<td>DA</td>
-</tr>
-<tr>
-<td>Pncc23V</td>
-<td>Pneumocócica 23V</td>
-<td>MULTIVACINAÇÃO</td>
-<td>DI</td>
 </tr>
 <tr>
 <td>Pncc23V</td>
@@ -99890,18 +99199,6 @@
 <tr>
 <td>SCR</td>
 <td>Tríplice viral</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D1</td>
-</tr>
-<tr>
-<td>SCR</td>
-<td>Tríplice viral</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D2</td>
-</tr>
-<tr>
-<td>SCR</td>
-<td>Tríplice viral</td>
 <td>ROTINA</td>
 <td>D1</td>
 </tr>
@@ -100562,12 +99859,6 @@
 <tr>
 <td>SR</td>
 <td>Dupla viral</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D</td>
-</tr>
-<tr>
-<td>SR</td>
-<td>Dupla viral</td>
 <td>ROTINA</td>
 <td>D</td>
 </tr>
@@ -100581,12 +99872,6 @@
 <td>Tetra Viral</td>
 <td>Tetra Viral</td>
 <td>INTENSIFICAÇÃO</td>
-<td>DU</td>
-</tr>
-<tr>
-<td>Tetra Viral</td>
-<td>Tetra Viral</td>
-<td>MULTIVACINAÇÃO</td>
 <td>DU</td>
 </tr>
 <tr>
@@ -100629,18 +99914,6 @@
 <td>VARC</td>
 <td>Varicela (atenuada)</td>
 <td>INTENSIFICAÇÃO</td>
-<td>D2</td>
-</tr>
-<tr>
-<td>VARC</td>
-<td>Varicela (atenuada)</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D1</td>
-</tr>
-<tr>
-<td>VARC</td>
-<td>Varicela (atenuada)</td>
-<td>MULTIVACINAÇÃO</td>
 <td>D2</td>
 </tr>
 <tr>
@@ -100719,24 +99992,6 @@
 <td>VIP</td>
 <td>Poliomielite inativada</td>
 <td>INTENSIFICAÇÃO</td>
-<td>D3</td>
-</tr>
-<tr>
-<td>VIP</td>
-<td>Poliomielite inativada</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D1</td>
-</tr>
-<tr>
-<td>VIP</td>
-<td>Poliomielite inativada</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D2</td>
-</tr>
-<tr>
-<td>VIP</td>
-<td>Poliomielite inativada</td>
-<td>MULTIVACINAÇÃO</td>
 <td>D3</td>
 </tr>
 <tr>
@@ -100826,36 +100081,6 @@
 <tr>
 <td>VOP</td>
 <td>Poliomielite oral (Bivalente)</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D1</td>
-</tr>
-<tr>
-<td>VOP</td>
-<td>Poliomielite oral (Bivalente)</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D2</td>
-</tr>
-<tr>
-<td>VOP</td>
-<td>Poliomielite oral (Bivalente)</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D3</td>
-</tr>
-<tr>
-<td>VOP</td>
-<td>Poliomielite oral (Bivalente)</td>
-<td>MULTIVACINAÇÃO</td>
-<td>R1</td>
-</tr>
-<tr>
-<td>VOP</td>
-<td>Poliomielite oral (Bivalente)</td>
-<td>MULTIVACINAÇÃO</td>
-<td>R2</td>
-</tr>
-<tr>
-<td>VOP</td>
-<td>Poliomielite oral (Bivalente)</td>
 <td>ROTINA</td>
 <td>D1</td>
 </tr>
@@ -100898,18 +100123,6 @@
 <tr>
 <td>VRH</td>
 <td>Vacina rotavírus humano</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D1</td>
-</tr>
-<tr>
-<td>VRH</td>
-<td>Vacina rotavírus humano</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D2</td>
-</tr>
-<tr>
-<td>VRH</td>
-<td>Vacina rotavírus humano</td>
 <td>ROTINA</td>
 <td>D1</td>
 </tr>
@@ -100918,54 +100131,6 @@
 <td>Vacina rotavírus humano</td>
 <td>ROTINA</td>
 <td>D2</td>
-</tr>
-<tr>
-<td>VVBN</td>
-<td>Varíola Bavarian Nordic</td>
-<td>CAMPANHA SELETIVA</td>
-<td>D1</td>
-</tr>
-<tr>
-<td>VVBN</td>
-<td>Varíola Bavarian Nordic</td>
-<td>CAMPANHA SELETIVA</td>
-<td>D2</td>
-</tr>
-<tr>
-<td>Vero</td>
-<td>Raiva em cultivo celular Vero</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D1</td>
-</tr>
-<tr>
-<td>Vero</td>
-<td>Raiva em cultivo celular Vero</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D2</td>
-</tr>
-<tr>
-<td>Vero</td>
-<td>Raiva em cultivo celular Vero</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D3</td>
-</tr>
-<tr>
-<td>Vero</td>
-<td>Raiva em cultivo celular Vero</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D4</td>
-</tr>
-<tr>
-<td>Vero</td>
-<td>Raiva em cultivo celular Vero</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D5</td>
-</tr>
-<tr>
-<td>Vero</td>
-<td>Raiva em cultivo celular Vero</td>
-<td>MULTIVACINAÇÃO</td>
-<td>REV</td>
 </tr>
 <tr>
 <td>Vero</td>
@@ -101049,30 +100214,6 @@
 <td>dT</td>
 <td>Dupla adulto</td>
 <td>INTENSIFICAÇÃO</td>
-<td>REF</td>
-</tr>
-<tr>
-<td>dT</td>
-<td>Dupla adulto</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D1</td>
-</tr>
-<tr>
-<td>dT</td>
-<td>Dupla adulto</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D2</td>
-</tr>
-<tr>
-<td>dT</td>
-<td>Dupla adulto</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D3</td>
-</tr>
-<tr>
-<td>dT</td>
-<td>Dupla adulto</td>
-<td>MULTIVACINAÇÃO</td>
 <td>REF</td>
 </tr>
 <tr>
@@ -101152,30 +100293,6 @@
 <td>Tríplice bacteriana acelular (adulto) - dTpa</td>
 <td>ESPECIAL</td>
 <td>R5</td>
-</tr>
-<tr>
-<td>dTpa adulto</td>
-<td>Tríplice bacteriana acelular (adulto) - dTpa</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D1</td>
-</tr>
-<tr>
-<td>dTpa adulto</td>
-<td>Tríplice bacteriana acelular (adulto) - dTpa</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D2</td>
-</tr>
-<tr>
-<td>dTpa adulto</td>
-<td>Tríplice bacteriana acelular (adulto) - dTpa</td>
-<td>MULTIVACINAÇÃO</td>
-<td>D3</td>
-</tr>
-<tr>
-<td>dTpa adulto</td>
-<td>Tríplice bacteriana acelular (adulto) - dTpa</td>
-<td>MULTIVACINAÇÃO</td>
-<td>R1</td>
 </tr>
 <tr>
 <td>dTpa adulto</td>
@@ -101671,25 +100788,21 @@
 
     <div class="post pdf shown" id="principais_alteracoes" data-url="/ledi/documentacao/principais_alteracoes.html">
       <header class="post-header">
-        <h1 class="post-title">Principais alterações da v4.4.2 para a v4.4.3</h1>
+        <h1 class="post-title">Principais alterações da v4.4.1 para a v4.4.2</h1>
       </header>
 
       
 
       <article class="post-content">
-        <p>Este documento relata as principais alterações em relação à versão v4.4.2 do LEDI APS:</p>
+        <p>Este documento relata as principais alterações em relação à versão v4.4.1 do LEDI APS:</p>
 
-<h3 id="1-altera-o-de-regras-vacinais">1. Alteração de regras vacinais</h3>
+<h3 id="1-inclus-o-de-imunobiol-gico">1. Inclusão de imunobiológico:</h3>
 
-<p><strong>1. </strong> Foram atualizadas todas as regras dos imunobiológicos contra COVID-19, conforme descrito na página <a href="/v442/ledi/documentacao/regras/validar_regras_vacinacao.html">Regras de vacinação</a>.</p>
+<p><strong>1. </strong> Foi adicionado o imunobiológico Vacina Covid-19 - Pfizer (Comirnaty) - Bivalente.</p>
 
-<h3 id="2-inclus-o-de-doses-de-revacina-o">2. Inclusão de doses de revacinação</h3>
+<h3 id="2-inclus-o-de-dose">2. Inclusão de Dose:</h3>
 
-<p><strong>2. </strong> Foram incluídas doses de revacinação para os imunobiológicos contra COVID-19, conforme descrito na página <a href="/v442/ledi/documentacao/regras/validar_regras_vacinacao.html">Regras de vacinação</a>.</p>
-
-<h3 id="3-atualiza-o-dos-grupos-de-atendimento">3. Atualização dos Grupos de Atendimento</h3>
-
-<p><strong>3. </strong> Foram atualizados e inseridos valores na relação de <a href="/v442/ledi/documentacao/referencias/dicionario.html#grupodeatendimento">Grupos de Atendimento</a>. </p>
+<p><strong>2. </strong> Incluída uma nova dose, a de Reforço, para o imunobiológico &quot;Vacina Covid-19 - Pfizer (Comirnaty) - Pediátrica&quot;.</p>
 
       </article>
 

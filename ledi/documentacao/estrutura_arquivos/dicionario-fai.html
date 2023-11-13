@@ -25,7 +25,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 5.0.5</span>
+        <span class="label">versão 5.2.0</span>
       
     </a>
 
@@ -75,7 +75,7 @@
           
         
           
-            <li><a title="Layout e-SUS APS de Dados e Interface Versão 5.0.5" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 5.0.5</a></li>
+            <li><a title="Layout e-SUS APS de Dados e Interface Versão 5.2.0" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 5.2.0</a></li>
           
         
           
@@ -115,9 +115,9 @@
   <ul>
     
       <li>
-        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 5.0.5" href="/ledi/documentacao/index.html" class="back-link">
+        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 5.2.0" href="/ledi/documentacao/index.html" class="back-link">
           <i class="icon icon-back"></i> Voltar
-          <small>(Layout e-SUS APS de Dados e Interface Versão 5.0.5)</small>
+          <small>(Layout e-SUS APS de Dados e Interface Versão 5.2.0)</small>
         </a>
       </li>
     
@@ -221,6 +221,13 @@
           
             <a title="Ficha de Vacinação" href="/ledi/documentacao/estrutura_arquivos/dicionario-fv.html">
               Ficha de Vacinação
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha de Cuidado Compartilhado" href="/ledi/documentacao/estrutura_arquivos/dicionario-fcc.html">
+              Ficha de Cuidado Compartilhado
             </a>
           </li>
         
@@ -1451,7 +1458,7 @@
 
 <ul>
 <li>Não pode ser preenchido caso o campo <a href="#4-doseunica">doseUnica</a> estiver marcado como &quot;Verdadeiro&quot;;</li>
-<li>Se o campo <a href="#6-dosefrequenciatipo">doseFrequenciaTipo</a> = <code>1 - Turno</code>, então deve ser preenchido com um valor conforme <a href="/ledi/documentacao/referencias/dicionario.html#turno">turno</a>, complementando a informação com o preenchimento dos campos <a href="#8-dosefrequenciaquantidade">doseFrequenciaQuantidade</a> e <a href="#9-dosefrequenciaunidademedida">doseFrequenciaUnidadeMedida</a>;</li>
+<li>Se o campo <a href="#6-dosefrequenciatipo">doseFrequenciaTipo</a> = <code>1 - Turno</code>, então deve ser preenchido com a descrição do turno conforme essa <a href="/ledi/documentacao/referencias/dicionario.html#turno">tabela</a>, complementando a informação com o preenchimento dos campos <a href="#8-dosefrequenciaquantidade">doseFrequenciaQuantidade</a> e <a href="#9-dosefrequenciaunidademedida">doseFrequenciaUnidadeMedida</a>;</li>
 <li>Se o campo <a href="#6-dosefrequenciatipo">doseFrequenciaTipo</a> = <code>2 - Frequência</code>, então deve ser preenchido com o <strong>número de vezes</strong> que a dose deverá ser administrada, complementando a informação com o preenchimento dos campos <a href="#8-dosefrequenciaquantidade">doseFrequenciaQuantidade</a> e <a href="#9-dosefrequenciaunidademedida">doseFrequenciaUnidadeMedida</a>;</li>
 <li>Se o campo <a href="#6-dosefrequenciatipo">doseFrequenciaTipo</a> = <code>3 - Intervalo</code>, então deve ser preenchido com o <strong>intervalo de horas</strong> que a dose deverá ser administrada.</li>
 </ul>
@@ -1940,6 +1947,113 @@
 <li>Se o campo <a href="#1-tiporesultado">tipoResultado</a> for igual a <code>2 - Dias</code> e o valor do campo <a href="#1-exame">exame</a> for <code>02.05.02.014-3 (ABEX024)</code>, <code>02.05.02.015-1</code> ou <code>02.05.01.005-9</code>, este campo deve ser preenchido com valores de <code>0 a 6</code>;</li>
 <li>Se o campo <a href="#1-tiporesultado">tipoResultado</a> for igual a <code>3 - Semanas</code> e o valor do campo <a href="#1-exame">exame</a> for <code>02.05.02.014-3 (ABEX024)</code>, <code>02.05.02.015-1</code> ou <code>02.05.01.005-9</code>, este campo deve ser preenchido com valores de <code>0 a 42</code>; </li>
 <li>Se o campo <a href="#1-tiporesultado">tipoResultado</a> for igual a <code>4 - Data</code> e o valor do campo <a href="#1-exame">exame</a> for <code>02.05.02.014-3 (ABEX024)</code>, <code>02.05.02.015-1</code> ou <code>02.05.01.005-9</code>, este campo deve ser preenchido com uma data seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a> e a data não pode ser anterior à <a href="#3-datarealizacao">dataRealizacao</a>.</li>
+</ul>
+
+<h2 id="profissionalfinalizadorobservacao">profissionalFinalizadorObservacao</h2>
+
+<h3 id="1-profissionalcns">#1 profissionalCNS</h3>
+
+<p>CNS do profissional finalizador da observação.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Não</td>
+<td>15</td>
+<td>15</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>CNS validado de acordo com o <a href="/ledi/documentacao/regras/algoritmo_CNS.html">algoritmo de validação</a>;</li>
+<li>Somente fichas de profissionais com vínculo com o respectivo município são consideradas válidas.</li>
+</ul>
+
+<h3 id="2-cbocodigo_2002">#2 cboCodigo_2002</h3>
+
+<p>Código do CBO do profissional finalizador.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Não</td>
+<td>6</td>
+<td>6</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Esse registro só deve aceitar CBOs de grupo de médicos ou enfermeiros</li>
+</ul>
+
+<h3 id="3-cnes">#3 cnes</h3>
+
+<p>Código do CNES da unidade de saúde que o profissional está lotado.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Não</td>
+<td>7</td>
+<td>7</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Pode ser preenchido com qualquer CNES pertencente ao respectivo município.</li>
+</ul>
+
+<h3 id="4-ine">#4 ine</h3>
+
+<p>Código INE da equipe do profissional.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Não</td>
+<td>10</td>
+<td>10</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Pode ser preenchido com qualquer INE pertencente ao respectivo município.</li>
 </ul>
 
 <h2 id="listaciapcondicaoavaliada">ListaCiapCondicaoAvaliada</h2>

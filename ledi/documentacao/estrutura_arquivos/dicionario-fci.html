@@ -25,7 +25,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 5.0.5</span>
+        <span class="label">versão 5.2.0</span>
       
     </a>
 
@@ -75,7 +75,7 @@
           
         
           
-            <li><a title="Layout e-SUS APS de Dados e Interface Versão 5.0.5" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 5.0.5</a></li>
+            <li><a title="Layout e-SUS APS de Dados e Interface Versão 5.2.0" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 5.2.0</a></li>
           
         
           
@@ -115,9 +115,9 @@
   <ul>
     
       <li>
-        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 5.0.5" href="/ledi/documentacao/index.html" class="back-link">
+        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 5.2.0" href="/ledi/documentacao/index.html" class="back-link">
           <i class="icon icon-back"></i> Voltar
-          <small>(Layout e-SUS APS de Dados e Interface Versão 5.0.5)</small>
+          <small>(Layout e-SUS APS de Dados e Interface Versão 5.2.0)</small>
         </a>
       </li>
     
@@ -221,6 +221,13 @@
           
             <a title="Ficha de Vacinação" href="/ledi/documentacao/estrutura_arquivos/dicionario-fv.html">
               Ficha de Vacinação
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha de Cuidado Compartilhado" href="/ledi/documentacao/estrutura_arquivos/dicionario-fcc.html">
+              Ficha de Cuidado Compartilhado
             </a>
           </li>
         
@@ -2539,6 +2546,60 @@
 </tbody></table>
 
 <p><strong>Regras:</strong> Só pode ser preenchido se o campo <a href="#1-motivosaidacidadao">motivoSaidaCidadao</a> = <code>135</code>.</p>
+
+<h2 id="informacoessocioeconomicas">InformacoesSocioEconomicas</h2>
+
+<h3 id="1-alimentosacabaramantesterdinheirocomprarmais">#1 alimentosAcabaramAntesTerDinheiroComprarMais</h3>
+
+<p>Resposta da pergunta 1 da TRIA: &quot;Nos últimos três meses, os alimentos acabaram antes que você tivesse dinheiro para comprar mais comida?&quot;.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Não</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> </p>
+
+<ul>
+<li>Só pode ser preenchido se o campo <a href="#2-comeualgunsalimentosquetinhadinheiroacabou">comeuAlgunsAlimentosQueTinhaDinheiroAcabou</a> for preenchido. Neste caso o preenchimento é obrigatório;</li>
+</ul>
+
+<h3 id="2-comeualgunsalimentosquetinhadinheiroacabou">#2 comeuAlgunsAlimentosQueTinhaDinheiroAcabou</h3>
+
+<p>Resposta da pergunta 2 da TRIA: &quot;Nos últimos três meses, você comeu apenas alguns alimentos que ainda tinha, porque o dinheiro acabou?&quot;.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Não</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> </p>
+
+<ul>
+<li>Só pode ser preenchido se o campo <a href="#1-alimentosacabaramantesterdinheirocomprarmais">alimentosAcabaramAntesTerDinheiroComprarMais</a> for preenchido. Neste caso o preenchimento é obrigatório;</li>
+</ul>
 
   </article>
 

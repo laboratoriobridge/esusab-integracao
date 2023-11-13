@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Visita domiciliar</title>
-  <meta name="description" content="Esta estratégia de negócio refere-se aos registros de Visitas Domiciliares e está centrada na tb_fat_visita_domiciliar. Neste registro o campo nu_prontuario ...">
+  <title>Cuidado compartilhado</title>
+  <meta name="description" content="Esta estratégia de negócio refere-se aos registros de Cuidado compatilhado e está centrada na tb_fat_cuidado_compartilhado. ">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="/dw/fatos/visita_domiciliar.html">
+  <link rel="canonical" href="/dw/fatos/cuidado_compartilhado.html">
   <link rel="icon" type="image/png" href="/img/logo-esus.png">
 </head>
 
@@ -79,7 +79,7 @@
           
         
           
-            <li><a title="Visita domiciliar" href="/dw/fatos/visita_domiciliar.html">Visita domiciliar</a></li>
+            <li><a title="Cuidado compartilhado" href="/dw/fatos/cuidado_compartilhado.html">Cuidado compartilhado</a></li>
           
         
 
@@ -164,7 +164,7 @@
             </a>
           </li>
         
-          <li class="active">
+          <li >
           
             <a title="Visita domiciliar" href="/dw/fatos/visita_domiciliar.html">
               Visita domiciliar
@@ -206,7 +206,7 @@
             </a>
           </li>
         
-          <li >
+          <li class="active">
           
             <a title="Cuidado compartilhado" href="/dw/fatos/cuidado_compartilhado.html">
               Cuidado compartilhado
@@ -228,57 +228,17 @@
           <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Visita domiciliar</h1>
+    <h1 class="post-title">Cuidado compartilhado</h1>
     <p class="post-meta">
-      <a class="btn" href="/pdf.html?include=/dw/fatos/visita_domiciliar.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
+      <a class="btn" href="/pdf.html?include=/dw/fatos/cuidado_compartilhado.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 29/04/2021</span>
+        <span class="label" title="Data da última modificação">Alterado em 13/11/2023</span>
       
     </p>
   </header>
 
   <article class="post-content">
-    <p>Esta estratégia de negócio refere-se aos registros de <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fvd.html">Visitas Domiciliares</a> e está centrada na <strong>tb_fat_visita_domiciliar</strong>. Neste registro o campo <em>nu_prontuario</em> é criptografado. </p>
-
-<table><thead>
-<tr>
-<th>Colunas DW</th>
-<th>Referência LEDI</th>
-<th>Referência sistema</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>st_busca_ativa_consulta <br> st_busca_ativa_exame <br> st_busca_ativa_vacina <br> st_busca_ativa_bolsa_familia</td>
-<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fvd.html#7-motivosvisita">#7 motivosVisita</a> <br> Somente as opções de busca ativa</td>
-<td>Busca ativa</td>
-</tr>
-<tr>
-<td>st_acomp_gestante <br> st_acomp_puerpera <br> st_acomp_recem_nascido <br> st_acomp_crianca <br> st_acomp_pessoa_desnutricao <br> st_acomp_pessoa_reabil_deficie <br> st_acomp_pessoa_hipertensao <br> st_acomp_pessoa_diabetes <br> st_acomp_pessoa_asma <br> st_acomp_pessoa_dpoc_enfisema <br> st_acomp_pessoa_cancer <br> st_acomp_pessoa_doenca_cronica <br> st_acomp_pessoa_hanseniase <br> st_acomp_pessoa_tuberculose <br> st_acomp_sintomaticos_respirat <br> st_acomp_tabagista <br> st_acomp_domiciliados_acamados <br> st_acomp_condi_vulnerab_social <br> st_acomp_condi_bolsa_familia <br> st_acomp_saude_mental <br> st_acomp_usuario_alcool <br> st_acomp_usuario_outras_drogra</td>
-<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fvd.html#7-motivosvisita">#7 motivosVisita</a> <br> Somente as opções de acompanhamento</td>
-<td>Acompanhamento</td>
-</tr>
-<tr>
-<td>st_ctrl_amb_vet_acao_educativa <br> st_ctrl_amb_vet_imovel_foco <br> st_ctrl_amb_vet_acao_mecanica <br> st_ctrl_amb_vet_tratamnt_focal</td>
-<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fvd.html#7-motivosvisita">#7 motivosVisita</a> <br> Somente as opções de controle ambiental / vetorial</td>
-<td>Controle ambiental / vetorial</td>
-</tr>
-<tr>
-<td>st_mot_vis_cad_att <br> st_mot_vis_visita_periodica <br> st_mot_vis_egresso_internacao <br> st_mot_vis_convte_atvidd_cltva <br> st_mot_vis_orintacao_prevncao <br> st_mot_vis_outros</td>
-<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fvd.html#7-motivosvisita">#7 motivosVisita</a></td>
-<td>Motivo da visita</td>
-</tr>
-</tbody></table>
-
-<p><em>Tabela 1. Apresentação das colunas x campos múltipla escolha</em></p>
-
-<p>Além das colunas apresentadas na Tabela 1, algumas foram criadas para facilitar o controle sobre os dados registrados:</p>
-
-<ul>
-<li><strong>st_mot_vis_busca_ativa</strong>: responsável por identificar se alguma opção do grupo <strong>Busca ativa</strong> foi selecionada;</li>
-<li><strong>st_mot_vis_acompanhamento</strong>: responsável por identificar se alguma opção do grupo <strong>Acompanhamento</strong> foi selecionada;</li>
-<li><strong>st_mot_vis_ctrl_ambnte_vetor</strong>: até a versão 2.0, esta opção era única. A partir da versão 2.1, esta coluna foi transformada em um agrupador, responsável por identificar se alguma opção do grupo <strong>Controle ambiental / vetorial</strong> foi selecionada;</li>
-<li><strong>co_uuid_origem_fcd</strong>: responsável por armazenar a informação de qual domicílio recebeu a visita. Corresponde ao campo <strong>nu_uuid_ficha_origem</strong> da tabela <strong>tb_fat_cad_domiciliar</strong>.</li>
-</ul>
+    <p>Esta estratégia de negócio refere-se aos registros de <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fcc.html">Cuidado compatilhado</a> e está centrada na <strong>tb_fat_cuidado_compartilhado</strong>. </p>
 
   </article>
 

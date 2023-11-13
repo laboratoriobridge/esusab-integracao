@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Principais alterações da v5.0.4 para a v5.0.5</title>
-  <meta name="description" content="Este documento relata as principais alterações em relação à versão v5.0.4 do LEDI APS:">
+  <title>Principais alterações da v5.0.5 para a v5.2.0</title>
+  <meta name="description" content="Este documento relata as principais alterações em relação à versão v5.0.5 do LEDI APS:">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="/ledi/documentacao/principais_alteracoes.html">
@@ -25,7 +25,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 5.0.5</span>
+        <span class="label">versão 5.2.0</span>
       
     </a>
 
@@ -75,11 +75,11 @@
           
         
           
-            <li><a title="Layout e-SUS APS de Dados e Interface Versão 5.0.5" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 5.0.5</a></li>
+            <li><a title="Layout e-SUS APS de Dados e Interface Versão 5.2.0" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 5.2.0</a></li>
           
         
           
-            <li><a title="Principais alterações da v5.0.4 para a v5.0.5" href="/ledi/documentacao/principais_alteracoes.html">Principais alterações da v5.0.4 para a v5.0.5</a></li>
+            <li><a title="Principais alterações da v5.0.5 para a v5.2.0" href="/ledi/documentacao/principais_alteracoes.html">Principais alterações da v5.0.5 para a v5.2.0</a></li>
           
         
 
@@ -119,7 +119,7 @@
     
 
     <li>
-      <a class="open" title="Layout e-SUS APS de Dados e Interface Versão 5.0.5" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 5.0.5</a>
+      <a class="open" title="Layout e-SUS APS de Dados e Interface Versão 5.2.0" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 5.2.0</a>
       <ul>
         
           <li  class="has-subitems">
@@ -152,8 +152,8 @@
         
           <li class="active">
           
-            <a title="Principais alterações da v5.0.4 para a v5.0.5" href="/ledi/documentacao/principais_alteracoes.html">
-              Principais alterações da v5.0.4 para a v5.0.5
+            <a title="Principais alterações da v5.0.5 para a v5.2.0" href="/ledi/documentacao/principais_alteracoes.html">
+              Principais alterações da v5.0.5 para a v5.2.0
             </a>
           </li>
         
@@ -172,7 +172,7 @@
           <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Principais alterações da v5.0.4 para a v5.0.5</h1>
+    <h1 class="post-title">Principais alterações da v5.0.5 para a v5.2.0</h1>
     <p class="post-meta">
       <a class="btn" href="/pdf.html?include=/ledi/documentacao/principais_alteracoes.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
@@ -182,17 +182,21 @@
   </header>
 
   <article class="post-content">
-    <p>Este documento relata as principais alterações em relação à versão v5.0.4 do LEDI APS:</p>
+    <p>Este documento relata as principais alterações em relação à versão v5.0.5 do LEDI APS:</p>
 
-<h3 id="1-inclus-o-de-procedimentos">1. Inclusão de procedimentos</h3>
+<h3 id="1-inclus-o-da-triagem-para-risco-de-inseguran-a-alimentar-tria">1. Inclusão da Triagem para Risco de Insegurança Alimentar (TRIA)</h3>
 
-<p><strong>1. </strong> Foram incluídos os seguintes procedimentos:</p>
+<p><strong>1. </strong> Foram incluídos os campos da TRIA na <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html">Ficha do Cadastro Individual</a>;</p>
 
-<ul>
-<li>02.11.07.043-2 - POTENCIAL EVOCADO AUDITIVO P/ TRIAGEM AUDITIVA (TESTE DA ORELHINHA/RETESTE);</li>
-<li>03.01.04.017-6 - INSERÇÃO DO IMPLANTE SUBDÉRMICO LIBERADOR DE ETONOGESTREL;</li>
-<li>03.01.04.018-4 - RETIRADA DO IMPLANTE SUBDÉRMICO LIBERADOR DE ETONOGESTREL.</li>
-</ul>
+<h3 id="2-cria-o-da-ficha-de-cuidado-compartilhado">2. Criação da Ficha de Cuidado Compartilhado</h3>
+
+<p><strong>2. </strong> Foi criada a <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fcc.html">Ficha do Cuidado Compartilhado</a>. As condutas possíveis de serem registradas podem ser verificadas <a href="/ledi/documentacao/referencias/dicionario.html#condutaevolucao">no dicionário de dados</a>;</p>
+
+<p><strong>3. </strong> Além das condutas citadas acima é possível reclassificar a prioridade do cuidado. Para tanto foi inserido o campo &quot;reclassificacaoPrioridadeCuidado&quot; na Ficha de Cuidado Compartilhado.</p>
+
+<h3 id="3-inser-o-de-novos-campos-nas-fai-para-inserir-a-lota-o-do-profissional-que-finalizou-uma-observa-o">3. Inserção de novos campos nas FAI para inserir a lotação do profissional que finalizou uma observação</h3>
+
+<p><strong>4. </strong> A partir desta versão será possível enviar a lotação e a equipe do profissional que finalizou um atendimento de observação. Para enviar essa informação para o SISAB foi necessário incluir a lotação de quem finalizou na <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#profissionalfinalizadorobservacao">seguinte estrutura</a>.</p>
 
   </article>
 

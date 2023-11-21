@@ -7,6 +7,8 @@
 #
 
 from thrift.Thrift import TType, TMessageType, TException, TApplicationException
+import br.gov.saude.esusab.ras.common.ttypes
+
 
 from thrift.transport import TTransport
 from thrift.protocol import TBinaryProtocol, TProtocol
@@ -17,34 +19,79 @@ except:
 
 
 
-class HeaderCdsCadastroThrift:
+class CuidadoCompartilhadoThrift:
   """
   Attributes:
-   - cnesUnidadeSaude
-   - cnsProfissional
-   - codigoIbgeMunicipio
-   - dataAtendimento
-   - ineEquipe
-   - microarea
+   - uuidEvolucao
+   - lotacaoEvolucao
+   - dataEvolucao
+   - dataEvolucaoAnterior
+   - coSequencialEvolucao
+   - condutaEvolucao
+   - tpCdsOrigem
+   - cnsCidadao
+   - cpfCidadao
+   - sexoCidadao
+   - dataNascimentoCidadao
+   - uuidCuidadoCompartilhado
+   - solicitante
+   - executante
+   - dataCriacaoCuidado
+   - cid10
+   - ciap
+   - uuidFichaOrigem
+   - tpDadoTranspFichaOrigem
+   - prioridadeCuidado
+   - reclassificacaoPrioridadeCuidado
   """
 
   thrift_spec = (
     None, # 0
-    (1, TType.STRING, 'cnesUnidadeSaude', None, None, ), # 1
-    (2, TType.STRING, 'cnsProfissional', None, None, ), # 2
-    (3, TType.STRING, 'codigoIbgeMunicipio', None, None, ), # 3
-    (4, TType.I64, 'dataAtendimento', None, None, ), # 4
-    (5, TType.STRING, 'ineEquipe', None, None, ), # 5
-    (6, TType.I64, 'microarea', None, None, ), # 6
+    (1, TType.STRING, 'uuidEvolucao', None, None, ), # 1
+    (2, TType.STRUCT, 'lotacaoEvolucao', (br.gov.saude.esusab.ras.common.ttypes.LotacaoThrift, br.gov.saude.esusab.ras.common.ttypes.LotacaoThrift.thrift_spec), None, ), # 2
+    (3, TType.I64, 'dataEvolucao', None, None, ), # 3
+    (4, TType.I64, 'dataEvolucaoAnterior', None, None, ), # 4
+    (5, TType.I32, 'coSequencialEvolucao', None, None, ), # 5
+    (6, TType.I64, 'condutaEvolucao', None, None, ), # 6
+    (7, TType.I32, 'tpCdsOrigem', None, None, ), # 7
+    (8, TType.STRING, 'cnsCidadao', None, None, ), # 8
+    (9, TType.STRING, 'cpfCidadao', None, None, ), # 9
+    (10, TType.I64, 'sexoCidadao', None, None, ), # 10
+    (11, TType.STRING, 'dataNascimentoCidadao', None, None, ), # 11
+    (12, TType.STRING, 'uuidCuidadoCompartilhado', None, None, ), # 12
+    (13, TType.STRUCT, 'solicitante', (br.gov.saude.esusab.ras.common.ttypes.LotacaoThrift, br.gov.saude.esusab.ras.common.ttypes.LotacaoThrift.thrift_spec), None, ), # 13
+    (14, TType.STRUCT, 'executante', (br.gov.saude.esusab.ras.common.ttypes.LotacaoThrift, br.gov.saude.esusab.ras.common.ttypes.LotacaoThrift.thrift_spec), None, ), # 14
+    (15, TType.I64, 'dataCriacaoCuidado', None, None, ), # 15
+    (16, TType.STRING, 'cid10', None, None, ), # 16
+    (17, TType.STRING, 'ciap', None, None, ), # 17
+    (18, TType.STRING, 'uuidFichaOrigem', None, None, ), # 18
+    (19, TType.I32, 'tpDadoTranspFichaOrigem', None, None, ), # 19
+    (20, TType.I32, 'prioridadeCuidado', None, None, ), # 20
+    (21, TType.I32, 'reclassificacaoPrioridadeCuidado', None, None, ), # 21
   )
 
-  def __init__(self, cnesUnidadeSaude=None, cnsProfissional=None, codigoIbgeMunicipio=None, dataAtendimento=None, ineEquipe=None, microarea=None,):
-    self.cnesUnidadeSaude = cnesUnidadeSaude
-    self.cnsProfissional = cnsProfissional
-    self.codigoIbgeMunicipio = codigoIbgeMunicipio
-    self.dataAtendimento = dataAtendimento
-    self.ineEquipe = ineEquipe
-    self.microarea = microarea
+  def __init__(self, uuidEvolucao=None, lotacaoEvolucao=None, dataEvolucao=None, dataEvolucaoAnterior=None, coSequencialEvolucao=None, condutaEvolucao=None, tpCdsOrigem=None, cnsCidadao=None, cpfCidadao=None, sexoCidadao=None, dataNascimentoCidadao=None, uuidCuidadoCompartilhado=None, solicitante=None, executante=None, dataCriacaoCuidado=None, cid10=None, ciap=None, uuidFichaOrigem=None, tpDadoTranspFichaOrigem=None, prioridadeCuidado=None, reclassificacaoPrioridadeCuidado=None,):
+    self.uuidEvolucao = uuidEvolucao
+    self.lotacaoEvolucao = lotacaoEvolucao
+    self.dataEvolucao = dataEvolucao
+    self.dataEvolucaoAnterior = dataEvolucaoAnterior
+    self.coSequencialEvolucao = coSequencialEvolucao
+    self.condutaEvolucao = condutaEvolucao
+    self.tpCdsOrigem = tpCdsOrigem
+    self.cnsCidadao = cnsCidadao
+    self.cpfCidadao = cpfCidadao
+    self.sexoCidadao = sexoCidadao
+    self.dataNascimentoCidadao = dataNascimentoCidadao
+    self.uuidCuidadoCompartilhado = uuidCuidadoCompartilhado
+    self.solicitante = solicitante
+    self.executante = executante
+    self.dataCriacaoCuidado = dataCriacaoCuidado
+    self.cid10 = cid10
+    self.ciap = ciap
+    self.uuidFichaOrigem = uuidFichaOrigem
+    self.tpDadoTranspFichaOrigem = tpDadoTranspFichaOrigem
+    self.prioridadeCuidado = prioridadeCuidado
+    self.reclassificacaoPrioridadeCuidado = reclassificacaoPrioridadeCuidado
 
   def read(self, iprot):
     if iprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None and fastbinary is not None:
@@ -57,797 +104,110 @@ class HeaderCdsCadastroThrift:
         break
       if fid == 1:
         if ftype == TType.STRING:
-          self.cnesUnidadeSaude = iprot.readString()
+          self.uuidEvolucao = iprot.readString()
         else:
           iprot.skip(ftype)
       elif fid == 2:
-        if ftype == TType.STRING:
-          self.cnsProfissional = iprot.readString()
-        else:
-          iprot.skip(ftype)
-      elif fid == 3:
-        if ftype == TType.STRING:
-          self.codigoIbgeMunicipio = iprot.readString()
-        else:
-          iprot.skip(ftype)
-      elif fid == 4:
-        if ftype == TType.I64:
-          self.dataAtendimento = iprot.readI64()
-        else:
-          iprot.skip(ftype)
-      elif fid == 5:
-        if ftype == TType.STRING:
-          self.ineEquipe = iprot.readString()
-        else:
-          iprot.skip(ftype)
-      elif fid == 6:
-        if ftype == TType.I64:
-          self.microarea = iprot.readI64()
-        else:
-          iprot.skip(ftype)
-      else:
-        iprot.skip(ftype)
-      iprot.readFieldEnd()
-    iprot.readStructEnd()
-
-  def write(self, oprot):
-    if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
-      return
-    oprot.writeStructBegin('HeaderCdsCadastroThrift')
-    if self.cnesUnidadeSaude is not None:
-      oprot.writeFieldBegin('cnesUnidadeSaude', TType.STRING, 1)
-      oprot.writeString(self.cnesUnidadeSaude)
-      oprot.writeFieldEnd()
-    if self.cnsProfissional is not None:
-      oprot.writeFieldBegin('cnsProfissional', TType.STRING, 2)
-      oprot.writeString(self.cnsProfissional)
-      oprot.writeFieldEnd()
-    if self.codigoIbgeMunicipio is not None:
-      oprot.writeFieldBegin('codigoIbgeMunicipio', TType.STRING, 3)
-      oprot.writeString(self.codigoIbgeMunicipio)
-      oprot.writeFieldEnd()
-    if self.dataAtendimento is not None:
-      oprot.writeFieldBegin('dataAtendimento', TType.I64, 4)
-      oprot.writeI64(self.dataAtendimento)
-      oprot.writeFieldEnd()
-    if self.ineEquipe is not None:
-      oprot.writeFieldBegin('ineEquipe', TType.STRING, 5)
-      oprot.writeString(self.ineEquipe)
-      oprot.writeFieldEnd()
-    if self.microarea is not None:
-      oprot.writeFieldBegin('microarea', TType.I64, 6)
-      oprot.writeI64(self.microarea)
-      oprot.writeFieldEnd()
-    oprot.writeFieldStop()
-    oprot.writeStructEnd()
-
-  def validate(self):
-    return
-
-
-  def __hash__(self):
-    value = 17
-    value = (value * 31) ^ hash(self.cnesUnidadeSaude)
-    value = (value * 31) ^ hash(self.cnsProfissional)
-    value = (value * 31) ^ hash(self.codigoIbgeMunicipio)
-    value = (value * 31) ^ hash(self.dataAtendimento)
-    value = (value * 31) ^ hash(self.ineEquipe)
-    value = (value * 31) ^ hash(self.microarea)
-    return value
-
-  def __repr__(self):
-    L = ['%s=%r' % (key, value)
-      for key, value in self.__dict__.iteritems()]
-    return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-  def __eq__(self, other):
-    return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-  def __ne__(self, other):
-    return not (self == other)
-
-class LotacaoHeaderThrift:
-  """
-  Attributes:
-   - profissionalCNS
-   - cboCodigo_2002
-   - cnes
-   - ine
-  """
-
-  thrift_spec = (
-    None, # 0
-    (1, TType.STRING, 'profissionalCNS', None, None, ), # 1
-    (2, TType.STRING, 'cboCodigo_2002', None, None, ), # 2
-    (3, TType.STRING, 'cnes', None, None, ), # 3
-    (4, TType.STRING, 'ine', None, None, ), # 4
-  )
-
-  def __init__(self, profissionalCNS=None, cboCodigo_2002=None, cnes=None, ine=None,):
-    self.profissionalCNS = profissionalCNS
-    self.cboCodigo_2002 = cboCodigo_2002
-    self.cnes = cnes
-    self.ine = ine
-
-  def read(self, iprot):
-    if iprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None and fastbinary is not None:
-      fastbinary.decode_binary(self, iprot.trans, (self.__class__, self.thrift_spec))
-      return
-    iprot.readStructBegin()
-    while True:
-      (fname, ftype, fid) = iprot.readFieldBegin()
-      if ftype == TType.STOP:
-        break
-      if fid == 1:
-        if ftype == TType.STRING:
-          self.profissionalCNS = iprot.readString()
-        else:
-          iprot.skip(ftype)
-      elif fid == 2:
-        if ftype == TType.STRING:
-          self.cboCodigo_2002 = iprot.readString()
-        else:
-          iprot.skip(ftype)
-      elif fid == 3:
-        if ftype == TType.STRING:
-          self.cnes = iprot.readString()
-        else:
-          iprot.skip(ftype)
-      elif fid == 4:
-        if ftype == TType.STRING:
-          self.ine = iprot.readString()
-        else:
-          iprot.skip(ftype)
-      else:
-        iprot.skip(ftype)
-      iprot.readFieldEnd()
-    iprot.readStructEnd()
-
-  def write(self, oprot):
-    if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
-      return
-    oprot.writeStructBegin('LotacaoHeaderThrift')
-    if self.profissionalCNS is not None:
-      oprot.writeFieldBegin('profissionalCNS', TType.STRING, 1)
-      oprot.writeString(self.profissionalCNS)
-      oprot.writeFieldEnd()
-    if self.cboCodigo_2002 is not None:
-      oprot.writeFieldBegin('cboCodigo_2002', TType.STRING, 2)
-      oprot.writeString(self.cboCodigo_2002)
-      oprot.writeFieldEnd()
-    if self.cnes is not None:
-      oprot.writeFieldBegin('cnes', TType.STRING, 3)
-      oprot.writeString(self.cnes)
-      oprot.writeFieldEnd()
-    if self.ine is not None:
-      oprot.writeFieldBegin('ine', TType.STRING, 4)
-      oprot.writeString(self.ine)
-      oprot.writeFieldEnd()
-    oprot.writeFieldStop()
-    oprot.writeStructEnd()
-
-  def validate(self):
-    return
-
-
-  def __hash__(self):
-    value = 17
-    value = (value * 31) ^ hash(self.profissionalCNS)
-    value = (value * 31) ^ hash(self.cboCodigo_2002)
-    value = (value * 31) ^ hash(self.cnes)
-    value = (value * 31) ^ hash(self.ine)
-    return value
-
-  def __repr__(self):
-    L = ['%s=%r' % (key, value)
-      for key, value in self.__dict__.iteritems()]
-    return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-  def __eq__(self, other):
-    return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-  def __ne__(self, other):
-    return not (self == other)
-
-class UnicaLotacaoHeaderThrift:
-  """
-  Attributes:
-   - profissionalCNS
-   - cboCodigo_2002
-   - cnes
-   - ine
-   - dataAtendimento
-   - codigoIbgeMunicipio
-  """
-
-  thrift_spec = (
-    None, # 0
-    (1, TType.STRING, 'profissionalCNS', None, None, ), # 1
-    (2, TType.STRING, 'cboCodigo_2002', None, None, ), # 2
-    (3, TType.STRING, 'cnes', None, None, ), # 3
-    (4, TType.STRING, 'ine', None, None, ), # 4
-    (5, TType.I64, 'dataAtendimento', None, None, ), # 5
-    (6, TType.STRING, 'codigoIbgeMunicipio', None, None, ), # 6
-  )
-
-  def __init__(self, profissionalCNS=None, cboCodigo_2002=None, cnes=None, ine=None, dataAtendimento=None, codigoIbgeMunicipio=None,):
-    self.profissionalCNS = profissionalCNS
-    self.cboCodigo_2002 = cboCodigo_2002
-    self.cnes = cnes
-    self.ine = ine
-    self.dataAtendimento = dataAtendimento
-    self.codigoIbgeMunicipio = codigoIbgeMunicipio
-
-  def read(self, iprot):
-    if iprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None and fastbinary is not None:
-      fastbinary.decode_binary(self, iprot.trans, (self.__class__, self.thrift_spec))
-      return
-    iprot.readStructBegin()
-    while True:
-      (fname, ftype, fid) = iprot.readFieldBegin()
-      if ftype == TType.STOP:
-        break
-      if fid == 1:
-        if ftype == TType.STRING:
-          self.profissionalCNS = iprot.readString()
-        else:
-          iprot.skip(ftype)
-      elif fid == 2:
-        if ftype == TType.STRING:
-          self.cboCodigo_2002 = iprot.readString()
-        else:
-          iprot.skip(ftype)
-      elif fid == 3:
-        if ftype == TType.STRING:
-          self.cnes = iprot.readString()
-        else:
-          iprot.skip(ftype)
-      elif fid == 4:
-        if ftype == TType.STRING:
-          self.ine = iprot.readString()
-        else:
-          iprot.skip(ftype)
-      elif fid == 5:
-        if ftype == TType.I64:
-          self.dataAtendimento = iprot.readI64()
-        else:
-          iprot.skip(ftype)
-      elif fid == 6:
-        if ftype == TType.STRING:
-          self.codigoIbgeMunicipio = iprot.readString()
-        else:
-          iprot.skip(ftype)
-      else:
-        iprot.skip(ftype)
-      iprot.readFieldEnd()
-    iprot.readStructEnd()
-
-  def write(self, oprot):
-    if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
-      return
-    oprot.writeStructBegin('UnicaLotacaoHeaderThrift')
-    if self.profissionalCNS is not None:
-      oprot.writeFieldBegin('profissionalCNS', TType.STRING, 1)
-      oprot.writeString(self.profissionalCNS)
-      oprot.writeFieldEnd()
-    if self.cboCodigo_2002 is not None:
-      oprot.writeFieldBegin('cboCodigo_2002', TType.STRING, 2)
-      oprot.writeString(self.cboCodigo_2002)
-      oprot.writeFieldEnd()
-    if self.cnes is not None:
-      oprot.writeFieldBegin('cnes', TType.STRING, 3)
-      oprot.writeString(self.cnes)
-      oprot.writeFieldEnd()
-    if self.ine is not None:
-      oprot.writeFieldBegin('ine', TType.STRING, 4)
-      oprot.writeString(self.ine)
-      oprot.writeFieldEnd()
-    if self.dataAtendimento is not None:
-      oprot.writeFieldBegin('dataAtendimento', TType.I64, 5)
-      oprot.writeI64(self.dataAtendimento)
-      oprot.writeFieldEnd()
-    if self.codigoIbgeMunicipio is not None:
-      oprot.writeFieldBegin('codigoIbgeMunicipio', TType.STRING, 6)
-      oprot.writeString(self.codigoIbgeMunicipio)
-      oprot.writeFieldEnd()
-    oprot.writeFieldStop()
-    oprot.writeStructEnd()
-
-  def validate(self):
-    return
-
-
-  def __hash__(self):
-    value = 17
-    value = (value * 31) ^ hash(self.profissionalCNS)
-    value = (value * 31) ^ hash(self.cboCodigo_2002)
-    value = (value * 31) ^ hash(self.cnes)
-    value = (value * 31) ^ hash(self.ine)
-    value = (value * 31) ^ hash(self.dataAtendimento)
-    value = (value * 31) ^ hash(self.codigoIbgeMunicipio)
-    return value
-
-  def __repr__(self):
-    L = ['%s=%r' % (key, value)
-      for key, value in self.__dict__.iteritems()]
-    return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-  def __eq__(self, other):
-    return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-  def __ne__(self, other):
-    return not (self == other)
-
-class VariasLotacoesHeaderThrift:
-  """
-  Attributes:
-   - lotacaoFormPrincipal
-   - lotacaoFormAtendimentoCompartilhado
-   - dataAtendimento
-   - codigoIbgeMunicipio
-  """
-
-  thrift_spec = (
-    None, # 0
-    None, # 1
-    None, # 2
-    None, # 3
-    None, # 4
-    None, # 5
-    (6, TType.STRUCT, 'lotacaoFormPrincipal', (LotacaoHeaderThrift, LotacaoHeaderThrift.thrift_spec), None, ), # 6
-    (7, TType.STRUCT, 'lotacaoFormAtendimentoCompartilhado', (LotacaoHeaderThrift, LotacaoHeaderThrift.thrift_spec), None, ), # 7
-    (8, TType.I64, 'dataAtendimento', None, None, ), # 8
-    (9, TType.STRING, 'codigoIbgeMunicipio', None, None, ), # 9
-  )
-
-  def __init__(self, lotacaoFormPrincipal=None, lotacaoFormAtendimentoCompartilhado=None, dataAtendimento=None, codigoIbgeMunicipio=None,):
-    self.lotacaoFormPrincipal = lotacaoFormPrincipal
-    self.lotacaoFormAtendimentoCompartilhado = lotacaoFormAtendimentoCompartilhado
-    self.dataAtendimento = dataAtendimento
-    self.codigoIbgeMunicipio = codigoIbgeMunicipio
-
-  def read(self, iprot):
-    if iprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None and fastbinary is not None:
-      fastbinary.decode_binary(self, iprot.trans, (self.__class__, self.thrift_spec))
-      return
-    iprot.readStructBegin()
-    while True:
-      (fname, ftype, fid) = iprot.readFieldBegin()
-      if ftype == TType.STOP:
-        break
-      if fid == 6:
         if ftype == TType.STRUCT:
-          self.lotacaoFormPrincipal = LotacaoHeaderThrift()
-          self.lotacaoFormPrincipal.read(iprot)
+          self.lotacaoEvolucao = br.gov.saude.esusab.ras.common.ttypes.LotacaoThrift()
+          self.lotacaoEvolucao.read(iprot)
+        else:
+          iprot.skip(ftype)
+      elif fid == 3:
+        if ftype == TType.I64:
+          self.dataEvolucao = iprot.readI64()
+        else:
+          iprot.skip(ftype)
+      elif fid == 4:
+        if ftype == TType.I64:
+          self.dataEvolucaoAnterior = iprot.readI64()
+        else:
+          iprot.skip(ftype)
+      elif fid == 5:
+        if ftype == TType.I32:
+          self.coSequencialEvolucao = iprot.readI32()
+        else:
+          iprot.skip(ftype)
+      elif fid == 6:
+        if ftype == TType.I64:
+          self.condutaEvolucao = iprot.readI64()
         else:
           iprot.skip(ftype)
       elif fid == 7:
-        if ftype == TType.STRUCT:
-          self.lotacaoFormAtendimentoCompartilhado = LotacaoHeaderThrift()
-          self.lotacaoFormAtendimentoCompartilhado.read(iprot)
-        else:
-          iprot.skip(ftype)
-      elif fid == 8:
-        if ftype == TType.I64:
-          self.dataAtendimento = iprot.readI64()
-        else:
-          iprot.skip(ftype)
-      elif fid == 9:
-        if ftype == TType.STRING:
-          self.codigoIbgeMunicipio = iprot.readString()
-        else:
-          iprot.skip(ftype)
-      else:
-        iprot.skip(ftype)
-      iprot.readFieldEnd()
-    iprot.readStructEnd()
-
-  def write(self, oprot):
-    if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
-      return
-    oprot.writeStructBegin('VariasLotacoesHeaderThrift')
-    if self.lotacaoFormPrincipal is not None:
-      oprot.writeFieldBegin('lotacaoFormPrincipal', TType.STRUCT, 6)
-      self.lotacaoFormPrincipal.write(oprot)
-      oprot.writeFieldEnd()
-    if self.lotacaoFormAtendimentoCompartilhado is not None:
-      oprot.writeFieldBegin('lotacaoFormAtendimentoCompartilhado', TType.STRUCT, 7)
-      self.lotacaoFormAtendimentoCompartilhado.write(oprot)
-      oprot.writeFieldEnd()
-    if self.dataAtendimento is not None:
-      oprot.writeFieldBegin('dataAtendimento', TType.I64, 8)
-      oprot.writeI64(self.dataAtendimento)
-      oprot.writeFieldEnd()
-    if self.codigoIbgeMunicipio is not None:
-      oprot.writeFieldBegin('codigoIbgeMunicipio', TType.STRING, 9)
-      oprot.writeString(self.codigoIbgeMunicipio)
-      oprot.writeFieldEnd()
-    oprot.writeFieldStop()
-    oprot.writeStructEnd()
-
-  def validate(self):
-    return
-
-
-  def __hash__(self):
-    value = 17
-    value = (value * 31) ^ hash(self.lotacaoFormPrincipal)
-    value = (value * 31) ^ hash(self.lotacaoFormAtendimentoCompartilhado)
-    value = (value * 31) ^ hash(self.dataAtendimento)
-    value = (value * 31) ^ hash(self.codigoIbgeMunicipio)
-    return value
-
-  def __repr__(self):
-    L = ['%s=%r' % (key, value)
-      for key, value in self.__dict__.iteritems()]
-    return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-  def __eq__(self, other):
-    return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-  def __ne__(self, other):
-    return not (self == other)
-
-class EnderecoLocalPermanenciaThrift:
-  """
-  Attributes:
-   - bairro
-   - cep
-   - codigoIbgeMunicipio
-   - complemento
-   - nomeLogradouro
-   - numero
-   - numeroDneUf
-   - telefoneContato
-   - telefoneResidencia
-   - tipoLogradouroNumeroDne
-   - stSemNumero
-   - pontoReferencia
-   - microArea
-   - stForaArea
-  """
-
-  thrift_spec = (
-    None, # 0
-    (1, TType.STRING, 'bairro', None, None, ), # 1
-    (2, TType.STRING, 'cep', None, None, ), # 2
-    (3, TType.STRING, 'codigoIbgeMunicipio', None, None, ), # 3
-    (4, TType.STRING, 'complemento', None, None, ), # 4
-    (5, TType.STRING, 'nomeLogradouro', None, None, ), # 5
-    (6, TType.STRING, 'numero', None, None, ), # 6
-    (7, TType.STRING, 'numeroDneUf', None, None, ), # 7
-    (8, TType.STRING, 'telefoneContato', None, None, ), # 8
-    (9, TType.STRING, 'telefoneResidencia', None, None, ), # 9
-    (10, TType.STRING, 'tipoLogradouroNumeroDne', None, None, ), # 10
-    (11, TType.BOOL, 'stSemNumero', None, None, ), # 11
-    (12, TType.STRING, 'pontoReferencia', None, None, ), # 12
-    (13, TType.STRING, 'microArea', None, None, ), # 13
-    (14, TType.BOOL, 'stForaArea', None, None, ), # 14
-  )
-
-  def __init__(self, bairro=None, cep=None, codigoIbgeMunicipio=None, complemento=None, nomeLogradouro=None, numero=None, numeroDneUf=None, telefoneContato=None, telefoneResidencia=None, tipoLogradouroNumeroDne=None, stSemNumero=None, pontoReferencia=None, microArea=None, stForaArea=None,):
-    self.bairro = bairro
-    self.cep = cep
-    self.codigoIbgeMunicipio = codigoIbgeMunicipio
-    self.complemento = complemento
-    self.nomeLogradouro = nomeLogradouro
-    self.numero = numero
-    self.numeroDneUf = numeroDneUf
-    self.telefoneContato = telefoneContato
-    self.telefoneResidencia = telefoneResidencia
-    self.tipoLogradouroNumeroDne = tipoLogradouroNumeroDne
-    self.stSemNumero = stSemNumero
-    self.pontoReferencia = pontoReferencia
-    self.microArea = microArea
-    self.stForaArea = stForaArea
-
-  def read(self, iprot):
-    if iprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None and fastbinary is not None:
-      fastbinary.decode_binary(self, iprot.trans, (self.__class__, self.thrift_spec))
-      return
-    iprot.readStructBegin()
-    while True:
-      (fname, ftype, fid) = iprot.readFieldBegin()
-      if ftype == TType.STOP:
-        break
-      if fid == 1:
-        if ftype == TType.STRING:
-          self.bairro = iprot.readString()
-        else:
-          iprot.skip(ftype)
-      elif fid == 2:
-        if ftype == TType.STRING:
-          self.cep = iprot.readString()
-        else:
-          iprot.skip(ftype)
-      elif fid == 3:
-        if ftype == TType.STRING:
-          self.codigoIbgeMunicipio = iprot.readString()
-        else:
-          iprot.skip(ftype)
-      elif fid == 4:
-        if ftype == TType.STRING:
-          self.complemento = iprot.readString()
-        else:
-          iprot.skip(ftype)
-      elif fid == 5:
-        if ftype == TType.STRING:
-          self.nomeLogradouro = iprot.readString()
-        else:
-          iprot.skip(ftype)
-      elif fid == 6:
-        if ftype == TType.STRING:
-          self.numero = iprot.readString()
-        else:
-          iprot.skip(ftype)
-      elif fid == 7:
-        if ftype == TType.STRING:
-          self.numeroDneUf = iprot.readString()
+        if ftype == TType.I32:
+          self.tpCdsOrigem = iprot.readI32()
         else:
           iprot.skip(ftype)
       elif fid == 8:
         if ftype == TType.STRING:
-          self.telefoneContato = iprot.readString()
+          self.cnsCidadao = iprot.readString()
         else:
           iprot.skip(ftype)
       elif fid == 9:
         if ftype == TType.STRING:
-          self.telefoneResidencia = iprot.readString()
+          self.cpfCidadao = iprot.readString()
         else:
           iprot.skip(ftype)
       elif fid == 10:
-        if ftype == TType.STRING:
-          self.tipoLogradouroNumeroDne = iprot.readString()
+        if ftype == TType.I64:
+          self.sexoCidadao = iprot.readI64()
         else:
           iprot.skip(ftype)
       elif fid == 11:
-        if ftype == TType.BOOL:
-          self.stSemNumero = iprot.readBool()
+        if ftype == TType.STRING:
+          self.dataNascimentoCidadao = iprot.readString()
         else:
           iprot.skip(ftype)
       elif fid == 12:
         if ftype == TType.STRING:
-          self.pontoReferencia = iprot.readString()
+          self.uuidCuidadoCompartilhado = iprot.readString()
         else:
           iprot.skip(ftype)
       elif fid == 13:
-        if ftype == TType.STRING:
-          self.microArea = iprot.readString()
+        if ftype == TType.STRUCT:
+          self.solicitante = br.gov.saude.esusab.ras.common.ttypes.LotacaoThrift()
+          self.solicitante.read(iprot)
         else:
           iprot.skip(ftype)
       elif fid == 14:
-        if ftype == TType.BOOL:
-          self.stForaArea = iprot.readBool()
+        if ftype == TType.STRUCT:
+          self.executante = br.gov.saude.esusab.ras.common.ttypes.LotacaoThrift()
+          self.executante.read(iprot)
         else:
           iprot.skip(ftype)
-      else:
-        iprot.skip(ftype)
-      iprot.readFieldEnd()
-    iprot.readStructEnd()
-
-  def write(self, oprot):
-    if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
-      return
-    oprot.writeStructBegin('EnderecoLocalPermanenciaThrift')
-    if self.bairro is not None:
-      oprot.writeFieldBegin('bairro', TType.STRING, 1)
-      oprot.writeString(self.bairro)
-      oprot.writeFieldEnd()
-    if self.cep is not None:
-      oprot.writeFieldBegin('cep', TType.STRING, 2)
-      oprot.writeString(self.cep)
-      oprot.writeFieldEnd()
-    if self.codigoIbgeMunicipio is not None:
-      oprot.writeFieldBegin('codigoIbgeMunicipio', TType.STRING, 3)
-      oprot.writeString(self.codigoIbgeMunicipio)
-      oprot.writeFieldEnd()
-    if self.complemento is not None:
-      oprot.writeFieldBegin('complemento', TType.STRING, 4)
-      oprot.writeString(self.complemento)
-      oprot.writeFieldEnd()
-    if self.nomeLogradouro is not None:
-      oprot.writeFieldBegin('nomeLogradouro', TType.STRING, 5)
-      oprot.writeString(self.nomeLogradouro)
-      oprot.writeFieldEnd()
-    if self.numero is not None:
-      oprot.writeFieldBegin('numero', TType.STRING, 6)
-      oprot.writeString(self.numero)
-      oprot.writeFieldEnd()
-    if self.numeroDneUf is not None:
-      oprot.writeFieldBegin('numeroDneUf', TType.STRING, 7)
-      oprot.writeString(self.numeroDneUf)
-      oprot.writeFieldEnd()
-    if self.telefoneContato is not None:
-      oprot.writeFieldBegin('telefoneContato', TType.STRING, 8)
-      oprot.writeString(self.telefoneContato)
-      oprot.writeFieldEnd()
-    if self.telefoneResidencia is not None:
-      oprot.writeFieldBegin('telefoneResidencia', TType.STRING, 9)
-      oprot.writeString(self.telefoneResidencia)
-      oprot.writeFieldEnd()
-    if self.tipoLogradouroNumeroDne is not None:
-      oprot.writeFieldBegin('tipoLogradouroNumeroDne', TType.STRING, 10)
-      oprot.writeString(self.tipoLogradouroNumeroDne)
-      oprot.writeFieldEnd()
-    if self.stSemNumero is not None:
-      oprot.writeFieldBegin('stSemNumero', TType.BOOL, 11)
-      oprot.writeBool(self.stSemNumero)
-      oprot.writeFieldEnd()
-    if self.pontoReferencia is not None:
-      oprot.writeFieldBegin('pontoReferencia', TType.STRING, 12)
-      oprot.writeString(self.pontoReferencia)
-      oprot.writeFieldEnd()
-    if self.microArea is not None:
-      oprot.writeFieldBegin('microArea', TType.STRING, 13)
-      oprot.writeString(self.microArea)
-      oprot.writeFieldEnd()
-    if self.stForaArea is not None:
-      oprot.writeFieldBegin('stForaArea', TType.BOOL, 14)
-      oprot.writeBool(self.stForaArea)
-      oprot.writeFieldEnd()
-    oprot.writeFieldStop()
-    oprot.writeStructEnd()
-
-  def validate(self):
-    return
-
-
-  def __hash__(self):
-    value = 17
-    value = (value * 31) ^ hash(self.bairro)
-    value = (value * 31) ^ hash(self.cep)
-    value = (value * 31) ^ hash(self.codigoIbgeMunicipio)
-    value = (value * 31) ^ hash(self.complemento)
-    value = (value * 31) ^ hash(self.nomeLogradouro)
-    value = (value * 31) ^ hash(self.numero)
-    value = (value * 31) ^ hash(self.numeroDneUf)
-    value = (value * 31) ^ hash(self.telefoneContato)
-    value = (value * 31) ^ hash(self.telefoneResidencia)
-    value = (value * 31) ^ hash(self.tipoLogradouroNumeroDne)
-    value = (value * 31) ^ hash(self.stSemNumero)
-    value = (value * 31) ^ hash(self.pontoReferencia)
-    value = (value * 31) ^ hash(self.microArea)
-    value = (value * 31) ^ hash(self.stForaArea)
-    return value
-
-  def __repr__(self):
-    L = ['%s=%r' % (key, value)
-      for key, value in self.__dict__.iteritems()]
-    return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-  def __eq__(self, other):
-    return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-  def __ne__(self, other):
-    return not (self == other)
-
-class MedicamentoThrift:
-  """
-  Attributes:
-   - codigoCatmat
-   - viaAdministracao
-   - dose
-   - doseUnica
-   - usoContinuo
-   - doseFrequenciaTipo
-   - doseFrequencia
-   - doseFrequenciaQuantidade
-   - doseFrequenciaUnidadeMedida
-   - dtInicioTratamento
-   - duracaoTratamento
-   - duracaoTratamentoMedida
-   - quantidadeReceitada
-  """
-
-  thrift_spec = (
-    None, # 0
-    (1, TType.STRING, 'codigoCatmat', None, None, ), # 1
-    (2, TType.I64, 'viaAdministracao', None, None, ), # 2
-    (3, TType.STRING, 'dose', None, None, ), # 3
-    (4, TType.BOOL, 'doseUnica', None, None, ), # 4
-    (5, TType.BOOL, 'usoContinuo', None, None, ), # 5
-    (6, TType.I64, 'doseFrequenciaTipo', None, None, ), # 6
-    (7, TType.STRING, 'doseFrequencia', None, None, ), # 7
-    (8, TType.I32, 'doseFrequenciaQuantidade', None, None, ), # 8
-    (9, TType.I64, 'doseFrequenciaUnidadeMedida', None, None, ), # 9
-    (10, TType.I64, 'dtInicioTratamento', None, None, ), # 10
-    (11, TType.I32, 'duracaoTratamento', None, None, ), # 11
-    (12, TType.I64, 'duracaoTratamentoMedida', None, None, ), # 12
-    (13, TType.I32, 'quantidadeReceitada', None, None, ), # 13
-  )
-
-  def __init__(self, codigoCatmat=None, viaAdministracao=None, dose=None, doseUnica=None, usoContinuo=None, doseFrequenciaTipo=None, doseFrequencia=None, doseFrequenciaQuantidade=None, doseFrequenciaUnidadeMedida=None, dtInicioTratamento=None, duracaoTratamento=None, duracaoTratamentoMedida=None, quantidadeReceitada=None,):
-    self.codigoCatmat = codigoCatmat
-    self.viaAdministracao = viaAdministracao
-    self.dose = dose
-    self.doseUnica = doseUnica
-    self.usoContinuo = usoContinuo
-    self.doseFrequenciaTipo = doseFrequenciaTipo
-    self.doseFrequencia = doseFrequencia
-    self.doseFrequenciaQuantidade = doseFrequenciaQuantidade
-    self.doseFrequenciaUnidadeMedida = doseFrequenciaUnidadeMedida
-    self.dtInicioTratamento = dtInicioTratamento
-    self.duracaoTratamento = duracaoTratamento
-    self.duracaoTratamentoMedida = duracaoTratamentoMedida
-    self.quantidadeReceitada = quantidadeReceitada
-
-  def read(self, iprot):
-    if iprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None and fastbinary is not None:
-      fastbinary.decode_binary(self, iprot.trans, (self.__class__, self.thrift_spec))
-      return
-    iprot.readStructBegin()
-    while True:
-      (fname, ftype, fid) = iprot.readFieldBegin()
-      if ftype == TType.STOP:
-        break
-      if fid == 1:
-        if ftype == TType.STRING:
-          self.codigoCatmat = iprot.readString()
-        else:
-          iprot.skip(ftype)
-      elif fid == 2:
+      elif fid == 15:
         if ftype == TType.I64:
-          self.viaAdministracao = iprot.readI64()
+          self.dataCriacaoCuidado = iprot.readI64()
         else:
           iprot.skip(ftype)
-      elif fid == 3:
+      elif fid == 16:
         if ftype == TType.STRING:
-          self.dose = iprot.readString()
+          self.cid10 = iprot.readString()
         else:
           iprot.skip(ftype)
-      elif fid == 4:
-        if ftype == TType.BOOL:
-          self.doseUnica = iprot.readBool()
-        else:
-          iprot.skip(ftype)
-      elif fid == 5:
-        if ftype == TType.BOOL:
-          self.usoContinuo = iprot.readBool()
-        else:
-          iprot.skip(ftype)
-      elif fid == 6:
-        if ftype == TType.I64:
-          self.doseFrequenciaTipo = iprot.readI64()
-        else:
-          iprot.skip(ftype)
-      elif fid == 7:
+      elif fid == 17:
         if ftype == TType.STRING:
-          self.doseFrequencia = iprot.readString()
+          self.ciap = iprot.readString()
         else:
           iprot.skip(ftype)
-      elif fid == 8:
+      elif fid == 18:
+        if ftype == TType.STRING:
+          self.uuidFichaOrigem = iprot.readString()
+        else:
+          iprot.skip(ftype)
+      elif fid == 19:
         if ftype == TType.I32:
-          self.doseFrequenciaQuantidade = iprot.readI32()
+          self.tpDadoTranspFichaOrigem = iprot.readI32()
         else:
           iprot.skip(ftype)
-      elif fid == 9:
-        if ftype == TType.I64:
-          self.doseFrequenciaUnidadeMedida = iprot.readI64()
-        else:
-          iprot.skip(ftype)
-      elif fid == 10:
-        if ftype == TType.I64:
-          self.dtInicioTratamento = iprot.readI64()
-        else:
-          iprot.skip(ftype)
-      elif fid == 11:
+      elif fid == 20:
         if ftype == TType.I32:
-          self.duracaoTratamento = iprot.readI32()
+          self.prioridadeCuidado = iprot.readI32()
         else:
           iprot.skip(ftype)
-      elif fid == 12:
-        if ftype == TType.I64:
-          self.duracaoTratamentoMedida = iprot.readI64()
-        else:
-          iprot.skip(ftype)
-      elif fid == 13:
+      elif fid == 21:
         if ftype == TType.I32:
-          self.quantidadeReceitada = iprot.readI32()
+          self.reclassificacaoPrioridadeCuidado = iprot.readI32()
         else:
           iprot.skip(ftype)
       else:
@@ -859,390 +219,125 @@ class MedicamentoThrift:
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
       oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
       return
-    oprot.writeStructBegin('MedicamentoThrift')
-    if self.codigoCatmat is not None:
-      oprot.writeFieldBegin('codigoCatmat', TType.STRING, 1)
-      oprot.writeString(self.codigoCatmat)
+    oprot.writeStructBegin('CuidadoCompartilhadoThrift')
+    if self.uuidEvolucao is not None:
+      oprot.writeFieldBegin('uuidEvolucao', TType.STRING, 1)
+      oprot.writeString(self.uuidEvolucao)
       oprot.writeFieldEnd()
-    if self.viaAdministracao is not None:
-      oprot.writeFieldBegin('viaAdministracao', TType.I64, 2)
-      oprot.writeI64(self.viaAdministracao)
+    if self.lotacaoEvolucao is not None:
+      oprot.writeFieldBegin('lotacaoEvolucao', TType.STRUCT, 2)
+      self.lotacaoEvolucao.write(oprot)
       oprot.writeFieldEnd()
-    if self.dose is not None:
-      oprot.writeFieldBegin('dose', TType.STRING, 3)
-      oprot.writeString(self.dose)
+    if self.dataEvolucao is not None:
+      oprot.writeFieldBegin('dataEvolucao', TType.I64, 3)
+      oprot.writeI64(self.dataEvolucao)
       oprot.writeFieldEnd()
-    if self.doseUnica is not None:
-      oprot.writeFieldBegin('doseUnica', TType.BOOL, 4)
-      oprot.writeBool(self.doseUnica)
+    if self.dataEvolucaoAnterior is not None:
+      oprot.writeFieldBegin('dataEvolucaoAnterior', TType.I64, 4)
+      oprot.writeI64(self.dataEvolucaoAnterior)
       oprot.writeFieldEnd()
-    if self.usoContinuo is not None:
-      oprot.writeFieldBegin('usoContinuo', TType.BOOL, 5)
-      oprot.writeBool(self.usoContinuo)
+    if self.coSequencialEvolucao is not None:
+      oprot.writeFieldBegin('coSequencialEvolucao', TType.I32, 5)
+      oprot.writeI32(self.coSequencialEvolucao)
       oprot.writeFieldEnd()
-    if self.doseFrequenciaTipo is not None:
-      oprot.writeFieldBegin('doseFrequenciaTipo', TType.I64, 6)
-      oprot.writeI64(self.doseFrequenciaTipo)
+    if self.condutaEvolucao is not None:
+      oprot.writeFieldBegin('condutaEvolucao', TType.I64, 6)
+      oprot.writeI64(self.condutaEvolucao)
       oprot.writeFieldEnd()
-    if self.doseFrequencia is not None:
-      oprot.writeFieldBegin('doseFrequencia', TType.STRING, 7)
-      oprot.writeString(self.doseFrequencia)
+    if self.tpCdsOrigem is not None:
+      oprot.writeFieldBegin('tpCdsOrigem', TType.I32, 7)
+      oprot.writeI32(self.tpCdsOrigem)
       oprot.writeFieldEnd()
-    if self.doseFrequenciaQuantidade is not None:
-      oprot.writeFieldBegin('doseFrequenciaQuantidade', TType.I32, 8)
-      oprot.writeI32(self.doseFrequenciaQuantidade)
+    if self.cnsCidadao is not None:
+      oprot.writeFieldBegin('cnsCidadao', TType.STRING, 8)
+      oprot.writeString(self.cnsCidadao)
       oprot.writeFieldEnd()
-    if self.doseFrequenciaUnidadeMedida is not None:
-      oprot.writeFieldBegin('doseFrequenciaUnidadeMedida', TType.I64, 9)
-      oprot.writeI64(self.doseFrequenciaUnidadeMedida)
+    if self.cpfCidadao is not None:
+      oprot.writeFieldBegin('cpfCidadao', TType.STRING, 9)
+      oprot.writeString(self.cpfCidadao)
       oprot.writeFieldEnd()
-    if self.dtInicioTratamento is not None:
-      oprot.writeFieldBegin('dtInicioTratamento', TType.I64, 10)
-      oprot.writeI64(self.dtInicioTratamento)
+    if self.sexoCidadao is not None:
+      oprot.writeFieldBegin('sexoCidadao', TType.I64, 10)
+      oprot.writeI64(self.sexoCidadao)
       oprot.writeFieldEnd()
-    if self.duracaoTratamento is not None:
-      oprot.writeFieldBegin('duracaoTratamento', TType.I32, 11)
-      oprot.writeI32(self.duracaoTratamento)
+    if self.dataNascimentoCidadao is not None:
+      oprot.writeFieldBegin('dataNascimentoCidadao', TType.STRING, 11)
+      oprot.writeString(self.dataNascimentoCidadao)
       oprot.writeFieldEnd()
-    if self.duracaoTratamentoMedida is not None:
-      oprot.writeFieldBegin('duracaoTratamentoMedida', TType.I64, 12)
-      oprot.writeI64(self.duracaoTratamentoMedida)
+    if self.uuidCuidadoCompartilhado is not None:
+      oprot.writeFieldBegin('uuidCuidadoCompartilhado', TType.STRING, 12)
+      oprot.writeString(self.uuidCuidadoCompartilhado)
       oprot.writeFieldEnd()
-    if self.quantidadeReceitada is not None:
-      oprot.writeFieldBegin('quantidadeReceitada', TType.I32, 13)
-      oprot.writeI32(self.quantidadeReceitada)
+    if self.solicitante is not None:
+      oprot.writeFieldBegin('solicitante', TType.STRUCT, 13)
+      self.solicitante.write(oprot)
       oprot.writeFieldEnd()
-    oprot.writeFieldStop()
-    oprot.writeStructEnd()
-
-  def validate(self):
-    return
-
-
-  def __hash__(self):
-    value = 17
-    value = (value * 31) ^ hash(self.codigoCatmat)
-    value = (value * 31) ^ hash(self.viaAdministracao)
-    value = (value * 31) ^ hash(self.dose)
-    value = (value * 31) ^ hash(self.doseUnica)
-    value = (value * 31) ^ hash(self.usoContinuo)
-    value = (value * 31) ^ hash(self.doseFrequenciaTipo)
-    value = (value * 31) ^ hash(self.doseFrequencia)
-    value = (value * 31) ^ hash(self.doseFrequenciaQuantidade)
-    value = (value * 31) ^ hash(self.doseFrequenciaUnidadeMedida)
-    value = (value * 31) ^ hash(self.dtInicioTratamento)
-    value = (value * 31) ^ hash(self.duracaoTratamento)
-    value = (value * 31) ^ hash(self.duracaoTratamentoMedida)
-    value = (value * 31) ^ hash(self.quantidadeReceitada)
-    return value
-
-  def __repr__(self):
-    L = ['%s=%r' % (key, value)
-      for key, value in self.__dict__.iteritems()]
-    return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-  def __eq__(self, other):
-    return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-  def __ne__(self, other):
-    return not (self == other)
-
-class EncaminhamentoExternoThrift:
-  """
-  Attributes:
-   - especialidade
-   - hipoteseDiagnosticoCid10
-   - hipoteseDiagnosticoCiap2
-   - classificacaoRisco
-  """
-
-  thrift_spec = (
-    None, # 0
-    (1, TType.I64, 'especialidade', None, None, ), # 1
-    (2, TType.STRING, 'hipoteseDiagnosticoCid10', None, None, ), # 2
-    (3, TType.STRING, 'hipoteseDiagnosticoCiap2', None, None, ), # 3
-    (4, TType.I64, 'classificacaoRisco', None, None, ), # 4
-  )
-
-  def __init__(self, especialidade=None, hipoteseDiagnosticoCid10=None, hipoteseDiagnosticoCiap2=None, classificacaoRisco=None,):
-    self.especialidade = especialidade
-    self.hipoteseDiagnosticoCid10 = hipoteseDiagnosticoCid10
-    self.hipoteseDiagnosticoCiap2 = hipoteseDiagnosticoCiap2
-    self.classificacaoRisco = classificacaoRisco
-
-  def read(self, iprot):
-    if iprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None and fastbinary is not None:
-      fastbinary.decode_binary(self, iprot.trans, (self.__class__, self.thrift_spec))
-      return
-    iprot.readStructBegin()
-    while True:
-      (fname, ftype, fid) = iprot.readFieldBegin()
-      if ftype == TType.STOP:
-        break
-      if fid == 1:
-        if ftype == TType.I64:
-          self.especialidade = iprot.readI64()
-        else:
-          iprot.skip(ftype)
-      elif fid == 2:
-        if ftype == TType.STRING:
-          self.hipoteseDiagnosticoCid10 = iprot.readString()
-        else:
-          iprot.skip(ftype)
-      elif fid == 3:
-        if ftype == TType.STRING:
-          self.hipoteseDiagnosticoCiap2 = iprot.readString()
-        else:
-          iprot.skip(ftype)
-      elif fid == 4:
-        if ftype == TType.I64:
-          self.classificacaoRisco = iprot.readI64()
-        else:
-          iprot.skip(ftype)
-      else:
-        iprot.skip(ftype)
-      iprot.readFieldEnd()
-    iprot.readStructEnd()
-
-  def write(self, oprot):
-    if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
-      return
-    oprot.writeStructBegin('EncaminhamentoExternoThrift')
-    if self.especialidade is not None:
-      oprot.writeFieldBegin('especialidade', TType.I64, 1)
-      oprot.writeI64(self.especialidade)
+    if self.executante is not None:
+      oprot.writeFieldBegin('executante', TType.STRUCT, 14)
+      self.executante.write(oprot)
       oprot.writeFieldEnd()
-    if self.hipoteseDiagnosticoCid10 is not None:
-      oprot.writeFieldBegin('hipoteseDiagnosticoCid10', TType.STRING, 2)
-      oprot.writeString(self.hipoteseDiagnosticoCid10)
+    if self.dataCriacaoCuidado is not None:
+      oprot.writeFieldBegin('dataCriacaoCuidado', TType.I64, 15)
+      oprot.writeI64(self.dataCriacaoCuidado)
       oprot.writeFieldEnd()
-    if self.hipoteseDiagnosticoCiap2 is not None:
-      oprot.writeFieldBegin('hipoteseDiagnosticoCiap2', TType.STRING, 3)
-      oprot.writeString(self.hipoteseDiagnosticoCiap2)
+    if self.cid10 is not None:
+      oprot.writeFieldBegin('cid10', TType.STRING, 16)
+      oprot.writeString(self.cid10)
       oprot.writeFieldEnd()
-    if self.classificacaoRisco is not None:
-      oprot.writeFieldBegin('classificacaoRisco', TType.I64, 4)
-      oprot.writeI64(self.classificacaoRisco)
+    if self.ciap is not None:
+      oprot.writeFieldBegin('ciap', TType.STRING, 17)
+      oprot.writeString(self.ciap)
+      oprot.writeFieldEnd()
+    if self.uuidFichaOrigem is not None:
+      oprot.writeFieldBegin('uuidFichaOrigem', TType.STRING, 18)
+      oprot.writeString(self.uuidFichaOrigem)
+      oprot.writeFieldEnd()
+    if self.tpDadoTranspFichaOrigem is not None:
+      oprot.writeFieldBegin('tpDadoTranspFichaOrigem', TType.I32, 19)
+      oprot.writeI32(self.tpDadoTranspFichaOrigem)
+      oprot.writeFieldEnd()
+    if self.prioridadeCuidado is not None:
+      oprot.writeFieldBegin('prioridadeCuidado', TType.I32, 20)
+      oprot.writeI32(self.prioridadeCuidado)
+      oprot.writeFieldEnd()
+    if self.reclassificacaoPrioridadeCuidado is not None:
+      oprot.writeFieldBegin('reclassificacaoPrioridadeCuidado', TType.I32, 21)
+      oprot.writeI32(self.reclassificacaoPrioridadeCuidado)
       oprot.writeFieldEnd()
     oprot.writeFieldStop()
     oprot.writeStructEnd()
 
   def validate(self):
+    if self.uuidEvolucao is None:
+      raise TProtocol.TProtocolException(message='Required field uuidEvolucao is unset!')
+    if self.uuidCuidadoCompartilhado is None:
+      raise TProtocol.TProtocolException(message='Required field uuidCuidadoCompartilhado is unset!')
     return
 
 
   def __hash__(self):
     value = 17
-    value = (value * 31) ^ hash(self.especialidade)
-    value = (value * 31) ^ hash(self.hipoteseDiagnosticoCid10)
-    value = (value * 31) ^ hash(self.hipoteseDiagnosticoCiap2)
-    value = (value * 31) ^ hash(self.classificacaoRisco)
-    return value
-
-  def __repr__(self):
-    L = ['%s=%r' % (key, value)
-      for key, value in self.__dict__.iteritems()]
-    return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-  def __eq__(self, other):
-    return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-  def __ne__(self, other):
-    return not (self == other)
-
-class ResultadoExameThrift:
-  """
-  Attributes:
-   - tipoResultado
-   - valorResultado
-  """
-
-  thrift_spec = (
-    None, # 0
-    (1, TType.I32, 'tipoResultado', None, None, ), # 1
-    (2, TType.STRING, 'valorResultado', None, None, ), # 2
-  )
-
-  def __init__(self, tipoResultado=None, valorResultado=None,):
-    self.tipoResultado = tipoResultado
-    self.valorResultado = valorResultado
-
-  def read(self, iprot):
-    if iprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None and fastbinary is not None:
-      fastbinary.decode_binary(self, iprot.trans, (self.__class__, self.thrift_spec))
-      return
-    iprot.readStructBegin()
-    while True:
-      (fname, ftype, fid) = iprot.readFieldBegin()
-      if ftype == TType.STOP:
-        break
-      if fid == 1:
-        if ftype == TType.I32:
-          self.tipoResultado = iprot.readI32()
-        else:
-          iprot.skip(ftype)
-      elif fid == 2:
-        if ftype == TType.STRING:
-          self.valorResultado = iprot.readString()
-        else:
-          iprot.skip(ftype)
-      else:
-        iprot.skip(ftype)
-      iprot.readFieldEnd()
-    iprot.readStructEnd()
-
-  def write(self, oprot):
-    if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
-      return
-    oprot.writeStructBegin('ResultadoExameThrift')
-    if self.tipoResultado is not None:
-      oprot.writeFieldBegin('tipoResultado', TType.I32, 1)
-      oprot.writeI32(self.tipoResultado)
-      oprot.writeFieldEnd()
-    if self.valorResultado is not None:
-      oprot.writeFieldBegin('valorResultado', TType.STRING, 2)
-      oprot.writeString(self.valorResultado)
-      oprot.writeFieldEnd()
-    oprot.writeFieldStop()
-    oprot.writeStructEnd()
-
-  def validate(self):
-    return
-
-
-  def __hash__(self):
-    value = 17
-    value = (value * 31) ^ hash(self.tipoResultado)
-    value = (value * 31) ^ hash(self.valorResultado)
-    return value
-
-  def __repr__(self):
-    L = ['%s=%r' % (key, value)
-      for key, value in self.__dict__.iteritems()]
-    return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-  def __eq__(self, other):
-    return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-  def __ne__(self, other):
-    return not (self == other)
-
-class ResultadosExameThrift:
-  """
-  Attributes:
-   - exame
-   - dataSolicitacao
-   - dataRealizacao
-   - dataResultado
-   - resultadoExame
-  """
-
-  thrift_spec = (
-    None, # 0
-    (1, TType.STRING, 'exame', None, None, ), # 1
-    (2, TType.I64, 'dataSolicitacao', None, None, ), # 2
-    (3, TType.I64, 'dataRealizacao', None, None, ), # 3
-    (4, TType.I64, 'dataResultado', None, None, ), # 4
-    None, # 5
-    (6, TType.LIST, 'resultadoExame', (TType.STRUCT,(ResultadoExameThrift, ResultadoExameThrift.thrift_spec)), None, ), # 6
-  )
-
-  def __init__(self, exame=None, dataSolicitacao=None, dataRealizacao=None, dataResultado=None, resultadoExame=None,):
-    self.exame = exame
-    self.dataSolicitacao = dataSolicitacao
-    self.dataRealizacao = dataRealizacao
-    self.dataResultado = dataResultado
-    self.resultadoExame = resultadoExame
-
-  def read(self, iprot):
-    if iprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None and fastbinary is not None:
-      fastbinary.decode_binary(self, iprot.trans, (self.__class__, self.thrift_spec))
-      return
-    iprot.readStructBegin()
-    while True:
-      (fname, ftype, fid) = iprot.readFieldBegin()
-      if ftype == TType.STOP:
-        break
-      if fid == 1:
-        if ftype == TType.STRING:
-          self.exame = iprot.readString()
-        else:
-          iprot.skip(ftype)
-      elif fid == 2:
-        if ftype == TType.I64:
-          self.dataSolicitacao = iprot.readI64()
-        else:
-          iprot.skip(ftype)
-      elif fid == 3:
-        if ftype == TType.I64:
-          self.dataRealizacao = iprot.readI64()
-        else:
-          iprot.skip(ftype)
-      elif fid == 4:
-        if ftype == TType.I64:
-          self.dataResultado = iprot.readI64()
-        else:
-          iprot.skip(ftype)
-      elif fid == 6:
-        if ftype == TType.LIST:
-          self.resultadoExame = []
-          (_etype3, _size0) = iprot.readListBegin()
-          for _i4 in xrange(_size0):
-            _elem5 = ResultadoExameThrift()
-            _elem5.read(iprot)
-            self.resultadoExame.append(_elem5)
-          iprot.readListEnd()
-        else:
-          iprot.skip(ftype)
-      else:
-        iprot.skip(ftype)
-      iprot.readFieldEnd()
-    iprot.readStructEnd()
-
-  def write(self, oprot):
-    if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
-      return
-    oprot.writeStructBegin('ResultadosExameThrift')
-    if self.exame is not None:
-      oprot.writeFieldBegin('exame', TType.STRING, 1)
-      oprot.writeString(self.exame)
-      oprot.writeFieldEnd()
-    if self.dataSolicitacao is not None:
-      oprot.writeFieldBegin('dataSolicitacao', TType.I64, 2)
-      oprot.writeI64(self.dataSolicitacao)
-      oprot.writeFieldEnd()
-    if self.dataRealizacao is not None:
-      oprot.writeFieldBegin('dataRealizacao', TType.I64, 3)
-      oprot.writeI64(self.dataRealizacao)
-      oprot.writeFieldEnd()
-    if self.dataResultado is not None:
-      oprot.writeFieldBegin('dataResultado', TType.I64, 4)
-      oprot.writeI64(self.dataResultado)
-      oprot.writeFieldEnd()
-    if self.resultadoExame is not None:
-      oprot.writeFieldBegin('resultadoExame', TType.LIST, 6)
-      oprot.writeListBegin(TType.STRUCT, len(self.resultadoExame))
-      for iter6 in self.resultadoExame:
-        iter6.write(oprot)
-      oprot.writeListEnd()
-      oprot.writeFieldEnd()
-    oprot.writeFieldStop()
-    oprot.writeStructEnd()
-
-  def validate(self):
-    return
-
-
-  def __hash__(self):
-    value = 17
-    value = (value * 31) ^ hash(self.exame)
-    value = (value * 31) ^ hash(self.dataSolicitacao)
-    value = (value * 31) ^ hash(self.dataRealizacao)
-    value = (value * 31) ^ hash(self.dataResultado)
-    value = (value * 31) ^ hash(self.resultadoExame)
+    value = (value * 31) ^ hash(self.uuidEvolucao)
+    value = (value * 31) ^ hash(self.lotacaoEvolucao)
+    value = (value * 31) ^ hash(self.dataEvolucao)
+    value = (value * 31) ^ hash(self.dataEvolucaoAnterior)
+    value = (value * 31) ^ hash(self.coSequencialEvolucao)
+    value = (value * 31) ^ hash(self.condutaEvolucao)
+    value = (value * 31) ^ hash(self.tpCdsOrigem)
+    value = (value * 31) ^ hash(self.cnsCidadao)
+    value = (value * 31) ^ hash(self.cpfCidadao)
+    value = (value * 31) ^ hash(self.sexoCidadao)
+    value = (value * 31) ^ hash(self.dataNascimentoCidadao)
+    value = (value * 31) ^ hash(self.uuidCuidadoCompartilhado)
+    value = (value * 31) ^ hash(self.solicitante)
+    value = (value * 31) ^ hash(self.executante)
+    value = (value * 31) ^ hash(self.dataCriacaoCuidado)
+    value = (value * 31) ^ hash(self.cid10)
+    value = (value * 31) ^ hash(self.ciap)
+    value = (value * 31) ^ hash(self.uuidFichaOrigem)
+    value = (value * 31) ^ hash(self.tpDadoTranspFichaOrigem)
+    value = (value * 31) ^ hash(self.prioridadeCuidado)
+    value = (value * 31) ^ hash(self.reclassificacaoPrioridadeCuidado)
     return value
 
   def __repr__(self):

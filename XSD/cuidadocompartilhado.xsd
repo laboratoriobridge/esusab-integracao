@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:cuidadocompartilhado="http://esus.ufsc.br/cuidadocompartilhado" xmlns:lotacao="http://esus.ufsc.br/lotacao" targetNamespace="http://esus.ufsc.br/cuidadocompartilhado" version="1.0">
+
+  <xs:import namespace="http://esus.ufsc.br/lotacao" schemaLocation="lotacao.xsd"/>
+
+  <xs:element name="cuidadoCompartilhadoTransport" type="cuidadocompartilhado:cuidadoCompartilhadoTransport"/>
+
+  <xs:complexType name="cuidadoCompartilhadoTransport">
+    <xs:sequence>
+      <xs:element maxOccurs="1" name="uuidEvolucao" type="xs:string"/>
+      <xs:element maxOccurs="1" name="lotacaoEvolucao" type="lotacao:lotacaoTransport"/>
+      <xs:element maxOccurs="1" name="dataEvolucao" type="xs:long"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="dataEvolucaoAnterior" type="xs:long"/>
+      <xs:element maxOccurs="1" name="coSequencialEvolucao" type="xs:int"/>
+      <xs:element maxOccurs="1" name="condutaEvolucao" type="xs:long"/>
+      <xs:element maxOccurs="1" name="tpCdsOrigem" type="xs:int"/>
+      <xs:element maxOccurs="1" name="uuidCuidadoCompartilhado" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="cnsCidadao" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="cpfCidadao" type="xs:string"/>
+      <xs:element maxOccurs="1" name="dataNascimentoCidadao">
+        <xs:annotation>
+          <xs:documentation>Padrão aceito YYYY-MM-DD</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:date"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element maxOccurs="1" name="sexoCidadao" type="xs:long"/>
+      <xs:element maxOccurs="1" name="solicitante" type="lotacao:lotacaoTransport"/>
+      <xs:element maxOccurs="1" name="executante" type="lotacao:lotacaoTransport"/>
+      <xs:element maxOccurs="1" name="dataCriacaoCuidado" type="xs:long"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="ciap" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="cid10" type="xs:string"/>
+      <xs:element maxOccurs="1" name="prioridadeCuidado" type="xs:int"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="reclassificacaoPrioridadeCuidado" type="xs:int"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="uuidFichaOrigem" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="tpDadoTranspFichaOrigem" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

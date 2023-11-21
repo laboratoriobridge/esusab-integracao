@@ -16,7 +16,8 @@ uses
   Thrift.Utils,
   Thrift.Collections,
   Thrift.Protocol,
-  Thrift.Transport;
+  Thrift.Transport,
+  br.gov.saude.esusab.ras.common;
 
 const
   cbr_gov_saude_esusab_ras_common_Option_AnsiStr_Binary = False;
@@ -26,87 +27,221 @@ const
   cbr_gov_saude_esusab_ras_common_Option_XmlDoc         = False;
 
 type
-  IHeaderCdsCadastroThrift = interface;
-  ILotacaoHeaderThrift = interface;
-  IUnicaLotacaoHeaderThrift = interface;
-  IVariasLotacoesHeaderThrift = interface;
-  IEnderecoLocalPermanenciaThrift = interface;
-  IMedicamentoThrift = interface;
-  IEncaminhamentoExternoThrift = interface;
-  IResultadoExameThrift = interface;
-  IResultadosExameThrift = interface;
+  ICuidadoCompartilhadoThrift = interface;
 
-  IHeaderCdsCadastroThrift = interface(IBase)
-    function GetCnesUnidadeSaude: string;
-    procedure SetCnesUnidadeSaude( const Value: string);
-    function GetCnsProfissional: string;
-    procedure SetCnsProfissional( const Value: string);
-    function GetCodigoIbgeMunicipio: string;
-    procedure SetCodigoIbgeMunicipio( const Value: string);
-    function GetDataAtendimento: Int64;
-    procedure SetDataAtendimento( const Value: Int64);
-    function GetIneEquipe: string;
-    procedure SetIneEquipe( const Value: string);
-    function GetMicroarea: Int64;
-    procedure SetMicroarea( const Value: Int64);
+  ICuidadoCompartilhadoThrift = interface(IBase)
+    function GetUuidEvolucao: string;
+    procedure SetUuidEvolucao( const Value: string);
+    function GetLotacaoEvolucao: ILotacaoThrift;
+    procedure SetLotacaoEvolucao( const Value: ILotacaoThrift);
+    function GetDataEvolucao: Int64;
+    procedure SetDataEvolucao( const Value: Int64);
+    function GetDataEvolucaoAnterior: Int64;
+    procedure SetDataEvolucaoAnterior( const Value: Int64);
+    function GetCoSequencialEvolucao: Integer;
+    procedure SetCoSequencialEvolucao( const Value: Integer);
+    function GetCondutaEvolucao: Int64;
+    procedure SetCondutaEvolucao( const Value: Int64);
+    function GetTpCdsOrigem: Integer;
+    procedure SetTpCdsOrigem( const Value: Integer);
+    function GetCnsCidadao: string;
+    procedure SetCnsCidadao( const Value: string);
+    function GetCpfCidadao: string;
+    procedure SetCpfCidadao( const Value: string);
+    function GetSexoCidadao: Int64;
+    procedure SetSexoCidadao( const Value: Int64);
+    function GetDataNascimentoCidadao: string;
+    procedure SetDataNascimentoCidadao( const Value: string);
+    function GetUuidCuidadoCompartilhado: string;
+    procedure SetUuidCuidadoCompartilhado( const Value: string);
+    function GetSolicitante: ILotacaoThrift;
+    procedure SetSolicitante( const Value: ILotacaoThrift);
+    function GetExecutante: ILotacaoThrift;
+    procedure SetExecutante( const Value: ILotacaoThrift);
+    function GetDataCriacaoCuidado: Int64;
+    procedure SetDataCriacaoCuidado( const Value: Int64);
+    function GetCid10: string;
+    procedure SetCid10( const Value: string);
+    function GetCiap: string;
+    procedure SetCiap( const Value: string);
+    function GetUuidFichaOrigem: string;
+    procedure SetUuidFichaOrigem( const Value: string);
+    function GetTpDadoTranspFichaOrigem: Integer;
+    procedure SetTpDadoTranspFichaOrigem( const Value: Integer);
+    function GetPrioridadeCuidado: Integer;
+    procedure SetPrioridadeCuidado( const Value: Integer);
+    function GetReclassificacaoPrioridadeCuidado: Integer;
+    procedure SetReclassificacaoPrioridadeCuidado( const Value: Integer);
 
-    property CnesUnidadeSaude: string read GetCnesUnidadeSaude write SetCnesUnidadeSaude;
-    property CnsProfissional: string read GetCnsProfissional write SetCnsProfissional;
-    property CodigoIbgeMunicipio: string read GetCodigoIbgeMunicipio write SetCodigoIbgeMunicipio;
-    property DataAtendimento: Int64 read GetDataAtendimento write SetDataAtendimento;
-    property IneEquipe: string read GetIneEquipe write SetIneEquipe;
-    property Microarea: Int64 read GetMicroarea write SetMicroarea;
+    property UuidEvolucao: string read GetUuidEvolucao write SetUuidEvolucao;
+    property LotacaoEvolucao: ILotacaoThrift read GetLotacaoEvolucao write SetLotacaoEvolucao;
+    property DataEvolucao: Int64 read GetDataEvolucao write SetDataEvolucao;
+    property DataEvolucaoAnterior: Int64 read GetDataEvolucaoAnterior write SetDataEvolucaoAnterior;
+    property CoSequencialEvolucao: Integer read GetCoSequencialEvolucao write SetCoSequencialEvolucao;
+    property CondutaEvolucao: Int64 read GetCondutaEvolucao write SetCondutaEvolucao;
+    property TpCdsOrigem: Integer read GetTpCdsOrigem write SetTpCdsOrigem;
+    property CnsCidadao: string read GetCnsCidadao write SetCnsCidadao;
+    property CpfCidadao: string read GetCpfCidadao write SetCpfCidadao;
+    property SexoCidadao: Int64 read GetSexoCidadao write SetSexoCidadao;
+    property DataNascimentoCidadao: string read GetDataNascimentoCidadao write SetDataNascimentoCidadao;
+    property UuidCuidadoCompartilhado: string read GetUuidCuidadoCompartilhado write SetUuidCuidadoCompartilhado;
+    property Solicitante: ILotacaoThrift read GetSolicitante write SetSolicitante;
+    property Executante: ILotacaoThrift read GetExecutante write SetExecutante;
+    property DataCriacaoCuidado: Int64 read GetDataCriacaoCuidado write SetDataCriacaoCuidado;
+    property Cid10: string read GetCid10 write SetCid10;
+    property Ciap: string read GetCiap write SetCiap;
+    property UuidFichaOrigem: string read GetUuidFichaOrigem write SetUuidFichaOrigem;
+    property TpDadoTranspFichaOrigem: Integer read GetTpDadoTranspFichaOrigem write SetTpDadoTranspFichaOrigem;
+    property PrioridadeCuidado: Integer read GetPrioridadeCuidado write SetPrioridadeCuidado;
+    property ReclassificacaoPrioridadeCuidado: Integer read GetReclassificacaoPrioridadeCuidado write SetReclassificacaoPrioridadeCuidado;
 
-    function Get__isset_CnesUnidadeSaude: Boolean;
-    function Get__isset_CnsProfissional: Boolean;
-    function Get__isset_CodigoIbgeMunicipio: Boolean;
-    function Get__isset_DataAtendimento: Boolean;
-    function Get__isset_IneEquipe: Boolean;
-    function Get__isset_Microarea: Boolean;
+    function Get__isset_LotacaoEvolucao: Boolean;
+    function Get__isset_DataEvolucao: Boolean;
+    function Get__isset_DataEvolucaoAnterior: Boolean;
+    function Get__isset_CoSequencialEvolucao: Boolean;
+    function Get__isset_CondutaEvolucao: Boolean;
+    function Get__isset_TpCdsOrigem: Boolean;
+    function Get__isset_CnsCidadao: Boolean;
+    function Get__isset_CpfCidadao: Boolean;
+    function Get__isset_SexoCidadao: Boolean;
+    function Get__isset_DataNascimentoCidadao: Boolean;
+    function Get__isset_Solicitante: Boolean;
+    function Get__isset_Executante: Boolean;
+    function Get__isset_DataCriacaoCuidado: Boolean;
+    function Get__isset_Cid10: Boolean;
+    function Get__isset_Ciap: Boolean;
+    function Get__isset_UuidFichaOrigem: Boolean;
+    function Get__isset_TpDadoTranspFichaOrigem: Boolean;
+    function Get__isset_PrioridadeCuidado: Boolean;
+    function Get__isset_ReclassificacaoPrioridadeCuidado: Boolean;
 
-    property __isset_CnesUnidadeSaude: Boolean read Get__isset_CnesUnidadeSaude;
-    property __isset_CnsProfissional: Boolean read Get__isset_CnsProfissional;
-    property __isset_CodigoIbgeMunicipio: Boolean read Get__isset_CodigoIbgeMunicipio;
-    property __isset_DataAtendimento: Boolean read Get__isset_DataAtendimento;
-    property __isset_IneEquipe: Boolean read Get__isset_IneEquipe;
-    property __isset_Microarea: Boolean read Get__isset_Microarea;
+    property __isset_LotacaoEvolucao: Boolean read Get__isset_LotacaoEvolucao;
+    property __isset_DataEvolucao: Boolean read Get__isset_DataEvolucao;
+    property __isset_DataEvolucaoAnterior: Boolean read Get__isset_DataEvolucaoAnterior;
+    property __isset_CoSequencialEvolucao: Boolean read Get__isset_CoSequencialEvolucao;
+    property __isset_CondutaEvolucao: Boolean read Get__isset_CondutaEvolucao;
+    property __isset_TpCdsOrigem: Boolean read Get__isset_TpCdsOrigem;
+    property __isset_CnsCidadao: Boolean read Get__isset_CnsCidadao;
+    property __isset_CpfCidadao: Boolean read Get__isset_CpfCidadao;
+    property __isset_SexoCidadao: Boolean read Get__isset_SexoCidadao;
+    property __isset_DataNascimentoCidadao: Boolean read Get__isset_DataNascimentoCidadao;
+    property __isset_Solicitante: Boolean read Get__isset_Solicitante;
+    property __isset_Executante: Boolean read Get__isset_Executante;
+    property __isset_DataCriacaoCuidado: Boolean read Get__isset_DataCriacaoCuidado;
+    property __isset_Cid10: Boolean read Get__isset_Cid10;
+    property __isset_Ciap: Boolean read Get__isset_Ciap;
+    property __isset_UuidFichaOrigem: Boolean read Get__isset_UuidFichaOrigem;
+    property __isset_TpDadoTranspFichaOrigem: Boolean read Get__isset_TpDadoTranspFichaOrigem;
+    property __isset_PrioridadeCuidado: Boolean read Get__isset_PrioridadeCuidado;
+    property __isset_ReclassificacaoPrioridadeCuidado: Boolean read Get__isset_ReclassificacaoPrioridadeCuidado;
   end;
 
-  THeaderCdsCadastroThriftImpl = class(TInterfacedObject, IBase, IHeaderCdsCadastroThrift)
+  TCuidadoCompartilhadoThriftImpl = class(TInterfacedObject, IBase, ICuidadoCompartilhadoThrift)
   private
-    FCnesUnidadeSaude: string;
-    FCnsProfissional: string;
-    FCodigoIbgeMunicipio: string;
-    FDataAtendimento: Int64;
-    FIneEquipe: string;
-    FMicroarea: Int64;
+    FUuidEvolucao: string;
+    FLotacaoEvolucao: ILotacaoThrift;
+    FDataEvolucao: Int64;
+    FDataEvolucaoAnterior: Int64;
+    FCoSequencialEvolucao: Integer;
+    FCondutaEvolucao: Int64;
+    FTpCdsOrigem: Integer;
+    FCnsCidadao: string;
+    FCpfCidadao: string;
+    FSexoCidadao: Int64;
+    FDataNascimentoCidadao: string;
+    FUuidCuidadoCompartilhado: string;
+    FSolicitante: ILotacaoThrift;
+    FExecutante: ILotacaoThrift;
+    FDataCriacaoCuidado: Int64;
+    FCid10: string;
+    FCiap: string;
+    FUuidFichaOrigem: string;
+    FTpDadoTranspFichaOrigem: Integer;
+    FPrioridadeCuidado: Integer;
+    FReclassificacaoPrioridadeCuidado: Integer;
     
-    F__isset_CnesUnidadeSaude: Boolean;
-    F__isset_CnsProfissional: Boolean;
-    F__isset_CodigoIbgeMunicipio: Boolean;
-    F__isset_DataAtendimento: Boolean;
-    F__isset_IneEquipe: Boolean;
-    F__isset_Microarea: Boolean;
+    F__isset_LotacaoEvolucao: Boolean;
+    F__isset_DataEvolucao: Boolean;
+    F__isset_DataEvolucaoAnterior: Boolean;
+    F__isset_CoSequencialEvolucao: Boolean;
+    F__isset_CondutaEvolucao: Boolean;
+    F__isset_TpCdsOrigem: Boolean;
+    F__isset_CnsCidadao: Boolean;
+    F__isset_CpfCidadao: Boolean;
+    F__isset_SexoCidadao: Boolean;
+    F__isset_DataNascimentoCidadao: Boolean;
+    F__isset_Solicitante: Boolean;
+    F__isset_Executante: Boolean;
+    F__isset_DataCriacaoCuidado: Boolean;
+    F__isset_Cid10: Boolean;
+    F__isset_Ciap: Boolean;
+    F__isset_UuidFichaOrigem: Boolean;
+    F__isset_TpDadoTranspFichaOrigem: Boolean;
+    F__isset_PrioridadeCuidado: Boolean;
+    F__isset_ReclassificacaoPrioridadeCuidado: Boolean;
     
-    function GetCnesUnidadeSaude: string;
-    procedure SetCnesUnidadeSaude( const Value: string);
-    function GetCnsProfissional: string;
-    procedure SetCnsProfissional( const Value: string);
-    function GetCodigoIbgeMunicipio: string;
-    procedure SetCodigoIbgeMunicipio( const Value: string);
-    function GetDataAtendimento: Int64;
-    procedure SetDataAtendimento( const Value: Int64);
-    function GetIneEquipe: string;
-    procedure SetIneEquipe( const Value: string);
-    function GetMicroarea: Int64;
-    procedure SetMicroarea( const Value: Int64);
+    function GetUuidEvolucao: string;
+    procedure SetUuidEvolucao( const Value: string);
+    function GetLotacaoEvolucao: ILotacaoThrift;
+    procedure SetLotacaoEvolucao( const Value: ILotacaoThrift);
+    function GetDataEvolucao: Int64;
+    procedure SetDataEvolucao( const Value: Int64);
+    function GetDataEvolucaoAnterior: Int64;
+    procedure SetDataEvolucaoAnterior( const Value: Int64);
+    function GetCoSequencialEvolucao: Integer;
+    procedure SetCoSequencialEvolucao( const Value: Integer);
+    function GetCondutaEvolucao: Int64;
+    procedure SetCondutaEvolucao( const Value: Int64);
+    function GetTpCdsOrigem: Integer;
+    procedure SetTpCdsOrigem( const Value: Integer);
+    function GetCnsCidadao: string;
+    procedure SetCnsCidadao( const Value: string);
+    function GetCpfCidadao: string;
+    procedure SetCpfCidadao( const Value: string);
+    function GetSexoCidadao: Int64;
+    procedure SetSexoCidadao( const Value: Int64);
+    function GetDataNascimentoCidadao: string;
+    procedure SetDataNascimentoCidadao( const Value: string);
+    function GetUuidCuidadoCompartilhado: string;
+    procedure SetUuidCuidadoCompartilhado( const Value: string);
+    function GetSolicitante: ILotacaoThrift;
+    procedure SetSolicitante( const Value: ILotacaoThrift);
+    function GetExecutante: ILotacaoThrift;
+    procedure SetExecutante( const Value: ILotacaoThrift);
+    function GetDataCriacaoCuidado: Int64;
+    procedure SetDataCriacaoCuidado( const Value: Int64);
+    function GetCid10: string;
+    procedure SetCid10( const Value: string);
+    function GetCiap: string;
+    procedure SetCiap( const Value: string);
+    function GetUuidFichaOrigem: string;
+    procedure SetUuidFichaOrigem( const Value: string);
+    function GetTpDadoTranspFichaOrigem: Integer;
+    procedure SetTpDadoTranspFichaOrigem( const Value: Integer);
+    function GetPrioridadeCuidado: Integer;
+    procedure SetPrioridadeCuidado( const Value: Integer);
+    function GetReclassificacaoPrioridadeCuidado: Integer;
+    procedure SetReclassificacaoPrioridadeCuidado( const Value: Integer);
 
-    function Get__isset_CnesUnidadeSaude: Boolean;
-    function Get__isset_CnsProfissional: Boolean;
-    function Get__isset_CodigoIbgeMunicipio: Boolean;
-    function Get__isset_DataAtendimento: Boolean;
-    function Get__isset_IneEquipe: Boolean;
-    function Get__isset_Microarea: Boolean;
+    function Get__isset_LotacaoEvolucao: Boolean;
+    function Get__isset_DataEvolucao: Boolean;
+    function Get__isset_DataEvolucaoAnterior: Boolean;
+    function Get__isset_CoSequencialEvolucao: Boolean;
+    function Get__isset_CondutaEvolucao: Boolean;
+    function Get__isset_TpCdsOrigem: Boolean;
+    function Get__isset_CnsCidadao: Boolean;
+    function Get__isset_CpfCidadao: Boolean;
+    function Get__isset_SexoCidadao: Boolean;
+    function Get__isset_DataNascimentoCidadao: Boolean;
+    function Get__isset_Solicitante: Boolean;
+    function Get__isset_Executante: Boolean;
+    function Get__isset_DataCriacaoCuidado: Boolean;
+    function Get__isset_Cid10: Boolean;
+    function Get__isset_Ciap: Boolean;
+    function Get__isset_UuidFichaOrigem: Boolean;
+    function Get__isset_TpDadoTranspFichaOrigem: Boolean;
+    function Get__isset_PrioridadeCuidado: Boolean;
+    function Get__isset_ReclassificacaoPrioridadeCuidado: Boolean;
   public
     constructor Create;
     destructor Destroy; override;
@@ -118,970 +253,398 @@ type
     procedure Write( const oprot: IProtocol);
 
     // Properties
-    property CnesUnidadeSaude: string read GetCnesUnidadeSaude write SetCnesUnidadeSaude;
-    property CnsProfissional: string read GetCnsProfissional write SetCnsProfissional;
-    property CodigoIbgeMunicipio: string read GetCodigoIbgeMunicipio write SetCodigoIbgeMunicipio;
-    property DataAtendimento: Int64 read GetDataAtendimento write SetDataAtendimento;
-    property IneEquipe: string read GetIneEquipe write SetIneEquipe;
-    property Microarea: Int64 read GetMicroarea write SetMicroarea;
+    property UuidEvolucao: string read GetUuidEvolucao write SetUuidEvolucao;
+    property LotacaoEvolucao: ILotacaoThrift read GetLotacaoEvolucao write SetLotacaoEvolucao;
+    property DataEvolucao: Int64 read GetDataEvolucao write SetDataEvolucao;
+    property DataEvolucaoAnterior: Int64 read GetDataEvolucaoAnterior write SetDataEvolucaoAnterior;
+    property CoSequencialEvolucao: Integer read GetCoSequencialEvolucao write SetCoSequencialEvolucao;
+    property CondutaEvolucao: Int64 read GetCondutaEvolucao write SetCondutaEvolucao;
+    property TpCdsOrigem: Integer read GetTpCdsOrigem write SetTpCdsOrigem;
+    property CnsCidadao: string read GetCnsCidadao write SetCnsCidadao;
+    property CpfCidadao: string read GetCpfCidadao write SetCpfCidadao;
+    property SexoCidadao: Int64 read GetSexoCidadao write SetSexoCidadao;
+    property DataNascimentoCidadao: string read GetDataNascimentoCidadao write SetDataNascimentoCidadao;
+    property UuidCuidadoCompartilhado: string read GetUuidCuidadoCompartilhado write SetUuidCuidadoCompartilhado;
+    property Solicitante: ILotacaoThrift read GetSolicitante write SetSolicitante;
+    property Executante: ILotacaoThrift read GetExecutante write SetExecutante;
+    property DataCriacaoCuidado: Int64 read GetDataCriacaoCuidado write SetDataCriacaoCuidado;
+    property Cid10: string read GetCid10 write SetCid10;
+    property Ciap: string read GetCiap write SetCiap;
+    property UuidFichaOrigem: string read GetUuidFichaOrigem write SetUuidFichaOrigem;
+    property TpDadoTranspFichaOrigem: Integer read GetTpDadoTranspFichaOrigem write SetTpDadoTranspFichaOrigem;
+    property PrioridadeCuidado: Integer read GetPrioridadeCuidado write SetPrioridadeCuidado;
+    property ReclassificacaoPrioridadeCuidado: Integer read GetReclassificacaoPrioridadeCuidado write SetReclassificacaoPrioridadeCuidado;
 
     // isset
-    property __isset_CnesUnidadeSaude: Boolean read Get__isset_CnesUnidadeSaude;
-    property __isset_CnsProfissional: Boolean read Get__isset_CnsProfissional;
-    property __isset_CodigoIbgeMunicipio: Boolean read Get__isset_CodigoIbgeMunicipio;
-    property __isset_DataAtendimento: Boolean read Get__isset_DataAtendimento;
-    property __isset_IneEquipe: Boolean read Get__isset_IneEquipe;
-    property __isset_Microarea: Boolean read Get__isset_Microarea;
-  end;
-
-  ILotacaoHeaderThrift = interface(IBase)
-    function GetProfissionalCNS: string;
-    procedure SetProfissionalCNS( const Value: string);
-    function GetCboCodigo_2002: string;
-    procedure SetCboCodigo_2002( const Value: string);
-    function GetCnes: string;
-    procedure SetCnes( const Value: string);
-    function GetIne: string;
-    procedure SetIne( const Value: string);
-
-    property ProfissionalCNS: string read GetProfissionalCNS write SetProfissionalCNS;
-    property CboCodigo_2002: string read GetCboCodigo_2002 write SetCboCodigo_2002;
-    property Cnes: string read GetCnes write SetCnes;
-    property Ine: string read GetIne write SetIne;
-
-    function Get__isset_ProfissionalCNS: Boolean;
-    function Get__isset_CboCodigo_2002: Boolean;
-    function Get__isset_Cnes: Boolean;
-    function Get__isset_Ine: Boolean;
-
-    property __isset_ProfissionalCNS: Boolean read Get__isset_ProfissionalCNS;
-    property __isset_CboCodigo_2002: Boolean read Get__isset_CboCodigo_2002;
-    property __isset_Cnes: Boolean read Get__isset_Cnes;
-    property __isset_Ine: Boolean read Get__isset_Ine;
-  end;
-
-  TLotacaoHeaderThriftImpl = class(TInterfacedObject, IBase, ILotacaoHeaderThrift)
-  private
-    FProfissionalCNS: string;
-    FCboCodigo_2002: string;
-    FCnes: string;
-    FIne: string;
-    
-    F__isset_ProfissionalCNS: Boolean;
-    F__isset_CboCodigo_2002: Boolean;
-    F__isset_Cnes: Boolean;
-    F__isset_Ine: Boolean;
-    
-    function GetProfissionalCNS: string;
-    procedure SetProfissionalCNS( const Value: string);
-    function GetCboCodigo_2002: string;
-    procedure SetCboCodigo_2002( const Value: string);
-    function GetCnes: string;
-    procedure SetCnes( const Value: string);
-    function GetIne: string;
-    procedure SetIne( const Value: string);
-
-    function Get__isset_ProfissionalCNS: Boolean;
-    function Get__isset_CboCodigo_2002: Boolean;
-    function Get__isset_Cnes: Boolean;
-    function Get__isset_Ine: Boolean;
-  public
-    constructor Create;
-    destructor Destroy; override;
-
-    function ToString: string; override;
-
-    // IBase
-    procedure Read( const iprot: IProtocol);
-    procedure Write( const oprot: IProtocol);
-
-    // Properties
-    property ProfissionalCNS: string read GetProfissionalCNS write SetProfissionalCNS;
-    property CboCodigo_2002: string read GetCboCodigo_2002 write SetCboCodigo_2002;
-    property Cnes: string read GetCnes write SetCnes;
-    property Ine: string read GetIne write SetIne;
-
-    // isset
-    property __isset_ProfissionalCNS: Boolean read Get__isset_ProfissionalCNS;
-    property __isset_CboCodigo_2002: Boolean read Get__isset_CboCodigo_2002;
-    property __isset_Cnes: Boolean read Get__isset_Cnes;
-    property __isset_Ine: Boolean read Get__isset_Ine;
-  end;
-
-  IUnicaLotacaoHeaderThrift = interface(IBase)
-    function GetProfissionalCNS: string;
-    procedure SetProfissionalCNS( const Value: string);
-    function GetCboCodigo_2002: string;
-    procedure SetCboCodigo_2002( const Value: string);
-    function GetCnes: string;
-    procedure SetCnes( const Value: string);
-    function GetIne: string;
-    procedure SetIne( const Value: string);
-    function GetDataAtendimento: Int64;
-    procedure SetDataAtendimento( const Value: Int64);
-    function GetCodigoIbgeMunicipio: string;
-    procedure SetCodigoIbgeMunicipio( const Value: string);
-
-    property ProfissionalCNS: string read GetProfissionalCNS write SetProfissionalCNS;
-    property CboCodigo_2002: string read GetCboCodigo_2002 write SetCboCodigo_2002;
-    property Cnes: string read GetCnes write SetCnes;
-    property Ine: string read GetIne write SetIne;
-    property DataAtendimento: Int64 read GetDataAtendimento write SetDataAtendimento;
-    property CodigoIbgeMunicipio: string read GetCodigoIbgeMunicipio write SetCodigoIbgeMunicipio;
-
-    function Get__isset_ProfissionalCNS: Boolean;
-    function Get__isset_CboCodigo_2002: Boolean;
-    function Get__isset_Cnes: Boolean;
-    function Get__isset_Ine: Boolean;
-    function Get__isset_DataAtendimento: Boolean;
-    function Get__isset_CodigoIbgeMunicipio: Boolean;
-
-    property __isset_ProfissionalCNS: Boolean read Get__isset_ProfissionalCNS;
-    property __isset_CboCodigo_2002: Boolean read Get__isset_CboCodigo_2002;
-    property __isset_Cnes: Boolean read Get__isset_Cnes;
-    property __isset_Ine: Boolean read Get__isset_Ine;
-    property __isset_DataAtendimento: Boolean read Get__isset_DataAtendimento;
-    property __isset_CodigoIbgeMunicipio: Boolean read Get__isset_CodigoIbgeMunicipio;
-  end;
-
-  TUnicaLotacaoHeaderThriftImpl = class(TInterfacedObject, IBase, IUnicaLotacaoHeaderThrift)
-  private
-    FProfissionalCNS: string;
-    FCboCodigo_2002: string;
-    FCnes: string;
-    FIne: string;
-    FDataAtendimento: Int64;
-    FCodigoIbgeMunicipio: string;
-    
-    F__isset_ProfissionalCNS: Boolean;
-    F__isset_CboCodigo_2002: Boolean;
-    F__isset_Cnes: Boolean;
-    F__isset_Ine: Boolean;
-    F__isset_DataAtendimento: Boolean;
-    F__isset_CodigoIbgeMunicipio: Boolean;
-    
-    function GetProfissionalCNS: string;
-    procedure SetProfissionalCNS( const Value: string);
-    function GetCboCodigo_2002: string;
-    procedure SetCboCodigo_2002( const Value: string);
-    function GetCnes: string;
-    procedure SetCnes( const Value: string);
-    function GetIne: string;
-    procedure SetIne( const Value: string);
-    function GetDataAtendimento: Int64;
-    procedure SetDataAtendimento( const Value: Int64);
-    function GetCodigoIbgeMunicipio: string;
-    procedure SetCodigoIbgeMunicipio( const Value: string);
-
-    function Get__isset_ProfissionalCNS: Boolean;
-    function Get__isset_CboCodigo_2002: Boolean;
-    function Get__isset_Cnes: Boolean;
-    function Get__isset_Ine: Boolean;
-    function Get__isset_DataAtendimento: Boolean;
-    function Get__isset_CodigoIbgeMunicipio: Boolean;
-  public
-    constructor Create;
-    destructor Destroy; override;
-
-    function ToString: string; override;
-
-    // IBase
-    procedure Read( const iprot: IProtocol);
-    procedure Write( const oprot: IProtocol);
-
-    // Properties
-    property ProfissionalCNS: string read GetProfissionalCNS write SetProfissionalCNS;
-    property CboCodigo_2002: string read GetCboCodigo_2002 write SetCboCodigo_2002;
-    property Cnes: string read GetCnes write SetCnes;
-    property Ine: string read GetIne write SetIne;
-    property DataAtendimento: Int64 read GetDataAtendimento write SetDataAtendimento;
-    property CodigoIbgeMunicipio: string read GetCodigoIbgeMunicipio write SetCodigoIbgeMunicipio;
-
-    // isset
-    property __isset_ProfissionalCNS: Boolean read Get__isset_ProfissionalCNS;
-    property __isset_CboCodigo_2002: Boolean read Get__isset_CboCodigo_2002;
-    property __isset_Cnes: Boolean read Get__isset_Cnes;
-    property __isset_Ine: Boolean read Get__isset_Ine;
-    property __isset_DataAtendimento: Boolean read Get__isset_DataAtendimento;
-    property __isset_CodigoIbgeMunicipio: Boolean read Get__isset_CodigoIbgeMunicipio;
-  end;
-
-  IVariasLotacoesHeaderThrift = interface(IBase)
-    function GetLotacaoFormPrincipal: ILotacaoHeaderThrift;
-    procedure SetLotacaoFormPrincipal( const Value: ILotacaoHeaderThrift);
-    function GetLotacaoFormAtendimentoCompartilhado: ILotacaoHeaderThrift;
-    procedure SetLotacaoFormAtendimentoCompartilhado( const Value: ILotacaoHeaderThrift);
-    function GetDataAtendimento: Int64;
-    procedure SetDataAtendimento( const Value: Int64);
-    function GetCodigoIbgeMunicipio: string;
-    procedure SetCodigoIbgeMunicipio( const Value: string);
-
-    property LotacaoFormPrincipal: ILotacaoHeaderThrift read GetLotacaoFormPrincipal write SetLotacaoFormPrincipal;
-    property LotacaoFormAtendimentoCompartilhado: ILotacaoHeaderThrift read GetLotacaoFormAtendimentoCompartilhado write SetLotacaoFormAtendimentoCompartilhado;
-    property DataAtendimento: Int64 read GetDataAtendimento write SetDataAtendimento;
-    property CodigoIbgeMunicipio: string read GetCodigoIbgeMunicipio write SetCodigoIbgeMunicipio;
-
-    function Get__isset_LotacaoFormPrincipal: Boolean;
-    function Get__isset_LotacaoFormAtendimentoCompartilhado: Boolean;
-    function Get__isset_DataAtendimento: Boolean;
-    function Get__isset_CodigoIbgeMunicipio: Boolean;
-
-    property __isset_LotacaoFormPrincipal: Boolean read Get__isset_LotacaoFormPrincipal;
-    property __isset_LotacaoFormAtendimentoCompartilhado: Boolean read Get__isset_LotacaoFormAtendimentoCompartilhado;
-    property __isset_DataAtendimento: Boolean read Get__isset_DataAtendimento;
-    property __isset_CodigoIbgeMunicipio: Boolean read Get__isset_CodigoIbgeMunicipio;
-  end;
-
-  TVariasLotacoesHeaderThriftImpl = class(TInterfacedObject, IBase, IVariasLotacoesHeaderThrift)
-  private
-    FLotacaoFormPrincipal: ILotacaoHeaderThrift;
-    FLotacaoFormAtendimentoCompartilhado: ILotacaoHeaderThrift;
-    FDataAtendimento: Int64;
-    FCodigoIbgeMunicipio: string;
-    
-    F__isset_LotacaoFormPrincipal: Boolean;
-    F__isset_LotacaoFormAtendimentoCompartilhado: Boolean;
-    F__isset_DataAtendimento: Boolean;
-    F__isset_CodigoIbgeMunicipio: Boolean;
-    
-    function GetLotacaoFormPrincipal: ILotacaoHeaderThrift;
-    procedure SetLotacaoFormPrincipal( const Value: ILotacaoHeaderThrift);
-    function GetLotacaoFormAtendimentoCompartilhado: ILotacaoHeaderThrift;
-    procedure SetLotacaoFormAtendimentoCompartilhado( const Value: ILotacaoHeaderThrift);
-    function GetDataAtendimento: Int64;
-    procedure SetDataAtendimento( const Value: Int64);
-    function GetCodigoIbgeMunicipio: string;
-    procedure SetCodigoIbgeMunicipio( const Value: string);
-
-    function Get__isset_LotacaoFormPrincipal: Boolean;
-    function Get__isset_LotacaoFormAtendimentoCompartilhado: Boolean;
-    function Get__isset_DataAtendimento: Boolean;
-    function Get__isset_CodigoIbgeMunicipio: Boolean;
-  public
-    constructor Create;
-    destructor Destroy; override;
-
-    function ToString: string; override;
-
-    // IBase
-    procedure Read( const iprot: IProtocol);
-    procedure Write( const oprot: IProtocol);
-
-    // Properties
-    property LotacaoFormPrincipal: ILotacaoHeaderThrift read GetLotacaoFormPrincipal write SetLotacaoFormPrincipal;
-    property LotacaoFormAtendimentoCompartilhado: ILotacaoHeaderThrift read GetLotacaoFormAtendimentoCompartilhado write SetLotacaoFormAtendimentoCompartilhado;
-    property DataAtendimento: Int64 read GetDataAtendimento write SetDataAtendimento;
-    property CodigoIbgeMunicipio: string read GetCodigoIbgeMunicipio write SetCodigoIbgeMunicipio;
-
-    // isset
-    property __isset_LotacaoFormPrincipal: Boolean read Get__isset_LotacaoFormPrincipal;
-    property __isset_LotacaoFormAtendimentoCompartilhado: Boolean read Get__isset_LotacaoFormAtendimentoCompartilhado;
-    property __isset_DataAtendimento: Boolean read Get__isset_DataAtendimento;
-    property __isset_CodigoIbgeMunicipio: Boolean read Get__isset_CodigoIbgeMunicipio;
-  end;
-
-  IEnderecoLocalPermanenciaThrift = interface(IBase)
-    function GetBairro: string;
-    procedure SetBairro( const Value: string);
-    function GetCep: string;
-    procedure SetCep( const Value: string);
-    function GetCodigoIbgeMunicipio: string;
-    procedure SetCodigoIbgeMunicipio( const Value: string);
-    function GetComplemento: string;
-    procedure SetComplemento( const Value: string);
-    function GetNomeLogradouro: string;
-    procedure SetNomeLogradouro( const Value: string);
-    function GetNumero: string;
-    procedure SetNumero( const Value: string);
-    function GetNumeroDneUf: string;
-    procedure SetNumeroDneUf( const Value: string);
-    function GetTelefoneContato: string;
-    procedure SetTelefoneContato( const Value: string);
-    function GetTelefoneResidencia: string;
-    procedure SetTelefoneResidencia( const Value: string);
-    function GetTipoLogradouroNumeroDne: string;
-    procedure SetTipoLogradouroNumeroDne( const Value: string);
-    function GetStSemNumero: Boolean;
-    procedure SetStSemNumero( const Value: Boolean);
-    function GetPontoReferencia: string;
-    procedure SetPontoReferencia( const Value: string);
-    function GetMicroArea: string;
-    procedure SetMicroArea( const Value: string);
-    function GetStForaArea: Boolean;
-    procedure SetStForaArea( const Value: Boolean);
-
-    property Bairro: string read GetBairro write SetBairro;
-    property Cep: string read GetCep write SetCep;
-    property CodigoIbgeMunicipio: string read GetCodigoIbgeMunicipio write SetCodigoIbgeMunicipio;
-    property Complemento: string read GetComplemento write SetComplemento;
-    property NomeLogradouro: string read GetNomeLogradouro write SetNomeLogradouro;
-    property Numero: string read GetNumero write SetNumero;
-    property NumeroDneUf: string read GetNumeroDneUf write SetNumeroDneUf;
-    property TelefoneContato: string read GetTelefoneContato write SetTelefoneContato;
-    property TelefoneResidencia: string read GetTelefoneResidencia write SetTelefoneResidencia;
-    property TipoLogradouroNumeroDne: string read GetTipoLogradouroNumeroDne write SetTipoLogradouroNumeroDne;
-    property StSemNumero: Boolean read GetStSemNumero write SetStSemNumero;
-    property PontoReferencia: string read GetPontoReferencia write SetPontoReferencia;
-    property MicroArea: string read GetMicroArea write SetMicroArea;
-    property StForaArea: Boolean read GetStForaArea write SetStForaArea;
-
-    function Get__isset_Bairro: Boolean;
-    function Get__isset_Cep: Boolean;
-    function Get__isset_CodigoIbgeMunicipio: Boolean;
-    function Get__isset_Complemento: Boolean;
-    function Get__isset_NomeLogradouro: Boolean;
-    function Get__isset_Numero: Boolean;
-    function Get__isset_NumeroDneUf: Boolean;
-    function Get__isset_TelefoneContato: Boolean;
-    function Get__isset_TelefoneResidencia: Boolean;
-    function Get__isset_TipoLogradouroNumeroDne: Boolean;
-    function Get__isset_StSemNumero: Boolean;
-    function Get__isset_PontoReferencia: Boolean;
-    function Get__isset_MicroArea: Boolean;
-    function Get__isset_StForaArea: Boolean;
-
-    property __isset_Bairro: Boolean read Get__isset_Bairro;
-    property __isset_Cep: Boolean read Get__isset_Cep;
-    property __isset_CodigoIbgeMunicipio: Boolean read Get__isset_CodigoIbgeMunicipio;
-    property __isset_Complemento: Boolean read Get__isset_Complemento;
-    property __isset_NomeLogradouro: Boolean read Get__isset_NomeLogradouro;
-    property __isset_Numero: Boolean read Get__isset_Numero;
-    property __isset_NumeroDneUf: Boolean read Get__isset_NumeroDneUf;
-    property __isset_TelefoneContato: Boolean read Get__isset_TelefoneContato;
-    property __isset_TelefoneResidencia: Boolean read Get__isset_TelefoneResidencia;
-    property __isset_TipoLogradouroNumeroDne: Boolean read Get__isset_TipoLogradouroNumeroDne;
-    property __isset_StSemNumero: Boolean read Get__isset_StSemNumero;
-    property __isset_PontoReferencia: Boolean read Get__isset_PontoReferencia;
-    property __isset_MicroArea: Boolean read Get__isset_MicroArea;
-    property __isset_StForaArea: Boolean read Get__isset_StForaArea;
-  end;
-
-  TEnderecoLocalPermanenciaThriftImpl = class(TInterfacedObject, IBase, IEnderecoLocalPermanenciaThrift)
-  private
-    FBairro: string;
-    FCep: string;
-    FCodigoIbgeMunicipio: string;
-    FComplemento: string;
-    FNomeLogradouro: string;
-    FNumero: string;
-    FNumeroDneUf: string;
-    FTelefoneContato: string;
-    FTelefoneResidencia: string;
-    FTipoLogradouroNumeroDne: string;
-    FStSemNumero: Boolean;
-    FPontoReferencia: string;
-    FMicroArea: string;
-    FStForaArea: Boolean;
-    
-    F__isset_Bairro: Boolean;
-    F__isset_Cep: Boolean;
-    F__isset_CodigoIbgeMunicipio: Boolean;
-    F__isset_Complemento: Boolean;
-    F__isset_NomeLogradouro: Boolean;
-    F__isset_Numero: Boolean;
-    F__isset_NumeroDneUf: Boolean;
-    F__isset_TelefoneContato: Boolean;
-    F__isset_TelefoneResidencia: Boolean;
-    F__isset_TipoLogradouroNumeroDne: Boolean;
-    F__isset_StSemNumero: Boolean;
-    F__isset_PontoReferencia: Boolean;
-    F__isset_MicroArea: Boolean;
-    F__isset_StForaArea: Boolean;
-    
-    function GetBairro: string;
-    procedure SetBairro( const Value: string);
-    function GetCep: string;
-    procedure SetCep( const Value: string);
-    function GetCodigoIbgeMunicipio: string;
-    procedure SetCodigoIbgeMunicipio( const Value: string);
-    function GetComplemento: string;
-    procedure SetComplemento( const Value: string);
-    function GetNomeLogradouro: string;
-    procedure SetNomeLogradouro( const Value: string);
-    function GetNumero: string;
-    procedure SetNumero( const Value: string);
-    function GetNumeroDneUf: string;
-    procedure SetNumeroDneUf( const Value: string);
-    function GetTelefoneContato: string;
-    procedure SetTelefoneContato( const Value: string);
-    function GetTelefoneResidencia: string;
-    procedure SetTelefoneResidencia( const Value: string);
-    function GetTipoLogradouroNumeroDne: string;
-    procedure SetTipoLogradouroNumeroDne( const Value: string);
-    function GetStSemNumero: Boolean;
-    procedure SetStSemNumero( const Value: Boolean);
-    function GetPontoReferencia: string;
-    procedure SetPontoReferencia( const Value: string);
-    function GetMicroArea: string;
-    procedure SetMicroArea( const Value: string);
-    function GetStForaArea: Boolean;
-    procedure SetStForaArea( const Value: Boolean);
-
-    function Get__isset_Bairro: Boolean;
-    function Get__isset_Cep: Boolean;
-    function Get__isset_CodigoIbgeMunicipio: Boolean;
-    function Get__isset_Complemento: Boolean;
-    function Get__isset_NomeLogradouro: Boolean;
-    function Get__isset_Numero: Boolean;
-    function Get__isset_NumeroDneUf: Boolean;
-    function Get__isset_TelefoneContato: Boolean;
-    function Get__isset_TelefoneResidencia: Boolean;
-    function Get__isset_TipoLogradouroNumeroDne: Boolean;
-    function Get__isset_StSemNumero: Boolean;
-    function Get__isset_PontoReferencia: Boolean;
-    function Get__isset_MicroArea: Boolean;
-    function Get__isset_StForaArea: Boolean;
-  public
-    constructor Create;
-    destructor Destroy; override;
-
-    function ToString: string; override;
-
-    // IBase
-    procedure Read( const iprot: IProtocol);
-    procedure Write( const oprot: IProtocol);
-
-    // Properties
-    property Bairro: string read GetBairro write SetBairro;
-    property Cep: string read GetCep write SetCep;
-    property CodigoIbgeMunicipio: string read GetCodigoIbgeMunicipio write SetCodigoIbgeMunicipio;
-    property Complemento: string read GetComplemento write SetComplemento;
-    property NomeLogradouro: string read GetNomeLogradouro write SetNomeLogradouro;
-    property Numero: string read GetNumero write SetNumero;
-    property NumeroDneUf: string read GetNumeroDneUf write SetNumeroDneUf;
-    property TelefoneContato: string read GetTelefoneContato write SetTelefoneContato;
-    property TelefoneResidencia: string read GetTelefoneResidencia write SetTelefoneResidencia;
-    property TipoLogradouroNumeroDne: string read GetTipoLogradouroNumeroDne write SetTipoLogradouroNumeroDne;
-    property StSemNumero: Boolean read GetStSemNumero write SetStSemNumero;
-    property PontoReferencia: string read GetPontoReferencia write SetPontoReferencia;
-    property MicroArea: string read GetMicroArea write SetMicroArea;
-    property StForaArea: Boolean read GetStForaArea write SetStForaArea;
-
-    // isset
-    property __isset_Bairro: Boolean read Get__isset_Bairro;
-    property __isset_Cep: Boolean read Get__isset_Cep;
-    property __isset_CodigoIbgeMunicipio: Boolean read Get__isset_CodigoIbgeMunicipio;
-    property __isset_Complemento: Boolean read Get__isset_Complemento;
-    property __isset_NomeLogradouro: Boolean read Get__isset_NomeLogradouro;
-    property __isset_Numero: Boolean read Get__isset_Numero;
-    property __isset_NumeroDneUf: Boolean read Get__isset_NumeroDneUf;
-    property __isset_TelefoneContato: Boolean read Get__isset_TelefoneContato;
-    property __isset_TelefoneResidencia: Boolean read Get__isset_TelefoneResidencia;
-    property __isset_TipoLogradouroNumeroDne: Boolean read Get__isset_TipoLogradouroNumeroDne;
-    property __isset_StSemNumero: Boolean read Get__isset_StSemNumero;
-    property __isset_PontoReferencia: Boolean read Get__isset_PontoReferencia;
-    property __isset_MicroArea: Boolean read Get__isset_MicroArea;
-    property __isset_StForaArea: Boolean read Get__isset_StForaArea;
-  end;
-
-  IMedicamentoThrift = interface(IBase)
-    function GetCodigoCatmat: string;
-    procedure SetCodigoCatmat( const Value: string);
-    function GetViaAdministracao: Int64;
-    procedure SetViaAdministracao( const Value: Int64);
-    function GetDose: string;
-    procedure SetDose( const Value: string);
-    function GetDoseUnica: Boolean;
-    procedure SetDoseUnica( const Value: Boolean);
-    function GetUsoContinuo: Boolean;
-    procedure SetUsoContinuo( const Value: Boolean);
-    function GetDoseFrequenciaTipo: Int64;
-    procedure SetDoseFrequenciaTipo( const Value: Int64);
-    function GetDoseFrequencia: string;
-    procedure SetDoseFrequencia( const Value: string);
-    function GetDoseFrequenciaQuantidade: Integer;
-    procedure SetDoseFrequenciaQuantidade( const Value: Integer);
-    function GetDoseFrequenciaUnidadeMedida: Int64;
-    procedure SetDoseFrequenciaUnidadeMedida( const Value: Int64);
-    function GetDtInicioTratamento: Int64;
-    procedure SetDtInicioTratamento( const Value: Int64);
-    function GetDuracaoTratamento: Integer;
-    procedure SetDuracaoTratamento( const Value: Integer);
-    function GetDuracaoTratamentoMedida: Int64;
-    procedure SetDuracaoTratamentoMedida( const Value: Int64);
-    function GetQuantidadeReceitada: Integer;
-    procedure SetQuantidadeReceitada( const Value: Integer);
-
-    property CodigoCatmat: string read GetCodigoCatmat write SetCodigoCatmat;
-    property ViaAdministracao: Int64 read GetViaAdministracao write SetViaAdministracao;
-    property Dose: string read GetDose write SetDose;
-    property DoseUnica: Boolean read GetDoseUnica write SetDoseUnica;
-    property UsoContinuo: Boolean read GetUsoContinuo write SetUsoContinuo;
-    property DoseFrequenciaTipo: Int64 read GetDoseFrequenciaTipo write SetDoseFrequenciaTipo;
-    property DoseFrequencia: string read GetDoseFrequencia write SetDoseFrequencia;
-    property DoseFrequenciaQuantidade: Integer read GetDoseFrequenciaQuantidade write SetDoseFrequenciaQuantidade;
-    property DoseFrequenciaUnidadeMedida: Int64 read GetDoseFrequenciaUnidadeMedida write SetDoseFrequenciaUnidadeMedida;
-    property DtInicioTratamento: Int64 read GetDtInicioTratamento write SetDtInicioTratamento;
-    property DuracaoTratamento: Integer read GetDuracaoTratamento write SetDuracaoTratamento;
-    property DuracaoTratamentoMedida: Int64 read GetDuracaoTratamentoMedida write SetDuracaoTratamentoMedida;
-    property QuantidadeReceitada: Integer read GetQuantidadeReceitada write SetQuantidadeReceitada;
-
-    function Get__isset_CodigoCatmat: Boolean;
-    function Get__isset_ViaAdministracao: Boolean;
-    function Get__isset_Dose: Boolean;
-    function Get__isset_DoseUnica: Boolean;
-    function Get__isset_UsoContinuo: Boolean;
-    function Get__isset_DoseFrequenciaTipo: Boolean;
-    function Get__isset_DoseFrequencia: Boolean;
-    function Get__isset_DoseFrequenciaQuantidade: Boolean;
-    function Get__isset_DoseFrequenciaUnidadeMedida: Boolean;
-    function Get__isset_DtInicioTratamento: Boolean;
-    function Get__isset_DuracaoTratamento: Boolean;
-    function Get__isset_DuracaoTratamentoMedida: Boolean;
-    function Get__isset_QuantidadeReceitada: Boolean;
-
-    property __isset_CodigoCatmat: Boolean read Get__isset_CodigoCatmat;
-    property __isset_ViaAdministracao: Boolean read Get__isset_ViaAdministracao;
-    property __isset_Dose: Boolean read Get__isset_Dose;
-    property __isset_DoseUnica: Boolean read Get__isset_DoseUnica;
-    property __isset_UsoContinuo: Boolean read Get__isset_UsoContinuo;
-    property __isset_DoseFrequenciaTipo: Boolean read Get__isset_DoseFrequenciaTipo;
-    property __isset_DoseFrequencia: Boolean read Get__isset_DoseFrequencia;
-    property __isset_DoseFrequenciaQuantidade: Boolean read Get__isset_DoseFrequenciaQuantidade;
-    property __isset_DoseFrequenciaUnidadeMedida: Boolean read Get__isset_DoseFrequenciaUnidadeMedida;
-    property __isset_DtInicioTratamento: Boolean read Get__isset_DtInicioTratamento;
-    property __isset_DuracaoTratamento: Boolean read Get__isset_DuracaoTratamento;
-    property __isset_DuracaoTratamentoMedida: Boolean read Get__isset_DuracaoTratamentoMedida;
-    property __isset_QuantidadeReceitada: Boolean read Get__isset_QuantidadeReceitada;
-  end;
-
-  TMedicamentoThriftImpl = class(TInterfacedObject, IBase, IMedicamentoThrift)
-  private
-    FCodigoCatmat: string;
-    FViaAdministracao: Int64;
-    FDose: string;
-    FDoseUnica: Boolean;
-    FUsoContinuo: Boolean;
-    FDoseFrequenciaTipo: Int64;
-    FDoseFrequencia: string;
-    FDoseFrequenciaQuantidade: Integer;
-    FDoseFrequenciaUnidadeMedida: Int64;
-    FDtInicioTratamento: Int64;
-    FDuracaoTratamento: Integer;
-    FDuracaoTratamentoMedida: Int64;
-    FQuantidadeReceitada: Integer;
-    
-    F__isset_CodigoCatmat: Boolean;
-    F__isset_ViaAdministracao: Boolean;
-    F__isset_Dose: Boolean;
-    F__isset_DoseUnica: Boolean;
-    F__isset_UsoContinuo: Boolean;
-    F__isset_DoseFrequenciaTipo: Boolean;
-    F__isset_DoseFrequencia: Boolean;
-    F__isset_DoseFrequenciaQuantidade: Boolean;
-    F__isset_DoseFrequenciaUnidadeMedida: Boolean;
-    F__isset_DtInicioTratamento: Boolean;
-    F__isset_DuracaoTratamento: Boolean;
-    F__isset_DuracaoTratamentoMedida: Boolean;
-    F__isset_QuantidadeReceitada: Boolean;
-    
-    function GetCodigoCatmat: string;
-    procedure SetCodigoCatmat( const Value: string);
-    function GetViaAdministracao: Int64;
-    procedure SetViaAdministracao( const Value: Int64);
-    function GetDose: string;
-    procedure SetDose( const Value: string);
-    function GetDoseUnica: Boolean;
-    procedure SetDoseUnica( const Value: Boolean);
-    function GetUsoContinuo: Boolean;
-    procedure SetUsoContinuo( const Value: Boolean);
-    function GetDoseFrequenciaTipo: Int64;
-    procedure SetDoseFrequenciaTipo( const Value: Int64);
-    function GetDoseFrequencia: string;
-    procedure SetDoseFrequencia( const Value: string);
-    function GetDoseFrequenciaQuantidade: Integer;
-    procedure SetDoseFrequenciaQuantidade( const Value: Integer);
-    function GetDoseFrequenciaUnidadeMedida: Int64;
-    procedure SetDoseFrequenciaUnidadeMedida( const Value: Int64);
-    function GetDtInicioTratamento: Int64;
-    procedure SetDtInicioTratamento( const Value: Int64);
-    function GetDuracaoTratamento: Integer;
-    procedure SetDuracaoTratamento( const Value: Integer);
-    function GetDuracaoTratamentoMedida: Int64;
-    procedure SetDuracaoTratamentoMedida( const Value: Int64);
-    function GetQuantidadeReceitada: Integer;
-    procedure SetQuantidadeReceitada( const Value: Integer);
-
-    function Get__isset_CodigoCatmat: Boolean;
-    function Get__isset_ViaAdministracao: Boolean;
-    function Get__isset_Dose: Boolean;
-    function Get__isset_DoseUnica: Boolean;
-    function Get__isset_UsoContinuo: Boolean;
-    function Get__isset_DoseFrequenciaTipo: Boolean;
-    function Get__isset_DoseFrequencia: Boolean;
-    function Get__isset_DoseFrequenciaQuantidade: Boolean;
-    function Get__isset_DoseFrequenciaUnidadeMedida: Boolean;
-    function Get__isset_DtInicioTratamento: Boolean;
-    function Get__isset_DuracaoTratamento: Boolean;
-    function Get__isset_DuracaoTratamentoMedida: Boolean;
-    function Get__isset_QuantidadeReceitada: Boolean;
-  public
-    constructor Create;
-    destructor Destroy; override;
-
-    function ToString: string; override;
-
-    // IBase
-    procedure Read( const iprot: IProtocol);
-    procedure Write( const oprot: IProtocol);
-
-    // Properties
-    property CodigoCatmat: string read GetCodigoCatmat write SetCodigoCatmat;
-    property ViaAdministracao: Int64 read GetViaAdministracao write SetViaAdministracao;
-    property Dose: string read GetDose write SetDose;
-    property DoseUnica: Boolean read GetDoseUnica write SetDoseUnica;
-    property UsoContinuo: Boolean read GetUsoContinuo write SetUsoContinuo;
-    property DoseFrequenciaTipo: Int64 read GetDoseFrequenciaTipo write SetDoseFrequenciaTipo;
-    property DoseFrequencia: string read GetDoseFrequencia write SetDoseFrequencia;
-    property DoseFrequenciaQuantidade: Integer read GetDoseFrequenciaQuantidade write SetDoseFrequenciaQuantidade;
-    property DoseFrequenciaUnidadeMedida: Int64 read GetDoseFrequenciaUnidadeMedida write SetDoseFrequenciaUnidadeMedida;
-    property DtInicioTratamento: Int64 read GetDtInicioTratamento write SetDtInicioTratamento;
-    property DuracaoTratamento: Integer read GetDuracaoTratamento write SetDuracaoTratamento;
-    property DuracaoTratamentoMedida: Int64 read GetDuracaoTratamentoMedida write SetDuracaoTratamentoMedida;
-    property QuantidadeReceitada: Integer read GetQuantidadeReceitada write SetQuantidadeReceitada;
-
-    // isset
-    property __isset_CodigoCatmat: Boolean read Get__isset_CodigoCatmat;
-    property __isset_ViaAdministracao: Boolean read Get__isset_ViaAdministracao;
-    property __isset_Dose: Boolean read Get__isset_Dose;
-    property __isset_DoseUnica: Boolean read Get__isset_DoseUnica;
-    property __isset_UsoContinuo: Boolean read Get__isset_UsoContinuo;
-    property __isset_DoseFrequenciaTipo: Boolean read Get__isset_DoseFrequenciaTipo;
-    property __isset_DoseFrequencia: Boolean read Get__isset_DoseFrequencia;
-    property __isset_DoseFrequenciaQuantidade: Boolean read Get__isset_DoseFrequenciaQuantidade;
-    property __isset_DoseFrequenciaUnidadeMedida: Boolean read Get__isset_DoseFrequenciaUnidadeMedida;
-    property __isset_DtInicioTratamento: Boolean read Get__isset_DtInicioTratamento;
-    property __isset_DuracaoTratamento: Boolean read Get__isset_DuracaoTratamento;
-    property __isset_DuracaoTratamentoMedida: Boolean read Get__isset_DuracaoTratamentoMedida;
-    property __isset_QuantidadeReceitada: Boolean read Get__isset_QuantidadeReceitada;
-  end;
-
-  IEncaminhamentoExternoThrift = interface(IBase)
-    function GetEspecialidade: Int64;
-    procedure SetEspecialidade( const Value: Int64);
-    function GetHipoteseDiagnosticoCid10: string;
-    procedure SetHipoteseDiagnosticoCid10( const Value: string);
-    function GetHipoteseDiagnosticoCiap2: string;
-    procedure SetHipoteseDiagnosticoCiap2( const Value: string);
-    function GetClassificacaoRisco: Int64;
-    procedure SetClassificacaoRisco( const Value: Int64);
-
-    property Especialidade: Int64 read GetEspecialidade write SetEspecialidade;
-    property HipoteseDiagnosticoCid10: string read GetHipoteseDiagnosticoCid10 write SetHipoteseDiagnosticoCid10;
-    property HipoteseDiagnosticoCiap2: string read GetHipoteseDiagnosticoCiap2 write SetHipoteseDiagnosticoCiap2;
-    property ClassificacaoRisco: Int64 read GetClassificacaoRisco write SetClassificacaoRisco;
-
-    function Get__isset_Especialidade: Boolean;
-    function Get__isset_HipoteseDiagnosticoCid10: Boolean;
-    function Get__isset_HipoteseDiagnosticoCiap2: Boolean;
-    function Get__isset_ClassificacaoRisco: Boolean;
-
-    property __isset_Especialidade: Boolean read Get__isset_Especialidade;
-    property __isset_HipoteseDiagnosticoCid10: Boolean read Get__isset_HipoteseDiagnosticoCid10;
-    property __isset_HipoteseDiagnosticoCiap2: Boolean read Get__isset_HipoteseDiagnosticoCiap2;
-    property __isset_ClassificacaoRisco: Boolean read Get__isset_ClassificacaoRisco;
-  end;
-
-  TEncaminhamentoExternoThriftImpl = class(TInterfacedObject, IBase, IEncaminhamentoExternoThrift)
-  private
-    FEspecialidade: Int64;
-    FHipoteseDiagnosticoCid10: string;
-    FHipoteseDiagnosticoCiap2: string;
-    FClassificacaoRisco: Int64;
-    
-    F__isset_Especialidade: Boolean;
-    F__isset_HipoteseDiagnosticoCid10: Boolean;
-    F__isset_HipoteseDiagnosticoCiap2: Boolean;
-    F__isset_ClassificacaoRisco: Boolean;
-    
-    function GetEspecialidade: Int64;
-    procedure SetEspecialidade( const Value: Int64);
-    function GetHipoteseDiagnosticoCid10: string;
-    procedure SetHipoteseDiagnosticoCid10( const Value: string);
-    function GetHipoteseDiagnosticoCiap2: string;
-    procedure SetHipoteseDiagnosticoCiap2( const Value: string);
-    function GetClassificacaoRisco: Int64;
-    procedure SetClassificacaoRisco( const Value: Int64);
-
-    function Get__isset_Especialidade: Boolean;
-    function Get__isset_HipoteseDiagnosticoCid10: Boolean;
-    function Get__isset_HipoteseDiagnosticoCiap2: Boolean;
-    function Get__isset_ClassificacaoRisco: Boolean;
-  public
-    constructor Create;
-    destructor Destroy; override;
-
-    function ToString: string; override;
-
-    // IBase
-    procedure Read( const iprot: IProtocol);
-    procedure Write( const oprot: IProtocol);
-
-    // Properties
-    property Especialidade: Int64 read GetEspecialidade write SetEspecialidade;
-    property HipoteseDiagnosticoCid10: string read GetHipoteseDiagnosticoCid10 write SetHipoteseDiagnosticoCid10;
-    property HipoteseDiagnosticoCiap2: string read GetHipoteseDiagnosticoCiap2 write SetHipoteseDiagnosticoCiap2;
-    property ClassificacaoRisco: Int64 read GetClassificacaoRisco write SetClassificacaoRisco;
-
-    // isset
-    property __isset_Especialidade: Boolean read Get__isset_Especialidade;
-    property __isset_HipoteseDiagnosticoCid10: Boolean read Get__isset_HipoteseDiagnosticoCid10;
-    property __isset_HipoteseDiagnosticoCiap2: Boolean read Get__isset_HipoteseDiagnosticoCiap2;
-    property __isset_ClassificacaoRisco: Boolean read Get__isset_ClassificacaoRisco;
-  end;
-
-  IResultadoExameThrift = interface(IBase)
-    function GetTipoResultado: Integer;
-    procedure SetTipoResultado( const Value: Integer);
-    function GetValorResultado: string;
-    procedure SetValorResultado( const Value: string);
-
-    property TipoResultado: Integer read GetTipoResultado write SetTipoResultado;
-    property ValorResultado: string read GetValorResultado write SetValorResultado;
-
-    function Get__isset_TipoResultado: Boolean;
-    function Get__isset_ValorResultado: Boolean;
-
-    property __isset_TipoResultado: Boolean read Get__isset_TipoResultado;
-    property __isset_ValorResultado: Boolean read Get__isset_ValorResultado;
-  end;
-
-  TResultadoExameThriftImpl = class(TInterfacedObject, IBase, IResultadoExameThrift)
-  private
-    FTipoResultado: Integer;
-    FValorResultado: string;
-    
-    F__isset_TipoResultado: Boolean;
-    F__isset_ValorResultado: Boolean;
-    
-    function GetTipoResultado: Integer;
-    procedure SetTipoResultado( const Value: Integer);
-    function GetValorResultado: string;
-    procedure SetValorResultado( const Value: string);
-
-    function Get__isset_TipoResultado: Boolean;
-    function Get__isset_ValorResultado: Boolean;
-  public
-    constructor Create;
-    destructor Destroy; override;
-
-    function ToString: string; override;
-
-    // IBase
-    procedure Read( const iprot: IProtocol);
-    procedure Write( const oprot: IProtocol);
-
-    // Properties
-    property TipoResultado: Integer read GetTipoResultado write SetTipoResultado;
-    property ValorResultado: string read GetValorResultado write SetValorResultado;
-
-    // isset
-    property __isset_TipoResultado: Boolean read Get__isset_TipoResultado;
-    property __isset_ValorResultado: Boolean read Get__isset_ValorResultado;
-  end;
-
-  IResultadosExameThrift = interface(IBase)
-    function GetExame: string;
-    procedure SetExame( const Value: string);
-    function GetDataSolicitacao: Int64;
-    procedure SetDataSolicitacao( const Value: Int64);
-    function GetDataRealizacao: Int64;
-    procedure SetDataRealizacao( const Value: Int64);
-    function GetDataResultado: Int64;
-    procedure SetDataResultado( const Value: Int64);
-    function GetResultadoExame: IThriftList<IResultadoExameThrift>;
-    procedure SetResultadoExame( const Value: IThriftList<IResultadoExameThrift>);
-
-    property Exame: string read GetExame write SetExame;
-    property DataSolicitacao: Int64 read GetDataSolicitacao write SetDataSolicitacao;
-    property DataRealizacao: Int64 read GetDataRealizacao write SetDataRealizacao;
-    property DataResultado: Int64 read GetDataResultado write SetDataResultado;
-    property ResultadoExame: IThriftList<IResultadoExameThrift> read GetResultadoExame write SetResultadoExame;
-
-    function Get__isset_Exame: Boolean;
-    function Get__isset_DataSolicitacao: Boolean;
-    function Get__isset_DataRealizacao: Boolean;
-    function Get__isset_DataResultado: Boolean;
-    function Get__isset_ResultadoExame: Boolean;
-
-    property __isset_Exame: Boolean read Get__isset_Exame;
-    property __isset_DataSolicitacao: Boolean read Get__isset_DataSolicitacao;
-    property __isset_DataRealizacao: Boolean read Get__isset_DataRealizacao;
-    property __isset_DataResultado: Boolean read Get__isset_DataResultado;
-    property __isset_ResultadoExame: Boolean read Get__isset_ResultadoExame;
-  end;
-
-  TResultadosExameThriftImpl = class(TInterfacedObject, IBase, IResultadosExameThrift)
-  private
-    FExame: string;
-    FDataSolicitacao: Int64;
-    FDataRealizacao: Int64;
-    FDataResultado: Int64;
-    FResultadoExame: IThriftList<IResultadoExameThrift>;
-    
-    F__isset_Exame: Boolean;
-    F__isset_DataSolicitacao: Boolean;
-    F__isset_DataRealizacao: Boolean;
-    F__isset_DataResultado: Boolean;
-    F__isset_ResultadoExame: Boolean;
-    
-    function GetExame: string;
-    procedure SetExame( const Value: string);
-    function GetDataSolicitacao: Int64;
-    procedure SetDataSolicitacao( const Value: Int64);
-    function GetDataRealizacao: Int64;
-    procedure SetDataRealizacao( const Value: Int64);
-    function GetDataResultado: Int64;
-    procedure SetDataResultado( const Value: Int64);
-    function GetResultadoExame: IThriftList<IResultadoExameThrift>;
-    procedure SetResultadoExame( const Value: IThriftList<IResultadoExameThrift>);
-
-    function Get__isset_Exame: Boolean;
-    function Get__isset_DataSolicitacao: Boolean;
-    function Get__isset_DataRealizacao: Boolean;
-    function Get__isset_DataResultado: Boolean;
-    function Get__isset_ResultadoExame: Boolean;
-  public
-    constructor Create;
-    destructor Destroy; override;
-
-    function ToString: string; override;
-
-    // IBase
-    procedure Read( const iprot: IProtocol);
-    procedure Write( const oprot: IProtocol);
-
-    // Properties
-    property Exame: string read GetExame write SetExame;
-    property DataSolicitacao: Int64 read GetDataSolicitacao write SetDataSolicitacao;
-    property DataRealizacao: Int64 read GetDataRealizacao write SetDataRealizacao;
-    property DataResultado: Int64 read GetDataResultado write SetDataResultado;
-    property ResultadoExame: IThriftList<IResultadoExameThrift> read GetResultadoExame write SetResultadoExame;
-
-    // isset
-    property __isset_Exame: Boolean read Get__isset_Exame;
-    property __isset_DataSolicitacao: Boolean read Get__isset_DataSolicitacao;
-    property __isset_DataRealizacao: Boolean read Get__isset_DataRealizacao;
-    property __isset_DataResultado: Boolean read Get__isset_DataResultado;
-    property __isset_ResultadoExame: Boolean read Get__isset_ResultadoExame;
+    property __isset_LotacaoEvolucao: Boolean read Get__isset_LotacaoEvolucao;
+    property __isset_DataEvolucao: Boolean read Get__isset_DataEvolucao;
+    property __isset_DataEvolucaoAnterior: Boolean read Get__isset_DataEvolucaoAnterior;
+    property __isset_CoSequencialEvolucao: Boolean read Get__isset_CoSequencialEvolucao;
+    property __isset_CondutaEvolucao: Boolean read Get__isset_CondutaEvolucao;
+    property __isset_TpCdsOrigem: Boolean read Get__isset_TpCdsOrigem;
+    property __isset_CnsCidadao: Boolean read Get__isset_CnsCidadao;
+    property __isset_CpfCidadao: Boolean read Get__isset_CpfCidadao;
+    property __isset_SexoCidadao: Boolean read Get__isset_SexoCidadao;
+    property __isset_DataNascimentoCidadao: Boolean read Get__isset_DataNascimentoCidadao;
+    property __isset_Solicitante: Boolean read Get__isset_Solicitante;
+    property __isset_Executante: Boolean read Get__isset_Executante;
+    property __isset_DataCriacaoCuidado: Boolean read Get__isset_DataCriacaoCuidado;
+    property __isset_Cid10: Boolean read Get__isset_Cid10;
+    property __isset_Ciap: Boolean read Get__isset_Ciap;
+    property __isset_UuidFichaOrigem: Boolean read Get__isset_UuidFichaOrigem;
+    property __isset_TpDadoTranspFichaOrigem: Boolean read Get__isset_TpDadoTranspFichaOrigem;
+    property __isset_PrioridadeCuidado: Boolean read Get__isset_PrioridadeCuidado;
+    property __isset_ReclassificacaoPrioridadeCuidado: Boolean read Get__isset_ReclassificacaoPrioridadeCuidado;
   end;
 
 implementation
 
-constructor THeaderCdsCadastroThriftImpl.Create;
+constructor TCuidadoCompartilhadoThriftImpl.Create;
 begin
   inherited;
 end;
 
-destructor THeaderCdsCadastroThriftImpl.Destroy;
+destructor TCuidadoCompartilhadoThriftImpl.Destroy;
 begin
   inherited;
 end;
 
-function THeaderCdsCadastroThriftImpl.GetCnesUnidadeSaude: string;
+function TCuidadoCompartilhadoThriftImpl.GetUuidEvolucao: string;
 begin
-  Result := FCnesUnidadeSaude;
+  Result := FUuidEvolucao;
 end;
 
-procedure THeaderCdsCadastroThriftImpl.SetCnesUnidadeSaude( const Value: string);
+procedure TCuidadoCompartilhadoThriftImpl.SetUuidEvolucao( const Value: string);
 begin
-  F__isset_CnesUnidadeSaude := True;
-  FCnesUnidadeSaude := Value;
+  FUuidEvolucao := Value;
 end;
 
-function THeaderCdsCadastroThriftImpl.Get__isset_CnesUnidadeSaude: Boolean;
+function TCuidadoCompartilhadoThriftImpl.GetLotacaoEvolucao: ILotacaoThrift;
 begin
-  Result := F__isset_CnesUnidadeSaude;
+  Result := FLotacaoEvolucao;
 end;
 
-function THeaderCdsCadastroThriftImpl.GetCnsProfissional: string;
+procedure TCuidadoCompartilhadoThriftImpl.SetLotacaoEvolucao( const Value: ILotacaoThrift);
 begin
-  Result := FCnsProfissional;
+  F__isset_LotacaoEvolucao := True;
+  FLotacaoEvolucao := Value;
 end;
 
-procedure THeaderCdsCadastroThriftImpl.SetCnsProfissional( const Value: string);
+function TCuidadoCompartilhadoThriftImpl.Get__isset_LotacaoEvolucao: Boolean;
 begin
-  F__isset_CnsProfissional := True;
-  FCnsProfissional := Value;
+  Result := F__isset_LotacaoEvolucao;
 end;
 
-function THeaderCdsCadastroThriftImpl.Get__isset_CnsProfissional: Boolean;
+function TCuidadoCompartilhadoThriftImpl.GetDataEvolucao: Int64;
 begin
-  Result := F__isset_CnsProfissional;
+  Result := FDataEvolucao;
 end;
 
-function THeaderCdsCadastroThriftImpl.GetCodigoIbgeMunicipio: string;
+procedure TCuidadoCompartilhadoThriftImpl.SetDataEvolucao( const Value: Int64);
 begin
-  Result := FCodigoIbgeMunicipio;
+  F__isset_DataEvolucao := True;
+  FDataEvolucao := Value;
 end;
 
-procedure THeaderCdsCadastroThriftImpl.SetCodigoIbgeMunicipio( const Value: string);
+function TCuidadoCompartilhadoThriftImpl.Get__isset_DataEvolucao: Boolean;
 begin
-  F__isset_CodigoIbgeMunicipio := True;
-  FCodigoIbgeMunicipio := Value;
+  Result := F__isset_DataEvolucao;
 end;
 
-function THeaderCdsCadastroThriftImpl.Get__isset_CodigoIbgeMunicipio: Boolean;
+function TCuidadoCompartilhadoThriftImpl.GetDataEvolucaoAnterior: Int64;
 begin
-  Result := F__isset_CodigoIbgeMunicipio;
+  Result := FDataEvolucaoAnterior;
 end;
 
-function THeaderCdsCadastroThriftImpl.GetDataAtendimento: Int64;
+procedure TCuidadoCompartilhadoThriftImpl.SetDataEvolucaoAnterior( const Value: Int64);
 begin
-  Result := FDataAtendimento;
+  F__isset_DataEvolucaoAnterior := True;
+  FDataEvolucaoAnterior := Value;
 end;
 
-procedure THeaderCdsCadastroThriftImpl.SetDataAtendimento( const Value: Int64);
+function TCuidadoCompartilhadoThriftImpl.Get__isset_DataEvolucaoAnterior: Boolean;
 begin
-  F__isset_DataAtendimento := True;
-  FDataAtendimento := Value;
+  Result := F__isset_DataEvolucaoAnterior;
 end;
 
-function THeaderCdsCadastroThriftImpl.Get__isset_DataAtendimento: Boolean;
+function TCuidadoCompartilhadoThriftImpl.GetCoSequencialEvolucao: Integer;
 begin
-  Result := F__isset_DataAtendimento;
+  Result := FCoSequencialEvolucao;
 end;
 
-function THeaderCdsCadastroThriftImpl.GetIneEquipe: string;
+procedure TCuidadoCompartilhadoThriftImpl.SetCoSequencialEvolucao( const Value: Integer);
 begin
-  Result := FIneEquipe;
+  F__isset_CoSequencialEvolucao := True;
+  FCoSequencialEvolucao := Value;
 end;
 
-procedure THeaderCdsCadastroThriftImpl.SetIneEquipe( const Value: string);
+function TCuidadoCompartilhadoThriftImpl.Get__isset_CoSequencialEvolucao: Boolean;
 begin
-  F__isset_IneEquipe := True;
-  FIneEquipe := Value;
+  Result := F__isset_CoSequencialEvolucao;
 end;
 
-function THeaderCdsCadastroThriftImpl.Get__isset_IneEquipe: Boolean;
+function TCuidadoCompartilhadoThriftImpl.GetCondutaEvolucao: Int64;
 begin
-  Result := F__isset_IneEquipe;
+  Result := FCondutaEvolucao;
 end;
 
-function THeaderCdsCadastroThriftImpl.GetMicroarea: Int64;
+procedure TCuidadoCompartilhadoThriftImpl.SetCondutaEvolucao( const Value: Int64);
 begin
-  Result := FMicroarea;
+  F__isset_CondutaEvolucao := True;
+  FCondutaEvolucao := Value;
 end;
 
-procedure THeaderCdsCadastroThriftImpl.SetMicroarea( const Value: Int64);
+function TCuidadoCompartilhadoThriftImpl.Get__isset_CondutaEvolucao: Boolean;
 begin
-  F__isset_Microarea := True;
-  FMicroarea := Value;
+  Result := F__isset_CondutaEvolucao;
 end;
 
-function THeaderCdsCadastroThriftImpl.Get__isset_Microarea: Boolean;
+function TCuidadoCompartilhadoThriftImpl.GetTpCdsOrigem: Integer;
 begin
-  Result := F__isset_Microarea;
+  Result := FTpCdsOrigem;
 end;
 
-procedure THeaderCdsCadastroThriftImpl.Read( const iprot: IProtocol);
+procedure TCuidadoCompartilhadoThriftImpl.SetTpCdsOrigem( const Value: Integer);
+begin
+  F__isset_TpCdsOrigem := True;
+  FTpCdsOrigem := Value;
+end;
+
+function TCuidadoCompartilhadoThriftImpl.Get__isset_TpCdsOrigem: Boolean;
+begin
+  Result := F__isset_TpCdsOrigem;
+end;
+
+function TCuidadoCompartilhadoThriftImpl.GetCnsCidadao: string;
+begin
+  Result := FCnsCidadao;
+end;
+
+procedure TCuidadoCompartilhadoThriftImpl.SetCnsCidadao( const Value: string);
+begin
+  F__isset_CnsCidadao := True;
+  FCnsCidadao := Value;
+end;
+
+function TCuidadoCompartilhadoThriftImpl.Get__isset_CnsCidadao: Boolean;
+begin
+  Result := F__isset_CnsCidadao;
+end;
+
+function TCuidadoCompartilhadoThriftImpl.GetCpfCidadao: string;
+begin
+  Result := FCpfCidadao;
+end;
+
+procedure TCuidadoCompartilhadoThriftImpl.SetCpfCidadao( const Value: string);
+begin
+  F__isset_CpfCidadao := True;
+  FCpfCidadao := Value;
+end;
+
+function TCuidadoCompartilhadoThriftImpl.Get__isset_CpfCidadao: Boolean;
+begin
+  Result := F__isset_CpfCidadao;
+end;
+
+function TCuidadoCompartilhadoThriftImpl.GetSexoCidadao: Int64;
+begin
+  Result := FSexoCidadao;
+end;
+
+procedure TCuidadoCompartilhadoThriftImpl.SetSexoCidadao( const Value: Int64);
+begin
+  F__isset_SexoCidadao := True;
+  FSexoCidadao := Value;
+end;
+
+function TCuidadoCompartilhadoThriftImpl.Get__isset_SexoCidadao: Boolean;
+begin
+  Result := F__isset_SexoCidadao;
+end;
+
+function TCuidadoCompartilhadoThriftImpl.GetDataNascimentoCidadao: string;
+begin
+  Result := FDataNascimentoCidadao;
+end;
+
+procedure TCuidadoCompartilhadoThriftImpl.SetDataNascimentoCidadao( const Value: string);
+begin
+  F__isset_DataNascimentoCidadao := True;
+  FDataNascimentoCidadao := Value;
+end;
+
+function TCuidadoCompartilhadoThriftImpl.Get__isset_DataNascimentoCidadao: Boolean;
+begin
+  Result := F__isset_DataNascimentoCidadao;
+end;
+
+function TCuidadoCompartilhadoThriftImpl.GetUuidCuidadoCompartilhado: string;
+begin
+  Result := FUuidCuidadoCompartilhado;
+end;
+
+procedure TCuidadoCompartilhadoThriftImpl.SetUuidCuidadoCompartilhado( const Value: string);
+begin
+  FUuidCuidadoCompartilhado := Value;
+end;
+
+function TCuidadoCompartilhadoThriftImpl.GetSolicitante: ILotacaoThrift;
+begin
+  Result := FSolicitante;
+end;
+
+procedure TCuidadoCompartilhadoThriftImpl.SetSolicitante( const Value: ILotacaoThrift);
+begin
+  F__isset_Solicitante := True;
+  FSolicitante := Value;
+end;
+
+function TCuidadoCompartilhadoThriftImpl.Get__isset_Solicitante: Boolean;
+begin
+  Result := F__isset_Solicitante;
+end;
+
+function TCuidadoCompartilhadoThriftImpl.GetExecutante: ILotacaoThrift;
+begin
+  Result := FExecutante;
+end;
+
+procedure TCuidadoCompartilhadoThriftImpl.SetExecutante( const Value: ILotacaoThrift);
+begin
+  F__isset_Executante := True;
+  FExecutante := Value;
+end;
+
+function TCuidadoCompartilhadoThriftImpl.Get__isset_Executante: Boolean;
+begin
+  Result := F__isset_Executante;
+end;
+
+function TCuidadoCompartilhadoThriftImpl.GetDataCriacaoCuidado: Int64;
+begin
+  Result := FDataCriacaoCuidado;
+end;
+
+procedure TCuidadoCompartilhadoThriftImpl.SetDataCriacaoCuidado( const Value: Int64);
+begin
+  F__isset_DataCriacaoCuidado := True;
+  FDataCriacaoCuidado := Value;
+end;
+
+function TCuidadoCompartilhadoThriftImpl.Get__isset_DataCriacaoCuidado: Boolean;
+begin
+  Result := F__isset_DataCriacaoCuidado;
+end;
+
+function TCuidadoCompartilhadoThriftImpl.GetCid10: string;
+begin
+  Result := FCid10;
+end;
+
+procedure TCuidadoCompartilhadoThriftImpl.SetCid10( const Value: string);
+begin
+  F__isset_Cid10 := True;
+  FCid10 := Value;
+end;
+
+function TCuidadoCompartilhadoThriftImpl.Get__isset_Cid10: Boolean;
+begin
+  Result := F__isset_Cid10;
+end;
+
+function TCuidadoCompartilhadoThriftImpl.GetCiap: string;
+begin
+  Result := FCiap;
+end;
+
+procedure TCuidadoCompartilhadoThriftImpl.SetCiap( const Value: string);
+begin
+  F__isset_Ciap := True;
+  FCiap := Value;
+end;
+
+function TCuidadoCompartilhadoThriftImpl.Get__isset_Ciap: Boolean;
+begin
+  Result := F__isset_Ciap;
+end;
+
+function TCuidadoCompartilhadoThriftImpl.GetUuidFichaOrigem: string;
+begin
+  Result := FUuidFichaOrigem;
+end;
+
+procedure TCuidadoCompartilhadoThriftImpl.SetUuidFichaOrigem( const Value: string);
+begin
+  F__isset_UuidFichaOrigem := True;
+  FUuidFichaOrigem := Value;
+end;
+
+function TCuidadoCompartilhadoThriftImpl.Get__isset_UuidFichaOrigem: Boolean;
+begin
+  Result := F__isset_UuidFichaOrigem;
+end;
+
+function TCuidadoCompartilhadoThriftImpl.GetTpDadoTranspFichaOrigem: Integer;
+begin
+  Result := FTpDadoTranspFichaOrigem;
+end;
+
+procedure TCuidadoCompartilhadoThriftImpl.SetTpDadoTranspFichaOrigem( const Value: Integer);
+begin
+  F__isset_TpDadoTranspFichaOrigem := True;
+  FTpDadoTranspFichaOrigem := Value;
+end;
+
+function TCuidadoCompartilhadoThriftImpl.Get__isset_TpDadoTranspFichaOrigem: Boolean;
+begin
+  Result := F__isset_TpDadoTranspFichaOrigem;
+end;
+
+function TCuidadoCompartilhadoThriftImpl.GetPrioridadeCuidado: Integer;
+begin
+  Result := FPrioridadeCuidado;
+end;
+
+procedure TCuidadoCompartilhadoThriftImpl.SetPrioridadeCuidado( const Value: Integer);
+begin
+  F__isset_PrioridadeCuidado := True;
+  FPrioridadeCuidado := Value;
+end;
+
+function TCuidadoCompartilhadoThriftImpl.Get__isset_PrioridadeCuidado: Boolean;
+begin
+  Result := F__isset_PrioridadeCuidado;
+end;
+
+function TCuidadoCompartilhadoThriftImpl.GetReclassificacaoPrioridadeCuidado: Integer;
+begin
+  Result := FReclassificacaoPrioridadeCuidado;
+end;
+
+procedure TCuidadoCompartilhadoThriftImpl.SetReclassificacaoPrioridadeCuidado( const Value: Integer);
+begin
+  F__isset_ReclassificacaoPrioridadeCuidado := True;
+  FReclassificacaoPrioridadeCuidado := Value;
+end;
+
+function TCuidadoCompartilhadoThriftImpl.Get__isset_ReclassificacaoPrioridadeCuidado: Boolean;
+begin
+  Result := F__isset_ReclassificacaoPrioridadeCuidado;
+end;
+
+procedure TCuidadoCompartilhadoThriftImpl.Read( const iprot: IProtocol);
 var
   field_ : IField;
   struc : IStruct;
   tracker : IProtocolRecursionTracker;
+  _req_isset_UuidEvolucao : Boolean;
+  _req_isset_UuidCuidadoCompartilhado : Boolean;
 
 begin
   tracker := iprot.NextRecursionLevel;
+  _req_isset_UuidEvolucao := FALSE;
+  _req_isset_UuidCuidadoCompartilhado := FALSE;
   struc := iprot.ReadStructBegin;
   try
     while (true) do
@@ -1095,1267 +658,63 @@ begin
         1: begin
           if (field_.Type_ = TType.String_) then
           begin
-            CnesUnidadeSaude := iprot.ReadString();
+            UuidEvolucao := iprot.ReadString();
+            _req_isset_UuidEvolucao := TRUE;
           end else
           begin
             TProtocolUtil.Skip(iprot, field_.Type_);
           end;
         end;
         2: begin
-          if (field_.Type_ = TType.String_) then
-          begin
-            CnsProfissional := iprot.ReadString();
-          end else
-          begin
-            TProtocolUtil.Skip(iprot, field_.Type_);
-          end;
-        end;
-        3: begin
-          if (field_.Type_ = TType.String_) then
-          begin
-            CodigoIbgeMunicipio := iprot.ReadString();
-          end else
-          begin
-            TProtocolUtil.Skip(iprot, field_.Type_);
-          end;
-        end;
-        4: begin
-          if (field_.Type_ = TType.I64) then
-          begin
-            DataAtendimento := iprot.ReadI64();
-          end else
-          begin
-            TProtocolUtil.Skip(iprot, field_.Type_);
-          end;
-        end;
-        5: begin
-          if (field_.Type_ = TType.String_) then
-          begin
-            IneEquipe := iprot.ReadString();
-          end else
-          begin
-            TProtocolUtil.Skip(iprot, field_.Type_);
-          end;
-        end;
-        6: begin
-          if (field_.Type_ = TType.I64) then
-          begin
-            Microarea := iprot.ReadI64();
-          end else
-          begin
-            TProtocolUtil.Skip(iprot, field_.Type_);
-          end;
-        end
-        else begin
-          TProtocolUtil.Skip(iprot, field_.Type_);
-        end;
-      end;
-      iprot.ReadFieldEnd;
-    end;
-  finally
-    iprot.ReadStructEnd;
-  end;
-end;
-
-procedure THeaderCdsCadastroThriftImpl.Write( const oprot: IProtocol);
-var
-  struc : IStruct;
-  field_ : IField;
-  tracker : IProtocolRecursionTracker;
-begin
-  tracker := oprot.NextRecursionLevel;
-  struc := TStructImpl.Create('HeaderCdsCadastroThrift');
-  oprot.WriteStructBegin(struc);
-  field_ := TFieldImpl.Create;
-  if (__isset_CnesUnidadeSaude) then
-  begin
-    field_.Name := 'cnesUnidadeSaude';
-    field_.Type_  := TType.String_;
-    field_.ID := 1;
-    oprot.WriteFieldBegin(field_);
-    oprot.WriteString(CnesUnidadeSaude);
-    oprot.WriteFieldEnd();
-  end;
-  if (__isset_CnsProfissional) then
-  begin
-    field_.Name := 'cnsProfissional';
-    field_.Type_  := TType.String_;
-    field_.ID := 2;
-    oprot.WriteFieldBegin(field_);
-    oprot.WriteString(CnsProfissional);
-    oprot.WriteFieldEnd();
-  end;
-  if (__isset_CodigoIbgeMunicipio) then
-  begin
-    field_.Name := 'codigoIbgeMunicipio';
-    field_.Type_  := TType.String_;
-    field_.ID := 3;
-    oprot.WriteFieldBegin(field_);
-    oprot.WriteString(CodigoIbgeMunicipio);
-    oprot.WriteFieldEnd();
-  end;
-  if (__isset_DataAtendimento) then
-  begin
-    field_.Name := 'dataAtendimento';
-    field_.Type_  := TType.I64;
-    field_.ID := 4;
-    oprot.WriteFieldBegin(field_);
-    oprot.WriteI64(DataAtendimento);
-    oprot.WriteFieldEnd();
-  end;
-  if (__isset_IneEquipe) then
-  begin
-    field_.Name := 'ineEquipe';
-    field_.Type_  := TType.String_;
-    field_.ID := 5;
-    oprot.WriteFieldBegin(field_);
-    oprot.WriteString(IneEquipe);
-    oprot.WriteFieldEnd();
-  end;
-  if (__isset_Microarea) then
-  begin
-    field_.Name := 'microarea';
-    field_.Type_  := TType.I64;
-    field_.ID := 6;
-    oprot.WriteFieldBegin(field_);
-    oprot.WriteI64(Microarea);
-    oprot.WriteFieldEnd();
-  end;
-  oprot.WriteFieldStop();
-  oprot.WriteStructEnd();
-end;
-
-function THeaderCdsCadastroThriftImpl.ToString: string;
-var
-  _sb0 : TThriftStringBuilder;
-  _first1 : Boolean;
-begin
-  _sb0 := TThriftStringBuilder.Create('(');
-  try
-    _first1 := TRUE;
-    if (__isset_CnesUnidadeSaude) then begin
-      if not _first1 then _sb0.Append(',');
-      _first1 := FALSE;
-      _sb0.Append('CnesUnidadeSaude: ');
-      _sb0.Append(CnesUnidadeSaude);
-    end;
-    if (__isset_CnsProfissional) then begin
-      if not _first1 then _sb0.Append(',');
-      _first1 := FALSE;
-      _sb0.Append('CnsProfissional: ');
-      _sb0.Append(CnsProfissional);
-    end;
-    if (__isset_CodigoIbgeMunicipio) then begin
-      if not _first1 then _sb0.Append(',');
-      _first1 := FALSE;
-      _sb0.Append('CodigoIbgeMunicipio: ');
-      _sb0.Append(CodigoIbgeMunicipio);
-    end;
-    if (__isset_DataAtendimento) then begin
-      if not _first1 then _sb0.Append(',');
-      _first1 := FALSE;
-      _sb0.Append('DataAtendimento: ');
-      _sb0.Append(DataAtendimento);
-    end;
-    if (__isset_IneEquipe) then begin
-      if not _first1 then _sb0.Append(',');
-      _first1 := FALSE;
-      _sb0.Append('IneEquipe: ');
-      _sb0.Append(IneEquipe);
-    end;
-    if (__isset_Microarea) then begin
-      if not _first1 then _sb0.Append(',');
-      _first1 := FALSE;
-      _sb0.Append('Microarea: ');
-      _sb0.Append(Microarea);
-    end;
-    _sb0.Append(')');
-    Result := _sb0.ToString;
-    if _first1 then {prevent warning};
-  finally
-    _sb0.Free;
-  end;
-end;
-
-constructor TLotacaoHeaderThriftImpl.Create;
-begin
-  inherited;
-end;
-
-destructor TLotacaoHeaderThriftImpl.Destroy;
-begin
-  inherited;
-end;
-
-function TLotacaoHeaderThriftImpl.GetProfissionalCNS: string;
-begin
-  Result := FProfissionalCNS;
-end;
-
-procedure TLotacaoHeaderThriftImpl.SetProfissionalCNS( const Value: string);
-begin
-  F__isset_ProfissionalCNS := True;
-  FProfissionalCNS := Value;
-end;
-
-function TLotacaoHeaderThriftImpl.Get__isset_ProfissionalCNS: Boolean;
-begin
-  Result := F__isset_ProfissionalCNS;
-end;
-
-function TLotacaoHeaderThriftImpl.GetCboCodigo_2002: string;
-begin
-  Result := FCboCodigo_2002;
-end;
-
-procedure TLotacaoHeaderThriftImpl.SetCboCodigo_2002( const Value: string);
-begin
-  F__isset_CboCodigo_2002 := True;
-  FCboCodigo_2002 := Value;
-end;
-
-function TLotacaoHeaderThriftImpl.Get__isset_CboCodigo_2002: Boolean;
-begin
-  Result := F__isset_CboCodigo_2002;
-end;
-
-function TLotacaoHeaderThriftImpl.GetCnes: string;
-begin
-  Result := FCnes;
-end;
-
-procedure TLotacaoHeaderThriftImpl.SetCnes( const Value: string);
-begin
-  F__isset_Cnes := True;
-  FCnes := Value;
-end;
-
-function TLotacaoHeaderThriftImpl.Get__isset_Cnes: Boolean;
-begin
-  Result := F__isset_Cnes;
-end;
-
-function TLotacaoHeaderThriftImpl.GetIne: string;
-begin
-  Result := FIne;
-end;
-
-procedure TLotacaoHeaderThriftImpl.SetIne( const Value: string);
-begin
-  F__isset_Ine := True;
-  FIne := Value;
-end;
-
-function TLotacaoHeaderThriftImpl.Get__isset_Ine: Boolean;
-begin
-  Result := F__isset_Ine;
-end;
-
-procedure TLotacaoHeaderThriftImpl.Read( const iprot: IProtocol);
-var
-  field_ : IField;
-  struc : IStruct;
-  tracker : IProtocolRecursionTracker;
-
-begin
-  tracker := iprot.NextRecursionLevel;
-  struc := iprot.ReadStructBegin;
-  try
-    while (true) do
-    begin
-      field_ := iprot.ReadFieldBegin();
-      if (field_.Type_ = TType.Stop) then
-      begin
-        Break;
-      end;
-      case field_.ID of
-        1: begin
-          if (field_.Type_ = TType.String_) then
-          begin
-            ProfissionalCNS := iprot.ReadString();
-          end else
-          begin
-            TProtocolUtil.Skip(iprot, field_.Type_);
-          end;
-        end;
-        2: begin
-          if (field_.Type_ = TType.String_) then
-          begin
-            CboCodigo_2002 := iprot.ReadString();
-          end else
-          begin
-            TProtocolUtil.Skip(iprot, field_.Type_);
-          end;
-        end;
-        3: begin
-          if (field_.Type_ = TType.String_) then
-          begin
-            Cnes := iprot.ReadString();
-          end else
-          begin
-            TProtocolUtil.Skip(iprot, field_.Type_);
-          end;
-        end;
-        4: begin
-          if (field_.Type_ = TType.String_) then
-          begin
-            Ine := iprot.ReadString();
-          end else
-          begin
-            TProtocolUtil.Skip(iprot, field_.Type_);
-          end;
-        end
-        else begin
-          TProtocolUtil.Skip(iprot, field_.Type_);
-        end;
-      end;
-      iprot.ReadFieldEnd;
-    end;
-  finally
-    iprot.ReadStructEnd;
-  end;
-end;
-
-procedure TLotacaoHeaderThriftImpl.Write( const oprot: IProtocol);
-var
-  struc : IStruct;
-  field_ : IField;
-  tracker : IProtocolRecursionTracker;
-begin
-  tracker := oprot.NextRecursionLevel;
-  struc := TStructImpl.Create('LotacaoHeaderThrift');
-  oprot.WriteStructBegin(struc);
-  field_ := TFieldImpl.Create;
-  if (__isset_ProfissionalCNS) then
-  begin
-    field_.Name := 'profissionalCNS';
-    field_.Type_  := TType.String_;
-    field_.ID := 1;
-    oprot.WriteFieldBegin(field_);
-    oprot.WriteString(ProfissionalCNS);
-    oprot.WriteFieldEnd();
-  end;
-  if (__isset_CboCodigo_2002) then
-  begin
-    field_.Name := 'cboCodigo_2002';
-    field_.Type_  := TType.String_;
-    field_.ID := 2;
-    oprot.WriteFieldBegin(field_);
-    oprot.WriteString(CboCodigo_2002);
-    oprot.WriteFieldEnd();
-  end;
-  if (__isset_Cnes) then
-  begin
-    field_.Name := 'cnes';
-    field_.Type_  := TType.String_;
-    field_.ID := 3;
-    oprot.WriteFieldBegin(field_);
-    oprot.WriteString(Cnes);
-    oprot.WriteFieldEnd();
-  end;
-  if (__isset_Ine) then
-  begin
-    field_.Name := 'ine';
-    field_.Type_  := TType.String_;
-    field_.ID := 4;
-    oprot.WriteFieldBegin(field_);
-    oprot.WriteString(Ine);
-    oprot.WriteFieldEnd();
-  end;
-  oprot.WriteFieldStop();
-  oprot.WriteStructEnd();
-end;
-
-function TLotacaoHeaderThriftImpl.ToString: string;
-var
-  _sb2 : TThriftStringBuilder;
-  _first3 : Boolean;
-begin
-  _sb2 := TThriftStringBuilder.Create('(');
-  try
-    _first3 := TRUE;
-    if (__isset_ProfissionalCNS) then begin
-      if not _first3 then _sb2.Append(',');
-      _first3 := FALSE;
-      _sb2.Append('ProfissionalCNS: ');
-      _sb2.Append(ProfissionalCNS);
-    end;
-    if (__isset_CboCodigo_2002) then begin
-      if not _first3 then _sb2.Append(',');
-      _first3 := FALSE;
-      _sb2.Append('CboCodigo_2002: ');
-      _sb2.Append(CboCodigo_2002);
-    end;
-    if (__isset_Cnes) then begin
-      if not _first3 then _sb2.Append(',');
-      _first3 := FALSE;
-      _sb2.Append('Cnes: ');
-      _sb2.Append(Cnes);
-    end;
-    if (__isset_Ine) then begin
-      if not _first3 then _sb2.Append(',');
-      _first3 := FALSE;
-      _sb2.Append('Ine: ');
-      _sb2.Append(Ine);
-    end;
-    _sb2.Append(')');
-    Result := _sb2.ToString;
-    if _first3 then {prevent warning};
-  finally
-    _sb2.Free;
-  end;
-end;
-
-constructor TUnicaLotacaoHeaderThriftImpl.Create;
-begin
-  inherited;
-end;
-
-destructor TUnicaLotacaoHeaderThriftImpl.Destroy;
-begin
-  inherited;
-end;
-
-function TUnicaLotacaoHeaderThriftImpl.GetProfissionalCNS: string;
-begin
-  Result := FProfissionalCNS;
-end;
-
-procedure TUnicaLotacaoHeaderThriftImpl.SetProfissionalCNS( const Value: string);
-begin
-  F__isset_ProfissionalCNS := True;
-  FProfissionalCNS := Value;
-end;
-
-function TUnicaLotacaoHeaderThriftImpl.Get__isset_ProfissionalCNS: Boolean;
-begin
-  Result := F__isset_ProfissionalCNS;
-end;
-
-function TUnicaLotacaoHeaderThriftImpl.GetCboCodigo_2002: string;
-begin
-  Result := FCboCodigo_2002;
-end;
-
-procedure TUnicaLotacaoHeaderThriftImpl.SetCboCodigo_2002( const Value: string);
-begin
-  F__isset_CboCodigo_2002 := True;
-  FCboCodigo_2002 := Value;
-end;
-
-function TUnicaLotacaoHeaderThriftImpl.Get__isset_CboCodigo_2002: Boolean;
-begin
-  Result := F__isset_CboCodigo_2002;
-end;
-
-function TUnicaLotacaoHeaderThriftImpl.GetCnes: string;
-begin
-  Result := FCnes;
-end;
-
-procedure TUnicaLotacaoHeaderThriftImpl.SetCnes( const Value: string);
-begin
-  F__isset_Cnes := True;
-  FCnes := Value;
-end;
-
-function TUnicaLotacaoHeaderThriftImpl.Get__isset_Cnes: Boolean;
-begin
-  Result := F__isset_Cnes;
-end;
-
-function TUnicaLotacaoHeaderThriftImpl.GetIne: string;
-begin
-  Result := FIne;
-end;
-
-procedure TUnicaLotacaoHeaderThriftImpl.SetIne( const Value: string);
-begin
-  F__isset_Ine := True;
-  FIne := Value;
-end;
-
-function TUnicaLotacaoHeaderThriftImpl.Get__isset_Ine: Boolean;
-begin
-  Result := F__isset_Ine;
-end;
-
-function TUnicaLotacaoHeaderThriftImpl.GetDataAtendimento: Int64;
-begin
-  Result := FDataAtendimento;
-end;
-
-procedure TUnicaLotacaoHeaderThriftImpl.SetDataAtendimento( const Value: Int64);
-begin
-  F__isset_DataAtendimento := True;
-  FDataAtendimento := Value;
-end;
-
-function TUnicaLotacaoHeaderThriftImpl.Get__isset_DataAtendimento: Boolean;
-begin
-  Result := F__isset_DataAtendimento;
-end;
-
-function TUnicaLotacaoHeaderThriftImpl.GetCodigoIbgeMunicipio: string;
-begin
-  Result := FCodigoIbgeMunicipio;
-end;
-
-procedure TUnicaLotacaoHeaderThriftImpl.SetCodigoIbgeMunicipio( const Value: string);
-begin
-  F__isset_CodigoIbgeMunicipio := True;
-  FCodigoIbgeMunicipio := Value;
-end;
-
-function TUnicaLotacaoHeaderThriftImpl.Get__isset_CodigoIbgeMunicipio: Boolean;
-begin
-  Result := F__isset_CodigoIbgeMunicipio;
-end;
-
-procedure TUnicaLotacaoHeaderThriftImpl.Read( const iprot: IProtocol);
-var
-  field_ : IField;
-  struc : IStruct;
-  tracker : IProtocolRecursionTracker;
-
-begin
-  tracker := iprot.NextRecursionLevel;
-  struc := iprot.ReadStructBegin;
-  try
-    while (true) do
-    begin
-      field_ := iprot.ReadFieldBegin();
-      if (field_.Type_ = TType.Stop) then
-      begin
-        Break;
-      end;
-      case field_.ID of
-        1: begin
-          if (field_.Type_ = TType.String_) then
-          begin
-            ProfissionalCNS := iprot.ReadString();
-          end else
-          begin
-            TProtocolUtil.Skip(iprot, field_.Type_);
-          end;
-        end;
-        2: begin
-          if (field_.Type_ = TType.String_) then
-          begin
-            CboCodigo_2002 := iprot.ReadString();
-          end else
-          begin
-            TProtocolUtil.Skip(iprot, field_.Type_);
-          end;
-        end;
-        3: begin
-          if (field_.Type_ = TType.String_) then
-          begin
-            Cnes := iprot.ReadString();
-          end else
-          begin
-            TProtocolUtil.Skip(iprot, field_.Type_);
-          end;
-        end;
-        4: begin
-          if (field_.Type_ = TType.String_) then
-          begin
-            Ine := iprot.ReadString();
-          end else
-          begin
-            TProtocolUtil.Skip(iprot, field_.Type_);
-          end;
-        end;
-        5: begin
-          if (field_.Type_ = TType.I64) then
-          begin
-            DataAtendimento := iprot.ReadI64();
-          end else
-          begin
-            TProtocolUtil.Skip(iprot, field_.Type_);
-          end;
-        end;
-        6: begin
-          if (field_.Type_ = TType.String_) then
-          begin
-            CodigoIbgeMunicipio := iprot.ReadString();
-          end else
-          begin
-            TProtocolUtil.Skip(iprot, field_.Type_);
-          end;
-        end
-        else begin
-          TProtocolUtil.Skip(iprot, field_.Type_);
-        end;
-      end;
-      iprot.ReadFieldEnd;
-    end;
-  finally
-    iprot.ReadStructEnd;
-  end;
-end;
-
-procedure TUnicaLotacaoHeaderThriftImpl.Write( const oprot: IProtocol);
-var
-  struc : IStruct;
-  field_ : IField;
-  tracker : IProtocolRecursionTracker;
-begin
-  tracker := oprot.NextRecursionLevel;
-  struc := TStructImpl.Create('UnicaLotacaoHeaderThrift');
-  oprot.WriteStructBegin(struc);
-  field_ := TFieldImpl.Create;
-  if (__isset_ProfissionalCNS) then
-  begin
-    field_.Name := 'profissionalCNS';
-    field_.Type_  := TType.String_;
-    field_.ID := 1;
-    oprot.WriteFieldBegin(field_);
-    oprot.WriteString(ProfissionalCNS);
-    oprot.WriteFieldEnd();
-  end;
-  if (__isset_CboCodigo_2002) then
-  begin
-    field_.Name := 'cboCodigo_2002';
-    field_.Type_  := TType.String_;
-    field_.ID := 2;
-    oprot.WriteFieldBegin(field_);
-    oprot.WriteString(CboCodigo_2002);
-    oprot.WriteFieldEnd();
-  end;
-  if (__isset_Cnes) then
-  begin
-    field_.Name := 'cnes';
-    field_.Type_  := TType.String_;
-    field_.ID := 3;
-    oprot.WriteFieldBegin(field_);
-    oprot.WriteString(Cnes);
-    oprot.WriteFieldEnd();
-  end;
-  if (__isset_Ine) then
-  begin
-    field_.Name := 'ine';
-    field_.Type_  := TType.String_;
-    field_.ID := 4;
-    oprot.WriteFieldBegin(field_);
-    oprot.WriteString(Ine);
-    oprot.WriteFieldEnd();
-  end;
-  if (__isset_DataAtendimento) then
-  begin
-    field_.Name := 'dataAtendimento';
-    field_.Type_  := TType.I64;
-    field_.ID := 5;
-    oprot.WriteFieldBegin(field_);
-    oprot.WriteI64(DataAtendimento);
-    oprot.WriteFieldEnd();
-  end;
-  if (__isset_CodigoIbgeMunicipio) then
-  begin
-    field_.Name := 'codigoIbgeMunicipio';
-    field_.Type_  := TType.String_;
-    field_.ID := 6;
-    oprot.WriteFieldBegin(field_);
-    oprot.WriteString(CodigoIbgeMunicipio);
-    oprot.WriteFieldEnd();
-  end;
-  oprot.WriteFieldStop();
-  oprot.WriteStructEnd();
-end;
-
-function TUnicaLotacaoHeaderThriftImpl.ToString: string;
-var
-  _sb4 : TThriftStringBuilder;
-  _first5 : Boolean;
-begin
-  _sb4 := TThriftStringBuilder.Create('(');
-  try
-    _first5 := TRUE;
-    if (__isset_ProfissionalCNS) then begin
-      if not _first5 then _sb4.Append(',');
-      _first5 := FALSE;
-      _sb4.Append('ProfissionalCNS: ');
-      _sb4.Append(ProfissionalCNS);
-    end;
-    if (__isset_CboCodigo_2002) then begin
-      if not _first5 then _sb4.Append(',');
-      _first5 := FALSE;
-      _sb4.Append('CboCodigo_2002: ');
-      _sb4.Append(CboCodigo_2002);
-    end;
-    if (__isset_Cnes) then begin
-      if not _first5 then _sb4.Append(',');
-      _first5 := FALSE;
-      _sb4.Append('Cnes: ');
-      _sb4.Append(Cnes);
-    end;
-    if (__isset_Ine) then begin
-      if not _first5 then _sb4.Append(',');
-      _first5 := FALSE;
-      _sb4.Append('Ine: ');
-      _sb4.Append(Ine);
-    end;
-    if (__isset_DataAtendimento) then begin
-      if not _first5 then _sb4.Append(',');
-      _first5 := FALSE;
-      _sb4.Append('DataAtendimento: ');
-      _sb4.Append(DataAtendimento);
-    end;
-    if (__isset_CodigoIbgeMunicipio) then begin
-      if not _first5 then _sb4.Append(',');
-      _first5 := FALSE;
-      _sb4.Append('CodigoIbgeMunicipio: ');
-      _sb4.Append(CodigoIbgeMunicipio);
-    end;
-    _sb4.Append(')');
-    Result := _sb4.ToString;
-    if _first5 then {prevent warning};
-  finally
-    _sb4.Free;
-  end;
-end;
-
-constructor TVariasLotacoesHeaderThriftImpl.Create;
-begin
-  inherited;
-end;
-
-destructor TVariasLotacoesHeaderThriftImpl.Destroy;
-begin
-  inherited;
-end;
-
-function TVariasLotacoesHeaderThriftImpl.GetLotacaoFormPrincipal: ILotacaoHeaderThrift;
-begin
-  Result := FLotacaoFormPrincipal;
-end;
-
-procedure TVariasLotacoesHeaderThriftImpl.SetLotacaoFormPrincipal( const Value: ILotacaoHeaderThrift);
-begin
-  F__isset_LotacaoFormPrincipal := True;
-  FLotacaoFormPrincipal := Value;
-end;
-
-function TVariasLotacoesHeaderThriftImpl.Get__isset_LotacaoFormPrincipal: Boolean;
-begin
-  Result := F__isset_LotacaoFormPrincipal;
-end;
-
-function TVariasLotacoesHeaderThriftImpl.GetLotacaoFormAtendimentoCompartilhado: ILotacaoHeaderThrift;
-begin
-  Result := FLotacaoFormAtendimentoCompartilhado;
-end;
-
-procedure TVariasLotacoesHeaderThriftImpl.SetLotacaoFormAtendimentoCompartilhado( const Value: ILotacaoHeaderThrift);
-begin
-  F__isset_LotacaoFormAtendimentoCompartilhado := True;
-  FLotacaoFormAtendimentoCompartilhado := Value;
-end;
-
-function TVariasLotacoesHeaderThriftImpl.Get__isset_LotacaoFormAtendimentoCompartilhado: Boolean;
-begin
-  Result := F__isset_LotacaoFormAtendimentoCompartilhado;
-end;
-
-function TVariasLotacoesHeaderThriftImpl.GetDataAtendimento: Int64;
-begin
-  Result := FDataAtendimento;
-end;
-
-procedure TVariasLotacoesHeaderThriftImpl.SetDataAtendimento( const Value: Int64);
-begin
-  F__isset_DataAtendimento := True;
-  FDataAtendimento := Value;
-end;
-
-function TVariasLotacoesHeaderThriftImpl.Get__isset_DataAtendimento: Boolean;
-begin
-  Result := F__isset_DataAtendimento;
-end;
-
-function TVariasLotacoesHeaderThriftImpl.GetCodigoIbgeMunicipio: string;
-begin
-  Result := FCodigoIbgeMunicipio;
-end;
-
-procedure TVariasLotacoesHeaderThriftImpl.SetCodigoIbgeMunicipio( const Value: string);
-begin
-  F__isset_CodigoIbgeMunicipio := True;
-  FCodigoIbgeMunicipio := Value;
-end;
-
-function TVariasLotacoesHeaderThriftImpl.Get__isset_CodigoIbgeMunicipio: Boolean;
-begin
-  Result := F__isset_CodigoIbgeMunicipio;
-end;
-
-procedure TVariasLotacoesHeaderThriftImpl.Read( const iprot: IProtocol);
-var
-  field_ : IField;
-  struc : IStruct;
-  tracker : IProtocolRecursionTracker;
-
-begin
-  tracker := iprot.NextRecursionLevel;
-  struc := iprot.ReadStructBegin;
-  try
-    while (true) do
-    begin
-      field_ := iprot.ReadFieldBegin();
-      if (field_.Type_ = TType.Stop) then
-      begin
-        Break;
-      end;
-      case field_.ID of
-        6: begin
           if (field_.Type_ = TType.Struct) then
           begin
-            LotacaoFormPrincipal := TLotacaoHeaderThriftImpl.Create;
-            LotacaoFormPrincipal.Read(iprot);
+            LotacaoEvolucao := TLotacaoThriftImpl.Create;
+            LotacaoEvolucao.Read(iprot);
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        3: begin
+          if (field_.Type_ = TType.I64) then
+          begin
+            DataEvolucao := iprot.ReadI64();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        4: begin
+          if (field_.Type_ = TType.I64) then
+          begin
+            DataEvolucaoAnterior := iprot.ReadI64();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        5: begin
+          if (field_.Type_ = TType.I32) then
+          begin
+            CoSequencialEvolucao := iprot.ReadI32();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        6: begin
+          if (field_.Type_ = TType.I64) then
+          begin
+            CondutaEvolucao := iprot.ReadI64();
           end else
           begin
             TProtocolUtil.Skip(iprot, field_.Type_);
           end;
         end;
         7: begin
-          if (field_.Type_ = TType.Struct) then
+          if (field_.Type_ = TType.I32) then
           begin
-            LotacaoFormAtendimentoCompartilhado := TLotacaoHeaderThriftImpl.Create;
-            LotacaoFormAtendimentoCompartilhado.Read(iprot);
-          end else
-          begin
-            TProtocolUtil.Skip(iprot, field_.Type_);
-          end;
-        end;
-        8: begin
-          if (field_.Type_ = TType.I64) then
-          begin
-            DataAtendimento := iprot.ReadI64();
-          end else
-          begin
-            TProtocolUtil.Skip(iprot, field_.Type_);
-          end;
-        end;
-        9: begin
-          if (field_.Type_ = TType.String_) then
-          begin
-            CodigoIbgeMunicipio := iprot.ReadString();
-          end else
-          begin
-            TProtocolUtil.Skip(iprot, field_.Type_);
-          end;
-        end
-        else begin
-          TProtocolUtil.Skip(iprot, field_.Type_);
-        end;
-      end;
-      iprot.ReadFieldEnd;
-    end;
-  finally
-    iprot.ReadStructEnd;
-  end;
-end;
-
-procedure TVariasLotacoesHeaderThriftImpl.Write( const oprot: IProtocol);
-var
-  struc : IStruct;
-  field_ : IField;
-  tracker : IProtocolRecursionTracker;
-begin
-  tracker := oprot.NextRecursionLevel;
-  struc := TStructImpl.Create('VariasLotacoesHeaderThrift');
-  oprot.WriteStructBegin(struc);
-  field_ := TFieldImpl.Create;
-  if (LotacaoFormPrincipal <> nil) and __isset_LotacaoFormPrincipal then
-  begin
-    field_.Name := 'lotacaoFormPrincipal';
-    field_.Type_  := TType.Struct;
-    field_.ID := 6;
-    oprot.WriteFieldBegin(field_);
-    LotacaoFormPrincipal.Write(oprot);
-    oprot.WriteFieldEnd();
-  end;
-  if (LotacaoFormAtendimentoCompartilhado <> nil) and __isset_LotacaoFormAtendimentoCompartilhado then
-  begin
-    field_.Name := 'lotacaoFormAtendimentoCompartilhado';
-    field_.Type_  := TType.Struct;
-    field_.ID := 7;
-    oprot.WriteFieldBegin(field_);
-    LotacaoFormAtendimentoCompartilhado.Write(oprot);
-    oprot.WriteFieldEnd();
-  end;
-  if (__isset_DataAtendimento) then
-  begin
-    field_.Name := 'dataAtendimento';
-    field_.Type_  := TType.I64;
-    field_.ID := 8;
-    oprot.WriteFieldBegin(field_);
-    oprot.WriteI64(DataAtendimento);
-    oprot.WriteFieldEnd();
-  end;
-  if (__isset_CodigoIbgeMunicipio) then
-  begin
-    field_.Name := 'codigoIbgeMunicipio';
-    field_.Type_  := TType.String_;
-    field_.ID := 9;
-    oprot.WriteFieldBegin(field_);
-    oprot.WriteString(CodigoIbgeMunicipio);
-    oprot.WriteFieldEnd();
-  end;
-  oprot.WriteFieldStop();
-  oprot.WriteStructEnd();
-end;
-
-function TVariasLotacoesHeaderThriftImpl.ToString: string;
-var
-  _sb6 : TThriftStringBuilder;
-  _first7 : Boolean;
-begin
-  _sb6 := TThriftStringBuilder.Create('(');
-  try
-    _first7 := TRUE;
-    if (LotacaoFormPrincipal <> nil) and __isset_LotacaoFormPrincipal then begin
-      if not _first7 then _sb6.Append(',');
-      _first7 := FALSE;
-      _sb6.Append('LotacaoFormPrincipal: ');
-      if (LotacaoFormPrincipal = nil) then _sb6.Append('<null>') else _sb6.Append(LotacaoFormPrincipal.ToString());
-    end;
-    if (LotacaoFormAtendimentoCompartilhado <> nil) and __isset_LotacaoFormAtendimentoCompartilhado then begin
-      if not _first7 then _sb6.Append(',');
-      _first7 := FALSE;
-      _sb6.Append('LotacaoFormAtendimentoCompartilhado: ');
-      if (LotacaoFormAtendimentoCompartilhado = nil) then _sb6.Append('<null>') else _sb6.Append(LotacaoFormAtendimentoCompartilhado.ToString());
-    end;
-    if (__isset_DataAtendimento) then begin
-      if not _first7 then _sb6.Append(',');
-      _first7 := FALSE;
-      _sb6.Append('DataAtendimento: ');
-      _sb6.Append(DataAtendimento);
-    end;
-    if (__isset_CodigoIbgeMunicipio) then begin
-      if not _first7 then _sb6.Append(',');
-      _first7 := FALSE;
-      _sb6.Append('CodigoIbgeMunicipio: ');
-      _sb6.Append(CodigoIbgeMunicipio);
-    end;
-    _sb6.Append(')');
-    Result := _sb6.ToString;
-    if _first7 then {prevent warning};
-  finally
-    _sb6.Free;
-  end;
-end;
-
-constructor TEnderecoLocalPermanenciaThriftImpl.Create;
-begin
-  inherited;
-end;
-
-destructor TEnderecoLocalPermanenciaThriftImpl.Destroy;
-begin
-  inherited;
-end;
-
-function TEnderecoLocalPermanenciaThriftImpl.GetBairro: string;
-begin
-  Result := FBairro;
-end;
-
-procedure TEnderecoLocalPermanenciaThriftImpl.SetBairro( const Value: string);
-begin
-  F__isset_Bairro := True;
-  FBairro := Value;
-end;
-
-function TEnderecoLocalPermanenciaThriftImpl.Get__isset_Bairro: Boolean;
-begin
-  Result := F__isset_Bairro;
-end;
-
-function TEnderecoLocalPermanenciaThriftImpl.GetCep: string;
-begin
-  Result := FCep;
-end;
-
-procedure TEnderecoLocalPermanenciaThriftImpl.SetCep( const Value: string);
-begin
-  F__isset_Cep := True;
-  FCep := Value;
-end;
-
-function TEnderecoLocalPermanenciaThriftImpl.Get__isset_Cep: Boolean;
-begin
-  Result := F__isset_Cep;
-end;
-
-function TEnderecoLocalPermanenciaThriftImpl.GetCodigoIbgeMunicipio: string;
-begin
-  Result := FCodigoIbgeMunicipio;
-end;
-
-procedure TEnderecoLocalPermanenciaThriftImpl.SetCodigoIbgeMunicipio( const Value: string);
-begin
-  F__isset_CodigoIbgeMunicipio := True;
-  FCodigoIbgeMunicipio := Value;
-end;
-
-function TEnderecoLocalPermanenciaThriftImpl.Get__isset_CodigoIbgeMunicipio: Boolean;
-begin
-  Result := F__isset_CodigoIbgeMunicipio;
-end;
-
-function TEnderecoLocalPermanenciaThriftImpl.GetComplemento: string;
-begin
-  Result := FComplemento;
-end;
-
-procedure TEnderecoLocalPermanenciaThriftImpl.SetComplemento( const Value: string);
-begin
-  F__isset_Complemento := True;
-  FComplemento := Value;
-end;
-
-function TEnderecoLocalPermanenciaThriftImpl.Get__isset_Complemento: Boolean;
-begin
-  Result := F__isset_Complemento;
-end;
-
-function TEnderecoLocalPermanenciaThriftImpl.GetNomeLogradouro: string;
-begin
-  Result := FNomeLogradouro;
-end;
-
-procedure TEnderecoLocalPermanenciaThriftImpl.SetNomeLogradouro( const Value: string);
-begin
-  F__isset_NomeLogradouro := True;
-  FNomeLogradouro := Value;
-end;
-
-function TEnderecoLocalPermanenciaThriftImpl.Get__isset_NomeLogradouro: Boolean;
-begin
-  Result := F__isset_NomeLogradouro;
-end;
-
-function TEnderecoLocalPermanenciaThriftImpl.GetNumero: string;
-begin
-  Result := FNumero;
-end;
-
-procedure TEnderecoLocalPermanenciaThriftImpl.SetNumero( const Value: string);
-begin
-  F__isset_Numero := True;
-  FNumero := Value;
-end;
-
-function TEnderecoLocalPermanenciaThriftImpl.Get__isset_Numero: Boolean;
-begin
-  Result := F__isset_Numero;
-end;
-
-function TEnderecoLocalPermanenciaThriftImpl.GetNumeroDneUf: string;
-begin
-  Result := FNumeroDneUf;
-end;
-
-procedure TEnderecoLocalPermanenciaThriftImpl.SetNumeroDneUf( const Value: string);
-begin
-  F__isset_NumeroDneUf := True;
-  FNumeroDneUf := Value;
-end;
-
-function TEnderecoLocalPermanenciaThriftImpl.Get__isset_NumeroDneUf: Boolean;
-begin
-  Result := F__isset_NumeroDneUf;
-end;
-
-function TEnderecoLocalPermanenciaThriftImpl.GetTelefoneContato: string;
-begin
-  Result := FTelefoneContato;
-end;
-
-procedure TEnderecoLocalPermanenciaThriftImpl.SetTelefoneContato( const Value: string);
-begin
-  F__isset_TelefoneContato := True;
-  FTelefoneContato := Value;
-end;
-
-function TEnderecoLocalPermanenciaThriftImpl.Get__isset_TelefoneContato: Boolean;
-begin
-  Result := F__isset_TelefoneContato;
-end;
-
-function TEnderecoLocalPermanenciaThriftImpl.GetTelefoneResidencia: string;
-begin
-  Result := FTelefoneResidencia;
-end;
-
-procedure TEnderecoLocalPermanenciaThriftImpl.SetTelefoneResidencia( const Value: string);
-begin
-  F__isset_TelefoneResidencia := True;
-  FTelefoneResidencia := Value;
-end;
-
-function TEnderecoLocalPermanenciaThriftImpl.Get__isset_TelefoneResidencia: Boolean;
-begin
-  Result := F__isset_TelefoneResidencia;
-end;
-
-function TEnderecoLocalPermanenciaThriftImpl.GetTipoLogradouroNumeroDne: string;
-begin
-  Result := FTipoLogradouroNumeroDne;
-end;
-
-procedure TEnderecoLocalPermanenciaThriftImpl.SetTipoLogradouroNumeroDne( const Value: string);
-begin
-  F__isset_TipoLogradouroNumeroDne := True;
-  FTipoLogradouroNumeroDne := Value;
-end;
-
-function TEnderecoLocalPermanenciaThriftImpl.Get__isset_TipoLogradouroNumeroDne: Boolean;
-begin
-  Result := F__isset_TipoLogradouroNumeroDne;
-end;
-
-function TEnderecoLocalPermanenciaThriftImpl.GetStSemNumero: Boolean;
-begin
-  Result := FStSemNumero;
-end;
-
-procedure TEnderecoLocalPermanenciaThriftImpl.SetStSemNumero( const Value: Boolean);
-begin
-  F__isset_StSemNumero := True;
-  FStSemNumero := Value;
-end;
-
-function TEnderecoLocalPermanenciaThriftImpl.Get__isset_StSemNumero: Boolean;
-begin
-  Result := F__isset_StSemNumero;
-end;
-
-function TEnderecoLocalPermanenciaThriftImpl.GetPontoReferencia: string;
-begin
-  Result := FPontoReferencia;
-end;
-
-procedure TEnderecoLocalPermanenciaThriftImpl.SetPontoReferencia( const Value: string);
-begin
-  F__isset_PontoReferencia := True;
-  FPontoReferencia := Value;
-end;
-
-function TEnderecoLocalPermanenciaThriftImpl.Get__isset_PontoReferencia: Boolean;
-begin
-  Result := F__isset_PontoReferencia;
-end;
-
-function TEnderecoLocalPermanenciaThriftImpl.GetMicroArea: string;
-begin
-  Result := FMicroArea;
-end;
-
-procedure TEnderecoLocalPermanenciaThriftImpl.SetMicroArea( const Value: string);
-begin
-  F__isset_MicroArea := True;
-  FMicroArea := Value;
-end;
-
-function TEnderecoLocalPermanenciaThriftImpl.Get__isset_MicroArea: Boolean;
-begin
-  Result := F__isset_MicroArea;
-end;
-
-function TEnderecoLocalPermanenciaThriftImpl.GetStForaArea: Boolean;
-begin
-  Result := FStForaArea;
-end;
-
-procedure TEnderecoLocalPermanenciaThriftImpl.SetStForaArea( const Value: Boolean);
-begin
-  F__isset_StForaArea := True;
-  FStForaArea := Value;
-end;
-
-function TEnderecoLocalPermanenciaThriftImpl.Get__isset_StForaArea: Boolean;
-begin
-  Result := F__isset_StForaArea;
-end;
-
-procedure TEnderecoLocalPermanenciaThriftImpl.Read( const iprot: IProtocol);
-var
-  field_ : IField;
-  struc : IStruct;
-  tracker : IProtocolRecursionTracker;
-
-begin
-  tracker := iprot.NextRecursionLevel;
-  struc := iprot.ReadStructBegin;
-  try
-    while (true) do
-    begin
-      field_ := iprot.ReadFieldBegin();
-      if (field_.Type_ = TType.Stop) then
-      begin
-        Break;
-      end;
-      case field_.ID of
-        1: begin
-          if (field_.Type_ = TType.String_) then
-          begin
-            Bairro := iprot.ReadString();
-          end else
-          begin
-            TProtocolUtil.Skip(iprot, field_.Type_);
-          end;
-        end;
-        2: begin
-          if (field_.Type_ = TType.String_) then
-          begin
-            Cep := iprot.ReadString();
-          end else
-          begin
-            TProtocolUtil.Skip(iprot, field_.Type_);
-          end;
-        end;
-        3: begin
-          if (field_.Type_ = TType.String_) then
-          begin
-            CodigoIbgeMunicipio := iprot.ReadString();
-          end else
-          begin
-            TProtocolUtil.Skip(iprot, field_.Type_);
-          end;
-        end;
-        4: begin
-          if (field_.Type_ = TType.String_) then
-          begin
-            Complemento := iprot.ReadString();
-          end else
-          begin
-            TProtocolUtil.Skip(iprot, field_.Type_);
-          end;
-        end;
-        5: begin
-          if (field_.Type_ = TType.String_) then
-          begin
-            NomeLogradouro := iprot.ReadString();
-          end else
-          begin
-            TProtocolUtil.Skip(iprot, field_.Type_);
-          end;
-        end;
-        6: begin
-          if (field_.Type_ = TType.String_) then
-          begin
-            Numero := iprot.ReadString();
-          end else
-          begin
-            TProtocolUtil.Skip(iprot, field_.Type_);
-          end;
-        end;
-        7: begin
-          if (field_.Type_ = TType.String_) then
-          begin
-            NumeroDneUf := iprot.ReadString();
+            TpCdsOrigem := iprot.ReadI32();
           end else
           begin
             TProtocolUtil.Skip(iprot, field_.Type_);
@@ -2364,7 +723,7 @@ begin
         8: begin
           if (field_.Type_ = TType.String_) then
           begin
-            TelefoneContato := iprot.ReadString();
+            CnsCidadao := iprot.ReadString();
           end else
           begin
             TProtocolUtil.Skip(iprot, field_.Type_);
@@ -2373,25 +732,25 @@ begin
         9: begin
           if (field_.Type_ = TType.String_) then
           begin
-            TelefoneResidencia := iprot.ReadString();
+            CpfCidadao := iprot.ReadString();
           end else
           begin
             TProtocolUtil.Skip(iprot, field_.Type_);
           end;
         end;
         10: begin
-          if (field_.Type_ = TType.String_) then
+          if (field_.Type_ = TType.I64) then
           begin
-            TipoLogradouroNumeroDne := iprot.ReadString();
+            SexoCidadao := iprot.ReadI64();
           end else
           begin
             TProtocolUtil.Skip(iprot, field_.Type_);
           end;
         end;
         11: begin
-          if (field_.Type_ = TType.Bool_) then
+          if (field_.Type_ = TType.String_) then
           begin
-            StSemNumero := iprot.ReadBool();
+            DataNascimentoCidadao := iprot.ReadString();
           end else
           begin
             TProtocolUtil.Skip(iprot, field_.Type_);
@@ -2400,25 +759,91 @@ begin
         12: begin
           if (field_.Type_ = TType.String_) then
           begin
-            PontoReferencia := iprot.ReadString();
+            UuidCuidadoCompartilhado := iprot.ReadString();
+            _req_isset_UuidCuidadoCompartilhado := TRUE;
           end else
           begin
             TProtocolUtil.Skip(iprot, field_.Type_);
           end;
         end;
         13: begin
-          if (field_.Type_ = TType.String_) then
+          if (field_.Type_ = TType.Struct) then
           begin
-            MicroArea := iprot.ReadString();
+            Solicitante := TLotacaoThriftImpl.Create;
+            Solicitante.Read(iprot);
           end else
           begin
             TProtocolUtil.Skip(iprot, field_.Type_);
           end;
         end;
         14: begin
-          if (field_.Type_ = TType.Bool_) then
+          if (field_.Type_ = TType.Struct) then
           begin
-            StForaArea := iprot.ReadBool();
+            Executante := TLotacaoThriftImpl.Create;
+            Executante.Read(iprot);
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        15: begin
+          if (field_.Type_ = TType.I64) then
+          begin
+            DataCriacaoCuidado := iprot.ReadI64();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        16: begin
+          if (field_.Type_ = TType.String_) then
+          begin
+            Cid10 := iprot.ReadString();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        17: begin
+          if (field_.Type_ = TType.String_) then
+          begin
+            Ciap := iprot.ReadString();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        18: begin
+          if (field_.Type_ = TType.String_) then
+          begin
+            UuidFichaOrigem := iprot.ReadString();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        19: begin
+          if (field_.Type_ = TType.I32) then
+          begin
+            TpDadoTranspFichaOrigem := iprot.ReadI32();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        20: begin
+          if (field_.Type_ = TType.I32) then
+          begin
+            PrioridadeCuidado := iprot.ReadI32();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        21: begin
+          if (field_.Type_ = TType.I32) then
+          begin
+            ReclassificacaoPrioridadeCuidado := iprot.ReadI32();
           end else
           begin
             TProtocolUtil.Skip(iprot, field_.Type_);
@@ -2433,1500 +858,301 @@ begin
   finally
     iprot.ReadStructEnd;
   end;
+  if not _req_isset_UuidEvolucao
+  then raise TProtocolException.Create( TProtocolException.INVALID_DATA, 'UuidEvolucao');
+  if not _req_isset_UuidCuidadoCompartilhado
+  then raise TProtocolException.Create( TProtocolException.INVALID_DATA, 'UuidCuidadoCompartilhado');
 end;
 
-procedure TEnderecoLocalPermanenciaThriftImpl.Write( const oprot: IProtocol);
+procedure TCuidadoCompartilhadoThriftImpl.Write( const oprot: IProtocol);
 var
   struc : IStruct;
   field_ : IField;
   tracker : IProtocolRecursionTracker;
 begin
   tracker := oprot.NextRecursionLevel;
-  struc := TStructImpl.Create('EnderecoLocalPermanenciaThrift');
+  struc := TStructImpl.Create('CuidadoCompartilhadoThrift');
   oprot.WriteStructBegin(struc);
   field_ := TFieldImpl.Create;
-  if (__isset_Bairro) then
+  // required field
+  field_.Name := 'uuidEvolucao';
+  field_.Type_  := TType.String_;
+  field_.ID := 1;
+  oprot.WriteFieldBegin(field_);
+  oprot.WriteString(UuidEvolucao);
+  oprot.WriteFieldEnd();
+  if (LotacaoEvolucao <> nil) and __isset_LotacaoEvolucao then
   begin
-    field_.Name := 'bairro';
-    field_.Type_  := TType.String_;
-    field_.ID := 1;
-    oprot.WriteFieldBegin(field_);
-    oprot.WriteString(Bairro);
-    oprot.WriteFieldEnd();
-  end;
-  if (__isset_Cep) then
-  begin
-    field_.Name := 'cep';
-    field_.Type_  := TType.String_;
+    field_.Name := 'lotacaoEvolucao';
+    field_.Type_  := TType.Struct;
     field_.ID := 2;
     oprot.WriteFieldBegin(field_);
-    oprot.WriteString(Cep);
+    LotacaoEvolucao.Write(oprot);
     oprot.WriteFieldEnd();
   end;
-  if (__isset_CodigoIbgeMunicipio) then
+  if (__isset_DataEvolucao) then
   begin
-    field_.Name := 'codigoIbgeMunicipio';
-    field_.Type_  := TType.String_;
+    field_.Name := 'dataEvolucao';
+    field_.Type_  := TType.I64;
     field_.ID := 3;
     oprot.WriteFieldBegin(field_);
-    oprot.WriteString(CodigoIbgeMunicipio);
+    oprot.WriteI64(DataEvolucao);
     oprot.WriteFieldEnd();
   end;
-  if (__isset_Complemento) then
+  if (__isset_DataEvolucaoAnterior) then
   begin
-    field_.Name := 'complemento';
-    field_.Type_  := TType.String_;
+    field_.Name := 'dataEvolucaoAnterior';
+    field_.Type_  := TType.I64;
     field_.ID := 4;
     oprot.WriteFieldBegin(field_);
-    oprot.WriteString(Complemento);
+    oprot.WriteI64(DataEvolucaoAnterior);
     oprot.WriteFieldEnd();
   end;
-  if (__isset_NomeLogradouro) then
+  if (__isset_CoSequencialEvolucao) then
   begin
-    field_.Name := 'nomeLogradouro';
-    field_.Type_  := TType.String_;
+    field_.Name := 'coSequencialEvolucao';
+    field_.Type_  := TType.I32;
     field_.ID := 5;
     oprot.WriteFieldBegin(field_);
-    oprot.WriteString(NomeLogradouro);
+    oprot.WriteI32(CoSequencialEvolucao);
     oprot.WriteFieldEnd();
   end;
-  if (__isset_Numero) then
+  if (__isset_CondutaEvolucao) then
   begin
-    field_.Name := 'numero';
-    field_.Type_  := TType.String_;
+    field_.Name := 'condutaEvolucao';
+    field_.Type_  := TType.I64;
     field_.ID := 6;
     oprot.WriteFieldBegin(field_);
-    oprot.WriteString(Numero);
+    oprot.WriteI64(CondutaEvolucao);
     oprot.WriteFieldEnd();
   end;
-  if (__isset_NumeroDneUf) then
+  if (__isset_TpCdsOrigem) then
   begin
-    field_.Name := 'numeroDneUf';
-    field_.Type_  := TType.String_;
+    field_.Name := 'tpCdsOrigem';
+    field_.Type_  := TType.I32;
     field_.ID := 7;
     oprot.WriteFieldBegin(field_);
-    oprot.WriteString(NumeroDneUf);
+    oprot.WriteI32(TpCdsOrigem);
     oprot.WriteFieldEnd();
   end;
-  if (__isset_TelefoneContato) then
+  if (__isset_CnsCidadao) then
   begin
-    field_.Name := 'telefoneContato';
+    field_.Name := 'cnsCidadao';
     field_.Type_  := TType.String_;
     field_.ID := 8;
     oprot.WriteFieldBegin(field_);
-    oprot.WriteString(TelefoneContato);
+    oprot.WriteString(CnsCidadao);
     oprot.WriteFieldEnd();
   end;
-  if (__isset_TelefoneResidencia) then
+  if (__isset_CpfCidadao) then
   begin
-    field_.Name := 'telefoneResidencia';
+    field_.Name := 'cpfCidadao';
     field_.Type_  := TType.String_;
     field_.ID := 9;
     oprot.WriteFieldBegin(field_);
-    oprot.WriteString(TelefoneResidencia);
+    oprot.WriteString(CpfCidadao);
     oprot.WriteFieldEnd();
   end;
-  if (__isset_TipoLogradouroNumeroDne) then
+  if (__isset_SexoCidadao) then
   begin
-    field_.Name := 'tipoLogradouroNumeroDne';
-    field_.Type_  := TType.String_;
+    field_.Name := 'sexoCidadao';
+    field_.Type_  := TType.I64;
     field_.ID := 10;
     oprot.WriteFieldBegin(field_);
-    oprot.WriteString(TipoLogradouroNumeroDne);
+    oprot.WriteI64(SexoCidadao);
     oprot.WriteFieldEnd();
   end;
-  if (__isset_StSemNumero) then
+  if (__isset_DataNascimentoCidadao) then
   begin
-    field_.Name := 'stSemNumero';
-    field_.Type_  := TType.Bool_;
+    field_.Name := 'dataNascimentoCidadao';
+    field_.Type_  := TType.String_;
     field_.ID := 11;
     oprot.WriteFieldBegin(field_);
-    oprot.WriteBool(StSemNumero);
+    oprot.WriteString(DataNascimentoCidadao);
     oprot.WriteFieldEnd();
   end;
-  if (__isset_PontoReferencia) then
+  // required field
+  field_.Name := 'uuidCuidadoCompartilhado';
+  field_.Type_  := TType.String_;
+  field_.ID := 12;
+  oprot.WriteFieldBegin(field_);
+  oprot.WriteString(UuidCuidadoCompartilhado);
+  oprot.WriteFieldEnd();
+  if (Solicitante <> nil) and __isset_Solicitante then
   begin
-    field_.Name := 'pontoReferencia';
-    field_.Type_  := TType.String_;
-    field_.ID := 12;
-    oprot.WriteFieldBegin(field_);
-    oprot.WriteString(PontoReferencia);
-    oprot.WriteFieldEnd();
-  end;
-  if (__isset_MicroArea) then
-  begin
-    field_.Name := 'microArea';
-    field_.Type_  := TType.String_;
+    field_.Name := 'solicitante';
+    field_.Type_  := TType.Struct;
     field_.ID := 13;
     oprot.WriteFieldBegin(field_);
-    oprot.WriteString(MicroArea);
+    Solicitante.Write(oprot);
     oprot.WriteFieldEnd();
   end;
-  if (__isset_StForaArea) then
+  if (Executante <> nil) and __isset_Executante then
   begin
-    field_.Name := 'stForaArea';
-    field_.Type_  := TType.Bool_;
+    field_.Name := 'executante';
+    field_.Type_  := TType.Struct;
     field_.ID := 14;
     oprot.WriteFieldBegin(field_);
-    oprot.WriteBool(StForaArea);
+    Executante.Write(oprot);
     oprot.WriteFieldEnd();
   end;
-  oprot.WriteFieldStop();
-  oprot.WriteStructEnd();
-end;
-
-function TEnderecoLocalPermanenciaThriftImpl.ToString: string;
-var
-  _sb8 : TThriftStringBuilder;
-  _first9 : Boolean;
-begin
-  _sb8 := TThriftStringBuilder.Create('(');
-  try
-    _first9 := TRUE;
-    if (__isset_Bairro) then begin
-      if not _first9 then _sb8.Append(',');
-      _first9 := FALSE;
-      _sb8.Append('Bairro: ');
-      _sb8.Append(Bairro);
-    end;
-    if (__isset_Cep) then begin
-      if not _first9 then _sb8.Append(',');
-      _first9 := FALSE;
-      _sb8.Append('Cep: ');
-      _sb8.Append(Cep);
-    end;
-    if (__isset_CodigoIbgeMunicipio) then begin
-      if not _first9 then _sb8.Append(',');
-      _first9 := FALSE;
-      _sb8.Append('CodigoIbgeMunicipio: ');
-      _sb8.Append(CodigoIbgeMunicipio);
-    end;
-    if (__isset_Complemento) then begin
-      if not _first9 then _sb8.Append(',');
-      _first9 := FALSE;
-      _sb8.Append('Complemento: ');
-      _sb8.Append(Complemento);
-    end;
-    if (__isset_NomeLogradouro) then begin
-      if not _first9 then _sb8.Append(',');
-      _first9 := FALSE;
-      _sb8.Append('NomeLogradouro: ');
-      _sb8.Append(NomeLogradouro);
-    end;
-    if (__isset_Numero) then begin
-      if not _first9 then _sb8.Append(',');
-      _first9 := FALSE;
-      _sb8.Append('Numero: ');
-      _sb8.Append(Numero);
-    end;
-    if (__isset_NumeroDneUf) then begin
-      if not _first9 then _sb8.Append(',');
-      _first9 := FALSE;
-      _sb8.Append('NumeroDneUf: ');
-      _sb8.Append(NumeroDneUf);
-    end;
-    if (__isset_TelefoneContato) then begin
-      if not _first9 then _sb8.Append(',');
-      _first9 := FALSE;
-      _sb8.Append('TelefoneContato: ');
-      _sb8.Append(TelefoneContato);
-    end;
-    if (__isset_TelefoneResidencia) then begin
-      if not _first9 then _sb8.Append(',');
-      _first9 := FALSE;
-      _sb8.Append('TelefoneResidencia: ');
-      _sb8.Append(TelefoneResidencia);
-    end;
-    if (__isset_TipoLogradouroNumeroDne) then begin
-      if not _first9 then _sb8.Append(',');
-      _first9 := FALSE;
-      _sb8.Append('TipoLogradouroNumeroDne: ');
-      _sb8.Append(TipoLogradouroNumeroDne);
-    end;
-    if (__isset_StSemNumero) then begin
-      if not _first9 then _sb8.Append(',');
-      _first9 := FALSE;
-      _sb8.Append('StSemNumero: ');
-      _sb8.Append(StSemNumero);
-    end;
-    if (__isset_PontoReferencia) then begin
-      if not _first9 then _sb8.Append(',');
-      _first9 := FALSE;
-      _sb8.Append('PontoReferencia: ');
-      _sb8.Append(PontoReferencia);
-    end;
-    if (__isset_MicroArea) then begin
-      if not _first9 then _sb8.Append(',');
-      _first9 := FALSE;
-      _sb8.Append('MicroArea: ');
-      _sb8.Append(MicroArea);
-    end;
-    if (__isset_StForaArea) then begin
-      if not _first9 then _sb8.Append(',');
-      _first9 := FALSE;
-      _sb8.Append('StForaArea: ');
-      _sb8.Append(StForaArea);
-    end;
-    _sb8.Append(')');
-    Result := _sb8.ToString;
-    if _first9 then {prevent warning};
-  finally
-    _sb8.Free;
-  end;
-end;
-
-constructor TMedicamentoThriftImpl.Create;
-begin
-  inherited;
-end;
-
-destructor TMedicamentoThriftImpl.Destroy;
-begin
-  inherited;
-end;
-
-function TMedicamentoThriftImpl.GetCodigoCatmat: string;
-begin
-  Result := FCodigoCatmat;
-end;
-
-procedure TMedicamentoThriftImpl.SetCodigoCatmat( const Value: string);
-begin
-  F__isset_CodigoCatmat := True;
-  FCodigoCatmat := Value;
-end;
-
-function TMedicamentoThriftImpl.Get__isset_CodigoCatmat: Boolean;
-begin
-  Result := F__isset_CodigoCatmat;
-end;
-
-function TMedicamentoThriftImpl.GetViaAdministracao: Int64;
-begin
-  Result := FViaAdministracao;
-end;
-
-procedure TMedicamentoThriftImpl.SetViaAdministracao( const Value: Int64);
-begin
-  F__isset_ViaAdministracao := True;
-  FViaAdministracao := Value;
-end;
-
-function TMedicamentoThriftImpl.Get__isset_ViaAdministracao: Boolean;
-begin
-  Result := F__isset_ViaAdministracao;
-end;
-
-function TMedicamentoThriftImpl.GetDose: string;
-begin
-  Result := FDose;
-end;
-
-procedure TMedicamentoThriftImpl.SetDose( const Value: string);
-begin
-  F__isset_Dose := True;
-  FDose := Value;
-end;
-
-function TMedicamentoThriftImpl.Get__isset_Dose: Boolean;
-begin
-  Result := F__isset_Dose;
-end;
-
-function TMedicamentoThriftImpl.GetDoseUnica: Boolean;
-begin
-  Result := FDoseUnica;
-end;
-
-procedure TMedicamentoThriftImpl.SetDoseUnica( const Value: Boolean);
-begin
-  F__isset_DoseUnica := True;
-  FDoseUnica := Value;
-end;
-
-function TMedicamentoThriftImpl.Get__isset_DoseUnica: Boolean;
-begin
-  Result := F__isset_DoseUnica;
-end;
-
-function TMedicamentoThriftImpl.GetUsoContinuo: Boolean;
-begin
-  Result := FUsoContinuo;
-end;
-
-procedure TMedicamentoThriftImpl.SetUsoContinuo( const Value: Boolean);
-begin
-  F__isset_UsoContinuo := True;
-  FUsoContinuo := Value;
-end;
-
-function TMedicamentoThriftImpl.Get__isset_UsoContinuo: Boolean;
-begin
-  Result := F__isset_UsoContinuo;
-end;
-
-function TMedicamentoThriftImpl.GetDoseFrequenciaTipo: Int64;
-begin
-  Result := FDoseFrequenciaTipo;
-end;
-
-procedure TMedicamentoThriftImpl.SetDoseFrequenciaTipo( const Value: Int64);
-begin
-  F__isset_DoseFrequenciaTipo := True;
-  FDoseFrequenciaTipo := Value;
-end;
-
-function TMedicamentoThriftImpl.Get__isset_DoseFrequenciaTipo: Boolean;
-begin
-  Result := F__isset_DoseFrequenciaTipo;
-end;
-
-function TMedicamentoThriftImpl.GetDoseFrequencia: string;
-begin
-  Result := FDoseFrequencia;
-end;
-
-procedure TMedicamentoThriftImpl.SetDoseFrequencia( const Value: string);
-begin
-  F__isset_DoseFrequencia := True;
-  FDoseFrequencia := Value;
-end;
-
-function TMedicamentoThriftImpl.Get__isset_DoseFrequencia: Boolean;
-begin
-  Result := F__isset_DoseFrequencia;
-end;
-
-function TMedicamentoThriftImpl.GetDoseFrequenciaQuantidade: Integer;
-begin
-  Result := FDoseFrequenciaQuantidade;
-end;
-
-procedure TMedicamentoThriftImpl.SetDoseFrequenciaQuantidade( const Value: Integer);
-begin
-  F__isset_DoseFrequenciaQuantidade := True;
-  FDoseFrequenciaQuantidade := Value;
-end;
-
-function TMedicamentoThriftImpl.Get__isset_DoseFrequenciaQuantidade: Boolean;
-begin
-  Result := F__isset_DoseFrequenciaQuantidade;
-end;
-
-function TMedicamentoThriftImpl.GetDoseFrequenciaUnidadeMedida: Int64;
-begin
-  Result := FDoseFrequenciaUnidadeMedida;
-end;
-
-procedure TMedicamentoThriftImpl.SetDoseFrequenciaUnidadeMedida( const Value: Int64);
-begin
-  F__isset_DoseFrequenciaUnidadeMedida := True;
-  FDoseFrequenciaUnidadeMedida := Value;
-end;
-
-function TMedicamentoThriftImpl.Get__isset_DoseFrequenciaUnidadeMedida: Boolean;
-begin
-  Result := F__isset_DoseFrequenciaUnidadeMedida;
-end;
-
-function TMedicamentoThriftImpl.GetDtInicioTratamento: Int64;
-begin
-  Result := FDtInicioTratamento;
-end;
-
-procedure TMedicamentoThriftImpl.SetDtInicioTratamento( const Value: Int64);
-begin
-  F__isset_DtInicioTratamento := True;
-  FDtInicioTratamento := Value;
-end;
-
-function TMedicamentoThriftImpl.Get__isset_DtInicioTratamento: Boolean;
-begin
-  Result := F__isset_DtInicioTratamento;
-end;
-
-function TMedicamentoThriftImpl.GetDuracaoTratamento: Integer;
-begin
-  Result := FDuracaoTratamento;
-end;
-
-procedure TMedicamentoThriftImpl.SetDuracaoTratamento( const Value: Integer);
-begin
-  F__isset_DuracaoTratamento := True;
-  FDuracaoTratamento := Value;
-end;
-
-function TMedicamentoThriftImpl.Get__isset_DuracaoTratamento: Boolean;
-begin
-  Result := F__isset_DuracaoTratamento;
-end;
-
-function TMedicamentoThriftImpl.GetDuracaoTratamentoMedida: Int64;
-begin
-  Result := FDuracaoTratamentoMedida;
-end;
-
-procedure TMedicamentoThriftImpl.SetDuracaoTratamentoMedida( const Value: Int64);
-begin
-  F__isset_DuracaoTratamentoMedida := True;
-  FDuracaoTratamentoMedida := Value;
-end;
-
-function TMedicamentoThriftImpl.Get__isset_DuracaoTratamentoMedida: Boolean;
-begin
-  Result := F__isset_DuracaoTratamentoMedida;
-end;
-
-function TMedicamentoThriftImpl.GetQuantidadeReceitada: Integer;
-begin
-  Result := FQuantidadeReceitada;
-end;
-
-procedure TMedicamentoThriftImpl.SetQuantidadeReceitada( const Value: Integer);
-begin
-  F__isset_QuantidadeReceitada := True;
-  FQuantidadeReceitada := Value;
-end;
-
-function TMedicamentoThriftImpl.Get__isset_QuantidadeReceitada: Boolean;
-begin
-  Result := F__isset_QuantidadeReceitada;
-end;
-
-procedure TMedicamentoThriftImpl.Read( const iprot: IProtocol);
-var
-  field_ : IField;
-  struc : IStruct;
-  tracker : IProtocolRecursionTracker;
-
-begin
-  tracker := iprot.NextRecursionLevel;
-  struc := iprot.ReadStructBegin;
-  try
-    while (true) do
-    begin
-      field_ := iprot.ReadFieldBegin();
-      if (field_.Type_ = TType.Stop) then
-      begin
-        Break;
-      end;
-      case field_.ID of
-        1: begin
-          if (field_.Type_ = TType.String_) then
-          begin
-            CodigoCatmat := iprot.ReadString();
-          end else
-          begin
-            TProtocolUtil.Skip(iprot, field_.Type_);
-          end;
-        end;
-        2: begin
-          if (field_.Type_ = TType.I64) then
-          begin
-            ViaAdministracao := iprot.ReadI64();
-          end else
-          begin
-            TProtocolUtil.Skip(iprot, field_.Type_);
-          end;
-        end;
-        3: begin
-          if (field_.Type_ = TType.String_) then
-          begin
-            Dose := iprot.ReadString();
-          end else
-          begin
-            TProtocolUtil.Skip(iprot, field_.Type_);
-          end;
-        end;
-        4: begin
-          if (field_.Type_ = TType.Bool_) then
-          begin
-            DoseUnica := iprot.ReadBool();
-          end else
-          begin
-            TProtocolUtil.Skip(iprot, field_.Type_);
-          end;
-        end;
-        5: begin
-          if (field_.Type_ = TType.Bool_) then
-          begin
-            UsoContinuo := iprot.ReadBool();
-          end else
-          begin
-            TProtocolUtil.Skip(iprot, field_.Type_);
-          end;
-        end;
-        6: begin
-          if (field_.Type_ = TType.I64) then
-          begin
-            DoseFrequenciaTipo := iprot.ReadI64();
-          end else
-          begin
-            TProtocolUtil.Skip(iprot, field_.Type_);
-          end;
-        end;
-        7: begin
-          if (field_.Type_ = TType.String_) then
-          begin
-            DoseFrequencia := iprot.ReadString();
-          end else
-          begin
-            TProtocolUtil.Skip(iprot, field_.Type_);
-          end;
-        end;
-        8: begin
-          if (field_.Type_ = TType.I32) then
-          begin
-            DoseFrequenciaQuantidade := iprot.ReadI32();
-          end else
-          begin
-            TProtocolUtil.Skip(iprot, field_.Type_);
-          end;
-        end;
-        9: begin
-          if (field_.Type_ = TType.I64) then
-          begin
-            DoseFrequenciaUnidadeMedida := iprot.ReadI64();
-          end else
-          begin
-            TProtocolUtil.Skip(iprot, field_.Type_);
-          end;
-        end;
-        10: begin
-          if (field_.Type_ = TType.I64) then
-          begin
-            DtInicioTratamento := iprot.ReadI64();
-          end else
-          begin
-            TProtocolUtil.Skip(iprot, field_.Type_);
-          end;
-        end;
-        11: begin
-          if (field_.Type_ = TType.I32) then
-          begin
-            DuracaoTratamento := iprot.ReadI32();
-          end else
-          begin
-            TProtocolUtil.Skip(iprot, field_.Type_);
-          end;
-        end;
-        12: begin
-          if (field_.Type_ = TType.I64) then
-          begin
-            DuracaoTratamentoMedida := iprot.ReadI64();
-          end else
-          begin
-            TProtocolUtil.Skip(iprot, field_.Type_);
-          end;
-        end;
-        13: begin
-          if (field_.Type_ = TType.I32) then
-          begin
-            QuantidadeReceitada := iprot.ReadI32();
-          end else
-          begin
-            TProtocolUtil.Skip(iprot, field_.Type_);
-          end;
-        end
-        else begin
-          TProtocolUtil.Skip(iprot, field_.Type_);
-        end;
-      end;
-      iprot.ReadFieldEnd;
-    end;
-  finally
-    iprot.ReadStructEnd;
-  end;
-end;
-
-procedure TMedicamentoThriftImpl.Write( const oprot: IProtocol);
-var
-  struc : IStruct;
-  field_ : IField;
-  tracker : IProtocolRecursionTracker;
-begin
-  tracker := oprot.NextRecursionLevel;
-  struc := TStructImpl.Create('MedicamentoThrift');
-  oprot.WriteStructBegin(struc);
-  field_ := TFieldImpl.Create;
-  if (__isset_CodigoCatmat) then
+  if (__isset_DataCriacaoCuidado) then
   begin
-    field_.Name := 'codigoCatmat';
-    field_.Type_  := TType.String_;
-    field_.ID := 1;
-    oprot.WriteFieldBegin(field_);
-    oprot.WriteString(CodigoCatmat);
-    oprot.WriteFieldEnd();
-  end;
-  if (__isset_ViaAdministracao) then
-  begin
-    field_.Name := 'viaAdministracao';
+    field_.Name := 'dataCriacaoCuidado';
     field_.Type_  := TType.I64;
-    field_.ID := 2;
+    field_.ID := 15;
     oprot.WriteFieldBegin(field_);
-    oprot.WriteI64(ViaAdministracao);
+    oprot.WriteI64(DataCriacaoCuidado);
     oprot.WriteFieldEnd();
   end;
-  if (__isset_Dose) then
+  if (__isset_Cid10) then
   begin
-    field_.Name := 'dose';
+    field_.Name := 'cid10';
     field_.Type_  := TType.String_;
-    field_.ID := 3;
+    field_.ID := 16;
     oprot.WriteFieldBegin(field_);
-    oprot.WriteString(Dose);
+    oprot.WriteString(Cid10);
     oprot.WriteFieldEnd();
   end;
-  if (__isset_DoseUnica) then
+  if (__isset_Ciap) then
   begin
-    field_.Name := 'doseUnica';
-    field_.Type_  := TType.Bool_;
-    field_.ID := 4;
-    oprot.WriteFieldBegin(field_);
-    oprot.WriteBool(DoseUnica);
-    oprot.WriteFieldEnd();
-  end;
-  if (__isset_UsoContinuo) then
-  begin
-    field_.Name := 'usoContinuo';
-    field_.Type_  := TType.Bool_;
-    field_.ID := 5;
-    oprot.WriteFieldBegin(field_);
-    oprot.WriteBool(UsoContinuo);
-    oprot.WriteFieldEnd();
-  end;
-  if (__isset_DoseFrequenciaTipo) then
-  begin
-    field_.Name := 'doseFrequenciaTipo';
-    field_.Type_  := TType.I64;
-    field_.ID := 6;
-    oprot.WriteFieldBegin(field_);
-    oprot.WriteI64(DoseFrequenciaTipo);
-    oprot.WriteFieldEnd();
-  end;
-  if (__isset_DoseFrequencia) then
-  begin
-    field_.Name := 'doseFrequencia';
+    field_.Name := 'ciap';
     field_.Type_  := TType.String_;
-    field_.ID := 7;
+    field_.ID := 17;
     oprot.WriteFieldBegin(field_);
-    oprot.WriteString(DoseFrequencia);
+    oprot.WriteString(Ciap);
     oprot.WriteFieldEnd();
   end;
-  if (__isset_DoseFrequenciaQuantidade) then
+  if (__isset_UuidFichaOrigem) then
   begin
-    field_.Name := 'doseFrequenciaQuantidade';
+    field_.Name := 'uuidFichaOrigem';
+    field_.Type_  := TType.String_;
+    field_.ID := 18;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteString(UuidFichaOrigem);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_TpDadoTranspFichaOrigem) then
+  begin
+    field_.Name := 'tpDadoTranspFichaOrigem';
     field_.Type_  := TType.I32;
-    field_.ID := 8;
+    field_.ID := 19;
     oprot.WriteFieldBegin(field_);
-    oprot.WriteI32(DoseFrequenciaQuantidade);
+    oprot.WriteI32(TpDadoTranspFichaOrigem);
     oprot.WriteFieldEnd();
   end;
-  if (__isset_DoseFrequenciaUnidadeMedida) then
+  if (__isset_PrioridadeCuidado) then
   begin
-    field_.Name := 'doseFrequenciaUnidadeMedida';
-    field_.Type_  := TType.I64;
-    field_.ID := 9;
-    oprot.WriteFieldBegin(field_);
-    oprot.WriteI64(DoseFrequenciaUnidadeMedida);
-    oprot.WriteFieldEnd();
-  end;
-  if (__isset_DtInicioTratamento) then
-  begin
-    field_.Name := 'dtInicioTratamento';
-    field_.Type_  := TType.I64;
-    field_.ID := 10;
-    oprot.WriteFieldBegin(field_);
-    oprot.WriteI64(DtInicioTratamento);
-    oprot.WriteFieldEnd();
-  end;
-  if (__isset_DuracaoTratamento) then
-  begin
-    field_.Name := 'duracaoTratamento';
+    field_.Name := 'prioridadeCuidado';
     field_.Type_  := TType.I32;
-    field_.ID := 11;
+    field_.ID := 20;
     oprot.WriteFieldBegin(field_);
-    oprot.WriteI32(DuracaoTratamento);
+    oprot.WriteI32(PrioridadeCuidado);
     oprot.WriteFieldEnd();
   end;
-  if (__isset_DuracaoTratamentoMedida) then
+  if (__isset_ReclassificacaoPrioridadeCuidado) then
   begin
-    field_.Name := 'duracaoTratamentoMedida';
-    field_.Type_  := TType.I64;
-    field_.ID := 12;
-    oprot.WriteFieldBegin(field_);
-    oprot.WriteI64(DuracaoTratamentoMedida);
-    oprot.WriteFieldEnd();
-  end;
-  if (__isset_QuantidadeReceitada) then
-  begin
-    field_.Name := 'quantidadeReceitada';
+    field_.Name := 'reclassificacaoPrioridadeCuidado';
     field_.Type_  := TType.I32;
-    field_.ID := 13;
+    field_.ID := 21;
     oprot.WriteFieldBegin(field_);
-    oprot.WriteI32(QuantidadeReceitada);
+    oprot.WriteI32(ReclassificacaoPrioridadeCuidado);
     oprot.WriteFieldEnd();
   end;
   oprot.WriteFieldStop();
   oprot.WriteStructEnd();
 end;
 
-function TMedicamentoThriftImpl.ToString: string;
+function TCuidadoCompartilhadoThriftImpl.ToString: string;
 var
-  _sb10 : TThriftStringBuilder;
-  _first11 : Boolean;
+  _sb0 : TThriftStringBuilder;
 begin
-  _sb10 := TThriftStringBuilder.Create('(');
+  _sb0 := TThriftStringBuilder.Create('(');
   try
-    _first11 := TRUE;
-    if (__isset_CodigoCatmat) then begin
-      if not _first11 then _sb10.Append(',');
-      _first11 := FALSE;
-      _sb10.Append('CodigoCatmat: ');
-      _sb10.Append(CodigoCatmat);
+    _sb0.Append(', UuidEvolucao: ');
+    _sb0.Append(UuidEvolucao);
+    if (LotacaoEvolucao <> nil) and __isset_LotacaoEvolucao then begin
+      _sb0.Append(', LotacaoEvolucao: ');
+      if (LotacaoEvolucao = nil) then _sb0.Append('<null>') else _sb0.Append(LotacaoEvolucao.ToString());
     end;
-    if (__isset_ViaAdministracao) then begin
-      if not _first11 then _sb10.Append(',');
-      _first11 := FALSE;
-      _sb10.Append('ViaAdministracao: ');
-      _sb10.Append(ViaAdministracao);
+    if (__isset_DataEvolucao) then begin
+      _sb0.Append(', DataEvolucao: ');
+      _sb0.Append(DataEvolucao);
     end;
-    if (__isset_Dose) then begin
-      if not _first11 then _sb10.Append(',');
-      _first11 := FALSE;
-      _sb10.Append('Dose: ');
-      _sb10.Append(Dose);
+    if (__isset_DataEvolucaoAnterior) then begin
+      _sb0.Append(', DataEvolucaoAnterior: ');
+      _sb0.Append(DataEvolucaoAnterior);
     end;
-    if (__isset_DoseUnica) then begin
-      if not _first11 then _sb10.Append(',');
-      _first11 := FALSE;
-      _sb10.Append('DoseUnica: ');
-      _sb10.Append(DoseUnica);
+    if (__isset_CoSequencialEvolucao) then begin
+      _sb0.Append(', CoSequencialEvolucao: ');
+      _sb0.Append(CoSequencialEvolucao);
     end;
-    if (__isset_UsoContinuo) then begin
-      if not _first11 then _sb10.Append(',');
-      _first11 := FALSE;
-      _sb10.Append('UsoContinuo: ');
-      _sb10.Append(UsoContinuo);
+    if (__isset_CondutaEvolucao) then begin
+      _sb0.Append(', CondutaEvolucao: ');
+      _sb0.Append(CondutaEvolucao);
     end;
-    if (__isset_DoseFrequenciaTipo) then begin
-      if not _first11 then _sb10.Append(',');
-      _first11 := FALSE;
-      _sb10.Append('DoseFrequenciaTipo: ');
-      _sb10.Append(DoseFrequenciaTipo);
+    if (__isset_TpCdsOrigem) then begin
+      _sb0.Append(', TpCdsOrigem: ');
+      _sb0.Append(TpCdsOrigem);
     end;
-    if (__isset_DoseFrequencia) then begin
-      if not _first11 then _sb10.Append(',');
-      _first11 := FALSE;
-      _sb10.Append('DoseFrequencia: ');
-      _sb10.Append(DoseFrequencia);
+    if (__isset_CnsCidadao) then begin
+      _sb0.Append(', CnsCidadao: ');
+      _sb0.Append(CnsCidadao);
     end;
-    if (__isset_DoseFrequenciaQuantidade) then begin
-      if not _first11 then _sb10.Append(',');
-      _first11 := FALSE;
-      _sb10.Append('DoseFrequenciaQuantidade: ');
-      _sb10.Append(DoseFrequenciaQuantidade);
+    if (__isset_CpfCidadao) then begin
+      _sb0.Append(', CpfCidadao: ');
+      _sb0.Append(CpfCidadao);
     end;
-    if (__isset_DoseFrequenciaUnidadeMedida) then begin
-      if not _first11 then _sb10.Append(',');
-      _first11 := FALSE;
-      _sb10.Append('DoseFrequenciaUnidadeMedida: ');
-      _sb10.Append(DoseFrequenciaUnidadeMedida);
+    if (__isset_SexoCidadao) then begin
+      _sb0.Append(', SexoCidadao: ');
+      _sb0.Append(SexoCidadao);
     end;
-    if (__isset_DtInicioTratamento) then begin
-      if not _first11 then _sb10.Append(',');
-      _first11 := FALSE;
-      _sb10.Append('DtInicioTratamento: ');
-      _sb10.Append(DtInicioTratamento);
+    if (__isset_DataNascimentoCidadao) then begin
+      _sb0.Append(', DataNascimentoCidadao: ');
+      _sb0.Append(DataNascimentoCidadao);
     end;
-    if (__isset_DuracaoTratamento) then begin
-      if not _first11 then _sb10.Append(',');
-      _first11 := FALSE;
-      _sb10.Append('DuracaoTratamento: ');
-      _sb10.Append(DuracaoTratamento);
+    _sb0.Append(', UuidCuidadoCompartilhado: ');
+    _sb0.Append(UuidCuidadoCompartilhado);
+    if (Solicitante <> nil) and __isset_Solicitante then begin
+      _sb0.Append(', Solicitante: ');
+      if (Solicitante = nil) then _sb0.Append('<null>') else _sb0.Append(Solicitante.ToString());
     end;
-    if (__isset_DuracaoTratamentoMedida) then begin
-      if not _first11 then _sb10.Append(',');
-      _first11 := FALSE;
-      _sb10.Append('DuracaoTratamentoMedida: ');
-      _sb10.Append(DuracaoTratamentoMedida);
+    if (Executante <> nil) and __isset_Executante then begin
+      _sb0.Append(', Executante: ');
+      if (Executante = nil) then _sb0.Append('<null>') else _sb0.Append(Executante.ToString());
     end;
-    if (__isset_QuantidadeReceitada) then begin
-      if not _first11 then _sb10.Append(',');
-      _first11 := FALSE;
-      _sb10.Append('QuantidadeReceitada: ');
-      _sb10.Append(QuantidadeReceitada);
+    if (__isset_DataCriacaoCuidado) then begin
+      _sb0.Append(', DataCriacaoCuidado: ');
+      _sb0.Append(DataCriacaoCuidado);
     end;
-    _sb10.Append(')');
-    Result := _sb10.ToString;
-    if _first11 then {prevent warning};
+    if (__isset_Cid10) then begin
+      _sb0.Append(', Cid10: ');
+      _sb0.Append(Cid10);
+    end;
+    if (__isset_Ciap) then begin
+      _sb0.Append(', Ciap: ');
+      _sb0.Append(Ciap);
+    end;
+    if (__isset_UuidFichaOrigem) then begin
+      _sb0.Append(', UuidFichaOrigem: ');
+      _sb0.Append(UuidFichaOrigem);
+    end;
+    if (__isset_TpDadoTranspFichaOrigem) then begin
+      _sb0.Append(', TpDadoTranspFichaOrigem: ');
+      _sb0.Append(TpDadoTranspFichaOrigem);
+    end;
+    if (__isset_PrioridadeCuidado) then begin
+      _sb0.Append(', PrioridadeCuidado: ');
+      _sb0.Append(PrioridadeCuidado);
+    end;
+    if (__isset_ReclassificacaoPrioridadeCuidado) then begin
+      _sb0.Append(', ReclassificacaoPrioridadeCuidado: ');
+      _sb0.Append(ReclassificacaoPrioridadeCuidado);
+    end;
+    _sb0.Append(')');
+    Result := _sb0.ToString;
   finally
-    _sb10.Free;
-  end;
-end;
-
-constructor TEncaminhamentoExternoThriftImpl.Create;
-begin
-  inherited;
-end;
-
-destructor TEncaminhamentoExternoThriftImpl.Destroy;
-begin
-  inherited;
-end;
-
-function TEncaminhamentoExternoThriftImpl.GetEspecialidade: Int64;
-begin
-  Result := FEspecialidade;
-end;
-
-procedure TEncaminhamentoExternoThriftImpl.SetEspecialidade( const Value: Int64);
-begin
-  F__isset_Especialidade := True;
-  FEspecialidade := Value;
-end;
-
-function TEncaminhamentoExternoThriftImpl.Get__isset_Especialidade: Boolean;
-begin
-  Result := F__isset_Especialidade;
-end;
-
-function TEncaminhamentoExternoThriftImpl.GetHipoteseDiagnosticoCid10: string;
-begin
-  Result := FHipoteseDiagnosticoCid10;
-end;
-
-procedure TEncaminhamentoExternoThriftImpl.SetHipoteseDiagnosticoCid10( const Value: string);
-begin
-  F__isset_HipoteseDiagnosticoCid10 := True;
-  FHipoteseDiagnosticoCid10 := Value;
-end;
-
-function TEncaminhamentoExternoThriftImpl.Get__isset_HipoteseDiagnosticoCid10: Boolean;
-begin
-  Result := F__isset_HipoteseDiagnosticoCid10;
-end;
-
-function TEncaminhamentoExternoThriftImpl.GetHipoteseDiagnosticoCiap2: string;
-begin
-  Result := FHipoteseDiagnosticoCiap2;
-end;
-
-procedure TEncaminhamentoExternoThriftImpl.SetHipoteseDiagnosticoCiap2( const Value: string);
-begin
-  F__isset_HipoteseDiagnosticoCiap2 := True;
-  FHipoteseDiagnosticoCiap2 := Value;
-end;
-
-function TEncaminhamentoExternoThriftImpl.Get__isset_HipoteseDiagnosticoCiap2: Boolean;
-begin
-  Result := F__isset_HipoteseDiagnosticoCiap2;
-end;
-
-function TEncaminhamentoExternoThriftImpl.GetClassificacaoRisco: Int64;
-begin
-  Result := FClassificacaoRisco;
-end;
-
-procedure TEncaminhamentoExternoThriftImpl.SetClassificacaoRisco( const Value: Int64);
-begin
-  F__isset_ClassificacaoRisco := True;
-  FClassificacaoRisco := Value;
-end;
-
-function TEncaminhamentoExternoThriftImpl.Get__isset_ClassificacaoRisco: Boolean;
-begin
-  Result := F__isset_ClassificacaoRisco;
-end;
-
-procedure TEncaminhamentoExternoThriftImpl.Read( const iprot: IProtocol);
-var
-  field_ : IField;
-  struc : IStruct;
-  tracker : IProtocolRecursionTracker;
-
-begin
-  tracker := iprot.NextRecursionLevel;
-  struc := iprot.ReadStructBegin;
-  try
-    while (true) do
-    begin
-      field_ := iprot.ReadFieldBegin();
-      if (field_.Type_ = TType.Stop) then
-      begin
-        Break;
-      end;
-      case field_.ID of
-        1: begin
-          if (field_.Type_ = TType.I64) then
-          begin
-            Especialidade := iprot.ReadI64();
-          end else
-          begin
-            TProtocolUtil.Skip(iprot, field_.Type_);
-          end;
-        end;
-        2: begin
-          if (field_.Type_ = TType.String_) then
-          begin
-            HipoteseDiagnosticoCid10 := iprot.ReadString();
-          end else
-          begin
-            TProtocolUtil.Skip(iprot, field_.Type_);
-          end;
-        end;
-        3: begin
-          if (field_.Type_ = TType.String_) then
-          begin
-            HipoteseDiagnosticoCiap2 := iprot.ReadString();
-          end else
-          begin
-            TProtocolUtil.Skip(iprot, field_.Type_);
-          end;
-        end;
-        4: begin
-          if (field_.Type_ = TType.I64) then
-          begin
-            ClassificacaoRisco := iprot.ReadI64();
-          end else
-          begin
-            TProtocolUtil.Skip(iprot, field_.Type_);
-          end;
-        end
-        else begin
-          TProtocolUtil.Skip(iprot, field_.Type_);
-        end;
-      end;
-      iprot.ReadFieldEnd;
-    end;
-  finally
-    iprot.ReadStructEnd;
-  end;
-end;
-
-procedure TEncaminhamentoExternoThriftImpl.Write( const oprot: IProtocol);
-var
-  struc : IStruct;
-  field_ : IField;
-  tracker : IProtocolRecursionTracker;
-begin
-  tracker := oprot.NextRecursionLevel;
-  struc := TStructImpl.Create('EncaminhamentoExternoThrift');
-  oprot.WriteStructBegin(struc);
-  field_ := TFieldImpl.Create;
-  if (__isset_Especialidade) then
-  begin
-    field_.Name := 'especialidade';
-    field_.Type_  := TType.I64;
-    field_.ID := 1;
-    oprot.WriteFieldBegin(field_);
-    oprot.WriteI64(Especialidade);
-    oprot.WriteFieldEnd();
-  end;
-  if (__isset_HipoteseDiagnosticoCid10) then
-  begin
-    field_.Name := 'hipoteseDiagnosticoCid10';
-    field_.Type_  := TType.String_;
-    field_.ID := 2;
-    oprot.WriteFieldBegin(field_);
-    oprot.WriteString(HipoteseDiagnosticoCid10);
-    oprot.WriteFieldEnd();
-  end;
-  if (__isset_HipoteseDiagnosticoCiap2) then
-  begin
-    field_.Name := 'hipoteseDiagnosticoCiap2';
-    field_.Type_  := TType.String_;
-    field_.ID := 3;
-    oprot.WriteFieldBegin(field_);
-    oprot.WriteString(HipoteseDiagnosticoCiap2);
-    oprot.WriteFieldEnd();
-  end;
-  if (__isset_ClassificacaoRisco) then
-  begin
-    field_.Name := 'classificacaoRisco';
-    field_.Type_  := TType.I64;
-    field_.ID := 4;
-    oprot.WriteFieldBegin(field_);
-    oprot.WriteI64(ClassificacaoRisco);
-    oprot.WriteFieldEnd();
-  end;
-  oprot.WriteFieldStop();
-  oprot.WriteStructEnd();
-end;
-
-function TEncaminhamentoExternoThriftImpl.ToString: string;
-var
-  _sb12 : TThriftStringBuilder;
-  _first13 : Boolean;
-begin
-  _sb12 := TThriftStringBuilder.Create('(');
-  try
-    _first13 := TRUE;
-    if (__isset_Especialidade) then begin
-      if not _first13 then _sb12.Append(',');
-      _first13 := FALSE;
-      _sb12.Append('Especialidade: ');
-      _sb12.Append(Especialidade);
-    end;
-    if (__isset_HipoteseDiagnosticoCid10) then begin
-      if not _first13 then _sb12.Append(',');
-      _first13 := FALSE;
-      _sb12.Append('HipoteseDiagnosticoCid10: ');
-      _sb12.Append(HipoteseDiagnosticoCid10);
-    end;
-    if (__isset_HipoteseDiagnosticoCiap2) then begin
-      if not _first13 then _sb12.Append(',');
-      _first13 := FALSE;
-      _sb12.Append('HipoteseDiagnosticoCiap2: ');
-      _sb12.Append(HipoteseDiagnosticoCiap2);
-    end;
-    if (__isset_ClassificacaoRisco) then begin
-      if not _first13 then _sb12.Append(',');
-      _first13 := FALSE;
-      _sb12.Append('ClassificacaoRisco: ');
-      _sb12.Append(ClassificacaoRisco);
-    end;
-    _sb12.Append(')');
-    Result := _sb12.ToString;
-    if _first13 then {prevent warning};
-  finally
-    _sb12.Free;
-  end;
-end;
-
-constructor TResultadoExameThriftImpl.Create;
-begin
-  inherited;
-end;
-
-destructor TResultadoExameThriftImpl.Destroy;
-begin
-  inherited;
-end;
-
-function TResultadoExameThriftImpl.GetTipoResultado: Integer;
-begin
-  Result := FTipoResultado;
-end;
-
-procedure TResultadoExameThriftImpl.SetTipoResultado( const Value: Integer);
-begin
-  F__isset_TipoResultado := True;
-  FTipoResultado := Value;
-end;
-
-function TResultadoExameThriftImpl.Get__isset_TipoResultado: Boolean;
-begin
-  Result := F__isset_TipoResultado;
-end;
-
-function TResultadoExameThriftImpl.GetValorResultado: string;
-begin
-  Result := FValorResultado;
-end;
-
-procedure TResultadoExameThriftImpl.SetValorResultado( const Value: string);
-begin
-  F__isset_ValorResultado := True;
-  FValorResultado := Value;
-end;
-
-function TResultadoExameThriftImpl.Get__isset_ValorResultado: Boolean;
-begin
-  Result := F__isset_ValorResultado;
-end;
-
-procedure TResultadoExameThriftImpl.Read( const iprot: IProtocol);
-var
-  field_ : IField;
-  struc : IStruct;
-  tracker : IProtocolRecursionTracker;
-
-begin
-  tracker := iprot.NextRecursionLevel;
-  struc := iprot.ReadStructBegin;
-  try
-    while (true) do
-    begin
-      field_ := iprot.ReadFieldBegin();
-      if (field_.Type_ = TType.Stop) then
-      begin
-        Break;
-      end;
-      case field_.ID of
-        1: begin
-          if (field_.Type_ = TType.I32) then
-          begin
-            TipoResultado := iprot.ReadI32();
-          end else
-          begin
-            TProtocolUtil.Skip(iprot, field_.Type_);
-          end;
-        end;
-        2: begin
-          if (field_.Type_ = TType.String_) then
-          begin
-            ValorResultado := iprot.ReadString();
-          end else
-          begin
-            TProtocolUtil.Skip(iprot, field_.Type_);
-          end;
-        end
-        else begin
-          TProtocolUtil.Skip(iprot, field_.Type_);
-        end;
-      end;
-      iprot.ReadFieldEnd;
-    end;
-  finally
-    iprot.ReadStructEnd;
-  end;
-end;
-
-procedure TResultadoExameThriftImpl.Write( const oprot: IProtocol);
-var
-  struc : IStruct;
-  field_ : IField;
-  tracker : IProtocolRecursionTracker;
-begin
-  tracker := oprot.NextRecursionLevel;
-  struc := TStructImpl.Create('ResultadoExameThrift');
-  oprot.WriteStructBegin(struc);
-  field_ := TFieldImpl.Create;
-  if (__isset_TipoResultado) then
-  begin
-    field_.Name := 'tipoResultado';
-    field_.Type_  := TType.I32;
-    field_.ID := 1;
-    oprot.WriteFieldBegin(field_);
-    oprot.WriteI32(TipoResultado);
-    oprot.WriteFieldEnd();
-  end;
-  if (__isset_ValorResultado) then
-  begin
-    field_.Name := 'valorResultado';
-    field_.Type_  := TType.String_;
-    field_.ID := 2;
-    oprot.WriteFieldBegin(field_);
-    oprot.WriteString(ValorResultado);
-    oprot.WriteFieldEnd();
-  end;
-  oprot.WriteFieldStop();
-  oprot.WriteStructEnd();
-end;
-
-function TResultadoExameThriftImpl.ToString: string;
-var
-  _sb14 : TThriftStringBuilder;
-  _first15 : Boolean;
-begin
-  _sb14 := TThriftStringBuilder.Create('(');
-  try
-    _first15 := TRUE;
-    if (__isset_TipoResultado) then begin
-      if not _first15 then _sb14.Append(',');
-      _first15 := FALSE;
-      _sb14.Append('TipoResultado: ');
-      _sb14.Append(TipoResultado);
-    end;
-    if (__isset_ValorResultado) then begin
-      if not _first15 then _sb14.Append(',');
-      _first15 := FALSE;
-      _sb14.Append('ValorResultado: ');
-      _sb14.Append(ValorResultado);
-    end;
-    _sb14.Append(')');
-    Result := _sb14.ToString;
-    if _first15 then {prevent warning};
-  finally
-    _sb14.Free;
-  end;
-end;
-
-constructor TResultadosExameThriftImpl.Create;
-begin
-  inherited;
-end;
-
-destructor TResultadosExameThriftImpl.Destroy;
-begin
-  inherited;
-end;
-
-function TResultadosExameThriftImpl.GetExame: string;
-begin
-  Result := FExame;
-end;
-
-procedure TResultadosExameThriftImpl.SetExame( const Value: string);
-begin
-  F__isset_Exame := True;
-  FExame := Value;
-end;
-
-function TResultadosExameThriftImpl.Get__isset_Exame: Boolean;
-begin
-  Result := F__isset_Exame;
-end;
-
-function TResultadosExameThriftImpl.GetDataSolicitacao: Int64;
-begin
-  Result := FDataSolicitacao;
-end;
-
-procedure TResultadosExameThriftImpl.SetDataSolicitacao( const Value: Int64);
-begin
-  F__isset_DataSolicitacao := True;
-  FDataSolicitacao := Value;
-end;
-
-function TResultadosExameThriftImpl.Get__isset_DataSolicitacao: Boolean;
-begin
-  Result := F__isset_DataSolicitacao;
-end;
-
-function TResultadosExameThriftImpl.GetDataRealizacao: Int64;
-begin
-  Result := FDataRealizacao;
-end;
-
-procedure TResultadosExameThriftImpl.SetDataRealizacao( const Value: Int64);
-begin
-  F__isset_DataRealizacao := True;
-  FDataRealizacao := Value;
-end;
-
-function TResultadosExameThriftImpl.Get__isset_DataRealizacao: Boolean;
-begin
-  Result := F__isset_DataRealizacao;
-end;
-
-function TResultadosExameThriftImpl.GetDataResultado: Int64;
-begin
-  Result := FDataResultado;
-end;
-
-procedure TResultadosExameThriftImpl.SetDataResultado( const Value: Int64);
-begin
-  F__isset_DataResultado := True;
-  FDataResultado := Value;
-end;
-
-function TResultadosExameThriftImpl.Get__isset_DataResultado: Boolean;
-begin
-  Result := F__isset_DataResultado;
-end;
-
-function TResultadosExameThriftImpl.GetResultadoExame: IThriftList<IResultadoExameThrift>;
-begin
-  Result := FResultadoExame;
-end;
-
-procedure TResultadosExameThriftImpl.SetResultadoExame( const Value: IThriftList<IResultadoExameThrift>);
-begin
-  F__isset_ResultadoExame := True;
-  FResultadoExame := Value;
-end;
-
-function TResultadosExameThriftImpl.Get__isset_ResultadoExame: Boolean;
-begin
-  Result := F__isset_ResultadoExame;
-end;
-
-procedure TResultadosExameThriftImpl.Read( const iprot: IProtocol);
-var
-  field_ : IField;
-  struc : IStruct;
-  tracker : IProtocolRecursionTracker;
-  _list16: IList;
-  _i17: Integer;
-  _elem18: IResultadoExameThrift;
-
-begin
-  tracker := iprot.NextRecursionLevel;
-  struc := iprot.ReadStructBegin;
-  try
-    while (true) do
-    begin
-      field_ := iprot.ReadFieldBegin();
-      if (field_.Type_ = TType.Stop) then
-      begin
-        Break;
-      end;
-      case field_.ID of
-        1: begin
-          if (field_.Type_ = TType.String_) then
-          begin
-            Exame := iprot.ReadString();
-          end else
-          begin
-            TProtocolUtil.Skip(iprot, field_.Type_);
-          end;
-        end;
-        2: begin
-          if (field_.Type_ = TType.I64) then
-          begin
-            DataSolicitacao := iprot.ReadI64();
-          end else
-          begin
-            TProtocolUtil.Skip(iprot, field_.Type_);
-          end;
-        end;
-        3: begin
-          if (field_.Type_ = TType.I64) then
-          begin
-            DataRealizacao := iprot.ReadI64();
-          end else
-          begin
-            TProtocolUtil.Skip(iprot, field_.Type_);
-          end;
-        end;
-        4: begin
-          if (field_.Type_ = TType.I64) then
-          begin
-            DataResultado := iprot.ReadI64();
-          end else
-          begin
-            TProtocolUtil.Skip(iprot, field_.Type_);
-          end;
-        end;
-        6: begin
-          if (field_.Type_ = TType.List) then
-          begin
-            ResultadoExame := TThriftListImpl<IResultadoExameThrift>.Create;
-            _list16 := iprot.ReadListBegin();
-            for _i17 := 0 to _list16.Count - 1 do
-            begin
-              _elem18 := TResultadoExameThriftImpl.Create;
-              _elem18.Read(iprot);
-              ResultadoExame.Add(_elem18);
-            end;
-            iprot.ReadListEnd();
-          end else
-          begin
-            TProtocolUtil.Skip(iprot, field_.Type_);
-          end;
-        end
-        else begin
-          TProtocolUtil.Skip(iprot, field_.Type_);
-        end;
-      end;
-      iprot.ReadFieldEnd;
-    end;
-  finally
-    iprot.ReadStructEnd;
-  end;
-end;
-
-procedure TResultadosExameThriftImpl.Write( const oprot: IProtocol);
-var
-  struc : IStruct;
-  field_ : IField;
-  tracker : IProtocolRecursionTracker;
-  list_19 : IList;
-  _iter20: IResultadoExameThrift;
-begin
-  tracker := oprot.NextRecursionLevel;
-  struc := TStructImpl.Create('ResultadosExameThrift');
-  oprot.WriteStructBegin(struc);
-  field_ := TFieldImpl.Create;
-  if (__isset_Exame) then
-  begin
-    field_.Name := 'exame';
-    field_.Type_  := TType.String_;
-    field_.ID := 1;
-    oprot.WriteFieldBegin(field_);
-    oprot.WriteString(Exame);
-    oprot.WriteFieldEnd();
-  end;
-  if (__isset_DataSolicitacao) then
-  begin
-    field_.Name := 'dataSolicitacao';
-    field_.Type_  := TType.I64;
-    field_.ID := 2;
-    oprot.WriteFieldBegin(field_);
-    oprot.WriteI64(DataSolicitacao);
-    oprot.WriteFieldEnd();
-  end;
-  if (__isset_DataRealizacao) then
-  begin
-    field_.Name := 'dataRealizacao';
-    field_.Type_  := TType.I64;
-    field_.ID := 3;
-    oprot.WriteFieldBegin(field_);
-    oprot.WriteI64(DataRealizacao);
-    oprot.WriteFieldEnd();
-  end;
-  if (__isset_DataResultado) then
-  begin
-    field_.Name := 'dataResultado';
-    field_.Type_  := TType.I64;
-    field_.ID := 4;
-    oprot.WriteFieldBegin(field_);
-    oprot.WriteI64(DataResultado);
-    oprot.WriteFieldEnd();
-  end;
-  if (ResultadoExame <> nil) and __isset_ResultadoExame then
-  begin
-    field_.Name := 'resultadoExame';
-    field_.Type_  := TType.List;
-    field_.ID := 6;
-    oprot.WriteFieldBegin(field_);
-    list_19 := TListImpl.Create(TType.Struct, ResultadoExame.Count);
-    oprot.WriteListBegin( list_19);
-    for _iter20 in ResultadoExame do
-    begin
-      _iter20.Write(oprot);
-    end;
-    oprot.WriteListEnd();
-    oprot.WriteFieldEnd();
-  end;
-  oprot.WriteFieldStop();
-  oprot.WriteStructEnd();
-end;
-
-function TResultadosExameThriftImpl.ToString: string;
-var
-  _sb21 : TThriftStringBuilder;
-  _first22 : Boolean;
-begin
-  _sb21 := TThriftStringBuilder.Create('(');
-  try
-    _first22 := TRUE;
-    if (__isset_Exame) then begin
-      if not _first22 then _sb21.Append(',');
-      _first22 := FALSE;
-      _sb21.Append('Exame: ');
-      _sb21.Append(Exame);
-    end;
-    if (__isset_DataSolicitacao) then begin
-      if not _first22 then _sb21.Append(',');
-      _first22 := FALSE;
-      _sb21.Append('DataSolicitacao: ');
-      _sb21.Append(DataSolicitacao);
-    end;
-    if (__isset_DataRealizacao) then begin
-      if not _first22 then _sb21.Append(',');
-      _first22 := FALSE;
-      _sb21.Append('DataRealizacao: ');
-      _sb21.Append(DataRealizacao);
-    end;
-    if (__isset_DataResultado) then begin
-      if not _first22 then _sb21.Append(',');
-      _first22 := FALSE;
-      _sb21.Append('DataResultado: ');
-      _sb21.Append(DataResultado);
-    end;
-    if (ResultadoExame <> nil) and __isset_ResultadoExame then begin
-      if not _first22 then _sb21.Append(',');
-      _first22 := FALSE;
-      _sb21.Append('ResultadoExame: ');
-      _sb21.Append(ResultadoExame);
-    end;
-    _sb21.Append(')');
-    Result := _sb21.ToString;
-    if _first22 then {prevent warning};
-  finally
-    _sb21.Free;
+    _sb0.Free;
   end;
 end;
 

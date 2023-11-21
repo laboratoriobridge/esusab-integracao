@@ -1,4 +1,3 @@
-
 namespace java br.gov.saude.esusab.ras.common
 namespace php br.gov.saude.esusab.ras.common
 namespace delphi br.gov.saude.esusab.ras.common
@@ -20,9 +19,9 @@ struct LotacaoHeaderThrift{
 	1:optional string profissionalCNS;
 
 	2:optional string cboCodigo_2002;
-	
+
 	3:optional string cnes;
-	
+
 	4:optional string ine;
 }
 
@@ -30,22 +29,31 @@ struct UnicaLotacaoHeaderThrift{
 	1:optional string profissionalCNS;
 
 	2:optional string cboCodigo_2002;
-	
+
 	3:optional string cnes;
-	
+
 	4:optional string ine;
-	
-	5:optional i64 dataAtendimento;	
-	
+
+	5:optional i64 dataAtendimento;
+
 	6:optional string codigoIbgeMunicipio;
 }
 
 struct VariasLotacoesHeaderThrift {
 	6:optional LotacaoHeaderThrift lotacaoFormPrincipal;
 	7:optional LotacaoHeaderThrift lotacaoFormAtendimentoCompartilhado;
-	
-	8:optional i64 dataAtendimento;	
+
+	8:optional i64 dataAtendimento;
 	9:optional string codigoIbgeMunicipio;
+}
+
+struct LotacaoThrift {
+	1:optional string cpf;
+	2:optional string cns;
+	3:optional string cboCodigo_2002;
+	4:optional string ine;
+	5:optional string cnes;
+	6:optional string codigoIbgeMunicipio;
 }
 
 struct EnderecoLocalPermanenciaThrift {

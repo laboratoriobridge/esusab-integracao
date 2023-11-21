@@ -4,6 +4,7 @@
 package common
 
 import (
+	"br/gov/saude/esusab/ras/common"
 	"bytes"
 	"fmt"
 	"git.apache.org/thrift.git/lib/go/thrift"
@@ -13,6 +14,8 @@ import (
 var _ = thrift.ZERO
 var _ = fmt.Printf
 var _ = bytes.Equal
+
+var _ = common.GoUnusedProtection__
 
 func init() {
 }

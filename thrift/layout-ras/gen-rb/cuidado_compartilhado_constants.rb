@@ -12,7 +12,7 @@ module Br
     module Saude
       module Esusab
         module Ras
-          module Common
+          module Cuidadocompartilhado
           end
         end
       end

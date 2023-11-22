@@ -13,7 +13,7 @@ module Br
     module Saude
       module Esusab
         module Ras
-          module Common
+          module Cuidadocompartilhado
             class CuidadoCompartilhadoThrift
               include ::Thrift::Struct, ::Thrift::Struct_Union
               UUIDEVOLUCAO = 1

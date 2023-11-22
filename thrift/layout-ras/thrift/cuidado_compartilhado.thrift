@@ -1,12 +1,12 @@
 include "./common.thrift"
 
-namespace java br.gov.saude.esusab.ras.common
-namespace php br.gov.saude.esusab.ras.common
-namespace delphi br.gov.saude.esusab.ras.common
-namespace csharp br.gov.saude.esusab.ras.common
-namespace rb br.gov.saude.esusab.ras.common
-namespace go br.gov.saude.esusab.ras.common
-namespace py br.gov.saude.esusab.ras.common
+namespace java br.gov.saude.esusab.ras.cuidadocompartilhado
+namespace php br.gov.saude.esusab.ras.cuidadocompartilhado
+namespace delphi br.gov.saude.esusab.ras.cuidadocompartilhado
+namespace csharp br.gov.saude.esusab.ras.cuidadocompartilhado
+namespace rb br.gov.saude.esusab.ras.cuidadocompartilhado
+namespace go br.gov.saude.esusab.ras.cuidadocompartilhado
+namespace py br.gov.saude.esusab.ras.cuidadocompartilhado
 
 struct CuidadoCompartilhadoThrift {
     1:required string uuidEvolucao;

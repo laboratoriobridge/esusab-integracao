@@ -274,8 +274,6 @@ type
     procedure SetHeaderTransport( const Value: IUnicaLotacaoHeaderThrift);
     function GetCnsCidadao: string;
     procedure SetCnsCidadao( const Value: string);
-    function GetIdentificacaoUsuario: string;
-    procedure SetIdentificacaoUsuario( const Value: string);
     function GetDataNascimento: Int64;
     procedure SetDataNascimento( const Value: Int64);
     function GetSexo: Int64;
@@ -297,7 +295,6 @@ type
 
     property HeaderTransport: IUnicaLotacaoHeaderThrift read GetHeaderTransport write SetHeaderTransport;
     property CnsCidadao: string read GetCnsCidadao write SetCnsCidadao;
-    property IdentificacaoUsuario: string read GetIdentificacaoUsuario write SetIdentificacaoUsuario;
     property DataNascimento: Int64 read GetDataNascimento write SetDataNascimento;
     property Sexo: Int64 read GetSexo write SetSexo;
     property LocalAtendimento: Int64 read GetLocalAtendimento write SetLocalAtendimento;
@@ -310,7 +307,6 @@ type
 
     function Get__isset_HeaderTransport: Boolean;
     function Get__isset_CnsCidadao: Boolean;
-    function Get__isset_IdentificacaoUsuario: Boolean;
     function Get__isset_DataNascimento: Boolean;
     function Get__isset_Sexo: Boolean;
     function Get__isset_LocalAtendimento: Boolean;
@@ -322,7 +318,6 @@ type
 
     property __isset_HeaderTransport: Boolean read Get__isset_HeaderTransport;
     property __isset_CnsCidadao: Boolean read Get__isset_CnsCidadao;
-    property __isset_IdentificacaoUsuario: Boolean read Get__isset_IdentificacaoUsuario;
     property __isset_DataNascimento: Boolean read Get__isset_DataNascimento;
     property __isset_Sexo: Boolean read Get__isset_Sexo;
     property __isset_LocalAtendimento: Boolean read Get__isset_LocalAtendimento;
@@ -337,7 +332,6 @@ type
   private
     FHeaderTransport: IUnicaLotacaoHeaderThrift;
     FCnsCidadao: string;
-    FIdentificacaoUsuario: string;
     FDataNascimento: Int64;
     FSexo: Int64;
     FLocalAtendimento: Int64;
@@ -350,7 +344,6 @@ type
     
     F__isset_HeaderTransport: Boolean;
     F__isset_CnsCidadao: Boolean;
-    F__isset_IdentificacaoUsuario: Boolean;
     F__isset_DataNascimento: Boolean;
     F__isset_Sexo: Boolean;
     F__isset_LocalAtendimento: Boolean;
@@ -364,8 +357,6 @@ type
     procedure SetHeaderTransport( const Value: IUnicaLotacaoHeaderThrift);
     function GetCnsCidadao: string;
     procedure SetCnsCidadao( const Value: string);
-    function GetIdentificacaoUsuario: string;
-    procedure SetIdentificacaoUsuario( const Value: string);
     function GetDataNascimento: Int64;
     procedure SetDataNascimento( const Value: Int64);
     function GetSexo: Int64;
@@ -387,7 +378,6 @@ type
 
     function Get__isset_HeaderTransport: Boolean;
     function Get__isset_CnsCidadao: Boolean;
-    function Get__isset_IdentificacaoUsuario: Boolean;
     function Get__isset_DataNascimento: Boolean;
     function Get__isset_Sexo: Boolean;
     function Get__isset_LocalAtendimento: Boolean;
@@ -409,7 +399,6 @@ type
     // Properties
     property HeaderTransport: IUnicaLotacaoHeaderThrift read GetHeaderTransport write SetHeaderTransport;
     property CnsCidadao: string read GetCnsCidadao write SetCnsCidadao;
-    property IdentificacaoUsuario: string read GetIdentificacaoUsuario write SetIdentificacaoUsuario;
     property DataNascimento: Int64 read GetDataNascimento write SetDataNascimento;
     property Sexo: Int64 read GetSexo write SetSexo;
     property LocalAtendimento: Int64 read GetLocalAtendimento write SetLocalAtendimento;
@@ -423,7 +412,6 @@ type
     // isset
     property __isset_HeaderTransport: Boolean read Get__isset_HeaderTransport;
     property __isset_CnsCidadao: Boolean read Get__isset_CnsCidadao;
-    property __isset_IdentificacaoUsuario: Boolean read Get__isset_IdentificacaoUsuario;
     property __isset_DataNascimento: Boolean read Get__isset_DataNascimento;
     property __isset_Sexo: Boolean read Get__isset_Sexo;
     property __isset_LocalAtendimento: Boolean read Get__isset_LocalAtendimento;
@@ -983,22 +971,6 @@ begin
   Result := F__isset_CnsCidadao;
 end;
 
-function TFichaConsumoAlimentarThriftImpl.GetIdentificacaoUsuario: string;
-begin
-  Result := FIdentificacaoUsuario;
-end;
-
-procedure TFichaConsumoAlimentarThriftImpl.SetIdentificacaoUsuario( const Value: string);
-begin
-  F__isset_IdentificacaoUsuario := True;
-  FIdentificacaoUsuario := Value;
-end;
-
-function TFichaConsumoAlimentarThriftImpl.Get__isset_IdentificacaoUsuario: Boolean;
-begin
-  Result := F__isset_IdentificacaoUsuario;
-end;
-
 function TFichaConsumoAlimentarThriftImpl.GetDataNascimento: Int64;
 begin
   Result := FDataNascimento;
@@ -1185,15 +1157,6 @@ begin
             TProtocolUtil.Skip(iprot, field_.Type_);
           end;
         end;
-        3: begin
-          if (field_.Type_ = TType.String_) then
-          begin
-            IdentificacaoUsuario := iprot.ReadString();
-          end else
-          begin
-            TProtocolUtil.Skip(iprot, field_.Type_);
-          end;
-        end;
         4: begin
           if (field_.Type_ = TType.I64) then
           begin
@@ -1347,15 +1310,6 @@ begin
     oprot.WriteString(CnsCidadao);
     oprot.WriteFieldEnd();
   end;
-  if (__isset_IdentificacaoUsuario) then
-  begin
-    field_.Name := 'identificacaoUsuario';
-    field_.Type_  := TType.String_;
-    field_.ID := 3;
-    oprot.WriteFieldBegin(field_);
-    oprot.WriteString(IdentificacaoUsuario);
-    oprot.WriteFieldEnd();
-  end;
   if (__isset_DataNascimento) then
   begin
     field_.Name := 'dataNascimento';
@@ -1476,12 +1430,6 @@ begin
       _first27 := FALSE;
       _sb26.Append('CnsCidadao: ');
       _sb26.Append(CnsCidadao);
-    end;
-    if (__isset_IdentificacaoUsuario) then begin
-      if not _first27 then _sb26.Append(',');
-      _first27 := FALSE;
-      _sb26.Append('IdentificacaoUsuario: ');
-      _sb26.Append(IdentificacaoUsuario);
     end;
     if (__isset_DataNascimento) then begin
       if not _first27 then _sb26.Append(',');

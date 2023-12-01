@@ -108,6 +108,32 @@ module Br
               ::Thrift::Struct.generate_accessors self
             end
 
+            class LotacaoThrift
+              include ::Thrift::Struct, ::Thrift::Struct_Union
+              CPF = 1
+              CNS = 2
+              CBOCODIGO_2002 = 3
+              INE = 4
+              CNES = 5
+              CODIGOIBGEMUNICIPIO = 6
+
+              FIELDS = {
+                CPF => {:type => ::Thrift::Types::STRING, :name => 'cpf', :optional => true},
+                CNS => {:type => ::Thrift::Types::STRING, :name => 'cns', :optional => true},
+                CBOCODIGO_2002 => {:type => ::Thrift::Types::STRING, :name => 'cboCodigo_2002', :optional => true},
+                INE => {:type => ::Thrift::Types::STRING, :name => 'ine', :optional => true},
+                CNES => {:type => ::Thrift::Types::STRING, :name => 'cnes', :optional => true},
+                CODIGOIBGEMUNICIPIO => {:type => ::Thrift::Types::STRING, :name => 'codigoIbgeMunicipio', :optional => true}
+              }
+
+              def struct_fields; FIELDS; end
+
+              def validate
+              end
+
+              ::Thrift::Struct.generate_accessors self
+            end
+
             class EnderecoLocalPermanenciaThrift
               include ::Thrift::Struct, ::Thrift::Struct_Union
               BAIRRO = 1

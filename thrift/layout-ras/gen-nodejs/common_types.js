@@ -467,6 +467,136 @@ VariasLotacoesHeaderThrift.prototype.write = function(output) {
   return;
 };
 
+LotacaoThrift = module.exports.LotacaoThrift = function(args) {
+  this.cpf = null;
+  this.cns = null;
+  this.cboCodigo_2002 = null;
+  this.ine = null;
+  this.cnes = null;
+  this.codigoIbgeMunicipio = null;
+  if (args) {
+    if (args.cpf !== undefined && args.cpf !== null) {
+      this.cpf = args.cpf;
+    }
+    if (args.cns !== undefined && args.cns !== null) {
+      this.cns = args.cns;
+    }
+    if (args.cboCodigo_2002 !== undefined && args.cboCodigo_2002 !== null) {
+      this.cboCodigo_2002 = args.cboCodigo_2002;
+    }
+    if (args.ine !== undefined && args.ine !== null) {
+      this.ine = args.ine;
+    }
+    if (args.cnes !== undefined && args.cnes !== null) {
+      this.cnes = args.cnes;
+    }
+    if (args.codigoIbgeMunicipio !== undefined && args.codigoIbgeMunicipio !== null) {
+      this.codigoIbgeMunicipio = args.codigoIbgeMunicipio;
+    }
+  }
+};
+LotacaoThrift.prototype = {};
+LotacaoThrift.prototype.read = function(input) {
+  input.readStructBegin();
+  while (true)
+  {
+    var ret = input.readFieldBegin();
+    var fname = ret.fname;
+    var ftype = ret.ftype;
+    var fid = ret.fid;
+    if (ftype == Thrift.Type.STOP) {
+      break;
+    }
+    switch (fid)
+    {
+      case 1:
+      if (ftype == Thrift.Type.STRING) {
+        this.cpf = input.readString();
+      } else {
+        input.skip(ftype);
+      }
+      break;
+      case 2:
+      if (ftype == Thrift.Type.STRING) {
+        this.cns = input.readString();
+      } else {
+        input.skip(ftype);
+      }
+      break;
+      case 3:
+      if (ftype == Thrift.Type.STRING) {
+        this.cboCodigo_2002 = input.readString();
+      } else {
+        input.skip(ftype);
+      }
+      break;
+      case 4:
+      if (ftype == Thrift.Type.STRING) {
+        this.ine = input.readString();
+      } else {
+        input.skip(ftype);
+      }
+      break;
+      case 5:
+      if (ftype == Thrift.Type.STRING) {
+        this.cnes = input.readString();
+      } else {
+        input.skip(ftype);
+      }
+      break;
+      case 6:
+      if (ftype == Thrift.Type.STRING) {
+        this.codigoIbgeMunicipio = input.readString();
+      } else {
+        input.skip(ftype);
+      }
+      break;
+      default:
+        input.skip(ftype);
+    }
+    input.readFieldEnd();
+  }
+  input.readStructEnd();
+  return;
+};
+
+LotacaoThrift.prototype.write = function(output) {
+  output.writeStructBegin('LotacaoThrift');
+  if (this.cpf !== null && this.cpf !== undefined) {
+    output.writeFieldBegin('cpf', Thrift.Type.STRING, 1);
+    output.writeString(this.cpf);
+    output.writeFieldEnd();
+  }
+  if (this.cns !== null && this.cns !== undefined) {
+    output.writeFieldBegin('cns', Thrift.Type.STRING, 2);
+    output.writeString(this.cns);
+    output.writeFieldEnd();
+  }
+  if (this.cboCodigo_2002 !== null && this.cboCodigo_2002 !== undefined) {
+    output.writeFieldBegin('cboCodigo_2002', Thrift.Type.STRING, 3);
+    output.writeString(this.cboCodigo_2002);
+    output.writeFieldEnd();
+  }
+  if (this.ine !== null && this.ine !== undefined) {
+    output.writeFieldBegin('ine', Thrift.Type.STRING, 4);
+    output.writeString(this.ine);
+    output.writeFieldEnd();
+  }
+  if (this.cnes !== null && this.cnes !== undefined) {
+    output.writeFieldBegin('cnes', Thrift.Type.STRING, 5);
+    output.writeString(this.cnes);
+    output.writeFieldEnd();
+  }
+  if (this.codigoIbgeMunicipio !== null && this.codigoIbgeMunicipio !== undefined) {
+    output.writeFieldBegin('codigoIbgeMunicipio', Thrift.Type.STRING, 6);
+    output.writeString(this.codigoIbgeMunicipio);
+    output.writeFieldEnd();
+  }
+  output.writeFieldStop();
+  output.writeStructEnd();
+  return;
+};
+
 EnderecoLocalPermanenciaThrift = module.exports.EnderecoLocalPermanenciaThrift = function(args) {
   this.bairro = null;
   this.cep = null;

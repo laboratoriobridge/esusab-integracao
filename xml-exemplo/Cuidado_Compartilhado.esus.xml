@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns3:dadoTransporteTransportXml xmlns:ns2="http://esus.ufsc.br/dadoinstalacao" xmlns:ns3="http://esus.ufsc.br/dadotransporte" xmlns:ns4="http://esus.ufsc.br/cuidadocompartilhado">
+    <uuidDadoSerializado>d78b7cf6-9dda-463b-86cc-d9ae7ecb7347</uuidDadoSerializado>
+    <tipoDadoSerializado>16</tipoDadoSerializado>
+    <codIbge>4205407</codIbge>
+    <cnesDadoSerializado>5444430</cnesDadoSerializado>
+    <ineDadoSerializado>1382855220</ineDadoSerializado>
+    <numLote>1</numLote>
+    <ns4:cuidadoCompartilhadoTransport>
+        <uuidEvolucao>d78b7cf6-9dda-463b-86cc-d9ae7ecb7347</uuidEvolucao>
+        <lotacaoEvolucao>
+            <cpf>13934367062</cpf>
+            <cns>770958287910002</cns>
+            <cboCodigo_2002>225125</cboCodigo_2002>
+            <ine>1382855220</ine>
+            <cnes>5444430</cnes>
+            <codigoIbgeMunicipio>4205407</codigoIbgeMunicipio>
+        </lotacaoEvolucao>
+        <dataEvolucao>1694716360732</dataEvolucao>
+        <dataEvolucaoAnterior>1694716254093</dataEvolucaoAnterior>
+        <coSequencialEvolucao>2</coSequencialEvolucao>
+        <condutaEvolucao>1</condutaEvolucao>
+        <tpCdsOrigem>2</tpCdsOrigem>
+        <uuidCuidadoCompartilhado>153d2a03-d480-44cf-b1af-b3675c10fd97</uuidCuidadoCompartilhado>
+        <cnsCidadao>295508550560000</cnsCidadao>
+        <dataNascimentoCidadao>2015-10-05</dataNascimentoCidadao>
+        <sexoCidadao>0</sexoCidadao>
+        <solicitante>
+            <cpf>13934367062</cpf>
+            <cns>770958287910002</cns>
+            <cboCodigo_2002>225125</cboCodigo_2002>
+            <ine>1382855220</ine>
+            <cnes>5444430</cnes>
+            <codigoIbgeMunicipio>4205407</codigoIbgeMunicipio>
+        </solicitante>
+        <executante>
+            <cpf>94792820030</cpf>
+            <cns>833771583670018</cns>
+            <cboCodigo_2002>515305</cboCodigo_2002>
+            <ine>0000000003</ine>
+            <cnes>5444430</cnes>
+            <codigoIbgeMunicipio>4205407</codigoIbgeMunicipio>
+        </executante>
+        <dataCriacaoCuidado>1694716254093</dataCriacaoCuidado>
+        <ciap>A03</ciap>
+        <cid10>A03</cid10>
+        <prioridadeCuidado>3</prioridadeCuidado>
+        <uuidFichaOrigem>5444430-87a1cc27-7137-415c-b632-425720e1e380</uuidFichaOrigem>
+        <tpDadoTranspFichaOrigem>16</tpDadoTranspFichaOrigem>
+    </ns4:cuidadoCompartilhadoTransport>
+    <ns2:remetente>
+        <contraChave>TREINAMENTO</contraChave>
+        <uuidInstalacao>TREINAMENTO</uuidInstalacao>
+        <cpfOuCnpj>58305794059</cpfOuCnpj>
+        <nomeOuRazaoSocial>INTEGRACAO PEC</nomeOuRazaoSocial>
+        <versaoSistema>5.1.4</versaoSistema>
+        <nomeBancoDados>Postgres</nomeBancoDados>
+    </ns2:remetente>
+    <ns2:originadora>
+        <contraChave>TREINAMENTO</contraChave>
+        <uuidInstalacao>TREINAMENTO</uuidInstalacao>
+        <cpfOuCnpj>59239685090</cpfOuCnpj>
+        <nomeOuRazaoSocial>INTEGRACAO PEC</nomeOuRazaoSocial>
+        <versaoSistema>5.1.4</versaoSistema>
+        <nomeBancoDados>Postgres</nomeBancoDados>
+    </ns2:originadora>
+    <versao major="5" minor="1" revision="4"/>
+</ns3:dadoTransporteTransportXml>

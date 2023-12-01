@@ -492,6 +492,136 @@ class VariasLotacoesHeaderThrift:
   def __ne__(self, other):
     return not (self == other)
 
+class LotacaoThrift:
+  """
+  Attributes:
+   - cpf
+   - cns
+   - cboCodigo_2002
+   - ine
+   - cnes
+   - codigoIbgeMunicipio
+  """
+
+  thrift_spec = (
+    None, # 0
+    (1, TType.STRING, 'cpf', None, None, ), # 1
+    (2, TType.STRING, 'cns', None, None, ), # 2
+    (3, TType.STRING, 'cboCodigo_2002', None, None, ), # 3
+    (4, TType.STRING, 'ine', None, None, ), # 4
+    (5, TType.STRING, 'cnes', None, None, ), # 5
+    (6, TType.STRING, 'codigoIbgeMunicipio', None, None, ), # 6
+  )
+
+  def __init__(self, cpf=None, cns=None, cboCodigo_2002=None, ine=None, cnes=None, codigoIbgeMunicipio=None,):
+    self.cpf = cpf
+    self.cns = cns
+    self.cboCodigo_2002 = cboCodigo_2002
+    self.ine = ine
+    self.cnes = cnes
+    self.codigoIbgeMunicipio = codigoIbgeMunicipio
+
+  def read(self, iprot):
+    if iprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None and fastbinary is not None:
+      fastbinary.decode_binary(self, iprot.trans, (self.__class__, self.thrift_spec))
+      return
+    iprot.readStructBegin()
+    while True:
+      (fname, ftype, fid) = iprot.readFieldBegin()
+      if ftype == TType.STOP:
+        break
+      if fid == 1:
+        if ftype == TType.STRING:
+          self.cpf = iprot.readString()
+        else:
+          iprot.skip(ftype)
+      elif fid == 2:
+        if ftype == TType.STRING:
+          self.cns = iprot.readString()
+        else:
+          iprot.skip(ftype)
+      elif fid == 3:
+        if ftype == TType.STRING:
+          self.cboCodigo_2002 = iprot.readString()
+        else:
+          iprot.skip(ftype)
+      elif fid == 4:
+        if ftype == TType.STRING:
+          self.ine = iprot.readString()
+        else:
+          iprot.skip(ftype)
+      elif fid == 5:
+        if ftype == TType.STRING:
+          self.cnes = iprot.readString()
+        else:
+          iprot.skip(ftype)
+      elif fid == 6:
+        if ftype == TType.STRING:
+          self.codigoIbgeMunicipio = iprot.readString()
+        else:
+          iprot.skip(ftype)
+      else:
+        iprot.skip(ftype)
+      iprot.readFieldEnd()
+    iprot.readStructEnd()
+
+  def write(self, oprot):
+    if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      return
+    oprot.writeStructBegin('LotacaoThrift')
+    if self.cpf is not None:
+      oprot.writeFieldBegin('cpf', TType.STRING, 1)
+      oprot.writeString(self.cpf)
+      oprot.writeFieldEnd()
+    if self.cns is not None:
+      oprot.writeFieldBegin('cns', TType.STRING, 2)
+      oprot.writeString(self.cns)
+      oprot.writeFieldEnd()
+    if self.cboCodigo_2002 is not None:
+      oprot.writeFieldBegin('cboCodigo_2002', TType.STRING, 3)
+      oprot.writeString(self.cboCodigo_2002)
+      oprot.writeFieldEnd()
+    if self.ine is not None:
+      oprot.writeFieldBegin('ine', TType.STRING, 4)
+      oprot.writeString(self.ine)
+      oprot.writeFieldEnd()
+    if self.cnes is not None:
+      oprot.writeFieldBegin('cnes', TType.STRING, 5)
+      oprot.writeString(self.cnes)
+      oprot.writeFieldEnd()
+    if self.codigoIbgeMunicipio is not None:
+      oprot.writeFieldBegin('codigoIbgeMunicipio', TType.STRING, 6)
+      oprot.writeString(self.codigoIbgeMunicipio)
+      oprot.writeFieldEnd()
+    oprot.writeFieldStop()
+    oprot.writeStructEnd()
+
+  def validate(self):
+    return
+
+
+  def __hash__(self):
+    value = 17
+    value = (value * 31) ^ hash(self.cpf)
+    value = (value * 31) ^ hash(self.cns)
+    value = (value * 31) ^ hash(self.cboCodigo_2002)
+    value = (value * 31) ^ hash(self.ine)
+    value = (value * 31) ^ hash(self.cnes)
+    value = (value * 31) ^ hash(self.codigoIbgeMunicipio)
+    return value
+
+  def __repr__(self):
+    L = ['%s=%r' % (key, value)
+      for key, value in self.__dict__.iteritems()]
+    return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+  def __eq__(self, other):
+    return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+  def __ne__(self, other):
+    return not (self == other)
+
 class EnderecoLocalPermanenciaThrift:
   """
   Attributes:

@@ -30,6 +30,7 @@ type
   ILotacaoHeaderThrift = interface;
   IUnicaLotacaoHeaderThrift = interface;
   IVariasLotacoesHeaderThrift = interface;
+  ILotacaoThrift = interface;
   IEnderecoLocalPermanenciaThrift = interface;
   IMedicamentoThrift = interface;
   IEncaminhamentoExternoThrift = interface;
@@ -377,6 +378,104 @@ type
     property __isset_LotacaoFormPrincipal: Boolean read Get__isset_LotacaoFormPrincipal;
     property __isset_LotacaoFormAtendimentoCompartilhado: Boolean read Get__isset_LotacaoFormAtendimentoCompartilhado;
     property __isset_DataAtendimento: Boolean read Get__isset_DataAtendimento;
+    property __isset_CodigoIbgeMunicipio: Boolean read Get__isset_CodigoIbgeMunicipio;
+  end;
+
+  ILotacaoThrift = interface(IBase)
+    function GetCpf: string;
+    procedure SetCpf( const Value: string);
+    function GetCns: string;
+    procedure SetCns( const Value: string);
+    function GetCboCodigo_2002: string;
+    procedure SetCboCodigo_2002( const Value: string);
+    function GetIne: string;
+    procedure SetIne( const Value: string);
+    function GetCnes: string;
+    procedure SetCnes( const Value: string);
+    function GetCodigoIbgeMunicipio: string;
+    procedure SetCodigoIbgeMunicipio( const Value: string);
+
+    property Cpf: string read GetCpf write SetCpf;
+    property Cns: string read GetCns write SetCns;
+    property CboCodigo_2002: string read GetCboCodigo_2002 write SetCboCodigo_2002;
+    property Ine: string read GetIne write SetIne;
+    property Cnes: string read GetCnes write SetCnes;
+    property CodigoIbgeMunicipio: string read GetCodigoIbgeMunicipio write SetCodigoIbgeMunicipio;
+
+    function Get__isset_Cpf: Boolean;
+    function Get__isset_Cns: Boolean;
+    function Get__isset_CboCodigo_2002: Boolean;
+    function Get__isset_Ine: Boolean;
+    function Get__isset_Cnes: Boolean;
+    function Get__isset_CodigoIbgeMunicipio: Boolean;
+
+    property __isset_Cpf: Boolean read Get__isset_Cpf;
+    property __isset_Cns: Boolean read Get__isset_Cns;
+    property __isset_CboCodigo_2002: Boolean read Get__isset_CboCodigo_2002;
+    property __isset_Ine: Boolean read Get__isset_Ine;
+    property __isset_Cnes: Boolean read Get__isset_Cnes;
+    property __isset_CodigoIbgeMunicipio: Boolean read Get__isset_CodigoIbgeMunicipio;
+  end;
+
+  TLotacaoThriftImpl = class(TInterfacedObject, IBase, ILotacaoThrift)
+  private
+    FCpf: string;
+    FCns: string;
+    FCboCodigo_2002: string;
+    FIne: string;
+    FCnes: string;
+    FCodigoIbgeMunicipio: string;
+    
+    F__isset_Cpf: Boolean;
+    F__isset_Cns: Boolean;
+    F__isset_CboCodigo_2002: Boolean;
+    F__isset_Ine: Boolean;
+    F__isset_Cnes: Boolean;
+    F__isset_CodigoIbgeMunicipio: Boolean;
+    
+    function GetCpf: string;
+    procedure SetCpf( const Value: string);
+    function GetCns: string;
+    procedure SetCns( const Value: string);
+    function GetCboCodigo_2002: string;
+    procedure SetCboCodigo_2002( const Value: string);
+    function GetIne: string;
+    procedure SetIne( const Value: string);
+    function GetCnes: string;
+    procedure SetCnes( const Value: string);
+    function GetCodigoIbgeMunicipio: string;
+    procedure SetCodigoIbgeMunicipio( const Value: string);
+
+    function Get__isset_Cpf: Boolean;
+    function Get__isset_Cns: Boolean;
+    function Get__isset_CboCodigo_2002: Boolean;
+    function Get__isset_Ine: Boolean;
+    function Get__isset_Cnes: Boolean;
+    function Get__isset_CodigoIbgeMunicipio: Boolean;
+  public
+    constructor Create;
+    destructor Destroy; override;
+
+    function ToString: string; override;
+
+    // IBase
+    procedure Read( const iprot: IProtocol);
+    procedure Write( const oprot: IProtocol);
+
+    // Properties
+    property Cpf: string read GetCpf write SetCpf;
+    property Cns: string read GetCns write SetCns;
+    property CboCodigo_2002: string read GetCboCodigo_2002 write SetCboCodigo_2002;
+    property Ine: string read GetIne write SetIne;
+    property Cnes: string read GetCnes write SetCnes;
+    property CodigoIbgeMunicipio: string read GetCodigoIbgeMunicipio write SetCodigoIbgeMunicipio;
+
+    // isset
+    property __isset_Cpf: Boolean read Get__isset_Cpf;
+    property __isset_Cns: Boolean read Get__isset_Cns;
+    property __isset_CboCodigo_2002: Boolean read Get__isset_CboCodigo_2002;
+    property __isset_Ine: Boolean read Get__isset_Ine;
+    property __isset_Cnes: Boolean read Get__isset_Cnes;
     property __isset_CodigoIbgeMunicipio: Boolean read Get__isset_CodigoIbgeMunicipio;
   end;
 
@@ -2046,6 +2145,315 @@ begin
   end;
 end;
 
+constructor TLotacaoThriftImpl.Create;
+begin
+  inherited;
+end;
+
+destructor TLotacaoThriftImpl.Destroy;
+begin
+  inherited;
+end;
+
+function TLotacaoThriftImpl.GetCpf: string;
+begin
+  Result := FCpf;
+end;
+
+procedure TLotacaoThriftImpl.SetCpf( const Value: string);
+begin
+  F__isset_Cpf := True;
+  FCpf := Value;
+end;
+
+function TLotacaoThriftImpl.Get__isset_Cpf: Boolean;
+begin
+  Result := F__isset_Cpf;
+end;
+
+function TLotacaoThriftImpl.GetCns: string;
+begin
+  Result := FCns;
+end;
+
+procedure TLotacaoThriftImpl.SetCns( const Value: string);
+begin
+  F__isset_Cns := True;
+  FCns := Value;
+end;
+
+function TLotacaoThriftImpl.Get__isset_Cns: Boolean;
+begin
+  Result := F__isset_Cns;
+end;
+
+function TLotacaoThriftImpl.GetCboCodigo_2002: string;
+begin
+  Result := FCboCodigo_2002;
+end;
+
+procedure TLotacaoThriftImpl.SetCboCodigo_2002( const Value: string);
+begin
+  F__isset_CboCodigo_2002 := True;
+  FCboCodigo_2002 := Value;
+end;
+
+function TLotacaoThriftImpl.Get__isset_CboCodigo_2002: Boolean;
+begin
+  Result := F__isset_CboCodigo_2002;
+end;
+
+function TLotacaoThriftImpl.GetIne: string;
+begin
+  Result := FIne;
+end;
+
+procedure TLotacaoThriftImpl.SetIne( const Value: string);
+begin
+  F__isset_Ine := True;
+  FIne := Value;
+end;
+
+function TLotacaoThriftImpl.Get__isset_Ine: Boolean;
+begin
+  Result := F__isset_Ine;
+end;
+
+function TLotacaoThriftImpl.GetCnes: string;
+begin
+  Result := FCnes;
+end;
+
+procedure TLotacaoThriftImpl.SetCnes( const Value: string);
+begin
+  F__isset_Cnes := True;
+  FCnes := Value;
+end;
+
+function TLotacaoThriftImpl.Get__isset_Cnes: Boolean;
+begin
+  Result := F__isset_Cnes;
+end;
+
+function TLotacaoThriftImpl.GetCodigoIbgeMunicipio: string;
+begin
+  Result := FCodigoIbgeMunicipio;
+end;
+
+procedure TLotacaoThriftImpl.SetCodigoIbgeMunicipio( const Value: string);
+begin
+  F__isset_CodigoIbgeMunicipio := True;
+  FCodigoIbgeMunicipio := Value;
+end;
+
+function TLotacaoThriftImpl.Get__isset_CodigoIbgeMunicipio: Boolean;
+begin
+  Result := F__isset_CodigoIbgeMunicipio;
+end;
+
+procedure TLotacaoThriftImpl.Read( const iprot: IProtocol);
+var
+  field_ : IField;
+  struc : IStruct;
+  tracker : IProtocolRecursionTracker;
+
+begin
+  tracker := iprot.NextRecursionLevel;
+  struc := iprot.ReadStructBegin;
+  try
+    while (true) do
+    begin
+      field_ := iprot.ReadFieldBegin();
+      if (field_.Type_ = TType.Stop) then
+      begin
+        Break;
+      end;
+      case field_.ID of
+        1: begin
+          if (field_.Type_ = TType.String_) then
+          begin
+            Cpf := iprot.ReadString();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        2: begin
+          if (field_.Type_ = TType.String_) then
+          begin
+            Cns := iprot.ReadString();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        3: begin
+          if (field_.Type_ = TType.String_) then
+          begin
+            CboCodigo_2002 := iprot.ReadString();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        4: begin
+          if (field_.Type_ = TType.String_) then
+          begin
+            Ine := iprot.ReadString();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        5: begin
+          if (field_.Type_ = TType.String_) then
+          begin
+            Cnes := iprot.ReadString();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        6: begin
+          if (field_.Type_ = TType.String_) then
+          begin
+            CodigoIbgeMunicipio := iprot.ReadString();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end
+        else begin
+          TProtocolUtil.Skip(iprot, field_.Type_);
+        end;
+      end;
+      iprot.ReadFieldEnd;
+    end;
+  finally
+    iprot.ReadStructEnd;
+  end;
+end;
+
+procedure TLotacaoThriftImpl.Write( const oprot: IProtocol);
+var
+  struc : IStruct;
+  field_ : IField;
+  tracker : IProtocolRecursionTracker;
+begin
+  tracker := oprot.NextRecursionLevel;
+  struc := TStructImpl.Create('LotacaoThrift');
+  oprot.WriteStructBegin(struc);
+  field_ := TFieldImpl.Create;
+  if (__isset_Cpf) then
+  begin
+    field_.Name := 'cpf';
+    field_.Type_  := TType.String_;
+    field_.ID := 1;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteString(Cpf);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_Cns) then
+  begin
+    field_.Name := 'cns';
+    field_.Type_  := TType.String_;
+    field_.ID := 2;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteString(Cns);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_CboCodigo_2002) then
+  begin
+    field_.Name := 'cboCodigo_2002';
+    field_.Type_  := TType.String_;
+    field_.ID := 3;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteString(CboCodigo_2002);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_Ine) then
+  begin
+    field_.Name := 'ine';
+    field_.Type_  := TType.String_;
+    field_.ID := 4;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteString(Ine);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_Cnes) then
+  begin
+    field_.Name := 'cnes';
+    field_.Type_  := TType.String_;
+    field_.ID := 5;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteString(Cnes);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_CodigoIbgeMunicipio) then
+  begin
+    field_.Name := 'codigoIbgeMunicipio';
+    field_.Type_  := TType.String_;
+    field_.ID := 6;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteString(CodigoIbgeMunicipio);
+    oprot.WriteFieldEnd();
+  end;
+  oprot.WriteFieldStop();
+  oprot.WriteStructEnd();
+end;
+
+function TLotacaoThriftImpl.ToString: string;
+var
+  _sb8 : TThriftStringBuilder;
+  _first9 : Boolean;
+begin
+  _sb8 := TThriftStringBuilder.Create('(');
+  try
+    _first9 := TRUE;
+    if (__isset_Cpf) then begin
+      if not _first9 then _sb8.Append(',');
+      _first9 := FALSE;
+      _sb8.Append('Cpf: ');
+      _sb8.Append(Cpf);
+    end;
+    if (__isset_Cns) then begin
+      if not _first9 then _sb8.Append(',');
+      _first9 := FALSE;
+      _sb8.Append('Cns: ');
+      _sb8.Append(Cns);
+    end;
+    if (__isset_CboCodigo_2002) then begin
+      if not _first9 then _sb8.Append(',');
+      _first9 := FALSE;
+      _sb8.Append('CboCodigo_2002: ');
+      _sb8.Append(CboCodigo_2002);
+    end;
+    if (__isset_Ine) then begin
+      if not _first9 then _sb8.Append(',');
+      _first9 := FALSE;
+      _sb8.Append('Ine: ');
+      _sb8.Append(Ine);
+    end;
+    if (__isset_Cnes) then begin
+      if not _first9 then _sb8.Append(',');
+      _first9 := FALSE;
+      _sb8.Append('Cnes: ');
+      _sb8.Append(Cnes);
+    end;
+    if (__isset_CodigoIbgeMunicipio) then begin
+      if not _first9 then _sb8.Append(',');
+      _first9 := FALSE;
+      _sb8.Append('CodigoIbgeMunicipio: ');
+      _sb8.Append(CodigoIbgeMunicipio);
+    end;
+    _sb8.Append(')');
+    Result := _sb8.ToString;
+    if _first9 then {prevent warning};
+  finally
+    _sb8.Free;
+  end;
+end;
+
 constructor TEnderecoLocalPermanenciaThriftImpl.Create;
 begin
   inherited;
@@ -2577,101 +2985,101 @@ end;
 
 function TEnderecoLocalPermanenciaThriftImpl.ToString: string;
 var
-  _sb8 : TThriftStringBuilder;
-  _first9 : Boolean;
+  _sb10 : TThriftStringBuilder;
+  _first11 : Boolean;
 begin
-  _sb8 := TThriftStringBuilder.Create('(');
+  _sb10 := TThriftStringBuilder.Create('(');
   try
-    _first9 := TRUE;
+    _first11 := TRUE;
     if (__isset_Bairro) then begin
-      if not _first9 then _sb8.Append(',');
-      _first9 := FALSE;
-      _sb8.Append('Bairro: ');
-      _sb8.Append(Bairro);
+      if not _first11 then _sb10.Append(',');
+      _first11 := FALSE;
+      _sb10.Append('Bairro: ');
+      _sb10.Append(Bairro);
     end;
     if (__isset_Cep) then begin
-      if not _first9 then _sb8.Append(',');
-      _first9 := FALSE;
-      _sb8.Append('Cep: ');
-      _sb8.Append(Cep);
+      if not _first11 then _sb10.Append(',');
+      _first11 := FALSE;
+      _sb10.Append('Cep: ');
+      _sb10.Append(Cep);
     end;
     if (__isset_CodigoIbgeMunicipio) then begin
-      if not _first9 then _sb8.Append(',');
-      _first9 := FALSE;
-      _sb8.Append('CodigoIbgeMunicipio: ');
-      _sb8.Append(CodigoIbgeMunicipio);
+      if not _first11 then _sb10.Append(',');
+      _first11 := FALSE;
+      _sb10.Append('CodigoIbgeMunicipio: ');
+      _sb10.Append(CodigoIbgeMunicipio);
     end;
     if (__isset_Complemento) then begin
-      if not _first9 then _sb8.Append(',');
-      _first9 := FALSE;
-      _sb8.Append('Complemento: ');
-      _sb8.Append(Complemento);
+      if not _first11 then _sb10.Append(',');
+      _first11 := FALSE;
+      _sb10.Append('Complemento: ');
+      _sb10.Append(Complemento);
     end;
     if (__isset_NomeLogradouro) then begin
-      if not _first9 then _sb8.Append(',');
-      _first9 := FALSE;
-      _sb8.Append('NomeLogradouro: ');
-      _sb8.Append(NomeLogradouro);
+      if not _first11 then _sb10.Append(',');
+      _first11 := FALSE;
+      _sb10.Append('NomeLogradouro: ');
+      _sb10.Append(NomeLogradouro);
     end;
     if (__isset_Numero) then begin
-      if not _first9 then _sb8.Append(',');
-      _first9 := FALSE;
-      _sb8.Append('Numero: ');
-      _sb8.Append(Numero);
+      if not _first11 then _sb10.Append(',');
+      _first11 := FALSE;
+      _sb10.Append('Numero: ');
+      _sb10.Append(Numero);
     end;
     if (__isset_NumeroDneUf) then begin
-      if not _first9 then _sb8.Append(',');
-      _first9 := FALSE;
-      _sb8.Append('NumeroDneUf: ');
-      _sb8.Append(NumeroDneUf);
+      if not _first11 then _sb10.Append(',');
+      _first11 := FALSE;
+      _sb10.Append('NumeroDneUf: ');
+      _sb10.Append(NumeroDneUf);
     end;
     if (__isset_TelefoneContato) then begin
-      if not _first9 then _sb8.Append(',');
-      _first9 := FALSE;
-      _sb8.Append('TelefoneContato: ');
-      _sb8.Append(TelefoneContato);
+      if not _first11 then _sb10.Append(',');
+      _first11 := FALSE;
+      _sb10.Append('TelefoneContato: ');
+      _sb10.Append(TelefoneContato);
     end;
     if (__isset_TelefoneResidencia) then begin
-      if not _first9 then _sb8.Append(',');
-      _first9 := FALSE;
-      _sb8.Append('TelefoneResidencia: ');
-      _sb8.Append(TelefoneResidencia);
+      if not _first11 then _sb10.Append(',');
+      _first11 := FALSE;
+      _sb10.Append('TelefoneResidencia: ');
+      _sb10.Append(TelefoneResidencia);
     end;
     if (__isset_TipoLogradouroNumeroDne) then begin
-      if not _first9 then _sb8.Append(',');
-      _first9 := FALSE;
-      _sb8.Append('TipoLogradouroNumeroDne: ');
-      _sb8.Append(TipoLogradouroNumeroDne);
+      if not _first11 then _sb10.Append(',');
+      _first11 := FALSE;
+      _sb10.Append('TipoLogradouroNumeroDne: ');
+      _sb10.Append(TipoLogradouroNumeroDne);
     end;
     if (__isset_StSemNumero) then begin
-      if not _first9 then _sb8.Append(',');
-      _first9 := FALSE;
-      _sb8.Append('StSemNumero: ');
-      _sb8.Append(StSemNumero);
+      if not _first11 then _sb10.Append(',');
+      _first11 := FALSE;
+      _sb10.Append('StSemNumero: ');
+      _sb10.Append(StSemNumero);
     end;
     if (__isset_PontoReferencia) then begin
-      if not _first9 then _sb8.Append(',');
-      _first9 := FALSE;
-      _sb8.Append('PontoReferencia: ');
-      _sb8.Append(PontoReferencia);
+      if not _first11 then _sb10.Append(',');
+      _first11 := FALSE;
+      _sb10.Append('PontoReferencia: ');
+      _sb10.Append(PontoReferencia);
     end;
     if (__isset_MicroArea) then begin
-      if not _first9 then _sb8.Append(',');
-      _first9 := FALSE;
-      _sb8.Append('MicroArea: ');
-      _sb8.Append(MicroArea);
+      if not _first11 then _sb10.Append(',');
+      _first11 := FALSE;
+      _sb10.Append('MicroArea: ');
+      _sb10.Append(MicroArea);
     end;
     if (__isset_StForaArea) then begin
-      if not _first9 then _sb8.Append(',');
-      _first9 := FALSE;
-      _sb8.Append('StForaArea: ');
-      _sb8.Append(StForaArea);
+      if not _first11 then _sb10.Append(',');
+      _first11 := FALSE;
+      _sb10.Append('StForaArea: ');
+      _sb10.Append(StForaArea);
     end;
-    _sb8.Append(')');
-    Result := _sb8.ToString;
-    if _first9 then {prevent warning};
+    _sb10.Append(')');
+    Result := _sb10.ToString;
+    if _first11 then {prevent warning};
   finally
-    _sb8.Free;
+    _sb10.Free;
   end;
 end;
 
@@ -3172,95 +3580,95 @@ end;
 
 function TMedicamentoThriftImpl.ToString: string;
 var
-  _sb10 : TThriftStringBuilder;
-  _first11 : Boolean;
+  _sb12 : TThriftStringBuilder;
+  _first13 : Boolean;
 begin
-  _sb10 := TThriftStringBuilder.Create('(');
+  _sb12 := TThriftStringBuilder.Create('(');
   try
-    _first11 := TRUE;
+    _first13 := TRUE;
     if (__isset_CodigoCatmat) then begin
-      if not _first11 then _sb10.Append(',');
-      _first11 := FALSE;
-      _sb10.Append('CodigoCatmat: ');
-      _sb10.Append(CodigoCatmat);
+      if not _first13 then _sb12.Append(',');
+      _first13 := FALSE;
+      _sb12.Append('CodigoCatmat: ');
+      _sb12.Append(CodigoCatmat);
     end;
     if (__isset_ViaAdministracao) then begin
-      if not _first11 then _sb10.Append(',');
-      _first11 := FALSE;
-      _sb10.Append('ViaAdministracao: ');
-      _sb10.Append(ViaAdministracao);
+      if not _first13 then _sb12.Append(',');
+      _first13 := FALSE;
+      _sb12.Append('ViaAdministracao: ');
+      _sb12.Append(ViaAdministracao);
     end;
     if (__isset_Dose) then begin
-      if not _first11 then _sb10.Append(',');
-      _first11 := FALSE;
-      _sb10.Append('Dose: ');
-      _sb10.Append(Dose);
+      if not _first13 then _sb12.Append(',');
+      _first13 := FALSE;
+      _sb12.Append('Dose: ');
+      _sb12.Append(Dose);
     end;
     if (__isset_DoseUnica) then begin
-      if not _first11 then _sb10.Append(',');
-      _first11 := FALSE;
-      _sb10.Append('DoseUnica: ');
-      _sb10.Append(DoseUnica);
+      if not _first13 then _sb12.Append(',');
+      _first13 := FALSE;
+      _sb12.Append('DoseUnica: ');
+      _sb12.Append(DoseUnica);
     end;
     if (__isset_UsoContinuo) then begin
-      if not _first11 then _sb10.Append(',');
-      _first11 := FALSE;
-      _sb10.Append('UsoContinuo: ');
-      _sb10.Append(UsoContinuo);
+      if not _first13 then _sb12.Append(',');
+      _first13 := FALSE;
+      _sb12.Append('UsoContinuo: ');
+      _sb12.Append(UsoContinuo);
     end;
     if (__isset_DoseFrequenciaTipo) then begin
-      if not _first11 then _sb10.Append(',');
-      _first11 := FALSE;
-      _sb10.Append('DoseFrequenciaTipo: ');
-      _sb10.Append(DoseFrequenciaTipo);
+      if not _first13 then _sb12.Append(',');
+      _first13 := FALSE;
+      _sb12.Append('DoseFrequenciaTipo: ');
+      _sb12.Append(DoseFrequenciaTipo);
     end;
     if (__isset_DoseFrequencia) then begin
-      if not _first11 then _sb10.Append(',');
-      _first11 := FALSE;
-      _sb10.Append('DoseFrequencia: ');
-      _sb10.Append(DoseFrequencia);
+      if not _first13 then _sb12.Append(',');
+      _first13 := FALSE;
+      _sb12.Append('DoseFrequencia: ');
+      _sb12.Append(DoseFrequencia);
     end;
     if (__isset_DoseFrequenciaQuantidade) then begin
-      if not _first11 then _sb10.Append(',');
-      _first11 := FALSE;
-      _sb10.Append('DoseFrequenciaQuantidade: ');
-      _sb10.Append(DoseFrequenciaQuantidade);
+      if not _first13 then _sb12.Append(',');
+      _first13 := FALSE;
+      _sb12.Append('DoseFrequenciaQuantidade: ');
+      _sb12.Append(DoseFrequenciaQuantidade);
     end;
     if (__isset_DoseFrequenciaUnidadeMedida) then begin
-      if not _first11 then _sb10.Append(',');
-      _first11 := FALSE;
-      _sb10.Append('DoseFrequenciaUnidadeMedida: ');
-      _sb10.Append(DoseFrequenciaUnidadeMedida);
+      if not _first13 then _sb12.Append(',');
+      _first13 := FALSE;
+      _sb12.Append('DoseFrequenciaUnidadeMedida: ');
+      _sb12.Append(DoseFrequenciaUnidadeMedida);
     end;
     if (__isset_DtInicioTratamento) then begin
-      if not _first11 then _sb10.Append(',');
-      _first11 := FALSE;
-      _sb10.Append('DtInicioTratamento: ');
-      _sb10.Append(DtInicioTratamento);
+      if not _first13 then _sb12.Append(',');
+      _first13 := FALSE;
+      _sb12.Append('DtInicioTratamento: ');
+      _sb12.Append(DtInicioTratamento);
     end;
     if (__isset_DuracaoTratamento) then begin
-      if not _first11 then _sb10.Append(',');
-      _first11 := FALSE;
-      _sb10.Append('DuracaoTratamento: ');
-      _sb10.Append(DuracaoTratamento);
+      if not _first13 then _sb12.Append(',');
+      _first13 := FALSE;
+      _sb12.Append('DuracaoTratamento: ');
+      _sb12.Append(DuracaoTratamento);
     end;
     if (__isset_DuracaoTratamentoMedida) then begin
-      if not _first11 then _sb10.Append(',');
-      _first11 := FALSE;
-      _sb10.Append('DuracaoTratamentoMedida: ');
-      _sb10.Append(DuracaoTratamentoMedida);
+      if not _first13 then _sb12.Append(',');
+      _first13 := FALSE;
+      _sb12.Append('DuracaoTratamentoMedida: ');
+      _sb12.Append(DuracaoTratamentoMedida);
     end;
     if (__isset_QuantidadeReceitada) then begin
-      if not _first11 then _sb10.Append(',');
-      _first11 := FALSE;
-      _sb10.Append('QuantidadeReceitada: ');
-      _sb10.Append(QuantidadeReceitada);
+      if not _first13 then _sb12.Append(',');
+      _first13 := FALSE;
+      _sb12.Append('QuantidadeReceitada: ');
+      _sb12.Append(QuantidadeReceitada);
     end;
-    _sb10.Append(')');
-    Result := _sb10.ToString;
-    if _first11 then {prevent warning};
+    _sb12.Append(')');
+    Result := _sb12.ToString;
+    if _first13 then {prevent warning};
   finally
-    _sb10.Free;
+    _sb12.Free;
   end;
 end;
 
@@ -3455,41 +3863,41 @@ end;
 
 function TEncaminhamentoExternoThriftImpl.ToString: string;
 var
-  _sb12 : TThriftStringBuilder;
-  _first13 : Boolean;
+  _sb14 : TThriftStringBuilder;
+  _first15 : Boolean;
 begin
-  _sb12 := TThriftStringBuilder.Create('(');
+  _sb14 := TThriftStringBuilder.Create('(');
   try
-    _first13 := TRUE;
+    _first15 := TRUE;
     if (__isset_Especialidade) then begin
-      if not _first13 then _sb12.Append(',');
-      _first13 := FALSE;
-      _sb12.Append('Especialidade: ');
-      _sb12.Append(Especialidade);
+      if not _first15 then _sb14.Append(',');
+      _first15 := FALSE;
+      _sb14.Append('Especialidade: ');
+      _sb14.Append(Especialidade);
     end;
     if (__isset_HipoteseDiagnosticoCid10) then begin
-      if not _first13 then _sb12.Append(',');
-      _first13 := FALSE;
-      _sb12.Append('HipoteseDiagnosticoCid10: ');
-      _sb12.Append(HipoteseDiagnosticoCid10);
+      if not _first15 then _sb14.Append(',');
+      _first15 := FALSE;
+      _sb14.Append('HipoteseDiagnosticoCid10: ');
+      _sb14.Append(HipoteseDiagnosticoCid10);
     end;
     if (__isset_HipoteseDiagnosticoCiap2) then begin
-      if not _first13 then _sb12.Append(',');
-      _first13 := FALSE;
-      _sb12.Append('HipoteseDiagnosticoCiap2: ');
-      _sb12.Append(HipoteseDiagnosticoCiap2);
+      if not _first15 then _sb14.Append(',');
+      _first15 := FALSE;
+      _sb14.Append('HipoteseDiagnosticoCiap2: ');
+      _sb14.Append(HipoteseDiagnosticoCiap2);
     end;
     if (__isset_ClassificacaoRisco) then begin
-      if not _first13 then _sb12.Append(',');
-      _first13 := FALSE;
-      _sb12.Append('ClassificacaoRisco: ');
-      _sb12.Append(ClassificacaoRisco);
+      if not _first15 then _sb14.Append(',');
+      _first15 := FALSE;
+      _sb14.Append('ClassificacaoRisco: ');
+      _sb14.Append(ClassificacaoRisco);
     end;
-    _sb12.Append(')');
-    Result := _sb12.ToString;
-    if _first13 then {prevent warning};
+    _sb14.Append(')');
+    Result := _sb14.ToString;
+    if _first15 then {prevent warning};
   finally
-    _sb12.Free;
+    _sb14.Free;
   end;
 end;
 
@@ -3616,29 +4024,29 @@ end;
 
 function TResultadoExameThriftImpl.ToString: string;
 var
-  _sb14 : TThriftStringBuilder;
-  _first15 : Boolean;
+  _sb16 : TThriftStringBuilder;
+  _first17 : Boolean;
 begin
-  _sb14 := TThriftStringBuilder.Create('(');
+  _sb16 := TThriftStringBuilder.Create('(');
   try
-    _first15 := TRUE;
+    _first17 := TRUE;
     if (__isset_TipoResultado) then begin
-      if not _first15 then _sb14.Append(',');
-      _first15 := FALSE;
-      _sb14.Append('TipoResultado: ');
-      _sb14.Append(TipoResultado);
+      if not _first17 then _sb16.Append(',');
+      _first17 := FALSE;
+      _sb16.Append('TipoResultado: ');
+      _sb16.Append(TipoResultado);
     end;
     if (__isset_ValorResultado) then begin
-      if not _first15 then _sb14.Append(',');
-      _first15 := FALSE;
-      _sb14.Append('ValorResultado: ');
-      _sb14.Append(ValorResultado);
+      if not _first17 then _sb16.Append(',');
+      _first17 := FALSE;
+      _sb16.Append('ValorResultado: ');
+      _sb16.Append(ValorResultado);
     end;
-    _sb14.Append(')');
-    Result := _sb14.ToString;
-    if _first15 then {prevent warning};
+    _sb16.Append(')');
+    Result := _sb16.ToString;
+    if _first17 then {prevent warning};
   finally
-    _sb14.Free;
+    _sb16.Free;
   end;
 end;
 
@@ -3737,9 +4145,9 @@ var
   field_ : IField;
   struc : IStruct;
   tracker : IProtocolRecursionTracker;
-  _list16: IList;
-  _i17: Integer;
-  _elem18: IResultadoExameThrift;
+  _list18: IList;
+  _i19: Integer;
+  _elem20: IResultadoExameThrift;
 
 begin
   tracker := iprot.NextRecursionLevel;
@@ -3793,12 +4201,12 @@ begin
           if (field_.Type_ = TType.List) then
           begin
             ResultadoExame := TThriftListImpl<IResultadoExameThrift>.Create;
-            _list16 := iprot.ReadListBegin();
-            for _i17 := 0 to _list16.Count - 1 do
+            _list18 := iprot.ReadListBegin();
+            for _i19 := 0 to _list18.Count - 1 do
             begin
-              _elem18 := TResultadoExameThriftImpl.Create;
-              _elem18.Read(iprot);
-              ResultadoExame.Add(_elem18);
+              _elem20 := TResultadoExameThriftImpl.Create;
+              _elem20.Read(iprot);
+              ResultadoExame.Add(_elem20);
             end;
             iprot.ReadListEnd();
           end else
@@ -3822,8 +4230,8 @@ var
   struc : IStruct;
   field_ : IField;
   tracker : IProtocolRecursionTracker;
-  list_19 : IList;
-  _iter20: IResultadoExameThrift;
+  list_21 : IList;
+  _iter22: IResultadoExameThrift;
 begin
   tracker := oprot.NextRecursionLevel;
   struc := TStructImpl.Create('ResultadosExameThrift');
@@ -3871,11 +4279,11 @@ begin
     field_.Type_  := TType.List;
     field_.ID := 6;
     oprot.WriteFieldBegin(field_);
-    list_19 := TListImpl.Create(TType.Struct, ResultadoExame.Count);
-    oprot.WriteListBegin( list_19);
-    for _iter20 in ResultadoExame do
+    list_21 := TListImpl.Create(TType.Struct, ResultadoExame.Count);
+    oprot.WriteListBegin( list_21);
+    for _iter22 in ResultadoExame do
     begin
-      _iter20.Write(oprot);
+      _iter22.Write(oprot);
     end;
     oprot.WriteListEnd();
     oprot.WriteFieldEnd();
@@ -3886,47 +4294,47 @@ end;
 
 function TResultadosExameThriftImpl.ToString: string;
 var
-  _sb21 : TThriftStringBuilder;
-  _first22 : Boolean;
+  _sb23 : TThriftStringBuilder;
+  _first24 : Boolean;
 begin
-  _sb21 := TThriftStringBuilder.Create('(');
+  _sb23 := TThriftStringBuilder.Create('(');
   try
-    _first22 := TRUE;
+    _first24 := TRUE;
     if (__isset_Exame) then begin
-      if not _first22 then _sb21.Append(',');
-      _first22 := FALSE;
-      _sb21.Append('Exame: ');
-      _sb21.Append(Exame);
+      if not _first24 then _sb23.Append(',');
+      _first24 := FALSE;
+      _sb23.Append('Exame: ');
+      _sb23.Append(Exame);
     end;
     if (__isset_DataSolicitacao) then begin
-      if not _first22 then _sb21.Append(',');
-      _first22 := FALSE;
-      _sb21.Append('DataSolicitacao: ');
-      _sb21.Append(DataSolicitacao);
+      if not _first24 then _sb23.Append(',');
+      _first24 := FALSE;
+      _sb23.Append('DataSolicitacao: ');
+      _sb23.Append(DataSolicitacao);
     end;
     if (__isset_DataRealizacao) then begin
-      if not _first22 then _sb21.Append(',');
-      _first22 := FALSE;
-      _sb21.Append('DataRealizacao: ');
-      _sb21.Append(DataRealizacao);
+      if not _first24 then _sb23.Append(',');
+      _first24 := FALSE;
+      _sb23.Append('DataRealizacao: ');
+      _sb23.Append(DataRealizacao);
     end;
     if (__isset_DataResultado) then begin
-      if not _first22 then _sb21.Append(',');
-      _first22 := FALSE;
-      _sb21.Append('DataResultado: ');
-      _sb21.Append(DataResultado);
+      if not _first24 then _sb23.Append(',');
+      _first24 := FALSE;
+      _sb23.Append('DataResultado: ');
+      _sb23.Append(DataResultado);
     end;
     if (ResultadoExame <> nil) and __isset_ResultadoExame then begin
-      if not _first22 then _sb21.Append(',');
-      _first22 := FALSE;
-      _sb21.Append('ResultadoExame: ');
-      _sb21.Append(ResultadoExame);
+      if not _first24 then _sb23.Append(',');
+      _first24 := FALSE;
+      _sb23.Append('ResultadoExame: ');
+      _sb23.Append(ResultadoExame);
     end;
-    _sb21.Append(')');
-    Result := _sb21.ToString;
-    if _first22 then {prevent warning};
+    _sb23.Append(')');
+    Result := _sb23.ToString;
+    if _first24 then {prevent warning};
   finally
-    _sb21.Free;
+    _sb23.Free;
   end;
 end;
 

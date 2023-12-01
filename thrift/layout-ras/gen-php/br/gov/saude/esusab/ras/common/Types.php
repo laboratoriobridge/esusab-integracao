@@ -695,6 +695,196 @@ class VariasLotacoesHeaderThrift {
 
 }
 
+class LotacaoThrift {
+  static $_TSPEC;
+
+  /**
+   * @var string
+   */
+  public $cpf = null;
+  /**
+   * @var string
+   */
+  public $cns = null;
+  /**
+   * @var string
+   */
+  public $cboCodigo_2002 = null;
+  /**
+   * @var string
+   */
+  public $ine = null;
+  /**
+   * @var string
+   */
+  public $cnes = null;
+  /**
+   * @var string
+   */
+  public $codigoIbgeMunicipio = null;
+
+  public function __construct($vals=null) {
+    if (!isset(self::$_TSPEC)) {
+      self::$_TSPEC = array(
+        1 => array(
+          'var' => 'cpf',
+          'type' => TType::STRING,
+          ),
+        2 => array(
+          'var' => 'cns',
+          'type' => TType::STRING,
+          ),
+        3 => array(
+          'var' => 'cboCodigo_2002',
+          'type' => TType::STRING,
+          ),
+        4 => array(
+          'var' => 'ine',
+          'type' => TType::STRING,
+          ),
+        5 => array(
+          'var' => 'cnes',
+          'type' => TType::STRING,
+          ),
+        6 => array(
+          'var' => 'codigoIbgeMunicipio',
+          'type' => TType::STRING,
+          ),
+        );
+    }
+    if (is_array($vals)) {
+      if (isset($vals['cpf'])) {
+        $this->cpf = $vals['cpf'];
+      }
+      if (isset($vals['cns'])) {
+        $this->cns = $vals['cns'];
+      }
+      if (isset($vals['cboCodigo_2002'])) {
+        $this->cboCodigo_2002 = $vals['cboCodigo_2002'];
+      }
+      if (isset($vals['ine'])) {
+        $this->ine = $vals['ine'];
+      }
+      if (isset($vals['cnes'])) {
+        $this->cnes = $vals['cnes'];
+      }
+      if (isset($vals['codigoIbgeMunicipio'])) {
+        $this->codigoIbgeMunicipio = $vals['codigoIbgeMunicipio'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'LotacaoThrift';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 1:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->cpf);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 2:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->cns);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 3:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->cboCodigo_2002);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 4:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->ine);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 5:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->cnes);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 6:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->codigoIbgeMunicipio);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('LotacaoThrift');
+    if ($this->cpf !== null) {
+      $xfer += $output->writeFieldBegin('cpf', TType::STRING, 1);
+      $xfer += $output->writeString($this->cpf);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->cns !== null) {
+      $xfer += $output->writeFieldBegin('cns', TType::STRING, 2);
+      $xfer += $output->writeString($this->cns);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->cboCodigo_2002 !== null) {
+      $xfer += $output->writeFieldBegin('cboCodigo_2002', TType::STRING, 3);
+      $xfer += $output->writeString($this->cboCodigo_2002);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->ine !== null) {
+      $xfer += $output->writeFieldBegin('ine', TType::STRING, 4);
+      $xfer += $output->writeString($this->ine);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->cnes !== null) {
+      $xfer += $output->writeFieldBegin('cnes', TType::STRING, 5);
+      $xfer += $output->writeString($this->cnes);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->codigoIbgeMunicipio !== null) {
+      $xfer += $output->writeFieldBegin('codigoIbgeMunicipio', TType::STRING, 6);
+      $xfer += $output->writeString($this->codigoIbgeMunicipio);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
 class EnderecoLocalPermanenciaThrift {
   static $_TSPEC;
 

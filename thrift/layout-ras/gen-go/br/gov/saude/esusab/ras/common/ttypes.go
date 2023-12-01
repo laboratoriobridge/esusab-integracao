@@ -1160,6 +1160,338 @@ func (p *VariasLotacoesHeaderThrift) String() string {
 }
 
 // Attributes:
+//  - Cpf
+//  - Cns
+//  - CboCodigo_2002
+//  - Ine
+//  - Cnes
+//  - CodigoIbgeMunicipio
+type LotacaoThrift struct {
+	Cpf                 *string `thrift:"cpf,1" json:"cpf,omitempty"`
+	Cns                 *string `thrift:"cns,2" json:"cns,omitempty"`
+	CboCodigo_2002      *string `thrift:"cboCodigo_2002,3" json:"cboCodigo_2002,omitempty"`
+	Ine                 *string `thrift:"ine,4" json:"ine,omitempty"`
+	Cnes                *string `thrift:"cnes,5" json:"cnes,omitempty"`
+	CodigoIbgeMunicipio *string `thrift:"codigoIbgeMunicipio,6" json:"codigoIbgeMunicipio,omitempty"`
+}
+
+func NewLotacaoThrift() *LotacaoThrift {
+	return &LotacaoThrift{}
+}
+
+var LotacaoThrift_Cpf_DEFAULT string
+
+func (p *LotacaoThrift) GetCpf() string {
+	if !p.IsSetCpf() {
+		return LotacaoThrift_Cpf_DEFAULT
+	}
+	return *p.Cpf
+}
+
+var LotacaoThrift_Cns_DEFAULT string
+
+func (p *LotacaoThrift) GetCns() string {
+	if !p.IsSetCns() {
+		return LotacaoThrift_Cns_DEFAULT
+	}
+	return *p.Cns
+}
+
+var LotacaoThrift_CboCodigo_2002_DEFAULT string
+
+func (p *LotacaoThrift) GetCboCodigo_2002() string {
+	if !p.IsSetCboCodigo_2002() {
+		return LotacaoThrift_CboCodigo_2002_DEFAULT
+	}
+	return *p.CboCodigo_2002
+}
+
+var LotacaoThrift_Ine_DEFAULT string
+
+func (p *LotacaoThrift) GetIne() string {
+	if !p.IsSetIne() {
+		return LotacaoThrift_Ine_DEFAULT
+	}
+	return *p.Ine
+}
+
+var LotacaoThrift_Cnes_DEFAULT string
+
+func (p *LotacaoThrift) GetCnes() string {
+	if !p.IsSetCnes() {
+		return LotacaoThrift_Cnes_DEFAULT
+	}
+	return *p.Cnes
+}
+
+var LotacaoThrift_CodigoIbgeMunicipio_DEFAULT string
+
+func (p *LotacaoThrift) GetCodigoIbgeMunicipio() string {
+	if !p.IsSetCodigoIbgeMunicipio() {
+		return LotacaoThrift_CodigoIbgeMunicipio_DEFAULT
+	}
+	return *p.CodigoIbgeMunicipio
+}
+func (p *LotacaoThrift) IsSetCpf() bool {
+	return p.Cpf != nil
+}
+
+func (p *LotacaoThrift) IsSetCns() bool {
+	return p.Cns != nil
+}
+
+func (p *LotacaoThrift) IsSetCboCodigo_2002() bool {
+	return p.CboCodigo_2002 != nil
+}
+
+func (p *LotacaoThrift) IsSetIne() bool {
+	return p.Ine != nil
+}
+
+func (p *LotacaoThrift) IsSetCnes() bool {
+	return p.Cnes != nil
+}
+
+func (p *LotacaoThrift) IsSetCodigoIbgeMunicipio() bool {
+	return p.CodigoIbgeMunicipio != nil
+}
+
+func (p *LotacaoThrift) Read(iprot thrift.TProtocol) error {
+	if _, err := iprot.ReadStructBegin(); err != nil {
+		return thrift.PrependError(fmt.Sprintf("%T read error: ", p), err)
+	}
+
+	for {
+		_, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
+		if err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T field %d read error: ", p, fieldId), err)
+		}
+		if fieldTypeId == thrift.STOP {
+			break
+		}
+		switch fieldId {
+		case 1:
+			if err := p.readField1(iprot); err != nil {
+				return err
+			}
+		case 2:
+			if err := p.readField2(iprot); err != nil {
+				return err
+			}
+		case 3:
+			if err := p.readField3(iprot); err != nil {
+				return err
+			}
+		case 4:
+			if err := p.readField4(iprot); err != nil {
+				return err
+			}
+		case 5:
+			if err := p.readField5(iprot); err != nil {
+				return err
+			}
+		case 6:
+			if err := p.readField6(iprot); err != nil {
+				return err
+			}
+		default:
+			if err := iprot.Skip(fieldTypeId); err != nil {
+				return err
+			}
+		}
+		if err := iprot.ReadFieldEnd(); err != nil {
+			return err
+		}
+	}
+	if err := iprot.ReadStructEnd(); err != nil {
+		return thrift.PrependError(fmt.Sprintf("%T read struct end error: ", p), err)
+	}
+	return nil
+}
+
+func (p *LotacaoThrift) readField1(iprot thrift.TProtocol) error {
+	if v, err := iprot.ReadString(); err != nil {
+		return thrift.PrependError("error reading field 1: ", err)
+	} else {
+		p.Cpf = &v
+	}
+	return nil
+}
+
+func (p *LotacaoThrift) readField2(iprot thrift.TProtocol) error {
+	if v, err := iprot.ReadString(); err != nil {
+		return thrift.PrependError("error reading field 2: ", err)
+	} else {
+		p.Cns = &v
+	}
+	return nil
+}
+
+func (p *LotacaoThrift) readField3(iprot thrift.TProtocol) error {
+	if v, err := iprot.ReadString(); err != nil {
+		return thrift.PrependError("error reading field 3: ", err)
+	} else {
+		p.CboCodigo_2002 = &v
+	}
+	return nil
+}
+
+func (p *LotacaoThrift) readField4(iprot thrift.TProtocol) error {
+	if v, err := iprot.ReadString(); err != nil {
+		return thrift.PrependError("error reading field 4: ", err)
+	} else {
+		p.Ine = &v
+	}
+	return nil
+}
+
+func (p *LotacaoThrift) readField5(iprot thrift.TProtocol) error {
+	if v, err := iprot.ReadString(); err != nil {
+		return thrift.PrependError("error reading field 5: ", err)
+	} else {
+		p.Cnes = &v
+	}
+	return nil
+}
+
+func (p *LotacaoThrift) readField6(iprot thrift.TProtocol) error {
+	if v, err := iprot.ReadString(); err != nil {
+		return thrift.PrependError("error reading field 6: ", err)
+	} else {
+		p.CodigoIbgeMunicipio = &v
+	}
+	return nil
+}
+
+func (p *LotacaoThrift) Write(oprot thrift.TProtocol) error {
+	if err := oprot.WriteStructBegin("LotacaoThrift"); err != nil {
+		return thrift.PrependError(fmt.Sprintf("%T write struct begin error: ", p), err)
+	}
+	if err := p.writeField1(oprot); err != nil {
+		return err
+	}
+	if err := p.writeField2(oprot); err != nil {
+		return err
+	}
+	if err := p.writeField3(oprot); err != nil {
+		return err
+	}
+	if err := p.writeField4(oprot); err != nil {
+		return err
+	}
+	if err := p.writeField5(oprot); err != nil {
+		return err
+	}
+	if err := p.writeField6(oprot); err != nil {
+		return err
+	}
+	if err := oprot.WriteFieldStop(); err != nil {
+		return thrift.PrependError("write field stop error: ", err)
+	}
+	if err := oprot.WriteStructEnd(); err != nil {
+		return thrift.PrependError("write struct stop error: ", err)
+	}
+	return nil
+}
+
+func (p *LotacaoThrift) writeField1(oprot thrift.TProtocol) (err error) {
+	if p.IsSetCpf() {
+		if err := oprot.WriteFieldBegin("cpf", thrift.STRING, 1); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field begin error 1:cpf: ", p), err)
+		}
+		if err := oprot.WriteString(string(*p.Cpf)); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T.cpf (1) field write error: ", p), err)
+		}
+		if err := oprot.WriteFieldEnd(); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field end error 1:cpf: ", p), err)
+		}
+	}
+	return err
+}
+
+func (p *LotacaoThrift) writeField2(oprot thrift.TProtocol) (err error) {
+	if p.IsSetCns() {
+		if err := oprot.WriteFieldBegin("cns", thrift.STRING, 2); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field begin error 2:cns: ", p), err)
+		}
+		if err := oprot.WriteString(string(*p.Cns)); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T.cns (2) field write error: ", p), err)
+		}
+		if err := oprot.WriteFieldEnd(); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field end error 2:cns: ", p), err)
+		}
+	}
+	return err
+}
+
+func (p *LotacaoThrift) writeField3(oprot thrift.TProtocol) (err error) {
+	if p.IsSetCboCodigo_2002() {
+		if err := oprot.WriteFieldBegin("cboCodigo_2002", thrift.STRING, 3); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field begin error 3:cboCodigo_2002: ", p), err)
+		}
+		if err := oprot.WriteString(string(*p.CboCodigo_2002)); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T.cboCodigo_2002 (3) field write error: ", p), err)
+		}
+		if err := oprot.WriteFieldEnd(); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field end error 3:cboCodigo_2002: ", p), err)
+		}
+	}
+	return err
+}
+
+func (p *LotacaoThrift) writeField4(oprot thrift.TProtocol) (err error) {
+	if p.IsSetIne() {
+		if err := oprot.WriteFieldBegin("ine", thrift.STRING, 4); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field begin error 4:ine: ", p), err)
+		}
+		if err := oprot.WriteString(string(*p.Ine)); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T.ine (4) field write error: ", p), err)
+		}
+		if err := oprot.WriteFieldEnd(); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field end error 4:ine: ", p), err)
+		}
+	}
+	return err
+}
+
+func (p *LotacaoThrift) writeField5(oprot thrift.TProtocol) (err error) {
+	if p.IsSetCnes() {
+		if err := oprot.WriteFieldBegin("cnes", thrift.STRING, 5); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field begin error 5:cnes: ", p), err)
+		}
+		if err := oprot.WriteString(string(*p.Cnes)); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T.cnes (5) field write error: ", p), err)
+		}
+		if err := oprot.WriteFieldEnd(); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field end error 5:cnes: ", p), err)
+		}
+	}
+	return err
+}
+
+func (p *LotacaoThrift) writeField6(oprot thrift.TProtocol) (err error) {
+	if p.IsSetCodigoIbgeMunicipio() {
+		if err := oprot.WriteFieldBegin("codigoIbgeMunicipio", thrift.STRING, 6); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field begin error 6:codigoIbgeMunicipio: ", p), err)
+		}
+		if err := oprot.WriteString(string(*p.CodigoIbgeMunicipio)); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T.codigoIbgeMunicipio (6) field write error: ", p), err)
+		}
+		if err := oprot.WriteFieldEnd(); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field end error 6:codigoIbgeMunicipio: ", p), err)
+		}
+	}
+	return err
+}
+
+func (p *LotacaoThrift) String() string {
+	if p == nil {
+		return "<nil>"
+	}
+	return fmt.Sprintf("LotacaoThrift(%+v)", *p)
+}
+
+// Attributes:
 //  - Bairro
 //  - Cep
 //  - CodigoIbgeMunicipio

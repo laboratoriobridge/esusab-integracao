@@ -25,7 +25,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 5.2.0</span>
+        <span class="label">versão 5.3.0</span>
       
     </a>
 
@@ -75,7 +75,7 @@
           
         
           
-            <li><a title="Layout e-SUS APS de Dados e Interface Versão 5.2.0" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 5.2.0</a></li>
+            <li><a title="Layout e-SUS APS de Dados e Interface Versão 5.3.0" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 5.3.0</a></li>
           
         
           
@@ -115,9 +115,9 @@
   <ul>
     
       <li>
-        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 5.2.0" href="/ledi/documentacao/index.html" class="back-link">
+        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 5.3.0" href="/ledi/documentacao/index.html" class="back-link">
           <i class="icon icon-back"></i> Voltar
-          <small>(Layout e-SUS APS de Dados e Interface Versão 5.2.0)</small>
+          <small>(Layout e-SUS APS de Dados e Interface Versão 5.3.0)</small>
         </a>
       </li>
     
@@ -250,7 +250,7 @@
     <p class="post-meta">
       <a class="btn" href="/pdf.html?include=/ledi/documentacao/estrutura_arquivos/dicionario-fai.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 28/09/2021</span>
+        <span class="label" title="Data da última modificação">Alterado em 13/11/2023</span>
       
     </p>
   </header>
@@ -1079,6 +1079,62 @@
 </tbody></table>
 
 <p><strong>Referência:</strong> <a href="#resultadosexames">resultadosExames</a>.</p>
+
+<h3 id="33-tipoparticipacaocidadao">#33 tipoParticipacaoCidadao</h3>
+
+<p>Código para identificar se o tipo de participação do cidadão foi síncrono ou assíncrono.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Não</td>
+<td>1</td>
+<td>7</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>As participações possíveis são: NAO_PARTICIPOU (1L, &quot;Não participou&quot;), PRESENCIAL (2L, &quot;Presencial&quot;), CHAMADA_DE_VIDEO(3L, &quot;Chamada de vídeo&quot;), CHAMADA_DE_VOZ (4L, &quot;Chamada de voz&quot;), EMAIL (5L, &quot;E-mail&quot;), MENSAGEM(6L, &quot;Mensagem&quot;), OUTROS (7L, &quot;Outros&quot;).</li>
+</ul>
+
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#tipoparticipacaoatendimento">Tipo de participação no atendimento</a>.</p>
+
+<h3 id="34-tipoparticipacaoprofissionalconvidado">#34 tipoParticipacaoProfissionalConvidado</h3>
+
+<p>Código para identificar se o tipo de participação do profissional convidado foi síncrono ou assíncrono.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Não</td>
+<td>1</td>
+<td>7</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>As participações possíveis são: NAO_PARTICIPOU (1L, &quot;Não participou&quot;), PRESENCIAL (2L, &quot;Presencial&quot;), CHAMADA_DE_VIDEO(3L, &quot;Chamada de vídeo&quot;), CHAMADA_DE_VOZ (4L, &quot;Chamada de voz&quot;), EMAIL (5L, &quot;E-mail&quot;), MENSAGEM(6L, &quot;Mensagem&quot;), OUTROS (7L, &quot;Outros&quot;).</li>
+</ul>
+
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#tipoparticipacaoatendimento">Tipo de participação no atendimento</a>.</p>
 
 <h2 id="exame">Exame</h2>
 

@@ -25,7 +25,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 5.2.0</span>
+        <span class="label">versão 5.3.0</span>
       
     </a>
 
@@ -137,7 +137,7 @@
 
       <li id="item-layout_ab" data-url="/ledi/documentacao/index.html">
         <label>
-          <input type="checkbox" value="layout_ab" checked="checked"> Layout e-SUS APS de Dados e Interface Versão 5.2.0
+          <input type="checkbox" value="layout_ab" checked="checked"> Layout e-SUS APS de Dados e Interface Versão 5.3.0
           <small>
             <a onclick="checkById('layout_ab', true); return false;">Marcar todos</a> |
             <a onclick="checkById('layout_ab', false); return false;">Desmarcar todos</a>
@@ -675,7 +675,7 @@
 
       <li id="item-principais_alteracoes" data-url="/ledi/documentacao/principais_alteracoes.html">
         <label>
-          <input type="checkbox" value="principais_alteracoes" checked="checked"> Principais alterações da v5.0.5 para a v5.2.0
+          <input type="checkbox" value="principais_alteracoes" checked="checked"> Principais alterações da v5.2.0 para a v5.3.0
           <small>
             <a onclick="checkById('principais_alteracoes', true); return false;">Marcar todos</a> |
             <a onclick="checkById('principais_alteracoes', false); return false;">Desmarcar todos</a>
@@ -1017,7 +1017,7 @@
   
       <!-- Cria a lista de itens[páginas] que foram selecionados  -->
 
-  <li id="summary-layout_ab"><a href="#layout_ab">Layout e-SUS APS de Dados e Interface Versão 5.2.0</a></li>
+  <li id="summary-layout_ab"><a href="#layout_ab">Layout e-SUS APS de Dados e Interface Versão 5.3.0</a></li>
   
       <!-- Cria a lista de itens[páginas] que foram selecionados  -->
 
@@ -1245,7 +1245,7 @@
 
   
 
-  <li id="summary-principais_alteracoes"><a href="#principais_alteracoes">Principais alterações da v5.0.5 para a v5.2.0</a></li>
+  <li id="summary-principais_alteracoes"><a href="#principais_alteracoes">Principais alterações da v5.2.0 para a v5.3.0</a></li>
   
       <!-- Cria a lista de itens[páginas] que foram selecionados  -->
 
@@ -1407,8 +1407,12 @@
 </tr>
 </thead><tbody>
 <tr>
+<td>5.2.21 ou superior</td>
+<td><a href="/ledi/documentacao/index.html">LEDI APS 5.3.0</a></td>
+</tr>
+<tr>
 <td>5.2.18 ou superior</td>
-<td><a href="/ledi/documentacao/index.html">LEDI APS 5.2.0</a></td>
+<td><a href="https://integracao.esusab.ufsc.br/v520/">LEDI APS 5.2.0</a></td>
 </tr>
 <tr>
 <td>5.1.15 ou superior</td>
@@ -1561,17 +1565,17 @@
         
     <div class="post pdf shown" id="layout_ab" data-url="/ledi/documentacao/index.html">
       <header class="post-header">
-        <h1 class="post-title">Layout e-SUS APS de Dados e Interface Versão 5.2.0</h1>
+        <h1 class="post-title">Layout e-SUS APS de Dados e Interface Versão 5.3.0</h1>
       </header>
 
       
 
       <article class="post-content">
-        <p>Esta documentação descreve as estruturas de dados, seus atributos e regras utilizadas no <strong>LEDI APS</strong> versão 5.2.0</p>
+        <p>Esta documentação descreve as estruturas de dados, seus atributos e regras utilizadas no <strong>LEDI APS</strong> versão 5.3.0</p>
 
-<p>A versão <strong>LEDI APS</strong> 5.2.0 é compatível com o sistema <strong>PEC e-SUS APS</strong> versão 5.2.18 ou superior.</p>
+<p>A versão <strong>LEDI APS</strong> 5.3.0 é compatível com o sistema <strong>PEC e-SUS APS</strong> versão 5.2.21 ou superior.</p>
 
-<p>Confira as principais alterações da V5.0.5 para a V5.2.0 <a href="/ledi/documentacao/principais_alteracoes.html">aqui</a>.</p>
+<p>Confira as principais alterações da V5.2.0 para a V5.3.0 <a href="/ledi/documentacao/principais_alteracoes.html">aqui</a>.</p>
 
       </article>
 
@@ -2376,6 +2380,147 @@
 </tbody></table>
 
 <p><strong>Regras:</strong> Deve ser preenchido com a mesma informação do campo <a href="/ledi/documentacao/estrutura_arquivos/camada-transporte.html#4-codibge">#4 codIbge</a>.</p>
+
+<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/municipios.html">Municípios</a>.</p>
+
+<h1 id="lotacaothrift">LotacaoThrift</h1>
+
+<h3 id="1-cpf">#1 CPF</h3>
+
+<p>CPF do profissional.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Sim</td>
+<td>11</td>
+<td>11</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Somente CPF válido;</li>
+<li>Somente CPF já existente na base de dados será considerado válido.</li>
+</ul>
+
+<h3 id="2-cns">#2 CNS</h3>
+
+<p>CNS do profissional.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Sim</td>
+<td>15</td>
+<td>15</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>CNS validado de acordo com o <a href="/ledi/documentacao/regras/algoritmo_CNS.html">algoritmo de validação</a>;</li>
+<li>Somente CNS já existente na base de dados será considerado válido.</li>
+<li>Somente fichas de profissionais com vínculo com o respectivo município são consideradas válidas.</li>
+</ul>
+
+<h3 id="3-cbocodigo_2002">#3 cboCodigo_2002</h3>
+
+<p>Código do CBO do profissional.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> Somente CBO Válido.</p>
+
+<h3 id="4-ine">#4 ine</h3>
+
+<p>Código INE da equipe do profissional.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Não</td>
+<td>10</td>
+<td>10</td>
+</tr>
+</tbody></table>
+
+<h3 id="5-cnes">#5 cnes</h3>
+
+<p>Código do CNES do estabelecimento de saúde onde o profissional está lotado.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Sim</td>
+<td>7</td>
+<td>7</td>
+</tr>
+</tbody></table>
+
+<h3 id="6-codigoibgemunicipio">#6 codigoIbgeMunicipio</h3>
+
+<p>Código IBGE do município.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Sim</td>
+<td>7</td>
+<td>7</td>
+</tr>
+</tbody></table>
 
 <p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/municipios.html">Municípios</a>.</p>
 
@@ -6955,6 +7100,62 @@
 
 <p><strong>Referência:</strong> <a href="/ledi/documentacao/estrutura_arquivos/#resultadosexames">resultadosExames</a>.</p>
 
+<h3 id="33-tipoparticipacaocidadao">#33 tipoParticipacaoCidadao</h3>
+
+<p>Código para identificar se o tipo de participação do cidadão foi síncrono ou assíncrono.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Não</td>
+<td>1</td>
+<td>7</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>As participações possíveis são: NAO_PARTICIPOU (1L, &quot;Não participou&quot;), PRESENCIAL (2L, &quot;Presencial&quot;), CHAMADA_DE_VIDEO(3L, &quot;Chamada de vídeo&quot;), CHAMADA_DE_VOZ (4L, &quot;Chamada de voz&quot;), EMAIL (5L, &quot;E-mail&quot;), MENSAGEM(6L, &quot;Mensagem&quot;), OUTROS (7L, &quot;Outros&quot;).</li>
+</ul>
+
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#tipoparticipacaoatendimento">Tipo de participação no atendimento</a>.</p>
+
+<h3 id="34-tipoparticipacaoprofissionalconvidado">#34 tipoParticipacaoProfissionalConvidado</h3>
+
+<p>Código para identificar se o tipo de participação do profissional convidado foi síncrono ou assíncrono.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Não</td>
+<td>1</td>
+<td>7</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>As participações possíveis são: NAO_PARTICIPOU (1L, &quot;Não participou&quot;), PRESENCIAL (2L, &quot;Presencial&quot;), CHAMADA_DE_VIDEO(3L, &quot;Chamada de vídeo&quot;), CHAMADA_DE_VOZ (4L, &quot;Chamada de voz&quot;), EMAIL (5L, &quot;E-mail&quot;), MENSAGEM(6L, &quot;Mensagem&quot;), OUTROS (7L, &quot;Outros&quot;).</li>
+</ul>
+
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#tipoparticipacaoatendimento">Tipo de participação no atendimento</a>.</p>
+
 <h2 id="exame">Exame</h2>
 
 <h3 id="1-codigoexame">#1 codigoExame</h3>
@@ -9124,6 +9325,62 @@
 <li>Máximo de 1 casa decimal;</li>
 <li>Valor mínimo 20 e máximo 250.</li>
 </ul>
+
+<h3 id="23-tipoparticipacaocidadao">#23 tipoParticipacaoCidadao</h3>
+
+<p>Código para identificar se o tipo de participação do cidadão foi síncrono ou assíncrono.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Não</td>
+<td>1</td>
+<td>7</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>As participações possíveis são: NAO_PARTICIPOU (1L, &quot;Não participou&quot;), PRESENCIAL (2L, &quot;Presencial&quot;), CHAMADA_DE_VIDEO(3L, &quot;Chamada de vídeo&quot;), CHAMADA_DE_VOZ (4L, &quot;Chamada de voz&quot;), EMAIL (5L, &quot;E-mail&quot;), MENSAGEM(6L, &quot;Mensagem&quot;), OUTROS (7L, &quot;Outros&quot;).</li>
+</ul>
+
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#tipoparticipacaoatendimento">Tipo de participação no atendimento</a>.</p>
+
+<h3 id="24-tipoparticipacaoprofissionalconvidado">#24 tipoParticipacaoProfissionalConvidado</h3>
+
+<p>Código para identificar se o tipo de participação do profissional convidado foi síncrono ou assíncrono.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Não</td>
+<td>1</td>
+<td>7</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> </p>
+
+<ul>
+<li>As participações possíveis são: NAO_PARTICIPOU (1L, &quot;Não participou&quot;), PRESENCIAL (2L, &quot;Presencial&quot;), CHAMADA_DE_VIDEO(3L, &quot;Chamada de vídeo&quot;), CHAMADA_DE_VOZ (4L, &quot;Chamada de voz&quot;), EMAIL (5L, &quot;E-mail&quot;), MENSAGEM(6L, &quot;Mensagem&quot;), OUTROS (7L, &quot;Outros&quot;).</li>
+</ul>
+
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#tipoparticipacaoatendimento">Tipo de participação no atendimento</a>.</p>
 
 <h2 id="procedimentoquantidade">ProcedimentoQuantidade</h2>
 
@@ -17008,16 +17265,23 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>LotacaoHeader</td>
-<td>Não</td>
+<td>LotacaoThrift</td>
+<td>Sim</td>
 <td>-</td>
 <td>-</td>
 </tr>
 </tbody></table>
 
-<p><strong>Regra:</strong> Este profissional obrigatoriamente precisa ser o solicitante ou o executante.  </p>
+<p><strong>Regra:</strong> </p>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#lotacaoheader">LotacaoHeader</a>.</p>
+<ul>
+<li>Este profissional obrigatoriamente precisa ser o solicitante ou o executante;</li>
+<li>O Código INE desta lotação deve ser preenchido com a mesma informação do campo <a href="/ledi/documentacao/estrutura_arquivos/camada-transporte.html#5-inedadoserializado">#5 ineDadoSerializado</a>;</li>
+<li>O Código CNES desta lotação deve ser preenchido com a mesma informação do campo <a href="/ledi/documentacao/estrutura_arquivos/camada-transporte.html#3-cnesdadoserializado">#3 cnesDadoSerializado</a>.</li>
+<li>O Código IBGE desta lotação deve ser preenchido com a mesma informação do campo <a href="/ledi/documentacao/estrutura_arquivos/camada-transporte.html#4-codibge">#4 codIbge</a>.</li>
+</ul>
+
+<p><strong>Referências:</strong> <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#lotacaothrift">LotacaoThrift</a>.</p>
 
 <h2 id="3-dataevolucao">#3 dataEvolucao</h2>
 
@@ -17033,7 +17297,7 @@
 </thead><tbody>
 <tr>
 <td>Long</td>
-<td>Não</td>
+<td>Sim</td>
 <td>-</td>
 <td>-</td>
 </tr>
@@ -17071,10 +17335,10 @@
 <p><strong>Regra:</strong> </p>
 
 <ul>
-<li>Deve ser obrigatório, caso não seja a primeira evolução do cuidado compartilhado;</li>
-<li>Esta data não pode ser anterior à data do DataCriacaoCuidado;</li>
-<li>Não pode ser posterior à DataEvolucao;</li>
-<li>Não pode ser posterior a data atual.</li>
+<li>Deve ser obrigatório caso não seja a primeira evolução do cuidado compartilhado, ou seja, quando o valor de <a href="/ledi/documentacao/estrutura_arquivos/#5-cosequencialevolucao">coSequencialEvolucao</a> seja superior a 1;</li>
+<li>Esta data deve ser posterior à data do DataCriacaoCuidado;</li>
+<li>Esta data deve ser anterior à DataEvolucao;</li>
+<li>Esta data deve ser anterior a data atual.</li>
 </ul>
 
 <p><strong>Referência:</strong> Deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
@@ -17093,7 +17357,7 @@
 </thead><tbody>
 <tr>
 <td>Integer</td>
-<td>Não</td>
+<td>Sim</td>
 <td>1</td>
 <td>3</td>
 </tr>
@@ -17120,7 +17384,7 @@
 </thead><tbody>
 <tr>
 <td>Long</td>
-<td>Não</td>
+<td>Sim</td>
 <td>-</td>
 <td>-</td>
 </tr>
@@ -17129,11 +17393,8 @@
 <p><strong>Regra:</strong> </p>
 
 <ul>
-<li>Conduta que solicitante pode preencher: NOVA_PERGUNTA (1L, &quot;Nova pergunta&quot;), AGENDADO_INTERCONSULTA_SEM_CIDADAO (5L, &quot;Agendar consulta compartilhada sem cidadão e sem videochama&quot;), AGENDADO_CONSULTA_CIDADAO_PRESENCIAL (6L, &quot;Consulta com cidadão&quot;), TROCA_PROFISSIONAL_REFERENCIA (7L, &quot;Troca de profissional referência&quot;), AGENDADO_TELEINTERCONSULTA_SEM_CIDADAO(9L, &quot;Agendar consulta compartilhada sem cidadão e com videochama&quot;), AGENDADO_INTERCONSULTA_COM_CIDADAO(10L, &quot;Agendar consulta compartilhada com cidadão e sem videochama&quot;), AGENDADO_TELEINTERCONSULTA_COM_CIDADAO(11L, &quot;Agendar consulta compartilhada com cidadão e com videochama&quot;);</li>
-<li>Conduta que executante pode preencher: PEDIDO_ESCLARECIMENTO (2L, &quot;Pedido esclarecimento&quot;), PARECER_TECNICO_CONCLUSIVO(4L, &quot;Parecer técnico conclusivo&quot;), TELECONSULTORIA (3L, &quot;Teleconsultoria&quot;), RECONDUCAO_CUIDADO(8L, &quot;Recondução de cuidado&quot;), TROCA_PROFISSIONAL_REFERENCIA(7L, &quot;Troca de profissional referência&quot;), AGENDADO_INTERCONSULTA_SEM_CIDADAO (5L, &quot;Agendar consulta compartilhada sem cidadão e sem videochama&quot;), AGENDADO_TELEINTERCONSULTA_SEM_CIDADAO(9L, &quot;Agendar consulta compartilhada sem cidadão e com videochama&quot;), AGENDADO_INTERCONSULTA_COM_CIDADAO(10L, &quot;Agendar consulta compartilhada com cidadão e sem videochama&quot;), AGENDADO_TELEINTERCONSULTA_COM_CIDADAO(11L, &quot;Agendar consulta compartilhada com cidadão e com videochama&quot;), , SUGESTAO_AGENDAMENTO_GRUPO(12L, &quot;Sugerir agendamento para grupo&quot;).</li>
+<li>Condutas válidas: <a href="/ledi/documentacao/referencias/dicionario.html#condutaevolucao">Condutas</a></li>
 </ul>
-
-<p>Referência: <a href="/ledi/documentacao/referencias/dicionario.html#condutaevolucao">Condutas</a></p>
 
 <h2 id="7-tpcdsorigem">#7 tpCdsOrigem</h2>
 
@@ -17149,14 +17410,17 @@
 </thead><tbody>
 <tr>
 <td>Integer</td>
-<td>Não</td>
+<td>Sim</td>
 <td>1</td>
 <td>1</td>
 </tr>
 </tbody></table>
 
-<p><strong>Regra:</strong> 
-- Utilizar valor 3 (sistemas terceiros).</p>
+<p><strong>Regra:</strong> </p>
+
+<ul>
+<li>Utilizar valor 3 (sistemas terceiros).</li>
+</ul>
 
 <h2 id="8-cnscidadao">#8 cnsCidadao</h2>
 
@@ -17205,9 +17469,12 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regra:</strong> 
-- Somente CPF válido será aceito;
-- Não pode ser preenchido se o campo CNS do cidadao for preenchido.</p>
+<p><strong>Regra:</strong></p>
+
+<ul>
+<li>Somente CPF válido será aceito;</li>
+<li>Não pode ser preenchido se o campo CNS do cidadao for preenchido.</li>
+</ul>
 
 <h2 id="10-sexocidadao">#10 sexoCidadao</h2>
 
@@ -17223,7 +17490,7 @@
 </thead><tbody>
 <tr>
 <td>Long</td>
-<td>Não</td>
+<td>Sim</td>
 <td>-</td>
 <td>-</td>
 </tr>
@@ -17245,7 +17512,7 @@
 </thead><tbody>
 <tr>
 <td>String</td>
-<td>Não</td>
+<td>Sim</td>
 <td>-</td>
 <td>-</td>
 </tr>
@@ -17254,6 +17521,7 @@
 <p><strong>Regra:</strong> </p>
 
 <ul>
+<li>Formato &quot;aaaa-mm-dd&quot;;</li>
 <li>Esta data não pode ser posterior à data do DataCriacaoCuidado;</li>
 <li>Não pode ser anterior a 130 anos a partir da data atual.</li>
 </ul>
@@ -17293,8 +17561,8 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>LotacaoHeader</td>
-<td>Não</td>
+<td>LotacaoThrift</td>
+<td>Sim</td>
 <td>-</td>
 <td>-</td>
 </tr>
@@ -17303,11 +17571,10 @@
 <p><strong>Regra:</strong> </p>
 
 <ul>
-<li>CNS validado de acordo com o <a href="/ledi/documentacao/regras/algoritmo_CNS.html">algoritmo de validação</a>;</li>
-<li>Não pode ser igual a lotação do executante.</li>
+<li>Deve ser diferente da lotação do executante. Para fins de comparação, todos os campos do objeto LotacaoThrift serão levados em consideração.</li>
 </ul>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#lotacaoheader">LotacaoHeader</a>.</p>
+<p><strong>Referências:</strong> <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#lotacaothrift">LotacaoThrift</a>.</p>
 
 <p><strong>Observações:</strong> Esta entidade é utilizada para representar o profissional solicitante do Compartilhamento de Cuidado.</p>
 
@@ -17324,8 +17591,8 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>LotacaoHeader</td>
-<td>Não</td>
+<td>LotacaoThrift</td>
+<td>Sim</td>
 <td>-</td>
 <td>-</td>
 </tr>
@@ -17334,11 +17601,11 @@
 <p><strong>Regra:</strong> </p>
 
 <ul>
-<li>CNS validado de acordo com o <a href="/ledi/documentacao/regras/algoritmo_CNS.html">algoritmo de validação</a>;</li>
-<li>Não pode ser igual a lotação do solicitante.</li>
+<li>Deve ser diferente a lotação do solicitante. Para fins de comparação, todos os campos do objeto LotacaoThrift serão levados em consideração;</li>
+<li>A equipe do executante é validada, tornando obrigatório o INE na LotacaoThrift neste caso.</li>
 </ul>
 
-<p><strong>Referências:</strong> <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#lotacaoheader">LotacaoHeader</a>.</p>
+<p><strong>Referências:</strong> <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#lotacaothrift">LotacaoThrift</a>.</p>
 
 <p><strong>Observações:</strong> Esta entidade é utilizada para representar o profissional executante do Compartilhamento de Cuidado.</p>
 
@@ -17356,7 +17623,7 @@
 </thead><tbody>
 <tr>
 <td>Long</td>
-<td>Não</td>
+<td>Sim</td>
 <td>-</td>
 <td>-</td>
 </tr>
@@ -17366,7 +17633,8 @@
 
 <ul>
 <li>Não pode ser posterior à data atual;</li>
-<li>Não pode ser anterior a data de nascimento do cidadão.</li>
+<li>Não pode ser anterior a data de nascimento do cidadão;</li>
+<li>Não pode ser anterior que a data 01/07/2023.</li>
 </ul>
 
 <p><strong>Referência:</strong> Deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
@@ -17394,7 +17662,8 @@
 <p><strong>Regra:</strong> </p>
 
 <ul>
-<li>Deve ser obrigatório caso o CIAP não seja informado. </li>
+<li>Deve ser apresentada somente CID10 permitida para o <a href="/ledi/documentacao/estrutura_arquivos/#10-sexocidadao">sexo do cidadão</a>;</li>
+<li>Deve ser obrigatório caso o CIAP2 não seja informado. </li>
 </ul>
 
 <h2 id="17-ciap">#17 ciap</h2>
@@ -17420,7 +17689,8 @@
 <p><strong>Regra:</strong> </p>
 
 <ul>
-<li>Deve ser obrigatório caso o CID não seja informado;</li>
+<li>Deve ser apresentada somente CIAP2 permitida para o <a href="/ledi/documentacao/estrutura_arquivos/#10-sexocidadao">sexo do cidadão</a>;</li>
+<li>Deve ser obrigatório caso o CID10 não seja informado;</li>
 <li>Inserir o código em caracteres maiúsculos sem espaços.</li>
 </ul>
 
@@ -17444,8 +17714,11 @@
 </tr>
 </tbody></table>
 
-<p><strong>Referência:</strong> Para ver a referência sobre o UUID, acesse: <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">UUID Wikipedia</a>.
-<strong>Observação:</strong> Não obrigatório por conta de sistemas terceiros.</p>
+<p><strong>Regra:</strong> Deve ser obrigatório caso o campo <a href="/ledi/documentacao/estrutura_arquivos/#19-tpdadotranspfichaorigem">tpDadoTranspFichaOrigem</a> seja informado.</p>
+
+<p><strong>Referência:</strong> Para ver a referência sobre o UUID, acesse: <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">UUID Wikipedia</a>.</p>
+
+<p><strong>Observação:</strong> Não obrigatório por conta de sistemas terceiros.</p>
 
 <h2 id="19-tpdadotranspfichaorigem">#19 tpDadoTranspFichaOrigem;</h2>
 
@@ -17467,7 +17740,17 @@
 </tr>
 </tbody></table>
 
-<p><strong>Observação:</strong> Valores válidos: 4 - Ficha Atendimento Individual, 5 - Ficha Atendimento Odontológico, 7 - Ficha Procedimentos, 10 - Ficha Atendimento Domiciliar, 16 - ESUS-PEC Cuidado Compartilhado.</p>
+<p><strong>Regra:</strong> Deve ser obrigatório caso o campo <a href="/ledi/documentacao/estrutura_arquivos/#18-uuidfichaorigem">uuidFichaOrigem</a> seja informado.</p>
+
+<p><strong>Observação:</strong> Valores válidos:</p>
+
+<ul>
+<li>4 = Ficha Atendimento Individual;</li>
+<li>5 = Ficha Atendimento Odontológico;</li>
+<li>7 = Ficha Procedimentos;</li>
+<li>10 = Ficha Atendimento Domiciliar;</li>
+<li>16 = ESUS-PEC Cuidado Compartilhado.</li>
+</ul>
 
 <h2 id="20-prioridadecuidado">#20 prioridadeCuidado</h2>
 
@@ -17483,13 +17766,11 @@
 </thead><tbody>
 <tr>
 <td>Integer</td>
-<td>Não</td>
+<td>Sim</td>
 <td>1</td>
 <td>1</td>
 </tr>
 </tbody></table>
-
-<p><strong>Observação:</strong> Valores válidos: 1 - Baixa, 2 - Média, 3 - Alta, 4 - Muito Alta.</p>
 
 <p>Referência: <a href="/ledi/documentacao/referencias/dicionario.html#prioridadecuidado">Classificação de Prioridade</a></p>
 
@@ -17513,7 +17794,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Observação:</strong> Valores válidos: 1 - Baixa, 2 - Média, 3 - Alta, 4 - Muito Alta.</p>
+<p><strong>Regra:</strong> Deve ser diferente do campo <a href="/ledi/documentacao/estrutura_arquivos/#20-prioridadecuidado">prioridadeCuidado</a> </p>
 
 <p>Referência: <a href="/ledi/documentacao/referencias/dicionario.html#prioridadecuidado">Classificação de Prioridade</a></p>
 
@@ -48276,7 +48557,7 @@
 <td>minor</td>
 <td>Integer</td>
 <td>Sim</td>
-<td>Valor único = 2</td>
+<td>Valor único = 3</td>
 </tr>
 <tr>
 <td>revision</td>
@@ -61783,6 +62064,11 @@
 <td>Ficha de Vacinação</td>
 <td>-</td>
 </tr>
+<tr>
+<td>16</td>
+<td>Ficha de Cuidado Compartilhado</td>
+<td>-</td>
+</tr>
 </tbody></table>
 
 <h2 id="tipodeacessoaodomicilio">TipoDeAcessoAoDomicilio</h2>
@@ -65358,6 +65644,52 @@
 <td>4</td>
 <td>Data</td>
 <td>Usado quando o resultado do exame é uma data</td>
+</tr>
+</tbody></table>
+
+<h2 id="tipoparticipacaoatendimento">tipoParticipacaoAtendimento</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1</td>
+<td>Não participou</td>
+<td>Usado para sinalizar que o cidadão ou o profissional convidado não participou de um atendimento</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Presencial</td>
+<td>Usado para sinalizar que o cidadão ou o profissional convidado participou presencialmente de um atendimento</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Chamada de vídeo</td>
+<td>Usado para sinalizar que o cidadão ou o profissional convidado participou via chamada de vídeo de um atendimento</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Chamada de voz</td>
+<td>Usado para sinalizar que o cidadão ou o profissional convidado participou via chamada de voz de um atendimento</td>
+</tr>
+<tr>
+<td>5</td>
+<td>E-mail</td>
+<td>Usado para sinalizar que o cidadão ou o profissional convidado participou via email de um atendimento</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Mensagem</td>
+<td>Usado para sinalizar que o cidadão ou o profissional convidado participou via mensagem de um atendimento</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Outros</td>
+<td>Usado para sinalizar que o cidadão ou o profissional convidado participou via algum meio não elencado acima</td>
 </tr>
 </tbody></table>
 
@@ -102162,27 +102494,17 @@
 
     <div class="post pdf shown" id="principais_alteracoes" data-url="/ledi/documentacao/principais_alteracoes.html">
       <header class="post-header">
-        <h1 class="post-title">Principais alterações da v5.0.5 para a v5.2.0</h1>
+        <h1 class="post-title">Principais alterações da v5.2.0 para a v5.3.0</h1>
       </header>
 
       
 
       <article class="post-content">
-        <p>Este documento relata as principais alterações em relação à versão v5.0.5 do LEDI APS:</p>
+        <p>Este documento relata as principais alterações em relação à versão v5.2.0 do LEDI APS:</p>
 
-<h3 id="1-inclus-o-da-triagem-para-risco-de-inseguran-a-alimentar-tria">1. Inclusão da Triagem para Risco de Insegurança Alimentar (TRIA)</h3>
+<h3 id="1-inser-o-de-novos-campos-na-ficha-de-atendimento-individual-e-na-ficha-de-atendimento-individual-odontol-gico">1. Inserção de novos campos na Ficha de Atendimento Individual e na Ficha de Atendimento Individual Odontológico</h3>
 
-<p><strong>1. </strong> Foram incluídos os campos da TRIA na <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html">Ficha do Cadastro Individual</a>;</p>
-
-<h3 id="2-cria-o-da-ficha-de-cuidado-compartilhado">2. Criação da Ficha de Cuidado Compartilhado</h3>
-
-<p><strong>2. </strong> Foi criada a <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fcc.html">Ficha do Cuidado Compartilhado</a>. As condutas possíveis de serem registradas podem ser verificadas <a href="/ledi/documentacao/referencias/dicionario.html#condutaevolucao">no dicionário de dados</a>;</p>
-
-<p><strong>3. </strong> Além das condutas citadas acima é possível reclassificar a prioridade do cuidado. Para tanto foi inserido o campo &quot;reclassificacaoPrioridadeCuidado&quot; na Ficha de Cuidado Compartilhado.</p>
-
-<h3 id="3-inser-o-de-novos-campos-nas-fai-para-inserir-a-lota-o-do-profissional-que-finalizou-uma-observa-o">3. Inserção de novos campos nas FAI para inserir a lotação do profissional que finalizou uma observação</h3>
-
-<p><strong>4. </strong> A partir desta versão será possível enviar a lotação e a equipe do profissional que finalizou um atendimento de observação. Para enviar essa informação para o SISAB foi necessário incluir a lotação de quem finalizou na <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#profissionalfinalizadorobservacao">seguinte estrutura</a>.</p>
+<p><strong>1. </strong> Com a criação da consulta entre profissionais na versão 5.2.21 através da FAI e a FAOI deve ser possível caracterizar o tipo de atendimento. Dentre as caracterizações possíveis estão se o atendimento foi realizado de forma síncrona ou assíncrona, o meio de comunicação utilizado e se o cidadão estava presente durante o atendimento.</p>
 
       </article>
 

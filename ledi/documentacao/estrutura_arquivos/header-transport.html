@@ -25,7 +25,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 5.2.0</span>
+        <span class="label">versão 5.3.0</span>
       
     </a>
 
@@ -75,7 +75,7 @@
           
         
           
-            <li><a title="Layout e-SUS APS de Dados e Interface Versão 5.2.0" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 5.2.0</a></li>
+            <li><a title="Layout e-SUS APS de Dados e Interface Versão 5.3.0" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 5.3.0</a></li>
           
         
           
@@ -115,9 +115,9 @@
   <ul>
     
       <li>
-        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 5.2.0" href="/ledi/documentacao/index.html" class="back-link">
+        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 5.3.0" href="/ledi/documentacao/index.html" class="back-link">
           <i class="icon icon-back"></i> Voltar
-          <small>(Layout e-SUS APS de Dados e Interface Versão 5.2.0)</small>
+          <small>(Layout e-SUS APS de Dados e Interface Versão 5.3.0)</small>
         </a>
       </li>
     
@@ -624,6 +624,147 @@
 </tbody></table>
 
 <p><strong>Regras:</strong> Deve ser preenchido com a mesma informação do campo <a href="/ledi/documentacao/estrutura_arquivos/camada-transporte.html#4-codibge">#4 codIbge</a>.</p>
+
+<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/municipios.html">Municípios</a>.</p>
+
+<h1 id="lotacaothrift">LotacaoThrift</h1>
+
+<h3 id="1-cpf">#1 CPF</h3>
+
+<p>CPF do profissional.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Sim</td>
+<td>11</td>
+<td>11</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Somente CPF válido;</li>
+<li>Somente CPF já existente na base de dados será considerado válido.</li>
+</ul>
+
+<h3 id="2-cns">#2 CNS</h3>
+
+<p>CNS do profissional.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Sim</td>
+<td>15</td>
+<td>15</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>CNS validado de acordo com o <a href="/ledi/documentacao/regras/algoritmo_CNS.html">algoritmo de validação</a>;</li>
+<li>Somente CNS já existente na base de dados será considerado válido.</li>
+<li>Somente fichas de profissionais com vínculo com o respectivo município são consideradas válidas.</li>
+</ul>
+
+<h3 id="3-cbocodigo_2002">#3 cboCodigo_2002</h3>
+
+<p>Código do CBO do profissional.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> Somente CBO Válido.</p>
+
+<h3 id="4-ine">#4 ine</h3>
+
+<p>Código INE da equipe do profissional.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Não</td>
+<td>10</td>
+<td>10</td>
+</tr>
+</tbody></table>
+
+<h3 id="5-cnes">#5 cnes</h3>
+
+<p>Código do CNES do estabelecimento de saúde onde o profissional está lotado.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Sim</td>
+<td>7</td>
+<td>7</td>
+</tr>
+</tbody></table>
+
+<h3 id="6-codigoibgemunicipio">#6 codigoIbgeMunicipio</h3>
+
+<p>Código IBGE do município.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Sim</td>
+<td>7</td>
+<td>7</td>
+</tr>
+</tbody></table>
 
 <p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/municipios.html">Municípios</a>.</p>
 

@@ -1661,6 +1661,72 @@ InformacoesSocioDemograficasThrift.prototype.write = function(output) {
   return;
 };
 
+InformacoesSocioEconomicasThrift = module.exports.InformacoesSocioEconomicasThrift = function(args) {
+  this.alimentosAcabaramAntesTerDinheiroComprarMais = null;
+  this.comeuAlgunsAlimentosQueTinhaDinheiroAcabou = null;
+  if (args) {
+    if (args.alimentosAcabaramAntesTerDinheiroComprarMais !== undefined && args.alimentosAcabaramAntesTerDinheiroComprarMais !== null) {
+      this.alimentosAcabaramAntesTerDinheiroComprarMais = args.alimentosAcabaramAntesTerDinheiroComprarMais;
+    }
+    if (args.comeuAlgunsAlimentosQueTinhaDinheiroAcabou !== undefined && args.comeuAlgunsAlimentosQueTinhaDinheiroAcabou !== null) {
+      this.comeuAlgunsAlimentosQueTinhaDinheiroAcabou = args.comeuAlgunsAlimentosQueTinhaDinheiroAcabou;
+    }
+  }
+};
+InformacoesSocioEconomicasThrift.prototype = {};
+InformacoesSocioEconomicasThrift.prototype.read = function(input) {
+  input.readStructBegin();
+  while (true)
+  {
+    var ret = input.readFieldBegin();
+    var fname = ret.fname;
+    var ftype = ret.ftype;
+    var fid = ret.fid;
+    if (ftype == Thrift.Type.STOP) {
+      break;
+    }
+    switch (fid)
+    {
+      case 1:
+      if (ftype == Thrift.Type.BOOL) {
+        this.alimentosAcabaramAntesTerDinheiroComprarMais = input.readBool();
+      } else {
+        input.skip(ftype);
+      }
+      break;
+      case 2:
+      if (ftype == Thrift.Type.BOOL) {
+        this.comeuAlgunsAlimentosQueTinhaDinheiroAcabou = input.readBool();
+      } else {
+        input.skip(ftype);
+      }
+      break;
+      default:
+        input.skip(ftype);
+    }
+    input.readFieldEnd();
+  }
+  input.readStructEnd();
+  return;
+};
+
+InformacoesSocioEconomicasThrift.prototype.write = function(output) {
+  output.writeStructBegin('InformacoesSocioEconomicasThrift');
+  if (this.alimentosAcabaramAntesTerDinheiroComprarMais !== null && this.alimentosAcabaramAntesTerDinheiroComprarMais !== undefined) {
+    output.writeFieldBegin('alimentosAcabaramAntesTerDinheiroComprarMais', Thrift.Type.BOOL, 1);
+    output.writeBool(this.alimentosAcabaramAntesTerDinheiroComprarMais);
+    output.writeFieldEnd();
+  }
+  if (this.comeuAlgunsAlimentosQueTinhaDinheiroAcabou !== null && this.comeuAlgunsAlimentosQueTinhaDinheiroAcabou !== undefined) {
+    output.writeFieldBegin('comeuAlgunsAlimentosQueTinhaDinheiroAcabou', Thrift.Type.BOOL, 2);
+    output.writeBool(this.comeuAlgunsAlimentosQueTinhaDinheiroAcabou);
+    output.writeFieldEnd();
+  }
+  output.writeFieldStop();
+  output.writeStructEnd();
+  return;
+};
+
 SaidaCidadaoCadastroThrift = module.exports.SaidaCidadaoCadastroThrift = function(args) {
   this.motivoSaidaCidadao = null;
   this.dataObito = null;
@@ -1758,6 +1824,7 @@ CadastroIndividualThrift = module.exports.CadastroIndividualThrift = function(ar
   this.headerTransport = null;
   this.statusCadastroIndividualInativo = null;
   this.statusGeradoAutomaticamente = null;
+  this.informacoesSocioEconomicas = null;
   if (args) {
     if (args.condicoesDeSaude !== undefined && args.condicoesDeSaude !== null) {
       this.condicoesDeSaude = new ttypes.CondicoesDeSaudeThrift(args.condicoesDeSaude);
@@ -1802,6 +1869,9 @@ CadastroIndividualThrift = module.exports.CadastroIndividualThrift = function(ar
     }
     if (args.statusGeradoAutomaticamente !== undefined && args.statusGeradoAutomaticamente !== null) {
       this.statusGeradoAutomaticamente = args.statusGeradoAutomaticamente;
+    }
+    if (args.informacoesSocioEconomicas !== undefined && args.informacoesSocioEconomicas !== null) {
+      this.informacoesSocioEconomicas = new ttypes.InformacoesSocioEconomicasThrift(args.informacoesSocioEconomicas);
     }
   }
 };
@@ -1923,6 +1993,14 @@ CadastroIndividualThrift.prototype.read = function(input) {
         input.skip(ftype);
       }
       break;
+      case 16:
+      if (ftype == Thrift.Type.STRUCT) {
+        this.informacoesSocioEconomicas = new ttypes.InformacoesSocioEconomicasThrift();
+        this.informacoesSocioEconomicas.read(input);
+      } else {
+        input.skip(ftype);
+      }
+      break;
       default:
         input.skip(ftype);
     }
@@ -2002,6 +2080,11 @@ CadastroIndividualThrift.prototype.write = function(output) {
   if (this.statusGeradoAutomaticamente !== null && this.statusGeradoAutomaticamente !== undefined) {
     output.writeFieldBegin('statusGeradoAutomaticamente', Thrift.Type.BOOL, 15);
     output.writeBool(this.statusGeradoAutomaticamente);
+    output.writeFieldEnd();
+  }
+  if (this.informacoesSocioEconomicas !== null && this.informacoesSocioEconomicas !== undefined) {
+    output.writeFieldBegin('informacoesSocioEconomicas', Thrift.Type.STRUCT, 16);
+    this.informacoesSocioEconomicas.write(output);
     output.writeFieldEnd();
   }
   output.writeFieldStop();

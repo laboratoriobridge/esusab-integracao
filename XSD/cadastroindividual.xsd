@@ -9,6 +9,8 @@
 
   <xs:import namespace="http://esus.ufsc.br/informacoessociodemograficas" schemaLocation="informacoessociodemograficas.xsd"/>
 
+  <xs:import namespace="http://esus.ufsc.br/informacoessocioeconomicas" schemaLocation="informacoessocioeconomicas.xsd"/>
+
   <xs:import namespace="http://esus.ufsc.br/saidacidadaocadastro" schemaLocation="saidacidadaocadastro.xsd"/>
 
   <xs:import namespace="http://esus.ufsc.br/unicalotacaoheader" schemaLocation="unicalotacaoheader.xsd"/>

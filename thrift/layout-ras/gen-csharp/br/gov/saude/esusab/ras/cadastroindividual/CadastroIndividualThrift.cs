@@ -36,6 +36,7 @@ namespace br.gov.saude.esusab.ras.cadastroindividual
     private br.gov.saude.esusab.ras.common.UnicaLotacaoHeaderThrift _headerTransport;
     private bool _statusCadastroIndividualInativo;
     private bool _statusGeradoAutomaticamente;
+    private InformacoesSocioEconomicasThrift _informacoesSocioEconomicas;
 
     public CondicoesDeSaudeThrift CondicoesDeSaude
     {
@@ -208,6 +209,19 @@ namespace br.gov.saude.esusab.ras.cadastroindividual
       }
     }
 
+    public InformacoesSocioEconomicasThrift InformacoesSocioEconomicas
+    {
+      get
+      {
+        return _informacoesSocioEconomicas;
+      }
+      set
+      {
+        __isset.informacoesSocioEconomicas = true;
+        this._informacoesSocioEconomicas = value;
+      }
+    }
+
 
     public Isset __isset;
     #if !SILVERLIGHT
@@ -227,6 +241,7 @@ namespace br.gov.saude.esusab.ras.cadastroindividual
       public bool headerTransport;
       public bool statusCadastroIndividualInativo;
       public bool statusGeradoAutomaticamente;
+      public bool informacoesSocioEconomicas;
     }
 
     public CadastroIndividualThrift() {
@@ -353,6 +368,14 @@ namespace br.gov.saude.esusab.ras.cadastroindividual
             case 15:
               if (field.Type == TType.Bool) {
                 StatusGeradoAutomaticamente = iprot.ReadBool();
+              } else { 
+                TProtocolUtil.Skip(iprot, field.Type);
+              }
+              break;
+            case 16:
+              if (field.Type == TType.Struct) {
+                InformacoesSocioEconomicas = new InformacoesSocioEconomicasThrift();
+                InformacoesSocioEconomicas.Read(iprot);
               } else { 
                 TProtocolUtil.Skip(iprot, field.Type);
               }
@@ -490,6 +513,14 @@ namespace br.gov.saude.esusab.ras.cadastroindividual
           oprot.WriteBool(StatusGeradoAutomaticamente);
           oprot.WriteFieldEnd();
         }
+        if (InformacoesSocioEconomicas != null && __isset.informacoesSocioEconomicas) {
+          field.Name = "informacoesSocioEconomicas";
+          field.Type = TType.Struct;
+          field.ID = 16;
+          oprot.WriteFieldBegin(field);
+          InformacoesSocioEconomicas.Write(oprot);
+          oprot.WriteFieldEnd();
+        }
         oprot.WriteFieldStop();
         oprot.WriteStructEnd();
       }
@@ -570,6 +601,10 @@ namespace br.gov.saude.esusab.ras.cadastroindividual
       if (__isset.statusGeradoAutomaticamente) {
         __sb.Append(", StatusGeradoAutomaticamente: ");
         __sb.Append(StatusGeradoAutomaticamente);
+      }
+      if (InformacoesSocioEconomicas != null && __isset.informacoesSocioEconomicas) {
+        __sb.Append(", InformacoesSocioEconomicas: ");
+        __sb.Append(InformacoesSocioEconomicas== null ? "<null>" : InformacoesSocioEconomicas.ToString());
       }
       __sb.Append(")");
       return __sb.ToString();

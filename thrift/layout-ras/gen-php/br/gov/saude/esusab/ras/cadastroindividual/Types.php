@@ -2362,6 +2362,104 @@ class InformacoesSocioDemograficasThrift {
 
 }
 
+class InformacoesSocioEconomicasThrift {
+  static $_TSPEC;
+
+  /**
+   * @var bool
+   */
+  public $alimentosAcabaramAntesTerDinheiroComprarMais = null;
+  /**
+   * @var bool
+   */
+  public $comeuAlgunsAlimentosQueTinhaDinheiroAcabou = null;
+
+  public function __construct($vals=null) {
+    if (!isset(self::$_TSPEC)) {
+      self::$_TSPEC = array(
+        1 => array(
+          'var' => 'alimentosAcabaramAntesTerDinheiroComprarMais',
+          'type' => TType::BOOL,
+          ),
+        2 => array(
+          'var' => 'comeuAlgunsAlimentosQueTinhaDinheiroAcabou',
+          'type' => TType::BOOL,
+          ),
+        );
+    }
+    if (is_array($vals)) {
+      if (isset($vals['alimentosAcabaramAntesTerDinheiroComprarMais'])) {
+        $this->alimentosAcabaramAntesTerDinheiroComprarMais = $vals['alimentosAcabaramAntesTerDinheiroComprarMais'];
+      }
+      if (isset($vals['comeuAlgunsAlimentosQueTinhaDinheiroAcabou'])) {
+        $this->comeuAlgunsAlimentosQueTinhaDinheiroAcabou = $vals['comeuAlgunsAlimentosQueTinhaDinheiroAcabou'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'InformacoesSocioEconomicasThrift';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 1:
+          if ($ftype == TType::BOOL) {
+            $xfer += $input->readBool($this->alimentosAcabaramAntesTerDinheiroComprarMais);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 2:
+          if ($ftype == TType::BOOL) {
+            $xfer += $input->readBool($this->comeuAlgunsAlimentosQueTinhaDinheiroAcabou);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('InformacoesSocioEconomicasThrift');
+    if ($this->alimentosAcabaramAntesTerDinheiroComprarMais !== null) {
+      $xfer += $output->writeFieldBegin('alimentosAcabaramAntesTerDinheiroComprarMais', TType::BOOL, 1);
+      $xfer += $output->writeBool($this->alimentosAcabaramAntesTerDinheiroComprarMais);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->comeuAlgunsAlimentosQueTinhaDinheiroAcabou !== null) {
+      $xfer += $output->writeFieldBegin('comeuAlgunsAlimentosQueTinhaDinheiroAcabou', TType::BOOL, 2);
+      $xfer += $output->writeBool($this->comeuAlgunsAlimentosQueTinhaDinheiroAcabou);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
 class SaidaCidadaoCadastroThrift {
   static $_TSPEC;
 
@@ -2542,6 +2640,10 @@ class CadastroIndividualThrift {
    * @var bool
    */
   public $statusGeradoAutomaticamente = null;
+  /**
+   * @var \br\gov\saude\esusab\ras\cadastroindividual\InformacoesSocioEconomicasThrift
+   */
+  public $informacoesSocioEconomicas = null;
 
   public function __construct($vals=null) {
     if (!isset(self::$_TSPEC)) {
@@ -2608,6 +2710,11 @@ class CadastroIndividualThrift {
           'var' => 'statusGeradoAutomaticamente',
           'type' => TType::BOOL,
           ),
+        16 => array(
+          'var' => 'informacoesSocioEconomicas',
+          'type' => TType::STRUCT,
+          'class' => '\br\gov\saude\esusab\ras\cadastroindividual\InformacoesSocioEconomicasThrift',
+          ),
         );
     }
     if (is_array($vals)) {
@@ -2652,6 +2759,9 @@ class CadastroIndividualThrift {
       }
       if (isset($vals['statusGeradoAutomaticamente'])) {
         $this->statusGeradoAutomaticamente = $vals['statusGeradoAutomaticamente'];
+      }
+      if (isset($vals['informacoesSocioEconomicas'])) {
+        $this->informacoesSocioEconomicas = $vals['informacoesSocioEconomicas'];
       }
     }
   }
@@ -2779,6 +2889,14 @@ class CadastroIndividualThrift {
             $xfer += $input->skip($ftype);
           }
           break;
+        case 16:
+          if ($ftype == TType::STRUCT) {
+            $this->informacoesSocioEconomicas = new \br\gov\saude\esusab\ras\cadastroindividual\InformacoesSocioEconomicasThrift();
+            $xfer += $this->informacoesSocioEconomicas->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
         default:
           $xfer += $input->skip($ftype);
           break;
@@ -2878,6 +2996,14 @@ class CadastroIndividualThrift {
     if ($this->statusGeradoAutomaticamente !== null) {
       $xfer += $output->writeFieldBegin('statusGeradoAutomaticamente', TType::BOOL, 15);
       $xfer += $output->writeBool($this->statusGeradoAutomaticamente);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->informacoesSocioEconomicas !== null) {
+      if (!is_object($this->informacoesSocioEconomicas)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('informacoesSocioEconomicas', TType::STRUCT, 16);
+      $xfer += $this->informacoesSocioEconomicas->write($output);
       $xfer += $output->writeFieldEnd();
     }
     $xfer += $output->writeFieldStop();

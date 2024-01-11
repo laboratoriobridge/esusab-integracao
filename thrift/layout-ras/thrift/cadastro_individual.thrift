@@ -105,6 +105,11 @@ struct InformacoesSocioDemograficasThrift {
 	20:optional i64 coPovoComunidadeTradicional;
 }
 
+struct InformacoesSocioEconomicasThrift {
+	1:optional bool alimentosAcabaramAntesTerDinheiroComprarMais;
+	2:optional bool comeuAlgunsAlimentosQueTinhaDinheiroAcabou;
+}
+
 struct SaidaCidadaoCadastroThrift {
 	1:optional i64 motivoSaidaCidadao;
 	2:optional i64 dataObito;
@@ -125,5 +130,6 @@ struct CadastroIndividualThrift {
 	12:optional SaidaCidadaoCadastroThrift saidaCidadaoCadastro,
 	13:optional common.UnicaLotacaoHeaderThrift headerTransport,
 	14:optional bool statusCadastroIndividualInativo,
-	15:optional bool statusGeradoAutomaticamente;
+	15:optional bool statusGeradoAutomaticamente,
+	16:optional InformacoesSocioEconomicasThrift informacoesSocioEconomicas;
 }

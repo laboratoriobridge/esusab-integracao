@@ -92,6 +92,10 @@
 			<statusDesejaInformarIdentidadeGenero>true</statusDesejaInformarIdentidadeGenero>
 			<coPovoComunidadeTradicional>175</coPovoComunidadeTradicional>
 		</informacoesSocioDemograficas>
+		<informacoesSocioEconomicas>
+			<alimentosAcabaramAntesTerDinheiroComprarMais>true</alimentosAcabaramAntesTerDinheiroComprarMais>
+			<comeuAlgunsAlimentosQueTinhaDinheiroAcabou>false</comeuAlgunsAlimentosQueTinhaDinheiroAcabou>
+		</informacoesSocioEconomicas>
 		<saidaCidadaoCadastro />
 		<statusTermoRecusaCadastroIndividualAtencaoBasica>false</statusTermoRecusaCadastroIndividualAtencaoBasica>
 		<tpCdsOrigem>3</tpCdsOrigem>

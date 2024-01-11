@@ -4284,6 +4284,154 @@ func (p *InformacoesSocioDemograficasThrift) String() string {
 }
 
 // Attributes:
+//  - AlimentosAcabaramAntesTerDinheiroComprarMais
+//  - ComeuAlgunsAlimentosQueTinhaDinheiroAcabou
+type InformacoesSocioEconomicasThrift struct {
+	AlimentosAcabaramAntesTerDinheiroComprarMais *bool `thrift:"alimentosAcabaramAntesTerDinheiroComprarMais,1" json:"alimentosAcabaramAntesTerDinheiroComprarMais,omitempty"`
+	ComeuAlgunsAlimentosQueTinhaDinheiroAcabou   *bool `thrift:"comeuAlgunsAlimentosQueTinhaDinheiroAcabou,2" json:"comeuAlgunsAlimentosQueTinhaDinheiroAcabou,omitempty"`
+}
+
+func NewInformacoesSocioEconomicasThrift() *InformacoesSocioEconomicasThrift {
+	return &InformacoesSocioEconomicasThrift{}
+}
+
+var InformacoesSocioEconomicasThrift_AlimentosAcabaramAntesTerDinheiroComprarMais_DEFAULT bool
+
+func (p *InformacoesSocioEconomicasThrift) GetAlimentosAcabaramAntesTerDinheiroComprarMais() bool {
+	if !p.IsSetAlimentosAcabaramAntesTerDinheiroComprarMais() {
+		return InformacoesSocioEconomicasThrift_AlimentosAcabaramAntesTerDinheiroComprarMais_DEFAULT
+	}
+	return *p.AlimentosAcabaramAntesTerDinheiroComprarMais
+}
+
+var InformacoesSocioEconomicasThrift_ComeuAlgunsAlimentosQueTinhaDinheiroAcabou_DEFAULT bool
+
+func (p *InformacoesSocioEconomicasThrift) GetComeuAlgunsAlimentosQueTinhaDinheiroAcabou() bool {
+	if !p.IsSetComeuAlgunsAlimentosQueTinhaDinheiroAcabou() {
+		return InformacoesSocioEconomicasThrift_ComeuAlgunsAlimentosQueTinhaDinheiroAcabou_DEFAULT
+	}
+	return *p.ComeuAlgunsAlimentosQueTinhaDinheiroAcabou
+}
+func (p *InformacoesSocioEconomicasThrift) IsSetAlimentosAcabaramAntesTerDinheiroComprarMais() bool {
+	return p.AlimentosAcabaramAntesTerDinheiroComprarMais != nil
+}
+
+func (p *InformacoesSocioEconomicasThrift) IsSetComeuAlgunsAlimentosQueTinhaDinheiroAcabou() bool {
+	return p.ComeuAlgunsAlimentosQueTinhaDinheiroAcabou != nil
+}
+
+func (p *InformacoesSocioEconomicasThrift) Read(iprot thrift.TProtocol) error {
+	if _, err := iprot.ReadStructBegin(); err != nil {
+		return thrift.PrependError(fmt.Sprintf("%T read error: ", p), err)
+	}
+
+	for {
+		_, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
+		if err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T field %d read error: ", p, fieldId), err)
+		}
+		if fieldTypeId == thrift.STOP {
+			break
+		}
+		switch fieldId {
+		case 1:
+			if err := p.readField1(iprot); err != nil {
+				return err
+			}
+		case 2:
+			if err := p.readField2(iprot); err != nil {
+				return err
+			}
+		default:
+			if err := iprot.Skip(fieldTypeId); err != nil {
+				return err
+			}
+		}
+		if err := iprot.ReadFieldEnd(); err != nil {
+			return err
+		}
+	}
+	if err := iprot.ReadStructEnd(); err != nil {
+		return thrift.PrependError(fmt.Sprintf("%T read struct end error: ", p), err)
+	}
+	return nil
+}
+
+func (p *InformacoesSocioEconomicasThrift) readField1(iprot thrift.TProtocol) error {
+	if v, err := iprot.ReadBool(); err != nil {
+		return thrift.PrependError("error reading field 1: ", err)
+	} else {
+		p.AlimentosAcabaramAntesTerDinheiroComprarMais = &v
+	}
+	return nil
+}
+
+func (p *InformacoesSocioEconomicasThrift) readField2(iprot thrift.TProtocol) error {
+	if v, err := iprot.ReadBool(); err != nil {
+		return thrift.PrependError("error reading field 2: ", err)
+	} else {
+		p.ComeuAlgunsAlimentosQueTinhaDinheiroAcabou = &v
+	}
+	return nil
+}
+
+func (p *InformacoesSocioEconomicasThrift) Write(oprot thrift.TProtocol) error {
+	if err := oprot.WriteStructBegin("InformacoesSocioEconomicasThrift"); err != nil {
+		return thrift.PrependError(fmt.Sprintf("%T write struct begin error: ", p), err)
+	}
+	if err := p.writeField1(oprot); err != nil {
+		return err
+	}
+	if err := p.writeField2(oprot); err != nil {
+		return err
+	}
+	if err := oprot.WriteFieldStop(); err != nil {
+		return thrift.PrependError("write field stop error: ", err)
+	}
+	if err := oprot.WriteStructEnd(); err != nil {
+		return thrift.PrependError("write struct stop error: ", err)
+	}
+	return nil
+}
+
+func (p *InformacoesSocioEconomicasThrift) writeField1(oprot thrift.TProtocol) (err error) {
+	if p.IsSetAlimentosAcabaramAntesTerDinheiroComprarMais() {
+		if err := oprot.WriteFieldBegin("alimentosAcabaramAntesTerDinheiroComprarMais", thrift.BOOL, 1); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field begin error 1:alimentosAcabaramAntesTerDinheiroComprarMais: ", p), err)
+		}
+		if err := oprot.WriteBool(bool(*p.AlimentosAcabaramAntesTerDinheiroComprarMais)); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T.alimentosAcabaramAntesTerDinheiroComprarMais (1) field write error: ", p), err)
+		}
+		if err := oprot.WriteFieldEnd(); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field end error 1:alimentosAcabaramAntesTerDinheiroComprarMais: ", p), err)
+		}
+	}
+	return err
+}
+
+func (p *InformacoesSocioEconomicasThrift) writeField2(oprot thrift.TProtocol) (err error) {
+	if p.IsSetComeuAlgunsAlimentosQueTinhaDinheiroAcabou() {
+		if err := oprot.WriteFieldBegin("comeuAlgunsAlimentosQueTinhaDinheiroAcabou", thrift.BOOL, 2); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field begin error 2:comeuAlgunsAlimentosQueTinhaDinheiroAcabou: ", p), err)
+		}
+		if err := oprot.WriteBool(bool(*p.ComeuAlgunsAlimentosQueTinhaDinheiroAcabou)); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T.comeuAlgunsAlimentosQueTinhaDinheiroAcabou (2) field write error: ", p), err)
+		}
+		if err := oprot.WriteFieldEnd(); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field end error 2:comeuAlgunsAlimentosQueTinhaDinheiroAcabou: ", p), err)
+		}
+	}
+	return err
+}
+
+func (p *InformacoesSocioEconomicasThrift) String() string {
+	if p == nil {
+		return "<nil>"
+	}
+	return fmt.Sprintf("InformacoesSocioEconomicasThrift(%+v)", *p)
+}
+
+// Attributes:
 //  - MotivoSaidaCidadao
 //  - DataObito
 //  - NumeroDO
@@ -4492,6 +4640,7 @@ func (p *SaidaCidadaoCadastroThrift) String() string {
 //  - HeaderTransport
 //  - StatusCadastroIndividualInativo
 //  - StatusGeradoAutomaticamente
+//  - InformacoesSocioEconomicas
 type CadastroIndividualThrift struct {
 	CondicoesDeSaude *CondicoesDeSaudeThrift `thrift:"condicoesDeSaude,1" json:"condicoesDeSaude,omitempty"`
 	// unused field # 2
@@ -4508,6 +4657,7 @@ type CadastroIndividualThrift struct {
 	HeaderTransport                                  *common.UnicaLotacaoHeaderThrift    `thrift:"headerTransport,13" json:"headerTransport,omitempty"`
 	StatusCadastroIndividualInativo                  *bool                               `thrift:"statusCadastroIndividualInativo,14" json:"statusCadastroIndividualInativo,omitempty"`
 	StatusGeradoAutomaticamente                      *bool                               `thrift:"statusGeradoAutomaticamente,15" json:"statusGeradoAutomaticamente,omitempty"`
+	InformacoesSocioEconomicas                       *InformacoesSocioEconomicasThrift   `thrift:"informacoesSocioEconomicas,16" json:"informacoesSocioEconomicas,omitempty"`
 }
 
 func NewCadastroIndividualThrift() *CadastroIndividualThrift {
@@ -4634,6 +4784,15 @@ func (p *CadastroIndividualThrift) GetStatusGeradoAutomaticamente() bool {
 	}
 	return *p.StatusGeradoAutomaticamente
 }
+
+var CadastroIndividualThrift_InformacoesSocioEconomicas_DEFAULT *InformacoesSocioEconomicasThrift
+
+func (p *CadastroIndividualThrift) GetInformacoesSocioEconomicas() *InformacoesSocioEconomicasThrift {
+	if !p.IsSetInformacoesSocioEconomicas() {
+		return CadastroIndividualThrift_InformacoesSocioEconomicas_DEFAULT
+	}
+	return p.InformacoesSocioEconomicas
+}
 func (p *CadastroIndividualThrift) IsSetCondicoesDeSaude() bool {
 	return p.CondicoesDeSaude != nil
 }
@@ -4684,6 +4843,10 @@ func (p *CadastroIndividualThrift) IsSetStatusCadastroIndividualInativo() bool {
 
 func (p *CadastroIndividualThrift) IsSetStatusGeradoAutomaticamente() bool {
 	return p.StatusGeradoAutomaticamente != nil
+}
+
+func (p *CadastroIndividualThrift) IsSetInformacoesSocioEconomicas() bool {
+	return p.InformacoesSocioEconomicas != nil
 }
 
 func (p *CadastroIndividualThrift) Read(iprot thrift.TProtocol) error {
@@ -4757,6 +4920,10 @@ func (p *CadastroIndividualThrift) Read(iprot thrift.TProtocol) error {
 			}
 		case 15:
 			if err := p.readField15(iprot); err != nil {
+				return err
+			}
+		case 16:
+			if err := p.readField16(iprot); err != nil {
 				return err
 			}
 		default:
@@ -4897,6 +5064,14 @@ func (p *CadastroIndividualThrift) readField15(iprot thrift.TProtocol) error {
 	return nil
 }
 
+func (p *CadastroIndividualThrift) readField16(iprot thrift.TProtocol) error {
+	p.InformacoesSocioEconomicas = &InformacoesSocioEconomicasThrift{}
+	if err := p.InformacoesSocioEconomicas.Read(iprot); err != nil {
+		return thrift.PrependError(fmt.Sprintf("%T error reading struct: ", p.InformacoesSocioEconomicas), err)
+	}
+	return nil
+}
+
 func (p *CadastroIndividualThrift) Write(oprot thrift.TProtocol) error {
 	if err := oprot.WriteStructBegin("CadastroIndividualThrift"); err != nil {
 		return thrift.PrependError(fmt.Sprintf("%T write struct begin error: ", p), err)
@@ -4941,6 +5116,9 @@ func (p *CadastroIndividualThrift) Write(oprot thrift.TProtocol) error {
 		return err
 	}
 	if err := p.writeField15(oprot); err != nil {
+		return err
+	}
+	if err := p.writeField16(oprot); err != nil {
 		return err
 	}
 	if err := oprot.WriteFieldStop(); err != nil {
@@ -5155,6 +5333,21 @@ func (p *CadastroIndividualThrift) writeField15(oprot thrift.TProtocol) (err err
 		}
 		if err := oprot.WriteFieldEnd(); err != nil {
 			return thrift.PrependError(fmt.Sprintf("%T write field end error 15:statusGeradoAutomaticamente: ", p), err)
+		}
+	}
+	return err
+}
+
+func (p *CadastroIndividualThrift) writeField16(oprot thrift.TProtocol) (err error) {
+	if p.IsSetInformacoesSocioEconomicas() {
+		if err := oprot.WriteFieldBegin("informacoesSocioEconomicas", thrift.STRUCT, 16); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field begin error 16:informacoesSocioEconomicas: ", p), err)
+		}
+		if err := p.InformacoesSocioEconomicas.Write(oprot); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T error writing struct: ", p.InformacoesSocioEconomicas), err)
+		}
+		if err := oprot.WriteFieldEnd(); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field end error 16:informacoesSocioEconomicas: ", p), err)
 		}
 	}
 	return err

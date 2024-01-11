@@ -240,6 +240,24 @@ module Br
               ::Thrift::Struct.generate_accessors self
             end
 
+            class InformacoesSocioEconomicasThrift
+              include ::Thrift::Struct, ::Thrift::Struct_Union
+              ALIMENTOSACABARAMANTESTERDINHEIROCOMPRARMAIS = 1
+              COMEUALGUNSALIMENTOSQUETINHADINHEIROACABOU = 2
+
+              FIELDS = {
+                ALIMENTOSACABARAMANTESTERDINHEIROCOMPRARMAIS => {:type => ::Thrift::Types::BOOL, :name => 'alimentosAcabaramAntesTerDinheiroComprarMais', :optional => true},
+                COMEUALGUNSALIMENTOSQUETINHADINHEIROACABOU => {:type => ::Thrift::Types::BOOL, :name => 'comeuAlgunsAlimentosQueTinhaDinheiroAcabou', :optional => true}
+              }
+
+              def struct_fields; FIELDS; end
+
+              def validate
+              end
+
+              ::Thrift::Struct.generate_accessors self
+            end
+
             class SaidaCidadaoCadastroThrift
               include ::Thrift::Struct, ::Thrift::Struct_Union
               MOTIVOSAIDACIDADAO = 1
@@ -276,6 +294,7 @@ module Br
               HEADERTRANSPORT = 13
               STATUSCADASTROINDIVIDUALINATIVO = 14
               STATUSGERADOAUTOMATICAMENTE = 15
+              INFORMACOESSOCIOECONOMICAS = 16
 
               FIELDS = {
                 CONDICOESDESAUDE => {:type => ::Thrift::Types::STRUCT, :name => 'condicoesDeSaude', :class => ::Br::Gov::Saude::Esusab::Ras::Cadastroindividual::CondicoesDeSaudeThrift, :optional => true},
@@ -291,7 +310,8 @@ module Br
                 SAIDACIDADAOCADASTRO => {:type => ::Thrift::Types::STRUCT, :name => 'saidaCidadaoCadastro', :class => ::Br::Gov::Saude::Esusab::Ras::Cadastroindividual::SaidaCidadaoCadastroThrift, :optional => true},
                 HEADERTRANSPORT => {:type => ::Thrift::Types::STRUCT, :name => 'headerTransport', :class => ::Br::Gov::Saude::Esusab::Ras::Common::UnicaLotacaoHeaderThrift, :optional => true},
                 STATUSCADASTROINDIVIDUALINATIVO => {:type => ::Thrift::Types::BOOL, :name => 'statusCadastroIndividualInativo', :optional => true},
-                STATUSGERADOAUTOMATICAMENTE => {:type => ::Thrift::Types::BOOL, :name => 'statusGeradoAutomaticamente', :optional => true}
+                STATUSGERADOAUTOMATICAMENTE => {:type => ::Thrift::Types::BOOL, :name => 'statusGeradoAutomaticamente', :optional => true},
+                INFORMACOESSOCIOECONOMICAS => {:type => ::Thrift::Types::STRUCT, :name => 'informacoesSocioEconomicas', :class => ::Br::Gov::Saude::Esusab::Ras::Cadastroindividual::InformacoesSocioEconomicasThrift, :optional => true}
               }
 
               def struct_fields; FIELDS; end

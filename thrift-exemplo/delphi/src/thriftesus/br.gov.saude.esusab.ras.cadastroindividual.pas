@@ -31,6 +31,7 @@ type
   IEmSituacaoDeRuaThrift = interface;
   IIdentificacaoUsuarioCidadaoThrift = interface;
   IInformacoesSocioDemograficasThrift = interface;
+  IInformacoesSocioEconomicasThrift = interface;
   ISaidaCidadaoCadastroThrift = interface;
   ICadastroIndividualThrift = interface;
 
@@ -1158,6 +1159,56 @@ type
     property __isset_CoPovoComunidadeTradicional: Boolean read Get__isset_CoPovoComunidadeTradicional;
   end;
 
+  IInformacoesSocioEconomicasThrift = interface(IBase)
+    function GetAlimentosAcabaramAntesTerDinheiroComprarMais: Boolean;
+    procedure SetAlimentosAcabaramAntesTerDinheiroComprarMais( const Value: Boolean);
+    function GetComeuAlgunsAlimentosQueTinhaDinheiroAcabou: Boolean;
+    procedure SetComeuAlgunsAlimentosQueTinhaDinheiroAcabou( const Value: Boolean);
+
+    property AlimentosAcabaramAntesTerDinheiroComprarMais: Boolean read GetAlimentosAcabaramAntesTerDinheiroComprarMais write SetAlimentosAcabaramAntesTerDinheiroComprarMais;
+    property ComeuAlgunsAlimentosQueTinhaDinheiroAcabou: Boolean read GetComeuAlgunsAlimentosQueTinhaDinheiroAcabou write SetComeuAlgunsAlimentosQueTinhaDinheiroAcabou;
+
+    function Get__isset_AlimentosAcabaramAntesTerDinheiroComprarMais: Boolean;
+    function Get__isset_ComeuAlgunsAlimentosQueTinhaDinheiroAcabou: Boolean;
+
+    property __isset_AlimentosAcabaramAntesTerDinheiroComprarMais: Boolean read Get__isset_AlimentosAcabaramAntesTerDinheiroComprarMais;
+    property __isset_ComeuAlgunsAlimentosQueTinhaDinheiroAcabou: Boolean read Get__isset_ComeuAlgunsAlimentosQueTinhaDinheiroAcabou;
+  end;
+
+  TInformacoesSocioEconomicasThriftImpl = class(TInterfacedObject, IBase, IInformacoesSocioEconomicasThrift)
+  private
+    FAlimentosAcabaramAntesTerDinheiroComprarMais: Boolean;
+    FComeuAlgunsAlimentosQueTinhaDinheiroAcabou: Boolean;
+    
+    F__isset_AlimentosAcabaramAntesTerDinheiroComprarMais: Boolean;
+    F__isset_ComeuAlgunsAlimentosQueTinhaDinheiroAcabou: Boolean;
+    
+    function GetAlimentosAcabaramAntesTerDinheiroComprarMais: Boolean;
+    procedure SetAlimentosAcabaramAntesTerDinheiroComprarMais( const Value: Boolean);
+    function GetComeuAlgunsAlimentosQueTinhaDinheiroAcabou: Boolean;
+    procedure SetComeuAlgunsAlimentosQueTinhaDinheiroAcabou( const Value: Boolean);
+
+    function Get__isset_AlimentosAcabaramAntesTerDinheiroComprarMais: Boolean;
+    function Get__isset_ComeuAlgunsAlimentosQueTinhaDinheiroAcabou: Boolean;
+  public
+    constructor Create;
+    destructor Destroy; override;
+
+    function ToString: string; override;
+
+    // IBase
+    procedure Read( const iprot: IProtocol);
+    procedure Write( const oprot: IProtocol);
+
+    // Properties
+    property AlimentosAcabaramAntesTerDinheiroComprarMais: Boolean read GetAlimentosAcabaramAntesTerDinheiroComprarMais write SetAlimentosAcabaramAntesTerDinheiroComprarMais;
+    property ComeuAlgunsAlimentosQueTinhaDinheiroAcabou: Boolean read GetComeuAlgunsAlimentosQueTinhaDinheiroAcabou write SetComeuAlgunsAlimentosQueTinhaDinheiroAcabou;
+
+    // isset
+    property __isset_AlimentosAcabaramAntesTerDinheiroComprarMais: Boolean read Get__isset_AlimentosAcabaramAntesTerDinheiroComprarMais;
+    property __isset_ComeuAlgunsAlimentosQueTinhaDinheiroAcabou: Boolean read Get__isset_ComeuAlgunsAlimentosQueTinhaDinheiroAcabou;
+  end;
+
   ISaidaCidadaoCadastroThrift = interface(IBase)
     function GetMotivoSaidaCidadao: Int64;
     procedure SetMotivoSaidaCidadao( const Value: Int64);
@@ -1249,6 +1300,8 @@ type
     procedure SetStatusCadastroIndividualInativo( const Value: Boolean);
     function GetStatusGeradoAutomaticamente: Boolean;
     procedure SetStatusGeradoAutomaticamente( const Value: Boolean);
+    function GetInformacoesSocioEconomicas: IInformacoesSocioEconomicasThrift;
+    procedure SetInformacoesSocioEconomicas( const Value: IInformacoesSocioEconomicasThrift);
 
     property CondicoesDeSaude: ICondicoesDeSaudeThrift read GetCondicoesDeSaude write SetCondicoesDeSaude;
     property EmSituacaoDeRua: IEmSituacaoDeRuaThrift read GetEmSituacaoDeRua write SetEmSituacaoDeRua;
@@ -1264,6 +1317,7 @@ type
     property HeaderTransport: IUnicaLotacaoHeaderThrift read GetHeaderTransport write SetHeaderTransport;
     property StatusCadastroIndividualInativo: Boolean read GetStatusCadastroIndividualInativo write SetStatusCadastroIndividualInativo;
     property StatusGeradoAutomaticamente: Boolean read GetStatusGeradoAutomaticamente write SetStatusGeradoAutomaticamente;
+    property InformacoesSocioEconomicas: IInformacoesSocioEconomicasThrift read GetInformacoesSocioEconomicas write SetInformacoesSocioEconomicas;
 
     function Get__isset_CondicoesDeSaude: Boolean;
     function Get__isset_EmSituacaoDeRua: Boolean;
@@ -1278,6 +1332,7 @@ type
     function Get__isset_HeaderTransport: Boolean;
     function Get__isset_StatusCadastroIndividualInativo: Boolean;
     function Get__isset_StatusGeradoAutomaticamente: Boolean;
+    function Get__isset_InformacoesSocioEconomicas: Boolean;
 
     property __isset_CondicoesDeSaude: Boolean read Get__isset_CondicoesDeSaude;
     property __isset_EmSituacaoDeRua: Boolean read Get__isset_EmSituacaoDeRua;
@@ -1292,6 +1347,7 @@ type
     property __isset_HeaderTransport: Boolean read Get__isset_HeaderTransport;
     property __isset_StatusCadastroIndividualInativo: Boolean read Get__isset_StatusCadastroIndividualInativo;
     property __isset_StatusGeradoAutomaticamente: Boolean read Get__isset_StatusGeradoAutomaticamente;
+    property __isset_InformacoesSocioEconomicas: Boolean read Get__isset_InformacoesSocioEconomicas;
   end;
 
   TCadastroIndividualThriftImpl = class(TInterfacedObject, IBase, ICadastroIndividualThrift)
@@ -1310,6 +1366,7 @@ type
     FHeaderTransport: IUnicaLotacaoHeaderThrift;
     FStatusCadastroIndividualInativo: Boolean;
     FStatusGeradoAutomaticamente: Boolean;
+    FInformacoesSocioEconomicas: IInformacoesSocioEconomicasThrift;
     
     F__isset_CondicoesDeSaude: Boolean;
     F__isset_EmSituacaoDeRua: Boolean;
@@ -1324,6 +1381,7 @@ type
     F__isset_HeaderTransport: Boolean;
     F__isset_StatusCadastroIndividualInativo: Boolean;
     F__isset_StatusGeradoAutomaticamente: Boolean;
+    F__isset_InformacoesSocioEconomicas: Boolean;
     
     function GetCondicoesDeSaude: ICondicoesDeSaudeThrift;
     procedure SetCondicoesDeSaude( const Value: ICondicoesDeSaudeThrift);
@@ -1353,6 +1411,8 @@ type
     procedure SetStatusCadastroIndividualInativo( const Value: Boolean);
     function GetStatusGeradoAutomaticamente: Boolean;
     procedure SetStatusGeradoAutomaticamente( const Value: Boolean);
+    function GetInformacoesSocioEconomicas: IInformacoesSocioEconomicasThrift;
+    procedure SetInformacoesSocioEconomicas( const Value: IInformacoesSocioEconomicasThrift);
 
     function Get__isset_CondicoesDeSaude: Boolean;
     function Get__isset_EmSituacaoDeRua: Boolean;
@@ -1367,6 +1427,7 @@ type
     function Get__isset_HeaderTransport: Boolean;
     function Get__isset_StatusCadastroIndividualInativo: Boolean;
     function Get__isset_StatusGeradoAutomaticamente: Boolean;
+    function Get__isset_InformacoesSocioEconomicas: Boolean;
   public
     constructor Create;
     destructor Destroy; override;
@@ -1392,6 +1453,7 @@ type
     property HeaderTransport: IUnicaLotacaoHeaderThrift read GetHeaderTransport write SetHeaderTransport;
     property StatusCadastroIndividualInativo: Boolean read GetStatusCadastroIndividualInativo write SetStatusCadastroIndividualInativo;
     property StatusGeradoAutomaticamente: Boolean read GetStatusGeradoAutomaticamente write SetStatusGeradoAutomaticamente;
+    property InformacoesSocioEconomicas: IInformacoesSocioEconomicasThrift read GetInformacoesSocioEconomicas write SetInformacoesSocioEconomicas;
 
     // isset
     property __isset_CondicoesDeSaude: Boolean read Get__isset_CondicoesDeSaude;
@@ -1407,6 +1469,7 @@ type
     property __isset_HeaderTransport: Boolean read Get__isset_HeaderTransport;
     property __isset_StatusCadastroIndividualInativo: Boolean read Get__isset_StatusCadastroIndividualInativo;
     property __isset_StatusGeradoAutomaticamente: Boolean read Get__isset_StatusGeradoAutomaticamente;
+    property __isset_InformacoesSocioEconomicas: Boolean read Get__isset_InformacoesSocioEconomicas;
   end;
 
 implementation
@@ -5213,6 +5276,155 @@ begin
   end;
 end;
 
+constructor TInformacoesSocioEconomicasThriftImpl.Create;
+begin
+  inherited;
+end;
+
+destructor TInformacoesSocioEconomicasThriftImpl.Destroy;
+begin
+  inherited;
+end;
+
+function TInformacoesSocioEconomicasThriftImpl.GetAlimentosAcabaramAntesTerDinheiroComprarMais: Boolean;
+begin
+  Result := FAlimentosAcabaramAntesTerDinheiroComprarMais;
+end;
+
+procedure TInformacoesSocioEconomicasThriftImpl.SetAlimentosAcabaramAntesTerDinheiroComprarMais( const Value: Boolean);
+begin
+  F__isset_AlimentosAcabaramAntesTerDinheiroComprarMais := True;
+  FAlimentosAcabaramAntesTerDinheiroComprarMais := Value;
+end;
+
+function TInformacoesSocioEconomicasThriftImpl.Get__isset_AlimentosAcabaramAntesTerDinheiroComprarMais: Boolean;
+begin
+  Result := F__isset_AlimentosAcabaramAntesTerDinheiroComprarMais;
+end;
+
+function TInformacoesSocioEconomicasThriftImpl.GetComeuAlgunsAlimentosQueTinhaDinheiroAcabou: Boolean;
+begin
+  Result := FComeuAlgunsAlimentosQueTinhaDinheiroAcabou;
+end;
+
+procedure TInformacoesSocioEconomicasThriftImpl.SetComeuAlgunsAlimentosQueTinhaDinheiroAcabou( const Value: Boolean);
+begin
+  F__isset_ComeuAlgunsAlimentosQueTinhaDinheiroAcabou := True;
+  FComeuAlgunsAlimentosQueTinhaDinheiroAcabou := Value;
+end;
+
+function TInformacoesSocioEconomicasThriftImpl.Get__isset_ComeuAlgunsAlimentosQueTinhaDinheiroAcabou: Boolean;
+begin
+  Result := F__isset_ComeuAlgunsAlimentosQueTinhaDinheiroAcabou;
+end;
+
+procedure TInformacoesSocioEconomicasThriftImpl.Read( const iprot: IProtocol);
+var
+  field_ : IField;
+  struc : IStruct;
+  tracker : IProtocolRecursionTracker;
+
+begin
+  tracker := iprot.NextRecursionLevel;
+  struc := iprot.ReadStructBegin;
+  try
+    while (true) do
+    begin
+      field_ := iprot.ReadFieldBegin();
+      if (field_.Type_ = TType.Stop) then
+      begin
+        Break;
+      end;
+      case field_.ID of
+        1: begin
+          if (field_.Type_ = TType.Bool_) then
+          begin
+            AlimentosAcabaramAntesTerDinheiroComprarMais := iprot.ReadBool();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        2: begin
+          if (field_.Type_ = TType.Bool_) then
+          begin
+            ComeuAlgunsAlimentosQueTinhaDinheiroAcabou := iprot.ReadBool();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end
+        else begin
+          TProtocolUtil.Skip(iprot, field_.Type_);
+        end;
+      end;
+      iprot.ReadFieldEnd;
+    end;
+  finally
+    iprot.ReadStructEnd;
+  end;
+end;
+
+procedure TInformacoesSocioEconomicasThriftImpl.Write( const oprot: IProtocol);
+var
+  struc : IStruct;
+  field_ : IField;
+  tracker : IProtocolRecursionTracker;
+begin
+  tracker := oprot.NextRecursionLevel;
+  struc := TStructImpl.Create('InformacoesSocioEconomicasThrift');
+  oprot.WriteStructBegin(struc);
+  field_ := TFieldImpl.Create;
+  if (__isset_AlimentosAcabaramAntesTerDinheiroComprarMais) then
+  begin
+    field_.Name := 'alimentosAcabaramAntesTerDinheiroComprarMais';
+    field_.Type_  := TType.Bool_;
+    field_.ID := 1;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteBool(AlimentosAcabaramAntesTerDinheiroComprarMais);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_ComeuAlgunsAlimentosQueTinhaDinheiroAcabou) then
+  begin
+    field_.Name := 'comeuAlgunsAlimentosQueTinhaDinheiroAcabou';
+    field_.Type_  := TType.Bool_;
+    field_.ID := 2;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteBool(ComeuAlgunsAlimentosQueTinhaDinheiroAcabou);
+    oprot.WriteFieldEnd();
+  end;
+  oprot.WriteFieldStop();
+  oprot.WriteStructEnd();
+end;
+
+function TInformacoesSocioEconomicasThriftImpl.ToString: string;
+var
+  _sb43 : TThriftStringBuilder;
+  _first44 : Boolean;
+begin
+  _sb43 := TThriftStringBuilder.Create('(');
+  try
+    _first44 := TRUE;
+    if (__isset_AlimentosAcabaramAntesTerDinheiroComprarMais) then begin
+      if not _first44 then _sb43.Append(',');
+      _first44 := FALSE;
+      _sb43.Append('AlimentosAcabaramAntesTerDinheiroComprarMais: ');
+      _sb43.Append(AlimentosAcabaramAntesTerDinheiroComprarMais);
+    end;
+    if (__isset_ComeuAlgunsAlimentosQueTinhaDinheiroAcabou) then begin
+      if not _first44 then _sb43.Append(',');
+      _first44 := FALSE;
+      _sb43.Append('ComeuAlgunsAlimentosQueTinhaDinheiroAcabou: ');
+      _sb43.Append(ComeuAlgunsAlimentosQueTinhaDinheiroAcabou);
+    end;
+    _sb43.Append(')');
+    Result := _sb43.ToString;
+    if _first44 then {prevent warning};
+  finally
+    _sb43.Free;
+  end;
+end;
+
 constructor TSaidaCidadaoCadastroThriftImpl.Create;
 begin
   inherited;
@@ -5370,35 +5582,35 @@ end;
 
 function TSaidaCidadaoCadastroThriftImpl.ToString: string;
 var
-  _sb43 : TThriftStringBuilder;
-  _first44 : Boolean;
+  _sb45 : TThriftStringBuilder;
+  _first46 : Boolean;
 begin
-  _sb43 := TThriftStringBuilder.Create('(');
+  _sb45 := TThriftStringBuilder.Create('(');
   try
-    _first44 := TRUE;
+    _first46 := TRUE;
     if (__isset_MotivoSaidaCidadao) then begin
-      if not _first44 then _sb43.Append(',');
-      _first44 := FALSE;
-      _sb43.Append('MotivoSaidaCidadao: ');
-      _sb43.Append(MotivoSaidaCidadao);
+      if not _first46 then _sb45.Append(',');
+      _first46 := FALSE;
+      _sb45.Append('MotivoSaidaCidadao: ');
+      _sb45.Append(MotivoSaidaCidadao);
     end;
     if (__isset_DataObito) then begin
-      if not _first44 then _sb43.Append(',');
-      _first44 := FALSE;
-      _sb43.Append('DataObito: ');
-      _sb43.Append(DataObito);
+      if not _first46 then _sb45.Append(',');
+      _first46 := FALSE;
+      _sb45.Append('DataObito: ');
+      _sb45.Append(DataObito);
     end;
     if (__isset_NumeroDO) then begin
-      if not _first44 then _sb43.Append(',');
-      _first44 := FALSE;
-      _sb43.Append('NumeroDO: ');
-      _sb43.Append(NumeroDO);
+      if not _first46 then _sb45.Append(',');
+      _first46 := FALSE;
+      _sb45.Append('NumeroDO: ');
+      _sb45.Append(NumeroDO);
     end;
-    _sb43.Append(')');
-    Result := _sb43.ToString;
-    if _first44 then {prevent warning};
+    _sb45.Append(')');
+    Result := _sb45.ToString;
+    if _first46 then {prevent warning};
   finally
-    _sb43.Free;
+    _sb45.Free;
   end;
 end;
 
@@ -5630,6 +5842,22 @@ begin
   Result := F__isset_StatusGeradoAutomaticamente;
 end;
 
+function TCadastroIndividualThriftImpl.GetInformacoesSocioEconomicas: IInformacoesSocioEconomicasThrift;
+begin
+  Result := FInformacoesSocioEconomicas;
+end;
+
+procedure TCadastroIndividualThriftImpl.SetInformacoesSocioEconomicas( const Value: IInformacoesSocioEconomicasThrift);
+begin
+  F__isset_InformacoesSocioEconomicas := True;
+  FInformacoesSocioEconomicas := Value;
+end;
+
+function TCadastroIndividualThriftImpl.Get__isset_InformacoesSocioEconomicas: Boolean;
+begin
+  Result := F__isset_InformacoesSocioEconomicas;
+end;
+
 procedure TCadastroIndividualThriftImpl.Read( const iprot: IProtocol);
 var
   field_ : IField;
@@ -5782,6 +6010,16 @@ begin
           begin
             TProtocolUtil.Skip(iprot, field_.Type_);
           end;
+        end;
+        16: begin
+          if (field_.Type_ = TType.Struct) then
+          begin
+            InformacoesSocioEconomicas := TInformacoesSocioEconomicasThriftImpl.Create;
+            InformacoesSocioEconomicas.Read(iprot);
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
         end
         else begin
           TProtocolUtil.Skip(iprot, field_.Type_);
@@ -5930,92 +6168,105 @@ begin
     oprot.WriteBool(StatusGeradoAutomaticamente);
     oprot.WriteFieldEnd();
   end;
+  if (InformacoesSocioEconomicas <> nil) and __isset_InformacoesSocioEconomicas then
+  begin
+    field_.Name := 'informacoesSocioEconomicas';
+    field_.Type_  := TType.Struct;
+    field_.ID := 16;
+    oprot.WriteFieldBegin(field_);
+    InformacoesSocioEconomicas.Write(oprot);
+    oprot.WriteFieldEnd();
+  end;
   oprot.WriteFieldStop();
   oprot.WriteStructEnd();
 end;
 
 function TCadastroIndividualThriftImpl.ToString: string;
 var
-  _sb45 : TThriftStringBuilder;
-  _first46 : Boolean;
+  _sb47 : TThriftStringBuilder;
+  _first48 : Boolean;
 begin
-  _sb45 := TThriftStringBuilder.Create('(');
+  _sb47 := TThriftStringBuilder.Create('(');
   try
-    _first46 := TRUE;
+    _first48 := TRUE;
     if (CondicoesDeSaude <> nil) and __isset_CondicoesDeSaude then begin
-      if not _first46 then _sb45.Append(',');
-      _first46 := FALSE;
-      _sb45.Append('CondicoesDeSaude: ');
-      if (CondicoesDeSaude = nil) then _sb45.Append('<null>') else _sb45.Append(CondicoesDeSaude.ToString());
+      if not _first48 then _sb47.Append(',');
+      _first48 := FALSE;
+      _sb47.Append('CondicoesDeSaude: ');
+      if (CondicoesDeSaude = nil) then _sb47.Append('<null>') else _sb47.Append(CondicoesDeSaude.ToString());
     end;
     if (EmSituacaoDeRua <> nil) and __isset_EmSituacaoDeRua then begin
-      if not _first46 then _sb45.Append(',');
-      _first46 := FALSE;
-      _sb45.Append('EmSituacaoDeRua: ');
-      if (EmSituacaoDeRua = nil) then _sb45.Append('<null>') else _sb45.Append(EmSituacaoDeRua.ToString());
+      if not _first48 then _sb47.Append(',');
+      _first48 := FALSE;
+      _sb47.Append('EmSituacaoDeRua: ');
+      if (EmSituacaoDeRua = nil) then _sb47.Append('<null>') else _sb47.Append(EmSituacaoDeRua.ToString());
     end;
     if (__isset_FichaAtualizada) then begin
-      if not _first46 then _sb45.Append(',');
-      _first46 := FALSE;
-      _sb45.Append('FichaAtualizada: ');
-      _sb45.Append(FichaAtualizada);
+      if not _first48 then _sb47.Append(',');
+      _first48 := FALSE;
+      _sb47.Append('FichaAtualizada: ');
+      _sb47.Append(FichaAtualizada);
     end;
     if (IdentificacaoUsuarioCidadao <> nil) and __isset_IdentificacaoUsuarioCidadao then begin
-      if not _first46 then _sb45.Append(',');
-      _first46 := FALSE;
-      _sb45.Append('IdentificacaoUsuarioCidadao: ');
-      if (IdentificacaoUsuarioCidadao = nil) then _sb45.Append('<null>') else _sb45.Append(IdentificacaoUsuarioCidadao.ToString());
+      if not _first48 then _sb47.Append(',');
+      _first48 := FALSE;
+      _sb47.Append('IdentificacaoUsuarioCidadao: ');
+      if (IdentificacaoUsuarioCidadao = nil) then _sb47.Append('<null>') else _sb47.Append(IdentificacaoUsuarioCidadao.ToString());
     end;
     if (InformacoesSocioDemograficas <> nil) and __isset_InformacoesSocioDemograficas then begin
-      if not _first46 then _sb45.Append(',');
-      _first46 := FALSE;
-      _sb45.Append('InformacoesSocioDemograficas: ');
-      if (InformacoesSocioDemograficas = nil) then _sb45.Append('<null>') else _sb45.Append(InformacoesSocioDemograficas.ToString());
+      if not _first48 then _sb47.Append(',');
+      _first48 := FALSE;
+      _sb47.Append('InformacoesSocioDemograficas: ');
+      if (InformacoesSocioDemograficas = nil) then _sb47.Append('<null>') else _sb47.Append(InformacoesSocioDemograficas.ToString());
     end;
     if (__isset_StatusTermoRecusaCadastroIndividualAtencaoBasica) then begin
-      if not _first46 then _sb45.Append(',');
-      _first46 := FALSE;
-      _sb45.Append('StatusTermoRecusaCadastroIndividualAtencaoBasica: ');
-      _sb45.Append(StatusTermoRecusaCadastroIndividualAtencaoBasica);
+      if not _first48 then _sb47.Append(',');
+      _first48 := FALSE;
+      _sb47.Append('StatusTermoRecusaCadastroIndividualAtencaoBasica: ');
+      _sb47.Append(StatusTermoRecusaCadastroIndividualAtencaoBasica);
     end;
     if (__isset_TpCdsOrigem) then begin
-      if not _first46 then _sb45.Append(',');
-      _first46 := FALSE;
-      _sb45.Append('TpCdsOrigem: ');
-      _sb45.Append(TpCdsOrigem);
+      if not _first48 then _sb47.Append(',');
+      _first48 := FALSE;
+      _sb47.Append('TpCdsOrigem: ');
+      _sb47.Append(TpCdsOrigem);
     end;
-    if not _first46 then _sb45.Append(',');
-    _sb45.Append('Uuid: ');
-    _sb45.Append(Uuid);
+    if not _first48 then _sb47.Append(',');
+    _sb47.Append('Uuid: ');
+    _sb47.Append(Uuid);
     if (__isset_UuidFichaOriginadora) then begin
-      _sb45.Append(', UuidFichaOriginadora: ');
-      _sb45.Append(UuidFichaOriginadora);
+      _sb47.Append(', UuidFichaOriginadora: ');
+      _sb47.Append(UuidFichaOriginadora);
     end;
     if (__isset_UuidCidadao) then begin
-      _sb45.Append(', UuidCidadao: ');
-      _sb45.Append(UuidCidadao);
+      _sb47.Append(', UuidCidadao: ');
+      _sb47.Append(UuidCidadao);
     end;
     if (SaidaCidadaoCadastro <> nil) and __isset_SaidaCidadaoCadastro then begin
-      _sb45.Append(', SaidaCidadaoCadastro: ');
-      if (SaidaCidadaoCadastro = nil) then _sb45.Append('<null>') else _sb45.Append(SaidaCidadaoCadastro.ToString());
+      _sb47.Append(', SaidaCidadaoCadastro: ');
+      if (SaidaCidadaoCadastro = nil) then _sb47.Append('<null>') else _sb47.Append(SaidaCidadaoCadastro.ToString());
     end;
     if (HeaderTransport <> nil) and __isset_HeaderTransport then begin
-      _sb45.Append(', HeaderTransport: ');
-      if (HeaderTransport = nil) then _sb45.Append('<null>') else _sb45.Append(HeaderTransport.ToString());
+      _sb47.Append(', HeaderTransport: ');
+      if (HeaderTransport = nil) then _sb47.Append('<null>') else _sb47.Append(HeaderTransport.ToString());
     end;
     if (__isset_StatusCadastroIndividualInativo) then begin
-      _sb45.Append(', StatusCadastroIndividualInativo: ');
-      _sb45.Append(StatusCadastroIndividualInativo);
+      _sb47.Append(', StatusCadastroIndividualInativo: ');
+      _sb47.Append(StatusCadastroIndividualInativo);
     end;
     if (__isset_StatusGeradoAutomaticamente) then begin
-      _sb45.Append(', StatusGeradoAutomaticamente: ');
-      _sb45.Append(StatusGeradoAutomaticamente);
+      _sb47.Append(', StatusGeradoAutomaticamente: ');
+      _sb47.Append(StatusGeradoAutomaticamente);
     end;
-    _sb45.Append(')');
-    Result := _sb45.ToString;
-    if _first46 then {prevent warning};
+    if (InformacoesSocioEconomicas <> nil) and __isset_InformacoesSocioEconomicas then begin
+      _sb47.Append(', InformacoesSocioEconomicas: ');
+      if (InformacoesSocioEconomicas = nil) then _sb47.Append('<null>') else _sb47.Append(InformacoesSocioEconomicas.ToString());
+    end;
+    _sb47.Append(')');
+    Result := _sb47.ToString;
+    if _first48 then {prevent warning};
   finally
-    _sb45.Free;
+    _sb47.Free;
   end;
 end;
 

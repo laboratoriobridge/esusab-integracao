@@ -89,6 +89,10 @@ module Br
               MEDICAMENTOS = 31
               ENCAMINHAMENTOS = 32
               RESULTADOSEXAMES = 33
+              UUIDRNDS = 34
+              FINALIZADOROBSERVACAO = 35
+              TIPOPARTICIPACAOCIDADAO = 36
+              TIPOPARTICIPACAOPROFISSIONALCONVIDADO = 37
 
               FIELDS = {
                 NUMEROPRONTUARIO => {:type => ::Thrift::Types::STRING, :name => 'numeroProntuario', :optional => true},
@@ -121,7 +125,11 @@ module Br
                 CPFCIDADAO => {:type => ::Thrift::Types::STRING, :name => 'cpfCidadao', :optional => true},
                 MEDICAMENTOS => {:type => ::Thrift::Types::LIST, :name => 'medicamentos', :element => {:type => ::Thrift::Types::STRUCT, :class => ::Br::Gov::Saude::Esusab::Ras::Common::MedicamentoThrift}, :optional => true},
                 ENCAMINHAMENTOS => {:type => ::Thrift::Types::LIST, :name => 'encaminhamentos', :element => {:type => ::Thrift::Types::STRUCT, :class => ::Br::Gov::Saude::Esusab::Ras::Common::EncaminhamentoExternoThrift}, :optional => true},
-                RESULTADOSEXAMES => {:type => ::Thrift::Types::LIST, :name => 'resultadosExames', :element => {:type => ::Thrift::Types::STRUCT, :class => ::Br::Gov::Saude::Esusab::Ras::Common::ResultadosExameThrift}, :optional => true}
+                RESULTADOSEXAMES => {:type => ::Thrift::Types::LIST, :name => 'resultadosExames', :element => {:type => ::Thrift::Types::STRUCT, :class => ::Br::Gov::Saude::Esusab::Ras::Common::ResultadosExameThrift}, :optional => true},
+                UUIDRNDS => {:type => ::Thrift::Types::STRING, :name => 'uuidRnds', :optional => true},
+                FINALIZADOROBSERVACAO => {:type => ::Thrift::Types::STRUCT, :name => 'finalizadorObservacao', :class => ::Br::Gov::Saude::Esusab::Ras::Common::LotacaoHeaderThrift, :optional => true},
+                TIPOPARTICIPACAOCIDADAO => {:type => ::Thrift::Types::I64, :name => 'tipoParticipacaoCidadao', :optional => true},
+                TIPOPARTICIPACAOPROFISSIONALCONVIDADO => {:type => ::Thrift::Types::I64, :name => 'tipoParticipacaoProfissionalConvidado', :optional => true}
               }
 
               def struct_fields; FIELDS; end

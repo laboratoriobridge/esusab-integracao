@@ -461,6 +461,22 @@ class FichaAtendimentoIndividualChildThrift {
    * @var \br\gov\saude\esusab\ras\common\ResultadosExameThrift[]
    */
   public $resultadosExames = null;
+  /**
+   * @var string
+   */
+  public $uuidRnds = null;
+  /**
+   * @var \br\gov\saude\esusab\ras\common\LotacaoHeaderThrift
+   */
+  public $finalizadorObservacao = null;
+  /**
+   * @var int
+   */
+  public $tipoParticipacaoCidadao = null;
+  /**
+   * @var int
+   */
+  public $tipoParticipacaoProfissionalConvidado = null;
 
   public function __construct($vals=null) {
     if (!isset(self::$_TSPEC)) {
@@ -618,6 +634,23 @@ class FichaAtendimentoIndividualChildThrift {
             'class' => '\br\gov\saude\esusab\ras\common\ResultadosExameThrift',
             ),
           ),
+        34 => array(
+          'var' => 'uuidRnds',
+          'type' => TType::STRING,
+          ),
+        35 => array(
+          'var' => 'finalizadorObservacao',
+          'type' => TType::STRUCT,
+          'class' => '\br\gov\saude\esusab\ras\common\LotacaoHeaderThrift',
+          ),
+        36 => array(
+          'var' => 'tipoParticipacaoCidadao',
+          'type' => TType::I64,
+          ),
+        37 => array(
+          'var' => 'tipoParticipacaoProfissionalConvidado',
+          'type' => TType::I64,
+          ),
         );
     }
     if (is_array($vals)) {
@@ -713,6 +746,18 @@ class FichaAtendimentoIndividualChildThrift {
       }
       if (isset($vals['resultadosExames'])) {
         $this->resultadosExames = $vals['resultadosExames'];
+      }
+      if (isset($vals['uuidRnds'])) {
+        $this->uuidRnds = $vals['uuidRnds'];
+      }
+      if (isset($vals['finalizadorObservacao'])) {
+        $this->finalizadorObservacao = $vals['finalizadorObservacao'];
+      }
+      if (isset($vals['tipoParticipacaoCidadao'])) {
+        $this->tipoParticipacaoCidadao = $vals['tipoParticipacaoCidadao'];
+      }
+      if (isset($vals['tipoParticipacaoProfissionalConvidado'])) {
+        $this->tipoParticipacaoProfissionalConvidado = $vals['tipoParticipacaoProfissionalConvidado'];
       }
     }
   }
@@ -1018,6 +1063,35 @@ class FichaAtendimentoIndividualChildThrift {
             $xfer += $input->skip($ftype);
           }
           break;
+        case 34:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->uuidRnds);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 35:
+          if ($ftype == TType::STRUCT) {
+            $this->finalizadorObservacao = new \br\gov\saude\esusab\ras\common\LotacaoHeaderThrift();
+            $xfer += $this->finalizadorObservacao->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 36:
+          if ($ftype == TType::I64) {
+            $xfer += $input->readI64($this->tipoParticipacaoCidadao);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 37:
+          if ($ftype == TType::I64) {
+            $xfer += $input->readI64($this->tipoParticipacaoProfissionalConvidado);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
         default:
           $xfer += $input->skip($ftype);
           break;
@@ -1259,6 +1333,29 @@ class FichaAtendimentoIndividualChildThrift {
         }
         $output->writeListEnd();
       }
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->uuidRnds !== null) {
+      $xfer += $output->writeFieldBegin('uuidRnds', TType::STRING, 34);
+      $xfer += $output->writeString($this->uuidRnds);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->finalizadorObservacao !== null) {
+      if (!is_object($this->finalizadorObservacao)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('finalizadorObservacao', TType::STRUCT, 35);
+      $xfer += $this->finalizadorObservacao->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->tipoParticipacaoCidadao !== null) {
+      $xfer += $output->writeFieldBegin('tipoParticipacaoCidadao', TType::I64, 36);
+      $xfer += $output->writeI64($this->tipoParticipacaoCidadao);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->tipoParticipacaoProfissionalConvidado !== null) {
+      $xfer += $output->writeFieldBegin('tipoParticipacaoProfissionalConvidado', TType::I64, 37);
+      $xfer += $output->writeI64($this->tipoParticipacaoProfissionalConvidado);
       $xfer += $output->writeFieldEnd();
     }
     $xfer += $output->writeFieldStop();

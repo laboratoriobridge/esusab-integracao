@@ -48,11 +48,14 @@ struct FichaAtendimentoIndividualChildThrift {
 	26:optional i64 racionalidadeSaude;
 	27:optional double perimetroCefalico;
 	28:optional i64 dataHoraInicialAtendimento;
-	29:optional i64 dataHoraFinalAtendimento;
+	29:optional i64 dataHoraFinalAtendamento;
 	30:optional string cpfCidadao;
 	31:optional list<common.MedicamentoThrift> medicamentos;
 	32:optional list<common.EncaminhamentoExternoThrift> encaminhamentos;
 	33:optional list<common.ResultadosExameThrift> resultadosExames;
+    35:optional common.LotacaoHeaderThrift finalizadorObservacao;
+    36:optional i64 tipoParticipacaoCidadao;
+    37:optional i64 tipoParticipacaoProfissionalConvidado;
 }
 
 struct FichaAtendimentoIndividualMasterThrift {

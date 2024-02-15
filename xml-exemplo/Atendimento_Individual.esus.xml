@@ -231,6 +231,8 @@
 					<valorResultado>25</valorResultado>
 				</resultadoExame>
 			</resultadosExames>
+			<tipoParticipacaoCidadao>1</tipoParticipacaoCidadao>
+			<tipoParticipacaoProfissionalConvidado>2</tipoParticipacaoProfissionalConvidado>
 		</atendimentosIndividuais>
 		<tpCdsOrigem>3</tpCdsOrigem>
 		<uuidFicha>0019615-edee6500-bf76-4691-b9c7-f7b1d550bc7a</uuidFicha>

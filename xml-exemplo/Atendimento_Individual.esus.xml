@@ -77,7 +77,13 @@
 				<solicitadoAvaliado>A</solicitadoAvaliado>
 			</exame>
 			<vacinaEmDia>true</vacinaEmDia>
-			<ficouEmObservacao>false</ficouEmObservacao>
+			<ficouEmObservacao>true</ficouEmObservacao>
+			<finalizadorObservacao>
+				<profissionalCNS>700609923387762</profissionalCNS>
+				<cboCodigo_2002>225142</cboCodigo_2002>
+				<cnes>0019615</cnes>
+				<ine>0000471828</ine>
+			</finalizadorObservacao>
 			<nasfs>1</nasfs>
 			<condutas>9</condutas>
 			<condutas>5</condutas>
@@ -225,6 +231,8 @@
 					<valorResultado>25</valorResultado>
 				</resultadoExame>
 			</resultadosExames>
+			<tipoParticipacaoCidadao>1</tipoParticipacaoCidadao>
+			<tipoParticipacaoProfissionalConvidado>2</tipoParticipacaoProfissionalConvidado>
 		</atendimentosIndividuais>
 		<tpCdsOrigem>3</tpCdsOrigem>
 		<uuidFicha>0019615-edee6500-bf76-4691-b9c7-f7b1d550bc7a</uuidFicha>
@@ -234,7 +242,7 @@
 		<uuidInstalacao>TREINAMENTO</uuidInstalacao>
 		<cpfOuCnpj>01234567890</cpfOuCnpj>
 		<nomeOuRazaoSocial>ADMINISTRADOR INSTALAÇÃO</nomeOuRazaoSocial>
-		<versaoSistema>5.0.16</versaoSistema>
+		<versaoSistema>5.2.26</versaoSistema>
 		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:remetente>
 	<ns2:originadora>
@@ -242,8 +250,8 @@
 		<uuidInstalacao>TREINAMENTO</uuidInstalacao>
 		<cpfOuCnpj>01234567890</cpfOuCnpj>
 		<nomeOuRazaoSocial>ADMINISTRADOR INSTALAÇÃO</nomeOuRazaoSocial>
-		<versaoSistema>5.0.16</versaoSistema>
+		<versaoSistema>5.2.26</versaoSistema>
 		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:originadora>
-	<versao major="4" minor="4" revision="1" />
+	<versao major="5" minor="3" revision="0" />
 </ns3:dadoTransporteTransportXml>

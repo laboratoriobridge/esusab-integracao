@@ -267,6 +267,10 @@ FichaAtendimentoIndividualChildThrift = module.exports.FichaAtendimentoIndividua
   this.medicamentos = null;
   this.encaminhamentos = null;
   this.resultadosExames = null;
+  this.uuidRnds = null;
+  this.finalizadorObservacao = null;
+  this.tipoParticipacaoCidadao = null;
+  this.tipoParticipacaoProfissionalConvidado = null;
   if (args) {
     if (args.numeroProntuario !== undefined && args.numeroProntuario !== null) {
       this.numeroProntuario = args.numeroProntuario;
@@ -360,6 +364,18 @@ FichaAtendimentoIndividualChildThrift = module.exports.FichaAtendimentoIndividua
     }
     if (args.resultadosExames !== undefined && args.resultadosExames !== null) {
       this.resultadosExames = Thrift.copyList(args.resultadosExames, [common_ttypes.ResultadosExameThrift]);
+    }
+    if (args.uuidRnds !== undefined && args.uuidRnds !== null) {
+      this.uuidRnds = args.uuidRnds;
+    }
+    if (args.finalizadorObservacao !== undefined && args.finalizadorObservacao !== null) {
+      this.finalizadorObservacao = new common_ttypes.LotacaoHeaderThrift(args.finalizadorObservacao);
+    }
+    if (args.tipoParticipacaoCidadao !== undefined && args.tipoParticipacaoCidadao !== null) {
+      this.tipoParticipacaoCidadao = args.tipoParticipacaoCidadao;
+    }
+    if (args.tipoParticipacaoProfissionalConvidado !== undefined && args.tipoParticipacaoProfissionalConvidado !== null) {
+      this.tipoParticipacaoProfissionalConvidado = args.tipoParticipacaoProfissionalConvidado;
     }
   }
 };
@@ -677,6 +693,35 @@ FichaAtendimentoIndividualChildThrift.prototype.read = function(input) {
         input.skip(ftype);
       }
       break;
+      case 34:
+      if (ftype == Thrift.Type.STRING) {
+        this.uuidRnds = input.readString();
+      } else {
+        input.skip(ftype);
+      }
+      break;
+      case 35:
+      if (ftype == Thrift.Type.STRUCT) {
+        this.finalizadorObservacao = new common_ttypes.LotacaoHeaderThrift();
+        this.finalizadorObservacao.read(input);
+      } else {
+        input.skip(ftype);
+      }
+      break;
+      case 36:
+      if (ftype == Thrift.Type.I64) {
+        this.tipoParticipacaoCidadao = input.readI64();
+      } else {
+        input.skip(ftype);
+      }
+      break;
+      case 37:
+      if (ftype == Thrift.Type.I64) {
+        this.tipoParticipacaoProfissionalConvidado = input.readI64();
+      } else {
+        input.skip(ftype);
+      }
+      break;
       default:
         input.skip(ftype);
     }
@@ -895,6 +940,26 @@ FichaAtendimentoIndividualChildThrift.prototype.write = function(output) {
       }
     }
     output.writeListEnd();
+    output.writeFieldEnd();
+  }
+  if (this.uuidRnds !== null && this.uuidRnds !== undefined) {
+    output.writeFieldBegin('uuidRnds', Thrift.Type.STRING, 34);
+    output.writeString(this.uuidRnds);
+    output.writeFieldEnd();
+  }
+  if (this.finalizadorObservacao !== null && this.finalizadorObservacao !== undefined) {
+    output.writeFieldBegin('finalizadorObservacao', Thrift.Type.STRUCT, 35);
+    this.finalizadorObservacao.write(output);
+    output.writeFieldEnd();
+  }
+  if (this.tipoParticipacaoCidadao !== null && this.tipoParticipacaoCidadao !== undefined) {
+    output.writeFieldBegin('tipoParticipacaoCidadao', Thrift.Type.I64, 36);
+    output.writeI64(this.tipoParticipacaoCidadao);
+    output.writeFieldEnd();
+  }
+  if (this.tipoParticipacaoProfissionalConvidado !== null && this.tipoParticipacaoProfissionalConvidado !== undefined) {
+    output.writeFieldBegin('tipoParticipacaoProfissionalConvidado', Thrift.Type.I64, 37);
+    output.writeI64(this.tipoParticipacaoProfissionalConvidado);
     output.writeFieldEnd();
   }
   output.writeFieldStop();

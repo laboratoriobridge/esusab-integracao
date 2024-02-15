@@ -53,6 +53,10 @@ struct FichaAtendimentoIndividualChildThrift {
 	31:optional list<common.MedicamentoThrift> medicamentos;
 	32:optional list<common.EncaminhamentoExternoThrift> encaminhamentos;
 	33:optional list<common.ResultadosExameThrift> resultadosExames;
+	34:optional string uuidRnds;
+	35:optional common.LotacaoHeaderThrift finalizadorObservacao;
+	36:optional i64 tipoParticipacaoCidadao;
+	37:optional i64 tipoParticipacaoProfissionalConvidado;
 }
 
 struct FichaAtendimentoIndividualMasterThrift {

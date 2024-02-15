@@ -231,6 +231,14 @@ type
     procedure SetEncaminhamentos( const Value: IThriftList<IEncaminhamentoExternoThrift>);
     function GetResultadosExames: IThriftList<IResultadosExameThrift>;
     procedure SetResultadosExames( const Value: IThriftList<IResultadosExameThrift>);
+    function GetUuidRnds: string;
+    procedure SetUuidRnds( const Value: string);
+    function GetFinalizadorObservacao: ILotacaoHeaderThrift;
+    procedure SetFinalizadorObservacao( const Value: ILotacaoHeaderThrift);
+    function GetTipoParticipacaoCidadao: Int64;
+    procedure SetTipoParticipacaoCidadao( const Value: Int64);
+    function GetTipoParticipacaoProfissionalConvidado: Int64;
+    procedure SetTipoParticipacaoProfissionalConvidado( const Value: Int64);
 
     property NumeroProntuario: string read GetNumeroProntuario write SetNumeroProntuario;
     property Cns: string read GetCns write SetCns;
@@ -263,6 +271,10 @@ type
     property Medicamentos: IThriftList<IMedicamentoThrift> read GetMedicamentos write SetMedicamentos;
     property Encaminhamentos: IThriftList<IEncaminhamentoExternoThrift> read GetEncaminhamentos write SetEncaminhamentos;
     property ResultadosExames: IThriftList<IResultadosExameThrift> read GetResultadosExames write SetResultadosExames;
+    property UuidRnds: string read GetUuidRnds write SetUuidRnds;
+    property FinalizadorObservacao: ILotacaoHeaderThrift read GetFinalizadorObservacao write SetFinalizadorObservacao;
+    property TipoParticipacaoCidadao: Int64 read GetTipoParticipacaoCidadao write SetTipoParticipacaoCidadao;
+    property TipoParticipacaoProfissionalConvidado: Int64 read GetTipoParticipacaoProfissionalConvidado write SetTipoParticipacaoProfissionalConvidado;
 
     function Get__isset_NumeroProntuario: Boolean;
     function Get__isset_Cns: Boolean;
@@ -295,6 +307,10 @@ type
     function Get__isset_Medicamentos: Boolean;
     function Get__isset_Encaminhamentos: Boolean;
     function Get__isset_ResultadosExames: Boolean;
+    function Get__isset_UuidRnds: Boolean;
+    function Get__isset_FinalizadorObservacao: Boolean;
+    function Get__isset_TipoParticipacaoCidadao: Boolean;
+    function Get__isset_TipoParticipacaoProfissionalConvidado: Boolean;
 
     property __isset_NumeroProntuario: Boolean read Get__isset_NumeroProntuario;
     property __isset_Cns: Boolean read Get__isset_Cns;
@@ -327,6 +343,10 @@ type
     property __isset_Medicamentos: Boolean read Get__isset_Medicamentos;
     property __isset_Encaminhamentos: Boolean read Get__isset_Encaminhamentos;
     property __isset_ResultadosExames: Boolean read Get__isset_ResultadosExames;
+    property __isset_UuidRnds: Boolean read Get__isset_UuidRnds;
+    property __isset_FinalizadorObservacao: Boolean read Get__isset_FinalizadorObservacao;
+    property __isset_TipoParticipacaoCidadao: Boolean read Get__isset_TipoParticipacaoCidadao;
+    property __isset_TipoParticipacaoProfissionalConvidado: Boolean read Get__isset_TipoParticipacaoProfissionalConvidado;
   end;
 
   TFichaAtendimentoIndividualChildThriftImpl = class(TInterfacedObject, IBase, IFichaAtendimentoIndividualChildThrift)
@@ -362,6 +382,10 @@ type
     FMedicamentos: IThriftList<IMedicamentoThrift>;
     FEncaminhamentos: IThriftList<IEncaminhamentoExternoThrift>;
     FResultadosExames: IThriftList<IResultadosExameThrift>;
+    FUuidRnds: string;
+    FFinalizadorObservacao: ILotacaoHeaderThrift;
+    FTipoParticipacaoCidadao: Int64;
+    FTipoParticipacaoProfissionalConvidado: Int64;
     
     F__isset_NumeroProntuario: Boolean;
     F__isset_Cns: Boolean;
@@ -394,6 +418,10 @@ type
     F__isset_Medicamentos: Boolean;
     F__isset_Encaminhamentos: Boolean;
     F__isset_ResultadosExames: Boolean;
+    F__isset_UuidRnds: Boolean;
+    F__isset_FinalizadorObservacao: Boolean;
+    F__isset_TipoParticipacaoCidadao: Boolean;
+    F__isset_TipoParticipacaoProfissionalConvidado: Boolean;
     
     function GetNumeroProntuario: string;
     procedure SetNumeroProntuario( const Value: string);
@@ -457,6 +485,14 @@ type
     procedure SetEncaminhamentos( const Value: IThriftList<IEncaminhamentoExternoThrift>);
     function GetResultadosExames: IThriftList<IResultadosExameThrift>;
     procedure SetResultadosExames( const Value: IThriftList<IResultadosExameThrift>);
+    function GetUuidRnds: string;
+    procedure SetUuidRnds( const Value: string);
+    function GetFinalizadorObservacao: ILotacaoHeaderThrift;
+    procedure SetFinalizadorObservacao( const Value: ILotacaoHeaderThrift);
+    function GetTipoParticipacaoCidadao: Int64;
+    procedure SetTipoParticipacaoCidadao( const Value: Int64);
+    function GetTipoParticipacaoProfissionalConvidado: Int64;
+    procedure SetTipoParticipacaoProfissionalConvidado( const Value: Int64);
 
     function Get__isset_NumeroProntuario: Boolean;
     function Get__isset_Cns: Boolean;
@@ -489,6 +525,10 @@ type
     function Get__isset_Medicamentos: Boolean;
     function Get__isset_Encaminhamentos: Boolean;
     function Get__isset_ResultadosExames: Boolean;
+    function Get__isset_UuidRnds: Boolean;
+    function Get__isset_FinalizadorObservacao: Boolean;
+    function Get__isset_TipoParticipacaoCidadao: Boolean;
+    function Get__isset_TipoParticipacaoProfissionalConvidado: Boolean;
   public
     constructor Create;
     destructor Destroy; override;
@@ -531,6 +571,10 @@ type
     property Medicamentos: IThriftList<IMedicamentoThrift> read GetMedicamentos write SetMedicamentos;
     property Encaminhamentos: IThriftList<IEncaminhamentoExternoThrift> read GetEncaminhamentos write SetEncaminhamentos;
     property ResultadosExames: IThriftList<IResultadosExameThrift> read GetResultadosExames write SetResultadosExames;
+    property UuidRnds: string read GetUuidRnds write SetUuidRnds;
+    property FinalizadorObservacao: ILotacaoHeaderThrift read GetFinalizadorObservacao write SetFinalizadorObservacao;
+    property TipoParticipacaoCidadao: Int64 read GetTipoParticipacaoCidadao write SetTipoParticipacaoCidadao;
+    property TipoParticipacaoProfissionalConvidado: Int64 read GetTipoParticipacaoProfissionalConvidado write SetTipoParticipacaoProfissionalConvidado;
 
     // isset
     property __isset_NumeroProntuario: Boolean read Get__isset_NumeroProntuario;
@@ -564,6 +608,10 @@ type
     property __isset_Medicamentos: Boolean read Get__isset_Medicamentos;
     property __isset_Encaminhamentos: Boolean read Get__isset_Encaminhamentos;
     property __isset_ResultadosExames: Boolean read Get__isset_ResultadosExames;
+    property __isset_UuidRnds: Boolean read Get__isset_UuidRnds;
+    property __isset_FinalizadorObservacao: Boolean read Get__isset_FinalizadorObservacao;
+    property __isset_TipoParticipacaoCidadao: Boolean read Get__isset_TipoParticipacaoCidadao;
+    property __isset_TipoParticipacaoProfissionalConvidado: Boolean read Get__isset_TipoParticipacaoProfissionalConvidado;
   end;
 
   IFichaAtendimentoIndividualMasterThrift = interface(IBase)
@@ -1597,6 +1645,70 @@ begin
   Result := F__isset_ResultadosExames;
 end;
 
+function TFichaAtendimentoIndividualChildThriftImpl.GetUuidRnds: string;
+begin
+  Result := FUuidRnds;
+end;
+
+procedure TFichaAtendimentoIndividualChildThriftImpl.SetUuidRnds( const Value: string);
+begin
+  F__isset_UuidRnds := True;
+  FUuidRnds := Value;
+end;
+
+function TFichaAtendimentoIndividualChildThriftImpl.Get__isset_UuidRnds: Boolean;
+begin
+  Result := F__isset_UuidRnds;
+end;
+
+function TFichaAtendimentoIndividualChildThriftImpl.GetFinalizadorObservacao: ILotacaoHeaderThrift;
+begin
+  Result := FFinalizadorObservacao;
+end;
+
+procedure TFichaAtendimentoIndividualChildThriftImpl.SetFinalizadorObservacao( const Value: ILotacaoHeaderThrift);
+begin
+  F__isset_FinalizadorObservacao := True;
+  FFinalizadorObservacao := Value;
+end;
+
+function TFichaAtendimentoIndividualChildThriftImpl.Get__isset_FinalizadorObservacao: Boolean;
+begin
+  Result := F__isset_FinalizadorObservacao;
+end;
+
+function TFichaAtendimentoIndividualChildThriftImpl.GetTipoParticipacaoCidadao: Int64;
+begin
+  Result := FTipoParticipacaoCidadao;
+end;
+
+procedure TFichaAtendimentoIndividualChildThriftImpl.SetTipoParticipacaoCidadao( const Value: Int64);
+begin
+  F__isset_TipoParticipacaoCidadao := True;
+  FTipoParticipacaoCidadao := Value;
+end;
+
+function TFichaAtendimentoIndividualChildThriftImpl.Get__isset_TipoParticipacaoCidadao: Boolean;
+begin
+  Result := F__isset_TipoParticipacaoCidadao;
+end;
+
+function TFichaAtendimentoIndividualChildThriftImpl.GetTipoParticipacaoProfissionalConvidado: Int64;
+begin
+  Result := FTipoParticipacaoProfissionalConvidado;
+end;
+
+procedure TFichaAtendimentoIndividualChildThriftImpl.SetTipoParticipacaoProfissionalConvidado( const Value: Int64);
+begin
+  F__isset_TipoParticipacaoProfissionalConvidado := True;
+  FTipoParticipacaoProfissionalConvidado := Value;
+end;
+
+function TFichaAtendimentoIndividualChildThriftImpl.Get__isset_TipoParticipacaoProfissionalConvidado: Boolean;
+begin
+  Result := F__isset_TipoParticipacaoProfissionalConvidado;
+end;
+
 procedure TFichaAtendimentoIndividualChildThriftImpl.Read( const iprot: IProtocol);
 var
   field_ : IField;
@@ -1958,6 +2070,43 @@ begin
           begin
             TProtocolUtil.Skip(iprot, field_.Type_);
           end;
+        end;
+        34: begin
+          if (field_.Type_ = TType.String_) then
+          begin
+            UuidRnds := iprot.ReadString();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        35: begin
+          if (field_.Type_ = TType.Struct) then
+          begin
+            FinalizadorObservacao := TLotacaoHeaderThriftImpl.Create;
+            FinalizadorObservacao.Read(iprot);
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        36: begin
+          if (field_.Type_ = TType.I64) then
+          begin
+            TipoParticipacaoCidadao := iprot.ReadI64();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        37: begin
+          if (field_.Type_ = TType.I64) then
+          begin
+            TipoParticipacaoProfissionalConvidado := iprot.ReadI64();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
         end
         else begin
           TProtocolUtil.Skip(iprot, field_.Type_);
@@ -2307,6 +2456,42 @@ begin
     oprot.WriteListEnd();
     oprot.WriteFieldEnd();
   end;
+  if (__isset_UuidRnds) then
+  begin
+    field_.Name := 'uuidRnds';
+    field_.Type_  := TType.String_;
+    field_.ID := 34;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteString(UuidRnds);
+    oprot.WriteFieldEnd();
+  end;
+  if (FinalizadorObservacao <> nil) and __isset_FinalizadorObservacao then
+  begin
+    field_.Name := 'finalizadorObservacao';
+    field_.Type_  := TType.Struct;
+    field_.ID := 35;
+    oprot.WriteFieldBegin(field_);
+    FinalizadorObservacao.Write(oprot);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_TipoParticipacaoCidadao) then
+  begin
+    field_.Name := 'tipoParticipacaoCidadao';
+    field_.Type_  := TType.I64;
+    field_.ID := 36;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteI64(TipoParticipacaoCidadao);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_TipoParticipacaoProfissionalConvidado) then
+  begin
+    field_.Name := 'tipoParticipacaoProfissionalConvidado';
+    field_.Type_  := TType.I64;
+    field_.ID := 37;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteI64(TipoParticipacaoProfissionalConvidado);
+    oprot.WriteFieldEnd();
+  end;
   oprot.WriteFieldStop();
   oprot.WriteStructEnd();
 end;
@@ -2504,6 +2689,30 @@ begin
       _first45 := FALSE;
       _sb44.Append('ResultadosExames: ');
       _sb44.Append(ResultadosExames);
+    end;
+    if (__isset_UuidRnds) then begin
+      if not _first45 then _sb44.Append(',');
+      _first45 := FALSE;
+      _sb44.Append('UuidRnds: ');
+      _sb44.Append(UuidRnds);
+    end;
+    if (FinalizadorObservacao <> nil) and __isset_FinalizadorObservacao then begin
+      if not _first45 then _sb44.Append(',');
+      _first45 := FALSE;
+      _sb44.Append('FinalizadorObservacao: ');
+      if (FinalizadorObservacao = nil) then _sb44.Append('<null>') else _sb44.Append(FinalizadorObservacao.ToString());
+    end;
+    if (__isset_TipoParticipacaoCidadao) then begin
+      if not _first45 then _sb44.Append(',');
+      _first45 := FALSE;
+      _sb44.Append('TipoParticipacaoCidadao: ');
+      _sb44.Append(TipoParticipacaoCidadao);
+    end;
+    if (__isset_TipoParticipacaoProfissionalConvidado) then begin
+      if not _first45 then _sb44.Append(',');
+      _first45 := FALSE;
+      _sb44.Append('TipoParticipacaoProfissionalConvidado: ');
+      _sb44.Append(TipoParticipacaoProfissionalConvidado);
     end;
     _sb44.Append(')');
     Result := _sb44.ToString;

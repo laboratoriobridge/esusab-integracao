@@ -54,6 +54,10 @@ namespace br.gov.saude.esusab.ras.atendindividual
     private List<br.gov.saude.esusab.ras.common.MedicamentoThrift> _medicamentos;
     private List<br.gov.saude.esusab.ras.common.EncaminhamentoExternoThrift> _encaminhamentos;
     private List<br.gov.saude.esusab.ras.common.ResultadosExameThrift> _resultadosExames;
+    private string _uuidRnds;
+    private br.gov.saude.esusab.ras.common.LotacaoHeaderThrift _finalizadorObservacao;
+    private long _tipoParticipacaoCidadao;
+    private long _tipoParticipacaoProfissionalConvidado;
 
     public string NumeroProntuario
     {
@@ -458,6 +462,58 @@ namespace br.gov.saude.esusab.ras.atendindividual
       }
     }
 
+    public string UuidRnds
+    {
+      get
+      {
+        return _uuidRnds;
+      }
+      set
+      {
+        __isset.uuidRnds = true;
+        this._uuidRnds = value;
+      }
+    }
+
+    public br.gov.saude.esusab.ras.common.LotacaoHeaderThrift FinalizadorObservacao
+    {
+      get
+      {
+        return _finalizadorObservacao;
+      }
+      set
+      {
+        __isset.finalizadorObservacao = true;
+        this._finalizadorObservacao = value;
+      }
+    }
+
+    public long TipoParticipacaoCidadao
+    {
+      get
+      {
+        return _tipoParticipacaoCidadao;
+      }
+      set
+      {
+        __isset.tipoParticipacaoCidadao = true;
+        this._tipoParticipacaoCidadao = value;
+      }
+    }
+
+    public long TipoParticipacaoProfissionalConvidado
+    {
+      get
+      {
+        return _tipoParticipacaoProfissionalConvidado;
+      }
+      set
+      {
+        __isset.tipoParticipacaoProfissionalConvidado = true;
+        this._tipoParticipacaoProfissionalConvidado = value;
+      }
+    }
+
 
     public Isset __isset;
     #if !SILVERLIGHT
@@ -495,6 +551,10 @@ namespace br.gov.saude.esusab.ras.atendindividual
       public bool medicamentos;
       public bool encaminhamentos;
       public bool resultadosExames;
+      public bool uuidRnds;
+      public bool finalizadorObservacao;
+      public bool tipoParticipacaoCidadao;
+      public bool tipoParticipacaoProfissionalConvidado;
     }
 
     public FichaAtendimentoIndividualChildThrift() {
@@ -793,6 +853,35 @@ namespace br.gov.saude.esusab.ras.atendindividual
                   }
                   iprot.ReadListEnd();
                 }
+              } else { 
+                TProtocolUtil.Skip(iprot, field.Type);
+              }
+              break;
+            case 34:
+              if (field.Type == TType.String) {
+                UuidRnds = iprot.ReadString();
+              } else { 
+                TProtocolUtil.Skip(iprot, field.Type);
+              }
+              break;
+            case 35:
+              if (field.Type == TType.Struct) {
+                FinalizadorObservacao = new br.gov.saude.esusab.ras.common.LotacaoHeaderThrift();
+                FinalizadorObservacao.Read(iprot);
+              } else { 
+                TProtocolUtil.Skip(iprot, field.Type);
+              }
+              break;
+            case 36:
+              if (field.Type == TType.I64) {
+                TipoParticipacaoCidadao = iprot.ReadI64();
+              } else { 
+                TProtocolUtil.Skip(iprot, field.Type);
+              }
+              break;
+            case 37:
+              if (field.Type == TType.I64) {
+                TipoParticipacaoProfissionalConvidado = iprot.ReadI64();
               } else { 
                 TProtocolUtil.Skip(iprot, field.Type);
               }
@@ -1108,6 +1197,38 @@ namespace br.gov.saude.esusab.ras.atendindividual
           }
           oprot.WriteFieldEnd();
         }
+        if (UuidRnds != null && __isset.uuidRnds) {
+          field.Name = "uuidRnds";
+          field.Type = TType.String;
+          field.ID = 34;
+          oprot.WriteFieldBegin(field);
+          oprot.WriteString(UuidRnds);
+          oprot.WriteFieldEnd();
+        }
+        if (FinalizadorObservacao != null && __isset.finalizadorObservacao) {
+          field.Name = "finalizadorObservacao";
+          field.Type = TType.Struct;
+          field.ID = 35;
+          oprot.WriteFieldBegin(field);
+          FinalizadorObservacao.Write(oprot);
+          oprot.WriteFieldEnd();
+        }
+        if (__isset.tipoParticipacaoCidadao) {
+          field.Name = "tipoParticipacaoCidadao";
+          field.Type = TType.I64;
+          field.ID = 36;
+          oprot.WriteFieldBegin(field);
+          oprot.WriteI64(TipoParticipacaoCidadao);
+          oprot.WriteFieldEnd();
+        }
+        if (__isset.tipoParticipacaoProfissionalConvidado) {
+          field.Name = "tipoParticipacaoProfissionalConvidado";
+          field.Type = TType.I64;
+          field.ID = 37;
+          oprot.WriteFieldBegin(field);
+          oprot.WriteI64(TipoParticipacaoProfissionalConvidado);
+          oprot.WriteFieldEnd();
+        }
         oprot.WriteFieldStop();
         oprot.WriteStructEnd();
       }
@@ -1305,6 +1426,30 @@ namespace br.gov.saude.esusab.ras.atendindividual
         __first = false;
         __sb.Append("ResultadosExames: ");
         __sb.Append(ResultadosExames);
+      }
+      if (UuidRnds != null && __isset.uuidRnds) {
+        if(!__first) { __sb.Append(", "); }
+        __first = false;
+        __sb.Append("UuidRnds: ");
+        __sb.Append(UuidRnds);
+      }
+      if (FinalizadorObservacao != null && __isset.finalizadorObservacao) {
+        if(!__first) { __sb.Append(", "); }
+        __first = false;
+        __sb.Append("FinalizadorObservacao: ");
+        __sb.Append(FinalizadorObservacao== null ? "<null>" : FinalizadorObservacao.ToString());
+      }
+      if (__isset.tipoParticipacaoCidadao) {
+        if(!__first) { __sb.Append(", "); }
+        __first = false;
+        __sb.Append("TipoParticipacaoCidadao: ");
+        __sb.Append(TipoParticipacaoCidadao);
+      }
+      if (__isset.tipoParticipacaoProfissionalConvidado) {
+        if(!__first) { __sb.Append(", "); }
+        __first = false;
+        __sb.Append("TipoParticipacaoProfissionalConvidado: ");
+        __sb.Append(TipoParticipacaoProfissionalConvidado);
       }
       __sb.Append(")");
       return __sb.ToString();

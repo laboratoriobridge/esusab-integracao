@@ -21,7 +21,7 @@ import br.gov.saude.esusab.ras.cadastroindividual.InformacoesSocioDemograficasTh
 import br.gov.saude.esusab.ras.cadastroindividual.IdentificacaoUsuarioCidadaoThrift;
 import br.gov.saude.esusab.ras.cadastroindividual.EmSituacaoDeRuaThrift;
 
-public class ExemploFIchaCadastroIndividualThrift {
+public class ExemploFichaCadastroIndividualThrift {
     private final static String EXTENSAO_EXPORT = ".esus";
 	private static long TIPO_DADO_SERIALIZADO_FICHA_CADASTRO_INDIVIDUAL = 2;
 
@@ -40,7 +40,7 @@ public class ExemploFIchaCadastroIndividualThrift {
 		dadoTransporteThrift.setDadoSerializado(fichaSerializada);
 
 		// Não esquecer de informar a versão da ficha a ser exportada (não é a versão do e-SUS AB)
-		VersaoThrift versaoThrift = new VersaoThrift(3, 2, 3);
+		VersaoThrift versaoThrift = new VersaoThrift(5, 4, 0);
 		dadoTransporteThrift.setVersao(versaoThrift);
 
 		try {
@@ -89,7 +89,7 @@ public class ExemploFIchaCadastroIndividualThrift {
 		originadora.setEmail("a@b.com");
 		originadora.setFone("999999999");
 		originadora.setNomeOuRazaoSocial("Nome ou Razao Social Originadora");
-		originadora.setUuidInstalacao("UUIDUNICO111");
+		originadora.setUuidInstalacao(UUID.randomUUID().toString());
 		dadoTransporteThrift.setOriginadora(originadora);
 
 		DadoInstalacaoThrift remetente = new DadoInstalacaoThrift();
@@ -98,7 +98,7 @@ public class ExemploFIchaCadastroIndividualThrift {
 		remetente.setEmail("b@a.com");
 		remetente.setFone("98888888");
 		remetente.setNomeOuRazaoSocial("Nome ou Razao Social Remetente");
-		remetente.setUuidInstalacao("UUIDUNICO222");
+		remetente.setUuidInstalacao(UUID.randomUUID().toString());
 		dadoTransporteThrift.setRemetente(remetente);
 
 		dadoTransporteThrift.setNumLote(0l);
@@ -122,8 +122,8 @@ public class ExemploFIchaCadastroIndividualThrift {
 		thriftCadIndividual.setStatusTermoRecusaCadastroIndividualAtencaoBasica(false);
 		thriftCadIndividual.setTpCdsOrigem(1);
 		thriftCadIndividual.setUuid(UUID.randomUUID().toString());
-		thriftCadIndividual.setUuidFichaOriginadora("UUID ficha originadora fictício");
-		thriftCadIndividual.setUuidCidadao("UUID cidadão fictício");
+		thriftCadIndividual.setUuidFichaOriginadora(UUID.randomUUID().toString());
+		thriftCadIndividual.setUuidCidadao(UUID.randomUUID().toString());
 		thriftCadIndividual.setSaidaCidadaoCadastro(getSaidaCidadaoCadastro());
 		thriftCadIndividual.setHeaderTransport(getHeaderTransport());
 		thriftCadIndividual.setStatusCadastroIndividualInativo(false);
@@ -206,14 +206,14 @@ public class ExemploFIchaCadastroIndividualThrift {
 		IdentificacaoUsuarioCidadaoThrift identificacaoUsuarioCidadao = new IdentificacaoUsuarioCidadaoThrift();
 
 		identificacaoUsuarioCidadao.setNomeSocial("Nome Social Fictício");
-		identificacaoUsuarioCidadao.setCodigoIbgeMunicipioNascimento("9999");
+		identificacaoUsuarioCidadao.setCodigoIbgeMunicipioNascimento("2708501");
 		identificacaoUsuarioCidadao.setDataNascimentoCidadao(System.currentTimeMillis());
 		identificacaoUsuarioCidadao.setDesconheceNomeMae(false);
 		identificacaoUsuarioCidadao.setEmailCidadao("email@ficticio.com");
 		identificacaoUsuarioCidadao.setNacionalidadeCidadao(1L);
 		identificacaoUsuarioCidadao.setNomeCidadao("Nome Cidadão Fictício");
 		identificacaoUsuarioCidadao.setNomeMaeCidadao("Nome Mãe Cidadão Fictício");
-		identificacaoUsuarioCidadao.setCnsCidadao("123456789012345");
+		identificacaoUsuarioCidadao.setCnsCidadao("231259791070009");
 		identificacaoUsuarioCidadao.setCnsResponsavelFamiliar("543210987654321");
 		identificacaoUsuarioCidadao.setTelefoneCelular("48999999999");
 		identificacaoUsuarioCidadao.setNumeroNisPisPasep("98765432100");
@@ -225,9 +225,9 @@ public class ExemploFIchaCadastroIndividualThrift {
 		identificacaoUsuarioCidadao.setNomePaiCidadao("Nome Pai Cidadão Fictício");
 		identificacaoUsuarioCidadao.setDesconheceNomePai(false);
 		identificacaoUsuarioCidadao.setDtNaturalizacao(System.currentTimeMillis());
-		identificacaoUsuarioCidadao.setPortariaNaturalizacao("Portaria Fictícia 1234");
+		identificacaoUsuarioCidadao.setPortariaNaturalizacao(null);
 		identificacaoUsuarioCidadao.setDtEntradaBrasil(System.currentTimeMillis() - 100000);
-		identificacaoUsuarioCidadao.setMicroArea("Micro Área Fictícia");
+		identificacaoUsuarioCidadao.setMicroArea("02");
 		identificacaoUsuarioCidadao.setStForaArea(false);
 		identificacaoUsuarioCidadao.setCpfCidadao("78231092048");
 		identificacaoUsuarioCidadao.setCpfResponsavelFamiliar("70789564009");
@@ -243,7 +243,7 @@ public class ExemploFIchaCadastroIndividualThrift {
 
 		informacoesSocioDemograficas.setDeficienciasCidadao(Arrays.asList(1L, 2L));
 		informacoesSocioDemograficas.setGrauInstrucaoCidadao(3L);
-		informacoesSocioDemograficas.setOcupacaoCodigoCbo2002("12345");
+		informacoesSocioDemograficas.setOcupacaoCodigoCbo2002("301105");
 		informacoesSocioDemograficas.setStatusDesejaInformarOrientacaoSexual(true);
 		informacoesSocioDemograficas.setOrientacaoSexualCidadao(148L);
 		informacoesSocioDemograficas.setRelacaoParentescoCidadao(144L);
@@ -270,7 +270,7 @@ public class ExemploFIchaCadastroIndividualThrift {
 
 		saidaCidadaoCadastro.setMotivoSaidaCidadao(1L);
 		saidaCidadaoCadastro.setDataObito(System.currentTimeMillis());
-		saidaCidadaoCadastro.setNumeroDO("DO123456789");
+		saidaCidadaoCadastro.setNumeroDO("123456789");
 
 		return saidaCidadaoCadastro;
 	}

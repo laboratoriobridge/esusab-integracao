@@ -25,7 +25,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 5.3.0</span>
+        <span class="label">versão 5.4.0</span>
       
     </a>
 
@@ -137,7 +137,7 @@
 
       <li id="item-layout_ab" data-url="/ledi/documentacao/index.html">
         <label>
-          <input type="checkbox" value="layout_ab" checked="checked"> Layout e-SUS APS de Dados e Interface Versão 5.3.0
+          <input type="checkbox" value="layout_ab" checked="checked"> Layout e-SUS APS de Dados e Interface Versão 5.4.0
           <small>
             <a onclick="checkById('layout_ab', true); return false;">Marcar todos</a> |
             <a onclick="checkById('layout_ab', false); return false;">Desmarcar todos</a>
@@ -675,7 +675,7 @@
 
       <li id="item-principais_alteracoes" data-url="/ledi/documentacao/principais_alteracoes.html">
         <label>
-          <input type="checkbox" value="principais_alteracoes" checked="checked"> Principais alterações da v5.2.0 para a v5.3.0
+          <input type="checkbox" value="principais_alteracoes" checked="checked"> Principais alterações da v5.3.0 para a v5.4.0
           <small>
             <a onclick="checkById('principais_alteracoes', true); return false;">Marcar todos</a> |
             <a onclick="checkById('principais_alteracoes', false); return false;">Desmarcar todos</a>
@@ -1017,7 +1017,7 @@
   
       <!-- Cria a lista de itens[páginas] que foram selecionados  -->
 
-  <li id="summary-layout_ab"><a href="#layout_ab">Layout e-SUS APS de Dados e Interface Versão 5.3.0</a></li>
+  <li id="summary-layout_ab"><a href="#layout_ab">Layout e-SUS APS de Dados e Interface Versão 5.4.0</a></li>
   
       <!-- Cria a lista de itens[páginas] que foram selecionados  -->
 
@@ -1245,7 +1245,7 @@
 
   
 
-  <li id="summary-principais_alteracoes"><a href="#principais_alteracoes">Principais alterações da v5.2.0 para a v5.3.0</a></li>
+  <li id="summary-principais_alteracoes"><a href="#principais_alteracoes">Principais alterações da v5.3.0 para a v5.4.0</a></li>
   
       <!-- Cria a lista de itens[páginas] que foram selecionados  -->
 
@@ -1407,8 +1407,12 @@
 </tr>
 </thead><tbody>
 <tr>
+<td>5.2.28 ou superior</td>
+<td><a href="/ledi/documentacao/index.html">LEDI APS 5.4.0</a></td>
+</tr>
+<tr>
 <td>5.2.21 ou superior</td>
-<td><a href="/ledi/documentacao/index.html">LEDI APS 5.3.0</a></td>
+<td><a href="https://integracao.esusab.ufsc.br/v530/">LEDI APS 5.3.0</a></td>
 </tr>
 <tr>
 <td>5.2.18 ou superior</td>
@@ -1565,17 +1569,17 @@
         
     <div class="post pdf shown" id="layout_ab" data-url="/ledi/documentacao/index.html">
       <header class="post-header">
-        <h1 class="post-title">Layout e-SUS APS de Dados e Interface Versão 5.3.0</h1>
+        <h1 class="post-title">Layout e-SUS APS de Dados e Interface Versão 5.4.0</h1>
       </header>
 
       
 
       <article class="post-content">
-        <p>Esta documentação descreve as estruturas de dados, seus atributos e regras utilizadas no <strong>LEDI APS</strong> versão 5.3.0</p>
+        <p>Esta documentação descreve as estruturas de dados, seus atributos e regras utilizadas no <strong>LEDI APS</strong> versão 5.4.0</p>
 
-<p>A versão <strong>LEDI APS</strong> 5.3.0 é compatível com o sistema <strong>PEC e-SUS APS</strong> versão 5.2.21 ou superior.</p>
+<p>A versão <strong>LEDI APS</strong> 5.4.0 é compatível com o sistema <strong>PEC e-SUS APS</strong> versão 5.2.28 ou superior.</p>
 
-<p>Confira as principais alterações da V5.2.0 para a V5.3.0 <a href="/ledi/documentacao/principais_alteracoes.html">aqui</a>.</p>
+<p>Confira as principais alterações da V5.3.0 para a V5.4.0 <a href="/ledi/documentacao/principais_alteracoes.html">aqui</a>.</p>
 
       </article>
 
@@ -48557,7 +48561,7 @@
 <td>minor</td>
 <td>Integer</td>
 <td>Sim</td>
-<td>Valor único = 3</td>
+<td>Valor único = 4</td>
 </tr>
 <tr>
 <td>revision</td>
@@ -60692,7 +60696,24 @@
 <td>Covid-19-RNAm, Pfizer (Comirnaty) bivalente</td>
 <td>COV19-PFZ-BIVALENTE</td>
 </tr>
+<tr>
+<td>104</td>
+<td>Vacina dengue (atenuada)</td>
+<td>DNG</td>
+</tr>
+<tr>
+<td>105</td>
+<td>Covid-19-RNAm, Moderna (Spikevax) bivalente</td>
+<td>COV-19 MODERNA - SPIKEVAX BIVALENTE</td>
+</tr>
+<tr>
+<td>106</td>
+<td>Pneumocócica 15-valente (conjugada, polissacarídica)</td>
+<td>VPC15</td>
+</tr>
 </tbody></table>
+
+<p><strong>Observação</strong>: O imunobiológico &quot;104 - Vacina dengue (atenuada)&quot; só é suportado para versões 5.2.27 ou superiores do e-SUS APS PEC.</p>
 
 <h2 id="localdeatendimento">LocalDeAtendimento</h2>
 
@@ -65614,6 +65635,12 @@
 <td>000302</td>
 <td>Ativo</td>
 </tr>
+<tr>
+<td>126</td>
+<td>TRISSOMIAS</td>
+<td>000118</td>
+<td>Ativo</td>
+</tr>
 </tbody></table>
 
 <h2 id="tiporesultadoexame">tipoResultadoExame</h2>
@@ -65760,7 +65787,12 @@
 <tr>
 <td>12</td>
 <td>Sugerir agendamento para grupo</td>
-<td>Deve ser utilizada sempre o profissional executante sugerir a participação do cidadão para grupos de atividade coletiva</td>
+<td>Deve ser utilizada sempre que o profissional executante sugerir a participação do cidadão para grupos de atividade coletiva</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Enviar para garantia do acesso</td>
+<td>Deve ser utilizada sempre que o profissional executante deseja realizar um agendamento de consulta, porém não possua disponibilidade no momento</td>
 </tr>
 </tbody></table>
 
@@ -98053,6 +98085,42 @@
 <td>REF</td>
 </tr>
 <tr>
+<td>COV19-PFZ-Bivalente</td>
+<td>Covid-19-RNAm, Pfizer (Comirnaty) bivalente</td>
+<td>CAMPANHA SELETIVA</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>COV19-PFZ-Bivalente</td>
+<td>Covid-19-RNAm, Pfizer (Comirnaty) bivalente</td>
+<td>CAMPANHA SELETIVA</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>COV19-PFZ-Bivalente</td>
+<td>Covid-19-RNAm, Pfizer (Comirnaty) bivalente</td>
+<td>CAMPANHA SELETIVA</td>
+<td>D3</td>
+</tr>
+<tr>
+<td>COV19-PFZ-Bivalente</td>
+<td>Covid-19-RNAm, Pfizer (Comirnaty) bivalente</td>
+<td>CAMPANHA SELETIVA</td>
+<td>D1REV</td>
+</tr>
+<tr>
+<td>COV19-PFZ-Bivalente</td>
+<td>Covid-19-RNAm, Pfizer (Comirnaty) bivalente</td>
+<td>CAMPANHA SELETIVA</td>
+<td>D2REV</td>
+</tr>
+<tr>
+<td>COV19-PFZ-Bivalente</td>
+<td>Covid-19-RNAm, Pfizer (Comirnaty) bivalente</td>
+<td>CAMPANHA SELETIVA</td>
+<td>D3REV</td>
+</tr>
+<tr>
 <td>COV19-PFZ-Ped-Menor-5a</td>
 <td>Covid-19-RNAm, Pfizer (Comirnaty) pediátrica menor de 5 anos</td>
 <td>CAMPANHA SELETIVA</td>
@@ -98359,78 +98427,6 @@
 <td>R2</td>
 </tr>
 <tr>
-<td>Dengue</td>
-<td>Vacina Dengue 1, 2, 3 e 4 (recomb e atenuada)</td>
-<td>INTENSIFICAÇÃO</td>
-<td>D1</td>
-</tr>
-<tr>
-<td>Dengue</td>
-<td>Vacina Dengue 1, 2, 3 e 4 (recomb e atenuada)</td>
-<td>INTENSIFICAÇÃO</td>
-<td>D2</td>
-</tr>
-<tr>
-<td>Dengue</td>
-<td>Vacina Dengue 1, 2, 3 e 4 (recomb e atenuada)</td>
-<td>INTENSIFICAÇÃO</td>
-<td>D3</td>
-</tr>
-<tr>
-<td>Dengue</td>
-<td>Vacina Dengue 1, 2, 3 e 4 (recomb e atenuada)</td>
-<td>ROTINA</td>
-<td>D1</td>
-</tr>
-<tr>
-<td>Dengue</td>
-<td>Vacina Dengue 1, 2, 3 e 4 (recomb e atenuada)</td>
-<td>ROTINA</td>
-<td>D2</td>
-</tr>
-<tr>
-<td>Dengue</td>
-<td>Vacina Dengue 1, 2, 3 e 4 (recomb e atenuada)</td>
-<td>ROTINA</td>
-<td>D3</td>
-</tr>
-<tr>
-<td>Embrião</td>
-<td>Raiva em cultivo celular (Embrião)</td>
-<td>ESPECIAL</td>
-<td>D1</td>
-</tr>
-<tr>
-<td>Embrião</td>
-<td>Raiva em cultivo celular (Embrião)</td>
-<td>ESPECIAL</td>
-<td>D2</td>
-</tr>
-<tr>
-<td>Embrião</td>
-<td>Raiva em cultivo celular (Embrião)</td>
-<td>ESPECIAL</td>
-<td>D3</td>
-</tr>
-<tr>
-<td>Embrião</td>
-<td>Raiva em cultivo celular (Embrião)</td>
-<td>ESPECIAL</td>
-<td>D4</td>
-</tr>
-<tr>
-<td>Embrião</td>
-<td>Raiva em cultivo celular (Embrião)</td>
-<td>ESPECIAL</td>
-<td>D5</td>
-</tr>
-<tr>
-<td>Embrião</td>
-<td>Raiva em cultivo celular (Embrião)</td>
-<td>ESPECIAL</td>
-<td>REV</td>
-</tr>
-<tr>
 <td>FA</td>
 <td>Febre amarela</td>
 <td>BLOQUEIO</td>
@@ -98489,12 +98485,6 @@
 <td>Febre amarela</td>
 <td>ROTINA</td>
 <td>REF</td>
-</tr>
-<tr>
-<td>FA (0,1 ml)</td>
-<td>Febre Amarela - Dose fracionada (0,1 ml)</td>
-<td>INTENSIFICAÇÃO</td>
-<td>D</td>
 </tr>
 <tr>
 <td>FLU3V</td>
@@ -100699,132 +100689,6 @@
 <td>T9</td>
 </tr>
 <tr>
-<td>SBOTULTRI</td>
-<td>Soro botulínico trivalente</td>
-<td>SOROTERAPIA</td>
-<td>T1</td>
-</tr>
-<tr>
-<td>SBOTULTRI</td>
-<td>Soro botulínico trivalente</td>
-<td>SOROTERAPIA</td>
-<td>T10</td>
-</tr>
-<tr>
-<td>SBOTULTRI</td>
-<td>Soro botulínico trivalente</td>
-<td>SOROTERAPIA</td>
-<td>T11</td>
-</tr>
-<tr>
-<td>SBOTULTRI</td>
-<td>Soro botulínico trivalente</td>
-<td>SOROTERAPIA</td>
-<td>T12</td>
-</tr>
-<tr>
-<td>SBOTULTRI</td>
-<td>Soro botulínico trivalente</td>
-<td>SOROTERAPIA</td>
-<td>T13</td>
-</tr>
-<tr>
-<td>SBOTULTRI</td>
-<td>Soro botulínico trivalente</td>
-<td>SOROTERAPIA</td>
-<td>T14</td>
-</tr>
-<tr>
-<td>SBOTULTRI</td>
-<td>Soro botulínico trivalente</td>
-<td>SOROTERAPIA</td>
-<td>T15</td>
-</tr>
-<tr>
-<td>SBOTULTRI</td>
-<td>Soro botulínico trivalente</td>
-<td>SOROTERAPIA</td>
-<td>T16</td>
-</tr>
-<tr>
-<td>SBOTULTRI</td>
-<td>Soro botulínico trivalente</td>
-<td>SOROTERAPIA</td>
-<td>T17</td>
-</tr>
-<tr>
-<td>SBOTULTRI</td>
-<td>Soro botulínico trivalente</td>
-<td>SOROTERAPIA</td>
-<td>T18</td>
-</tr>
-<tr>
-<td>SBOTULTRI</td>
-<td>Soro botulínico trivalente</td>
-<td>SOROTERAPIA</td>
-<td>T19</td>
-</tr>
-<tr>
-<td>SBOTULTRI</td>
-<td>Soro botulínico trivalente</td>
-<td>SOROTERAPIA</td>
-<td>T2</td>
-</tr>
-<tr>
-<td>SBOTULTRI</td>
-<td>Soro botulínico trivalente</td>
-<td>SOROTERAPIA</td>
-<td>T20</td>
-</tr>
-<tr>
-<td>SBOTULTRI</td>
-<td>Soro botulínico trivalente</td>
-<td>SOROTERAPIA</td>
-<td>T24</td>
-</tr>
-<tr>
-<td>SBOTULTRI</td>
-<td>Soro botulínico trivalente</td>
-<td>SOROTERAPIA</td>
-<td>T3</td>
-</tr>
-<tr>
-<td>SBOTULTRI</td>
-<td>Soro botulínico trivalente</td>
-<td>SOROTERAPIA</td>
-<td>T4</td>
-</tr>
-<tr>
-<td>SBOTULTRI</td>
-<td>Soro botulínico trivalente</td>
-<td>SOROTERAPIA</td>
-<td>T5</td>
-</tr>
-<tr>
-<td>SBOTULTRI</td>
-<td>Soro botulínico trivalente</td>
-<td>SOROTERAPIA</td>
-<td>T6</td>
-</tr>
-<tr>
-<td>SBOTULTRI</td>
-<td>Soro botulínico trivalente</td>
-<td>SOROTERAPIA</td>
-<td>T7</td>
-</tr>
-<tr>
-<td>SBOTULTRI</td>
-<td>Soro botulínico trivalente</td>
-<td>SOROTERAPIA</td>
-<td>T8</td>
-</tr>
-<tr>
-<td>SBOTULTRI</td>
-<td>Soro botulínico trivalente</td>
-<td>SOROTERAPIA</td>
-<td>T9</td>
-</tr>
-<tr>
 <td>SCR</td>
 <td>Tríplice viral</td>
 <td>BLOQUEIO</td>
@@ -101531,30 +101395,6 @@
 <td>Soro loxoscélico</td>
 <td>SOROTERAPIA</td>
 <td>T9</td>
-</tr>
-<tr>
-<td>SR</td>
-<td>Dupla viral</td>
-<td>BLOQUEIO</td>
-<td>D</td>
-</tr>
-<tr>
-<td>SR</td>
-<td>Dupla viral</td>
-<td>INTENSIFICAÇÃO</td>
-<td>D1</td>
-</tr>
-<tr>
-<td>SR</td>
-<td>Dupla viral</td>
-<td>INTENSIFICAÇÃO</td>
-<td>D2</td>
-</tr>
-<tr>
-<td>SR</td>
-<td>Dupla viral</td>
-<td>ROTINA</td>
-<td>D</td>
 </tr>
 <tr>
 <td>Tetra Viral</td>
@@ -102023,6 +101863,18 @@
 <td>Tríplice bacteriana acelular (adulto) - dTpa</td>
 <td>ROTINA</td>
 <td>R1</td>
+</tr>
+<tr>
+<td>DNG</td>
+<td>Vacina dengue (atenuada)</td>
+<td>ROTINA</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>DNG</td>
+<td>Vacina dengue (atenuada)</td>
+<td>ROTINA</td>
+<td>D2</td>
 </tr>
 </tbody></table>
 
@@ -102494,17 +102346,25 @@
 
     <div class="post pdf shown" id="principais_alteracoes" data-url="/ledi/documentacao/principais_alteracoes.html">
       <header class="post-header">
-        <h1 class="post-title">Principais alterações da v5.2.0 para a v5.3.0</h1>
+        <h1 class="post-title">Principais alterações da v5.3.0 para a v5.4.0</h1>
       </header>
 
       
 
       <article class="post-content">
-        <p>Este documento relata as principais alterações em relação à versão v5.2.0 do LEDI APS:</p>
+        <p>Este documento relata as principais alterações em relação à versão v5.3.0 do LEDI APS:</p>
 
-<h3 id="1-inser-o-de-novos-campos-na-ficha-de-atendimento-individual-e-na-ficha-de-atendimento-individual-odontol-gico">1. Inserção de novos campos na Ficha de Atendimento Individual e na Ficha de Atendimento Individual Odontológico</h3>
+<h3 id="1-inativa-o-de-imunobiol-gicos-n-o-mais-aplicados-na-aps">1. Inativação de imunobiológicos não mais aplicados na APS.</h3>
 
-<p><strong>1. </strong> Com a criação da consulta entre profissionais na versão 5.2.21 através da FAI e a FAOI deve ser possível caracterizar o tipo de atendimento. Dentre as caracterizações possíveis estão se o atendimento foi realizado de forma síncrona ou assíncrona, o meio de comunicação utilizado e se o cidadão estava presente durante o atendimento.</p>
+<p><strong>1. </strong> Foram inativados os registros de novas aplicações dos imunobiológicoss 13, 18, 27, 36, 38, 39, 40, 44, 70, 71, 72, 73, 82 e 84. Os mesmos ainda podem ser informados como &quot;Registro Anterior&quot; (Transcrição de Caderneta).</p>
+
+<h3 id="2-inclus-o-de-imunobiol-gicos">2. Inclusão de imunobiológicos.</h3>
+
+<p><strong>2. </strong> Foram incluídos os imunobiológicos 105 - Covid-19-RNAm, Moderna (Spikevax) bivalente e 106 - Vacina adsorvida pneumocócica 15-valente (conjugada, polissacarídica).</p>
+
+<h3 id="3-inclus-o-de-grupo-de-atendimento">3. Inclusão de Grupo de Atendimento.</h3>
+
+<p><strong>3. </strong> Foi incluído o grupo de atendimento 000118 - Trissomias.</p>
 
       </article>
 

@@ -524,6 +524,7 @@ func (p *ProblemaCondicaoAvaliacaoAIThrift) String() string {
 //  - FinalizadorObservacao
 //  - TipoParticipacaoCidadao
 //  - TipoParticipacaoProfissionalConvidado
+//  - Emultis
 type FichaAtendimentoIndividualChildThrift struct {
 	NumeroProntuario                *string                            `thrift:"numeroProntuario,1" json:"numeroProntuario,omitempty"`
 	Cns                             *string                            `thrift:"cns,2" json:"cns,omitempty"`
@@ -561,6 +562,7 @@ type FichaAtendimentoIndividualChildThrift struct {
 	FinalizadorObservacao                 *common.LotacaoHeaderThrift           `thrift:"finalizadorObservacao,35" json:"finalizadorObservacao,omitempty"`
 	TipoParticipacaoCidadao               *int64                                `thrift:"tipoParticipacaoCidadao,36" json:"tipoParticipacaoCidadao,omitempty"`
 	TipoParticipacaoProfissionalConvidado *int64                                `thrift:"tipoParticipacaoProfissionalConvidado,37" json:"tipoParticipacaoProfissionalConvidado,omitempty"`
+	Emultis                               []int64                               `thrift:"emultis,38" json:"emultis,omitempty"`
 }
 
 func NewFichaAtendimentoIndividualChildThrift() *FichaAtendimentoIndividualChildThrift {
@@ -863,6 +865,12 @@ func (p *FichaAtendimentoIndividualChildThrift) GetTipoParticipacaoProfissionalC
 	}
 	return *p.TipoParticipacaoProfissionalConvidado
 }
+
+var FichaAtendimentoIndividualChildThrift_Emultis_DEFAULT []int64
+
+func (p *FichaAtendimentoIndividualChildThrift) GetEmultis() []int64 {
+	return p.Emultis
+}
 func (p *FichaAtendimentoIndividualChildThrift) IsSetNumeroProntuario() bool {
 	return p.NumeroProntuario != nil
 }
@@ -1001,6 +1009,10 @@ func (p *FichaAtendimentoIndividualChildThrift) IsSetTipoParticipacaoCidadao() b
 
 func (p *FichaAtendimentoIndividualChildThrift) IsSetTipoParticipacaoProfissionalConvidado() bool {
 	return p.TipoParticipacaoProfissionalConvidado != nil
+}
+
+func (p *FichaAtendimentoIndividualChildThrift) IsSetEmultis() bool {
+	return p.Emultis != nil
 }
 
 func (p *FichaAtendimentoIndividualChildThrift) Read(iprot thrift.TProtocol) error {
@@ -1155,6 +1167,10 @@ func (p *FichaAtendimentoIndividualChildThrift) Read(iprot thrift.TProtocol) err
 			}
 		case 37:
 			if err := p.readField37(iprot); err != nil {
+				return err
+			}
+		case 38:
+			if err := p.readField38(iprot); err != nil {
 				return err
 			}
 		default:
@@ -1555,6 +1571,28 @@ func (p *FichaAtendimentoIndividualChildThrift) readField37(iprot thrift.TProtoc
 	return nil
 }
 
+func (p *FichaAtendimentoIndividualChildThrift) readField38(iprot thrift.TProtocol) error {
+	_, size, err := iprot.ReadListBegin()
+	if err != nil {
+		return thrift.PrependError("error reading list begin: ", err)
+	}
+	tSlice := make([]int64, 0, size)
+	p.Emultis = tSlice
+	for i := 0; i < size; i++ {
+		var _elem8 int64
+		if v, err := iprot.ReadI64(); err != nil {
+			return thrift.PrependError("error reading field 0: ", err)
+		} else {
+			_elem8 = v
+		}
+		p.Emultis = append(p.Emultis, _elem8)
+	}
+	if err := iprot.ReadListEnd(); err != nil {
+		return thrift.PrependError("error reading list end: ", err)
+	}
+	return nil
+}
+
 func (p *FichaAtendimentoIndividualChildThrift) Write(oprot thrift.TProtocol) error {
 	if err := oprot.WriteStructBegin("FichaAtendimentoIndividualChildThrift"); err != nil {
 		return thrift.PrependError(fmt.Sprintf("%T write struct begin error: ", p), err)
@@ -1662,6 +1700,9 @@ func (p *FichaAtendimentoIndividualChildThrift) Write(oprot thrift.TProtocol) er
 		return err
 	}
 	if err := p.writeField37(oprot); err != nil {
+		return err
+	}
+	if err := p.writeField38(oprot); err != nil {
 		return err
 	}
 	if err := oprot.WriteFieldStop(); err != nil {
@@ -2246,6 +2287,29 @@ func (p *FichaAtendimentoIndividualChildThrift) writeField37(oprot thrift.TProto
 	return err
 }
 
+func (p *FichaAtendimentoIndividualChildThrift) writeField38(oprot thrift.TProtocol) (err error) {
+	if p.IsSetEmultis() {
+		if err := oprot.WriteFieldBegin("emultis", thrift.LIST, 38); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field begin error 38:emultis: ", p), err)
+		}
+		if err := oprot.WriteListBegin(thrift.I64, len(p.Emultis)); err != nil {
+			return thrift.PrependError("error writing list begin: ", err)
+		}
+		for _, v := range p.Emultis {
+			if err := oprot.WriteI64(int64(v)); err != nil {
+				return thrift.PrependError(fmt.Sprintf("%T. (0) field write error: ", p), err)
+			}
+		}
+		if err := oprot.WriteListEnd(); err != nil {
+			return thrift.PrependError("error writing list end: ", err)
+		}
+		if err := oprot.WriteFieldEnd(); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field end error 38:emultis: ", p), err)
+		}
+	}
+	return err
+}
+
 func (p *FichaAtendimentoIndividualChildThrift) String() string {
 	if p == nil {
 		return "<nil>"
@@ -2375,11 +2439,11 @@ func (p *FichaAtendimentoIndividualMasterThrift) readField2(iprot thrift.TProtoc
 	tSlice := make([]*FichaAtendimentoIndividualChildThrift, 0, size)
 	p.AtendimentosIndividuais = tSlice
 	for i := 0; i < size; i++ {
-		_elem8 := &FichaAtendimentoIndividualChildThrift{}
-		if err := _elem8.Read(iprot); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T error reading struct: ", _elem8), err)
+		_elem9 := &FichaAtendimentoIndividualChildThrift{}
+		if err := _elem9.Read(iprot); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T error reading struct: ", _elem9), err)
 		}
-		p.AtendimentosIndividuais = append(p.AtendimentosIndividuais, _elem8)
+		p.AtendimentosIndividuais = append(p.AtendimentosIndividuais, _elem9)
 	}
 	if err := iprot.ReadListEnd(); err != nil {
 		return thrift.PrependError("error reading list end: ", err)

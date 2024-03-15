@@ -58,6 +58,7 @@ namespace br.gov.saude.esusab.ras.atendindividual
     private br.gov.saude.esusab.ras.common.LotacaoHeaderThrift _finalizadorObservacao;
     private long _tipoParticipacaoCidadao;
     private long _tipoParticipacaoProfissionalConvidado;
+    private List<long> _emultis;
 
     public string NumeroProntuario
     {
@@ -514,6 +515,19 @@ namespace br.gov.saude.esusab.ras.atendindividual
       }
     }
 
+    public List<long> Emultis
+    {
+      get
+      {
+        return _emultis;
+      }
+      set
+      {
+        __isset.emultis = true;
+        this._emultis = value;
+      }
+    }
+
 
     public Isset __isset;
     #if !SILVERLIGHT
@@ -555,6 +569,7 @@ namespace br.gov.saude.esusab.ras.atendindividual
       public bool finalizadorObservacao;
       public bool tipoParticipacaoCidadao;
       public bool tipoParticipacaoProfissionalConvidado;
+      public bool emultis;
     }
 
     public FichaAtendimentoIndividualChildThrift() {
@@ -886,6 +901,23 @@ namespace br.gov.saude.esusab.ras.atendindividual
                 TProtocolUtil.Skip(iprot, field.Type);
               }
               break;
+            case 38:
+              if (field.Type == TType.List) {
+                {
+                  Emultis = new List<long>();
+                  TList _list26 = iprot.ReadListBegin();
+                  for( int _i27 = 0; _i27 < _list26.Count; ++_i27)
+                  {
+                    long _elem28;
+                    _elem28 = iprot.ReadI64();
+                    Emultis.Add(_elem28);
+                  }
+                  iprot.ReadListEnd();
+                }
+              } else { 
+                TProtocolUtil.Skip(iprot, field.Type);
+              }
+              break;
             default: 
               TProtocolUtil.Skip(iprot, field.Type);
               break;
@@ -1026,9 +1058,9 @@ namespace br.gov.saude.esusab.ras.atendindividual
           oprot.WriteFieldBegin(field);
           {
             oprot.WriteListBegin(new TList(TType.Struct, Exame.Count));
-            foreach (ExameThrift _iter26 in Exame)
+            foreach (ExameThrift _iter29 in Exame)
             {
-              _iter26.Write(oprot);
+              _iter29.Write(oprot);
             }
             oprot.WriteListEnd();
           }
@@ -1065,9 +1097,9 @@ namespace br.gov.saude.esusab.ras.atendindividual
           oprot.WriteFieldBegin(field);
           {
             oprot.WriteListBegin(new TList(TType.I64, Nasfs.Count));
-            foreach (long _iter27 in Nasfs)
+            foreach (long _iter30 in Nasfs)
             {
-              oprot.WriteI64(_iter27);
+              oprot.WriteI64(_iter30);
             }
             oprot.WriteListEnd();
           }
@@ -1080,9 +1112,9 @@ namespace br.gov.saude.esusab.ras.atendindividual
           oprot.WriteFieldBegin(field);
           {
             oprot.WriteListBegin(new TList(TType.I64, Condutas.Count));
-            foreach (long _iter28 in Condutas)
+            foreach (long _iter31 in Condutas)
             {
-              oprot.WriteI64(_iter28);
+              oprot.WriteI64(_iter31);
             }
             oprot.WriteListEnd();
           }
@@ -1159,9 +1191,9 @@ namespace br.gov.saude.esusab.ras.atendindividual
           oprot.WriteFieldBegin(field);
           {
             oprot.WriteListBegin(new TList(TType.Struct, Medicamentos.Count));
-            foreach (br.gov.saude.esusab.ras.common.MedicamentoThrift _iter29 in Medicamentos)
+            foreach (br.gov.saude.esusab.ras.common.MedicamentoThrift _iter32 in Medicamentos)
             {
-              _iter29.Write(oprot);
+              _iter32.Write(oprot);
             }
             oprot.WriteListEnd();
           }
@@ -1174,9 +1206,9 @@ namespace br.gov.saude.esusab.ras.atendindividual
           oprot.WriteFieldBegin(field);
           {
             oprot.WriteListBegin(new TList(TType.Struct, Encaminhamentos.Count));
-            foreach (br.gov.saude.esusab.ras.common.EncaminhamentoExternoThrift _iter30 in Encaminhamentos)
+            foreach (br.gov.saude.esusab.ras.common.EncaminhamentoExternoThrift _iter33 in Encaminhamentos)
             {
-              _iter30.Write(oprot);
+              _iter33.Write(oprot);
             }
             oprot.WriteListEnd();
           }
@@ -1189,9 +1221,9 @@ namespace br.gov.saude.esusab.ras.atendindividual
           oprot.WriteFieldBegin(field);
           {
             oprot.WriteListBegin(new TList(TType.Struct, ResultadosExames.Count));
-            foreach (br.gov.saude.esusab.ras.common.ResultadosExameThrift _iter31 in ResultadosExames)
+            foreach (br.gov.saude.esusab.ras.common.ResultadosExameThrift _iter34 in ResultadosExames)
             {
-              _iter31.Write(oprot);
+              _iter34.Write(oprot);
             }
             oprot.WriteListEnd();
           }
@@ -1227,6 +1259,21 @@ namespace br.gov.saude.esusab.ras.atendindividual
           field.ID = 37;
           oprot.WriteFieldBegin(field);
           oprot.WriteI64(TipoParticipacaoProfissionalConvidado);
+          oprot.WriteFieldEnd();
+        }
+        if (Emultis != null && __isset.emultis) {
+          field.Name = "emultis";
+          field.Type = TType.List;
+          field.ID = 38;
+          oprot.WriteFieldBegin(field);
+          {
+            oprot.WriteListBegin(new TList(TType.I64, Emultis.Count));
+            foreach (long _iter35 in Emultis)
+            {
+              oprot.WriteI64(_iter35);
+            }
+            oprot.WriteListEnd();
+          }
           oprot.WriteFieldEnd();
         }
         oprot.WriteFieldStop();
@@ -1450,6 +1497,12 @@ namespace br.gov.saude.esusab.ras.atendindividual
         __first = false;
         __sb.Append("TipoParticipacaoProfissionalConvidado: ");
         __sb.Append(TipoParticipacaoProfissionalConvidado);
+      }
+      if (Emultis != null && __isset.emultis) {
+        if(!__first) { __sb.Append(", "); }
+        __first = false;
+        __sb.Append("Emultis: ");
+        __sb.Append(Emultis);
       }
       __sb.Append(")");
       return __sb.ToString();

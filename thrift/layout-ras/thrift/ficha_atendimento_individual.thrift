@@ -57,6 +57,7 @@ struct FichaAtendimentoIndividualChildThrift {
 	35:optional common.LotacaoHeaderThrift finalizadorObservacao;
 	36:optional i64 tipoParticipacaoCidadao;
 	37:optional i64 tipoParticipacaoProfissionalConvidado;
+	38:optional list<i64> emultis;
 }
 
 struct FichaAtendimentoIndividualMasterThrift {

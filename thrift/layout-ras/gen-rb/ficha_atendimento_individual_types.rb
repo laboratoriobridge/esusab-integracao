@@ -93,6 +93,7 @@ module Br
               FINALIZADOROBSERVACAO = 35
               TIPOPARTICIPACAOCIDADAO = 36
               TIPOPARTICIPACAOPROFISSIONALCONVIDADO = 37
+              EMULTIS = 38
 
               FIELDS = {
                 NUMEROPRONTUARIO => {:type => ::Thrift::Types::STRING, :name => 'numeroProntuario', :optional => true},
@@ -129,7 +130,8 @@ module Br
                 UUIDRNDS => {:type => ::Thrift::Types::STRING, :name => 'uuidRnds', :optional => true},
                 FINALIZADOROBSERVACAO => {:type => ::Thrift::Types::STRUCT, :name => 'finalizadorObservacao', :class => ::Br::Gov::Saude::Esusab::Ras::Common::LotacaoHeaderThrift, :optional => true},
                 TIPOPARTICIPACAOCIDADAO => {:type => ::Thrift::Types::I64, :name => 'tipoParticipacaoCidadao', :optional => true},
-                TIPOPARTICIPACAOPROFISSIONALCONVIDADO => {:type => ::Thrift::Types::I64, :name => 'tipoParticipacaoProfissionalConvidado', :optional => true}
+                TIPOPARTICIPACAOPROFISSIONALCONVIDADO => {:type => ::Thrift::Types::I64, :name => 'tipoParticipacaoProfissionalConvidado', :optional => true},
+                EMULTIS => {:type => ::Thrift::Types::LIST, :name => 'emultis', :element => {:type => ::Thrift::Types::I64}, :optional => true}
               }
 
               def struct_fields; FIELDS; end

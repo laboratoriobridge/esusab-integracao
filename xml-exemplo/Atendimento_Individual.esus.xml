@@ -84,10 +84,11 @@
 				<cnes>0019615</cnes>
 				<ine>0000471828</ine>
 			</finalizadorObservacao>
-			<nasfs>1</nasfs>
+			<emultis>1</emultis>
 			<condutas>9</condutas>
 			<condutas>5</condutas>
 			<condutas>4</condutas>
+			<condutas>14</condutas>
 			<stGravidezPlanejada>false</stGravidezPlanejada>
 			<nuGestasPrevias>1</nuGestasPrevias>
 			<nuPartos>1</nuPartos>
@@ -180,9 +181,10 @@
 			</exame>
 			<vacinaEmDia>true</vacinaEmDia>
 			<ficouEmObservacao>false</ficouEmObservacao>
-			<nasfs>1</nasfs>
+			<emultis>1</emultis>
 			<condutas>9</condutas>
 			<condutas>5</condutas>
+			<condutas>14</condutas>
 			<stGravidezPlanejada>false</stGravidezPlanejada>
 			<nuGestasPrevias>1</nuGestasPrevias>
 			<nuPartos>1</nuPartos>
@@ -250,8 +252,8 @@
 		<uuidInstalacao>TREINAMENTO</uuidInstalacao>
 		<cpfOuCnpj>01234567890</cpfOuCnpj>
 		<nomeOuRazaoSocial>ADMINISTRADOR INSTALAÇÃO</nomeOuRazaoSocial>
-		<versaoSistema>5.2.26</versaoSistema>
+		<versaoSistema>5.2.29</versaoSistema>
 		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:originadora>
-	<versao major="5" minor="3" revision="0" />
+	<versao major="5" minor="5" revision="0" />
 </ns3:dadoTransporteTransportXml>

@@ -37,6 +37,7 @@
       <xs:element maxOccurs="1" minOccurs="0" name="ficouEmObservacao" type="xs:boolean"/>
       <xs:element maxOccurs="1" minOccurs="0" name="finalizadorObservacao" type="lotacaoHeader:lotacaoHeaderTransport"/>
       <xs:element maxOccurs="unbounded" minOccurs="0" name="nasfs" type="xs:long"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="emultis" type="xs:long"/>
       <xs:element maxOccurs="unbounded" minOccurs="0" name="condutas" type="xs:long"/>
       <xs:element maxOccurs="1" minOccurs="0" name="stGravidezPlanejada" type="xs:boolean"/>
       <xs:element maxOccurs="1" minOccurs="0" name="nuGestasPrevias" type="xs:int"/>

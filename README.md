@@ -7,6 +7,7 @@ O e-SUS AB fornece dois tipos de arquivos para o envio de informações para o P
 * THRIFT
 
 Esse repositório contém esses arquivos além de exemplos de como utilizá-los.
+IMPORTANTE: a implementação de alterações deve ser pautada majoritariamente pelo [LEDI]({% url layout_ab %}), e não somente pelos arquivos de exemplos.
 
 # Organização do repositório:
  * **XSD** - Arquivos XSD fornecidos para integração via XML.

@@ -25,7 +25,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 5.4.0</span>
+        <span class="label">versão 5.5.0</span>
       
     </a>
 
@@ -137,7 +137,7 @@
 
       <li id="item-layout_ab" data-url="/ledi/documentacao/index.html">
         <label>
-          <input type="checkbox" value="layout_ab" checked="checked"> Layout e-SUS APS de Dados e Interface Versão 5.4.0
+          <input type="checkbox" value="layout_ab" checked="checked"> Layout e-SUS APS de Dados e Interface Versão 5.5.0
           <small>
             <a onclick="checkById('layout_ab', true); return false;">Marcar todos</a> |
             <a onclick="checkById('layout_ab', false); return false;">Desmarcar todos</a>
@@ -675,7 +675,7 @@
 
       <li id="item-principais_alteracoes" data-url="/ledi/documentacao/principais_alteracoes.html">
         <label>
-          <input type="checkbox" value="principais_alteracoes" checked="checked"> Principais alterações da v5.3.0 para a v5.4.0
+          <input type="checkbox" value="principais_alteracoes" checked="checked"> Principais alterações da v5.4.0 para a v5.5.0
           <small>
             <a onclick="checkById('principais_alteracoes', true); return false;">Marcar todos</a> |
             <a onclick="checkById('principais_alteracoes', false); return false;">Desmarcar todos</a>
@@ -1017,7 +1017,7 @@
   
       <!-- Cria a lista de itens[páginas] que foram selecionados  -->
 
-  <li id="summary-layout_ab"><a href="#layout_ab">Layout e-SUS APS de Dados e Interface Versão 5.4.0</a></li>
+  <li id="summary-layout_ab"><a href="#layout_ab">Layout e-SUS APS de Dados e Interface Versão 5.5.0</a></li>
   
       <!-- Cria a lista de itens[páginas] que foram selecionados  -->
 
@@ -1245,7 +1245,7 @@
 
   
 
-  <li id="summary-principais_alteracoes"><a href="#principais_alteracoes">Principais alterações da v5.3.0 para a v5.4.0</a></li>
+  <li id="summary-principais_alteracoes"><a href="#principais_alteracoes">Principais alterações da v5.4.0 para a v5.5.0</a></li>
   
       <!-- Cria a lista de itens[páginas] que foram selecionados  -->
 
@@ -1407,8 +1407,12 @@
 </tr>
 </thead><tbody>
 <tr>
+<td>5.2.29 ou superior</td>
+<td><a href="/ledi/documentacao/index.html">LEDI APS 5.5.0</a></td>
+</tr>
+<tr>
 <td>5.2.28 ou superior</td>
-<td><a href="/ledi/documentacao/index.html">LEDI APS 5.4.0</a></td>
+<td><a href="https://integracao.esusab.ufsc.br/v540/">LEDI APS 5.4.0</a></td>
 </tr>
 <tr>
 <td>5.2.21 ou superior</td>
@@ -1569,17 +1573,17 @@
         
     <div class="post pdf shown" id="layout_ab" data-url="/ledi/documentacao/index.html">
       <header class="post-header">
-        <h1 class="post-title">Layout e-SUS APS de Dados e Interface Versão 5.4.0</h1>
+        <h1 class="post-title">Layout e-SUS APS de Dados e Interface Versão 5.5.0</h1>
       </header>
 
       
 
       <article class="post-content">
-        <p>Esta documentação descreve as estruturas de dados, seus atributos e regras utilizadas no <strong>LEDI APS</strong> versão 5.4.0</p>
+        <p>Esta documentação descreve as estruturas de dados, seus atributos e regras utilizadas no <strong>LEDI APS</strong> versão 5.5.0</p>
 
-<p>A versão <strong>LEDI APS</strong> 5.4.0 é compatível com o sistema <strong>PEC e-SUS APS</strong> versão 5.2.28 ou superior.</p>
+<p>A versão <strong>LEDI APS</strong> 5.5.0 é compatível com o sistema <strong>PEC e-SUS APS</strong> versão 5.2.29 ou superior.</p>
 
-<p>Confira as principais alterações da V5.3.0 para a V5.4.0 <a href="/ledi/documentacao/principais_alteracoes.html">aqui</a>.</p>
+<p>Confira as principais alterações da V5.4.0 para a V5.5.0 <a href="/ledi/documentacao/principais_alteracoes.html">aqui</a>.</p>
 
       </article>
 
@@ -6783,9 +6787,9 @@
 </tr>
 </tbody></table>
 
-<h3 id="20-nasfs">#20 nasfs</h3>
+<h3 id="20-emultis">#20 emultis</h3>
 
-<p>Código das ações realizadas pelo Núcleo de Atenção a Saúde da Família.</p>
+<p>Código das ações realizadas pelas Equipes Multiprofissionais na Atenção Primária à Saúde.</p>
 
 <table><thead>
 <tr>
@@ -6803,7 +6807,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#nasf">Nasf</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#emulti">eMulti</a>.</p>
 
 <h3 id="21-condutas">#21 condutas</h3>
 
@@ -48561,7 +48565,7 @@
 <td>minor</td>
 <td>Integer</td>
 <td>Sim</td>
-<td>Valor único = 4</td>
+<td>Valor único = 5</td>
 </tr>
 <tr>
 <td>revision</td>
@@ -59439,7 +59443,7 @@
 </tr>
 <tr>
 <td>3</td>
-<td>Agendamento para NASF</td>
+<td>Agendamento para eMulti</td>
 <td>-</td>
 </tr>
 <tr>
@@ -59505,7 +59509,7 @@
 </tr>
 <tr>
 <td>13</td>
-<td>Agendamento para NASF</td>
+<td>Agendamento para eMulti</td>
 <td>-</td>
 </tr>
 <tr>
@@ -61132,7 +61136,7 @@
 </tr>
 </tbody></table>
 
-<h2 id="nasf">NASF</h2>
+<h2 id="emulti">eMulti</h2>
 
 <table><thead>
 <tr>
@@ -102346,25 +102350,17 @@
 
     <div class="post pdf shown" id="principais_alteracoes" data-url="/ledi/documentacao/principais_alteracoes.html">
       <header class="post-header">
-        <h1 class="post-title">Principais alterações da v5.3.0 para a v5.4.0</h1>
+        <h1 class="post-title">Principais alterações da v5.4.0 para a v5.5.0</h1>
       </header>
 
       
 
       <article class="post-content">
-        <p>Este documento relata as principais alterações em relação à versão v5.3.0 do LEDI APS:</p>
+        <p>Este documento relata as principais alterações em relação à versão v5.4.0 do LEDI APS:</p>
 
-<h3 id="1-inativa-o-de-imunobiol-gicos-n-o-mais-aplicados-na-aps">1. Inativação de imunobiológicos não mais aplicados na APS.</h3>
+<h3 id="1-altera-o-de-agendamento-para-nasf-por-agendamento-para-emulti-no-desfecho-do-atendimento-individual-e-odontol-gico">1. Alteração de &quot;Agendamento para NASF&quot; por &quot;Agendamento para eMulti&quot; no desfecho do atendimento individual e odontológico</h3>
 
-<p><strong>1. </strong> Foram inativados os registros de novas aplicações dos imunobiológicoss 13, 18, 27, 36, 38, 39, 40, 44, 70, 71, 72, 73, 82 e 84. Os mesmos ainda podem ser informados como &quot;Registro Anterior&quot; (Transcrição de Caderneta).</p>
-
-<h3 id="2-inclus-o-de-imunobiol-gicos">2. Inclusão de imunobiológicos.</h3>
-
-<p><strong>2. </strong> Foram incluídos os imunobiológicos 105 - Covid-19-RNAm, Moderna (Spikevax) bivalente e 106 - Vacina adsorvida pneumocócica 15-valente (conjugada, polissacarídica).</p>
-
-<h3 id="3-inclus-o-de-grupo-de-atendimento">3. Inclusão de Grupo de Atendimento.</h3>
-
-<p><strong>3. </strong> Foi incluído o grupo de atendimento 000118 - Trissomias.</p>
+<p>Após o lançamento da Portaria GM/MS Nº 635, de 22 de maio de 2023, as equipes NASF (Núcleo de Apoio à Saúde da Família) deixam de existir, sendo substituídas pelas equipes eMulti (Equipes Multiprofissionais). Portanto, a conduta &quot;Agendamento para NASF&quot; é substituída por &quot;Agendamento para eMulti&quot; no desfecho do atendimento individual e odontológico. Logo, a conduta &quot;NASF/Polo&quot; foi alterada para &quot;eMulti/Polo&quot; nas fichas de Atendimento Individual e Atendimento Odontológico Individual. </p>
 
       </article>
 
@@ -103363,11 +103359,11 @@
 </thead><tbody>
 <tr>
 <td>st_nasf_avaliacao_diagnostico <br> st_nasf_proce_clin_terapeutico <br> st_nasf_prescricao_terapeutica</td>
-<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#20-nasfs">#20 nasfs</a></td>
-<td>NASF / Polo</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#20-emultis">#20 emultis</a></td>
+<td>eMulti / Polo</td>
 </tr>
 <tr>
-<td>st_conduta_consulta_agendada <br> st_conduta_cuidd_conti_program <br> st_conduta_agendamento_grupos <br> st_conduta_agendamento_nasf <br> st_conduta_alta_episodio</td>
+<td>st_conduta_consulta_agendada <br> st_conduta_cuidd_conti_program <br> st_conduta_agendamento_grupos <br> st_conduta_agendamento_nasf <br> st_conduta_agendamento_emulti <br> st_conduta_alta_episodio</td>
 <td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#21-condutas">#21 condutas</a> <br> Somente opções de conduta</td>
 <td>Conduta / Desfecho</td>
 </tr>
@@ -103430,7 +103426,7 @@
 <td>Fornecimento</td>
 </tr>
 <tr>
-<td>st_conduta_consulta_agendada <br> st_conduta_outros_profissio_ab <br>  st_conduta_agendamento_nasf <br> st_conduta_agendamento_grupos <br> st_conduta_alta_episodio <br> st_conduta_tratamento_concluid</td>
+<td>st_conduta_consulta_agendada <br> st_conduta_outros_profissio_ab <br>  st_conduta_agendamento_nasf <br> st_conduta_agendamento_emulti <br> st_conduta_agendamento_grupos <br> st_conduta_alta_episodio <br> st_conduta_tratamento_concluid</td>
 <td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fao.html#8-tiposencamodonto">#8 tiposEncamOdonto</a> <br> Somente opções de conduta</td>
 <td>Conduta / Desfecho</td>
 </tr>

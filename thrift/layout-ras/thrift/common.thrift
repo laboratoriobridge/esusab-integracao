@@ -94,6 +94,8 @@ struct EncaminhamentoExternoThrift {
 	2:optional string hipoteseDiagnosticoCid10;
 	3:optional string hipoteseDiagnosticoCiap2;
 	4:optional i64 classificacaoRisco;
+	5:optional string cboCodigo_2002;
+	6:optional i64 classificacaoPrioridade;
 }
 
 struct ResultadoExameThrift {

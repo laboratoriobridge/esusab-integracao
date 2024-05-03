@@ -3,10 +3,10 @@
 
   <xs:complexType name="lotacaoTransport">
     <xs:sequence>
-      <xs:element maxOccurs="1" name="cpf" type="xs:string"/>
-      <xs:element maxOccurs="1" name="cns" type="xs:string"/>
-      <xs:element maxOccurs="1" name="cboCodigo_2002" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="cpf" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="cns" type="xs:string"/>
       <xs:element maxOccurs="1" minOccurs="0" name="ine" type="xs:string"/>
+      <xs:element maxOccurs="1" name="cboCodigo_2002" type="xs:string"/>
       <xs:element maxOccurs="1" name="cnes" type="xs:string"/>
       <xs:element maxOccurs="1" name="codigoIbgeMunicipio" type="xs:string"/>
     </xs:sequence>

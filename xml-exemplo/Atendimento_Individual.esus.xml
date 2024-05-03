@@ -127,14 +127,14 @@
 				<quantidadeReceitada>12</quantidadeReceitada>
 			</medicamentos>
 			<encaminhamentos>
-				<especialidade>3</especialidade>
 				<hipoteseDiagnosticoCid10>B170</hipoteseDiagnosticoCid10>
-				<classificacaoRisco>3</classificacaoRisco>
+				<cboCodigo_2002>225105</cboCodigo_2002>
+				<classificacaoPrioridade>1</classificacaoPrioridade>
 				</encaminhamentos>
 			<encaminhamentos>
-				<especialidade>10</especialidade>
-				<hipoteseDiagnosticoCid10>O03</hipoteseDiagnosticoCid10>
-				<classificacaoRisco>1</classificacaoRisco>
+				<hipoteseDiagnosticoCiap2>O03</hipoteseDiagnosticoCiap2>
+				<cboCodigo_2002>223565</cboCodigo_2002>
+				<classificacaoPrioridade>1</classificacaoPrioridade>
 			</encaminhamentos>
 		</atendimentosIndividuais>
 		<atendimentosIndividuais>
@@ -217,8 +217,8 @@
 			</resultadosExames>
 			<resultadosExames>
 				<exame>0205020143</exame>
-				<dataSolicitacao>1586088000000</dataSolicitacao> 
-				<dataRealizacao>1586088000000</dataRealizacao> 
+				<dataSolicitacao>1586088000000</dataSolicitacao>
+				<dataRealizacao>1586088000000</dataRealizacao>
 				<dataResultado>1586088000000</dataResultado>
 				<resultadoExame>
 					<tipoResultado>4</tipoResultado>

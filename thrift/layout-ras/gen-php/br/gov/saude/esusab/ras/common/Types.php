@@ -1629,6 +1629,14 @@ class EncaminhamentoExternoThrift {
    * @var int
    */
   public $classificacaoRisco = null;
+  /**
+   * @var string
+   */
+  public $cboCodigo_2002 = null;
+  /**
+   * @var int
+   */
+  public $classificacaoPrioridade = null;
 
   public function __construct($vals=null) {
     if (!isset(self::$_TSPEC)) {
@@ -1649,6 +1657,14 @@ class EncaminhamentoExternoThrift {
           'var' => 'classificacaoRisco',
           'type' => TType::I64,
           ),
+        5 => array(
+          'var' => 'cboCodigo_2002',
+          'type' => TType::STRING,
+          ),
+        6 => array(
+          'var' => 'classificacaoPrioridade',
+          'type' => TType::I64,
+          ),
         );
     }
     if (is_array($vals)) {
@@ -1663,6 +1679,12 @@ class EncaminhamentoExternoThrift {
       }
       if (isset($vals['classificacaoRisco'])) {
         $this->classificacaoRisco = $vals['classificacaoRisco'];
+      }
+      if (isset($vals['cboCodigo_2002'])) {
+        $this->cboCodigo_2002 = $vals['cboCodigo_2002'];
+      }
+      if (isset($vals['classificacaoPrioridade'])) {
+        $this->classificacaoPrioridade = $vals['classificacaoPrioridade'];
       }
     }
   }
@@ -1714,6 +1736,20 @@ class EncaminhamentoExternoThrift {
             $xfer += $input->skip($ftype);
           }
           break;
+        case 5:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->cboCodigo_2002);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 6:
+          if ($ftype == TType::I64) {
+            $xfer += $input->readI64($this->classificacaoPrioridade);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
         default:
           $xfer += $input->skip($ftype);
           break;
@@ -1745,6 +1781,16 @@ class EncaminhamentoExternoThrift {
     if ($this->classificacaoRisco !== null) {
       $xfer += $output->writeFieldBegin('classificacaoRisco', TType::I64, 4);
       $xfer += $output->writeI64($this->classificacaoRisco);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->cboCodigo_2002 !== null) {
+      $xfer += $output->writeFieldBegin('cboCodigo_2002', TType::STRING, 5);
+      $xfer += $output->writeString($this->cboCodigo_2002);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->classificacaoPrioridade !== null) {
+      $xfer += $output->writeFieldBegin('classificacaoPrioridade', TType::I64, 6);
+      $xfer += $output->writeI64($this->classificacaoPrioridade);
       $xfer += $output->writeFieldEnd();
     }
     $xfer += $output->writeFieldStop();

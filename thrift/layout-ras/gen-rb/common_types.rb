@@ -222,12 +222,16 @@ module Br
               HIPOTESEDIAGNOSTICOCID10 = 2
               HIPOTESEDIAGNOSTICOCIAP2 = 3
               CLASSIFICACAORISCO = 4
+              CBOCODIGO_2002 = 5
+              CLASSIFICACAOPRIORIDADE = 6
 
               FIELDS = {
                 ESPECIALIDADE => {:type => ::Thrift::Types::I64, :name => 'especialidade', :optional => true},
                 HIPOTESEDIAGNOSTICOCID10 => {:type => ::Thrift::Types::STRING, :name => 'hipoteseDiagnosticoCid10', :optional => true},
                 HIPOTESEDIAGNOSTICOCIAP2 => {:type => ::Thrift::Types::STRING, :name => 'hipoteseDiagnosticoCiap2', :optional => true},
-                CLASSIFICACAORISCO => {:type => ::Thrift::Types::I64, :name => 'classificacaoRisco', :optional => true}
+                CLASSIFICACAORISCO => {:type => ::Thrift::Types::I64, :name => 'classificacaoRisco', :optional => true},
+                CBOCODIGO_2002 => {:type => ::Thrift::Types::STRING, :name => 'cboCodigo_2002', :optional => true},
+                CLASSIFICACAOPRIORIDADE => {:type => ::Thrift::Types::I64, :name => 'classificacaoPrioridade', :optional => true}
               }
 
               def struct_fields; FIELDS; end

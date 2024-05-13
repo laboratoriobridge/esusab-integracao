@@ -2850,11 +2850,15 @@ func (p *MedicamentoThrift) String() string {
 //  - HipoteseDiagnosticoCid10
 //  - HipoteseDiagnosticoCiap2
 //  - ClassificacaoRisco
+//  - CboCodigo_2002
+//  - ClassificacaoPrioridade
 type EncaminhamentoExternoThrift struct {
 	Especialidade            *int64  `thrift:"especialidade,1" json:"especialidade,omitempty"`
 	HipoteseDiagnosticoCid10 *string `thrift:"hipoteseDiagnosticoCid10,2" json:"hipoteseDiagnosticoCid10,omitempty"`
 	HipoteseDiagnosticoCiap2 *string `thrift:"hipoteseDiagnosticoCiap2,3" json:"hipoteseDiagnosticoCiap2,omitempty"`
 	ClassificacaoRisco       *int64  `thrift:"classificacaoRisco,4" json:"classificacaoRisco,omitempty"`
+	CboCodigo_2002           *string `thrift:"cboCodigo_2002,5" json:"cboCodigo_2002,omitempty"`
+	ClassificacaoPrioridade  *int64  `thrift:"classificacaoPrioridade,6" json:"classificacaoPrioridade,omitempty"`
 }
 
 func NewEncaminhamentoExternoThrift() *EncaminhamentoExternoThrift {
@@ -2896,6 +2900,24 @@ func (p *EncaminhamentoExternoThrift) GetClassificacaoRisco() int64 {
 	}
 	return *p.ClassificacaoRisco
 }
+
+var EncaminhamentoExternoThrift_CboCodigo_2002_DEFAULT string
+
+func (p *EncaminhamentoExternoThrift) GetCboCodigo_2002() string {
+	if !p.IsSetCboCodigo_2002() {
+		return EncaminhamentoExternoThrift_CboCodigo_2002_DEFAULT
+	}
+	return *p.CboCodigo_2002
+}
+
+var EncaminhamentoExternoThrift_ClassificacaoPrioridade_DEFAULT int64
+
+func (p *EncaminhamentoExternoThrift) GetClassificacaoPrioridade() int64 {
+	if !p.IsSetClassificacaoPrioridade() {
+		return EncaminhamentoExternoThrift_ClassificacaoPrioridade_DEFAULT
+	}
+	return *p.ClassificacaoPrioridade
+}
 func (p *EncaminhamentoExternoThrift) IsSetEspecialidade() bool {
 	return p.Especialidade != nil
 }
@@ -2910,6 +2932,14 @@ func (p *EncaminhamentoExternoThrift) IsSetHipoteseDiagnosticoCiap2() bool {
 
 func (p *EncaminhamentoExternoThrift) IsSetClassificacaoRisco() bool {
 	return p.ClassificacaoRisco != nil
+}
+
+func (p *EncaminhamentoExternoThrift) IsSetCboCodigo_2002() bool {
+	return p.CboCodigo_2002 != nil
+}
+
+func (p *EncaminhamentoExternoThrift) IsSetClassificacaoPrioridade() bool {
+	return p.ClassificacaoPrioridade != nil
 }
 
 func (p *EncaminhamentoExternoThrift) Read(iprot thrift.TProtocol) error {
@@ -2940,6 +2970,14 @@ func (p *EncaminhamentoExternoThrift) Read(iprot thrift.TProtocol) error {
 			}
 		case 4:
 			if err := p.readField4(iprot); err != nil {
+				return err
+			}
+		case 5:
+			if err := p.readField5(iprot); err != nil {
+				return err
+			}
+		case 6:
+			if err := p.readField6(iprot); err != nil {
 				return err
 			}
 		default:
@@ -2993,6 +3031,24 @@ func (p *EncaminhamentoExternoThrift) readField4(iprot thrift.TProtocol) error {
 	return nil
 }
 
+func (p *EncaminhamentoExternoThrift) readField5(iprot thrift.TProtocol) error {
+	if v, err := iprot.ReadString(); err != nil {
+		return thrift.PrependError("error reading field 5: ", err)
+	} else {
+		p.CboCodigo_2002 = &v
+	}
+	return nil
+}
+
+func (p *EncaminhamentoExternoThrift) readField6(iprot thrift.TProtocol) error {
+	if v, err := iprot.ReadI64(); err != nil {
+		return thrift.PrependError("error reading field 6: ", err)
+	} else {
+		p.ClassificacaoPrioridade = &v
+	}
+	return nil
+}
+
 func (p *EncaminhamentoExternoThrift) Write(oprot thrift.TProtocol) error {
 	if err := oprot.WriteStructBegin("EncaminhamentoExternoThrift"); err != nil {
 		return thrift.PrependError(fmt.Sprintf("%T write struct begin error: ", p), err)
@@ -3007,6 +3063,12 @@ func (p *EncaminhamentoExternoThrift) Write(oprot thrift.TProtocol) error {
 		return err
 	}
 	if err := p.writeField4(oprot); err != nil {
+		return err
+	}
+	if err := p.writeField5(oprot); err != nil {
+		return err
+	}
+	if err := p.writeField6(oprot); err != nil {
 		return err
 	}
 	if err := oprot.WriteFieldStop(); err != nil {
@@ -3073,6 +3135,36 @@ func (p *EncaminhamentoExternoThrift) writeField4(oprot thrift.TProtocol) (err e
 		}
 		if err := oprot.WriteFieldEnd(); err != nil {
 			return thrift.PrependError(fmt.Sprintf("%T write field end error 4:classificacaoRisco: ", p), err)
+		}
+	}
+	return err
+}
+
+func (p *EncaminhamentoExternoThrift) writeField5(oprot thrift.TProtocol) (err error) {
+	if p.IsSetCboCodigo_2002() {
+		if err := oprot.WriteFieldBegin("cboCodigo_2002", thrift.STRING, 5); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field begin error 5:cboCodigo_2002: ", p), err)
+		}
+		if err := oprot.WriteString(string(*p.CboCodigo_2002)); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T.cboCodigo_2002 (5) field write error: ", p), err)
+		}
+		if err := oprot.WriteFieldEnd(); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field end error 5:cboCodigo_2002: ", p), err)
+		}
+	}
+	return err
+}
+
+func (p *EncaminhamentoExternoThrift) writeField6(oprot thrift.TProtocol) (err error) {
+	if p.IsSetClassificacaoPrioridade() {
+		if err := oprot.WriteFieldBegin("classificacaoPrioridade", thrift.I64, 6); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field begin error 6:classificacaoPrioridade: ", p), err)
+		}
+		if err := oprot.WriteI64(int64(*p.ClassificacaoPrioridade)); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T.classificacaoPrioridade (6) field write error: ", p), err)
+		}
+		if err := oprot.WriteFieldEnd(); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field end error 6:classificacaoPrioridade: ", p), err)
 		}
 	}
 	return err

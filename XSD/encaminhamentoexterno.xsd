@@ -7,6 +7,8 @@
       <xs:element maxOccurs="1" minOccurs="0" name="hipoteseDiagnosticoCid10" type="xs:string"/>
       <xs:element maxOccurs="1" minOccurs="0" name="hipoteseDiagnosticoCiap2" type="xs:string"/>
       <xs:element maxOccurs="1" minOccurs="0" name="classificacaoRisco" type="xs:long"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="classificacaoPrioridade" type="xs:long"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="nu_cbo_2002" type="xs:string"/>
     </xs:sequence>
   </xs:complexType>
 </xs:schema>

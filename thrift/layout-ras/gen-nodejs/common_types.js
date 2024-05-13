@@ -1102,6 +1102,8 @@ EncaminhamentoExternoThrift = module.exports.EncaminhamentoExternoThrift = funct
   this.hipoteseDiagnosticoCid10 = null;
   this.hipoteseDiagnosticoCiap2 = null;
   this.classificacaoRisco = null;
+  this.cboCodigo_2002 = null;
+  this.classificacaoPrioridade = null;
   if (args) {
     if (args.especialidade !== undefined && args.especialidade !== null) {
       this.especialidade = args.especialidade;
@@ -1114,6 +1116,12 @@ EncaminhamentoExternoThrift = module.exports.EncaminhamentoExternoThrift = funct
     }
     if (args.classificacaoRisco !== undefined && args.classificacaoRisco !== null) {
       this.classificacaoRisco = args.classificacaoRisco;
+    }
+    if (args.cboCodigo_2002 !== undefined && args.cboCodigo_2002 !== null) {
+      this.cboCodigo_2002 = args.cboCodigo_2002;
+    }
+    if (args.classificacaoPrioridade !== undefined && args.classificacaoPrioridade !== null) {
+      this.classificacaoPrioridade = args.classificacaoPrioridade;
     }
   }
 };
@@ -1159,6 +1167,20 @@ EncaminhamentoExternoThrift.prototype.read = function(input) {
         input.skip(ftype);
       }
       break;
+      case 5:
+      if (ftype == Thrift.Type.STRING) {
+        this.cboCodigo_2002 = input.readString();
+      } else {
+        input.skip(ftype);
+      }
+      break;
+      case 6:
+      if (ftype == Thrift.Type.I64) {
+        this.classificacaoPrioridade = input.readI64();
+      } else {
+        input.skip(ftype);
+      }
+      break;
       default:
         input.skip(ftype);
     }
@@ -1188,6 +1210,16 @@ EncaminhamentoExternoThrift.prototype.write = function(output) {
   if (this.classificacaoRisco !== null && this.classificacaoRisco !== undefined) {
     output.writeFieldBegin('classificacaoRisco', Thrift.Type.I64, 4);
     output.writeI64(this.classificacaoRisco);
+    output.writeFieldEnd();
+  }
+  if (this.cboCodigo_2002 !== null && this.cboCodigo_2002 !== undefined) {
+    output.writeFieldBegin('cboCodigo_2002', Thrift.Type.STRING, 5);
+    output.writeString(this.cboCodigo_2002);
+    output.writeFieldEnd();
+  }
+  if (this.classificacaoPrioridade !== null && this.classificacaoPrioridade !== undefined) {
+    output.writeFieldBegin('classificacaoPrioridade', Thrift.Type.I64, 6);
+    output.writeI64(this.classificacaoPrioridade);
     output.writeFieldEnd();
   }
   output.writeFieldStop();

@@ -129,12 +129,12 @@
 			<encaminhamentos>
 				<hipoteseDiagnosticoCid10>B170</hipoteseDiagnosticoCid10>
 				<classificacaoPrioridade>1</classificacaoPrioridade>
-				<nu_cbo_2002>225105</nu_cbo_2002>
+				<cboCodigo_2002>225105</cboCodigo_2002>
 				</encaminhamentos>
 			<encaminhamentos>
 				<hipoteseDiagnosticoCiap2>O03</hipoteseDiagnosticoCiap2>
 				<classificacaoPrioridade>1</classificacaoPrioridade>
-				<nu_cbo_2002>223565</nu_cbo_2002>
+				<cboCodigo_2002>223565</cboCodigo_2002>
 			</encaminhamentos>
 		</atendimentosIndividuais>
 		<atendimentosIndividuais>

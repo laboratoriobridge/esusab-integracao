@@ -1084,6 +1084,8 @@ class EncaminhamentoExternoThrift:
    - hipoteseDiagnosticoCid10
    - hipoteseDiagnosticoCiap2
    - classificacaoRisco
+   - cboCodigo_2002
+   - classificacaoPrioridade
   """
 
   thrift_spec = (
@@ -1092,13 +1094,17 @@ class EncaminhamentoExternoThrift:
     (2, TType.STRING, 'hipoteseDiagnosticoCid10', None, None, ), # 2
     (3, TType.STRING, 'hipoteseDiagnosticoCiap2', None, None, ), # 3
     (4, TType.I64, 'classificacaoRisco', None, None, ), # 4
+    (5, TType.STRING, 'cboCodigo_2002', None, None, ), # 5
+    (6, TType.I64, 'classificacaoPrioridade', None, None, ), # 6
   )
 
-  def __init__(self, especialidade=None, hipoteseDiagnosticoCid10=None, hipoteseDiagnosticoCiap2=None, classificacaoRisco=None,):
+  def __init__(self, especialidade=None, hipoteseDiagnosticoCid10=None, hipoteseDiagnosticoCiap2=None, classificacaoRisco=None, cboCodigo_2002=None, classificacaoPrioridade=None,):
     self.especialidade = especialidade
     self.hipoteseDiagnosticoCid10 = hipoteseDiagnosticoCid10
     self.hipoteseDiagnosticoCiap2 = hipoteseDiagnosticoCiap2
     self.classificacaoRisco = classificacaoRisco
+    self.cboCodigo_2002 = cboCodigo_2002
+    self.classificacaoPrioridade = classificacaoPrioridade
 
   def read(self, iprot):
     if iprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None and fastbinary is not None:
@@ -1129,6 +1135,16 @@ class EncaminhamentoExternoThrift:
           self.classificacaoRisco = iprot.readI64()
         else:
           iprot.skip(ftype)
+      elif fid == 5:
+        if ftype == TType.STRING:
+          self.cboCodigo_2002 = iprot.readString()
+        else:
+          iprot.skip(ftype)
+      elif fid == 6:
+        if ftype == TType.I64:
+          self.classificacaoPrioridade = iprot.readI64()
+        else:
+          iprot.skip(ftype)
       else:
         iprot.skip(ftype)
       iprot.readFieldEnd()
@@ -1155,6 +1171,14 @@ class EncaminhamentoExternoThrift:
       oprot.writeFieldBegin('classificacaoRisco', TType.I64, 4)
       oprot.writeI64(self.classificacaoRisco)
       oprot.writeFieldEnd()
+    if self.cboCodigo_2002 is not None:
+      oprot.writeFieldBegin('cboCodigo_2002', TType.STRING, 5)
+      oprot.writeString(self.cboCodigo_2002)
+      oprot.writeFieldEnd()
+    if self.classificacaoPrioridade is not None:
+      oprot.writeFieldBegin('classificacaoPrioridade', TType.I64, 6)
+      oprot.writeI64(self.classificacaoPrioridade)
+      oprot.writeFieldEnd()
     oprot.writeFieldStop()
     oprot.writeStructEnd()
 
@@ -1168,6 +1192,8 @@ class EncaminhamentoExternoThrift:
     value = (value * 31) ^ hash(self.hipoteseDiagnosticoCid10)
     value = (value * 31) ^ hash(self.hipoteseDiagnosticoCiap2)
     value = (value * 31) ^ hash(self.classificacaoRisco)
+    value = (value * 31) ^ hash(self.cboCodigo_2002)
+    value = (value * 31) ^ hash(self.classificacaoPrioridade)
     return value
 
   def __repr__(self):

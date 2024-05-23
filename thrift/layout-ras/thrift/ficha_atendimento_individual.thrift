@@ -58,6 +58,7 @@ struct FichaAtendimentoIndividualChildThrift {
 	36:optional i64 tipoParticipacaoCidadao;
 	37:optional i64 tipoParticipacaoProfissionalConvidado;
 	38:optional list<i64> emultis;
+	39:optional common.MedicoesThrift medicoes;
 }
 
 struct FichaAtendimentoIndividualMasterThrift {

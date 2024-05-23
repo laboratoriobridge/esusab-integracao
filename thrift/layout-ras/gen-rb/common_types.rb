@@ -280,6 +280,46 @@ module Br
               ::Thrift::Struct.generate_accessors self
             end
 
+            class MedicoesThrift
+              include ::Thrift::Struct, ::Thrift::Struct_Union
+              CIRCUFERENCIAABDOMINAL = 1
+              PERIMETROPANTURRILHA = 2
+              PRESSAOARTERIALSISTOLICA = 3
+              PRESSAOARTERIALDIASTOLICA = 4
+              FREQUENCIARESPIRATORIA = 5
+              FREQUENCIACARDIACA = 6
+              TEMPERATURA = 7
+              SATURACAOO2 = 8
+              GLICEMIACAPILAR = 9
+              TIPOGLICEMIACAPILAR = 10
+              PESO = 11
+              ALTURA = 12
+              PERIMETROCEFALICO = 13
+
+              FIELDS = {
+                CIRCUFERENCIAABDOMINAL => {:type => ::Thrift::Types::DOUBLE, :name => 'circuferenciaAbdominal', :optional => true},
+                PERIMETROPANTURRILHA => {:type => ::Thrift::Types::DOUBLE, :name => 'perimetroPanturrilha', :optional => true},
+                PRESSAOARTERIALSISTOLICA => {:type => ::Thrift::Types::I32, :name => 'pressaoArterialSistolica', :optional => true},
+                PRESSAOARTERIALDIASTOLICA => {:type => ::Thrift::Types::I32, :name => 'pressaoArterialDiastolica', :optional => true},
+                FREQUENCIARESPIRATORIA => {:type => ::Thrift::Types::I32, :name => 'frequenciaRespiratoria', :optional => true},
+                FREQUENCIACARDIACA => {:type => ::Thrift::Types::I32, :name => 'frequenciaCardiaca', :optional => true},
+                TEMPERATURA => {:type => ::Thrift::Types::DOUBLE, :name => 'temperatura', :optional => true},
+                SATURACAOO2 => {:type => ::Thrift::Types::I32, :name => 'saturacaoO2', :optional => true},
+                GLICEMIACAPILAR => {:type => ::Thrift::Types::I32, :name => 'glicemiaCapilar', :optional => true},
+                TIPOGLICEMIACAPILAR => {:type => ::Thrift::Types::I64, :name => 'tipoGlicemiaCapilar', :optional => true},
+                PESO => {:type => ::Thrift::Types::DOUBLE, :name => 'peso', :optional => true},
+                ALTURA => {:type => ::Thrift::Types::DOUBLE, :name => 'altura', :optional => true},
+                PERIMETROCEFALICO => {:type => ::Thrift::Types::DOUBLE, :name => 'perimetroCefalico', :optional => true}
+              }
+
+              def struct_fields; FIELDS; end
+
+              def validate
+              end
+
+              ::Thrift::Struct.generate_accessors self
+            end
+
           end
         end
       end

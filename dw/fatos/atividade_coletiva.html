@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Atividade coletiva</title>
-  <meta name="description" content="Esta estratégia de negócio refere-se aos registros de Atividades Coletivas e está centrada na tb_fat_atividade_coletiva.">
+  <meta name="description" content="1. Dados">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="/dw/fatos/atividade_coletiva.html">
@@ -25,7 +25,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 5.6.1</span>
+        <span class="label">versão 5.6.2</span>
       
     </a>
 
@@ -232,17 +232,21 @@
     <p class="post-meta">
       <a class="btn" href="/pdf.html?include=/dw/fatos/atividade_coletiva.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 29/09/2023</span>
+        <span class="label" title="Data da última modificação">Alterado em 23/05/2024</span>
       
     </p>
   </header>
 
   <article class="post-content">
-    <p>Esta estratégia de negócio refere-se aos registros de <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html">Atividades Coletivas</a> e está centrada na <strong>tb_fat_atividade_coletiva</strong>.</p>
+    <h1 id="1-dados">1. Dados</h1>
+
+<p>Esta estratégia de negócio refere-se aos registros de <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html">Atividades Coletivas</a> e está centrada na <strong>tb_fat_atividade_coletiva</strong>.</p>
 
 <p>Os <strong>Profissionais participantes</strong> estão armazenados na <strong>tb_fat_atvdd_coletiva_propart</strong>. Os <strong>Temas para reunião</strong> estão armazenados na <strong>tb_fat_atvdd_coletiva_int</strong> (quando no grupo atividade for informado uma das opções referentes à reunião). Já os registros de <strong>Público alvo</strong>, <strong>Temas para saúde</strong> e <strong>Práticas em saúde</strong> estão armazenados na <strong>tb_fat_atvdd_coletiva_ext</strong> (quando no grupo atividade for informado uma atividade relacionada a ações de saúde com os usuários). Os <strong>Participantes</strong> estão armazenados na tabela <strong>tb_fat_atvdd_coletiva_part</strong>. Estas tabelas são interligadas com a <strong>tb_fat_atividade_coletiva</strong> através da coluna <strong>co_fat_atividade_coletiva</strong>.</p>
 
 <p>Algumas informações adicionadas nas tabelas acima não existem na ficha de atividade coletiva, mas foram incluídas para melhorar a performance. Neste cenário encontram-se as colunas <strong>nu_participantes_registrados</strong> e <strong>nu_avaliacoes_alteradas</strong>, referentes a quantidade de cidadãos registrados no grupo &quot;Participantes&quot; e a quantidade de cidadãos registrados no grupo &quot;Participantes&quot; com &quot;Avaliação alterada&quot; selecionada, respectivamente.</p>
+
+<h1 id="2-estrutura">2. Estrutura</h1>
 
 <table><thead>
 <tr>

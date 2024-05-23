@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Atendimento domiciliar</title>
-  <meta name="description" content="Esta estratégia de negócio refere-se aos registros de Atendimentos Domiciliares e está centrada na tb_fat_atendimento_domiciliar.">
+  <meta name="description" content="1. Dados">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="/dw/fatos/atendimento_domiciliar.html">
@@ -25,7 +25,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 5.6.1</span>
+        <span class="label">versão 5.6.2</span>
       
     </a>
 
@@ -232,17 +232,21 @@
     <p class="post-meta">
       <a class="btn" href="/pdf.html?include=/dw/fatos/atendimento_domiciliar.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 29/09/2023</span>
+        <span class="label" title="Data da última modificação">Alterado em 23/05/2024</span>
       
     </p>
   </header>
 
   <article class="post-content">
-    <p>Esta estratégia de negócio refere-se aos registros de <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fad.html">Atendimentos Domiciliares</a> e está centrada na <strong>tb_fat_atendimento_domiciliar</strong>.</p>
+    <h1 id="1-dados">1. Dados</h1>
+
+<p>Esta estratégia de negócio refere-se aos registros de <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fad.html">Atendimentos Domiciliares</a> e está centrada na <strong>tb_fat_atendimento_domiciliar</strong>.</p>
 
 <p>As <strong>Condições avaliadas</strong> estão armazenadas na <strong>tb_fat_atend_dom_condicao_aval</strong>. Já os <strong>Procedimentos</strong> estão armazenados na <strong>tb_fat_atend_dom_proced</strong>. Estas duas tabelas são interligadas com a <strong>tb_fat_atendimento_domiciliar</strong> através da coluna <strong>co_fat_atend_domiciliar</strong>.</p>
 
 <p>Os dados registrados nas opções rápidas das &quot;Condições Avaliadas&quot; são armazenados na tabela <strong>tb_fat_atendimento_domiciliar</strong>. Enquanto que dos dados de CIAP2 e CID10 são armazenados na <strong>tb_fat_atend_dom_condicao_aval</strong>.</p>
+
+<h1 id="2-estrutura">2. Estrutura</h1>
 
 <table><thead>
 <tr>

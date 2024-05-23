@@ -25,7 +25,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 5.6.1</span>
+        <span class="label">versão 5.6.2</span>
       
     </a>
 
@@ -139,6 +139,13 @@
             </a>
           </li>
         
+          <li  class="has-subitems">
+          
+            <a title="Visualizações" href="/dw/visualizacoes/index.html">
+              Visualizações
+            </a>
+          </li>
+        
       </ul>
     </li>
   </ul>
@@ -158,7 +165,7 @@
     <p class="post-meta">
       <a class="btn" href="/pdf.html?include=/dw/principais_alteracoes.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 15/11/2023</span>
+        <span class="label" title="Data da última modificação">Alterado em 23/05/2024</span>
       
     </p>
   </header>
@@ -166,29 +173,33 @@
   <article class="post-content">
     <p>Este documento relata as principais alterações entre as versões do DW.</p>
 
-<h3 id="1-principais-altera-es-da-v5-2-16-para-a-v-5-2-17-do-e-sus-aps">1. Principais alterações da v5.2.16 para a v.5.2.17 do e-SUS APS:</h3>
+<h3 id="1-principais-altera-es-da-v5-2-33-para-a-v-5-2-34-do-e-sus-aps">1. Principais alterações da v5.2.33 para a v.5.2.34 do e-SUS APS:</h3>
 
-<p><strong>1. </strong> No contexto de <a href="/dw/fatos/cuidado_compartilhado.html">Cuidado compartilhado</a> foram incluídas as estruturas de dados para registro da informação do cuidado compartilhado. Esta informação está armazenada na tabela: <code>tb_fat_cuidado_compartilhado</code>.</p>
+<p><strong>1. </strong> Inclusão da seção de <a href="/dw/visualizacoes/index.html">Visualizações</a>, com a nova <a href="/dw/visualizacoes/acompanhamento_cidadaos_vinculados.html">Tabela de acompanhamento de cidadãos vinculados</a>.</p>
 
-<p><strong>2. </strong> Para contextualizar as informações da tabela <code>tb_fat_cuidado_compartilhado</code>, foram criadas as seguintes tabelas de dimensão: <code>tb_dim_conduta_cuidado</code>e <code>tb_dim_prioridade_cuidado</code>.</p>
+<h3 id="2-principais-altera-es-da-v5-2-16-para-a-v-5-2-17-do-e-sus-aps">2. Principais alterações da v5.2.16 para a v.5.2.17 do e-SUS APS:</h3>
 
-<p><strong>3. </strong> Inclusão do tipo de ficha &quot;ESUS PEC Cuidado compartilhado&quot; na <code>tb_dim_tipo_ficha</code>.</p>
+<p><strong>2. </strong> No contexto de <a href="/dw/fatos/cuidado_compartilhado.html">Cuidado compartilhado</a> foram incluídas as estruturas de dados para registro da informação do cuidado compartilhado. Esta informação está armazenada na tabela: <code>tb_fat_cuidado_compartilhado</code>.</p>
 
-<h3 id="2-principais-altera-es-da-v5-2-4-para-a-v-5-2-5-do-e-sus-aps">2. Principais alterações da v5.2.4 para a v.5.2.5 do e-SUS APS:</h3>
+<p><strong>3. </strong> Para contextualizar as informações da tabela <code>tb_fat_cuidado_compartilhado</code>, foram criadas as seguintes tabelas de dimensão: <code>tb_dim_conduta_cuidado</code>e <code>tb_dim_prioridade_cuidado</code>.</p>
+
+<p><strong>4. </strong> Inclusão do tipo de ficha &quot;ESUS PEC Cuidado compartilhado&quot; na <code>tb_dim_tipo_ficha</code>.</p>
+
+<h3 id="3-principais-altera-es-da-v5-2-4-para-a-v-5-2-5-do-e-sus-aps">3. Principais alterações da v5.2.4 para a v.5.2.5 do e-SUS APS:</h3>
 
 <p><strong>1. </strong> Inclusão da tabela de dimensões referente ao vínculo entre equipes: <code>tb_dim_vinculacao_equipes</code>.</p>
 
-<h3 id="3-principais-altera-es-da-v4-2-1-para-a-v4-2-3">3. Principais alterações da v4.2.1 para a v4.2.3:</h3>
+<h3 id="4-principais-altera-es-da-v4-2-1-para-a-v4-2-3">4. Principais alterações da v4.2.1 para a v4.2.3:</h3>
 
 <p><strong>1. </strong> No contexto de <a href="/dw/fatos/procedimentos.html">Procedimentos</a> foram incluídos os campos <code>nu_peso</code> e <code>nu_altura</code>.</p>
 
 <p><strong>2. </strong> No contexto de <a href="/dw/fatos/atendimento_odontologico_individual.html">Atendimento odontológico individual</a> foram incluídos os campos <code>nu_peso</code> e <code>nu_altura</code>.</p>
 
-<h3 id="4-principais-altera-es-da-v4-2-0-para-a-v4-2-1">4. Principais alterações da v4.2.0 para a v4.2.1:</h3>
+<h3 id="5-principais-altera-es-da-v4-2-0-para-a-v4-2-1">5. Principais alterações da v4.2.0 para a v4.2.1:</h3>
 
 <p><strong>1. </strong> No contexto de <a href="/dw/fatos/cadastro_individual.html">Cadastro individual</a> foi incluído o campo <code>co_dim_povo_comunidade_tradicional</code>. Além deste campo, também foi criada a tabela de dimensão <a href="/dw/dimensoes.html#tb\_dim\_povo\_comunidade\_tradicional">tb_dim_povo_comunidade_tradicional</a>.</p>
 
-<h3 id="5-principais-altera-es-da-v4-1-4-para-a-v4-2-0">5. Principais alterações da v4.1.4 para a v4.2.0:</h3>
+<h3 id="6-principais-altera-es-da-v4-1-4-para-a-v4-2-0">6. Principais alterações da v4.1.4 para a v4.2.0:</h3>
 
 <p><strong>1. </strong> No contexto de <a href="/dw/fatos/atendimento_individual.html">Atendimento individual</a> e <a href="/dw/fatos/atendimento_odontologico_individual.html">Atendimento odontológico individual</a> foram incluídas as estruturas de dados para registro das informações de resultados de exames. Estas informações estão armazenadas nas tabelas:</p>
 
@@ -203,13 +214,13 @@
 
 <p><strong>4. </strong> No contexto de <a href="/dw/fatos/vacinacao.html">Vacinação</a> foram incluídos os campos <code>st_registro_anterior</code> e <code>co_dim_tempo_vacina_aplicada</code>.</p>
 
-<h3 id="6-principais-altera-es-da-v4-1-2-para-a-v4-1-4">6. Principais alterações da v4.1.2 para a v4.1.4:</h3>
+<h3 id="7-principais-altera-es-da-v4-1-2-para-a-v4-1-4">7. Principais alterações da v4.1.2 para a v4.1.4:</h3>
 
 <p><strong>1. </strong> No contexto de <a href="/dw/fatos/vacinacao.html">Vacinação</a> foram incluídas as estruturas de dados para registro da informação de grupo de atendimento. Esta informação está armazenada na tabela: <code>tb_fat_vacinacao_vacina</code>.</p>
 
 <p><strong>2. </strong> Para contextualizar as informações da tabela <code>tb_fat_vacinacao_vacina</code>, foi criada a seguinte tabela de dimensão: <code>tb_dim_grupo_atendimento</code>.</p>
 
-<h3 id="7-principais-altera-es-da-v4-0-0-para-a-v4-1-2">7. Principais alterações da v4.0.0 para a v4.1.2:</h3>
+<h3 id="8-principais-altera-es-da-v4-0-0-para-a-v4-1-2">8. Principais alterações da v4.0.0 para a v4.1.2:</h3>
 
 <p><strong>1. </strong> No contexto de <a href="/dw/fatos/atendimento_individual.html">Atendimento individual</a> foram incluídas as estruturas de dados para registro das informações de prescrição de medicamentos e encaminhamentos. Estas informações estão armazenadas nas tabelas:</p>
 

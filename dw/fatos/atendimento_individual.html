@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Atendimento individual</title>
-  <meta name="description" content="Esta estratégia de negócio refere-se aos registros de Atendimentos Individuais e está centrada na tb_fat_atendimento_individual. Neste registro o campo nu_pr...">
+  <meta name="description" content="1. Dados">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="/dw/fatos/atendimento_individual.html">
@@ -25,7 +25,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 5.6.1</span>
+        <span class="label">versão 5.6.2</span>
       
     </a>
 
@@ -232,13 +232,17 @@
     <p class="post-meta">
       <a class="btn" href="/pdf.html?include=/dw/fatos/atendimento_individual.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 22/03/2024</span>
+        <span class="label" title="Data da última modificação">Alterado em 23/05/2024</span>
       
     </p>
   </header>
 
   <article class="post-content">
-    <p>Esta estratégia de negócio refere-se aos registros de <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html">Atendimentos Individuais</a> e está centrada na <strong>tb_fat_atendimento_individual</strong>. Neste registro o campo <em>nu_prontuario</em> é criptografado. </p>
+    <h1 id="1-dados">1. Dados</h1>
+
+<p>Esta estratégia de negócio refere-se aos registros de <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html">Atendimentos Individuais</a> e está centrada na <strong>tb_fat_atendimento_individual</strong>. Neste registro o campo <em>nu_prontuario</em> é criptografado. </p>
+
+<h1 id="2-regras">2. Regras</h1>
 
 <p><strong>1. </strong> Os <strong>problemas / condições de saúde</strong> estão armazenados na <strong>tb_fat_atd_ind_problemas</strong>.</p>
 
@@ -251,6 +255,8 @@
 <p><strong>5. </strong> As informações dos <strong>encaminhamentos</strong> estão armazenadas na <strong>tb_fat_atd_ind_encaminhamentos</strong>.</p>
 
 <p><strong>6. </strong> Todas as tabelas relacionadas com a <strong>tb_fat_atendimento_individual</strong> são interligadas através da coluna <strong>co_fat_atd_ind</strong>.</p>
+
+<h1 id="3-estrutura">3. Estrutura</h1>
 
 <table><thead>
 <tr>

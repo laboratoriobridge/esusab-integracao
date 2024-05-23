@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Data Warehouse Relatórios e-SUS APS PEC</title>
-  <meta name="description" content="Esta seção descreve a estrutura de Data Warehouse (DW) onde são armazenados os dados para a geração dos relatórios.">
+  <meta name="description" content="1. Objetivo">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="/dw/">
@@ -25,7 +25,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 5.6.1</span>
+        <span class="label">versão 5.6.2</span>
       
     </a>
 
@@ -135,6 +135,13 @@
             </a>
           </li>
         
+          <li  class="has-subitems">
+          
+            <a title="Visualizações" href="/dw/visualizacoes/index.html">
+              Visualizações
+            </a>
+          </li>
+        
       </ul>
     </li>
   </ul>
@@ -154,19 +161,21 @@
     <p class="post-meta">
       <a class="btn" href="/pdf.html?include=/dw/index.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 09/05/2024</span>
+        <span class="label" title="Data da última modificação">Alterado em 23/05/2024</span>
       
     </p>
   </header>
 
   <article class="post-content">
-    <p>Esta seção descreve a estrutura de Data Warehouse (DW) onde são armazenados os dados para a geração dos relatórios.</p>
+    <h1 id="1-objetivo">1. Objetivo</h1>
 
-<p>O DW é uma base de dados contendo vários componentes. Possui uma arquitetura multidimensional, onde encontram-se as <a href="/dw/dimensoes.html">Dimensões</a> e <a href="/dw/fatos/index.html">Fatos</a>. Estas estruturas são alguns dos elementos do DW, são dependentes entre si e permitem o armazenamento dos dados.</p>
+<p>Esta seção descreve a estrutura de Data Warehouse (DW) onde são armazenados os dados para a geração dos relatórios.</p>
 
-<p>Através de um sistema de <a href="https://pt.wikipedia.org/wiki/Extract,_transform,_load">ETL</a>, as informações são extraídas de arquivos conforme descritos na estrutura <a href="/ledi/index.html">Layout e-SUS APS de Dados e Interface</a> e armazenadas nas tabelas Fatos e Dimensões.</p>
+<p>O DW é uma base de dados contendo vários componentes. Possui uma arquitetura multidimensional, onde encontram-se as <a href="/dw/dimensoes.html">Dimensões</a> e <a href="/dw/fatos/index.html">Fatos</a>. Estas estruturas são alguns dos elementos do DW, são dependentes entre si e permitem o armazenamento dos dados. Além disso, temos as <a href="/dw/visualizacoes/index.html">Visualizações</a> que são estruturas que, diferente das dimensões e fatos, são independentes, construídas própriamente para tratar de domínios específicos, consolidando eventos e já repassando o que o Prontuário Eletrônico do Cidadão considera como verdade sobre esses domínios.</p>
 
-<p>As Dimensões possuem características descritivas dentro do DW. São responsáveis por qualificar as informações provenientes das tabelas Fatos. As tabelas Fatos possuem características quantitativa dentro do DW. A partir delas, são extraídas métricas que são cruzadas com os dados das Dimensões, gerando informações significativas para a avaliação do usuário. Todos os dados históricos no DW ficam armazenadas nas tabelas Fatos.</p>
+<p>Através de um sistema de <a href="https://pt.wikipedia.org/wiki/Extract,_transform,_load">ETL</a>, as informações são extraídas de arquivos conforme descritos na estrutura <a href="/ledi/index.html">Layout e-SUS APS de Dados e Interface</a> e armazenadas nas tabelas Fatos e Dimensões. Enquanto isso, as tabelas de Visualizações são populadas com dados de diversas origens, independente de estarem no PEC ou no DW.</p>
+
+<p>As Dimensões possuem características descritivas dentro do DW. São responsáveis por qualificar as informações provenientes das tabelas Fatos. As tabelas Fatos possuem características quantitativa dentro do DW. A partir delas, são extraídas métricas que são cruzadas com os dados das Dimensões, gerando informações significativas para a avaliação do usuário. Todos os dados históricos no DW ficam armazenadas nas tabelas Fatos. As visualizações não possuem dados históricos, sendo especificamente a situação em que se encontra os dados com base no último processamento dos relatórios.</p>
 
 <p>Com exceção dos relatórios Operacionais, todos os outros modelos de relatórios do e-SUS APS PEC utilizam esta estrutura de Data Warehouse.</p>
 

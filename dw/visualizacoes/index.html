@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Regras</title>
-  <meta name="description" content="O envio de dados de sistemas próprios para o e-SUS APS (PEC) deve atender as regras listadas abaixo:">
+  <title>Visualizações</title>
+  <meta name="description" content="1. Visualizações">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="/ledi/documentacao/regras/">
+  <link rel="canonical" href="/dw/visualizacoes/">
   <link rel="icon" type="image/png" href="/img/logo-esus.png">
 </head>
 
@@ -71,15 +71,11 @@
       
         
           
-            <li><a title="Layout e-SUS APS de Dados e Interface" href="/ledi/index.html">Layout e-SUS APS de Dados e Interface</a></li>
+            <li><a title="Data Warehouse Relatórios e-SUS APS PEC" href="/dw/index.html">Data Warehouse Relatórios e-SUS APS PEC</a></li>
           
         
           
-            <li><a title="Layout e-SUS APS de Dados e Interface Versão 5.6.2" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 5.6.2</a></li>
-          
-        
-          
-            <li><a title="Regras" href="/ledi/documentacao/regras/index.html">Regras</a></li>
+            <li><a title="Visualizações" href="/dw/visualizacoes/index.html">Visualizações</a></li>
           
         
 
@@ -111,42 +107,21 @@
   <ul>
     
       <li>
-        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 5.6.2" href="/ledi/documentacao/index.html" class="back-link">
+        <a title="Voltar para Data Warehouse Relatórios e-SUS APS PEC" href="/dw/index.html" class="back-link">
           <i class="icon icon-back"></i> Voltar
-          <small>(Layout e-SUS APS de Dados e Interface Versão 5.6.2)</small>
+          <small>(Data Warehouse Relatórios e-SUS APS PEC)</small>
         </a>
       </li>
     
 
     <li>
-      <a class="open" title="Regras" href="/ledi/documentacao/regras/index.html">Regras</a>
+      <a class="open" title="Visualizações" href="/dw/visualizacoes/index.html">Visualizações</a>
       <ul>
         
           <li >
           
-            <a title="Validar CNS" href="/ledi/documentacao/regras/algoritmo_CNS.html">
-              Validar CNS
-            </a>
-          </li>
-        
-          <li >
-          
-            <a title="Validar nome" href="/ledi/documentacao/regras/validar_nome.html">
-              Validar nome
-            </a>
-          </li>
-        
-          <li >
-          
-            <a title="Grupos de CBOs x Tipo de ficha" href="/ledi/documentacao/regras/cbo.html">
-              Grupos de CBOs x Tipo de ficha
-            </a>
-          </li>
-        
-          <li >
-          
-            <a title="Regras de vacinação" href="/ledi/documentacao/regras/validar_regras_vacinacao.html">
-              Regras de vacinação
+            <a title="Tabela de acompanhamento de cidadãos vinculados" href="/dw/visualizacoes/acompanhamento_cidadaos_vinculados.html">
+              Tabela de acompanhamento de cidadãos vinculados
             </a>
           </li>
         
@@ -165,24 +140,33 @@
           <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Regras</h1>
+    <h1 class="post-title">Visualizações</h1>
     <p class="post-meta">
-      <a class="btn" href="/pdf.html?include=/ledi/documentacao/regras/index.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
+      <a class="btn" href="/pdf.html?include=/dw/visualizacoes/index.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 29/09/2023</span>
+        <span class="label" title="Data da última modificação">Alterado em 23/05/2024</span>
       
     </p>
   </header>
 
   <article class="post-content">
-    <p>O envio de dados de sistemas próprios para o e-SUS APS (PEC) deve atender as regras listadas abaixo:</p>
+    <h1 id="1-visualiza-es">1. Visualizações</h1>
 
-<ul>
-<li><a href="/ledi/documentacao/regras/algoritmo_CNS.html">Validar CNS</a>;</li>
-<li><a href="/ledi/documentacao/regras/validar_nome.html">Validar nome</a>;</li>
-<li><a href="/ledi/documentacao/regras/cbo.html">Grupos de CBOs x Tipo de ficha</a>;</li>
-<li><a href="/ledi/documentacao/regras/validar_regras_vacinacao.html">Regras de vacinação</a>.</li>
-</ul>
+<p>Nas Visualizações a maioria dos dados são populados de forma legível para o usuário. O processo de ETL é realizado e utilizando as regras de negócios estabelecidas pelo PEC, trazendo uma informação valiosa e estruturada que é utilizada pelo próprio e-SUS APS na construção de relatórios internos. Porém, nada impede que elas possam ser utilizadas também para construir relatórios dinâmicos.</p>
+
+<p>A estrutura de Visualizações é composta pelas seguintes tabelas:</p>
+
+<table><thead>
+<tr>
+<th>Nome da Tabela</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><a href="/dw/visualizacoes/acompanhamento_cidadaos_vinculados.html">tb_acomp_cidadaos_vinculados</a></td>
+<td>Utilizada para identificar todos os cadastros de cidadãos que são acompanhados por alguma equipe. O uso dessa tabela é sugerido quando houver necessidade de criar relatórios que listam dados dos cidadãos ou que desejam filtrar cidadãos de determinadas equipes, garantindo assim uma consistência com os dados apresentados pelo PEC</td>
+</tr>
+</tbody></table>
 
   </article>
 

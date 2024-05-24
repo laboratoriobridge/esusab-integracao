@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fichaProcedimentoChild="http://esus.ufsc.br/fichaprocedimentochild" xmlns:fichaProcedimentoMaster="http://esus.ufsc.br/fichaprocedimentomaster" xmlns:unicaLotacaoHeader="http://esus.ufsc.br/unicalotacaoheader" targetNamespace="http://esus.ufsc.br/fichaprocedimentomaster" version="1.0">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fichaProcedimentoChild="http://esus.ufsc.br/fichaprocedimentochild" xmlns:fichaProcedimentoMaster="http://esus.ufsc.br/fichaprocedimentomaster" xmlns:medicoes="http://esus.ufsc.br/medicoes" xmlns:unicaLotacaoHeader="http://esus.ufsc.br/unicalotacaoheader" targetNamespace="http://esus.ufsc.br/fichaprocedimentomaster" version="1.0">
 
   <xs:import namespace="http://esus.ufsc.br/unicalotacaoheader" schemaLocation="unicalotacaoheader.xsd"/>
+
+  <xs:import namespace="http://esus.ufsc.br/medicoes" schemaLocation="medicoes.xsd"/>
 
   <xs:import namespace="http://esus.ufsc.br/fichaprocedimentochild" schemaLocation="fichaprocedimentochild.xsd"/>
 
@@ -9,17 +11,17 @@
 
   <xs:complexType name="fichaProcedimentoMasterTransport">
     <xs:sequence>
-      <xs:element maxOccurs="1" minOccurs="0" name="headerTransport" type="unicaLotacaoHeader:unicaLotacaoHeaderTransport"/>
+      <xs:element minOccurs="0" name="headerTransport" type="unicaLotacaoHeader:unicaLotacaoHeaderTransport"/>
       <xs:element maxOccurs="unbounded" minOccurs="0" name="atendProcedimentos" type="fichaProcedimentoChild:fichaProcedimentoChildTransport"/>
-      <xs:element maxOccurs="1" name="uuidFicha" type="xs:string"/>
-      <xs:element maxOccurs="1" minOccurs="0" name="tpCdsOrigem" type="xs:int"/>
-      <xs:element maxOccurs="1" minOccurs="0" name="numTotalAfericaoPa" type="xs:long"/>
-      <xs:element maxOccurs="1" minOccurs="0" name="numTotalAfericaoTemperatura" type="xs:long"/>
-      <xs:element maxOccurs="1" minOccurs="0" name="numTotalCurativoSimples" type="xs:long"/>
-      <xs:element maxOccurs="1" minOccurs="0" name="numTotalColetaMaterialParaExameLaboratorial" type="xs:long"/>
-      <xs:element maxOccurs="1" minOccurs="0" name="numTotalGlicemiaCapilar" type="xs:long"/>
-      <xs:element maxOccurs="1" minOccurs="0" name="numTotalMedicaoAltura" type="xs:long"/>
-      <xs:element maxOccurs="1" minOccurs="0" name="numTotalMedicaoPeso" type="xs:long"/>
+      <xs:element name="uuidFicha" type="xs:string"/>
+      <xs:element minOccurs="0" name="tpCdsOrigem" type="xs:int"/>
+      <xs:element minOccurs="0" name="numTotalAfericaoPa" type="xs:long"/>
+      <xs:element minOccurs="0" name="numTotalAfericaoTemperatura" type="xs:long"/>
+      <xs:element minOccurs="0" name="numTotalCurativoSimples" type="xs:long"/>
+      <xs:element minOccurs="0" name="numTotalColetaMaterialParaExameLaboratorial" type="xs:long"/>
+      <xs:element minOccurs="0" name="numTotalGlicemiaCapilar" type="xs:long"/>
+      <xs:element minOccurs="0" name="numTotalMedicaoAltura" type="xs:long"/>
+      <xs:element minOccurs="0" name="numTotalMedicaoPeso" type="xs:long"/>
     </xs:sequence>
   </xs:complexType>
 </xs:schema>

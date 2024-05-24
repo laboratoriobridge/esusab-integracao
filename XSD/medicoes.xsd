@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://esus.ufsc.br/medicoes" version="1.0">
+
+  <xs:complexType name="medicoesTransport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="circuferenciaAbdominal" type="xs:double"/>
+      <xs:element minOccurs="0" name="perimetroPanturrilha" type="xs:double"/>
+      <xs:element minOccurs="0" name="pressaoArterialSistolica" type="xs:int"/>
+      <xs:element minOccurs="0" name="pressaoArterialDiastolica" type="xs:int"/>
+      <xs:element minOccurs="0" name="frequenciaRespiratoria" type="xs:int"/>
+      <xs:element minOccurs="0" name="frequenciaCardiaca" type="xs:int"/>
+      <xs:element minOccurs="0" name="temperatura" type="xs:double"/>
+      <xs:element minOccurs="0" name="saturacaoO2" type="xs:int"/>
+      <xs:element minOccurs="0" name="glicemiaCapilar" type="xs:int"/>
+      <xs:element minOccurs="0" name="tipoGlicemiaCapilar" type="xs:long"/>
+      <xs:element minOccurs="0" name="peso" type="xs:double"/>
+      <xs:element minOccurs="0" name="altura" type="xs:double"/>
+      <xs:element minOccurs="0" name="perimetroCefalico" type="xs:double"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

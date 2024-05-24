@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:encaminhamentoExterno="http://esus.ufsc.br/encaminhamentoexterno" xmlns:exame="http://esus.ufsc.br/exame" xmlns:lotacaoHeader="http://esus.ufsc.br/lotacaoheader" xmlns:medicamento="http://esus.ufsc.br/medicamento" xmlns:problemaCondicaoAvaliacaoAI="http://esus.ufsc.br/problemacondicaoavaliacaoai" xmlns:resultadoExame="http://esus.ufsc.br/resultadoexame" xmlns:resultadosExame="http://esus.ufsc.br/resultadosexame" targetNamespace="http://esus.ufsc.br/fichaatendimentoindividualchild" version="1.0">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:encaminhamentoExterno="http://esus.ufsc.br/encaminhamentoexterno" xmlns:exame="http://esus.ufsc.br/exame" xmlns:lotacaoHeader="http://esus.ufsc.br/lotacaoheader" xmlns:medicamento="http://esus.ufsc.br/medicamento" xmlns:medicoes="http://esus.ufsc.br/medicoes" xmlns:problemaCondicaoAvaliacaoAI="http://esus.ufsc.br/problemacondicaoavaliacaoai" xmlns:resultadoExame="http://esus.ufsc.br/resultadoexame" xmlns:resultadosExame="http://esus.ufsc.br/resultadosexame" targetNamespace="http://esus.ufsc.br/fichaatendimentoindividualchild" version="1.0">
+
+  <xs:import namespace="http://esus.ufsc.br/medicoes" schemaLocation="medicoes.xsd"/>
 
   <xs:import namespace="http://esus.ufsc.br/problemacondicaoavaliacaoai" schemaLocation="problemacondicaoavaliacaoai.xsd"/>
 
@@ -17,41 +19,39 @@
 
   <xs:complexType name="fichaAtendimentoIndividualChildTransport">
     <xs:sequence>
-      <xs:element maxOccurs="1" minOccurs="0" name="numeroProntuario" type="xs:string"/>
-      <xs:element maxOccurs="1" minOccurs="0" name="cnsCidadao" type="xs:string"/>
-      <xs:element maxOccurs="1" minOccurs="0" name="cpfCidadao" type="xs:string"/>
-      <xs:element maxOccurs="1" minOccurs="0" name="dataNascimento" type="xs:long"/>
-      <xs:element maxOccurs="1" minOccurs="0" name="localDeAtendimento" type="xs:long"/>
-      <xs:element maxOccurs="1" minOccurs="0" name="sexo" type="xs:long"/>
-      <xs:element maxOccurs="1" minOccurs="0" name="turno" type="xs:long"/>
-      <xs:element maxOccurs="1" minOccurs="0" name="tipoAtendimento" type="xs:long"/>
-      <xs:element maxOccurs="1" minOccurs="0" name="pesoAcompanhamentoNutricional" type="xs:double"/>
-      <xs:element maxOccurs="1" minOccurs="0" name="alturaAcompanhamentoNutricional" type="xs:double"/>
-      <xs:element maxOccurs="1" minOccurs="0" name="aleitamentoMaterno" type="xs:long"/>
-      <xs:element maxOccurs="1" minOccurs="0" name="dumDaGestante" type="xs:long"/>
-      <xs:element maxOccurs="1" minOccurs="0" name="idadeGestacional" type="xs:int"/>
-      <xs:element maxOccurs="1" minOccurs="0" name="atencaoDomiciliarModalidade" type="xs:long"/>
-      <xs:element maxOccurs="1" minOccurs="0" name="problemaCondicaoAvaliada" type="problemaCondicaoAvaliacaoAI:problemaCondicaoAvaliacaoAITransport"/>
+      <xs:element minOccurs="0" name="numeroProntuario" type="xs:string"/>
+      <xs:element minOccurs="0" name="cnsCidadao" type="xs:string"/>
+      <xs:element minOccurs="0" name="cpfCidadao" type="xs:string"/>
+      <xs:element minOccurs="0" name="dataNascimento" type="xs:long"/>
+      <xs:element minOccurs="0" name="localDeAtendimento" type="xs:long"/>
+      <xs:element minOccurs="0" name="sexo" type="xs:long"/>
+      <xs:element minOccurs="0" name="turno" type="xs:long"/>
+      <xs:element minOccurs="0" name="tipoAtendimento" type="xs:long"/>
+      <xs:element minOccurs="0" name="medicoes" type="medicoes:medicoesTransport"/>
+      <xs:element minOccurs="0" name="aleitamentoMaterno" type="xs:long"/>
+      <xs:element minOccurs="0" name="dumDaGestante" type="xs:long"/>
+      <xs:element minOccurs="0" name="idadeGestacional" type="xs:int"/>
+      <xs:element minOccurs="0" name="atencaoDomiciliarModalidade" type="xs:long"/>
+      <xs:element minOccurs="0" name="problemaCondicaoAvaliada" type="problemaCondicaoAvaliacaoAI:problemaCondicaoAvaliacaoAITransport"/>
       <xs:element maxOccurs="unbounded" minOccurs="0" name="exame" type="exame:exameTransport"/>
-      <xs:element maxOccurs="1" minOccurs="0" name="vacinaEmDia" type="xs:boolean"/>
-      <xs:element maxOccurs="1" minOccurs="0" name="ficouEmObservacao" type="xs:boolean"/>
-      <xs:element maxOccurs="1" minOccurs="0" name="finalizadorObservacao" type="lotacaoHeader:lotacaoHeaderTransport"/>
+      <xs:element minOccurs="0" name="vacinaEmDia" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="ficouEmObservacao" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="finalizadorObservacao" type="lotacaoHeader:lotacaoHeaderTransport"/>
       <xs:element maxOccurs="unbounded" minOccurs="0" name="nasfs" type="xs:long"/>
       <xs:element maxOccurs="unbounded" minOccurs="0" name="emultis" type="xs:long"/>
       <xs:element maxOccurs="unbounded" minOccurs="0" name="condutas" type="xs:long"/>
-      <xs:element maxOccurs="1" minOccurs="0" name="stGravidezPlanejada" type="xs:boolean"/>
-      <xs:element maxOccurs="1" minOccurs="0" name="nuGestasPrevias" type="xs:int"/>
-      <xs:element maxOccurs="1" minOccurs="0" name="nuPartos" type="xs:int"/>
-      <xs:element maxOccurs="1" minOccurs="0" name="racionalidadeSaude" type="xs:long"/>
-      <xs:element maxOccurs="1" minOccurs="0" name="perimetroCefalico" type="xs:double"/>
-      <xs:element maxOccurs="1" minOccurs="0" name="dataHoraInicialAtendimento" type="xs:long"/>
-      <xs:element maxOccurs="1" minOccurs="0" name="dataHoraFinalAtendimento" type="xs:long"/>
+      <xs:element minOccurs="0" name="stGravidezPlanejada" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="nuGestasPrevias" type="xs:int"/>
+      <xs:element minOccurs="0" name="nuPartos" type="xs:int"/>
+      <xs:element minOccurs="0" name="racionalidadeSaude" type="xs:long"/>
+      <xs:element minOccurs="0" name="dataHoraInicialAtendimento" type="xs:long"/>
+      <xs:element minOccurs="0" name="dataHoraFinalAtendimento" type="xs:long"/>
       <xs:element maxOccurs="unbounded" minOccurs="0" name="medicamentos" type="medicamento:medicamentoTransport"/>
       <xs:element maxOccurs="unbounded" minOccurs="0" name="encaminhamentos" type="encaminhamentoExterno:encaminhamentoExternoTransport"/>
       <xs:element maxOccurs="unbounded" minOccurs="0" name="resultadosExames" type="resultadosExame:resultadosExameTransport"/>
-      <xs:element maxOccurs="1" minOccurs="0" name="uuidRnds" type="xs:string"/>
-      <xs:element maxOccurs="1" minOccurs="0" name="tipoParticipacaoCidadao" type="xs:long"/>
-      <xs:element maxOccurs="1" minOccurs="0" name="tipoParticipacaoProfissionalConvidado" type="xs:long"/>
+      <xs:element minOccurs="0" name="uuidRnds" type="xs:string"/>
+      <xs:element minOccurs="0" name="tipoParticipacaoCidadao" type="xs:long"/>
+      <xs:element minOccurs="0" name="tipoParticipacaoProfissionalConvidado" type="xs:long"/>
     </xs:sequence>
   </xs:complexType>
 </xs:schema>

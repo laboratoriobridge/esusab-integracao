@@ -272,6 +272,7 @@ FichaAtendimentoIndividualChildThrift = module.exports.FichaAtendimentoIndividua
   this.tipoParticipacaoCidadao = null;
   this.tipoParticipacaoProfissionalConvidado = null;
   this.emultis = null;
+  this.medicoes = null;
   if (args) {
     if (args.numeroProntuario !== undefined && args.numeroProntuario !== null) {
       this.numeroProntuario = args.numeroProntuario;
@@ -380,6 +381,9 @@ FichaAtendimentoIndividualChildThrift = module.exports.FichaAtendimentoIndividua
     }
     if (args.emultis !== undefined && args.emultis !== null) {
       this.emultis = Thrift.copyList(args.emultis, [null]);
+    }
+    if (args.medicoes !== undefined && args.medicoes !== null) {
+      this.medicoes = new common_ttypes.MedicoesThrift(args.medicoes);
     }
   }
 };
@@ -746,6 +750,14 @@ FichaAtendimentoIndividualChildThrift.prototype.read = function(input) {
         input.skip(ftype);
       }
       break;
+      case 39:
+      if (ftype == Thrift.Type.STRUCT) {
+        this.medicoes = new common_ttypes.MedicoesThrift();
+        this.medicoes.read(input);
+      } else {
+        input.skip(ftype);
+      }
+      break;
       default:
         input.skip(ftype);
     }
@@ -998,6 +1010,11 @@ FichaAtendimentoIndividualChildThrift.prototype.write = function(output) {
       }
     }
     output.writeListEnd();
+    output.writeFieldEnd();
+  }
+  if (this.medicoes !== null && this.medicoes !== undefined) {
+    output.writeFieldBegin('medicoes', Thrift.Type.STRUCT, 39);
+    this.medicoes.write(output);
     output.writeFieldEnd();
   }
   output.writeFieldStop();

@@ -59,6 +59,7 @@ namespace br.gov.saude.esusab.ras.atendindividual
     private long _tipoParticipacaoCidadao;
     private long _tipoParticipacaoProfissionalConvidado;
     private List<long> _emultis;
+    private br.gov.saude.esusab.ras.common.MedicoesThrift _medicoes;
 
     public string NumeroProntuario
     {
@@ -528,6 +529,19 @@ namespace br.gov.saude.esusab.ras.atendindividual
       }
     }
 
+    public br.gov.saude.esusab.ras.common.MedicoesThrift Medicoes
+    {
+      get
+      {
+        return _medicoes;
+      }
+      set
+      {
+        __isset.medicoes = true;
+        this._medicoes = value;
+      }
+    }
+
 
     public Isset __isset;
     #if !SILVERLIGHT
@@ -570,6 +584,7 @@ namespace br.gov.saude.esusab.ras.atendindividual
       public bool tipoParticipacaoCidadao;
       public bool tipoParticipacaoProfissionalConvidado;
       public bool emultis;
+      public bool medicoes;
     }
 
     public FichaAtendimentoIndividualChildThrift() {
@@ -914,6 +929,14 @@ namespace br.gov.saude.esusab.ras.atendindividual
                   }
                   iprot.ReadListEnd();
                 }
+              } else { 
+                TProtocolUtil.Skip(iprot, field.Type);
+              }
+              break;
+            case 39:
+              if (field.Type == TType.Struct) {
+                Medicoes = new br.gov.saude.esusab.ras.common.MedicoesThrift();
+                Medicoes.Read(iprot);
               } else { 
                 TProtocolUtil.Skip(iprot, field.Type);
               }
@@ -1276,6 +1299,14 @@ namespace br.gov.saude.esusab.ras.atendindividual
           }
           oprot.WriteFieldEnd();
         }
+        if (Medicoes != null && __isset.medicoes) {
+          field.Name = "medicoes";
+          field.Type = TType.Struct;
+          field.ID = 39;
+          oprot.WriteFieldBegin(field);
+          Medicoes.Write(oprot);
+          oprot.WriteFieldEnd();
+        }
         oprot.WriteFieldStop();
         oprot.WriteStructEnd();
       }
@@ -1503,6 +1534,12 @@ namespace br.gov.saude.esusab.ras.atendindividual
         __first = false;
         __sb.Append("Emultis: ");
         __sb.Append(Emultis);
+      }
+      if (Medicoes != null && __isset.medicoes) {
+        if(!__first) { __sb.Append(", "); }
+        __first = false;
+        __sb.Append("Medicoes: ");
+        __sb.Append(Medicoes== null ? "<null>" : Medicoes.ToString());
       }
       __sb.Append(")");
       return __sb.ToString();

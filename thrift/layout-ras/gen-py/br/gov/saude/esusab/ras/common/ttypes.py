@@ -1385,3 +1385,224 @@ class ResultadosExameThrift:
 
   def __ne__(self, other):
     return not (self == other)
+
+class MedicoesThrift:
+  """
+  Attributes:
+   - circuferenciaAbdominal
+   - perimetroPanturrilha
+   - pressaoArterialSistolica
+   - pressaoArterialDiastolica
+   - frequenciaRespiratoria
+   - frequenciaCardiaca
+   - temperatura
+   - saturacaoO2
+   - glicemiaCapilar
+   - tipoGlicemiaCapilar
+   - peso
+   - altura
+   - perimetroCefalico
+  """
+
+  thrift_spec = (
+    None, # 0
+    (1, TType.DOUBLE, 'circuferenciaAbdominal', None, None, ), # 1
+    (2, TType.DOUBLE, 'perimetroPanturrilha', None, None, ), # 2
+    (3, TType.I32, 'pressaoArterialSistolica', None, None, ), # 3
+    (4, TType.I32, 'pressaoArterialDiastolica', None, None, ), # 4
+    (5, TType.I32, 'frequenciaRespiratoria', None, None, ), # 5
+    (6, TType.I32, 'frequenciaCardiaca', None, None, ), # 6
+    (7, TType.DOUBLE, 'temperatura', None, None, ), # 7
+    (8, TType.I32, 'saturacaoO2', None, None, ), # 8
+    (9, TType.I32, 'glicemiaCapilar', None, None, ), # 9
+    (10, TType.I64, 'tipoGlicemiaCapilar', None, None, ), # 10
+    (11, TType.DOUBLE, 'peso', None, None, ), # 11
+    (12, TType.DOUBLE, 'altura', None, None, ), # 12
+    (13, TType.DOUBLE, 'perimetroCefalico', None, None, ), # 13
+  )
+
+  def __init__(self, circuferenciaAbdominal=None, perimetroPanturrilha=None, pressaoArterialSistolica=None, pressaoArterialDiastolica=None, frequenciaRespiratoria=None, frequenciaCardiaca=None, temperatura=None, saturacaoO2=None, glicemiaCapilar=None, tipoGlicemiaCapilar=None, peso=None, altura=None, perimetroCefalico=None,):
+    self.circuferenciaAbdominal = circuferenciaAbdominal
+    self.perimetroPanturrilha = perimetroPanturrilha
+    self.pressaoArterialSistolica = pressaoArterialSistolica
+    self.pressaoArterialDiastolica = pressaoArterialDiastolica
+    self.frequenciaRespiratoria = frequenciaRespiratoria
+    self.frequenciaCardiaca = frequenciaCardiaca
+    self.temperatura = temperatura
+    self.saturacaoO2 = saturacaoO2
+    self.glicemiaCapilar = glicemiaCapilar
+    self.tipoGlicemiaCapilar = tipoGlicemiaCapilar
+    self.peso = peso
+    self.altura = altura
+    self.perimetroCefalico = perimetroCefalico
+
+  def read(self, iprot):
+    if iprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None and fastbinary is not None:
+      fastbinary.decode_binary(self, iprot.trans, (self.__class__, self.thrift_spec))
+      return
+    iprot.readStructBegin()
+    while True:
+      (fname, ftype, fid) = iprot.readFieldBegin()
+      if ftype == TType.STOP:
+        break
+      if fid == 1:
+        if ftype == TType.DOUBLE:
+          self.circuferenciaAbdominal = iprot.readDouble()
+        else:
+          iprot.skip(ftype)
+      elif fid == 2:
+        if ftype == TType.DOUBLE:
+          self.perimetroPanturrilha = iprot.readDouble()
+        else:
+          iprot.skip(ftype)
+      elif fid == 3:
+        if ftype == TType.I32:
+          self.pressaoArterialSistolica = iprot.readI32()
+        else:
+          iprot.skip(ftype)
+      elif fid == 4:
+        if ftype == TType.I32:
+          self.pressaoArterialDiastolica = iprot.readI32()
+        else:
+          iprot.skip(ftype)
+      elif fid == 5:
+        if ftype == TType.I32:
+          self.frequenciaRespiratoria = iprot.readI32()
+        else:
+          iprot.skip(ftype)
+      elif fid == 6:
+        if ftype == TType.I32:
+          self.frequenciaCardiaca = iprot.readI32()
+        else:
+          iprot.skip(ftype)
+      elif fid == 7:
+        if ftype == TType.DOUBLE:
+          self.temperatura = iprot.readDouble()
+        else:
+          iprot.skip(ftype)
+      elif fid == 8:
+        if ftype == TType.I32:
+          self.saturacaoO2 = iprot.readI32()
+        else:
+          iprot.skip(ftype)
+      elif fid == 9:
+        if ftype == TType.I32:
+          self.glicemiaCapilar = iprot.readI32()
+        else:
+          iprot.skip(ftype)
+      elif fid == 10:
+        if ftype == TType.I64:
+          self.tipoGlicemiaCapilar = iprot.readI64()
+        else:
+          iprot.skip(ftype)
+      elif fid == 11:
+        if ftype == TType.DOUBLE:
+          self.peso = iprot.readDouble()
+        else:
+          iprot.skip(ftype)
+      elif fid == 12:
+        if ftype == TType.DOUBLE:
+          self.altura = iprot.readDouble()
+        else:
+          iprot.skip(ftype)
+      elif fid == 13:
+        if ftype == TType.DOUBLE:
+          self.perimetroCefalico = iprot.readDouble()
+        else:
+          iprot.skip(ftype)
+      else:
+        iprot.skip(ftype)
+      iprot.readFieldEnd()
+    iprot.readStructEnd()
+
+  def write(self, oprot):
+    if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      return
+    oprot.writeStructBegin('MedicoesThrift')
+    if self.circuferenciaAbdominal is not None:
+      oprot.writeFieldBegin('circuferenciaAbdominal', TType.DOUBLE, 1)
+      oprot.writeDouble(self.circuferenciaAbdominal)
+      oprot.writeFieldEnd()
+    if self.perimetroPanturrilha is not None:
+      oprot.writeFieldBegin('perimetroPanturrilha', TType.DOUBLE, 2)
+      oprot.writeDouble(self.perimetroPanturrilha)
+      oprot.writeFieldEnd()
+    if self.pressaoArterialSistolica is not None:
+      oprot.writeFieldBegin('pressaoArterialSistolica', TType.I32, 3)
+      oprot.writeI32(self.pressaoArterialSistolica)
+      oprot.writeFieldEnd()
+    if self.pressaoArterialDiastolica is not None:
+      oprot.writeFieldBegin('pressaoArterialDiastolica', TType.I32, 4)
+      oprot.writeI32(self.pressaoArterialDiastolica)
+      oprot.writeFieldEnd()
+    if self.frequenciaRespiratoria is not None:
+      oprot.writeFieldBegin('frequenciaRespiratoria', TType.I32, 5)
+      oprot.writeI32(self.frequenciaRespiratoria)
+      oprot.writeFieldEnd()
+    if self.frequenciaCardiaca is not None:
+      oprot.writeFieldBegin('frequenciaCardiaca', TType.I32, 6)
+      oprot.writeI32(self.frequenciaCardiaca)
+      oprot.writeFieldEnd()
+    if self.temperatura is not None:
+      oprot.writeFieldBegin('temperatura', TType.DOUBLE, 7)
+      oprot.writeDouble(self.temperatura)
+      oprot.writeFieldEnd()
+    if self.saturacaoO2 is not None:
+      oprot.writeFieldBegin('saturacaoO2', TType.I32, 8)
+      oprot.writeI32(self.saturacaoO2)
+      oprot.writeFieldEnd()
+    if self.glicemiaCapilar is not None:
+      oprot.writeFieldBegin('glicemiaCapilar', TType.I32, 9)
+      oprot.writeI32(self.glicemiaCapilar)
+      oprot.writeFieldEnd()
+    if self.tipoGlicemiaCapilar is not None:
+      oprot.writeFieldBegin('tipoGlicemiaCapilar', TType.I64, 10)
+      oprot.writeI64(self.tipoGlicemiaCapilar)
+      oprot.writeFieldEnd()
+    if self.peso is not None:
+      oprot.writeFieldBegin('peso', TType.DOUBLE, 11)
+      oprot.writeDouble(self.peso)
+      oprot.writeFieldEnd()
+    if self.altura is not None:
+      oprot.writeFieldBegin('altura', TType.DOUBLE, 12)
+      oprot.writeDouble(self.altura)
+      oprot.writeFieldEnd()
+    if self.perimetroCefalico is not None:
+      oprot.writeFieldBegin('perimetroCefalico', TType.DOUBLE, 13)
+      oprot.writeDouble(self.perimetroCefalico)
+      oprot.writeFieldEnd()
+    oprot.writeFieldStop()
+    oprot.writeStructEnd()
+
+  def validate(self):
+    return
+
+
+  def __hash__(self):
+    value = 17
+    value = (value * 31) ^ hash(self.circuferenciaAbdominal)
+    value = (value * 31) ^ hash(self.perimetroPanturrilha)
+    value = (value * 31) ^ hash(self.pressaoArterialSistolica)
+    value = (value * 31) ^ hash(self.pressaoArterialDiastolica)
+    value = (value * 31) ^ hash(self.frequenciaRespiratoria)
+    value = (value * 31) ^ hash(self.frequenciaCardiaca)
+    value = (value * 31) ^ hash(self.temperatura)
+    value = (value * 31) ^ hash(self.saturacaoO2)
+    value = (value * 31) ^ hash(self.glicemiaCapilar)
+    value = (value * 31) ^ hash(self.tipoGlicemiaCapilar)
+    value = (value * 31) ^ hash(self.peso)
+    value = (value * 31) ^ hash(self.altura)
+    value = (value * 31) ^ hash(self.perimetroCefalico)
+    return value
+
+  def __repr__(self):
+    L = ['%s=%r' % (key, value)
+      for key, value in self.__dict__.iteritems()]
+    return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+  def __eq__(self, other):
+    return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+  def __ne__(self, other):
+    return not (self == other)

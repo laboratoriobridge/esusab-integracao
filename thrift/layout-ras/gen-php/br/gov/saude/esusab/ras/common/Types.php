@@ -2047,4 +2047,355 @@ class ResultadosExameThrift {
 
 }
 
+class MedicoesThrift {
+  static $_TSPEC;
+
+  /**
+   * @var double
+   */
+  public $circuferenciaAbdominal = null;
+  /**
+   * @var double
+   */
+  public $perimetroPanturrilha = null;
+  /**
+   * @var int
+   */
+  public $pressaoArterialSistolica = null;
+  /**
+   * @var int
+   */
+  public $pressaoArterialDiastolica = null;
+  /**
+   * @var int
+   */
+  public $frequenciaRespiratoria = null;
+  /**
+   * @var int
+   */
+  public $frequenciaCardiaca = null;
+  /**
+   * @var double
+   */
+  public $temperatura = null;
+  /**
+   * @var int
+   */
+  public $saturacaoO2 = null;
+  /**
+   * @var int
+   */
+  public $glicemiaCapilar = null;
+  /**
+   * @var int
+   */
+  public $tipoGlicemiaCapilar = null;
+  /**
+   * @var double
+   */
+  public $peso = null;
+  /**
+   * @var double
+   */
+  public $altura = null;
+  /**
+   * @var double
+   */
+  public $perimetroCefalico = null;
+
+  public function __construct($vals=null) {
+    if (!isset(self::$_TSPEC)) {
+      self::$_TSPEC = array(
+        1 => array(
+          'var' => 'circuferenciaAbdominal',
+          'type' => TType::DOUBLE,
+          ),
+        2 => array(
+          'var' => 'perimetroPanturrilha',
+          'type' => TType::DOUBLE,
+          ),
+        3 => array(
+          'var' => 'pressaoArterialSistolica',
+          'type' => TType::I32,
+          ),
+        4 => array(
+          'var' => 'pressaoArterialDiastolica',
+          'type' => TType::I32,
+          ),
+        5 => array(
+          'var' => 'frequenciaRespiratoria',
+          'type' => TType::I32,
+          ),
+        6 => array(
+          'var' => 'frequenciaCardiaca',
+          'type' => TType::I32,
+          ),
+        7 => array(
+          'var' => 'temperatura',
+          'type' => TType::DOUBLE,
+          ),
+        8 => array(
+          'var' => 'saturacaoO2',
+          'type' => TType::I32,
+          ),
+        9 => array(
+          'var' => 'glicemiaCapilar',
+          'type' => TType::I32,
+          ),
+        10 => array(
+          'var' => 'tipoGlicemiaCapilar',
+          'type' => TType::I64,
+          ),
+        11 => array(
+          'var' => 'peso',
+          'type' => TType::DOUBLE,
+          ),
+        12 => array(
+          'var' => 'altura',
+          'type' => TType::DOUBLE,
+          ),
+        13 => array(
+          'var' => 'perimetroCefalico',
+          'type' => TType::DOUBLE,
+          ),
+        );
+    }
+    if (is_array($vals)) {
+      if (isset($vals['circuferenciaAbdominal'])) {
+        $this->circuferenciaAbdominal = $vals['circuferenciaAbdominal'];
+      }
+      if (isset($vals['perimetroPanturrilha'])) {
+        $this->perimetroPanturrilha = $vals['perimetroPanturrilha'];
+      }
+      if (isset($vals['pressaoArterialSistolica'])) {
+        $this->pressaoArterialSistolica = $vals['pressaoArterialSistolica'];
+      }
+      if (isset($vals['pressaoArterialDiastolica'])) {
+        $this->pressaoArterialDiastolica = $vals['pressaoArterialDiastolica'];
+      }
+      if (isset($vals['frequenciaRespiratoria'])) {
+        $this->frequenciaRespiratoria = $vals['frequenciaRespiratoria'];
+      }
+      if (isset($vals['frequenciaCardiaca'])) {
+        $this->frequenciaCardiaca = $vals['frequenciaCardiaca'];
+      }
+      if (isset($vals['temperatura'])) {
+        $this->temperatura = $vals['temperatura'];
+      }
+      if (isset($vals['saturacaoO2'])) {
+        $this->saturacaoO2 = $vals['saturacaoO2'];
+      }
+      if (isset($vals['glicemiaCapilar'])) {
+        $this->glicemiaCapilar = $vals['glicemiaCapilar'];
+      }
+      if (isset($vals['tipoGlicemiaCapilar'])) {
+        $this->tipoGlicemiaCapilar = $vals['tipoGlicemiaCapilar'];
+      }
+      if (isset($vals['peso'])) {
+        $this->peso = $vals['peso'];
+      }
+      if (isset($vals['altura'])) {
+        $this->altura = $vals['altura'];
+      }
+      if (isset($vals['perimetroCefalico'])) {
+        $this->perimetroCefalico = $vals['perimetroCefalico'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'MedicoesThrift';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 1:
+          if ($ftype == TType::DOUBLE) {
+            $xfer += $input->readDouble($this->circuferenciaAbdominal);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 2:
+          if ($ftype == TType::DOUBLE) {
+            $xfer += $input->readDouble($this->perimetroPanturrilha);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 3:
+          if ($ftype == TType::I32) {
+            $xfer += $input->readI32($this->pressaoArterialSistolica);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 4:
+          if ($ftype == TType::I32) {
+            $xfer += $input->readI32($this->pressaoArterialDiastolica);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 5:
+          if ($ftype == TType::I32) {
+            $xfer += $input->readI32($this->frequenciaRespiratoria);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 6:
+          if ($ftype == TType::I32) {
+            $xfer += $input->readI32($this->frequenciaCardiaca);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 7:
+          if ($ftype == TType::DOUBLE) {
+            $xfer += $input->readDouble($this->temperatura);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 8:
+          if ($ftype == TType::I32) {
+            $xfer += $input->readI32($this->saturacaoO2);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 9:
+          if ($ftype == TType::I32) {
+            $xfer += $input->readI32($this->glicemiaCapilar);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 10:
+          if ($ftype == TType::I64) {
+            $xfer += $input->readI64($this->tipoGlicemiaCapilar);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 11:
+          if ($ftype == TType::DOUBLE) {
+            $xfer += $input->readDouble($this->peso);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 12:
+          if ($ftype == TType::DOUBLE) {
+            $xfer += $input->readDouble($this->altura);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 13:
+          if ($ftype == TType::DOUBLE) {
+            $xfer += $input->readDouble($this->perimetroCefalico);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('MedicoesThrift');
+    if ($this->circuferenciaAbdominal !== null) {
+      $xfer += $output->writeFieldBegin('circuferenciaAbdominal', TType::DOUBLE, 1);
+      $xfer += $output->writeDouble($this->circuferenciaAbdominal);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->perimetroPanturrilha !== null) {
+      $xfer += $output->writeFieldBegin('perimetroPanturrilha', TType::DOUBLE, 2);
+      $xfer += $output->writeDouble($this->perimetroPanturrilha);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->pressaoArterialSistolica !== null) {
+      $xfer += $output->writeFieldBegin('pressaoArterialSistolica', TType::I32, 3);
+      $xfer += $output->writeI32($this->pressaoArterialSistolica);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->pressaoArterialDiastolica !== null) {
+      $xfer += $output->writeFieldBegin('pressaoArterialDiastolica', TType::I32, 4);
+      $xfer += $output->writeI32($this->pressaoArterialDiastolica);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->frequenciaRespiratoria !== null) {
+      $xfer += $output->writeFieldBegin('frequenciaRespiratoria', TType::I32, 5);
+      $xfer += $output->writeI32($this->frequenciaRespiratoria);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->frequenciaCardiaca !== null) {
+      $xfer += $output->writeFieldBegin('frequenciaCardiaca', TType::I32, 6);
+      $xfer += $output->writeI32($this->frequenciaCardiaca);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->temperatura !== null) {
+      $xfer += $output->writeFieldBegin('temperatura', TType::DOUBLE, 7);
+      $xfer += $output->writeDouble($this->temperatura);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->saturacaoO2 !== null) {
+      $xfer += $output->writeFieldBegin('saturacaoO2', TType::I32, 8);
+      $xfer += $output->writeI32($this->saturacaoO2);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->glicemiaCapilar !== null) {
+      $xfer += $output->writeFieldBegin('glicemiaCapilar', TType::I32, 9);
+      $xfer += $output->writeI32($this->glicemiaCapilar);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->tipoGlicemiaCapilar !== null) {
+      $xfer += $output->writeFieldBegin('tipoGlicemiaCapilar', TType::I64, 10);
+      $xfer += $output->writeI64($this->tipoGlicemiaCapilar);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->peso !== null) {
+      $xfer += $output->writeFieldBegin('peso', TType::DOUBLE, 11);
+      $xfer += $output->writeDouble($this->peso);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->altura !== null) {
+      $xfer += $output->writeFieldBegin('altura', TType::DOUBLE, 12);
+      $xfer += $output->writeDouble($this->altura);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->perimetroCefalico !== null) {
+      $xfer += $output->writeFieldBegin('perimetroCefalico', TType::DOUBLE, 13);
+      $xfer += $output->writeDouble($this->perimetroCefalico);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
 

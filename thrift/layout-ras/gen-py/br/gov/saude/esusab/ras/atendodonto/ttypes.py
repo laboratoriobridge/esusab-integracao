@@ -122,6 +122,7 @@ class FichaAtendimentoOdontologicoChildThrift:
    - resultadosExames
    - pesoAcompanhamentoNutricional
    - alturaAcompanhamentoNutricional
+   - medicoes
   """
 
   thrift_spec = (
@@ -149,9 +150,13 @@ class FichaAtendimentoOdontologicoChildThrift:
     (21, TType.LIST, 'resultadosExames', (TType.STRUCT,(br.gov.saude.esusab.ras.common.ttypes.ResultadosExameThrift, br.gov.saude.esusab.ras.common.ttypes.ResultadosExameThrift.thrift_spec)), None, ), # 21
     (22, TType.DOUBLE, 'pesoAcompanhamentoNutricional', None, None, ), # 22
     (23, TType.DOUBLE, 'alturaAcompanhamentoNutricional', None, None, ), # 23
+    None, # 24
+    None, # 25
+    None, # 26
+    (27, TType.STRUCT, 'medicoes', (br.gov.saude.esusab.ras.common.ttypes.MedicoesThrift, br.gov.saude.esusab.ras.common.ttypes.MedicoesThrift.thrift_spec), None, ), # 27
   )
 
-  def __init__(self, dtNascimento=None, cnsCidadao=None, numProntuario=None, gestante=None, necessidadesEspeciais=None, localAtendimento=None, tipoAtendimento=None, tiposEncamOdonto=None, tiposFornecimOdonto=None, tiposVigilanciaSaudeBucal=None, tiposConsultaOdonto=None, procedimentosRealizados=None, sexo=None, turno=None, dataHoraInicialAtendimento=None, dataHoraFinalAtendimento=None, cpfCidadao=None, medicamentos=None, encaminhamentos=None, resultadosExames=None, pesoAcompanhamentoNutricional=None, alturaAcompanhamentoNutricional=None,):
+  def __init__(self, dtNascimento=None, cnsCidadao=None, numProntuario=None, gestante=None, necessidadesEspeciais=None, localAtendimento=None, tipoAtendimento=None, tiposEncamOdonto=None, tiposFornecimOdonto=None, tiposVigilanciaSaudeBucal=None, tiposConsultaOdonto=None, procedimentosRealizados=None, sexo=None, turno=None, dataHoraInicialAtendimento=None, dataHoraFinalAtendimento=None, cpfCidadao=None, medicamentos=None, encaminhamentos=None, resultadosExames=None, pesoAcompanhamentoNutricional=None, alturaAcompanhamentoNutricional=None, medicoes=None,):
     self.dtNascimento = dtNascimento
     self.cnsCidadao = cnsCidadao
     self.numProntuario = numProntuario
@@ -174,6 +179,7 @@ class FichaAtendimentoOdontologicoChildThrift:
     self.resultadosExames = resultadosExames
     self.pesoAcompanhamentoNutricional = pesoAcompanhamentoNutricional
     self.alturaAcompanhamentoNutricional = alturaAcompanhamentoNutricional
+    self.medicoes = medicoes
 
   def read(self, iprot):
     if iprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None and fastbinary is not None:
@@ -338,6 +344,12 @@ class FichaAtendimentoOdontologicoChildThrift:
           self.alturaAcompanhamentoNutricional = iprot.readDouble()
         else:
           iprot.skip(ftype)
+      elif fid == 27:
+        if ftype == TType.STRUCT:
+          self.medicoes = br.gov.saude.esusab.ras.common.ttypes.MedicoesThrift()
+          self.medicoes.read(iprot)
+        else:
+          iprot.skip(ftype)
       else:
         iprot.skip(ftype)
       iprot.readFieldEnd()
@@ -460,6 +472,10 @@ class FichaAtendimentoOdontologicoChildThrift:
       oprot.writeFieldBegin('alturaAcompanhamentoNutricional', TType.DOUBLE, 23)
       oprot.writeDouble(self.alturaAcompanhamentoNutricional)
       oprot.writeFieldEnd()
+    if self.medicoes is not None:
+      oprot.writeFieldBegin('medicoes', TType.STRUCT, 27)
+      self.medicoes.write(oprot)
+      oprot.writeFieldEnd()
     oprot.writeFieldStop()
     oprot.writeStructEnd()
 
@@ -491,6 +507,7 @@ class FichaAtendimentoOdontologicoChildThrift:
     value = (value * 31) ^ hash(self.resultadosExames)
     value = (value * 31) ^ hash(self.pesoAcompanhamentoNutricional)
     value = (value * 31) ^ hash(self.alturaAcompanhamentoNutricional)
+    value = (value * 31) ^ hash(self.medicoes)
     return value
 
   def __repr__(self):

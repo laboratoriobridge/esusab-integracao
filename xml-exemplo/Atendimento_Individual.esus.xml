@@ -25,8 +25,6 @@
 			<sexo>1</sexo>
 			<turno>1</turno>
 			<tipoAtendimento>2</tipoAtendimento>
-			<pesoAcompanhamentoNutricional>70.0</pesoAcompanhamentoNutricional>
-			<alturaAcompanhamentoNutricional>180.0</alturaAcompanhamentoNutricional>
 			<aleitamentoMaterno>1</aleitamentoMaterno>
 			<dumDaGestante>1551452400000</dumDaGestante>
 			<idadeGestacional>35</idadeGestacional>
@@ -136,6 +134,21 @@
 				<hipoteseDiagnosticoCid10>O03</hipoteseDiagnosticoCid10>
 				<classificacaoRisco>1</classificacaoRisco>
 			</encaminhamentos>
+			<medicoes>
+				<circuferenciaAbdominal>50.0</circuferenciaAbdominal>
+				<perimetroPanturrilha>20.0</perimetroPanturrilha>
+				<pressaoArterialSistolica>12</pressaoArterialSistolica>
+				<pressaoArterialDiastolica>8</pressaoArterialDiastolica>
+				<frequenciaRespiratoria>100</frequenciaRespiratoria>
+				<frequenciaCardiaca>100</frequenciaCardiaca>
+				<temperatura>36.0</temperatura>
+				<saturacaoO2>75</saturacaoO2>
+				<glicemiaCapilar>80</glicemiaCapilar>
+				<tipoGlicemiaCapilar>2</tipoGlicemiaCapilar>
+				<peso>70.0</peso>
+				<altura>180.3</altura>
+				<perimetroCefalico>30.0</perimetroCefalico>
+			</medicoes>
 		</atendimentosIndividuais>
 		<atendimentosIndividuais>
 			<numeroProntuario>1234</numeroProntuario>
@@ -145,8 +158,6 @@
 			<sexo>1</sexo>
 			<turno>1</turno>
 			<tipoAtendimento>2</tipoAtendimento>
-			<pesoAcompanhamentoNutricional>70.0</pesoAcompanhamentoNutricional>
-			<alturaAcompanhamentoNutricional>180.0</alturaAcompanhamentoNutricional>
 			<aleitamentoMaterno>1</aleitamentoMaterno>
 			<dumDaGestante>1551452400000</dumDaGestante>
 			<atencaoDomiciliarModalidade>1</atencaoDomiciliarModalidade>
@@ -192,6 +203,21 @@
 			<perimetroCefalico>58.0</perimetroCefalico>
 			<dataHoraInicialAtendimento>1586098800000</dataHoraInicialAtendimento>
 			<dataHoraFinalAtendimento>1586102400000</dataHoraFinalAtendimento>
+			<medicoes>
+				<circuferenciaAbdominal>50.0</circuferenciaAbdominal>
+				<perimetroPanturrilha>20.0</perimetroPanturrilha>
+				<pressaoArterialSistolica>12</pressaoArterialSistolica>
+				<pressaoArterialDiastolica>8</pressaoArterialDiastolica>
+				<frequenciaRespiratoria>100</frequenciaRespiratoria>
+				<frequenciaCardiaca>100</frequenciaCardiaca>
+				<temperatura>36.0</temperatura>
+				<saturacaoO2>75</saturacaoO2>
+				<glicemiaCapilar>80</glicemiaCapilar>
+				<tipoGlicemiaCapilar>2</tipoGlicemiaCapilar>
+				<peso>70.0</peso>
+				<altura>180.3</altura>
+				<perimetroCefalico>30.0</perimetroCefalico>
+			</medicoes>
 		</atendimentosIndividuais>
 		<atendimentosIndividuais>
 			<dataNascimento>1046703600000</dataNascimento>
@@ -235,6 +261,21 @@
 			</resultadosExames>
 			<tipoParticipacaoCidadao>1</tipoParticipacaoCidadao>
 			<tipoParticipacaoProfissionalConvidado>2</tipoParticipacaoProfissionalConvidado>
+			<medicoes>
+				<circuferenciaAbdominal>50.0</circuferenciaAbdominal>
+				<perimetroPanturrilha>20.0</perimetroPanturrilha>
+				<pressaoArterialSistolica>12</pressaoArterialSistolica>
+				<pressaoArterialDiastolica>8</pressaoArterialDiastolica>
+				<frequenciaRespiratoria>100</frequenciaRespiratoria>
+				<frequenciaCardiaca>100</frequenciaCardiaca>
+				<temperatura>36.0</temperatura>
+				<saturacaoO2>75</saturacaoO2>
+				<glicemiaCapilar>80</glicemiaCapilar>
+				<tipoGlicemiaCapilar>2</tipoGlicemiaCapilar>
+				<peso>70.0</peso>
+				<altura>180.3</altura>
+				<perimetroCefalico>30.0</perimetroCefalico>
+			</medicoes>
 		</atendimentosIndividuais>
 		<tpCdsOrigem>3</tpCdsOrigem>
 		<uuidFicha>0019615-edee6500-bf76-4691-b9c7-f7b1d550bc7a</uuidFicha>
@@ -244,7 +285,7 @@
 		<uuidInstalacao>TREINAMENTO</uuidInstalacao>
 		<cpfOuCnpj>01234567890</cpfOuCnpj>
 		<nomeOuRazaoSocial>ADMINISTRADOR INSTALAÇÃO</nomeOuRazaoSocial>
-		<versaoSistema>5.2.26</versaoSistema>
+		<versaoSistema>7.0.0</versaoSistema>
 		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:remetente>
 	<ns2:originadora>
@@ -252,7 +293,7 @@
 		<uuidInstalacao>TREINAMENTO</uuidInstalacao>
 		<cpfOuCnpj>01234567890</cpfOuCnpj>
 		<nomeOuRazaoSocial>ADMINISTRADOR INSTALAÇÃO</nomeOuRazaoSocial>
-		<versaoSistema>5.2.29</versaoSistema>
+		<versaoSistema>7.0.0</versaoSistema>
 		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:originadora>
 	<versao major="5" minor="5" revision="0" />

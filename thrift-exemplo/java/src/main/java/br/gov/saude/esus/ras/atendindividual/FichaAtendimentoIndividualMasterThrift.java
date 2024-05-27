@@ -609,14 +609,14 @@ public class FichaAtendimentoIndividualMasterThrift implements org.apache.thrift
           case 2: // ATENDIMENTOS_INDIVIDUAIS
             if (schemeField.type == org.apache.thrift.protocol.TType.LIST) {
               {
-                org.apache.thrift.protocol.TList _list72 = iprot.readListBegin();
-                struct.atendimentosIndividuais = new ArrayList<FichaAtendimentoIndividualChildThrift>(_list72.size);
-                FichaAtendimentoIndividualChildThrift _elem73;
-                for (int _i74 = 0; _i74 < _list72.size; ++_i74)
+                org.apache.thrift.protocol.TList _list64 = iprot.readListBegin();
+                struct.atendimentosIndividuais = new ArrayList<FichaAtendimentoIndividualChildThrift>(_list64.size);
+                FichaAtendimentoIndividualChildThrift _elem65;
+                for (int _i66 = 0; _i66 < _list64.size; ++_i66)
                 {
-                  _elem73 = new FichaAtendimentoIndividualChildThrift();
-                  _elem73.read(iprot);
-                  struct.atendimentosIndividuais.add(_elem73);
+                  _elem65 = new FichaAtendimentoIndividualChildThrift();
+                  _elem65.read(iprot);
+                  struct.atendimentosIndividuais.add(_elem65);
                 }
                 iprot.readListEnd();
               }
@@ -666,9 +666,9 @@ public class FichaAtendimentoIndividualMasterThrift implements org.apache.thrift
           oprot.writeFieldBegin(ATENDIMENTOS_INDIVIDUAIS_FIELD_DESC);
           {
             oprot.writeListBegin(new org.apache.thrift.protocol.TList(org.apache.thrift.protocol.TType.STRUCT, struct.atendimentosIndividuais.size()));
-            for (FichaAtendimentoIndividualChildThrift _iter75 : struct.atendimentosIndividuais)
+            for (FichaAtendimentoIndividualChildThrift _iter67 : struct.atendimentosIndividuais)
             {
-              _iter75.write(oprot);
+              _iter67.write(oprot);
             }
             oprot.writeListEnd();
           }
@@ -720,9 +720,9 @@ public class FichaAtendimentoIndividualMasterThrift implements org.apache.thrift
       if (struct.isSetAtendimentosIndividuais()) {
         {
           oprot.writeI32(struct.atendimentosIndividuais.size());
-          for (FichaAtendimentoIndividualChildThrift _iter76 : struct.atendimentosIndividuais)
+          for (FichaAtendimentoIndividualChildThrift _iter68 : struct.atendimentosIndividuais)
           {
-            _iter76.write(oprot);
+            _iter68.write(oprot);
           }
         }
       }
@@ -744,14 +744,14 @@ public class FichaAtendimentoIndividualMasterThrift implements org.apache.thrift
       }
       if (incoming.get(1)) {
         {
-          org.apache.thrift.protocol.TList _list77 = new org.apache.thrift.protocol.TList(org.apache.thrift.protocol.TType.STRUCT, iprot.readI32());
-          struct.atendimentosIndividuais = new ArrayList<FichaAtendimentoIndividualChildThrift>(_list77.size);
-          FichaAtendimentoIndividualChildThrift _elem78;
-          for (int _i79 = 0; _i79 < _list77.size; ++_i79)
+          org.apache.thrift.protocol.TList _list69 = new org.apache.thrift.protocol.TList(org.apache.thrift.protocol.TType.STRUCT, iprot.readI32());
+          struct.atendimentosIndividuais = new ArrayList<FichaAtendimentoIndividualChildThrift>(_list69.size);
+          FichaAtendimentoIndividualChildThrift _elem70;
+          for (int _i71 = 0; _i71 < _list69.size; ++_i71)
           {
-            _elem78 = new FichaAtendimentoIndividualChildThrift();
-            _elem78.read(iprot);
-            struct.atendimentosIndividuais.add(_elem78);
+            _elem70 = new FichaAtendimentoIndividualChildThrift();
+            _elem70.read(iprot);
+            struct.atendimentosIndividuais.add(_elem70);
           }
         }
         struct.setAtendimentosIndividuaisIsSet(true);

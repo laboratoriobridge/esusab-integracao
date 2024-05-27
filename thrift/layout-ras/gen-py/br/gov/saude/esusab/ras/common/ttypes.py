@@ -1389,7 +1389,7 @@ class ResultadosExameThrift:
 class MedicoesThrift:
   """
   Attributes:
-   - circuferenciaAbdominal
+   - circunferenciaAbdominal
    - perimetroPanturrilha
    - pressaoArterialSistolica
    - pressaoArterialDiastolica
@@ -1406,7 +1406,7 @@ class MedicoesThrift:
 
   thrift_spec = (
     None, # 0
-    (1, TType.DOUBLE, 'circuferenciaAbdominal', None, None, ), # 1
+    (1, TType.DOUBLE, 'circunferenciaAbdominal', None, None, ), # 1
     (2, TType.DOUBLE, 'perimetroPanturrilha', None, None, ), # 2
     (3, TType.I32, 'pressaoArterialSistolica', None, None, ), # 3
     (4, TType.I32, 'pressaoArterialDiastolica', None, None, ), # 4
@@ -1421,8 +1421,8 @@ class MedicoesThrift:
     (13, TType.DOUBLE, 'perimetroCefalico', None, None, ), # 13
   )
 
-  def __init__(self, circuferenciaAbdominal=None, perimetroPanturrilha=None, pressaoArterialSistolica=None, pressaoArterialDiastolica=None, frequenciaRespiratoria=None, frequenciaCardiaca=None, temperatura=None, saturacaoO2=None, glicemiaCapilar=None, tipoGlicemiaCapilar=None, peso=None, altura=None, perimetroCefalico=None,):
-    self.circuferenciaAbdominal = circuferenciaAbdominal
+  def __init__(self, circunferenciaAbdominal=None, perimetroPanturrilha=None, pressaoArterialSistolica=None, pressaoArterialDiastolica=None, frequenciaRespiratoria=None, frequenciaCardiaca=None, temperatura=None, saturacaoO2=None, glicemiaCapilar=None, tipoGlicemiaCapilar=None, peso=None, altura=None, perimetroCefalico=None,):
+    self.circunferenciaAbdominal = circunferenciaAbdominal
     self.perimetroPanturrilha = perimetroPanturrilha
     self.pressaoArterialSistolica = pressaoArterialSistolica
     self.pressaoArterialDiastolica = pressaoArterialDiastolica
@@ -1447,7 +1447,7 @@ class MedicoesThrift:
         break
       if fid == 1:
         if ftype == TType.DOUBLE:
-          self.circuferenciaAbdominal = iprot.readDouble()
+          self.circunferenciaAbdominal = iprot.readDouble()
         else:
           iprot.skip(ftype)
       elif fid == 2:
@@ -1520,9 +1520,9 @@ class MedicoesThrift:
       oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
       return
     oprot.writeStructBegin('MedicoesThrift')
-    if self.circuferenciaAbdominal is not None:
-      oprot.writeFieldBegin('circuferenciaAbdominal', TType.DOUBLE, 1)
-      oprot.writeDouble(self.circuferenciaAbdominal)
+    if self.circunferenciaAbdominal is not None:
+      oprot.writeFieldBegin('circunferenciaAbdominal', TType.DOUBLE, 1)
+      oprot.writeDouble(self.circunferenciaAbdominal)
       oprot.writeFieldEnd()
     if self.perimetroPanturrilha is not None:
       oprot.writeFieldBegin('perimetroPanturrilha', TType.DOUBLE, 2)
@@ -1581,7 +1581,7 @@ class MedicoesThrift:
 
   def __hash__(self):
     value = 17
-    value = (value * 31) ^ hash(self.circuferenciaAbdominal)
+    value = (value * 31) ^ hash(self.circunferenciaAbdominal)
     value = (value * 31) ^ hash(self.perimetroPanturrilha)
     value = (value * 31) ^ hash(self.pressaoArterialSistolica)
     value = (value * 31) ^ hash(self.pressaoArterialDiastolica)

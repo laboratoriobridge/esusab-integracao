@@ -3537,7 +3537,7 @@ func (p *ResultadosExameThrift) String() string {
 }
 
 // Attributes:
-//  - CircuferenciaAbdominal
+//  - CircunferenciaAbdominal
 //  - PerimetroPanturrilha
 //  - PressaoArterialSistolica
 //  - PressaoArterialDiastolica
@@ -3551,7 +3551,7 @@ func (p *ResultadosExameThrift) String() string {
 //  - Altura
 //  - PerimetroCefalico
 type MedicoesThrift struct {
-	CircuferenciaAbdominal    *float64 `thrift:"circuferenciaAbdominal,1" json:"circuferenciaAbdominal,omitempty"`
+	CircunferenciaAbdominal   *float64 `thrift:"circunferenciaAbdominal,1" json:"circunferenciaAbdominal,omitempty"`
 	PerimetroPanturrilha      *float64 `thrift:"perimetroPanturrilha,2" json:"perimetroPanturrilha,omitempty"`
 	PressaoArterialSistolica  *int32   `thrift:"pressaoArterialSistolica,3" json:"pressaoArterialSistolica,omitempty"`
 	PressaoArterialDiastolica *int32   `thrift:"pressaoArterialDiastolica,4" json:"pressaoArterialDiastolica,omitempty"`
@@ -3570,13 +3570,13 @@ func NewMedicoesThrift() *MedicoesThrift {
 	return &MedicoesThrift{}
 }
 
-var MedicoesThrift_CircuferenciaAbdominal_DEFAULT float64
+var MedicoesThrift_CircunferenciaAbdominal_DEFAULT float64
 
-func (p *MedicoesThrift) GetCircuferenciaAbdominal() float64 {
-	if !p.IsSetCircuferenciaAbdominal() {
-		return MedicoesThrift_CircuferenciaAbdominal_DEFAULT
+func (p *MedicoesThrift) GetCircunferenciaAbdominal() float64 {
+	if !p.IsSetCircunferenciaAbdominal() {
+		return MedicoesThrift_CircunferenciaAbdominal_DEFAULT
 	}
-	return *p.CircuferenciaAbdominal
+	return *p.CircunferenciaAbdominal
 }
 
 var MedicoesThrift_PerimetroPanturrilha_DEFAULT float64
@@ -3686,8 +3686,8 @@ func (p *MedicoesThrift) GetPerimetroCefalico() float64 {
 	}
 	return *p.PerimetroCefalico
 }
-func (p *MedicoesThrift) IsSetCircuferenciaAbdominal() bool {
-	return p.CircuferenciaAbdominal != nil
+func (p *MedicoesThrift) IsSetCircunferenciaAbdominal() bool {
+	return p.CircunferenciaAbdominal != nil
 }
 
 func (p *MedicoesThrift) IsSetPerimetroPanturrilha() bool {
@@ -3823,7 +3823,7 @@ func (p *MedicoesThrift) readField1(iprot thrift.TProtocol) error {
 	if v, err := iprot.ReadDouble(); err != nil {
 		return thrift.PrependError("error reading field 1: ", err)
 	} else {
-		p.CircuferenciaAbdominal = &v
+		p.CircunferenciaAbdominal = &v
 	}
 	return nil
 }
@@ -3989,15 +3989,15 @@ func (p *MedicoesThrift) Write(oprot thrift.TProtocol) error {
 }
 
 func (p *MedicoesThrift) writeField1(oprot thrift.TProtocol) (err error) {
-	if p.IsSetCircuferenciaAbdominal() {
-		if err := oprot.WriteFieldBegin("circuferenciaAbdominal", thrift.DOUBLE, 1); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field begin error 1:circuferenciaAbdominal: ", p), err)
+	if p.IsSetCircunferenciaAbdominal() {
+		if err := oprot.WriteFieldBegin("circunferenciaAbdominal", thrift.DOUBLE, 1); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field begin error 1:circunferenciaAbdominal: ", p), err)
 		}
-		if err := oprot.WriteDouble(float64(*p.CircuferenciaAbdominal)); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T.circuferenciaAbdominal (1) field write error: ", p), err)
+		if err := oprot.WriteDouble(float64(*p.CircunferenciaAbdominal)); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T.circunferenciaAbdominal (1) field write error: ", p), err)
 		}
 		if err := oprot.WriteFieldEnd(); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field end error 1:circuferenciaAbdominal: ", p), err)
+			return thrift.PrependError(fmt.Sprintf("%T write field end error 1:circunferenciaAbdominal: ", p), err)
 		}
 	}
 	return err

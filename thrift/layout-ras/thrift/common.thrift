@@ -110,7 +110,7 @@ struct ResultadosExameThrift {
 }
 
 struct MedicoesThrift {
-    1:optional double circuferenciaAbdominal;
+    1:optional double circunferenciaAbdominal;
     2:optional double perimetroPanturrilha;
     3:optional i32 pressaoArterialSistolica;
     4:optional i32 pressaoArterialDiastolica;

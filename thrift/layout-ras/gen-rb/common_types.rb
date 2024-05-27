@@ -282,7 +282,7 @@ module Br
 
             class MedicoesThrift
               include ::Thrift::Struct, ::Thrift::Struct_Union
-              CIRCUFERENCIAABDOMINAL = 1
+              CIRCUNFERENCIAABDOMINAL = 1
               PERIMETROPANTURRILHA = 2
               PRESSAOARTERIALSISTOLICA = 3
               PRESSAOARTERIALDIASTOLICA = 4
@@ -297,7 +297,7 @@ module Br
               PERIMETROCEFALICO = 13
 
               FIELDS = {
-                CIRCUFERENCIAABDOMINAL => {:type => ::Thrift::Types::DOUBLE, :name => 'circuferenciaAbdominal', :optional => true},
+                CIRCUNFERENCIAABDOMINAL => {:type => ::Thrift::Types::DOUBLE, :name => 'circunferenciaAbdominal', :optional => true},
                 PERIMETROPANTURRILHA => {:type => ::Thrift::Types::DOUBLE, :name => 'perimetroPanturrilha', :optional => true},
                 PRESSAOARTERIALSISTOLICA => {:type => ::Thrift::Types::I32, :name => 'pressaoArterialSistolica', :optional => true},
                 PRESSAOARTERIALDIASTOLICA => {:type => ::Thrift::Types::I32, :name => 'pressaoArterialDiastolica', :optional => true},

@@ -23,7 +23,7 @@ namespace br.gov.saude.esusab.ras.common
   #endif
   public partial class MedicoesThrift : TBase
   {
-    private double _circuferenciaAbdominal;
+    private double _circunferenciaAbdominal;
     private double _perimetroPanturrilha;
     private int _pressaoArterialSistolica;
     private int _pressaoArterialDiastolica;
@@ -37,16 +37,16 @@ namespace br.gov.saude.esusab.ras.common
     private double _altura;
     private double _perimetroCefalico;
 
-    public double CircuferenciaAbdominal
+    public double CircunferenciaAbdominal
     {
       get
       {
-        return _circuferenciaAbdominal;
+        return _circunferenciaAbdominal;
       }
       set
       {
-        __isset.circuferenciaAbdominal = true;
-        this._circuferenciaAbdominal = value;
+        __isset.circunferenciaAbdominal = true;
+        this._circunferenciaAbdominal = value;
       }
     }
 
@@ -212,7 +212,7 @@ namespace br.gov.saude.esusab.ras.common
     [Serializable]
     #endif
     public struct Isset {
-      public bool circuferenciaAbdominal;
+      public bool circunferenciaAbdominal;
       public bool perimetroPanturrilha;
       public bool pressaoArterialSistolica;
       public bool pressaoArterialDiastolica;
@@ -247,7 +247,7 @@ namespace br.gov.saude.esusab.ras.common
           {
             case 1:
               if (field.Type == TType.Double) {
-                CircuferenciaAbdominal = iprot.ReadDouble();
+                CircunferenciaAbdominal = iprot.ReadDouble();
               } else { 
                 TProtocolUtil.Skip(iprot, field.Type);
               }
@@ -357,12 +357,12 @@ namespace br.gov.saude.esusab.ras.common
         TStruct struc = new TStruct("MedicoesThrift");
         oprot.WriteStructBegin(struc);
         TField field = new TField();
-        if (__isset.circuferenciaAbdominal) {
-          field.Name = "circuferenciaAbdominal";
+        if (__isset.circunferenciaAbdominal) {
+          field.Name = "circunferenciaAbdominal";
           field.Type = TType.Double;
           field.ID = 1;
           oprot.WriteFieldBegin(field);
-          oprot.WriteDouble(CircuferenciaAbdominal);
+          oprot.WriteDouble(CircunferenciaAbdominal);
           oprot.WriteFieldEnd();
         }
         if (__isset.perimetroPanturrilha) {
@@ -473,11 +473,11 @@ namespace br.gov.saude.esusab.ras.common
     public override string ToString() {
       StringBuilder __sb = new StringBuilder("MedicoesThrift(");
       bool __first = true;
-      if (__isset.circuferenciaAbdominal) {
+      if (__isset.circunferenciaAbdominal) {
         if(!__first) { __sb.Append(", "); }
         __first = false;
-        __sb.Append("CircuferenciaAbdominal: ");
-        __sb.Append(CircuferenciaAbdominal);
+        __sb.Append("CircunferenciaAbdominal: ");
+        __sb.Append(CircunferenciaAbdominal);
       }
       if (__isset.perimetroPanturrilha) {
         if(!__first) { __sb.Append(", "); }

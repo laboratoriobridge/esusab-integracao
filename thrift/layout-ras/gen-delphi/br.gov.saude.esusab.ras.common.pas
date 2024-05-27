@@ -1067,8 +1067,8 @@ type
   end;
 
   IMedicoesThrift = interface(IBase)
-    function GetCircuferenciaAbdominal: Double;
-    procedure SetCircuferenciaAbdominal( const Value: Double);
+    function GetCircunferenciaAbdominal: Double;
+    procedure SetCircunferenciaAbdominal( const Value: Double);
     function GetPerimetroPanturrilha: Double;
     procedure SetPerimetroPanturrilha( const Value: Double);
     function GetPressaoArterialSistolica: Integer;
@@ -1094,7 +1094,7 @@ type
     function GetPerimetroCefalico: Double;
     procedure SetPerimetroCefalico( const Value: Double);
 
-    property CircuferenciaAbdominal: Double read GetCircuferenciaAbdominal write SetCircuferenciaAbdominal;
+    property CircunferenciaAbdominal: Double read GetCircunferenciaAbdominal write SetCircunferenciaAbdominal;
     property PerimetroPanturrilha: Double read GetPerimetroPanturrilha write SetPerimetroPanturrilha;
     property PressaoArterialSistolica: Integer read GetPressaoArterialSistolica write SetPressaoArterialSistolica;
     property PressaoArterialDiastolica: Integer read GetPressaoArterialDiastolica write SetPressaoArterialDiastolica;
@@ -1108,7 +1108,7 @@ type
     property Altura: Double read GetAltura write SetAltura;
     property PerimetroCefalico: Double read GetPerimetroCefalico write SetPerimetroCefalico;
 
-    function Get__isset_CircuferenciaAbdominal: Boolean;
+    function Get__isset_CircunferenciaAbdominal: Boolean;
     function Get__isset_PerimetroPanturrilha: Boolean;
     function Get__isset_PressaoArterialSistolica: Boolean;
     function Get__isset_PressaoArterialDiastolica: Boolean;
@@ -1122,7 +1122,7 @@ type
     function Get__isset_Altura: Boolean;
     function Get__isset_PerimetroCefalico: Boolean;
 
-    property __isset_CircuferenciaAbdominal: Boolean read Get__isset_CircuferenciaAbdominal;
+    property __isset_CircunferenciaAbdominal: Boolean read Get__isset_CircunferenciaAbdominal;
     property __isset_PerimetroPanturrilha: Boolean read Get__isset_PerimetroPanturrilha;
     property __isset_PressaoArterialSistolica: Boolean read Get__isset_PressaoArterialSistolica;
     property __isset_PressaoArterialDiastolica: Boolean read Get__isset_PressaoArterialDiastolica;
@@ -1139,7 +1139,7 @@ type
 
   TMedicoesThriftImpl = class(TInterfacedObject, IBase, IMedicoesThrift)
   private
-    FCircuferenciaAbdominal: Double;
+    FCircunferenciaAbdominal: Double;
     FPerimetroPanturrilha: Double;
     FPressaoArterialSistolica: Integer;
     FPressaoArterialDiastolica: Integer;
@@ -1153,7 +1153,7 @@ type
     FAltura: Double;
     FPerimetroCefalico: Double;
     
-    F__isset_CircuferenciaAbdominal: Boolean;
+    F__isset_CircunferenciaAbdominal: Boolean;
     F__isset_PerimetroPanturrilha: Boolean;
     F__isset_PressaoArterialSistolica: Boolean;
     F__isset_PressaoArterialDiastolica: Boolean;
@@ -1167,8 +1167,8 @@ type
     F__isset_Altura: Boolean;
     F__isset_PerimetroCefalico: Boolean;
     
-    function GetCircuferenciaAbdominal: Double;
-    procedure SetCircuferenciaAbdominal( const Value: Double);
+    function GetCircunferenciaAbdominal: Double;
+    procedure SetCircunferenciaAbdominal( const Value: Double);
     function GetPerimetroPanturrilha: Double;
     procedure SetPerimetroPanturrilha( const Value: Double);
     function GetPressaoArterialSistolica: Integer;
@@ -1194,7 +1194,7 @@ type
     function GetPerimetroCefalico: Double;
     procedure SetPerimetroCefalico( const Value: Double);
 
-    function Get__isset_CircuferenciaAbdominal: Boolean;
+    function Get__isset_CircunferenciaAbdominal: Boolean;
     function Get__isset_PerimetroPanturrilha: Boolean;
     function Get__isset_PressaoArterialSistolica: Boolean;
     function Get__isset_PressaoArterialDiastolica: Boolean;
@@ -1218,7 +1218,7 @@ type
     procedure Write( const oprot: IProtocol);
 
     // Properties
-    property CircuferenciaAbdominal: Double read GetCircuferenciaAbdominal write SetCircuferenciaAbdominal;
+    property CircunferenciaAbdominal: Double read GetCircunferenciaAbdominal write SetCircunferenciaAbdominal;
     property PerimetroPanturrilha: Double read GetPerimetroPanturrilha write SetPerimetroPanturrilha;
     property PressaoArterialSistolica: Integer read GetPressaoArterialSistolica write SetPressaoArterialSistolica;
     property PressaoArterialDiastolica: Integer read GetPressaoArterialDiastolica write SetPressaoArterialDiastolica;
@@ -1233,7 +1233,7 @@ type
     property PerimetroCefalico: Double read GetPerimetroCefalico write SetPerimetroCefalico;
 
     // isset
-    property __isset_CircuferenciaAbdominal: Boolean read Get__isset_CircuferenciaAbdominal;
+    property __isset_CircunferenciaAbdominal: Boolean read Get__isset_CircunferenciaAbdominal;
     property __isset_PerimetroPanturrilha: Boolean read Get__isset_PerimetroPanturrilha;
     property __isset_PressaoArterialSistolica: Boolean read Get__isset_PressaoArterialSistolica;
     property __isset_PressaoArterialDiastolica: Boolean read Get__isset_PressaoArterialDiastolica;
@@ -4531,20 +4531,20 @@ begin
   inherited;
 end;
 
-function TMedicoesThriftImpl.GetCircuferenciaAbdominal: Double;
+function TMedicoesThriftImpl.GetCircunferenciaAbdominal: Double;
 begin
-  Result := FCircuferenciaAbdominal;
+  Result := FCircunferenciaAbdominal;
 end;
 
-procedure TMedicoesThriftImpl.SetCircuferenciaAbdominal( const Value: Double);
+procedure TMedicoesThriftImpl.SetCircunferenciaAbdominal( const Value: Double);
 begin
-  F__isset_CircuferenciaAbdominal := True;
-  FCircuferenciaAbdominal := Value;
+  F__isset_CircunferenciaAbdominal := True;
+  FCircunferenciaAbdominal := Value;
 end;
 
-function TMedicoesThriftImpl.Get__isset_CircuferenciaAbdominal: Boolean;
+function TMedicoesThriftImpl.Get__isset_CircunferenciaAbdominal: Boolean;
 begin
-  Result := F__isset_CircuferenciaAbdominal;
+  Result := F__isset_CircunferenciaAbdominal;
 end;
 
 function TMedicoesThriftImpl.GetPerimetroPanturrilha: Double;
@@ -4760,7 +4760,7 @@ begin
         1: begin
           if (field_.Type_ = TType.Double_) then
           begin
-            CircuferenciaAbdominal := iprot.ReadDouble();
+            CircunferenciaAbdominal := iprot.ReadDouble();
           end else
           begin
             TProtocolUtil.Skip(iprot, field_.Type_);
@@ -4895,13 +4895,13 @@ begin
   struc := TStructImpl.Create('MedicoesThrift');
   oprot.WriteStructBegin(struc);
   field_ := TFieldImpl.Create;
-  if (__isset_CircuferenciaAbdominal) then
+  if (__isset_CircunferenciaAbdominal) then
   begin
-    field_.Name := 'circuferenciaAbdominal';
+    field_.Name := 'circunferenciaAbdominal';
     field_.Type_  := TType.Double_;
     field_.ID := 1;
     oprot.WriteFieldBegin(field_);
-    oprot.WriteDouble(CircuferenciaAbdominal);
+    oprot.WriteDouble(CircunferenciaAbdominal);
     oprot.WriteFieldEnd();
   end;
   if (__isset_PerimetroPanturrilha) then
@@ -5024,11 +5024,11 @@ begin
   _sb25 := TThriftStringBuilder.Create('(');
   try
     _first26 := TRUE;
-    if (__isset_CircuferenciaAbdominal) then begin
+    if (__isset_CircunferenciaAbdominal) then begin
       if not _first26 then _sb25.Append(',');
       _first26 := FALSE;
-      _sb25.Append('CircuferenciaAbdominal: ');
-      _sb25.Append(CircuferenciaAbdominal);
+      _sb25.Append('CircunferenciaAbdominal: ');
+      _sb25.Append(CircunferenciaAbdominal);
     end;
     if (__isset_PerimetroPanturrilha) then begin
       if not _first26 then _sb25.Append(',');

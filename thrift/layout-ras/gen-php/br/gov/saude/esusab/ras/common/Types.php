@@ -2053,7 +2053,7 @@ class MedicoesThrift {
   /**
    * @var double
    */
-  public $circuferenciaAbdominal = null;
+  public $circunferenciaAbdominal = null;
   /**
    * @var double
    */
@@ -2107,7 +2107,7 @@ class MedicoesThrift {
     if (!isset(self::$_TSPEC)) {
       self::$_TSPEC = array(
         1 => array(
-          'var' => 'circuferenciaAbdominal',
+          'var' => 'circunferenciaAbdominal',
           'type' => TType::DOUBLE,
           ),
         2 => array(
@@ -2161,8 +2161,8 @@ class MedicoesThrift {
         );
     }
     if (is_array($vals)) {
-      if (isset($vals['circuferenciaAbdominal'])) {
-        $this->circuferenciaAbdominal = $vals['circuferenciaAbdominal'];
+      if (isset($vals['circunferenciaAbdominal'])) {
+        $this->circunferenciaAbdominal = $vals['circunferenciaAbdominal'];
       }
       if (isset($vals['perimetroPanturrilha'])) {
         $this->perimetroPanturrilha = $vals['perimetroPanturrilha'];
@@ -2224,7 +2224,7 @@ class MedicoesThrift {
       {
         case 1:
           if ($ftype == TType::DOUBLE) {
-            $xfer += $input->readDouble($this->circuferenciaAbdominal);
+            $xfer += $input->readDouble($this->circunferenciaAbdominal);
           } else {
             $xfer += $input->skip($ftype);
           }
@@ -2326,9 +2326,9 @@ class MedicoesThrift {
   public function write($output) {
     $xfer = 0;
     $xfer += $output->writeStructBegin('MedicoesThrift');
-    if ($this->circuferenciaAbdominal !== null) {
-      $xfer += $output->writeFieldBegin('circuferenciaAbdominal', TType::DOUBLE, 1);
-      $xfer += $output->writeDouble($this->circuferenciaAbdominal);
+    if ($this->circunferenciaAbdominal !== null) {
+      $xfer += $output->writeFieldBegin('circunferenciaAbdominal', TType::DOUBLE, 1);
+      $xfer += $output->writeDouble($this->circunferenciaAbdominal);
       $xfer += $output->writeFieldEnd();
     }
     if ($this->perimetroPanturrilha !== null) {

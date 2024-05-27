@@ -1399,7 +1399,7 @@ ResultadosExameThrift.prototype.write = function(output) {
 };
 
 MedicoesThrift = module.exports.MedicoesThrift = function(args) {
-  this.circuferenciaAbdominal = null;
+  this.circunferenciaAbdominal = null;
   this.perimetroPanturrilha = null;
   this.pressaoArterialSistolica = null;
   this.pressaoArterialDiastolica = null;
@@ -1413,8 +1413,8 @@ MedicoesThrift = module.exports.MedicoesThrift = function(args) {
   this.altura = null;
   this.perimetroCefalico = null;
   if (args) {
-    if (args.circuferenciaAbdominal !== undefined && args.circuferenciaAbdominal !== null) {
-      this.circuferenciaAbdominal = args.circuferenciaAbdominal;
+    if (args.circunferenciaAbdominal !== undefined && args.circunferenciaAbdominal !== null) {
+      this.circunferenciaAbdominal = args.circunferenciaAbdominal;
     }
     if (args.perimetroPanturrilha !== undefined && args.perimetroPanturrilha !== null) {
       this.perimetroPanturrilha = args.perimetroPanturrilha;
@@ -1470,7 +1470,7 @@ MedicoesThrift.prototype.read = function(input) {
     {
       case 1:
       if (ftype == Thrift.Type.DOUBLE) {
-        this.circuferenciaAbdominal = input.readDouble();
+        this.circunferenciaAbdominal = input.readDouble();
       } else {
         input.skip(ftype);
       }
@@ -1570,9 +1570,9 @@ MedicoesThrift.prototype.read = function(input) {
 
 MedicoesThrift.prototype.write = function(output) {
   output.writeStructBegin('MedicoesThrift');
-  if (this.circuferenciaAbdominal !== null && this.circuferenciaAbdominal !== undefined) {
-    output.writeFieldBegin('circuferenciaAbdominal', Thrift.Type.DOUBLE, 1);
-    output.writeDouble(this.circuferenciaAbdominal);
+  if (this.circunferenciaAbdominal !== null && this.circunferenciaAbdominal !== undefined) {
+    output.writeFieldBegin('circunferenciaAbdominal', Thrift.Type.DOUBLE, 1);
+    output.writeDouble(this.circunferenciaAbdominal);
     output.writeFieldEnd();
   }
   if (this.perimetroPanturrilha !== null && this.perimetroPanturrilha !== undefined) {

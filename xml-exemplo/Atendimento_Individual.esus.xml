@@ -135,7 +135,7 @@
 				<classificacaoRisco>1</classificacaoRisco>
 			</encaminhamentos>
 			<medicoes>
-				<circuferenciaAbdominal>50.0</circuferenciaAbdominal>
+				<circunferenciaAbdominal>50.0</circunferenciaAbdominal>
 				<perimetroPanturrilha>20.0</perimetroPanturrilha>
 				<pressaoArterialSistolica>12</pressaoArterialSistolica>
 				<pressaoArterialDiastolica>8</pressaoArterialDiastolica>
@@ -204,7 +204,7 @@
 			<dataHoraInicialAtendimento>1586098800000</dataHoraInicialAtendimento>
 			<dataHoraFinalAtendimento>1586102400000</dataHoraFinalAtendimento>
 			<medicoes>
-				<circuferenciaAbdominal>50.0</circuferenciaAbdominal>
+				<circunferenciaAbdominal>50.0</circunferenciaAbdominal>
 				<perimetroPanturrilha>20.0</perimetroPanturrilha>
 				<pressaoArterialSistolica>12</pressaoArterialSistolica>
 				<pressaoArterialDiastolica>8</pressaoArterialDiastolica>
@@ -262,7 +262,7 @@
 			<tipoParticipacaoCidadao>1</tipoParticipacaoCidadao>
 			<tipoParticipacaoProfissionalConvidado>2</tipoParticipacaoProfissionalConvidado>
 			<medicoes>
-				<circuferenciaAbdominal>50.0</circuferenciaAbdominal>
+				<circunferenciaAbdominal>50.0</circunferenciaAbdominal>
 				<perimetroPanturrilha>20.0</perimetroPanturrilha>
 				<pressaoArterialSistolica>12</pressaoArterialSistolica>
 				<pressaoArterialDiastolica>8</pressaoArterialDiastolica>

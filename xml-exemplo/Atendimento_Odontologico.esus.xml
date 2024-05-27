@@ -78,7 +78,7 @@
 				<classificacaoRisco>1</classificacaoRisco>
 			</encaminhamentos>
 			<medicoes>
-				<circuferenciaAbdominal>50.0</circuferenciaAbdominal>
+				<circunferenciaAbdominal>50.0</circunferenciaAbdominal>
 				<perimetroPanturrilha>20.0</perimetroPanturrilha>
 				<pressaoArterialSistolica>12</pressaoArterialSistolica>
 				<pressaoArterialDiastolica>8</pressaoArterialDiastolica>
@@ -145,7 +145,7 @@
 			<dataHoraInicialAtendimento>1549378800000</dataHoraInicialAtendimento>
 			<dataHoraFinalAtendimento>1549378800000</dataHoraFinalAtendimento>
 			<medicoes>
-				<circuferenciaAbdominal>50.0</circuferenciaAbdominal>
+				<circunferenciaAbdominal>50.0</circunferenciaAbdominal>
 				<perimetroPanturrilha>20.0</perimetroPanturrilha>
 				<pressaoArterialSistolica>12</pressaoArterialSistolica>
 				<pressaoArterialDiastolica>8</pressaoArterialDiastolica>
@@ -188,7 +188,7 @@
 			<dataHoraInicialAtendimento>1553094000000</dataHoraInicialAtendimento>
 			<dataHoraFinalAtendimento>1553097000000</dataHoraFinalAtendimento>
 			<medicoes>
-				<circuferenciaAbdominal>50.0</circuferenciaAbdominal>
+				<circunferenciaAbdominal>50.0</circunferenciaAbdominal>
 				<perimetroPanturrilha>20.0</perimetroPanturrilha>
 				<pressaoArterialSistolica>12</pressaoArterialSistolica>
 				<pressaoArterialDiastolica>8</pressaoArterialDiastolica>
@@ -231,7 +231,7 @@
 			<dataHoraInicialAtendimento>1553094000000</dataHoraInicialAtendimento>
 			<dataHoraFinalAtendimento>1553097000000</dataHoraFinalAtendimento>
 			<medicoes>
-				<circuferenciaAbdominal>50.0</circuferenciaAbdominal>
+				<circunferenciaAbdominal>50.0</circunferenciaAbdominal>
 				<perimetroPanturrilha>20.0</perimetroPanturrilha>
 				<pressaoArterialSistolica>12</pressaoArterialSistolica>
 				<pressaoArterialDiastolica>8</pressaoArterialDiastolica>
@@ -287,7 +287,7 @@
 				</resultadoExame>
 			</resultadosExames>
 			<medicoes>
-				<circuferenciaAbdominal>50.0</circuferenciaAbdominal>
+				<circunferenciaAbdominal>50.0</circunferenciaAbdominal>
 				<perimetroPanturrilha>20.0</perimetroPanturrilha>
 				<pressaoArterialSistolica>12</pressaoArterialSistolica>
 				<pressaoArterialDiastolica>8</pressaoArterialDiastolica>

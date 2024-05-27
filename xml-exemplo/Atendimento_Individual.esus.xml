@@ -285,7 +285,7 @@
 		<uuidInstalacao>TREINAMENTO</uuidInstalacao>
 		<cpfOuCnpj>01234567890</cpfOuCnpj>
 		<nomeOuRazaoSocial>ADMINISTRADOR INSTALAÇÃO</nomeOuRazaoSocial>
-		<versaoSistema>5.2.29</versaoSistema>
+		<versaoSistema>5.2.26</versaoSistema>
 		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:remetente>
 	<ns2:originadora>

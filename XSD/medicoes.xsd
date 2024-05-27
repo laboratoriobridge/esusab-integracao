@@ -3,7 +3,7 @@
 
   <xs:complexType name="medicoesTransport">
     <xs:sequence>
-      <xs:element minOccurs="0" name="circuferenciaAbdominal" type="xs:double"/>
+      <xs:element minOccurs="0" name="circunferenciaAbdominal" type="xs:double"/>
       <xs:element minOccurs="0" name="perimetroPanturrilha" type="xs:double"/>
       <xs:element minOccurs="0" name="pressaoArterialSistolica" type="xs:int"/>
       <xs:element minOccurs="0" name="pressaoArterialDiastolica" type="xs:int"/>

@@ -25,6 +25,21 @@
 			<sexo>1</sexo>
 			<turno>1</turno>
 			<tipoAtendimento>2</tipoAtendimento>
+			<medicoes>
+				<circunferenciaAbdominal>50.0</circunferenciaAbdominal>
+				<perimetroPanturrilha>20.0</perimetroPanturrilha>
+				<pressaoArterialSistolica>12</pressaoArterialSistolica>
+				<pressaoArterialDiastolica>8</pressaoArterialDiastolica>
+				<frequenciaRespiratoria>100</frequenciaRespiratoria>
+				<frequenciaCardiaca>100</frequenciaCardiaca>
+				<temperatura>36.0</temperatura>
+				<saturacaoO2>75</saturacaoO2>
+				<glicemiaCapilar>80</glicemiaCapilar>
+				<tipoGlicemiaCapilar>2</tipoGlicemiaCapilar>
+				<peso>70.0</peso>
+				<altura>180.3</altura>
+				<perimetroCefalico>30.0</perimetroCefalico>
+			</medicoes>
 			<aleitamentoMaterno>1</aleitamentoMaterno>
 			<dumDaGestante>1551452400000</dumDaGestante>
 			<idadeGestacional>35</idadeGestacional>
@@ -134,6 +149,15 @@
 				<hipoteseDiagnosticoCid10>O03</hipoteseDiagnosticoCid10>
 				<classificacaoRisco>1</classificacaoRisco>
 			</encaminhamentos>
+		</atendimentosIndividuais>
+		<atendimentosIndividuais>
+			<numeroProntuario>1234</numeroProntuario>
+			<cpfCidadao>68688625042</cpfCidadao>
+			<dataNascimento>978361200000</dataNascimento>
+			<localDeAtendimento>1</localDeAtendimento>
+			<sexo>1</sexo>
+			<turno>1</turno>
+			<tipoAtendimento>2</tipoAtendimento>
 			<medicoes>
 				<circunferenciaAbdominal>50.0</circunferenciaAbdominal>
 				<perimetroPanturrilha>20.0</perimetroPanturrilha>
@@ -149,15 +173,6 @@
 				<altura>180.3</altura>
 				<perimetroCefalico>30.0</perimetroCefalico>
 			</medicoes>
-		</atendimentosIndividuais>
-		<atendimentosIndividuais>
-			<numeroProntuario>1234</numeroProntuario>
-			<cpfCidadao>68688625042</cpfCidadao>
-			<dataNascimento>978361200000</dataNascimento>
-			<localDeAtendimento>1</localDeAtendimento>
-			<sexo>1</sexo>
-			<turno>1</turno>
-			<tipoAtendimento>2</tipoAtendimento>
 			<aleitamentoMaterno>1</aleitamentoMaterno>
 			<dumDaGestante>1551452400000</dumDaGestante>
 			<atencaoDomiciliarModalidade>1</atencaoDomiciliarModalidade>
@@ -203,6 +218,13 @@
 			<perimetroCefalico>58.0</perimetroCefalico>
 			<dataHoraInicialAtendimento>1586098800000</dataHoraInicialAtendimento>
 			<dataHoraFinalAtendimento>1586102400000</dataHoraFinalAtendimento>
+		</atendimentosIndividuais>
+		<atendimentosIndividuais>
+			<dataNascimento>1046703600000</dataNascimento>
+			<localDeAtendimento>1</localDeAtendimento>
+			<sexo>0</sexo>
+			<turno>2</turno>
+			<tipoAtendimento>4</tipoAtendimento>
 			<medicoes>
 				<circunferenciaAbdominal>50.0</circunferenciaAbdominal>
 				<perimetroPanturrilha>20.0</perimetroPanturrilha>
@@ -218,13 +240,6 @@
 				<altura>180.3</altura>
 				<perimetroCefalico>30.0</perimetroCefalico>
 			</medicoes>
-		</atendimentosIndividuais>
-		<atendimentosIndividuais>
-			<dataNascimento>1046703600000</dataNascimento>
-			<localDeAtendimento>1</localDeAtendimento>
-			<sexo>0</sexo>
-			<turno>2</turno>
-			<tipoAtendimento>4</tipoAtendimento>
 			<problemaCondicaoAvaliada>
 				<ciaps>ABP003</ciaps>
 			</problemaCondicaoAvaliada>
@@ -261,21 +276,6 @@
 			</resultadosExames>
 			<tipoParticipacaoCidadao>1</tipoParticipacaoCidadao>
 			<tipoParticipacaoProfissionalConvidado>2</tipoParticipacaoProfissionalConvidado>
-			<medicoes>
-				<circunferenciaAbdominal>50.0</circunferenciaAbdominal>
-				<perimetroPanturrilha>20.0</perimetroPanturrilha>
-				<pressaoArterialSistolica>12</pressaoArterialSistolica>
-				<pressaoArterialDiastolica>8</pressaoArterialDiastolica>
-				<frequenciaRespiratoria>100</frequenciaRespiratoria>
-				<frequenciaCardiaca>100</frequenciaCardiaca>
-				<temperatura>36.0</temperatura>
-				<saturacaoO2>75</saturacaoO2>
-				<glicemiaCapilar>80</glicemiaCapilar>
-				<tipoGlicemiaCapilar>2</tipoGlicemiaCapilar>
-				<peso>70.0</peso>
-				<altura>180.3</altura>
-				<perimetroCefalico>30.0</perimetroCefalico>
-			</medicoes>
 		</atendimentosIndividuais>
 		<tpCdsOrigem>3</tpCdsOrigem>
 		<uuidFicha>0019615-edee6500-bf76-4691-b9c7-f7b1d550bc7a</uuidFicha>

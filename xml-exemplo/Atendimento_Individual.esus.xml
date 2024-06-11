@@ -25,8 +25,21 @@
 			<sexo>1</sexo>
 			<turno>1</turno>
 			<tipoAtendimento>2</tipoAtendimento>
-			<pesoAcompanhamentoNutricional>70.0</pesoAcompanhamentoNutricional>
-			<alturaAcompanhamentoNutricional>180.0</alturaAcompanhamentoNutricional>
+			<medicoes>
+				<circunferenciaAbdominal>50.0</circunferenciaAbdominal>
+				<perimetroPanturrilha>20.0</perimetroPanturrilha>
+				<pressaoArterialSistolica>12</pressaoArterialSistolica>
+				<pressaoArterialDiastolica>8</pressaoArterialDiastolica>
+				<frequenciaRespiratoria>100</frequenciaRespiratoria>
+				<frequenciaCardiaca>100</frequenciaCardiaca>
+				<temperatura>36.0</temperatura>
+				<saturacaoO2>75</saturacaoO2>
+				<glicemiaCapilar>80</glicemiaCapilar>
+				<tipoGlicemiaCapilar>2</tipoGlicemiaCapilar>
+				<peso>70.0</peso>
+				<altura>180.3</altura>
+				<perimetroCefalico>30.0</perimetroCefalico>
+			</medicoes>
 			<aleitamentoMaterno>1</aleitamentoMaterno>
 			<dumDaGestante>1551452400000</dumDaGestante>
 			<idadeGestacional>35</idadeGestacional>
@@ -145,8 +158,21 @@
 			<sexo>1</sexo>
 			<turno>1</turno>
 			<tipoAtendimento>2</tipoAtendimento>
-			<pesoAcompanhamentoNutricional>70.0</pesoAcompanhamentoNutricional>
-			<alturaAcompanhamentoNutricional>180.0</alturaAcompanhamentoNutricional>
+			<medicoes>
+				<circunferenciaAbdominal>50.0</circunferenciaAbdominal>
+				<perimetroPanturrilha>20.0</perimetroPanturrilha>
+				<pressaoArterialSistolica>12</pressaoArterialSistolica>
+				<pressaoArterialDiastolica>8</pressaoArterialDiastolica>
+				<frequenciaRespiratoria>100</frequenciaRespiratoria>
+				<frequenciaCardiaca>100</frequenciaCardiaca>
+				<temperatura>36.0</temperatura>
+				<saturacaoO2>75</saturacaoO2>
+				<glicemiaCapilar>80</glicemiaCapilar>
+				<tipoGlicemiaCapilar>2</tipoGlicemiaCapilar>
+				<peso>70.0</peso>
+				<altura>180.3</altura>
+				<perimetroCefalico>30.0</perimetroCefalico>
+			</medicoes>
 			<aleitamentoMaterno>1</aleitamentoMaterno>
 			<dumDaGestante>1551452400000</dumDaGestante>
 			<atencaoDomiciliarModalidade>1</atencaoDomiciliarModalidade>
@@ -199,6 +225,21 @@
 			<sexo>0</sexo>
 			<turno>2</turno>
 			<tipoAtendimento>4</tipoAtendimento>
+			<medicoes>
+				<circunferenciaAbdominal>50.0</circunferenciaAbdominal>
+				<perimetroPanturrilha>20.0</perimetroPanturrilha>
+				<pressaoArterialSistolica>12</pressaoArterialSistolica>
+				<pressaoArterialDiastolica>8</pressaoArterialDiastolica>
+				<frequenciaRespiratoria>100</frequenciaRespiratoria>
+				<frequenciaCardiaca>100</frequenciaCardiaca>
+				<temperatura>36.0</temperatura>
+				<saturacaoO2>75</saturacaoO2>
+				<glicemiaCapilar>80</glicemiaCapilar>
+				<tipoGlicemiaCapilar>2</tipoGlicemiaCapilar>
+				<peso>70.0</peso>
+				<altura>180.3</altura>
+				<perimetroCefalico>30.0</perimetroCefalico>
+			</medicoes>
 			<problemaCondicaoAvaliada>
 				<ciaps>ABP003</ciaps>
 			</problemaCondicaoAvaliada>
@@ -255,5 +296,5 @@
 		<versaoSistema>5.2.29</versaoSistema>
 		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:originadora>
-	<versao major="5" minor="5" revision="0" />
+	<versao major="7" minor="0" revision="0" />
 </ns3:dadoTransporteTransportXml>

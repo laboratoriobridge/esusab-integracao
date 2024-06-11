@@ -241,6 +241,8 @@ type
     procedure SetTipoParticipacaoProfissionalConvidado( const Value: Int64);
     function GetEmultis: IThriftList<Int64>;
     procedure SetEmultis( const Value: IThriftList<Int64>);
+    function GetMedicoes: IMedicoesThrift;
+    procedure SetMedicoes( const Value: IMedicoesThrift);
 
     property NumeroProntuario: string read GetNumeroProntuario write SetNumeroProntuario;
     property Cns: string read GetCns write SetCns;
@@ -278,6 +280,7 @@ type
     property TipoParticipacaoCidadao: Int64 read GetTipoParticipacaoCidadao write SetTipoParticipacaoCidadao;
     property TipoParticipacaoProfissionalConvidado: Int64 read GetTipoParticipacaoProfissionalConvidado write SetTipoParticipacaoProfissionalConvidado;
     property Emultis: IThriftList<Int64> read GetEmultis write SetEmultis;
+    property Medicoes: IMedicoesThrift read GetMedicoes write SetMedicoes;
 
     function Get__isset_NumeroProntuario: Boolean;
     function Get__isset_Cns: Boolean;
@@ -315,6 +318,7 @@ type
     function Get__isset_TipoParticipacaoCidadao: Boolean;
     function Get__isset_TipoParticipacaoProfissionalConvidado: Boolean;
     function Get__isset_Emultis: Boolean;
+    function Get__isset_Medicoes: Boolean;
 
     property __isset_NumeroProntuario: Boolean read Get__isset_NumeroProntuario;
     property __isset_Cns: Boolean read Get__isset_Cns;
@@ -352,6 +356,7 @@ type
     property __isset_TipoParticipacaoCidadao: Boolean read Get__isset_TipoParticipacaoCidadao;
     property __isset_TipoParticipacaoProfissionalConvidado: Boolean read Get__isset_TipoParticipacaoProfissionalConvidado;
     property __isset_Emultis: Boolean read Get__isset_Emultis;
+    property __isset_Medicoes: Boolean read Get__isset_Medicoes;
   end;
 
   TFichaAtendimentoIndividualChildThriftImpl = class(TInterfacedObject, IBase, IFichaAtendimentoIndividualChildThrift)
@@ -392,6 +397,7 @@ type
     FTipoParticipacaoCidadao: Int64;
     FTipoParticipacaoProfissionalConvidado: Int64;
     FEmultis: IThriftList<Int64>;
+    FMedicoes: IMedicoesThrift;
     
     F__isset_NumeroProntuario: Boolean;
     F__isset_Cns: Boolean;
@@ -429,6 +435,7 @@ type
     F__isset_TipoParticipacaoCidadao: Boolean;
     F__isset_TipoParticipacaoProfissionalConvidado: Boolean;
     F__isset_Emultis: Boolean;
+    F__isset_Medicoes: Boolean;
     
     function GetNumeroProntuario: string;
     procedure SetNumeroProntuario( const Value: string);
@@ -502,6 +509,8 @@ type
     procedure SetTipoParticipacaoProfissionalConvidado( const Value: Int64);
     function GetEmultis: IThriftList<Int64>;
     procedure SetEmultis( const Value: IThriftList<Int64>);
+    function GetMedicoes: IMedicoesThrift;
+    procedure SetMedicoes( const Value: IMedicoesThrift);
 
     function Get__isset_NumeroProntuario: Boolean;
     function Get__isset_Cns: Boolean;
@@ -539,6 +548,7 @@ type
     function Get__isset_TipoParticipacaoCidadao: Boolean;
     function Get__isset_TipoParticipacaoProfissionalConvidado: Boolean;
     function Get__isset_Emultis: Boolean;
+    function Get__isset_Medicoes: Boolean;
   public
     constructor Create;
     destructor Destroy; override;
@@ -586,6 +596,7 @@ type
     property TipoParticipacaoCidadao: Int64 read GetTipoParticipacaoCidadao write SetTipoParticipacaoCidadao;
     property TipoParticipacaoProfissionalConvidado: Int64 read GetTipoParticipacaoProfissionalConvidado write SetTipoParticipacaoProfissionalConvidado;
     property Emultis: IThriftList<Int64> read GetEmultis write SetEmultis;
+    property Medicoes: IMedicoesThrift read GetMedicoes write SetMedicoes;
 
     // isset
     property __isset_NumeroProntuario: Boolean read Get__isset_NumeroProntuario;
@@ -624,6 +635,7 @@ type
     property __isset_TipoParticipacaoCidadao: Boolean read Get__isset_TipoParticipacaoCidadao;
     property __isset_TipoParticipacaoProfissionalConvidado: Boolean read Get__isset_TipoParticipacaoProfissionalConvidado;
     property __isset_Emultis: Boolean read Get__isset_Emultis;
+    property __isset_Medicoes: Boolean read Get__isset_Medicoes;
   end;
 
   IFichaAtendimentoIndividualMasterThrift = interface(IBase)
@@ -1737,6 +1749,22 @@ begin
   Result := F__isset_Emultis;
 end;
 
+function TFichaAtendimentoIndividualChildThriftImpl.GetMedicoes: IMedicoesThrift;
+begin
+  Result := FMedicoes;
+end;
+
+procedure TFichaAtendimentoIndividualChildThriftImpl.SetMedicoes( const Value: IMedicoesThrift);
+begin
+  F__isset_Medicoes := True;
+  FMedicoes := Value;
+end;
+
+function TFichaAtendimentoIndividualChildThriftImpl.Get__isset_Medicoes: Boolean;
+begin
+  Result := F__isset_Medicoes;
+end;
+
 procedure TFichaAtendimentoIndividualChildThriftImpl.Read( const iprot: IProtocol);
 var
   field_ : IField;
@@ -2154,6 +2182,16 @@ begin
           begin
             TProtocolUtil.Skip(iprot, field_.Type_);
           end;
+        end;
+        39: begin
+          if (field_.Type_ = TType.Struct) then
+          begin
+            Medicoes := TMedicoesThriftImpl.Create;
+            Medicoes.Read(iprot);
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
         end
         else begin
           TProtocolUtil.Skip(iprot, field_.Type_);
@@ -2556,6 +2594,15 @@ begin
     oprot.WriteListEnd();
     oprot.WriteFieldEnd();
   end;
+  if (Medicoes <> nil) and __isset_Medicoes then
+  begin
+    field_.Name := 'medicoes';
+    field_.Type_  := TType.Struct;
+    field_.ID := 39;
+    oprot.WriteFieldBegin(field_);
+    Medicoes.Write(oprot);
+    oprot.WriteFieldEnd();
+  end;
   oprot.WriteFieldStop();
   oprot.WriteStructEnd();
 end;
@@ -2783,6 +2830,12 @@ begin
       _first50 := FALSE;
       _sb49.Append('Emultis: ');
       _sb49.Append(Emultis);
+    end;
+    if (Medicoes <> nil) and __isset_Medicoes then begin
+      if not _first50 then _sb49.Append(',');
+      _first50 := FALSE;
+      _sb49.Append('Medicoes: ');
+      if (Medicoes = nil) then _sb49.Append('<null>') else _sb49.Append(Medicoes.ToString());
     end;
     _sb49.Append(')');
     Result := _sb49.ToString;

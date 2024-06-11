@@ -22,6 +22,7 @@ struct FichaProcedimentoChildThrift {
 	12:optional string cpfCidadao;
 	13:optional double pesoAcompanhamentoNutricional;
 	14:optional double alturaAcompanhamentoNutricional;
+	16:optional common.MedicoesThrift medicoes;
 }
 
 struct FichaProcedimentoMasterThrift {

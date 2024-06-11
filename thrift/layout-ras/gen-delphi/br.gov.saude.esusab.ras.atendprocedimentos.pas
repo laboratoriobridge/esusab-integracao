@@ -57,6 +57,8 @@ type
     procedure SetPesoAcompanhamentoNutricional( const Value: Double);
     function GetAlturaAcompanhamentoNutricional: Double;
     procedure SetAlturaAcompanhamentoNutricional( const Value: Double);
+    function GetMedicoes: IMedicoesThrift;
+    procedure SetMedicoes( const Value: IMedicoesThrift);
 
     property NumProntuario: string read GetNumProntuario write SetNumProntuario;
     property CnsCidadao: string read GetCnsCidadao write SetCnsCidadao;
@@ -71,6 +73,7 @@ type
     property CpfCidadao: string read GetCpfCidadao write SetCpfCidadao;
     property PesoAcompanhamentoNutricional: Double read GetPesoAcompanhamentoNutricional write SetPesoAcompanhamentoNutricional;
     property AlturaAcompanhamentoNutricional: Double read GetAlturaAcompanhamentoNutricional write SetAlturaAcompanhamentoNutricional;
+    property Medicoes: IMedicoesThrift read GetMedicoes write SetMedicoes;
 
     function Get__isset_NumProntuario: Boolean;
     function Get__isset_CnsCidadao: Boolean;
@@ -85,6 +88,7 @@ type
     function Get__isset_CpfCidadao: Boolean;
     function Get__isset_PesoAcompanhamentoNutricional: Boolean;
     function Get__isset_AlturaAcompanhamentoNutricional: Boolean;
+    function Get__isset_Medicoes: Boolean;
 
     property __isset_NumProntuario: Boolean read Get__isset_NumProntuario;
     property __isset_CnsCidadao: Boolean read Get__isset_CnsCidadao;
@@ -99,6 +103,7 @@ type
     property __isset_CpfCidadao: Boolean read Get__isset_CpfCidadao;
     property __isset_PesoAcompanhamentoNutricional: Boolean read Get__isset_PesoAcompanhamentoNutricional;
     property __isset_AlturaAcompanhamentoNutricional: Boolean read Get__isset_AlturaAcompanhamentoNutricional;
+    property __isset_Medicoes: Boolean read Get__isset_Medicoes;
   end;
 
   TFichaProcedimentoChildThriftImpl = class(TInterfacedObject, IBase, IFichaProcedimentoChildThrift)
@@ -116,6 +121,7 @@ type
     FCpfCidadao: string;
     FPesoAcompanhamentoNutricional: Double;
     FAlturaAcompanhamentoNutricional: Double;
+    FMedicoes: IMedicoesThrift;
     
     F__isset_NumProntuario: Boolean;
     F__isset_CnsCidadao: Boolean;
@@ -130,6 +136,7 @@ type
     F__isset_CpfCidadao: Boolean;
     F__isset_PesoAcompanhamentoNutricional: Boolean;
     F__isset_AlturaAcompanhamentoNutricional: Boolean;
+    F__isset_Medicoes: Boolean;
     
     function GetNumProntuario: string;
     procedure SetNumProntuario( const Value: string);
@@ -157,6 +164,8 @@ type
     procedure SetPesoAcompanhamentoNutricional( const Value: Double);
     function GetAlturaAcompanhamentoNutricional: Double;
     procedure SetAlturaAcompanhamentoNutricional( const Value: Double);
+    function GetMedicoes: IMedicoesThrift;
+    procedure SetMedicoes( const Value: IMedicoesThrift);
 
     function Get__isset_NumProntuario: Boolean;
     function Get__isset_CnsCidadao: Boolean;
@@ -171,6 +180,7 @@ type
     function Get__isset_CpfCidadao: Boolean;
     function Get__isset_PesoAcompanhamentoNutricional: Boolean;
     function Get__isset_AlturaAcompanhamentoNutricional: Boolean;
+    function Get__isset_Medicoes: Boolean;
   public
     constructor Create;
     destructor Destroy; override;
@@ -195,6 +205,7 @@ type
     property CpfCidadao: string read GetCpfCidadao write SetCpfCidadao;
     property PesoAcompanhamentoNutricional: Double read GetPesoAcompanhamentoNutricional write SetPesoAcompanhamentoNutricional;
     property AlturaAcompanhamentoNutricional: Double read GetAlturaAcompanhamentoNutricional write SetAlturaAcompanhamentoNutricional;
+    property Medicoes: IMedicoesThrift read GetMedicoes write SetMedicoes;
 
     // isset
     property __isset_NumProntuario: Boolean read Get__isset_NumProntuario;
@@ -210,6 +221,7 @@ type
     property __isset_CpfCidadao: Boolean read Get__isset_CpfCidadao;
     property __isset_PesoAcompanhamentoNutricional: Boolean read Get__isset_PesoAcompanhamentoNutricional;
     property __isset_AlturaAcompanhamentoNutricional: Boolean read Get__isset_AlturaAcompanhamentoNutricional;
+    property __isset_Medicoes: Boolean read Get__isset_Medicoes;
   end;
 
   IFichaProcedimentoMasterThrift = interface(IBase)
@@ -585,6 +597,22 @@ begin
   Result := F__isset_AlturaAcompanhamentoNutricional;
 end;
 
+function TFichaProcedimentoChildThriftImpl.GetMedicoes: IMedicoesThrift;
+begin
+  Result := FMedicoes;
+end;
+
+procedure TFichaProcedimentoChildThriftImpl.SetMedicoes( const Value: IMedicoesThrift);
+begin
+  F__isset_Medicoes := True;
+  FMedicoes := Value;
+end;
+
+function TFichaProcedimentoChildThriftImpl.Get__isset_Medicoes: Boolean;
+begin
+  Result := F__isset_Medicoes;
+end;
+
 procedure TFichaProcedimentoChildThriftImpl.Read( const iprot: IProtocol);
 var
   field_ : IField;
@@ -725,6 +753,16 @@ begin
           if (field_.Type_ = TType.Double_) then
           begin
             AlturaAcompanhamentoNutricional := iprot.ReadDouble();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        16: begin
+          if (field_.Type_ = TType.Struct) then
+          begin
+            Medicoes := TMedicoesThriftImpl.Create;
+            Medicoes.Read(iprot);
           end else
           begin
             TProtocolUtil.Skip(iprot, field_.Type_);
@@ -876,6 +914,15 @@ begin
     oprot.WriteDouble(AlturaAcompanhamentoNutricional);
     oprot.WriteFieldEnd();
   end;
+  if (Medicoes <> nil) and __isset_Medicoes then
+  begin
+    field_.Name := 'medicoes';
+    field_.Type_  := TType.Struct;
+    field_.ID := 16;
+    oprot.WriteFieldBegin(field_);
+    Medicoes.Write(oprot);
+    oprot.WriteFieldEnd();
+  end;
   oprot.WriteFieldStop();
   oprot.WriteStructEnd();
 end;
@@ -965,6 +1012,12 @@ begin
       _first6 := FALSE;
       _sb5.Append('AlturaAcompanhamentoNutricional: ');
       _sb5.Append(AlturaAcompanhamentoNutricional);
+    end;
+    if (Medicoes <> nil) and __isset_Medicoes then begin
+      if not _first6 then _sb5.Append(',');
+      _first6 := FALSE;
+      _sb5.Append('Medicoes: ');
+      if (Medicoes = nil) then _sb5.Append('<null>') else _sb5.Append(Medicoes.ToString());
     end;
     _sb5.Append(')');
     Result := _sb5.ToString;

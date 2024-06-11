@@ -32,6 +32,7 @@ var GoUnusedProtection__ int
 //  - CpfCidadao
 //  - PesoAcompanhamentoNutricional
 //  - AlturaAcompanhamentoNutricional
+//  - Medicoes
 type FichaProcedimentoChildThrift struct {
 	NumProntuario                 *string  `thrift:"numProntuario,1" json:"numProntuario,omitempty"`
 	CnsCidadao                    *string  `thrift:"cnsCidadao,2" json:"cnsCidadao,omitempty"`
@@ -47,6 +48,8 @@ type FichaProcedimentoChildThrift struct {
 	CpfCidadao                      *string  `thrift:"cpfCidadao,12" json:"cpfCidadao,omitempty"`
 	PesoAcompanhamentoNutricional   *float64 `thrift:"pesoAcompanhamentoNutricional,13" json:"pesoAcompanhamentoNutricional,omitempty"`
 	AlturaAcompanhamentoNutricional *float64 `thrift:"alturaAcompanhamentoNutricional,14" json:"alturaAcompanhamentoNutricional,omitempty"`
+	// unused field # 15
+	Medicoes *common.MedicoesThrift `thrift:"medicoes,16" json:"medicoes,omitempty"`
 }
 
 func NewFichaProcedimentoChildThrift() *FichaProcedimentoChildThrift {
@@ -166,6 +169,15 @@ func (p *FichaProcedimentoChildThrift) GetAlturaAcompanhamentoNutricional() floa
 	}
 	return *p.AlturaAcompanhamentoNutricional
 }
+
+var FichaProcedimentoChildThrift_Medicoes_DEFAULT *common.MedicoesThrift
+
+func (p *FichaProcedimentoChildThrift) GetMedicoes() *common.MedicoesThrift {
+	if !p.IsSetMedicoes() {
+		return FichaProcedimentoChildThrift_Medicoes_DEFAULT
+	}
+	return p.Medicoes
+}
 func (p *FichaProcedimentoChildThrift) IsSetNumProntuario() bool {
 	return p.NumProntuario != nil
 }
@@ -216,6 +228,10 @@ func (p *FichaProcedimentoChildThrift) IsSetPesoAcompanhamentoNutricional() bool
 
 func (p *FichaProcedimentoChildThrift) IsSetAlturaAcompanhamentoNutricional() bool {
 	return p.AlturaAcompanhamentoNutricional != nil
+}
+
+func (p *FichaProcedimentoChildThrift) IsSetMedicoes() bool {
+	return p.Medicoes != nil
 }
 
 func (p *FichaProcedimentoChildThrift) Read(iprot thrift.TProtocol) error {
@@ -282,6 +298,10 @@ func (p *FichaProcedimentoChildThrift) Read(iprot thrift.TProtocol) error {
 			}
 		case 14:
 			if err := p.readField14(iprot); err != nil {
+				return err
+			}
+		case 16:
+			if err := p.readField16(iprot); err != nil {
 				return err
 			}
 		default:
@@ -429,6 +449,14 @@ func (p *FichaProcedimentoChildThrift) readField14(iprot thrift.TProtocol) error
 	return nil
 }
 
+func (p *FichaProcedimentoChildThrift) readField16(iprot thrift.TProtocol) error {
+	p.Medicoes = &common.MedicoesThrift{}
+	if err := p.Medicoes.Read(iprot); err != nil {
+		return thrift.PrependError(fmt.Sprintf("%T error reading struct: ", p.Medicoes), err)
+	}
+	return nil
+}
+
 func (p *FichaProcedimentoChildThrift) Write(oprot thrift.TProtocol) error {
 	if err := oprot.WriteStructBegin("FichaProcedimentoChildThrift"); err != nil {
 		return thrift.PrependError(fmt.Sprintf("%T write struct begin error: ", p), err)
@@ -470,6 +498,9 @@ func (p *FichaProcedimentoChildThrift) Write(oprot thrift.TProtocol) error {
 		return err
 	}
 	if err := p.writeField14(oprot); err != nil {
+		return err
+	}
+	if err := p.writeField16(oprot); err != nil {
 		return err
 	}
 	if err := oprot.WriteFieldStop(); err != nil {
@@ -679,6 +710,21 @@ func (p *FichaProcedimentoChildThrift) writeField14(oprot thrift.TProtocol) (err
 		}
 		if err := oprot.WriteFieldEnd(); err != nil {
 			return thrift.PrependError(fmt.Sprintf("%T write field end error 14:alturaAcompanhamentoNutricional: ", p), err)
+		}
+	}
+	return err
+}
+
+func (p *FichaProcedimentoChildThrift) writeField16(oprot thrift.TProtocol) (err error) {
+	if p.IsSetMedicoes() {
+		if err := oprot.WriteFieldBegin("medicoes", thrift.STRUCT, 16); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field begin error 16:medicoes: ", p), err)
+		}
+		if err := p.Medicoes.Write(oprot); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T error writing struct: ", p.Medicoes), err)
+		}
+		if err := oprot.WriteFieldEnd(); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field end error 16:medicoes: ", p), err)
 		}
 	}
 	return err

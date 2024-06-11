@@ -15,7 +15,6 @@
       <xs:element minOccurs="0" name="dataHoraInicialAtendimento" type="xs:long"/>
       <xs:element minOccurs="0" name="dataHoraFinalAtendimento" type="xs:long"/>
       <xs:element minOccurs="0" name="medicoes" type="medicoes:medicoesTransport"/>
-      <xs:element minOccurs="0" name="uuidRnds" type="xs:string"/>
     </xs:sequence>
   </xs:complexType>
 </xs:schema>

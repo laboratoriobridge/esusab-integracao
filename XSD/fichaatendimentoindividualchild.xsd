@@ -49,7 +49,6 @@
       <xs:element maxOccurs="unbounded" minOccurs="0" name="medicamentos" type="medicamento:medicamentoTransport"/>
       <xs:element maxOccurs="unbounded" minOccurs="0" name="encaminhamentos" type="encaminhamentoExterno:encaminhamentoExternoTransport"/>
       <xs:element maxOccurs="unbounded" minOccurs="0" name="resultadosExames" type="resultadosExame:resultadosExameTransport"/>
-      <xs:element minOccurs="0" name="uuidRnds" type="xs:string"/>
       <xs:element minOccurs="0" name="tipoParticipacaoCidadao" type="xs:long"/>
       <xs:element minOccurs="0" name="tipoParticipacaoProfissionalConvidado" type="xs:long"/>
     </xs:sequence>

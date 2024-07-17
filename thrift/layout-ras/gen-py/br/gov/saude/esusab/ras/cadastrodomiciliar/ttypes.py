@@ -564,8 +564,9 @@ class CadastroDomiciliarThrift:
     (13, TType.I64, 'tipoDeImovel', None, None, ), # 13
     (14, TType.STRUCT, 'instituicaoPermanencia', (InstituicaoPermanenciaThrift, InstituicaoPermanenciaThrift.thrift_spec), None, ), # 14
     (15, TType.STRUCT, 'headerTransport', (br.gov.saude.esusab.ras.common.ttypes.UnicaLotacaoHeaderThrift, br.gov.saude.esusab.ras.common.ttypes.UnicaLotacaoHeaderThrift.thrift_spec), None, ), # 15
-    (16, TType.DOUBLE, 'latitude', None, None, ), # 16
-    (17, TType.DOUBLE, 'longitude', None, None, ), # 17
+    None, # 16
+    (17, TType.DOUBLE, 'latitude', None, None, ), # 17
+    (18, TType.DOUBLE, 'longitude', None, None, ), # 18
   )
 
   def __init__(self, animaisNoDomicilio=None, condicaoMoradia=None, enderecoLocalPermanencia=None, familias=None, fichaAtualizada=None, quantosAnimaisNoDomicilio=None, stAnimaisNoDomicilio=None, statusTermoRecusa=None, tpCdsOrigem=None, uuid=None, uuidFichaOriginadora=None, tipoDeImovel=None, instituicaoPermanencia=None, headerTransport=None, latitude=None, longitude=None,):
@@ -680,12 +681,12 @@ class CadastroDomiciliarThrift:
           self.headerTransport.read(iprot)
         else:
           iprot.skip(ftype)
-      elif fid == 16:
+      elif fid == 17:
         if ftype == TType.DOUBLE:
           self.latitude = iprot.readDouble()
         else:
           iprot.skip(ftype)
-      elif fid == 17:
+      elif fid == 18:
         if ftype == TType.DOUBLE:
           self.longitude = iprot.readDouble()
         else:
@@ -763,11 +764,11 @@ class CadastroDomiciliarThrift:
       self.headerTransport.write(oprot)
       oprot.writeFieldEnd()
     if self.latitude is not None:
-      oprot.writeFieldBegin('latitude', TType.DOUBLE, 16)
+      oprot.writeFieldBegin('latitude', TType.DOUBLE, 17)
       oprot.writeDouble(self.latitude)
       oprot.writeFieldEnd()
     if self.longitude is not None:
-      oprot.writeFieldBegin('longitude', TType.DOUBLE, 17)
+      oprot.writeFieldBegin('longitude', TType.DOUBLE, 18)
       oprot.writeDouble(self.longitude)
       oprot.writeFieldEnd()
     oprot.writeFieldStop()

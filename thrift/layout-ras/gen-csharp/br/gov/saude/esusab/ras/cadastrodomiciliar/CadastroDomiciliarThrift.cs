@@ -406,14 +406,14 @@ namespace br.gov.saude.esusab.ras.cadastrodomiciliar
                 TProtocolUtil.Skip(iprot, field.Type);
               }
               break;
-            case 16:
+            case 17:
               if (field.Type == TType.Double) {
                 Latitude = iprot.ReadDouble();
               } else { 
                 TProtocolUtil.Skip(iprot, field.Type);
               }
               break;
-            case 17:
+            case 18:
               if (field.Type == TType.Double) {
                 Longitude = iprot.ReadDouble();
               } else { 
@@ -570,7 +570,7 @@ namespace br.gov.saude.esusab.ras.cadastrodomiciliar
         if (__isset.latitude) {
           field.Name = "latitude";
           field.Type = TType.Double;
-          field.ID = 16;
+          field.ID = 17;
           oprot.WriteFieldBegin(field);
           oprot.WriteDouble(Latitude);
           oprot.WriteFieldEnd();
@@ -578,7 +578,7 @@ namespace br.gov.saude.esusab.ras.cadastrodomiciliar
         if (__isset.longitude) {
           field.Name = "longitude";
           field.Type = TType.Double;
-          field.ID = 17;
+          field.ID = 18;
           oprot.WriteFieldBegin(field);
           oprot.WriteDouble(Longitude);
           oprot.WriteFieldEnd();

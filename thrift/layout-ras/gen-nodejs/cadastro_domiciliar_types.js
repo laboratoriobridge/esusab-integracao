@@ -758,14 +758,14 @@ CadastroDomiciliarThrift.prototype.read = function(input) {
         input.skip(ftype);
       }
       break;
-      case 16:
+      case 17:
       if (ftype == Thrift.Type.DOUBLE) {
         this.latitude = input.readDouble();
       } else {
         input.skip(ftype);
       }
       break;
-      case 17:
+      case 18:
       if (ftype == Thrift.Type.DOUBLE) {
         this.longitude = input.readDouble();
       } else {
@@ -872,12 +872,12 @@ CadastroDomiciliarThrift.prototype.write = function(output) {
     output.writeFieldEnd();
   }
   if (this.latitude !== null && this.latitude !== undefined) {
-    output.writeFieldBegin('latitude', Thrift.Type.DOUBLE, 16);
+    output.writeFieldBegin('latitude', Thrift.Type.DOUBLE, 17);
     output.writeDouble(this.latitude);
     output.writeFieldEnd();
   }
   if (this.longitude !== null && this.longitude !== undefined) {
-    output.writeFieldBegin('longitude', Thrift.Type.DOUBLE, 17);
+    output.writeFieldBegin('longitude', Thrift.Type.DOUBLE, 18);
     output.writeDouble(this.longitude);
     output.writeFieldEnd();
   }

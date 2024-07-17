@@ -52,8 +52,8 @@ public class CadastroDomiciliarThrift implements org.apache.thrift.TBase<Cadastr
   private static final org.apache.thrift.protocol.TField TIPO_DE_IMOVEL_FIELD_DESC = new org.apache.thrift.protocol.TField("tipoDeImovel", org.apache.thrift.protocol.TType.I64, (short)13);
   private static final org.apache.thrift.protocol.TField INSTITUICAO_PERMANENCIA_FIELD_DESC = new org.apache.thrift.protocol.TField("instituicaoPermanencia", org.apache.thrift.protocol.TType.STRUCT, (short)14);
   private static final org.apache.thrift.protocol.TField HEADER_TRANSPORT_FIELD_DESC = new org.apache.thrift.protocol.TField("headerTransport", org.apache.thrift.protocol.TType.STRUCT, (short)15);
-  private static final org.apache.thrift.protocol.TField LATITUDE_FIELD_DESC = new org.apache.thrift.protocol.TField("latitude", org.apache.thrift.protocol.TType.DOUBLE, (short)16);
-  private static final org.apache.thrift.protocol.TField LONGITUDE_FIELD_DESC = new org.apache.thrift.protocol.TField("longitude", org.apache.thrift.protocol.TType.DOUBLE, (short)17);
+  private static final org.apache.thrift.protocol.TField LATITUDE_FIELD_DESC = new org.apache.thrift.protocol.TField("latitude", org.apache.thrift.protocol.TType.DOUBLE, (short)17);
+  private static final org.apache.thrift.protocol.TField LONGITUDE_FIELD_DESC = new org.apache.thrift.protocol.TField("longitude", org.apache.thrift.protocol.TType.DOUBLE, (short)18);
 
   private static final Map<Class<? extends IScheme>, SchemeFactory> schemes = new HashMap<Class<? extends IScheme>, SchemeFactory>();
   static {
@@ -94,8 +94,8 @@ public class CadastroDomiciliarThrift implements org.apache.thrift.TBase<Cadastr
     TIPO_DE_IMOVEL((short)13, "tipoDeImovel"),
     INSTITUICAO_PERMANENCIA((short)14, "instituicaoPermanencia"),
     HEADER_TRANSPORT((short)15, "headerTransport"),
-    LATITUDE((short)16, "latitude"),
-    LONGITUDE((short)17, "longitude");
+    LATITUDE((short)17, "latitude"),
+    LONGITUDE((short)18, "longitude");
 
     private static final Map<String, _Fields> byName = new HashMap<String, _Fields>();
 
@@ -138,9 +138,9 @@ public class CadastroDomiciliarThrift implements org.apache.thrift.TBase<Cadastr
           return INSTITUICAO_PERMANENCIA;
         case 15: // HEADER_TRANSPORT
           return HEADER_TRANSPORT;
-        case 16: // LATITUDE
+        case 17: // LATITUDE
           return LATITUDE;
-        case 17: // LONGITUDE
+        case 18: // LONGITUDE
           return LONGITUDE;
         default:
           return null;
@@ -1702,7 +1702,7 @@ public class CadastroDomiciliarThrift implements org.apache.thrift.TBase<Cadastr
               org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
             }
             break;
-          case 16: // LATITUDE
+          case 17: // LATITUDE
             if (schemeField.type == org.apache.thrift.protocol.TType.DOUBLE) {
               struct.latitude = iprot.readDouble();
               struct.setLatitudeIsSet(true);
@@ -1710,7 +1710,7 @@ public class CadastroDomiciliarThrift implements org.apache.thrift.TBase<Cadastr
               org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
             }
             break;
-          case 17: // LONGITUDE
+          case 18: // LONGITUDE
             if (schemeField.type == org.apache.thrift.protocol.TType.DOUBLE) {
               struct.longitude = iprot.readDouble();
               struct.setLongitudeIsSet(true);

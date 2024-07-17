@@ -126,8 +126,8 @@ module Br
               TIPODEIMOVEL = 13
               INSTITUICAOPERMANENCIA = 14
               HEADERTRANSPORT = 15
-              LATITUDE = 16
-              LONGITUDE = 17
+              LATITUDE = 17
+              LONGITUDE = 18
 
               FIELDS = {
                 ANIMAISNODOMICILIO => {:type => ::Thrift::Types::LIST, :name => 'animaisNoDomicilio', :element => {:type => ::Thrift::Types::I64}, :optional => true},

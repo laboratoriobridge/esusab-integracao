@@ -2368,7 +2368,7 @@ begin
             TProtocolUtil.Skip(iprot, field_.Type_);
           end;
         end;
-        16: begin
+        17: begin
           if (field_.Type_ = TType.Double_) then
           begin
             Latitude := iprot.ReadDouble();
@@ -2377,7 +2377,7 @@ begin
             TProtocolUtil.Skip(iprot, field_.Type_);
           end;
         end;
-        17: begin
+        18: begin
           if (field_.Type_ = TType.Double_) then
           begin
             Longitude := iprot.ReadDouble();
@@ -2553,7 +2553,7 @@ begin
   begin
     field_.Name := 'latitude';
     field_.Type_  := TType.Double_;
-    field_.ID := 16;
+    field_.ID := 17;
     oprot.WriteFieldBegin(field_);
     oprot.WriteDouble(Latitude);
     oprot.WriteFieldEnd();
@@ -2562,7 +2562,7 @@ begin
   begin
     field_.Name := 'longitude';
     field_.Type_  := TType.Double_;
-    field_.ID := 17;
+    field_.ID := 18;
     oprot.WriteFieldBegin(field_);
     oprot.WriteDouble(Longitude);
     oprot.WriteFieldEnd();

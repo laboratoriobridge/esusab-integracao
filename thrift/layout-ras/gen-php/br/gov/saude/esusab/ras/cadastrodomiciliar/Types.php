@@ -934,11 +934,11 @@ class CadastroDomiciliarThrift {
           'type' => TType::STRUCT,
           'class' => '\br\gov\saude\esusab\ras\common\UnicaLotacaoHeaderThrift',
           ),
-        16 => array(
+        17 => array(
           'var' => 'latitude',
           'type' => TType::DOUBLE,
           ),
-        17 => array(
+        18 => array(
           'var' => 'longitude',
           'type' => TType::DOUBLE,
           ),
@@ -1138,14 +1138,14 @@ class CadastroDomiciliarThrift {
             $xfer += $input->skip($ftype);
           }
           break;
-        case 16:
+        case 17:
           if ($ftype == TType::DOUBLE) {
             $xfer += $input->readDouble($this->latitude);
           } else {
             $xfer += $input->skip($ftype);
           }
           break;
-        case 17:
+        case 18:
           if ($ftype == TType::DOUBLE) {
             $xfer += $input->readDouble($this->longitude);
           } else {
@@ -1272,12 +1272,12 @@ class CadastroDomiciliarThrift {
       $xfer += $output->writeFieldEnd();
     }
     if ($this->latitude !== null) {
-      $xfer += $output->writeFieldBegin('latitude', TType::DOUBLE, 16);
+      $xfer += $output->writeFieldBegin('latitude', TType::DOUBLE, 17);
       $xfer += $output->writeDouble($this->latitude);
       $xfer += $output->writeFieldEnd();
     }
     if ($this->longitude !== null) {
-      $xfer += $output->writeFieldBegin('longitude', TType::DOUBLE, 17);
+      $xfer += $output->writeFieldBegin('longitude', TType::DOUBLE, 18);
       $xfer += $output->writeDouble($this->longitude);
       $xfer += $output->writeFieldEnd();
     }

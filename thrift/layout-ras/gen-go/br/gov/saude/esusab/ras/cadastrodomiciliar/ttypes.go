@@ -1461,8 +1461,9 @@ type CadastroDomiciliarThrift struct {
 	TipoDeImovel              *int64                                 `thrift:"tipoDeImovel,13" json:"tipoDeImovel,omitempty"`
 	InstituicaoPermanencia    *InstituicaoPermanenciaThrift          `thrift:"instituicaoPermanencia,14" json:"instituicaoPermanencia,omitempty"`
 	HeaderTransport           *common.UnicaLotacaoHeaderThrift       `thrift:"headerTransport,15" json:"headerTransport,omitempty"`
-	Latitude                  *float64                               `thrift:"latitude,16" json:"latitude,omitempty"`
-	Longitude                 *float64                               `thrift:"longitude,17" json:"longitude,omitempty"`
+	// unused field # 16
+	Latitude  *float64 `thrift:"latitude,17" json:"latitude,omitempty"`
+	Longitude *float64 `thrift:"longitude,18" json:"longitude,omitempty"`
 }
 
 func NewCadastroDomiciliarThrift() *CadastroDomiciliarThrift {
@@ -1734,12 +1735,12 @@ func (p *CadastroDomiciliarThrift) Read(iprot thrift.TProtocol) error {
 			if err := p.readField15(iprot); err != nil {
 				return err
 			}
-		case 16:
-			if err := p.readField16(iprot); err != nil {
-				return err
-			}
 		case 17:
 			if err := p.readField17(iprot); err != nil {
+				return err
+			}
+		case 18:
+			if err := p.readField18(iprot); err != nil {
 				return err
 			}
 		default:
@@ -1906,18 +1907,18 @@ func (p *CadastroDomiciliarThrift) readField15(iprot thrift.TProtocol) error {
 	return nil
 }
 
-func (p *CadastroDomiciliarThrift) readField16(iprot thrift.TProtocol) error {
+func (p *CadastroDomiciliarThrift) readField17(iprot thrift.TProtocol) error {
 	if v, err := iprot.ReadDouble(); err != nil {
-		return thrift.PrependError("error reading field 16: ", err)
+		return thrift.PrependError("error reading field 17: ", err)
 	} else {
 		p.Latitude = &v
 	}
 	return nil
 }
 
-func (p *CadastroDomiciliarThrift) readField17(iprot thrift.TProtocol) error {
+func (p *CadastroDomiciliarThrift) readField18(iprot thrift.TProtocol) error {
 	if v, err := iprot.ReadDouble(); err != nil {
-		return thrift.PrependError("error reading field 17: ", err)
+		return thrift.PrependError("error reading field 18: ", err)
 	} else {
 		p.Longitude = &v
 	}
@@ -1970,10 +1971,10 @@ func (p *CadastroDomiciliarThrift) Write(oprot thrift.TProtocol) error {
 	if err := p.writeField15(oprot); err != nil {
 		return err
 	}
-	if err := p.writeField16(oprot); err != nil {
+	if err := p.writeField17(oprot); err != nil {
 		return err
 	}
-	if err := p.writeField17(oprot); err != nil {
+	if err := p.writeField18(oprot); err != nil {
 		return err
 	}
 	if err := oprot.WriteFieldStop(); err != nil {
@@ -2209,31 +2210,31 @@ func (p *CadastroDomiciliarThrift) writeField15(oprot thrift.TProtocol) (err err
 	return err
 }
 
-func (p *CadastroDomiciliarThrift) writeField16(oprot thrift.TProtocol) (err error) {
+func (p *CadastroDomiciliarThrift) writeField17(oprot thrift.TProtocol) (err error) {
 	if p.IsSetLatitude() {
-		if err := oprot.WriteFieldBegin("latitude", thrift.DOUBLE, 16); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field begin error 16:latitude: ", p), err)
+		if err := oprot.WriteFieldBegin("latitude", thrift.DOUBLE, 17); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field begin error 17:latitude: ", p), err)
 		}
 		if err := oprot.WriteDouble(float64(*p.Latitude)); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T.latitude (16) field write error: ", p), err)
+			return thrift.PrependError(fmt.Sprintf("%T.latitude (17) field write error: ", p), err)
 		}
 		if err := oprot.WriteFieldEnd(); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field end error 16:latitude: ", p), err)
+			return thrift.PrependError(fmt.Sprintf("%T write field end error 17:latitude: ", p), err)
 		}
 	}
 	return err
 }
 
-func (p *CadastroDomiciliarThrift) writeField17(oprot thrift.TProtocol) (err error) {
+func (p *CadastroDomiciliarThrift) writeField18(oprot thrift.TProtocol) (err error) {
 	if p.IsSetLongitude() {
-		if err := oprot.WriteFieldBegin("longitude", thrift.DOUBLE, 17); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field begin error 17:longitude: ", p), err)
+		if err := oprot.WriteFieldBegin("longitude", thrift.DOUBLE, 18); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field begin error 18:longitude: ", p), err)
 		}
 		if err := oprot.WriteDouble(float64(*p.Longitude)); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T.longitude (17) field write error: ", p), err)
+			return thrift.PrependError(fmt.Sprintf("%T.longitude (18) field write error: ", p), err)
 		}
 		if err := oprot.WriteFieldEnd(); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field end error 17:longitude: ", p), err)
+			return thrift.PrependError(fmt.Sprintf("%T write field end error 18:longitude: ", p), err)
 		}
 	}
 	return err

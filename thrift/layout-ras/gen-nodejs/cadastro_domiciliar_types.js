@@ -560,7 +560,6 @@ CadastroDomiciliarThrift = module.exports.CadastroDomiciliarThrift = function(ar
   this.tipoDeImovel = null;
   this.instituicaoPermanencia = null;
   this.headerTransport = null;
-  this.statusGeradoAutomaticamente = null;
   this.latitude = null;
   this.longitude = null;
   if (args) {
@@ -607,9 +606,6 @@ CadastroDomiciliarThrift = module.exports.CadastroDomiciliarThrift = function(ar
     }
     if (args.headerTransport !== undefined && args.headerTransport !== null) {
       this.headerTransport = new common_ttypes.UnicaLotacaoHeaderThrift(args.headerTransport);
-    }
-    if (args.statusGeradoAutomaticamente !== undefined && args.statusGeradoAutomaticamente !== null) {
-      this.statusGeradoAutomaticamente = args.statusGeradoAutomaticamente;
     }
     if (args.latitude !== undefined && args.latitude !== null) {
       this.latitude = args.latitude;
@@ -763,20 +759,13 @@ CadastroDomiciliarThrift.prototype.read = function(input) {
       }
       break;
       case 16:
-      if (ftype == Thrift.Type.BOOL) {
-        this.statusGeradoAutomaticamente = input.readBool();
-      } else {
-        input.skip(ftype);
-      }
-      break;
-      case 17:
       if (ftype == Thrift.Type.DOUBLE) {
         this.latitude = input.readDouble();
       } else {
         input.skip(ftype);
       }
       break;
-      case 18:
+      case 17:
       if (ftype == Thrift.Type.DOUBLE) {
         this.longitude = input.readDouble();
       } else {
@@ -882,18 +871,13 @@ CadastroDomiciliarThrift.prototype.write = function(output) {
     this.headerTransport.write(output);
     output.writeFieldEnd();
   }
-  if (this.statusGeradoAutomaticamente !== null && this.statusGeradoAutomaticamente !== undefined) {
-    output.writeFieldBegin('statusGeradoAutomaticamente', Thrift.Type.BOOL, 16);
-    output.writeBool(this.statusGeradoAutomaticamente);
-    output.writeFieldEnd();
-  }
   if (this.latitude !== null && this.latitude !== undefined) {
-    output.writeFieldBegin('latitude', Thrift.Type.DOUBLE, 17);
+    output.writeFieldBegin('latitude', Thrift.Type.DOUBLE, 16);
     output.writeDouble(this.latitude);
     output.writeFieldEnd();
   }
   if (this.longitude !== null && this.longitude !== undefined) {
-    output.writeFieldBegin('longitude', Thrift.Type.DOUBLE, 18);
+    output.writeFieldBegin('longitude', Thrift.Type.DOUBLE, 17);
     output.writeDouble(this.longitude);
     output.writeFieldEnd();
   }

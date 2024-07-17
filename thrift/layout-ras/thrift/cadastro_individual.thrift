@@ -126,7 +126,7 @@ struct CadastroIndividualThrift {
 	8:optional i32 tpCdsOrigem,
 	9:required string uuid,
 	10:optional string uuidFichaOriginadora,
-	11:optional SaidaCidadaoCadastroThrift saidaCidadaoCadastro,
-	12:optional common.UnicaLotacaoHeaderThrift headerTransport,
-	13:optional InformacoesSocioEconomicasThrift informacoesSocioEconomicas;
+	12:optional SaidaCidadaoCadastroThrift saidaCidadaoCadastro,
+	13:optional common.UnicaLotacaoHeaderThrift headerTransport,
+	16:optional InformacoesSocioEconomicasThrift informacoesSocioEconomicas;
 }

@@ -36,7 +36,6 @@ namespace br.gov.saude.esusab.ras.cadastrodomiciliar
     private long _tipoDeImovel;
     private InstituicaoPermanenciaThrift _instituicaoPermanencia;
     private br.gov.saude.esusab.ras.common.UnicaLotacaoHeaderThrift _headerTransport;
-    private bool _statusGeradoAutomaticamente;
     private double _latitude;
     private double _longitude;
 
@@ -211,19 +210,6 @@ namespace br.gov.saude.esusab.ras.cadastrodomiciliar
       }
     }
 
-    public bool StatusGeradoAutomaticamente
-    {
-      get
-      {
-        return _statusGeradoAutomaticamente;
-      }
-      set
-      {
-        __isset.statusGeradoAutomaticamente = true;
-        this._statusGeradoAutomaticamente = value;
-      }
-    }
-
     public double Latitude
     {
       get
@@ -269,7 +255,6 @@ namespace br.gov.saude.esusab.ras.cadastrodomiciliar
       public bool tipoDeImovel;
       public bool instituicaoPermanencia;
       public bool headerTransport;
-      public bool statusGeradoAutomaticamente;
       public bool latitude;
       public bool longitude;
     }
@@ -422,20 +407,13 @@ namespace br.gov.saude.esusab.ras.cadastrodomiciliar
               }
               break;
             case 16:
-              if (field.Type == TType.Bool) {
-                StatusGeradoAutomaticamente = iprot.ReadBool();
-              } else { 
-                TProtocolUtil.Skip(iprot, field.Type);
-              }
-              break;
-            case 17:
               if (field.Type == TType.Double) {
                 Latitude = iprot.ReadDouble();
               } else { 
                 TProtocolUtil.Skip(iprot, field.Type);
               }
               break;
-            case 18:
+            case 17:
               if (field.Type == TType.Double) {
                 Longitude = iprot.ReadDouble();
               } else { 
@@ -589,18 +567,10 @@ namespace br.gov.saude.esusab.ras.cadastrodomiciliar
           HeaderTransport.Write(oprot);
           oprot.WriteFieldEnd();
         }
-        if (__isset.statusGeradoAutomaticamente) {
-          field.Name = "statusGeradoAutomaticamente";
-          field.Type = TType.Bool;
-          field.ID = 16;
-          oprot.WriteFieldBegin(field);
-          oprot.WriteBool(StatusGeradoAutomaticamente);
-          oprot.WriteFieldEnd();
-        }
         if (__isset.latitude) {
           field.Name = "latitude";
           field.Type = TType.Double;
-          field.ID = 17;
+          field.ID = 16;
           oprot.WriteFieldBegin(field);
           oprot.WriteDouble(Latitude);
           oprot.WriteFieldEnd();
@@ -608,7 +578,7 @@ namespace br.gov.saude.esusab.ras.cadastrodomiciliar
         if (__isset.longitude) {
           field.Name = "longitude";
           field.Type = TType.Double;
-          field.ID = 18;
+          field.ID = 17;
           oprot.WriteFieldBegin(field);
           oprot.WriteDouble(Longitude);
           oprot.WriteFieldEnd();
@@ -697,10 +667,6 @@ namespace br.gov.saude.esusab.ras.cadastrodomiciliar
       if (HeaderTransport != null && __isset.headerTransport) {
         __sb.Append(", HeaderTransport: ");
         __sb.Append(HeaderTransport== null ? "<null>" : HeaderTransport.ToString());
-      }
-      if (__isset.statusGeradoAutomaticamente) {
-        __sb.Append(", StatusGeradoAutomaticamente: ");
-        __sb.Append(StatusGeradoAutomaticamente);
       }
       if (__isset.latitude) {
         __sb.Append(", Latitude: ");

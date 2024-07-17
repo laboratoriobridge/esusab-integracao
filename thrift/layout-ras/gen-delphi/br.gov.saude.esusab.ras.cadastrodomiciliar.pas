@@ -463,8 +463,6 @@ type
     procedure SetInstituicaoPermanencia( const Value: IInstituicaoPermanenciaThrift);
     function GetHeaderTransport: IUnicaLotacaoHeaderThrift;
     procedure SetHeaderTransport( const Value: IUnicaLotacaoHeaderThrift);
-    function GetStatusGeradoAutomaticamente: Boolean;
-    procedure SetStatusGeradoAutomaticamente( const Value: Boolean);
     function GetLatitude: Double;
     procedure SetLatitude( const Value: Double);
     function GetLongitude: Double;
@@ -484,7 +482,6 @@ type
     property TipoDeImovel: Int64 read GetTipoDeImovel write SetTipoDeImovel;
     property InstituicaoPermanencia: IInstituicaoPermanenciaThrift read GetInstituicaoPermanencia write SetInstituicaoPermanencia;
     property HeaderTransport: IUnicaLotacaoHeaderThrift read GetHeaderTransport write SetHeaderTransport;
-    property StatusGeradoAutomaticamente: Boolean read GetStatusGeradoAutomaticamente write SetStatusGeradoAutomaticamente;
     property Latitude: Double read GetLatitude write SetLatitude;
     property Longitude: Double read GetLongitude write SetLongitude;
 
@@ -501,7 +498,6 @@ type
     function Get__isset_TipoDeImovel: Boolean;
     function Get__isset_InstituicaoPermanencia: Boolean;
     function Get__isset_HeaderTransport: Boolean;
-    function Get__isset_StatusGeradoAutomaticamente: Boolean;
     function Get__isset_Latitude: Boolean;
     function Get__isset_Longitude: Boolean;
 
@@ -518,7 +514,6 @@ type
     property __isset_TipoDeImovel: Boolean read Get__isset_TipoDeImovel;
     property __isset_InstituicaoPermanencia: Boolean read Get__isset_InstituicaoPermanencia;
     property __isset_HeaderTransport: Boolean read Get__isset_HeaderTransport;
-    property __isset_StatusGeradoAutomaticamente: Boolean read Get__isset_StatusGeradoAutomaticamente;
     property __isset_Latitude: Boolean read Get__isset_Latitude;
     property __isset_Longitude: Boolean read Get__isset_Longitude;
   end;
@@ -539,7 +534,6 @@ type
     FTipoDeImovel: Int64;
     FInstituicaoPermanencia: IInstituicaoPermanenciaThrift;
     FHeaderTransport: IUnicaLotacaoHeaderThrift;
-    FStatusGeradoAutomaticamente: Boolean;
     FLatitude: Double;
     FLongitude: Double;
     
@@ -556,7 +550,6 @@ type
     F__isset_TipoDeImovel: Boolean;
     F__isset_InstituicaoPermanencia: Boolean;
     F__isset_HeaderTransport: Boolean;
-    F__isset_StatusGeradoAutomaticamente: Boolean;
     F__isset_Latitude: Boolean;
     F__isset_Longitude: Boolean;
     
@@ -588,8 +581,6 @@ type
     procedure SetInstituicaoPermanencia( const Value: IInstituicaoPermanenciaThrift);
     function GetHeaderTransport: IUnicaLotacaoHeaderThrift;
     procedure SetHeaderTransport( const Value: IUnicaLotacaoHeaderThrift);
-    function GetStatusGeradoAutomaticamente: Boolean;
-    procedure SetStatusGeradoAutomaticamente( const Value: Boolean);
     function GetLatitude: Double;
     procedure SetLatitude( const Value: Double);
     function GetLongitude: Double;
@@ -608,7 +599,6 @@ type
     function Get__isset_TipoDeImovel: Boolean;
     function Get__isset_InstituicaoPermanencia: Boolean;
     function Get__isset_HeaderTransport: Boolean;
-    function Get__isset_StatusGeradoAutomaticamente: Boolean;
     function Get__isset_Latitude: Boolean;
     function Get__isset_Longitude: Boolean;
   public
@@ -636,7 +626,6 @@ type
     property TipoDeImovel: Int64 read GetTipoDeImovel write SetTipoDeImovel;
     property InstituicaoPermanencia: IInstituicaoPermanenciaThrift read GetInstituicaoPermanencia write SetInstituicaoPermanencia;
     property HeaderTransport: IUnicaLotacaoHeaderThrift read GetHeaderTransport write SetHeaderTransport;
-    property StatusGeradoAutomaticamente: Boolean read GetStatusGeradoAutomaticamente write SetStatusGeradoAutomaticamente;
     property Latitude: Double read GetLatitude write SetLatitude;
     property Longitude: Double read GetLongitude write SetLongitude;
 
@@ -654,7 +643,6 @@ type
     property __isset_TipoDeImovel: Boolean read Get__isset_TipoDeImovel;
     property __isset_InstituicaoPermanencia: Boolean read Get__isset_InstituicaoPermanencia;
     property __isset_HeaderTransport: Boolean read Get__isset_HeaderTransport;
-    property __isset_StatusGeradoAutomaticamente: Boolean read Get__isset_StatusGeradoAutomaticamente;
     property __isset_Latitude: Boolean read Get__isset_Latitude;
     property __isset_Longitude: Boolean read Get__isset_Longitude;
   end;
@@ -2176,22 +2164,6 @@ begin
   Result := F__isset_HeaderTransport;
 end;
 
-function TCadastroDomiciliarThriftImpl.GetStatusGeradoAutomaticamente: Boolean;
-begin
-  Result := FStatusGeradoAutomaticamente;
-end;
-
-procedure TCadastroDomiciliarThriftImpl.SetStatusGeradoAutomaticamente( const Value: Boolean);
-begin
-  F__isset_StatusGeradoAutomaticamente := True;
-  FStatusGeradoAutomaticamente := Value;
-end;
-
-function TCadastroDomiciliarThriftImpl.Get__isset_StatusGeradoAutomaticamente: Boolean;
-begin
-  Result := F__isset_StatusGeradoAutomaticamente;
-end;
-
 function TCadastroDomiciliarThriftImpl.GetLatitude: Double;
 begin
   Result := FLatitude;
@@ -2397,15 +2369,6 @@ begin
           end;
         end;
         16: begin
-          if (field_.Type_ = TType.Bool_) then
-          begin
-            StatusGeradoAutomaticamente := iprot.ReadBool();
-          end else
-          begin
-            TProtocolUtil.Skip(iprot, field_.Type_);
-          end;
-        end;
-        17: begin
           if (field_.Type_ = TType.Double_) then
           begin
             Latitude := iprot.ReadDouble();
@@ -2414,7 +2377,7 @@ begin
             TProtocolUtil.Skip(iprot, field_.Type_);
           end;
         end;
-        18: begin
+        17: begin
           if (field_.Type_ = TType.Double_) then
           begin
             Longitude := iprot.ReadDouble();
@@ -2586,20 +2549,11 @@ begin
     HeaderTransport.Write(oprot);
     oprot.WriteFieldEnd();
   end;
-  if (__isset_StatusGeradoAutomaticamente) then
-  begin
-    field_.Name := 'statusGeradoAutomaticamente';
-    field_.Type_  := TType.Bool_;
-    field_.ID := 16;
-    oprot.WriteFieldBegin(field_);
-    oprot.WriteBool(StatusGeradoAutomaticamente);
-    oprot.WriteFieldEnd();
-  end;
   if (__isset_Latitude) then
   begin
     field_.Name := 'latitude';
     field_.Type_  := TType.Double_;
-    field_.ID := 17;
+    field_.ID := 16;
     oprot.WriteFieldBegin(field_);
     oprot.WriteDouble(Latitude);
     oprot.WriteFieldEnd();
@@ -2608,7 +2562,7 @@ begin
   begin
     field_.Name := 'longitude';
     field_.Type_  := TType.Double_;
-    field_.ID := 18;
+    field_.ID := 17;
     oprot.WriteFieldBegin(field_);
     oprot.WriteDouble(Longitude);
     oprot.WriteFieldEnd();
@@ -2697,10 +2651,6 @@ begin
     if (HeaderTransport <> nil) and __isset_HeaderTransport then begin
       _sb16.Append(', HeaderTransport: ');
       if (HeaderTransport = nil) then _sb16.Append('<null>') else _sb16.Append(HeaderTransport.ToString());
-    end;
-    if (__isset_StatusGeradoAutomaticamente) then begin
-      _sb16.Append(', StatusGeradoAutomaticamente: ');
-      _sb16.Append(StatusGeradoAutomaticamente);
     end;
     if (__isset_Latitude) then begin
       _sb16.Append(', Latitude: ');

@@ -47,18 +47,18 @@ struct FamiliaRowThrift {
 struct CadastroDomiciliarThrift {
 	1:optional list<i64> animaisNoDomicilio,
 	2:optional CondicaoMoradiaThrift condicaoMoradia,
-	3:optional common.EnderecoLocalPermanenciaThrift enderecoLocalPermanencia,
-	4:optional list<FamiliaRowThrift> familias,
-	5:optional bool fichaAtualizada,
-	6:optional string quantosAnimaisNoDomicilio,
-	7:optional bool stAnimaisNoDomicilio,
-	8:optional bool statusTermoRecusa,
-	9:optional i32 tpCdsOrigem,
-	10:required string uuid,
-	11:optional string uuidFichaOriginadora,
-	12:optional i64 tipoDeImovel,
-	13:optional InstituicaoPermanenciaThrift instituicaoPermanencia,
-	14:optional common.UnicaLotacaoHeaderThrift headerTransport,
-	15:optional double latitude;
-    16:optional double longitude;
+	4:optional common.EnderecoLocalPermanenciaThrift enderecoLocalPermanencia,
+	5:optional list<FamiliaRowThrift> familias,
+	6:optional bool fichaAtualizada,
+	7:optional string quantosAnimaisNoDomicilio,
+	8:optional bool stAnimaisNoDomicilio,
+	9:optional bool statusTermoRecusa,
+	10:optional i32 tpCdsOrigem,
+	11:required string uuid,
+	12:optional string uuidFichaOriginadora,
+	13:optional i64 tipoDeImovel,
+	14:optional InstituicaoPermanenciaThrift instituicaoPermanencia,
+	15:optional common.UnicaLotacaoHeaderThrift headerTransport,
+	16:optional double latitude;
+    17:optional double longitude;
 }

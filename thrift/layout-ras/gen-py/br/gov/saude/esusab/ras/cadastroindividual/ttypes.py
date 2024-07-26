@@ -1574,11 +1574,8 @@ class CadastroIndividualThrift:
    - tpCdsOrigem
    - uuid
    - uuidFichaOriginadora
-   - uuidCidadao
    - saidaCidadaoCadastro
    - headerTransport
-   - statusCadastroIndividualInativo
-   - statusGeradoAutomaticamente
    - informacoesSocioEconomicas
   """
 
@@ -1594,15 +1591,15 @@ class CadastroIndividualThrift:
     (8, TType.I32, 'tpCdsOrigem', None, None, ), # 8
     (9, TType.STRING, 'uuid', None, None, ), # 9
     (10, TType.STRING, 'uuidFichaOriginadora', None, None, ), # 10
-    (11, TType.STRING, 'uuidCidadao', None, None, ), # 11
+    None, # 11
     (12, TType.STRUCT, 'saidaCidadaoCadastro', (SaidaCidadaoCadastroThrift, SaidaCidadaoCadastroThrift.thrift_spec), None, ), # 12
     (13, TType.STRUCT, 'headerTransport', (br.gov.saude.esusab.ras.common.ttypes.UnicaLotacaoHeaderThrift, br.gov.saude.esusab.ras.common.ttypes.UnicaLotacaoHeaderThrift.thrift_spec), None, ), # 13
-    (14, TType.BOOL, 'statusCadastroIndividualInativo', None, None, ), # 14
-    (15, TType.BOOL, 'statusGeradoAutomaticamente', None, None, ), # 15
+    None, # 14
+    None, # 15
     (16, TType.STRUCT, 'informacoesSocioEconomicas', (InformacoesSocioEconomicasThrift, InformacoesSocioEconomicasThrift.thrift_spec), None, ), # 16
   )
 
-  def __init__(self, condicoesDeSaude=None, emSituacaoDeRua=None, fichaAtualizada=None, identificacaoUsuarioCidadao=None, informacoesSocioDemograficas=None, statusTermoRecusaCadastroIndividualAtencaoBasica=None, tpCdsOrigem=None, uuid=None, uuidFichaOriginadora=None, uuidCidadao=None, saidaCidadaoCadastro=None, headerTransport=None, statusCadastroIndividualInativo=None, statusGeradoAutomaticamente=None, informacoesSocioEconomicas=None,):
+  def __init__(self, condicoesDeSaude=None, emSituacaoDeRua=None, fichaAtualizada=None, identificacaoUsuarioCidadao=None, informacoesSocioDemograficas=None, statusTermoRecusaCadastroIndividualAtencaoBasica=None, tpCdsOrigem=None, uuid=None, uuidFichaOriginadora=None, saidaCidadaoCadastro=None, headerTransport=None, informacoesSocioEconomicas=None,):
     self.condicoesDeSaude = condicoesDeSaude
     self.emSituacaoDeRua = emSituacaoDeRua
     self.fichaAtualizada = fichaAtualizada
@@ -1612,11 +1609,8 @@ class CadastroIndividualThrift:
     self.tpCdsOrigem = tpCdsOrigem
     self.uuid = uuid
     self.uuidFichaOriginadora = uuidFichaOriginadora
-    self.uuidCidadao = uuidCidadao
     self.saidaCidadaoCadastro = saidaCidadaoCadastro
     self.headerTransport = headerTransport
-    self.statusCadastroIndividualInativo = statusCadastroIndividualInativo
-    self.statusGeradoAutomaticamente = statusGeradoAutomaticamente
     self.informacoesSocioEconomicas = informacoesSocioEconomicas
 
   def read(self, iprot):
@@ -1677,11 +1671,6 @@ class CadastroIndividualThrift:
           self.uuidFichaOriginadora = iprot.readString()
         else:
           iprot.skip(ftype)
-      elif fid == 11:
-        if ftype == TType.STRING:
-          self.uuidCidadao = iprot.readString()
-        else:
-          iprot.skip(ftype)
       elif fid == 12:
         if ftype == TType.STRUCT:
           self.saidaCidadaoCadastro = SaidaCidadaoCadastroThrift()
@@ -1692,16 +1681,6 @@ class CadastroIndividualThrift:
         if ftype == TType.STRUCT:
           self.headerTransport = br.gov.saude.esusab.ras.common.ttypes.UnicaLotacaoHeaderThrift()
           self.headerTransport.read(iprot)
-        else:
-          iprot.skip(ftype)
-      elif fid == 14:
-        if ftype == TType.BOOL:
-          self.statusCadastroIndividualInativo = iprot.readBool()
-        else:
-          iprot.skip(ftype)
-      elif fid == 15:
-        if ftype == TType.BOOL:
-          self.statusGeradoAutomaticamente = iprot.readBool()
         else:
           iprot.skip(ftype)
       elif fid == 16:
@@ -1756,10 +1735,6 @@ class CadastroIndividualThrift:
       oprot.writeFieldBegin('uuidFichaOriginadora', TType.STRING, 10)
       oprot.writeString(self.uuidFichaOriginadora)
       oprot.writeFieldEnd()
-    if self.uuidCidadao is not None:
-      oprot.writeFieldBegin('uuidCidadao', TType.STRING, 11)
-      oprot.writeString(self.uuidCidadao)
-      oprot.writeFieldEnd()
     if self.saidaCidadaoCadastro is not None:
       oprot.writeFieldBegin('saidaCidadaoCadastro', TType.STRUCT, 12)
       self.saidaCidadaoCadastro.write(oprot)
@@ -1767,14 +1742,6 @@ class CadastroIndividualThrift:
     if self.headerTransport is not None:
       oprot.writeFieldBegin('headerTransport', TType.STRUCT, 13)
       self.headerTransport.write(oprot)
-      oprot.writeFieldEnd()
-    if self.statusCadastroIndividualInativo is not None:
-      oprot.writeFieldBegin('statusCadastroIndividualInativo', TType.BOOL, 14)
-      oprot.writeBool(self.statusCadastroIndividualInativo)
-      oprot.writeFieldEnd()
-    if self.statusGeradoAutomaticamente is not None:
-      oprot.writeFieldBegin('statusGeradoAutomaticamente', TType.BOOL, 15)
-      oprot.writeBool(self.statusGeradoAutomaticamente)
       oprot.writeFieldEnd()
     if self.informacoesSocioEconomicas is not None:
       oprot.writeFieldBegin('informacoesSocioEconomicas', TType.STRUCT, 16)
@@ -1800,11 +1767,8 @@ class CadastroIndividualThrift:
     value = (value * 31) ^ hash(self.tpCdsOrigem)
     value = (value * 31) ^ hash(self.uuid)
     value = (value * 31) ^ hash(self.uuidFichaOriginadora)
-    value = (value * 31) ^ hash(self.uuidCidadao)
     value = (value * 31) ^ hash(self.saidaCidadaoCadastro)
     value = (value * 31) ^ hash(self.headerTransport)
-    value = (value * 31) ^ hash(self.statusCadastroIndividualInativo)
-    value = (value * 31) ^ hash(self.statusGeradoAutomaticamente)
     value = (value * 31) ^ hash(self.informacoesSocioEconomicas)
     return value
 

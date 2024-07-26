@@ -31,11 +31,8 @@ namespace br.gov.saude.esusab.ras.cadastroindividual
     private bool _statusTermoRecusaCadastroIndividualAtencaoBasica;
     private int _tpCdsOrigem;
     private string _uuidFichaOriginadora;
-    private string _uuidCidadao;
     private SaidaCidadaoCadastroThrift _saidaCidadaoCadastro;
     private br.gov.saude.esusab.ras.common.UnicaLotacaoHeaderThrift _headerTransport;
-    private bool _statusCadastroIndividualInativo;
-    private bool _statusGeradoAutomaticamente;
     private InformacoesSocioEconomicasThrift _informacoesSocioEconomicas;
 
     public CondicoesDeSaudeThrift CondicoesDeSaude
@@ -144,19 +141,6 @@ namespace br.gov.saude.esusab.ras.cadastroindividual
       }
     }
 
-    public string UuidCidadao
-    {
-      get
-      {
-        return _uuidCidadao;
-      }
-      set
-      {
-        __isset.uuidCidadao = true;
-        this._uuidCidadao = value;
-      }
-    }
-
     public SaidaCidadaoCadastroThrift SaidaCidadaoCadastro
     {
       get
@@ -180,32 +164,6 @@ namespace br.gov.saude.esusab.ras.cadastroindividual
       {
         __isset.headerTransport = true;
         this._headerTransport = value;
-      }
-    }
-
-    public bool StatusCadastroIndividualInativo
-    {
-      get
-      {
-        return _statusCadastroIndividualInativo;
-      }
-      set
-      {
-        __isset.statusCadastroIndividualInativo = true;
-        this._statusCadastroIndividualInativo = value;
-      }
-    }
-
-    public bool StatusGeradoAutomaticamente
-    {
-      get
-      {
-        return _statusGeradoAutomaticamente;
-      }
-      set
-      {
-        __isset.statusGeradoAutomaticamente = true;
-        this._statusGeradoAutomaticamente = value;
       }
     }
 
@@ -236,11 +194,8 @@ namespace br.gov.saude.esusab.ras.cadastroindividual
       public bool statusTermoRecusaCadastroIndividualAtencaoBasica;
       public bool tpCdsOrigem;
       public bool uuidFichaOriginadora;
-      public bool uuidCidadao;
       public bool saidaCidadaoCadastro;
       public bool headerTransport;
-      public bool statusCadastroIndividualInativo;
-      public bool statusGeradoAutomaticamente;
       public bool informacoesSocioEconomicas;
     }
 
@@ -335,13 +290,6 @@ namespace br.gov.saude.esusab.ras.cadastroindividual
                 TProtocolUtil.Skip(iprot, field.Type);
               }
               break;
-            case 11:
-              if (field.Type == TType.String) {
-                UuidCidadao = iprot.ReadString();
-              } else { 
-                TProtocolUtil.Skip(iprot, field.Type);
-              }
-              break;
             case 12:
               if (field.Type == TType.Struct) {
                 SaidaCidadaoCadastro = new SaidaCidadaoCadastroThrift();
@@ -354,20 +302,6 @@ namespace br.gov.saude.esusab.ras.cadastroindividual
               if (field.Type == TType.Struct) {
                 HeaderTransport = new br.gov.saude.esusab.ras.common.UnicaLotacaoHeaderThrift();
                 HeaderTransport.Read(iprot);
-              } else { 
-                TProtocolUtil.Skip(iprot, field.Type);
-              }
-              break;
-            case 14:
-              if (field.Type == TType.Bool) {
-                StatusCadastroIndividualInativo = iprot.ReadBool();
-              } else { 
-                TProtocolUtil.Skip(iprot, field.Type);
-              }
-              break;
-            case 15:
-              if (field.Type == TType.Bool) {
-                StatusGeradoAutomaticamente = iprot.ReadBool();
               } else { 
                 TProtocolUtil.Skip(iprot, field.Type);
               }
@@ -473,14 +407,6 @@ namespace br.gov.saude.esusab.ras.cadastroindividual
           oprot.WriteString(UuidFichaOriginadora);
           oprot.WriteFieldEnd();
         }
-        if (UuidCidadao != null && __isset.uuidCidadao) {
-          field.Name = "uuidCidadao";
-          field.Type = TType.String;
-          field.ID = 11;
-          oprot.WriteFieldBegin(field);
-          oprot.WriteString(UuidCidadao);
-          oprot.WriteFieldEnd();
-        }
         if (SaidaCidadaoCadastro != null && __isset.saidaCidadaoCadastro) {
           field.Name = "saidaCidadaoCadastro";
           field.Type = TType.Struct;
@@ -495,22 +421,6 @@ namespace br.gov.saude.esusab.ras.cadastroindividual
           field.ID = 13;
           oprot.WriteFieldBegin(field);
           HeaderTransport.Write(oprot);
-          oprot.WriteFieldEnd();
-        }
-        if (__isset.statusCadastroIndividualInativo) {
-          field.Name = "statusCadastroIndividualInativo";
-          field.Type = TType.Bool;
-          field.ID = 14;
-          oprot.WriteFieldBegin(field);
-          oprot.WriteBool(StatusCadastroIndividualInativo);
-          oprot.WriteFieldEnd();
-        }
-        if (__isset.statusGeradoAutomaticamente) {
-          field.Name = "statusGeradoAutomaticamente";
-          field.Type = TType.Bool;
-          field.ID = 15;
-          oprot.WriteFieldBegin(field);
-          oprot.WriteBool(StatusGeradoAutomaticamente);
           oprot.WriteFieldEnd();
         }
         if (InformacoesSocioEconomicas != null && __isset.informacoesSocioEconomicas) {
@@ -582,10 +492,6 @@ namespace br.gov.saude.esusab.ras.cadastroindividual
         __sb.Append(", UuidFichaOriginadora: ");
         __sb.Append(UuidFichaOriginadora);
       }
-      if (UuidCidadao != null && __isset.uuidCidadao) {
-        __sb.Append(", UuidCidadao: ");
-        __sb.Append(UuidCidadao);
-      }
       if (SaidaCidadaoCadastro != null && __isset.saidaCidadaoCadastro) {
         __sb.Append(", SaidaCidadaoCadastro: ");
         __sb.Append(SaidaCidadaoCadastro== null ? "<null>" : SaidaCidadaoCadastro.ToString());
@@ -593,14 +499,6 @@ namespace br.gov.saude.esusab.ras.cadastroindividual
       if (HeaderTransport != null && __isset.headerTransport) {
         __sb.Append(", HeaderTransport: ");
         __sb.Append(HeaderTransport== null ? "<null>" : HeaderTransport.ToString());
-      }
-      if (__isset.statusCadastroIndividualInativo) {
-        __sb.Append(", StatusCadastroIndividualInativo: ");
-        __sb.Append(StatusCadastroIndividualInativo);
-      }
-      if (__isset.statusGeradoAutomaticamente) {
-        __sb.Append(", StatusGeradoAutomaticamente: ");
-        __sb.Append(StatusGeradoAutomaticamente);
       }
       if (InformacoesSocioEconomicas != null && __isset.informacoesSocioEconomicas) {
         __sb.Append(", InformacoesSocioEconomicas: ");

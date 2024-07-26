@@ -1819,11 +1819,8 @@ CadastroIndividualThrift = module.exports.CadastroIndividualThrift = function(ar
   this.tpCdsOrigem = null;
   this.uuid = null;
   this.uuidFichaOriginadora = null;
-  this.uuidCidadao = null;
   this.saidaCidadaoCadastro = null;
   this.headerTransport = null;
-  this.statusCadastroIndividualInativo = null;
-  this.statusGeradoAutomaticamente = null;
   this.informacoesSocioEconomicas = null;
   if (args) {
     if (args.condicoesDeSaude !== undefined && args.condicoesDeSaude !== null) {
@@ -1855,20 +1852,11 @@ CadastroIndividualThrift = module.exports.CadastroIndividualThrift = function(ar
     if (args.uuidFichaOriginadora !== undefined && args.uuidFichaOriginadora !== null) {
       this.uuidFichaOriginadora = args.uuidFichaOriginadora;
     }
-    if (args.uuidCidadao !== undefined && args.uuidCidadao !== null) {
-      this.uuidCidadao = args.uuidCidadao;
-    }
     if (args.saidaCidadaoCadastro !== undefined && args.saidaCidadaoCadastro !== null) {
       this.saidaCidadaoCadastro = new ttypes.SaidaCidadaoCadastroThrift(args.saidaCidadaoCadastro);
     }
     if (args.headerTransport !== undefined && args.headerTransport !== null) {
       this.headerTransport = new common_ttypes.UnicaLotacaoHeaderThrift(args.headerTransport);
-    }
-    if (args.statusCadastroIndividualInativo !== undefined && args.statusCadastroIndividualInativo !== null) {
-      this.statusCadastroIndividualInativo = args.statusCadastroIndividualInativo;
-    }
-    if (args.statusGeradoAutomaticamente !== undefined && args.statusGeradoAutomaticamente !== null) {
-      this.statusGeradoAutomaticamente = args.statusGeradoAutomaticamente;
     }
     if (args.informacoesSocioEconomicas !== undefined && args.informacoesSocioEconomicas !== null) {
       this.informacoesSocioEconomicas = new ttypes.InformacoesSocioEconomicasThrift(args.informacoesSocioEconomicas);
@@ -1956,13 +1944,6 @@ CadastroIndividualThrift.prototype.read = function(input) {
         input.skip(ftype);
       }
       break;
-      case 11:
-      if (ftype == Thrift.Type.STRING) {
-        this.uuidCidadao = input.readString();
-      } else {
-        input.skip(ftype);
-      }
-      break;
       case 12:
       if (ftype == Thrift.Type.STRUCT) {
         this.saidaCidadaoCadastro = new ttypes.SaidaCidadaoCadastroThrift();
@@ -1975,20 +1956,6 @@ CadastroIndividualThrift.prototype.read = function(input) {
       if (ftype == Thrift.Type.STRUCT) {
         this.headerTransport = new common_ttypes.UnicaLotacaoHeaderThrift();
         this.headerTransport.read(input);
-      } else {
-        input.skip(ftype);
-      }
-      break;
-      case 14:
-      if (ftype == Thrift.Type.BOOL) {
-        this.statusCadastroIndividualInativo = input.readBool();
-      } else {
-        input.skip(ftype);
-      }
-      break;
-      case 15:
-      if (ftype == Thrift.Type.BOOL) {
-        this.statusGeradoAutomaticamente = input.readBool();
       } else {
         input.skip(ftype);
       }
@@ -2057,11 +2024,6 @@ CadastroIndividualThrift.prototype.write = function(output) {
     output.writeString(this.uuidFichaOriginadora);
     output.writeFieldEnd();
   }
-  if (this.uuidCidadao !== null && this.uuidCidadao !== undefined) {
-    output.writeFieldBegin('uuidCidadao', Thrift.Type.STRING, 11);
-    output.writeString(this.uuidCidadao);
-    output.writeFieldEnd();
-  }
   if (this.saidaCidadaoCadastro !== null && this.saidaCidadaoCadastro !== undefined) {
     output.writeFieldBegin('saidaCidadaoCadastro', Thrift.Type.STRUCT, 12);
     this.saidaCidadaoCadastro.write(output);
@@ -2070,16 +2032,6 @@ CadastroIndividualThrift.prototype.write = function(output) {
   if (this.headerTransport !== null && this.headerTransport !== undefined) {
     output.writeFieldBegin('headerTransport', Thrift.Type.STRUCT, 13);
     this.headerTransport.write(output);
-    output.writeFieldEnd();
-  }
-  if (this.statusCadastroIndividualInativo !== null && this.statusCadastroIndividualInativo !== undefined) {
-    output.writeFieldBegin('statusCadastroIndividualInativo', Thrift.Type.BOOL, 14);
-    output.writeBool(this.statusCadastroIndividualInativo);
-    output.writeFieldEnd();
-  }
-  if (this.statusGeradoAutomaticamente !== null && this.statusGeradoAutomaticamente !== undefined) {
-    output.writeFieldBegin('statusGeradoAutomaticamente', Thrift.Type.BOOL, 15);
-    output.writeBool(this.statusGeradoAutomaticamente);
     output.writeFieldEnd();
   }
   if (this.informacoesSocioEconomicas !== null && this.informacoesSocioEconomicas !== undefined) {

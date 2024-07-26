@@ -35,7 +35,8 @@ struct FichaAtendimentoOdontologicoChildThrift {
 	20:optional list<common.EncaminhamentoExternoThrift> encaminhamentos;
 	21:optional list<common.ResultadosExameThrift> resultadosExames;
 	22:optional double pesoAcompanhamentoNutricional;
-  23:optional double alturaAcompanhamentoNutricional;
+	23:optional double alturaAcompanhamentoNutricional;
+	27:optional common.MedicoesThrift medicoes;
 }
 
 struct FichaAtendimentoOdontologicoMasterThrift {

@@ -525,6 +525,7 @@ func (p *ProblemaCondicaoAvaliacaoAIThrift) String() string {
 //  - TipoParticipacaoCidadao
 //  - TipoParticipacaoProfissionalConvidado
 //  - Emultis
+//  - Medicoes
 type FichaAtendimentoIndividualChildThrift struct {
 	NumeroProntuario                *string                            `thrift:"numeroProntuario,1" json:"numeroProntuario,omitempty"`
 	Cns                             *string                            `thrift:"cns,2" json:"cns,omitempty"`
@@ -563,6 +564,7 @@ type FichaAtendimentoIndividualChildThrift struct {
 	TipoParticipacaoCidadao               *int64                                `thrift:"tipoParticipacaoCidadao,36" json:"tipoParticipacaoCidadao,omitempty"`
 	TipoParticipacaoProfissionalConvidado *int64                                `thrift:"tipoParticipacaoProfissionalConvidado,37" json:"tipoParticipacaoProfissionalConvidado,omitempty"`
 	Emultis                               []int64                               `thrift:"emultis,38" json:"emultis,omitempty"`
+	Medicoes                              *common.MedicoesThrift                `thrift:"medicoes,39" json:"medicoes,omitempty"`
 }
 
 func NewFichaAtendimentoIndividualChildThrift() *FichaAtendimentoIndividualChildThrift {
@@ -871,6 +873,15 @@ var FichaAtendimentoIndividualChildThrift_Emultis_DEFAULT []int64
 func (p *FichaAtendimentoIndividualChildThrift) GetEmultis() []int64 {
 	return p.Emultis
 }
+
+var FichaAtendimentoIndividualChildThrift_Medicoes_DEFAULT *common.MedicoesThrift
+
+func (p *FichaAtendimentoIndividualChildThrift) GetMedicoes() *common.MedicoesThrift {
+	if !p.IsSetMedicoes() {
+		return FichaAtendimentoIndividualChildThrift_Medicoes_DEFAULT
+	}
+	return p.Medicoes
+}
 func (p *FichaAtendimentoIndividualChildThrift) IsSetNumeroProntuario() bool {
 	return p.NumeroProntuario != nil
 }
@@ -1013,6 +1024,10 @@ func (p *FichaAtendimentoIndividualChildThrift) IsSetTipoParticipacaoProfissiona
 
 func (p *FichaAtendimentoIndividualChildThrift) IsSetEmultis() bool {
 	return p.Emultis != nil
+}
+
+func (p *FichaAtendimentoIndividualChildThrift) IsSetMedicoes() bool {
+	return p.Medicoes != nil
 }
 
 func (p *FichaAtendimentoIndividualChildThrift) Read(iprot thrift.TProtocol) error {
@@ -1171,6 +1186,10 @@ func (p *FichaAtendimentoIndividualChildThrift) Read(iprot thrift.TProtocol) err
 			}
 		case 38:
 			if err := p.readField38(iprot); err != nil {
+				return err
+			}
+		case 39:
+			if err := p.readField39(iprot); err != nil {
 				return err
 			}
 		default:
@@ -1593,6 +1612,14 @@ func (p *FichaAtendimentoIndividualChildThrift) readField38(iprot thrift.TProtoc
 	return nil
 }
 
+func (p *FichaAtendimentoIndividualChildThrift) readField39(iprot thrift.TProtocol) error {
+	p.Medicoes = &common.MedicoesThrift{}
+	if err := p.Medicoes.Read(iprot); err != nil {
+		return thrift.PrependError(fmt.Sprintf("%T error reading struct: ", p.Medicoes), err)
+	}
+	return nil
+}
+
 func (p *FichaAtendimentoIndividualChildThrift) Write(oprot thrift.TProtocol) error {
 	if err := oprot.WriteStructBegin("FichaAtendimentoIndividualChildThrift"); err != nil {
 		return thrift.PrependError(fmt.Sprintf("%T write struct begin error: ", p), err)
@@ -1703,6 +1730,9 @@ func (p *FichaAtendimentoIndividualChildThrift) Write(oprot thrift.TProtocol) er
 		return err
 	}
 	if err := p.writeField38(oprot); err != nil {
+		return err
+	}
+	if err := p.writeField39(oprot); err != nil {
 		return err
 	}
 	if err := oprot.WriteFieldStop(); err != nil {
@@ -2305,6 +2335,21 @@ func (p *FichaAtendimentoIndividualChildThrift) writeField38(oprot thrift.TProto
 		}
 		if err := oprot.WriteFieldEnd(); err != nil {
 			return thrift.PrependError(fmt.Sprintf("%T write field end error 38:emultis: ", p), err)
+		}
+	}
+	return err
+}
+
+func (p *FichaAtendimentoIndividualChildThrift) writeField39(oprot thrift.TProtocol) (err error) {
+	if p.IsSetMedicoes() {
+		if err := oprot.WriteFieldBegin("medicoes", thrift.STRUCT, 39); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field begin error 39:medicoes: ", p), err)
+		}
+		if err := p.Medicoes.Write(oprot); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T error writing struct: ", p.Medicoes), err)
+		}
+		if err := oprot.WriteFieldEnd(); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field end error 39:medicoes: ", p), err)
 		}
 	}
 	return err

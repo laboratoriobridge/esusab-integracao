@@ -35,8 +35,21 @@
 			<procedimentos>0413010058</procedimentos>
 			<dataHoraInicialAtendimento>1559833200000</dataHoraInicialAtendimento>
 			<dataHoraFinalAtendimento>1559833200000</dataHoraFinalAtendimento>
-			<pesoAcompanhamentoNutricional>2.5</pesoAcompanhamentoNutricional>
-			<alturaAcompanhamentoNutricional>20.3</alturaAcompanhamentoNutricional>
+			<medicoes>
+				<circunferenciaAbdominal>50.0</circunferenciaAbdominal>
+				<perimetroPanturrilha>20.0</perimetroPanturrilha>
+				<pressaoArterialSistolica>12</pressaoArterialSistolica>
+				<pressaoArterialDiastolica>8</pressaoArterialDiastolica>
+				<frequenciaRespiratoria>100</frequenciaRespiratoria>
+				<frequenciaCardiaca>100</frequenciaCardiaca>
+				<temperatura>36.0</temperatura>
+				<saturacaoO2>75</saturacaoO2>
+				<glicemiaCapilar>80</glicemiaCapilar>
+				<tipoGlicemiaCapilar>2</tipoGlicemiaCapilar>
+				<peso>2.5</peso>
+				<altura>20.3</altura>
+				<perimetroCefalico>30.0</perimetroCefalico>
+			</medicoes>
 		</atendProcedimentos>
 		<atendProcedimentos>
 			<numProntuario>016</numProntuario>
@@ -58,8 +71,21 @@
 			<procedimentos>0413010058</procedimentos>
 			<dataHoraInicialAtendimento>1559833200000</dataHoraInicialAtendimento>
 			<dataHoraFinalAtendimento>1559833200000</dataHoraFinalAtendimento>
-			<pesoAcompanhamentoNutricional>2.5</pesoAcompanhamentoNutricional>
-			<alturaAcompanhamentoNutricional>20.3</alturaAcompanhamentoNutricional>
+			<medicoes>
+				<circunferenciaAbdominal>50.0</circunferenciaAbdominal>
+				<perimetroPanturrilha>20.0</perimetroPanturrilha>
+				<pressaoArterialSistolica>12</pressaoArterialSistolica>
+				<pressaoArterialDiastolica>8</pressaoArterialDiastolica>
+				<frequenciaRespiratoria>100</frequenciaRespiratoria>
+				<frequenciaCardiaca>100</frequenciaCardiaca>
+				<temperatura>36.0</temperatura>
+				<saturacaoO2>75</saturacaoO2>
+				<glicemiaCapilar>80</glicemiaCapilar>
+				<tipoGlicemiaCapilar>2</tipoGlicemiaCapilar>
+				<peso>2.5</peso>
+				<altura>20.3</altura>
+				<perimetroCefalico>30.0</perimetroCefalico>
+			</medicoes>
 		</atendProcedimentos>
 		<uuidFicha>0019615-6f783cac-ab7c-4246-8458-d3cd99164c10</uuidFicha>
 		<tpCdsOrigem>3</tpCdsOrigem>
@@ -91,5 +117,5 @@
 		<versaoSistema>5.0.16</versaoSistema>
 		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:originadora>
-	<versao major="4" minor="4" revision="1" />
+	<versao major="7" minor="0" revision="0" />
 </ns3:dadoTransporteTransportXml>

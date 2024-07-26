@@ -72,6 +72,10 @@ class FichaProcedimentoChildThrift {
    * @var double
    */
   public $alturaAcompanhamentoNutricional = null;
+  /**
+   * @var \br\gov\saude\esusab\ras\common\MedicoesThrift
+   */
+  public $medicoes = null;
 
   public function __construct($vals=null) {
     if (!isset(self::$_TSPEC)) {
@@ -132,6 +136,11 @@ class FichaProcedimentoChildThrift {
           'var' => 'alturaAcompanhamentoNutricional',
           'type' => TType::DOUBLE,
           ),
+        16 => array(
+          'var' => 'medicoes',
+          'type' => TType::STRUCT,
+          'class' => '\br\gov\saude\esusab\ras\common\MedicoesThrift',
+          ),
         );
     }
     if (is_array($vals)) {
@@ -173,6 +182,9 @@ class FichaProcedimentoChildThrift {
       }
       if (isset($vals['alturaAcompanhamentoNutricional'])) {
         $this->alturaAcompanhamentoNutricional = $vals['alturaAcompanhamentoNutricional'];
+      }
+      if (isset($vals['medicoes'])) {
+        $this->medicoes = $vals['medicoes'];
       }
     }
   }
@@ -297,6 +309,14 @@ class FichaProcedimentoChildThrift {
             $xfer += $input->skip($ftype);
           }
           break;
+        case 16:
+          if ($ftype == TType::STRUCT) {
+            $this->medicoes = new \br\gov\saude\esusab\ras\common\MedicoesThrift();
+            $xfer += $this->medicoes->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
         default:
           $xfer += $input->skip($ftype);
           break;
@@ -385,6 +405,14 @@ class FichaProcedimentoChildThrift {
     if ($this->alturaAcompanhamentoNutricional !== null) {
       $xfer += $output->writeFieldBegin('alturaAcompanhamentoNutricional', TType::DOUBLE, 14);
       $xfer += $output->writeDouble($this->alturaAcompanhamentoNutricional);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->medicoes !== null) {
+      if (!is_object($this->medicoes)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('medicoes', TType::STRUCT, 16);
+      $xfer += $this->medicoes->write($output);
       $xfer += $output->writeFieldEnd();
     }
     $xfer += $output->writeFieldStop();

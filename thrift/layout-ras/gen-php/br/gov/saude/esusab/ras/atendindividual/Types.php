@@ -481,6 +481,10 @@ class FichaAtendimentoIndividualChildThrift {
    * @var int[]
    */
   public $emultis = null;
+  /**
+   * @var \br\gov\saude\esusab\ras\common\MedicoesThrift
+   */
+  public $medicoes = null;
 
   public function __construct($vals=null) {
     if (!isset(self::$_TSPEC)) {
@@ -663,6 +667,11 @@ class FichaAtendimentoIndividualChildThrift {
             'type' => TType::I64,
             ),
           ),
+        39 => array(
+          'var' => 'medicoes',
+          'type' => TType::STRUCT,
+          'class' => '\br\gov\saude\esusab\ras\common\MedicoesThrift',
+          ),
         );
     }
     if (is_array($vals)) {
@@ -773,6 +782,9 @@ class FichaAtendimentoIndividualChildThrift {
       }
       if (isset($vals['emultis'])) {
         $this->emultis = $vals['emultis'];
+      }
+      if (isset($vals['medicoes'])) {
+        $this->medicoes = $vals['medicoes'];
       }
     }
   }
@@ -1124,6 +1136,14 @@ class FichaAtendimentoIndividualChildThrift {
             $xfer += $input->skip($ftype);
           }
           break;
+        case 39:
+          if ($ftype == TType::STRUCT) {
+            $this->medicoes = new \br\gov\saude\esusab\ras\common\MedicoesThrift();
+            $xfer += $this->medicoes->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
         default:
           $xfer += $input->skip($ftype);
           break;
@@ -1405,6 +1425,14 @@ class FichaAtendimentoIndividualChildThrift {
         }
         $output->writeListEnd();
       }
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->medicoes !== null) {
+      if (!is_object($this->medicoes)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('medicoes', TType::STRUCT, 39);
+      $xfer += $this->medicoes->write($output);
       $xfer += $output->writeFieldEnd();
     }
     $xfer += $output->writeFieldStop();

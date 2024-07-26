@@ -864,21 +864,31 @@ type
     procedure SetHipoteseDiagnosticoCiap2( const Value: string);
     function GetClassificacaoRisco: Int64;
     procedure SetClassificacaoRisco( const Value: Int64);
+    function GetCboCodigo_2002: string;
+    procedure SetCboCodigo_2002( const Value: string);
+    function GetClassificacaoPrioridade: Int64;
+    procedure SetClassificacaoPrioridade( const Value: Int64);
 
     property Especialidade: Int64 read GetEspecialidade write SetEspecialidade;
     property HipoteseDiagnosticoCid10: string read GetHipoteseDiagnosticoCid10 write SetHipoteseDiagnosticoCid10;
     property HipoteseDiagnosticoCiap2: string read GetHipoteseDiagnosticoCiap2 write SetHipoteseDiagnosticoCiap2;
     property ClassificacaoRisco: Int64 read GetClassificacaoRisco write SetClassificacaoRisco;
+    property CboCodigo_2002: string read GetCboCodigo_2002 write SetCboCodigo_2002;
+    property ClassificacaoPrioridade: Int64 read GetClassificacaoPrioridade write SetClassificacaoPrioridade;
 
     function Get__isset_Especialidade: Boolean;
     function Get__isset_HipoteseDiagnosticoCid10: Boolean;
     function Get__isset_HipoteseDiagnosticoCiap2: Boolean;
     function Get__isset_ClassificacaoRisco: Boolean;
+    function Get__isset_CboCodigo_2002: Boolean;
+    function Get__isset_ClassificacaoPrioridade: Boolean;
 
     property __isset_Especialidade: Boolean read Get__isset_Especialidade;
     property __isset_HipoteseDiagnosticoCid10: Boolean read Get__isset_HipoteseDiagnosticoCid10;
     property __isset_HipoteseDiagnosticoCiap2: Boolean read Get__isset_HipoteseDiagnosticoCiap2;
     property __isset_ClassificacaoRisco: Boolean read Get__isset_ClassificacaoRisco;
+    property __isset_CboCodigo_2002: Boolean read Get__isset_CboCodigo_2002;
+    property __isset_ClassificacaoPrioridade: Boolean read Get__isset_ClassificacaoPrioridade;
   end;
 
   TEncaminhamentoExternoThriftImpl = class(TInterfacedObject, IBase, IEncaminhamentoExternoThrift)
@@ -887,11 +897,15 @@ type
     FHipoteseDiagnosticoCid10: string;
     FHipoteseDiagnosticoCiap2: string;
     FClassificacaoRisco: Int64;
+    FCboCodigo_2002: string;
+    FClassificacaoPrioridade: Int64;
     
     F__isset_Especialidade: Boolean;
     F__isset_HipoteseDiagnosticoCid10: Boolean;
     F__isset_HipoteseDiagnosticoCiap2: Boolean;
     F__isset_ClassificacaoRisco: Boolean;
+    F__isset_CboCodigo_2002: Boolean;
+    F__isset_ClassificacaoPrioridade: Boolean;
     
     function GetEspecialidade: Int64;
     procedure SetEspecialidade( const Value: Int64);
@@ -901,11 +915,17 @@ type
     procedure SetHipoteseDiagnosticoCiap2( const Value: string);
     function GetClassificacaoRisco: Int64;
     procedure SetClassificacaoRisco( const Value: Int64);
+    function GetCboCodigo_2002: string;
+    procedure SetCboCodigo_2002( const Value: string);
+    function GetClassificacaoPrioridade: Int64;
+    procedure SetClassificacaoPrioridade( const Value: Int64);
 
     function Get__isset_Especialidade: Boolean;
     function Get__isset_HipoteseDiagnosticoCid10: Boolean;
     function Get__isset_HipoteseDiagnosticoCiap2: Boolean;
     function Get__isset_ClassificacaoRisco: Boolean;
+    function Get__isset_CboCodigo_2002: Boolean;
+    function Get__isset_ClassificacaoPrioridade: Boolean;
   public
     constructor Create;
     destructor Destroy; override;
@@ -921,12 +941,16 @@ type
     property HipoteseDiagnosticoCid10: string read GetHipoteseDiagnosticoCid10 write SetHipoteseDiagnosticoCid10;
     property HipoteseDiagnosticoCiap2: string read GetHipoteseDiagnosticoCiap2 write SetHipoteseDiagnosticoCiap2;
     property ClassificacaoRisco: Int64 read GetClassificacaoRisco write SetClassificacaoRisco;
+    property CboCodigo_2002: string read GetCboCodigo_2002 write SetCboCodigo_2002;
+    property ClassificacaoPrioridade: Int64 read GetClassificacaoPrioridade write SetClassificacaoPrioridade;
 
     // isset
     property __isset_Especialidade: Boolean read Get__isset_Especialidade;
     property __isset_HipoteseDiagnosticoCid10: Boolean read Get__isset_HipoteseDiagnosticoCid10;
     property __isset_HipoteseDiagnosticoCiap2: Boolean read Get__isset_HipoteseDiagnosticoCiap2;
     property __isset_ClassificacaoRisco: Boolean read Get__isset_ClassificacaoRisco;
+    property __isset_CboCodigo_2002: Boolean read Get__isset_CboCodigo_2002;
+    property __isset_ClassificacaoPrioridade: Boolean read Get__isset_ClassificacaoPrioridade;
   end;
 
   IResultadoExameThrift = interface(IBase)
@@ -3746,6 +3770,38 @@ begin
   Result := F__isset_ClassificacaoRisco;
 end;
 
+function TEncaminhamentoExternoThriftImpl.GetCboCodigo_2002: string;
+begin
+  Result := FCboCodigo_2002;
+end;
+
+procedure TEncaminhamentoExternoThriftImpl.SetCboCodigo_2002( const Value: string);
+begin
+  F__isset_CboCodigo_2002 := True;
+  FCboCodigo_2002 := Value;
+end;
+
+function TEncaminhamentoExternoThriftImpl.Get__isset_CboCodigo_2002: Boolean;
+begin
+  Result := F__isset_CboCodigo_2002;
+end;
+
+function TEncaminhamentoExternoThriftImpl.GetClassificacaoPrioridade: Int64;
+begin
+  Result := FClassificacaoPrioridade;
+end;
+
+procedure TEncaminhamentoExternoThriftImpl.SetClassificacaoPrioridade( const Value: Int64);
+begin
+  F__isset_ClassificacaoPrioridade := True;
+  FClassificacaoPrioridade := Value;
+end;
+
+function TEncaminhamentoExternoThriftImpl.Get__isset_ClassificacaoPrioridade: Boolean;
+begin
+  Result := F__isset_ClassificacaoPrioridade;
+end;
+
 procedure TEncaminhamentoExternoThriftImpl.Read( const iprot: IProtocol);
 var
   field_ : IField;
@@ -3795,6 +3851,24 @@ begin
           if (field_.Type_ = TType.I64) then
           begin
             ClassificacaoRisco := iprot.ReadI64();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        5: begin
+          if (field_.Type_ = TType.String_) then
+          begin
+            CboCodigo_2002 := iprot.ReadString();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        6: begin
+          if (field_.Type_ = TType.I64) then
+          begin
+            ClassificacaoPrioridade := iprot.ReadI64();
           end else
           begin
             TProtocolUtil.Skip(iprot, field_.Type_);
@@ -3857,6 +3931,24 @@ begin
     oprot.WriteI64(ClassificacaoRisco);
     oprot.WriteFieldEnd();
   end;
+  if (__isset_CboCodigo_2002) then
+  begin
+    field_.Name := 'cboCodigo_2002';
+    field_.Type_  := TType.String_;
+    field_.ID := 5;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteString(CboCodigo_2002);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_ClassificacaoPrioridade) then
+  begin
+    field_.Name := 'classificacaoPrioridade';
+    field_.Type_  := TType.I64;
+    field_.ID := 6;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteI64(ClassificacaoPrioridade);
+    oprot.WriteFieldEnd();
+  end;
   oprot.WriteFieldStop();
   oprot.WriteStructEnd();
 end;
@@ -3892,6 +3984,18 @@ begin
       _first15 := FALSE;
       _sb14.Append('ClassificacaoRisco: ');
       _sb14.Append(ClassificacaoRisco);
+    end;
+    if (__isset_CboCodigo_2002) then begin
+      if not _first15 then _sb14.Append(',');
+      _first15 := FALSE;
+      _sb14.Append('CboCodigo_2002: ');
+      _sb14.Append(CboCodigo_2002);
+    end;
+    if (__isset_ClassificacaoPrioridade) then begin
+      if not _first15 then _sb14.Append(',');
+      _first15 := FALSE;
+      _sb14.Append('ClassificacaoPrioridade: ');
+      _sb14.Append(ClassificacaoPrioridade);
     end;
     _sb14.Append(')');
     Result := _sb14.ToString;

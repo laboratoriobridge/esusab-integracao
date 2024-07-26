@@ -27,6 +27,8 @@ namespace br.gov.saude.esusab.ras.common
     private string _hipoteseDiagnosticoCid10;
     private string _hipoteseDiagnosticoCiap2;
     private long _classificacaoRisco;
+    private string _cboCodigo_2002;
+    private long _classificacaoPrioridade;
 
     public long Especialidade
     {
@@ -80,6 +82,32 @@ namespace br.gov.saude.esusab.ras.common
       }
     }
 
+    public string CboCodigo_2002
+    {
+      get
+      {
+        return _cboCodigo_2002;
+      }
+      set
+      {
+        __isset.cboCodigo_2002 = true;
+        this._cboCodigo_2002 = value;
+      }
+    }
+
+    public long ClassificacaoPrioridade
+    {
+      get
+      {
+        return _classificacaoPrioridade;
+      }
+      set
+      {
+        __isset.classificacaoPrioridade = true;
+        this._classificacaoPrioridade = value;
+      }
+    }
+
 
     public Isset __isset;
     #if !SILVERLIGHT
@@ -90,6 +118,8 @@ namespace br.gov.saude.esusab.ras.common
       public bool hipoteseDiagnosticoCid10;
       public bool hipoteseDiagnosticoCiap2;
       public bool classificacaoRisco;
+      public bool cboCodigo_2002;
+      public bool classificacaoPrioridade;
     }
 
     public EncaminhamentoExternoThrift() {
@@ -134,6 +164,20 @@ namespace br.gov.saude.esusab.ras.common
             case 4:
               if (field.Type == TType.I64) {
                 ClassificacaoRisco = iprot.ReadI64();
+              } else { 
+                TProtocolUtil.Skip(iprot, field.Type);
+              }
+              break;
+            case 5:
+              if (field.Type == TType.String) {
+                CboCodigo_2002 = iprot.ReadString();
+              } else { 
+                TProtocolUtil.Skip(iprot, field.Type);
+              }
+              break;
+            case 6:
+              if (field.Type == TType.I64) {
+                ClassificacaoPrioridade = iprot.ReadI64();
               } else { 
                 TProtocolUtil.Skip(iprot, field.Type);
               }
@@ -191,6 +235,22 @@ namespace br.gov.saude.esusab.ras.common
           oprot.WriteI64(ClassificacaoRisco);
           oprot.WriteFieldEnd();
         }
+        if (CboCodigo_2002 != null && __isset.cboCodigo_2002) {
+          field.Name = "cboCodigo_2002";
+          field.Type = TType.String;
+          field.ID = 5;
+          oprot.WriteFieldBegin(field);
+          oprot.WriteString(CboCodigo_2002);
+          oprot.WriteFieldEnd();
+        }
+        if (__isset.classificacaoPrioridade) {
+          field.Name = "classificacaoPrioridade";
+          field.Type = TType.I64;
+          field.ID = 6;
+          oprot.WriteFieldBegin(field);
+          oprot.WriteI64(ClassificacaoPrioridade);
+          oprot.WriteFieldEnd();
+        }
         oprot.WriteFieldStop();
         oprot.WriteStructEnd();
       }
@@ -226,6 +286,18 @@ namespace br.gov.saude.esusab.ras.common
         __first = false;
         __sb.Append("ClassificacaoRisco: ");
         __sb.Append(ClassificacaoRisco);
+      }
+      if (CboCodigo_2002 != null && __isset.cboCodigo_2002) {
+        if(!__first) { __sb.Append(", "); }
+        __first = false;
+        __sb.Append("CboCodigo_2002: ");
+        __sb.Append(CboCodigo_2002);
+      }
+      if (__isset.classificacaoPrioridade) {
+        if(!__first) { __sb.Append(", "); }
+        __first = false;
+        __sb.Append("ClassificacaoPrioridade: ");
+        __sb.Append(ClassificacaoPrioridade);
       }
       __sb.Append(")");
       return __sb.ToString();

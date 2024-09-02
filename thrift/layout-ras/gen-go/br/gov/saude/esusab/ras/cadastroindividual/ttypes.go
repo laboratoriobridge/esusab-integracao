@@ -4635,11 +4635,8 @@ func (p *SaidaCidadaoCadastroThrift) String() string {
 //  - TpCdsOrigem
 //  - UUID
 //  - UuidFichaOriginadora
-//  - UuidCidadao
 //  - SaidaCidadaoCadastro
 //  - HeaderTransport
-//  - StatusCadastroIndividualInativo
-//  - StatusGeradoAutomaticamente
 //  - InformacoesSocioEconomicas
 type CadastroIndividualThrift struct {
 	CondicoesDeSaude *CondicoesDeSaudeThrift `thrift:"condicoesDeSaude,1" json:"condicoesDeSaude,omitempty"`
@@ -4652,12 +4649,11 @@ type CadastroIndividualThrift struct {
 	TpCdsOrigem                                      *int32                              `thrift:"tpCdsOrigem,8" json:"tpCdsOrigem,omitempty"`
 	UUID                                             string                              `thrift:"uuid,9,required" json:"uuid"`
 	UuidFichaOriginadora                             *string                             `thrift:"uuidFichaOriginadora,10" json:"uuidFichaOriginadora,omitempty"`
-	UuidCidadao                                      *string                             `thrift:"uuidCidadao,11" json:"uuidCidadao,omitempty"`
-	SaidaCidadaoCadastro                             *SaidaCidadaoCadastroThrift         `thrift:"saidaCidadaoCadastro,12" json:"saidaCidadaoCadastro,omitempty"`
-	HeaderTransport                                  *common.UnicaLotacaoHeaderThrift    `thrift:"headerTransport,13" json:"headerTransport,omitempty"`
-	StatusCadastroIndividualInativo                  *bool                               `thrift:"statusCadastroIndividualInativo,14" json:"statusCadastroIndividualInativo,omitempty"`
-	StatusGeradoAutomaticamente                      *bool                               `thrift:"statusGeradoAutomaticamente,15" json:"statusGeradoAutomaticamente,omitempty"`
-	InformacoesSocioEconomicas                       *InformacoesSocioEconomicasThrift   `thrift:"informacoesSocioEconomicas,16" json:"informacoesSocioEconomicas,omitempty"`
+	// unused field # 11
+	SaidaCidadaoCadastro *SaidaCidadaoCadastroThrift      `thrift:"saidaCidadaoCadastro,12" json:"saidaCidadaoCadastro,omitempty"`
+	HeaderTransport      *common.UnicaLotacaoHeaderThrift `thrift:"headerTransport,13" json:"headerTransport,omitempty"`
+	// unused fields # 14 to 15
+	InformacoesSocioEconomicas *InformacoesSocioEconomicasThrift `thrift:"informacoesSocioEconomicas,16" json:"informacoesSocioEconomicas,omitempty"`
 }
 
 func NewCadastroIndividualThrift() *CadastroIndividualThrift {
@@ -4740,15 +4736,6 @@ func (p *CadastroIndividualThrift) GetUuidFichaOriginadora() string {
 	return *p.UuidFichaOriginadora
 }
 
-var CadastroIndividualThrift_UuidCidadao_DEFAULT string
-
-func (p *CadastroIndividualThrift) GetUuidCidadao() string {
-	if !p.IsSetUuidCidadao() {
-		return CadastroIndividualThrift_UuidCidadao_DEFAULT
-	}
-	return *p.UuidCidadao
-}
-
 var CadastroIndividualThrift_SaidaCidadaoCadastro_DEFAULT *SaidaCidadaoCadastroThrift
 
 func (p *CadastroIndividualThrift) GetSaidaCidadaoCadastro() *SaidaCidadaoCadastroThrift {
@@ -4765,24 +4752,6 @@ func (p *CadastroIndividualThrift) GetHeaderTransport() *common.UnicaLotacaoHead
 		return CadastroIndividualThrift_HeaderTransport_DEFAULT
 	}
 	return p.HeaderTransport
-}
-
-var CadastroIndividualThrift_StatusCadastroIndividualInativo_DEFAULT bool
-
-func (p *CadastroIndividualThrift) GetStatusCadastroIndividualInativo() bool {
-	if !p.IsSetStatusCadastroIndividualInativo() {
-		return CadastroIndividualThrift_StatusCadastroIndividualInativo_DEFAULT
-	}
-	return *p.StatusCadastroIndividualInativo
-}
-
-var CadastroIndividualThrift_StatusGeradoAutomaticamente_DEFAULT bool
-
-func (p *CadastroIndividualThrift) GetStatusGeradoAutomaticamente() bool {
-	if !p.IsSetStatusGeradoAutomaticamente() {
-		return CadastroIndividualThrift_StatusGeradoAutomaticamente_DEFAULT
-	}
-	return *p.StatusGeradoAutomaticamente
 }
 
 var CadastroIndividualThrift_InformacoesSocioEconomicas_DEFAULT *InformacoesSocioEconomicasThrift
@@ -4825,24 +4794,12 @@ func (p *CadastroIndividualThrift) IsSetUuidFichaOriginadora() bool {
 	return p.UuidFichaOriginadora != nil
 }
 
-func (p *CadastroIndividualThrift) IsSetUuidCidadao() bool {
-	return p.UuidCidadao != nil
-}
-
 func (p *CadastroIndividualThrift) IsSetSaidaCidadaoCadastro() bool {
 	return p.SaidaCidadaoCadastro != nil
 }
 
 func (p *CadastroIndividualThrift) IsSetHeaderTransport() bool {
 	return p.HeaderTransport != nil
-}
-
-func (p *CadastroIndividualThrift) IsSetStatusCadastroIndividualInativo() bool {
-	return p.StatusCadastroIndividualInativo != nil
-}
-
-func (p *CadastroIndividualThrift) IsSetStatusGeradoAutomaticamente() bool {
-	return p.StatusGeradoAutomaticamente != nil
 }
 
 func (p *CadastroIndividualThrift) IsSetInformacoesSocioEconomicas() bool {
@@ -4902,24 +4859,12 @@ func (p *CadastroIndividualThrift) Read(iprot thrift.TProtocol) error {
 			if err := p.readField10(iprot); err != nil {
 				return err
 			}
-		case 11:
-			if err := p.readField11(iprot); err != nil {
-				return err
-			}
 		case 12:
 			if err := p.readField12(iprot); err != nil {
 				return err
 			}
 		case 13:
 			if err := p.readField13(iprot); err != nil {
-				return err
-			}
-		case 14:
-			if err := p.readField14(iprot); err != nil {
-				return err
-			}
-		case 15:
-			if err := p.readField15(iprot); err != nil {
 				return err
 			}
 		case 16:
@@ -5021,15 +4966,6 @@ func (p *CadastroIndividualThrift) readField10(iprot thrift.TProtocol) error {
 	return nil
 }
 
-func (p *CadastroIndividualThrift) readField11(iprot thrift.TProtocol) error {
-	if v, err := iprot.ReadString(); err != nil {
-		return thrift.PrependError("error reading field 11: ", err)
-	} else {
-		p.UuidCidadao = &v
-	}
-	return nil
-}
-
 func (p *CadastroIndividualThrift) readField12(iprot thrift.TProtocol) error {
 	p.SaidaCidadaoCadastro = &SaidaCidadaoCadastroThrift{}
 	if err := p.SaidaCidadaoCadastro.Read(iprot); err != nil {
@@ -5042,24 +4978,6 @@ func (p *CadastroIndividualThrift) readField13(iprot thrift.TProtocol) error {
 	p.HeaderTransport = &common.UnicaLotacaoHeaderThrift{}
 	if err := p.HeaderTransport.Read(iprot); err != nil {
 		return thrift.PrependError(fmt.Sprintf("%T error reading struct: ", p.HeaderTransport), err)
-	}
-	return nil
-}
-
-func (p *CadastroIndividualThrift) readField14(iprot thrift.TProtocol) error {
-	if v, err := iprot.ReadBool(); err != nil {
-		return thrift.PrependError("error reading field 14: ", err)
-	} else {
-		p.StatusCadastroIndividualInativo = &v
-	}
-	return nil
-}
-
-func (p *CadastroIndividualThrift) readField15(iprot thrift.TProtocol) error {
-	if v, err := iprot.ReadBool(); err != nil {
-		return thrift.PrependError("error reading field 15: ", err)
-	} else {
-		p.StatusGeradoAutomaticamente = &v
 	}
 	return nil
 }
@@ -5103,19 +5021,10 @@ func (p *CadastroIndividualThrift) Write(oprot thrift.TProtocol) error {
 	if err := p.writeField10(oprot); err != nil {
 		return err
 	}
-	if err := p.writeField11(oprot); err != nil {
-		return err
-	}
 	if err := p.writeField12(oprot); err != nil {
 		return err
 	}
 	if err := p.writeField13(oprot); err != nil {
-		return err
-	}
-	if err := p.writeField14(oprot); err != nil {
-		return err
-	}
-	if err := p.writeField15(oprot); err != nil {
 		return err
 	}
 	if err := p.writeField16(oprot); err != nil {
@@ -5263,21 +5172,6 @@ func (p *CadastroIndividualThrift) writeField10(oprot thrift.TProtocol) (err err
 	return err
 }
 
-func (p *CadastroIndividualThrift) writeField11(oprot thrift.TProtocol) (err error) {
-	if p.IsSetUuidCidadao() {
-		if err := oprot.WriteFieldBegin("uuidCidadao", thrift.STRING, 11); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field begin error 11:uuidCidadao: ", p), err)
-		}
-		if err := oprot.WriteString(string(*p.UuidCidadao)); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T.uuidCidadao (11) field write error: ", p), err)
-		}
-		if err := oprot.WriteFieldEnd(); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field end error 11:uuidCidadao: ", p), err)
-		}
-	}
-	return err
-}
-
 func (p *CadastroIndividualThrift) writeField12(oprot thrift.TProtocol) (err error) {
 	if p.IsSetSaidaCidadaoCadastro() {
 		if err := oprot.WriteFieldBegin("saidaCidadaoCadastro", thrift.STRUCT, 12); err != nil {
@@ -5303,36 +5197,6 @@ func (p *CadastroIndividualThrift) writeField13(oprot thrift.TProtocol) (err err
 		}
 		if err := oprot.WriteFieldEnd(); err != nil {
 			return thrift.PrependError(fmt.Sprintf("%T write field end error 13:headerTransport: ", p), err)
-		}
-	}
-	return err
-}
-
-func (p *CadastroIndividualThrift) writeField14(oprot thrift.TProtocol) (err error) {
-	if p.IsSetStatusCadastroIndividualInativo() {
-		if err := oprot.WriteFieldBegin("statusCadastroIndividualInativo", thrift.BOOL, 14); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field begin error 14:statusCadastroIndividualInativo: ", p), err)
-		}
-		if err := oprot.WriteBool(bool(*p.StatusCadastroIndividualInativo)); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T.statusCadastroIndividualInativo (14) field write error: ", p), err)
-		}
-		if err := oprot.WriteFieldEnd(); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field end error 14:statusCadastroIndividualInativo: ", p), err)
-		}
-	}
-	return err
-}
-
-func (p *CadastroIndividualThrift) writeField15(oprot thrift.TProtocol) (err error) {
-	if p.IsSetStatusGeradoAutomaticamente() {
-		if err := oprot.WriteFieldBegin("statusGeradoAutomaticamente", thrift.BOOL, 15); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field begin error 15:statusGeradoAutomaticamente: ", p), err)
-		}
-		if err := oprot.WriteBool(bool(*p.StatusGeradoAutomaticamente)); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T.statusGeradoAutomaticamente (15) field write error: ", p), err)
-		}
-		if err := oprot.WriteFieldEnd(); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field end error 15:statusGeradoAutomaticamente: ", p), err)
 		}
 	}
 	return err

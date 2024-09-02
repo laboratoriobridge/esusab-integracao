@@ -1290,16 +1290,10 @@ type
     procedure SetUuid( const Value: string);
     function GetUuidFichaOriginadora: string;
     procedure SetUuidFichaOriginadora( const Value: string);
-    function GetUuidCidadao: string;
-    procedure SetUuidCidadao( const Value: string);
     function GetSaidaCidadaoCadastro: ISaidaCidadaoCadastroThrift;
     procedure SetSaidaCidadaoCadastro( const Value: ISaidaCidadaoCadastroThrift);
     function GetHeaderTransport: IUnicaLotacaoHeaderThrift;
     procedure SetHeaderTransport( const Value: IUnicaLotacaoHeaderThrift);
-    function GetStatusCadastroIndividualInativo: Boolean;
-    procedure SetStatusCadastroIndividualInativo( const Value: Boolean);
-    function GetStatusGeradoAutomaticamente: Boolean;
-    procedure SetStatusGeradoAutomaticamente( const Value: Boolean);
     function GetInformacoesSocioEconomicas: IInformacoesSocioEconomicasThrift;
     procedure SetInformacoesSocioEconomicas( const Value: IInformacoesSocioEconomicasThrift);
 
@@ -1312,11 +1306,8 @@ type
     property TpCdsOrigem: Integer read GetTpCdsOrigem write SetTpCdsOrigem;
     property Uuid: string read GetUuid write SetUuid;
     property UuidFichaOriginadora: string read GetUuidFichaOriginadora write SetUuidFichaOriginadora;
-    property UuidCidadao: string read GetUuidCidadao write SetUuidCidadao;
     property SaidaCidadaoCadastro: ISaidaCidadaoCadastroThrift read GetSaidaCidadaoCadastro write SetSaidaCidadaoCadastro;
     property HeaderTransport: IUnicaLotacaoHeaderThrift read GetHeaderTransport write SetHeaderTransport;
-    property StatusCadastroIndividualInativo: Boolean read GetStatusCadastroIndividualInativo write SetStatusCadastroIndividualInativo;
-    property StatusGeradoAutomaticamente: Boolean read GetStatusGeradoAutomaticamente write SetStatusGeradoAutomaticamente;
     property InformacoesSocioEconomicas: IInformacoesSocioEconomicasThrift read GetInformacoesSocioEconomicas write SetInformacoesSocioEconomicas;
 
     function Get__isset_CondicoesDeSaude: Boolean;
@@ -1327,11 +1318,8 @@ type
     function Get__isset_StatusTermoRecusaCadastroIndividualAtencaoBasica: Boolean;
     function Get__isset_TpCdsOrigem: Boolean;
     function Get__isset_UuidFichaOriginadora: Boolean;
-    function Get__isset_UuidCidadao: Boolean;
     function Get__isset_SaidaCidadaoCadastro: Boolean;
     function Get__isset_HeaderTransport: Boolean;
-    function Get__isset_StatusCadastroIndividualInativo: Boolean;
-    function Get__isset_StatusGeradoAutomaticamente: Boolean;
     function Get__isset_InformacoesSocioEconomicas: Boolean;
 
     property __isset_CondicoesDeSaude: Boolean read Get__isset_CondicoesDeSaude;
@@ -1342,11 +1330,8 @@ type
     property __isset_StatusTermoRecusaCadastroIndividualAtencaoBasica: Boolean read Get__isset_StatusTermoRecusaCadastroIndividualAtencaoBasica;
     property __isset_TpCdsOrigem: Boolean read Get__isset_TpCdsOrigem;
     property __isset_UuidFichaOriginadora: Boolean read Get__isset_UuidFichaOriginadora;
-    property __isset_UuidCidadao: Boolean read Get__isset_UuidCidadao;
     property __isset_SaidaCidadaoCadastro: Boolean read Get__isset_SaidaCidadaoCadastro;
     property __isset_HeaderTransport: Boolean read Get__isset_HeaderTransport;
-    property __isset_StatusCadastroIndividualInativo: Boolean read Get__isset_StatusCadastroIndividualInativo;
-    property __isset_StatusGeradoAutomaticamente: Boolean read Get__isset_StatusGeradoAutomaticamente;
     property __isset_InformacoesSocioEconomicas: Boolean read Get__isset_InformacoesSocioEconomicas;
   end;
 
@@ -1361,11 +1346,8 @@ type
     FTpCdsOrigem: Integer;
     FUuid: string;
     FUuidFichaOriginadora: string;
-    FUuidCidadao: string;
     FSaidaCidadaoCadastro: ISaidaCidadaoCadastroThrift;
     FHeaderTransport: IUnicaLotacaoHeaderThrift;
-    FStatusCadastroIndividualInativo: Boolean;
-    FStatusGeradoAutomaticamente: Boolean;
     FInformacoesSocioEconomicas: IInformacoesSocioEconomicasThrift;
     
     F__isset_CondicoesDeSaude: Boolean;
@@ -1376,11 +1358,8 @@ type
     F__isset_StatusTermoRecusaCadastroIndividualAtencaoBasica: Boolean;
     F__isset_TpCdsOrigem: Boolean;
     F__isset_UuidFichaOriginadora: Boolean;
-    F__isset_UuidCidadao: Boolean;
     F__isset_SaidaCidadaoCadastro: Boolean;
     F__isset_HeaderTransport: Boolean;
-    F__isset_StatusCadastroIndividualInativo: Boolean;
-    F__isset_StatusGeradoAutomaticamente: Boolean;
     F__isset_InformacoesSocioEconomicas: Boolean;
     
     function GetCondicoesDeSaude: ICondicoesDeSaudeThrift;
@@ -1401,16 +1380,10 @@ type
     procedure SetUuid( const Value: string);
     function GetUuidFichaOriginadora: string;
     procedure SetUuidFichaOriginadora( const Value: string);
-    function GetUuidCidadao: string;
-    procedure SetUuidCidadao( const Value: string);
     function GetSaidaCidadaoCadastro: ISaidaCidadaoCadastroThrift;
     procedure SetSaidaCidadaoCadastro( const Value: ISaidaCidadaoCadastroThrift);
     function GetHeaderTransport: IUnicaLotacaoHeaderThrift;
     procedure SetHeaderTransport( const Value: IUnicaLotacaoHeaderThrift);
-    function GetStatusCadastroIndividualInativo: Boolean;
-    procedure SetStatusCadastroIndividualInativo( const Value: Boolean);
-    function GetStatusGeradoAutomaticamente: Boolean;
-    procedure SetStatusGeradoAutomaticamente( const Value: Boolean);
     function GetInformacoesSocioEconomicas: IInformacoesSocioEconomicasThrift;
     procedure SetInformacoesSocioEconomicas( const Value: IInformacoesSocioEconomicasThrift);
 
@@ -1422,11 +1395,8 @@ type
     function Get__isset_StatusTermoRecusaCadastroIndividualAtencaoBasica: Boolean;
     function Get__isset_TpCdsOrigem: Boolean;
     function Get__isset_UuidFichaOriginadora: Boolean;
-    function Get__isset_UuidCidadao: Boolean;
     function Get__isset_SaidaCidadaoCadastro: Boolean;
     function Get__isset_HeaderTransport: Boolean;
-    function Get__isset_StatusCadastroIndividualInativo: Boolean;
-    function Get__isset_StatusGeradoAutomaticamente: Boolean;
     function Get__isset_InformacoesSocioEconomicas: Boolean;
   public
     constructor Create;
@@ -1448,11 +1418,8 @@ type
     property TpCdsOrigem: Integer read GetTpCdsOrigem write SetTpCdsOrigem;
     property Uuid: string read GetUuid write SetUuid;
     property UuidFichaOriginadora: string read GetUuidFichaOriginadora write SetUuidFichaOriginadora;
-    property UuidCidadao: string read GetUuidCidadao write SetUuidCidadao;
     property SaidaCidadaoCadastro: ISaidaCidadaoCadastroThrift read GetSaidaCidadaoCadastro write SetSaidaCidadaoCadastro;
     property HeaderTransport: IUnicaLotacaoHeaderThrift read GetHeaderTransport write SetHeaderTransport;
-    property StatusCadastroIndividualInativo: Boolean read GetStatusCadastroIndividualInativo write SetStatusCadastroIndividualInativo;
-    property StatusGeradoAutomaticamente: Boolean read GetStatusGeradoAutomaticamente write SetStatusGeradoAutomaticamente;
     property InformacoesSocioEconomicas: IInformacoesSocioEconomicasThrift read GetInformacoesSocioEconomicas write SetInformacoesSocioEconomicas;
 
     // isset
@@ -1464,11 +1431,8 @@ type
     property __isset_StatusTermoRecusaCadastroIndividualAtencaoBasica: Boolean read Get__isset_StatusTermoRecusaCadastroIndividualAtencaoBasica;
     property __isset_TpCdsOrigem: Boolean read Get__isset_TpCdsOrigem;
     property __isset_UuidFichaOriginadora: Boolean read Get__isset_UuidFichaOriginadora;
-    property __isset_UuidCidadao: Boolean read Get__isset_UuidCidadao;
     property __isset_SaidaCidadaoCadastro: Boolean read Get__isset_SaidaCidadaoCadastro;
     property __isset_HeaderTransport: Boolean read Get__isset_HeaderTransport;
-    property __isset_StatusCadastroIndividualInativo: Boolean read Get__isset_StatusCadastroIndividualInativo;
-    property __isset_StatusGeradoAutomaticamente: Boolean read Get__isset_StatusGeradoAutomaticamente;
     property __isset_InformacoesSocioEconomicas: Boolean read Get__isset_InformacoesSocioEconomicas;
   end;
 
@@ -5762,22 +5726,6 @@ begin
   Result := F__isset_UuidFichaOriginadora;
 end;
 
-function TCadastroIndividualThriftImpl.GetUuidCidadao: string;
-begin
-  Result := FUuidCidadao;
-end;
-
-procedure TCadastroIndividualThriftImpl.SetUuidCidadao( const Value: string);
-begin
-  F__isset_UuidCidadao := True;
-  FUuidCidadao := Value;
-end;
-
-function TCadastroIndividualThriftImpl.Get__isset_UuidCidadao: Boolean;
-begin
-  Result := F__isset_UuidCidadao;
-end;
-
 function TCadastroIndividualThriftImpl.GetSaidaCidadaoCadastro: ISaidaCidadaoCadastroThrift;
 begin
   Result := FSaidaCidadaoCadastro;
@@ -5808,38 +5756,6 @@ end;
 function TCadastroIndividualThriftImpl.Get__isset_HeaderTransport: Boolean;
 begin
   Result := F__isset_HeaderTransport;
-end;
-
-function TCadastroIndividualThriftImpl.GetStatusCadastroIndividualInativo: Boolean;
-begin
-  Result := FStatusCadastroIndividualInativo;
-end;
-
-procedure TCadastroIndividualThriftImpl.SetStatusCadastroIndividualInativo( const Value: Boolean);
-begin
-  F__isset_StatusCadastroIndividualInativo := True;
-  FStatusCadastroIndividualInativo := Value;
-end;
-
-function TCadastroIndividualThriftImpl.Get__isset_StatusCadastroIndividualInativo: Boolean;
-begin
-  Result := F__isset_StatusCadastroIndividualInativo;
-end;
-
-function TCadastroIndividualThriftImpl.GetStatusGeradoAutomaticamente: Boolean;
-begin
-  Result := FStatusGeradoAutomaticamente;
-end;
-
-procedure TCadastroIndividualThriftImpl.SetStatusGeradoAutomaticamente( const Value: Boolean);
-begin
-  F__isset_StatusGeradoAutomaticamente := True;
-  FStatusGeradoAutomaticamente := Value;
-end;
-
-function TCadastroIndividualThriftImpl.Get__isset_StatusGeradoAutomaticamente: Boolean;
-begin
-  Result := F__isset_StatusGeradoAutomaticamente;
 end;
 
 function TCadastroIndividualThriftImpl.GetInformacoesSocioEconomicas: IInformacoesSocioEconomicasThrift;
@@ -5964,15 +5880,6 @@ begin
             TProtocolUtil.Skip(iprot, field_.Type_);
           end;
         end;
-        11: begin
-          if (field_.Type_ = TType.String_) then
-          begin
-            UuidCidadao := iprot.ReadString();
-          end else
-          begin
-            TProtocolUtil.Skip(iprot, field_.Type_);
-          end;
-        end;
         12: begin
           if (field_.Type_ = TType.Struct) then
           begin
@@ -5988,24 +5895,6 @@ begin
           begin
             HeaderTransport := TUnicaLotacaoHeaderThriftImpl.Create;
             HeaderTransport.Read(iprot);
-          end else
-          begin
-            TProtocolUtil.Skip(iprot, field_.Type_);
-          end;
-        end;
-        14: begin
-          if (field_.Type_ = TType.Bool_) then
-          begin
-            StatusCadastroIndividualInativo := iprot.ReadBool();
-          end else
-          begin
-            TProtocolUtil.Skip(iprot, field_.Type_);
-          end;
-        end;
-        15: begin
-          if (field_.Type_ = TType.Bool_) then
-          begin
-            StatusGeradoAutomaticamente := iprot.ReadBool();
           end else
           begin
             TProtocolUtil.Skip(iprot, field_.Type_);
@@ -6123,15 +6012,6 @@ begin
     oprot.WriteString(UuidFichaOriginadora);
     oprot.WriteFieldEnd();
   end;
-  if (__isset_UuidCidadao) then
-  begin
-    field_.Name := 'uuidCidadao';
-    field_.Type_  := TType.String_;
-    field_.ID := 11;
-    oprot.WriteFieldBegin(field_);
-    oprot.WriteString(UuidCidadao);
-    oprot.WriteFieldEnd();
-  end;
   if (SaidaCidadaoCadastro <> nil) and __isset_SaidaCidadaoCadastro then
   begin
     field_.Name := 'saidaCidadaoCadastro';
@@ -6148,24 +6028,6 @@ begin
     field_.ID := 13;
     oprot.WriteFieldBegin(field_);
     HeaderTransport.Write(oprot);
-    oprot.WriteFieldEnd();
-  end;
-  if (__isset_StatusCadastroIndividualInativo) then
-  begin
-    field_.Name := 'statusCadastroIndividualInativo';
-    field_.Type_  := TType.Bool_;
-    field_.ID := 14;
-    oprot.WriteFieldBegin(field_);
-    oprot.WriteBool(StatusCadastroIndividualInativo);
-    oprot.WriteFieldEnd();
-  end;
-  if (__isset_StatusGeradoAutomaticamente) then
-  begin
-    field_.Name := 'statusGeradoAutomaticamente';
-    field_.Type_  := TType.Bool_;
-    field_.ID := 15;
-    oprot.WriteFieldBegin(field_);
-    oprot.WriteBool(StatusGeradoAutomaticamente);
     oprot.WriteFieldEnd();
   end;
   if (InformacoesSocioEconomicas <> nil) and __isset_InformacoesSocioEconomicas then
@@ -6238,10 +6100,6 @@ begin
       _sb47.Append(', UuidFichaOriginadora: ');
       _sb47.Append(UuidFichaOriginadora);
     end;
-    if (__isset_UuidCidadao) then begin
-      _sb47.Append(', UuidCidadao: ');
-      _sb47.Append(UuidCidadao);
-    end;
     if (SaidaCidadaoCadastro <> nil) and __isset_SaidaCidadaoCadastro then begin
       _sb47.Append(', SaidaCidadaoCadastro: ');
       if (SaidaCidadaoCadastro = nil) then _sb47.Append('<null>') else _sb47.Append(SaidaCidadaoCadastro.ToString());
@@ -6249,14 +6107,6 @@ begin
     if (HeaderTransport <> nil) and __isset_HeaderTransport then begin
       _sb47.Append(', HeaderTransport: ');
       if (HeaderTransport = nil) then _sb47.Append('<null>') else _sb47.Append(HeaderTransport.ToString());
-    end;
-    if (__isset_StatusCadastroIndividualInativo) then begin
-      _sb47.Append(', StatusCadastroIndividualInativo: ');
-      _sb47.Append(StatusCadastroIndividualInativo);
-    end;
-    if (__isset_StatusGeradoAutomaticamente) then begin
-      _sb47.Append(', StatusGeradoAutomaticamente: ');
-      _sb47.Append(StatusGeradoAutomaticamente);
     end;
     if (InformacoesSocioEconomicas <> nil) and __isset_InformacoesSocioEconomicas then begin
       _sb47.Append(', InformacoesSocioEconomicas: ');

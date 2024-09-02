@@ -543,7 +543,6 @@ class CadastroDomiciliarThrift:
    - tipoDeImovel
    - instituicaoPermanencia
    - headerTransport
-   - statusGeradoAutomaticamente
    - latitude
    - longitude
   """
@@ -565,12 +564,12 @@ class CadastroDomiciliarThrift:
     (13, TType.I64, 'tipoDeImovel', None, None, ), # 13
     (14, TType.STRUCT, 'instituicaoPermanencia', (InstituicaoPermanenciaThrift, InstituicaoPermanenciaThrift.thrift_spec), None, ), # 14
     (15, TType.STRUCT, 'headerTransport', (br.gov.saude.esusab.ras.common.ttypes.UnicaLotacaoHeaderThrift, br.gov.saude.esusab.ras.common.ttypes.UnicaLotacaoHeaderThrift.thrift_spec), None, ), # 15
-    (16, TType.BOOL, 'statusGeradoAutomaticamente', None, None, ), # 16
+    None, # 16
     (17, TType.DOUBLE, 'latitude', None, None, ), # 17
     (18, TType.DOUBLE, 'longitude', None, None, ), # 18
   )
 
-  def __init__(self, animaisNoDomicilio=None, condicaoMoradia=None, enderecoLocalPermanencia=None, familias=None, fichaAtualizada=None, quantosAnimaisNoDomicilio=None, stAnimaisNoDomicilio=None, statusTermoRecusa=None, tpCdsOrigem=None, uuid=None, uuidFichaOriginadora=None, tipoDeImovel=None, instituicaoPermanencia=None, headerTransport=None, statusGeradoAutomaticamente=None, latitude=None, longitude=None,):
+  def __init__(self, animaisNoDomicilio=None, condicaoMoradia=None, enderecoLocalPermanencia=None, familias=None, fichaAtualizada=None, quantosAnimaisNoDomicilio=None, stAnimaisNoDomicilio=None, statusTermoRecusa=None, tpCdsOrigem=None, uuid=None, uuidFichaOriginadora=None, tipoDeImovel=None, instituicaoPermanencia=None, headerTransport=None, latitude=None, longitude=None,):
     self.animaisNoDomicilio = animaisNoDomicilio
     self.condicaoMoradia = condicaoMoradia
     self.enderecoLocalPermanencia = enderecoLocalPermanencia
@@ -585,7 +584,6 @@ class CadastroDomiciliarThrift:
     self.tipoDeImovel = tipoDeImovel
     self.instituicaoPermanencia = instituicaoPermanencia
     self.headerTransport = headerTransport
-    self.statusGeradoAutomaticamente = statusGeradoAutomaticamente
     self.latitude = latitude
     self.longitude = longitude
 
@@ -683,11 +681,6 @@ class CadastroDomiciliarThrift:
           self.headerTransport.read(iprot)
         else:
           iprot.skip(ftype)
-      elif fid == 16:
-        if ftype == TType.BOOL:
-          self.statusGeradoAutomaticamente = iprot.readBool()
-        else:
-          iprot.skip(ftype)
       elif fid == 17:
         if ftype == TType.DOUBLE:
           self.latitude = iprot.readDouble()
@@ -770,10 +763,6 @@ class CadastroDomiciliarThrift:
       oprot.writeFieldBegin('headerTransport', TType.STRUCT, 15)
       self.headerTransport.write(oprot)
       oprot.writeFieldEnd()
-    if self.statusGeradoAutomaticamente is not None:
-      oprot.writeFieldBegin('statusGeradoAutomaticamente', TType.BOOL, 16)
-      oprot.writeBool(self.statusGeradoAutomaticamente)
-      oprot.writeFieldEnd()
     if self.latitude is not None:
       oprot.writeFieldBegin('latitude', TType.DOUBLE, 17)
       oprot.writeDouble(self.latitude)
@@ -807,7 +796,6 @@ class CadastroDomiciliarThrift:
     value = (value * 31) ^ hash(self.tipoDeImovel)
     value = (value * 31) ^ hash(self.instituicaoPermanencia)
     value = (value * 31) ^ hash(self.headerTransport)
-    value = (value * 31) ^ hash(self.statusGeradoAutomaticamente)
     value = (value * 31) ^ hash(self.latitude)
     value = (value * 31) ^ hash(self.longitude)
     return value

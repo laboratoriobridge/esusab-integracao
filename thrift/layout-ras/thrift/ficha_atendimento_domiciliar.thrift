@@ -22,6 +22,7 @@ struct FichaAtendimentoDomiciliarChildThrift {
 	11:optional list<string> procedimentos;
 	13:optional i64 condutaDesfecho;
 	15:optional string cpfCidadao;
+	16:optional list<common.ProblemaCondicaoThrift> problemasCondicoes;
 }
 
 struct FichaAtendimentoDomiciliarMasterThrift {

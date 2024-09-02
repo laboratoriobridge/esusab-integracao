@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://esus.ufsc.br/fichaatendimentodomiciliarchild" version="1.0">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:problemacondicao="http://esus.ufsc.br/problemacondicao" targetNamespace="http://esus.ufsc.br/fichaatendimentodomiciliarchild" version="1.0">
+
+  <xs:import namespace="http://esus.ufsc.br/problemacondicao" schemaLocation="problemacondicao.xsd"/>
 
   <xs:complexType name="fichaAtendimentoDomiciliarChildTransport">
     <xs:sequence>
-      <xs:element maxOccurs="1" minOccurs="0" name="turno" type="xs:long"/>
-      <xs:element maxOccurs="1" minOccurs="0" name="cnsCidadao" type="xs:string"/>
-      <xs:element maxOccurs="1" minOccurs="0" name="cpfCidadao" type="xs:string"/>
-      <xs:element maxOccurs="1" minOccurs="0" name="dataNascimento" type="xs:long"/>
-      <xs:element maxOccurs="1" minOccurs="0" name="sexo" type="xs:long"/>
-      <xs:element maxOccurs="1" minOccurs="0" name="localAtendimento" type="xs:long"/>
-      <xs:element maxOccurs="1" minOccurs="0" name="atencaoDomiciliarModalidade" type="xs:long"/>
-      <xs:element maxOccurs="1" minOccurs="0" name="tipoAtendimento" type="xs:long"/>
+      <xs:element minOccurs="0" name="turno" type="xs:long"/>
+      <xs:element minOccurs="0" name="cnsCidadao" type="xs:string"/>
+      <xs:element minOccurs="0" name="cpfCidadao" type="xs:string"/>
+      <xs:element minOccurs="0" name="dataNascimento" type="xs:long"/>
+      <xs:element minOccurs="0" name="sexo" type="xs:long"/>
+      <xs:element minOccurs="0" name="localAtendimento" type="xs:long"/>
+      <xs:element minOccurs="0" name="atencaoDomiciliarModalidade" type="xs:long"/>
+      <xs:element minOccurs="0" name="tipoAtendimento" type="xs:long"/>
       <xs:element maxOccurs="unbounded" minOccurs="0" name="condicoesAvaliadas" type="xs:long"/>
-      <xs:element maxOccurs="1" minOccurs="0" name="cid" type="xs:string"/>
-      <xs:element maxOccurs="1" minOccurs="0" name="ciap" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="problemasCondicoes" type="problemacondicao:problemaCondicaoTransport"/>
       <xs:element maxOccurs="unbounded" minOccurs="0" name="procedimentos" type="xs:string"/>
-      <xs:element maxOccurs="1" minOccurs="0" name="condutaDesfecho" type="xs:long"/>
+      <xs:element minOccurs="0" name="condutaDesfecho" type="xs:long"/>
     </xs:sequence>
   </xs:complexType>
 </xs:schema>

@@ -25,6 +25,7 @@ FichaProcedimentoChildThrift = module.exports.FichaProcedimentoChildThrift = fun
   this.cpfCidadao = null;
   this.pesoAcompanhamentoNutricional = null;
   this.alturaAcompanhamentoNutricional = null;
+  this.medicoes = null;
   if (args) {
     if (args.numProntuario !== undefined && args.numProntuario !== null) {
       this.numProntuario = args.numProntuario;
@@ -64,6 +65,9 @@ FichaProcedimentoChildThrift = module.exports.FichaProcedimentoChildThrift = fun
     }
     if (args.alturaAcompanhamentoNutricional !== undefined && args.alturaAcompanhamentoNutricional !== null) {
       this.alturaAcompanhamentoNutricional = args.alturaAcompanhamentoNutricional;
+    }
+    if (args.medicoes !== undefined && args.medicoes !== null) {
+      this.medicoes = new common_ttypes.MedicoesThrift(args.medicoes);
     }
   }
 };
@@ -185,6 +189,14 @@ FichaProcedimentoChildThrift.prototype.read = function(input) {
         input.skip(ftype);
       }
       break;
+      case 16:
+      if (ftype == Thrift.Type.STRUCT) {
+        this.medicoes = new common_ttypes.MedicoesThrift();
+        this.medicoes.read(input);
+      } else {
+        input.skip(ftype);
+      }
+      break;
       default:
         input.skip(ftype);
     }
@@ -268,6 +280,11 @@ FichaProcedimentoChildThrift.prototype.write = function(output) {
   if (this.alturaAcompanhamentoNutricional !== null && this.alturaAcompanhamentoNutricional !== undefined) {
     output.writeFieldBegin('alturaAcompanhamentoNutricional', Thrift.Type.DOUBLE, 14);
     output.writeDouble(this.alturaAcompanhamentoNutricional);
+    output.writeFieldEnd();
+  }
+  if (this.medicoes !== null && this.medicoes !== undefined) {
+    output.writeFieldBegin('medicoes', Thrift.Type.STRUCT, 16);
+    this.medicoes.write(output);
     output.writeFieldEnd();
   }
   output.writeFieldStop();

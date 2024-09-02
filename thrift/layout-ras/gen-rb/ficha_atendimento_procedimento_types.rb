@@ -29,6 +29,7 @@ module Br
               CPFCIDADAO = 12
               PESOACOMPANHAMENTONUTRICIONAL = 13
               ALTURAACOMPANHAMENTONUTRICIONAL = 14
+              MEDICOES = 16
 
               FIELDS = {
                 NUMPRONTUARIO => {:type => ::Thrift::Types::STRING, :name => 'numProntuario', :optional => true},
@@ -43,7 +44,8 @@ module Br
                 DATAHORAFINALATENDIMENTO => {:type => ::Thrift::Types::I64, :name => 'dataHoraFinalAtendimento', :optional => true},
                 CPFCIDADAO => {:type => ::Thrift::Types::STRING, :name => 'cpfCidadao', :optional => true},
                 PESOACOMPANHAMENTONUTRICIONAL => {:type => ::Thrift::Types::DOUBLE, :name => 'pesoAcompanhamentoNutricional', :optional => true},
-                ALTURAACOMPANHAMENTONUTRICIONAL => {:type => ::Thrift::Types::DOUBLE, :name => 'alturaAcompanhamentoNutricional', :optional => true}
+                ALTURAACOMPANHAMENTONUTRICIONAL => {:type => ::Thrift::Types::DOUBLE, :name => 'alturaAcompanhamentoNutricional', :optional => true},
+                MEDICOES => {:type => ::Thrift::Types::STRUCT, :name => 'medicoes', :class => ::Br::Gov::Saude::Esusab::Ras::Common::MedicoesThrift, :optional => true}
               }
 
               def struct_fields; FIELDS; end

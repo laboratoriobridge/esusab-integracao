@@ -45,6 +45,7 @@ namespace br.gov.saude.esusab.ras.atendodonto
     private List<br.gov.saude.esusab.ras.common.ResultadosExameThrift> _resultadosExames;
     private double _pesoAcompanhamentoNutricional;
     private double _alturaAcompanhamentoNutricional;
+    private br.gov.saude.esusab.ras.common.MedicoesThrift _medicoes;
 
     public long DtNascimento
     {
@@ -332,6 +333,19 @@ namespace br.gov.saude.esusab.ras.atendodonto
       }
     }
 
+    public br.gov.saude.esusab.ras.common.MedicoesThrift Medicoes
+    {
+      get
+      {
+        return _medicoes;
+      }
+      set
+      {
+        __isset.medicoes = true;
+        this._medicoes = value;
+      }
+    }
+
 
     public Isset __isset;
     #if !SILVERLIGHT
@@ -360,6 +374,7 @@ namespace br.gov.saude.esusab.ras.atendodonto
       public bool resultadosExames;
       public bool pesoAcompanhamentoNutricional;
       public bool alturaAcompanhamentoNutricional;
+      public bool medicoes;
     }
 
     public FichaAtendimentoOdontologicoChildThrift() {
@@ -618,6 +633,14 @@ namespace br.gov.saude.esusab.ras.atendodonto
                 TProtocolUtil.Skip(iprot, field.Type);
               }
               break;
+            case 27:
+              if (field.Type == TType.Struct) {
+                Medicoes = new br.gov.saude.esusab.ras.common.MedicoesThrift();
+                Medicoes.Read(iprot);
+              } else { 
+                TProtocolUtil.Skip(iprot, field.Type);
+              }
+              break;
             default: 
               TProtocolUtil.Skip(iprot, field.Type);
               break;
@@ -871,6 +894,14 @@ namespace br.gov.saude.esusab.ras.atendodonto
           oprot.WriteDouble(AlturaAcompanhamentoNutricional);
           oprot.WriteFieldEnd();
         }
+        if (Medicoes != null && __isset.medicoes) {
+          field.Name = "medicoes";
+          field.Type = TType.Struct;
+          field.ID = 27;
+          oprot.WriteFieldBegin(field);
+          Medicoes.Write(oprot);
+          oprot.WriteFieldEnd();
+        }
         oprot.WriteFieldStop();
         oprot.WriteStructEnd();
       }
@@ -1014,6 +1045,12 @@ namespace br.gov.saude.esusab.ras.atendodonto
         __first = false;
         __sb.Append("AlturaAcompanhamentoNutricional: ");
         __sb.Append(AlturaAcompanhamentoNutricional);
+      }
+      if (Medicoes != null && __isset.medicoes) {
+        if(!__first) { __sb.Append(", "); }
+        __first = false;
+        __sb.Append("Medicoes: ");
+        __sb.Append(Medicoes== null ? "<null>" : Medicoes.ToString());
       }
       __sb.Append(")");
       return __sb.ToString();

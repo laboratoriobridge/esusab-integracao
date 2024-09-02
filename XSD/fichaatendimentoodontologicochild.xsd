@@ -40,7 +40,6 @@
           <xs:element minOccurs="0" name="medicoes" type="medicoes:medicoesTransport"/>
           <xs:element minOccurs="0" name="tipoParticipacaoCidadao" type="xs:long"/>
           <xs:element minOccurs="0" name="tipoParticipacaoProfissionalConvidado" type="xs:long"/>
-          <xs:element minOccurs="0" name="uuidRnds" type="xs:string"/>
           <xs:element maxOccurs="unbounded" minOccurs="0" name="problemasCondicoes" type="problemacondicao:problemaCondicaoTransport"/>
       </xs:sequence>
   </xs:complexType>

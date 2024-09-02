@@ -77,8 +77,21 @@
 				<hipoteseDiagnosticoCid10>O03</hipoteseDiagnosticoCid10>
 				<classificacaoRisco>1</classificacaoRisco>
 			</encaminhamentos>
-			<pesoAcompanhamentoNutricional>2.5</pesoAcompanhamentoNutricional>
-			<alturaAcompanhamentoNutricional>20.3</alturaAcompanhamentoNutricional>
+			<medicoes>
+				<circunferenciaAbdominal>50.0</circunferenciaAbdominal>
+				<perimetroPanturrilha>20.0</perimetroPanturrilha>
+				<pressaoArterialSistolica>12</pressaoArterialSistolica>
+				<pressaoArterialDiastolica>8</pressaoArterialDiastolica>
+				<frequenciaRespiratoria>100</frequenciaRespiratoria>
+				<frequenciaCardiaca>100</frequenciaCardiaca>
+				<temperatura>36.0</temperatura>
+				<saturacaoO2>75</saturacaoO2>
+				<glicemiaCapilar>80</glicemiaCapilar>
+				<tipoGlicemiaCapilar>2</tipoGlicemiaCapilar>
+				<peso>2.5</peso>
+				<altura>20.3</altura>
+				<perimetroCefalico>30.0</perimetroCefalico>
+			</medicoes>
 		</atendimentosOdontologicos>
 		<atendimentosOdontologicos>
 			<numProntuario>4321</numProntuario>
@@ -131,8 +144,21 @@
 			<sexo>1</sexo>
 			<dataHoraInicialAtendimento>1549378800000</dataHoraInicialAtendimento>
 			<dataHoraFinalAtendimento>1549378800000</dataHoraFinalAtendimento>
-			<pesoAcompanhamentoNutricional>2.5</pesoAcompanhamentoNutricional>
-			<alturaAcompanhamentoNutricional>20.3</alturaAcompanhamentoNutricional>
+			<medicoes>
+				<circunferenciaAbdominal>50.0</circunferenciaAbdominal>
+				<perimetroPanturrilha>20.0</perimetroPanturrilha>
+				<pressaoArterialSistolica>12</pressaoArterialSistolica>
+				<pressaoArterialDiastolica>8</pressaoArterialDiastolica>
+				<frequenciaRespiratoria>100</frequenciaRespiratoria>
+				<frequenciaCardiaca>100</frequenciaCardiaca>
+				<temperatura>36.0</temperatura>
+				<saturacaoO2>75</saturacaoO2>
+				<glicemiaCapilar>80</glicemiaCapilar>
+				<tipoGlicemiaCapilar>2</tipoGlicemiaCapilar>
+				<peso>2.5</peso>
+				<altura>20.3</altura>
+				<perimetroCefalico>30.0</perimetroCefalico>
+			</medicoes>
 		</atendimentosOdontologicos>
 		<atendimentosOdontologicos>
 			<numProntuario>123</numProntuario>
@@ -161,8 +187,21 @@
 			<sexo>1</sexo>
 			<dataHoraInicialAtendimento>1553094000000</dataHoraInicialAtendimento>
 			<dataHoraFinalAtendimento>1553097000000</dataHoraFinalAtendimento>
-			<pesoAcompanhamentoNutricional>2.5</pesoAcompanhamentoNutricional>
-			<alturaAcompanhamentoNutricional>20.3</alturaAcompanhamentoNutricional>
+			<medicoes>
+				<circunferenciaAbdominal>50.0</circunferenciaAbdominal>
+				<perimetroPanturrilha>20.0</perimetroPanturrilha>
+				<pressaoArterialSistolica>12</pressaoArterialSistolica>
+				<pressaoArterialDiastolica>8</pressaoArterialDiastolica>
+				<frequenciaRespiratoria>100</frequenciaRespiratoria>
+				<frequenciaCardiaca>100</frequenciaCardiaca>
+				<temperatura>36.0</temperatura>
+				<saturacaoO2>75</saturacaoO2>
+				<glicemiaCapilar>80</glicemiaCapilar>
+				<tipoGlicemiaCapilar>2</tipoGlicemiaCapilar>
+				<peso>2.5</peso>
+				<altura>20.3</altura>
+				<perimetroCefalico>30.0</perimetroCefalico>
+			</medicoes>
 		</atendimentosOdontologicos>
 		<atendimentosOdontologicos>
 			<numProntuario>123</numProntuario>
@@ -191,8 +230,21 @@
 			<sexo>1</sexo>
 			<dataHoraInicialAtendimento>1553094000000</dataHoraInicialAtendimento>
 			<dataHoraFinalAtendimento>1553097000000</dataHoraFinalAtendimento>
-			<pesoAcompanhamentoNutricional>2.5</pesoAcompanhamentoNutricional>
-			<alturaAcompanhamentoNutricional>20.3</alturaAcompanhamentoNutricional>
+			<medicoes>
+				<circunferenciaAbdominal>50.0</circunferenciaAbdominal>
+				<perimetroPanturrilha>20.0</perimetroPanturrilha>
+				<pressaoArterialSistolica>12</pressaoArterialSistolica>
+				<pressaoArterialDiastolica>8</pressaoArterialDiastolica>
+				<frequenciaRespiratoria>100</frequenciaRespiratoria>
+				<frequenciaCardiaca>100</frequenciaCardiaca>
+				<temperatura>36.0</temperatura>
+				<saturacaoO2>75</saturacaoO2>
+				<glicemiaCapilar>80</glicemiaCapilar>
+				<tipoGlicemiaCapilar>2</tipoGlicemiaCapilar>
+				<peso>2.5</peso>
+				<altura>20.3</altura>
+				<perimetroCefalico>30.0</perimetroCefalico>
+			</medicoes>
 		</atendimentosOdontologicos>
 		<atendimentosOdontologicos>
 			<dtNascimento>1115305200000</dtNascimento>
@@ -234,8 +286,21 @@
 					<valorResultado>25</valorResultado>
 				</resultadoExame>
 			</resultadosExames>
-			<pesoAcompanhamentoNutricional>2.5</pesoAcompanhamentoNutricional>
-			<alturaAcompanhamentoNutricional>20.3</alturaAcompanhamentoNutricional>
+			<medicoes>
+				<circunferenciaAbdominal>50.0</circunferenciaAbdominal>
+				<perimetroPanturrilha>20.0</perimetroPanturrilha>
+				<pressaoArterialSistolica>12</pressaoArterialSistolica>
+				<pressaoArterialDiastolica>8</pressaoArterialDiastolica>
+				<frequenciaRespiratoria>100</frequenciaRespiratoria>
+				<frequenciaCardiaca>100</frequenciaCardiaca>
+				<temperatura>36.0</temperatura>
+				<saturacaoO2>75</saturacaoO2>
+				<glicemiaCapilar>80</glicemiaCapilar>
+				<tipoGlicemiaCapilar>2</tipoGlicemiaCapilar>
+				<peso>2.5</peso>
+				<altura>20.3</altura>
+				<perimetroCefalico>30.0</perimetroCefalico>
+			</medicoes>
 		</atendimentosOdontologicos>
 		<headerTransport>
 			<lotacaoFormPrincipal>
@@ -268,5 +333,5 @@
 		<versaoSistema>5.0.16</versaoSistema>
 		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:originadora>
-	<versao major="4" minor="4" revision="1" />
+	<versao major="7" minor="0" revision="0" />
 </ns3:dadoTransporteTransportXml>

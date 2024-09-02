@@ -3,13 +3,9 @@
 //
 // DO NOT EDIT UNLESS YOU ARE SURE THAT YOU KNOW WHAT YOU ARE DOING
 //
-var thrift = require('thrift');
-var Thrift = thrift.Thrift;
-var Q = thrift.Q;
 
 
-var ttypes = module.exports = {};
-HeaderCdsCadastroThrift = module.exports.HeaderCdsCadastroThrift = function(args) {
+HeaderCdsCadastroThrift = function(args) {
   this.cnesUnidadeSaude = null;
   this.cnsProfissional = null;
   this.codigoIbgeMunicipio = null;
@@ -53,42 +49,42 @@ HeaderCdsCadastroThrift.prototype.read = function(input) {
     {
       case 1:
       if (ftype == Thrift.Type.STRING) {
-        this.cnesUnidadeSaude = input.readString();
+        this.cnesUnidadeSaude = input.readString().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 2:
       if (ftype == Thrift.Type.STRING) {
-        this.cnsProfissional = input.readString();
+        this.cnsProfissional = input.readString().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 3:
       if (ftype == Thrift.Type.STRING) {
-        this.codigoIbgeMunicipio = input.readString();
+        this.codigoIbgeMunicipio = input.readString().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 4:
       if (ftype == Thrift.Type.I64) {
-        this.dataAtendimento = input.readI64();
+        this.dataAtendimento = input.readI64().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 5:
       if (ftype == Thrift.Type.STRING) {
-        this.ineEquipe = input.readString();
+        this.ineEquipe = input.readString().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 6:
       if (ftype == Thrift.Type.I64) {
-        this.microarea = input.readI64();
+        this.microarea = input.readI64().value;
       } else {
         input.skip(ftype);
       }
@@ -139,7 +135,7 @@ HeaderCdsCadastroThrift.prototype.write = function(output) {
   return;
 };
 
-LotacaoHeaderThrift = module.exports.LotacaoHeaderThrift = function(args) {
+LotacaoHeaderThrift = function(args) {
   this.profissionalCNS = null;
   this.cboCodigo_2002 = null;
   this.cnes = null;
@@ -175,28 +171,28 @@ LotacaoHeaderThrift.prototype.read = function(input) {
     {
       case 1:
       if (ftype == Thrift.Type.STRING) {
-        this.profissionalCNS = input.readString();
+        this.profissionalCNS = input.readString().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 2:
       if (ftype == Thrift.Type.STRING) {
-        this.cboCodigo_2002 = input.readString();
+        this.cboCodigo_2002 = input.readString().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 3:
       if (ftype == Thrift.Type.STRING) {
-        this.cnes = input.readString();
+        this.cnes = input.readString().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 4:
       if (ftype == Thrift.Type.STRING) {
-        this.ine = input.readString();
+        this.ine = input.readString().value;
       } else {
         input.skip(ftype);
       }
@@ -237,7 +233,7 @@ LotacaoHeaderThrift.prototype.write = function(output) {
   return;
 };
 
-UnicaLotacaoHeaderThrift = module.exports.UnicaLotacaoHeaderThrift = function(args) {
+UnicaLotacaoHeaderThrift = function(args) {
   this.profissionalCNS = null;
   this.cboCodigo_2002 = null;
   this.cnes = null;
@@ -281,42 +277,42 @@ UnicaLotacaoHeaderThrift.prototype.read = function(input) {
     {
       case 1:
       if (ftype == Thrift.Type.STRING) {
-        this.profissionalCNS = input.readString();
+        this.profissionalCNS = input.readString().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 2:
       if (ftype == Thrift.Type.STRING) {
-        this.cboCodigo_2002 = input.readString();
+        this.cboCodigo_2002 = input.readString().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 3:
       if (ftype == Thrift.Type.STRING) {
-        this.cnes = input.readString();
+        this.cnes = input.readString().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 4:
       if (ftype == Thrift.Type.STRING) {
-        this.ine = input.readString();
+        this.ine = input.readString().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 5:
       if (ftype == Thrift.Type.I64) {
-        this.dataAtendimento = input.readI64();
+        this.dataAtendimento = input.readI64().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 6:
       if (ftype == Thrift.Type.STRING) {
-        this.codigoIbgeMunicipio = input.readString();
+        this.codigoIbgeMunicipio = input.readString().value;
       } else {
         input.skip(ftype);
       }
@@ -367,17 +363,17 @@ UnicaLotacaoHeaderThrift.prototype.write = function(output) {
   return;
 };
 
-VariasLotacoesHeaderThrift = module.exports.VariasLotacoesHeaderThrift = function(args) {
+VariasLotacoesHeaderThrift = function(args) {
   this.lotacaoFormPrincipal = null;
   this.lotacaoFormAtendimentoCompartilhado = null;
   this.dataAtendimento = null;
   this.codigoIbgeMunicipio = null;
   if (args) {
     if (args.lotacaoFormPrincipal !== undefined && args.lotacaoFormPrincipal !== null) {
-      this.lotacaoFormPrincipal = new ttypes.LotacaoHeaderThrift(args.lotacaoFormPrincipal);
+      this.lotacaoFormPrincipal = new LotacaoHeaderThrift(args.lotacaoFormPrincipal);
     }
     if (args.lotacaoFormAtendimentoCompartilhado !== undefined && args.lotacaoFormAtendimentoCompartilhado !== null) {
-      this.lotacaoFormAtendimentoCompartilhado = new ttypes.LotacaoHeaderThrift(args.lotacaoFormAtendimentoCompartilhado);
+      this.lotacaoFormAtendimentoCompartilhado = new LotacaoHeaderThrift(args.lotacaoFormAtendimentoCompartilhado);
     }
     if (args.dataAtendimento !== undefined && args.dataAtendimento !== null) {
       this.dataAtendimento = args.dataAtendimento;
@@ -403,7 +399,7 @@ VariasLotacoesHeaderThrift.prototype.read = function(input) {
     {
       case 6:
       if (ftype == Thrift.Type.STRUCT) {
-        this.lotacaoFormPrincipal = new ttypes.LotacaoHeaderThrift();
+        this.lotacaoFormPrincipal = new LotacaoHeaderThrift();
         this.lotacaoFormPrincipal.read(input);
       } else {
         input.skip(ftype);
@@ -411,7 +407,7 @@ VariasLotacoesHeaderThrift.prototype.read = function(input) {
       break;
       case 7:
       if (ftype == Thrift.Type.STRUCT) {
-        this.lotacaoFormAtendimentoCompartilhado = new ttypes.LotacaoHeaderThrift();
+        this.lotacaoFormAtendimentoCompartilhado = new LotacaoHeaderThrift();
         this.lotacaoFormAtendimentoCompartilhado.read(input);
       } else {
         input.skip(ftype);
@@ -419,14 +415,14 @@ VariasLotacoesHeaderThrift.prototype.read = function(input) {
       break;
       case 8:
       if (ftype == Thrift.Type.I64) {
-        this.dataAtendimento = input.readI64();
+        this.dataAtendimento = input.readI64().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 9:
       if (ftype == Thrift.Type.STRING) {
-        this.codigoIbgeMunicipio = input.readString();
+        this.codigoIbgeMunicipio = input.readString().value;
       } else {
         input.skip(ftype);
       }
@@ -467,7 +463,7 @@ VariasLotacoesHeaderThrift.prototype.write = function(output) {
   return;
 };
 
-LotacaoThrift = module.exports.LotacaoThrift = function(args) {
+LotacaoThrift = function(args) {
   this.cpf = null;
   this.cns = null;
   this.cboCodigo_2002 = null;
@@ -511,42 +507,42 @@ LotacaoThrift.prototype.read = function(input) {
     {
       case 1:
       if (ftype == Thrift.Type.STRING) {
-        this.cpf = input.readString();
+        this.cpf = input.readString().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 2:
       if (ftype == Thrift.Type.STRING) {
-        this.cns = input.readString();
+        this.cns = input.readString().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 3:
       if (ftype == Thrift.Type.STRING) {
-        this.cboCodigo_2002 = input.readString();
+        this.cboCodigo_2002 = input.readString().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 4:
       if (ftype == Thrift.Type.STRING) {
-        this.ine = input.readString();
+        this.ine = input.readString().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 5:
       if (ftype == Thrift.Type.STRING) {
-        this.cnes = input.readString();
+        this.cnes = input.readString().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 6:
       if (ftype == Thrift.Type.STRING) {
-        this.codigoIbgeMunicipio = input.readString();
+        this.codigoIbgeMunicipio = input.readString().value;
       } else {
         input.skip(ftype);
       }
@@ -597,7 +593,7 @@ LotacaoThrift.prototype.write = function(output) {
   return;
 };
 
-EnderecoLocalPermanenciaThrift = module.exports.EnderecoLocalPermanenciaThrift = function(args) {
+EnderecoLocalPermanenciaThrift = function(args) {
   this.bairro = null;
   this.cep = null;
   this.codigoIbgeMunicipio = null;
@@ -673,98 +669,98 @@ EnderecoLocalPermanenciaThrift.prototype.read = function(input) {
     {
       case 1:
       if (ftype == Thrift.Type.STRING) {
-        this.bairro = input.readString();
+        this.bairro = input.readString().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 2:
       if (ftype == Thrift.Type.STRING) {
-        this.cep = input.readString();
+        this.cep = input.readString().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 3:
       if (ftype == Thrift.Type.STRING) {
-        this.codigoIbgeMunicipio = input.readString();
+        this.codigoIbgeMunicipio = input.readString().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 4:
       if (ftype == Thrift.Type.STRING) {
-        this.complemento = input.readString();
+        this.complemento = input.readString().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 5:
       if (ftype == Thrift.Type.STRING) {
-        this.nomeLogradouro = input.readString();
+        this.nomeLogradouro = input.readString().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 6:
       if (ftype == Thrift.Type.STRING) {
-        this.numero = input.readString();
+        this.numero = input.readString().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 7:
       if (ftype == Thrift.Type.STRING) {
-        this.numeroDneUf = input.readString();
+        this.numeroDneUf = input.readString().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 8:
       if (ftype == Thrift.Type.STRING) {
-        this.telefoneContato = input.readString();
+        this.telefoneContato = input.readString().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 9:
       if (ftype == Thrift.Type.STRING) {
-        this.telefoneResidencia = input.readString();
+        this.telefoneResidencia = input.readString().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 10:
       if (ftype == Thrift.Type.STRING) {
-        this.tipoLogradouroNumeroDne = input.readString();
+        this.tipoLogradouroNumeroDne = input.readString().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 11:
       if (ftype == Thrift.Type.BOOL) {
-        this.stSemNumero = input.readBool();
+        this.stSemNumero = input.readBool().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 12:
       if (ftype == Thrift.Type.STRING) {
-        this.pontoReferencia = input.readString();
+        this.pontoReferencia = input.readString().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 13:
       if (ftype == Thrift.Type.STRING) {
-        this.microArea = input.readString();
+        this.microArea = input.readString().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 14:
       if (ftype == Thrift.Type.BOOL) {
-        this.stForaArea = input.readBool();
+        this.stForaArea = input.readBool().value;
       } else {
         input.skip(ftype);
       }
@@ -855,7 +851,7 @@ EnderecoLocalPermanenciaThrift.prototype.write = function(output) {
   return;
 };
 
-MedicamentoThrift = module.exports.MedicamentoThrift = function(args) {
+MedicamentoThrift = function(args) {
   this.codigoCatmat = null;
   this.viaAdministracao = null;
   this.dose = null;
@@ -927,91 +923,91 @@ MedicamentoThrift.prototype.read = function(input) {
     {
       case 1:
       if (ftype == Thrift.Type.STRING) {
-        this.codigoCatmat = input.readString();
+        this.codigoCatmat = input.readString().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 2:
       if (ftype == Thrift.Type.I64) {
-        this.viaAdministracao = input.readI64();
+        this.viaAdministracao = input.readI64().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 3:
       if (ftype == Thrift.Type.STRING) {
-        this.dose = input.readString();
+        this.dose = input.readString().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 4:
       if (ftype == Thrift.Type.BOOL) {
-        this.doseUnica = input.readBool();
+        this.doseUnica = input.readBool().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 5:
       if (ftype == Thrift.Type.BOOL) {
-        this.usoContinuo = input.readBool();
+        this.usoContinuo = input.readBool().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 6:
       if (ftype == Thrift.Type.I64) {
-        this.doseFrequenciaTipo = input.readI64();
+        this.doseFrequenciaTipo = input.readI64().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 7:
       if (ftype == Thrift.Type.STRING) {
-        this.doseFrequencia = input.readString();
+        this.doseFrequencia = input.readString().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 8:
       if (ftype == Thrift.Type.I32) {
-        this.doseFrequenciaQuantidade = input.readI32();
+        this.doseFrequenciaQuantidade = input.readI32().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 9:
       if (ftype == Thrift.Type.I64) {
-        this.doseFrequenciaUnidadeMedida = input.readI64();
+        this.doseFrequenciaUnidadeMedida = input.readI64().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 10:
       if (ftype == Thrift.Type.I64) {
-        this.dtInicioTratamento = input.readI64();
+        this.dtInicioTratamento = input.readI64().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 11:
       if (ftype == Thrift.Type.I32) {
-        this.duracaoTratamento = input.readI32();
+        this.duracaoTratamento = input.readI32().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 12:
       if (ftype == Thrift.Type.I64) {
-        this.duracaoTratamentoMedida = input.readI64();
+        this.duracaoTratamentoMedida = input.readI64().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 13:
       if (ftype == Thrift.Type.I32) {
-        this.quantidadeReceitada = input.readI32();
+        this.quantidadeReceitada = input.readI32().value;
       } else {
         input.skip(ftype);
       }
@@ -1097,7 +1093,7 @@ MedicamentoThrift.prototype.write = function(output) {
   return;
 };
 
-EncaminhamentoExternoThrift = module.exports.EncaminhamentoExternoThrift = function(args) {
+EncaminhamentoExternoThrift = function(args) {
   this.especialidade = null;
   this.hipoteseDiagnosticoCid10 = null;
   this.hipoteseDiagnosticoCiap2 = null;
@@ -1133,28 +1129,28 @@ EncaminhamentoExternoThrift.prototype.read = function(input) {
     {
       case 1:
       if (ftype == Thrift.Type.I64) {
-        this.especialidade = input.readI64();
+        this.especialidade = input.readI64().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 2:
       if (ftype == Thrift.Type.STRING) {
-        this.hipoteseDiagnosticoCid10 = input.readString();
+        this.hipoteseDiagnosticoCid10 = input.readString().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 3:
       if (ftype == Thrift.Type.STRING) {
-        this.hipoteseDiagnosticoCiap2 = input.readString();
+        this.hipoteseDiagnosticoCiap2 = input.readString().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 4:
       if (ftype == Thrift.Type.I64) {
-        this.classificacaoRisco = input.readI64();
+        this.classificacaoRisco = input.readI64().value;
       } else {
         input.skip(ftype);
       }
@@ -1195,7 +1191,7 @@ EncaminhamentoExternoThrift.prototype.write = function(output) {
   return;
 };
 
-ResultadoExameThrift = module.exports.ResultadoExameThrift = function(args) {
+ResultadoExameThrift = function(args) {
   this.tipoResultado = null;
   this.valorResultado = null;
   if (args) {
@@ -1223,14 +1219,14 @@ ResultadoExameThrift.prototype.read = function(input) {
     {
       case 1:
       if (ftype == Thrift.Type.I32) {
-        this.tipoResultado = input.readI32();
+        this.tipoResultado = input.readI32().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 2:
       if (ftype == Thrift.Type.STRING) {
-        this.valorResultado = input.readString();
+        this.valorResultado = input.readString().value;
       } else {
         input.skip(ftype);
       }
@@ -1261,7 +1257,7 @@ ResultadoExameThrift.prototype.write = function(output) {
   return;
 };
 
-ResultadosExameThrift = module.exports.ResultadosExameThrift = function(args) {
+ResultadosExameThrift = function(args) {
   this.exame = null;
   this.dataSolicitacao = null;
   this.dataRealizacao = null;
@@ -1281,7 +1277,7 @@ ResultadosExameThrift = module.exports.ResultadosExameThrift = function(args) {
       this.dataResultado = args.dataResultado;
     }
     if (args.resultadoExame !== undefined && args.resultadoExame !== null) {
-      this.resultadoExame = Thrift.copyList(args.resultadoExame, [ttypes.ResultadoExameThrift]);
+      this.resultadoExame = Thrift.copyList(args.resultadoExame, [ResultadoExameThrift]);
     }
   }
 };
@@ -1301,28 +1297,28 @@ ResultadosExameThrift.prototype.read = function(input) {
     {
       case 1:
       if (ftype == Thrift.Type.STRING) {
-        this.exame = input.readString();
+        this.exame = input.readString().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 2:
       if (ftype == Thrift.Type.I64) {
-        this.dataSolicitacao = input.readI64();
+        this.dataSolicitacao = input.readI64().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 3:
       if (ftype == Thrift.Type.I64) {
-        this.dataRealizacao = input.readI64();
+        this.dataRealizacao = input.readI64().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 4:
       if (ftype == Thrift.Type.I64) {
-        this.dataResultado = input.readI64();
+        this.dataResultado = input.readI64().value;
       } else {
         input.skip(ftype);
       }
@@ -1339,7 +1335,7 @@ ResultadosExameThrift.prototype.read = function(input) {
         for (var _i5 = 0; _i5 < _size0; ++_i5)
         {
           var elem6 = null;
-          elem6 = new ttypes.ResultadoExameThrift();
+          elem6 = new ResultadoExameThrift();
           elem6.read(input);
           this.resultadoExame.push(elem6);
         }
@@ -1398,7 +1394,7 @@ ResultadosExameThrift.prototype.write = function(output) {
   return;
 };
 
-MedicoesThrift = module.exports.MedicoesThrift = function(args) {
+MedicoesThrift = function(args) {
   this.circunferenciaAbdominal = null;
   this.perimetroPanturrilha = null;
   this.pressaoArterialSistolica = null;
@@ -1470,91 +1466,91 @@ MedicoesThrift.prototype.read = function(input) {
     {
       case 1:
       if (ftype == Thrift.Type.DOUBLE) {
-        this.circunferenciaAbdominal = input.readDouble();
+        this.circunferenciaAbdominal = input.readDouble().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 2:
       if (ftype == Thrift.Type.DOUBLE) {
-        this.perimetroPanturrilha = input.readDouble();
+        this.perimetroPanturrilha = input.readDouble().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 3:
       if (ftype == Thrift.Type.I32) {
-        this.pressaoArterialSistolica = input.readI32();
+        this.pressaoArterialSistolica = input.readI32().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 4:
       if (ftype == Thrift.Type.I32) {
-        this.pressaoArterialDiastolica = input.readI32();
+        this.pressaoArterialDiastolica = input.readI32().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 5:
       if (ftype == Thrift.Type.I32) {
-        this.frequenciaRespiratoria = input.readI32();
+        this.frequenciaRespiratoria = input.readI32().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 6:
       if (ftype == Thrift.Type.I32) {
-        this.frequenciaCardiaca = input.readI32();
+        this.frequenciaCardiaca = input.readI32().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 7:
       if (ftype == Thrift.Type.DOUBLE) {
-        this.temperatura = input.readDouble();
+        this.temperatura = input.readDouble().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 8:
       if (ftype == Thrift.Type.I32) {
-        this.saturacaoO2 = input.readI32();
+        this.saturacaoO2 = input.readI32().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 9:
       if (ftype == Thrift.Type.I32) {
-        this.glicemiaCapilar = input.readI32();
+        this.glicemiaCapilar = input.readI32().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 10:
       if (ftype == Thrift.Type.I64) {
-        this.tipoGlicemiaCapilar = input.readI64();
+        this.tipoGlicemiaCapilar = input.readI64().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 11:
       if (ftype == Thrift.Type.DOUBLE) {
-        this.peso = input.readDouble();
+        this.peso = input.readDouble().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 12:
       if (ftype == Thrift.Type.DOUBLE) {
-        this.altura = input.readDouble();
+        this.altura = input.readDouble().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 13:
       if (ftype == Thrift.Type.DOUBLE) {
-        this.perimetroCefalico = input.readDouble();
+        this.perimetroCefalico = input.readDouble().value;
       } else {
         input.skip(ftype);
       }
@@ -1633,6 +1629,184 @@ MedicoesThrift.prototype.write = function(output) {
   if (this.perimetroCefalico !== null && this.perimetroCefalico !== undefined) {
     output.writeFieldBegin('perimetroCefalico', Thrift.Type.DOUBLE, 13);
     output.writeDouble(this.perimetroCefalico);
+    output.writeFieldEnd();
+  }
+  output.writeFieldStop();
+  output.writeStructEnd();
+  return;
+};
+
+ProblemaCondicaoThrift = function(args) {
+  this.uuidProblema = null;
+  this.uuidEvolucaoProblema = null;
+  this.coSequencialEvolucao = null;
+  this.ciap = null;
+  this.cid10 = null;
+  this.situacao = null;
+  this.dataInicioProblema = null;
+  this.dataFimProblema = null;
+  this.isAvaliado = null;
+  if (args) {
+    if (args.uuidProblema !== undefined && args.uuidProblema !== null) {
+      this.uuidProblema = args.uuidProblema;
+    }
+    if (args.uuidEvolucaoProblema !== undefined && args.uuidEvolucaoProblema !== null) {
+      this.uuidEvolucaoProblema = args.uuidEvolucaoProblema;
+    }
+    if (args.coSequencialEvolucao !== undefined && args.coSequencialEvolucao !== null) {
+      this.coSequencialEvolucao = args.coSequencialEvolucao;
+    }
+    if (args.ciap !== undefined && args.ciap !== null) {
+      this.ciap = args.ciap;
+    }
+    if (args.cid10 !== undefined && args.cid10 !== null) {
+      this.cid10 = args.cid10;
+    }
+    if (args.situacao !== undefined && args.situacao !== null) {
+      this.situacao = args.situacao;
+    }
+    if (args.dataInicioProblema !== undefined && args.dataInicioProblema !== null) {
+      this.dataInicioProblema = args.dataInicioProblema;
+    }
+    if (args.dataFimProblema !== undefined && args.dataFimProblema !== null) {
+      this.dataFimProblema = args.dataFimProblema;
+    }
+    if (args.isAvaliado !== undefined && args.isAvaliado !== null) {
+      this.isAvaliado = args.isAvaliado;
+    }
+  }
+};
+ProblemaCondicaoThrift.prototype = {};
+ProblemaCondicaoThrift.prototype.read = function(input) {
+  input.readStructBegin();
+  while (true)
+  {
+    var ret = input.readFieldBegin();
+    var fname = ret.fname;
+    var ftype = ret.ftype;
+    var fid = ret.fid;
+    if (ftype == Thrift.Type.STOP) {
+      break;
+    }
+    switch (fid)
+    {
+      case 1:
+      if (ftype == Thrift.Type.STRING) {
+        this.uuidProblema = input.readString().value;
+      } else {
+        input.skip(ftype);
+      }
+      break;
+      case 2:
+      if (ftype == Thrift.Type.STRING) {
+        this.uuidEvolucaoProblema = input.readString().value;
+      } else {
+        input.skip(ftype);
+      }
+      break;
+      case 3:
+      if (ftype == Thrift.Type.I64) {
+        this.coSequencialEvolucao = input.readI64().value;
+      } else {
+        input.skip(ftype);
+      }
+      break;
+      case 4:
+      if (ftype == Thrift.Type.STRING) {
+        this.ciap = input.readString().value;
+      } else {
+        input.skip(ftype);
+      }
+      break;
+      case 5:
+      if (ftype == Thrift.Type.STRING) {
+        this.cid10 = input.readString().value;
+      } else {
+        input.skip(ftype);
+      }
+      break;
+      case 6:
+      if (ftype == Thrift.Type.I64) {
+        this.situacao = input.readI64().value;
+      } else {
+        input.skip(ftype);
+      }
+      break;
+      case 7:
+      if (ftype == Thrift.Type.I64) {
+        this.dataInicioProblema = input.readI64().value;
+      } else {
+        input.skip(ftype);
+      }
+      break;
+      case 8:
+      if (ftype == Thrift.Type.I64) {
+        this.dataFimProblema = input.readI64().value;
+      } else {
+        input.skip(ftype);
+      }
+      break;
+      case 9:
+      if (ftype == Thrift.Type.BOOL) {
+        this.isAvaliado = input.readBool().value;
+      } else {
+        input.skip(ftype);
+      }
+      break;
+      default:
+        input.skip(ftype);
+    }
+    input.readFieldEnd();
+  }
+  input.readStructEnd();
+  return;
+};
+
+ProblemaCondicaoThrift.prototype.write = function(output) {
+  output.writeStructBegin('ProblemaCondicaoThrift');
+  if (this.uuidProblema !== null && this.uuidProblema !== undefined) {
+    output.writeFieldBegin('uuidProblema', Thrift.Type.STRING, 1);
+    output.writeString(this.uuidProblema);
+    output.writeFieldEnd();
+  }
+  if (this.uuidEvolucaoProblema !== null && this.uuidEvolucaoProblema !== undefined) {
+    output.writeFieldBegin('uuidEvolucaoProblema', Thrift.Type.STRING, 2);
+    output.writeString(this.uuidEvolucaoProblema);
+    output.writeFieldEnd();
+  }
+  if (this.coSequencialEvolucao !== null && this.coSequencialEvolucao !== undefined) {
+    output.writeFieldBegin('coSequencialEvolucao', Thrift.Type.I64, 3);
+    output.writeI64(this.coSequencialEvolucao);
+    output.writeFieldEnd();
+  }
+  if (this.ciap !== null && this.ciap !== undefined) {
+    output.writeFieldBegin('ciap', Thrift.Type.STRING, 4);
+    output.writeString(this.ciap);
+    output.writeFieldEnd();
+  }
+  if (this.cid10 !== null && this.cid10 !== undefined) {
+    output.writeFieldBegin('cid10', Thrift.Type.STRING, 5);
+    output.writeString(this.cid10);
+    output.writeFieldEnd();
+  }
+  if (this.situacao !== null && this.situacao !== undefined) {
+    output.writeFieldBegin('situacao', Thrift.Type.I64, 6);
+    output.writeI64(this.situacao);
+    output.writeFieldEnd();
+  }
+  if (this.dataInicioProblema !== null && this.dataInicioProblema !== undefined) {
+    output.writeFieldBegin('dataInicioProblema', Thrift.Type.I64, 7);
+    output.writeI64(this.dataInicioProblema);
+    output.writeFieldEnd();
+  }
+  if (this.dataFimProblema !== null && this.dataFimProblema !== undefined) {
+    output.writeFieldBegin('dataFimProblema', Thrift.Type.I64, 8);
+    output.writeI64(this.dataFimProblema);
+    output.writeFieldEnd();
+  }
+  if (this.isAvaliado !== null && this.isAvaliado !== undefined) {
+    output.writeFieldBegin('isAvaliado', Thrift.Type.BOOL, 9);
+    output.writeBool(this.isAvaliado);
     output.writeFieldEnd();
   }
   output.writeFieldStop();

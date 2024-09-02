@@ -1606,3 +1606,172 @@ class MedicoesThrift:
 
   def __ne__(self, other):
     return not (self == other)
+
+class ProblemaCondicaoThrift:
+  """
+  Attributes:
+   - uuidProblema
+   - uuidEvolucaoProblema
+   - coSequencialEvolucao
+   - ciap
+   - cid10
+   - situacao
+   - dataInicioProblema
+   - dataFimProblema
+   - isAvaliado
+  """
+
+  thrift_spec = (
+    None, # 0
+    (1, TType.STRING, 'uuidProblema', None, None, ), # 1
+    (2, TType.STRING, 'uuidEvolucaoProblema', None, None, ), # 2
+    (3, TType.I64, 'coSequencialEvolucao', None, None, ), # 3
+    (4, TType.STRING, 'ciap', None, None, ), # 4
+    (5, TType.STRING, 'cid10', None, None, ), # 5
+    (6, TType.I64, 'situacao', None, None, ), # 6
+    (7, TType.I64, 'dataInicioProblema', None, None, ), # 7
+    (8, TType.I64, 'dataFimProblema', None, None, ), # 8
+    (9, TType.BOOL, 'isAvaliado', None, None, ), # 9
+  )
+
+  def __init__(self, uuidProblema=None, uuidEvolucaoProblema=None, coSequencialEvolucao=None, ciap=None, cid10=None, situacao=None, dataInicioProblema=None, dataFimProblema=None, isAvaliado=None,):
+    self.uuidProblema = uuidProblema
+    self.uuidEvolucaoProblema = uuidEvolucaoProblema
+    self.coSequencialEvolucao = coSequencialEvolucao
+    self.ciap = ciap
+    self.cid10 = cid10
+    self.situacao = situacao
+    self.dataInicioProblema = dataInicioProblema
+    self.dataFimProblema = dataFimProblema
+    self.isAvaliado = isAvaliado
+
+  def read(self, iprot):
+    if iprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None and fastbinary is not None:
+      fastbinary.decode_binary(self, iprot.trans, (self.__class__, self.thrift_spec))
+      return
+    iprot.readStructBegin()
+    while True:
+      (fname, ftype, fid) = iprot.readFieldBegin()
+      if ftype == TType.STOP:
+        break
+      if fid == 1:
+        if ftype == TType.STRING:
+          self.uuidProblema = iprot.readString()
+        else:
+          iprot.skip(ftype)
+      elif fid == 2:
+        if ftype == TType.STRING:
+          self.uuidEvolucaoProblema = iprot.readString()
+        else:
+          iprot.skip(ftype)
+      elif fid == 3:
+        if ftype == TType.I64:
+          self.coSequencialEvolucao = iprot.readI64()
+        else:
+          iprot.skip(ftype)
+      elif fid == 4:
+        if ftype == TType.STRING:
+          self.ciap = iprot.readString()
+        else:
+          iprot.skip(ftype)
+      elif fid == 5:
+        if ftype == TType.STRING:
+          self.cid10 = iprot.readString()
+        else:
+          iprot.skip(ftype)
+      elif fid == 6:
+        if ftype == TType.I64:
+          self.situacao = iprot.readI64()
+        else:
+          iprot.skip(ftype)
+      elif fid == 7:
+        if ftype == TType.I64:
+          self.dataInicioProblema = iprot.readI64()
+        else:
+          iprot.skip(ftype)
+      elif fid == 8:
+        if ftype == TType.I64:
+          self.dataFimProblema = iprot.readI64()
+        else:
+          iprot.skip(ftype)
+      elif fid == 9:
+        if ftype == TType.BOOL:
+          self.isAvaliado = iprot.readBool()
+        else:
+          iprot.skip(ftype)
+      else:
+        iprot.skip(ftype)
+      iprot.readFieldEnd()
+    iprot.readStructEnd()
+
+  def write(self, oprot):
+    if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      return
+    oprot.writeStructBegin('ProblemaCondicaoThrift')
+    if self.uuidProblema is not None:
+      oprot.writeFieldBegin('uuidProblema', TType.STRING, 1)
+      oprot.writeString(self.uuidProblema)
+      oprot.writeFieldEnd()
+    if self.uuidEvolucaoProblema is not None:
+      oprot.writeFieldBegin('uuidEvolucaoProblema', TType.STRING, 2)
+      oprot.writeString(self.uuidEvolucaoProblema)
+      oprot.writeFieldEnd()
+    if self.coSequencialEvolucao is not None:
+      oprot.writeFieldBegin('coSequencialEvolucao', TType.I64, 3)
+      oprot.writeI64(self.coSequencialEvolucao)
+      oprot.writeFieldEnd()
+    if self.ciap is not None:
+      oprot.writeFieldBegin('ciap', TType.STRING, 4)
+      oprot.writeString(self.ciap)
+      oprot.writeFieldEnd()
+    if self.cid10 is not None:
+      oprot.writeFieldBegin('cid10', TType.STRING, 5)
+      oprot.writeString(self.cid10)
+      oprot.writeFieldEnd()
+    if self.situacao is not None:
+      oprot.writeFieldBegin('situacao', TType.I64, 6)
+      oprot.writeI64(self.situacao)
+      oprot.writeFieldEnd()
+    if self.dataInicioProblema is not None:
+      oprot.writeFieldBegin('dataInicioProblema', TType.I64, 7)
+      oprot.writeI64(self.dataInicioProblema)
+      oprot.writeFieldEnd()
+    if self.dataFimProblema is not None:
+      oprot.writeFieldBegin('dataFimProblema', TType.I64, 8)
+      oprot.writeI64(self.dataFimProblema)
+      oprot.writeFieldEnd()
+    if self.isAvaliado is not None:
+      oprot.writeFieldBegin('isAvaliado', TType.BOOL, 9)
+      oprot.writeBool(self.isAvaliado)
+      oprot.writeFieldEnd()
+    oprot.writeFieldStop()
+    oprot.writeStructEnd()
+
+  def validate(self):
+    return
+
+
+  def __hash__(self):
+    value = 17
+    value = (value * 31) ^ hash(self.uuidProblema)
+    value = (value * 31) ^ hash(self.uuidEvolucaoProblema)
+    value = (value * 31) ^ hash(self.coSequencialEvolucao)
+    value = (value * 31) ^ hash(self.ciap)
+    value = (value * 31) ^ hash(self.cid10)
+    value = (value * 31) ^ hash(self.situacao)
+    value = (value * 31) ^ hash(self.dataInicioProblema)
+    value = (value * 31) ^ hash(self.dataFimProblema)
+    value = (value * 31) ^ hash(self.isAvaliado)
+    return value
+
+  def __repr__(self):
+    L = ['%s=%r' % (key, value)
+      for key, value in self.__dict__.iteritems()]
+    return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+  def __eq__(self, other):
+    return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+  def __ne__(self, other):
+    return not (self == other)

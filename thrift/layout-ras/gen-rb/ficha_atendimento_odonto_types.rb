@@ -57,6 +57,7 @@ module Br
               PESOACOMPANHAMENTONUTRICIONAL = 22
               ALTURAACOMPANHAMENTONUTRICIONAL = 23
               MEDICOES = 27
+              PROBLEMASCONDICOES = 28
 
               FIELDS = {
                 DTNASCIMENTO => {:type => ::Thrift::Types::I64, :name => 'dtNascimento', :optional => true},
@@ -81,7 +82,8 @@ module Br
                 RESULTADOSEXAMES => {:type => ::Thrift::Types::LIST, :name => 'resultadosExames', :element => {:type => ::Thrift::Types::STRUCT, :class => ::Br::Gov::Saude::Esusab::Ras::Common::ResultadosExameThrift}, :optional => true},
                 PESOACOMPANHAMENTONUTRICIONAL => {:type => ::Thrift::Types::DOUBLE, :name => 'pesoAcompanhamentoNutricional', :optional => true},
                 ALTURAACOMPANHAMENTONUTRICIONAL => {:type => ::Thrift::Types::DOUBLE, :name => 'alturaAcompanhamentoNutricional', :optional => true},
-                MEDICOES => {:type => ::Thrift::Types::STRUCT, :name => 'medicoes', :class => ::Br::Gov::Saude::Esusab::Ras::Common::MedicoesThrift, :optional => true}
+                MEDICOES => {:type => ::Thrift::Types::STRUCT, :name => 'medicoes', :class => ::Br::Gov::Saude::Esusab::Ras::Common::MedicoesThrift, :optional => true},
+                PROBLEMASCONDICOES => {:type => ::Thrift::Types::LIST, :name => 'problemasCondicoes', :element => {:type => ::Thrift::Types::STRUCT, :class => ::Br::Gov::Saude::Esusab::Ras::Common::ProblemaCondicaoThrift}, :optional => true}
               }
 
               def struct_fields; FIELDS; end

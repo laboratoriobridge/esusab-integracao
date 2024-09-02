@@ -60,6 +60,7 @@ namespace br.gov.saude.esusab.ras.atendindividual
     private long _tipoParticipacaoProfissionalConvidado;
     private List<long> _emultis;
     private br.gov.saude.esusab.ras.common.MedicoesThrift _medicoes;
+    private List<br.gov.saude.esusab.ras.common.ProblemaCondicaoThrift> _problemasCondicoes;
 
     public string NumeroProntuario
     {
@@ -542,6 +543,19 @@ namespace br.gov.saude.esusab.ras.atendindividual
       }
     }
 
+    public List<br.gov.saude.esusab.ras.common.ProblemaCondicaoThrift> ProblemasCondicoes
+    {
+      get
+      {
+        return _problemasCondicoes;
+      }
+      set
+      {
+        __isset.problemasCondicoes = true;
+        this._problemasCondicoes = value;
+      }
+    }
+
 
     public Isset __isset;
     #if !SILVERLIGHT
@@ -585,6 +599,7 @@ namespace br.gov.saude.esusab.ras.atendindividual
       public bool tipoParticipacaoProfissionalConvidado;
       public bool emultis;
       public bool medicoes;
+      public bool problemasCondicoes;
     }
 
     public FichaAtendimentoIndividualChildThrift() {
@@ -941,6 +956,24 @@ namespace br.gov.saude.esusab.ras.atendindividual
                 TProtocolUtil.Skip(iprot, field.Type);
               }
               break;
+            case 40:
+              if (field.Type == TType.List) {
+                {
+                  ProblemasCondicoes = new List<br.gov.saude.esusab.ras.common.ProblemaCondicaoThrift>();
+                  TList _list29 = iprot.ReadListBegin();
+                  for( int _i30 = 0; _i30 < _list29.Count; ++_i30)
+                  {
+                    br.gov.saude.esusab.ras.common.ProblemaCondicaoThrift _elem31;
+                    _elem31 = new br.gov.saude.esusab.ras.common.ProblemaCondicaoThrift();
+                    _elem31.Read(iprot);
+                    ProblemasCondicoes.Add(_elem31);
+                  }
+                  iprot.ReadListEnd();
+                }
+              } else { 
+                TProtocolUtil.Skip(iprot, field.Type);
+              }
+              break;
             default: 
               TProtocolUtil.Skip(iprot, field.Type);
               break;
@@ -1081,9 +1114,9 @@ namespace br.gov.saude.esusab.ras.atendindividual
           oprot.WriteFieldBegin(field);
           {
             oprot.WriteListBegin(new TList(TType.Struct, Exame.Count));
-            foreach (ExameThrift _iter29 in Exame)
+            foreach (ExameThrift _iter32 in Exame)
             {
-              _iter29.Write(oprot);
+              _iter32.Write(oprot);
             }
             oprot.WriteListEnd();
           }
@@ -1120,9 +1153,9 @@ namespace br.gov.saude.esusab.ras.atendindividual
           oprot.WriteFieldBegin(field);
           {
             oprot.WriteListBegin(new TList(TType.I64, Nasfs.Count));
-            foreach (long _iter30 in Nasfs)
+            foreach (long _iter33 in Nasfs)
             {
-              oprot.WriteI64(_iter30);
+              oprot.WriteI64(_iter33);
             }
             oprot.WriteListEnd();
           }
@@ -1135,9 +1168,9 @@ namespace br.gov.saude.esusab.ras.atendindividual
           oprot.WriteFieldBegin(field);
           {
             oprot.WriteListBegin(new TList(TType.I64, Condutas.Count));
-            foreach (long _iter31 in Condutas)
+            foreach (long _iter34 in Condutas)
             {
-              oprot.WriteI64(_iter31);
+              oprot.WriteI64(_iter34);
             }
             oprot.WriteListEnd();
           }
@@ -1214,9 +1247,9 @@ namespace br.gov.saude.esusab.ras.atendindividual
           oprot.WriteFieldBegin(field);
           {
             oprot.WriteListBegin(new TList(TType.Struct, Medicamentos.Count));
-            foreach (br.gov.saude.esusab.ras.common.MedicamentoThrift _iter32 in Medicamentos)
+            foreach (br.gov.saude.esusab.ras.common.MedicamentoThrift _iter35 in Medicamentos)
             {
-              _iter32.Write(oprot);
+              _iter35.Write(oprot);
             }
             oprot.WriteListEnd();
           }
@@ -1229,9 +1262,9 @@ namespace br.gov.saude.esusab.ras.atendindividual
           oprot.WriteFieldBegin(field);
           {
             oprot.WriteListBegin(new TList(TType.Struct, Encaminhamentos.Count));
-            foreach (br.gov.saude.esusab.ras.common.EncaminhamentoExternoThrift _iter33 in Encaminhamentos)
+            foreach (br.gov.saude.esusab.ras.common.EncaminhamentoExternoThrift _iter36 in Encaminhamentos)
             {
-              _iter33.Write(oprot);
+              _iter36.Write(oprot);
             }
             oprot.WriteListEnd();
           }
@@ -1244,9 +1277,9 @@ namespace br.gov.saude.esusab.ras.atendindividual
           oprot.WriteFieldBegin(field);
           {
             oprot.WriteListBegin(new TList(TType.Struct, ResultadosExames.Count));
-            foreach (br.gov.saude.esusab.ras.common.ResultadosExameThrift _iter34 in ResultadosExames)
+            foreach (br.gov.saude.esusab.ras.common.ResultadosExameThrift _iter37 in ResultadosExames)
             {
-              _iter34.Write(oprot);
+              _iter37.Write(oprot);
             }
             oprot.WriteListEnd();
           }
@@ -1291,9 +1324,9 @@ namespace br.gov.saude.esusab.ras.atendindividual
           oprot.WriteFieldBegin(field);
           {
             oprot.WriteListBegin(new TList(TType.I64, Emultis.Count));
-            foreach (long _iter35 in Emultis)
+            foreach (long _iter38 in Emultis)
             {
-              oprot.WriteI64(_iter35);
+              oprot.WriteI64(_iter38);
             }
             oprot.WriteListEnd();
           }
@@ -1305,6 +1338,21 @@ namespace br.gov.saude.esusab.ras.atendindividual
           field.ID = 39;
           oprot.WriteFieldBegin(field);
           Medicoes.Write(oprot);
+          oprot.WriteFieldEnd();
+        }
+        if (ProblemasCondicoes != null && __isset.problemasCondicoes) {
+          field.Name = "problemasCondicoes";
+          field.Type = TType.List;
+          field.ID = 40;
+          oprot.WriteFieldBegin(field);
+          {
+            oprot.WriteListBegin(new TList(TType.Struct, ProblemasCondicoes.Count));
+            foreach (br.gov.saude.esusab.ras.common.ProblemaCondicaoThrift _iter39 in ProblemasCondicoes)
+            {
+              _iter39.Write(oprot);
+            }
+            oprot.WriteListEnd();
+          }
           oprot.WriteFieldEnd();
         }
         oprot.WriteFieldStop();
@@ -1540,6 +1588,12 @@ namespace br.gov.saude.esusab.ras.atendindividual
         __first = false;
         __sb.Append("Medicoes: ");
         __sb.Append(Medicoes== null ? "<null>" : Medicoes.ToString());
+      }
+      if (ProblemasCondicoes != null && __isset.problemasCondicoes) {
+        if(!__first) { __sb.Append(", "); }
+        __first = false;
+        __sb.Append("ProblemasCondicoes: ");
+        __sb.Append(ProblemasCondicoes);
       }
       __sb.Append(")");
       return __sb.ToString();

@@ -36,6 +36,7 @@ namespace br.gov.saude.esusab.ras.atenddomiciliar
     private List<string> _procedimentos;
     private long _condutaDesfecho;
     private string _cpfCidadao;
+    private List<br.gov.saude.esusab.ras.common.ProblemaCondicaoThrift> _problemasCondicoes;
 
     public long Turno
     {
@@ -206,6 +207,19 @@ namespace br.gov.saude.esusab.ras.atenddomiciliar
       }
     }
 
+    public List<br.gov.saude.esusab.ras.common.ProblemaCondicaoThrift> ProblemasCondicoes
+    {
+      get
+      {
+        return _problemasCondicoes;
+      }
+      set
+      {
+        __isset.problemasCondicoes = true;
+        this._problemasCondicoes = value;
+      }
+    }
+
 
     public Isset __isset;
     #if !SILVERLIGHT
@@ -225,6 +239,7 @@ namespace br.gov.saude.esusab.ras.atenddomiciliar
       public bool procedimentos;
       public bool condutaDesfecho;
       public bool cpfCidadao;
+      public bool problemasCondicoes;
     }
 
     public FichaAtendimentoDomiciliarChildThrift() {
@@ -356,6 +371,24 @@ namespace br.gov.saude.esusab.ras.atenddomiciliar
                 TProtocolUtil.Skip(iprot, field.Type);
               }
               break;
+            case 16:
+              if (field.Type == TType.List) {
+                {
+                  ProblemasCondicoes = new List<br.gov.saude.esusab.ras.common.ProblemaCondicaoThrift>();
+                  TList _list6 = iprot.ReadListBegin();
+                  for( int _i7 = 0; _i7 < _list6.Count; ++_i7)
+                  {
+                    br.gov.saude.esusab.ras.common.ProblemaCondicaoThrift _elem8;
+                    _elem8 = new br.gov.saude.esusab.ras.common.ProblemaCondicaoThrift();
+                    _elem8.Read(iprot);
+                    ProblemasCondicoes.Add(_elem8);
+                  }
+                  iprot.ReadListEnd();
+                }
+              } else { 
+                TProtocolUtil.Skip(iprot, field.Type);
+              }
+              break;
             default: 
               TProtocolUtil.Skip(iprot, field.Type);
               break;
@@ -440,9 +473,9 @@ namespace br.gov.saude.esusab.ras.atenddomiciliar
           oprot.WriteFieldBegin(field);
           {
             oprot.WriteListBegin(new TList(TType.I64, CondicoesAvaliadas.Count));
-            foreach (long _iter6 in CondicoesAvaliadas)
+            foreach (long _iter9 in CondicoesAvaliadas)
             {
-              oprot.WriteI64(_iter6);
+              oprot.WriteI64(_iter9);
             }
             oprot.WriteListEnd();
           }
@@ -471,9 +504,9 @@ namespace br.gov.saude.esusab.ras.atenddomiciliar
           oprot.WriteFieldBegin(field);
           {
             oprot.WriteListBegin(new TList(TType.String, Procedimentos.Count));
-            foreach (string _iter7 in Procedimentos)
+            foreach (string _iter10 in Procedimentos)
             {
-              oprot.WriteString(_iter7);
+              oprot.WriteString(_iter10);
             }
             oprot.WriteListEnd();
           }
@@ -493,6 +526,21 @@ namespace br.gov.saude.esusab.ras.atenddomiciliar
           field.ID = 15;
           oprot.WriteFieldBegin(field);
           oprot.WriteString(CpfCidadao);
+          oprot.WriteFieldEnd();
+        }
+        if (ProblemasCondicoes != null && __isset.problemasCondicoes) {
+          field.Name = "problemasCondicoes";
+          field.Type = TType.List;
+          field.ID = 16;
+          oprot.WriteFieldBegin(field);
+          {
+            oprot.WriteListBegin(new TList(TType.Struct, ProblemasCondicoes.Count));
+            foreach (br.gov.saude.esusab.ras.common.ProblemaCondicaoThrift _iter11 in ProblemasCondicoes)
+            {
+              _iter11.Write(oprot);
+            }
+            oprot.WriteListEnd();
+          }
           oprot.WriteFieldEnd();
         }
         oprot.WriteFieldStop();
@@ -584,6 +632,12 @@ namespace br.gov.saude.esusab.ras.atenddomiciliar
         __first = false;
         __sb.Append("CpfCidadao: ");
         __sb.Append(CpfCidadao);
+      }
+      if (ProblemasCondicoes != null && __isset.problemasCondicoes) {
+        if(!__first) { __sb.Append(", "); }
+        __first = false;
+        __sb.Append("ProblemasCondicoes: ");
+        __sb.Append(ProblemasCondicoes);
       }
       __sb.Append(")");
       return __sb.ToString();

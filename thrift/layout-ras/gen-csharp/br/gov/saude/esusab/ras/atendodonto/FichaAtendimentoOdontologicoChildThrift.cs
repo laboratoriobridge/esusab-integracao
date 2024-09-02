@@ -46,6 +46,7 @@ namespace br.gov.saude.esusab.ras.atendodonto
     private double _pesoAcompanhamentoNutricional;
     private double _alturaAcompanhamentoNutricional;
     private br.gov.saude.esusab.ras.common.MedicoesThrift _medicoes;
+    private List<br.gov.saude.esusab.ras.common.ProblemaCondicaoThrift> _problemasCondicoes;
 
     public long DtNascimento
     {
@@ -346,6 +347,19 @@ namespace br.gov.saude.esusab.ras.atendodonto
       }
     }
 
+    public List<br.gov.saude.esusab.ras.common.ProblemaCondicaoThrift> ProblemasCondicoes
+    {
+      get
+      {
+        return _problemasCondicoes;
+      }
+      set
+      {
+        __isset.problemasCondicoes = true;
+        this._problemasCondicoes = value;
+      }
+    }
+
 
     public Isset __isset;
     #if !SILVERLIGHT
@@ -375,6 +389,7 @@ namespace br.gov.saude.esusab.ras.atendodonto
       public bool pesoAcompanhamentoNutricional;
       public bool alturaAcompanhamentoNutricional;
       public bool medicoes;
+      public bool problemasCondicoes;
     }
 
     public FichaAtendimentoOdontologicoChildThrift() {
@@ -641,6 +656,24 @@ namespace br.gov.saude.esusab.ras.atendodonto
                 TProtocolUtil.Skip(iprot, field.Type);
               }
               break;
+            case 28:
+              if (field.Type == TType.List) {
+                {
+                  ProblemasCondicoes = new List<br.gov.saude.esusab.ras.common.ProblemaCondicaoThrift>();
+                  TList _list24 = iprot.ReadListBegin();
+                  for( int _i25 = 0; _i25 < _list24.Count; ++_i25)
+                  {
+                    br.gov.saude.esusab.ras.common.ProblemaCondicaoThrift _elem26;
+                    _elem26 = new br.gov.saude.esusab.ras.common.ProblemaCondicaoThrift();
+                    _elem26.Read(iprot);
+                    ProblemasCondicoes.Add(_elem26);
+                  }
+                  iprot.ReadListEnd();
+                }
+              } else { 
+                TProtocolUtil.Skip(iprot, field.Type);
+              }
+              break;
             default: 
               TProtocolUtil.Skip(iprot, field.Type);
               break;
@@ -725,9 +758,9 @@ namespace br.gov.saude.esusab.ras.atendodonto
           oprot.WriteFieldBegin(field);
           {
             oprot.WriteListBegin(new TList(TType.I64, TiposEncamOdonto.Count));
-            foreach (long _iter24 in TiposEncamOdonto)
+            foreach (long _iter27 in TiposEncamOdonto)
             {
-              oprot.WriteI64(_iter24);
+              oprot.WriteI64(_iter27);
             }
             oprot.WriteListEnd();
           }
@@ -740,9 +773,9 @@ namespace br.gov.saude.esusab.ras.atendodonto
           oprot.WriteFieldBegin(field);
           {
             oprot.WriteListBegin(new TList(TType.I64, TiposFornecimOdonto.Count));
-            foreach (long _iter25 in TiposFornecimOdonto)
+            foreach (long _iter28 in TiposFornecimOdonto)
             {
-              oprot.WriteI64(_iter25);
+              oprot.WriteI64(_iter28);
             }
             oprot.WriteListEnd();
           }
@@ -755,9 +788,9 @@ namespace br.gov.saude.esusab.ras.atendodonto
           oprot.WriteFieldBegin(field);
           {
             oprot.WriteListBegin(new TList(TType.I64, TiposVigilanciaSaudeBucal.Count));
-            foreach (long _iter26 in TiposVigilanciaSaudeBucal)
+            foreach (long _iter29 in TiposVigilanciaSaudeBucal)
             {
-              oprot.WriteI64(_iter26);
+              oprot.WriteI64(_iter29);
             }
             oprot.WriteListEnd();
           }
@@ -770,9 +803,9 @@ namespace br.gov.saude.esusab.ras.atendodonto
           oprot.WriteFieldBegin(field);
           {
             oprot.WriteListBegin(new TList(TType.I64, TiposConsultaOdonto.Count));
-            foreach (long _iter27 in TiposConsultaOdonto)
+            foreach (long _iter30 in TiposConsultaOdonto)
             {
-              oprot.WriteI64(_iter27);
+              oprot.WriteI64(_iter30);
             }
             oprot.WriteListEnd();
           }
@@ -785,9 +818,9 @@ namespace br.gov.saude.esusab.ras.atendodonto
           oprot.WriteFieldBegin(field);
           {
             oprot.WriteListBegin(new TList(TType.Struct, ProcedimentosRealizados.Count));
-            foreach (ProcedimentoQuantidadeThrift _iter28 in ProcedimentosRealizados)
+            foreach (ProcedimentoQuantidadeThrift _iter31 in ProcedimentosRealizados)
             {
-              _iter28.Write(oprot);
+              _iter31.Write(oprot);
             }
             oprot.WriteListEnd();
           }
@@ -840,9 +873,9 @@ namespace br.gov.saude.esusab.ras.atendodonto
           oprot.WriteFieldBegin(field);
           {
             oprot.WriteListBegin(new TList(TType.Struct, Medicamentos.Count));
-            foreach (br.gov.saude.esusab.ras.common.MedicamentoThrift _iter29 in Medicamentos)
+            foreach (br.gov.saude.esusab.ras.common.MedicamentoThrift _iter32 in Medicamentos)
             {
-              _iter29.Write(oprot);
+              _iter32.Write(oprot);
             }
             oprot.WriteListEnd();
           }
@@ -855,9 +888,9 @@ namespace br.gov.saude.esusab.ras.atendodonto
           oprot.WriteFieldBegin(field);
           {
             oprot.WriteListBegin(new TList(TType.Struct, Encaminhamentos.Count));
-            foreach (br.gov.saude.esusab.ras.common.EncaminhamentoExternoThrift _iter30 in Encaminhamentos)
+            foreach (br.gov.saude.esusab.ras.common.EncaminhamentoExternoThrift _iter33 in Encaminhamentos)
             {
-              _iter30.Write(oprot);
+              _iter33.Write(oprot);
             }
             oprot.WriteListEnd();
           }
@@ -870,9 +903,9 @@ namespace br.gov.saude.esusab.ras.atendodonto
           oprot.WriteFieldBegin(field);
           {
             oprot.WriteListBegin(new TList(TType.Struct, ResultadosExames.Count));
-            foreach (br.gov.saude.esusab.ras.common.ResultadosExameThrift _iter31 in ResultadosExames)
+            foreach (br.gov.saude.esusab.ras.common.ResultadosExameThrift _iter34 in ResultadosExames)
             {
-              _iter31.Write(oprot);
+              _iter34.Write(oprot);
             }
             oprot.WriteListEnd();
           }
@@ -900,6 +933,21 @@ namespace br.gov.saude.esusab.ras.atendodonto
           field.ID = 27;
           oprot.WriteFieldBegin(field);
           Medicoes.Write(oprot);
+          oprot.WriteFieldEnd();
+        }
+        if (ProblemasCondicoes != null && __isset.problemasCondicoes) {
+          field.Name = "problemasCondicoes";
+          field.Type = TType.List;
+          field.ID = 28;
+          oprot.WriteFieldBegin(field);
+          {
+            oprot.WriteListBegin(new TList(TType.Struct, ProblemasCondicoes.Count));
+            foreach (br.gov.saude.esusab.ras.common.ProblemaCondicaoThrift _iter35 in ProblemasCondicoes)
+            {
+              _iter35.Write(oprot);
+            }
+            oprot.WriteListEnd();
+          }
           oprot.WriteFieldEnd();
         }
         oprot.WriteFieldStop();
@@ -1051,6 +1099,12 @@ namespace br.gov.saude.esusab.ras.atendodonto
         __first = false;
         __sb.Append("Medicoes: ");
         __sb.Append(Medicoes== null ? "<null>" : Medicoes.ToString());
+      }
+      if (ProblemasCondicoes != null && __isset.problemasCondicoes) {
+        if(!__first) { __sb.Append(", "); }
+        __first = false;
+        __sb.Append("ProblemasCondicoes: ");
+        __sb.Append(ProblemasCondicoes);
       }
       __sb.Append(")");
       return __sb.ToString();

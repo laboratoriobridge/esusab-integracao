@@ -3,15 +3,9 @@
 //
 // DO NOT EDIT UNLESS YOU ARE SURE THAT YOU KNOW WHAT YOU ARE DOING
 //
-var thrift = require('thrift');
-var Thrift = thrift.Thrift;
-var Q = thrift.Q;
-
-var common_ttypes = require('./common_types')
 
 
-var ttypes = module.exports = {};
-ProcedimentoQuantidadeThrift = module.exports.ProcedimentoQuantidadeThrift = function(args) {
+ProcedimentoQuantidadeThrift = function(args) {
   this.coMsProcedimento = null;
   this.quantidade = null;
   if (args) {
@@ -39,14 +33,14 @@ ProcedimentoQuantidadeThrift.prototype.read = function(input) {
     {
       case 1:
       if (ftype == Thrift.Type.STRING) {
-        this.coMsProcedimento = input.readString();
+        this.coMsProcedimento = input.readString().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 2:
       if (ftype == Thrift.Type.I32) {
-        this.quantidade = input.readI32();
+        this.quantidade = input.readI32().value;
       } else {
         input.skip(ftype);
       }
@@ -77,7 +71,7 @@ ProcedimentoQuantidadeThrift.prototype.write = function(output) {
   return;
 };
 
-FichaAtendimentoOdontologicoChildThrift = module.exports.FichaAtendimentoOdontologicoChildThrift = function(args) {
+FichaAtendimentoOdontologicoChildThrift = function(args) {
   this.dtNascimento = null;
   this.cnsCidadao = null;
   this.numProntuario = null;
@@ -101,6 +95,7 @@ FichaAtendimentoOdontologicoChildThrift = module.exports.FichaAtendimentoOdontol
   this.pesoAcompanhamentoNutricional = null;
   this.alturaAcompanhamentoNutricional = null;
   this.medicoes = null;
+  this.problemasCondicoes = null;
   if (args) {
     if (args.dtNascimento !== undefined && args.dtNascimento !== null) {
       this.dtNascimento = args.dtNascimento;
@@ -136,7 +131,7 @@ FichaAtendimentoOdontologicoChildThrift = module.exports.FichaAtendimentoOdontol
       this.tiposConsultaOdonto = Thrift.copyList(args.tiposConsultaOdonto, [null]);
     }
     if (args.procedimentosRealizados !== undefined && args.procedimentosRealizados !== null) {
-      this.procedimentosRealizados = Thrift.copyList(args.procedimentosRealizados, [ttypes.ProcedimentoQuantidadeThrift]);
+      this.procedimentosRealizados = Thrift.copyList(args.procedimentosRealizados, [ProcedimentoQuantidadeThrift]);
     }
     if (args.sexo !== undefined && args.sexo !== null) {
       this.sexo = args.sexo;
@@ -154,13 +149,13 @@ FichaAtendimentoOdontologicoChildThrift = module.exports.FichaAtendimentoOdontol
       this.cpfCidadao = args.cpfCidadao;
     }
     if (args.medicamentos !== undefined && args.medicamentos !== null) {
-      this.medicamentos = Thrift.copyList(args.medicamentos, [common_ttypes.MedicamentoThrift]);
+      this.medicamentos = Thrift.copyList(args.medicamentos, [MedicamentoThrift]);
     }
     if (args.encaminhamentos !== undefined && args.encaminhamentos !== null) {
-      this.encaminhamentos = Thrift.copyList(args.encaminhamentos, [common_ttypes.EncaminhamentoExternoThrift]);
+      this.encaminhamentos = Thrift.copyList(args.encaminhamentos, [EncaminhamentoExternoThrift]);
     }
     if (args.resultadosExames !== undefined && args.resultadosExames !== null) {
-      this.resultadosExames = Thrift.copyList(args.resultadosExames, [common_ttypes.ResultadosExameThrift]);
+      this.resultadosExames = Thrift.copyList(args.resultadosExames, [ResultadosExameThrift]);
     }
     if (args.pesoAcompanhamentoNutricional !== undefined && args.pesoAcompanhamentoNutricional !== null) {
       this.pesoAcompanhamentoNutricional = args.pesoAcompanhamentoNutricional;
@@ -169,7 +164,10 @@ FichaAtendimentoOdontologicoChildThrift = module.exports.FichaAtendimentoOdontol
       this.alturaAcompanhamentoNutricional = args.alturaAcompanhamentoNutricional;
     }
     if (args.medicoes !== undefined && args.medicoes !== null) {
-      this.medicoes = new common_ttypes.MedicoesThrift(args.medicoes);
+      this.medicoes = new MedicoesThrift(args.medicoes);
+    }
+    if (args.problemasCondicoes !== undefined && args.problemasCondicoes !== null) {
+      this.problemasCondicoes = Thrift.copyList(args.problemasCondicoes, [ProblemaCondicaoThrift]);
     }
   }
 };
@@ -189,49 +187,49 @@ FichaAtendimentoOdontologicoChildThrift.prototype.read = function(input) {
     {
       case 1:
       if (ftype == Thrift.Type.I64) {
-        this.dtNascimento = input.readI64();
+        this.dtNascimento = input.readI64().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 2:
       if (ftype == Thrift.Type.STRING) {
-        this.cnsCidadao = input.readString();
+        this.cnsCidadao = input.readString().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 3:
       if (ftype == Thrift.Type.STRING) {
-        this.numProntuario = input.readString();
+        this.numProntuario = input.readString().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 4:
       if (ftype == Thrift.Type.BOOL) {
-        this.gestante = input.readBool();
+        this.gestante = input.readBool().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 5:
       if (ftype == Thrift.Type.BOOL) {
-        this.necessidadesEspeciais = input.readBool();
+        this.necessidadesEspeciais = input.readBool().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 6:
       if (ftype == Thrift.Type.I64) {
-        this.localAtendimento = input.readI64();
+        this.localAtendimento = input.readI64().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 7:
       if (ftype == Thrift.Type.I64) {
-        this.tipoAtendimento = input.readI64();
+        this.tipoAtendimento = input.readI64().value;
       } else {
         input.skip(ftype);
       }
@@ -248,7 +246,7 @@ FichaAtendimentoOdontologicoChildThrift.prototype.read = function(input) {
         for (var _i5 = 0; _i5 < _size0; ++_i5)
         {
           var elem6 = null;
-          elem6 = input.readI64();
+          elem6 = input.readI64().value;
           this.tiposEncamOdonto.push(elem6);
         }
         input.readListEnd();
@@ -268,7 +266,7 @@ FichaAtendimentoOdontologicoChildThrift.prototype.read = function(input) {
         for (var _i12 = 0; _i12 < _size7; ++_i12)
         {
           var elem13 = null;
-          elem13 = input.readI64();
+          elem13 = input.readI64().value;
           this.tiposFornecimOdonto.push(elem13);
         }
         input.readListEnd();
@@ -288,7 +286,7 @@ FichaAtendimentoOdontologicoChildThrift.prototype.read = function(input) {
         for (var _i19 = 0; _i19 < _size14; ++_i19)
         {
           var elem20 = null;
-          elem20 = input.readI64();
+          elem20 = input.readI64().value;
           this.tiposVigilanciaSaudeBucal.push(elem20);
         }
         input.readListEnd();
@@ -308,7 +306,7 @@ FichaAtendimentoOdontologicoChildThrift.prototype.read = function(input) {
         for (var _i26 = 0; _i26 < _size21; ++_i26)
         {
           var elem27 = null;
-          elem27 = input.readI64();
+          elem27 = input.readI64().value;
           this.tiposConsultaOdonto.push(elem27);
         }
         input.readListEnd();
@@ -328,7 +326,7 @@ FichaAtendimentoOdontologicoChildThrift.prototype.read = function(input) {
         for (var _i33 = 0; _i33 < _size28; ++_i33)
         {
           var elem34 = null;
-          elem34 = new ttypes.ProcedimentoQuantidadeThrift();
+          elem34 = new ProcedimentoQuantidadeThrift();
           elem34.read(input);
           this.procedimentosRealizados.push(elem34);
         }
@@ -339,35 +337,35 @@ FichaAtendimentoOdontologicoChildThrift.prototype.read = function(input) {
       break;
       case 14:
       if (ftype == Thrift.Type.I64) {
-        this.sexo = input.readI64();
+        this.sexo = input.readI64().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 15:
       if (ftype == Thrift.Type.I64) {
-        this.turno = input.readI64();
+        this.turno = input.readI64().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 16:
       if (ftype == Thrift.Type.I64) {
-        this.dataHoraInicialAtendimento = input.readI64();
+        this.dataHoraInicialAtendimento = input.readI64().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 17:
       if (ftype == Thrift.Type.I64) {
-        this.dataHoraFinalAtendimento = input.readI64();
+        this.dataHoraFinalAtendimento = input.readI64().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 18:
       if (ftype == Thrift.Type.STRING) {
-        this.cpfCidadao = input.readString();
+        this.cpfCidadao = input.readString().value;
       } else {
         input.skip(ftype);
       }
@@ -384,7 +382,7 @@ FichaAtendimentoOdontologicoChildThrift.prototype.read = function(input) {
         for (var _i40 = 0; _i40 < _size35; ++_i40)
         {
           var elem41 = null;
-          elem41 = new common_ttypes.MedicamentoThrift();
+          elem41 = new MedicamentoThrift();
           elem41.read(input);
           this.medicamentos.push(elem41);
         }
@@ -405,7 +403,7 @@ FichaAtendimentoOdontologicoChildThrift.prototype.read = function(input) {
         for (var _i47 = 0; _i47 < _size42; ++_i47)
         {
           var elem48 = null;
-          elem48 = new common_ttypes.EncaminhamentoExternoThrift();
+          elem48 = new EncaminhamentoExternoThrift();
           elem48.read(input);
           this.encaminhamentos.push(elem48);
         }
@@ -426,7 +424,7 @@ FichaAtendimentoOdontologicoChildThrift.prototype.read = function(input) {
         for (var _i54 = 0; _i54 < _size49; ++_i54)
         {
           var elem55 = null;
-          elem55 = new common_ttypes.ResultadosExameThrift();
+          elem55 = new ResultadosExameThrift();
           elem55.read(input);
           this.resultadosExames.push(elem55);
         }
@@ -437,22 +435,43 @@ FichaAtendimentoOdontologicoChildThrift.prototype.read = function(input) {
       break;
       case 22:
       if (ftype == Thrift.Type.DOUBLE) {
-        this.pesoAcompanhamentoNutricional = input.readDouble();
+        this.pesoAcompanhamentoNutricional = input.readDouble().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 23:
       if (ftype == Thrift.Type.DOUBLE) {
-        this.alturaAcompanhamentoNutricional = input.readDouble();
+        this.alturaAcompanhamentoNutricional = input.readDouble().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 27:
       if (ftype == Thrift.Type.STRUCT) {
-        this.medicoes = new common_ttypes.MedicoesThrift();
+        this.medicoes = new MedicoesThrift();
         this.medicoes.read(input);
+      } else {
+        input.skip(ftype);
+      }
+      break;
+      case 28:
+      if (ftype == Thrift.Type.LIST) {
+        var _size56 = 0;
+        var _rtmp360;
+        this.problemasCondicoes = [];
+        var _etype59 = 0;
+        _rtmp360 = input.readListBegin();
+        _etype59 = _rtmp360.etype;
+        _size56 = _rtmp360.size;
+        for (var _i61 = 0; _i61 < _size56; ++_i61)
+        {
+          var elem62 = null;
+          elem62 = new ProblemaCondicaoThrift();
+          elem62.read(input);
+          this.problemasCondicoes.push(elem62);
+        }
+        input.readListEnd();
       } else {
         input.skip(ftype);
       }
@@ -506,12 +525,12 @@ FichaAtendimentoOdontologicoChildThrift.prototype.write = function(output) {
   if (this.tiposEncamOdonto !== null && this.tiposEncamOdonto !== undefined) {
     output.writeFieldBegin('tiposEncamOdonto', Thrift.Type.LIST, 8);
     output.writeListBegin(Thrift.Type.I64, this.tiposEncamOdonto.length);
-    for (var iter56 in this.tiposEncamOdonto)
+    for (var iter63 in this.tiposEncamOdonto)
     {
-      if (this.tiposEncamOdonto.hasOwnProperty(iter56))
+      if (this.tiposEncamOdonto.hasOwnProperty(iter63))
       {
-        iter56 = this.tiposEncamOdonto[iter56];
-        output.writeI64(iter56);
+        iter63 = this.tiposEncamOdonto[iter63];
+        output.writeI64(iter63);
       }
     }
     output.writeListEnd();
@@ -520,12 +539,12 @@ FichaAtendimentoOdontologicoChildThrift.prototype.write = function(output) {
   if (this.tiposFornecimOdonto !== null && this.tiposFornecimOdonto !== undefined) {
     output.writeFieldBegin('tiposFornecimOdonto', Thrift.Type.LIST, 9);
     output.writeListBegin(Thrift.Type.I64, this.tiposFornecimOdonto.length);
-    for (var iter57 in this.tiposFornecimOdonto)
+    for (var iter64 in this.tiposFornecimOdonto)
     {
-      if (this.tiposFornecimOdonto.hasOwnProperty(iter57))
+      if (this.tiposFornecimOdonto.hasOwnProperty(iter64))
       {
-        iter57 = this.tiposFornecimOdonto[iter57];
-        output.writeI64(iter57);
+        iter64 = this.tiposFornecimOdonto[iter64];
+        output.writeI64(iter64);
       }
     }
     output.writeListEnd();
@@ -534,12 +553,12 @@ FichaAtendimentoOdontologicoChildThrift.prototype.write = function(output) {
   if (this.tiposVigilanciaSaudeBucal !== null && this.tiposVigilanciaSaudeBucal !== undefined) {
     output.writeFieldBegin('tiposVigilanciaSaudeBucal', Thrift.Type.LIST, 10);
     output.writeListBegin(Thrift.Type.I64, this.tiposVigilanciaSaudeBucal.length);
-    for (var iter58 in this.tiposVigilanciaSaudeBucal)
+    for (var iter65 in this.tiposVigilanciaSaudeBucal)
     {
-      if (this.tiposVigilanciaSaudeBucal.hasOwnProperty(iter58))
+      if (this.tiposVigilanciaSaudeBucal.hasOwnProperty(iter65))
       {
-        iter58 = this.tiposVigilanciaSaudeBucal[iter58];
-        output.writeI64(iter58);
+        iter65 = this.tiposVigilanciaSaudeBucal[iter65];
+        output.writeI64(iter65);
       }
     }
     output.writeListEnd();
@@ -548,12 +567,12 @@ FichaAtendimentoOdontologicoChildThrift.prototype.write = function(output) {
   if (this.tiposConsultaOdonto !== null && this.tiposConsultaOdonto !== undefined) {
     output.writeFieldBegin('tiposConsultaOdonto', Thrift.Type.LIST, 11);
     output.writeListBegin(Thrift.Type.I64, this.tiposConsultaOdonto.length);
-    for (var iter59 in this.tiposConsultaOdonto)
+    for (var iter66 in this.tiposConsultaOdonto)
     {
-      if (this.tiposConsultaOdonto.hasOwnProperty(iter59))
+      if (this.tiposConsultaOdonto.hasOwnProperty(iter66))
       {
-        iter59 = this.tiposConsultaOdonto[iter59];
-        output.writeI64(iter59);
+        iter66 = this.tiposConsultaOdonto[iter66];
+        output.writeI64(iter66);
       }
     }
     output.writeListEnd();
@@ -562,12 +581,12 @@ FichaAtendimentoOdontologicoChildThrift.prototype.write = function(output) {
   if (this.procedimentosRealizados !== null && this.procedimentosRealizados !== undefined) {
     output.writeFieldBegin('procedimentosRealizados', Thrift.Type.LIST, 12);
     output.writeListBegin(Thrift.Type.STRUCT, this.procedimentosRealizados.length);
-    for (var iter60 in this.procedimentosRealizados)
+    for (var iter67 in this.procedimentosRealizados)
     {
-      if (this.procedimentosRealizados.hasOwnProperty(iter60))
+      if (this.procedimentosRealizados.hasOwnProperty(iter67))
       {
-        iter60 = this.procedimentosRealizados[iter60];
-        iter60.write(output);
+        iter67 = this.procedimentosRealizados[iter67];
+        iter67.write(output);
       }
     }
     output.writeListEnd();
@@ -601,12 +620,12 @@ FichaAtendimentoOdontologicoChildThrift.prototype.write = function(output) {
   if (this.medicamentos !== null && this.medicamentos !== undefined) {
     output.writeFieldBegin('medicamentos', Thrift.Type.LIST, 19);
     output.writeListBegin(Thrift.Type.STRUCT, this.medicamentos.length);
-    for (var iter61 in this.medicamentos)
+    for (var iter68 in this.medicamentos)
     {
-      if (this.medicamentos.hasOwnProperty(iter61))
+      if (this.medicamentos.hasOwnProperty(iter68))
       {
-        iter61 = this.medicamentos[iter61];
-        iter61.write(output);
+        iter68 = this.medicamentos[iter68];
+        iter68.write(output);
       }
     }
     output.writeListEnd();
@@ -615,12 +634,12 @@ FichaAtendimentoOdontologicoChildThrift.prototype.write = function(output) {
   if (this.encaminhamentos !== null && this.encaminhamentos !== undefined) {
     output.writeFieldBegin('encaminhamentos', Thrift.Type.LIST, 20);
     output.writeListBegin(Thrift.Type.STRUCT, this.encaminhamentos.length);
-    for (var iter62 in this.encaminhamentos)
+    for (var iter69 in this.encaminhamentos)
     {
-      if (this.encaminhamentos.hasOwnProperty(iter62))
+      if (this.encaminhamentos.hasOwnProperty(iter69))
       {
-        iter62 = this.encaminhamentos[iter62];
-        iter62.write(output);
+        iter69 = this.encaminhamentos[iter69];
+        iter69.write(output);
       }
     }
     output.writeListEnd();
@@ -629,12 +648,12 @@ FichaAtendimentoOdontologicoChildThrift.prototype.write = function(output) {
   if (this.resultadosExames !== null && this.resultadosExames !== undefined) {
     output.writeFieldBegin('resultadosExames', Thrift.Type.LIST, 21);
     output.writeListBegin(Thrift.Type.STRUCT, this.resultadosExames.length);
-    for (var iter63 in this.resultadosExames)
+    for (var iter70 in this.resultadosExames)
     {
-      if (this.resultadosExames.hasOwnProperty(iter63))
+      if (this.resultadosExames.hasOwnProperty(iter70))
       {
-        iter63 = this.resultadosExames[iter63];
-        iter63.write(output);
+        iter70 = this.resultadosExames[iter70];
+        iter70.write(output);
       }
     }
     output.writeListEnd();
@@ -655,12 +674,26 @@ FichaAtendimentoOdontologicoChildThrift.prototype.write = function(output) {
     this.medicoes.write(output);
     output.writeFieldEnd();
   }
+  if (this.problemasCondicoes !== null && this.problemasCondicoes !== undefined) {
+    output.writeFieldBegin('problemasCondicoes', Thrift.Type.LIST, 28);
+    output.writeListBegin(Thrift.Type.STRUCT, this.problemasCondicoes.length);
+    for (var iter71 in this.problemasCondicoes)
+    {
+      if (this.problemasCondicoes.hasOwnProperty(iter71))
+      {
+        iter71 = this.problemasCondicoes[iter71];
+        iter71.write(output);
+      }
+    }
+    output.writeListEnd();
+    output.writeFieldEnd();
+  }
   output.writeFieldStop();
   output.writeStructEnd();
   return;
 };
 
-FichaAtendimentoOdontologicoMasterThrift = module.exports.FichaAtendimentoOdontologicoMasterThrift = function(args) {
+FichaAtendimentoOdontologicoMasterThrift = function(args) {
   this.uuidFicha = null;
   this.headerTransport = null;
   this.atendimentosOdontologicos = null;
@@ -672,10 +705,10 @@ FichaAtendimentoOdontologicoMasterThrift = module.exports.FichaAtendimentoOdonto
       throw new Thrift.TProtocolException(Thrift.TProtocolExceptionType.UNKNOWN, 'Required field uuidFicha is unset!');
     }
     if (args.headerTransport !== undefined && args.headerTransport !== null) {
-      this.headerTransport = new common_ttypes.VariasLotacoesHeaderThrift(args.headerTransport);
+      this.headerTransport = new VariasLotacoesHeaderThrift(args.headerTransport);
     }
     if (args.atendimentosOdontologicos !== undefined && args.atendimentosOdontologicos !== null) {
-      this.atendimentosOdontologicos = Thrift.copyList(args.atendimentosOdontologicos, [ttypes.FichaAtendimentoOdontologicoChildThrift]);
+      this.atendimentosOdontologicos = Thrift.copyList(args.atendimentosOdontologicos, [FichaAtendimentoOdontologicoChildThrift]);
     }
     if (args.tpCdsOrigem !== undefined && args.tpCdsOrigem !== null) {
       this.tpCdsOrigem = args.tpCdsOrigem;
@@ -698,14 +731,14 @@ FichaAtendimentoOdontologicoMasterThrift.prototype.read = function(input) {
     {
       case 1:
       if (ftype == Thrift.Type.STRING) {
-        this.uuidFicha = input.readString();
+        this.uuidFicha = input.readString().value;
       } else {
         input.skip(ftype);
       }
       break;
       case 2:
       if (ftype == Thrift.Type.STRUCT) {
-        this.headerTransport = new common_ttypes.VariasLotacoesHeaderThrift();
+        this.headerTransport = new VariasLotacoesHeaderThrift();
         this.headerTransport.read(input);
       } else {
         input.skip(ftype);
@@ -713,19 +746,19 @@ FichaAtendimentoOdontologicoMasterThrift.prototype.read = function(input) {
       break;
       case 3:
       if (ftype == Thrift.Type.LIST) {
-        var _size64 = 0;
-        var _rtmp368;
+        var _size72 = 0;
+        var _rtmp376;
         this.atendimentosOdontologicos = [];
-        var _etype67 = 0;
-        _rtmp368 = input.readListBegin();
-        _etype67 = _rtmp368.etype;
-        _size64 = _rtmp368.size;
-        for (var _i69 = 0; _i69 < _size64; ++_i69)
+        var _etype75 = 0;
+        _rtmp376 = input.readListBegin();
+        _etype75 = _rtmp376.etype;
+        _size72 = _rtmp376.size;
+        for (var _i77 = 0; _i77 < _size72; ++_i77)
         {
-          var elem70 = null;
-          elem70 = new ttypes.FichaAtendimentoOdontologicoChildThrift();
-          elem70.read(input);
-          this.atendimentosOdontologicos.push(elem70);
+          var elem78 = null;
+          elem78 = new FichaAtendimentoOdontologicoChildThrift();
+          elem78.read(input);
+          this.atendimentosOdontologicos.push(elem78);
         }
         input.readListEnd();
       } else {
@@ -734,7 +767,7 @@ FichaAtendimentoOdontologicoMasterThrift.prototype.read = function(input) {
       break;
       case 4:
       if (ftype == Thrift.Type.I32) {
-        this.tpCdsOrigem = input.readI32();
+        this.tpCdsOrigem = input.readI32().value;
       } else {
         input.skip(ftype);
       }
@@ -763,12 +796,12 @@ FichaAtendimentoOdontologicoMasterThrift.prototype.write = function(output) {
   if (this.atendimentosOdontologicos !== null && this.atendimentosOdontologicos !== undefined) {
     output.writeFieldBegin('atendimentosOdontologicos', Thrift.Type.LIST, 3);
     output.writeListBegin(Thrift.Type.STRUCT, this.atendimentosOdontologicos.length);
-    for (var iter71 in this.atendimentosOdontologicos)
+    for (var iter79 in this.atendimentosOdontologicos)
     {
-      if (this.atendimentosOdontologicos.hasOwnProperty(iter71))
+      if (this.atendimentosOdontologicos.hasOwnProperty(iter79))
       {
-        iter71 = this.atendimentosOdontologicos[iter71];
-        iter71.write(output);
+        iter79 = this.atendimentosOdontologicos[iter79];
+        iter79.write(output);
       }
     }
     output.writeListEnd();

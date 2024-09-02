@@ -19,8 +19,8 @@ var _ = common.GoUnusedProtection__
 var GoUnusedProtection__ int
 
 // Attributes:
-//  - CodigoExame
-//  - SolicitadoAvaliado
+//   - CodigoExame
+//   - SolicitadoAvaliado
 type ExameThrift struct {
 	CodigoExame        *string  `thrift:"codigoExame,1" json:"codigoExame,omitempty"`
 	SolicitadoAvaliado []string `thrift:"solicitadoAvaliado,2" json:"solicitadoAvaliado,omitempty"`
@@ -185,11 +185,11 @@ func (p *ExameThrift) String() string {
 }
 
 // Attributes:
-//  - Ciaps
-//  - OutroCiap1
-//  - OutroCiap2
-//  - Cid10
-//  - Cid10_2
+//   - Ciaps
+//   - OutroCiap1
+//   - OutroCiap2
+//   - Cid10
+//   - Cid10_2
 type ProblemaCondicaoAvaliacaoAIThrift struct {
 	Ciaps      []string `thrift:"ciaps,1" json:"ciaps,omitempty"`
 	OutroCiap1 *string  `thrift:"outroCiap1,2" json:"outroCiap1,omitempty"`
@@ -489,43 +489,44 @@ func (p *ProblemaCondicaoAvaliacaoAIThrift) String() string {
 }
 
 // Attributes:
-//  - NumeroProntuario
-//  - Cns
-//  - DataNascimento
-//  - LocalDeAtendimento
-//  - Sexo
-//  - Turno
-//  - TipoAtendimento
-//  - PesoAcompanhamentoNutricional
-//  - AlturaAcompanhamentoNutricional
-//  - AleitamentoMaterno
-//  - DumDaGestante
-//  - IdadeGestacional
-//  - AtencaoDomiciliarModalidade
-//  - ProblemaCondicaoAvaliada
-//  - Exame
-//  - VacinaEmDia
-//  - Pic
-//  - FicouEmObservacao
-//  - Nasfs
-//  - Condutas
-//  - StGravidezPlanejada
-//  - NuGestasPrevias
-//  - NuPartos
-//  - RacionalidadeSaude
-//  - PerimetroCefalico
-//  - DataHoraInicialAtendimento
-//  - DataHoraFinalAtendimento
-//  - CpfCidadao
-//  - Medicamentos
-//  - Encaminhamentos
-//  - ResultadosExames
-//  - UuidRnds
-//  - FinalizadorObservacao
-//  - TipoParticipacaoCidadao
-//  - TipoParticipacaoProfissionalConvidado
-//  - Emultis
-//  - Medicoes
+//   - NumeroProntuario
+//   - Cns
+//   - DataNascimento
+//   - LocalDeAtendimento
+//   - Sexo
+//   - Turno
+//   - TipoAtendimento
+//   - PesoAcompanhamentoNutricional
+//   - AlturaAcompanhamentoNutricional
+//   - AleitamentoMaterno
+//   - DumDaGestante
+//   - IdadeGestacional
+//   - AtencaoDomiciliarModalidade
+//   - ProblemaCondicaoAvaliada
+//   - Exame
+//   - VacinaEmDia
+//   - Pic
+//   - FicouEmObservacao
+//   - Nasfs
+//   - Condutas
+//   - StGravidezPlanejada
+//   - NuGestasPrevias
+//   - NuPartos
+//   - RacionalidadeSaude
+//   - PerimetroCefalico
+//   - DataHoraInicialAtendimento
+//   - DataHoraFinalAtendimento
+//   - CpfCidadao
+//   - Medicamentos
+//   - Encaminhamentos
+//   - ResultadosExames
+//   - UuidRnds
+//   - FinalizadorObservacao
+//   - TipoParticipacaoCidadao
+//   - TipoParticipacaoProfissionalConvidado
+//   - Emultis
+//   - Medicoes
+//   - ProblemasCondicoes
 type FichaAtendimentoIndividualChildThrift struct {
 	NumeroProntuario                *string                            `thrift:"numeroProntuario,1" json:"numeroProntuario,omitempty"`
 	Cns                             *string                            `thrift:"cns,2" json:"cns,omitempty"`
@@ -565,6 +566,7 @@ type FichaAtendimentoIndividualChildThrift struct {
 	TipoParticipacaoProfissionalConvidado *int64                                `thrift:"tipoParticipacaoProfissionalConvidado,37" json:"tipoParticipacaoProfissionalConvidado,omitempty"`
 	Emultis                               []int64                               `thrift:"emultis,38" json:"emultis,omitempty"`
 	Medicoes                              *common.MedicoesThrift                `thrift:"medicoes,39" json:"medicoes,omitempty"`
+	ProblemasCondicoes                    []*common.ProblemaCondicaoThrift      `thrift:"problemasCondicoes,40" json:"problemasCondicoes,omitempty"`
 }
 
 func NewFichaAtendimentoIndividualChildThrift() *FichaAtendimentoIndividualChildThrift {
@@ -882,6 +884,12 @@ func (p *FichaAtendimentoIndividualChildThrift) GetMedicoes() *common.MedicoesTh
 	}
 	return p.Medicoes
 }
+
+var FichaAtendimentoIndividualChildThrift_ProblemasCondicoes_DEFAULT []*common.ProblemaCondicaoThrift
+
+func (p *FichaAtendimentoIndividualChildThrift) GetProblemasCondicoes() []*common.ProblemaCondicaoThrift {
+	return p.ProblemasCondicoes
+}
 func (p *FichaAtendimentoIndividualChildThrift) IsSetNumeroProntuario() bool {
 	return p.NumeroProntuario != nil
 }
@@ -1028,6 +1036,10 @@ func (p *FichaAtendimentoIndividualChildThrift) IsSetEmultis() bool {
 
 func (p *FichaAtendimentoIndividualChildThrift) IsSetMedicoes() bool {
 	return p.Medicoes != nil
+}
+
+func (p *FichaAtendimentoIndividualChildThrift) IsSetProblemasCondicoes() bool {
+	return p.ProblemasCondicoes != nil
 }
 
 func (p *FichaAtendimentoIndividualChildThrift) Read(iprot thrift.TProtocol) error {
@@ -1190,6 +1202,10 @@ func (p *FichaAtendimentoIndividualChildThrift) Read(iprot thrift.TProtocol) err
 			}
 		case 39:
 			if err := p.readField39(iprot); err != nil {
+				return err
+			}
+		case 40:
+			if err := p.readField40(iprot); err != nil {
 				return err
 			}
 		default:
@@ -1620,6 +1636,26 @@ func (p *FichaAtendimentoIndividualChildThrift) readField39(iprot thrift.TProtoc
 	return nil
 }
 
+func (p *FichaAtendimentoIndividualChildThrift) readField40(iprot thrift.TProtocol) error {
+	_, size, err := iprot.ReadListBegin()
+	if err != nil {
+		return thrift.PrependError("error reading list begin: ", err)
+	}
+	tSlice := make([]*common.ProblemaCondicaoThrift, 0, size)
+	p.ProblemasCondicoes = tSlice
+	for i := 0; i < size; i++ {
+		_elem9 := &common.ProblemaCondicaoThrift{}
+		if err := _elem9.Read(iprot); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T error reading struct: ", _elem9), err)
+		}
+		p.ProblemasCondicoes = append(p.ProblemasCondicoes, _elem9)
+	}
+	if err := iprot.ReadListEnd(); err != nil {
+		return thrift.PrependError("error reading list end: ", err)
+	}
+	return nil
+}
+
 func (p *FichaAtendimentoIndividualChildThrift) Write(oprot thrift.TProtocol) error {
 	if err := oprot.WriteStructBegin("FichaAtendimentoIndividualChildThrift"); err != nil {
 		return thrift.PrependError(fmt.Sprintf("%T write struct begin error: ", p), err)
@@ -1733,6 +1769,9 @@ func (p *FichaAtendimentoIndividualChildThrift) Write(oprot thrift.TProtocol) er
 		return err
 	}
 	if err := p.writeField39(oprot); err != nil {
+		return err
+	}
+	if err := p.writeField40(oprot); err != nil {
 		return err
 	}
 	if err := oprot.WriteFieldStop(); err != nil {
@@ -2355,6 +2394,29 @@ func (p *FichaAtendimentoIndividualChildThrift) writeField39(oprot thrift.TProto
 	return err
 }
 
+func (p *FichaAtendimentoIndividualChildThrift) writeField40(oprot thrift.TProtocol) (err error) {
+	if p.IsSetProblemasCondicoes() {
+		if err := oprot.WriteFieldBegin("problemasCondicoes", thrift.LIST, 40); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field begin error 40:problemasCondicoes: ", p), err)
+		}
+		if err := oprot.WriteListBegin(thrift.STRUCT, len(p.ProblemasCondicoes)); err != nil {
+			return thrift.PrependError("error writing list begin: ", err)
+		}
+		for _, v := range p.ProblemasCondicoes {
+			if err := v.Write(oprot); err != nil {
+				return thrift.PrependError(fmt.Sprintf("%T error writing struct: ", v), err)
+			}
+		}
+		if err := oprot.WriteListEnd(); err != nil {
+			return thrift.PrependError("error writing list end: ", err)
+		}
+		if err := oprot.WriteFieldEnd(); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field end error 40:problemasCondicoes: ", p), err)
+		}
+	}
+	return err
+}
+
 func (p *FichaAtendimentoIndividualChildThrift) String() string {
 	if p == nil {
 		return "<nil>"
@@ -2363,10 +2425,10 @@ func (p *FichaAtendimentoIndividualChildThrift) String() string {
 }
 
 // Attributes:
-//  - HeaderTransport
-//  - AtendimentosIndividuais
-//  - UuidFicha
-//  - TpCdsOrigem
+//   - HeaderTransport
+//   - AtendimentosIndividuais
+//   - UuidFicha
+//   - TpCdsOrigem
 type FichaAtendimentoIndividualMasterThrift struct {
 	HeaderTransport         *common.VariasLotacoesHeaderThrift       `thrift:"headerTransport,1" json:"headerTransport,omitempty"`
 	AtendimentosIndividuais []*FichaAtendimentoIndividualChildThrift `thrift:"atendimentosIndividuais,2" json:"atendimentosIndividuais,omitempty"`
@@ -2484,11 +2546,11 @@ func (p *FichaAtendimentoIndividualMasterThrift) readField2(iprot thrift.TProtoc
 	tSlice := make([]*FichaAtendimentoIndividualChildThrift, 0, size)
 	p.AtendimentosIndividuais = tSlice
 	for i := 0; i < size; i++ {
-		_elem9 := &FichaAtendimentoIndividualChildThrift{}
-		if err := _elem9.Read(iprot); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T error reading struct: ", _elem9), err)
+		_elem10 := &FichaAtendimentoIndividualChildThrift{}
+		if err := _elem10.Read(iprot); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T error reading struct: ", _elem10), err)
 		}
-		p.AtendimentosIndividuais = append(p.AtendimentosIndividuais, _elem9)
+		p.AtendimentosIndividuais = append(p.AtendimentosIndividuais, _elem10)
 	}
 	if err := iprot.ReadListEnd(); err != nil {
 		return thrift.PrependError("error reading list end: ", err)

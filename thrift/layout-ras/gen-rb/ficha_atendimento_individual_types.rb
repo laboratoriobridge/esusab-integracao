@@ -95,6 +95,7 @@ module Br
               TIPOPARTICIPACAOPROFISSIONALCONVIDADO = 37
               EMULTIS = 38
               MEDICOES = 39
+              PROBLEMASCONDICOES = 40
 
               FIELDS = {
                 NUMEROPRONTUARIO => {:type => ::Thrift::Types::STRING, :name => 'numeroProntuario', :optional => true},
@@ -133,7 +134,8 @@ module Br
                 TIPOPARTICIPACAOCIDADAO => {:type => ::Thrift::Types::I64, :name => 'tipoParticipacaoCidadao', :optional => true},
                 TIPOPARTICIPACAOPROFISSIONALCONVIDADO => {:type => ::Thrift::Types::I64, :name => 'tipoParticipacaoProfissionalConvidado', :optional => true},
                 EMULTIS => {:type => ::Thrift::Types::LIST, :name => 'emultis', :element => {:type => ::Thrift::Types::I64}, :optional => true},
-                MEDICOES => {:type => ::Thrift::Types::STRUCT, :name => 'medicoes', :class => ::Br::Gov::Saude::Esusab::Ras::Common::MedicoesThrift, :optional => true}
+                MEDICOES => {:type => ::Thrift::Types::STRUCT, :name => 'medicoes', :class => ::Br::Gov::Saude::Esusab::Ras::Common::MedicoesThrift, :optional => true},
+                PROBLEMASCONDICOES => {:type => ::Thrift::Types::LIST, :name => 'problemasCondicoes', :element => {:type => ::Thrift::Types::STRUCT, :class => ::Br::Gov::Saude::Esusab::Ras::Common::ProblemaCondicaoThrift}, :optional => true}
               }
 
               def struct_fields; FIELDS; end

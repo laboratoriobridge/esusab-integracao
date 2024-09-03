@@ -44,34 +44,6 @@
 			<dumDaGestante>1551452400000</dumDaGestante>
 			<idadeGestacional>35</idadeGestacional>
 			<atencaoDomiciliarModalidade>1</atencaoDomiciliarModalidade>
-			<problemaCondicaoAvaliada>
-				<ciaps>ABP009</ciaps>
-				<ciaps>ABP019</ciaps>
-				<ciaps>ABP008</ciaps>
-				<ciaps>ABP006</ciaps>
-				<ciaps>ABP010</ciaps>
-				<ciaps>ABP020</ciaps>
-				<ciaps>ABP018</ciaps>
-				<ciaps>ABP005</ciaps>
-				<ciaps>ABP007</ciaps>
-				<ciaps>ABP001</ciaps>
-				<ciaps>ABP004</ciaps>
-				<ciaps>ABP002</ciaps>
-				<ciaps>ABP023</ciaps>
-				<ciaps>ABP022</ciaps>
-				<ciaps>ABP024</ciaps>
-				<ciaps>ABP015</ciaps>
-				<ciaps>ABP014</ciaps>
-				<ciaps>ABP003</ciaps>
-				<ciaps>ABP011</ciaps>
-				<ciaps>ABP017</ciaps>
-				<ciaps>ABP012</ciaps>
-				<ciaps>ABP013</ciaps>
-				<outroCiap1>R88</outroCiap1>
-				<outroCiap2>R02</outroCiap2>
-				<cid10>J70</cid10>
-				<cid10_2>J99</cid10_2>
-			</problemaCondicaoAvaliada>
 			<exame>
 				<codigoExame>0201010054</codigoExame>
 				<solicitadoAvaliado>A</solicitadoAvaliado>
@@ -149,6 +121,17 @@
 				<hipoteseDiagnosticoCid10>O03</hipoteseDiagnosticoCid10>
 				<classificacaoRisco>1</classificacaoRisco>
 			</encaminhamentos>
+			<problemasCondicoes>
+				<uuidProblema>b0dc457d-8468-49d7-bd82-d37cc96d2326</uuidProblema>
+				<uuidEvolucaoProblema>b0dc457d-8468-49d7-bd82-d37cc96d2327</uuidEvolucaoProblema>
+				<coSequencialEvolucao>1</coSequencialEvolucao>
+				<ciap>A03</ciap>
+				<cid10>R05</cid10>
+				<situacao>1</situacao>
+				<dataInicioProblema>1722643018000</dataInicioProblema> 
+                <dataFimProblema>1722643020000</dataFimProblema> 
+				<isAvaliado>1</isAvaliado>
+			</problemasCondicoes>
 		</atendimentosIndividuais>
 		<atendimentosIndividuais>
 			<numeroProntuario>1234</numeroProntuario>
@@ -176,18 +159,6 @@
 			<aleitamentoMaterno>1</aleitamentoMaterno>
 			<dumDaGestante>1551452400000</dumDaGestante>
 			<atencaoDomiciliarModalidade>1</atencaoDomiciliarModalidade>
-			<problemaCondicaoAvaliada>
-				<ciaps>ABP009</ciaps>
-				<ciaps>ABP019</ciaps>
-				<ciaps>ABP008</ciaps>
-				<ciaps>ABP006</ciaps>
-				<ciaps>ABP012</ciaps>
-				<ciaps>ABP013</ciaps>
-				<outroCiap1>R88</outroCiap1>
-				<outroCiap2>R02</outroCiap2>
-				<cid10>J70</cid10>
-				<cid10_2>J99</cid10_2>
-			</problemaCondicaoAvaliada>
 			<exame>
 				<codigoExame>0201010054</codigoExame>
 				<solicitadoAvaliado>A</solicitadoAvaliado>
@@ -215,9 +186,19 @@
 			<nuGestasPrevias>1</nuGestasPrevias>
 			<nuPartos>1</nuPartos>
 			<racionalidadeSaude>6</racionalidadeSaude>
-			<perimetroCefalico>58.0</perimetroCefalico>
 			<dataHoraInicialAtendimento>1586098800000</dataHoraInicialAtendimento>
 			<dataHoraFinalAtendimento>1586102400000</dataHoraFinalAtendimento>
+			<problemasCondicoes>
+				<uuidProblema>b0dc457d-8468-49d7-bd82-d37cc96d2328</uuidProblema>
+				<uuidEvolucaoProblema>b0dc457d-8468-49d7-bd82-d37cc96d2329</uuidEvolucaoProblema>
+				<coSequencialEvolucao>2</coSequencialEvolucao>
+				<ciap>A03</ciap>
+				<cid10>R05</cid10>
+				<situacao>1</situacao>
+				<dataInicioProblema>1722643018000</dataInicioProblema> 
+                <dataFimProblema>1722643020000</dataFimProblema> 
+				<isAvaliado>1</isAvaliado>
+			</problemasCondicoes>
 		</atendimentosIndividuais>
 		<atendimentosIndividuais>
 			<dataNascimento>1046703600000</dataNascimento>
@@ -240,9 +221,6 @@
 				<altura>180.3</altura>
 				<perimetroCefalico>30.0</perimetroCefalico>
 			</medicoes>
-			<problemaCondicaoAvaliada>
-				<ciaps>ABP003</ciaps>
-			</problemaCondicaoAvaliada>
 			<condutas>1</condutas>
 			<dataHoraInicialAtendimento>1586098800000</dataHoraInicialAtendimento>
 			<dataHoraFinalAtendimento>1586102400000</dataHoraFinalAtendimento>
@@ -274,6 +252,17 @@
 					<valorResultado>25</valorResultado>
 				</resultadoExame>
 			</resultadosExames>
+			<problemasCondicoes>
+				<uuidProblema>b0dc457d-8468-49d7-bd82-d37cc96d2330</uuidProblema>
+				<uuidEvolucaoProblema>b0dc457d-8468-49d7-bd82-d37cc96d2331</uuidEvolucaoProblema>
+				<coSequencialEvolucao>3</coSequencialEvolucao>
+				<ciap>A03</ciap>
+				<cid10>R05</cid10>
+				<situacao>1</situacao>
+				<dataInicioProblema>1722643018000</dataInicioProblema> 
+                <dataFimProblema>1722643020000</dataFimProblema> 
+				<isAvaliado>1</isAvaliado>
+			</problemasCondicoes>
 			<tipoParticipacaoCidadao>1</tipoParticipacaoCidadao>
 			<tipoParticipacaoProfissionalConvidado>2</tipoParticipacaoProfissionalConvidado>
 		</atendimentosIndividuais>
@@ -296,5 +285,5 @@
 		<versaoSistema>5.2.29</versaoSistema>
 		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:originadora>
-	<versao major="7" minor="0" revision="0" />
+	<versao major="6" minor="2" revision="0"/>
 </ns3:dadoTransporteTransportXml>

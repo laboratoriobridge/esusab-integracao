@@ -35,6 +35,17 @@
 			<procedimentos>0404030319</procedimentos>
 			<procedimentos>0301070083</procedimentos>
 			<condutaDesfecho>1</condutaDesfecho>
+			<problemasCondicoes>
+				<uuidProblema>b0dc457d-8468-49d7-bd82-d37cc96d2355</uuidProblema>
+				<uuidEvolucaoProblema>b0dc457d-8468-49d7-bd82-d37cc96d2356</uuidEvolucaoProblema>
+				<coSequencialEvolucao>1</coSequencialEvolucao>
+				<ciap>A03</ciap>
+				<cid10>R05</cid10>
+				<situacao>1</situacao>
+				<dataInicioProblema>1722643018000</dataInicioProblema> 
+                <dataFimProblema>1722643020000</dataFimProblema> 
+				<isAvaliado>1</isAvaliado>
+			</problemasCondicoes>	
 		</atendimentosDomiciliares>
 		<atendimentosDomiciliares>
 			<turno>2</turno>
@@ -52,6 +63,17 @@
 			<procedimentos>0404030319</procedimentos>
 			<procedimentos>0301070083</procedimentos>
 			<condutaDesfecho>1</condutaDesfecho>
+			<problemasCondicoes>
+				<uuidProblema>b0dc457d-8468-49d7-bd82-d37cc96d2358</uuidProblema>
+				<uuidEvolucaoProblema>b0dc457d-8468-49d7-bd82-d37cc96d2359</uuidEvolucaoProblema>
+				<coSequencialEvolucao>2</coSequencialEvolucao>
+				<ciap>A03</ciap>
+				<cid10>R05</cid10>
+				<situacao>1</situacao>
+				<dataInicioProblema>1722643018000</dataInicioProblema> 
+                <dataFimProblema>1722643020000</dataFimProblema> 
+				<isAvaliado>1</isAvaliado>
+			</problemasCondicoes>
 		</atendimentosDomiciliares>
 	</ns4:fichaAtendimentoDomiciliarMasterTransport>
 	<ns2:remetente>
@@ -74,5 +96,5 @@
 		<versaoSistema>5.0.16</versaoSistema>
 		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:originadora>
-	<versao major="4" minor="4" revision="1" />
+	<versao major="6" minor="2" revision="0"/>
 </ns3:dadoTransporteTransportXml>

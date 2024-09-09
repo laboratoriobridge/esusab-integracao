@@ -19,8 +19,8 @@ var _ = common.GoUnusedProtection__
 var GoUnusedProtection__ int
 
 // Attributes:
-//   - CodigoExame
-//   - SolicitadoAvaliado
+//  - CodigoExame
+//  - SolicitadoAvaliado
 type ExameThrift struct {
 	CodigoExame        *string  `thrift:"codigoExame,1" json:"codigoExame,omitempty"`
 	SolicitadoAvaliado []string `thrift:"solicitadoAvaliado,2" json:"solicitadoAvaliado,omitempty"`
@@ -185,11 +185,11 @@ func (p *ExameThrift) String() string {
 }
 
 // Attributes:
-//   - Ciaps
-//   - OutroCiap1
-//   - OutroCiap2
-//   - Cid10
-//   - Cid10_2
+//  - Ciaps
+//  - OutroCiap1
+//  - OutroCiap2
+//  - Cid10
+//  - Cid10_2
 type ProblemaCondicaoAvaliacaoAIThrift struct {
 	Ciaps      []string `thrift:"ciaps,1" json:"ciaps,omitempty"`
 	OutroCiap1 *string  `thrift:"outroCiap1,2" json:"outroCiap1,omitempty"`
@@ -489,44 +489,44 @@ func (p *ProblemaCondicaoAvaliacaoAIThrift) String() string {
 }
 
 // Attributes:
-//   - NumeroProntuario
-//   - Cns
-//   - DataNascimento
-//   - LocalDeAtendimento
-//   - Sexo
-//   - Turno
-//   - TipoAtendimento
-//   - PesoAcompanhamentoNutricional
-//   - AlturaAcompanhamentoNutricional
-//   - AleitamentoMaterno
-//   - DumDaGestante
-//   - IdadeGestacional
-//   - AtencaoDomiciliarModalidade
-//   - ProblemaCondicaoAvaliada
-//   - Exame
-//   - VacinaEmDia
-//   - Pic
-//   - FicouEmObservacao
-//   - Nasfs
-//   - Condutas
-//   - StGravidezPlanejada
-//   - NuGestasPrevias
-//   - NuPartos
-//   - RacionalidadeSaude
-//   - PerimetroCefalico
-//   - DataHoraInicialAtendimento
-//   - DataHoraFinalAtendimento
-//   - CpfCidadao
-//   - Medicamentos
-//   - Encaminhamentos
-//   - ResultadosExames
-//   - UuidRnds
-//   - FinalizadorObservacao
-//   - TipoParticipacaoCidadao
-//   - TipoParticipacaoProfissionalConvidado
-//   - Emultis
-//   - Medicoes
-//   - ProblemasCondicoes
+//  - NumeroProntuario
+//  - Cns
+//  - DataNascimento
+//  - LocalDeAtendimento
+//  - Sexo
+//  - Turno
+//  - TipoAtendimento
+//  - PesoAcompanhamentoNutricional
+//  - AlturaAcompanhamentoNutricional
+//  - AleitamentoMaterno
+//  - DumDaGestante
+//  - IdadeGestacional
+//  - AtencaoDomiciliarModalidade
+//  - ProblemaCondicaoAvaliada
+//  - Exame
+//  - VacinaEmDia
+//  - Pic
+//  - FicouEmObservacao
+//  - Nasfs
+//  - Condutas
+//  - StGravidezPlanejada
+//  - NuGestasPrevias
+//  - NuPartos
+//  - RacionalidadeSaude
+//  - PerimetroCefalico
+//  - DataHoraInicialAtendimento
+//  - DataHoraFinalAtendimento
+//  - CpfCidadao
+//  - Medicamentos
+//  - Encaminhamentos
+//  - ResultadosExames
+//  - UuidRnds
+//  - FinalizadorObservacao
+//  - TipoParticipacaoCidadao
+//  - TipoParticipacaoProfissionalConvidado
+//  - Emultis
+//  - Medicoes
+//  - ProblemasCondicoes
 type FichaAtendimentoIndividualChildThrift struct {
 	NumeroProntuario                *string                            `thrift:"numeroProntuario,1" json:"numeroProntuario,omitempty"`
 	Cns                             *string                            `thrift:"cns,2" json:"cns,omitempty"`
@@ -2425,10 +2425,10 @@ func (p *FichaAtendimentoIndividualChildThrift) String() string {
 }
 
 // Attributes:
-//   - HeaderTransport
-//   - AtendimentosIndividuais
-//   - UuidFicha
-//   - TpCdsOrigem
+//  - HeaderTransport
+//  - AtendimentosIndividuais
+//  - UuidFicha
+//  - TpCdsOrigem
 type FichaAtendimentoIndividualMasterThrift struct {
 	HeaderTransport         *common.VariasLotacoesHeaderThrift       `thrift:"headerTransport,1" json:"headerTransport,omitempty"`
 	AtendimentosIndividuais []*FichaAtendimentoIndividualChildThrift `thrift:"atendimentosIndividuais,2" json:"atendimentosIndividuais,omitempty"`

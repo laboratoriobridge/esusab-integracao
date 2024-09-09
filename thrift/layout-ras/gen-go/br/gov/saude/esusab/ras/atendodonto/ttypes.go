@@ -19,8 +19,8 @@ var _ = common.GoUnusedProtection__
 var GoUnusedProtection__ int
 
 // Attributes:
-//   - CoMsProcedimento
-//   - Quantidade
+//  - CoMsProcedimento
+//  - Quantidade
 type ProcedimentoQuantidadeThrift struct {
 	CoMsProcedimento *string `thrift:"coMsProcedimento,1" json:"coMsProcedimento,omitempty"`
 	Quantidade       *int32  `thrift:"quantidade,2" json:"quantidade,omitempty"`
@@ -167,30 +167,30 @@ func (p *ProcedimentoQuantidadeThrift) String() string {
 }
 
 // Attributes:
-//   - DtNascimento
-//   - CnsCidadao
-//   - NumProntuario
-//   - Gestante
-//   - NecessidadesEspeciais
-//   - LocalAtendimento
-//   - TipoAtendimento
-//   - TiposEncamOdonto
-//   - TiposFornecimOdonto
-//   - TiposVigilanciaSaudeBucal
-//   - TiposConsultaOdonto
-//   - ProcedimentosRealizados
-//   - Sexo
-//   - Turno
-//   - DataHoraInicialAtendimento
-//   - DataHoraFinalAtendimento
-//   - CpfCidadao
-//   - Medicamentos
-//   - Encaminhamentos
-//   - ResultadosExames
-//   - PesoAcompanhamentoNutricional
-//   - AlturaAcompanhamentoNutricional
-//   - Medicoes
-//   - ProblemasCondicoes
+//  - DtNascimento
+//  - CnsCidadao
+//  - NumProntuario
+//  - Gestante
+//  - NecessidadesEspeciais
+//  - LocalAtendimento
+//  - TipoAtendimento
+//  - TiposEncamOdonto
+//  - TiposFornecimOdonto
+//  - TiposVigilanciaSaudeBucal
+//  - TiposConsultaOdonto
+//  - ProcedimentosRealizados
+//  - Sexo
+//  - Turno
+//  - DataHoraInicialAtendimento
+//  - DataHoraFinalAtendimento
+//  - CpfCidadao
+//  - Medicamentos
+//  - Encaminhamentos
+//  - ResultadosExames
+//  - PesoAcompanhamentoNutricional
+//  - AlturaAcompanhamentoNutricional
+//  - Medicoes
+//  - ProblemasCondicoes
 type FichaAtendimentoOdontologicoChildThrift struct {
 	DtNascimento              *int64                          `thrift:"dtNascimento,1" json:"dtNascimento,omitempty"`
 	CnsCidadao                *string                         `thrift:"cnsCidadao,2" json:"cnsCidadao,omitempty"`
@@ -1480,10 +1480,10 @@ func (p *FichaAtendimentoOdontologicoChildThrift) String() string {
 }
 
 // Attributes:
-//   - UuidFicha
-//   - HeaderTransport
-//   - AtendimentosOdontologicos
-//   - TpCdsOrigem
+//  - UuidFicha
+//  - HeaderTransport
+//  - AtendimentosOdontologicos
+//  - TpCdsOrigem
 type FichaAtendimentoOdontologicoMasterThrift struct {
 	UuidFicha                 string                                     `thrift:"uuidFicha,1,required" json:"uuidFicha"`
 	HeaderTransport           *common.VariasLotacoesHeaderThrift         `thrift:"headerTransport,2" json:"headerTransport,omitempty"`

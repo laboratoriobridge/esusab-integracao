@@ -19,20 +19,20 @@ var _ = common.GoUnusedProtection__
 var GoUnusedProtection__ int
 
 // Attributes:
-//   - Turno
-//   - CnsCidadao
-//   - DataNascimento
-//   - Sexo
-//   - LocalAtendimento
-//   - AtencaoDomiciliarModalidade
-//   - TipoAtendimento
-//   - CondicoesAvaliadas
-//   - Cid
-//   - Ciap
-//   - Procedimentos
-//   - CondutaDesfecho
-//   - CpfCidadao
-//   - ProblemasCondicoes
+//  - Turno
+//  - CnsCidadao
+//  - DataNascimento
+//  - Sexo
+//  - LocalAtendimento
+//  - AtencaoDomiciliarModalidade
+//  - TipoAtendimento
+//  - CondicoesAvaliadas
+//  - Cid
+//  - Ciap
+//  - Procedimentos
+//  - CondutaDesfecho
+//  - CpfCidadao
+//  - ProblemasCondicoes
 type FichaAtendimentoDomiciliarChildThrift struct {
 	Turno                       *int64   `thrift:"turno,1" json:"turno,omitempty"`
 	CnsCidadao                  *string  `thrift:"cnsCidadao,2" json:"cnsCidadao,omitempty"`
@@ -773,10 +773,10 @@ func (p *FichaAtendimentoDomiciliarChildThrift) String() string {
 }
 
 // Attributes:
-//   - UuidFicha
-//   - TpCdsOrigem
-//   - AtendimentosDomiciliares
-//   - HeaderTransport
+//  - UuidFicha
+//  - TpCdsOrigem
+//  - AtendimentosDomiciliares
+//  - HeaderTransport
 type FichaAtendimentoDomiciliarMasterThrift struct {
 	UuidFicha   string `thrift:"uuidFicha,1,required" json:"uuidFicha"`
 	TpCdsOrigem *int32 `thrift:"tpCdsOrigem,2" json:"tpCdsOrigem,omitempty"`

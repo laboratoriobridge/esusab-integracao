@@ -17,12 +17,12 @@ var _ = bytes.Equal
 var GoUnusedProtection__ int
 
 // Attributes:
-//   - CnesUnidadeSaude
-//   - CnsProfissional
-//   - CodigoIbgeMunicipio
-//   - DataAtendimento
-//   - IneEquipe
-//   - Microarea
+//  - CnesUnidadeSaude
+//  - CnsProfissional
+//  - CodigoIbgeMunicipio
+//  - DataAtendimento
+//  - IneEquipe
+//  - Microarea
 type HeaderCdsCadastroThrift struct {
 	CnesUnidadeSaude    *string `thrift:"cnesUnidadeSaude,1" json:"cnesUnidadeSaude,omitempty"`
 	CnsProfissional     *string `thrift:"cnsProfissional,2" json:"cnsProfissional,omitempty"`
@@ -349,10 +349,10 @@ func (p *HeaderCdsCadastroThrift) String() string {
 }
 
 // Attributes:
-//   - ProfissionalCNS
-//   - CboCodigo_2002
-//   - Cnes
-//   - Ine
+//  - ProfissionalCNS
+//  - CboCodigo_2002
+//  - Cnes
+//  - Ine
 type LotacaoHeaderThrift struct {
 	ProfissionalCNS *string `thrift:"profissionalCNS,1" json:"profissionalCNS,omitempty"`
 	CboCodigo_2002  *string `thrift:"cboCodigo_2002,2" json:"cboCodigo_2002,omitempty"`
@@ -589,12 +589,12 @@ func (p *LotacaoHeaderThrift) String() string {
 }
 
 // Attributes:
-//   - ProfissionalCNS
-//   - CboCodigo_2002
-//   - Cnes
-//   - Ine
-//   - DataAtendimento
-//   - CodigoIbgeMunicipio
+//  - ProfissionalCNS
+//  - CboCodigo_2002
+//  - Cnes
+//  - Ine
+//  - DataAtendimento
+//  - CodigoIbgeMunicipio
 type UnicaLotacaoHeaderThrift struct {
 	ProfissionalCNS     *string `thrift:"profissionalCNS,1" json:"profissionalCNS,omitempty"`
 	CboCodigo_2002      *string `thrift:"cboCodigo_2002,2" json:"cboCodigo_2002,omitempty"`
@@ -921,10 +921,10 @@ func (p *UnicaLotacaoHeaderThrift) String() string {
 }
 
 // Attributes:
-//   - LotacaoFormPrincipal
-//   - LotacaoFormAtendimentoCompartilhado
-//   - DataAtendimento
-//   - CodigoIbgeMunicipio
+//  - LotacaoFormPrincipal
+//  - LotacaoFormAtendimentoCompartilhado
+//  - DataAtendimento
+//  - CodigoIbgeMunicipio
 type VariasLotacoesHeaderThrift struct {
 	// unused fields # 1 to 5
 	LotacaoFormPrincipal                *LotacaoHeaderThrift `thrift:"lotacaoFormPrincipal,6" json:"lotacaoFormPrincipal,omitempty"`
@@ -1160,12 +1160,12 @@ func (p *VariasLotacoesHeaderThrift) String() string {
 }
 
 // Attributes:
-//   - Cpf
-//   - Cns
-//   - CboCodigo_2002
-//   - Ine
-//   - Cnes
-//   - CodigoIbgeMunicipio
+//  - Cpf
+//  - Cns
+//  - CboCodigo_2002
+//  - Ine
+//  - Cnes
+//  - CodigoIbgeMunicipio
 type LotacaoThrift struct {
 	Cpf                 *string `thrift:"cpf,1" json:"cpf,omitempty"`
 	Cns                 *string `thrift:"cns,2" json:"cns,omitempty"`
@@ -1492,20 +1492,20 @@ func (p *LotacaoThrift) String() string {
 }
 
 // Attributes:
-//   - Bairro
-//   - Cep
-//   - CodigoIbgeMunicipio
-//   - Complemento
-//   - NomeLogradouro
-//   - Numero
-//   - NumeroDneUf
-//   - TelefoneContato
-//   - TelefoneResidencia
-//   - TipoLogradouroNumeroDne
-//   - StSemNumero
-//   - PontoReferencia
-//   - MicroArea
-//   - StForaArea
+//  - Bairro
+//  - Cep
+//  - CodigoIbgeMunicipio
+//  - Complemento
+//  - NomeLogradouro
+//  - Numero
+//  - NumeroDneUf
+//  - TelefoneContato
+//  - TelefoneResidencia
+//  - TipoLogradouroNumeroDne
+//  - StSemNumero
+//  - PontoReferencia
+//  - MicroArea
+//  - StForaArea
 type EnderecoLocalPermanenciaThrift struct {
 	Bairro                  *string `thrift:"bairro,1" json:"bairro,omitempty"`
 	Cep                     *string `thrift:"cep,2" json:"cep,omitempty"`
@@ -2192,19 +2192,19 @@ func (p *EnderecoLocalPermanenciaThrift) String() string {
 }
 
 // Attributes:
-//   - CodigoCatmat
-//   - ViaAdministracao
-//   - Dose
-//   - DoseUnica
-//   - UsoContinuo
-//   - DoseFrequenciaTipo
-//   - DoseFrequencia
-//   - DoseFrequenciaQuantidade
-//   - DoseFrequenciaUnidadeMedida
-//   - DtInicioTratamento
-//   - DuracaoTratamento
-//   - DuracaoTratamentoMedida
-//   - QuantidadeReceitada
+//  - CodigoCatmat
+//  - ViaAdministracao
+//  - Dose
+//  - DoseUnica
+//  - UsoContinuo
+//  - DoseFrequenciaTipo
+//  - DoseFrequencia
+//  - DoseFrequenciaQuantidade
+//  - DoseFrequenciaUnidadeMedida
+//  - DtInicioTratamento
+//  - DuracaoTratamento
+//  - DuracaoTratamentoMedida
+//  - QuantidadeReceitada
 type MedicamentoThrift struct {
 	CodigoCatmat                *string `thrift:"codigoCatmat,1" json:"codigoCatmat,omitempty"`
 	ViaAdministracao            *int64  `thrift:"viaAdministracao,2" json:"viaAdministracao,omitempty"`
@@ -2846,10 +2846,10 @@ func (p *MedicamentoThrift) String() string {
 }
 
 // Attributes:
-//   - Especialidade
-//   - HipoteseDiagnosticoCid10
-//   - HipoteseDiagnosticoCiap2
-//   - ClassificacaoRisco
+//  - Especialidade
+//  - HipoteseDiagnosticoCid10
+//  - HipoteseDiagnosticoCiap2
+//  - ClassificacaoRisco
 type EncaminhamentoExternoThrift struct {
 	Especialidade            *int64  `thrift:"especialidade,1" json:"especialidade,omitempty"`
 	HipoteseDiagnosticoCid10 *string `thrift:"hipoteseDiagnosticoCid10,2" json:"hipoteseDiagnosticoCid10,omitempty"`
@@ -3086,8 +3086,8 @@ func (p *EncaminhamentoExternoThrift) String() string {
 }
 
 // Attributes:
-//   - TipoResultado
-//   - ValorResultado
+//  - TipoResultado
+//  - ValorResultado
 type ResultadoExameThrift struct {
 	TipoResultado  *int32  `thrift:"tipoResultado,1" json:"tipoResultado,omitempty"`
 	ValorResultado *string `thrift:"valorResultado,2" json:"valorResultado,omitempty"`
@@ -3234,11 +3234,11 @@ func (p *ResultadoExameThrift) String() string {
 }
 
 // Attributes:
-//   - Exame
-//   - DataSolicitacao
-//   - DataRealizacao
-//   - DataResultado
-//   - ResultadoExame
+//  - Exame
+//  - DataSolicitacao
+//  - DataRealizacao
+//  - DataResultado
+//  - ResultadoExame
 type ResultadosExameThrift struct {
 	Exame           *string `thrift:"exame,1" json:"exame,omitempty"`
 	DataSolicitacao *int64  `thrift:"dataSolicitacao,2" json:"dataSolicitacao,omitempty"`
@@ -3537,19 +3537,19 @@ func (p *ResultadosExameThrift) String() string {
 }
 
 // Attributes:
-//   - CircunferenciaAbdominal
-//   - PerimetroPanturrilha
-//   - PressaoArterialSistolica
-//   - PressaoArterialDiastolica
-//   - FrequenciaRespiratoria
-//   - FrequenciaCardiaca
-//   - Temperatura
-//   - SaturacaoO2
-//   - GlicemiaCapilar
-//   - TipoGlicemiaCapilar
-//   - Peso
-//   - Altura
-//   - PerimetroCefalico
+//  - CircunferenciaAbdominal
+//  - PerimetroPanturrilha
+//  - PressaoArterialSistolica
+//  - PressaoArterialDiastolica
+//  - FrequenciaRespiratoria
+//  - FrequenciaCardiaca
+//  - Temperatura
+//  - SaturacaoO2
+//  - GlicemiaCapilar
+//  - TipoGlicemiaCapilar
+//  - Peso
+//  - Altura
+//  - PerimetroCefalico
 type MedicoesThrift struct {
 	CircunferenciaAbdominal   *float64 `thrift:"circunferenciaAbdominal,1" json:"circunferenciaAbdominal,omitempty"`
 	PerimetroPanturrilha      *float64 `thrift:"perimetroPanturrilha,2" json:"perimetroPanturrilha,omitempty"`
@@ -4191,15 +4191,15 @@ func (p *MedicoesThrift) String() string {
 }
 
 // Attributes:
-//   - UuidProblema
-//   - UuidEvolucaoProblema
-//   - CoSequencialEvolucao
-//   - Ciap
-//   - Cid10
-//   - Situacao
-//   - DataInicioProblema
-//   - DataFimProblema
-//   - IsAvaliado
+//  - UuidProblema
+//  - UuidEvolucaoProblema
+//  - CoSequencialEvolucao
+//  - Ciap
+//  - Cid10
+//  - Situacao
+//  - DataInicioProblema
+//  - DataFimProblema
+//  - IsAvaliado
 type ProblemaCondicaoThrift struct {
 	UuidProblema         *string `thrift:"uuidProblema,1" json:"uuidProblema,omitempty"`
 	UuidEvolucaoProblema *string `thrift:"uuidEvolucaoProblema,2" json:"uuidEvolucaoProblema,omitempty"`

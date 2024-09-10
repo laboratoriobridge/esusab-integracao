@@ -99,8 +99,8 @@
 				<ciap>A03</ciap>
 				<cid10>R05</cid10>
 				<situacao>1</situacao>
-				<dataInicioProblema>1722643018000</dataInicioProblema> 
-                <dataFimProblema>1722643020000</dataFimProblema> 
+				<dataInicioProblema>1549376600000</dataInicioProblema> 
+                <dataFimProblema>1549377700000</dataFimProblema> 
 				<isAvaliado>1</isAvaliado>
 			</problemasCondicoes>
 		</atendimentosOdontologicos>
@@ -115,7 +115,6 @@
 			<tiposEncamOdonto>3</tiposEncamOdonto>
 			<tiposEncamOdonto>12</tiposEncamOdonto>
 			<tiposEncamOdonto>7</tiposEncamOdonto>
-			<tiposEncamOdonto>13</tiposEncamOdonto>
 			<tiposEncamOdonto>15</tiposEncamOdonto>
 			<tiposEncamOdonto>6</tiposEncamOdonto>
 			<tiposEncamOdonto>14</tiposEncamOdonto>
@@ -176,9 +175,8 @@
 				<coSequencialEvolucao>2</coSequencialEvolucao>
 				<ciap>A03</ciap>
 				<cid10>R05</cid10>
-				<situacao>1</situacao>
-				<dataInicioProblema>1722643018000</dataInicioProblema> 
-                <dataFimProblema>1722643020000</dataFimProblema> 
+				<situacao>0</situacao>
+				<dataInicioProblema>1549376600000</dataInicioProblema> 
 				<isAvaliado>1</isAvaliado>
 			</problemasCondicoes>
 		</atendimentosOdontologicos>
@@ -225,16 +223,9 @@
 				<perimetroCefalico>30.0</perimetroCefalico>
 			</medicoes>
 			<problemasCondicoes>
-				<uuidProblema>b0dc457d-8468-49d7-bd82-d37cc96d2345</uuidProblema>
-				<uuidEvolucaoProblema>b0dc457d-8468-49d7-bd82-d37cc96d2346</uuidEvolucaoProblema>
-				<coSequencialEvolucao>3</coSequencialEvolucao>
-				<ciap>A03</ciap>
-				<cid10>R05</cid10>
-				<situacao>1</situacao>
-				<dataInicioProblema>1722643018000</dataInicioProblema> 
-                <dataFimProblema>1722643020000</dataFimProblema> 
-				<isAvaliado>1</isAvaliado>
-			</problemasCondicoes>
+                <ciap>A03</ciap>
+                <isAvaliado>true</isAvaliado>
+            </problemasCondicoes>
 		</atendimentosOdontologicos>
 		<atendimentosOdontologicos>
 			<numProntuario>123</numProntuario>
@@ -285,8 +276,8 @@
 				<ciap>A03</ciap>
 				<cid10>R05</cid10>
 				<situacao>1</situacao>
-				<dataInicioProblema>1722643018000</dataInicioProblema> 
-                <dataFimProblema>1722643020000</dataFimProblema> 
+				<dataInicioProblema>1553034000000</dataInicioProblema> 
+                <dataFimProblema>1553044000000</dataFimProblema> 
 				<isAvaliado>1</isAvaliado>
 			</problemasCondicoes>
 		</atendimentosOdontologicos>
@@ -352,8 +343,8 @@
 				<ciap>A03</ciap>
 				<cid10>R05</cid10>
 				<situacao>1</situacao>
-				<dataInicioProblema>1722643018000</dataInicioProblema> 
-                <dataFimProblema>1722643020000</dataFimProblema> 
+				<dataInicioProblema>1553108100000</dataInicioProblema> 
+                <dataFimProblema>1553108200000</dataFimProblema> 
 				<isAvaliado>1</isAvaliado>
 			</problemasCondicoes>
 		</atendimentosOdontologicos>

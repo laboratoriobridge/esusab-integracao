@@ -28,13 +28,6 @@
 			<atencaoDomiciliarModalidade>1</atencaoDomiciliarModalidade>
 			<tipoAtendimento>7</tipoAtendimento>
 			<condicoesAvaliadas>2</condicoesAvaliadas>
-			<cid>Z620</cid>
-			<ciap>S96</ciap>
-			<procedimentos>0301070024</procedimentos>
-			<procedimentos>0301050090</procedimentos>
-			<procedimentos>0404030319</procedimentos>
-			<procedimentos>0301070083</procedimentos>
-			<condutaDesfecho>1</condutaDesfecho>
 			<problemasCondicoes>
 				<uuidProblema>b0dc457d-8468-49d7-bd82-d37cc96d2355</uuidProblema>
 				<uuidEvolucaoProblema>b0dc457d-8468-49d7-bd82-d37cc96d2356</uuidEvolucaoProblema>
@@ -42,10 +35,15 @@
 				<ciap>A03</ciap>
 				<cid10>R05</cid10>
 				<situacao>1</situacao>
-				<dataInicioProblema>1722643018000</dataInicioProblema> 
-                <dataFimProblema>1722643020000</dataFimProblema> 
+				<dataInicioProblema>1550674600000</dataInicioProblema> 
+                <dataFimProblema>1550674700000</dataFimProblema> 
 				<isAvaliado>1</isAvaliado>
-			</problemasCondicoes>	
+			</problemasCondicoes>
+			<procedimentos>0301070024</procedimentos>
+			<procedimentos>0301050090</procedimentos>
+			<procedimentos>0404030319</procedimentos>
+			<procedimentos>0301070083</procedimentos>
+			<condutaDesfecho>1</condutaDesfecho>
 		</atendimentosDomiciliares>
 		<atendimentosDomiciliares>
 			<turno>2</turno>
@@ -56,24 +54,15 @@
 			<atencaoDomiciliarModalidade>1</atencaoDomiciliarModalidade>
 			<tipoAtendimento>7</tipoAtendimento>
 			<condicoesAvaliadas>2</condicoesAvaliadas>
-			<cid>Z620</cid>
-			<ciap>S96</ciap>
 			<procedimentos>0301070024</procedimentos>
 			<procedimentos>0301050090</procedimentos>
 			<procedimentos>0404030319</procedimentos>
 			<procedimentos>0301070083</procedimentos>
 			<condutaDesfecho>1</condutaDesfecho>
-			<problemasCondicoes>
-				<uuidProblema>b0dc457d-8468-49d7-bd82-d37cc96d2358</uuidProblema>
-				<uuidEvolucaoProblema>b0dc457d-8468-49d7-bd82-d37cc96d2359</uuidEvolucaoProblema>
-				<coSequencialEvolucao>2</coSequencialEvolucao>
-				<ciap>A03</ciap>
-				<cid10>R05</cid10>
-				<situacao>1</situacao>
-				<dataInicioProblema>1722643018000</dataInicioProblema> 
-                <dataFimProblema>1722643020000</dataFimProblema> 
-				<isAvaliado>1</isAvaliado>
-			</problemasCondicoes>
+            <problemasCondicoes>
+                <ciap>A03</ciap>
+                <isAvaliado>true</isAvaliado>
+            </problemasCondicoes>
 		</atendimentosDomiciliares>
 	</ns4:fichaAtendimentoDomiciliarMasterTransport>
 	<ns2:remetente>

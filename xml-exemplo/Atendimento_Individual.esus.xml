@@ -78,7 +78,6 @@
 			<nuGestasPrevias>1</nuGestasPrevias>
 			<nuPartos>1</nuPartos>
 			<racionalidadeSaude>6</racionalidadeSaude>
-			<perimetroCefalico>58.0</perimetroCefalico>
 			<dataHoraInicialAtendimento>1586098800000</dataHoraInicialAtendimento>
 			<dataHoraFinalAtendimento>1586102400000</dataHoraFinalAtendimento>
 			<medicamentos>
@@ -112,14 +111,14 @@
 				<quantidadeReceitada>12</quantidadeReceitada>
 			</medicamentos>
 			<encaminhamentos>
-				<especialidade>3</especialidade>
 				<hipoteseDiagnosticoCid10>B170</hipoteseDiagnosticoCid10>
-				<classificacaoRisco>3</classificacaoRisco>
-				</encaminhamentos>
+				<classificacaoPrioridade>1</classificacaoPrioridade>
+                <cboCodigo_2002>225142</cboCodigo_2002>
+			</encaminhamentos>
 			<encaminhamentos>
-				<especialidade>10</especialidade>
 				<hipoteseDiagnosticoCid10>O03</hipoteseDiagnosticoCid10>
-				<classificacaoRisco>1</classificacaoRisco>
+				<classificacaoPrioridade>1</classificacaoPrioridade>
+                <cboCodigo_2002>225142</cboCodigo_2002>
 			</encaminhamentos>
 			<problemasCondicoes>
 				<uuidProblema>b0dc457d-8468-49d7-bd82-d37cc96d2326</uuidProblema>
@@ -128,8 +127,8 @@
 				<ciap>A03</ciap>
 				<cid10>R05</cid10>
 				<situacao>1</situacao>
-				<dataInicioProblema>1722643018000</dataInicioProblema> 
-                <dataFimProblema>1722643020000</dataFimProblema> 
+				<dataInicioProblema>1586102200000</dataInicioProblema> 
+                <dataFimProblema>1586102300000</dataFimProblema> 
 				<isAvaliado>1</isAvaliado>
 			</problemasCondicoes>
 		</atendimentosIndividuais>
@@ -188,17 +187,10 @@
 			<racionalidadeSaude>6</racionalidadeSaude>
 			<dataHoraInicialAtendimento>1586098800000</dataHoraInicialAtendimento>
 			<dataHoraFinalAtendimento>1586102400000</dataHoraFinalAtendimento>
-			<problemasCondicoes>
-				<uuidProblema>b0dc457d-8468-49d7-bd82-d37cc96d2328</uuidProblema>
-				<uuidEvolucaoProblema>b0dc457d-8468-49d7-bd82-d37cc96d2329</uuidEvolucaoProblema>
-				<coSequencialEvolucao>2</coSequencialEvolucao>
-				<ciap>A03</ciap>
-				<cid10>R05</cid10>
-				<situacao>1</situacao>
-				<dataInicioProblema>1722643018000</dataInicioProblema> 
-                <dataFimProblema>1722643020000</dataFimProblema> 
-				<isAvaliado>1</isAvaliado>
-			</problemasCondicoes>
+            <problemasCondicoes>
+                <ciap>ABP018</ciap>
+                <isAvaliado>true</isAvaliado>
+            </problemasCondicoes>
 		</atendimentosIndividuais>
 		<atendimentosIndividuais>
 			<dataNascimento>1046703600000</dataNascimento>
@@ -258,9 +250,8 @@
 				<coSequencialEvolucao>3</coSequencialEvolucao>
 				<ciap>A03</ciap>
 				<cid10>R05</cid10>
-				<situacao>1</situacao>
-				<dataInicioProblema>1722643018000</dataInicioProblema> 
-                <dataFimProblema>1722643020000</dataFimProblema> 
+				<situacao>0</situacao>
+				<dataInicioProblema>1586098800010</dataInicioProblema> 
 				<isAvaliado>1</isAvaliado>
 			</problemasCondicoes>
 			<tipoParticipacaoCidadao>1</tipoParticipacaoCidadao>

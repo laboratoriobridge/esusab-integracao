@@ -189,7 +189,7 @@
 			<dataHoraFinalAtendimento>1586102400000</dataHoraFinalAtendimento>
             <problemasCondicoes>
                 <ciap>ABP018</ciap>
-                <isAvaliado>true</isAvaliado>
+                <isAvaliado>1</isAvaliado>
             </problemasCondicoes>
 		</atendimentosIndividuais>
 		<atendimentosIndividuais>

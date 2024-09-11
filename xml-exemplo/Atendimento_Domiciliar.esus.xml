@@ -61,7 +61,7 @@
 			<condutaDesfecho>1</condutaDesfecho>
             <problemasCondicoes>
                 <ciap>A03</ciap>
-                <isAvaliado>true</isAvaliado>
+                <isAvaliado>1</isAvaliado>
             </problemasCondicoes>
 		</atendimentosDomiciliares>
 	</ns4:fichaAtendimentoDomiciliarMasterTransport>

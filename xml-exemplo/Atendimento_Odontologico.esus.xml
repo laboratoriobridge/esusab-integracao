@@ -224,7 +224,7 @@
 			</medicoes>
 			<problemasCondicoes>
                 <ciap>A03</ciap>
-                <isAvaliado>true</isAvaliado>
+                <isAvaliado>1</isAvaliado>
             </problemasCondicoes>
 		</atendimentosOdontologicos>
 		<atendimentosOdontologicos>

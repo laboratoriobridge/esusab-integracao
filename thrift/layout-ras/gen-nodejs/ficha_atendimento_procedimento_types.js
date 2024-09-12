@@ -23,8 +23,6 @@ FichaProcedimentoChildThrift = module.exports.FichaProcedimentoChildThrift = fun
   this.dataHoraInicialAtendimento = null;
   this.dataHoraFinalAtendimento = null;
   this.cpfCidadao = null;
-  this.pesoAcompanhamentoNutricional = null;
-  this.alturaAcompanhamentoNutricional = null;
   this.medicoes = null;
   if (args) {
     if (args.numProntuario !== undefined && args.numProntuario !== null) {
@@ -59,12 +57,6 @@ FichaProcedimentoChildThrift = module.exports.FichaProcedimentoChildThrift = fun
     }
     if (args.cpfCidadao !== undefined && args.cpfCidadao !== null) {
       this.cpfCidadao = args.cpfCidadao;
-    }
-    if (args.pesoAcompanhamentoNutricional !== undefined && args.pesoAcompanhamentoNutricional !== null) {
-      this.pesoAcompanhamentoNutricional = args.pesoAcompanhamentoNutricional;
-    }
-    if (args.alturaAcompanhamentoNutricional !== undefined && args.alturaAcompanhamentoNutricional !== null) {
-      this.alturaAcompanhamentoNutricional = args.alturaAcompanhamentoNutricional;
     }
     if (args.medicoes !== undefined && args.medicoes !== null) {
       this.medicoes = new common_ttypes.MedicoesThrift(args.medicoes);
@@ -175,20 +167,6 @@ FichaProcedimentoChildThrift.prototype.read = function(input) {
         input.skip(ftype);
       }
       break;
-      case 13:
-      if (ftype == Thrift.Type.DOUBLE) {
-        this.pesoAcompanhamentoNutricional = input.readDouble();
-      } else {
-        input.skip(ftype);
-      }
-      break;
-      case 14:
-      if (ftype == Thrift.Type.DOUBLE) {
-        this.alturaAcompanhamentoNutricional = input.readDouble();
-      } else {
-        input.skip(ftype);
-      }
-      break;
       case 16:
       if (ftype == Thrift.Type.STRUCT) {
         this.medicoes = new common_ttypes.MedicoesThrift();
@@ -270,16 +248,6 @@ FichaProcedimentoChildThrift.prototype.write = function(output) {
   if (this.cpfCidadao !== null && this.cpfCidadao !== undefined) {
     output.writeFieldBegin('cpfCidadao', Thrift.Type.STRING, 12);
     output.writeString(this.cpfCidadao);
-    output.writeFieldEnd();
-  }
-  if (this.pesoAcompanhamentoNutricional !== null && this.pesoAcompanhamentoNutricional !== undefined) {
-    output.writeFieldBegin('pesoAcompanhamentoNutricional', Thrift.Type.DOUBLE, 13);
-    output.writeDouble(this.pesoAcompanhamentoNutricional);
-    output.writeFieldEnd();
-  }
-  if (this.alturaAcompanhamentoNutricional !== null && this.alturaAcompanhamentoNutricional !== undefined) {
-    output.writeFieldBegin('alturaAcompanhamentoNutricional', Thrift.Type.DOUBLE, 14);
-    output.writeDouble(this.alturaAcompanhamentoNutricional);
     output.writeFieldEnd();
   }
   if (this.medicoes !== null && this.medicoes !== undefined) {

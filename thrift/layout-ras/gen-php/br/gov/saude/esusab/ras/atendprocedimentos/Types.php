@@ -65,14 +65,6 @@ class FichaProcedimentoChildThrift {
    */
   public $cpfCidadao = null;
   /**
-   * @var double
-   */
-  public $pesoAcompanhamentoNutricional = null;
-  /**
-   * @var double
-   */
-  public $alturaAcompanhamentoNutricional = null;
-  /**
    * @var \br\gov\saude\esusab\ras\common\MedicoesThrift
    */
   public $medicoes = null;
@@ -128,14 +120,6 @@ class FichaProcedimentoChildThrift {
           'var' => 'cpfCidadao',
           'type' => TType::STRING,
           ),
-        13 => array(
-          'var' => 'pesoAcompanhamentoNutricional',
-          'type' => TType::DOUBLE,
-          ),
-        14 => array(
-          'var' => 'alturaAcompanhamentoNutricional',
-          'type' => TType::DOUBLE,
-          ),
         16 => array(
           'var' => 'medicoes',
           'type' => TType::STRUCT,
@@ -176,12 +160,6 @@ class FichaProcedimentoChildThrift {
       }
       if (isset($vals['cpfCidadao'])) {
         $this->cpfCidadao = $vals['cpfCidadao'];
-      }
-      if (isset($vals['pesoAcompanhamentoNutricional'])) {
-        $this->pesoAcompanhamentoNutricional = $vals['pesoAcompanhamentoNutricional'];
-      }
-      if (isset($vals['alturaAcompanhamentoNutricional'])) {
-        $this->alturaAcompanhamentoNutricional = $vals['alturaAcompanhamentoNutricional'];
       }
       if (isset($vals['medicoes'])) {
         $this->medicoes = $vals['medicoes'];
@@ -295,20 +273,6 @@ class FichaProcedimentoChildThrift {
             $xfer += $input->skip($ftype);
           }
           break;
-        case 13:
-          if ($ftype == TType::DOUBLE) {
-            $xfer += $input->readDouble($this->pesoAcompanhamentoNutricional);
-          } else {
-            $xfer += $input->skip($ftype);
-          }
-          break;
-        case 14:
-          if ($ftype == TType::DOUBLE) {
-            $xfer += $input->readDouble($this->alturaAcompanhamentoNutricional);
-          } else {
-            $xfer += $input->skip($ftype);
-          }
-          break;
         case 16:
           if ($ftype == TType::STRUCT) {
             $this->medicoes = new \br\gov\saude\esusab\ras\common\MedicoesThrift();
@@ -395,16 +359,6 @@ class FichaProcedimentoChildThrift {
     if ($this->cpfCidadao !== null) {
       $xfer += $output->writeFieldBegin('cpfCidadao', TType::STRING, 12);
       $xfer += $output->writeString($this->cpfCidadao);
-      $xfer += $output->writeFieldEnd();
-    }
-    if ($this->pesoAcompanhamentoNutricional !== null) {
-      $xfer += $output->writeFieldBegin('pesoAcompanhamentoNutricional', TType::DOUBLE, 13);
-      $xfer += $output->writeDouble($this->pesoAcompanhamentoNutricional);
-      $xfer += $output->writeFieldEnd();
-    }
-    if ($this->alturaAcompanhamentoNutricional !== null) {
-      $xfer += $output->writeFieldBegin('alturaAcompanhamentoNutricional', TType::DOUBLE, 14);
-      $xfer += $output->writeDouble($this->alturaAcompanhamentoNutricional);
       $xfer += $output->writeFieldEnd();
     }
     if ($this->medicoes !== null) {

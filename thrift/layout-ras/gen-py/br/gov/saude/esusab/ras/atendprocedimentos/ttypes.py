@@ -33,8 +33,6 @@ class FichaProcedimentoChildThrift:
    - dataHoraInicialAtendimento
    - dataHoraFinalAtendimento
    - cpfCidadao
-   - pesoAcompanhamentoNutricional
-   - alturaAcompanhamentoNutricional
    - medicoes
   """
 
@@ -52,13 +50,13 @@ class FichaProcedimentoChildThrift:
     (10, TType.I64, 'dataHoraInicialAtendimento', None, None, ), # 10
     (11, TType.I64, 'dataHoraFinalAtendimento', None, None, ), # 11
     (12, TType.STRING, 'cpfCidadao', None, None, ), # 12
-    (13, TType.DOUBLE, 'pesoAcompanhamentoNutricional', None, None, ), # 13
-    (14, TType.DOUBLE, 'alturaAcompanhamentoNutricional', None, None, ), # 14
+    None, # 13
+    None, # 14
     None, # 15
     (16, TType.STRUCT, 'medicoes', (br.gov.saude.esusab.ras.common.ttypes.MedicoesThrift, br.gov.saude.esusab.ras.common.ttypes.MedicoesThrift.thrift_spec), None, ), # 16
   )
 
-  def __init__(self, numProntuario=None, cnsCidadao=None, dtNascimento=None, sexo=None, localAtendimento=None, turno=None, statusEscutaInicialOrientacao=None, procedimentos=None, dataHoraInicialAtendimento=None, dataHoraFinalAtendimento=None, cpfCidadao=None, pesoAcompanhamentoNutricional=None, alturaAcompanhamentoNutricional=None, medicoes=None,):
+  def __init__(self, numProntuario=None, cnsCidadao=None, dtNascimento=None, sexo=None, localAtendimento=None, turno=None, statusEscutaInicialOrientacao=None, procedimentos=None, dataHoraInicialAtendimento=None, dataHoraFinalAtendimento=None, cpfCidadao=None, medicoes=None,):
     self.numProntuario = numProntuario
     self.cnsCidadao = cnsCidadao
     self.dtNascimento = dtNascimento
@@ -70,8 +68,6 @@ class FichaProcedimentoChildThrift:
     self.dataHoraInicialAtendimento = dataHoraInicialAtendimento
     self.dataHoraFinalAtendimento = dataHoraFinalAtendimento
     self.cpfCidadao = cpfCidadao
-    self.pesoAcompanhamentoNutricional = pesoAcompanhamentoNutricional
-    self.alturaAcompanhamentoNutricional = alturaAcompanhamentoNutricional
     self.medicoes = medicoes
 
   def read(self, iprot):
@@ -143,16 +139,6 @@ class FichaProcedimentoChildThrift:
           self.cpfCidadao = iprot.readString()
         else:
           iprot.skip(ftype)
-      elif fid == 13:
-        if ftype == TType.DOUBLE:
-          self.pesoAcompanhamentoNutricional = iprot.readDouble()
-        else:
-          iprot.skip(ftype)
-      elif fid == 14:
-        if ftype == TType.DOUBLE:
-          self.alturaAcompanhamentoNutricional = iprot.readDouble()
-        else:
-          iprot.skip(ftype)
       elif fid == 16:
         if ftype == TType.STRUCT:
           self.medicoes = br.gov.saude.esusab.ras.common.ttypes.MedicoesThrift()
@@ -216,14 +202,6 @@ class FichaProcedimentoChildThrift:
       oprot.writeFieldBegin('cpfCidadao', TType.STRING, 12)
       oprot.writeString(self.cpfCidadao)
       oprot.writeFieldEnd()
-    if self.pesoAcompanhamentoNutricional is not None:
-      oprot.writeFieldBegin('pesoAcompanhamentoNutricional', TType.DOUBLE, 13)
-      oprot.writeDouble(self.pesoAcompanhamentoNutricional)
-      oprot.writeFieldEnd()
-    if self.alturaAcompanhamentoNutricional is not None:
-      oprot.writeFieldBegin('alturaAcompanhamentoNutricional', TType.DOUBLE, 14)
-      oprot.writeDouble(self.alturaAcompanhamentoNutricional)
-      oprot.writeFieldEnd()
     if self.medicoes is not None:
       oprot.writeFieldBegin('medicoes', TType.STRUCT, 16)
       self.medicoes.write(oprot)
@@ -248,8 +226,6 @@ class FichaProcedimentoChildThrift:
     value = (value * 31) ^ hash(self.dataHoraInicialAtendimento)
     value = (value * 31) ^ hash(self.dataHoraFinalAtendimento)
     value = (value * 31) ^ hash(self.cpfCidadao)
-    value = (value * 31) ^ hash(self.pesoAcompanhamentoNutricional)
-    value = (value * 31) ^ hash(self.alturaAcompanhamentoNutricional)
     value = (value * 31) ^ hash(self.medicoes)
     return value
 

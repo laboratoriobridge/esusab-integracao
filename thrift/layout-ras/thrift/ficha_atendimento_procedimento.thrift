@@ -20,8 +20,6 @@ struct FichaProcedimentoChildThrift {
 	10:optional i64 dataHoraInicialAtendimento;
 	11:optional i64 dataHoraFinalAtendimento;
 	12:optional string cpfCidadao;
-	13:optional double pesoAcompanhamentoNutricional;
-	14:optional double alturaAcompanhamentoNutricional;
 	16:optional common.MedicoesThrift medicoes;
 }
 

@@ -122,10 +122,6 @@ type
     procedure SetEncaminhamentos( const Value: IThriftList<IEncaminhamentoExternoThrift>);
     function GetResultadosExames: IThriftList<IResultadosExameThrift>;
     procedure SetResultadosExames( const Value: IThriftList<IResultadosExameThrift>);
-    function GetPesoAcompanhamentoNutricional: Double;
-    procedure SetPesoAcompanhamentoNutricional( const Value: Double);
-    function GetAlturaAcompanhamentoNutricional: Double;
-    procedure SetAlturaAcompanhamentoNutricional( const Value: Double);
     function GetMedicoes: IMedicoesThrift;
     procedure SetMedicoes( const Value: IMedicoesThrift);
 
@@ -149,8 +145,6 @@ type
     property Medicamentos: IThriftList<IMedicamentoThrift> read GetMedicamentos write SetMedicamentos;
     property Encaminhamentos: IThriftList<IEncaminhamentoExternoThrift> read GetEncaminhamentos write SetEncaminhamentos;
     property ResultadosExames: IThriftList<IResultadosExameThrift> read GetResultadosExames write SetResultadosExames;
-    property PesoAcompanhamentoNutricional: Double read GetPesoAcompanhamentoNutricional write SetPesoAcompanhamentoNutricional;
-    property AlturaAcompanhamentoNutricional: Double read GetAlturaAcompanhamentoNutricional write SetAlturaAcompanhamentoNutricional;
     property Medicoes: IMedicoesThrift read GetMedicoes write SetMedicoes;
 
     function Get__isset_DtNascimento: Boolean;
@@ -173,8 +167,6 @@ type
     function Get__isset_Medicamentos: Boolean;
     function Get__isset_Encaminhamentos: Boolean;
     function Get__isset_ResultadosExames: Boolean;
-    function Get__isset_PesoAcompanhamentoNutricional: Boolean;
-    function Get__isset_AlturaAcompanhamentoNutricional: Boolean;
     function Get__isset_Medicoes: Boolean;
 
     property __isset_DtNascimento: Boolean read Get__isset_DtNascimento;
@@ -197,8 +189,6 @@ type
     property __isset_Medicamentos: Boolean read Get__isset_Medicamentos;
     property __isset_Encaminhamentos: Boolean read Get__isset_Encaminhamentos;
     property __isset_ResultadosExames: Boolean read Get__isset_ResultadosExames;
-    property __isset_PesoAcompanhamentoNutricional: Boolean read Get__isset_PesoAcompanhamentoNutricional;
-    property __isset_AlturaAcompanhamentoNutricional: Boolean read Get__isset_AlturaAcompanhamentoNutricional;
     property __isset_Medicoes: Boolean read Get__isset_Medicoes;
   end;
 
@@ -224,8 +214,6 @@ type
     FMedicamentos: IThriftList<IMedicamentoThrift>;
     FEncaminhamentos: IThriftList<IEncaminhamentoExternoThrift>;
     FResultadosExames: IThriftList<IResultadosExameThrift>;
-    FPesoAcompanhamentoNutricional: Double;
-    FAlturaAcompanhamentoNutricional: Double;
     FMedicoes: IMedicoesThrift;
     
     F__isset_DtNascimento: Boolean;
@@ -248,8 +236,6 @@ type
     F__isset_Medicamentos: Boolean;
     F__isset_Encaminhamentos: Boolean;
     F__isset_ResultadosExames: Boolean;
-    F__isset_PesoAcompanhamentoNutricional: Boolean;
-    F__isset_AlturaAcompanhamentoNutricional: Boolean;
     F__isset_Medicoes: Boolean;
     
     function GetDtNascimento: Int64;
@@ -292,10 +278,6 @@ type
     procedure SetEncaminhamentos( const Value: IThriftList<IEncaminhamentoExternoThrift>);
     function GetResultadosExames: IThriftList<IResultadosExameThrift>;
     procedure SetResultadosExames( const Value: IThriftList<IResultadosExameThrift>);
-    function GetPesoAcompanhamentoNutricional: Double;
-    procedure SetPesoAcompanhamentoNutricional( const Value: Double);
-    function GetAlturaAcompanhamentoNutricional: Double;
-    procedure SetAlturaAcompanhamentoNutricional( const Value: Double);
     function GetMedicoes: IMedicoesThrift;
     procedure SetMedicoes( const Value: IMedicoesThrift);
 
@@ -319,8 +301,6 @@ type
     function Get__isset_Medicamentos: Boolean;
     function Get__isset_Encaminhamentos: Boolean;
     function Get__isset_ResultadosExames: Boolean;
-    function Get__isset_PesoAcompanhamentoNutricional: Boolean;
-    function Get__isset_AlturaAcompanhamentoNutricional: Boolean;
     function Get__isset_Medicoes: Boolean;
   public
     constructor Create;
@@ -353,8 +333,6 @@ type
     property Medicamentos: IThriftList<IMedicamentoThrift> read GetMedicamentos write SetMedicamentos;
     property Encaminhamentos: IThriftList<IEncaminhamentoExternoThrift> read GetEncaminhamentos write SetEncaminhamentos;
     property ResultadosExames: IThriftList<IResultadosExameThrift> read GetResultadosExames write SetResultadosExames;
-    property PesoAcompanhamentoNutricional: Double read GetPesoAcompanhamentoNutricional write SetPesoAcompanhamentoNutricional;
-    property AlturaAcompanhamentoNutricional: Double read GetAlturaAcompanhamentoNutricional write SetAlturaAcompanhamentoNutricional;
     property Medicoes: IMedicoesThrift read GetMedicoes write SetMedicoes;
 
     // isset
@@ -378,8 +356,6 @@ type
     property __isset_Medicamentos: Boolean read Get__isset_Medicamentos;
     property __isset_Encaminhamentos: Boolean read Get__isset_Encaminhamentos;
     property __isset_ResultadosExames: Boolean read Get__isset_ResultadosExames;
-    property __isset_PesoAcompanhamentoNutricional: Boolean read Get__isset_PesoAcompanhamentoNutricional;
-    property __isset_AlturaAcompanhamentoNutricional: Boolean read Get__isset_AlturaAcompanhamentoNutricional;
     property __isset_Medicoes: Boolean read Get__isset_Medicoes;
   end;
 
@@ -933,38 +909,6 @@ begin
   Result := F__isset_ResultadosExames;
 end;
 
-function TFichaAtendimentoOdontologicoChildThriftImpl.GetPesoAcompanhamentoNutricional: Double;
-begin
-  Result := FPesoAcompanhamentoNutricional;
-end;
-
-procedure TFichaAtendimentoOdontologicoChildThriftImpl.SetPesoAcompanhamentoNutricional( const Value: Double);
-begin
-  F__isset_PesoAcompanhamentoNutricional := True;
-  FPesoAcompanhamentoNutricional := Value;
-end;
-
-function TFichaAtendimentoOdontologicoChildThriftImpl.Get__isset_PesoAcompanhamentoNutricional: Boolean;
-begin
-  Result := F__isset_PesoAcompanhamentoNutricional;
-end;
-
-function TFichaAtendimentoOdontologicoChildThriftImpl.GetAlturaAcompanhamentoNutricional: Double;
-begin
-  Result := FAlturaAcompanhamentoNutricional;
-end;
-
-procedure TFichaAtendimentoOdontologicoChildThriftImpl.SetAlturaAcompanhamentoNutricional( const Value: Double);
-begin
-  F__isset_AlturaAcompanhamentoNutricional := True;
-  FAlturaAcompanhamentoNutricional := Value;
-end;
-
-function TFichaAtendimentoOdontologicoChildThriftImpl.Get__isset_AlturaAcompanhamentoNutricional: Boolean;
-begin
-  Result := F__isset_AlturaAcompanhamentoNutricional;
-end;
-
 function TFichaAtendimentoOdontologicoChildThriftImpl.GetMedicoes: IMedicoesThrift;
 begin
   Result := FMedicoes;
@@ -1263,24 +1207,6 @@ begin
             TProtocolUtil.Skip(iprot, field_.Type_);
           end;
         end;
-        22: begin
-          if (field_.Type_ = TType.Double_) then
-          begin
-            PesoAcompanhamentoNutricional := iprot.ReadDouble();
-          end else
-          begin
-            TProtocolUtil.Skip(iprot, field_.Type_);
-          end;
-        end;
-        23: begin
-          if (field_.Type_ = TType.Double_) then
-          begin
-            AlturaAcompanhamentoNutricional := iprot.ReadDouble();
-          end else
-          begin
-            TProtocolUtil.Skip(iprot, field_.Type_);
-          end;
-        end;
         27: begin
           if (field_.Type_ = TType.Struct) then
           begin
@@ -1556,24 +1482,6 @@ begin
     oprot.WriteListEnd();
     oprot.WriteFieldEnd();
   end;
-  if (__isset_PesoAcompanhamentoNutricional) then
-  begin
-    field_.Name := 'pesoAcompanhamentoNutricional';
-    field_.Type_  := TType.Double_;
-    field_.ID := 22;
-    oprot.WriteFieldBegin(field_);
-    oprot.WriteDouble(PesoAcompanhamentoNutricional);
-    oprot.WriteFieldEnd();
-  end;
-  if (__isset_AlturaAcompanhamentoNutricional) then
-  begin
-    field_.Name := 'alturaAcompanhamentoNutricional';
-    field_.Type_  := TType.Double_;
-    field_.ID := 23;
-    oprot.WriteFieldBegin(field_);
-    oprot.WriteDouble(AlturaAcompanhamentoNutricional);
-    oprot.WriteFieldEnd();
-  end;
   if (Medicoes <> nil) and __isset_Medicoes then
   begin
     field_.Name := 'medicoes';
@@ -1714,18 +1622,6 @@ begin
       _first43 := FALSE;
       _sb42.Append('ResultadosExames: ');
       _sb42.Append(ResultadosExames);
-    end;
-    if (__isset_PesoAcompanhamentoNutricional) then begin
-      if not _first43 then _sb42.Append(',');
-      _first43 := FALSE;
-      _sb42.Append('PesoAcompanhamentoNutricional: ');
-      _sb42.Append(PesoAcompanhamentoNutricional);
-    end;
-    if (__isset_AlturaAcompanhamentoNutricional) then begin
-      if not _first43 then _sb42.Append(',');
-      _first43 := FALSE;
-      _sb42.Append('AlturaAcompanhamentoNutricional: ');
-      _sb42.Append(AlturaAcompanhamentoNutricional);
     end;
     if (Medicoes <> nil) and __isset_Medicoes then begin
       if not _first43 then _sb42.Append(',');

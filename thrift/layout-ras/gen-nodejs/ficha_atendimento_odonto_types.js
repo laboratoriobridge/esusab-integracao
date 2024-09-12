@@ -98,8 +98,6 @@ FichaAtendimentoOdontologicoChildThrift = module.exports.FichaAtendimentoOdontol
   this.medicamentos = null;
   this.encaminhamentos = null;
   this.resultadosExames = null;
-  this.pesoAcompanhamentoNutricional = null;
-  this.alturaAcompanhamentoNutricional = null;
   this.medicoes = null;
   if (args) {
     if (args.dtNascimento !== undefined && args.dtNascimento !== null) {
@@ -161,12 +159,6 @@ FichaAtendimentoOdontologicoChildThrift = module.exports.FichaAtendimentoOdontol
     }
     if (args.resultadosExames !== undefined && args.resultadosExames !== null) {
       this.resultadosExames = Thrift.copyList(args.resultadosExames, [common_ttypes.ResultadosExameThrift]);
-    }
-    if (args.pesoAcompanhamentoNutricional !== undefined && args.pesoAcompanhamentoNutricional !== null) {
-      this.pesoAcompanhamentoNutricional = args.pesoAcompanhamentoNutricional;
-    }
-    if (args.alturaAcompanhamentoNutricional !== undefined && args.alturaAcompanhamentoNutricional !== null) {
-      this.alturaAcompanhamentoNutricional = args.alturaAcompanhamentoNutricional;
     }
     if (args.medicoes !== undefined && args.medicoes !== null) {
       this.medicoes = new common_ttypes.MedicoesThrift(args.medicoes);
@@ -435,20 +427,6 @@ FichaAtendimentoOdontologicoChildThrift.prototype.read = function(input) {
         input.skip(ftype);
       }
       break;
-      case 22:
-      if (ftype == Thrift.Type.DOUBLE) {
-        this.pesoAcompanhamentoNutricional = input.readDouble();
-      } else {
-        input.skip(ftype);
-      }
-      break;
-      case 23:
-      if (ftype == Thrift.Type.DOUBLE) {
-        this.alturaAcompanhamentoNutricional = input.readDouble();
-      } else {
-        input.skip(ftype);
-      }
-      break;
       case 27:
       if (ftype == Thrift.Type.STRUCT) {
         this.medicoes = new common_ttypes.MedicoesThrift();
@@ -638,16 +616,6 @@ FichaAtendimentoOdontologicoChildThrift.prototype.write = function(output) {
       }
     }
     output.writeListEnd();
-    output.writeFieldEnd();
-  }
-  if (this.pesoAcompanhamentoNutricional !== null && this.pesoAcompanhamentoNutricional !== undefined) {
-    output.writeFieldBegin('pesoAcompanhamentoNutricional', Thrift.Type.DOUBLE, 22);
-    output.writeDouble(this.pesoAcompanhamentoNutricional);
-    output.writeFieldEnd();
-  }
-  if (this.alturaAcompanhamentoNutricional !== null && this.alturaAcompanhamentoNutricional !== undefined) {
-    output.writeFieldBegin('alturaAcompanhamentoNutricional', Thrift.Type.DOUBLE, 23);
-    output.writeDouble(this.alturaAcompanhamentoNutricional);
     output.writeFieldEnd();
   }
   if (this.medicoes !== null && this.medicoes !== undefined) {

@@ -54,8 +54,6 @@ module Br
               MEDICAMENTOS = 19
               ENCAMINHAMENTOS = 20
               RESULTADOSEXAMES = 21
-              PESOACOMPANHAMENTONUTRICIONAL = 22
-              ALTURAACOMPANHAMENTONUTRICIONAL = 23
               MEDICOES = 27
 
               FIELDS = {
@@ -79,8 +77,6 @@ module Br
                 MEDICAMENTOS => {:type => ::Thrift::Types::LIST, :name => 'medicamentos', :element => {:type => ::Thrift::Types::STRUCT, :class => ::Br::Gov::Saude::Esusab::Ras::Common::MedicamentoThrift}, :optional => true},
                 ENCAMINHAMENTOS => {:type => ::Thrift::Types::LIST, :name => 'encaminhamentos', :element => {:type => ::Thrift::Types::STRUCT, :class => ::Br::Gov::Saude::Esusab::Ras::Common::EncaminhamentoExternoThrift}, :optional => true},
                 RESULTADOSEXAMES => {:type => ::Thrift::Types::LIST, :name => 'resultadosExames', :element => {:type => ::Thrift::Types::STRUCT, :class => ::Br::Gov::Saude::Esusab::Ras::Common::ResultadosExameThrift}, :optional => true},
-                PESOACOMPANHAMENTONUTRICIONAL => {:type => ::Thrift::Types::DOUBLE, :name => 'pesoAcompanhamentoNutricional', :optional => true},
-                ALTURAACOMPANHAMENTONUTRICIONAL => {:type => ::Thrift::Types::DOUBLE, :name => 'alturaAcompanhamentoNutricional', :optional => true},
                 MEDICOES => {:type => ::Thrift::Types::STRUCT, :name => 'medicoes', :class => ::Br::Gov::Saude::Esusab::Ras::Common::MedicoesThrift, :optional => true}
               }
 

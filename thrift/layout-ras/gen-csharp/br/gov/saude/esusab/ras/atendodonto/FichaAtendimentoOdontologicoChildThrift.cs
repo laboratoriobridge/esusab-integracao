@@ -43,8 +43,6 @@ namespace br.gov.saude.esusab.ras.atendodonto
     private List<br.gov.saude.esusab.ras.common.MedicamentoThrift> _medicamentos;
     private List<br.gov.saude.esusab.ras.common.EncaminhamentoExternoThrift> _encaminhamentos;
     private List<br.gov.saude.esusab.ras.common.ResultadosExameThrift> _resultadosExames;
-    private double _pesoAcompanhamentoNutricional;
-    private double _alturaAcompanhamentoNutricional;
     private br.gov.saude.esusab.ras.common.MedicoesThrift _medicoes;
 
     public long DtNascimento
@@ -307,32 +305,6 @@ namespace br.gov.saude.esusab.ras.atendodonto
       }
     }
 
-    public double PesoAcompanhamentoNutricional
-    {
-      get
-      {
-        return _pesoAcompanhamentoNutricional;
-      }
-      set
-      {
-        __isset.pesoAcompanhamentoNutricional = true;
-        this._pesoAcompanhamentoNutricional = value;
-      }
-    }
-
-    public double AlturaAcompanhamentoNutricional
-    {
-      get
-      {
-        return _alturaAcompanhamentoNutricional;
-      }
-      set
-      {
-        __isset.alturaAcompanhamentoNutricional = true;
-        this._alturaAcompanhamentoNutricional = value;
-      }
-    }
-
     public br.gov.saude.esusab.ras.common.MedicoesThrift Medicoes
     {
       get
@@ -372,8 +344,6 @@ namespace br.gov.saude.esusab.ras.atendodonto
       public bool medicamentos;
       public bool encaminhamentos;
       public bool resultadosExames;
-      public bool pesoAcompanhamentoNutricional;
-      public bool alturaAcompanhamentoNutricional;
       public bool medicoes;
     }
 
@@ -615,20 +585,6 @@ namespace br.gov.saude.esusab.ras.atendodonto
                   }
                   iprot.ReadListEnd();
                 }
-              } else { 
-                TProtocolUtil.Skip(iprot, field.Type);
-              }
-              break;
-            case 22:
-              if (field.Type == TType.Double) {
-                PesoAcompanhamentoNutricional = iprot.ReadDouble();
-              } else { 
-                TProtocolUtil.Skip(iprot, field.Type);
-              }
-              break;
-            case 23:
-              if (field.Type == TType.Double) {
-                AlturaAcompanhamentoNutricional = iprot.ReadDouble();
               } else { 
                 TProtocolUtil.Skip(iprot, field.Type);
               }
@@ -878,22 +834,6 @@ namespace br.gov.saude.esusab.ras.atendodonto
           }
           oprot.WriteFieldEnd();
         }
-        if (__isset.pesoAcompanhamentoNutricional) {
-          field.Name = "pesoAcompanhamentoNutricional";
-          field.Type = TType.Double;
-          field.ID = 22;
-          oprot.WriteFieldBegin(field);
-          oprot.WriteDouble(PesoAcompanhamentoNutricional);
-          oprot.WriteFieldEnd();
-        }
-        if (__isset.alturaAcompanhamentoNutricional) {
-          field.Name = "alturaAcompanhamentoNutricional";
-          field.Type = TType.Double;
-          field.ID = 23;
-          oprot.WriteFieldBegin(field);
-          oprot.WriteDouble(AlturaAcompanhamentoNutricional);
-          oprot.WriteFieldEnd();
-        }
         if (Medicoes != null && __isset.medicoes) {
           field.Name = "medicoes";
           field.Type = TType.Struct;
@@ -1033,18 +973,6 @@ namespace br.gov.saude.esusab.ras.atendodonto
         __first = false;
         __sb.Append("ResultadosExames: ");
         __sb.Append(ResultadosExames);
-      }
-      if (__isset.pesoAcompanhamentoNutricional) {
-        if(!__first) { __sb.Append(", "); }
-        __first = false;
-        __sb.Append("PesoAcompanhamentoNutricional: ");
-        __sb.Append(PesoAcompanhamentoNutricional);
-      }
-      if (__isset.alturaAcompanhamentoNutricional) {
-        if(!__first) { __sb.Append(", "); }
-        __first = false;
-        __sb.Append("AlturaAcompanhamentoNutricional: ");
-        __sb.Append(AlturaAcompanhamentoNutricional);
       }
       if (Medicoes != null && __isset.medicoes) {
         if(!__first) { __sb.Append(", "); }

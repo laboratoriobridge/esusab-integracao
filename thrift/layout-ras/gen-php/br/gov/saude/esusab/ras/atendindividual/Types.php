@@ -366,14 +366,6 @@ class FichaAtendimentoIndividualChildThrift {
    */
   public $tipoAtendimento = null;
   /**
-   * @var double
-   */
-  public $pesoAcompanhamentoNutricional = null;
-  /**
-   * @var double
-   */
-  public $alturaAcompanhamentoNutricional = null;
-  /**
    * @var int
    */
   public $aleitamentoMaterno = null;
@@ -433,10 +425,6 @@ class FichaAtendimentoIndividualChildThrift {
    * @var int
    */
   public $racionalidadeSaude = null;
-  /**
-   * @var double
-   */
-  public $perimetroCefalico = null;
   /**
    * @var int
    */
@@ -517,14 +505,6 @@ class FichaAtendimentoIndividualChildThrift {
           'var' => 'tipoAtendimento',
           'type' => TType::I64,
           ),
-        8 => array(
-          'var' => 'pesoAcompanhamentoNutricional',
-          'type' => TType::DOUBLE,
-          ),
-        9 => array(
-          'var' => 'alturaAcompanhamentoNutricional',
-          'type' => TType::DOUBLE,
-          ),
         10 => array(
           'var' => 'aleitamentoMaterno',
           'type' => TType::I64,
@@ -598,10 +578,6 @@ class FichaAtendimentoIndividualChildThrift {
         26 => array(
           'var' => 'racionalidadeSaude',
           'type' => TType::I64,
-          ),
-        27 => array(
-          'var' => 'perimetroCefalico',
-          'type' => TType::DOUBLE,
           ),
         28 => array(
           'var' => 'dataHoraInicialAtendimento',
@@ -696,12 +672,6 @@ class FichaAtendimentoIndividualChildThrift {
       if (isset($vals['tipoAtendimento'])) {
         $this->tipoAtendimento = $vals['tipoAtendimento'];
       }
-      if (isset($vals['pesoAcompanhamentoNutricional'])) {
-        $this->pesoAcompanhamentoNutricional = $vals['pesoAcompanhamentoNutricional'];
-      }
-      if (isset($vals['alturaAcompanhamentoNutricional'])) {
-        $this->alturaAcompanhamentoNutricional = $vals['alturaAcompanhamentoNutricional'];
-      }
       if (isset($vals['aleitamentoMaterno'])) {
         $this->aleitamentoMaterno = $vals['aleitamentoMaterno'];
       }
@@ -746,9 +716,6 @@ class FichaAtendimentoIndividualChildThrift {
       }
       if (isset($vals['racionalidadeSaude'])) {
         $this->racionalidadeSaude = $vals['racionalidadeSaude'];
-      }
-      if (isset($vals['perimetroCefalico'])) {
-        $this->perimetroCefalico = $vals['perimetroCefalico'];
       }
       if (isset($vals['dataHoraInicialAtendimento'])) {
         $this->dataHoraInicialAtendimento = $vals['dataHoraInicialAtendimento'];
@@ -853,20 +820,6 @@ class FichaAtendimentoIndividualChildThrift {
         case 7:
           if ($ftype == TType::I64) {
             $xfer += $input->readI64($this->tipoAtendimento);
-          } else {
-            $xfer += $input->skip($ftype);
-          }
-          break;
-        case 8:
-          if ($ftype == TType::DOUBLE) {
-            $xfer += $input->readDouble($this->pesoAcompanhamentoNutricional);
-          } else {
-            $xfer += $input->skip($ftype);
-          }
-          break;
-        case 9:
-          if ($ftype == TType::DOUBLE) {
-            $xfer += $input->readDouble($this->alturaAcompanhamentoNutricional);
           } else {
             $xfer += $input->skip($ftype);
           }
@@ -1004,13 +957,6 @@ class FichaAtendimentoIndividualChildThrift {
         case 26:
           if ($ftype == TType::I64) {
             $xfer += $input->readI64($this->racionalidadeSaude);
-          } else {
-            $xfer += $input->skip($ftype);
-          }
-          break;
-        case 27:
-          if ($ftype == TType::DOUBLE) {
-            $xfer += $input->readDouble($this->perimetroCefalico);
           } else {
             $xfer += $input->skip($ftype);
           }
@@ -1192,16 +1138,6 @@ class FichaAtendimentoIndividualChildThrift {
       $xfer += $output->writeI64($this->tipoAtendimento);
       $xfer += $output->writeFieldEnd();
     }
-    if ($this->pesoAcompanhamentoNutricional !== null) {
-      $xfer += $output->writeFieldBegin('pesoAcompanhamentoNutricional', TType::DOUBLE, 8);
-      $xfer += $output->writeDouble($this->pesoAcompanhamentoNutricional);
-      $xfer += $output->writeFieldEnd();
-    }
-    if ($this->alturaAcompanhamentoNutricional !== null) {
-      $xfer += $output->writeFieldBegin('alturaAcompanhamentoNutricional', TType::DOUBLE, 9);
-      $xfer += $output->writeDouble($this->alturaAcompanhamentoNutricional);
-      $xfer += $output->writeFieldEnd();
-    }
     if ($this->aleitamentoMaterno !== null) {
       $xfer += $output->writeFieldBegin('aleitamentoMaterno', TType::I64, 10);
       $xfer += $output->writeI64($this->aleitamentoMaterno);
@@ -1314,11 +1250,6 @@ class FichaAtendimentoIndividualChildThrift {
     if ($this->racionalidadeSaude !== null) {
       $xfer += $output->writeFieldBegin('racionalidadeSaude', TType::I64, 26);
       $xfer += $output->writeI64($this->racionalidadeSaude);
-      $xfer += $output->writeFieldEnd();
-    }
-    if ($this->perimetroCefalico !== null) {
-      $xfer += $output->writeFieldBegin('perimetroCefalico', TType::DOUBLE, 27);
-      $xfer += $output->writeDouble($this->perimetroCefalico);
       $xfer += $output->writeFieldEnd();
     }
     if ($this->dataHoraInicialAtendimento !== null) {

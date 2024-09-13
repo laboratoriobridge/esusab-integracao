@@ -240,8 +240,6 @@ class FichaAtendimentoIndividualChildThrift:
    - sexo
    - turno
    - tipoAtendimento
-   - pesoAcompanhamentoNutricional
-   - alturaAcompanhamentoNutricional
    - aleitamentoMaterno
    - dumDaGestante
    - idadeGestacional
@@ -257,7 +255,6 @@ class FichaAtendimentoIndividualChildThrift:
    - nuGestasPrevias
    - nuPartos
    - racionalidadeSaude
-   - perimetroCefalico
    - dataHoraInicialAtendimento
    - dataHoraFinalAtendimento
    - cpfCidadao
@@ -282,8 +279,8 @@ class FichaAtendimentoIndividualChildThrift:
     (5, TType.I64, 'sexo', None, None, ), # 5
     (6, TType.I64, 'turno', None, None, ), # 6
     (7, TType.I64, 'tipoAtendimento', None, None, ), # 7
-    (8, TType.DOUBLE, 'pesoAcompanhamentoNutricional', None, None, ), # 8
-    (9, TType.DOUBLE, 'alturaAcompanhamentoNutricional', None, None, ), # 9
+    None, # 8
+    None, # 9
     (10, TType.I64, 'aleitamentoMaterno', None, None, ), # 10
     (11, TType.I64, 'dumDaGestante', None, None, ), # 11
     (12, TType.I32, 'idadeGestacional', None, None, ), # 12
@@ -301,7 +298,7 @@ class FichaAtendimentoIndividualChildThrift:
     (24, TType.I32, 'nuGestasPrevias', None, None, ), # 24
     (25, TType.I32, 'nuPartos', None, None, ), # 25
     (26, TType.I64, 'racionalidadeSaude', None, None, ), # 26
-    (27, TType.DOUBLE, 'perimetroCefalico', None, None, ), # 27
+    None, # 27
     (28, TType.I64, 'dataHoraInicialAtendimento', None, None, ), # 28
     (29, TType.I64, 'dataHoraFinalAtendimento', None, None, ), # 29
     (30, TType.STRING, 'cpfCidadao', None, None, ), # 30
@@ -317,7 +314,7 @@ class FichaAtendimentoIndividualChildThrift:
     (40, TType.LIST, 'problemasCondicoes', (TType.STRUCT,(br.gov.saude.esusab.ras.common.ttypes.ProblemaCondicaoThrift, br.gov.saude.esusab.ras.common.ttypes.ProblemaCondicaoThrift.thrift_spec)), None, ), # 40
   )
 
-  def __init__(self, numeroProntuario=None, cns=None, dataNascimento=None, localDeAtendimento=None, sexo=None, turno=None, tipoAtendimento=None, pesoAcompanhamentoNutricional=None, alturaAcompanhamentoNutricional=None, aleitamentoMaterno=None, dumDaGestante=None, idadeGestacional=None, atencaoDomiciliarModalidade=None, problemaCondicaoAvaliada=None, exame=None, vacinaEmDia=None, pic=None, ficouEmObservacao=None, nasfs=None, condutas=None, stGravidezPlanejada=None, nuGestasPrevias=None, nuPartos=None, racionalidadeSaude=None, perimetroCefalico=None, dataHoraInicialAtendimento=None, dataHoraFinalAtendimento=None, cpfCidadao=None, medicamentos=None, encaminhamentos=None, resultadosExames=None, uuidRnds=None, finalizadorObservacao=None, tipoParticipacaoCidadao=None, tipoParticipacaoProfissionalConvidado=None, emultis=None, medicoes=None, problemasCondicoes=None,):
+  def __init__(self, numeroProntuario=None, cns=None, dataNascimento=None, localDeAtendimento=None, sexo=None, turno=None, tipoAtendimento=None, aleitamentoMaterno=None, dumDaGestante=None, idadeGestacional=None, atencaoDomiciliarModalidade=None, problemaCondicaoAvaliada=None, exame=None, vacinaEmDia=None, pic=None, ficouEmObservacao=None, nasfs=None, condutas=None, stGravidezPlanejada=None, nuGestasPrevias=None, nuPartos=None, racionalidadeSaude=None, dataHoraInicialAtendimento=None, dataHoraFinalAtendimento=None, cpfCidadao=None, medicamentos=None, encaminhamentos=None, resultadosExames=None, uuidRnds=None, finalizadorObservacao=None, tipoParticipacaoCidadao=None, tipoParticipacaoProfissionalConvidado=None, emultis=None, medicoes=None, problemasCondicoes=None,):
     self.numeroProntuario = numeroProntuario
     self.cns = cns
     self.dataNascimento = dataNascimento
@@ -325,8 +322,6 @@ class FichaAtendimentoIndividualChildThrift:
     self.sexo = sexo
     self.turno = turno
     self.tipoAtendimento = tipoAtendimento
-    self.pesoAcompanhamentoNutricional = pesoAcompanhamentoNutricional
-    self.alturaAcompanhamentoNutricional = alturaAcompanhamentoNutricional
     self.aleitamentoMaterno = aleitamentoMaterno
     self.dumDaGestante = dumDaGestante
     self.idadeGestacional = idadeGestacional
@@ -342,7 +337,6 @@ class FichaAtendimentoIndividualChildThrift:
     self.nuGestasPrevias = nuGestasPrevias
     self.nuPartos = nuPartos
     self.racionalidadeSaude = racionalidadeSaude
-    self.perimetroCefalico = perimetroCefalico
     self.dataHoraInicialAtendimento = dataHoraInicialAtendimento
     self.dataHoraFinalAtendimento = dataHoraFinalAtendimento
     self.cpfCidadao = cpfCidadao
@@ -399,16 +393,6 @@ class FichaAtendimentoIndividualChildThrift:
       elif fid == 7:
         if ftype == TType.I64:
           self.tipoAtendimento = iprot.readI64()
-        else:
-          iprot.skip(ftype)
-      elif fid == 8:
-        if ftype == TType.DOUBLE:
-          self.pesoAcompanhamentoNutricional = iprot.readDouble()
-        else:
-          iprot.skip(ftype)
-      elif fid == 9:
-        if ftype == TType.DOUBLE:
-          self.alturaAcompanhamentoNutricional = iprot.readDouble()
         else:
           iprot.skip(ftype)
       elif fid == 10:
@@ -501,11 +485,6 @@ class FichaAtendimentoIndividualChildThrift:
       elif fid == 26:
         if ftype == TType.I64:
           self.racionalidadeSaude = iprot.readI64()
-        else:
-          iprot.skip(ftype)
-      elif fid == 27:
-        if ftype == TType.DOUBLE:
-          self.perimetroCefalico = iprot.readDouble()
         else:
           iprot.skip(ftype)
       elif fid == 28:
@@ -642,14 +621,6 @@ class FichaAtendimentoIndividualChildThrift:
       oprot.writeFieldBegin('tipoAtendimento', TType.I64, 7)
       oprot.writeI64(self.tipoAtendimento)
       oprot.writeFieldEnd()
-    if self.pesoAcompanhamentoNutricional is not None:
-      oprot.writeFieldBegin('pesoAcompanhamentoNutricional', TType.DOUBLE, 8)
-      oprot.writeDouble(self.pesoAcompanhamentoNutricional)
-      oprot.writeFieldEnd()
-    if self.alturaAcompanhamentoNutricional is not None:
-      oprot.writeFieldBegin('alturaAcompanhamentoNutricional', TType.DOUBLE, 9)
-      oprot.writeDouble(self.alturaAcompanhamentoNutricional)
-      oprot.writeFieldEnd()
     if self.aleitamentoMaterno is not None:
       oprot.writeFieldBegin('aleitamentoMaterno', TType.I64, 10)
       oprot.writeI64(self.aleitamentoMaterno)
@@ -718,10 +689,6 @@ class FichaAtendimentoIndividualChildThrift:
     if self.racionalidadeSaude is not None:
       oprot.writeFieldBegin('racionalidadeSaude', TType.I64, 26)
       oprot.writeI64(self.racionalidadeSaude)
-      oprot.writeFieldEnd()
-    if self.perimetroCefalico is not None:
-      oprot.writeFieldBegin('perimetroCefalico', TType.DOUBLE, 27)
-      oprot.writeDouble(self.perimetroCefalico)
       oprot.writeFieldEnd()
     if self.dataHoraInicialAtendimento is not None:
       oprot.writeFieldBegin('dataHoraInicialAtendimento', TType.I64, 28)
@@ -806,8 +773,6 @@ class FichaAtendimentoIndividualChildThrift:
     value = (value * 31) ^ hash(self.sexo)
     value = (value * 31) ^ hash(self.turno)
     value = (value * 31) ^ hash(self.tipoAtendimento)
-    value = (value * 31) ^ hash(self.pesoAcompanhamentoNutricional)
-    value = (value * 31) ^ hash(self.alturaAcompanhamentoNutricional)
     value = (value * 31) ^ hash(self.aleitamentoMaterno)
     value = (value * 31) ^ hash(self.dumDaGestante)
     value = (value * 31) ^ hash(self.idadeGestacional)
@@ -823,7 +788,6 @@ class FichaAtendimentoIndividualChildThrift:
     value = (value * 31) ^ hash(self.nuGestasPrevias)
     value = (value * 31) ^ hash(self.nuPartos)
     value = (value * 31) ^ hash(self.racionalidadeSaude)
-    value = (value * 31) ^ hash(self.perimetroCefalico)
     value = (value * 31) ^ hash(self.dataHoraInicialAtendimento)
     value = (value * 31) ^ hash(self.dataHoraFinalAtendimento)
     value = (value * 31) ^ hash(self.cpfCidadao)

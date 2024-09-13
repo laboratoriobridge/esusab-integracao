@@ -65,8 +65,6 @@ module Br
               SEXO = 5
               TURNO = 6
               TIPOATENDIMENTO = 7
-              PESOACOMPANHAMENTONUTRICIONAL = 8
-              ALTURAACOMPANHAMENTONUTRICIONAL = 9
               ALEITAMENTOMATERNO = 10
               DUMDAGESTANTE = 11
               IDADEGESTACIONAL = 12
@@ -82,7 +80,6 @@ module Br
               NUGESTASPREVIAS = 24
               NUPARTOS = 25
               RACIONALIDADESAUDE = 26
-              PERIMETROCEFALICO = 27
               DATAHORAINICIALATENDIMENTO = 28
               DATAHORAFINALATENDIMENTO = 29
               CPFCIDADAO = 30
@@ -105,8 +102,6 @@ module Br
                 SEXO => {:type => ::Thrift::Types::I64, :name => 'sexo', :optional => true},
                 TURNO => {:type => ::Thrift::Types::I64, :name => 'turno', :optional => true},
                 TIPOATENDIMENTO => {:type => ::Thrift::Types::I64, :name => 'tipoAtendimento', :optional => true},
-                PESOACOMPANHAMENTONUTRICIONAL => {:type => ::Thrift::Types::DOUBLE, :name => 'pesoAcompanhamentoNutricional', :optional => true},
-                ALTURAACOMPANHAMENTONUTRICIONAL => {:type => ::Thrift::Types::DOUBLE, :name => 'alturaAcompanhamentoNutricional', :optional => true},
                 ALEITAMENTOMATERNO => {:type => ::Thrift::Types::I64, :name => 'aleitamentoMaterno', :optional => true},
                 DUMDAGESTANTE => {:type => ::Thrift::Types::I64, :name => 'dumDaGestante', :optional => true},
                 IDADEGESTACIONAL => {:type => ::Thrift::Types::I32, :name => 'idadeGestacional', :optional => true},
@@ -122,7 +117,6 @@ module Br
                 NUGESTASPREVIAS => {:type => ::Thrift::Types::I32, :name => 'nuGestasPrevias', :optional => true},
                 NUPARTOS => {:type => ::Thrift::Types::I32, :name => 'nuPartos', :optional => true},
                 RACIONALIDADESAUDE => {:type => ::Thrift::Types::I64, :name => 'racionalidadeSaude', :optional => true},
-                PERIMETROCEFALICO => {:type => ::Thrift::Types::DOUBLE, :name => 'perimetroCefalico', :optional => true},
                 DATAHORAINICIALATENDIMENTO => {:type => ::Thrift::Types::I64, :name => 'dataHoraInicialAtendimento', :optional => true},
                 DATAHORAFINALATENDIMENTO => {:type => ::Thrift::Types::I64, :name => 'dataHoraFinalAtendimento', :optional => true},
                 CPFCIDADAO => {:type => ::Thrift::Types::STRING, :name => 'cpfCidadao', :optional => true},

@@ -29,8 +29,6 @@ struct FichaAtendimentoIndividualChildThrift {
 	5:optional i64 sexo;
 	6:optional i64 turno;
 	7:optional i64 tipoAtendimento;
-	8:optional double pesoAcompanhamentoNutricional;
-	9:optional double alturaAcompanhamentoNutricional;
 	10:optional i64 aleitamentoMaterno;
 	11:optional i64 dumDaGestante;
 	12:optional i32 idadeGestacional;
@@ -46,7 +44,6 @@ struct FichaAtendimentoIndividualChildThrift {
 	24:optional i32 nuGestasPrevias;
 	25:optional i32 nuPartos;
 	26:optional i64 racionalidadeSaude;
-	27:optional double perimetroCefalico;
 	28:optional i64 dataHoraInicialAtendimento;
 	29:optional i64 dataHoraFinalAtendimento;
 	30:optional string cpfCidadao;

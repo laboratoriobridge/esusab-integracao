@@ -243,8 +243,6 @@ FichaAtendimentoIndividualChildThrift = module.exports.FichaAtendimentoIndividua
   this.sexo = null;
   this.turno = null;
   this.tipoAtendimento = null;
-  this.pesoAcompanhamentoNutricional = null;
-  this.alturaAcompanhamentoNutricional = null;
   this.aleitamentoMaterno = null;
   this.dumDaGestante = null;
   this.idadeGestacional = null;
@@ -260,7 +258,6 @@ FichaAtendimentoIndividualChildThrift = module.exports.FichaAtendimentoIndividua
   this.nuGestasPrevias = null;
   this.nuPartos = null;
   this.racionalidadeSaude = null;
-  this.perimetroCefalico = null;
   this.dataHoraInicialAtendimento = null;
   this.dataHoraFinalAtendimento = null;
   this.cpfCidadao = null;
@@ -295,12 +292,6 @@ FichaAtendimentoIndividualChildThrift = module.exports.FichaAtendimentoIndividua
     }
     if (args.tipoAtendimento !== undefined && args.tipoAtendimento !== null) {
       this.tipoAtendimento = args.tipoAtendimento;
-    }
-    if (args.pesoAcompanhamentoNutricional !== undefined && args.pesoAcompanhamentoNutricional !== null) {
-      this.pesoAcompanhamentoNutricional = args.pesoAcompanhamentoNutricional;
-    }
-    if (args.alturaAcompanhamentoNutricional !== undefined && args.alturaAcompanhamentoNutricional !== null) {
-      this.alturaAcompanhamentoNutricional = args.alturaAcompanhamentoNutricional;
     }
     if (args.aleitamentoMaterno !== undefined && args.aleitamentoMaterno !== null) {
       this.aleitamentoMaterno = args.aleitamentoMaterno;
@@ -346,9 +337,6 @@ FichaAtendimentoIndividualChildThrift = module.exports.FichaAtendimentoIndividua
     }
     if (args.racionalidadeSaude !== undefined && args.racionalidadeSaude !== null) {
       this.racionalidadeSaude = args.racionalidadeSaude;
-    }
-    if (args.perimetroCefalico !== undefined && args.perimetroCefalico !== null) {
-      this.perimetroCefalico = args.perimetroCefalico;
     }
     if (args.dataHoraInicialAtendimento !== undefined && args.dataHoraInicialAtendimento !== null) {
       this.dataHoraInicialAtendimento = args.dataHoraInicialAtendimento;
@@ -450,20 +438,6 @@ FichaAtendimentoIndividualChildThrift.prototype.read = function(input) {
       case 7:
       if (ftype == Thrift.Type.I64) {
         this.tipoAtendimento = input.readI64();
-      } else {
-        input.skip(ftype);
-      }
-      break;
-      case 8:
-      if (ftype == Thrift.Type.DOUBLE) {
-        this.pesoAcompanhamentoNutricional = input.readDouble();
-      } else {
-        input.skip(ftype);
-      }
-      break;
-      case 9:
-      if (ftype == Thrift.Type.DOUBLE) {
-        this.alturaAcompanhamentoNutricional = input.readDouble();
       } else {
         input.skip(ftype);
       }
@@ -610,13 +584,6 @@ FichaAtendimentoIndividualChildThrift.prototype.read = function(input) {
       case 26:
       if (ftype == Thrift.Type.I64) {
         this.racionalidadeSaude = input.readI64();
-      } else {
-        input.skip(ftype);
-      }
-      break;
-      case 27:
-      if (ftype == Thrift.Type.DOUBLE) {
-        this.perimetroCefalico = input.readDouble();
       } else {
         input.skip(ftype);
       }
@@ -829,16 +796,6 @@ FichaAtendimentoIndividualChildThrift.prototype.write = function(output) {
     output.writeI64(this.tipoAtendimento);
     output.writeFieldEnd();
   }
-  if (this.pesoAcompanhamentoNutricional !== null && this.pesoAcompanhamentoNutricional !== undefined) {
-    output.writeFieldBegin('pesoAcompanhamentoNutricional', Thrift.Type.DOUBLE, 8);
-    output.writeDouble(this.pesoAcompanhamentoNutricional);
-    output.writeFieldEnd();
-  }
-  if (this.alturaAcompanhamentoNutricional !== null && this.alturaAcompanhamentoNutricional !== undefined) {
-    output.writeFieldBegin('alturaAcompanhamentoNutricional', Thrift.Type.DOUBLE, 9);
-    output.writeDouble(this.alturaAcompanhamentoNutricional);
-    output.writeFieldEnd();
-  }
   if (this.aleitamentoMaterno !== null && this.aleitamentoMaterno !== undefined) {
     output.writeFieldBegin('aleitamentoMaterno', Thrift.Type.I64, 10);
     output.writeI64(this.aleitamentoMaterno);
@@ -939,11 +896,6 @@ FichaAtendimentoIndividualChildThrift.prototype.write = function(output) {
   if (this.racionalidadeSaude !== null && this.racionalidadeSaude !== undefined) {
     output.writeFieldBegin('racionalidadeSaude', Thrift.Type.I64, 26);
     output.writeI64(this.racionalidadeSaude);
-    output.writeFieldEnd();
-  }
-  if (this.perimetroCefalico !== null && this.perimetroCefalico !== undefined) {
-    output.writeFieldBegin('perimetroCefalico', Thrift.Type.DOUBLE, 27);
-    output.writeDouble(this.perimetroCefalico);
     output.writeFieldEnd();
   }
   if (this.dataHoraInicialAtendimento !== null && this.dataHoraInicialAtendimento !== undefined) {

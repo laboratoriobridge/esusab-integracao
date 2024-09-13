@@ -30,8 +30,6 @@ var GoUnusedProtection__ int
 //  - DataHoraInicialAtendimento
 //  - DataHoraFinalAtendimento
 //  - CpfCidadao
-//  - PesoAcompanhamentoNutricional
-//  - AlturaAcompanhamentoNutricional
 //  - Medicoes
 type FichaProcedimentoChildThrift struct {
 	NumProntuario                 *string  `thrift:"numProntuario,1" json:"numProntuario,omitempty"`
@@ -43,12 +41,10 @@ type FichaProcedimentoChildThrift struct {
 	StatusEscutaInicialOrientacao *bool    `thrift:"statusEscutaInicialOrientacao,7" json:"statusEscutaInicialOrientacao,omitempty"`
 	Procedimentos                 []string `thrift:"procedimentos,8" json:"procedimentos,omitempty"`
 	// unused field # 9
-	DataHoraInicialAtendimento      *int64   `thrift:"dataHoraInicialAtendimento,10" json:"dataHoraInicialAtendimento,omitempty"`
-	DataHoraFinalAtendimento        *int64   `thrift:"dataHoraFinalAtendimento,11" json:"dataHoraFinalAtendimento,omitempty"`
-	CpfCidadao                      *string  `thrift:"cpfCidadao,12" json:"cpfCidadao,omitempty"`
-	PesoAcompanhamentoNutricional   *float64 `thrift:"pesoAcompanhamentoNutricional,13" json:"pesoAcompanhamentoNutricional,omitempty"`
-	AlturaAcompanhamentoNutricional *float64 `thrift:"alturaAcompanhamentoNutricional,14" json:"alturaAcompanhamentoNutricional,omitempty"`
-	// unused field # 15
+	DataHoraInicialAtendimento *int64  `thrift:"dataHoraInicialAtendimento,10" json:"dataHoraInicialAtendimento,omitempty"`
+	DataHoraFinalAtendimento   *int64  `thrift:"dataHoraFinalAtendimento,11" json:"dataHoraFinalAtendimento,omitempty"`
+	CpfCidadao                 *string `thrift:"cpfCidadao,12" json:"cpfCidadao,omitempty"`
+	// unused fields # 13 to 15
 	Medicoes *common.MedicoesThrift `thrift:"medicoes,16" json:"medicoes,omitempty"`
 }
 
@@ -152,24 +148,6 @@ func (p *FichaProcedimentoChildThrift) GetCpfCidadao() string {
 	return *p.CpfCidadao
 }
 
-var FichaProcedimentoChildThrift_PesoAcompanhamentoNutricional_DEFAULT float64
-
-func (p *FichaProcedimentoChildThrift) GetPesoAcompanhamentoNutricional() float64 {
-	if !p.IsSetPesoAcompanhamentoNutricional() {
-		return FichaProcedimentoChildThrift_PesoAcompanhamentoNutricional_DEFAULT
-	}
-	return *p.PesoAcompanhamentoNutricional
-}
-
-var FichaProcedimentoChildThrift_AlturaAcompanhamentoNutricional_DEFAULT float64
-
-func (p *FichaProcedimentoChildThrift) GetAlturaAcompanhamentoNutricional() float64 {
-	if !p.IsSetAlturaAcompanhamentoNutricional() {
-		return FichaProcedimentoChildThrift_AlturaAcompanhamentoNutricional_DEFAULT
-	}
-	return *p.AlturaAcompanhamentoNutricional
-}
-
 var FichaProcedimentoChildThrift_Medicoes_DEFAULT *common.MedicoesThrift
 
 func (p *FichaProcedimentoChildThrift) GetMedicoes() *common.MedicoesThrift {
@@ -220,14 +198,6 @@ func (p *FichaProcedimentoChildThrift) IsSetDataHoraFinalAtendimento() bool {
 
 func (p *FichaProcedimentoChildThrift) IsSetCpfCidadao() bool {
 	return p.CpfCidadao != nil
-}
-
-func (p *FichaProcedimentoChildThrift) IsSetPesoAcompanhamentoNutricional() bool {
-	return p.PesoAcompanhamentoNutricional != nil
-}
-
-func (p *FichaProcedimentoChildThrift) IsSetAlturaAcompanhamentoNutricional() bool {
-	return p.AlturaAcompanhamentoNutricional != nil
 }
 
 func (p *FichaProcedimentoChildThrift) IsSetMedicoes() bool {
@@ -290,14 +260,6 @@ func (p *FichaProcedimentoChildThrift) Read(iprot thrift.TProtocol) error {
 			}
 		case 12:
 			if err := p.readField12(iprot); err != nil {
-				return err
-			}
-		case 13:
-			if err := p.readField13(iprot); err != nil {
-				return err
-			}
-		case 14:
-			if err := p.readField14(iprot); err != nil {
 				return err
 			}
 		case 16:
@@ -431,24 +393,6 @@ func (p *FichaProcedimentoChildThrift) readField12(iprot thrift.TProtocol) error
 	return nil
 }
 
-func (p *FichaProcedimentoChildThrift) readField13(iprot thrift.TProtocol) error {
-	if v, err := iprot.ReadDouble(); err != nil {
-		return thrift.PrependError("error reading field 13: ", err)
-	} else {
-		p.PesoAcompanhamentoNutricional = &v
-	}
-	return nil
-}
-
-func (p *FichaProcedimentoChildThrift) readField14(iprot thrift.TProtocol) error {
-	if v, err := iprot.ReadDouble(); err != nil {
-		return thrift.PrependError("error reading field 14: ", err)
-	} else {
-		p.AlturaAcompanhamentoNutricional = &v
-	}
-	return nil
-}
-
 func (p *FichaProcedimentoChildThrift) readField16(iprot thrift.TProtocol) error {
 	p.Medicoes = &common.MedicoesThrift{}
 	if err := p.Medicoes.Read(iprot); err != nil {
@@ -492,12 +436,6 @@ func (p *FichaProcedimentoChildThrift) Write(oprot thrift.TProtocol) error {
 		return err
 	}
 	if err := p.writeField12(oprot); err != nil {
-		return err
-	}
-	if err := p.writeField13(oprot); err != nil {
-		return err
-	}
-	if err := p.writeField14(oprot); err != nil {
 		return err
 	}
 	if err := p.writeField16(oprot); err != nil {
@@ -680,36 +618,6 @@ func (p *FichaProcedimentoChildThrift) writeField12(oprot thrift.TProtocol) (err
 		}
 		if err := oprot.WriteFieldEnd(); err != nil {
 			return thrift.PrependError(fmt.Sprintf("%T write field end error 12:cpfCidadao: ", p), err)
-		}
-	}
-	return err
-}
-
-func (p *FichaProcedimentoChildThrift) writeField13(oprot thrift.TProtocol) (err error) {
-	if p.IsSetPesoAcompanhamentoNutricional() {
-		if err := oprot.WriteFieldBegin("pesoAcompanhamentoNutricional", thrift.DOUBLE, 13); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field begin error 13:pesoAcompanhamentoNutricional: ", p), err)
-		}
-		if err := oprot.WriteDouble(float64(*p.PesoAcompanhamentoNutricional)); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T.pesoAcompanhamentoNutricional (13) field write error: ", p), err)
-		}
-		if err := oprot.WriteFieldEnd(); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field end error 13:pesoAcompanhamentoNutricional: ", p), err)
-		}
-	}
-	return err
-}
-
-func (p *FichaProcedimentoChildThrift) writeField14(oprot thrift.TProtocol) (err error) {
-	if p.IsSetAlturaAcompanhamentoNutricional() {
-		if err := oprot.WriteFieldBegin("alturaAcompanhamentoNutricional", thrift.DOUBLE, 14); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field begin error 14:alturaAcompanhamentoNutricional: ", p), err)
-		}
-		if err := oprot.WriteDouble(float64(*p.AlturaAcompanhamentoNutricional)); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T.alturaAcompanhamentoNutricional (14) field write error: ", p), err)
-		}
-		if err := oprot.WriteFieldEnd(); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field end error 14:alturaAcompanhamentoNutricional: ", p), err)
 		}
 	}
 	return err

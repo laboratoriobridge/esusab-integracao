@@ -183,10 +183,6 @@ type
     procedure SetTurno( const Value: Int64);
     function GetTipoAtendimento: Int64;
     procedure SetTipoAtendimento( const Value: Int64);
-    function GetPesoAcompanhamentoNutricional: Double;
-    procedure SetPesoAcompanhamentoNutricional( const Value: Double);
-    function GetAlturaAcompanhamentoNutricional: Double;
-    procedure SetAlturaAcompanhamentoNutricional( const Value: Double);
     function GetAleitamentoMaterno: Int64;
     procedure SetAleitamentoMaterno( const Value: Int64);
     function GetDumDaGestante: Int64;
@@ -217,8 +213,6 @@ type
     procedure SetNuPartos( const Value: Integer);
     function GetRacionalidadeSaude: Int64;
     procedure SetRacionalidadeSaude( const Value: Int64);
-    function GetPerimetroCefalico: Double;
-    procedure SetPerimetroCefalico( const Value: Double);
     function GetDataHoraInicialAtendimento: Int64;
     procedure SetDataHoraInicialAtendimento( const Value: Int64);
     function GetDataHoraFinalAtendimento: Int64;
@@ -253,8 +247,6 @@ type
     property Sexo: Int64 read GetSexo write SetSexo;
     property Turno: Int64 read GetTurno write SetTurno;
     property TipoAtendimento: Int64 read GetTipoAtendimento write SetTipoAtendimento;
-    property PesoAcompanhamentoNutricional: Double read GetPesoAcompanhamentoNutricional write SetPesoAcompanhamentoNutricional;
-    property AlturaAcompanhamentoNutricional: Double read GetAlturaAcompanhamentoNutricional write SetAlturaAcompanhamentoNutricional;
     property AleitamentoMaterno: Int64 read GetAleitamentoMaterno write SetAleitamentoMaterno;
     property DumDaGestante: Int64 read GetDumDaGestante write SetDumDaGestante;
     property IdadeGestacional: Integer read GetIdadeGestacional write SetIdadeGestacional;
@@ -270,7 +262,6 @@ type
     property NuGestasPrevias: Integer read GetNuGestasPrevias write SetNuGestasPrevias;
     property NuPartos: Integer read GetNuPartos write SetNuPartos;
     property RacionalidadeSaude: Int64 read GetRacionalidadeSaude write SetRacionalidadeSaude;
-    property PerimetroCefalico: Double read GetPerimetroCefalico write SetPerimetroCefalico;
     property DataHoraInicialAtendimento: Int64 read GetDataHoraInicialAtendimento write SetDataHoraInicialAtendimento;
     property DataHoraFinalAtendimento: Int64 read GetDataHoraFinalAtendimento write SetDataHoraFinalAtendimento;
     property CpfCidadao: string read GetCpfCidadao write SetCpfCidadao;
@@ -292,8 +283,6 @@ type
     function Get__isset_Sexo: Boolean;
     function Get__isset_Turno: Boolean;
     function Get__isset_TipoAtendimento: Boolean;
-    function Get__isset_PesoAcompanhamentoNutricional: Boolean;
-    function Get__isset_AlturaAcompanhamentoNutricional: Boolean;
     function Get__isset_AleitamentoMaterno: Boolean;
     function Get__isset_DumDaGestante: Boolean;
     function Get__isset_IdadeGestacional: Boolean;
@@ -309,7 +298,6 @@ type
     function Get__isset_NuGestasPrevias: Boolean;
     function Get__isset_NuPartos: Boolean;
     function Get__isset_RacionalidadeSaude: Boolean;
-    function Get__isset_PerimetroCefalico: Boolean;
     function Get__isset_DataHoraInicialAtendimento: Boolean;
     function Get__isset_DataHoraFinalAtendimento: Boolean;
     function Get__isset_CpfCidadao: Boolean;
@@ -331,8 +319,6 @@ type
     property __isset_Sexo: Boolean read Get__isset_Sexo;
     property __isset_Turno: Boolean read Get__isset_Turno;
     property __isset_TipoAtendimento: Boolean read Get__isset_TipoAtendimento;
-    property __isset_PesoAcompanhamentoNutricional: Boolean read Get__isset_PesoAcompanhamentoNutricional;
-    property __isset_AlturaAcompanhamentoNutricional: Boolean read Get__isset_AlturaAcompanhamentoNutricional;
     property __isset_AleitamentoMaterno: Boolean read Get__isset_AleitamentoMaterno;
     property __isset_DumDaGestante: Boolean read Get__isset_DumDaGestante;
     property __isset_IdadeGestacional: Boolean read Get__isset_IdadeGestacional;
@@ -348,7 +334,6 @@ type
     property __isset_NuGestasPrevias: Boolean read Get__isset_NuGestasPrevias;
     property __isset_NuPartos: Boolean read Get__isset_NuPartos;
     property __isset_RacionalidadeSaude: Boolean read Get__isset_RacionalidadeSaude;
-    property __isset_PerimetroCefalico: Boolean read Get__isset_PerimetroCefalico;
     property __isset_DataHoraInicialAtendimento: Boolean read Get__isset_DataHoraInicialAtendimento;
     property __isset_DataHoraFinalAtendimento: Boolean read Get__isset_DataHoraFinalAtendimento;
     property __isset_CpfCidadao: Boolean read Get__isset_CpfCidadao;
@@ -373,8 +358,6 @@ type
     FSexo: Int64;
     FTurno: Int64;
     FTipoAtendimento: Int64;
-    FPesoAcompanhamentoNutricional: Double;
-    FAlturaAcompanhamentoNutricional: Double;
     FAleitamentoMaterno: Int64;
     FDumDaGestante: Int64;
     FIdadeGestacional: Integer;
@@ -390,7 +373,6 @@ type
     FNuGestasPrevias: Integer;
     FNuPartos: Integer;
     FRacionalidadeSaude: Int64;
-    FPerimetroCefalico: Double;
     FDataHoraInicialAtendimento: Int64;
     FDataHoraFinalAtendimento: Int64;
     FCpfCidadao: string;
@@ -412,8 +394,6 @@ type
     F__isset_Sexo: Boolean;
     F__isset_Turno: Boolean;
     F__isset_TipoAtendimento: Boolean;
-    F__isset_PesoAcompanhamentoNutricional: Boolean;
-    F__isset_AlturaAcompanhamentoNutricional: Boolean;
     F__isset_AleitamentoMaterno: Boolean;
     F__isset_DumDaGestante: Boolean;
     F__isset_IdadeGestacional: Boolean;
@@ -429,7 +409,6 @@ type
     F__isset_NuGestasPrevias: Boolean;
     F__isset_NuPartos: Boolean;
     F__isset_RacionalidadeSaude: Boolean;
-    F__isset_PerimetroCefalico: Boolean;
     F__isset_DataHoraInicialAtendimento: Boolean;
     F__isset_DataHoraFinalAtendimento: Boolean;
     F__isset_CpfCidadao: Boolean;
@@ -458,10 +437,6 @@ type
     procedure SetTurno( const Value: Int64);
     function GetTipoAtendimento: Int64;
     procedure SetTipoAtendimento( const Value: Int64);
-    function GetPesoAcompanhamentoNutricional: Double;
-    procedure SetPesoAcompanhamentoNutricional( const Value: Double);
-    function GetAlturaAcompanhamentoNutricional: Double;
-    procedure SetAlturaAcompanhamentoNutricional( const Value: Double);
     function GetAleitamentoMaterno: Int64;
     procedure SetAleitamentoMaterno( const Value: Int64);
     function GetDumDaGestante: Int64;
@@ -492,8 +467,6 @@ type
     procedure SetNuPartos( const Value: Integer);
     function GetRacionalidadeSaude: Int64;
     procedure SetRacionalidadeSaude( const Value: Int64);
-    function GetPerimetroCefalico: Double;
-    procedure SetPerimetroCefalico( const Value: Double);
     function GetDataHoraInicialAtendimento: Int64;
     procedure SetDataHoraInicialAtendimento( const Value: Int64);
     function GetDataHoraFinalAtendimento: Int64;
@@ -528,8 +501,6 @@ type
     function Get__isset_Sexo: Boolean;
     function Get__isset_Turno: Boolean;
     function Get__isset_TipoAtendimento: Boolean;
-    function Get__isset_PesoAcompanhamentoNutricional: Boolean;
-    function Get__isset_AlturaAcompanhamentoNutricional: Boolean;
     function Get__isset_AleitamentoMaterno: Boolean;
     function Get__isset_DumDaGestante: Boolean;
     function Get__isset_IdadeGestacional: Boolean;
@@ -545,7 +516,6 @@ type
     function Get__isset_NuGestasPrevias: Boolean;
     function Get__isset_NuPartos: Boolean;
     function Get__isset_RacionalidadeSaude: Boolean;
-    function Get__isset_PerimetroCefalico: Boolean;
     function Get__isset_DataHoraInicialAtendimento: Boolean;
     function Get__isset_DataHoraFinalAtendimento: Boolean;
     function Get__isset_CpfCidadao: Boolean;
@@ -577,8 +547,6 @@ type
     property Sexo: Int64 read GetSexo write SetSexo;
     property Turno: Int64 read GetTurno write SetTurno;
     property TipoAtendimento: Int64 read GetTipoAtendimento write SetTipoAtendimento;
-    property PesoAcompanhamentoNutricional: Double read GetPesoAcompanhamentoNutricional write SetPesoAcompanhamentoNutricional;
-    property AlturaAcompanhamentoNutricional: Double read GetAlturaAcompanhamentoNutricional write SetAlturaAcompanhamentoNutricional;
     property AleitamentoMaterno: Int64 read GetAleitamentoMaterno write SetAleitamentoMaterno;
     property DumDaGestante: Int64 read GetDumDaGestante write SetDumDaGestante;
     property IdadeGestacional: Integer read GetIdadeGestacional write SetIdadeGestacional;
@@ -594,7 +562,6 @@ type
     property NuGestasPrevias: Integer read GetNuGestasPrevias write SetNuGestasPrevias;
     property NuPartos: Integer read GetNuPartos write SetNuPartos;
     property RacionalidadeSaude: Int64 read GetRacionalidadeSaude write SetRacionalidadeSaude;
-    property PerimetroCefalico: Double read GetPerimetroCefalico write SetPerimetroCefalico;
     property DataHoraInicialAtendimento: Int64 read GetDataHoraInicialAtendimento write SetDataHoraInicialAtendimento;
     property DataHoraFinalAtendimento: Int64 read GetDataHoraFinalAtendimento write SetDataHoraFinalAtendimento;
     property CpfCidadao: string read GetCpfCidadao write SetCpfCidadao;
@@ -617,8 +584,6 @@ type
     property __isset_Sexo: Boolean read Get__isset_Sexo;
     property __isset_Turno: Boolean read Get__isset_Turno;
     property __isset_TipoAtendimento: Boolean read Get__isset_TipoAtendimento;
-    property __isset_PesoAcompanhamentoNutricional: Boolean read Get__isset_PesoAcompanhamentoNutricional;
-    property __isset_AlturaAcompanhamentoNutricional: Boolean read Get__isset_AlturaAcompanhamentoNutricional;
     property __isset_AleitamentoMaterno: Boolean read Get__isset_AleitamentoMaterno;
     property __isset_DumDaGestante: Boolean read Get__isset_DumDaGestante;
     property __isset_IdadeGestacional: Boolean read Get__isset_IdadeGestacional;
@@ -634,7 +599,6 @@ type
     property __isset_NuGestasPrevias: Boolean read Get__isset_NuGestasPrevias;
     property __isset_NuPartos: Boolean read Get__isset_NuPartos;
     property __isset_RacionalidadeSaude: Boolean read Get__isset_RacionalidadeSaude;
-    property __isset_PerimetroCefalico: Boolean read Get__isset_PerimetroCefalico;
     property __isset_DataHoraInicialAtendimento: Boolean read Get__isset_DataHoraInicialAtendimento;
     property __isset_DataHoraFinalAtendimento: Boolean read Get__isset_DataHoraFinalAtendimento;
     property __isset_CpfCidadao: Boolean read Get__isset_CpfCidadao;
@@ -1297,38 +1261,6 @@ begin
   Result := F__isset_TipoAtendimento;
 end;
 
-function TFichaAtendimentoIndividualChildThriftImpl.GetPesoAcompanhamentoNutricional: Double;
-begin
-  Result := FPesoAcompanhamentoNutricional;
-end;
-
-procedure TFichaAtendimentoIndividualChildThriftImpl.SetPesoAcompanhamentoNutricional( const Value: Double);
-begin
-  F__isset_PesoAcompanhamentoNutricional := True;
-  FPesoAcompanhamentoNutricional := Value;
-end;
-
-function TFichaAtendimentoIndividualChildThriftImpl.Get__isset_PesoAcompanhamentoNutricional: Boolean;
-begin
-  Result := F__isset_PesoAcompanhamentoNutricional;
-end;
-
-function TFichaAtendimentoIndividualChildThriftImpl.GetAlturaAcompanhamentoNutricional: Double;
-begin
-  Result := FAlturaAcompanhamentoNutricional;
-end;
-
-procedure TFichaAtendimentoIndividualChildThriftImpl.SetAlturaAcompanhamentoNutricional( const Value: Double);
-begin
-  F__isset_AlturaAcompanhamentoNutricional := True;
-  FAlturaAcompanhamentoNutricional := Value;
-end;
-
-function TFichaAtendimentoIndividualChildThriftImpl.Get__isset_AlturaAcompanhamentoNutricional: Boolean;
-begin
-  Result := F__isset_AlturaAcompanhamentoNutricional;
-end;
-
 function TFichaAtendimentoIndividualChildThriftImpl.GetAleitamentoMaterno: Int64;
 begin
   Result := FAleitamentoMaterno;
@@ -1567,22 +1499,6 @@ end;
 function TFichaAtendimentoIndividualChildThriftImpl.Get__isset_RacionalidadeSaude: Boolean;
 begin
   Result := F__isset_RacionalidadeSaude;
-end;
-
-function TFichaAtendimentoIndividualChildThriftImpl.GetPerimetroCefalico: Double;
-begin
-  Result := FPerimetroCefalico;
-end;
-
-procedure TFichaAtendimentoIndividualChildThriftImpl.SetPerimetroCefalico( const Value: Double);
-begin
-  F__isset_PerimetroCefalico := True;
-  FPerimetroCefalico := Value;
-end;
-
-function TFichaAtendimentoIndividualChildThriftImpl.Get__isset_PerimetroCefalico: Boolean;
-begin
-  Result := F__isset_PerimetroCefalico;
 end;
 
 function TFichaAtendimentoIndividualChildThriftImpl.GetDataHoraInicialAtendimento: Int64;
@@ -1898,24 +1814,6 @@ begin
             TProtocolUtil.Skip(iprot, field_.Type_);
           end;
         end;
-        8: begin
-          if (field_.Type_ = TType.Double_) then
-          begin
-            PesoAcompanhamentoNutricional := iprot.ReadDouble();
-          end else
-          begin
-            TProtocolUtil.Skip(iprot, field_.Type_);
-          end;
-        end;
-        9: begin
-          if (field_.Type_ = TType.Double_) then
-          begin
-            AlturaAcompanhamentoNutricional := iprot.ReadDouble();
-          end else
-          begin
-            TProtocolUtil.Skip(iprot, field_.Type_);
-          end;
-        end;
         10: begin
           if (field_.Type_ = TType.I64) then
           begin
@@ -2069,15 +1967,6 @@ begin
           if (field_.Type_ = TType.I64) then
           begin
             RacionalidadeSaude := iprot.ReadI64();
-          end else
-          begin
-            TProtocolUtil.Skip(iprot, field_.Type_);
-          end;
-        end;
-        27: begin
-          if (field_.Type_ = TType.Double_) then
-          begin
-            PerimetroCefalico := iprot.ReadDouble();
           end else
           begin
             TProtocolUtil.Skip(iprot, field_.Type_);
@@ -2341,24 +2230,6 @@ begin
     oprot.WriteI64(TipoAtendimento);
     oprot.WriteFieldEnd();
   end;
-  if (__isset_PesoAcompanhamentoNutricional) then
-  begin
-    field_.Name := 'pesoAcompanhamentoNutricional';
-    field_.Type_  := TType.Double_;
-    field_.ID := 8;
-    oprot.WriteFieldBegin(field_);
-    oprot.WriteDouble(PesoAcompanhamentoNutricional);
-    oprot.WriteFieldEnd();
-  end;
-  if (__isset_AlturaAcompanhamentoNutricional) then
-  begin
-    field_.Name := 'alturaAcompanhamentoNutricional';
-    field_.Type_  := TType.Double_;
-    field_.ID := 9;
-    oprot.WriteFieldBegin(field_);
-    oprot.WriteDouble(AlturaAcompanhamentoNutricional);
-    oprot.WriteFieldEnd();
-  end;
   if (__isset_AleitamentoMaterno) then
   begin
     field_.Name := 'aleitamentoMaterno';
@@ -2510,15 +2381,6 @@ begin
     field_.ID := 26;
     oprot.WriteFieldBegin(field_);
     oprot.WriteI64(RacionalidadeSaude);
-    oprot.WriteFieldEnd();
-  end;
-  if (__isset_PerimetroCefalico) then
-  begin
-    field_.Name := 'perimetroCefalico';
-    field_.Type_  := TType.Double_;
-    field_.ID := 27;
-    oprot.WriteFieldBegin(field_);
-    oprot.WriteDouble(PerimetroCefalico);
     oprot.WriteFieldEnd();
   end;
   if (__isset_DataHoraInicialAtendimento) then
@@ -2722,18 +2584,6 @@ begin
       _sb54.Append('TipoAtendimento: ');
       _sb54.Append(TipoAtendimento);
     end;
-    if (__isset_PesoAcompanhamentoNutricional) then begin
-      if not _first55 then _sb54.Append(',');
-      _first55 := FALSE;
-      _sb54.Append('PesoAcompanhamentoNutricional: ');
-      _sb54.Append(PesoAcompanhamentoNutricional);
-    end;
-    if (__isset_AlturaAcompanhamentoNutricional) then begin
-      if not _first55 then _sb54.Append(',');
-      _first55 := FALSE;
-      _sb54.Append('AlturaAcompanhamentoNutricional: ');
-      _sb54.Append(AlturaAcompanhamentoNutricional);
-    end;
     if (__isset_AleitamentoMaterno) then begin
       if not _first55 then _sb54.Append(',');
       _first55 := FALSE;
@@ -2823,12 +2673,6 @@ begin
       _first55 := FALSE;
       _sb54.Append('RacionalidadeSaude: ');
       _sb54.Append(RacionalidadeSaude);
-    end;
-    if (__isset_PerimetroCefalico) then begin
-      if not _first55 then _sb54.Append(',');
-      _first55 := FALSE;
-      _sb54.Append('PerimetroCefalico: ');
-      _sb54.Append(PerimetroCefalico);
     end;
     if (__isset_DataHoraInicialAtendimento) then begin
       if not _first55 then _sb54.Append(',');

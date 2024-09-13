@@ -31,8 +31,6 @@ namespace br.gov.saude.esusab.ras.atenddomiciliar
     private long _atencaoDomiciliarModalidade;
     private long _tipoAtendimento;
     private List<long> _condicoesAvaliadas;
-    private string _cid;
-    private string _ciap;
     private List<string> _procedimentos;
     private long _condutaDesfecho;
     private string _cpfCidadao;
@@ -142,32 +140,6 @@ namespace br.gov.saude.esusab.ras.atenddomiciliar
       }
     }
 
-    public string Cid
-    {
-      get
-      {
-        return _cid;
-      }
-      set
-      {
-        __isset.cid = true;
-        this._cid = value;
-      }
-    }
-
-    public string Ciap
-    {
-      get
-      {
-        return _ciap;
-      }
-      set
-      {
-        __isset.ciap = true;
-        this._ciap = value;
-      }
-    }
-
     public List<string> Procedimentos
     {
       get
@@ -234,8 +206,6 @@ namespace br.gov.saude.esusab.ras.atenddomiciliar
       public bool atencaoDomiciliarModalidade;
       public bool tipoAtendimento;
       public bool condicoesAvaliadas;
-      public bool cid;
-      public bool ciap;
       public bool procedimentos;
       public bool condutaDesfecho;
       public bool cpfCidadao;
@@ -322,20 +292,6 @@ namespace br.gov.saude.esusab.ras.atenddomiciliar
                   }
                   iprot.ReadListEnd();
                 }
-              } else { 
-                TProtocolUtil.Skip(iprot, field.Type);
-              }
-              break;
-            case 9:
-              if (field.Type == TType.String) {
-                Cid = iprot.ReadString();
-              } else { 
-                TProtocolUtil.Skip(iprot, field.Type);
-              }
-              break;
-            case 10:
-              if (field.Type == TType.String) {
-                Ciap = iprot.ReadString();
               } else { 
                 TProtocolUtil.Skip(iprot, field.Type);
               }
@@ -481,22 +437,6 @@ namespace br.gov.saude.esusab.ras.atenddomiciliar
           }
           oprot.WriteFieldEnd();
         }
-        if (Cid != null && __isset.cid) {
-          field.Name = "cid";
-          field.Type = TType.String;
-          field.ID = 9;
-          oprot.WriteFieldBegin(field);
-          oprot.WriteString(Cid);
-          oprot.WriteFieldEnd();
-        }
-        if (Ciap != null && __isset.ciap) {
-          field.Name = "ciap";
-          field.Type = TType.String;
-          field.ID = 10;
-          oprot.WriteFieldBegin(field);
-          oprot.WriteString(Ciap);
-          oprot.WriteFieldEnd();
-        }
         if (Procedimentos != null && __isset.procedimentos) {
           field.Name = "procedimentos";
           field.Type = TType.List;
@@ -602,18 +542,6 @@ namespace br.gov.saude.esusab.ras.atenddomiciliar
         __first = false;
         __sb.Append("CondicoesAvaliadas: ");
         __sb.Append(CondicoesAvaliadas);
-      }
-      if (Cid != null && __isset.cid) {
-        if(!__first) { __sb.Append(", "); }
-        __first = false;
-        __sb.Append("Cid: ");
-        __sb.Append(Cid);
-      }
-      if (Ciap != null && __isset.ciap) {
-        if(!__first) { __sb.Append(", "); }
-        __first = false;
-        __sb.Append("Ciap: ");
-        __sb.Append(Ciap);
       }
       if (Procedimentos != null && __isset.procedimentos) {
         if(!__first) { __sb.Append(", "); }

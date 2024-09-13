@@ -500,7 +500,6 @@ func (p *ProblemaCondicaoAvaliacaoAIThrift) String() string {
 //  - DumDaGestante
 //  - IdadeGestacional
 //  - AtencaoDomiciliarModalidade
-//  - ProblemaCondicaoAvaliada
 //  - Exame
 //  - VacinaEmDia
 //  - Pic
@@ -533,12 +532,11 @@ type FichaAtendimentoIndividualChildThrift struct {
 	Turno              *int64  `thrift:"turno,6" json:"turno,omitempty"`
 	TipoAtendimento    *int64  `thrift:"tipoAtendimento,7" json:"tipoAtendimento,omitempty"`
 	// unused fields # 8 to 9
-	AleitamentoMaterno          *int64                             `thrift:"aleitamentoMaterno,10" json:"aleitamentoMaterno,omitempty"`
-	DumDaGestante               *int64                             `thrift:"dumDaGestante,11" json:"dumDaGestante,omitempty"`
-	IdadeGestacional            *int32                             `thrift:"idadeGestacional,12" json:"idadeGestacional,omitempty"`
-	AtencaoDomiciliarModalidade *int64                             `thrift:"atencaoDomiciliarModalidade,13" json:"atencaoDomiciliarModalidade,omitempty"`
-	ProblemaCondicaoAvaliada    *ProblemaCondicaoAvaliacaoAIThrift `thrift:"problemaCondicaoAvaliada,14" json:"problemaCondicaoAvaliada,omitempty"`
-	// unused fields # 15 to 16
+	AleitamentoMaterno          *int64 `thrift:"aleitamentoMaterno,10" json:"aleitamentoMaterno,omitempty"`
+	DumDaGestante               *int64 `thrift:"dumDaGestante,11" json:"dumDaGestante,omitempty"`
+	IdadeGestacional            *int32 `thrift:"idadeGestacional,12" json:"idadeGestacional,omitempty"`
+	AtencaoDomiciliarModalidade *int64 `thrift:"atencaoDomiciliarModalidade,13" json:"atencaoDomiciliarModalidade,omitempty"`
+	// unused fields # 14 to 16
 	Exame               []*ExameThrift `thrift:"exame,17" json:"exame,omitempty"`
 	VacinaEmDia         *bool          `thrift:"vacinaEmDia,18" json:"vacinaEmDia,omitempty"`
 	Pic                 *int64         `thrift:"pic,19" json:"pic,omitempty"`
@@ -666,15 +664,6 @@ func (p *FichaAtendimentoIndividualChildThrift) GetAtencaoDomiciliarModalidade()
 		return FichaAtendimentoIndividualChildThrift_AtencaoDomiciliarModalidade_DEFAULT
 	}
 	return *p.AtencaoDomiciliarModalidade
-}
-
-var FichaAtendimentoIndividualChildThrift_ProblemaCondicaoAvaliada_DEFAULT *ProblemaCondicaoAvaliacaoAIThrift
-
-func (p *FichaAtendimentoIndividualChildThrift) GetProblemaCondicaoAvaliada() *ProblemaCondicaoAvaliacaoAIThrift {
-	if !p.IsSetProblemaCondicaoAvaliada() {
-		return FichaAtendimentoIndividualChildThrift_ProblemaCondicaoAvaliada_DEFAULT
-	}
-	return p.ProblemaCondicaoAvaliada
 }
 
 var FichaAtendimentoIndividualChildThrift_Exame_DEFAULT []*ExameThrift
@@ -903,10 +892,6 @@ func (p *FichaAtendimentoIndividualChildThrift) IsSetAtencaoDomiciliarModalidade
 	return p.AtencaoDomiciliarModalidade != nil
 }
 
-func (p *FichaAtendimentoIndividualChildThrift) IsSetProblemaCondicaoAvaliada() bool {
-	return p.ProblemaCondicaoAvaliada != nil
-}
-
 func (p *FichaAtendimentoIndividualChildThrift) IsSetExame() bool {
 	return p.Exame != nil
 }
@@ -1055,10 +1040,6 @@ func (p *FichaAtendimentoIndividualChildThrift) Read(iprot thrift.TProtocol) err
 			}
 		case 13:
 			if err := p.readField13(iprot); err != nil {
-				return err
-			}
-		case 14:
-			if err := p.readField14(iprot); err != nil {
 				return err
 			}
 		case 17:
@@ -1263,14 +1244,6 @@ func (p *FichaAtendimentoIndividualChildThrift) readField13(iprot thrift.TProtoc
 		return thrift.PrependError("error reading field 13: ", err)
 	} else {
 		p.AtencaoDomiciliarModalidade = &v
-	}
-	return nil
-}
-
-func (p *FichaAtendimentoIndividualChildThrift) readField14(iprot thrift.TProtocol) error {
-	p.ProblemaCondicaoAvaliada = &ProblemaCondicaoAvaliacaoAIThrift{}
-	if err := p.ProblemaCondicaoAvaliada.Read(iprot); err != nil {
-		return thrift.PrependError(fmt.Sprintf("%T error reading struct: ", p.ProblemaCondicaoAvaliada), err)
 	}
 	return nil
 }
@@ -1611,9 +1584,6 @@ func (p *FichaAtendimentoIndividualChildThrift) Write(oprot thrift.TProtocol) er
 	if err := p.writeField13(oprot); err != nil {
 		return err
 	}
-	if err := p.writeField14(oprot); err != nil {
-		return err
-	}
 	if err := p.writeField17(oprot); err != nil {
 		return err
 	}
@@ -1852,21 +1822,6 @@ func (p *FichaAtendimentoIndividualChildThrift) writeField13(oprot thrift.TProto
 		}
 		if err := oprot.WriteFieldEnd(); err != nil {
 			return thrift.PrependError(fmt.Sprintf("%T write field end error 13:atencaoDomiciliarModalidade: ", p), err)
-		}
-	}
-	return err
-}
-
-func (p *FichaAtendimentoIndividualChildThrift) writeField14(oprot thrift.TProtocol) (err error) {
-	if p.IsSetProblemaCondicaoAvaliada() {
-		if err := oprot.WriteFieldBegin("problemaCondicaoAvaliada", thrift.STRUCT, 14); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field begin error 14:problemaCondicaoAvaliada: ", p), err)
-		}
-		if err := p.ProblemaCondicaoAvaliada.Write(oprot); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T error writing struct: ", p.ProblemaCondicaoAvaliada), err)
-		}
-		if err := oprot.WriteFieldEnd(); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field end error 14:problemaCondicaoAvaliada: ", p), err)
 		}
 	}
 	return err

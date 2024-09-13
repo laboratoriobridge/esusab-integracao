@@ -212,7 +212,7 @@ type FichaAtendimentoOdontologicoChildThrift struct {
 	Encaminhamentos            []*common.EncaminhamentoExternoThrift `thrift:"encaminhamentos,20" json:"encaminhamentos,omitempty"`
 	ResultadosExames           []*common.ResultadosExameThrift       `thrift:"resultadosExames,21" json:"resultadosExames,omitempty"`
 	// unused fields # 22 to 26
-	Medicoes *common.MedicoesThrift `thrift:"medicoes,27" json:"medicoes,omitempty"`
+	Medicoes           *common.MedicoesThrift           `thrift:"medicoes,27" json:"medicoes,omitempty"`
 	ProblemasCondicoes []*common.ProblemaCondicaoThrift `thrift:"problemasCondicoes,28" json:"problemasCondicoes,omitempty"`
 }
 

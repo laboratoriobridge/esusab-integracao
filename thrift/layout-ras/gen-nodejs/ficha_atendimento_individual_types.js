@@ -247,7 +247,6 @@ FichaAtendimentoIndividualChildThrift = module.exports.FichaAtendimentoIndividua
   this.dumDaGestante = null;
   this.idadeGestacional = null;
   this.atencaoDomiciliarModalidade = null;
-  this.problemaCondicaoAvaliada = null;
   this.exame = null;
   this.vacinaEmDia = null;
   this.pic = null;
@@ -304,9 +303,6 @@ FichaAtendimentoIndividualChildThrift = module.exports.FichaAtendimentoIndividua
     }
     if (args.atencaoDomiciliarModalidade !== undefined && args.atencaoDomiciliarModalidade !== null) {
       this.atencaoDomiciliarModalidade = args.atencaoDomiciliarModalidade;
-    }
-    if (args.problemaCondicaoAvaliada !== undefined && args.problemaCondicaoAvaliada !== null) {
-      this.problemaCondicaoAvaliada = new ttypes.ProblemaCondicaoAvaliacaoAIThrift(args.problemaCondicaoAvaliada);
     }
     if (args.exame !== undefined && args.exame !== null) {
       this.exame = Thrift.copyList(args.exame, [ttypes.ExameThrift]);
@@ -466,14 +462,6 @@ FichaAtendimentoIndividualChildThrift.prototype.read = function(input) {
       case 13:
       if (ftype == Thrift.Type.I64) {
         this.atencaoDomiciliarModalidade = input.readI64();
-      } else {
-        input.skip(ftype);
-      }
-      break;
-      case 14:
-      if (ftype == Thrift.Type.STRUCT) {
-        this.problemaCondicaoAvaliada = new ttypes.ProblemaCondicaoAvaliacaoAIThrift();
-        this.problemaCondicaoAvaliada.read(input);
       } else {
         input.skip(ftype);
       }
@@ -814,11 +802,6 @@ FichaAtendimentoIndividualChildThrift.prototype.write = function(output) {
   if (this.atencaoDomiciliarModalidade !== null && this.atencaoDomiciliarModalidade !== undefined) {
     output.writeFieldBegin('atencaoDomiciliarModalidade', Thrift.Type.I64, 13);
     output.writeI64(this.atencaoDomiciliarModalidade);
-    output.writeFieldEnd();
-  }
-  if (this.problemaCondicaoAvaliada !== null && this.problemaCondicaoAvaliada !== undefined) {
-    output.writeFieldBegin('problemaCondicaoAvaliada', Thrift.Type.STRUCT, 14);
-    this.problemaCondicaoAvaliada.write(output);
     output.writeFieldEnd();
   }
   if (this.exame !== null && this.exame !== undefined) {

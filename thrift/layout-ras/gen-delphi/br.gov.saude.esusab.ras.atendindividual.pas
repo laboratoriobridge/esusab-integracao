@@ -191,8 +191,6 @@ type
     procedure SetIdadeGestacional( const Value: Integer);
     function GetAtencaoDomiciliarModalidade: Int64;
     procedure SetAtencaoDomiciliarModalidade( const Value: Int64);
-    function GetProblemaCondicaoAvaliada: IProblemaCondicaoAvaliacaoAIThrift;
-    procedure SetProblemaCondicaoAvaliada( const Value: IProblemaCondicaoAvaliacaoAIThrift);
     function GetExame: IThriftList<IExameThrift>;
     procedure SetExame( const Value: IThriftList<IExameThrift>);
     function GetVacinaEmDia: Boolean;
@@ -251,7 +249,6 @@ type
     property DumDaGestante: Int64 read GetDumDaGestante write SetDumDaGestante;
     property IdadeGestacional: Integer read GetIdadeGestacional write SetIdadeGestacional;
     property AtencaoDomiciliarModalidade: Int64 read GetAtencaoDomiciliarModalidade write SetAtencaoDomiciliarModalidade;
-    property ProblemaCondicaoAvaliada: IProblemaCondicaoAvaliacaoAIThrift read GetProblemaCondicaoAvaliada write SetProblemaCondicaoAvaliada;
     property Exame: IThriftList<IExameThrift> read GetExame write SetExame;
     property VacinaEmDia: Boolean read GetVacinaEmDia write SetVacinaEmDia;
     property Pic: Int64 read GetPic write SetPic;
@@ -287,7 +284,6 @@ type
     function Get__isset_DumDaGestante: Boolean;
     function Get__isset_IdadeGestacional: Boolean;
     function Get__isset_AtencaoDomiciliarModalidade: Boolean;
-    function Get__isset_ProblemaCondicaoAvaliada: Boolean;
     function Get__isset_Exame: Boolean;
     function Get__isset_VacinaEmDia: Boolean;
     function Get__isset_Pic: Boolean;
@@ -323,7 +319,6 @@ type
     property __isset_DumDaGestante: Boolean read Get__isset_DumDaGestante;
     property __isset_IdadeGestacional: Boolean read Get__isset_IdadeGestacional;
     property __isset_AtencaoDomiciliarModalidade: Boolean read Get__isset_AtencaoDomiciliarModalidade;
-    property __isset_ProblemaCondicaoAvaliada: Boolean read Get__isset_ProblemaCondicaoAvaliada;
     property __isset_Exame: Boolean read Get__isset_Exame;
     property __isset_VacinaEmDia: Boolean read Get__isset_VacinaEmDia;
     property __isset_Pic: Boolean read Get__isset_Pic;
@@ -362,7 +357,6 @@ type
     FDumDaGestante: Int64;
     FIdadeGestacional: Integer;
     FAtencaoDomiciliarModalidade: Int64;
-    FProblemaCondicaoAvaliada: IProblemaCondicaoAvaliacaoAIThrift;
     FExame: IThriftList<IExameThrift>;
     FVacinaEmDia: Boolean;
     FPic: Int64;
@@ -398,7 +392,6 @@ type
     F__isset_DumDaGestante: Boolean;
     F__isset_IdadeGestacional: Boolean;
     F__isset_AtencaoDomiciliarModalidade: Boolean;
-    F__isset_ProblemaCondicaoAvaliada: Boolean;
     F__isset_Exame: Boolean;
     F__isset_VacinaEmDia: Boolean;
     F__isset_Pic: Boolean;
@@ -445,8 +438,6 @@ type
     procedure SetIdadeGestacional( const Value: Integer);
     function GetAtencaoDomiciliarModalidade: Int64;
     procedure SetAtencaoDomiciliarModalidade( const Value: Int64);
-    function GetProblemaCondicaoAvaliada: IProblemaCondicaoAvaliacaoAIThrift;
-    procedure SetProblemaCondicaoAvaliada( const Value: IProblemaCondicaoAvaliacaoAIThrift);
     function GetExame: IThriftList<IExameThrift>;
     procedure SetExame( const Value: IThriftList<IExameThrift>);
     function GetVacinaEmDia: Boolean;
@@ -505,7 +496,6 @@ type
     function Get__isset_DumDaGestante: Boolean;
     function Get__isset_IdadeGestacional: Boolean;
     function Get__isset_AtencaoDomiciliarModalidade: Boolean;
-    function Get__isset_ProblemaCondicaoAvaliada: Boolean;
     function Get__isset_Exame: Boolean;
     function Get__isset_VacinaEmDia: Boolean;
     function Get__isset_Pic: Boolean;
@@ -551,7 +541,6 @@ type
     property DumDaGestante: Int64 read GetDumDaGestante write SetDumDaGestante;
     property IdadeGestacional: Integer read GetIdadeGestacional write SetIdadeGestacional;
     property AtencaoDomiciliarModalidade: Int64 read GetAtencaoDomiciliarModalidade write SetAtencaoDomiciliarModalidade;
-    property ProblemaCondicaoAvaliada: IProblemaCondicaoAvaliacaoAIThrift read GetProblemaCondicaoAvaliada write SetProblemaCondicaoAvaliada;
     property Exame: IThriftList<IExameThrift> read GetExame write SetExame;
     property VacinaEmDia: Boolean read GetVacinaEmDia write SetVacinaEmDia;
     property Pic: Int64 read GetPic write SetPic;
@@ -588,7 +577,6 @@ type
     property __isset_DumDaGestante: Boolean read Get__isset_DumDaGestante;
     property __isset_IdadeGestacional: Boolean read Get__isset_IdadeGestacional;
     property __isset_AtencaoDomiciliarModalidade: Boolean read Get__isset_AtencaoDomiciliarModalidade;
-    property __isset_ProblemaCondicaoAvaliada: Boolean read Get__isset_ProblemaCondicaoAvaliada;
     property __isset_Exame: Boolean read Get__isset_Exame;
     property __isset_VacinaEmDia: Boolean read Get__isset_VacinaEmDia;
     property __isset_Pic: Boolean read Get__isset_Pic;
@@ -1325,22 +1313,6 @@ begin
   Result := F__isset_AtencaoDomiciliarModalidade;
 end;
 
-function TFichaAtendimentoIndividualChildThriftImpl.GetProblemaCondicaoAvaliada: IProblemaCondicaoAvaliacaoAIThrift;
-begin
-  Result := FProblemaCondicaoAvaliada;
-end;
-
-procedure TFichaAtendimentoIndividualChildThriftImpl.SetProblemaCondicaoAvaliada( const Value: IProblemaCondicaoAvaliacaoAIThrift);
-begin
-  F__isset_ProblemaCondicaoAvaliada := True;
-  FProblemaCondicaoAvaliada := Value;
-end;
-
-function TFichaAtendimentoIndividualChildThriftImpl.Get__isset_ProblemaCondicaoAvaliada: Boolean;
-begin
-  Result := F__isset_ProblemaCondicaoAvaliada;
-end;
-
 function TFichaAtendimentoIndividualChildThriftImpl.GetExame: IThriftList<IExameThrift>;
 begin
   Result := FExame;
@@ -1850,16 +1822,6 @@ begin
             TProtocolUtil.Skip(iprot, field_.Type_);
           end;
         end;
-        14: begin
-          if (field_.Type_ = TType.Struct) then
-          begin
-            ProblemaCondicaoAvaliada := TProblemaCondicaoAvaliacaoAIThriftImpl.Create;
-            ProblemaCondicaoAvaliada.Read(iprot);
-          end else
-          begin
-            TProtocolUtil.Skip(iprot, field_.Type_);
-          end;
-        end;
         17: begin
           if (field_.Type_ = TType.List) then
           begin
@@ -2266,15 +2228,6 @@ begin
     oprot.WriteI64(AtencaoDomiciliarModalidade);
     oprot.WriteFieldEnd();
   end;
-  if (ProblemaCondicaoAvaliada <> nil) and __isset_ProblemaCondicaoAvaliada then
-  begin
-    field_.Name := 'problemaCondicaoAvaliada';
-    field_.Type_  := TType.Struct;
-    field_.ID := 14;
-    oprot.WriteFieldBegin(field_);
-    ProblemaCondicaoAvaliada.Write(oprot);
-    oprot.WriteFieldEnd();
-  end;
   if (Exame <> nil) and __isset_Exame then
   begin
     field_.Name := 'exame';
@@ -2607,12 +2560,6 @@ begin
       _first55 := FALSE;
       _sb54.Append('AtencaoDomiciliarModalidade: ');
       _sb54.Append(AtencaoDomiciliarModalidade);
-    end;
-    if (ProblemaCondicaoAvaliada <> nil) and __isset_ProblemaCondicaoAvaliada then begin
-      if not _first55 then _sb54.Append(',');
-      _first55 := FALSE;
-      _sb54.Append('ProblemaCondicaoAvaliada: ');
-      if (ProblemaCondicaoAvaliada = nil) then _sb54.Append('<null>') else _sb54.Append(ProblemaCondicaoAvaliada.ToString());
     end;
     if (Exame <> nil) and __isset_Exame then begin
       if not _first55 then _sb54.Append(',');

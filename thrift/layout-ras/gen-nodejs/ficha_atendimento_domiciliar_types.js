@@ -20,8 +20,6 @@ FichaAtendimentoDomiciliarChildThrift = module.exports.FichaAtendimentoDomicilia
   this.atencaoDomiciliarModalidade = null;
   this.tipoAtendimento = null;
   this.condicoesAvaliadas = null;
-  this.cid = null;
-  this.ciap = null;
   this.procedimentos = null;
   this.condutaDesfecho = null;
   this.cpfCidadao = null;
@@ -50,12 +48,6 @@ FichaAtendimentoDomiciliarChildThrift = module.exports.FichaAtendimentoDomicilia
     }
     if (args.condicoesAvaliadas !== undefined && args.condicoesAvaliadas !== null) {
       this.condicoesAvaliadas = Thrift.copyList(args.condicoesAvaliadas, [null]);
-    }
-    if (args.cid !== undefined && args.cid !== null) {
-      this.cid = args.cid;
-    }
-    if (args.ciap !== undefined && args.ciap !== null) {
-      this.ciap = args.ciap;
     }
     if (args.procedimentos !== undefined && args.procedimentos !== null) {
       this.procedimentos = Thrift.copyList(args.procedimentos, [null]);
@@ -150,20 +142,6 @@ FichaAtendimentoDomiciliarChildThrift.prototype.read = function(input) {
           this.condicoesAvaliadas.push(elem6);
         }
         input.readListEnd();
-      } else {
-        input.skip(ftype);
-      }
-      break;
-      case 9:
-      if (ftype == Thrift.Type.STRING) {
-        this.cid = input.readString();
-      } else {
-        input.skip(ftype);
-      }
-      break;
-      case 10:
-      if (ftype == Thrift.Type.STRING) {
-        this.ciap = input.readString();
       } else {
         input.skip(ftype);
       }
@@ -281,16 +259,6 @@ FichaAtendimentoDomiciliarChildThrift.prototype.write = function(output) {
       }
     }
     output.writeListEnd();
-    output.writeFieldEnd();
-  }
-  if (this.cid !== null && this.cid !== undefined) {
-    output.writeFieldBegin('cid', Thrift.Type.STRING, 9);
-    output.writeString(this.cid);
-    output.writeFieldEnd();
-  }
-  if (this.ciap !== null && this.ciap !== undefined) {
-    output.writeFieldBegin('ciap', Thrift.Type.STRING, 10);
-    output.writeString(this.ciap);
     output.writeFieldEnd();
   }
   if (this.procedimentos !== null && this.procedimentos !== undefined) {

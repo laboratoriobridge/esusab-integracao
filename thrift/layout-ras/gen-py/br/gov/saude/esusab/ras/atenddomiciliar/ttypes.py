@@ -30,8 +30,6 @@ class FichaAtendimentoDomiciliarChildThrift:
    - atencaoDomiciliarModalidade
    - tipoAtendimento
    - condicoesAvaliadas
-   - cid
-   - ciap
    - procedimentos
    - condutaDesfecho
    - cpfCidadao
@@ -48,8 +46,8 @@ class FichaAtendimentoDomiciliarChildThrift:
     (6, TType.I64, 'atencaoDomiciliarModalidade', None, None, ), # 6
     (7, TType.I64, 'tipoAtendimento', None, None, ), # 7
     (8, TType.LIST, 'condicoesAvaliadas', (TType.I64,None), None, ), # 8
-    (9, TType.STRING, 'cid', None, None, ), # 9
-    (10, TType.STRING, 'ciap', None, None, ), # 10
+    None, # 9
+    None, # 10
     (11, TType.LIST, 'procedimentos', (TType.STRING,None), None, ), # 11
     None, # 12
     (13, TType.I64, 'condutaDesfecho', None, None, ), # 13
@@ -58,7 +56,7 @@ class FichaAtendimentoDomiciliarChildThrift:
     (16, TType.LIST, 'problemasCondicoes', (TType.STRUCT,(br.gov.saude.esusab.ras.common.ttypes.ProblemaCondicaoThrift, br.gov.saude.esusab.ras.common.ttypes.ProblemaCondicaoThrift.thrift_spec)), None, ), # 16
   )
 
-  def __init__(self, turno=None, cnsCidadao=None, dataNascimento=None, sexo=None, localAtendimento=None, atencaoDomiciliarModalidade=None, tipoAtendimento=None, condicoesAvaliadas=None, cid=None, ciap=None, procedimentos=None, condutaDesfecho=None, cpfCidadao=None, problemasCondicoes=None,):
+  def __init__(self, turno=None, cnsCidadao=None, dataNascimento=None, sexo=None, localAtendimento=None, atencaoDomiciliarModalidade=None, tipoAtendimento=None, condicoesAvaliadas=None, procedimentos=None, condutaDesfecho=None, cpfCidadao=None, problemasCondicoes=None,):
     self.turno = turno
     self.cnsCidadao = cnsCidadao
     self.dataNascimento = dataNascimento
@@ -67,8 +65,6 @@ class FichaAtendimentoDomiciliarChildThrift:
     self.atencaoDomiciliarModalidade = atencaoDomiciliarModalidade
     self.tipoAtendimento = tipoAtendimento
     self.condicoesAvaliadas = condicoesAvaliadas
-    self.cid = cid
-    self.ciap = ciap
     self.procedimentos = procedimentos
     self.condutaDesfecho = condutaDesfecho
     self.cpfCidadao = cpfCidadao
@@ -126,16 +122,6 @@ class FichaAtendimentoDomiciliarChildThrift:
             _elem5 = iprot.readI64()
             self.condicoesAvaliadas.append(_elem5)
           iprot.readListEnd()
-        else:
-          iprot.skip(ftype)
-      elif fid == 9:
-        if ftype == TType.STRING:
-          self.cid = iprot.readString()
-        else:
-          iprot.skip(ftype)
-      elif fid == 10:
-        if ftype == TType.STRING:
-          self.ciap = iprot.readString()
         else:
           iprot.skip(ftype)
       elif fid == 11:
@@ -214,14 +200,6 @@ class FichaAtendimentoDomiciliarChildThrift:
         oprot.writeI64(iter18)
       oprot.writeListEnd()
       oprot.writeFieldEnd()
-    if self.cid is not None:
-      oprot.writeFieldBegin('cid', TType.STRING, 9)
-      oprot.writeString(self.cid)
-      oprot.writeFieldEnd()
-    if self.ciap is not None:
-      oprot.writeFieldBegin('ciap', TType.STRING, 10)
-      oprot.writeString(self.ciap)
-      oprot.writeFieldEnd()
     if self.procedimentos is not None:
       oprot.writeFieldBegin('procedimentos', TType.LIST, 11)
       oprot.writeListBegin(TType.STRING, len(self.procedimentos))
@@ -261,8 +239,6 @@ class FichaAtendimentoDomiciliarChildThrift:
     value = (value * 31) ^ hash(self.atencaoDomiciliarModalidade)
     value = (value * 31) ^ hash(self.tipoAtendimento)
     value = (value * 31) ^ hash(self.condicoesAvaliadas)
-    value = (value * 31) ^ hash(self.cid)
-    value = (value * 31) ^ hash(self.ciap)
     value = (value * 31) ^ hash(self.procedimentos)
     value = (value * 31) ^ hash(self.condutaDesfecho)
     value = (value * 31) ^ hash(self.cpfCidadao)

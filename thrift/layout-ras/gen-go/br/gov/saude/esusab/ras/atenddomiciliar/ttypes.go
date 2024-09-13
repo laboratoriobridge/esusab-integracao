@@ -27,24 +27,21 @@ var GoUnusedProtection__ int
 //  - AtencaoDomiciliarModalidade
 //  - TipoAtendimento
 //  - CondicoesAvaliadas
-//  - Cid
-//  - Ciap
 //  - Procedimentos
 //  - CondutaDesfecho
 //  - CpfCidadao
 //  - ProblemasCondicoes
 type FichaAtendimentoDomiciliarChildThrift struct {
-	Turno                       *int64   `thrift:"turno,1" json:"turno,omitempty"`
-	CnsCidadao                  *string  `thrift:"cnsCidadao,2" json:"cnsCidadao,omitempty"`
-	DataNascimento              *int64   `thrift:"dataNascimento,3" json:"dataNascimento,omitempty"`
-	Sexo                        *int64   `thrift:"sexo,4" json:"sexo,omitempty"`
-	LocalAtendimento            *int64   `thrift:"localAtendimento,5" json:"localAtendimento,omitempty"`
-	AtencaoDomiciliarModalidade *int64   `thrift:"atencaoDomiciliarModalidade,6" json:"atencaoDomiciliarModalidade,omitempty"`
-	TipoAtendimento             *int64   `thrift:"tipoAtendimento,7" json:"tipoAtendimento,omitempty"`
-	CondicoesAvaliadas          []int64  `thrift:"condicoesAvaliadas,8" json:"condicoesAvaliadas,omitempty"`
-	Cid                         *string  `thrift:"cid,9" json:"cid,omitempty"`
-	Ciap                        *string  `thrift:"ciap,10" json:"ciap,omitempty"`
-	Procedimentos               []string `thrift:"procedimentos,11" json:"procedimentos,omitempty"`
+	Turno                       *int64  `thrift:"turno,1" json:"turno,omitempty"`
+	CnsCidadao                  *string `thrift:"cnsCidadao,2" json:"cnsCidadao,omitempty"`
+	DataNascimento              *int64  `thrift:"dataNascimento,3" json:"dataNascimento,omitempty"`
+	Sexo                        *int64  `thrift:"sexo,4" json:"sexo,omitempty"`
+	LocalAtendimento            *int64  `thrift:"localAtendimento,5" json:"localAtendimento,omitempty"`
+	AtencaoDomiciliarModalidade *int64  `thrift:"atencaoDomiciliarModalidade,6" json:"atencaoDomiciliarModalidade,omitempty"`
+	TipoAtendimento             *int64  `thrift:"tipoAtendimento,7" json:"tipoAtendimento,omitempty"`
+	CondicoesAvaliadas          []int64 `thrift:"condicoesAvaliadas,8" json:"condicoesAvaliadas,omitempty"`
+	// unused fields # 9 to 10
+	Procedimentos []string `thrift:"procedimentos,11" json:"procedimentos,omitempty"`
 	// unused field # 12
 	CondutaDesfecho *int64 `thrift:"condutaDesfecho,13" json:"condutaDesfecho,omitempty"`
 	// unused field # 14
@@ -125,24 +122,6 @@ func (p *FichaAtendimentoDomiciliarChildThrift) GetCondicoesAvaliadas() []int64 
 	return p.CondicoesAvaliadas
 }
 
-var FichaAtendimentoDomiciliarChildThrift_Cid_DEFAULT string
-
-func (p *FichaAtendimentoDomiciliarChildThrift) GetCid() string {
-	if !p.IsSetCid() {
-		return FichaAtendimentoDomiciliarChildThrift_Cid_DEFAULT
-	}
-	return *p.Cid
-}
-
-var FichaAtendimentoDomiciliarChildThrift_Ciap_DEFAULT string
-
-func (p *FichaAtendimentoDomiciliarChildThrift) GetCiap() string {
-	if !p.IsSetCiap() {
-		return FichaAtendimentoDomiciliarChildThrift_Ciap_DEFAULT
-	}
-	return *p.Ciap
-}
-
 var FichaAtendimentoDomiciliarChildThrift_Procedimentos_DEFAULT []string
 
 func (p *FichaAtendimentoDomiciliarChildThrift) GetProcedimentos() []string {
@@ -202,14 +181,6 @@ func (p *FichaAtendimentoDomiciliarChildThrift) IsSetTipoAtendimento() bool {
 
 func (p *FichaAtendimentoDomiciliarChildThrift) IsSetCondicoesAvaliadas() bool {
 	return p.CondicoesAvaliadas != nil
-}
-
-func (p *FichaAtendimentoDomiciliarChildThrift) IsSetCid() bool {
-	return p.Cid != nil
-}
-
-func (p *FichaAtendimentoDomiciliarChildThrift) IsSetCiap() bool {
-	return p.Ciap != nil
 }
 
 func (p *FichaAtendimentoDomiciliarChildThrift) IsSetProcedimentos() bool {
@@ -272,14 +243,6 @@ func (p *FichaAtendimentoDomiciliarChildThrift) Read(iprot thrift.TProtocol) err
 			}
 		case 8:
 			if err := p.readField8(iprot); err != nil {
-				return err
-			}
-		case 9:
-			if err := p.readField9(iprot); err != nil {
-				return err
-			}
-		case 10:
-			if err := p.readField10(iprot); err != nil {
 				return err
 			}
 		case 11:
@@ -398,24 +361,6 @@ func (p *FichaAtendimentoDomiciliarChildThrift) readField8(iprot thrift.TProtoco
 	return nil
 }
 
-func (p *FichaAtendimentoDomiciliarChildThrift) readField9(iprot thrift.TProtocol) error {
-	if v, err := iprot.ReadString(); err != nil {
-		return thrift.PrependError("error reading field 9: ", err)
-	} else {
-		p.Cid = &v
-	}
-	return nil
-}
-
-func (p *FichaAtendimentoDomiciliarChildThrift) readField10(iprot thrift.TProtocol) error {
-	if v, err := iprot.ReadString(); err != nil {
-		return thrift.PrependError("error reading field 10: ", err)
-	} else {
-		p.Ciap = &v
-	}
-	return nil
-}
-
 func (p *FichaAtendimentoDomiciliarChildThrift) readField11(iprot thrift.TProtocol) error {
 	_, size, err := iprot.ReadListBegin()
 	if err != nil {
@@ -502,12 +447,6 @@ func (p *FichaAtendimentoDomiciliarChildThrift) Write(oprot thrift.TProtocol) er
 		return err
 	}
 	if err := p.writeField8(oprot); err != nil {
-		return err
-	}
-	if err := p.writeField9(oprot); err != nil {
-		return err
-	}
-	if err := p.writeField10(oprot); err != nil {
 		return err
 	}
 	if err := p.writeField11(oprot); err != nil {
@@ -654,36 +593,6 @@ func (p *FichaAtendimentoDomiciliarChildThrift) writeField8(oprot thrift.TProtoc
 		}
 		if err := oprot.WriteFieldEnd(); err != nil {
 			return thrift.PrependError(fmt.Sprintf("%T write field end error 8:condicoesAvaliadas: ", p), err)
-		}
-	}
-	return err
-}
-
-func (p *FichaAtendimentoDomiciliarChildThrift) writeField9(oprot thrift.TProtocol) (err error) {
-	if p.IsSetCid() {
-		if err := oprot.WriteFieldBegin("cid", thrift.STRING, 9); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field begin error 9:cid: ", p), err)
-		}
-		if err := oprot.WriteString(string(*p.Cid)); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T.cid (9) field write error: ", p), err)
-		}
-		if err := oprot.WriteFieldEnd(); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field end error 9:cid: ", p), err)
-		}
-	}
-	return err
-}
-
-func (p *FichaAtendimentoDomiciliarChildThrift) writeField10(oprot thrift.TProtocol) (err error) {
-	if p.IsSetCiap() {
-		if err := oprot.WriteFieldBegin("ciap", thrift.STRING, 10); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field begin error 10:ciap: ", p), err)
-		}
-		if err := oprot.WriteString(string(*p.Ciap)); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T.ciap (10) field write error: ", p), err)
-		}
-		if err := oprot.WriteFieldEnd(); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field end error 10:ciap: ", p), err)
 		}
 	}
 	return err

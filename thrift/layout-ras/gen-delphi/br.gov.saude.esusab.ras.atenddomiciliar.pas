@@ -47,10 +47,6 @@ type
     procedure SetTipoAtendimento( const Value: Int64);
     function GetCondicoesAvaliadas: IThriftList<Int64>;
     procedure SetCondicoesAvaliadas( const Value: IThriftList<Int64>);
-    function GetCid: string;
-    procedure SetCid( const Value: string);
-    function GetCiap: string;
-    procedure SetCiap( const Value: string);
     function GetProcedimentos: IThriftList<string>;
     procedure SetProcedimentos( const Value: IThriftList<string>);
     function GetCondutaDesfecho: Int64;
@@ -68,8 +64,6 @@ type
     property AtencaoDomiciliarModalidade: Int64 read GetAtencaoDomiciliarModalidade write SetAtencaoDomiciliarModalidade;
     property TipoAtendimento: Int64 read GetTipoAtendimento write SetTipoAtendimento;
     property CondicoesAvaliadas: IThriftList<Int64> read GetCondicoesAvaliadas write SetCondicoesAvaliadas;
-    property Cid: string read GetCid write SetCid;
-    property Ciap: string read GetCiap write SetCiap;
     property Procedimentos: IThriftList<string> read GetProcedimentos write SetProcedimentos;
     property CondutaDesfecho: Int64 read GetCondutaDesfecho write SetCondutaDesfecho;
     property CpfCidadao: string read GetCpfCidadao write SetCpfCidadao;
@@ -83,8 +77,6 @@ type
     function Get__isset_AtencaoDomiciliarModalidade: Boolean;
     function Get__isset_TipoAtendimento: Boolean;
     function Get__isset_CondicoesAvaliadas: Boolean;
-    function Get__isset_Cid: Boolean;
-    function Get__isset_Ciap: Boolean;
     function Get__isset_Procedimentos: Boolean;
     function Get__isset_CondutaDesfecho: Boolean;
     function Get__isset_CpfCidadao: Boolean;
@@ -98,8 +90,6 @@ type
     property __isset_AtencaoDomiciliarModalidade: Boolean read Get__isset_AtencaoDomiciliarModalidade;
     property __isset_TipoAtendimento: Boolean read Get__isset_TipoAtendimento;
     property __isset_CondicoesAvaliadas: Boolean read Get__isset_CondicoesAvaliadas;
-    property __isset_Cid: Boolean read Get__isset_Cid;
-    property __isset_Ciap: Boolean read Get__isset_Ciap;
     property __isset_Procedimentos: Boolean read Get__isset_Procedimentos;
     property __isset_CondutaDesfecho: Boolean read Get__isset_CondutaDesfecho;
     property __isset_CpfCidadao: Boolean read Get__isset_CpfCidadao;
@@ -116,8 +106,6 @@ type
     FAtencaoDomiciliarModalidade: Int64;
     FTipoAtendimento: Int64;
     FCondicoesAvaliadas: IThriftList<Int64>;
-    FCid: string;
-    FCiap: string;
     FProcedimentos: IThriftList<string>;
     FCondutaDesfecho: Int64;
     FCpfCidadao: string;
@@ -131,8 +119,6 @@ type
     F__isset_AtencaoDomiciliarModalidade: Boolean;
     F__isset_TipoAtendimento: Boolean;
     F__isset_CondicoesAvaliadas: Boolean;
-    F__isset_Cid: Boolean;
-    F__isset_Ciap: Boolean;
     F__isset_Procedimentos: Boolean;
     F__isset_CondutaDesfecho: Boolean;
     F__isset_CpfCidadao: Boolean;
@@ -154,10 +140,6 @@ type
     procedure SetTipoAtendimento( const Value: Int64);
     function GetCondicoesAvaliadas: IThriftList<Int64>;
     procedure SetCondicoesAvaliadas( const Value: IThriftList<Int64>);
-    function GetCid: string;
-    procedure SetCid( const Value: string);
-    function GetCiap: string;
-    procedure SetCiap( const Value: string);
     function GetProcedimentos: IThriftList<string>;
     procedure SetProcedimentos( const Value: IThriftList<string>);
     function GetCondutaDesfecho: Int64;
@@ -175,8 +157,6 @@ type
     function Get__isset_AtencaoDomiciliarModalidade: Boolean;
     function Get__isset_TipoAtendimento: Boolean;
     function Get__isset_CondicoesAvaliadas: Boolean;
-    function Get__isset_Cid: Boolean;
-    function Get__isset_Ciap: Boolean;
     function Get__isset_Procedimentos: Boolean;
     function Get__isset_CondutaDesfecho: Boolean;
     function Get__isset_CpfCidadao: Boolean;
@@ -200,8 +180,6 @@ type
     property AtencaoDomiciliarModalidade: Int64 read GetAtencaoDomiciliarModalidade write SetAtencaoDomiciliarModalidade;
     property TipoAtendimento: Int64 read GetTipoAtendimento write SetTipoAtendimento;
     property CondicoesAvaliadas: IThriftList<Int64> read GetCondicoesAvaliadas write SetCondicoesAvaliadas;
-    property Cid: string read GetCid write SetCid;
-    property Ciap: string read GetCiap write SetCiap;
     property Procedimentos: IThriftList<string> read GetProcedimentos write SetProcedimentos;
     property CondutaDesfecho: Int64 read GetCondutaDesfecho write SetCondutaDesfecho;
     property CpfCidadao: string read GetCpfCidadao write SetCpfCidadao;
@@ -216,8 +194,6 @@ type
     property __isset_AtencaoDomiciliarModalidade: Boolean read Get__isset_AtencaoDomiciliarModalidade;
     property __isset_TipoAtendimento: Boolean read Get__isset_TipoAtendimento;
     property __isset_CondicoesAvaliadas: Boolean read Get__isset_CondicoesAvaliadas;
-    property __isset_Cid: Boolean read Get__isset_Cid;
-    property __isset_Ciap: Boolean read Get__isset_Ciap;
     property __isset_Procedimentos: Boolean read Get__isset_Procedimentos;
     property __isset_CondutaDesfecho: Boolean read Get__isset_CondutaDesfecho;
     property __isset_CpfCidadao: Boolean read Get__isset_CpfCidadao;
@@ -433,38 +409,6 @@ begin
   Result := F__isset_CondicoesAvaliadas;
 end;
 
-function TFichaAtendimentoDomiciliarChildThriftImpl.GetCid: string;
-begin
-  Result := FCid;
-end;
-
-procedure TFichaAtendimentoDomiciliarChildThriftImpl.SetCid( const Value: string);
-begin
-  F__isset_Cid := True;
-  FCid := Value;
-end;
-
-function TFichaAtendimentoDomiciliarChildThriftImpl.Get__isset_Cid: Boolean;
-begin
-  Result := F__isset_Cid;
-end;
-
-function TFichaAtendimentoDomiciliarChildThriftImpl.GetCiap: string;
-begin
-  Result := FCiap;
-end;
-
-procedure TFichaAtendimentoDomiciliarChildThriftImpl.SetCiap( const Value: string);
-begin
-  F__isset_Ciap := True;
-  FCiap := Value;
-end;
-
-function TFichaAtendimentoDomiciliarChildThriftImpl.Get__isset_Ciap: Boolean;
-begin
-  Result := F__isset_Ciap;
-end;
-
 function TFichaAtendimentoDomiciliarChildThriftImpl.GetProcedimentos: IThriftList<string>;
 begin
   Result := FProcedimentos;
@@ -635,24 +579,6 @@ begin
             TProtocolUtil.Skip(iprot, field_.Type_);
           end;
         end;
-        9: begin
-          if (field_.Type_ = TType.String_) then
-          begin
-            Cid := iprot.ReadString();
-          end else
-          begin
-            TProtocolUtil.Skip(iprot, field_.Type_);
-          end;
-        end;
-        10: begin
-          if (field_.Type_ = TType.String_) then
-          begin
-            Ciap := iprot.ReadString();
-          end else
-          begin
-            TProtocolUtil.Skip(iprot, field_.Type_);
-          end;
-        end;
         11: begin
           if (field_.Type_ = TType.List) then
           begin
@@ -809,24 +735,6 @@ begin
     oprot.WriteListEnd();
     oprot.WriteFieldEnd();
   end;
-  if (__isset_Cid) then
-  begin
-    field_.Name := 'cid';
-    field_.Type_  := TType.String_;
-    field_.ID := 9;
-    oprot.WriteFieldBegin(field_);
-    oprot.WriteString(Cid);
-    oprot.WriteFieldEnd();
-  end;
-  if (__isset_Ciap) then
-  begin
-    field_.Name := 'ciap';
-    field_.Type_  := TType.String_;
-    field_.ID := 10;
-    oprot.WriteFieldBegin(field_);
-    oprot.WriteString(Ciap);
-    oprot.WriteFieldEnd();
-  end;
   if (Procedimentos <> nil) and __isset_Procedimentos then
   begin
     field_.Name := 'procedimentos';
@@ -934,18 +842,6 @@ begin
       _first16 := FALSE;
       _sb15.Append('CondicoesAvaliadas: ');
       _sb15.Append(CondicoesAvaliadas);
-    end;
-    if (__isset_Cid) then begin
-      if not _first16 then _sb15.Append(',');
-      _first16 := FALSE;
-      _sb15.Append('Cid: ');
-      _sb15.Append(Cid);
-    end;
-    if (__isset_Ciap) then begin
-      if not _first16 then _sb15.Append(',');
-      _first16 := FALSE;
-      _sb15.Append('Ciap: ');
-      _sb15.Append(Ciap);
     end;
     if (Procedimentos <> nil) and __isset_Procedimentos then begin
       if not _first16 then _sb15.Append(',');

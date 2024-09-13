@@ -33,7 +33,6 @@ struct FichaAtendimentoIndividualChildThrift {
 	11:optional i64 dumDaGestante;
 	12:optional i32 idadeGestacional;
 	13:optional i64 atencaoDomiciliarModalidade;
-	14:optional ProblemaCondicaoAvaliacaoAIThrift problemaCondicaoAvaliada;
 	17:optional list<ExameThrift> exame;
 	18:optional bool vacinaEmDia;
 	19:optional i64 pic;

@@ -53,14 +53,6 @@ class FichaAtendimentoDomiciliarChildThrift {
    */
   public $condicoesAvaliadas = null;
   /**
-   * @var string
-   */
-  public $cid = null;
-  /**
-   * @var string
-   */
-  public $ciap = null;
-  /**
    * @var string[]
    */
   public $procedimentos = null;
@@ -116,14 +108,6 @@ class FichaAtendimentoDomiciliarChildThrift {
             'type' => TType::I64,
             ),
           ),
-        9 => array(
-          'var' => 'cid',
-          'type' => TType::STRING,
-          ),
-        10 => array(
-          'var' => 'ciap',
-          'type' => TType::STRING,
-          ),
         11 => array(
           'var' => 'procedimentos',
           'type' => TType::LST,
@@ -175,12 +159,6 @@ class FichaAtendimentoDomiciliarChildThrift {
       }
       if (isset($vals['condicoesAvaliadas'])) {
         $this->condicoesAvaliadas = $vals['condicoesAvaliadas'];
-      }
-      if (isset($vals['cid'])) {
-        $this->cid = $vals['cid'];
-      }
-      if (isset($vals['ciap'])) {
-        $this->ciap = $vals['ciap'];
       }
       if (isset($vals['procedimentos'])) {
         $this->procedimentos = $vals['procedimentos'];
@@ -278,20 +256,6 @@ class FichaAtendimentoDomiciliarChildThrift {
               $this->condicoesAvaliadas []= $elem5;
             }
             $xfer += $input->readListEnd();
-          } else {
-            $xfer += $input->skip($ftype);
-          }
-          break;
-        case 9:
-          if ($ftype == TType::STRING) {
-            $xfer += $input->readString($this->cid);
-          } else {
-            $xfer += $input->skip($ftype);
-          }
-          break;
-        case 10:
-          if ($ftype == TType::STRING) {
-            $xfer += $input->readString($this->ciap);
           } else {
             $xfer += $input->skip($ftype);
           }
@@ -408,16 +372,6 @@ class FichaAtendimentoDomiciliarChildThrift {
         }
         $output->writeListEnd();
       }
-      $xfer += $output->writeFieldEnd();
-    }
-    if ($this->cid !== null) {
-      $xfer += $output->writeFieldBegin('cid', TType::STRING, 9);
-      $xfer += $output->writeString($this->cid);
-      $xfer += $output->writeFieldEnd();
-    }
-    if ($this->ciap !== null) {
-      $xfer += $output->writeFieldBegin('ciap', TType::STRING, 10);
-      $xfer += $output->writeString($this->ciap);
       $xfer += $output->writeFieldEnd();
     }
     if ($this->procedimentos !== null) {

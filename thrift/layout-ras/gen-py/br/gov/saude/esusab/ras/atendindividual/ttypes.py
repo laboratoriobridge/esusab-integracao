@@ -244,7 +244,6 @@ class FichaAtendimentoIndividualChildThrift:
    - dumDaGestante
    - idadeGestacional
    - atencaoDomiciliarModalidade
-   - problemaCondicaoAvaliada
    - exame
    - vacinaEmDia
    - pic
@@ -285,7 +284,7 @@ class FichaAtendimentoIndividualChildThrift:
     (11, TType.I64, 'dumDaGestante', None, None, ), # 11
     (12, TType.I32, 'idadeGestacional', None, None, ), # 12
     (13, TType.I64, 'atencaoDomiciliarModalidade', None, None, ), # 13
-    (14, TType.STRUCT, 'problemaCondicaoAvaliada', (ProblemaCondicaoAvaliacaoAIThrift, ProblemaCondicaoAvaliacaoAIThrift.thrift_spec), None, ), # 14
+    None, # 14
     None, # 15
     None, # 16
     (17, TType.LIST, 'exame', (TType.STRUCT,(ExameThrift, ExameThrift.thrift_spec)), None, ), # 17
@@ -314,7 +313,7 @@ class FichaAtendimentoIndividualChildThrift:
     (40, TType.LIST, 'problemasCondicoes', (TType.STRUCT,(br.gov.saude.esusab.ras.common.ttypes.ProblemaCondicaoThrift, br.gov.saude.esusab.ras.common.ttypes.ProblemaCondicaoThrift.thrift_spec)), None, ), # 40
   )
 
-  def __init__(self, numeroProntuario=None, cns=None, dataNascimento=None, localDeAtendimento=None, sexo=None, turno=None, tipoAtendimento=None, aleitamentoMaterno=None, dumDaGestante=None, idadeGestacional=None, atencaoDomiciliarModalidade=None, problemaCondicaoAvaliada=None, exame=None, vacinaEmDia=None, pic=None, ficouEmObservacao=None, nasfs=None, condutas=None, stGravidezPlanejada=None, nuGestasPrevias=None, nuPartos=None, racionalidadeSaude=None, dataHoraInicialAtendimento=None, dataHoraFinalAtendimento=None, cpfCidadao=None, medicamentos=None, encaminhamentos=None, resultadosExames=None, uuidRnds=None, finalizadorObservacao=None, tipoParticipacaoCidadao=None, tipoParticipacaoProfissionalConvidado=None, emultis=None, medicoes=None, problemasCondicoes=None,):
+  def __init__(self, numeroProntuario=None, cns=None, dataNascimento=None, localDeAtendimento=None, sexo=None, turno=None, tipoAtendimento=None, aleitamentoMaterno=None, dumDaGestante=None, idadeGestacional=None, atencaoDomiciliarModalidade=None, exame=None, vacinaEmDia=None, pic=None, ficouEmObservacao=None, nasfs=None, condutas=None, stGravidezPlanejada=None, nuGestasPrevias=None, nuPartos=None, racionalidadeSaude=None, dataHoraInicialAtendimento=None, dataHoraFinalAtendimento=None, cpfCidadao=None, medicamentos=None, encaminhamentos=None, resultadosExames=None, uuidRnds=None, finalizadorObservacao=None, tipoParticipacaoCidadao=None, tipoParticipacaoProfissionalConvidado=None, emultis=None, medicoes=None, problemasCondicoes=None,):
     self.numeroProntuario = numeroProntuario
     self.cns = cns
     self.dataNascimento = dataNascimento
@@ -326,7 +325,6 @@ class FichaAtendimentoIndividualChildThrift:
     self.dumDaGestante = dumDaGestante
     self.idadeGestacional = idadeGestacional
     self.atencaoDomiciliarModalidade = atencaoDomiciliarModalidade
-    self.problemaCondicaoAvaliada = problemaCondicaoAvaliada
     self.exame = exame
     self.vacinaEmDia = vacinaEmDia
     self.pic = pic
@@ -413,12 +411,6 @@ class FichaAtendimentoIndividualChildThrift:
       elif fid == 13:
         if ftype == TType.I64:
           self.atencaoDomiciliarModalidade = iprot.readI64()
-        else:
-          iprot.skip(ftype)
-      elif fid == 14:
-        if ftype == TType.STRUCT:
-          self.problemaCondicaoAvaliada = ProblemaCondicaoAvaliacaoAIThrift()
-          self.problemaCondicaoAvaliada.read(iprot)
         else:
           iprot.skip(ftype)
       elif fid == 17:
@@ -637,10 +629,6 @@ class FichaAtendimentoIndividualChildThrift:
       oprot.writeFieldBegin('atencaoDomiciliarModalidade', TType.I64, 13)
       oprot.writeI64(self.atencaoDomiciliarModalidade)
       oprot.writeFieldEnd()
-    if self.problemaCondicaoAvaliada is not None:
-      oprot.writeFieldBegin('problemaCondicaoAvaliada', TType.STRUCT, 14)
-      self.problemaCondicaoAvaliada.write(oprot)
-      oprot.writeFieldEnd()
     if self.exame is not None:
       oprot.writeFieldBegin('exame', TType.LIST, 17)
       oprot.writeListBegin(TType.STRUCT, len(self.exame))
@@ -777,7 +765,6 @@ class FichaAtendimentoIndividualChildThrift:
     value = (value * 31) ^ hash(self.dumDaGestante)
     value = (value * 31) ^ hash(self.idadeGestacional)
     value = (value * 31) ^ hash(self.atencaoDomiciliarModalidade)
-    value = (value * 31) ^ hash(self.problemaCondicaoAvaliada)
     value = (value * 31) ^ hash(self.exame)
     value = (value * 31) ^ hash(self.vacinaEmDia)
     value = (value * 31) ^ hash(self.pic)

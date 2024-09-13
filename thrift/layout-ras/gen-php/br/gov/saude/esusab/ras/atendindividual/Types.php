@@ -382,10 +382,6 @@ class FichaAtendimentoIndividualChildThrift {
    */
   public $atencaoDomiciliarModalidade = null;
   /**
-   * @var \br\gov\saude\esusab\ras\atendindividual\ProblemaCondicaoAvaliacaoAIThrift
-   */
-  public $problemaCondicaoAvaliada = null;
-  /**
    * @var \br\gov\saude\esusab\ras\atendindividual\ExameThrift[]
    */
   public $exame = null;
@@ -524,11 +520,6 @@ class FichaAtendimentoIndividualChildThrift {
         13 => array(
           'var' => 'atencaoDomiciliarModalidade',
           'type' => TType::I64,
-          ),
-        14 => array(
-          'var' => 'problemaCondicaoAvaliada',
-          'type' => TType::STRUCT,
-          'class' => '\br\gov\saude\esusab\ras\atendindividual\ProblemaCondicaoAvaliacaoAIThrift',
           ),
         17 => array(
           'var' => 'exame',
@@ -697,9 +688,6 @@ class FichaAtendimentoIndividualChildThrift {
       if (isset($vals['atencaoDomiciliarModalidade'])) {
         $this->atencaoDomiciliarModalidade = $vals['atencaoDomiciliarModalidade'];
       }
-      if (isset($vals['problemaCondicaoAvaliada'])) {
-        $this->problemaCondicaoAvaliada = $vals['problemaCondicaoAvaliada'];
-      }
       if (isset($vals['exame'])) {
         $this->exame = $vals['exame'];
       }
@@ -864,14 +852,6 @@ class FichaAtendimentoIndividualChildThrift {
         case 13:
           if ($ftype == TType::I64) {
             $xfer += $input->readI64($this->atencaoDomiciliarModalidade);
-          } else {
-            $xfer += $input->skip($ftype);
-          }
-          break;
-        case 14:
-          if ($ftype == TType::STRUCT) {
-            $this->problemaCondicaoAvaliada = new \br\gov\saude\esusab\ras\atendindividual\ProblemaCondicaoAvaliacaoAIThrift();
-            $xfer += $this->problemaCondicaoAvaliada->read($input);
           } else {
             $xfer += $input->skip($ftype);
           }
@@ -1190,14 +1170,6 @@ class FichaAtendimentoIndividualChildThrift {
     if ($this->atencaoDomiciliarModalidade !== null) {
       $xfer += $output->writeFieldBegin('atencaoDomiciliarModalidade', TType::I64, 13);
       $xfer += $output->writeI64($this->atencaoDomiciliarModalidade);
-      $xfer += $output->writeFieldEnd();
-    }
-    if ($this->problemaCondicaoAvaliada !== null) {
-      if (!is_object($this->problemaCondicaoAvaliada)) {
-        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
-      }
-      $xfer += $output->writeFieldBegin('problemaCondicaoAvaliada', TType::STRUCT, 14);
-      $xfer += $this->problemaCondicaoAvaliada->write($output);
       $xfer += $output->writeFieldEnd();
     }
     if ($this->exame !== null) {

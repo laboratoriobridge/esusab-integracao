@@ -54,15 +54,15 @@
 			<atencaoDomiciliarModalidade>1</atencaoDomiciliarModalidade>
 			<tipoAtendimento>7</tipoAtendimento>
 			<condicoesAvaliadas>2</condicoesAvaliadas>
+            <problemasCondicoes>
+                <ciap>A03</ciap>
+                <isAvaliado>1</isAvaliado>
+            </problemasCondicoes>
 			<procedimentos>0301070024</procedimentos>
 			<procedimentos>0301050090</procedimentos>
 			<procedimentos>0404030319</procedimentos>
 			<procedimentos>0301070083</procedimentos>
 			<condutaDesfecho>1</condutaDesfecho>
-            <problemasCondicoes>
-                <ciap>A03</ciap>
-                <isAvaliado>1</isAvaliado>
-            </problemasCondicoes>
 		</atendimentosDomiciliares>
 	</ns4:fichaAtendimentoDomiciliarMasterTransport>
 	<ns2:remetente>

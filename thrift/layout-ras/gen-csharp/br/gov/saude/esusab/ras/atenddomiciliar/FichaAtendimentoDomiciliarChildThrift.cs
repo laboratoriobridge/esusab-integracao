@@ -31,11 +31,10 @@ namespace br.gov.saude.esusab.ras.atenddomiciliar
     private long _atencaoDomiciliarModalidade;
     private long _tipoAtendimento;
     private List<long> _condicoesAvaliadas;
-    private string _cid;
-    private string _ciap;
     private List<string> _procedimentos;
     private long _condutaDesfecho;
     private string _cpfCidadao;
+    private List<br.gov.saude.esusab.ras.common.ProblemaCondicaoThrift> _problemasCondicoes;
 
     public long Turno
     {
@@ -141,32 +140,6 @@ namespace br.gov.saude.esusab.ras.atenddomiciliar
       }
     }
 
-    public string Cid
-    {
-      get
-      {
-        return _cid;
-      }
-      set
-      {
-        __isset.cid = true;
-        this._cid = value;
-      }
-    }
-
-    public string Ciap
-    {
-      get
-      {
-        return _ciap;
-      }
-      set
-      {
-        __isset.ciap = true;
-        this._ciap = value;
-      }
-    }
-
     public List<string> Procedimentos
     {
       get
@@ -206,6 +179,19 @@ namespace br.gov.saude.esusab.ras.atenddomiciliar
       }
     }
 
+    public List<br.gov.saude.esusab.ras.common.ProblemaCondicaoThrift> ProblemasCondicoes
+    {
+      get
+      {
+        return _problemasCondicoes;
+      }
+      set
+      {
+        __isset.problemasCondicoes = true;
+        this._problemasCondicoes = value;
+      }
+    }
+
 
     public Isset __isset;
     #if !SILVERLIGHT
@@ -220,11 +206,10 @@ namespace br.gov.saude.esusab.ras.atenddomiciliar
       public bool atencaoDomiciliarModalidade;
       public bool tipoAtendimento;
       public bool condicoesAvaliadas;
-      public bool cid;
-      public bool ciap;
       public bool procedimentos;
       public bool condutaDesfecho;
       public bool cpfCidadao;
+      public bool problemasCondicoes;
     }
 
     public FichaAtendimentoDomiciliarChildThrift() {
@@ -311,20 +296,6 @@ namespace br.gov.saude.esusab.ras.atenddomiciliar
                 TProtocolUtil.Skip(iprot, field.Type);
               }
               break;
-            case 9:
-              if (field.Type == TType.String) {
-                Cid = iprot.ReadString();
-              } else { 
-                TProtocolUtil.Skip(iprot, field.Type);
-              }
-              break;
-            case 10:
-              if (field.Type == TType.String) {
-                Ciap = iprot.ReadString();
-              } else { 
-                TProtocolUtil.Skip(iprot, field.Type);
-              }
-              break;
             case 11:
               if (field.Type == TType.List) {
                 {
@@ -352,6 +323,24 @@ namespace br.gov.saude.esusab.ras.atenddomiciliar
             case 15:
               if (field.Type == TType.String) {
                 CpfCidadao = iprot.ReadString();
+              } else { 
+                TProtocolUtil.Skip(iprot, field.Type);
+              }
+              break;
+            case 16:
+              if (field.Type == TType.List) {
+                {
+                  ProblemasCondicoes = new List<br.gov.saude.esusab.ras.common.ProblemaCondicaoThrift>();
+                  TList _list6 = iprot.ReadListBegin();
+                  for( int _i7 = 0; _i7 < _list6.Count; ++_i7)
+                  {
+                    br.gov.saude.esusab.ras.common.ProblemaCondicaoThrift _elem8;
+                    _elem8 = new br.gov.saude.esusab.ras.common.ProblemaCondicaoThrift();
+                    _elem8.Read(iprot);
+                    ProblemasCondicoes.Add(_elem8);
+                  }
+                  iprot.ReadListEnd();
+                }
               } else { 
                 TProtocolUtil.Skip(iprot, field.Type);
               }
@@ -440,28 +429,12 @@ namespace br.gov.saude.esusab.ras.atenddomiciliar
           oprot.WriteFieldBegin(field);
           {
             oprot.WriteListBegin(new TList(TType.I64, CondicoesAvaliadas.Count));
-            foreach (long _iter6 in CondicoesAvaliadas)
+            foreach (long _iter9 in CondicoesAvaliadas)
             {
-              oprot.WriteI64(_iter6);
+              oprot.WriteI64(_iter9);
             }
             oprot.WriteListEnd();
           }
-          oprot.WriteFieldEnd();
-        }
-        if (Cid != null && __isset.cid) {
-          field.Name = "cid";
-          field.Type = TType.String;
-          field.ID = 9;
-          oprot.WriteFieldBegin(field);
-          oprot.WriteString(Cid);
-          oprot.WriteFieldEnd();
-        }
-        if (Ciap != null && __isset.ciap) {
-          field.Name = "ciap";
-          field.Type = TType.String;
-          field.ID = 10;
-          oprot.WriteFieldBegin(field);
-          oprot.WriteString(Ciap);
           oprot.WriteFieldEnd();
         }
         if (Procedimentos != null && __isset.procedimentos) {
@@ -471,9 +444,9 @@ namespace br.gov.saude.esusab.ras.atenddomiciliar
           oprot.WriteFieldBegin(field);
           {
             oprot.WriteListBegin(new TList(TType.String, Procedimentos.Count));
-            foreach (string _iter7 in Procedimentos)
+            foreach (string _iter10 in Procedimentos)
             {
-              oprot.WriteString(_iter7);
+              oprot.WriteString(_iter10);
             }
             oprot.WriteListEnd();
           }
@@ -493,6 +466,21 @@ namespace br.gov.saude.esusab.ras.atenddomiciliar
           field.ID = 15;
           oprot.WriteFieldBegin(field);
           oprot.WriteString(CpfCidadao);
+          oprot.WriteFieldEnd();
+        }
+        if (ProblemasCondicoes != null && __isset.problemasCondicoes) {
+          field.Name = "problemasCondicoes";
+          field.Type = TType.List;
+          field.ID = 16;
+          oprot.WriteFieldBegin(field);
+          {
+            oprot.WriteListBegin(new TList(TType.Struct, ProblemasCondicoes.Count));
+            foreach (br.gov.saude.esusab.ras.common.ProblemaCondicaoThrift _iter11 in ProblemasCondicoes)
+            {
+              _iter11.Write(oprot);
+            }
+            oprot.WriteListEnd();
+          }
           oprot.WriteFieldEnd();
         }
         oprot.WriteFieldStop();
@@ -555,18 +543,6 @@ namespace br.gov.saude.esusab.ras.atenddomiciliar
         __sb.Append("CondicoesAvaliadas: ");
         __sb.Append(CondicoesAvaliadas);
       }
-      if (Cid != null && __isset.cid) {
-        if(!__first) { __sb.Append(", "); }
-        __first = false;
-        __sb.Append("Cid: ");
-        __sb.Append(Cid);
-      }
-      if (Ciap != null && __isset.ciap) {
-        if(!__first) { __sb.Append(", "); }
-        __first = false;
-        __sb.Append("Ciap: ");
-        __sb.Append(Ciap);
-      }
       if (Procedimentos != null && __isset.procedimentos) {
         if(!__first) { __sb.Append(", "); }
         __first = false;
@@ -584,6 +560,12 @@ namespace br.gov.saude.esusab.ras.atenddomiciliar
         __first = false;
         __sb.Append("CpfCidadao: ");
         __sb.Append(CpfCidadao);
+      }
+      if (ProblemasCondicoes != null && __isset.problemasCondicoes) {
+        if(!__first) { __sb.Append(", "); }
+        __first = false;
+        __sb.Append("ProblemasCondicoes: ");
+        __sb.Append(ProblemasCondicoes);
       }
       __sb.Append(")");
       return __sb.ToString();

@@ -320,6 +320,38 @@ module Br
               ::Thrift::Struct.generate_accessors self
             end
 
+            class ProblemaCondicaoThrift
+              include ::Thrift::Struct, ::Thrift::Struct_Union
+              UUIDPROBLEMA = 1
+              UUIDEVOLUCAOPROBLEMA = 2
+              COSEQUENCIALEVOLUCAO = 3
+              CIAP = 4
+              CID10 = 5
+              SITUACAO = 6
+              DATAINICIOPROBLEMA = 7
+              DATAFIMPROBLEMA = 8
+              ISAVALIADO = 9
+
+              FIELDS = {
+                UUIDPROBLEMA => {:type => ::Thrift::Types::STRING, :name => 'uuidProblema', :optional => true},
+                UUIDEVOLUCAOPROBLEMA => {:type => ::Thrift::Types::STRING, :name => 'uuidEvolucaoProblema', :optional => true},
+                COSEQUENCIALEVOLUCAO => {:type => ::Thrift::Types::I64, :name => 'coSequencialEvolucao', :optional => true},
+                CIAP => {:type => ::Thrift::Types::STRING, :name => 'ciap', :optional => true},
+                CID10 => {:type => ::Thrift::Types::STRING, :name => 'cid10', :optional => true},
+                SITUACAO => {:type => ::Thrift::Types::I64, :name => 'situacao', :optional => true},
+                DATAINICIOPROBLEMA => {:type => ::Thrift::Types::I64, :name => 'dataInicioProblema', :optional => true},
+                DATAFIMPROBLEMA => {:type => ::Thrift::Types::I64, :name => 'dataFimProblema', :optional => true},
+                ISAVALIADO => {:type => ::Thrift::Types::BOOL, :name => 'isAvaliado', :optional => true}
+              }
+
+              def struct_fields; FIELDS; end
+
+              def validate
+              end
+
+              ::Thrift::Struct.generate_accessors self
+            end
+
           end
         end
       end

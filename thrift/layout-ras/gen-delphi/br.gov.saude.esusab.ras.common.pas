@@ -37,6 +37,7 @@ type
   IResultadoExameThrift = interface;
   IResultadosExameThrift = interface;
   IMedicoesThrift = interface;
+  IProblemaCondicaoThrift = interface;
 
   IHeaderCdsCadastroThrift = interface(IBase)
     function GetCnesUnidadeSaude: string;
@@ -1246,6 +1247,140 @@ type
     property __isset_Peso: Boolean read Get__isset_Peso;
     property __isset_Altura: Boolean read Get__isset_Altura;
     property __isset_PerimetroCefalico: Boolean read Get__isset_PerimetroCefalico;
+  end;
+
+  IProblemaCondicaoThrift = interface(IBase)
+    function GetUuidProblema: string;
+    procedure SetUuidProblema( const Value: string);
+    function GetUuidEvolucaoProblema: string;
+    procedure SetUuidEvolucaoProblema( const Value: string);
+    function GetCoSequencialEvolucao: Int64;
+    procedure SetCoSequencialEvolucao( const Value: Int64);
+    function GetCiap: string;
+    procedure SetCiap( const Value: string);
+    function GetCid10: string;
+    procedure SetCid10( const Value: string);
+    function GetSituacao: Int64;
+    procedure SetSituacao( const Value: Int64);
+    function GetDataInicioProblema: Int64;
+    procedure SetDataInicioProblema( const Value: Int64);
+    function GetDataFimProblema: Int64;
+    procedure SetDataFimProblema( const Value: Int64);
+    function GetIsAvaliado: Boolean;
+    procedure SetIsAvaliado( const Value: Boolean);
+
+    property UuidProblema: string read GetUuidProblema write SetUuidProblema;
+    property UuidEvolucaoProblema: string read GetUuidEvolucaoProblema write SetUuidEvolucaoProblema;
+    property CoSequencialEvolucao: Int64 read GetCoSequencialEvolucao write SetCoSequencialEvolucao;
+    property Ciap: string read GetCiap write SetCiap;
+    property Cid10: string read GetCid10 write SetCid10;
+    property Situacao: Int64 read GetSituacao write SetSituacao;
+    property DataInicioProblema: Int64 read GetDataInicioProblema write SetDataInicioProblema;
+    property DataFimProblema: Int64 read GetDataFimProblema write SetDataFimProblema;
+    property IsAvaliado: Boolean read GetIsAvaliado write SetIsAvaliado;
+
+    function Get__isset_UuidProblema: Boolean;
+    function Get__isset_UuidEvolucaoProblema: Boolean;
+    function Get__isset_CoSequencialEvolucao: Boolean;
+    function Get__isset_Ciap: Boolean;
+    function Get__isset_Cid10: Boolean;
+    function Get__isset_Situacao: Boolean;
+    function Get__isset_DataInicioProblema: Boolean;
+    function Get__isset_DataFimProblema: Boolean;
+    function Get__isset_IsAvaliado: Boolean;
+
+    property __isset_UuidProblema: Boolean read Get__isset_UuidProblema;
+    property __isset_UuidEvolucaoProblema: Boolean read Get__isset_UuidEvolucaoProblema;
+    property __isset_CoSequencialEvolucao: Boolean read Get__isset_CoSequencialEvolucao;
+    property __isset_Ciap: Boolean read Get__isset_Ciap;
+    property __isset_Cid10: Boolean read Get__isset_Cid10;
+    property __isset_Situacao: Boolean read Get__isset_Situacao;
+    property __isset_DataInicioProblema: Boolean read Get__isset_DataInicioProblema;
+    property __isset_DataFimProblema: Boolean read Get__isset_DataFimProblema;
+    property __isset_IsAvaliado: Boolean read Get__isset_IsAvaliado;
+  end;
+
+  TProblemaCondicaoThriftImpl = class(TInterfacedObject, IBase, IProblemaCondicaoThrift)
+  private
+    FUuidProblema: string;
+    FUuidEvolucaoProblema: string;
+    FCoSequencialEvolucao: Int64;
+    FCiap: string;
+    FCid10: string;
+    FSituacao: Int64;
+    FDataInicioProblema: Int64;
+    FDataFimProblema: Int64;
+    FIsAvaliado: Boolean;
+    
+    F__isset_UuidProblema: Boolean;
+    F__isset_UuidEvolucaoProblema: Boolean;
+    F__isset_CoSequencialEvolucao: Boolean;
+    F__isset_Ciap: Boolean;
+    F__isset_Cid10: Boolean;
+    F__isset_Situacao: Boolean;
+    F__isset_DataInicioProblema: Boolean;
+    F__isset_DataFimProblema: Boolean;
+    F__isset_IsAvaliado: Boolean;
+    
+    function GetUuidProblema: string;
+    procedure SetUuidProblema( const Value: string);
+    function GetUuidEvolucaoProblema: string;
+    procedure SetUuidEvolucaoProblema( const Value: string);
+    function GetCoSequencialEvolucao: Int64;
+    procedure SetCoSequencialEvolucao( const Value: Int64);
+    function GetCiap: string;
+    procedure SetCiap( const Value: string);
+    function GetCid10: string;
+    procedure SetCid10( const Value: string);
+    function GetSituacao: Int64;
+    procedure SetSituacao( const Value: Int64);
+    function GetDataInicioProblema: Int64;
+    procedure SetDataInicioProblema( const Value: Int64);
+    function GetDataFimProblema: Int64;
+    procedure SetDataFimProblema( const Value: Int64);
+    function GetIsAvaliado: Boolean;
+    procedure SetIsAvaliado( const Value: Boolean);
+
+    function Get__isset_UuidProblema: Boolean;
+    function Get__isset_UuidEvolucaoProblema: Boolean;
+    function Get__isset_CoSequencialEvolucao: Boolean;
+    function Get__isset_Ciap: Boolean;
+    function Get__isset_Cid10: Boolean;
+    function Get__isset_Situacao: Boolean;
+    function Get__isset_DataInicioProblema: Boolean;
+    function Get__isset_DataFimProblema: Boolean;
+    function Get__isset_IsAvaliado: Boolean;
+  public
+    constructor Create;
+    destructor Destroy; override;
+
+    function ToString: string; override;
+
+    // IBase
+    procedure Read( const iprot: IProtocol);
+    procedure Write( const oprot: IProtocol);
+
+    // Properties
+    property UuidProblema: string read GetUuidProblema write SetUuidProblema;
+    property UuidEvolucaoProblema: string read GetUuidEvolucaoProblema write SetUuidEvolucaoProblema;
+    property CoSequencialEvolucao: Int64 read GetCoSequencialEvolucao write SetCoSequencialEvolucao;
+    property Ciap: string read GetCiap write SetCiap;
+    property Cid10: string read GetCid10 write SetCid10;
+    property Situacao: Int64 read GetSituacao write SetSituacao;
+    property DataInicioProblema: Int64 read GetDataInicioProblema write SetDataInicioProblema;
+    property DataFimProblema: Int64 read GetDataFimProblema write SetDataFimProblema;
+    property IsAvaliado: Boolean read GetIsAvaliado write SetIsAvaliado;
+
+    // isset
+    property __isset_UuidProblema: Boolean read Get__isset_UuidProblema;
+    property __isset_UuidEvolucaoProblema: Boolean read Get__isset_UuidEvolucaoProblema;
+    property __isset_CoSequencialEvolucao: Boolean read Get__isset_CoSequencialEvolucao;
+    property __isset_Ciap: Boolean read Get__isset_Ciap;
+    property __isset_Cid10: Boolean read Get__isset_Cid10;
+    property __isset_Situacao: Boolean read Get__isset_Situacao;
+    property __isset_DataInicioProblema: Boolean read Get__isset_DataInicioProblema;
+    property __isset_DataFimProblema: Boolean read Get__isset_DataFimProblema;
+    property __isset_IsAvaliado: Boolean read Get__isset_IsAvaliado;
   end;
 
 implementation
@@ -5107,6 +5242,435 @@ begin
     if _first26 then {prevent warning};
   finally
     _sb25.Free;
+  end;
+end;
+
+constructor TProblemaCondicaoThriftImpl.Create;
+begin
+  inherited;
+end;
+
+destructor TProblemaCondicaoThriftImpl.Destroy;
+begin
+  inherited;
+end;
+
+function TProblemaCondicaoThriftImpl.GetUuidProblema: string;
+begin
+  Result := FUuidProblema;
+end;
+
+procedure TProblemaCondicaoThriftImpl.SetUuidProblema( const Value: string);
+begin
+  F__isset_UuidProblema := True;
+  FUuidProblema := Value;
+end;
+
+function TProblemaCondicaoThriftImpl.Get__isset_UuidProblema: Boolean;
+begin
+  Result := F__isset_UuidProblema;
+end;
+
+function TProblemaCondicaoThriftImpl.GetUuidEvolucaoProblema: string;
+begin
+  Result := FUuidEvolucaoProblema;
+end;
+
+procedure TProblemaCondicaoThriftImpl.SetUuidEvolucaoProblema( const Value: string);
+begin
+  F__isset_UuidEvolucaoProblema := True;
+  FUuidEvolucaoProblema := Value;
+end;
+
+function TProblemaCondicaoThriftImpl.Get__isset_UuidEvolucaoProblema: Boolean;
+begin
+  Result := F__isset_UuidEvolucaoProblema;
+end;
+
+function TProblemaCondicaoThriftImpl.GetCoSequencialEvolucao: Int64;
+begin
+  Result := FCoSequencialEvolucao;
+end;
+
+procedure TProblemaCondicaoThriftImpl.SetCoSequencialEvolucao( const Value: Int64);
+begin
+  F__isset_CoSequencialEvolucao := True;
+  FCoSequencialEvolucao := Value;
+end;
+
+function TProblemaCondicaoThriftImpl.Get__isset_CoSequencialEvolucao: Boolean;
+begin
+  Result := F__isset_CoSequencialEvolucao;
+end;
+
+function TProblemaCondicaoThriftImpl.GetCiap: string;
+begin
+  Result := FCiap;
+end;
+
+procedure TProblemaCondicaoThriftImpl.SetCiap( const Value: string);
+begin
+  F__isset_Ciap := True;
+  FCiap := Value;
+end;
+
+function TProblemaCondicaoThriftImpl.Get__isset_Ciap: Boolean;
+begin
+  Result := F__isset_Ciap;
+end;
+
+function TProblemaCondicaoThriftImpl.GetCid10: string;
+begin
+  Result := FCid10;
+end;
+
+procedure TProblemaCondicaoThriftImpl.SetCid10( const Value: string);
+begin
+  F__isset_Cid10 := True;
+  FCid10 := Value;
+end;
+
+function TProblemaCondicaoThriftImpl.Get__isset_Cid10: Boolean;
+begin
+  Result := F__isset_Cid10;
+end;
+
+function TProblemaCondicaoThriftImpl.GetSituacao: Int64;
+begin
+  Result := FSituacao;
+end;
+
+procedure TProblemaCondicaoThriftImpl.SetSituacao( const Value: Int64);
+begin
+  F__isset_Situacao := True;
+  FSituacao := Value;
+end;
+
+function TProblemaCondicaoThriftImpl.Get__isset_Situacao: Boolean;
+begin
+  Result := F__isset_Situacao;
+end;
+
+function TProblemaCondicaoThriftImpl.GetDataInicioProblema: Int64;
+begin
+  Result := FDataInicioProblema;
+end;
+
+procedure TProblemaCondicaoThriftImpl.SetDataInicioProblema( const Value: Int64);
+begin
+  F__isset_DataInicioProblema := True;
+  FDataInicioProblema := Value;
+end;
+
+function TProblemaCondicaoThriftImpl.Get__isset_DataInicioProblema: Boolean;
+begin
+  Result := F__isset_DataInicioProblema;
+end;
+
+function TProblemaCondicaoThriftImpl.GetDataFimProblema: Int64;
+begin
+  Result := FDataFimProblema;
+end;
+
+procedure TProblemaCondicaoThriftImpl.SetDataFimProblema( const Value: Int64);
+begin
+  F__isset_DataFimProblema := True;
+  FDataFimProblema := Value;
+end;
+
+function TProblemaCondicaoThriftImpl.Get__isset_DataFimProblema: Boolean;
+begin
+  Result := F__isset_DataFimProblema;
+end;
+
+function TProblemaCondicaoThriftImpl.GetIsAvaliado: Boolean;
+begin
+  Result := FIsAvaliado;
+end;
+
+procedure TProblemaCondicaoThriftImpl.SetIsAvaliado( const Value: Boolean);
+begin
+  F__isset_IsAvaliado := True;
+  FIsAvaliado := Value;
+end;
+
+function TProblemaCondicaoThriftImpl.Get__isset_IsAvaliado: Boolean;
+begin
+  Result := F__isset_IsAvaliado;
+end;
+
+procedure TProblemaCondicaoThriftImpl.Read( const iprot: IProtocol);
+var
+  field_ : IField;
+  struc : IStruct;
+  tracker : IProtocolRecursionTracker;
+
+begin
+  tracker := iprot.NextRecursionLevel;
+  struc := iprot.ReadStructBegin;
+  try
+    while (true) do
+    begin
+      field_ := iprot.ReadFieldBegin();
+      if (field_.Type_ = TType.Stop) then
+      begin
+        Break;
+      end;
+      case field_.ID of
+        1: begin
+          if (field_.Type_ = TType.String_) then
+          begin
+            UuidProblema := iprot.ReadString();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        2: begin
+          if (field_.Type_ = TType.String_) then
+          begin
+            UuidEvolucaoProblema := iprot.ReadString();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        3: begin
+          if (field_.Type_ = TType.I64) then
+          begin
+            CoSequencialEvolucao := iprot.ReadI64();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        4: begin
+          if (field_.Type_ = TType.String_) then
+          begin
+            Ciap := iprot.ReadString();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        5: begin
+          if (field_.Type_ = TType.String_) then
+          begin
+            Cid10 := iprot.ReadString();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        6: begin
+          if (field_.Type_ = TType.I64) then
+          begin
+            Situacao := iprot.ReadI64();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        7: begin
+          if (field_.Type_ = TType.I64) then
+          begin
+            DataInicioProblema := iprot.ReadI64();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        8: begin
+          if (field_.Type_ = TType.I64) then
+          begin
+            DataFimProblema := iprot.ReadI64();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        9: begin
+          if (field_.Type_ = TType.Bool_) then
+          begin
+            IsAvaliado := iprot.ReadBool();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end
+        else begin
+          TProtocolUtil.Skip(iprot, field_.Type_);
+        end;
+      end;
+      iprot.ReadFieldEnd;
+    end;
+  finally
+    iprot.ReadStructEnd;
+  end;
+end;
+
+procedure TProblemaCondicaoThriftImpl.Write( const oprot: IProtocol);
+var
+  struc : IStruct;
+  field_ : IField;
+  tracker : IProtocolRecursionTracker;
+begin
+  tracker := oprot.NextRecursionLevel;
+  struc := TStructImpl.Create('ProblemaCondicaoThrift');
+  oprot.WriteStructBegin(struc);
+  field_ := TFieldImpl.Create;
+  if (__isset_UuidProblema) then
+  begin
+    field_.Name := 'uuidProblema';
+    field_.Type_  := TType.String_;
+    field_.ID := 1;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteString(UuidProblema);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_UuidEvolucaoProblema) then
+  begin
+    field_.Name := 'uuidEvolucaoProblema';
+    field_.Type_  := TType.String_;
+    field_.ID := 2;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteString(UuidEvolucaoProblema);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_CoSequencialEvolucao) then
+  begin
+    field_.Name := 'coSequencialEvolucao';
+    field_.Type_  := TType.I64;
+    field_.ID := 3;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteI64(CoSequencialEvolucao);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_Ciap) then
+  begin
+    field_.Name := 'ciap';
+    field_.Type_  := TType.String_;
+    field_.ID := 4;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteString(Ciap);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_Cid10) then
+  begin
+    field_.Name := 'cid10';
+    field_.Type_  := TType.String_;
+    field_.ID := 5;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteString(Cid10);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_Situacao) then
+  begin
+    field_.Name := 'situacao';
+    field_.Type_  := TType.I64;
+    field_.ID := 6;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteI64(Situacao);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_DataInicioProblema) then
+  begin
+    field_.Name := 'dataInicioProblema';
+    field_.Type_  := TType.I64;
+    field_.ID := 7;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteI64(DataInicioProblema);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_DataFimProblema) then
+  begin
+    field_.Name := 'dataFimProblema';
+    field_.Type_  := TType.I64;
+    field_.ID := 8;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteI64(DataFimProblema);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_IsAvaliado) then
+  begin
+    field_.Name := 'isAvaliado';
+    field_.Type_  := TType.Bool_;
+    field_.ID := 9;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteBool(IsAvaliado);
+    oprot.WriteFieldEnd();
+  end;
+  oprot.WriteFieldStop();
+  oprot.WriteStructEnd();
+end;
+
+function TProblemaCondicaoThriftImpl.ToString: string;
+var
+  _sb27 : TThriftStringBuilder;
+  _first28 : Boolean;
+begin
+  _sb27 := TThriftStringBuilder.Create('(');
+  try
+    _first28 := TRUE;
+    if (__isset_UuidProblema) then begin
+      if not _first28 then _sb27.Append(',');
+      _first28 := FALSE;
+      _sb27.Append('UuidProblema: ');
+      _sb27.Append(UuidProblema);
+    end;
+    if (__isset_UuidEvolucaoProblema) then begin
+      if not _first28 then _sb27.Append(',');
+      _first28 := FALSE;
+      _sb27.Append('UuidEvolucaoProblema: ');
+      _sb27.Append(UuidEvolucaoProblema);
+    end;
+    if (__isset_CoSequencialEvolucao) then begin
+      if not _first28 then _sb27.Append(',');
+      _first28 := FALSE;
+      _sb27.Append('CoSequencialEvolucao: ');
+      _sb27.Append(CoSequencialEvolucao);
+    end;
+    if (__isset_Ciap) then begin
+      if not _first28 then _sb27.Append(',');
+      _first28 := FALSE;
+      _sb27.Append('Ciap: ');
+      _sb27.Append(Ciap);
+    end;
+    if (__isset_Cid10) then begin
+      if not _first28 then _sb27.Append(',');
+      _first28 := FALSE;
+      _sb27.Append('Cid10: ');
+      _sb27.Append(Cid10);
+    end;
+    if (__isset_Situacao) then begin
+      if not _first28 then _sb27.Append(',');
+      _first28 := FALSE;
+      _sb27.Append('Situacao: ');
+      _sb27.Append(Situacao);
+    end;
+    if (__isset_DataInicioProblema) then begin
+      if not _first28 then _sb27.Append(',');
+      _first28 := FALSE;
+      _sb27.Append('DataInicioProblema: ');
+      _sb27.Append(DataInicioProblema);
+    end;
+    if (__isset_DataFimProblema) then begin
+      if not _first28 then _sb27.Append(',');
+      _first28 := FALSE;
+      _sb27.Append('DataFimProblema: ');
+      _sb27.Append(DataFimProblema);
+    end;
+    if (__isset_IsAvaliado) then begin
+      if not _first28 then _sb27.Append(',');
+      _first28 := FALSE;
+      _sb27.Append('IsAvaliado: ');
+      _sb27.Append(IsAvaliado);
+    end;
+    _sb27.Append(')');
+    Result := _sb27.ToString;
+    if _first28 then {prevent warning};
+  finally
+    _sb27.Free;
   end;
 end;
 

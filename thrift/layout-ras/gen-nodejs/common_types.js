@@ -1640,3 +1640,181 @@ MedicoesThrift.prototype.write = function(output) {
   return;
 };
 
+ProblemaCondicaoThrift = module.exports.ProblemaCondicaoThrift = function(args) {
+  this.uuidProblema = null;
+  this.uuidEvolucaoProblema = null;
+  this.coSequencialEvolucao = null;
+  this.ciap = null;
+  this.cid10 = null;
+  this.situacao = null;
+  this.dataInicioProblema = null;
+  this.dataFimProblema = null;
+  this.isAvaliado = null;
+  if (args) {
+    if (args.uuidProblema !== undefined && args.uuidProblema !== null) {
+      this.uuidProblema = args.uuidProblema;
+    }
+    if (args.uuidEvolucaoProblema !== undefined && args.uuidEvolucaoProblema !== null) {
+      this.uuidEvolucaoProblema = args.uuidEvolucaoProblema;
+    }
+    if (args.coSequencialEvolucao !== undefined && args.coSequencialEvolucao !== null) {
+      this.coSequencialEvolucao = args.coSequencialEvolucao;
+    }
+    if (args.ciap !== undefined && args.ciap !== null) {
+      this.ciap = args.ciap;
+    }
+    if (args.cid10 !== undefined && args.cid10 !== null) {
+      this.cid10 = args.cid10;
+    }
+    if (args.situacao !== undefined && args.situacao !== null) {
+      this.situacao = args.situacao;
+    }
+    if (args.dataInicioProblema !== undefined && args.dataInicioProblema !== null) {
+      this.dataInicioProblema = args.dataInicioProblema;
+    }
+    if (args.dataFimProblema !== undefined && args.dataFimProblema !== null) {
+      this.dataFimProblema = args.dataFimProblema;
+    }
+    if (args.isAvaliado !== undefined && args.isAvaliado !== null) {
+      this.isAvaliado = args.isAvaliado;
+    }
+  }
+};
+ProblemaCondicaoThrift.prototype = {};
+ProblemaCondicaoThrift.prototype.read = function(input) {
+  input.readStructBegin();
+  while (true)
+  {
+    var ret = input.readFieldBegin();
+    var fname = ret.fname;
+    var ftype = ret.ftype;
+    var fid = ret.fid;
+    if (ftype == Thrift.Type.STOP) {
+      break;
+    }
+    switch (fid)
+    {
+      case 1:
+      if (ftype == Thrift.Type.STRING) {
+        this.uuidProblema = input.readString();
+      } else {
+        input.skip(ftype);
+      }
+      break;
+      case 2:
+      if (ftype == Thrift.Type.STRING) {
+        this.uuidEvolucaoProblema = input.readString();
+      } else {
+        input.skip(ftype);
+      }
+      break;
+      case 3:
+      if (ftype == Thrift.Type.I64) {
+        this.coSequencialEvolucao = input.readI64();
+      } else {
+        input.skip(ftype);
+      }
+      break;
+      case 4:
+      if (ftype == Thrift.Type.STRING) {
+        this.ciap = input.readString();
+      } else {
+        input.skip(ftype);
+      }
+      break;
+      case 5:
+      if (ftype == Thrift.Type.STRING) {
+        this.cid10 = input.readString();
+      } else {
+        input.skip(ftype);
+      }
+      break;
+      case 6:
+      if (ftype == Thrift.Type.I64) {
+        this.situacao = input.readI64();
+      } else {
+        input.skip(ftype);
+      }
+      break;
+      case 7:
+      if (ftype == Thrift.Type.I64) {
+        this.dataInicioProblema = input.readI64();
+      } else {
+        input.skip(ftype);
+      }
+      break;
+      case 8:
+      if (ftype == Thrift.Type.I64) {
+        this.dataFimProblema = input.readI64();
+      } else {
+        input.skip(ftype);
+      }
+      break;
+      case 9:
+      if (ftype == Thrift.Type.BOOL) {
+        this.isAvaliado = input.readBool();
+      } else {
+        input.skip(ftype);
+      }
+      break;
+      default:
+        input.skip(ftype);
+    }
+    input.readFieldEnd();
+  }
+  input.readStructEnd();
+  return;
+};
+
+ProblemaCondicaoThrift.prototype.write = function(output) {
+  output.writeStructBegin('ProblemaCondicaoThrift');
+  if (this.uuidProblema !== null && this.uuidProblema !== undefined) {
+    output.writeFieldBegin('uuidProblema', Thrift.Type.STRING, 1);
+    output.writeString(this.uuidProblema);
+    output.writeFieldEnd();
+  }
+  if (this.uuidEvolucaoProblema !== null && this.uuidEvolucaoProblema !== undefined) {
+    output.writeFieldBegin('uuidEvolucaoProblema', Thrift.Type.STRING, 2);
+    output.writeString(this.uuidEvolucaoProblema);
+    output.writeFieldEnd();
+  }
+  if (this.coSequencialEvolucao !== null && this.coSequencialEvolucao !== undefined) {
+    output.writeFieldBegin('coSequencialEvolucao', Thrift.Type.I64, 3);
+    output.writeI64(this.coSequencialEvolucao);
+    output.writeFieldEnd();
+  }
+  if (this.ciap !== null && this.ciap !== undefined) {
+    output.writeFieldBegin('ciap', Thrift.Type.STRING, 4);
+    output.writeString(this.ciap);
+    output.writeFieldEnd();
+  }
+  if (this.cid10 !== null && this.cid10 !== undefined) {
+    output.writeFieldBegin('cid10', Thrift.Type.STRING, 5);
+    output.writeString(this.cid10);
+    output.writeFieldEnd();
+  }
+  if (this.situacao !== null && this.situacao !== undefined) {
+    output.writeFieldBegin('situacao', Thrift.Type.I64, 6);
+    output.writeI64(this.situacao);
+    output.writeFieldEnd();
+  }
+  if (this.dataInicioProblema !== null && this.dataInicioProblema !== undefined) {
+    output.writeFieldBegin('dataInicioProblema', Thrift.Type.I64, 7);
+    output.writeI64(this.dataInicioProblema);
+    output.writeFieldEnd();
+  }
+  if (this.dataFimProblema !== null && this.dataFimProblema !== undefined) {
+    output.writeFieldBegin('dataFimProblema', Thrift.Type.I64, 8);
+    output.writeI64(this.dataFimProblema);
+    output.writeFieldEnd();
+  }
+  if (this.isAvaliado !== null && this.isAvaliado !== undefined) {
+    output.writeFieldBegin('isAvaliado', Thrift.Type.BOOL, 9);
+    output.writeBool(this.isAvaliado);
+    output.writeFieldEnd();
+  }
+  output.writeFieldStop();
+  output.writeStructEnd();
+  return;
+};
+

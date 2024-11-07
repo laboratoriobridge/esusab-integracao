@@ -30,11 +30,10 @@ class FichaAtendimentoDomiciliarChildThrift:
    - atencaoDomiciliarModalidade
    - tipoAtendimento
    - condicoesAvaliadas
-   - cid
-   - ciap
    - procedimentos
    - condutaDesfecho
    - cpfCidadao
+   - problemasCondicoes
   """
 
   thrift_spec = (
@@ -47,16 +46,17 @@ class FichaAtendimentoDomiciliarChildThrift:
     (6, TType.I64, 'atencaoDomiciliarModalidade', None, None, ), # 6
     (7, TType.I64, 'tipoAtendimento', None, None, ), # 7
     (8, TType.LIST, 'condicoesAvaliadas', (TType.I64,None), None, ), # 8
-    (9, TType.STRING, 'cid', None, None, ), # 9
-    (10, TType.STRING, 'ciap', None, None, ), # 10
+    None, # 9
+    None, # 10
     (11, TType.LIST, 'procedimentos', (TType.STRING,None), None, ), # 11
     None, # 12
     (13, TType.I64, 'condutaDesfecho', None, None, ), # 13
     None, # 14
     (15, TType.STRING, 'cpfCidadao', None, None, ), # 15
+    (16, TType.LIST, 'problemasCondicoes', (TType.STRUCT,(br.gov.saude.esusab.ras.common.ttypes.ProblemaCondicaoThrift, br.gov.saude.esusab.ras.common.ttypes.ProblemaCondicaoThrift.thrift_spec)), None, ), # 16
   )
 
-  def __init__(self, turno=None, cnsCidadao=None, dataNascimento=None, sexo=None, localAtendimento=None, atencaoDomiciliarModalidade=None, tipoAtendimento=None, condicoesAvaliadas=None, cid=None, ciap=None, procedimentos=None, condutaDesfecho=None, cpfCidadao=None,):
+  def __init__(self, turno=None, cnsCidadao=None, dataNascimento=None, sexo=None, localAtendimento=None, atencaoDomiciliarModalidade=None, tipoAtendimento=None, condicoesAvaliadas=None, procedimentos=None, condutaDesfecho=None, cpfCidadao=None, problemasCondicoes=None,):
     self.turno = turno
     self.cnsCidadao = cnsCidadao
     self.dataNascimento = dataNascimento
@@ -65,11 +65,10 @@ class FichaAtendimentoDomiciliarChildThrift:
     self.atencaoDomiciliarModalidade = atencaoDomiciliarModalidade
     self.tipoAtendimento = tipoAtendimento
     self.condicoesAvaliadas = condicoesAvaliadas
-    self.cid = cid
-    self.ciap = ciap
     self.procedimentos = procedimentos
     self.condutaDesfecho = condutaDesfecho
     self.cpfCidadao = cpfCidadao
+    self.problemasCondicoes = problemasCondicoes
 
   def read(self, iprot):
     if iprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None and fastbinary is not None:
@@ -125,16 +124,6 @@ class FichaAtendimentoDomiciliarChildThrift:
           iprot.readListEnd()
         else:
           iprot.skip(ftype)
-      elif fid == 9:
-        if ftype == TType.STRING:
-          self.cid = iprot.readString()
-        else:
-          iprot.skip(ftype)
-      elif fid == 10:
-        if ftype == TType.STRING:
-          self.ciap = iprot.readString()
-        else:
-          iprot.skip(ftype)
       elif fid == 11:
         if ftype == TType.LIST:
           self.procedimentos = []
@@ -153,6 +142,17 @@ class FichaAtendimentoDomiciliarChildThrift:
       elif fid == 15:
         if ftype == TType.STRING:
           self.cpfCidadao = iprot.readString()
+        else:
+          iprot.skip(ftype)
+      elif fid == 16:
+        if ftype == TType.LIST:
+          self.problemasCondicoes = []
+          (_etype15, _size12) = iprot.readListBegin()
+          for _i16 in xrange(_size12):
+            _elem17 = br.gov.saude.esusab.ras.common.ttypes.ProblemaCondicaoThrift()
+            _elem17.read(iprot)
+            self.problemasCondicoes.append(_elem17)
+          iprot.readListEnd()
         else:
           iprot.skip(ftype)
       else:
@@ -196,23 +196,15 @@ class FichaAtendimentoDomiciliarChildThrift:
     if self.condicoesAvaliadas is not None:
       oprot.writeFieldBegin('condicoesAvaliadas', TType.LIST, 8)
       oprot.writeListBegin(TType.I64, len(self.condicoesAvaliadas))
-      for iter12 in self.condicoesAvaliadas:
-        oprot.writeI64(iter12)
+      for iter18 in self.condicoesAvaliadas:
+        oprot.writeI64(iter18)
       oprot.writeListEnd()
-      oprot.writeFieldEnd()
-    if self.cid is not None:
-      oprot.writeFieldBegin('cid', TType.STRING, 9)
-      oprot.writeString(self.cid)
-      oprot.writeFieldEnd()
-    if self.ciap is not None:
-      oprot.writeFieldBegin('ciap', TType.STRING, 10)
-      oprot.writeString(self.ciap)
       oprot.writeFieldEnd()
     if self.procedimentos is not None:
       oprot.writeFieldBegin('procedimentos', TType.LIST, 11)
       oprot.writeListBegin(TType.STRING, len(self.procedimentos))
-      for iter13 in self.procedimentos:
-        oprot.writeString(iter13)
+      for iter19 in self.procedimentos:
+        oprot.writeString(iter19)
       oprot.writeListEnd()
       oprot.writeFieldEnd()
     if self.condutaDesfecho is not None:
@@ -222,6 +214,13 @@ class FichaAtendimentoDomiciliarChildThrift:
     if self.cpfCidadao is not None:
       oprot.writeFieldBegin('cpfCidadao', TType.STRING, 15)
       oprot.writeString(self.cpfCidadao)
+      oprot.writeFieldEnd()
+    if self.problemasCondicoes is not None:
+      oprot.writeFieldBegin('problemasCondicoes', TType.LIST, 16)
+      oprot.writeListBegin(TType.STRUCT, len(self.problemasCondicoes))
+      for iter20 in self.problemasCondicoes:
+        iter20.write(oprot)
+      oprot.writeListEnd()
       oprot.writeFieldEnd()
     oprot.writeFieldStop()
     oprot.writeStructEnd()
@@ -240,11 +239,10 @@ class FichaAtendimentoDomiciliarChildThrift:
     value = (value * 31) ^ hash(self.atencaoDomiciliarModalidade)
     value = (value * 31) ^ hash(self.tipoAtendimento)
     value = (value * 31) ^ hash(self.condicoesAvaliadas)
-    value = (value * 31) ^ hash(self.cid)
-    value = (value * 31) ^ hash(self.ciap)
     value = (value * 31) ^ hash(self.procedimentos)
     value = (value * 31) ^ hash(self.condutaDesfecho)
     value = (value * 31) ^ hash(self.cpfCidadao)
+    value = (value * 31) ^ hash(self.problemasCondicoes)
     return value
 
   def __repr__(self):
@@ -304,11 +302,11 @@ class FichaAtendimentoDomiciliarMasterThrift:
       elif fid == 4:
         if ftype == TType.LIST:
           self.atendimentosDomiciliares = []
-          (_etype17, _size14) = iprot.readListBegin()
-          for _i18 in xrange(_size14):
-            _elem19 = FichaAtendimentoDomiciliarChildThrift()
-            _elem19.read(iprot)
-            self.atendimentosDomiciliares.append(_elem19)
+          (_etype24, _size21) = iprot.readListBegin()
+          for _i25 in xrange(_size21):
+            _elem26 = FichaAtendimentoDomiciliarChildThrift()
+            _elem26.read(iprot)
+            self.atendimentosDomiciliares.append(_elem26)
           iprot.readListEnd()
         else:
           iprot.skip(ftype)
@@ -339,8 +337,8 @@ class FichaAtendimentoDomiciliarMasterThrift:
     if self.atendimentosDomiciliares is not None:
       oprot.writeFieldBegin('atendimentosDomiciliares', TType.LIST, 4)
       oprot.writeListBegin(TType.STRUCT, len(self.atendimentosDomiciliares))
-      for iter20 in self.atendimentosDomiciliares:
-        iter20.write(oprot)
+      for iter27 in self.atendimentosDomiciliares:
+        iter27.write(oprot)
       oprot.writeListEnd()
       oprot.writeFieldEnd()
     if self.headerTransport is not None:

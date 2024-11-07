@@ -47,16 +47,14 @@ type
     procedure SetTipoAtendimento( const Value: Int64);
     function GetCondicoesAvaliadas: IThriftList<Int64>;
     procedure SetCondicoesAvaliadas( const Value: IThriftList<Int64>);
-    function GetCid: string;
-    procedure SetCid( const Value: string);
-    function GetCiap: string;
-    procedure SetCiap( const Value: string);
     function GetProcedimentos: IThriftList<string>;
     procedure SetProcedimentos( const Value: IThriftList<string>);
     function GetCondutaDesfecho: Int64;
     procedure SetCondutaDesfecho( const Value: Int64);
     function GetCpfCidadao: string;
     procedure SetCpfCidadao( const Value: string);
+    function GetProblemasCondicoes: IThriftList<IProblemaCondicaoThrift>;
+    procedure SetProblemasCondicoes( const Value: IThriftList<IProblemaCondicaoThrift>);
 
     property Turno: Int64 read GetTurno write SetTurno;
     property CnsCidadao: string read GetCnsCidadao write SetCnsCidadao;
@@ -66,11 +64,10 @@ type
     property AtencaoDomiciliarModalidade: Int64 read GetAtencaoDomiciliarModalidade write SetAtencaoDomiciliarModalidade;
     property TipoAtendimento: Int64 read GetTipoAtendimento write SetTipoAtendimento;
     property CondicoesAvaliadas: IThriftList<Int64> read GetCondicoesAvaliadas write SetCondicoesAvaliadas;
-    property Cid: string read GetCid write SetCid;
-    property Ciap: string read GetCiap write SetCiap;
     property Procedimentos: IThriftList<string> read GetProcedimentos write SetProcedimentos;
     property CondutaDesfecho: Int64 read GetCondutaDesfecho write SetCondutaDesfecho;
     property CpfCidadao: string read GetCpfCidadao write SetCpfCidadao;
+    property ProblemasCondicoes: IThriftList<IProblemaCondicaoThrift> read GetProblemasCondicoes write SetProblemasCondicoes;
 
     function Get__isset_Turno: Boolean;
     function Get__isset_CnsCidadao: Boolean;
@@ -80,11 +77,10 @@ type
     function Get__isset_AtencaoDomiciliarModalidade: Boolean;
     function Get__isset_TipoAtendimento: Boolean;
     function Get__isset_CondicoesAvaliadas: Boolean;
-    function Get__isset_Cid: Boolean;
-    function Get__isset_Ciap: Boolean;
     function Get__isset_Procedimentos: Boolean;
     function Get__isset_CondutaDesfecho: Boolean;
     function Get__isset_CpfCidadao: Boolean;
+    function Get__isset_ProblemasCondicoes: Boolean;
 
     property __isset_Turno: Boolean read Get__isset_Turno;
     property __isset_CnsCidadao: Boolean read Get__isset_CnsCidadao;
@@ -94,11 +90,10 @@ type
     property __isset_AtencaoDomiciliarModalidade: Boolean read Get__isset_AtencaoDomiciliarModalidade;
     property __isset_TipoAtendimento: Boolean read Get__isset_TipoAtendimento;
     property __isset_CondicoesAvaliadas: Boolean read Get__isset_CondicoesAvaliadas;
-    property __isset_Cid: Boolean read Get__isset_Cid;
-    property __isset_Ciap: Boolean read Get__isset_Ciap;
     property __isset_Procedimentos: Boolean read Get__isset_Procedimentos;
     property __isset_CondutaDesfecho: Boolean read Get__isset_CondutaDesfecho;
     property __isset_CpfCidadao: Boolean read Get__isset_CpfCidadao;
+    property __isset_ProblemasCondicoes: Boolean read Get__isset_ProblemasCondicoes;
   end;
 
   TFichaAtendimentoDomiciliarChildThriftImpl = class(TInterfacedObject, IBase, IFichaAtendimentoDomiciliarChildThrift)
@@ -111,11 +106,10 @@ type
     FAtencaoDomiciliarModalidade: Int64;
     FTipoAtendimento: Int64;
     FCondicoesAvaliadas: IThriftList<Int64>;
-    FCid: string;
-    FCiap: string;
     FProcedimentos: IThriftList<string>;
     FCondutaDesfecho: Int64;
     FCpfCidadao: string;
+    FProblemasCondicoes: IThriftList<IProblemaCondicaoThrift>;
     
     F__isset_Turno: Boolean;
     F__isset_CnsCidadao: Boolean;
@@ -125,11 +119,10 @@ type
     F__isset_AtencaoDomiciliarModalidade: Boolean;
     F__isset_TipoAtendimento: Boolean;
     F__isset_CondicoesAvaliadas: Boolean;
-    F__isset_Cid: Boolean;
-    F__isset_Ciap: Boolean;
     F__isset_Procedimentos: Boolean;
     F__isset_CondutaDesfecho: Boolean;
     F__isset_CpfCidadao: Boolean;
+    F__isset_ProblemasCondicoes: Boolean;
     
     function GetTurno: Int64;
     procedure SetTurno( const Value: Int64);
@@ -147,16 +140,14 @@ type
     procedure SetTipoAtendimento( const Value: Int64);
     function GetCondicoesAvaliadas: IThriftList<Int64>;
     procedure SetCondicoesAvaliadas( const Value: IThriftList<Int64>);
-    function GetCid: string;
-    procedure SetCid( const Value: string);
-    function GetCiap: string;
-    procedure SetCiap( const Value: string);
     function GetProcedimentos: IThriftList<string>;
     procedure SetProcedimentos( const Value: IThriftList<string>);
     function GetCondutaDesfecho: Int64;
     procedure SetCondutaDesfecho( const Value: Int64);
     function GetCpfCidadao: string;
     procedure SetCpfCidadao( const Value: string);
+    function GetProblemasCondicoes: IThriftList<IProblemaCondicaoThrift>;
+    procedure SetProblemasCondicoes( const Value: IThriftList<IProblemaCondicaoThrift>);
 
     function Get__isset_Turno: Boolean;
     function Get__isset_CnsCidadao: Boolean;
@@ -166,11 +157,10 @@ type
     function Get__isset_AtencaoDomiciliarModalidade: Boolean;
     function Get__isset_TipoAtendimento: Boolean;
     function Get__isset_CondicoesAvaliadas: Boolean;
-    function Get__isset_Cid: Boolean;
-    function Get__isset_Ciap: Boolean;
     function Get__isset_Procedimentos: Boolean;
     function Get__isset_CondutaDesfecho: Boolean;
     function Get__isset_CpfCidadao: Boolean;
+    function Get__isset_ProblemasCondicoes: Boolean;
   public
     constructor Create;
     destructor Destroy; override;
@@ -190,11 +180,10 @@ type
     property AtencaoDomiciliarModalidade: Int64 read GetAtencaoDomiciliarModalidade write SetAtencaoDomiciliarModalidade;
     property TipoAtendimento: Int64 read GetTipoAtendimento write SetTipoAtendimento;
     property CondicoesAvaliadas: IThriftList<Int64> read GetCondicoesAvaliadas write SetCondicoesAvaliadas;
-    property Cid: string read GetCid write SetCid;
-    property Ciap: string read GetCiap write SetCiap;
     property Procedimentos: IThriftList<string> read GetProcedimentos write SetProcedimentos;
     property CondutaDesfecho: Int64 read GetCondutaDesfecho write SetCondutaDesfecho;
     property CpfCidadao: string read GetCpfCidadao write SetCpfCidadao;
+    property ProblemasCondicoes: IThriftList<IProblemaCondicaoThrift> read GetProblemasCondicoes write SetProblemasCondicoes;
 
     // isset
     property __isset_Turno: Boolean read Get__isset_Turno;
@@ -205,11 +194,10 @@ type
     property __isset_AtencaoDomiciliarModalidade: Boolean read Get__isset_AtencaoDomiciliarModalidade;
     property __isset_TipoAtendimento: Boolean read Get__isset_TipoAtendimento;
     property __isset_CondicoesAvaliadas: Boolean read Get__isset_CondicoesAvaliadas;
-    property __isset_Cid: Boolean read Get__isset_Cid;
-    property __isset_Ciap: Boolean read Get__isset_Ciap;
     property __isset_Procedimentos: Boolean read Get__isset_Procedimentos;
     property __isset_CondutaDesfecho: Boolean read Get__isset_CondutaDesfecho;
     property __isset_CpfCidadao: Boolean read Get__isset_CpfCidadao;
+    property __isset_ProblemasCondicoes: Boolean read Get__isset_ProblemasCondicoes;
   end;
 
   IFichaAtendimentoDomiciliarMasterThrift = interface(IBase)
@@ -421,38 +409,6 @@ begin
   Result := F__isset_CondicoesAvaliadas;
 end;
 
-function TFichaAtendimentoDomiciliarChildThriftImpl.GetCid: string;
-begin
-  Result := FCid;
-end;
-
-procedure TFichaAtendimentoDomiciliarChildThriftImpl.SetCid( const Value: string);
-begin
-  F__isset_Cid := True;
-  FCid := Value;
-end;
-
-function TFichaAtendimentoDomiciliarChildThriftImpl.Get__isset_Cid: Boolean;
-begin
-  Result := F__isset_Cid;
-end;
-
-function TFichaAtendimentoDomiciliarChildThriftImpl.GetCiap: string;
-begin
-  Result := FCiap;
-end;
-
-procedure TFichaAtendimentoDomiciliarChildThriftImpl.SetCiap( const Value: string);
-begin
-  F__isset_Ciap := True;
-  FCiap := Value;
-end;
-
-function TFichaAtendimentoDomiciliarChildThriftImpl.Get__isset_Ciap: Boolean;
-begin
-  Result := F__isset_Ciap;
-end;
-
 function TFichaAtendimentoDomiciliarChildThriftImpl.GetProcedimentos: IThriftList<string>;
 begin
   Result := FProcedimentos;
@@ -501,6 +457,22 @@ begin
   Result := F__isset_CpfCidadao;
 end;
 
+function TFichaAtendimentoDomiciliarChildThriftImpl.GetProblemasCondicoes: IThriftList<IProblemaCondicaoThrift>;
+begin
+  Result := FProblemasCondicoes;
+end;
+
+procedure TFichaAtendimentoDomiciliarChildThriftImpl.SetProblemasCondicoes( const Value: IThriftList<IProblemaCondicaoThrift>);
+begin
+  F__isset_ProblemasCondicoes := True;
+  FProblemasCondicoes := Value;
+end;
+
+function TFichaAtendimentoDomiciliarChildThriftImpl.Get__isset_ProblemasCondicoes: Boolean;
+begin
+  Result := F__isset_ProblemasCondicoes;
+end;
+
 procedure TFichaAtendimentoDomiciliarChildThriftImpl.Read( const iprot: IProtocol);
 var
   field_ : IField;
@@ -512,6 +484,9 @@ var
   _list3: IList;
   _i4: Integer;
   _elem5: string;
+  _list6: IList;
+  _i7: Integer;
+  _elem8: IProblemaCondicaoThrift;
 
 begin
   tracker := iprot.NextRecursionLevel;
@@ -604,24 +579,6 @@ begin
             TProtocolUtil.Skip(iprot, field_.Type_);
           end;
         end;
-        9: begin
-          if (field_.Type_ = TType.String_) then
-          begin
-            Cid := iprot.ReadString();
-          end else
-          begin
-            TProtocolUtil.Skip(iprot, field_.Type_);
-          end;
-        end;
-        10: begin
-          if (field_.Type_ = TType.String_) then
-          begin
-            Ciap := iprot.ReadString();
-          end else
-          begin
-            TProtocolUtil.Skip(iprot, field_.Type_);
-          end;
-        end;
         11: begin
           if (field_.Type_ = TType.List) then
           begin
@@ -655,6 +612,23 @@ begin
           begin
             TProtocolUtil.Skip(iprot, field_.Type_);
           end;
+        end;
+        16: begin
+          if (field_.Type_ = TType.List) then
+          begin
+            ProblemasCondicoes := TThriftListImpl<IProblemaCondicaoThrift>.Create;
+            _list6 := iprot.ReadListBegin();
+            for _i7 := 0 to _list6.Count - 1 do
+            begin
+              _elem8 := TProblemaCondicaoThriftImpl.Create;
+              _elem8.Read(iprot);
+              ProblemasCondicoes.Add(_elem8);
+            end;
+            iprot.ReadListEnd();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
         end
         else begin
           TProtocolUtil.Skip(iprot, field_.Type_);
@@ -672,10 +646,12 @@ var
   struc : IStruct;
   field_ : IField;
   tracker : IProtocolRecursionTracker;
-  list_6 : IList;
-  _iter7: Int64;
-  list_8 : IList;
-  _iter9: string;
+  list_9 : IList;
+  _iter10: Int64;
+  list_11 : IList;
+  _iter12: string;
+  list_13 : IList;
+  _iter14: IProblemaCondicaoThrift;
 begin
   tracker := oprot.NextRecursionLevel;
   struc := TStructImpl.Create('FichaAtendimentoDomiciliarChildThrift');
@@ -750,31 +726,13 @@ begin
     field_.Type_  := TType.List;
     field_.ID := 8;
     oprot.WriteFieldBegin(field_);
-    list_6 := TListImpl.Create(TType.I64, CondicoesAvaliadas.Count);
-    oprot.WriteListBegin( list_6);
-    for _iter7 in CondicoesAvaliadas do
+    list_9 := TListImpl.Create(TType.I64, CondicoesAvaliadas.Count);
+    oprot.WriteListBegin( list_9);
+    for _iter10 in CondicoesAvaliadas do
     begin
-      oprot.WriteI64(_iter7);
+      oprot.WriteI64(_iter10);
     end;
     oprot.WriteListEnd();
-    oprot.WriteFieldEnd();
-  end;
-  if (__isset_Cid) then
-  begin
-    field_.Name := 'cid';
-    field_.Type_  := TType.String_;
-    field_.ID := 9;
-    oprot.WriteFieldBegin(field_);
-    oprot.WriteString(Cid);
-    oprot.WriteFieldEnd();
-  end;
-  if (__isset_Ciap) then
-  begin
-    field_.Name := 'ciap';
-    field_.Type_  := TType.String_;
-    field_.ID := 10;
-    oprot.WriteFieldBegin(field_);
-    oprot.WriteString(Ciap);
     oprot.WriteFieldEnd();
   end;
   if (Procedimentos <> nil) and __isset_Procedimentos then
@@ -783,11 +741,11 @@ begin
     field_.Type_  := TType.List;
     field_.ID := 11;
     oprot.WriteFieldBegin(field_);
-    list_8 := TListImpl.Create(TType.String_, Procedimentos.Count);
-    oprot.WriteListBegin( list_8);
-    for _iter9 in Procedimentos do
+    list_11 := TListImpl.Create(TType.String_, Procedimentos.Count);
+    oprot.WriteListBegin( list_11);
+    for _iter12 in Procedimentos do
     begin
-      oprot.WriteString(_iter9);
+      oprot.WriteString(_iter12);
     end;
     oprot.WriteListEnd();
     oprot.WriteFieldEnd();
@@ -810,101 +768,110 @@ begin
     oprot.WriteString(CpfCidadao);
     oprot.WriteFieldEnd();
   end;
+  if (ProblemasCondicoes <> nil) and __isset_ProblemasCondicoes then
+  begin
+    field_.Name := 'problemasCondicoes';
+    field_.Type_  := TType.List;
+    field_.ID := 16;
+    oprot.WriteFieldBegin(field_);
+    list_13 := TListImpl.Create(TType.Struct, ProblemasCondicoes.Count);
+    oprot.WriteListBegin( list_13);
+    for _iter14 in ProblemasCondicoes do
+    begin
+      _iter14.Write(oprot);
+    end;
+    oprot.WriteListEnd();
+    oprot.WriteFieldEnd();
+  end;
   oprot.WriteFieldStop();
   oprot.WriteStructEnd();
 end;
 
 function TFichaAtendimentoDomiciliarChildThriftImpl.ToString: string;
 var
-  _sb10 : TThriftStringBuilder;
-  _first11 : Boolean;
+  _sb15 : TThriftStringBuilder;
+  _first16 : Boolean;
 begin
-  _sb10 := TThriftStringBuilder.Create('(');
+  _sb15 := TThriftStringBuilder.Create('(');
   try
-    _first11 := TRUE;
+    _first16 := TRUE;
     if (__isset_Turno) then begin
-      if not _first11 then _sb10.Append(',');
-      _first11 := FALSE;
-      _sb10.Append('Turno: ');
-      _sb10.Append(Turno);
+      if not _first16 then _sb15.Append(',');
+      _first16 := FALSE;
+      _sb15.Append('Turno: ');
+      _sb15.Append(Turno);
     end;
     if (__isset_CnsCidadao) then begin
-      if not _first11 then _sb10.Append(',');
-      _first11 := FALSE;
-      _sb10.Append('CnsCidadao: ');
-      _sb10.Append(CnsCidadao);
+      if not _first16 then _sb15.Append(',');
+      _first16 := FALSE;
+      _sb15.Append('CnsCidadao: ');
+      _sb15.Append(CnsCidadao);
     end;
     if (__isset_DataNascimento) then begin
-      if not _first11 then _sb10.Append(',');
-      _first11 := FALSE;
-      _sb10.Append('DataNascimento: ');
-      _sb10.Append(DataNascimento);
+      if not _first16 then _sb15.Append(',');
+      _first16 := FALSE;
+      _sb15.Append('DataNascimento: ');
+      _sb15.Append(DataNascimento);
     end;
     if (__isset_Sexo) then begin
-      if not _first11 then _sb10.Append(',');
-      _first11 := FALSE;
-      _sb10.Append('Sexo: ');
-      _sb10.Append(Sexo);
+      if not _first16 then _sb15.Append(',');
+      _first16 := FALSE;
+      _sb15.Append('Sexo: ');
+      _sb15.Append(Sexo);
     end;
     if (__isset_LocalAtendimento) then begin
-      if not _first11 then _sb10.Append(',');
-      _first11 := FALSE;
-      _sb10.Append('LocalAtendimento: ');
-      _sb10.Append(LocalAtendimento);
+      if not _first16 then _sb15.Append(',');
+      _first16 := FALSE;
+      _sb15.Append('LocalAtendimento: ');
+      _sb15.Append(LocalAtendimento);
     end;
     if (__isset_AtencaoDomiciliarModalidade) then begin
-      if not _first11 then _sb10.Append(',');
-      _first11 := FALSE;
-      _sb10.Append('AtencaoDomiciliarModalidade: ');
-      _sb10.Append(AtencaoDomiciliarModalidade);
+      if not _first16 then _sb15.Append(',');
+      _first16 := FALSE;
+      _sb15.Append('AtencaoDomiciliarModalidade: ');
+      _sb15.Append(AtencaoDomiciliarModalidade);
     end;
     if (__isset_TipoAtendimento) then begin
-      if not _first11 then _sb10.Append(',');
-      _first11 := FALSE;
-      _sb10.Append('TipoAtendimento: ');
-      _sb10.Append(TipoAtendimento);
+      if not _first16 then _sb15.Append(',');
+      _first16 := FALSE;
+      _sb15.Append('TipoAtendimento: ');
+      _sb15.Append(TipoAtendimento);
     end;
     if (CondicoesAvaliadas <> nil) and __isset_CondicoesAvaliadas then begin
-      if not _first11 then _sb10.Append(',');
-      _first11 := FALSE;
-      _sb10.Append('CondicoesAvaliadas: ');
-      _sb10.Append(CondicoesAvaliadas);
-    end;
-    if (__isset_Cid) then begin
-      if not _first11 then _sb10.Append(',');
-      _first11 := FALSE;
-      _sb10.Append('Cid: ');
-      _sb10.Append(Cid);
-    end;
-    if (__isset_Ciap) then begin
-      if not _first11 then _sb10.Append(',');
-      _first11 := FALSE;
-      _sb10.Append('Ciap: ');
-      _sb10.Append(Ciap);
+      if not _first16 then _sb15.Append(',');
+      _first16 := FALSE;
+      _sb15.Append('CondicoesAvaliadas: ');
+      _sb15.Append(CondicoesAvaliadas);
     end;
     if (Procedimentos <> nil) and __isset_Procedimentos then begin
-      if not _first11 then _sb10.Append(',');
-      _first11 := FALSE;
-      _sb10.Append('Procedimentos: ');
-      _sb10.Append(Procedimentos);
+      if not _first16 then _sb15.Append(',');
+      _first16 := FALSE;
+      _sb15.Append('Procedimentos: ');
+      _sb15.Append(Procedimentos);
     end;
     if (__isset_CondutaDesfecho) then begin
-      if not _first11 then _sb10.Append(',');
-      _first11 := FALSE;
-      _sb10.Append('CondutaDesfecho: ');
-      _sb10.Append(CondutaDesfecho);
+      if not _first16 then _sb15.Append(',');
+      _first16 := FALSE;
+      _sb15.Append('CondutaDesfecho: ');
+      _sb15.Append(CondutaDesfecho);
     end;
     if (__isset_CpfCidadao) then begin
-      if not _first11 then _sb10.Append(',');
-      _first11 := FALSE;
-      _sb10.Append('CpfCidadao: ');
-      _sb10.Append(CpfCidadao);
+      if not _first16 then _sb15.Append(',');
+      _first16 := FALSE;
+      _sb15.Append('CpfCidadao: ');
+      _sb15.Append(CpfCidadao);
     end;
-    _sb10.Append(')');
-    Result := _sb10.ToString;
-    if _first11 then {prevent warning};
+    if (ProblemasCondicoes <> nil) and __isset_ProblemasCondicoes then begin
+      if not _first16 then _sb15.Append(',');
+      _first16 := FALSE;
+      _sb15.Append('ProblemasCondicoes: ');
+      _sb15.Append(ProblemasCondicoes);
+    end;
+    _sb15.Append(')');
+    Result := _sb15.ToString;
+    if _first16 then {prevent warning};
   finally
-    _sb10.Free;
+    _sb15.Free;
   end;
 end;
 
@@ -982,9 +949,9 @@ var
   struc : IStruct;
   tracker : IProtocolRecursionTracker;
   _req_isset_UuidFicha : Boolean;
-  _list12: IList;
-  _i13: Integer;
-  _elem14: IFichaAtendimentoDomiciliarChildThrift;
+  _list17: IList;
+  _i18: Integer;
+  _elem19: IFichaAtendimentoDomiciliarChildThrift;
 
 begin
   tracker := iprot.NextRecursionLevel;
@@ -1022,12 +989,12 @@ begin
           if (field_.Type_ = TType.List) then
           begin
             AtendimentosDomiciliares := TThriftListImpl<IFichaAtendimentoDomiciliarChildThrift>.Create;
-            _list12 := iprot.ReadListBegin();
-            for _i13 := 0 to _list12.Count - 1 do
+            _list17 := iprot.ReadListBegin();
+            for _i18 := 0 to _list17.Count - 1 do
             begin
-              _elem14 := TFichaAtendimentoDomiciliarChildThriftImpl.Create;
-              _elem14.Read(iprot);
-              AtendimentosDomiciliares.Add(_elem14);
+              _elem19 := TFichaAtendimentoDomiciliarChildThriftImpl.Create;
+              _elem19.Read(iprot);
+              AtendimentosDomiciliares.Add(_elem19);
             end;
             iprot.ReadListEnd();
           end else
@@ -1063,8 +1030,8 @@ var
   struc : IStruct;
   field_ : IField;
   tracker : IProtocolRecursionTracker;
-  list_15 : IList;
-  _iter16: IFichaAtendimentoDomiciliarChildThrift;
+  list_20 : IList;
+  _iter21: IFichaAtendimentoDomiciliarChildThrift;
 begin
   tracker := oprot.NextRecursionLevel;
   struc := TStructImpl.Create('FichaAtendimentoDomiciliarMasterThrift');
@@ -1092,11 +1059,11 @@ begin
     field_.Type_  := TType.List;
     field_.ID := 4;
     oprot.WriteFieldBegin(field_);
-    list_15 := TListImpl.Create(TType.Struct, AtendimentosDomiciliares.Count);
-    oprot.WriteListBegin( list_15);
-    for _iter16 in AtendimentosDomiciliares do
+    list_20 := TListImpl.Create(TType.Struct, AtendimentosDomiciliares.Count);
+    oprot.WriteListBegin( list_20);
+    for _iter21 in AtendimentosDomiciliares do
     begin
-      _iter16.Write(oprot);
+      _iter21.Write(oprot);
     end;
     oprot.WriteListEnd();
     oprot.WriteFieldEnd();
@@ -1116,28 +1083,28 @@ end;
 
 function TFichaAtendimentoDomiciliarMasterThriftImpl.ToString: string;
 var
-  _sb17 : TThriftStringBuilder;
+  _sb22 : TThriftStringBuilder;
 begin
-  _sb17 := TThriftStringBuilder.Create('(');
+  _sb22 := TThriftStringBuilder.Create('(');
   try
-    _sb17.Append(', UuidFicha: ');
-    _sb17.Append(UuidFicha);
+    _sb22.Append(', UuidFicha: ');
+    _sb22.Append(UuidFicha);
     if (__isset_TpCdsOrigem) then begin
-      _sb17.Append(', TpCdsOrigem: ');
-      _sb17.Append(TpCdsOrigem);
+      _sb22.Append(', TpCdsOrigem: ');
+      _sb22.Append(TpCdsOrigem);
     end;
     if (AtendimentosDomiciliares <> nil) and __isset_AtendimentosDomiciliares then begin
-      _sb17.Append(', AtendimentosDomiciliares: ');
-      _sb17.Append(AtendimentosDomiciliares);
+      _sb22.Append(', AtendimentosDomiciliares: ');
+      _sb22.Append(AtendimentosDomiciliares);
     end;
     if (HeaderTransport <> nil) and __isset_HeaderTransport then begin
-      _sb17.Append(', HeaderTransport: ');
-      if (HeaderTransport = nil) then _sb17.Append('<null>') else _sb17.Append(HeaderTransport.ToString());
+      _sb22.Append(', HeaderTransport: ');
+      if (HeaderTransport = nil) then _sb22.Append('<null>') else _sb22.Append(HeaderTransport.ToString());
     end;
-    _sb17.Append(')');
-    Result := _sb17.ToString;
+    _sb22.Append(')');
+    Result := _sb22.ToString;
   finally
-    _sb17.Free;
+    _sb22.Free;
   end;
 end;
 

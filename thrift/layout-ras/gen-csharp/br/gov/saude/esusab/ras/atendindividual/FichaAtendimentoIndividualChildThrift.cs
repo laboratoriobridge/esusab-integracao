@@ -30,13 +30,10 @@ namespace br.gov.saude.esusab.ras.atendindividual
     private long _sexo;
     private long _turno;
     private long _tipoAtendimento;
-    private double _pesoAcompanhamentoNutricional;
-    private double _alturaAcompanhamentoNutricional;
     private long _aleitamentoMaterno;
     private long _dumDaGestante;
     private int _idadeGestacional;
     private long _atencaoDomiciliarModalidade;
-    private ProblemaCondicaoAvaliacaoAIThrift _problemaCondicaoAvaliada;
     private List<ExameThrift> _exame;
     private bool _vacinaEmDia;
     private long _pic;
@@ -47,7 +44,6 @@ namespace br.gov.saude.esusab.ras.atendindividual
     private int _nuGestasPrevias;
     private int _nuPartos;
     private long _racionalidadeSaude;
-    private double _perimetroCefalico;
     private long _dataHoraInicialAtendimento;
     private long _dataHoraFinalAtendimento;
     private string _cpfCidadao;
@@ -60,6 +56,7 @@ namespace br.gov.saude.esusab.ras.atendindividual
     private long _tipoParticipacaoProfissionalConvidado;
     private List<long> _emultis;
     private br.gov.saude.esusab.ras.common.MedicoesThrift _medicoes;
+    private List<br.gov.saude.esusab.ras.common.ProblemaCondicaoThrift> _problemasCondicoes;
 
     public string NumeroProntuario
     {
@@ -152,32 +149,6 @@ namespace br.gov.saude.esusab.ras.atendindividual
       }
     }
 
-    public double PesoAcompanhamentoNutricional
-    {
-      get
-      {
-        return _pesoAcompanhamentoNutricional;
-      }
-      set
-      {
-        __isset.pesoAcompanhamentoNutricional = true;
-        this._pesoAcompanhamentoNutricional = value;
-      }
-    }
-
-    public double AlturaAcompanhamentoNutricional
-    {
-      get
-      {
-        return _alturaAcompanhamentoNutricional;
-      }
-      set
-      {
-        __isset.alturaAcompanhamentoNutricional = true;
-        this._alturaAcompanhamentoNutricional = value;
-      }
-    }
-
     public long AleitamentoMaterno
     {
       get
@@ -227,19 +198,6 @@ namespace br.gov.saude.esusab.ras.atendindividual
       {
         __isset.atencaoDomiciliarModalidade = true;
         this._atencaoDomiciliarModalidade = value;
-      }
-    }
-
-    public ProblemaCondicaoAvaliacaoAIThrift ProblemaCondicaoAvaliada
-    {
-      get
-      {
-        return _problemaCondicaoAvaliada;
-      }
-      set
-      {
-        __isset.problemaCondicaoAvaliada = true;
-        this._problemaCondicaoAvaliada = value;
       }
     }
 
@@ -370,19 +328,6 @@ namespace br.gov.saude.esusab.ras.atendindividual
       {
         __isset.racionalidadeSaude = true;
         this._racionalidadeSaude = value;
-      }
-    }
-
-    public double PerimetroCefalico
-    {
-      get
-      {
-        return _perimetroCefalico;
-      }
-      set
-      {
-        __isset.perimetroCefalico = true;
-        this._perimetroCefalico = value;
       }
     }
 
@@ -542,6 +487,19 @@ namespace br.gov.saude.esusab.ras.atendindividual
       }
     }
 
+    public List<br.gov.saude.esusab.ras.common.ProblemaCondicaoThrift> ProblemasCondicoes
+    {
+      get
+      {
+        return _problemasCondicoes;
+      }
+      set
+      {
+        __isset.problemasCondicoes = true;
+        this._problemasCondicoes = value;
+      }
+    }
+
 
     public Isset __isset;
     #if !SILVERLIGHT
@@ -555,13 +513,10 @@ namespace br.gov.saude.esusab.ras.atendindividual
       public bool sexo;
       public bool turno;
       public bool tipoAtendimento;
-      public bool pesoAcompanhamentoNutricional;
-      public bool alturaAcompanhamentoNutricional;
       public bool aleitamentoMaterno;
       public bool dumDaGestante;
       public bool idadeGestacional;
       public bool atencaoDomiciliarModalidade;
-      public bool problemaCondicaoAvaliada;
       public bool exame;
       public bool vacinaEmDia;
       public bool pic;
@@ -572,7 +527,6 @@ namespace br.gov.saude.esusab.ras.atendindividual
       public bool nuGestasPrevias;
       public bool nuPartos;
       public bool racionalidadeSaude;
-      public bool perimetroCefalico;
       public bool dataHoraInicialAtendimento;
       public bool dataHoraFinalAtendimento;
       public bool cpfCidadao;
@@ -585,6 +539,7 @@ namespace br.gov.saude.esusab.ras.atendindividual
       public bool tipoParticipacaoProfissionalConvidado;
       public bool emultis;
       public bool medicoes;
+      public bool problemasCondicoes;
     }
 
     public FichaAtendimentoIndividualChildThrift() {
@@ -654,20 +609,6 @@ namespace br.gov.saude.esusab.ras.atendindividual
                 TProtocolUtil.Skip(iprot, field.Type);
               }
               break;
-            case 8:
-              if (field.Type == TType.Double) {
-                PesoAcompanhamentoNutricional = iprot.ReadDouble();
-              } else { 
-                TProtocolUtil.Skip(iprot, field.Type);
-              }
-              break;
-            case 9:
-              if (field.Type == TType.Double) {
-                AlturaAcompanhamentoNutricional = iprot.ReadDouble();
-              } else { 
-                TProtocolUtil.Skip(iprot, field.Type);
-              }
-              break;
             case 10:
               if (field.Type == TType.I64) {
                 AleitamentoMaterno = iprot.ReadI64();
@@ -692,14 +633,6 @@ namespace br.gov.saude.esusab.ras.atendindividual
             case 13:
               if (field.Type == TType.I64) {
                 AtencaoDomiciliarModalidade = iprot.ReadI64();
-              } else { 
-                TProtocolUtil.Skip(iprot, field.Type);
-              }
-              break;
-            case 14:
-              if (field.Type == TType.Struct) {
-                ProblemaCondicaoAvaliada = new ProblemaCondicaoAvaliacaoAIThrift();
-                ProblemaCondicaoAvaliada.Read(iprot);
               } else { 
                 TProtocolUtil.Skip(iprot, field.Type);
               }
@@ -801,13 +734,6 @@ namespace br.gov.saude.esusab.ras.atendindividual
             case 26:
               if (field.Type == TType.I64) {
                 RacionalidadeSaude = iprot.ReadI64();
-              } else { 
-                TProtocolUtil.Skip(iprot, field.Type);
-              }
-              break;
-            case 27:
-              if (field.Type == TType.Double) {
-                PerimetroCefalico = iprot.ReadDouble();
               } else { 
                 TProtocolUtil.Skip(iprot, field.Type);
               }
@@ -941,6 +867,24 @@ namespace br.gov.saude.esusab.ras.atendindividual
                 TProtocolUtil.Skip(iprot, field.Type);
               }
               break;
+            case 40:
+              if (field.Type == TType.List) {
+                {
+                  ProblemasCondicoes = new List<br.gov.saude.esusab.ras.common.ProblemaCondicaoThrift>();
+                  TList _list29 = iprot.ReadListBegin();
+                  for( int _i30 = 0; _i30 < _list29.Count; ++_i30)
+                  {
+                    br.gov.saude.esusab.ras.common.ProblemaCondicaoThrift _elem31;
+                    _elem31 = new br.gov.saude.esusab.ras.common.ProblemaCondicaoThrift();
+                    _elem31.Read(iprot);
+                    ProblemasCondicoes.Add(_elem31);
+                  }
+                  iprot.ReadListEnd();
+                }
+              } else { 
+                TProtocolUtil.Skip(iprot, field.Type);
+              }
+              break;
             default: 
               TProtocolUtil.Skip(iprot, field.Type);
               break;
@@ -1018,22 +962,6 @@ namespace br.gov.saude.esusab.ras.atendindividual
           oprot.WriteI64(TipoAtendimento);
           oprot.WriteFieldEnd();
         }
-        if (__isset.pesoAcompanhamentoNutricional) {
-          field.Name = "pesoAcompanhamentoNutricional";
-          field.Type = TType.Double;
-          field.ID = 8;
-          oprot.WriteFieldBegin(field);
-          oprot.WriteDouble(PesoAcompanhamentoNutricional);
-          oprot.WriteFieldEnd();
-        }
-        if (__isset.alturaAcompanhamentoNutricional) {
-          field.Name = "alturaAcompanhamentoNutricional";
-          field.Type = TType.Double;
-          field.ID = 9;
-          oprot.WriteFieldBegin(field);
-          oprot.WriteDouble(AlturaAcompanhamentoNutricional);
-          oprot.WriteFieldEnd();
-        }
         if (__isset.aleitamentoMaterno) {
           field.Name = "aleitamentoMaterno";
           field.Type = TType.I64;
@@ -1066,14 +994,6 @@ namespace br.gov.saude.esusab.ras.atendindividual
           oprot.WriteI64(AtencaoDomiciliarModalidade);
           oprot.WriteFieldEnd();
         }
-        if (ProblemaCondicaoAvaliada != null && __isset.problemaCondicaoAvaliada) {
-          field.Name = "problemaCondicaoAvaliada";
-          field.Type = TType.Struct;
-          field.ID = 14;
-          oprot.WriteFieldBegin(field);
-          ProblemaCondicaoAvaliada.Write(oprot);
-          oprot.WriteFieldEnd();
-        }
         if (Exame != null && __isset.exame) {
           field.Name = "exame";
           field.Type = TType.List;
@@ -1081,9 +1001,9 @@ namespace br.gov.saude.esusab.ras.atendindividual
           oprot.WriteFieldBegin(field);
           {
             oprot.WriteListBegin(new TList(TType.Struct, Exame.Count));
-            foreach (ExameThrift _iter29 in Exame)
+            foreach (ExameThrift _iter32 in Exame)
             {
-              _iter29.Write(oprot);
+              _iter32.Write(oprot);
             }
             oprot.WriteListEnd();
           }
@@ -1120,9 +1040,9 @@ namespace br.gov.saude.esusab.ras.atendindividual
           oprot.WriteFieldBegin(field);
           {
             oprot.WriteListBegin(new TList(TType.I64, Nasfs.Count));
-            foreach (long _iter30 in Nasfs)
+            foreach (long _iter33 in Nasfs)
             {
-              oprot.WriteI64(_iter30);
+              oprot.WriteI64(_iter33);
             }
             oprot.WriteListEnd();
           }
@@ -1135,9 +1055,9 @@ namespace br.gov.saude.esusab.ras.atendindividual
           oprot.WriteFieldBegin(field);
           {
             oprot.WriteListBegin(new TList(TType.I64, Condutas.Count));
-            foreach (long _iter31 in Condutas)
+            foreach (long _iter34 in Condutas)
             {
-              oprot.WriteI64(_iter31);
+              oprot.WriteI64(_iter34);
             }
             oprot.WriteListEnd();
           }
@@ -1175,14 +1095,6 @@ namespace br.gov.saude.esusab.ras.atendindividual
           oprot.WriteI64(RacionalidadeSaude);
           oprot.WriteFieldEnd();
         }
-        if (__isset.perimetroCefalico) {
-          field.Name = "perimetroCefalico";
-          field.Type = TType.Double;
-          field.ID = 27;
-          oprot.WriteFieldBegin(field);
-          oprot.WriteDouble(PerimetroCefalico);
-          oprot.WriteFieldEnd();
-        }
         if (__isset.dataHoraInicialAtendimento) {
           field.Name = "dataHoraInicialAtendimento";
           field.Type = TType.I64;
@@ -1214,9 +1126,9 @@ namespace br.gov.saude.esusab.ras.atendindividual
           oprot.WriteFieldBegin(field);
           {
             oprot.WriteListBegin(new TList(TType.Struct, Medicamentos.Count));
-            foreach (br.gov.saude.esusab.ras.common.MedicamentoThrift _iter32 in Medicamentos)
+            foreach (br.gov.saude.esusab.ras.common.MedicamentoThrift _iter35 in Medicamentos)
             {
-              _iter32.Write(oprot);
+              _iter35.Write(oprot);
             }
             oprot.WriteListEnd();
           }
@@ -1229,9 +1141,9 @@ namespace br.gov.saude.esusab.ras.atendindividual
           oprot.WriteFieldBegin(field);
           {
             oprot.WriteListBegin(new TList(TType.Struct, Encaminhamentos.Count));
-            foreach (br.gov.saude.esusab.ras.common.EncaminhamentoExternoThrift _iter33 in Encaminhamentos)
+            foreach (br.gov.saude.esusab.ras.common.EncaminhamentoExternoThrift _iter36 in Encaminhamentos)
             {
-              _iter33.Write(oprot);
+              _iter36.Write(oprot);
             }
             oprot.WriteListEnd();
           }
@@ -1244,9 +1156,9 @@ namespace br.gov.saude.esusab.ras.atendindividual
           oprot.WriteFieldBegin(field);
           {
             oprot.WriteListBegin(new TList(TType.Struct, ResultadosExames.Count));
-            foreach (br.gov.saude.esusab.ras.common.ResultadosExameThrift _iter34 in ResultadosExames)
+            foreach (br.gov.saude.esusab.ras.common.ResultadosExameThrift _iter37 in ResultadosExames)
             {
-              _iter34.Write(oprot);
+              _iter37.Write(oprot);
             }
             oprot.WriteListEnd();
           }
@@ -1291,9 +1203,9 @@ namespace br.gov.saude.esusab.ras.atendindividual
           oprot.WriteFieldBegin(field);
           {
             oprot.WriteListBegin(new TList(TType.I64, Emultis.Count));
-            foreach (long _iter35 in Emultis)
+            foreach (long _iter38 in Emultis)
             {
-              oprot.WriteI64(_iter35);
+              oprot.WriteI64(_iter38);
             }
             oprot.WriteListEnd();
           }
@@ -1305,6 +1217,21 @@ namespace br.gov.saude.esusab.ras.atendindividual
           field.ID = 39;
           oprot.WriteFieldBegin(field);
           Medicoes.Write(oprot);
+          oprot.WriteFieldEnd();
+        }
+        if (ProblemasCondicoes != null && __isset.problemasCondicoes) {
+          field.Name = "problemasCondicoes";
+          field.Type = TType.List;
+          field.ID = 40;
+          oprot.WriteFieldBegin(field);
+          {
+            oprot.WriteListBegin(new TList(TType.Struct, ProblemasCondicoes.Count));
+            foreach (br.gov.saude.esusab.ras.common.ProblemaCondicaoThrift _iter39 in ProblemasCondicoes)
+            {
+              _iter39.Write(oprot);
+            }
+            oprot.WriteListEnd();
+          }
           oprot.WriteFieldEnd();
         }
         oprot.WriteFieldStop();
@@ -1361,18 +1288,6 @@ namespace br.gov.saude.esusab.ras.atendindividual
         __sb.Append("TipoAtendimento: ");
         __sb.Append(TipoAtendimento);
       }
-      if (__isset.pesoAcompanhamentoNutricional) {
-        if(!__first) { __sb.Append(", "); }
-        __first = false;
-        __sb.Append("PesoAcompanhamentoNutricional: ");
-        __sb.Append(PesoAcompanhamentoNutricional);
-      }
-      if (__isset.alturaAcompanhamentoNutricional) {
-        if(!__first) { __sb.Append(", "); }
-        __first = false;
-        __sb.Append("AlturaAcompanhamentoNutricional: ");
-        __sb.Append(AlturaAcompanhamentoNutricional);
-      }
       if (__isset.aleitamentoMaterno) {
         if(!__first) { __sb.Append(", "); }
         __first = false;
@@ -1396,12 +1311,6 @@ namespace br.gov.saude.esusab.ras.atendindividual
         __first = false;
         __sb.Append("AtencaoDomiciliarModalidade: ");
         __sb.Append(AtencaoDomiciliarModalidade);
-      }
-      if (ProblemaCondicaoAvaliada != null && __isset.problemaCondicaoAvaliada) {
-        if(!__first) { __sb.Append(", "); }
-        __first = false;
-        __sb.Append("ProblemaCondicaoAvaliada: ");
-        __sb.Append(ProblemaCondicaoAvaliada== null ? "<null>" : ProblemaCondicaoAvaliada.ToString());
       }
       if (Exame != null && __isset.exame) {
         if(!__first) { __sb.Append(", "); }
@@ -1462,12 +1371,6 @@ namespace br.gov.saude.esusab.ras.atendindividual
         __first = false;
         __sb.Append("RacionalidadeSaude: ");
         __sb.Append(RacionalidadeSaude);
-      }
-      if (__isset.perimetroCefalico) {
-        if(!__first) { __sb.Append(", "); }
-        __first = false;
-        __sb.Append("PerimetroCefalico: ");
-        __sb.Append(PerimetroCefalico);
       }
       if (__isset.dataHoraInicialAtendimento) {
         if(!__first) { __sb.Append(", "); }
@@ -1540,6 +1443,12 @@ namespace br.gov.saude.esusab.ras.atendindividual
         __first = false;
         __sb.Append("Medicoes: ");
         __sb.Append(Medicoes== null ? "<null>" : Medicoes.ToString());
+      }
+      if (ProblemasCondicoes != null && __isset.problemasCondicoes) {
+        if(!__first) { __sb.Append(", "); }
+        __first = false;
+        __sb.Append("ProblemasCondicoes: ");
+        __sb.Append(ProblemasCondicoes);
       }
       __sb.Append(")");
       return __sb.ToString();

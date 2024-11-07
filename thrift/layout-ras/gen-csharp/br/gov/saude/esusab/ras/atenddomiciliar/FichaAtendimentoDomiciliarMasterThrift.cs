@@ -121,13 +121,13 @@ namespace br.gov.saude.esusab.ras.atenddomiciliar
               if (field.Type == TType.List) {
                 {
                   AtendimentosDomiciliares = new List<FichaAtendimentoDomiciliarChildThrift>();
-                  TList _list8 = iprot.ReadListBegin();
-                  for( int _i9 = 0; _i9 < _list8.Count; ++_i9)
+                  TList _list12 = iprot.ReadListBegin();
+                  for( int _i13 = 0; _i13 < _list12.Count; ++_i13)
                   {
-                    FichaAtendimentoDomiciliarChildThrift _elem10;
-                    _elem10 = new FichaAtendimentoDomiciliarChildThrift();
-                    _elem10.Read(iprot);
-                    AtendimentosDomiciliares.Add(_elem10);
+                    FichaAtendimentoDomiciliarChildThrift _elem14;
+                    _elem14 = new FichaAtendimentoDomiciliarChildThrift();
+                    _elem14.Read(iprot);
+                    AtendimentosDomiciliares.Add(_elem14);
                   }
                   iprot.ReadListEnd();
                 }
@@ -187,9 +187,9 @@ namespace br.gov.saude.esusab.ras.atenddomiciliar
           oprot.WriteFieldBegin(field);
           {
             oprot.WriteListBegin(new TList(TType.Struct, AtendimentosDomiciliares.Count));
-            foreach (FichaAtendimentoDomiciliarChildThrift _iter11 in AtendimentosDomiciliares)
+            foreach (FichaAtendimentoDomiciliarChildThrift _iter15 in AtendimentosDomiciliares)
             {
-              _iter11.Write(oprot);
+              _iter15.Write(oprot);
             }
             oprot.WriteListEnd();
           }

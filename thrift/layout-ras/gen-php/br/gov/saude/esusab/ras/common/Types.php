@@ -2398,4 +2398,263 @@ class MedicoesThrift {
 
 }
 
+class ProblemaCondicaoThrift {
+  static $_TSPEC;
+
+  /**
+   * @var string
+   */
+  public $uuidProblema = null;
+  /**
+   * @var string
+   */
+  public $uuidEvolucaoProblema = null;
+  /**
+   * @var int
+   */
+  public $coSequencialEvolucao = null;
+  /**
+   * @var string
+   */
+  public $ciap = null;
+  /**
+   * @var string
+   */
+  public $cid10 = null;
+  /**
+   * @var int
+   */
+  public $situacao = null;
+  /**
+   * @var int
+   */
+  public $dataInicioProblema = null;
+  /**
+   * @var int
+   */
+  public $dataFimProblema = null;
+  /**
+   * @var bool
+   */
+  public $isAvaliado = null;
+
+  public function __construct($vals=null) {
+    if (!isset(self::$_TSPEC)) {
+      self::$_TSPEC = array(
+        1 => array(
+          'var' => 'uuidProblema',
+          'type' => TType::STRING,
+          ),
+        2 => array(
+          'var' => 'uuidEvolucaoProblema',
+          'type' => TType::STRING,
+          ),
+        3 => array(
+          'var' => 'coSequencialEvolucao',
+          'type' => TType::I64,
+          ),
+        4 => array(
+          'var' => 'ciap',
+          'type' => TType::STRING,
+          ),
+        5 => array(
+          'var' => 'cid10',
+          'type' => TType::STRING,
+          ),
+        6 => array(
+          'var' => 'situacao',
+          'type' => TType::I64,
+          ),
+        7 => array(
+          'var' => 'dataInicioProblema',
+          'type' => TType::I64,
+          ),
+        8 => array(
+          'var' => 'dataFimProblema',
+          'type' => TType::I64,
+          ),
+        9 => array(
+          'var' => 'isAvaliado',
+          'type' => TType::BOOL,
+          ),
+        );
+    }
+    if (is_array($vals)) {
+      if (isset($vals['uuidProblema'])) {
+        $this->uuidProblema = $vals['uuidProblema'];
+      }
+      if (isset($vals['uuidEvolucaoProblema'])) {
+        $this->uuidEvolucaoProblema = $vals['uuidEvolucaoProblema'];
+      }
+      if (isset($vals['coSequencialEvolucao'])) {
+        $this->coSequencialEvolucao = $vals['coSequencialEvolucao'];
+      }
+      if (isset($vals['ciap'])) {
+        $this->ciap = $vals['ciap'];
+      }
+      if (isset($vals['cid10'])) {
+        $this->cid10 = $vals['cid10'];
+      }
+      if (isset($vals['situacao'])) {
+        $this->situacao = $vals['situacao'];
+      }
+      if (isset($vals['dataInicioProblema'])) {
+        $this->dataInicioProblema = $vals['dataInicioProblema'];
+      }
+      if (isset($vals['dataFimProblema'])) {
+        $this->dataFimProblema = $vals['dataFimProblema'];
+      }
+      if (isset($vals['isAvaliado'])) {
+        $this->isAvaliado = $vals['isAvaliado'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'ProblemaCondicaoThrift';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 1:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->uuidProblema);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 2:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->uuidEvolucaoProblema);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 3:
+          if ($ftype == TType::I64) {
+            $xfer += $input->readI64($this->coSequencialEvolucao);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 4:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->ciap);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 5:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->cid10);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 6:
+          if ($ftype == TType::I64) {
+            $xfer += $input->readI64($this->situacao);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 7:
+          if ($ftype == TType::I64) {
+            $xfer += $input->readI64($this->dataInicioProblema);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 8:
+          if ($ftype == TType::I64) {
+            $xfer += $input->readI64($this->dataFimProblema);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 9:
+          if ($ftype == TType::BOOL) {
+            $xfer += $input->readBool($this->isAvaliado);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('ProblemaCondicaoThrift');
+    if ($this->uuidProblema !== null) {
+      $xfer += $output->writeFieldBegin('uuidProblema', TType::STRING, 1);
+      $xfer += $output->writeString($this->uuidProblema);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->uuidEvolucaoProblema !== null) {
+      $xfer += $output->writeFieldBegin('uuidEvolucaoProblema', TType::STRING, 2);
+      $xfer += $output->writeString($this->uuidEvolucaoProblema);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->coSequencialEvolucao !== null) {
+      $xfer += $output->writeFieldBegin('coSequencialEvolucao', TType::I64, 3);
+      $xfer += $output->writeI64($this->coSequencialEvolucao);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->ciap !== null) {
+      $xfer += $output->writeFieldBegin('ciap', TType::STRING, 4);
+      $xfer += $output->writeString($this->ciap);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->cid10 !== null) {
+      $xfer += $output->writeFieldBegin('cid10', TType::STRING, 5);
+      $xfer += $output->writeString($this->cid10);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->situacao !== null) {
+      $xfer += $output->writeFieldBegin('situacao', TType::I64, 6);
+      $xfer += $output->writeI64($this->situacao);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->dataInicioProblema !== null) {
+      $xfer += $output->writeFieldBegin('dataInicioProblema', TType::I64, 7);
+      $xfer += $output->writeI64($this->dataInicioProblema);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->dataFimProblema !== null) {
+      $xfer += $output->writeFieldBegin('dataFimProblema', TType::I64, 8);
+      $xfer += $output->writeI64($this->dataFimProblema);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->isAvaliado !== null) {
+      $xfer += $output->writeFieldBegin('isAvaliado', TType::BOOL, 9);
+      $xfer += $output->writeBool($this->isAvaliado);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
 

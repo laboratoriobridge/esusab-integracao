@@ -92,6 +92,17 @@
 				<altura>20.3</altura>
 				<perimetroCefalico>30.0</perimetroCefalico>
 			</medicoes>
+			<problemasCondicoes>
+				<uuidProblema>b0dc457d-8468-49d7-bd82-d37cc96d2338</uuidProblema>
+				<uuidEvolucaoProblema>b0dc457d-8468-49d7-bd82-d37cc96d2339</uuidEvolucaoProblema>
+				<coSequencialEvolucao>1</coSequencialEvolucao>
+				<ciap>A03</ciap>
+				<cid10>R05</cid10>
+				<situacao>1</situacao>
+				<dataInicioProblema>1549376600000</dataInicioProblema> 
+                <dataFimProblema>1549377700000</dataFimProblema> 
+				<isAvaliado>1</isAvaliado>
+			</problemasCondicoes>
 		</atendimentosOdontologicos>
 		<atendimentosOdontologicos>
 			<numProntuario>4321</numProntuario>
@@ -104,7 +115,6 @@
 			<tiposEncamOdonto>3</tiposEncamOdonto>
 			<tiposEncamOdonto>12</tiposEncamOdonto>
 			<tiposEncamOdonto>7</tiposEncamOdonto>
-			<tiposEncamOdonto>13</tiposEncamOdonto>
 			<tiposEncamOdonto>15</tiposEncamOdonto>
 			<tiposEncamOdonto>6</tiposEncamOdonto>
 			<tiposEncamOdonto>14</tiposEncamOdonto>
@@ -159,6 +169,16 @@
 				<altura>20.3</altura>
 				<perimetroCefalico>30.0</perimetroCefalico>
 			</medicoes>
+			<problemasCondicoes>
+				<uuidProblema>b0dc457d-8468-49d7-bd82-d37cc96d2335</uuidProblema>
+				<uuidEvolucaoProblema>b0dc457d-8468-49d7-bd82-d37cc96d2336</uuidEvolucaoProblema>
+				<coSequencialEvolucao>2</coSequencialEvolucao>
+				<ciap>A03</ciap>
+				<cid10>R05</cid10>
+				<situacao>0</situacao>
+				<dataInicioProblema>1549376600000</dataInicioProblema> 
+				<isAvaliado>1</isAvaliado>
+			</problemasCondicoes>
 		</atendimentosOdontologicos>
 		<atendimentosOdontologicos>
 			<numProntuario>123</numProntuario>
@@ -202,6 +222,10 @@
 				<altura>20.3</altura>
 				<perimetroCefalico>30.0</perimetroCefalico>
 			</medicoes>
+			<problemasCondicoes>
+                <ciap>A03</ciap>
+                <isAvaliado>1</isAvaliado>
+            </problemasCondicoes>
 		</atendimentosOdontologicos>
 		<atendimentosOdontologicos>
 			<numProntuario>123</numProntuario>
@@ -245,6 +269,17 @@
 				<altura>20.3</altura>
 				<perimetroCefalico>30.0</perimetroCefalico>
 			</medicoes>
+			<problemasCondicoes>
+				<uuidProblema>b0dc457d-8468-49d7-bd82-d37cc96d2340</uuidProblema>
+				<uuidEvolucaoProblema>b0dc457d-8468-49d7-bd82-d37cc96d2341</uuidEvolucaoProblema>
+				<coSequencialEvolucao>4</coSequencialEvolucao>
+				<ciap>A03</ciap>
+				<cid10>R05</cid10>
+				<situacao>1</situacao>
+				<dataInicioProblema>1553034000000</dataInicioProblema> 
+                <dataFimProblema>1553044000000</dataFimProblema> 
+				<isAvaliado>1</isAvaliado>
+			</problemasCondicoes>
 		</atendimentosOdontologicos>
 		<atendimentosOdontologicos>
 			<dtNascimento>1115305200000</dtNascimento>
@@ -301,6 +336,17 @@
 				<altura>20.3</altura>
 				<perimetroCefalico>30.0</perimetroCefalico>
 			</medicoes>
+			<problemasCondicoes>
+				<uuidProblema>b0dc457d-8468-49d7-bd82-d37cc96d2350</uuidProblema>
+				<uuidEvolucaoProblema>b0dc457d-8468-49d7-bd82-d37cc96d2351</uuidEvolucaoProblema>
+				<coSequencialEvolucao>5</coSequencialEvolucao>
+				<ciap>A03</ciap>
+				<cid10>R05</cid10>
+				<situacao>1</situacao>
+				<dataInicioProblema>1553108100000</dataInicioProblema> 
+                <dataFimProblema>1553108200000</dataFimProblema> 
+				<isAvaliado>1</isAvaliado>
+			</problemasCondicoes>
 		</atendimentosOdontologicos>
 		<headerTransport>
 			<lotacaoFormPrincipal>
@@ -333,5 +379,5 @@
 		<versaoSistema>5.0.16</versaoSistema>
 		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:originadora>
-	<versao major="6" minor="1" revision="0" />
+	<versao major="6" minor="2" revision="0"/>
 </ns3:dadoTransporteTransportXml>

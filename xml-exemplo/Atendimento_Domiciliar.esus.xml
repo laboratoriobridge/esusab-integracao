@@ -28,8 +28,17 @@
 			<atencaoDomiciliarModalidade>1</atencaoDomiciliarModalidade>
 			<tipoAtendimento>7</tipoAtendimento>
 			<condicoesAvaliadas>2</condicoesAvaliadas>
-			<cid>Z620</cid>
-			<ciap>S96</ciap>
+			<problemasCondicoes>
+				<uuidProblema>b0dc457d-8468-49d7-bd82-d37cc96d2355</uuidProblema>
+				<uuidEvolucaoProblema>b0dc457d-8468-49d7-bd82-d37cc96d2356</uuidEvolucaoProblema>
+				<coSequencialEvolucao>1</coSequencialEvolucao>
+				<ciap>A03</ciap>
+				<cid10>R05</cid10>
+				<situacao>1</situacao>
+				<dataInicioProblema>1550674600000</dataInicioProblema> 
+                <dataFimProblema>1550674700000</dataFimProblema> 
+				<isAvaliado>1</isAvaliado>
+			</problemasCondicoes>
 			<procedimentos>0301070024</procedimentos>
 			<procedimentos>0301050090</procedimentos>
 			<procedimentos>0404030319</procedimentos>
@@ -45,8 +54,10 @@
 			<atencaoDomiciliarModalidade>1</atencaoDomiciliarModalidade>
 			<tipoAtendimento>7</tipoAtendimento>
 			<condicoesAvaliadas>2</condicoesAvaliadas>
-			<cid>Z620</cid>
-			<ciap>S96</ciap>
+            <problemasCondicoes>
+                <ciap>A03</ciap>
+                <isAvaliado>1</isAvaliado>
+            </problemasCondicoes>
 			<procedimentos>0301070024</procedimentos>
 			<procedimentos>0301050090</procedimentos>
 			<procedimentos>0404030319</procedimentos>
@@ -74,5 +85,5 @@
 		<versaoSistema>5.0.16</versaoSistema>
 		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:originadora>
-	<versao major="4" minor="4" revision="1" />
+	<versao major="6" minor="2" revision="0"/>
 </ns3:dadoTransporteTransportXml>

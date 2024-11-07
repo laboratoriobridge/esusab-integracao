@@ -125,3 +125,15 @@ struct MedicoesThrift {
     12:optional double altura;
     13:optional double perimetroCefalico;
 }
+
+struct ProblemaCondicaoThrift {
+    1:optional string uuidProblema
+    2:optional string uuidEvolucaoProblema
+    3:optional i64 coSequencialEvolucao
+    4:optional string ciap
+    5:optional string cid10
+    6:optional i64 situacao
+    7:optional i64 dataInicioProblema
+    8:optional i64 dataFimProblema
+    9:optional bool isAvaliado
+}

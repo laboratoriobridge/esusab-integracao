@@ -24,11 +24,10 @@ module Br
               ATENCAODOMICILIARMODALIDADE = 6
               TIPOATENDIMENTO = 7
               CONDICOESAVALIADAS = 8
-              CID = 9
-              CIAP = 10
               PROCEDIMENTOS = 11
               CONDUTADESFECHO = 13
               CPFCIDADAO = 15
+              PROBLEMASCONDICOES = 16
 
               FIELDS = {
                 TURNO => {:type => ::Thrift::Types::I64, :name => 'turno', :optional => true},
@@ -39,11 +38,10 @@ module Br
                 ATENCAODOMICILIARMODALIDADE => {:type => ::Thrift::Types::I64, :name => 'atencaoDomiciliarModalidade', :optional => true},
                 TIPOATENDIMENTO => {:type => ::Thrift::Types::I64, :name => 'tipoAtendimento', :optional => true},
                 CONDICOESAVALIADAS => {:type => ::Thrift::Types::LIST, :name => 'condicoesAvaliadas', :element => {:type => ::Thrift::Types::I64}, :optional => true},
-                CID => {:type => ::Thrift::Types::STRING, :name => 'cid', :optional => true},
-                CIAP => {:type => ::Thrift::Types::STRING, :name => 'ciap', :optional => true},
                 PROCEDIMENTOS => {:type => ::Thrift::Types::LIST, :name => 'procedimentos', :element => {:type => ::Thrift::Types::STRING}, :optional => true},
                 CONDUTADESFECHO => {:type => ::Thrift::Types::I64, :name => 'condutaDesfecho', :optional => true},
-                CPFCIDADAO => {:type => ::Thrift::Types::STRING, :name => 'cpfCidadao', :optional => true}
+                CPFCIDADAO => {:type => ::Thrift::Types::STRING, :name => 'cpfCidadao', :optional => true},
+                PROBLEMASCONDICOES => {:type => ::Thrift::Types::LIST, :name => 'problemasCondicoes', :element => {:type => ::Thrift::Types::STRUCT, :class => ::Br::Gov::Saude::Esusab::Ras::Common::ProblemaCondicaoThrift}, :optional => true}
               }
 
               def struct_fields; FIELDS; end

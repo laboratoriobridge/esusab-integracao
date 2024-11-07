@@ -17,11 +17,10 @@ struct FichaAtendimentoDomiciliarChildThrift {
 	6:optional i64 atencaoDomiciliarModalidade;
 	7:optional i64 tipoAtendimento;
 	8:optional list<i64> condicoesAvaliadas;
-	9:optional string cid;
-	10:optional string ciap;
 	11:optional list<string> procedimentos;
 	13:optional i64 condutaDesfecho;
 	15:optional string cpfCidadao;
+	16:optional list<common.ProblemaCondicaoThrift> problemasCondicoes;
 }
 
 struct FichaAtendimentoDomiciliarMasterThrift {

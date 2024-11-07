@@ -108,3 +108,32 @@ struct ResultadosExameThrift {
     4:optional i64 dataResultado;
     6:optional list<ResultadoExameThrift> resultadoExame;
 }
+
+struct MedicoesThrift {
+    1:optional double circunferenciaAbdominal;
+    2:optional double perimetroPanturrilha;
+    3:optional i32 pressaoArterialSistolica;
+    4:optional i32 pressaoArterialDiastolica;
+    5:optional i32 frequenciaRespiratoria;
+    6:optional i32 frequenciaCardiaca;
+    7:optional double temperatura;
+    8:optional i32 saturacaoO2;
+    9:optional i32 glicemiaCapilar;
+    10:optional i64 tipoGlicemiaCapilar;
+    //    Campos jah enviados antes da 6.0.0
+    11:optional double peso;
+    12:optional double altura;
+    13:optional double perimetroCefalico;
+}
+
+struct ProblemaCondicaoThrift {
+    1:optional string uuidProblema
+    2:optional string uuidEvolucaoProblema
+    3:optional i64 coSequencialEvolucao
+    4:optional string ciap
+    5:optional string cid10
+    6:optional i64 situacao
+    7:optional i64 dataInicioProblema
+    8:optional i64 dataFimProblema
+    9:optional bool isAvaliado
+}

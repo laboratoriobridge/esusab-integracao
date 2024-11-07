@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://esus.ufsc.br/problemacondicao" version="1.0">
+
+  <xs:complexType name="problemaCondicaoTransport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="uuidProblema" type="xs:string"/>
+      <xs:element minOccurs="0" name="uuidEvolucaoProblema" type="xs:string"/>
+      <xs:element minOccurs="0" name="coSequencialEvolucao" type="xs:long"/>
+      <xs:element minOccurs="0" name="ciap" type="xs:string"/>
+      <xs:element minOccurs="0" name="cid10" type="xs:string"/>      
+      <xs:element minOccurs="0" name="situacao" type="xs:long"/>                        
+      <xs:element minOccurs="0" name="dataInicioProblema" type="xs:long"/>                       
+      <xs:element minOccurs="0" name="dataFimProblema" type="xs:long"/>                        
+      <xs:element minOccurs="0" name="isAvaliado" type="xs:boolean"/>                    
+    </xs:sequence>            
+  </xs:complexType>
+</xs:schema>

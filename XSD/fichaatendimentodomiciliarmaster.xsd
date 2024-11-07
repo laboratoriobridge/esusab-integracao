@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fichaAtendimentoDomiciliarChild="http://esus.ufsc.br/fichaatendimentodomiciliarchild" xmlns:fichaAtendimentoDomiciliarMaster="http://esus.ufsc.br/fichaatendimentodomiciliarmaster" xmlns:lotacaoHeader="http://esus.ufsc.br/lotacaoheader" xmlns:variasLotacoesHeader="http://esus.ufsc.br/variaslotacoesheader" targetNamespace="http://esus.ufsc.br/fichaatendimentodomiciliarmaster" version="1.0">
-
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fichaAtendimentoDomiciliarChild="http://esus.ufsc.br/fichaatendimentodomiciliarchild" xmlns:fichaAtendimentoDomiciliarMaster="http://esus.ufsc.br/fichaatendimentodomiciliarmaster" xmlns:lotacaoHeader="http://esus.ufsc.br/lotacaoheader" xmlns:problemacondicao="http://esus.ufsc.br/problemacondicao" xmlns:variasLotacoesHeader="http://esus.ufsc.br/variaslotacoesheader" targetNamespace="http://esus.ufsc.br/fichaatendimentodomiciliarmaster" version="1.0">
+        
   <xs:import namespace="http://esus.ufsc.br/lotacaoheader" schemaLocation="lotacaoheader.xsd"/>
-
+        
   <xs:import namespace="http://esus.ufsc.br/variaslotacoesheader" schemaLocation="variaslotacoesheader.xsd"/>
-
+        
+  <xs:import namespace="http://esus.ufsc.br/problemacondicao" schemaLocation="problemacondicao.xsd"/>
+  
   <xs:import namespace="http://esus.ufsc.br/fichaatendimentodomiciliarchild" schemaLocation="fichaatendimentodomiciliarchild.xsd"/>
-
+        
   <xs:element name="fichaAtendimentoDomiciliarMasterTransport" type="fichaAtendimentoDomiciliarMaster:fichaAtendimentoDomiciliarMasterTransport"/>
-
+        
   <xs:complexType name="fichaAtendimentoDomiciliarMasterTransport">
     <xs:sequence>
-      <xs:element maxOccurs="1" name="uuidFicha" type="xs:string"/>
-      <xs:element maxOccurs="1" minOccurs="0" name="tpCdsOrigem" type="xs:int"/>
-      <xs:element maxOccurs="1" minOccurs="0" name="headerTransport" type="variasLotacoesHeader:variasLotacoesHeaderTransport"/>
+      <xs:element name="uuidFicha" type="xs:string"/>
+      <xs:element minOccurs="0" name="tpCdsOrigem" type="xs:int"/>
+      <xs:element minOccurs="0" name="headerTransport" type="variasLotacoesHeader:variasLotacoesHeaderTransport"/>
       <xs:element maxOccurs="unbounded" minOccurs="0" name="atendimentosDomiciliares" type="fichaAtendimentoDomiciliarChild:fichaAtendimentoDomiciliarChildTransport"/>
     </xs:sequence>
   </xs:complexType>

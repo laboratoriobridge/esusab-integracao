@@ -29,13 +29,10 @@ struct FichaAtendimentoIndividualChildThrift {
 	5:optional i64 sexo;
 	6:optional i64 turno;
 	7:optional i64 tipoAtendimento;
-	8:optional double pesoAcompanhamentoNutricional;
-	9:optional double alturaAcompanhamentoNutricional;
 	10:optional i64 aleitamentoMaterno;
 	11:optional i64 dumDaGestante;
 	12:optional i32 idadeGestacional;
 	13:optional i64 atencaoDomiciliarModalidade;
-	14:optional ProblemaCondicaoAvaliacaoAIThrift problemaCondicaoAvaliada;
 	17:optional list<ExameThrift> exame;
 	18:optional bool vacinaEmDia;
 	19:optional i64 pic;
@@ -46,7 +43,6 @@ struct FichaAtendimentoIndividualChildThrift {
 	24:optional i32 nuGestasPrevias;
 	25:optional i32 nuPartos;
 	26:optional i64 racionalidadeSaude;
-	27:optional double perimetroCefalico;
 	28:optional i64 dataHoraInicialAtendimento;
 	29:optional i64 dataHoraFinalAtendimento;
 	30:optional string cpfCidadao;
@@ -58,6 +54,8 @@ struct FichaAtendimentoIndividualChildThrift {
 	36:optional i64 tipoParticipacaoCidadao;
 	37:optional i64 tipoParticipacaoProfissionalConvidado;
 	38:optional list<i64> emultis;
+	39:optional common.MedicoesThrift medicoes;
+	40:optional list<common.ProblemaCondicaoThrift> problemasCondicoes;
 }
 
 struct FichaAtendimentoIndividualMasterThrift {

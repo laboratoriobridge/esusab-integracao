@@ -36,6 +36,8 @@ type
   IEncaminhamentoExternoThrift = interface;
   IResultadoExameThrift = interface;
   IResultadosExameThrift = interface;
+  IMedicoesThrift = interface;
+  IProblemaCondicaoThrift = interface;
 
   IHeaderCdsCadastroThrift = interface(IBase)
     function GetCnesUnidadeSaude: string;
@@ -1063,6 +1065,322 @@ type
     property __isset_DataRealizacao: Boolean read Get__isset_DataRealizacao;
     property __isset_DataResultado: Boolean read Get__isset_DataResultado;
     property __isset_ResultadoExame: Boolean read Get__isset_ResultadoExame;
+  end;
+
+  IMedicoesThrift = interface(IBase)
+    function GetCircunferenciaAbdominal: Double;
+    procedure SetCircunferenciaAbdominal( const Value: Double);
+    function GetPerimetroPanturrilha: Double;
+    procedure SetPerimetroPanturrilha( const Value: Double);
+    function GetPressaoArterialSistolica: Integer;
+    procedure SetPressaoArterialSistolica( const Value: Integer);
+    function GetPressaoArterialDiastolica: Integer;
+    procedure SetPressaoArterialDiastolica( const Value: Integer);
+    function GetFrequenciaRespiratoria: Integer;
+    procedure SetFrequenciaRespiratoria( const Value: Integer);
+    function GetFrequenciaCardiaca: Integer;
+    procedure SetFrequenciaCardiaca( const Value: Integer);
+    function GetTemperatura: Double;
+    procedure SetTemperatura( const Value: Double);
+    function GetSaturacaoO2: Integer;
+    procedure SetSaturacaoO2( const Value: Integer);
+    function GetGlicemiaCapilar: Integer;
+    procedure SetGlicemiaCapilar( const Value: Integer);
+    function GetTipoGlicemiaCapilar: Int64;
+    procedure SetTipoGlicemiaCapilar( const Value: Int64);
+    function GetPeso: Double;
+    procedure SetPeso( const Value: Double);
+    function GetAltura: Double;
+    procedure SetAltura( const Value: Double);
+    function GetPerimetroCefalico: Double;
+    procedure SetPerimetroCefalico( const Value: Double);
+
+    property CircunferenciaAbdominal: Double read GetCircunferenciaAbdominal write SetCircunferenciaAbdominal;
+    property PerimetroPanturrilha: Double read GetPerimetroPanturrilha write SetPerimetroPanturrilha;
+    property PressaoArterialSistolica: Integer read GetPressaoArterialSistolica write SetPressaoArterialSistolica;
+    property PressaoArterialDiastolica: Integer read GetPressaoArterialDiastolica write SetPressaoArterialDiastolica;
+    property FrequenciaRespiratoria: Integer read GetFrequenciaRespiratoria write SetFrequenciaRespiratoria;
+    property FrequenciaCardiaca: Integer read GetFrequenciaCardiaca write SetFrequenciaCardiaca;
+    property Temperatura: Double read GetTemperatura write SetTemperatura;
+    property SaturacaoO2: Integer read GetSaturacaoO2 write SetSaturacaoO2;
+    property GlicemiaCapilar: Integer read GetGlicemiaCapilar write SetGlicemiaCapilar;
+    property TipoGlicemiaCapilar: Int64 read GetTipoGlicemiaCapilar write SetTipoGlicemiaCapilar;
+    property Peso: Double read GetPeso write SetPeso;
+    property Altura: Double read GetAltura write SetAltura;
+    property PerimetroCefalico: Double read GetPerimetroCefalico write SetPerimetroCefalico;
+
+    function Get__isset_CircunferenciaAbdominal: Boolean;
+    function Get__isset_PerimetroPanturrilha: Boolean;
+    function Get__isset_PressaoArterialSistolica: Boolean;
+    function Get__isset_PressaoArterialDiastolica: Boolean;
+    function Get__isset_FrequenciaRespiratoria: Boolean;
+    function Get__isset_FrequenciaCardiaca: Boolean;
+    function Get__isset_Temperatura: Boolean;
+    function Get__isset_SaturacaoO2: Boolean;
+    function Get__isset_GlicemiaCapilar: Boolean;
+    function Get__isset_TipoGlicemiaCapilar: Boolean;
+    function Get__isset_Peso: Boolean;
+    function Get__isset_Altura: Boolean;
+    function Get__isset_PerimetroCefalico: Boolean;
+
+    property __isset_CircunferenciaAbdominal: Boolean read Get__isset_CircunferenciaAbdominal;
+    property __isset_PerimetroPanturrilha: Boolean read Get__isset_PerimetroPanturrilha;
+    property __isset_PressaoArterialSistolica: Boolean read Get__isset_PressaoArterialSistolica;
+    property __isset_PressaoArterialDiastolica: Boolean read Get__isset_PressaoArterialDiastolica;
+    property __isset_FrequenciaRespiratoria: Boolean read Get__isset_FrequenciaRespiratoria;
+    property __isset_FrequenciaCardiaca: Boolean read Get__isset_FrequenciaCardiaca;
+    property __isset_Temperatura: Boolean read Get__isset_Temperatura;
+    property __isset_SaturacaoO2: Boolean read Get__isset_SaturacaoO2;
+    property __isset_GlicemiaCapilar: Boolean read Get__isset_GlicemiaCapilar;
+    property __isset_TipoGlicemiaCapilar: Boolean read Get__isset_TipoGlicemiaCapilar;
+    property __isset_Peso: Boolean read Get__isset_Peso;
+    property __isset_Altura: Boolean read Get__isset_Altura;
+    property __isset_PerimetroCefalico: Boolean read Get__isset_PerimetroCefalico;
+  end;
+
+  TMedicoesThriftImpl = class(TInterfacedObject, IBase, IMedicoesThrift)
+  private
+    FCircunferenciaAbdominal: Double;
+    FPerimetroPanturrilha: Double;
+    FPressaoArterialSistolica: Integer;
+    FPressaoArterialDiastolica: Integer;
+    FFrequenciaRespiratoria: Integer;
+    FFrequenciaCardiaca: Integer;
+    FTemperatura: Double;
+    FSaturacaoO2: Integer;
+    FGlicemiaCapilar: Integer;
+    FTipoGlicemiaCapilar: Int64;
+    FPeso: Double;
+    FAltura: Double;
+    FPerimetroCefalico: Double;
+    
+    F__isset_CircunferenciaAbdominal: Boolean;
+    F__isset_PerimetroPanturrilha: Boolean;
+    F__isset_PressaoArterialSistolica: Boolean;
+    F__isset_PressaoArterialDiastolica: Boolean;
+    F__isset_FrequenciaRespiratoria: Boolean;
+    F__isset_FrequenciaCardiaca: Boolean;
+    F__isset_Temperatura: Boolean;
+    F__isset_SaturacaoO2: Boolean;
+    F__isset_GlicemiaCapilar: Boolean;
+    F__isset_TipoGlicemiaCapilar: Boolean;
+    F__isset_Peso: Boolean;
+    F__isset_Altura: Boolean;
+    F__isset_PerimetroCefalico: Boolean;
+    
+    function GetCircunferenciaAbdominal: Double;
+    procedure SetCircunferenciaAbdominal( const Value: Double);
+    function GetPerimetroPanturrilha: Double;
+    procedure SetPerimetroPanturrilha( const Value: Double);
+    function GetPressaoArterialSistolica: Integer;
+    procedure SetPressaoArterialSistolica( const Value: Integer);
+    function GetPressaoArterialDiastolica: Integer;
+    procedure SetPressaoArterialDiastolica( const Value: Integer);
+    function GetFrequenciaRespiratoria: Integer;
+    procedure SetFrequenciaRespiratoria( const Value: Integer);
+    function GetFrequenciaCardiaca: Integer;
+    procedure SetFrequenciaCardiaca( const Value: Integer);
+    function GetTemperatura: Double;
+    procedure SetTemperatura( const Value: Double);
+    function GetSaturacaoO2: Integer;
+    procedure SetSaturacaoO2( const Value: Integer);
+    function GetGlicemiaCapilar: Integer;
+    procedure SetGlicemiaCapilar( const Value: Integer);
+    function GetTipoGlicemiaCapilar: Int64;
+    procedure SetTipoGlicemiaCapilar( const Value: Int64);
+    function GetPeso: Double;
+    procedure SetPeso( const Value: Double);
+    function GetAltura: Double;
+    procedure SetAltura( const Value: Double);
+    function GetPerimetroCefalico: Double;
+    procedure SetPerimetroCefalico( const Value: Double);
+
+    function Get__isset_CircunferenciaAbdominal: Boolean;
+    function Get__isset_PerimetroPanturrilha: Boolean;
+    function Get__isset_PressaoArterialSistolica: Boolean;
+    function Get__isset_PressaoArterialDiastolica: Boolean;
+    function Get__isset_FrequenciaRespiratoria: Boolean;
+    function Get__isset_FrequenciaCardiaca: Boolean;
+    function Get__isset_Temperatura: Boolean;
+    function Get__isset_SaturacaoO2: Boolean;
+    function Get__isset_GlicemiaCapilar: Boolean;
+    function Get__isset_TipoGlicemiaCapilar: Boolean;
+    function Get__isset_Peso: Boolean;
+    function Get__isset_Altura: Boolean;
+    function Get__isset_PerimetroCefalico: Boolean;
+  public
+    constructor Create;
+    destructor Destroy; override;
+
+    function ToString: string; override;
+
+    // IBase
+    procedure Read( const iprot: IProtocol);
+    procedure Write( const oprot: IProtocol);
+
+    // Properties
+    property CircunferenciaAbdominal: Double read GetCircunferenciaAbdominal write SetCircunferenciaAbdominal;
+    property PerimetroPanturrilha: Double read GetPerimetroPanturrilha write SetPerimetroPanturrilha;
+    property PressaoArterialSistolica: Integer read GetPressaoArterialSistolica write SetPressaoArterialSistolica;
+    property PressaoArterialDiastolica: Integer read GetPressaoArterialDiastolica write SetPressaoArterialDiastolica;
+    property FrequenciaRespiratoria: Integer read GetFrequenciaRespiratoria write SetFrequenciaRespiratoria;
+    property FrequenciaCardiaca: Integer read GetFrequenciaCardiaca write SetFrequenciaCardiaca;
+    property Temperatura: Double read GetTemperatura write SetTemperatura;
+    property SaturacaoO2: Integer read GetSaturacaoO2 write SetSaturacaoO2;
+    property GlicemiaCapilar: Integer read GetGlicemiaCapilar write SetGlicemiaCapilar;
+    property TipoGlicemiaCapilar: Int64 read GetTipoGlicemiaCapilar write SetTipoGlicemiaCapilar;
+    property Peso: Double read GetPeso write SetPeso;
+    property Altura: Double read GetAltura write SetAltura;
+    property PerimetroCefalico: Double read GetPerimetroCefalico write SetPerimetroCefalico;
+
+    // isset
+    property __isset_CircunferenciaAbdominal: Boolean read Get__isset_CircunferenciaAbdominal;
+    property __isset_PerimetroPanturrilha: Boolean read Get__isset_PerimetroPanturrilha;
+    property __isset_PressaoArterialSistolica: Boolean read Get__isset_PressaoArterialSistolica;
+    property __isset_PressaoArterialDiastolica: Boolean read Get__isset_PressaoArterialDiastolica;
+    property __isset_FrequenciaRespiratoria: Boolean read Get__isset_FrequenciaRespiratoria;
+    property __isset_FrequenciaCardiaca: Boolean read Get__isset_FrequenciaCardiaca;
+    property __isset_Temperatura: Boolean read Get__isset_Temperatura;
+    property __isset_SaturacaoO2: Boolean read Get__isset_SaturacaoO2;
+    property __isset_GlicemiaCapilar: Boolean read Get__isset_GlicemiaCapilar;
+    property __isset_TipoGlicemiaCapilar: Boolean read Get__isset_TipoGlicemiaCapilar;
+    property __isset_Peso: Boolean read Get__isset_Peso;
+    property __isset_Altura: Boolean read Get__isset_Altura;
+    property __isset_PerimetroCefalico: Boolean read Get__isset_PerimetroCefalico;
+  end;
+
+  IProblemaCondicaoThrift = interface(IBase)
+    function GetUuidProblema: string;
+    procedure SetUuidProblema( const Value: string);
+    function GetUuidEvolucaoProblema: string;
+    procedure SetUuidEvolucaoProblema( const Value: string);
+    function GetCoSequencialEvolucao: Int64;
+    procedure SetCoSequencialEvolucao( const Value: Int64);
+    function GetCiap: string;
+    procedure SetCiap( const Value: string);
+    function GetCid10: string;
+    procedure SetCid10( const Value: string);
+    function GetSituacao: Int64;
+    procedure SetSituacao( const Value: Int64);
+    function GetDataInicioProblema: Int64;
+    procedure SetDataInicioProblema( const Value: Int64);
+    function GetDataFimProblema: Int64;
+    procedure SetDataFimProblema( const Value: Int64);
+    function GetIsAvaliado: Boolean;
+    procedure SetIsAvaliado( const Value: Boolean);
+
+    property UuidProblema: string read GetUuidProblema write SetUuidProblema;
+    property UuidEvolucaoProblema: string read GetUuidEvolucaoProblema write SetUuidEvolucaoProblema;
+    property CoSequencialEvolucao: Int64 read GetCoSequencialEvolucao write SetCoSequencialEvolucao;
+    property Ciap: string read GetCiap write SetCiap;
+    property Cid10: string read GetCid10 write SetCid10;
+    property Situacao: Int64 read GetSituacao write SetSituacao;
+    property DataInicioProblema: Int64 read GetDataInicioProblema write SetDataInicioProblema;
+    property DataFimProblema: Int64 read GetDataFimProblema write SetDataFimProblema;
+    property IsAvaliado: Boolean read GetIsAvaliado write SetIsAvaliado;
+
+    function Get__isset_UuidProblema: Boolean;
+    function Get__isset_UuidEvolucaoProblema: Boolean;
+    function Get__isset_CoSequencialEvolucao: Boolean;
+    function Get__isset_Ciap: Boolean;
+    function Get__isset_Cid10: Boolean;
+    function Get__isset_Situacao: Boolean;
+    function Get__isset_DataInicioProblema: Boolean;
+    function Get__isset_DataFimProblema: Boolean;
+    function Get__isset_IsAvaliado: Boolean;
+
+    property __isset_UuidProblema: Boolean read Get__isset_UuidProblema;
+    property __isset_UuidEvolucaoProblema: Boolean read Get__isset_UuidEvolucaoProblema;
+    property __isset_CoSequencialEvolucao: Boolean read Get__isset_CoSequencialEvolucao;
+    property __isset_Ciap: Boolean read Get__isset_Ciap;
+    property __isset_Cid10: Boolean read Get__isset_Cid10;
+    property __isset_Situacao: Boolean read Get__isset_Situacao;
+    property __isset_DataInicioProblema: Boolean read Get__isset_DataInicioProblema;
+    property __isset_DataFimProblema: Boolean read Get__isset_DataFimProblema;
+    property __isset_IsAvaliado: Boolean read Get__isset_IsAvaliado;
+  end;
+
+  TProblemaCondicaoThriftImpl = class(TInterfacedObject, IBase, IProblemaCondicaoThrift)
+  private
+    FUuidProblema: string;
+    FUuidEvolucaoProblema: string;
+    FCoSequencialEvolucao: Int64;
+    FCiap: string;
+    FCid10: string;
+    FSituacao: Int64;
+    FDataInicioProblema: Int64;
+    FDataFimProblema: Int64;
+    FIsAvaliado: Boolean;
+    
+    F__isset_UuidProblema: Boolean;
+    F__isset_UuidEvolucaoProblema: Boolean;
+    F__isset_CoSequencialEvolucao: Boolean;
+    F__isset_Ciap: Boolean;
+    F__isset_Cid10: Boolean;
+    F__isset_Situacao: Boolean;
+    F__isset_DataInicioProblema: Boolean;
+    F__isset_DataFimProblema: Boolean;
+    F__isset_IsAvaliado: Boolean;
+    
+    function GetUuidProblema: string;
+    procedure SetUuidProblema( const Value: string);
+    function GetUuidEvolucaoProblema: string;
+    procedure SetUuidEvolucaoProblema( const Value: string);
+    function GetCoSequencialEvolucao: Int64;
+    procedure SetCoSequencialEvolucao( const Value: Int64);
+    function GetCiap: string;
+    procedure SetCiap( const Value: string);
+    function GetCid10: string;
+    procedure SetCid10( const Value: string);
+    function GetSituacao: Int64;
+    procedure SetSituacao( const Value: Int64);
+    function GetDataInicioProblema: Int64;
+    procedure SetDataInicioProblema( const Value: Int64);
+    function GetDataFimProblema: Int64;
+    procedure SetDataFimProblema( const Value: Int64);
+    function GetIsAvaliado: Boolean;
+    procedure SetIsAvaliado( const Value: Boolean);
+
+    function Get__isset_UuidProblema: Boolean;
+    function Get__isset_UuidEvolucaoProblema: Boolean;
+    function Get__isset_CoSequencialEvolucao: Boolean;
+    function Get__isset_Ciap: Boolean;
+    function Get__isset_Cid10: Boolean;
+    function Get__isset_Situacao: Boolean;
+    function Get__isset_DataInicioProblema: Boolean;
+    function Get__isset_DataFimProblema: Boolean;
+    function Get__isset_IsAvaliado: Boolean;
+  public
+    constructor Create;
+    destructor Destroy; override;
+
+    function ToString: string; override;
+
+    // IBase
+    procedure Read( const iprot: IProtocol);
+    procedure Write( const oprot: IProtocol);
+
+    // Properties
+    property UuidProblema: string read GetUuidProblema write SetUuidProblema;
+    property UuidEvolucaoProblema: string read GetUuidEvolucaoProblema write SetUuidEvolucaoProblema;
+    property CoSequencialEvolucao: Int64 read GetCoSequencialEvolucao write SetCoSequencialEvolucao;
+    property Ciap: string read GetCiap write SetCiap;
+    property Cid10: string read GetCid10 write SetCid10;
+    property Situacao: Int64 read GetSituacao write SetSituacao;
+    property DataInicioProblema: Int64 read GetDataInicioProblema write SetDataInicioProblema;
+    property DataFimProblema: Int64 read GetDataFimProblema write SetDataFimProblema;
+    property IsAvaliado: Boolean read GetIsAvaliado write SetIsAvaliado;
+
+    // isset
+    property __isset_UuidProblema: Boolean read Get__isset_UuidProblema;
+    property __isset_UuidEvolucaoProblema: Boolean read Get__isset_UuidEvolucaoProblema;
+    property __isset_CoSequencialEvolucao: Boolean read Get__isset_CoSequencialEvolucao;
+    property __isset_Ciap: Boolean read Get__isset_Ciap;
+    property __isset_Cid10: Boolean read Get__isset_Cid10;
+    property __isset_Situacao: Boolean read Get__isset_Situacao;
+    property __isset_DataInicioProblema: Boolean read Get__isset_DataInicioProblema;
+    property __isset_DataFimProblema: Boolean read Get__isset_DataFimProblema;
+    property __isset_IsAvaliado: Boolean read Get__isset_IsAvaliado;
   end;
 
 implementation
@@ -4335,6 +4653,1024 @@ begin
     if _first24 then {prevent warning};
   finally
     _sb23.Free;
+  end;
+end;
+
+constructor TMedicoesThriftImpl.Create;
+begin
+  inherited;
+end;
+
+destructor TMedicoesThriftImpl.Destroy;
+begin
+  inherited;
+end;
+
+function TMedicoesThriftImpl.GetCircunferenciaAbdominal: Double;
+begin
+  Result := FCircunferenciaAbdominal;
+end;
+
+procedure TMedicoesThriftImpl.SetCircunferenciaAbdominal( const Value: Double);
+begin
+  F__isset_CircunferenciaAbdominal := True;
+  FCircunferenciaAbdominal := Value;
+end;
+
+function TMedicoesThriftImpl.Get__isset_CircunferenciaAbdominal: Boolean;
+begin
+  Result := F__isset_CircunferenciaAbdominal;
+end;
+
+function TMedicoesThriftImpl.GetPerimetroPanturrilha: Double;
+begin
+  Result := FPerimetroPanturrilha;
+end;
+
+procedure TMedicoesThriftImpl.SetPerimetroPanturrilha( const Value: Double);
+begin
+  F__isset_PerimetroPanturrilha := True;
+  FPerimetroPanturrilha := Value;
+end;
+
+function TMedicoesThriftImpl.Get__isset_PerimetroPanturrilha: Boolean;
+begin
+  Result := F__isset_PerimetroPanturrilha;
+end;
+
+function TMedicoesThriftImpl.GetPressaoArterialSistolica: Integer;
+begin
+  Result := FPressaoArterialSistolica;
+end;
+
+procedure TMedicoesThriftImpl.SetPressaoArterialSistolica( const Value: Integer);
+begin
+  F__isset_PressaoArterialSistolica := True;
+  FPressaoArterialSistolica := Value;
+end;
+
+function TMedicoesThriftImpl.Get__isset_PressaoArterialSistolica: Boolean;
+begin
+  Result := F__isset_PressaoArterialSistolica;
+end;
+
+function TMedicoesThriftImpl.GetPressaoArterialDiastolica: Integer;
+begin
+  Result := FPressaoArterialDiastolica;
+end;
+
+procedure TMedicoesThriftImpl.SetPressaoArterialDiastolica( const Value: Integer);
+begin
+  F__isset_PressaoArterialDiastolica := True;
+  FPressaoArterialDiastolica := Value;
+end;
+
+function TMedicoesThriftImpl.Get__isset_PressaoArterialDiastolica: Boolean;
+begin
+  Result := F__isset_PressaoArterialDiastolica;
+end;
+
+function TMedicoesThriftImpl.GetFrequenciaRespiratoria: Integer;
+begin
+  Result := FFrequenciaRespiratoria;
+end;
+
+procedure TMedicoesThriftImpl.SetFrequenciaRespiratoria( const Value: Integer);
+begin
+  F__isset_FrequenciaRespiratoria := True;
+  FFrequenciaRespiratoria := Value;
+end;
+
+function TMedicoesThriftImpl.Get__isset_FrequenciaRespiratoria: Boolean;
+begin
+  Result := F__isset_FrequenciaRespiratoria;
+end;
+
+function TMedicoesThriftImpl.GetFrequenciaCardiaca: Integer;
+begin
+  Result := FFrequenciaCardiaca;
+end;
+
+procedure TMedicoesThriftImpl.SetFrequenciaCardiaca( const Value: Integer);
+begin
+  F__isset_FrequenciaCardiaca := True;
+  FFrequenciaCardiaca := Value;
+end;
+
+function TMedicoesThriftImpl.Get__isset_FrequenciaCardiaca: Boolean;
+begin
+  Result := F__isset_FrequenciaCardiaca;
+end;
+
+function TMedicoesThriftImpl.GetTemperatura: Double;
+begin
+  Result := FTemperatura;
+end;
+
+procedure TMedicoesThriftImpl.SetTemperatura( const Value: Double);
+begin
+  F__isset_Temperatura := True;
+  FTemperatura := Value;
+end;
+
+function TMedicoesThriftImpl.Get__isset_Temperatura: Boolean;
+begin
+  Result := F__isset_Temperatura;
+end;
+
+function TMedicoesThriftImpl.GetSaturacaoO2: Integer;
+begin
+  Result := FSaturacaoO2;
+end;
+
+procedure TMedicoesThriftImpl.SetSaturacaoO2( const Value: Integer);
+begin
+  F__isset_SaturacaoO2 := True;
+  FSaturacaoO2 := Value;
+end;
+
+function TMedicoesThriftImpl.Get__isset_SaturacaoO2: Boolean;
+begin
+  Result := F__isset_SaturacaoO2;
+end;
+
+function TMedicoesThriftImpl.GetGlicemiaCapilar: Integer;
+begin
+  Result := FGlicemiaCapilar;
+end;
+
+procedure TMedicoesThriftImpl.SetGlicemiaCapilar( const Value: Integer);
+begin
+  F__isset_GlicemiaCapilar := True;
+  FGlicemiaCapilar := Value;
+end;
+
+function TMedicoesThriftImpl.Get__isset_GlicemiaCapilar: Boolean;
+begin
+  Result := F__isset_GlicemiaCapilar;
+end;
+
+function TMedicoesThriftImpl.GetTipoGlicemiaCapilar: Int64;
+begin
+  Result := FTipoGlicemiaCapilar;
+end;
+
+procedure TMedicoesThriftImpl.SetTipoGlicemiaCapilar( const Value: Int64);
+begin
+  F__isset_TipoGlicemiaCapilar := True;
+  FTipoGlicemiaCapilar := Value;
+end;
+
+function TMedicoesThriftImpl.Get__isset_TipoGlicemiaCapilar: Boolean;
+begin
+  Result := F__isset_TipoGlicemiaCapilar;
+end;
+
+function TMedicoesThriftImpl.GetPeso: Double;
+begin
+  Result := FPeso;
+end;
+
+procedure TMedicoesThriftImpl.SetPeso( const Value: Double);
+begin
+  F__isset_Peso := True;
+  FPeso := Value;
+end;
+
+function TMedicoesThriftImpl.Get__isset_Peso: Boolean;
+begin
+  Result := F__isset_Peso;
+end;
+
+function TMedicoesThriftImpl.GetAltura: Double;
+begin
+  Result := FAltura;
+end;
+
+procedure TMedicoesThriftImpl.SetAltura( const Value: Double);
+begin
+  F__isset_Altura := True;
+  FAltura := Value;
+end;
+
+function TMedicoesThriftImpl.Get__isset_Altura: Boolean;
+begin
+  Result := F__isset_Altura;
+end;
+
+function TMedicoesThriftImpl.GetPerimetroCefalico: Double;
+begin
+  Result := FPerimetroCefalico;
+end;
+
+procedure TMedicoesThriftImpl.SetPerimetroCefalico( const Value: Double);
+begin
+  F__isset_PerimetroCefalico := True;
+  FPerimetroCefalico := Value;
+end;
+
+function TMedicoesThriftImpl.Get__isset_PerimetroCefalico: Boolean;
+begin
+  Result := F__isset_PerimetroCefalico;
+end;
+
+procedure TMedicoesThriftImpl.Read( const iprot: IProtocol);
+var
+  field_ : IField;
+  struc : IStruct;
+  tracker : IProtocolRecursionTracker;
+
+begin
+  tracker := iprot.NextRecursionLevel;
+  struc := iprot.ReadStructBegin;
+  try
+    while (true) do
+    begin
+      field_ := iprot.ReadFieldBegin();
+      if (field_.Type_ = TType.Stop) then
+      begin
+        Break;
+      end;
+      case field_.ID of
+        1: begin
+          if (field_.Type_ = TType.Double_) then
+          begin
+            CircunferenciaAbdominal := iprot.ReadDouble();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        2: begin
+          if (field_.Type_ = TType.Double_) then
+          begin
+            PerimetroPanturrilha := iprot.ReadDouble();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        3: begin
+          if (field_.Type_ = TType.I32) then
+          begin
+            PressaoArterialSistolica := iprot.ReadI32();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        4: begin
+          if (field_.Type_ = TType.I32) then
+          begin
+            PressaoArterialDiastolica := iprot.ReadI32();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        5: begin
+          if (field_.Type_ = TType.I32) then
+          begin
+            FrequenciaRespiratoria := iprot.ReadI32();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        6: begin
+          if (field_.Type_ = TType.I32) then
+          begin
+            FrequenciaCardiaca := iprot.ReadI32();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        7: begin
+          if (field_.Type_ = TType.Double_) then
+          begin
+            Temperatura := iprot.ReadDouble();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        8: begin
+          if (field_.Type_ = TType.I32) then
+          begin
+            SaturacaoO2 := iprot.ReadI32();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        9: begin
+          if (field_.Type_ = TType.I32) then
+          begin
+            GlicemiaCapilar := iprot.ReadI32();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        10: begin
+          if (field_.Type_ = TType.I64) then
+          begin
+            TipoGlicemiaCapilar := iprot.ReadI64();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        11: begin
+          if (field_.Type_ = TType.Double_) then
+          begin
+            Peso := iprot.ReadDouble();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        12: begin
+          if (field_.Type_ = TType.Double_) then
+          begin
+            Altura := iprot.ReadDouble();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        13: begin
+          if (field_.Type_ = TType.Double_) then
+          begin
+            PerimetroCefalico := iprot.ReadDouble();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end
+        else begin
+          TProtocolUtil.Skip(iprot, field_.Type_);
+        end;
+      end;
+      iprot.ReadFieldEnd;
+    end;
+  finally
+    iprot.ReadStructEnd;
+  end;
+end;
+
+procedure TMedicoesThriftImpl.Write( const oprot: IProtocol);
+var
+  struc : IStruct;
+  field_ : IField;
+  tracker : IProtocolRecursionTracker;
+begin
+  tracker := oprot.NextRecursionLevel;
+  struc := TStructImpl.Create('MedicoesThrift');
+  oprot.WriteStructBegin(struc);
+  field_ := TFieldImpl.Create;
+  if (__isset_CircunferenciaAbdominal) then
+  begin
+    field_.Name := 'circunferenciaAbdominal';
+    field_.Type_  := TType.Double_;
+    field_.ID := 1;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteDouble(CircunferenciaAbdominal);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_PerimetroPanturrilha) then
+  begin
+    field_.Name := 'perimetroPanturrilha';
+    field_.Type_  := TType.Double_;
+    field_.ID := 2;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteDouble(PerimetroPanturrilha);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_PressaoArterialSistolica) then
+  begin
+    field_.Name := 'pressaoArterialSistolica';
+    field_.Type_  := TType.I32;
+    field_.ID := 3;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteI32(PressaoArterialSistolica);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_PressaoArterialDiastolica) then
+  begin
+    field_.Name := 'pressaoArterialDiastolica';
+    field_.Type_  := TType.I32;
+    field_.ID := 4;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteI32(PressaoArterialDiastolica);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_FrequenciaRespiratoria) then
+  begin
+    field_.Name := 'frequenciaRespiratoria';
+    field_.Type_  := TType.I32;
+    field_.ID := 5;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteI32(FrequenciaRespiratoria);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_FrequenciaCardiaca) then
+  begin
+    field_.Name := 'frequenciaCardiaca';
+    field_.Type_  := TType.I32;
+    field_.ID := 6;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteI32(FrequenciaCardiaca);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_Temperatura) then
+  begin
+    field_.Name := 'temperatura';
+    field_.Type_  := TType.Double_;
+    field_.ID := 7;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteDouble(Temperatura);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_SaturacaoO2) then
+  begin
+    field_.Name := 'saturacaoO2';
+    field_.Type_  := TType.I32;
+    field_.ID := 8;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteI32(SaturacaoO2);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_GlicemiaCapilar) then
+  begin
+    field_.Name := 'glicemiaCapilar';
+    field_.Type_  := TType.I32;
+    field_.ID := 9;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteI32(GlicemiaCapilar);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_TipoGlicemiaCapilar) then
+  begin
+    field_.Name := 'tipoGlicemiaCapilar';
+    field_.Type_  := TType.I64;
+    field_.ID := 10;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteI64(TipoGlicemiaCapilar);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_Peso) then
+  begin
+    field_.Name := 'peso';
+    field_.Type_  := TType.Double_;
+    field_.ID := 11;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteDouble(Peso);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_Altura) then
+  begin
+    field_.Name := 'altura';
+    field_.Type_  := TType.Double_;
+    field_.ID := 12;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteDouble(Altura);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_PerimetroCefalico) then
+  begin
+    field_.Name := 'perimetroCefalico';
+    field_.Type_  := TType.Double_;
+    field_.ID := 13;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteDouble(PerimetroCefalico);
+    oprot.WriteFieldEnd();
+  end;
+  oprot.WriteFieldStop();
+  oprot.WriteStructEnd();
+end;
+
+function TMedicoesThriftImpl.ToString: string;
+var
+  _sb25 : TThriftStringBuilder;
+  _first26 : Boolean;
+begin
+  _sb25 := TThriftStringBuilder.Create('(');
+  try
+    _first26 := TRUE;
+    if (__isset_CircunferenciaAbdominal) then begin
+      if not _first26 then _sb25.Append(',');
+      _first26 := FALSE;
+      _sb25.Append('CircunferenciaAbdominal: ');
+      _sb25.Append(CircunferenciaAbdominal);
+    end;
+    if (__isset_PerimetroPanturrilha) then begin
+      if not _first26 then _sb25.Append(',');
+      _first26 := FALSE;
+      _sb25.Append('PerimetroPanturrilha: ');
+      _sb25.Append(PerimetroPanturrilha);
+    end;
+    if (__isset_PressaoArterialSistolica) then begin
+      if not _first26 then _sb25.Append(',');
+      _first26 := FALSE;
+      _sb25.Append('PressaoArterialSistolica: ');
+      _sb25.Append(PressaoArterialSistolica);
+    end;
+    if (__isset_PressaoArterialDiastolica) then begin
+      if not _first26 then _sb25.Append(',');
+      _first26 := FALSE;
+      _sb25.Append('PressaoArterialDiastolica: ');
+      _sb25.Append(PressaoArterialDiastolica);
+    end;
+    if (__isset_FrequenciaRespiratoria) then begin
+      if not _first26 then _sb25.Append(',');
+      _first26 := FALSE;
+      _sb25.Append('FrequenciaRespiratoria: ');
+      _sb25.Append(FrequenciaRespiratoria);
+    end;
+    if (__isset_FrequenciaCardiaca) then begin
+      if not _first26 then _sb25.Append(',');
+      _first26 := FALSE;
+      _sb25.Append('FrequenciaCardiaca: ');
+      _sb25.Append(FrequenciaCardiaca);
+    end;
+    if (__isset_Temperatura) then begin
+      if not _first26 then _sb25.Append(',');
+      _first26 := FALSE;
+      _sb25.Append('Temperatura: ');
+      _sb25.Append(Temperatura);
+    end;
+    if (__isset_SaturacaoO2) then begin
+      if not _first26 then _sb25.Append(',');
+      _first26 := FALSE;
+      _sb25.Append('SaturacaoO2: ');
+      _sb25.Append(SaturacaoO2);
+    end;
+    if (__isset_GlicemiaCapilar) then begin
+      if not _first26 then _sb25.Append(',');
+      _first26 := FALSE;
+      _sb25.Append('GlicemiaCapilar: ');
+      _sb25.Append(GlicemiaCapilar);
+    end;
+    if (__isset_TipoGlicemiaCapilar) then begin
+      if not _first26 then _sb25.Append(',');
+      _first26 := FALSE;
+      _sb25.Append('TipoGlicemiaCapilar: ');
+      _sb25.Append(TipoGlicemiaCapilar);
+    end;
+    if (__isset_Peso) then begin
+      if not _first26 then _sb25.Append(',');
+      _first26 := FALSE;
+      _sb25.Append('Peso: ');
+      _sb25.Append(Peso);
+    end;
+    if (__isset_Altura) then begin
+      if not _first26 then _sb25.Append(',');
+      _first26 := FALSE;
+      _sb25.Append('Altura: ');
+      _sb25.Append(Altura);
+    end;
+    if (__isset_PerimetroCefalico) then begin
+      if not _first26 then _sb25.Append(',');
+      _first26 := FALSE;
+      _sb25.Append('PerimetroCefalico: ');
+      _sb25.Append(PerimetroCefalico);
+    end;
+    _sb25.Append(')');
+    Result := _sb25.ToString;
+    if _first26 then {prevent warning};
+  finally
+    _sb25.Free;
+  end;
+end;
+
+constructor TProblemaCondicaoThriftImpl.Create;
+begin
+  inherited;
+end;
+
+destructor TProblemaCondicaoThriftImpl.Destroy;
+begin
+  inherited;
+end;
+
+function TProblemaCondicaoThriftImpl.GetUuidProblema: string;
+begin
+  Result := FUuidProblema;
+end;
+
+procedure TProblemaCondicaoThriftImpl.SetUuidProblema( const Value: string);
+begin
+  F__isset_UuidProblema := True;
+  FUuidProblema := Value;
+end;
+
+function TProblemaCondicaoThriftImpl.Get__isset_UuidProblema: Boolean;
+begin
+  Result := F__isset_UuidProblema;
+end;
+
+function TProblemaCondicaoThriftImpl.GetUuidEvolucaoProblema: string;
+begin
+  Result := FUuidEvolucaoProblema;
+end;
+
+procedure TProblemaCondicaoThriftImpl.SetUuidEvolucaoProblema( const Value: string);
+begin
+  F__isset_UuidEvolucaoProblema := True;
+  FUuidEvolucaoProblema := Value;
+end;
+
+function TProblemaCondicaoThriftImpl.Get__isset_UuidEvolucaoProblema: Boolean;
+begin
+  Result := F__isset_UuidEvolucaoProblema;
+end;
+
+function TProblemaCondicaoThriftImpl.GetCoSequencialEvolucao: Int64;
+begin
+  Result := FCoSequencialEvolucao;
+end;
+
+procedure TProblemaCondicaoThriftImpl.SetCoSequencialEvolucao( const Value: Int64);
+begin
+  F__isset_CoSequencialEvolucao := True;
+  FCoSequencialEvolucao := Value;
+end;
+
+function TProblemaCondicaoThriftImpl.Get__isset_CoSequencialEvolucao: Boolean;
+begin
+  Result := F__isset_CoSequencialEvolucao;
+end;
+
+function TProblemaCondicaoThriftImpl.GetCiap: string;
+begin
+  Result := FCiap;
+end;
+
+procedure TProblemaCondicaoThriftImpl.SetCiap( const Value: string);
+begin
+  F__isset_Ciap := True;
+  FCiap := Value;
+end;
+
+function TProblemaCondicaoThriftImpl.Get__isset_Ciap: Boolean;
+begin
+  Result := F__isset_Ciap;
+end;
+
+function TProblemaCondicaoThriftImpl.GetCid10: string;
+begin
+  Result := FCid10;
+end;
+
+procedure TProblemaCondicaoThriftImpl.SetCid10( const Value: string);
+begin
+  F__isset_Cid10 := True;
+  FCid10 := Value;
+end;
+
+function TProblemaCondicaoThriftImpl.Get__isset_Cid10: Boolean;
+begin
+  Result := F__isset_Cid10;
+end;
+
+function TProblemaCondicaoThriftImpl.GetSituacao: Int64;
+begin
+  Result := FSituacao;
+end;
+
+procedure TProblemaCondicaoThriftImpl.SetSituacao( const Value: Int64);
+begin
+  F__isset_Situacao := True;
+  FSituacao := Value;
+end;
+
+function TProblemaCondicaoThriftImpl.Get__isset_Situacao: Boolean;
+begin
+  Result := F__isset_Situacao;
+end;
+
+function TProblemaCondicaoThriftImpl.GetDataInicioProblema: Int64;
+begin
+  Result := FDataInicioProblema;
+end;
+
+procedure TProblemaCondicaoThriftImpl.SetDataInicioProblema( const Value: Int64);
+begin
+  F__isset_DataInicioProblema := True;
+  FDataInicioProblema := Value;
+end;
+
+function TProblemaCondicaoThriftImpl.Get__isset_DataInicioProblema: Boolean;
+begin
+  Result := F__isset_DataInicioProblema;
+end;
+
+function TProblemaCondicaoThriftImpl.GetDataFimProblema: Int64;
+begin
+  Result := FDataFimProblema;
+end;
+
+procedure TProblemaCondicaoThriftImpl.SetDataFimProblema( const Value: Int64);
+begin
+  F__isset_DataFimProblema := True;
+  FDataFimProblema := Value;
+end;
+
+function TProblemaCondicaoThriftImpl.Get__isset_DataFimProblema: Boolean;
+begin
+  Result := F__isset_DataFimProblema;
+end;
+
+function TProblemaCondicaoThriftImpl.GetIsAvaliado: Boolean;
+begin
+  Result := FIsAvaliado;
+end;
+
+procedure TProblemaCondicaoThriftImpl.SetIsAvaliado( const Value: Boolean);
+begin
+  F__isset_IsAvaliado := True;
+  FIsAvaliado := Value;
+end;
+
+function TProblemaCondicaoThriftImpl.Get__isset_IsAvaliado: Boolean;
+begin
+  Result := F__isset_IsAvaliado;
+end;
+
+procedure TProblemaCondicaoThriftImpl.Read( const iprot: IProtocol);
+var
+  field_ : IField;
+  struc : IStruct;
+  tracker : IProtocolRecursionTracker;
+
+begin
+  tracker := iprot.NextRecursionLevel;
+  struc := iprot.ReadStructBegin;
+  try
+    while (true) do
+    begin
+      field_ := iprot.ReadFieldBegin();
+      if (field_.Type_ = TType.Stop) then
+      begin
+        Break;
+      end;
+      case field_.ID of
+        1: begin
+          if (field_.Type_ = TType.String_) then
+          begin
+            UuidProblema := iprot.ReadString();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        2: begin
+          if (field_.Type_ = TType.String_) then
+          begin
+            UuidEvolucaoProblema := iprot.ReadString();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        3: begin
+          if (field_.Type_ = TType.I64) then
+          begin
+            CoSequencialEvolucao := iprot.ReadI64();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        4: begin
+          if (field_.Type_ = TType.String_) then
+          begin
+            Ciap := iprot.ReadString();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        5: begin
+          if (field_.Type_ = TType.String_) then
+          begin
+            Cid10 := iprot.ReadString();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        6: begin
+          if (field_.Type_ = TType.I64) then
+          begin
+            Situacao := iprot.ReadI64();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        7: begin
+          if (field_.Type_ = TType.I64) then
+          begin
+            DataInicioProblema := iprot.ReadI64();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        8: begin
+          if (field_.Type_ = TType.I64) then
+          begin
+            DataFimProblema := iprot.ReadI64();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        9: begin
+          if (field_.Type_ = TType.Bool_) then
+          begin
+            IsAvaliado := iprot.ReadBool();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end
+        else begin
+          TProtocolUtil.Skip(iprot, field_.Type_);
+        end;
+      end;
+      iprot.ReadFieldEnd;
+    end;
+  finally
+    iprot.ReadStructEnd;
+  end;
+end;
+
+procedure TProblemaCondicaoThriftImpl.Write( const oprot: IProtocol);
+var
+  struc : IStruct;
+  field_ : IField;
+  tracker : IProtocolRecursionTracker;
+begin
+  tracker := oprot.NextRecursionLevel;
+  struc := TStructImpl.Create('ProblemaCondicaoThrift');
+  oprot.WriteStructBegin(struc);
+  field_ := TFieldImpl.Create;
+  if (__isset_UuidProblema) then
+  begin
+    field_.Name := 'uuidProblema';
+    field_.Type_  := TType.String_;
+    field_.ID := 1;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteString(UuidProblema);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_UuidEvolucaoProblema) then
+  begin
+    field_.Name := 'uuidEvolucaoProblema';
+    field_.Type_  := TType.String_;
+    field_.ID := 2;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteString(UuidEvolucaoProblema);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_CoSequencialEvolucao) then
+  begin
+    field_.Name := 'coSequencialEvolucao';
+    field_.Type_  := TType.I64;
+    field_.ID := 3;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteI64(CoSequencialEvolucao);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_Ciap) then
+  begin
+    field_.Name := 'ciap';
+    field_.Type_  := TType.String_;
+    field_.ID := 4;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteString(Ciap);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_Cid10) then
+  begin
+    field_.Name := 'cid10';
+    field_.Type_  := TType.String_;
+    field_.ID := 5;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteString(Cid10);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_Situacao) then
+  begin
+    field_.Name := 'situacao';
+    field_.Type_  := TType.I64;
+    field_.ID := 6;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteI64(Situacao);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_DataInicioProblema) then
+  begin
+    field_.Name := 'dataInicioProblema';
+    field_.Type_  := TType.I64;
+    field_.ID := 7;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteI64(DataInicioProblema);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_DataFimProblema) then
+  begin
+    field_.Name := 'dataFimProblema';
+    field_.Type_  := TType.I64;
+    field_.ID := 8;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteI64(DataFimProblema);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_IsAvaliado) then
+  begin
+    field_.Name := 'isAvaliado';
+    field_.Type_  := TType.Bool_;
+    field_.ID := 9;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteBool(IsAvaliado);
+    oprot.WriteFieldEnd();
+  end;
+  oprot.WriteFieldStop();
+  oprot.WriteStructEnd();
+end;
+
+function TProblemaCondicaoThriftImpl.ToString: string;
+var
+  _sb27 : TThriftStringBuilder;
+  _first28 : Boolean;
+begin
+  _sb27 := TThriftStringBuilder.Create('(');
+  try
+    _first28 := TRUE;
+    if (__isset_UuidProblema) then begin
+      if not _first28 then _sb27.Append(',');
+      _first28 := FALSE;
+      _sb27.Append('UuidProblema: ');
+      _sb27.Append(UuidProblema);
+    end;
+    if (__isset_UuidEvolucaoProblema) then begin
+      if not _first28 then _sb27.Append(',');
+      _first28 := FALSE;
+      _sb27.Append('UuidEvolucaoProblema: ');
+      _sb27.Append(UuidEvolucaoProblema);
+    end;
+    if (__isset_CoSequencialEvolucao) then begin
+      if not _first28 then _sb27.Append(',');
+      _first28 := FALSE;
+      _sb27.Append('CoSequencialEvolucao: ');
+      _sb27.Append(CoSequencialEvolucao);
+    end;
+    if (__isset_Ciap) then begin
+      if not _first28 then _sb27.Append(',');
+      _first28 := FALSE;
+      _sb27.Append('Ciap: ');
+      _sb27.Append(Ciap);
+    end;
+    if (__isset_Cid10) then begin
+      if not _first28 then _sb27.Append(',');
+      _first28 := FALSE;
+      _sb27.Append('Cid10: ');
+      _sb27.Append(Cid10);
+    end;
+    if (__isset_Situacao) then begin
+      if not _first28 then _sb27.Append(',');
+      _first28 := FALSE;
+      _sb27.Append('Situacao: ');
+      _sb27.Append(Situacao);
+    end;
+    if (__isset_DataInicioProblema) then begin
+      if not _first28 then _sb27.Append(',');
+      _first28 := FALSE;
+      _sb27.Append('DataInicioProblema: ');
+      _sb27.Append(DataInicioProblema);
+    end;
+    if (__isset_DataFimProblema) then begin
+      if not _first28 then _sb27.Append(',');
+      _first28 := FALSE;
+      _sb27.Append('DataFimProblema: ');
+      _sb27.Append(DataFimProblema);
+    end;
+    if (__isset_IsAvaliado) then begin
+      if not _first28 then _sb27.Append(',');
+      _first28 := FALSE;
+      _sb27.Append('IsAvaliado: ');
+      _sb27.Append(IsAvaliado);
+    end;
+    _sb27.Append(')');
+    Result := _sb27.ToString;
+    if _first28 then {prevent warning};
+  finally
+    _sb27.Free;
   end;
 end;
 

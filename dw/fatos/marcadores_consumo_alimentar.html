@@ -7,11 +7,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Marcadores de consumo alimentar</title>
-  <meta name="description" content="1. Dados">
+  <meta name="description" content="1. Objetivo">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="/dw/fatos/marcadores_consumo_alimentar.html">
   <link rel="icon" type="image/png" href="/img/logo-esus.png">
+
+  <script src="//code.jquery.com/jquery-3.1.0.min.js"></script>  
+  
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 
 
@@ -69,20 +73,7 @@
       <li><a href="/">Home</a></li>
 
       
-        
-          
-            <li><a title="Data Warehouse Relatórios e-SUS APS PEC" href="/dw/index.html">Data Warehouse Relatórios e-SUS APS PEC</a></li>
-          
-        
-          
-            <li><a title="Fatos" href="/dw/fatos/index.html">Fatos</a></li>
-          
-        
-          
-            <li><a title="Marcadores de consumo alimentar" href="/dw/fatos/marcadores_consumo_alimentar.html">Marcadores de consumo alimentar</a></li>
-          
-        
-
+        <li title="Marcadores de consumo alimentar">Marcadores de consumo alimentar</li>
       
     </ol>
   </div>
@@ -106,115 +97,12 @@
 
 
 
-  
-
   <ul>
     
       <li>
-        <a title="Voltar para Data Warehouse Relatórios e-SUS APS PEC" href="/dw/index.html" class="back-link">
-          <i class="icon icon-back"></i> Voltar
-          <small>(Data Warehouse Relatórios e-SUS APS PEC)</small>
-        </a>
+        <a href="/ledi/index.html">Layout e-SUS APS de Dados e Interface</a>
       </li>
     
-
-    <li>
-      <a class="open" title="Fatos" href="/dw/fatos/index.html">Fatos</a>
-      <ul>
-        
-          <li >
-          
-            <a title="Cadastro individual" href="/dw/fatos/cadastro_individual.html">
-              Cadastro individual
-            </a>
-          </li>
-        
-          <li >
-          
-            <a title="Cadastro domiciliar" href="/dw/fatos/cadastro_domiciliar.html">
-              Cadastro domiciliar
-            </a>
-          </li>
-        
-          <li  class="has-subitems">
-          
-            <a title="Atendimento individual" href="/dw/fatos/atendimento_individual/index.html">
-              Atendimento individual
-            </a>
-          </li>
-        
-          <li >
-          
-            <a title="Atendimento odontológico individual" href="/dw/fatos/atendimento_odontologico_individual.html">
-              Atendimento odontológico individual
-            </a>
-          </li>
-        
-          <li  class="has-subitems">
-          
-            <a title="Procedimentos" href="/dw/fatos/procedimentos/index.html">
-              Procedimentos
-            </a>
-          </li>
-        
-          <li >
-          
-            <a title="Atividade coletiva" href="/dw/fatos/atividade_coletiva.html">
-              Atividade coletiva
-            </a>
-          </li>
-        
-          <li >
-          
-            <a title="Visita domiciliar" href="/dw/fatos/visita_domiciliar.html">
-              Visita domiciliar
-            </a>
-          </li>
-        
-          <li class="active">
-          
-            <a title="Marcadores de consumo alimentar" href="/dw/fatos/marcadores_consumo_alimentar.html">
-              Marcadores de consumo alimentar
-            </a>
-          </li>
-        
-          <li >
-          
-            <a title="Avaliação de elegibilidade" href="/dw/fatos/avaliacao_elegibilidade.html">
-              Avaliação de elegibilidade
-            </a>
-          </li>
-        
-          <li >
-          
-            <a title="Atendimento domiciliar" href="/dw/fatos/atendimento_domiciliar.html">
-              Atendimento domiciliar
-            </a>
-          </li>
-        
-          <li >
-          
-            <a title="Síndrome neurológica por Zika / Microcefalia" href="/dw/fatos/ficha_complementar.html">
-              Síndrome neurológica por Zika / Microcefalia
-            </a>
-          </li>
-        
-          <li >
-          
-            <a title="Vacinação" href="/dw/fatos/vacinacao.html">
-              Vacinação
-            </a>
-          </li>
-        
-          <li >
-          
-            <a title="Cuidado compartilhado" href="/dw/fatos/cuidado_compartilhado.html">
-              Cuidado compartilhado
-            </a>
-          </li>
-        
-      </ul>
-    </li>
   </ul>
 
 
@@ -232,19 +120,77 @@
     <p class="post-meta">
       <a class="btn" href="/pdf.html?include=/dw/fatos/marcadores_consumo_alimentar.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 15/08/2024</span>
+        <span class="label" title="Data da última modificação">Alterado em 08/11/2024</span>
       
     </p>
   </header>
 
   <article class="post-content">
-    <h1 id="1-dados">1. Dados</h1>
+    <h1 id="1-objetivo">1. Objetivo</h1>
 
-<p>Esta estratégia de negócio refere-se aos registros de <a href="/ledi/documentacao/estrutura_arquivos/dicionario-mca.html">Marcadores de Consumo Alimentar</a> e está centrada na <strong>tb_fat_marca_consumo_alimnt</strong>. Neste registro o campo <em>no_nome</em> é criptografado. </p>
+<p>A tabela <code>tb_fat_marca_consumo_alimnt</code> é populada sempre que os dados de um <a href="/ledi/documentacao/estrutura_arquivos/dicionario-mca.html">Marcador de Consumo Alimentar</a> são processados.</p>
 
-<p>Tendo em vista que as informações presentes nesta ficha são difíceis de serem representadas devido ao seu tamanho, as colunas da tabela receberam nomes genéricos, conforme apresentados na Tabela 1.</p>
+<h1 id="2-regras">2. Regras</h1>
 
-<h1 id="2-estrutura">2. Estrutura</h1>
+<p><strong>1. </strong> A <code>tb_fat_marca_consumo_alimnt</code> é preenchida quando:</p>
+
+<ul>
+<li>São recebidas fichas de marcadores de consumo alimentar através da importação de sistemas terceiros ou outras instalações do PEC;</li>
+<li>É realizado um atendimento que teve registro de marcador de consumo alimentar no <strong>Objetivo</strong>;</li>
+<li>É registrado um Marcador de consumo alimentar no CDS.</li>
+</ul>
+
+<h1 id="3-fatos">3. Fatos</h1>
+
+<h2 id="3-1-metadados-dos-fatos">3.1 Metadados dos fatos</h2>
+
+<table><thead>
+<tr>
+<th>Colunas DW</th>
+<th>Referência LEDI</th>
+<th>Referência sistema</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>co_seq_fat_marca_\con_almnt</td>
+<td>-</td>
+<td>Código de identificação sequencial criado automaticamente pelo sistema</td>
+</tr>
+<tr>
+<td>nu_uuid_ficha</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-mca.html#10-uuidficha">uuidFicha</a></td>
+<td>Identificador universalmente único do registro</td>
+</tr>
+<tr>
+<td>nu_uuid_dado_transp</td>
+<td>-</td>
+<td>Identificador universalmente único da camada de transporte de dados. Caso o registro seja gerado dentro do PEC terá o mesmo valor do campo nu_uuid_ficha</td>
+</tr>
+<tr>
+<td>co_fat_cidadao_pec</td>
+<td>-</td>
+<td>Campo <code>co_seq_fat_cidadao_pec</code> da <code>tb_fat_cidadao_pec</code></td>
+</tr>
+<tr>
+<td>nu_cpf_cidadao</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-mca.html#12-cpfcidadao">cpfCidadao</a></td>
+<td>CPF do cidadão</td>
+</tr>
+<tr>
+<td>nu_cns</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-mca.html#2-cnscidadao">cnsCidadao</a></td>
+<td>CNS do cidadão</td>
+</tr>
+<tr>
+<td>dt_nascimento</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-mca.html#4-datanascimento">dataNascimento</a></td>
+<td>Data de nascimento do cidadão</td>
+</tr>
+</tbody></table>
+
+<h2 id="3-2-m-tricas-dos-fatos">3.2 Métricas dos Fatos</h2>
+
+<p>Como as informações presentes nesta ficha são difíceis de serem representadas devido ao seu tamanho, as colunas da tabela receberam nomes genéricos, conforme apresentados na tabela abaixo.</p>
 
 <table><thead>
 <tr>
@@ -401,21 +347,6 @@
 <tr>
 <td>nu_resp_2_anos_ou_mais_1</td>
 <td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-mca.html#perguntaquestionariocriancascommaisdoisanos">PerguntaQuestionarioCriancasComMaisDoisAnos</a></td>
-<td>Você tem costume de realizar as refeições assistindo à TV, mexendo no computador e / ou celular</td>
-</tr>
-<tr>
-<td>st_resp_2_anos_ou_mais_2_1</td>
-<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-mca.html#perguntaquestionariocriancascommaisdoisanos">PerguntaQuestionarioCriancasComMaisDoisAnos</a></td>
-<td>Quais refeições você faz ao longo do dia? Café da manhã</td>
-</tr>
-<tr>
-<td>st_resp_2_anos_ou_mais_2_2</td>
-<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-mca.html#perguntaquestionariocriancascommaisdoisanos">PerguntaQuestionarioCriancasComMaisDoisAnos</a></td>
-<td>Quais refeições você faz ao longo do dia? Lanche da manhã</td>
-</tr>
-<tr>
-<td>st_resp_2_anos_ou_mais_2_3</td>
-<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-mca.html#perguntaquestionariocriancascommaisdoisanos">PerguntaQuestionarioCriancasComMaisDoisAnos</a></td>
 <td>Quais refeições você faz ao longo do dia? Almoço</td>
 </tr>
 <tr>
@@ -470,7 +401,63 @@
 </tr>
 </tbody></table>
 
-<p><em>Tabela 1. Colunas do DW e suas representações</em></p>
+<h1 id="4-dimens-es-da-tabela">4. Dimensões da tabela</h1>
+
+<table><thead>
+<tr>
+<th>Coluna DW</th>
+<th>Dimensão referência</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>co_dim_municipio</td>
+<td>Código de identificação do município. Campo <code>co_seq_dim_municipio</code> da <code>tb_dim_municipio</code></td>
+</tr>
+<tr>
+<td>co_dim_tipo_ficha</td>
+<td>Código de identificação do tipo de ficha. Campo <code>co_seq_dim_tipo_ficha</code> da <code>tb_dim_tipo_ficha</code></td>
+</tr>
+<tr>
+<td>co_dim_profissional</td>
+<td>Código de identificação do profissional responsável. Campo <code>co_seq_dim_profissional</code> da <code>tb_dim_profissional</code></td>
+</tr>
+<tr>
+<td>co_dim_cbo</td>
+<td>Código de identificação do CBO profissional responsável. Campo <code>co_seq_dim_cbo</code> da <code>tb_dim_cbo</code></td>
+</tr>
+<tr>
+<td>co_dim_unidade_saude</td>
+<td>Código de identificação da unidade de sáude do profissional responsável. Campo <code>co_seq_dim_unidade_saude</code> da <code>tb_dim_unidade_saude</code></td>
+</tr>
+<tr>
+<td>co_dim_equipe</td>
+<td>Código de identificação da equipe do profissional responsável. Campo <code>co_seq_dim_equipe</code> da <code>tb_dim_equipe</code></td>
+</tr>
+<tr>
+<td>co_dim_tipo_origem_dado_transp</td>
+<td>Código da origem do dado no transporte. Campo <code>co_seq_dim_tp_orgm_dado_transp</code> da <code>tb_dim_tipo_origem_dado_transp</code></td>
+</tr>
+<tr>
+<td>co_dim_cds_tipo_origem</td>
+<td>Código da origem do dado no transporte. Campo <code>co_seq_dim_tipo_origem</code> da <code>tb_dim_tipo_origem</code></td>
+</tr>
+<tr>
+<td>co_dim_tempo</td>
+<td>Responsável por armazenar as datas de maneira estruturada. Campo <code>co_seq_dim_tempo</code> da <code>tb_dim_tempo</code></td>
+</tr>
+<tr>
+<td>co_dim_sexo</td>
+<td>Código do sexo. Campo <code>co_seq_dim_faixa_sexo</code> da <code>tb_dim_sexo</code></td>
+</tr>
+<tr>
+<td>co_dim_local_atendimento</td>
+<td>Código do local de atendimento. Campo <code>co_seq_dim_local_atendimento</code> da <code>tb_dim_local_atendimento</code></td>
+</tr>
+<tr>
+<td>co_dim_faixa_etaria</td>
+<td>Código da faixa etária. Campo <code>co_seq_dim_faixa_etaria</code> da <code>tb_dim_faixa_etaria</code></td>
+</tr>
+</tbody></table>
 
   </article>
 

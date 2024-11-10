@@ -32,7 +32,7 @@ h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
 .highlight {
-  margin-bottom: 14px; }
+  margin-bottom: 13px; }
 
 /**
  * Images
@@ -54,7 +54,7 @@ figcaption {
  * Lists
  */
 ul, ol {
-  margin-left: 28px; }
+  margin-left: 26px; }
 
 li > ul,
 li > ol {
@@ -76,7 +76,7 @@ a {
 blockquote {
   color: #828282;
   border-left: 4px solid #e8e8e8;
-  padding-left: 14px;
+  padding-left: 13px;
   font-size: 18px;
   letter-spacing: -1px;
   font-style: italic; }
@@ -112,13 +112,13 @@ pre {
   max-width: 1600px;
   margin-right: auto;
   margin-left: auto;
-  padding-right: 56px;
-  padding-left: 56px; }
+  padding-right: 52px;
+  padding-left: 52px; }
   @media screen and (max-width: 800px) {
     .wrapper, .breadcrumb-wrapper.sticky .breadcrumb {
       max-width: 1600px;
-      padding-right: 28px;
-      padding-left: 28px; } }
+      padding-right: 26px;
+      padding-left: 26px; } }
 
 /**
  * Clearfix
@@ -480,7 +480,7 @@ li ul {
   margin-left: 0;
   list-style: none; }
   .post-list > li {
-    margin-bottom: 28px; }
+    margin-bottom: 26px; }
 
 .post-meta {
   font-size: 13px;
@@ -501,13 +501,13 @@ li ul {
   border-bottom: 1px solid #ddd; }
 
 .post-title {
-  font-size: 36px;
+  font-size: 32px;
   font-weight: 600;
   line-height: 1.35;
   margin: 0; }
   @media screen and (max-width: 800px) {
     .post-title {
-      font-size: 32px; } }
+      font-size: 28px; } }
 
 .post p > img[alt] {
   display: block;
@@ -520,38 +520,38 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400; }
 
 .post-content {
-  margin-bottom: 28px; }
+  margin-bottom: 26px; }
   .post-content h1 {
-    font-size: 30px;
+    font-size: 26px;
     font-weight: 600; }
     @media screen and (max-width: 800px) {
       .post-content h1 {
-        font-size: 28px; } }
-  .post-content h2 {
-    font-size: 26px; }
-    @media screen and (max-width: 800px) {
-      .post-content h2 {
         font-size: 24px; } }
-  .post-content h3 {
+  .post-content h2 {
     font-size: 24px; }
     @media screen and (max-width: 800px) {
-      .post-content h3 {
+      .post-content h2 {
         font-size: 22px; } }
-  .post-content h4 {
+  .post-content h3 {
     font-size: 22px; }
     @media screen and (max-width: 800px) {
-      .post-content h4 {
+      .post-content h3 {
         font-size: 20px; } }
-  .post-content h5 {
+  .post-content h4 {
     font-size: 20px; }
     @media screen and (max-width: 800px) {
-      .post-content h5 {
+      .post-content h4 {
         font-size: 18px; } }
-  .post-content h6 {
+  .post-content h5 {
     font-size: 18px; }
     @media screen and (max-width: 800px) {
-      .post-content h6 {
+      .post-content h5 {
         font-size: 16px; } }
+  .post-content h6 {
+    font-size: 16px; }
+    @media screen and (max-width: 800px) {
+      .post-content h6 {
+        font-size: 14px; } }
 
 /**
 Fix for anchor links with sticky header
@@ -640,13 +640,13 @@ h6[id]::before, a[name]::before {
     page-break-after: avoid; }
 
   .post-title {
-    font-size: 22pt !important; }
-
-  h1 {
     font-size: 20pt !important; }
 
+  h1 {
+    font-size: 18pt !important; }
+
   h2 {
-    font-size: 17pt !important; }
+    font-size: 16pt !important; }
 
   h3 {
     font-size: 14pt !important; }
@@ -969,9 +969,9 @@ ol.breadcrumb {
   color: #297aea; }
 
 .button-large {
-  padding-top: 60px;
-  width: 160px;
-  height: 160px;
+  padding-top: 35px;
+  width: 150px;
+  height: 100px;
   font-size: 18px; }
 
 @font-face {

@@ -6,16 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Principais alterações da v5.6.4 para a v6.2.0</title>
+  <title>Principais alterações da v5.6.3 para a v5.6.4</title>
   <meta name="description" content="Este documento relata as principais alterações em relação à versão v5.6.4 do LEDI APS:">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="/ledi/documentacao/principais_alteracoes.html">
   <link rel="icon" type="image/png" href="/img/logo-esus.png">
-
-  <script src="//code.jquery.com/jquery-3.1.0.min.js"></script>  
-  
-  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 
 
@@ -79,11 +75,11 @@
           
         
           
-            <li><a title="Layout e-SUS APS de Dados e Interface Versão 6.2.0" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 6.2.0</a></li>
+            <li><a title="Layout e-SUS APS de Dados e Interface Versão 5.6.4" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 5.6.4</a></li>
           
         
           
-            <li><a title="Principais alterações da v5.6.4 para a v6.2.0" href="/ledi/documentacao/principais_alteracoes.html">Principais alterações da v5.6.4 para a v6.2.0</a></li>
+            <li><a title="Principais alterações da v5.6.3 para a v5.6.4" href="/ledi/documentacao/principais_alteracoes.html">Principais alterações da v5.6.3 para a v5.6.4</a></li>
           
         
 
@@ -123,7 +119,7 @@
     
 
     <li>
-      <a class="open" title="Layout e-SUS APS de Dados e Interface Versão 6.2.0" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 6.2.0</a>
+      <a class="open" title="Layout e-SUS APS de Dados e Interface Versão 5.6.4" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 5.6.4</a>
       <ul>
         
           <li  class="has-subitems">
@@ -156,8 +152,8 @@
         
           <li class="active">
           
-            <a title="Principais alterações da v5.6.4 para a v6.2.0" href="/ledi/documentacao/principais_alteracoes.html">
-              Principais alterações da v5.6.4 para a v6.2.0
+            <a title="Principais alterações da v5.6.3 para a v5.6.4" href="/ledi/documentacao/principais_alteracoes.html">
+              Principais alterações da v5.6.3 para a v5.6.4
             </a>
           </li>
         
@@ -176,11 +172,11 @@
           <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Principais alterações da v5.6.4 para a v6.2.0</h1>
+    <h1 class="post-title">Principais alterações da v5.6.3 para a v5.6.4</h1>
     <p class="post-meta">
       <a class="btn" href="/pdf.html?include=/ledi/documentacao/principais_alteracoes.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 08/11/2024</span>
+        <span class="label" title="Data da última modificação">Alterado em 16/08/2024</span>
       
     </p>
   </header>
@@ -188,92 +184,21 @@
   <article class="post-content">
     <p>Este documento relata as principais alterações em relação à versão v5.6.4 do LEDI APS:</p>
 
-<h3 id="1-inclus-o-de-regras-vacinais">1. Inclusão de regras vacinais</h3>
+<h3 id="1-inclus-o-de-imunobiol-gicos">1. Inclusão de imunobiológicos</h3>
 
-<p>Foram incluídas novas regras para aplicação dos imunobiológicos Hexa acelular (43), Penta (42) e SCRV (56).</p>
+<p>Foram incluídos no dicionário de dados do LEDI os imunobiológicos VPC20, VVSR-Rec, INF4-alta dosagem, e VVSR-RecAdj.</p>
 
-<h3 id="2-inclus-o-de-sinais-vitais-antropometria-e-glicemia-capilar">2. Inclusão de sinais vitais, antropometria e glicemia capilar</h3>
+<h3 id="2-atualiza-o-de-regras-vacinais">2. Atualização de regras vacinais</h3>
 
-<p>Foi incluído um grupo de informações chamado &quot;medicoes&quot; na Ficha de atendimento individual, Ficha de procedimentos e Ficha de atendimento odontológico individual. As seguintes alterações foram realizadas:</p>
+<p>Foram incluídas as regras de aplicação referentes aos imunobiológicos Hib, dTpa e VVSR-RecAdj e o preenchimento do campo Grupo de Atendimento passa a ser obrigatório para todos os imunobiológicos.</p>
 
-<ul>
-<li>Remoção dos campos &quot;pesoAcompanhamentoNutricional&quot; e &quot;alturaAcompanhamentoNutricional&quot; da Ficha de atendimento individual, Ficha de procedimentos e Ficha de atendimento odontológico individual;</li>
-<li>Remoção do campo &quot;perimetroCefalico&quot; da Ficha de atendimento individual;</li>
-<li>Inclusão do grupo &quot;medicoes&quot; com os campos:
+<h3 id="3-corre-o-do-c-digo-de-dose">3. Correção do código de dose</h3>
 
-<ul>
-<li>circunferenciaAbdominal: Circunferência abdominal do cidadão em centímetros;</li>
-<li>perimetroPanturrilha: Perímetro da panturrilha do cidadão em centímetros;</li>
-<li>pressaoArterialSistolica: Pressão arterial sistólica do cidadão em mmHg;</li>
-<li>pressaoArterialDiastolica: Pressão arterial diastólica do cidadão em mmHg;</li>
-<li>frequenciaRespiratoria: Frequência respiratória do cidadão em MPM;</li>
-<li>frequenciaCardiaca: Frequência cardíaca do cidadão em BPM;</li>
-<li>temperatura: Temperatura do cidadão em ºC;</li>
-<li>saturacaoO2: Saturação de oxigênio do cidadão em percentual;</li>
-<li>glicemiaCapilar: Glicemia capilar do cidadão em mg/dL;</li>
-<li>tipoGlicemiaCapilar: Momento da coleta da glicemia capilar;</li>
-<li>peso: Peso do cidadão em quilogramas;</li>
-<li>altura: Altura do cidadão em centímetros;</li>
-<li>perimetroCefalico: Perímetro cefálico do cidadão em centímetros.</li>
-</ul></li>
-</ul>
+<p>Foi corrigdo o código da dose do imunobiológico COVID-19-RNAm Moderna (Spikevax), de 9 (DU) para 8 (D), referente a estratégia Campanha seletiva. </p>
 
-<h3 id="3-atualiza-o-da-documenta-o">3. Atualização da documentação</h3>
+<h3 id="4-atualiza-o-da-documenta-o">4. Atualização da documentação</h3>
 
 <p>Foi corrigida a documentação do LEDI com as referências corretas a competência 02/2024 da tabela SIGTAP.</p>
-
-<h3 id="4-inclus-o-da-lista-de-problemas-e-condi-es">4. Inclusão da lista de problemas e condições</h3>
-
-<p>Foi incluído um grupo de informações chamado &quot;problemasCondicoes&quot; na Ficha de atendimento individual, Ficha de atendimento odontológico individual e Ficha de atendimento domiciliar. As seguintes alterações foram realizadas:</p>
-
-<ul>
-<li>Remoção do grupo &quot;problemaCondicaoAvaliada&quot; da Ficha de atendimento individual;</li>
-<li>Remoção dos campos &quot;ciap&quot; e &quot;cid&quot; da Ficha de atendimento domiciliar;</li>
-<li>Inclusão do grupo &quot;problemasCondicoes&quot; com os campos:
-
-<ul>
-<li>uuidProblema: Código identificador único do problema ou condição;</li>
-<li>uuidEvolucaoProblema: Código identificador único da evolução do problema ou condição;</li>
-<li>coSequencialEvolucao: Código sequencial da evolução dentro do próprio problema e condição atual;</li>
-<li>ciap: Código da CIAP2 ou AB;</li>
-<li>cid10: Código da CID10;</li>
-<li>situacao: Situação do problema ou condição;</li>
-<li>dataInicioProblema: Data de inicio do problema ou condição;</li>
-<li>dataFimProblema: Data de finalização do problema ou condição;</li>
-<li>isAvaliado: Indicador se o problema ou condição foi avaliado durante o atendimento.</li>
-</ul></li>
-</ul>
-
-<h3 id="5-inclus-o-dos-turnos">5. Inclusão dos turnos</h3>
-
-<p>Foram incluídas novas regras relacionadas ao preenchimento das doses por turno (manhã, tarde, noite) na Ficha de atendimento individual e na Ficha de atendimento odontológico. As regras introduzem a obrigatoriedade de registrar doses separadas por turnos, além de determinar o formato e a validação da soma das doses em cada período.</p>
-
-<ul>
-<li><p>Os campos adicionados foram:</p>
-
-<ul>
-<li><strong>qtDoseManha</strong>: Quantidade de doses do medicamento/princípio ativo a ser administrada durante o turno da manhã.</li>
-<li><strong>qtDoseTarde</strong>: Quantidade de doses do medicamento/princípio ativo a ser administrada durante o turno da tarde.</li>
-<li><strong>qtDoseNoite</strong>: Quantidade de doses do medicamento/princípio ativo a ser administrada durante o turno da noite.</li>
-</ul></li>
-<li><p>As principais regras aplicadas:</p>
-
-<ul>
-<li>O campo não pode ser preenchido caso o campo <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#4-doseunica">doseUnica</a> esteja marcado como &quot;Verdadeiro&quot;.</li>
-<li>É obrigatório preencher no mínimo 2 turnos.</li>
-<li>A quantidade de doses por turno pode ser separada por barra ou vírgula, seguindo os seguintes formatos:
-
-<ul>
-<li><strong>Vírgula</strong>: Permitidos até 2 caracteres antes e depois (<code>x,x</code>, <code>xx,x</code>, <code>xx,xx</code>, <code>x,xx</code>).</li>
-<li><strong>Barra</strong>: Permitido 1 caractere antes e depois (<code>x/x</code>).</li>
-</ul></li>
-<li>A soma das doses dos turnos deve ser igual à quantidade total da dose informada.</li>
-</ul></li>
-</ul>
-
-<h3 id="aviso-importante">AVISO IMPORTANTE</h3>
-
-<p>A inclusão do imunobiológico &quot;111 - Vacina Tetra Acelular - dTpa/VIP&quot;, disponível para transcrições de caderneta (registro anterior) só é válida para versões 5.2.42 ou posteriores do e-SUS APS PEC, mesmo utilizando a versão 5.6.4 do LEDI.</p>
 
   </article>
 

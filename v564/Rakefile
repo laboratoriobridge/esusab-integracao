@@ -1,23 +1,45 @@
 require 'html-proofer'
+require 'yaml'
 
 # rake test
 desc 'build docs and test generated site'
 task :test do
   sh 'bundle exec jekyll clean'
-  sh 'bundle exec jekyll build -d ./_site/docs'
+  sh 'bundle exec jekyll build'
+  Rake::Task["html_proofer_check_site"].execute
+end
+
+task :build, [:version] do |t, args|
+  sh 'bundle exec jekyll clean'
+
+  configDeploy = {
+    "version" => "#{args[:version]}",
+    "baseurl" => "/#{args[:version]}"
+  }
+
+  File.open("_configDeploy.yml", "w") { |file| file.write(configDeploy.to_yaml) }
+
+  sh 'bundle exec jekyll build --config _config.yml,_configDeploy.yml'
+end
+
+task :html_proofer_check_site do
   HTMLProofer.check_directory('./_site', {
-    # https://github.com/gjtorikian/html-proofer#configuration
+      # https://github.com/gjtorikian/html-proofer#configuration
 
-    # Enables HTML validation errors from Nokogiri
-    :check_html => true,
+      # Enables HTML validation errors from Nokogiri
+      :check_html => true,
 
-    # Files that are safe to ignore
-    :file_ignore => [/.*pdf.html/],
+      # Files that are safe to ignore
+      :file_ignore => [/.*pdf.html/],
 
-    # Ignore empty `alt` tags
-    :empty_alt_ignore => true,
+      # Only reports errors for links that fall within the 4xx status code range.
+      :only_4xx => true,
 
-    # Ignore github links since HTMLProofer does not have access to the private repos
-    :url_ignore => [/github.com\/.*/],
-  }).run
+      # Ignore empty `alt` tags
+      :empty_alt_ignore => true,
+
+      # Ignore github links since HTMLProofer does not have access to the private repos
+      # Ignore internal documentation links
+      :url_ignore => [/github.com\/.*/, /doc.agendamentosus.ufsc.br\/.*/, /doc.esusab.ufsc.br\/.*/, /integracao.esusab.ufsc.br\/.*/],
+    }).run
 end

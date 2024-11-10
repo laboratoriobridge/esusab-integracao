@@ -12,10 +12,6 @@
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="/dw/">
   <link rel="icon" type="image/png" href="/img/logo-esus.png">
-
-  <script src="//code.jquery.com/jquery-3.1.0.min.js"></script>  
-  
-  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 
 
@@ -73,7 +69,12 @@
       <li><a href="/">Home</a></li>
 
       
-        <li title="Data Warehouse Relatórios e-SUS APS PEC">Data Warehouse Relatórios e-SUS APS PEC</li>
+        
+          
+            <li><a title="Data Warehouse Relatórios e-SUS APS PEC" href="/dw/index.html">Data Warehouse Relatórios e-SUS APS PEC</a></li>
+          
+        
+
       
     </ol>
   </div>
@@ -97,12 +98,52 @@
 
 
 
+  
+
   <ul>
     
       <li>
-        <a href="/ledi/index.html">Layout e-SUS APS de Dados e Interface</a>
+        <a title="Voltar para Home" href="/" class="back-link">
+          <i class="icon icon-back"></i> Voltar
+          <small>(Home)</small>
+        </a>
       </li>
     
+
+    <li>
+      <a class="open" title="Data Warehouse Relatórios e-SUS APS PEC" href="/dw/index.html">Data Warehouse Relatórios e-SUS APS PEC</a>
+      <ul>
+        
+          <li >
+          
+            <a title="Principais alterações entre versões" href="/dw/principais_alteracoes.html">
+              Principais alterações entre versões
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Dimensões" href="/dw/dimensoes.html">
+              Dimensões
+            </a>
+          </li>
+        
+          <li  class="has-subitems">
+          
+            <a title="Fatos" href="/dw/fatos/index.html">
+              Fatos
+            </a>
+          </li>
+        
+          <li  class="has-subitems">
+          
+            <a title="Visualizações" href="/dw/visualizacoes/index.html">
+              Visualizações
+            </a>
+          </li>
+        
+      </ul>
+    </li>
   </ul>
 
 
@@ -120,7 +161,7 @@
     <p class="post-meta">
       <a class="btn" href="/pdf.html?include=/dw/index.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 15/08/2024</span>
+        <span class="label" title="Data da última modificação">Alterado em 16/08/2024</span>
       
     </p>
   </header>
@@ -130,7 +171,7 @@
 
 <p>Esta seção descreve a estrutura de Data Warehouse (DW) onde são armazenados os dados para a geração dos relatórios.</p>
 
-<p>O DW é uma base de dados contendo vários componentes. Possui uma arquitetura multidimensional, onde encontram-se as <a href="/dw/dimensoes/index.html">Dimensões</a> e <a href="/dw/fatos/index.html">Fatos</a>. Estas estruturas são alguns dos elementos do DW, são dependentes entre si e permitem o armazenamento dos dados. Além disso, temos as <a href="/dw/visualizacoes/index.html">Visualizações</a> que são estruturas que, diferente das dimensões e fatos, são independentes, construídas própriamente para tratar de domínios específicos, consolidando eventos e já repassando o que o Prontuário Eletrônico do Cidadão considera como verdade sobre esses domínios.</p>
+<p>O DW é uma base de dados contendo vários componentes. Possui uma arquitetura multidimensional, onde encontram-se as <a href="/dw/dimensoes.html">Dimensões</a> e <a href="/dw/fatos/index.html">Fatos</a>. Estas estruturas são alguns dos elementos do DW, são dependentes entre si e permitem o armazenamento dos dados. Além disso, temos as <a href="/dw/visualizacoes/index.html">Visualizações</a> que são estruturas que, diferente das dimensões e fatos, são independentes, construídas própriamente para tratar de domínios específicos, consolidando eventos e já repassando o que o Prontuário Eletrônico do Cidadão considera como verdade sobre esses domínios.</p>
 
 <p>Através de um sistema de <a href="https://pt.wikipedia.org/wiki/Extract,_transform,_load">ETL</a>, as informações são extraídas de arquivos conforme descritos na estrutura <a href="/ledi/index.html">Layout e-SUS APS de Dados e Interface</a> e armazenadas nas tabelas Fatos e Dimensões. Enquanto isso, as tabelas de Visualizações são populadas com dados de diversas origens, independente de estarem no PEC ou no DW.</p>
 

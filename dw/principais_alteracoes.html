@@ -10,8 +10,12 @@
   <meta name="description" content="Este documento relata as principais alterações entre as versões do DW.">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="/dw/principais_alteracoes.html">
+  <link rel="canonical" href="http://localhost:4040/dw/principais_alteracoes.html">
   <link rel="icon" type="image/png" href="/img/logo-esus.png">
+
+  <script src="//code.jquery.com/jquery-3.1.0.min.js"></script>  
+  
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 
 
@@ -25,7 +29,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 5.6.4</span>
+        <span class="label">versão 6.2.0</span>
       
     </a>
 
@@ -125,17 +129,17 @@
             </a>
           </li>
         
-          <li >
+          <li  class="has-subitems">
           
-            <a title="Dimensões" href="/dw/dimensoes.html">
-              Dimensões
+            <a title="Fatos" href="/dw/fatos/index.html">
+              Fatos
             </a>
           </li>
         
           <li  class="has-subitems">
           
-            <a title="Fatos" href="/dw/fatos/index.html">
-              Fatos
+            <a title="Dimensões" href="/dw/dimensoes/index.html">
+              Dimensões
             </a>
           </li>
         
@@ -165,7 +169,7 @@
     <p class="post-meta">
       <a class="btn" href="/pdf.html?include=/dw/principais_alteracoes.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 15/08/2024</span>
+        <span class="label" title="Data da última modificação">Alterado em 10/11/2024</span>
       
     </p>
   </header>
@@ -173,44 +177,90 @@
   <article class="post-content">
     <p>Este documento relata as principais alterações entre as versões do DW.</p>
 
-<h3 id="1-principais-altera-es-da-v-5-2-36-para-a-v-5-2-37-do-e-sus-aps">1. Principais alterações da v.5.2.36 para a v.5.2.37 do e-SUS APS:</h3>
+<h3 id="1-principais-altera-es-da-v-5-3-14-para-a-v-5-3-15-do-e-sus-aps">1. Principais alterações da v.5.3.14 para a v.5.3.15 do e-SUS APS:</h3>
 
-<p><strong>1. </strong> Inclusão do detalhamento dos fatos:</p>
+<p><strong>1. </strong> Inclusão da tabela <code>tb_dim_situacao_problema</code>, contendo todas as possíveis situações que podem ser preenchidas na lista de problemas e condições.</p>
+
+<p><strong>2. </strong> Renomeação da tabela <code>tb_fat_atend_dom_condicao_aval</code> para <code>tb_fat_atend_dom_prob_cond</code>.</p>
+
+<p><strong>3. </strong> Inclusão de novos campos nas tabelas de fato <code>tb_fat_atd_ind_problemas</code>, <code>tb_fat_atend_odonto_problemas</code> e <code>tb_fat_atend_dom_prob_cond</code>:</p>
+
+<ul>
+<li>nu_uuid_problema: Código identificador único do problema ou condição;</li>
+<li>co_unico_evolucao: Código identificador único da evolução do problema ou condição;</li>
+<li>co_sequencial_evolucao: Código sequencial da evolução dentro do próprio problema e condição atual;</li>
+<li>co_dim_situacao: Código da <code>tb_dim_situacao_problema</code> referente a situação do problema ou condição;</li>
+<li>co_dim_data_inicio_problema: Código da <code>tb_dim_tempo</code> referente a data de inicio do problema ou condição;</li>
+<li>co_dim_data_fim_problema: Código da <code>tb_dim_tempo</code> referente a data de finalização do problema ou condição;</li>
+<li>st_avaliado: Indicador se o problema ou condição foi avaliado durante o atendimento.</li>
+</ul>
+
+<p><strong>4. </strong> Inclusão de novos campos nas tabelas de fato <code>tb_fat_atd_ind_medicamentos</code> e <code>tb_fat_atend_odonto_medicamentos</code>:</p>
+
+<ul>
+<li>qt_dose_manha;</li>
+<li>qt_dose_tarde;</li>
+<li>qt_dose_noite.</li>
+</ul>
+
+<h3 id="2-principais-altera-es-da-v-5-3-6-para-a-v-5-3-7-do-e-sus-aps">2. Principais alterações da v.5.3.6 para a v.5.3.7 do e-SUS APS:</h3>
+
+<p><strong>5. </strong> Inclusão de novos campos nas tabelas de fato <code>tb_fat_atendimento_individual</code>, <code>tb_fat_proced_atend</code> e <code>tb_fat_atendimento_odonto</code>:</p>
+
+<ul>
+<li>nu_medicao_circ_abdominal: Circunferência abdominal do cidadão em centímetros;</li>
+<li>nu_medicao_perim_pantrlha: Perímetro da panturrilha do cidadão em centímetros;</li>
+<li>nu_medicao_pressao_sistolica: Pressão arterial sistólica do cidadão em mmHg;</li>
+<li>nu_medicao_pressao_diastolica: Pressão arterial diastólica do cidadão em mmHg;</li>
+<li>nu_medicao_freq_respiratoria: Frequência respiratória do cidadão em MPM;</li>
+<li>nu_medicao_freq_cardiaca: Frequência cardíaca do cidadão em BPM;</li>
+<li>nu_medicao_temperatura: Temperatura do cidadão em ºC;</li>
+<li>nu_medicao_saturacao_o2: Saturação de oxigênio do cidadão em percentual;</li>
+<li>nu_medicao_glicemia: Glicemia capilar do cidadão em mg/dL;</li>
+<li>co_dim_tipo_glicemia: Momento da coleta da glicemia capilar;</li>
+<li>nu_peso: Peso do cidadão em quilogramas;</li>
+<li>nu_altura: Altura do cidadão em centímetros;</li>
+<li>nu_perimetro_cefalico: Perímetro cefálico do cidadão em centímetros.</li>
+</ul>
+
+<h3 id="3-principais-altera-es-da-v-5-2-36-para-a-v-5-2-37-do-e-sus-aps">3. Principais alterações da v.5.2.36 para a v.5.2.37 do e-SUS APS:</h3>
+
+<p><strong>6. </strong> Inclusão do detalhamento dos fatos:</p>
 
 <ul>
 <li><a href="/dw/fatos/atendimento_individual/index.html">Atendimento individual</a>;</li>
 <li><a href="/dw/fatos/procedimentos/index.html">Procedimentos</a>.</li>
 </ul>
 
-<h3 id="2-principais-altera-es-da-v5-2-33-para-a-v-5-2-34-do-e-sus-aps">2. Principais alterações da v5.2.33 para a v.5.2.34 do e-SUS APS:</h3>
+<h3 id="4-principais-altera-es-da-v5-2-33-para-a-v-5-2-34-do-e-sus-aps">4. Principais alterações da v5.2.33 para a v.5.2.34 do e-SUS APS:</h3>
 
-<p><strong>2. </strong> Inclusão da seção de <a href="/dw/visualizacoes/index.html">Visualizações</a>, com a nova <a href="/dw/visualizacoes/acompanhamento_cidadaos_vinculados.html">Tabela de acompanhamento de cidadãos vinculados</a>.</p>
+<p><strong>7. </strong> Inclusão da seção de <a href="/dw/visualizacoes/index.html">Visualizações</a>, com a nova <a href="/dw/visualizacoes/acompanhamento_cidadaos_vinculados.html">Tabela de acompanhamento de cidadãos vinculados</a>.</p>
 
-<h3 id="3-principais-altera-es-da-v5-2-16-para-a-v-5-2-17-do-e-sus-aps">3. Principais alterações da v5.2.16 para a v.5.2.17 do e-SUS APS:</h3>
+<h3 id="5-principais-altera-es-da-v5-2-16-para-a-v-5-2-17-do-e-sus-aps">5. Principais alterações da v5.2.16 para a v.5.2.17 do e-SUS APS:</h3>
 
-<p><strong>3. </strong> No contexto de <a href="/dw/fatos/cuidado_compartilhado.html">Cuidado compartilhado</a> foram incluídas as estruturas de dados para registro da informação do cuidado compartilhado. Esta informação está armazenada na tabela: <code>tb_fat_cuidado_compartilhado</code>.</p>
+<p><strong>8. </strong> No contexto de <a href="/dw/fatos/cuidado_compartilhado/index.html">Cuidado compartilhado</a> foram incluídas as estruturas de dados para registro da informação do cuidado compartilhado. Esta informação está armazenada na tabela: <code>tb_fat_cuidado_compartilhado</code>.</p>
 
-<p><strong>4. </strong> Para contextualizar as informações da tabela <code>tb_fat_cuidado_compartilhado</code>, foram criadas as seguintes tabelas de dimensão: <code>tb_dim_conduta_cuidado</code>e <code>tb_dim_prioridade_cuidado</code>.</p>
+<p><strong>9. </strong> Para contextualizar as informações da tabela <code>tb_fat_cuidado_compartilhado</code>, foram criadas as seguintes tabelas de dimensão: <code>tb_dim_conduta_cuidado</code>e <code>tb_dim_prioridade_cuidado</code>.</p>
 
-<p><strong>5. </strong> Inclusão do tipo de ficha &quot;ESUS PEC Cuidado compartilhado&quot; na <code>tb_dim_tipo_ficha</code>.</p>
+<p><strong>10. </strong> Inclusão do tipo de ficha &quot;ESUS PEC Cuidado compartilhado&quot; na <code>tb_dim_tipo_ficha</code>.</p>
 
-<h3 id="4-principais-altera-es-da-v5-2-4-para-a-v-5-2-5-do-e-sus-aps">4. Principais alterações da v5.2.4 para a v.5.2.5 do e-SUS APS:</h3>
+<h3 id="6-principais-altera-es-da-v5-2-4-para-a-v-5-2-5-do-e-sus-aps">6. Principais alterações da v5.2.4 para a v.5.2.5 do e-SUS APS:</h3>
 
 <p><strong>1. </strong> Inclusão da tabela de dimensões referente ao vínculo entre equipes: <code>tb_dim_vinculacao_equipes</code>.</p>
 
-<h3 id="5-principais-altera-es-da-v4-2-1-para-a-v4-2-3">5. Principais alterações da v4.2.1 para a v4.2.3:</h3>
+<h3 id="7-principais-altera-es-da-v4-2-1-para-a-v4-2-3">7. Principais alterações da v4.2.1 para a v4.2.3:</h3>
 
 <p><strong>1. </strong> No contexto de <a href="/dw/fatos/procedimentos/index.html">Procedimentos</a> foram incluídos os campos <code>nu_peso</code> e <code>nu_altura</code>.</p>
 
-<p><strong>2. </strong> No contexto de <a href="/dw/fatos/atendimento_odontologico_individual.html">Atendimento odontológico individual</a> foram incluídos os campos <code>nu_peso</code> e <code>nu_altura</code>.</p>
+<p><strong>2. </strong> No contexto de <a href="/dw/fatos/atendimento_odontologico/index.html">Atendimento odontológico</a> foram incluídos os campos <code>nu_peso</code> e <code>nu_altura</code>.</p>
 
-<h3 id="6-principais-altera-es-da-v4-2-0-para-a-v4-2-1">6. Principais alterações da v4.2.0 para a v4.2.1:</h3>
+<h3 id="8-principais-altera-es-da-v4-2-0-para-a-v4-2-1">8. Principais alterações da v4.2.0 para a v4.2.1:</h3>
 
-<p><strong>1. </strong> No contexto de <a href="/dw/fatos/cadastro_individual.html">Cadastro individual</a> foi incluído o campo <code>co_dim_povo_comunidade_tradicional</code>. Além deste campo, também foi criada a tabela de dimensão <a href="/dw/dimensoes.html#tb\_dim\_povo\_comunidade\_tradicional">tb_dim_povo_comunidade_tradicional</a>.</p>
+<p><strong>1. </strong> No contexto de <a href="/dw/fatos/cadastro_individual.html">Cadastro individual</a> foi incluído o campo <code>co_dim_povo_comunidade_tradicional</code>. Além deste campo, também foi criada a tabela de dimensão <a href="/dw/dimensoes/index.html#tb\_dim\_povo\_comunidade\_tradicional">tb_dim_povo_comunidade_tradicional</a>.</p>
 
-<h3 id="7-principais-altera-es-da-v4-1-4-para-a-v4-2-0">7. Principais alterações da v4.1.4 para a v4.2.0:</h3>
+<h3 id="9-principais-altera-es-da-v4-1-4-para-a-v4-2-0">9. Principais alterações da v4.1.4 para a v4.2.0:</h3>
 
-<p><strong>1. </strong> No contexto de <a href="/dw/fatos/atendimento_individual/index.html">Atendimento individual</a> e <a href="/dw/fatos/atendimento_odontologico_individual.html">Atendimento odontológico individual</a> foram incluídas as estruturas de dados para registro das informações de resultados de exames. Estas informações estão armazenadas nas tabelas:</p>
+<p><strong>1. </strong> No contexto de <a href="/dw/fatos/atendimento_individual/index.html">Atendimento individual</a> e <a href="/dw/fatos/atendimento_odontologico/index.html">Atendimento odontológico</a> foram incluídas as estruturas de dados para registro das informações de resultados de exames. Estas informações estão armazenadas nas tabelas:</p>
 
 <ul>
 <li><code>tb_fat_atd_ind_exames</code>;</li>
@@ -223,13 +273,13 @@
 
 <p><strong>4. </strong> No contexto de <a href="/dw/fatos/vacinacao.html">Vacinação</a> foram incluídos os campos <code>st_registro_anterior</code> e <code>co_dim_tempo_vacina_aplicada</code>.</p>
 
-<h3 id="8-principais-altera-es-da-v4-1-2-para-a-v4-1-4">8. Principais alterações da v4.1.2 para a v4.1.4:</h3>
+<h3 id="10-principais-altera-es-da-v4-1-2-para-a-v4-1-4">10. Principais alterações da v4.1.2 para a v4.1.4:</h3>
 
 <p><strong>1. </strong> No contexto de <a href="/dw/fatos/vacinacao.html">Vacinação</a> foram incluídas as estruturas de dados para registro da informação de grupo de atendimento. Esta informação está armazenada na tabela: <code>tb_fat_vacinacao_vacina</code>.</p>
 
 <p><strong>2. </strong> Para contextualizar as informações da tabela <code>tb_fat_vacinacao_vacina</code>, foi criada a seguinte tabela de dimensão: <code>tb_dim_grupo_atendimento</code>.</p>
 
-<h3 id="9-principais-altera-es-da-v4-0-0-para-a-v4-1-2">9. Principais alterações da v4.0.0 para a v4.1.2:</h3>
+<h3 id="11-principais-altera-es-da-v4-0-0-para-a-v4-1-2">11. Principais alterações da v4.0.0 para a v4.1.2:</h3>
 
 <p><strong>1. </strong> No contexto de <a href="/dw/fatos/atendimento_individual/index.html">Atendimento individual</a> foram incluídas as estruturas de dados para registro das informações de prescrição de medicamentos e encaminhamentos. Estas informações estão armazenadas nas tabelas:</p>
 
@@ -238,30 +288,30 @@
 <li><code>tb_fat_atd_ind_encaminhamentos</code>.</li>
 </ul>
 
-<p><strong>2. </strong> No contexto de <a href="/dw/fatos/atendimento_odontologico_individual.html">Atendimento odontológico individual</a> foram incluídas as estruturas de dados para registro das informações de prescrição de medicamentos e encaminhamentos. Estas informações estão armazenadas nas tabelas:</p>
+<p><strong>2. </strong> No contexto de <a href="/dw/fatos/atendimento_odontologico/index.html">Atendimento odontológico</a> foram incluídas as estruturas de dados para registro das informações de prescrição de medicamentos e encaminhamentos. Estas informações estão armazenadas nas tabelas:</p>
 
 <ul>
 <li><code>tb_fat_atend_odonto_medicamentos</code>;</li>
 <li><code>tb_fat_atend_odonto_encaminhamentos</code>.</li>
 </ul>
 
-<p><strong>3. </strong> No contexto de <a href="/dw/fatos/visita_domiciliar.html">Visita domiciliar</a> foram adicionados os campos <code>nu_medicao_pressao_arterial</code>, <code>nu_medicao_temperatura</code>, <code>co_dim_tipo_glicemia</code> e <code>nu_medicao_glicemia</code>. Além destes campos, também foi criada a tabela de dimensão <a href="/dw/dimensoes.html#tb\_dim\_tipo\_glicemia">tb_dim_tipo_glicemia</a>.</p>
+<p><strong>3. </strong> No contexto de <a href="/dw/fatos/visita_domiciliar.html">Visita domiciliar</a> foram adicionados os campos <code>nu_medicao_pressao_arterial</code>, <code>nu_medicao_temperatura</code>, <code>co_dim_tipo_glicemia</code> e <code>nu_medicao_glicemia</code>. Além destes campos, também foi criada a tabela de dimensão <a href="/dw/dimensoes/index.html#tb\_dim\_tipo\_glicemia">tb_dim_tipo_glicemia</a>.</p>
 
 <p><strong>4. </strong> Para contextualizar as informações das tabelas <code>tb_fat_atd_ind_medicamentos</code> e <code>tb_fat_atend_odonto_medicamentos</code>, foram criadas as seguintes tabelas de dimensões:</p>
 
 <ul>
-<li><a href="/dw/dimensoes.html#tb\_dim\_catmat">tb_dim_catmat</a>;</li>
-<li><a href="/dw/dimensoes.html#tb\_dim\_via\_administracao">tb_dim_via_administracao</a>;</li>
-<li><a href="/dw/dimensoes.html#tb\_dim\_dose\_frequencia">tb_dim_dose_frequencia</a>;</li>
-<li><a href="/dw/dimensoes.html#tb\_dim\_dose\_frequencia\_medida">tb_dim_dose_frequencia_medida</a>;</li>
-<li><a href="/dw/dimensoes.html#tb\_dim\_duracao\_tratamento\_med">tb_dim_duracao_tratamento_med</a>.</li>
+<li><a href="/dw/dimensoes/dim_catmat.html">tb_dim_catmat</a>;</li>
+<li><a href="/dw/dimensoes/index.html#tb\_dim\_via\_administracao">tb_dim_via_administracao</a>;</li>
+<li><a href="/dw/dimensoes/dim_dose_frequencia.html">tb_dim_dose_frequencia</a>;</li>
+<li><a href="/dw/dimensoes/dim_dose_frequencia_medida.html">tb_dim_dose_frequencia_medida</a>;</li>
+<li><a href="/dw/dimensoes/dim_duracao_tratamento_med.html">tb_dim_duracao_tratamento_med</a>.</li>
 </ul>
 
 <p><strong>5. </strong> Para contextualizar as informações das tabelas <code>tb_fat_atd_ind_encaminhamentos</code> e <code>tb_fat_atend_odonto_encaminhamentos</code>, foram criadas as seguintes tabelas de dimensões:</p>
 
 <ul>
-<li><a href="/dw/dimensoes.html#tb\_dim\_especialidade">tb_dim_especialidade</a>;</li>
-<li><a href="/dw/dimensoes.html#tb\_dim\_classificacao\_risc\_enc">tb_dim_classificacao_risc_enc</a>.</li>
+<li><a href="/dw/dimensoes/dim_especialidade.html">tb_dim_especialidade</a>;</li>
+<li><a href="/dw/dimensoes/dim_classificacao_risc_enc.html">tb_dim_classificacao_risc_enc</a>.</li>
 </ul>
 
   </article>

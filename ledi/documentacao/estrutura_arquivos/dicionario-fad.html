@@ -10,8 +10,12 @@
   <meta name="description" content="FichaAtendimentoDomiciliarMaster">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="/ledi/documentacao/estrutura_arquivos/dicionario-fad.html">
+  <link rel="canonical" href="http://localhost:4040/ledi/documentacao/estrutura_arquivos/dicionario-fad.html">
   <link rel="icon" type="image/png" href="/img/logo-esus.png">
+
+  <script src="//code.jquery.com/jquery-3.1.0.min.js"></script>  
+  
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 
 
@@ -25,7 +29,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 5.6.4</span>
+        <span class="label">versão 6.2.0</span>
       
     </a>
 
@@ -75,7 +79,7 @@
           
         
           
-            <li><a title="Layout e-SUS APS de Dados e Interface Versão 5.6.4" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 5.6.4</a></li>
+            <li><a title="Layout e-SUS APS de Dados e Interface Versão 6.2.0" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 6.2.0</a></li>
           
         
           
@@ -115,9 +119,9 @@
   <ul>
     
       <li>
-        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 5.6.4" href="/ledi/documentacao/index.html" class="back-link">
+        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 6.2.0" href="/ledi/documentacao/index.html" class="back-link">
           <i class="icon icon-back"></i> Voltar
-          <small>(Layout e-SUS APS de Dados e Interface Versão 5.6.4)</small>
+          <small>(Layout e-SUS APS de Dados e Interface Versão 6.2.0)</small>
         </a>
       </li>
     
@@ -250,7 +254,7 @@
     <p class="post-meta">
       <a class="btn" href="/pdf.html?include=/ledi/documentacao/estrutura_arquivos/dicionario-fad.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 16/08/2024</span>
+        <span class="label" title="Data da última modificação">Alterado em 10/11/2024</span>
       
     </p>
   </header>
@@ -398,7 +402,7 @@
 
 <ul>
 <li>Validado pelo algoritmo;</li>
-<li>Não pode ser preenchido se o campo <a href="#15-cpfcidadao">cpfCidadao</a> for preenchido.</li>
+<li>Não pode ser preenchido se o campo <a href="#12-cpfcidadao">cpfCidadao</a> for preenchido.</li>
 </ul>
 
 <p><strong>Referência:</strong> O algoritmo de validação está presente em <a href="/ledi/documentacao/regras/algoritmo_CNS.html">Validar CNS</a>.</p>
@@ -548,31 +552,9 @@
 
 <p><strong>Referência:</strong> <a href="#condi-es-avaliadas">Condições Avaliadas</a>.</p>
 
-<h3 id="9-cid">#9 cid</h3>
+<h3 id="9-problemascondicoes">#9 problemasCondicoes</h3>
 
-<p>Código do CID10 registrado no atendimento.</p>
-
-<table><thead>
-<tr>
-<th>Tipo</th>
-<th>Obrigatório</th>
-<th>Mínimo</th>
-<th>Máximo</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>String</td>
-<td>Não</td>
-<td>-</td>
-<td>-</td>
-</tr>
-</tbody></table>
-
-<p><strong>Regra:</strong> Devem ser apresentadas somente CID-10 permitidas para o <a href="#4-sexo">Sexo</a>.</p>
-
-<h3 id="10-ciap">#10 ciap</h3>
-
-<p>Código do CIAP2 registrado no atendimento.</p>
+<p>Situações de saúde avaliadas no atendimento.</p>
 
 <table><thead>
 <tr>
@@ -583,21 +565,16 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>String</td>
-<td>Não</td>
-<td>-</td>
+<td>problemacondicao</td>
+<td>Sim</td>
+<td>1</td>
 <td>-</td>
 </tr>
 </tbody></table>
 
-<p><strong>Regras:</strong> </p>
+<p><strong>Referência:</strong> <a href="#problemacondicao">problemacondicao</a>.</p>
 
-<ul>
-<li>Devem ser apresentadas somente CIAP&#39;s permitidas para o <a href="#4-sexo">Sexo</a>;</li>
-<li>Não pode conter nenhum dos itens listados no grupo Procedimentos da Tabela CIAP2.</li>
-</ul>
-
-<h3 id="11-procedimentos">#11 procedimentos</h3>
+<h3 id="10-procedimentos">#10 procedimentos</h3>
 
 <p>Código dos procedimentos registrados no atendimento.</p>
 
@@ -630,7 +607,7 @@
 
 <p>Observação: Inserir o código do procedimento SIGTAP sem ponto ou hífen, ex: <code>0214010015</code>.</p>
 
-<h3 id="13-condutadesfecho">#13 condutaDesfecho</h3>
+<h3 id="11-condutadesfecho">#11 condutaDesfecho</h3>
 
 <p>Código do desfecho do atendimento do cidadão.</p>
 
@@ -652,7 +629,7 @@
 
 <p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#condutadesfecho">CondutaDesfecho</a>.</p>
 
-<h3 id="15-cpfcidadao">#15 cpfCidadao</h3>
+<h3 id="12-cpfcidadao">#12 cpfCidadao</h3>
 
 <p>CPF do cidadão que recebeu o atendimento.</p>
 
@@ -678,6 +655,241 @@
 <li>Somente CPF válido será aceito;</li>
 <li>Não pode ser preenchido se o campo <a href="#2-cnscidadao">cnsCidadao</a> for preenchido.</li>
 </ul>
+
+<h2 id="problemacondicao">ProblemaCondicao</h2>
+
+<h3 id="1-uuidproblema">#1 uuidProblema</h3>
+
+<p>Código identificador único do problema ou condição.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Não</td>
+<td>0</td>
+<td>22</td>
+</tr>
+</tbody></table>
+
+<h3 id="2-uuidevolucaoproblema">#2 uuidEvolucaoProblema</h3>
+
+<p>Código identificador único da evolução do problema ou condição.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Não</td>
+<td>0</td>
+<td>22</td>
+</tr>
+</tbody></table>
+
+<h3 id="3-cosequencialevolucao">#3 coSequencialEvolucao</h3>
+
+<p>Código sequencial da evolução dentro do próprio problema e condição atual.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Não</td>
+<td>0</td>
+<td>22</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>A primeira evolução do problema ou condição possui o valor 1, as evoluções subsequentes incrementam de 1 em 1;</li>
+<li>Não é recomendado repetir dentro do mesmo problema ou condição;</li>
+<li>É recomendado que o valor seja reiniciado para cada problema ou condição novo.</li>
+</ul>
+
+<h3 id="4-ciap">#4 ciap</h3>
+
+<p>Código da CIAP registrada no atendimento.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Condicional</td>
+<td>0</td>
+<td>22</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Não deve repetir a mesma CIAP2;</li>
+<li>Não pode conter nenhum dos itens listados no grupo Procedimentos da Tabela CIAP2;</li>
+<li>Não é permitida CIAP2 relacionada ao pré-natal com uma CID de desfecho de gestação (exemplo: CIAP2 &quot;GRAVIDEZ DE ALTO RISCO - W84&quot; relacionada a CID10 &quot;PARTO ÚNICO ESPONTÂNEO - O80&quot;);</li>
+<li>Não é permitida CIAP2 relacionada ao pré-natal caso a idade seja inferior a 9 anos;</li>
+<li>A CIAP2 &quot;GRAVIDEZ - W78&quot; só pode ser vinculada a uma CID10 da familia Z34; </li>
+<li>O código deve ser inserido em caracteres maiúsculos, sem espaços;</li>
+<li>Se torna obrigatório caso o campo <a href="#5-cid10">cid10</a> não seja preenchido.</li>
+</ul>
+
+<h3 id="5-cid10">#5 cid10</h3>
+
+<p>Código da CID10 registrada no atendimento.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Condicional</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Não deve repetir a mesma CID10;</li>
+<li>Não é permitida mais que uma CID10 da familia Z34 na mesma ficha;</li>
+<li>Se torna obrigatório caso o campo <a href="#4-ciap">ciap</a> não seja preenchido.</li>
+</ul>
+
+<h3 id="6-situacao">#6 situacao</h3>
+
+<p>Situação do problema ou condição.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Não</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Quando a <a href="#4-ciap">ciap</a> informada for &quot;GRAVIDEZ - W78&quot; não é permitido preencher a situação com o valor &quot;1 - Latente&quot;;</li>
+<li>Apenas valores de <code>0</code> a <code>2</code>.</li>
+</ul>
+
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#situacaoproblemascondicoes">SituacaoProblemasCondicoes</a>.</p>
+
+<h3 id="7-datainicioproblema">#7 dataInicioProblema</h3>
+
+<p>Data de inicio do problema ou condição.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Não</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Deve ser igual ou posterior a <a href="#3-datanascimento">dataNascimento</a>;</li>
+<li>Deve ser anterior ou igual <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>.</li>
+</ul>
+
+<h3 id="8-datafimproblema">#8 dataFimProblema</h3>
+
+<p>Data de finalização do problema ou condição.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Condicional</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Se torna obrigatório quando o campo <a href="#6-situacao">situacao</a> possuir o valor &quot;2 - Resolvido&quot;;</li>
+<li>Deve ser igual ou posterior a <a href="#3-datanascimento">dataNascimento</a>;</li>
+<li>Deve ser anterior ou igual <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>;</li>
+<li>Deve ser posterior ou igual a <a href="#7-datainicioproblema">dataInicioProblema</a>.</li>
+</ul>
+
+<h3 id="9-isavaliado">#9 isAvaliado</h3>
+
+<p>Indicador se o problema ou condição foi avaliado durante o atendimento.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
 
 <h2 id="condi-es-avaliadas">Condições avaliadas</h2>
 

@@ -10,7 +10,7 @@
   <meta name="description" content="Integração e-SUS APS PEC">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://localhost:4040/pdf.html">
+  <link rel="canonical" href="http://0.0.0.0:4000/pdf.html">
   <link rel="icon" type="image/png" href="/img/logo-esus.png">
 
   <script src="//code.jquery.com/jquery-3.1.0.min.js"></script>  
@@ -29,7 +29,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 6.2.0</span>
+        <span class="label">versão 6.3.0</span>
       
     </a>
 
@@ -141,7 +141,7 @@
 
       <li id="item-layout_ab" data-url="/ledi/documentacao/index.html">
         <label>
-          <input type="checkbox" value="layout_ab" checked="checked"> Layout e-SUS APS de Dados e Interface Versão 6.2.0
+          <input type="checkbox" value="layout_ab" checked="checked"> Layout e-SUS APS de Dados e Interface Versão 6.3.0
           <small>
             <a onclick="checkById('layout_ab', true); return false;">Marcar todos</a> |
             <a onclick="checkById('layout_ab', false); return false;">Desmarcar todos</a>
@@ -661,6 +661,22 @@
       </li>
     
 
+      <li id="item-api_transmissao_registro_LEDI" data-url="/ledi/documentacao/api_transmissao/api_transmissao_registro_LEDI.html">
+        <label>
+          <input type="checkbox" value="api_transmissao_registro_LEDI" checked="checked"> API para transmissão de registros no formato LEDI
+          <small>
+            <a onclick="checkById('api_transmissao_registro_LEDI', true); return false;">Marcar todos</a> |
+            <a onclick="checkById('api_transmissao_registro_LEDI', false); return false;">Desmarcar todos</a>
+          </small>
+        </label>
+
+        
+          
+
+        
+      </li>
+    
+
       <li id="item-thrift-xsd" data-url="/ledi/documentacao/thrift-xsd.html">
         <label>
           <input type="checkbox" value="thrift-xsd" checked="checked"> Registros Thrift / XSD por ficha
@@ -679,7 +695,7 @@
 
       <li id="item-principais_alteracoes" data-url="/ledi/documentacao/principais_alteracoes.html">
         <label>
-          <input type="checkbox" value="principais_alteracoes" checked="checked"> Principais alterações da v5.6.4 para a v6.2.0
+          <input type="checkbox" value="principais_alteracoes" checked="checked"> Principais alterações entre versões recentes
           <small>
             <a onclick="checkById('principais_alteracoes', true); return false;">Marcar todos</a> |
             <a onclick="checkById('principais_alteracoes', false); return false;">Desmarcar todos</a>
@@ -1765,7 +1781,7 @@
   
       <!-- Cria a lista de itens[páginas] que foram selecionados  -->
 
-  <li id="summary-layout_ab"><a href="#layout_ab">Layout e-SUS APS de Dados e Interface Versão 6.2.0</a></li>
+  <li id="summary-layout_ab"><a href="#layout_ab">Layout e-SUS APS de Dados e Interface Versão 6.3.0</a></li>
   
       <!-- Cria a lista de itens[páginas] que foram selecionados  -->
 
@@ -1986,6 +2002,13 @@
 
   
 
+  <li id="summary-api_transmissao_registro_LEDI"><a href="#api_transmissao_registro_LEDI">API para transmissão de registros no formato LEDI</a></li>
+  
+      <!-- Cria a lista de itens[páginas] que foram selecionados  -->
+
+
+  
+
   <li id="summary-thrift-xsd"><a href="#thrift-xsd">Registros Thrift / XSD por ficha</a></li>
   
       <!-- Cria a lista de itens[páginas] que foram selecionados  -->
@@ -1993,7 +2016,7 @@
 
   
 
-  <li id="summary-principais_alteracoes"><a href="#principais_alteracoes">Principais alterações da v5.6.4 para a v6.2.0</a></li>
+  <li id="summary-principais_alteracoes"><a href="#principais_alteracoes">Principais alterações entre versões recentes</a></li>
   
       <!-- Cria a lista de itens[páginas] que foram selecionados  -->
 
@@ -2471,8 +2494,13 @@
 </tr>
 </thead><tbody>
 <tr>
+<td>5.3.19 ou superior</td>
+<td><a href="/ledi/documentacao/index.html">LEDI APS 6.3.0</a></td>
+<td>14/11/2024</td>
+</tr>
+<tr>
 <td>5.3.15 ou superior</td>
-<td><a href="/ledi/documentacao/index.html">LEDI APS 6.2.0</a></td>
+<td><a href="https://integracao.esusab.ufsc.br/v620/">LEDI APS 6.2.0</a></td>
 <td>07/11/2024</td>
 </tr>
 <tr>
@@ -2706,17 +2734,17 @@
         
     <div class="post pdf shown" id="layout_ab" data-url="/ledi/documentacao/index.html">
       <header class="post-header">
-        <h1 class="post-title">Layout e-SUS APS de Dados e Interface Versão 6.2.0</h1>
+        <h1 class="post-title">Layout e-SUS APS de Dados e Interface Versão 6.3.0</h1>
       </header>
 
       
 
       <article class="post-content">
-        <p>Esta documentação descreve as estruturas de dados, seus atributos e regras utilizadas no <strong>LEDI APS</strong> versão 6.2.0</p>
+        <p>Esta documentação descreve as estruturas de dados, seus atributos e regras utilizadas no <strong>LEDI APS</strong> versão 6.3.0.</p>
 
-<p>A versão <strong>LEDI APS</strong> 6.2.0 é compatível com o sistema <strong>PEC e-SUS APS</strong> versão 5.3.15 ou superior.</p>
+<p>A versão <strong>LEDI APS</strong> 6.3.0 é compatível com o sistema <strong>PEC e-SUS APS</strong> versão 5.3.19 ou superior.</p>
 
-<p>Confira as principais alterações da V5.6.4 para a V6.2.0 <a href="/ledi/documentacao/principais_alteracoes.html">aqui</a>.</p>
+<p>Confira as principais alterações na versão 6.3.0 <a href="/ledi/documentacao/principais_alteracoes.html">aqui</a>.</p>
 
       </article>
 
@@ -51341,7 +51369,7 @@
 <td>minor</td>
 <td>Integer</td>
 <td>Sim</td>
-<td>Valor único = 2</td>
+<td>Valor único = 3</td>
 </tr>
 <tr>
 <td>revision</td>
@@ -65309,6 +65337,11 @@
 <td>4</td>
 <td>Ignorado</td>
 <td>Apenas quando não foi informado o sexo do cidadão.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Indeterminado</td>
+<td></td>
 </tr>
 </tbody></table>
 
@@ -104315,6 +104348,14 @@
 <tr>
 <td>22</td>
 <td>Vacina polio injetável</td>
+<td>1</td>
+<td>Rotina</td>
+<td>38</td>
+<td>REF</td>
+</tr>
+<tr>
+<td>22</td>
+<td>Vacina polio injetável</td>
 <td>2</td>
 <td>Especial</td>
 <td>1</td>
@@ -104379,6 +104420,22 @@
 <tr>
 <td>22</td>
 <td>Vacina polio injetável</td>
+<td>4</td>
+<td>Intensificação</td>
+<td>38</td>
+<td>REF</td>
+</tr>
+<tr>
+<td>22</td>
+<td>Vacina polio injetável</td>
+<td>5</td>
+<td>Campanha indiscriminada</td>
+<td>8</td>
+<td>D</td>
+</tr>
+<tr>
+<td>22</td>
+<td>Vacina polio injetável</td>
 <td>9</td>
 <td>Monitoramento Rápido de Cobertura Vacinal</td>
 <td>1</td>
@@ -104405,16 +104462,16 @@
 <td>Vacina polio injetável</td>
 <td>9</td>
 <td>Monitoramento Rápido de Cobertura Vacinal</td>
-<td>6</td>
-<td>R1</td>
+<td>8</td>
+<td>D</td>
 </tr>
 <tr>
 <td>22</td>
 <td>Vacina polio injetável</td>
 <td>9</td>
 <td>Monitoramento Rápido de Cobertura Vacinal</td>
-<td>7</td>
-<td>R2</td>
+<td>38</td>
+<td>REF</td>
 </tr>
 <tr>
 <td>23</td>
@@ -104787,6 +104844,22 @@
 <tr>
 <td>25</td>
 <td>Vacina difteria e tétano adulto</td>
+<td>2</td>
+<td>Especial</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>25</td>
+<td>Vacina difteria e tétano adulto</td>
+<td>2</td>
+<td>Especial</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>25</td>
+<td>Vacina difteria e tétano adulto</td>
 <td>3</td>
 <td>Bloqueio</td>
 <td>1</td>
@@ -104943,78 +105016,6 @@
 <td>Intensificação</td>
 <td>38</td>
 <td>REF</td>
-</tr>
-<tr>
-<td>28</td>
-<td>Vacina polio oral</td>
-<td>1</td>
-<td>Rotina</td>
-<td>1</td>
-<td>D1</td>
-</tr>
-<tr>
-<td>28</td>
-<td>Vacina polio oral</td>
-<td>1</td>
-<td>Rotina</td>
-<td>2</td>
-<td>D2</td>
-</tr>
-<tr>
-<td>28</td>
-<td>Vacina polio oral</td>
-<td>1</td>
-<td>Rotina</td>
-<td>3</td>
-<td>D3</td>
-</tr>
-<tr>
-<td>28</td>
-<td>Vacina polio oral</td>
-<td>1</td>
-<td>Rotina</td>
-<td>6</td>
-<td>R1</td>
-</tr>
-<tr>
-<td>28</td>
-<td>Vacina polio oral</td>
-<td>1</td>
-<td>Rotina</td>
-<td>7</td>
-<td>R2</td>
-</tr>
-<tr>
-<td>28</td>
-<td>Vacina polio oral</td>
-<td>4</td>
-<td>Intensificação</td>
-<td>6</td>
-<td>R1</td>
-</tr>
-<tr>
-<td>28</td>
-<td>Vacina polio oral</td>
-<td>4</td>
-<td>Intensificação</td>
-<td>7</td>
-<td>R2</td>
-</tr>
-<tr>
-<td>28</td>
-<td>Vacina polio oral</td>
-<td>5</td>
-<td>Campanha indiscriminada</td>
-<td>6</td>
-<td>R1</td>
-</tr>
-<tr>
-<td>28</td>
-<td>Vacina polio oral</td>
-<td>5</td>
-<td>Campanha indiscriminada</td>
-<td>7</td>
-<td>R2</td>
 </tr>
 <tr>
 <td>28</td>
@@ -105023,14 +105024,6 @@
 <td>Campanha indiscriminada</td>
 <td>8</td>
 <td>D</td>
-</tr>
-<tr>
-<td>28</td>
-<td>Vacina polio oral</td>
-<td>5</td>
-<td>Campanha indiscriminada</td>
-<td>58</td>
-<td>R0</td>
 </tr>
 <tr>
 <td>29</td>
@@ -105613,7 +105606,7 @@
 <td>Vacina raiva em cultivo celular vero</td>
 <td>12</td>
 <td>Pós-exposição</td>
-<td> </td>
+<td>1</td>
 <td>D1</td>
 </tr>
 <tr>
@@ -105621,7 +105614,7 @@
 <td>Vacina raiva em cultivo celular vero</td>
 <td>12</td>
 <td>Pós-exposição</td>
-<td> </td>
+<td>2</td>
 <td>D2</td>
 </tr>
 <tr>
@@ -105629,7 +105622,7 @@
 <td>Vacina raiva em cultivo celular vero</td>
 <td>12</td>
 <td>Pós-exposição</td>
-<td> </td>
+<td>3</td>
 <td>D3</td>
 </tr>
 <tr>
@@ -105637,7 +105630,7 @@
 <td>Vacina raiva em cultivo celular vero</td>
 <td>12</td>
 <td>Pós-exposição</td>
-<td> </td>
+<td>4</td>
 <td>D4</td>
 </tr>
 <tr>
@@ -105645,7 +105638,7 @@
 <td>Vacina raiva em cultivo celular vero</td>
 <td>11</td>
 <td>Pré-exposição</td>
-<td> </td>
+<td>1</td>
 <td>D1</td>
 </tr>
 <tr>
@@ -105653,7 +105646,7 @@
 <td>Vacina raiva em cultivo celular vero</td>
 <td>11</td>
 <td>Pré-exposição</td>
-<td> </td>
+<td>2</td>
 <td>D2</td>
 </tr>
 <tr>
@@ -105661,7 +105654,7 @@
 <td>Vacina raiva em cultivo celular vero</td>
 <td>13</td>
 <td>Reexposição</td>
-<td> </td>
+<td>1</td>
 <td>D1</td>
 </tr>
 <tr>
@@ -105669,7 +105662,7 @@
 <td>Vacina raiva em cultivo celular vero</td>
 <td>13</td>
 <td>Reexposição</td>
-<td> </td>
+<td>2</td>
 <td>D2</td>
 </tr>
 <tr>
@@ -105677,7 +105670,7 @@
 <td>Vacina raiva em cultivo celular vero</td>
 <td>13</td>
 <td>Reexposição</td>
-<td> </td>
+<td>3</td>
 <td>D3</td>
 </tr>
 <tr>
@@ -105685,7 +105678,7 @@
 <td>Vacina raiva em cultivo celular vero</td>
 <td>13</td>
 <td>Reexposição</td>
-<td> </td>
+<td>4</td>
 <td>D4</td>
 </tr>
 <tr>
@@ -106227,14 +106220,6 @@
 <tr>
 <td>57</td>
 <td>Vacina dTpa adulto</td>
-<td>2</td>
-<td>Especial</td>
-<td>38</td>
-<td>REF</td>
-</tr>
-<tr>
-<td>57</td>
-<td>Vacina dTpa adulto</td>
 <td>3</td>
 <td>Bloqueio</td>
 <td>8</td>
@@ -106245,24 +106230,16 @@
 <td>Vacina dTpa adulto</td>
 <td>4</td>
 <td>Intensificação</td>
-<td>1</td>
-<td>D1</td>
+<td>8</td>
+<td>D</td>
 </tr>
 <tr>
 <td>57</td>
 <td>Vacina dTpa adulto</td>
 <td>4</td>
 <td>Intensificação</td>
-<td>2</td>
-<td>D2</td>
-</tr>
-<tr>
-<td>57</td>
-<td>Vacina dTpa adulto</td>
-<td>4</td>
-<td>Intensificação</td>
-<td>3</td>
-<td>D3</td>
+<td>38</td>
+<td>REF</td>
 </tr>
 <tr>
 <td>59</td>
@@ -107287,6 +107264,138 @@
 
     
 
+    <div class="post pdf shown" id="api_transmissao_registro_LEDI" data-url="/ledi/documentacao/api_transmissao/api_transmissao_registro_LEDI.html">
+      <header class="post-header">
+        <h1 class="post-title">API para transmissão de registros no formato LEDI</h1>
+      </header>
+
+      
+
+      <article class="post-content">
+        <h1 id="1-objetivo">1. Objetivo</h1>
+
+<p>Este documento apresenta as etapas necessárias para conseguir enviar registros no formato LEDI via API.</p>
+
+<h1 id="2-gera-o-da-credencial">2. Geração da credencial</h1>
+
+<p><strong>1. </strong> A geração das credenciais deve estar habilitada somente para as instalações que possuam HTTPS configurado.</p>
+
+<p><strong>2. </strong> A geração da credencial deve ser feita pelo Administrador Municipal no módulo &quot;Transmissão de dados &gt; Configurações&quot;. Sendo necessário informar os seguintes dados dos integradores:</p>
+
+<ul>
+<li>Para cadastro de &quot;Pessoa física&quot; o registro deve conter as seguintes informações da pessoa que será responsável pela integração: Nome, CPF, E-mail e Nome da credencial;</li>
+<li>Para cadastro de &quot;Pessoa jurídica&quot; o registro deve conter as seguintes informações da pessoa que será responsável pela integração: Nome, CNPJ, E-mail e Nome da credencial.</li>
+</ul>
+
+<p><strong>3. </strong> Após realizar o cadastro de um integrador o sistema deve gerar o usuário e a senha que serão utilizados na autenticação da API. Sendo o Administrador Municipal responsável por repassar essas informações para os integradores. Não deve ser possível recuperar um usuário e senha gerados previamente, caso o usuário e a senha sejam perdidos é necessário gerar outra credencial.</p>
+
+<h1 id="3-endpoint-vari-veis-e-respostas-da-api">3. Endpoint, variáveis e respostas da API</h1>
+
+<p><strong>4. </strong> A API possui dois endpoints disponíveis: &quot;[url_instalacao]/api/recebimento/login&quot; e &quot;[url_instalacao]/api/v1/recebimento/ficha&quot;.</p>
+
+<p><strong>5. </strong> O endpoint &quot;/api/recebimento/login&quot; deve ser utilziado para realizar a autenticação do envio através da requisição do tipo POST. Sendo aceitas as variáveis &quot;usuario&quot; e &quot;senha&quot;. As respostas possíveis são:</p>
+
+<ul>
+<li>Resposta de sucesso: a API deve retornar um cookie chamado &quot;JSESSIONID&quot;. Esse cookie deve ser enviado em requisições futuras como forma de autenticação;</li>
+<li>Resposta de erro: deve ser retornado um código e mensagem do erro.</li>
+</ul>
+
+<p><strong>6. </strong> O endpoint &quot;/api/v1/recebimento/ficha&quot; deve ser utilizado para realizar o envio dos registros no formato LEDI através da requisição do tipo POST. Sendo aceito a variável ficha. O valor da variável deve ser um arquivo serializado em binário e o nome desse arquivo deve ser &quot;uuid do registro eletrônico no formato LEDI&quot; + &quot;.esus&quot;. Segue um exemplo de ficha nomeada corretamente: &quot;0000007-cfdd9b1b-2c4d-4759-b254-76564ec219f3.esus&quot;.</p>
+
+<p><strong>7. </strong> As respostas possíveis para o endpoint &quot;/api/v1/recebimento/ficha&quot; são:</p>
+
+<ul>
+<li>Respostas de sucesso: deve ser retornado o status 200;</li>
+<li>Resposta de erro: deve ser retornado um código e uma mensagem do erro. Informando quais informações devem ser corrigidas para que a ficha seja aceita.</li>
+</ul>
+
+<p><strong>8. </strong> Sugere-se que o erro retornado pela API seja armazenado pelo próprio integrador. Possibilitando assim correção de registros no formato LEDI que foram enviadas com erro.</p>
+
+<h1 id="4-exemplos-de-requisi-o">4. Exemplos de requisição</h1>
+
+<p><img src="/ledi/documentacao/api_transmissao/img/api_login.png" alt="Protótipo 1 - Requisição POST no endpoint de autenticação" title="Protótipo 1 - Autenticação na API de tramissão de registros no formato LEDI"> <em>Protótipo 1 - Requisição POST no endpoint de autenticação</em></p>
+
+<p><img src="/ledi/documentacao/api_transmissao/img/api_recebimento_ficha.png" alt="Protótipo 2 - Requisição POST para envio de registros no formato LEDI " title="Protótipo 2 - Envio de registros no formato LEDI através da API de tramissão de registros no formato LEDI"> <em>Protótipo 2 - Requisição POST para envio de registros no formato LEDI</em></p>
+
+<h1 id="5-fluxograma">5. Fluxograma</h1>
+
+<p><strong>9. </strong> O propósito desse fluxograma é facilitar a compreensão do funcionamento da API. </p>
+
+<p><img src="/ledi/documentacao/api_transmissao/img/fluxo_api_recebimento.png" alt="Fluxograma 1 - Fluxograma para facilitar a compreensão do funcionamento da API " title="Fluxograma 1 - Fluxograma para facilitar a compreensão do funcionamento da API"> <em>Fluxograma 1 - Fluxograma para facilitar a compreensão do funcionamento da API</em></p>
+
+<h1 id="6-dicion-rio-de-dados">6. Dicionário de dados</h1>
+
+<p><strong>10. </strong> Relação de endpoint, tipos de requisição e parâmetros:</p>
+
+<table><thead>
+<tr>
+<th>Endpoint</th>
+<th>Tipo de requisição</th>
+<th>Parâmetros</th>
+<th>Observação</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>api/recebimento/login</td>
+<td>POST</td>
+<td>usuario</td>
+<td>Utilizando o usuário fornecido nas credenciais geradas pelo PEC para a autenticação da API</td>
+</tr>
+<tr>
+<td>api/recebimento/login</td>
+<td>POST</td>
+<td>senha</td>
+<td>Utilizando a senha fornecida nas credenciais geradas pelo PEC para a autenticação da API</td>
+</tr>
+<tr>
+<td>api/v1/recebimento/ficha</td>
+<td>POST</td>
+<td>ficha</td>
+<td>Enviar o path dos modelos de informação do LEDI  na requisição. O nome do arquivo deve ser “uuidDadoSerializado”, que está presente no modelo de informação</td>
+</tr>
+</tbody></table>
+
+<p><strong>11. </strong> Relação de endpoint e possíveis respostas:</p>
+
+<table><thead>
+<tr>
+<th>Endpoint</th>
+<th>Resposta</th>
+<th>Observação</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>api/recebimento/login</td>
+<td>200</td>
+<td>Acesso autorizado.</td>
+</tr>
+<tr>
+<td>api/recebimento/login</td>
+<td>400</td>
+<td>Acesso negado, verificar credenciais utilizadas</td>
+</tr>
+<tr>
+<td>api/v1/recebimento/ficha</td>
+<td>200</td>
+<td>Envio realizado com sucesso</td>
+</tr>
+<tr>
+<td>api/v1/recebimento/ficha</td>
+<td>400</td>
+<td>Alguns dos registros no formato LEDI enviados possuem erros. Os registros no formato LEDI que apresentam erro e o respectivo erro são enviados na resposta da API</td>
+</tr>
+</tbody></table>
+
+      </article>
+
+      <div class="pdf-separator"></div>
+    </div>
+
+    
+        
+
+    
+
     <div class="post pdf shown" id="thrift-xsd" data-url="/ledi/documentacao/thrift-xsd.html">
       <header class="post-header">
         <h1 class="post-title">Registros Thrift / XSD por ficha</h1>
@@ -107752,13 +107861,29 @@
 
     <div class="post pdf shown" id="principais_alteracoes" data-url="/ledi/documentacao/principais_alteracoes.html">
       <header class="post-header">
-        <h1 class="post-title">Principais alterações da v5.6.4 para a v6.2.0</h1>
+        <h1 class="post-title">Principais alterações entre versões recentes</h1>
       </header>
 
       
 
       <article class="post-content">
-        <p>Este documento relata as principais alterações em relação à versão v5.6.4 do LEDI APS:</p>
+        <p>Este documento relata as principais alterações entre as últimas versões do LEDI APS:</p>
+
+<h2 id="vers-o-6-3-0">Versão 6.3.0</h2>
+
+<h3 id="1-inclus-o-do-sexo-indeterminado">1. Inclusão do sexo &quot;Indeterminado&quot;</h3>
+
+<p>Foi incluída a possibilidade de informar sexo de nascimento &quot;indeterminado&quot; para o cidadão, em conssonância com a versão mais recente da <strong>DNV - Declaração de Nascido Vivo</strong>. A validação de todos os campos relacionados ao sexo biológico, em todos os modelos de dados do LEDI, agora considera a possibilidade desse valor.</p>
+
+<h3 id="2-atualiza-o-de-regras-vacinais">2. Atualização de regras vacinais</h3>
+
+<p>Foram atualizadas as regras para aplicação dos imunobiológicos VIP (22), dT (25), VOP (28) e dTpa (57).</p>
+
+<h3 id="3-api-de-transmiss-o-de-registros-no-formato-ledi">3. API de transmissão de registros no formato LEDI</h3>
+
+<p><strong>1. </strong> A API de transmissão de registros no formato LEDI possibilita que sistemas terceiros enviem registros no formato LEDI de forma automatizada. Mais informações sobre como utilizar a API estão na disponíveis na <a href="/ledi/documentacao/api_transmissao/api_transmissao_registro_LEDI.html">documentação</a>.</p>
+
+<h2 id="vers-o-6-2-0">Versão 6.2.0</h2>
 
 <h3 id="1-inclus-o-de-regras-vacinais">1. Inclusão de regras vacinais</h3>
 
@@ -107842,10 +107967,6 @@
 <li>A soma das doses dos turnos deve ser igual à quantidade total da dose informada.</li>
 </ul></li>
 </ul>
-
-<h3 id="aviso-importante">AVISO IMPORTANTE</h3>
-
-<p>A inclusão do imunobiológico &quot;111 - Vacina Tetra Acelular - dTpa/VIP&quot;, disponível para transcrições de caderneta (registro anterior) só é válida para versões 5.2.42 ou posteriores do e-SUS APS PEC, mesmo utilizando a versão 5.6.4 do LEDI.</p>
 
       </article>
 

@@ -5,7 +5,7 @@ Este exemplo é um projeto maven que demonstra como serializar fichas thrift(1) 
 
 ## (1) Serializar fichas thrift
 
-A classe [ExemploFichaProcedimentoThrift.java](../java/src/main/java/exemplo/ExemploFichaProcedimentoThrift.java) é um exemplo de como criar um objeto de ficha e serializá-lo.
+A classe [ExemploFichaProcedimentoThrift.java](../java/src/main/java/exemplo/ExemploFichaProcedimentoThrift.java) é um exemplo de como criar um objeto de ficha e serializá-lo.    
 Para mais informações sobre as validações dos dados no sistema e-SUS AB consulte o [dicionário de dados](https://integracao.esusab.ufsc.br/).
 
 

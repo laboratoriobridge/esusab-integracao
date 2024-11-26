@@ -63,16 +63,19 @@ public class ExemploEnvioApi {
 			// Passo 6: Serializar a ficha
 			byte[] fichaExemploSerializada = SerializadorThrift.serializar(fichaExemplo);
 
-			// Passo 7: Configurar post de envio de ficha informando atributo ficha e o arquivo serializado, importante que o nome do arquivo seja o uuid da ficha + ".esus"
+			// Passo 7: Definir o nome do arquivo serializado UUID + ".esus"
+			String filename = fichaExemplo.getUuidDadoSerializado() + ".esus";
+
+			// Passo 8: Configurar post de envio de ficha informando atributo ficha e o arquivo serializado, importante que o nome do arquivo seja o uuid da ficha + ".esus"
 			HttpPost sendFicha = new HttpPost(ENVIO_URL);
 			sendFicha.setEntity(MultipartEntityBuilder
 					.create()
-					.addBinaryBody("ficha", fichaExemploSerializada, ContentType.APPLICATION_OCTET_STREAM, fichaExemplo.getUuidDadoSerializado() + ".esus")
+					.addBinaryBody("ficha", fichaExemploSerializada, ContentType.APPLICATION_OCTET_STREAM, filename)
 					.build());
 
-			// Passo 8: Executar o post de envio de ficha
+			// Passo 9: Executar o post de envio de ficha
 			client.execute(sendFicha, response -> {
-				// Passo 8.1: Tratar resposta de erro no envio de ficha
+				// Passo 9.1: Tratar resposta de erro no envio de ficha
 				if (HttpStatus.SC_CREATED != response.getCode()) {
 					throw new RuntimeException("\n" +
 							"Erro ao enviar ficha. \n" +

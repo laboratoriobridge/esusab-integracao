@@ -20,12 +20,13 @@ public class ExemploEnvioApi {
 
 	public static void main(String[] args) throws IOException {
 
-		// Passo 1: Setar os valores nas variáveis APPLICATION_URL, USUARIO_CREDENCIAL e SENHA_CREDENCIAL abaixo para configurar o envio
+		// Passo 1: Setar os valores nas variáveis USUARIO_CREDENCIAL, SENHA_CREDENCIAL e APPLICATION_URL abaixo para configurar o envio
+		String USUARIO_CREDENCIAL = "COLOQUE_AQUI_USUARIO";    /* Usuário da credencial obtida com o responsável pelo recebimento. */
+		String SENHA_CREDENCIAL = "COLOQUE_AQUI_SENHA";    /* Senha da credencial obtida com o responsável pelo recebimento. */
 		String APPLICATION_URL = "COLOQUE_AQUI_URL_SERVIDOR_PEC";  /* Endereço de ip da instalação a se fazer o envio */
 		String LOGIN_URL = APPLICATION_URL + "/api/recebimento/login";
 		String ENVIO_URL = APPLICATION_URL + "/api/v1/recebimento/ficha";
-		String USUARIO_CREDENCIAL = "COLOQUE_AQUI_USUARIO";    /* Usuário da credencial obtida com o responsãvel pelo recebimento. */
-		String SENHA_CREDENCIAL = "COLOQUE_AQUI_SENHA";    /* Senha da credencial obtida com o responsãvel pelo recebimento. */
+
 
 		// Passo 2: Criar um client http
 		try (CloseableHttpClient client = HttpClients.createDefault()) {

@@ -1,28 +1,23 @@
 package exemplo;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 import java.util.UUID;
-import java.util.zip.ZipEntry;
-import java.util.zip.ZipOutputStream;
 
-import br.gov.saude.esusab.ras.common.UnicaLotacaoHeaderThrift;
-import br.gov.saude.esusab.ras.atendprocedimentos.FichaProcedimentoChildThrift;
-import br.gov.saude.esusab.ras.atendprocedimentos.FichaProcedimentoMasterThrift;
 import br.gov.saude.esus.transport.common.api.configuracaodestino.VersaoThrift;
 import br.gov.saude.esus.transport.common.generated.thrift.DadoInstalacaoThrift;
 import br.gov.saude.esus.transport.common.generated.thrift.DadoTransporteThrift;
+import br.gov.saude.esusab.ras.atendprocedimentos.FichaProcedimentoChildThrift;
+import br.gov.saude.esusab.ras.atendprocedimentos.FichaProcedimentoMasterThrift;
+import br.gov.saude.esusab.ras.common.UnicaLotacaoHeaderThrift;
+
+import exemplo.common.SerializadorThrift;
 
 public class ExemploFichaProcedimentoThrift {
-
-	private final static String EXTENSAO_EXPORT = ".esus";
 	private static long TIPO_DADO_SERIALIZADO_FICHA_PROCEDIMENTO = 7;
 
-	public static void main(String[] args) {
+	public static DadoTransporteThrift getDadoTransporte() {
 		// Passo 1: Popular a ficha
 		FichaProcedimentoMasterThrift thriftFichaProcedimento = getFicha();
 
@@ -37,33 +32,10 @@ public class ExemploFichaProcedimentoThrift {
 		dadoTransporteThrift.setDadoSerializado(fichaSerializada);
 
 		// Não esquecer de informar a versão da ficha a ser exportada (não é a versão do e-SUS AB)
-		VersaoThrift versaoThrift = new VersaoThrift(3, 2, 3);
+		VersaoThrift versaoThrift = new VersaoThrift(6, 3, 0);
 		dadoTransporteThrift.setVersao(versaoThrift);
 
-		try {
-			// Passo 5: Criar um arquivo zip para conter as fichas
-			File zipFile = new File(System.getProperty("user.home") + "/exemploConversaoThrift.zip");
-			ZipOutputStream outputStream = new ZipOutputStream(new FileOutputStream(zipFile));
-
-			// Passo 6: Dar um nome para o arquivo (nesse caso usamos o UUID da ficha) sempre acrescentando a extensão ".esus" ao final
-			String entryName = dadoTransporteThrift.getUuidDadoSerializado() + EXTENSAO_EXPORT;
-
-			// Passo 7: Adicionar uma nova entrada (novo arquivo) dentro do zip com o nome definido
-			outputStream.putNextEntry(new ZipEntry(entryName));
-
-			// Passo 8: serializar o DadoTransporte utilizando o TBinaryProtocol da biblioteca thrift
-			byte[] dadoTransporteSerializado = SerializadorThrift.serializar(dadoTransporteThrift);
-
-			// Passo 9: escrever o dadoTransporteSerializado no arquivo zip
-			outputStream.write(dadoTransporteSerializado);
-
-			// Para adicionar mais fichas no mesmo zip, repetir os passos 6, 7, 8 e 9 com as demais fichas
-
-			// Passo 10: Finalizar o arquivo zip
-			outputStream.close();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		return dadoTransporteThrift;
 	}
 
 	/**
@@ -72,7 +44,7 @@ public class ExemploFichaProcedimentoThrift {
 	 * @return DadoTransporteThrift
 	 */
 
-	public static DadoTransporteThrift getDadoTransporte(FichaProcedimentoMasterThrift ficha) {
+	private static DadoTransporteThrift getDadoTransporte(FichaProcedimentoMasterThrift ficha) {
 		DadoTransporteThrift dadoTransporteThrift = new DadoTransporteThrift();
 
 		dadoTransporteThrift.setUuidDadoSerializado(ficha.getUuidFicha());
@@ -98,9 +70,7 @@ public class ExemploFichaProcedimentoThrift {
 		remetente.setUuidInstalacao("UUIDUNICO222");
 		dadoTransporteThrift.setRemetente(remetente);
 
-		dadoTransporteThrift.setNumLote(0l);
-
-
+		dadoTransporteThrift.setNumLote(0L);
 
 		return dadoTransporteThrift;
 	}
@@ -155,24 +125,50 @@ public class ExemploFichaProcedimentoThrift {
 	private static List<FichaProcedimentoChildThrift> getAtendimentos() {
 		List<FichaProcedimentoChildThrift> listaProcedimentosAtendimento = new ArrayList<>();
 
-		for (Integer numeroAtendimentos = 0; numeroAtendimentos < 2; numeroAtendimentos++) {
-			FichaProcedimentoChildThrift atendimentoProcedimentoThrift = new FichaProcedimentoChildThrift();
+		FichaProcedimentoChildThrift atendimentoProcedimentoThrift1 = new FichaProcedimentoChildThrift();
 
-			Calendar dataNascimento = Calendar.getInstance();
-			dataNascimento.set(2014, 11, 20);
-			atendimentoProcedimentoThrift.setDtNascimento(dataNascimento.getTimeInMillis());
+		Calendar dataNascimento = Calendar.getInstance();
+		dataNascimento.set(2013, 12, 20);
+		atendimentoProcedimentoThrift1.setDtNascimento(dataNascimento.getTimeInMillis());
 
-			atendimentoProcedimentoThrift.setLocalAtendimento(1);
-			atendimentoProcedimentoThrift.setCpfCidadao("80487483391");
-			atendimentoProcedimentoThrift.setNumProntuario("43143");
-			atendimentoProcedimentoThrift.setSexo(1);
-			atendimentoProcedimentoThrift.setTurno(1);
+		atendimentoProcedimentoThrift1.setLocalAtendimento(2);
+		atendimentoProcedimentoThrift1.setCpfCidadao("81381513077");
+		atendimentoProcedimentoThrift1.setNumProntuario("35284");
+		atendimentoProcedimentoThrift1.setSexo(0);
+		atendimentoProcedimentoThrift1.setTurno(2);
 
-			atendimentoProcedimentoThrift.setProcedimentos(getProcedimentosSia());
-			atendimentoProcedimentoThrift.setProcedimentos(getProcedimentos());
+		Calendar dataInicioAtendimento = Calendar.getInstance();
+		dataInicioAtendimento.set(2020, 12, 20, 10, 00);
+		atendimentoProcedimentoThrift1.setDataHoraInicialAtendimento(dataInicioAtendimento.getTimeInMillis());
 
-			listaProcedimentosAtendimento.add(atendimentoProcedimentoThrift);
-		}
+		Calendar dataFimAtendimento = Calendar.getInstance();
+		dataFimAtendimento.set(2020, 12, 20, 10, 20);
+		atendimentoProcedimentoThrift1.setDataHoraFinalAtendimento(dataFimAtendimento.getTimeInMillis());
+
+		atendimentoProcedimentoThrift1.setProcedimentos(getProcedimentosSia());
+		atendimentoProcedimentoThrift1.setProcedimentos(getProcedimentos());
+
+		listaProcedimentosAtendimento.add(atendimentoProcedimentoThrift1);
+
+		FichaProcedimentoChildThrift atendimentoProcedimentoThrift2 = new FichaProcedimentoChildThrift();
+
+		Calendar dataNascimento1 = Calendar.getInstance();
+		dataNascimento1.set(2014, 11, 20);
+		atendimentoProcedimentoThrift2.setDtNascimento(dataNascimento1.getTimeInMillis());
+
+		atendimentoProcedimentoThrift2.setLocalAtendimento(1);
+		atendimentoProcedimentoThrift2.setCpfCidadao("61228957096");
+		atendimentoProcedimentoThrift2.setNumProntuario("43143");
+		atendimentoProcedimentoThrift2.setSexo(1);
+		atendimentoProcedimentoThrift2.setTurno(1);
+
+		atendimentoProcedimentoThrift2.setDataHoraInicialAtendimento(dataInicioAtendimento.getTimeInMillis());
+		atendimentoProcedimentoThrift2.setDataHoraFinalAtendimento(dataFimAtendimento.getTimeInMillis());
+
+		atendimentoProcedimentoThrift2.setProcedimentos(getProcedimentosSia());
+		atendimentoProcedimentoThrift2.setProcedimentos(getProcedimentos());
+
+		listaProcedimentosAtendimento.add(atendimentoProcedimentoThrift2);
 
 		return listaProcedimentosAtendimento;
 	}

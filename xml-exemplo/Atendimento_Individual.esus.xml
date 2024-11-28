@@ -98,10 +98,10 @@
 			<medicamentos>
 				<codigoCatmat>BR0387985</codigoCatmat>
 				<viaAdministracao>11</viaAdministracao>
-				<dose>1 aplicação</dose>
+				<dose>6 aplicações</dose>
 				<doseUnica>false</doseUnica>
 				<usoContinuo>false</usoContinuo>
-				<doseFrequenciaTipo>1</doseFrequenciaTipo>
+				<doseFrequenciaTipo>4</doseFrequenciaTipo>
 				<doseFrequencia>manhã</doseFrequencia>
 				<doseFrequenciaQuantidade>2</doseFrequenciaQuantidade>
 				<doseFrequenciaUnidadeMedida>3</doseFrequenciaUnidadeMedida>
@@ -109,6 +109,9 @@
 				<duracaoTratamento>12</duracaoTratamento>
 				<duracaoTratamentoMedida>3</duracaoTratamentoMedida>
 				<quantidadeReceitada>12</quantidadeReceitada>
+				<qtDoseManha>2</qtDoseManha>
+				<qtDoseTarde>2</qtDoseTarde>
+				<qtDoseNoite>2</qtDoseNoite>
 			</medicamentos>
 			<encaminhamentos>
 				<hipoteseDiagnosticoCid10>B170</hipoteseDiagnosticoCid10>
@@ -276,5 +279,5 @@
 		<versaoSistema>5.2.29</versaoSistema>
 		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:originadora>
-	<versao major="6" minor="2" revision="0"/>
+	<versao major="6" minor="3" revision="1"/>
 </ns3:dadoTransporteTransportXml>

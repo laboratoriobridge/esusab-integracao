@@ -67,8 +67,8 @@
 				<duracaoTratamentoMedida>3</duracaoTratamentoMedida>
 				<quantidadeReceitada>12</quantidadeReceitada>
 				<qtDoseManha>2</qtDoseManha>
-				<qtDoseTarde>2</qtDoseTarde>
-				<qtDoseNoite>2</qtDoseNoite>
+				<qtDoseTarde>1</qtDoseTarde>
+				<qtDoseNoite>3</qtDoseNoite>
 			</medicamentos>
 			<encaminhamentos>
 				<especialidade>3</especialidade>

@@ -29,7 +29,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 6.3.0</span>
+        <span class="label">versão 6.3.2</span>
       
     </a>
 
@@ -79,7 +79,7 @@
           
         
           
-            <li><a title="Layout e-SUS APS de Dados e Interface Versão 6.3.0" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 6.3.0</a></li>
+            <li><a title="Layout e-SUS APS de Dados e Interface Versão 6.3.2" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 6.3.2</a></li>
           
         
           
@@ -123,7 +123,7 @@
     
 
     <li>
-      <a class="open" title="Layout e-SUS APS de Dados e Interface Versão 6.3.0" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 6.3.0</a>
+      <a class="open" title="Layout e-SUS APS de Dados e Interface Versão 6.3.2" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 6.3.2</a>
       <ul>
         
           <li  class="has-subitems">
@@ -187,7 +187,7 @@
     <p class="post-meta">
       <a class="btn" href="/pdf.html?include=/ledi/documentacao/api_transmissao/api_transmissao_registro_LEDI.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 19/11/2024</span>
+        <span class="label" title="Data da última modificação">Alterado em 06/12/2024</span>
       
     </p>
   </header>
@@ -232,21 +232,25 @@
 
 <p><strong>8. </strong> Sugere-se que o erro retornado pela API seja armazenado pelo próprio integrador. Possibilitando assim correção de registros no formato LEDI que foram enviadas com erro.</p>
 
-<h1 id="4-exemplos-de-requisi-o">4. Exemplos de requisição</h1>
+<h1 id="4-reposit-rio-p-blico-no-github-com-exemplos-de-serializa-o-e-envio-de-informa-es-via-api">4. Repositório público no Github com exemplos de serialização e envio de informações via API</h1>
+
+<p><strong>9. </strong> O <a href="https://github.com/laboratoriobridge/esusab-integracao/tree/master/thrift-exemplo">repositório</a> contém explicações detalhadas sobre como serializar os registros e transmiti-los via API de transmissão. Serão disponibilizados exemplos na linguagem java.</p>
+
+<h1 id="5-exemplos-de-requisi-o">5. Exemplos de requisição</h1>
 
 <p><img src="img/api_login.png" alt="Protótipo 1 - Requisição POST no endpoint de autenticação" title="Protótipo 1 - Autenticação na API de tramissão de registros no formato LEDI"> <em>Protótipo 1 - Requisição POST no endpoint de autenticação</em></p>
 
 <p><img src="img/api_recebimento_ficha.png" alt="Protótipo 2 - Requisição POST para envio de registros no formato LEDI " title="Protótipo 2 - Envio de registros no formato LEDI através da API de tramissão de registros no formato LEDI"> <em>Protótipo 2 - Requisição POST para envio de registros no formato LEDI</em></p>
 
-<h1 id="5-fluxograma">5. Fluxograma</h1>
+<h1 id="6-fluxograma">6. Fluxograma</h1>
 
-<p><strong>9. </strong> O propósito desse fluxograma é facilitar a compreensão do funcionamento da API. </p>
+<p><strong>10. </strong> O propósito desse fluxograma é facilitar a compreensão do funcionamento da API. </p>
 
 <p><img src="img/fluxo_api_recebimento.png" alt="Fluxograma 1 - Fluxograma para facilitar a compreensão do funcionamento da API " title="Fluxograma 1 - Fluxograma para facilitar a compreensão do funcionamento da API"> <em>Fluxograma 1 - Fluxograma para facilitar a compreensão do funcionamento da API</em></p>
 
-<h1 id="6-dicion-rio-de-dados">6. Dicionário de dados</h1>
+<h1 id="7-dicion-rio-de-dados">7. Dicionário de dados</h1>
 
-<p><strong>10. </strong> Relação de endpoint, tipos de requisição e parâmetros:</p>
+<p><strong>11. </strong> Relação de endpoint, tipos de requisição e parâmetros:</p>
 
 <table><thead>
 <tr>
@@ -276,34 +280,70 @@
 </tr>
 </tbody></table>
 
-<p><strong>11. </strong> Relação de endpoint e possíveis respostas:</p>
+<p><strong>12. </strong> Erros que podem ser retornados pelo endpoint &quot;/api/recebimento/login&quot;:</p>
 
 <table><thead>
 <tr>
-<th>Endpoint</th>
-<th>Resposta</th>
-<th>Observação</th>
+<th>Código</th>
+<th>Mensagem</th>
+<th>Descrição</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>api/recebimento/login</td>
-<td>200</td>
-<td>Acesso autorizado.</td>
-</tr>
-<tr>
-<td>api/recebimento/login</td>
 <td>400</td>
-<td>Acesso negado, verificar credenciais utilizadas</td>
+<td>Serviço indisponível</td>
+<td>Ocorre quando a flag relacionada a API de transmissão está inativa</td>
 </tr>
 <tr>
-<td>api/v1/recebimento/ficha</td>
-<td>200</td>
-<td>Envio realizado com sucesso</td>
-</tr>
-<tr>
-<td>api/v1/recebimento/ficha</td>
 <td>400</td>
-<td>Alguns dos registros no formato LEDI enviados possuem erros. Os registros no formato LEDI que apresentam erro e o respectivo erro são enviados na resposta da API</td>
+<td>Usuário ou senha inválidos</td>
+<td>-</td>
+</tr>
+<tr>
+<td>400</td>
+<td>Credencial inativa</td>
+<td>-</td>
+</tr>
+<tr>
+<td>400</td>
+<td>Essa instalação foi desativada. Para acessar a nova instalação é necessário acessar o link: [NOVO_LINK_UNIFICACAO_BASE]</td>
+<td>Ocorre quando a instalação foi unificada</td>
+</tr>
+</tbody></table>
+
+<p><strong>13. </strong> Erros que podem ser retornados pelo endpoint &quot;/api/v1/recebimento/ficha&quot;:</p>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Mensagem</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>400</td>
+<td>Erro de validação</td>
+<td>Ocorre quando a ficha possui erros de validação em relação ao LEDI</td>
+</tr>
+<tr>
+<td>400</td>
+<td>Várias, vai sinalizar erro com o formato do arquivo recebido</td>
+<td>Ocorre ao tentar deserializar o arquivo em thrift ou xml. Exemplo de erro: sistema recebe um arquivo zip que não é esperado</td>
+</tr>
+<tr>
+<td>500</td>
+<td>Erro ao desserializar ficha</td>
+<td>Ocorre quando acontece um erro inesperado na deserialização de um arquivo thrift</td>
+</tr>
+<tr>
+<td>500</td>
+<td>Erro ao ler ficha</td>
+<td>Ocorre quando acontece um erro ao tentar ler bytes recebidos da ficha</td>
+</tr>
+<tr>
+<td>500</td>
+<td>Erro inesperado ao receber ficha</td>
+<td>Ocorre em quaisquer outros erros não mapeados acima</td>
 </tr>
 </tbody></table>
 

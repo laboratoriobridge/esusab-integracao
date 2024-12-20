@@ -29,7 +29,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 6.3.0</span>
+        <span class="label">versão 6.3.2</span>
       
     </a>
 
@@ -79,7 +79,7 @@
           
         
           
-            <li><a title="Layout e-SUS APS de Dados e Interface Versão 6.3.0" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 6.3.0</a></li>
+            <li><a title="Layout e-SUS APS de Dados e Interface Versão 6.3.2" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 6.3.2</a></li>
           
         
           
@@ -119,9 +119,9 @@
   <ul>
     
       <li>
-        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 6.3.0" href="/ledi/documentacao/index.html" class="back-link">
+        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 6.3.2" href="/ledi/documentacao/index.html" class="back-link">
           <i class="icon icon-back"></i> Voltar
-          <small>(Layout e-SUS APS de Dados e Interface Versão 6.3.0)</small>
+          <small>(Layout e-SUS APS de Dados e Interface Versão 6.3.2)</small>
         </a>
       </li>
     
@@ -254,7 +254,7 @@
     <p class="post-meta">
       <a class="btn" href="/pdf.html?include=/ledi/documentacao/estrutura_arquivos/dicionario-fao.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 10/11/2024</span>
+        <span class="label" title="Data da última modificação">Alterado em 06/12/2024</span>
       
     </p>
   </header>
@@ -1894,7 +1894,8 @@
 
 <ul>
 <li>Apenas números inteiros;</li>
-<li>Valor mínimo 0 e máximo 800.</li>
+<li>Valor mínimo 0 e máximo 800;</li>
+<li>Caso este campo seja preenchido, torna-se obrigatório o preenchimento do campo <a href="#10-tipoglicemiacapilar">tipoGlicemiaCapilar</a>.</li>
 </ul>
 
 <h3 id="10-tipoglicemiacapilar">#10 tipoGlicemiaCapilar</h3>
@@ -1921,6 +1922,7 @@
 
 <ul>
 <li>Apenas as opções <code>0</code>, <code>1</code>, <code>2</code> ou <code>3</code> são aceitas.</li>
+<li>Caso este campo seja preenchido, torna-se obrigatório o preenchimento do campo <a href="#9-glicemiacapilar">glicemiaCapilar</a>.</li>
 </ul>
 
 <p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#tipoglicemiacapilar">TipoGlicemiaCapilar</a>.</p>
@@ -2350,7 +2352,7 @@
 </tr>
 <tr>
 <td>03.07.01.003-1</td>
-<td>Restauração de dente permanente anterior</td>
+<td>Restauração de dente permanente anterior com resina composta</td>
 <td>ABPO022</td>
 </tr>
 <tr>
@@ -2401,20 +2403,8 @@
 <td>2</td>
 </tr>
 <tr>
-<td>04.04.02.044-5</td>
-<td>CONTENÇÃO DE DENTES POR SPLINTAGEM</td>
-<td>Arcada</td>
-<td>2</td>
-</tr>
-<tr>
-<td>04.04.02.061-5</td>
-<td>REDUÇÃO DE LUXAÇÃO TÊMPORO-MANDIBULAR</td>
-<td>Arcada</td>
-<td>2</td>
-</tr>
-<tr>
-<td>04.04.02.062-3</td>
-<td>RETIRADA DE MATERIAL DE SÍNTESE ÓSSEA / DENTÁRIA</td>
+<td>03.07.04.017-8</td>
+<td>MOLDAGEM DENTO-GENGIVAL COM FINALIDADE ORTODÔNTICA</td>
 <td>Arcada</td>
 <td>2</td>
 </tr>
@@ -2445,6 +2435,24 @@
 <tr>
 <td>04.14.02.029-4</td>
 <td>REMOÇÃO DE TORUS E EXOSTOSES</td>
+<td>Arcada</td>
+<td>2</td>
+</tr>
+<tr>
+<td>04.04.02.044-5</td>
+<td>CONTENÇÃO DE DENTES POR SPLINTAGEM</td>
+<td>Arcada</td>
+<td>2</td>
+</tr>
+<tr>
+<td>04.04.02.061-5</td>
+<td>REDUÇÃO DE LUXAÇÃO TÊMPORO-MANDIBULAR</td>
+<td>Arcada</td>
+<td>2</td>
+</tr>
+<tr>
+<td>04.04.02.062-3</td>
+<td>RETIRADA DE MATERIAL DE SÍNTESE ÓSSEA / DENTÁRIA</td>
 <td>Arcada</td>
 <td>2</td>
 </tr>
@@ -2497,12 +2505,6 @@
 <td>2</td>
 </tr>
 <tr>
-<td>03.07.04.017-8</td>
-<td>MOLDAGEM DENTO-GENGIVAL COM FINALIDADE ORTODÔNTICA</td>
-<td>Arcada</td>
-<td>2</td>
-</tr>
-<tr>
 <td>01.01.02.005-8</td>
 <td>APLICAÇÃO DE CARIOSTÁTICO (POR DENTE)</td>
 <td>Dente</td>
@@ -2540,7 +2542,7 @@
 </tr>
 <tr>
 <td>03.07.01.003-1</td>
-<td>RESTAURAÇÃO DE DENTE PERMANENTE ANTERIOR</td>
+<td>RESTAURAÇÃO DE DENTE PERMANENTE ANTERIOR COM RESINA COMPOSTA</td>
 <td>Dente</td>
 <td>32</td>
 </tr>
@@ -2576,7 +2578,7 @@
 </tr>
 <tr>
 <td>03.07.01.011-2</td>
-<td>RESTAURAÇÃO DE DENTE DECÍDUO ANTERIOR COM RESINA COMPOSTA</td>
+<td>RESTAURAÇÃO DE DENTE DECÍDUO ANTERIOR COM RESINA COMPOSTA.</td>
 <td>Dente</td>
 <td>32</td>
 </tr>
@@ -2606,25 +2608,25 @@
 </tr>
 <tr>
 <td>03.07.02.003-7</td>
-<td>OBTURAÇÃO DE DENTE DECÍDUO</td>
+<td>TRATAMENTO ENDODÔNTICO DE DENTE DECÍDUO</td>
 <td>Dente</td>
 <td>32</td>
 </tr>
 <tr>
 <td>03.07.02.004-5</td>
-<td>OBTURAÇÃO EM DENTE PERMANENTE BIRRADICULAR</td>
+<td>TRATAMENTO ENDODÔNTICO DE DENTE PERMANENTE BIRRADICULAR</td>
 <td>Dente</td>
 <td>32</td>
 </tr>
 <tr>
 <td>03.07.02.005-3</td>
-<td>OBTURAÇÃO EM DENTE PERMANENTE COM TRÊS OU MAIS RAÍZES</td>
+<td>TRATAMENTO ENDODÔNTICO DE DENTE PERMANENTE COM TRÊS OU MAIS RAÍZES</td>
 <td>Dente</td>
 <td>32</td>
 </tr>
 <tr>
 <td>03.07.02.006-1</td>
-<td>OBTURAÇÃO EM DENTE PERMANENTE UNIRRADICULAR</td>
+<td>TRATAMENTO ENDODÔNTICO DE DENTE PERMANENTE UNIRRADICULAR</td>
 <td>Dente</td>
 <td>32</td>
 </tr>
@@ -2773,6 +2775,12 @@
 <td>6</td>
 </tr>
 <tr>
+<td>03.07.03.003-2</td>
+<td>RASPAGEM CORONO-RADICULAR (POR SEXTANTE)</td>
+<td>Sextante</td>
+<td>6</td>
+</tr>
+<tr>
 <td>03.07.03.005-9</td>
 <td>RASPAGEM ALISAMENTO E POLIMENTO SUPRAGENGIVAIS (POR SEXTANTE)</td>
 <td>Sextante</td>
@@ -2791,6 +2799,12 @@
 <td>6</td>
 </tr>
 <tr>
+<td>04.14.02.014-6</td>
+<td>EXODONTIA MÚLTIPLA COM ALVEOLOPLASTIA POR SEXTANTE</td>
+<td>Sextante</td>
+<td>6</td>
+</tr>
+<tr>
 <td>04.14.02.016-2</td>
 <td>GENGIVOPLASTIA (POR SEXTANTE)</td>
 <td>Sextante</td>
@@ -2799,18 +2813,6 @@
 <tr>
 <td>04.14.02.037-5</td>
 <td>TRATAMENTO CIRÚRGICO PERIODONTAL (POR SEXTANTE)</td>
-<td>Sextante</td>
-<td>6</td>
-</tr>
-<tr>
-<td>03.07.03.003-2</td>
-<td>RASPAGEM CORONO-RADICULAR (POR SEXTANTE)</td>
-<td>Sextante</td>
-<td>6</td>
-</tr>
-<tr>
-<td>04.14.02.014-6</td>
-<td>EXODONTIA MÚLTIPLA COM ALVEOLOPLASTIA POR SEXTANTE</td>
 <td>Sextante</td>
 <td>6</td>
 </tr>

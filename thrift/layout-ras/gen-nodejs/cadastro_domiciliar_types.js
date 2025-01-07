@@ -155,6 +155,7 @@ CondicaoMoradiaThrift = module.exports.CondicaoMoradiaThrift = function(args) {
   this.tipoAcessoDomicilio = null;
   this.tipoDomicilio = null;
   this.aguaConsumoDomicilio = null;
+  this.tipoOrigemEnergiaEletrica = null;
   if (args) {
     if (args.abastecimentoAgua !== undefined && args.abastecimentoAgua !== null) {
       this.abastecimentoAgua = args.abastecimentoAgua;
@@ -194,6 +195,9 @@ CondicaoMoradiaThrift = module.exports.CondicaoMoradiaThrift = function(args) {
     }
     if (args.aguaConsumoDomicilio !== undefined && args.aguaConsumoDomicilio !== null) {
       this.aguaConsumoDomicilio = args.aguaConsumoDomicilio;
+    }
+    if (args.tipoOrigemEnergiaEletrica !== undefined && args.tipoOrigemEnergiaEletrica !== null) {
+      this.tipoOrigemEnergiaEletrica = args.tipoOrigemEnergiaEletrica;
     }
   }
 };
@@ -302,6 +306,13 @@ CondicaoMoradiaThrift.prototype.read = function(input) {
         input.skip(ftype);
       }
       break;
+      case 14:
+      if (ftype == Thrift.Type.I64) {
+        this.tipoOrigemEnergiaEletrica = input.readI64();
+      } else {
+        input.skip(ftype);
+      }
+      break;
       default:
         input.skip(ftype);
     }
@@ -376,6 +387,11 @@ CondicaoMoradiaThrift.prototype.write = function(output) {
   if (this.aguaConsumoDomicilio !== null && this.aguaConsumoDomicilio !== undefined) {
     output.writeFieldBegin('aguaConsumoDomicilio', Thrift.Type.I64, 13);
     output.writeI64(this.aguaConsumoDomicilio);
+    output.writeFieldEnd();
+  }
+  if (this.tipoOrigemEnergiaEletrica !== null && this.tipoOrigemEnergiaEletrica !== undefined) {
+    output.writeFieldBegin('tipoOrigemEnergiaEletrica', Thrift.Type.I64, 14);
+    output.writeI64(this.tipoOrigemEnergiaEletrica);
     output.writeFieldEnd();
   }
   output.writeFieldStop();
@@ -562,6 +578,7 @@ CadastroDomiciliarThrift = module.exports.CadastroDomiciliarThrift = function(ar
   this.headerTransport = null;
   this.latitude = null;
   this.longitude = null;
+  this.tipoEndereco = null;
   if (args) {
     if (args.animaisNoDomicilio !== undefined && args.animaisNoDomicilio !== null) {
       this.animaisNoDomicilio = Thrift.copyList(args.animaisNoDomicilio, [null]);
@@ -612,6 +629,9 @@ CadastroDomiciliarThrift = module.exports.CadastroDomiciliarThrift = function(ar
     }
     if (args.longitude !== undefined && args.longitude !== null) {
       this.longitude = args.longitude;
+    }
+    if (args.tipoEndereco !== undefined && args.tipoEndereco !== null) {
+      this.tipoEndereco = args.tipoEndereco;
     }
   }
 };
@@ -772,6 +792,13 @@ CadastroDomiciliarThrift.prototype.read = function(input) {
         input.skip(ftype);
       }
       break;
+      case 20:
+      if (ftype == Thrift.Type.I64) {
+        this.tipoEndereco = input.readI64();
+      } else {
+        input.skip(ftype);
+      }
+      break;
       default:
         input.skip(ftype);
     }
@@ -879,6 +906,11 @@ CadastroDomiciliarThrift.prototype.write = function(output) {
   if (this.longitude !== null && this.longitude !== undefined) {
     output.writeFieldBegin('longitude', Thrift.Type.DOUBLE, 18);
     output.writeDouble(this.longitude);
+    output.writeFieldEnd();
+  }
+  if (this.tipoEndereco !== null && this.tipoEndereco !== undefined) {
+    output.writeFieldBegin('tipoEndereco', Thrift.Type.I64, 20);
+    output.writeI64(this.tipoEndereco);
     output.writeFieldEnd();
   }
   output.writeFieldStop();

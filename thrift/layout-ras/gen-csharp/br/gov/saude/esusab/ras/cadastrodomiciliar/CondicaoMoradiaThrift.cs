@@ -36,6 +36,7 @@ namespace br.gov.saude.esusab.ras.cadastrodomiciliar
     private long _tipoAcessoDomicilio;
     private long _tipoDomicilio;
     private long _aguaConsumoDomicilio;
+    private long _tipoOrigemEnergiaEletrica;
 
     public long AbastecimentoAgua
     {
@@ -206,6 +207,19 @@ namespace br.gov.saude.esusab.ras.cadastrodomiciliar
       }
     }
 
+    public long TipoOrigemEnergiaEletrica
+    {
+      get
+      {
+        return _tipoOrigemEnergiaEletrica;
+      }
+      set
+      {
+        __isset.tipoOrigemEnergiaEletrica = true;
+        this._tipoOrigemEnergiaEletrica = value;
+      }
+    }
+
 
     public Isset __isset;
     #if !SILVERLIGHT
@@ -225,6 +239,7 @@ namespace br.gov.saude.esusab.ras.cadastrodomiciliar
       public bool tipoAcessoDomicilio;
       public bool tipoDomicilio;
       public bool aguaConsumoDomicilio;
+      public bool tipoOrigemEnergiaEletrica;
     }
 
     public CondicaoMoradiaThrift() {
@@ -332,6 +347,13 @@ namespace br.gov.saude.esusab.ras.cadastrodomiciliar
             case 13:
               if (field.Type == TType.I64) {
                 AguaConsumoDomicilio = iprot.ReadI64();
+              } else { 
+                TProtocolUtil.Skip(iprot, field.Type);
+              }
+              break;
+            case 14:
+              if (field.Type == TType.I64) {
+                TipoOrigemEnergiaEletrica = iprot.ReadI64();
               } else { 
                 TProtocolUtil.Skip(iprot, field.Type);
               }
@@ -461,6 +483,14 @@ namespace br.gov.saude.esusab.ras.cadastrodomiciliar
           oprot.WriteI64(AguaConsumoDomicilio);
           oprot.WriteFieldEnd();
         }
+        if (__isset.tipoOrigemEnergiaEletrica) {
+          field.Name = "tipoOrigemEnergiaEletrica";
+          field.Type = TType.I64;
+          field.ID = 14;
+          oprot.WriteFieldBegin(field);
+          oprot.WriteI64(TipoOrigemEnergiaEletrica);
+          oprot.WriteFieldEnd();
+        }
         oprot.WriteFieldStop();
         oprot.WriteStructEnd();
       }
@@ -550,6 +580,12 @@ namespace br.gov.saude.esusab.ras.cadastrodomiciliar
         __first = false;
         __sb.Append("AguaConsumoDomicilio: ");
         __sb.Append(AguaConsumoDomicilio);
+      }
+      if (__isset.tipoOrigemEnergiaEletrica) {
+        if(!__first) { __sb.Append(", "); }
+        __first = false;
+        __sb.Append("TipoOrigemEnergiaEletrica: ");
+        __sb.Append(TipoOrigemEnergiaEletrica);
       }
       __sb.Append(")");
       return __sb.ToString();

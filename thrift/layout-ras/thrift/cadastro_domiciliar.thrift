@@ -61,6 +61,6 @@ struct CadastroDomiciliarThrift {
 	14:optional InstituicaoPermanenciaThrift instituicaoPermanencia,
 	15:optional common.UnicaLotacaoHeaderThrift headerTransport,
 	17:optional double latitude,
-    18:optional double longitude,
-    20:optional i64 tipoEndereco;
+	18:optional double longitude,
+	20:optional i64 tipoEndereco;
 }

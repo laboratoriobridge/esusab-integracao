@@ -19,10 +19,12 @@
 			<nuMoradores>2</nuMoradores>
 			<situacaoMoradiaPosseTerra>75</situacaoMoradiaPosseTerra>
 			<stDisponibilidadeEnergiaEletrica>true</stDisponibilidadeEnergiaEletrica>
+			<tipoOrigemEnergiaEletrica>230</tipoOrigemEnergiaEletrica>
 			<tipoAcessoDomicilio>89</tipoAcessoDomicilio>
 			<tipoDomicilio>86</tipoDomicilio>
-			<aguaConsumoDomicilio>97</aguaConsumoDomicilio>
+			<aguaConsumoDomicilio>98</aguaConsumoDomicilio>
 		</condicaoMoradia>
+		<tipoEndereco>3</tipoEndereco>
 		<enderecoLocalPermanencia>
 			<bairro>RIO TAVARES</bairro>
 			<cep>88048330</cep>

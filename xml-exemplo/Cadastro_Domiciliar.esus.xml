@@ -98,5 +98,5 @@
 		<versaoSistema>5.0.16</versaoSistema>
 		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:originadora>
-	<versao major="4" minor="4" revision="1" />
+	<versao major="6" minor="3" revision="2" />
 </ns3:dadoTransporteTransportXml>

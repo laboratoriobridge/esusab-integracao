@@ -16,6 +16,9 @@
       <xs:element maxOccurs="1" minOccurs="0" name="duracaoTratamento" type="xs:int"/>
       <xs:element maxOccurs="1" minOccurs="0" name="duracaoTratamentoMedida" type="xs:long"/>
       <xs:element maxOccurs="1" name="quantidadeReceitada" type="xs:int"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="qtDoseManha" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="qtDoseTarde" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="qtDoseNoite" type="xs:string"/>
     </xs:sequence>
   </xs:complexType>
 </xs:schema>

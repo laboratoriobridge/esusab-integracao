@@ -55,6 +55,7 @@ module Br
               TIPOACESSODOMICILIO = 11
               TIPODOMICILIO = 12
               AGUACONSUMODOMICILIO = 13
+              TIPOORIGEMENERGIAELETRICA = 14
 
               FIELDS = {
                 ABASTECIMENTOAGUA => {:type => ::Thrift::Types::I64, :name => 'abastecimentoAgua', :optional => true},
@@ -69,7 +70,8 @@ module Br
                 STDISPONIBILIDADEENERGIAELETRICA => {:type => ::Thrift::Types::BOOL, :name => 'stDisponibilidadeEnergiaEletrica', :optional => true},
                 TIPOACESSODOMICILIO => {:type => ::Thrift::Types::I64, :name => 'tipoAcessoDomicilio', :optional => true},
                 TIPODOMICILIO => {:type => ::Thrift::Types::I64, :name => 'tipoDomicilio', :optional => true},
-                AGUACONSUMODOMICILIO => {:type => ::Thrift::Types::I64, :name => 'aguaConsumoDomicilio', :optional => true}
+                AGUACONSUMODOMICILIO => {:type => ::Thrift::Types::I64, :name => 'aguaConsumoDomicilio', :optional => true},
+                TIPOORIGEMENERGIAELETRICA => {:type => ::Thrift::Types::I64, :name => 'tipoOrigemEnergiaEletrica', :optional => true}
               }
 
               def struct_fields; FIELDS; end
@@ -128,6 +130,7 @@ module Br
               HEADERTRANSPORT = 15
               LATITUDE = 17
               LONGITUDE = 18
+              TIPOENDERECO = 20
 
               FIELDS = {
                 ANIMAISNODOMICILIO => {:type => ::Thrift::Types::LIST, :name => 'animaisNoDomicilio', :element => {:type => ::Thrift::Types::I64}, :optional => true},
@@ -145,7 +148,8 @@ module Br
                 INSTITUICAOPERMANENCIA => {:type => ::Thrift::Types::STRUCT, :name => 'instituicaoPermanencia', :class => ::Br::Gov::Saude::Esusab::Ras::Cadastrodomiciliar::InstituicaoPermanenciaThrift, :optional => true},
                 HEADERTRANSPORT => {:type => ::Thrift::Types::STRUCT, :name => 'headerTransport', :class => ::Br::Gov::Saude::Esusab::Ras::Common::UnicaLotacaoHeaderThrift, :optional => true},
                 LATITUDE => {:type => ::Thrift::Types::DOUBLE, :name => 'latitude', :optional => true},
-                LONGITUDE => {:type => ::Thrift::Types::DOUBLE, :name => 'longitude', :optional => true}
+                LONGITUDE => {:type => ::Thrift::Types::DOUBLE, :name => 'longitude', :optional => true},
+                TIPOENDERECO => {:type => ::Thrift::Types::I64, :name => 'tipoEndereco', :optional => true}
               }
 
               def struct_fields; FIELDS; end

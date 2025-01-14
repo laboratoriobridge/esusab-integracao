@@ -165,6 +165,7 @@ class CondicaoMoradiaThrift:
    - tipoAcessoDomicilio
    - tipoDomicilio
    - aguaConsumoDomicilio
+   - tipoOrigemEnergiaEletrica
   """
 
   thrift_spec = (
@@ -182,9 +183,10 @@ class CondicaoMoradiaThrift:
     (11, TType.I64, 'tipoAcessoDomicilio', None, None, ), # 11
     (12, TType.I64, 'tipoDomicilio', None, None, ), # 12
     (13, TType.I64, 'aguaConsumoDomicilio', None, None, ), # 13
+    (14, TType.I64, 'tipoOrigemEnergiaEletrica', None, None, ), # 14
   )
 
-  def __init__(self, abastecimentoAgua=None, areaProducaoRural=None, destinoLixo=None, formaEscoamentoBanheiro=None, localizacao=None, materialPredominanteParedesExtDomicilio=None, nuComodos=None, nuMoradores=None, situacaoMoradiaPosseTerra=None, stDisponibilidadeEnergiaEletrica=None, tipoAcessoDomicilio=None, tipoDomicilio=None, aguaConsumoDomicilio=None,):
+  def __init__(self, abastecimentoAgua=None, areaProducaoRural=None, destinoLixo=None, formaEscoamentoBanheiro=None, localizacao=None, materialPredominanteParedesExtDomicilio=None, nuComodos=None, nuMoradores=None, situacaoMoradiaPosseTerra=None, stDisponibilidadeEnergiaEletrica=None, tipoAcessoDomicilio=None, tipoDomicilio=None, aguaConsumoDomicilio=None, tipoOrigemEnergiaEletrica=None,):
     self.abastecimentoAgua = abastecimentoAgua
     self.areaProducaoRural = areaProducaoRural
     self.destinoLixo = destinoLixo
@@ -198,6 +200,7 @@ class CondicaoMoradiaThrift:
     self.tipoAcessoDomicilio = tipoAcessoDomicilio
     self.tipoDomicilio = tipoDomicilio
     self.aguaConsumoDomicilio = aguaConsumoDomicilio
+    self.tipoOrigemEnergiaEletrica = tipoOrigemEnergiaEletrica
 
   def read(self, iprot):
     if iprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None and fastbinary is not None:
@@ -273,6 +276,11 @@ class CondicaoMoradiaThrift:
           self.aguaConsumoDomicilio = iprot.readI64()
         else:
           iprot.skip(ftype)
+      elif fid == 14:
+        if ftype == TType.I64:
+          self.tipoOrigemEnergiaEletrica = iprot.readI64()
+        else:
+          iprot.skip(ftype)
       else:
         iprot.skip(ftype)
       iprot.readFieldEnd()
@@ -335,6 +343,10 @@ class CondicaoMoradiaThrift:
       oprot.writeFieldBegin('aguaConsumoDomicilio', TType.I64, 13)
       oprot.writeI64(self.aguaConsumoDomicilio)
       oprot.writeFieldEnd()
+    if self.tipoOrigemEnergiaEletrica is not None:
+      oprot.writeFieldBegin('tipoOrigemEnergiaEletrica', TType.I64, 14)
+      oprot.writeI64(self.tipoOrigemEnergiaEletrica)
+      oprot.writeFieldEnd()
     oprot.writeFieldStop()
     oprot.writeStructEnd()
 
@@ -357,6 +369,7 @@ class CondicaoMoradiaThrift:
     value = (value * 31) ^ hash(self.tipoAcessoDomicilio)
     value = (value * 31) ^ hash(self.tipoDomicilio)
     value = (value * 31) ^ hash(self.aguaConsumoDomicilio)
+    value = (value * 31) ^ hash(self.tipoOrigemEnergiaEletrica)
     return value
 
   def __repr__(self):
@@ -545,6 +558,7 @@ class CadastroDomiciliarThrift:
    - headerTransport
    - latitude
    - longitude
+   - tipoEndereco
   """
 
   thrift_spec = (
@@ -567,9 +581,11 @@ class CadastroDomiciliarThrift:
     None, # 16
     (17, TType.DOUBLE, 'latitude', None, None, ), # 17
     (18, TType.DOUBLE, 'longitude', None, None, ), # 18
+    None, # 19
+    (20, TType.I64, 'tipoEndereco', None, None, ), # 20
   )
 
-  def __init__(self, animaisNoDomicilio=None, condicaoMoradia=None, enderecoLocalPermanencia=None, familias=None, fichaAtualizada=None, quantosAnimaisNoDomicilio=None, stAnimaisNoDomicilio=None, statusTermoRecusa=None, tpCdsOrigem=None, uuid=None, uuidFichaOriginadora=None, tipoDeImovel=None, instituicaoPermanencia=None, headerTransport=None, latitude=None, longitude=None,):
+  def __init__(self, animaisNoDomicilio=None, condicaoMoradia=None, enderecoLocalPermanencia=None, familias=None, fichaAtualizada=None, quantosAnimaisNoDomicilio=None, stAnimaisNoDomicilio=None, statusTermoRecusa=None, tpCdsOrigem=None, uuid=None, uuidFichaOriginadora=None, tipoDeImovel=None, instituicaoPermanencia=None, headerTransport=None, latitude=None, longitude=None, tipoEndereco=None,):
     self.animaisNoDomicilio = animaisNoDomicilio
     self.condicaoMoradia = condicaoMoradia
     self.enderecoLocalPermanencia = enderecoLocalPermanencia
@@ -586,6 +602,7 @@ class CadastroDomiciliarThrift:
     self.headerTransport = headerTransport
     self.latitude = latitude
     self.longitude = longitude
+    self.tipoEndereco = tipoEndereco
 
   def read(self, iprot):
     if iprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None and fastbinary is not None:
@@ -691,6 +708,11 @@ class CadastroDomiciliarThrift:
           self.longitude = iprot.readDouble()
         else:
           iprot.skip(ftype)
+      elif fid == 20:
+        if ftype == TType.I64:
+          self.tipoEndereco = iprot.readI64()
+        else:
+          iprot.skip(ftype)
       else:
         iprot.skip(ftype)
       iprot.readFieldEnd()
@@ -771,6 +793,10 @@ class CadastroDomiciliarThrift:
       oprot.writeFieldBegin('longitude', TType.DOUBLE, 18)
       oprot.writeDouble(self.longitude)
       oprot.writeFieldEnd()
+    if self.tipoEndereco is not None:
+      oprot.writeFieldBegin('tipoEndereco', TType.I64, 20)
+      oprot.writeI64(self.tipoEndereco)
+      oprot.writeFieldEnd()
     oprot.writeFieldStop()
     oprot.writeStructEnd()
 
@@ -798,6 +824,7 @@ class CadastroDomiciliarThrift:
     value = (value * 31) ^ hash(self.headerTransport)
     value = (value * 31) ^ hash(self.latitude)
     value = (value * 31) ^ hash(self.longitude)
+    value = (value * 31) ^ hash(self.tipoEndereco)
     return value
 
   def __repr__(self):

@@ -364,6 +364,7 @@ func (p *InstituicaoPermanenciaThrift) String() string {
 //  - TipoAcessoDomicilio
 //  - TipoDomicilio
 //  - AguaConsumoDomicilio
+//  - TipoOrigemEnergiaEletrica
 type CondicaoMoradiaThrift struct {
 	AbastecimentoAgua                       *int64  `thrift:"abastecimentoAgua,1" json:"abastecimentoAgua,omitempty"`
 	AreaProducaoRural                       *int64  `thrift:"areaProducaoRural,2" json:"areaProducaoRural,omitempty"`
@@ -378,6 +379,7 @@ type CondicaoMoradiaThrift struct {
 	TipoAcessoDomicilio                     *int64  `thrift:"tipoAcessoDomicilio,11" json:"tipoAcessoDomicilio,omitempty"`
 	TipoDomicilio                           *int64  `thrift:"tipoDomicilio,12" json:"tipoDomicilio,omitempty"`
 	AguaConsumoDomicilio                    *int64  `thrift:"aguaConsumoDomicilio,13" json:"aguaConsumoDomicilio,omitempty"`
+	TipoOrigemEnergiaEletrica               *int64  `thrift:"tipoOrigemEnergiaEletrica,14" json:"tipoOrigemEnergiaEletrica,omitempty"`
 }
 
 func NewCondicaoMoradiaThrift() *CondicaoMoradiaThrift {
@@ -500,6 +502,15 @@ func (p *CondicaoMoradiaThrift) GetAguaConsumoDomicilio() int64 {
 	}
 	return *p.AguaConsumoDomicilio
 }
+
+var CondicaoMoradiaThrift_TipoOrigemEnergiaEletrica_DEFAULT int64
+
+func (p *CondicaoMoradiaThrift) GetTipoOrigemEnergiaEletrica() int64 {
+	if !p.IsSetTipoOrigemEnergiaEletrica() {
+		return CondicaoMoradiaThrift_TipoOrigemEnergiaEletrica_DEFAULT
+	}
+	return *p.TipoOrigemEnergiaEletrica
+}
 func (p *CondicaoMoradiaThrift) IsSetAbastecimentoAgua() bool {
 	return p.AbastecimentoAgua != nil
 }
@@ -550,6 +561,10 @@ func (p *CondicaoMoradiaThrift) IsSetTipoDomicilio() bool {
 
 func (p *CondicaoMoradiaThrift) IsSetAguaConsumoDomicilio() bool {
 	return p.AguaConsumoDomicilio != nil
+}
+
+func (p *CondicaoMoradiaThrift) IsSetTipoOrigemEnergiaEletrica() bool {
+	return p.TipoOrigemEnergiaEletrica != nil
 }
 
 func (p *CondicaoMoradiaThrift) Read(iprot thrift.TProtocol) error {
@@ -616,6 +631,10 @@ func (p *CondicaoMoradiaThrift) Read(iprot thrift.TProtocol) error {
 			}
 		case 13:
 			if err := p.readField13(iprot); err != nil {
+				return err
+			}
+		case 14:
+			if err := p.readField14(iprot); err != nil {
 				return err
 			}
 		default:
@@ -750,6 +769,15 @@ func (p *CondicaoMoradiaThrift) readField13(iprot thrift.TProtocol) error {
 	return nil
 }
 
+func (p *CondicaoMoradiaThrift) readField14(iprot thrift.TProtocol) error {
+	if v, err := iprot.ReadI64(); err != nil {
+		return thrift.PrependError("error reading field 14: ", err)
+	} else {
+		p.TipoOrigemEnergiaEletrica = &v
+	}
+	return nil
+}
+
 func (p *CondicaoMoradiaThrift) Write(oprot thrift.TProtocol) error {
 	if err := oprot.WriteStructBegin("CondicaoMoradiaThrift"); err != nil {
 		return thrift.PrependError(fmt.Sprintf("%T write struct begin error: ", p), err)
@@ -791,6 +819,9 @@ func (p *CondicaoMoradiaThrift) Write(oprot thrift.TProtocol) error {
 		return err
 	}
 	if err := p.writeField13(oprot); err != nil {
+		return err
+	}
+	if err := p.writeField14(oprot); err != nil {
 		return err
 	}
 	if err := oprot.WriteFieldStop(); err != nil {
@@ -992,6 +1023,21 @@ func (p *CondicaoMoradiaThrift) writeField13(oprot thrift.TProtocol) (err error)
 		}
 		if err := oprot.WriteFieldEnd(); err != nil {
 			return thrift.PrependError(fmt.Sprintf("%T write field end error 13:aguaConsumoDomicilio: ", p), err)
+		}
+	}
+	return err
+}
+
+func (p *CondicaoMoradiaThrift) writeField14(oprot thrift.TProtocol) (err error) {
+	if p.IsSetTipoOrigemEnergiaEletrica() {
+		if err := oprot.WriteFieldBegin("tipoOrigemEnergiaEletrica", thrift.I64, 14); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field begin error 14:tipoOrigemEnergiaEletrica: ", p), err)
+		}
+		if err := oprot.WriteI64(int64(*p.TipoOrigemEnergiaEletrica)); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T.tipoOrigemEnergiaEletrica (14) field write error: ", p), err)
+		}
+		if err := oprot.WriteFieldEnd(); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field end error 14:tipoOrigemEnergiaEletrica: ", p), err)
 		}
 	}
 	return err
@@ -1445,6 +1491,7 @@ func (p *FamiliaRowThrift) String() string {
 //  - HeaderTransport
 //  - Latitude
 //  - Longitude
+//  - TipoEndereco
 type CadastroDomiciliarThrift struct {
 	AnimaisNoDomicilio []int64                `thrift:"animaisNoDomicilio,1" json:"animaisNoDomicilio,omitempty"`
 	CondicaoMoradia    *CondicaoMoradiaThrift `thrift:"condicaoMoradia,2" json:"condicaoMoradia,omitempty"`
@@ -1464,6 +1511,8 @@ type CadastroDomiciliarThrift struct {
 	// unused field # 16
 	Latitude  *float64 `thrift:"latitude,17" json:"latitude,omitempty"`
 	Longitude *float64 `thrift:"longitude,18" json:"longitude,omitempty"`
+	// unused field # 19
+	TipoEndereco *int64 `thrift:"tipoEndereco,20" json:"tipoEndereco,omitempty"`
 }
 
 func NewCadastroDomiciliarThrift() *CadastroDomiciliarThrift {
@@ -1602,6 +1651,15 @@ func (p *CadastroDomiciliarThrift) GetLongitude() float64 {
 	}
 	return *p.Longitude
 }
+
+var CadastroDomiciliarThrift_TipoEndereco_DEFAULT int64
+
+func (p *CadastroDomiciliarThrift) GetTipoEndereco() int64 {
+	if !p.IsSetTipoEndereco() {
+		return CadastroDomiciliarThrift_TipoEndereco_DEFAULT
+	}
+	return *p.TipoEndereco
+}
 func (p *CadastroDomiciliarThrift) IsSetAnimaisNoDomicilio() bool {
 	return p.AnimaisNoDomicilio != nil
 }
@@ -1660,6 +1718,10 @@ func (p *CadastroDomiciliarThrift) IsSetLatitude() bool {
 
 func (p *CadastroDomiciliarThrift) IsSetLongitude() bool {
 	return p.Longitude != nil
+}
+
+func (p *CadastroDomiciliarThrift) IsSetTipoEndereco() bool {
+	return p.TipoEndereco != nil
 }
 
 func (p *CadastroDomiciliarThrift) Read(iprot thrift.TProtocol) error {
@@ -1741,6 +1803,10 @@ func (p *CadastroDomiciliarThrift) Read(iprot thrift.TProtocol) error {
 			}
 		case 18:
 			if err := p.readField18(iprot); err != nil {
+				return err
+			}
+		case 20:
+			if err := p.readField20(iprot); err != nil {
 				return err
 			}
 		default:
@@ -1925,6 +1991,15 @@ func (p *CadastroDomiciliarThrift) readField18(iprot thrift.TProtocol) error {
 	return nil
 }
 
+func (p *CadastroDomiciliarThrift) readField20(iprot thrift.TProtocol) error {
+	if v, err := iprot.ReadI64(); err != nil {
+		return thrift.PrependError("error reading field 20: ", err)
+	} else {
+		p.TipoEndereco = &v
+	}
+	return nil
+}
+
 func (p *CadastroDomiciliarThrift) Write(oprot thrift.TProtocol) error {
 	if err := oprot.WriteStructBegin("CadastroDomiciliarThrift"); err != nil {
 		return thrift.PrependError(fmt.Sprintf("%T write struct begin error: ", p), err)
@@ -1975,6 +2050,9 @@ func (p *CadastroDomiciliarThrift) Write(oprot thrift.TProtocol) error {
 		return err
 	}
 	if err := p.writeField18(oprot); err != nil {
+		return err
+	}
+	if err := p.writeField20(oprot); err != nil {
 		return err
 	}
 	if err := oprot.WriteFieldStop(); err != nil {
@@ -2235,6 +2313,21 @@ func (p *CadastroDomiciliarThrift) writeField18(oprot thrift.TProtocol) (err err
 		}
 		if err := oprot.WriteFieldEnd(); err != nil {
 			return thrift.PrependError(fmt.Sprintf("%T write field end error 18:longitude: ", p), err)
+		}
+	}
+	return err
+}
+
+func (p *CadastroDomiciliarThrift) writeField20(oprot thrift.TProtocol) (err error) {
+	if p.IsSetTipoEndereco() {
+		if err := oprot.WriteFieldBegin("tipoEndereco", thrift.I64, 20); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field begin error 20:tipoEndereco: ", p), err)
+		}
+		if err := oprot.WriteI64(int64(*p.TipoEndereco)); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T.tipoEndereco (20) field write error: ", p), err)
+		}
+		if err := oprot.WriteFieldEnd(); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field end error 20:tipoEndereco: ", p), err)
 		}
 	}
 	return err

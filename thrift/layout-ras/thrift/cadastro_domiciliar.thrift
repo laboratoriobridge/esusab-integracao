@@ -30,7 +30,8 @@ struct CondicaoMoradiaThrift {
 	10:optional bool stDisponibilidadeEnergiaEletrica,
 	11:optional i64 tipoAcessoDomicilio,
 	12:optional i64 tipoDomicilio,
-	13:optional i64 aguaConsumoDomicilio;
+	13:optional i64 aguaConsumoDomicilio,
+	14:optional i64 tipoOrigemEnergiaEletrica;
 }
 
 struct FamiliaRowThrift {
@@ -59,6 +60,7 @@ struct CadastroDomiciliarThrift {
 	13:optional i64 tipoDeImovel,
 	14:optional InstituicaoPermanenciaThrift instituicaoPermanencia,
 	15:optional common.UnicaLotacaoHeaderThrift headerTransport,
-	17:optional double latitude;
-    18:optional double longitude;
+	17:optional double latitude,
+	18:optional double longitude,
+	20:optional i64 tipoEndereco;
 }

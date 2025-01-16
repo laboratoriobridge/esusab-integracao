@@ -137,3 +137,21 @@ struct ProblemaCondicaoThrift {
     8:optional i64 dataFimProblema
     9:optional bool isAvaliado
 }
+
+struct IvcfThrift {
+    1:optional i32 resultado;
+    2:optional bool hasSgIdade;
+    3:optional bool hasSgPercepcaoSaude;
+    4:optional bool hasSgAvdInstrumental;
+    5:optional bool hasSgAvdBasica;
+    6:optional bool hasSgCognicao;
+    7:optional bool hasSgHumor;
+    8:optional bool hasSgAlcancePreensaoPinca;
+    9:optional bool hasSgCapAerobicaMuscular;
+    10:optional bool hasSgMarcha;
+    11:optional bool hasSgContinencia;
+    12:optional bool hasSgVisao;
+    13:optional bool hasSgAudicao;
+    14:optional bool hasSgComorbidade;
+    15:optional i64 dataResultado;
+}

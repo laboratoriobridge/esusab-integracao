@@ -126,6 +126,8 @@ type
     procedure SetMedicoes( const Value: IMedicoesThrift);
     function GetProblemasCondicoes: IThriftList<IProblemaCondicaoThrift>;
     procedure SetProblemasCondicoes( const Value: IThriftList<IProblemaCondicaoThrift>);
+    function GetIvcf: IIvcfThrift;
+    procedure SetIvcf( const Value: IIvcfThrift);
 
     property DtNascimento: Int64 read GetDtNascimento write SetDtNascimento;
     property CnsCidadao: string read GetCnsCidadao write SetCnsCidadao;
@@ -149,6 +151,7 @@ type
     property ResultadosExames: IThriftList<IResultadosExameThrift> read GetResultadosExames write SetResultadosExames;
     property Medicoes: IMedicoesThrift read GetMedicoes write SetMedicoes;
     property ProblemasCondicoes: IThriftList<IProblemaCondicaoThrift> read GetProblemasCondicoes write SetProblemasCondicoes;
+    property Ivcf: IIvcfThrift read GetIvcf write SetIvcf;
 
     function Get__isset_DtNascimento: Boolean;
     function Get__isset_CnsCidadao: Boolean;
@@ -172,6 +175,7 @@ type
     function Get__isset_ResultadosExames: Boolean;
     function Get__isset_Medicoes: Boolean;
     function Get__isset_ProblemasCondicoes: Boolean;
+    function Get__isset_Ivcf: Boolean;
 
     property __isset_DtNascimento: Boolean read Get__isset_DtNascimento;
     property __isset_CnsCidadao: Boolean read Get__isset_CnsCidadao;
@@ -195,6 +199,7 @@ type
     property __isset_ResultadosExames: Boolean read Get__isset_ResultadosExames;
     property __isset_Medicoes: Boolean read Get__isset_Medicoes;
     property __isset_ProblemasCondicoes: Boolean read Get__isset_ProblemasCondicoes;
+    property __isset_Ivcf: Boolean read Get__isset_Ivcf;
   end;
 
   TFichaAtendimentoOdontologicoChildThriftImpl = class(TInterfacedObject, IBase, IFichaAtendimentoOdontologicoChildThrift)
@@ -221,6 +226,7 @@ type
     FResultadosExames: IThriftList<IResultadosExameThrift>;
     FMedicoes: IMedicoesThrift;
     FProblemasCondicoes: IThriftList<IProblemaCondicaoThrift>;
+    FIvcf: IIvcfThrift;
     
     F__isset_DtNascimento: Boolean;
     F__isset_CnsCidadao: Boolean;
@@ -244,6 +250,7 @@ type
     F__isset_ResultadosExames: Boolean;
     F__isset_Medicoes: Boolean;
     F__isset_ProblemasCondicoes: Boolean;
+    F__isset_Ivcf: Boolean;
     
     function GetDtNascimento: Int64;
     procedure SetDtNascimento( const Value: Int64);
@@ -289,6 +296,8 @@ type
     procedure SetMedicoes( const Value: IMedicoesThrift);
     function GetProblemasCondicoes: IThriftList<IProblemaCondicaoThrift>;
     procedure SetProblemasCondicoes( const Value: IThriftList<IProblemaCondicaoThrift>);
+    function GetIvcf: IIvcfThrift;
+    procedure SetIvcf( const Value: IIvcfThrift);
 
     function Get__isset_DtNascimento: Boolean;
     function Get__isset_CnsCidadao: Boolean;
@@ -312,6 +321,7 @@ type
     function Get__isset_ResultadosExames: Boolean;
     function Get__isset_Medicoes: Boolean;
     function Get__isset_ProblemasCondicoes: Boolean;
+    function Get__isset_Ivcf: Boolean;
   public
     constructor Create;
     destructor Destroy; override;
@@ -345,6 +355,7 @@ type
     property ResultadosExames: IThriftList<IResultadosExameThrift> read GetResultadosExames write SetResultadosExames;
     property Medicoes: IMedicoesThrift read GetMedicoes write SetMedicoes;
     property ProblemasCondicoes: IThriftList<IProblemaCondicaoThrift> read GetProblemasCondicoes write SetProblemasCondicoes;
+    property Ivcf: IIvcfThrift read GetIvcf write SetIvcf;
 
     // isset
     property __isset_DtNascimento: Boolean read Get__isset_DtNascimento;
@@ -369,6 +380,7 @@ type
     property __isset_ResultadosExames: Boolean read Get__isset_ResultadosExames;
     property __isset_Medicoes: Boolean read Get__isset_Medicoes;
     property __isset_ProblemasCondicoes: Boolean read Get__isset_ProblemasCondicoes;
+    property __isset_Ivcf: Boolean read Get__isset_Ivcf;
   end;
 
   IFichaAtendimentoOdontologicoMasterThrift = interface(IBase)
@@ -953,6 +965,22 @@ begin
   Result := F__isset_ProblemasCondicoes;
 end;
 
+function TFichaAtendimentoOdontologicoChildThriftImpl.GetIvcf: IIvcfThrift;
+begin
+  Result := FIvcf;
+end;
+
+procedure TFichaAtendimentoOdontologicoChildThriftImpl.SetIvcf( const Value: IIvcfThrift);
+begin
+  F__isset_Ivcf := True;
+  FIvcf := Value;
+end;
+
+function TFichaAtendimentoOdontologicoChildThriftImpl.Get__isset_Ivcf: Boolean;
+begin
+  Result := F__isset_Ivcf;
+end;
+
 procedure TFichaAtendimentoOdontologicoChildThriftImpl.Read( const iprot: IProtocol);
 var
   field_ : IField;
@@ -1264,6 +1292,16 @@ begin
           begin
             TProtocolUtil.Skip(iprot, field_.Type_);
           end;
+        end;
+        29: begin
+          if (field_.Type_ = TType.Struct) then
+          begin
+            Ivcf := TIvcfThriftImpl.Create;
+            Ivcf.Read(iprot);
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
         end
         else begin
           TProtocolUtil.Skip(iprot, field_.Type_);
@@ -1556,6 +1594,15 @@ begin
     oprot.WriteListEnd();
     oprot.WriteFieldEnd();
   end;
+  if (Ivcf <> nil) and __isset_Ivcf then
+  begin
+    field_.Name := 'ivcf';
+    field_.Type_  := TType.Struct;
+    field_.ID := 29;
+    oprot.WriteFieldBegin(field_);
+    Ivcf.Write(oprot);
+    oprot.WriteFieldEnd();
+  end;
   oprot.WriteFieldStop();
   oprot.WriteStructEnd();
 end;
@@ -1699,6 +1746,12 @@ begin
       _first48 := FALSE;
       _sb47.Append('ProblemasCondicoes: ');
       _sb47.Append(ProblemasCondicoes);
+    end;
+    if (Ivcf <> nil) and __isset_Ivcf then begin
+      if not _first48 then _sb47.Append(',');
+      _first48 := FALSE;
+      _sb47.Append('Ivcf: ');
+      if (Ivcf = nil) then _sb47.Append('<null>') else _sb47.Append(Ivcf.ToString());
     end;
     _sb47.Append(')');
     Result := _sb47.ToString;

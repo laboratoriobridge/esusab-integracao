@@ -1775,3 +1775,250 @@ class ProblemaCondicaoThrift:
 
   def __ne__(self, other):
     return not (self == other)
+
+class IvcfThrift:
+  """
+  Attributes:
+   - resultado
+   - hasSgIdade
+   - hasSgPercepcaoSaude
+   - hasSgAvdInstrumental
+   - hasSgAvdBasica
+   - hasSgCognicao
+   - hasSgHumor
+   - hasSgAlcancePreensaoPinca
+   - hasSgCapAerobicaMuscular
+   - hasSgMarcha
+   - hasSgContinencia
+   - hasSgVisao
+   - hasSgAudicao
+   - hasSgComorbidade
+   - dataResultado
+  """
+
+  thrift_spec = (
+    None, # 0
+    (1, TType.I32, 'resultado', None, None, ), # 1
+    (2, TType.BOOL, 'hasSgIdade', None, None, ), # 2
+    (3, TType.BOOL, 'hasSgPercepcaoSaude', None, None, ), # 3
+    (4, TType.BOOL, 'hasSgAvdInstrumental', None, None, ), # 4
+    (5, TType.BOOL, 'hasSgAvdBasica', None, None, ), # 5
+    (6, TType.BOOL, 'hasSgCognicao', None, None, ), # 6
+    (7, TType.BOOL, 'hasSgHumor', None, None, ), # 7
+    (8, TType.BOOL, 'hasSgAlcancePreensaoPinca', None, None, ), # 8
+    (9, TType.BOOL, 'hasSgCapAerobicaMuscular', None, None, ), # 9
+    (10, TType.BOOL, 'hasSgMarcha', None, None, ), # 10
+    (11, TType.BOOL, 'hasSgContinencia', None, None, ), # 11
+    (12, TType.BOOL, 'hasSgVisao', None, None, ), # 12
+    (13, TType.BOOL, 'hasSgAudicao', None, None, ), # 13
+    (14, TType.BOOL, 'hasSgComorbidade', None, None, ), # 14
+    (15, TType.I64, 'dataResultado', None, None, ), # 15
+  )
+
+  def __init__(self, resultado=None, hasSgIdade=None, hasSgPercepcaoSaude=None, hasSgAvdInstrumental=None, hasSgAvdBasica=None, hasSgCognicao=None, hasSgHumor=None, hasSgAlcancePreensaoPinca=None, hasSgCapAerobicaMuscular=None, hasSgMarcha=None, hasSgContinencia=None, hasSgVisao=None, hasSgAudicao=None, hasSgComorbidade=None, dataResultado=None,):
+    self.resultado = resultado
+    self.hasSgIdade = hasSgIdade
+    self.hasSgPercepcaoSaude = hasSgPercepcaoSaude
+    self.hasSgAvdInstrumental = hasSgAvdInstrumental
+    self.hasSgAvdBasica = hasSgAvdBasica
+    self.hasSgCognicao = hasSgCognicao
+    self.hasSgHumor = hasSgHumor
+    self.hasSgAlcancePreensaoPinca = hasSgAlcancePreensaoPinca
+    self.hasSgCapAerobicaMuscular = hasSgCapAerobicaMuscular
+    self.hasSgMarcha = hasSgMarcha
+    self.hasSgContinencia = hasSgContinencia
+    self.hasSgVisao = hasSgVisao
+    self.hasSgAudicao = hasSgAudicao
+    self.hasSgComorbidade = hasSgComorbidade
+    self.dataResultado = dataResultado
+
+  def read(self, iprot):
+    if iprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None and fastbinary is not None:
+      fastbinary.decode_binary(self, iprot.trans, (self.__class__, self.thrift_spec))
+      return
+    iprot.readStructBegin()
+    while True:
+      (fname, ftype, fid) = iprot.readFieldBegin()
+      if ftype == TType.STOP:
+        break
+      if fid == 1:
+        if ftype == TType.I32:
+          self.resultado = iprot.readI32()
+        else:
+          iprot.skip(ftype)
+      elif fid == 2:
+        if ftype == TType.BOOL:
+          self.hasSgIdade = iprot.readBool()
+        else:
+          iprot.skip(ftype)
+      elif fid == 3:
+        if ftype == TType.BOOL:
+          self.hasSgPercepcaoSaude = iprot.readBool()
+        else:
+          iprot.skip(ftype)
+      elif fid == 4:
+        if ftype == TType.BOOL:
+          self.hasSgAvdInstrumental = iprot.readBool()
+        else:
+          iprot.skip(ftype)
+      elif fid == 5:
+        if ftype == TType.BOOL:
+          self.hasSgAvdBasica = iprot.readBool()
+        else:
+          iprot.skip(ftype)
+      elif fid == 6:
+        if ftype == TType.BOOL:
+          self.hasSgCognicao = iprot.readBool()
+        else:
+          iprot.skip(ftype)
+      elif fid == 7:
+        if ftype == TType.BOOL:
+          self.hasSgHumor = iprot.readBool()
+        else:
+          iprot.skip(ftype)
+      elif fid == 8:
+        if ftype == TType.BOOL:
+          self.hasSgAlcancePreensaoPinca = iprot.readBool()
+        else:
+          iprot.skip(ftype)
+      elif fid == 9:
+        if ftype == TType.BOOL:
+          self.hasSgCapAerobicaMuscular = iprot.readBool()
+        else:
+          iprot.skip(ftype)
+      elif fid == 10:
+        if ftype == TType.BOOL:
+          self.hasSgMarcha = iprot.readBool()
+        else:
+          iprot.skip(ftype)
+      elif fid == 11:
+        if ftype == TType.BOOL:
+          self.hasSgContinencia = iprot.readBool()
+        else:
+          iprot.skip(ftype)
+      elif fid == 12:
+        if ftype == TType.BOOL:
+          self.hasSgVisao = iprot.readBool()
+        else:
+          iprot.skip(ftype)
+      elif fid == 13:
+        if ftype == TType.BOOL:
+          self.hasSgAudicao = iprot.readBool()
+        else:
+          iprot.skip(ftype)
+      elif fid == 14:
+        if ftype == TType.BOOL:
+          self.hasSgComorbidade = iprot.readBool()
+        else:
+          iprot.skip(ftype)
+      elif fid == 15:
+        if ftype == TType.I64:
+          self.dataResultado = iprot.readI64()
+        else:
+          iprot.skip(ftype)
+      else:
+        iprot.skip(ftype)
+      iprot.readFieldEnd()
+    iprot.readStructEnd()
+
+  def write(self, oprot):
+    if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      return
+    oprot.writeStructBegin('IvcfThrift')
+    if self.resultado is not None:
+      oprot.writeFieldBegin('resultado', TType.I32, 1)
+      oprot.writeI32(self.resultado)
+      oprot.writeFieldEnd()
+    if self.hasSgIdade is not None:
+      oprot.writeFieldBegin('hasSgIdade', TType.BOOL, 2)
+      oprot.writeBool(self.hasSgIdade)
+      oprot.writeFieldEnd()
+    if self.hasSgPercepcaoSaude is not None:
+      oprot.writeFieldBegin('hasSgPercepcaoSaude', TType.BOOL, 3)
+      oprot.writeBool(self.hasSgPercepcaoSaude)
+      oprot.writeFieldEnd()
+    if self.hasSgAvdInstrumental is not None:
+      oprot.writeFieldBegin('hasSgAvdInstrumental', TType.BOOL, 4)
+      oprot.writeBool(self.hasSgAvdInstrumental)
+      oprot.writeFieldEnd()
+    if self.hasSgAvdBasica is not None:
+      oprot.writeFieldBegin('hasSgAvdBasica', TType.BOOL, 5)
+      oprot.writeBool(self.hasSgAvdBasica)
+      oprot.writeFieldEnd()
+    if self.hasSgCognicao is not None:
+      oprot.writeFieldBegin('hasSgCognicao', TType.BOOL, 6)
+      oprot.writeBool(self.hasSgCognicao)
+      oprot.writeFieldEnd()
+    if self.hasSgHumor is not None:
+      oprot.writeFieldBegin('hasSgHumor', TType.BOOL, 7)
+      oprot.writeBool(self.hasSgHumor)
+      oprot.writeFieldEnd()
+    if self.hasSgAlcancePreensaoPinca is not None:
+      oprot.writeFieldBegin('hasSgAlcancePreensaoPinca', TType.BOOL, 8)
+      oprot.writeBool(self.hasSgAlcancePreensaoPinca)
+      oprot.writeFieldEnd()
+    if self.hasSgCapAerobicaMuscular is not None:
+      oprot.writeFieldBegin('hasSgCapAerobicaMuscular', TType.BOOL, 9)
+      oprot.writeBool(self.hasSgCapAerobicaMuscular)
+      oprot.writeFieldEnd()
+    if self.hasSgMarcha is not None:
+      oprot.writeFieldBegin('hasSgMarcha', TType.BOOL, 10)
+      oprot.writeBool(self.hasSgMarcha)
+      oprot.writeFieldEnd()
+    if self.hasSgContinencia is not None:
+      oprot.writeFieldBegin('hasSgContinencia', TType.BOOL, 11)
+      oprot.writeBool(self.hasSgContinencia)
+      oprot.writeFieldEnd()
+    if self.hasSgVisao is not None:
+      oprot.writeFieldBegin('hasSgVisao', TType.BOOL, 12)
+      oprot.writeBool(self.hasSgVisao)
+      oprot.writeFieldEnd()
+    if self.hasSgAudicao is not None:
+      oprot.writeFieldBegin('hasSgAudicao', TType.BOOL, 13)
+      oprot.writeBool(self.hasSgAudicao)
+      oprot.writeFieldEnd()
+    if self.hasSgComorbidade is not None:
+      oprot.writeFieldBegin('hasSgComorbidade', TType.BOOL, 14)
+      oprot.writeBool(self.hasSgComorbidade)
+      oprot.writeFieldEnd()
+    if self.dataResultado is not None:
+      oprot.writeFieldBegin('dataResultado', TType.I64, 15)
+      oprot.writeI64(self.dataResultado)
+      oprot.writeFieldEnd()
+    oprot.writeFieldStop()
+    oprot.writeStructEnd()
+
+  def validate(self):
+    return
+
+
+  def __hash__(self):
+    value = 17
+    value = (value * 31) ^ hash(self.resultado)
+    value = (value * 31) ^ hash(self.hasSgIdade)
+    value = (value * 31) ^ hash(self.hasSgPercepcaoSaude)
+    value = (value * 31) ^ hash(self.hasSgAvdInstrumental)
+    value = (value * 31) ^ hash(self.hasSgAvdBasica)
+    value = (value * 31) ^ hash(self.hasSgCognicao)
+    value = (value * 31) ^ hash(self.hasSgHumor)
+    value = (value * 31) ^ hash(self.hasSgAlcancePreensaoPinca)
+    value = (value * 31) ^ hash(self.hasSgCapAerobicaMuscular)
+    value = (value * 31) ^ hash(self.hasSgMarcha)
+    value = (value * 31) ^ hash(self.hasSgContinencia)
+    value = (value * 31) ^ hash(self.hasSgVisao)
+    value = (value * 31) ^ hash(self.hasSgAudicao)
+    value = (value * 31) ^ hash(self.hasSgComorbidade)
+    value = (value * 31) ^ hash(self.dataResultado)
+    return value
+
+  def __repr__(self):
+    L = ['%s=%r' % (key, value)
+      for key, value in self.__dict__.iteritems()]
+    return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+  def __eq__(self, other):
+    return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+  def __ne__(self, other):
+    return not (self == other)

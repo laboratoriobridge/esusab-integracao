@@ -122,6 +122,7 @@ class FichaAtendimentoOdontologicoChildThrift:
    - resultadosExames
    - medicoes
    - problemasCondicoes
+   - ivcf
   """
 
   thrift_spec = (
@@ -154,9 +155,10 @@ class FichaAtendimentoOdontologicoChildThrift:
     None, # 26
     (27, TType.STRUCT, 'medicoes', (br.gov.saude.esusab.ras.common.ttypes.MedicoesThrift, br.gov.saude.esusab.ras.common.ttypes.MedicoesThrift.thrift_spec), None, ), # 27
     (28, TType.LIST, 'problemasCondicoes', (TType.STRUCT,(br.gov.saude.esusab.ras.common.ttypes.ProblemaCondicaoThrift, br.gov.saude.esusab.ras.common.ttypes.ProblemaCondicaoThrift.thrift_spec)), None, ), # 28
+    (29, TType.STRUCT, 'ivcf', (br.gov.saude.esusab.ras.common.ttypes.IvcfThrift, br.gov.saude.esusab.ras.common.ttypes.IvcfThrift.thrift_spec), None, ), # 29
   )
 
-  def __init__(self, dtNascimento=None, cnsCidadao=None, numProntuario=None, gestante=None, necessidadesEspeciais=None, localAtendimento=None, tipoAtendimento=None, tiposEncamOdonto=None, tiposFornecimOdonto=None, tiposVigilanciaSaudeBucal=None, tiposConsultaOdonto=None, procedimentosRealizados=None, sexo=None, turno=None, dataHoraInicialAtendimento=None, dataHoraFinalAtendimento=None, cpfCidadao=None, medicamentos=None, encaminhamentos=None, resultadosExames=None, medicoes=None, problemasCondicoes=None,):
+  def __init__(self, dtNascimento=None, cnsCidadao=None, numProntuario=None, gestante=None, necessidadesEspeciais=None, localAtendimento=None, tipoAtendimento=None, tiposEncamOdonto=None, tiposFornecimOdonto=None, tiposVigilanciaSaudeBucal=None, tiposConsultaOdonto=None, procedimentosRealizados=None, sexo=None, turno=None, dataHoraInicialAtendimento=None, dataHoraFinalAtendimento=None, cpfCidadao=None, medicamentos=None, encaminhamentos=None, resultadosExames=None, medicoes=None, problemasCondicoes=None, ivcf=None,):
     self.dtNascimento = dtNascimento
     self.cnsCidadao = cnsCidadao
     self.numProntuario = numProntuario
@@ -179,6 +181,7 @@ class FichaAtendimentoOdontologicoChildThrift:
     self.resultadosExames = resultadosExames
     self.medicoes = medicoes
     self.problemasCondicoes = problemasCondicoes
+    self.ivcf = ivcf
 
   def read(self, iprot):
     if iprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None and fastbinary is not None:
@@ -350,6 +353,12 @@ class FichaAtendimentoOdontologicoChildThrift:
           iprot.readListEnd()
         else:
           iprot.skip(ftype)
+      elif fid == 29:
+        if ftype == TType.STRUCT:
+          self.ivcf = br.gov.saude.esusab.ras.common.ttypes.IvcfThrift()
+          self.ivcf.read(iprot)
+        else:
+          iprot.skip(ftype)
       else:
         iprot.skip(ftype)
       iprot.readFieldEnd()
@@ -475,6 +484,10 @@ class FichaAtendimentoOdontologicoChildThrift:
         iter62.write(oprot)
       oprot.writeListEnd()
       oprot.writeFieldEnd()
+    if self.ivcf is not None:
+      oprot.writeFieldBegin('ivcf', TType.STRUCT, 29)
+      self.ivcf.write(oprot)
+      oprot.writeFieldEnd()
     oprot.writeFieldStop()
     oprot.writeStructEnd()
 
@@ -506,6 +519,7 @@ class FichaAtendimentoOdontologicoChildThrift:
     value = (value * 31) ^ hash(self.resultadosExames)
     value = (value * 31) ^ hash(self.medicoes)
     value = (value * 31) ^ hash(self.problemasCondicoes)
+    value = (value * 31) ^ hash(self.ivcf)
     return value
 
   def __repr__(self):

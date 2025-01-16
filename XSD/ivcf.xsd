@@ -1,62 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://esus.ufsc.br/ivcf" version="1.0">
-      
-  
-  <xs:complexType name="ivcfTransport">
-            
-    
-    <xs:sequence>
-                  
-      
-      <xs:element name="resultado" type="xs:int"/>
-                  
-      
-      <xs:element name="hasSgIdade" type="xs:boolean"/>
-                  
-      
-      <xs:element name="hasSgPercepcaoSaude" type="xs:boolean"/>
-                  
-      
-      <xs:element name="hasSgAvdInstrumental" type="xs:boolean"/>
-                  
-      
-      <xs:element name="hasSgAvdBasica" type="xs:boolean"/>
-                  
-      
-      <xs:element name="hasSgCognicao" type="xs:boolean"/>
-                  
-      
-      <xs:element name="hasSgHumor" type="xs:boolean"/>
-                  
-      
-      <xs:element name="hasSgAlcancePreensaoPinca" type="xs:boolean"/>
-                  
-      
-      <xs:element name="hasSgCapAerobicaMuscular" type="xs:boolean"/>
-                  
-      
-      <xs:element name="hasSgMarcha" type="xs:boolean"/>
-                  
-      
-      <xs:element name="hasSgContinencia" type="xs:boolean"/>
-                  
-      
-      <xs:element name="hasSgVisao" type="xs:boolean"/>
-                  
-      
-      <xs:element name="hasSgAudicao" type="xs:boolean"/>
-                  
-      
-      <xs:element name="hasSgComorbidade" type="xs:boolean"/>
-                  
-      
-      <xs:element name="dataResultado" type="xs:long"/>
-                
-    
-    </xs:sequence>
-          
-  
-  </xs:complexType>
-    
 
+  <xs:complexType name="ivcfTransport">
+    <xs:sequence>
+      <xs:element name="resultado" type="xs:int"/>
+      <xs:element name="hasSgIdade" type="xs:boolean"/>
+      <xs:element name="hasSgPercepcaoSaude" type="xs:boolean"/>
+      <xs:element name="hasSgAvdInstrumental" type="xs:boolean"/>
+      <xs:element name="hasSgAvdBasica" type="xs:boolean"/>
+      <xs:element name="hasSgCognicao" type="xs:boolean"/>
+      <xs:element name="hasSgHumor" type="xs:boolean"/>
+      <xs:element name="hasSgAlcancePreensaoPinca" type="xs:boolean"/>
+      <xs:element name="hasSgCapAerobicaMuscular" type="xs:boolean"/>
+      <xs:element name="hasSgMarcha" type="xs:boolean"/>
+      <xs:element name="hasSgContinencia" type="xs:boolean"/>
+      <xs:element name="hasSgVisao" type="xs:boolean"/>
+      <xs:element name="hasSgAudicao" type="xs:boolean"/>
+      <xs:element name="hasSgComorbidade" type="xs:boolean"/>
+      <xs:element name="dataResultado" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
 </xs:schema>

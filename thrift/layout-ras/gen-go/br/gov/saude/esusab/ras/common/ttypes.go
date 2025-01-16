@@ -4659,3 +4659,749 @@ func (p *ProblemaCondicaoThrift) String() string {
 	}
 	return fmt.Sprintf("ProblemaCondicaoThrift(%+v)", *p)
 }
+
+// Attributes:
+//  - Resultado
+//  - HasSgIdade
+//  - HasSgPercepcaoSaude
+//  - HasSgAvdInstrumental
+//  - HasSgAvdBasica
+//  - HasSgCognicao
+//  - HasSgHumor
+//  - HasSgAlcancePreensaoPinca
+//  - HasSgCapAerobicaMuscular
+//  - HasSgMarcha
+//  - HasSgContinencia
+//  - HasSgVisao
+//  - HasSgAudicao
+//  - HasSgComorbidade
+//  - DataResultado
+type IvcfThrift struct {
+	Resultado                 *int32 `thrift:"resultado,1" json:"resultado,omitempty"`
+	HasSgIdade                *bool  `thrift:"hasSgIdade,2" json:"hasSgIdade,omitempty"`
+	HasSgPercepcaoSaude       *bool  `thrift:"hasSgPercepcaoSaude,3" json:"hasSgPercepcaoSaude,omitempty"`
+	HasSgAvdInstrumental      *bool  `thrift:"hasSgAvdInstrumental,4" json:"hasSgAvdInstrumental,omitempty"`
+	HasSgAvdBasica            *bool  `thrift:"hasSgAvdBasica,5" json:"hasSgAvdBasica,omitempty"`
+	HasSgCognicao             *bool  `thrift:"hasSgCognicao,6" json:"hasSgCognicao,omitempty"`
+	HasSgHumor                *bool  `thrift:"hasSgHumor,7" json:"hasSgHumor,omitempty"`
+	HasSgAlcancePreensaoPinca *bool  `thrift:"hasSgAlcancePreensaoPinca,8" json:"hasSgAlcancePreensaoPinca,omitempty"`
+	HasSgCapAerobicaMuscular  *bool  `thrift:"hasSgCapAerobicaMuscular,9" json:"hasSgCapAerobicaMuscular,omitempty"`
+	HasSgMarcha               *bool  `thrift:"hasSgMarcha,10" json:"hasSgMarcha,omitempty"`
+	HasSgContinencia          *bool  `thrift:"hasSgContinencia,11" json:"hasSgContinencia,omitempty"`
+	HasSgVisao                *bool  `thrift:"hasSgVisao,12" json:"hasSgVisao,omitempty"`
+	HasSgAudicao              *bool  `thrift:"hasSgAudicao,13" json:"hasSgAudicao,omitempty"`
+	HasSgComorbidade          *bool  `thrift:"hasSgComorbidade,14" json:"hasSgComorbidade,omitempty"`
+	DataResultado             *int64 `thrift:"dataResultado,15" json:"dataResultado,omitempty"`
+}
+
+func NewIvcfThrift() *IvcfThrift {
+	return &IvcfThrift{}
+}
+
+var IvcfThrift_Resultado_DEFAULT int32
+
+func (p *IvcfThrift) GetResultado() int32 {
+	if !p.IsSetResultado() {
+		return IvcfThrift_Resultado_DEFAULT
+	}
+	return *p.Resultado
+}
+
+var IvcfThrift_HasSgIdade_DEFAULT bool
+
+func (p *IvcfThrift) GetHasSgIdade() bool {
+	if !p.IsSetHasSgIdade() {
+		return IvcfThrift_HasSgIdade_DEFAULT
+	}
+	return *p.HasSgIdade
+}
+
+var IvcfThrift_HasSgPercepcaoSaude_DEFAULT bool
+
+func (p *IvcfThrift) GetHasSgPercepcaoSaude() bool {
+	if !p.IsSetHasSgPercepcaoSaude() {
+		return IvcfThrift_HasSgPercepcaoSaude_DEFAULT
+	}
+	return *p.HasSgPercepcaoSaude
+}
+
+var IvcfThrift_HasSgAvdInstrumental_DEFAULT bool
+
+func (p *IvcfThrift) GetHasSgAvdInstrumental() bool {
+	if !p.IsSetHasSgAvdInstrumental() {
+		return IvcfThrift_HasSgAvdInstrumental_DEFAULT
+	}
+	return *p.HasSgAvdInstrumental
+}
+
+var IvcfThrift_HasSgAvdBasica_DEFAULT bool
+
+func (p *IvcfThrift) GetHasSgAvdBasica() bool {
+	if !p.IsSetHasSgAvdBasica() {
+		return IvcfThrift_HasSgAvdBasica_DEFAULT
+	}
+	return *p.HasSgAvdBasica
+}
+
+var IvcfThrift_HasSgCognicao_DEFAULT bool
+
+func (p *IvcfThrift) GetHasSgCognicao() bool {
+	if !p.IsSetHasSgCognicao() {
+		return IvcfThrift_HasSgCognicao_DEFAULT
+	}
+	return *p.HasSgCognicao
+}
+
+var IvcfThrift_HasSgHumor_DEFAULT bool
+
+func (p *IvcfThrift) GetHasSgHumor() bool {
+	if !p.IsSetHasSgHumor() {
+		return IvcfThrift_HasSgHumor_DEFAULT
+	}
+	return *p.HasSgHumor
+}
+
+var IvcfThrift_HasSgAlcancePreensaoPinca_DEFAULT bool
+
+func (p *IvcfThrift) GetHasSgAlcancePreensaoPinca() bool {
+	if !p.IsSetHasSgAlcancePreensaoPinca() {
+		return IvcfThrift_HasSgAlcancePreensaoPinca_DEFAULT
+	}
+	return *p.HasSgAlcancePreensaoPinca
+}
+
+var IvcfThrift_HasSgCapAerobicaMuscular_DEFAULT bool
+
+func (p *IvcfThrift) GetHasSgCapAerobicaMuscular() bool {
+	if !p.IsSetHasSgCapAerobicaMuscular() {
+		return IvcfThrift_HasSgCapAerobicaMuscular_DEFAULT
+	}
+	return *p.HasSgCapAerobicaMuscular
+}
+
+var IvcfThrift_HasSgMarcha_DEFAULT bool
+
+func (p *IvcfThrift) GetHasSgMarcha() bool {
+	if !p.IsSetHasSgMarcha() {
+		return IvcfThrift_HasSgMarcha_DEFAULT
+	}
+	return *p.HasSgMarcha
+}
+
+var IvcfThrift_HasSgContinencia_DEFAULT bool
+
+func (p *IvcfThrift) GetHasSgContinencia() bool {
+	if !p.IsSetHasSgContinencia() {
+		return IvcfThrift_HasSgContinencia_DEFAULT
+	}
+	return *p.HasSgContinencia
+}
+
+var IvcfThrift_HasSgVisao_DEFAULT bool
+
+func (p *IvcfThrift) GetHasSgVisao() bool {
+	if !p.IsSetHasSgVisao() {
+		return IvcfThrift_HasSgVisao_DEFAULT
+	}
+	return *p.HasSgVisao
+}
+
+var IvcfThrift_HasSgAudicao_DEFAULT bool
+
+func (p *IvcfThrift) GetHasSgAudicao() bool {
+	if !p.IsSetHasSgAudicao() {
+		return IvcfThrift_HasSgAudicao_DEFAULT
+	}
+	return *p.HasSgAudicao
+}
+
+var IvcfThrift_HasSgComorbidade_DEFAULT bool
+
+func (p *IvcfThrift) GetHasSgComorbidade() bool {
+	if !p.IsSetHasSgComorbidade() {
+		return IvcfThrift_HasSgComorbidade_DEFAULT
+	}
+	return *p.HasSgComorbidade
+}
+
+var IvcfThrift_DataResultado_DEFAULT int64
+
+func (p *IvcfThrift) GetDataResultado() int64 {
+	if !p.IsSetDataResultado() {
+		return IvcfThrift_DataResultado_DEFAULT
+	}
+	return *p.DataResultado
+}
+func (p *IvcfThrift) IsSetResultado() bool {
+	return p.Resultado != nil
+}
+
+func (p *IvcfThrift) IsSetHasSgIdade() bool {
+	return p.HasSgIdade != nil
+}
+
+func (p *IvcfThrift) IsSetHasSgPercepcaoSaude() bool {
+	return p.HasSgPercepcaoSaude != nil
+}
+
+func (p *IvcfThrift) IsSetHasSgAvdInstrumental() bool {
+	return p.HasSgAvdInstrumental != nil
+}
+
+func (p *IvcfThrift) IsSetHasSgAvdBasica() bool {
+	return p.HasSgAvdBasica != nil
+}
+
+func (p *IvcfThrift) IsSetHasSgCognicao() bool {
+	return p.HasSgCognicao != nil
+}
+
+func (p *IvcfThrift) IsSetHasSgHumor() bool {
+	return p.HasSgHumor != nil
+}
+
+func (p *IvcfThrift) IsSetHasSgAlcancePreensaoPinca() bool {
+	return p.HasSgAlcancePreensaoPinca != nil
+}
+
+func (p *IvcfThrift) IsSetHasSgCapAerobicaMuscular() bool {
+	return p.HasSgCapAerobicaMuscular != nil
+}
+
+func (p *IvcfThrift) IsSetHasSgMarcha() bool {
+	return p.HasSgMarcha != nil
+}
+
+func (p *IvcfThrift) IsSetHasSgContinencia() bool {
+	return p.HasSgContinencia != nil
+}
+
+func (p *IvcfThrift) IsSetHasSgVisao() bool {
+	return p.HasSgVisao != nil
+}
+
+func (p *IvcfThrift) IsSetHasSgAudicao() bool {
+	return p.HasSgAudicao != nil
+}
+
+func (p *IvcfThrift) IsSetHasSgComorbidade() bool {
+	return p.HasSgComorbidade != nil
+}
+
+func (p *IvcfThrift) IsSetDataResultado() bool {
+	return p.DataResultado != nil
+}
+
+func (p *IvcfThrift) Read(iprot thrift.TProtocol) error {
+	if _, err := iprot.ReadStructBegin(); err != nil {
+		return thrift.PrependError(fmt.Sprintf("%T read error: ", p), err)
+	}
+
+	for {
+		_, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
+		if err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T field %d read error: ", p, fieldId), err)
+		}
+		if fieldTypeId == thrift.STOP {
+			break
+		}
+		switch fieldId {
+		case 1:
+			if err := p.readField1(iprot); err != nil {
+				return err
+			}
+		case 2:
+			if err := p.readField2(iprot); err != nil {
+				return err
+			}
+		case 3:
+			if err := p.readField3(iprot); err != nil {
+				return err
+			}
+		case 4:
+			if err := p.readField4(iprot); err != nil {
+				return err
+			}
+		case 5:
+			if err := p.readField5(iprot); err != nil {
+				return err
+			}
+		case 6:
+			if err := p.readField6(iprot); err != nil {
+				return err
+			}
+		case 7:
+			if err := p.readField7(iprot); err != nil {
+				return err
+			}
+		case 8:
+			if err := p.readField8(iprot); err != nil {
+				return err
+			}
+		case 9:
+			if err := p.readField9(iprot); err != nil {
+				return err
+			}
+		case 10:
+			if err := p.readField10(iprot); err != nil {
+				return err
+			}
+		case 11:
+			if err := p.readField11(iprot); err != nil {
+				return err
+			}
+		case 12:
+			if err := p.readField12(iprot); err != nil {
+				return err
+			}
+		case 13:
+			if err := p.readField13(iprot); err != nil {
+				return err
+			}
+		case 14:
+			if err := p.readField14(iprot); err != nil {
+				return err
+			}
+		case 15:
+			if err := p.readField15(iprot); err != nil {
+				return err
+			}
+		default:
+			if err := iprot.Skip(fieldTypeId); err != nil {
+				return err
+			}
+		}
+		if err := iprot.ReadFieldEnd(); err != nil {
+			return err
+		}
+	}
+	if err := iprot.ReadStructEnd(); err != nil {
+		return thrift.PrependError(fmt.Sprintf("%T read struct end error: ", p), err)
+	}
+	return nil
+}
+
+func (p *IvcfThrift) readField1(iprot thrift.TProtocol) error {
+	if v, err := iprot.ReadI32(); err != nil {
+		return thrift.PrependError("error reading field 1: ", err)
+	} else {
+		p.Resultado = &v
+	}
+	return nil
+}
+
+func (p *IvcfThrift) readField2(iprot thrift.TProtocol) error {
+	if v, err := iprot.ReadBool(); err != nil {
+		return thrift.PrependError("error reading field 2: ", err)
+	} else {
+		p.HasSgIdade = &v
+	}
+	return nil
+}
+
+func (p *IvcfThrift) readField3(iprot thrift.TProtocol) error {
+	if v, err := iprot.ReadBool(); err != nil {
+		return thrift.PrependError("error reading field 3: ", err)
+	} else {
+		p.HasSgPercepcaoSaude = &v
+	}
+	return nil
+}
+
+func (p *IvcfThrift) readField4(iprot thrift.TProtocol) error {
+	if v, err := iprot.ReadBool(); err != nil {
+		return thrift.PrependError("error reading field 4: ", err)
+	} else {
+		p.HasSgAvdInstrumental = &v
+	}
+	return nil
+}
+
+func (p *IvcfThrift) readField5(iprot thrift.TProtocol) error {
+	if v, err := iprot.ReadBool(); err != nil {
+		return thrift.PrependError("error reading field 5: ", err)
+	} else {
+		p.HasSgAvdBasica = &v
+	}
+	return nil
+}
+
+func (p *IvcfThrift) readField6(iprot thrift.TProtocol) error {
+	if v, err := iprot.ReadBool(); err != nil {
+		return thrift.PrependError("error reading field 6: ", err)
+	} else {
+		p.HasSgCognicao = &v
+	}
+	return nil
+}
+
+func (p *IvcfThrift) readField7(iprot thrift.TProtocol) error {
+	if v, err := iprot.ReadBool(); err != nil {
+		return thrift.PrependError("error reading field 7: ", err)
+	} else {
+		p.HasSgHumor = &v
+	}
+	return nil
+}
+
+func (p *IvcfThrift) readField8(iprot thrift.TProtocol) error {
+	if v, err := iprot.ReadBool(); err != nil {
+		return thrift.PrependError("error reading field 8: ", err)
+	} else {
+		p.HasSgAlcancePreensaoPinca = &v
+	}
+	return nil
+}
+
+func (p *IvcfThrift) readField9(iprot thrift.TProtocol) error {
+	if v, err := iprot.ReadBool(); err != nil {
+		return thrift.PrependError("error reading field 9: ", err)
+	} else {
+		p.HasSgCapAerobicaMuscular = &v
+	}
+	return nil
+}
+
+func (p *IvcfThrift) readField10(iprot thrift.TProtocol) error {
+	if v, err := iprot.ReadBool(); err != nil {
+		return thrift.PrependError("error reading field 10: ", err)
+	} else {
+		p.HasSgMarcha = &v
+	}
+	return nil
+}
+
+func (p *IvcfThrift) readField11(iprot thrift.TProtocol) error {
+	if v, err := iprot.ReadBool(); err != nil {
+		return thrift.PrependError("error reading field 11: ", err)
+	} else {
+		p.HasSgContinencia = &v
+	}
+	return nil
+}
+
+func (p *IvcfThrift) readField12(iprot thrift.TProtocol) error {
+	if v, err := iprot.ReadBool(); err != nil {
+		return thrift.PrependError("error reading field 12: ", err)
+	} else {
+		p.HasSgVisao = &v
+	}
+	return nil
+}
+
+func (p *IvcfThrift) readField13(iprot thrift.TProtocol) error {
+	if v, err := iprot.ReadBool(); err != nil {
+		return thrift.PrependError("error reading field 13: ", err)
+	} else {
+		p.HasSgAudicao = &v
+	}
+	return nil
+}
+
+func (p *IvcfThrift) readField14(iprot thrift.TProtocol) error {
+	if v, err := iprot.ReadBool(); err != nil {
+		return thrift.PrependError("error reading field 14: ", err)
+	} else {
+		p.HasSgComorbidade = &v
+	}
+	return nil
+}
+
+func (p *IvcfThrift) readField15(iprot thrift.TProtocol) error {
+	if v, err := iprot.ReadI64(); err != nil {
+		return thrift.PrependError("error reading field 15: ", err)
+	} else {
+		p.DataResultado = &v
+	}
+	return nil
+}
+
+func (p *IvcfThrift) Write(oprot thrift.TProtocol) error {
+	if err := oprot.WriteStructBegin("IvcfThrift"); err != nil {
+		return thrift.PrependError(fmt.Sprintf("%T write struct begin error: ", p), err)
+	}
+	if err := p.writeField1(oprot); err != nil {
+		return err
+	}
+	if err := p.writeField2(oprot); err != nil {
+		return err
+	}
+	if err := p.writeField3(oprot); err != nil {
+		return err
+	}
+	if err := p.writeField4(oprot); err != nil {
+		return err
+	}
+	if err := p.writeField5(oprot); err != nil {
+		return err
+	}
+	if err := p.writeField6(oprot); err != nil {
+		return err
+	}
+	if err := p.writeField7(oprot); err != nil {
+		return err
+	}
+	if err := p.writeField8(oprot); err != nil {
+		return err
+	}
+	if err := p.writeField9(oprot); err != nil {
+		return err
+	}
+	if err := p.writeField10(oprot); err != nil {
+		return err
+	}
+	if err := p.writeField11(oprot); err != nil {
+		return err
+	}
+	if err := p.writeField12(oprot); err != nil {
+		return err
+	}
+	if err := p.writeField13(oprot); err != nil {
+		return err
+	}
+	if err := p.writeField14(oprot); err != nil {
+		return err
+	}
+	if err := p.writeField15(oprot); err != nil {
+		return err
+	}
+	if err := oprot.WriteFieldStop(); err != nil {
+		return thrift.PrependError("write field stop error: ", err)
+	}
+	if err := oprot.WriteStructEnd(); err != nil {
+		return thrift.PrependError("write struct stop error: ", err)
+	}
+	return nil
+}
+
+func (p *IvcfThrift) writeField1(oprot thrift.TProtocol) (err error) {
+	if p.IsSetResultado() {
+		if err := oprot.WriteFieldBegin("resultado", thrift.I32, 1); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field begin error 1:resultado: ", p), err)
+		}
+		if err := oprot.WriteI32(int32(*p.Resultado)); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T.resultado (1) field write error: ", p), err)
+		}
+		if err := oprot.WriteFieldEnd(); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field end error 1:resultado: ", p), err)
+		}
+	}
+	return err
+}
+
+func (p *IvcfThrift) writeField2(oprot thrift.TProtocol) (err error) {
+	if p.IsSetHasSgIdade() {
+		if err := oprot.WriteFieldBegin("hasSgIdade", thrift.BOOL, 2); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field begin error 2:hasSgIdade: ", p), err)
+		}
+		if err := oprot.WriteBool(bool(*p.HasSgIdade)); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T.hasSgIdade (2) field write error: ", p), err)
+		}
+		if err := oprot.WriteFieldEnd(); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field end error 2:hasSgIdade: ", p), err)
+		}
+	}
+	return err
+}
+
+func (p *IvcfThrift) writeField3(oprot thrift.TProtocol) (err error) {
+	if p.IsSetHasSgPercepcaoSaude() {
+		if err := oprot.WriteFieldBegin("hasSgPercepcaoSaude", thrift.BOOL, 3); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field begin error 3:hasSgPercepcaoSaude: ", p), err)
+		}
+		if err := oprot.WriteBool(bool(*p.HasSgPercepcaoSaude)); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T.hasSgPercepcaoSaude (3) field write error: ", p), err)
+		}
+		if err := oprot.WriteFieldEnd(); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field end error 3:hasSgPercepcaoSaude: ", p), err)
+		}
+	}
+	return err
+}
+
+func (p *IvcfThrift) writeField4(oprot thrift.TProtocol) (err error) {
+	if p.IsSetHasSgAvdInstrumental() {
+		if err := oprot.WriteFieldBegin("hasSgAvdInstrumental", thrift.BOOL, 4); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field begin error 4:hasSgAvdInstrumental: ", p), err)
+		}
+		if err := oprot.WriteBool(bool(*p.HasSgAvdInstrumental)); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T.hasSgAvdInstrumental (4) field write error: ", p), err)
+		}
+		if err := oprot.WriteFieldEnd(); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field end error 4:hasSgAvdInstrumental: ", p), err)
+		}
+	}
+	return err
+}
+
+func (p *IvcfThrift) writeField5(oprot thrift.TProtocol) (err error) {
+	if p.IsSetHasSgAvdBasica() {
+		if err := oprot.WriteFieldBegin("hasSgAvdBasica", thrift.BOOL, 5); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field begin error 5:hasSgAvdBasica: ", p), err)
+		}
+		if err := oprot.WriteBool(bool(*p.HasSgAvdBasica)); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T.hasSgAvdBasica (5) field write error: ", p), err)
+		}
+		if err := oprot.WriteFieldEnd(); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field end error 5:hasSgAvdBasica: ", p), err)
+		}
+	}
+	return err
+}
+
+func (p *IvcfThrift) writeField6(oprot thrift.TProtocol) (err error) {
+	if p.IsSetHasSgCognicao() {
+		if err := oprot.WriteFieldBegin("hasSgCognicao", thrift.BOOL, 6); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field begin error 6:hasSgCognicao: ", p), err)
+		}
+		if err := oprot.WriteBool(bool(*p.HasSgCognicao)); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T.hasSgCognicao (6) field write error: ", p), err)
+		}
+		if err := oprot.WriteFieldEnd(); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field end error 6:hasSgCognicao: ", p), err)
+		}
+	}
+	return err
+}
+
+func (p *IvcfThrift) writeField7(oprot thrift.TProtocol) (err error) {
+	if p.IsSetHasSgHumor() {
+		if err := oprot.WriteFieldBegin("hasSgHumor", thrift.BOOL, 7); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field begin error 7:hasSgHumor: ", p), err)
+		}
+		if err := oprot.WriteBool(bool(*p.HasSgHumor)); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T.hasSgHumor (7) field write error: ", p), err)
+		}
+		if err := oprot.WriteFieldEnd(); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field end error 7:hasSgHumor: ", p), err)
+		}
+	}
+	return err
+}
+
+func (p *IvcfThrift) writeField8(oprot thrift.TProtocol) (err error) {
+	if p.IsSetHasSgAlcancePreensaoPinca() {
+		if err := oprot.WriteFieldBegin("hasSgAlcancePreensaoPinca", thrift.BOOL, 8); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field begin error 8:hasSgAlcancePreensaoPinca: ", p), err)
+		}
+		if err := oprot.WriteBool(bool(*p.HasSgAlcancePreensaoPinca)); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T.hasSgAlcancePreensaoPinca (8) field write error: ", p), err)
+		}
+		if err := oprot.WriteFieldEnd(); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field end error 8:hasSgAlcancePreensaoPinca: ", p), err)
+		}
+	}
+	return err
+}
+
+func (p *IvcfThrift) writeField9(oprot thrift.TProtocol) (err error) {
+	if p.IsSetHasSgCapAerobicaMuscular() {
+		if err := oprot.WriteFieldBegin("hasSgCapAerobicaMuscular", thrift.BOOL, 9); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field begin error 9:hasSgCapAerobicaMuscular: ", p), err)
+		}
+		if err := oprot.WriteBool(bool(*p.HasSgCapAerobicaMuscular)); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T.hasSgCapAerobicaMuscular (9) field write error: ", p), err)
+		}
+		if err := oprot.WriteFieldEnd(); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field end error 9:hasSgCapAerobicaMuscular: ", p), err)
+		}
+	}
+	return err
+}
+
+func (p *IvcfThrift) writeField10(oprot thrift.TProtocol) (err error) {
+	if p.IsSetHasSgMarcha() {
+		if err := oprot.WriteFieldBegin("hasSgMarcha", thrift.BOOL, 10); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field begin error 10:hasSgMarcha: ", p), err)
+		}
+		if err := oprot.WriteBool(bool(*p.HasSgMarcha)); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T.hasSgMarcha (10) field write error: ", p), err)
+		}
+		if err := oprot.WriteFieldEnd(); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field end error 10:hasSgMarcha: ", p), err)
+		}
+	}
+	return err
+}
+
+func (p *IvcfThrift) writeField11(oprot thrift.TProtocol) (err error) {
+	if p.IsSetHasSgContinencia() {
+		if err := oprot.WriteFieldBegin("hasSgContinencia", thrift.BOOL, 11); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field begin error 11:hasSgContinencia: ", p), err)
+		}
+		if err := oprot.WriteBool(bool(*p.HasSgContinencia)); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T.hasSgContinencia (11) field write error: ", p), err)
+		}
+		if err := oprot.WriteFieldEnd(); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field end error 11:hasSgContinencia: ", p), err)
+		}
+	}
+	return err
+}
+
+func (p *IvcfThrift) writeField12(oprot thrift.TProtocol) (err error) {
+	if p.IsSetHasSgVisao() {
+		if err := oprot.WriteFieldBegin("hasSgVisao", thrift.BOOL, 12); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field begin error 12:hasSgVisao: ", p), err)
+		}
+		if err := oprot.WriteBool(bool(*p.HasSgVisao)); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T.hasSgVisao (12) field write error: ", p), err)
+		}
+		if err := oprot.WriteFieldEnd(); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field end error 12:hasSgVisao: ", p), err)
+		}
+	}
+	return err
+}
+
+func (p *IvcfThrift) writeField13(oprot thrift.TProtocol) (err error) {
+	if p.IsSetHasSgAudicao() {
+		if err := oprot.WriteFieldBegin("hasSgAudicao", thrift.BOOL, 13); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field begin error 13:hasSgAudicao: ", p), err)
+		}
+		if err := oprot.WriteBool(bool(*p.HasSgAudicao)); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T.hasSgAudicao (13) field write error: ", p), err)
+		}
+		if err := oprot.WriteFieldEnd(); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field end error 13:hasSgAudicao: ", p), err)
+		}
+	}
+	return err
+}
+
+func (p *IvcfThrift) writeField14(oprot thrift.TProtocol) (err error) {
+	if p.IsSetHasSgComorbidade() {
+		if err := oprot.WriteFieldBegin("hasSgComorbidade", thrift.BOOL, 14); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field begin error 14:hasSgComorbidade: ", p), err)
+		}
+		if err := oprot.WriteBool(bool(*p.HasSgComorbidade)); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T.hasSgComorbidade (14) field write error: ", p), err)
+		}
+		if err := oprot.WriteFieldEnd(); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field end error 14:hasSgComorbidade: ", p), err)
+		}
+	}
+	return err
+}
+
+func (p *IvcfThrift) writeField15(oprot thrift.TProtocol) (err error) {
+	if p.IsSetDataResultado() {
+		if err := oprot.WriteFieldBegin("dataResultado", thrift.I64, 15); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field begin error 15:dataResultado: ", p), err)
+		}
+		if err := oprot.WriteI64(int64(*p.DataResultado)); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T.dataResultado (15) field write error: ", p), err)
+		}
+		if err := oprot.WriteFieldEnd(); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field end error 15:dataResultado: ", p), err)
+		}
+	}
+	return err
+}
+
+func (p *IvcfThrift) String() string {
+	if p == nil {
+		return "<nil>"
+	}
+	return fmt.Sprintf("IvcfThrift(%+v)", *p)
+}

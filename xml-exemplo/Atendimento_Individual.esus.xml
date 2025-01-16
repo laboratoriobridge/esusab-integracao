@@ -127,8 +127,8 @@
 				<ciap>A03</ciap>
 				<cid10>R05</cid10>
 				<situacao>1</situacao>
-				<dataInicioProblema>1586102200000</dataInicioProblema> 
-                <dataFimProblema>1586102300000</dataFimProblema> 
+				<dataInicioProblema>1586102200000</dataInicioProblema>
+                <dataFimProblema>1586102300000</dataFimProblema>
 				<isAvaliado>1</isAvaliado>
 			</problemasCondicoes>
 		</atendimentosIndividuais>
@@ -228,8 +228,8 @@
 			</resultadosExames>
 			<resultadosExames>
 				<exame>0205020143</exame>
-				<dataSolicitacao>1586088000000</dataSolicitacao> 
-				<dataRealizacao>1586088000000</dataRealizacao> 
+				<dataSolicitacao>1586088000000</dataSolicitacao>
+				<dataRealizacao>1586088000000</dataRealizacao>
 				<dataResultado>1586088000000</dataResultado>
 				<resultadoExame>
 					<tipoResultado>4</tipoResultado>
@@ -251,11 +251,28 @@
 				<ciap>A03</ciap>
 				<cid10>R05</cid10>
 				<situacao>0</situacao>
-				<dataInicioProblema>1586098800010</dataInicioProblema> 
+				<dataInicioProblema>1586098800010</dataInicioProblema>
 				<isAvaliado>1</isAvaliado>
 			</problemasCondicoes>
 			<tipoParticipacaoCidadao>1</tipoParticipacaoCidadao>
 			<tipoParticipacaoProfissionalConvidado>2</tipoParticipacaoProfissionalConvidado>
+			<ivcf>
+				<resultado>40</resultado>
+				<hasSgIdade>false</hasSgIdade>
+				<hasSgPercepcaoSaude>false</hasSgPercepcaoSaude>
+				<hasSgAvdInstrumental>false</hasSgAvdInstrumental>
+				<hasSgAvdBasica>false</hasSgAvdBasica>
+				<hasSgCognicao>false</hasSgCognicao>
+				<hasSgHumor>false</hasSgHumor>
+				<hasSgAlcancePreensaoPinca>false</hasSgAlcancePreensaoPinca>
+				<hasSgCapAerobicaMuscular>false</hasSgCapAerobicaMuscular>
+				<hasSgMarcha>false</hasSgMarcha>
+				<hasSgContinencia>false</hasSgContinencia>
+				<hasSgVisao>false</hasSgVisao>
+				<hasSgAudicao>false</hasSgAudicao>
+				<hasSgComorbidade>false</hasSgComorbidade>
+				<dataResultado>1586095200000</dataResultado>
+			</ivcf>
 		</atendimentosIndividuais>
 		<tpCdsOrigem>3</tpCdsOrigem>
 		<uuidFicha>0019615-edee6500-bf76-4691-b9c7-f7b1d550bc7a</uuidFicha>

@@ -24,6 +24,7 @@ FichaProcedimentoChildThrift = module.exports.FichaProcedimentoChildThrift = fun
   this.dataHoraFinalAtendimento = null;
   this.cpfCidadao = null;
   this.medicoes = null;
+  this.ivcf = null;
   if (args) {
     if (args.numProntuario !== undefined && args.numProntuario !== null) {
       this.numProntuario = args.numProntuario;
@@ -60,6 +61,9 @@ FichaProcedimentoChildThrift = module.exports.FichaProcedimentoChildThrift = fun
     }
     if (args.medicoes !== undefined && args.medicoes !== null) {
       this.medicoes = new common_ttypes.MedicoesThrift(args.medicoes);
+    }
+    if (args.ivcf !== undefined && args.ivcf !== null) {
+      this.ivcf = new common_ttypes.IvcfThrift(args.ivcf);
     }
   }
 };
@@ -175,6 +179,14 @@ FichaProcedimentoChildThrift.prototype.read = function(input) {
         input.skip(ftype);
       }
       break;
+      case 17:
+      if (ftype == Thrift.Type.STRUCT) {
+        this.ivcf = new common_ttypes.IvcfThrift();
+        this.ivcf.read(input);
+      } else {
+        input.skip(ftype);
+      }
+      break;
       default:
         input.skip(ftype);
     }
@@ -253,6 +265,11 @@ FichaProcedimentoChildThrift.prototype.write = function(output) {
   if (this.medicoes !== null && this.medicoes !== undefined) {
     output.writeFieldBegin('medicoes', Thrift.Type.STRUCT, 16);
     this.medicoes.write(output);
+    output.writeFieldEnd();
+  }
+  if (this.ivcf !== null && this.ivcf !== undefined) {
+    output.writeFieldBegin('ivcf', Thrift.Type.STRUCT, 17);
+    this.ivcf.write(output);
     output.writeFieldEnd();
   }
   output.writeFieldStop();

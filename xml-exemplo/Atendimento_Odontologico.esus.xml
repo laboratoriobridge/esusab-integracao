@@ -99,8 +99,8 @@
 				<ciap>A03</ciap>
 				<cid10>R05</cid10>
 				<situacao>1</situacao>
-				<dataInicioProblema>1549376600000</dataInicioProblema> 
-                <dataFimProblema>1549377700000</dataFimProblema> 
+				<dataInicioProblema>1549376600000</dataInicioProblema>
+                <dataFimProblema>1549377700000</dataFimProblema>
 				<isAvaliado>1</isAvaliado>
 			</problemasCondicoes>
 		</atendimentosOdontologicos>
@@ -176,7 +176,7 @@
 				<ciap>A03</ciap>
 				<cid10>R05</cid10>
 				<situacao>0</situacao>
-				<dataInicioProblema>1549376600000</dataInicioProblema> 
+				<dataInicioProblema>1549376600000</dataInicioProblema>
 				<isAvaliado>1</isAvaliado>
 			</problemasCondicoes>
 		</atendimentosOdontologicos>
@@ -276,8 +276,8 @@
 				<ciap>A03</ciap>
 				<cid10>R05</cid10>
 				<situacao>1</situacao>
-				<dataInicioProblema>1553034000000</dataInicioProblema> 
-                <dataFimProblema>1553044000000</dataFimProblema> 
+				<dataInicioProblema>1553034000000</dataInicioProblema>
+                <dataFimProblema>1553044000000</dataFimProblema>
 				<isAvaliado>1</isAvaliado>
 			</problemasCondicoes>
 		</atendimentosOdontologicos>
@@ -343,10 +343,27 @@
 				<ciap>A03</ciap>
 				<cid10>R05</cid10>
 				<situacao>1</situacao>
-				<dataInicioProblema>1553108100000</dataInicioProblema> 
-                <dataFimProblema>1553108200000</dataFimProblema> 
+				<dataInicioProblema>1553108100000</dataInicioProblema>
+                <dataFimProblema>1553108200000</dataFimProblema>
 				<isAvaliado>1</isAvaliado>
 			</problemasCondicoes>
+			<ivcf>
+				<resultado>40</resultado>
+				<hasSgIdade>false</hasSgIdade>
+				<hasSgPercepcaoSaude>false</hasSgPercepcaoSaude>
+				<hasSgAvdInstrumental>false</hasSgAvdInstrumental>
+				<hasSgAvdBasica>false</hasSgAvdBasica>
+				<hasSgCognicao>false</hasSgCognicao>
+				<hasSgHumor>false</hasSgHumor>
+				<hasSgAlcancePreensaoPinca>false</hasSgAlcancePreensaoPinca>
+				<hasSgCapAerobicaMuscular>false</hasSgCapAerobicaMuscular>
+				<hasSgMarcha>false</hasSgMarcha>
+				<hasSgContinencia>false</hasSgContinencia>
+				<hasSgVisao>false</hasSgVisao>
+				<hasSgAudicao>false</hasSgAudicao>
+				<hasSgComorbidade>false</hasSgComorbidade>
+				<dataResultado>1586095200000</dataResultado>
+			</ivcf>
 		</atendimentosOdontologicos>
 		<headerTransport>
 			<lotacaoFormPrincipal>

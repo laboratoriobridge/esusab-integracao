@@ -189,6 +189,7 @@ func (p *ProcedimentoQuantidadeThrift) String() string {
 //  - ResultadosExames
 //  - Medicoes
 //  - ProblemasCondicoes
+//  - Ivcf
 type FichaAtendimentoOdontologicoChildThrift struct {
 	DtNascimento              *int64                          `thrift:"dtNascimento,1" json:"dtNascimento,omitempty"`
 	CnsCidadao                *string                         `thrift:"cnsCidadao,2" json:"cnsCidadao,omitempty"`
@@ -214,6 +215,7 @@ type FichaAtendimentoOdontologicoChildThrift struct {
 	// unused fields # 22 to 26
 	Medicoes           *common.MedicoesThrift           `thrift:"medicoes,27" json:"medicoes,omitempty"`
 	ProblemasCondicoes []*common.ProblemaCondicaoThrift `thrift:"problemasCondicoes,28" json:"problemasCondicoes,omitempty"`
+	Ivcf               *common.IvcfThrift               `thrift:"ivcf,29" json:"ivcf,omitempty"`
 }
 
 func NewFichaAtendimentoOdontologicoChildThrift() *FichaAtendimentoOdontologicoChildThrift {
@@ -390,6 +392,15 @@ var FichaAtendimentoOdontologicoChildThrift_ProblemasCondicoes_DEFAULT []*common
 func (p *FichaAtendimentoOdontologicoChildThrift) GetProblemasCondicoes() []*common.ProblemaCondicaoThrift {
 	return p.ProblemasCondicoes
 }
+
+var FichaAtendimentoOdontologicoChildThrift_Ivcf_DEFAULT *common.IvcfThrift
+
+func (p *FichaAtendimentoOdontologicoChildThrift) GetIvcf() *common.IvcfThrift {
+	if !p.IsSetIvcf() {
+		return FichaAtendimentoOdontologicoChildThrift_Ivcf_DEFAULT
+	}
+	return p.Ivcf
+}
 func (p *FichaAtendimentoOdontologicoChildThrift) IsSetDtNascimento() bool {
 	return p.DtNascimento != nil
 }
@@ -476,6 +487,10 @@ func (p *FichaAtendimentoOdontologicoChildThrift) IsSetMedicoes() bool {
 
 func (p *FichaAtendimentoOdontologicoChildThrift) IsSetProblemasCondicoes() bool {
 	return p.ProblemasCondicoes != nil
+}
+
+func (p *FichaAtendimentoOdontologicoChildThrift) IsSetIvcf() bool {
+	return p.Ivcf != nil
 }
 
 func (p *FichaAtendimentoOdontologicoChildThrift) Read(iprot thrift.TProtocol) error {
@@ -578,6 +593,10 @@ func (p *FichaAtendimentoOdontologicoChildThrift) Read(iprot thrift.TProtocol) e
 			}
 		case 28:
 			if err := p.readField28(iprot); err != nil {
+				return err
+			}
+		case 29:
+			if err := p.readField29(iprot); err != nil {
 				return err
 			}
 		default:
@@ -899,6 +918,14 @@ func (p *FichaAtendimentoOdontologicoChildThrift) readField28(iprot thrift.TProt
 	return nil
 }
 
+func (p *FichaAtendimentoOdontologicoChildThrift) readField29(iprot thrift.TProtocol) error {
+	p.Ivcf = &common.IvcfThrift{}
+	if err := p.Ivcf.Read(iprot); err != nil {
+		return thrift.PrependError(fmt.Sprintf("%T error reading struct: ", p.Ivcf), err)
+	}
+	return nil
+}
+
 func (p *FichaAtendimentoOdontologicoChildThrift) Write(oprot thrift.TProtocol) error {
 	if err := oprot.WriteStructBegin("FichaAtendimentoOdontologicoChildThrift"); err != nil {
 		return thrift.PrependError(fmt.Sprintf("%T write struct begin error: ", p), err)
@@ -967,6 +994,9 @@ func (p *FichaAtendimentoOdontologicoChildThrift) Write(oprot thrift.TProtocol) 
 		return err
 	}
 	if err := p.writeField28(oprot); err != nil {
+		return err
+	}
+	if err := p.writeField29(oprot); err != nil {
 		return err
 	}
 	if err := oprot.WriteFieldStop(); err != nil {
@@ -1375,6 +1405,21 @@ func (p *FichaAtendimentoOdontologicoChildThrift) writeField28(oprot thrift.TPro
 		}
 		if err := oprot.WriteFieldEnd(); err != nil {
 			return thrift.PrependError(fmt.Sprintf("%T write field end error 28:problemasCondicoes: ", p), err)
+		}
+	}
+	return err
+}
+
+func (p *FichaAtendimentoOdontologicoChildThrift) writeField29(oprot thrift.TProtocol) (err error) {
+	if p.IsSetIvcf() {
+		if err := oprot.WriteFieldBegin("ivcf", thrift.STRUCT, 29); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field begin error 29:ivcf: ", p), err)
+		}
+		if err := p.Ivcf.Write(oprot); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T error writing struct: ", p.Ivcf), err)
+		}
+		if err := oprot.WriteFieldEnd(); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field end error 29:ivcf: ", p), err)
 		}
 	}
 	return err

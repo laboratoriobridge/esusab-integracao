@@ -35,6 +35,7 @@ namespace br.gov.saude.esusab.ras.atendprocedimentos
     private long _dataHoraFinalAtendimento;
     private string _cpfCidadao;
     private br.gov.saude.esusab.ras.common.MedicoesThrift _medicoes;
+    private br.gov.saude.esusab.ras.common.IvcfThrift _ivcf;
 
     public string NumProntuario
     {
@@ -192,6 +193,19 @@ namespace br.gov.saude.esusab.ras.atendprocedimentos
       }
     }
 
+    public br.gov.saude.esusab.ras.common.IvcfThrift Ivcf
+    {
+      get
+      {
+        return _ivcf;
+      }
+      set
+      {
+        __isset.ivcf = true;
+        this._ivcf = value;
+      }
+    }
+
 
     public Isset __isset;
     #if !SILVERLIGHT
@@ -210,6 +224,7 @@ namespace br.gov.saude.esusab.ras.atendprocedimentos
       public bool dataHoraFinalAtendimento;
       public bool cpfCidadao;
       public bool medicoes;
+      public bool ivcf;
     }
 
     public FichaProcedimentoChildThrift() {
@@ -321,6 +336,14 @@ namespace br.gov.saude.esusab.ras.atendprocedimentos
               if (field.Type == TType.Struct) {
                 Medicoes = new br.gov.saude.esusab.ras.common.MedicoesThrift();
                 Medicoes.Read(iprot);
+              } else { 
+                TProtocolUtil.Skip(iprot, field.Type);
+              }
+              break;
+            case 17:
+              if (field.Type == TType.Struct) {
+                Ivcf = new br.gov.saude.esusab.ras.common.IvcfThrift();
+                Ivcf.Read(iprot);
               } else { 
                 TProtocolUtil.Skip(iprot, field.Type);
               }
@@ -449,6 +472,14 @@ namespace br.gov.saude.esusab.ras.atendprocedimentos
           Medicoes.Write(oprot);
           oprot.WriteFieldEnd();
         }
+        if (Ivcf != null && __isset.ivcf) {
+          field.Name = "ivcf";
+          field.Type = TType.Struct;
+          field.ID = 17;
+          oprot.WriteFieldBegin(field);
+          Ivcf.Write(oprot);
+          oprot.WriteFieldEnd();
+        }
         oprot.WriteFieldStop();
         oprot.WriteStructEnd();
       }
@@ -532,6 +563,12 @@ namespace br.gov.saude.esusab.ras.atendprocedimentos
         __first = false;
         __sb.Append("Medicoes: ");
         __sb.Append(Medicoes== null ? "<null>" : Medicoes.ToString());
+      }
+      if (Ivcf != null && __isset.ivcf) {
+        if(!__first) { __sb.Append(", "); }
+        __first = false;
+        __sb.Append("Ivcf: ");
+        __sb.Append(Ivcf== null ? "<null>" : Ivcf.ToString());
       }
       __sb.Append(")");
       return __sb.ToString();

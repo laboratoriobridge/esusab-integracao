@@ -50,6 +50,23 @@
 				<altura>20.3</altura>
 				<perimetroCefalico>30.0</perimetroCefalico>
 			</medicoes>
+			<ivcf>
+				<resultado>40</resultado>
+				<hasSgIdade>false</hasSgIdade>
+				<hasSgPercepcaoSaude>false</hasSgPercepcaoSaude>
+				<hasSgAvdInstrumental>false</hasSgAvdInstrumental>
+				<hasSgAvdBasica>false</hasSgAvdBasica>
+				<hasSgCognicao>false</hasSgCognicao>
+				<hasSgHumor>false</hasSgHumor>
+				<hasSgAlcancePreensaoPinca>false</hasSgAlcancePreensaoPinca>
+				<hasSgCapAerobicaMuscular>false</hasSgCapAerobicaMuscular>
+				<hasSgMarcha>false</hasSgMarcha>
+				<hasSgContinencia>false</hasSgContinencia>
+				<hasSgVisao>false</hasSgVisao>
+				<hasSgAudicao>false</hasSgAudicao>
+				<hasSgComorbidade>false</hasSgComorbidade>
+				<dataResultado>1586095200000</dataResultado>
+			</ivcf>
 		</atendProcedimentos>
 		<atendProcedimentos>
 			<numProntuario>016</numProntuario>

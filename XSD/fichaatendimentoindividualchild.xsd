@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:encaminhamentoExterno="http://esus.ufsc.br/encaminhamentoexterno" xmlns:exame="http://esus.ufsc.br/exame" xmlns:lotacaoHeader="http://esus.ufsc.br/lotacaoheader" xmlns:medicamento="http://esus.ufsc.br/medicamento" xmlns:medicoes="http://esus.ufsc.br/medicoes" xmlns:problemacondicao="http://esus.ufsc.br/problemacondicao" xmlns:resultadoExame="http://esus.ufsc.br/resultadoexame" xmlns:resultadosExame="http://esus.ufsc.br/resultadosexame" targetNamespace="http://esus.ufsc.br/fichaatendimentoindividualchild" version="1.0">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:encaminhamentoExterno="http://esus.ufsc.br/encaminhamentoexterno" xmlns:exame="http://esus.ufsc.br/exame" xmlns:lotacaoHeader="http://esus.ufsc.br/lotacaoheader" xmlns:medicamento="http://esus.ufsc.br/medicamento" xmlns:medicoes="http://esus.ufsc.br/medicoes" xmlns:problemacondicao="http://esus.ufsc.br/problemacondicao" xmlns:resultadosExame="http://esus.ufsc.br/resultadosexame" xmlns:ivcf="http://esus.ufsc.br/ivcf"  targetNamespace="http://esus.ufsc.br/fichaatendimentoindividualchild" version="1.0">
 
   <xs:import namespace="http://esus.ufsc.br/medicoes" schemaLocation="medicoes.xsd"/>
 
@@ -51,7 +51,7 @@
           <xs:element maxOccurs="unbounded" minOccurs="0" name="problemasCondicoes" type="problemacondicao:problemaCondicaoTransport"/>
           <xs:element minOccurs="0" name="tipoParticipacaoCidadao" type="xs:long"/>
           <xs:element minOccurs="0" name="tipoParticipacaoProfissionalConvidado" type="xs:long"/>
+          <xs:element minOccurs="0" name="ivcf" type="ivcf:ivcfTransport"/>
       </xs:sequence>
   </xs:complexType>
 </xs:schema>
-

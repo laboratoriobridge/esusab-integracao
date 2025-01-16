@@ -21,6 +21,7 @@ struct FichaProcedimentoChildThrift {
 	11:optional i64 dataHoraFinalAtendimento;
 	12:optional string cpfCidadao;
 	16:optional common.MedicoesThrift medicoes;
+	17:optional common.IvcfThrift ivcf;
 }
 
 struct FichaProcedimentoMasterThrift {

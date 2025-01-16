@@ -1818,3 +1818,277 @@ ProblemaCondicaoThrift.prototype.write = function(output) {
   return;
 };
 
+IvcfThrift = module.exports.IvcfThrift = function(args) {
+  this.resultado = null;
+  this.hasSgIdade = null;
+  this.hasSgPercepcaoSaude = null;
+  this.hasSgAvdInstrumental = null;
+  this.hasSgAvdBasica = null;
+  this.hasSgCognicao = null;
+  this.hasSgHumor = null;
+  this.hasSgAlcancePreensaoPinca = null;
+  this.hasSgCapAerobicaMuscular = null;
+  this.hasSgMarcha = null;
+  this.hasSgContinencia = null;
+  this.hasSgVisao = null;
+  this.hasSgAudicao = null;
+  this.hasSgComorbidade = null;
+  this.dataResultado = null;
+  if (args) {
+    if (args.resultado !== undefined && args.resultado !== null) {
+      this.resultado = args.resultado;
+    }
+    if (args.hasSgIdade !== undefined && args.hasSgIdade !== null) {
+      this.hasSgIdade = args.hasSgIdade;
+    }
+    if (args.hasSgPercepcaoSaude !== undefined && args.hasSgPercepcaoSaude !== null) {
+      this.hasSgPercepcaoSaude = args.hasSgPercepcaoSaude;
+    }
+    if (args.hasSgAvdInstrumental !== undefined && args.hasSgAvdInstrumental !== null) {
+      this.hasSgAvdInstrumental = args.hasSgAvdInstrumental;
+    }
+    if (args.hasSgAvdBasica !== undefined && args.hasSgAvdBasica !== null) {
+      this.hasSgAvdBasica = args.hasSgAvdBasica;
+    }
+    if (args.hasSgCognicao !== undefined && args.hasSgCognicao !== null) {
+      this.hasSgCognicao = args.hasSgCognicao;
+    }
+    if (args.hasSgHumor !== undefined && args.hasSgHumor !== null) {
+      this.hasSgHumor = args.hasSgHumor;
+    }
+    if (args.hasSgAlcancePreensaoPinca !== undefined && args.hasSgAlcancePreensaoPinca !== null) {
+      this.hasSgAlcancePreensaoPinca = args.hasSgAlcancePreensaoPinca;
+    }
+    if (args.hasSgCapAerobicaMuscular !== undefined && args.hasSgCapAerobicaMuscular !== null) {
+      this.hasSgCapAerobicaMuscular = args.hasSgCapAerobicaMuscular;
+    }
+    if (args.hasSgMarcha !== undefined && args.hasSgMarcha !== null) {
+      this.hasSgMarcha = args.hasSgMarcha;
+    }
+    if (args.hasSgContinencia !== undefined && args.hasSgContinencia !== null) {
+      this.hasSgContinencia = args.hasSgContinencia;
+    }
+    if (args.hasSgVisao !== undefined && args.hasSgVisao !== null) {
+      this.hasSgVisao = args.hasSgVisao;
+    }
+    if (args.hasSgAudicao !== undefined && args.hasSgAudicao !== null) {
+      this.hasSgAudicao = args.hasSgAudicao;
+    }
+    if (args.hasSgComorbidade !== undefined && args.hasSgComorbidade !== null) {
+      this.hasSgComorbidade = args.hasSgComorbidade;
+    }
+    if (args.dataResultado !== undefined && args.dataResultado !== null) {
+      this.dataResultado = args.dataResultado;
+    }
+  }
+};
+IvcfThrift.prototype = {};
+IvcfThrift.prototype.read = function(input) {
+  input.readStructBegin();
+  while (true)
+  {
+    var ret = input.readFieldBegin();
+    var fname = ret.fname;
+    var ftype = ret.ftype;
+    var fid = ret.fid;
+    if (ftype == Thrift.Type.STOP) {
+      break;
+    }
+    switch (fid)
+    {
+      case 1:
+      if (ftype == Thrift.Type.I32) {
+        this.resultado = input.readI32();
+      } else {
+        input.skip(ftype);
+      }
+      break;
+      case 2:
+      if (ftype == Thrift.Type.BOOL) {
+        this.hasSgIdade = input.readBool();
+      } else {
+        input.skip(ftype);
+      }
+      break;
+      case 3:
+      if (ftype == Thrift.Type.BOOL) {
+        this.hasSgPercepcaoSaude = input.readBool();
+      } else {
+        input.skip(ftype);
+      }
+      break;
+      case 4:
+      if (ftype == Thrift.Type.BOOL) {
+        this.hasSgAvdInstrumental = input.readBool();
+      } else {
+        input.skip(ftype);
+      }
+      break;
+      case 5:
+      if (ftype == Thrift.Type.BOOL) {
+        this.hasSgAvdBasica = input.readBool();
+      } else {
+        input.skip(ftype);
+      }
+      break;
+      case 6:
+      if (ftype == Thrift.Type.BOOL) {
+        this.hasSgCognicao = input.readBool();
+      } else {
+        input.skip(ftype);
+      }
+      break;
+      case 7:
+      if (ftype == Thrift.Type.BOOL) {
+        this.hasSgHumor = input.readBool();
+      } else {
+        input.skip(ftype);
+      }
+      break;
+      case 8:
+      if (ftype == Thrift.Type.BOOL) {
+        this.hasSgAlcancePreensaoPinca = input.readBool();
+      } else {
+        input.skip(ftype);
+      }
+      break;
+      case 9:
+      if (ftype == Thrift.Type.BOOL) {
+        this.hasSgCapAerobicaMuscular = input.readBool();
+      } else {
+        input.skip(ftype);
+      }
+      break;
+      case 10:
+      if (ftype == Thrift.Type.BOOL) {
+        this.hasSgMarcha = input.readBool();
+      } else {
+        input.skip(ftype);
+      }
+      break;
+      case 11:
+      if (ftype == Thrift.Type.BOOL) {
+        this.hasSgContinencia = input.readBool();
+      } else {
+        input.skip(ftype);
+      }
+      break;
+      case 12:
+      if (ftype == Thrift.Type.BOOL) {
+        this.hasSgVisao = input.readBool();
+      } else {
+        input.skip(ftype);
+      }
+      break;
+      case 13:
+      if (ftype == Thrift.Type.BOOL) {
+        this.hasSgAudicao = input.readBool();
+      } else {
+        input.skip(ftype);
+      }
+      break;
+      case 14:
+      if (ftype == Thrift.Type.BOOL) {
+        this.hasSgComorbidade = input.readBool();
+      } else {
+        input.skip(ftype);
+      }
+      break;
+      case 15:
+      if (ftype == Thrift.Type.I64) {
+        this.dataResultado = input.readI64();
+      } else {
+        input.skip(ftype);
+      }
+      break;
+      default:
+        input.skip(ftype);
+    }
+    input.readFieldEnd();
+  }
+  input.readStructEnd();
+  return;
+};
+
+IvcfThrift.prototype.write = function(output) {
+  output.writeStructBegin('IvcfThrift');
+  if (this.resultado !== null && this.resultado !== undefined) {
+    output.writeFieldBegin('resultado', Thrift.Type.I32, 1);
+    output.writeI32(this.resultado);
+    output.writeFieldEnd();
+  }
+  if (this.hasSgIdade !== null && this.hasSgIdade !== undefined) {
+    output.writeFieldBegin('hasSgIdade', Thrift.Type.BOOL, 2);
+    output.writeBool(this.hasSgIdade);
+    output.writeFieldEnd();
+  }
+  if (this.hasSgPercepcaoSaude !== null && this.hasSgPercepcaoSaude !== undefined) {
+    output.writeFieldBegin('hasSgPercepcaoSaude', Thrift.Type.BOOL, 3);
+    output.writeBool(this.hasSgPercepcaoSaude);
+    output.writeFieldEnd();
+  }
+  if (this.hasSgAvdInstrumental !== null && this.hasSgAvdInstrumental !== undefined) {
+    output.writeFieldBegin('hasSgAvdInstrumental', Thrift.Type.BOOL, 4);
+    output.writeBool(this.hasSgAvdInstrumental);
+    output.writeFieldEnd();
+  }
+  if (this.hasSgAvdBasica !== null && this.hasSgAvdBasica !== undefined) {
+    output.writeFieldBegin('hasSgAvdBasica', Thrift.Type.BOOL, 5);
+    output.writeBool(this.hasSgAvdBasica);
+    output.writeFieldEnd();
+  }
+  if (this.hasSgCognicao !== null && this.hasSgCognicao !== undefined) {
+    output.writeFieldBegin('hasSgCognicao', Thrift.Type.BOOL, 6);
+    output.writeBool(this.hasSgCognicao);
+    output.writeFieldEnd();
+  }
+  if (this.hasSgHumor !== null && this.hasSgHumor !== undefined) {
+    output.writeFieldBegin('hasSgHumor', Thrift.Type.BOOL, 7);
+    output.writeBool(this.hasSgHumor);
+    output.writeFieldEnd();
+  }
+  if (this.hasSgAlcancePreensaoPinca !== null && this.hasSgAlcancePreensaoPinca !== undefined) {
+    output.writeFieldBegin('hasSgAlcancePreensaoPinca', Thrift.Type.BOOL, 8);
+    output.writeBool(this.hasSgAlcancePreensaoPinca);
+    output.writeFieldEnd();
+  }
+  if (this.hasSgCapAerobicaMuscular !== null && this.hasSgCapAerobicaMuscular !== undefined) {
+    output.writeFieldBegin('hasSgCapAerobicaMuscular', Thrift.Type.BOOL, 9);
+    output.writeBool(this.hasSgCapAerobicaMuscular);
+    output.writeFieldEnd();
+  }
+  if (this.hasSgMarcha !== null && this.hasSgMarcha !== undefined) {
+    output.writeFieldBegin('hasSgMarcha', Thrift.Type.BOOL, 10);
+    output.writeBool(this.hasSgMarcha);
+    output.writeFieldEnd();
+  }
+  if (this.hasSgContinencia !== null && this.hasSgContinencia !== undefined) {
+    output.writeFieldBegin('hasSgContinencia', Thrift.Type.BOOL, 11);
+    output.writeBool(this.hasSgContinencia);
+    output.writeFieldEnd();
+  }
+  if (this.hasSgVisao !== null && this.hasSgVisao !== undefined) {
+    output.writeFieldBegin('hasSgVisao', Thrift.Type.BOOL, 12);
+    output.writeBool(this.hasSgVisao);
+    output.writeFieldEnd();
+  }
+  if (this.hasSgAudicao !== null && this.hasSgAudicao !== undefined) {
+    output.writeFieldBegin('hasSgAudicao', Thrift.Type.BOOL, 13);
+    output.writeBool(this.hasSgAudicao);
+    output.writeFieldEnd();
+  }
+  if (this.hasSgComorbidade !== null && this.hasSgComorbidade !== undefined) {
+    output.writeFieldBegin('hasSgComorbidade', Thrift.Type.BOOL, 14);
+    output.writeBool(this.hasSgComorbidade);
+    output.writeFieldEnd();
+  }
+  if (this.dataResultado !== null && this.dataResultado !== undefined) {
+    output.writeFieldBegin('dataResultado', Thrift.Type.I64, 15);
+    output.writeI64(this.dataResultado);
+    output.writeFieldEnd();
+  }
+  output.writeFieldStop();
+  output.writeStructEnd();
+  return;
+};
+

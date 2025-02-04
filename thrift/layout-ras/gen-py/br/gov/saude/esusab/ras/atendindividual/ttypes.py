@@ -267,6 +267,7 @@ class FichaAtendimentoIndividualChildThrift:
    - emultis
    - medicoes
    - problemasCondicoes
+   - ivcf
   """
 
   thrift_spec = (
@@ -311,9 +312,10 @@ class FichaAtendimentoIndividualChildThrift:
     (38, TType.LIST, 'emultis', (TType.I64,None), None, ), # 38
     (39, TType.STRUCT, 'medicoes', (br.gov.saude.esusab.ras.common.ttypes.MedicoesThrift, br.gov.saude.esusab.ras.common.ttypes.MedicoesThrift.thrift_spec), None, ), # 39
     (40, TType.LIST, 'problemasCondicoes', (TType.STRUCT,(br.gov.saude.esusab.ras.common.ttypes.ProblemaCondicaoThrift, br.gov.saude.esusab.ras.common.ttypes.ProblemaCondicaoThrift.thrift_spec)), None, ), # 40
+    (41, TType.STRUCT, 'ivcf', (br.gov.saude.esusab.ras.common.ttypes.IvcfThrift, br.gov.saude.esusab.ras.common.ttypes.IvcfThrift.thrift_spec), None, ), # 41
   )
 
-  def __init__(self, numeroProntuario=None, cns=None, dataNascimento=None, localDeAtendimento=None, sexo=None, turno=None, tipoAtendimento=None, aleitamentoMaterno=None, dumDaGestante=None, idadeGestacional=None, atencaoDomiciliarModalidade=None, exame=None, vacinaEmDia=None, pic=None, ficouEmObservacao=None, nasfs=None, condutas=None, stGravidezPlanejada=None, nuGestasPrevias=None, nuPartos=None, racionalidadeSaude=None, dataHoraInicialAtendimento=None, dataHoraFinalAtendimento=None, cpfCidadao=None, medicamentos=None, encaminhamentos=None, resultadosExames=None, uuidRnds=None, finalizadorObservacao=None, tipoParticipacaoCidadao=None, tipoParticipacaoProfissionalConvidado=None, emultis=None, medicoes=None, problemasCondicoes=None,):
+  def __init__(self, numeroProntuario=None, cns=None, dataNascimento=None, localDeAtendimento=None, sexo=None, turno=None, tipoAtendimento=None, aleitamentoMaterno=None, dumDaGestante=None, idadeGestacional=None, atencaoDomiciliarModalidade=None, exame=None, vacinaEmDia=None, pic=None, ficouEmObservacao=None, nasfs=None, condutas=None, stGravidezPlanejada=None, nuGestasPrevias=None, nuPartos=None, racionalidadeSaude=None, dataHoraInicialAtendimento=None, dataHoraFinalAtendimento=None, cpfCidadao=None, medicamentos=None, encaminhamentos=None, resultadosExames=None, uuidRnds=None, finalizadorObservacao=None, tipoParticipacaoCidadao=None, tipoParticipacaoProfissionalConvidado=None, emultis=None, medicoes=None, problemasCondicoes=None, ivcf=None,):
     self.numeroProntuario = numeroProntuario
     self.cns = cns
     self.dataNascimento = dataNascimento
@@ -348,6 +350,7 @@ class FichaAtendimentoIndividualChildThrift:
     self.emultis = emultis
     self.medicoes = medicoes
     self.problemasCondicoes = problemasCondicoes
+    self.ivcf = ivcf
 
   def read(self, iprot):
     if iprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None and fastbinary is not None:
@@ -575,6 +578,12 @@ class FichaAtendimentoIndividualChildThrift:
           iprot.readListEnd()
         else:
           iprot.skip(ftype)
+      elif fid == 41:
+        if ftype == TType.STRUCT:
+          self.ivcf = br.gov.saude.esusab.ras.common.ttypes.IvcfThrift()
+          self.ivcf.read(iprot)
+        else:
+          iprot.skip(ftype)
       else:
         iprot.skip(ftype)
       iprot.readFieldEnd()
@@ -745,6 +754,10 @@ class FichaAtendimentoIndividualChildThrift:
         iter69.write(oprot)
       oprot.writeListEnd()
       oprot.writeFieldEnd()
+    if self.ivcf is not None:
+      oprot.writeFieldBegin('ivcf', TType.STRUCT, 41)
+      self.ivcf.write(oprot)
+      oprot.writeFieldEnd()
     oprot.writeFieldStop()
     oprot.writeStructEnd()
 
@@ -788,6 +801,7 @@ class FichaAtendimentoIndividualChildThrift:
     value = (value * 31) ^ hash(self.emultis)
     value = (value * 31) ^ hash(self.medicoes)
     value = (value * 31) ^ hash(self.problemasCondicoes)
+    value = (value * 31) ^ hash(self.ivcf)
     return value
 
   def __repr__(self):

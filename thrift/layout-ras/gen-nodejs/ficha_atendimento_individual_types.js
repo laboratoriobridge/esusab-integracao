@@ -270,6 +270,7 @@ FichaAtendimentoIndividualChildThrift = module.exports.FichaAtendimentoIndividua
   this.emultis = null;
   this.medicoes = null;
   this.problemasCondicoes = null;
+  this.ivcf = null;
   if (args) {
     if (args.numeroProntuario !== undefined && args.numeroProntuario !== null) {
       this.numeroProntuario = args.numeroProntuario;
@@ -372,6 +373,9 @@ FichaAtendimentoIndividualChildThrift = module.exports.FichaAtendimentoIndividua
     }
     if (args.problemasCondicoes !== undefined && args.problemasCondicoes !== null) {
       this.problemasCondicoes = Thrift.copyList(args.problemasCondicoes, [common_ttypes.ProblemaCondicaoThrift]);
+    }
+    if (args.ivcf !== undefined && args.ivcf !== null) {
+      this.ivcf = new common_ttypes.IvcfThrift(args.ivcf);
     }
   }
 };
@@ -738,6 +742,14 @@ FichaAtendimentoIndividualChildThrift.prototype.read = function(input) {
         input.skip(ftype);
       }
       break;
+      case 41:
+      if (ftype == Thrift.Type.STRUCT) {
+        this.ivcf = new common_ttypes.IvcfThrift();
+        this.ivcf.read(input);
+      } else {
+        input.skip(ftype);
+      }
+      break;
       default:
         input.skip(ftype);
     }
@@ -989,6 +1001,11 @@ FichaAtendimentoIndividualChildThrift.prototype.write = function(output) {
       }
     }
     output.writeListEnd();
+    output.writeFieldEnd();
+  }
+  if (this.ivcf !== null && this.ivcf !== undefined) {
+    output.writeFieldBegin('ivcf', Thrift.Type.STRUCT, 41);
+    this.ivcf.write(output);
     output.writeFieldEnd();
   }
   output.writeFieldStop();

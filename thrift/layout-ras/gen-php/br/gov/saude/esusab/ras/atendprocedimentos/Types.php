@@ -68,6 +68,10 @@ class FichaProcedimentoChildThrift {
    * @var \br\gov\saude\esusab\ras\common\MedicoesThrift
    */
   public $medicoes = null;
+  /**
+   * @var \br\gov\saude\esusab\ras\common\IvcfThrift
+   */
+  public $ivcf = null;
 
   public function __construct($vals=null) {
     if (!isset(self::$_TSPEC)) {
@@ -125,6 +129,11 @@ class FichaProcedimentoChildThrift {
           'type' => TType::STRUCT,
           'class' => '\br\gov\saude\esusab\ras\common\MedicoesThrift',
           ),
+        17 => array(
+          'var' => 'ivcf',
+          'type' => TType::STRUCT,
+          'class' => '\br\gov\saude\esusab\ras\common\IvcfThrift',
+          ),
         );
     }
     if (is_array($vals)) {
@@ -163,6 +172,9 @@ class FichaProcedimentoChildThrift {
       }
       if (isset($vals['medicoes'])) {
         $this->medicoes = $vals['medicoes'];
+      }
+      if (isset($vals['ivcf'])) {
+        $this->ivcf = $vals['ivcf'];
       }
     }
   }
@@ -281,6 +293,14 @@ class FichaProcedimentoChildThrift {
             $xfer += $input->skip($ftype);
           }
           break;
+        case 17:
+          if ($ftype == TType::STRUCT) {
+            $this->ivcf = new \br\gov\saude\esusab\ras\common\IvcfThrift();
+            $xfer += $this->ivcf->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
         default:
           $xfer += $input->skip($ftype);
           break;
@@ -367,6 +387,14 @@ class FichaProcedimentoChildThrift {
       }
       $xfer += $output->writeFieldBegin('medicoes', TType::STRUCT, 16);
       $xfer += $this->medicoes->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->ivcf !== null) {
+      if (!is_object($this->ivcf)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('ivcf', TType::STRUCT, 17);
+      $xfer += $this->ivcf->write($output);
       $xfer += $output->writeFieldEnd();
     }
     $xfer += $output->writeFieldStop();

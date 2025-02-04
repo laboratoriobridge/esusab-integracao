@@ -38,6 +38,7 @@ type
   IResultadosExameThrift = interface;
   IMedicoesThrift = interface;
   IProblemaCondicaoThrift = interface;
+  IIvcfThrift = interface;
 
   IHeaderCdsCadastroThrift = interface(IBase)
     function GetCnesUnidadeSaude: string;
@@ -1381,6 +1382,212 @@ type
     property __isset_DataInicioProblema: Boolean read Get__isset_DataInicioProblema;
     property __isset_DataFimProblema: Boolean read Get__isset_DataFimProblema;
     property __isset_IsAvaliado: Boolean read Get__isset_IsAvaliado;
+  end;
+
+  IIvcfThrift = interface(IBase)
+    function GetResultado: Integer;
+    procedure SetResultado( const Value: Integer);
+    function GetHasSgIdade: Boolean;
+    procedure SetHasSgIdade( const Value: Boolean);
+    function GetHasSgPercepcaoSaude: Boolean;
+    procedure SetHasSgPercepcaoSaude( const Value: Boolean);
+    function GetHasSgAvdInstrumental: Boolean;
+    procedure SetHasSgAvdInstrumental( const Value: Boolean);
+    function GetHasSgAvdBasica: Boolean;
+    procedure SetHasSgAvdBasica( const Value: Boolean);
+    function GetHasSgCognicao: Boolean;
+    procedure SetHasSgCognicao( const Value: Boolean);
+    function GetHasSgHumor: Boolean;
+    procedure SetHasSgHumor( const Value: Boolean);
+    function GetHasSgAlcancePreensaoPinca: Boolean;
+    procedure SetHasSgAlcancePreensaoPinca( const Value: Boolean);
+    function GetHasSgCapAerobicaMuscular: Boolean;
+    procedure SetHasSgCapAerobicaMuscular( const Value: Boolean);
+    function GetHasSgMarcha: Boolean;
+    procedure SetHasSgMarcha( const Value: Boolean);
+    function GetHasSgContinencia: Boolean;
+    procedure SetHasSgContinencia( const Value: Boolean);
+    function GetHasSgVisao: Boolean;
+    procedure SetHasSgVisao( const Value: Boolean);
+    function GetHasSgAudicao: Boolean;
+    procedure SetHasSgAudicao( const Value: Boolean);
+    function GetHasSgComorbidade: Boolean;
+    procedure SetHasSgComorbidade( const Value: Boolean);
+    function GetDataResultado: Int64;
+    procedure SetDataResultado( const Value: Int64);
+
+    property Resultado: Integer read GetResultado write SetResultado;
+    property HasSgIdade: Boolean read GetHasSgIdade write SetHasSgIdade;
+    property HasSgPercepcaoSaude: Boolean read GetHasSgPercepcaoSaude write SetHasSgPercepcaoSaude;
+    property HasSgAvdInstrumental: Boolean read GetHasSgAvdInstrumental write SetHasSgAvdInstrumental;
+    property HasSgAvdBasica: Boolean read GetHasSgAvdBasica write SetHasSgAvdBasica;
+    property HasSgCognicao: Boolean read GetHasSgCognicao write SetHasSgCognicao;
+    property HasSgHumor: Boolean read GetHasSgHumor write SetHasSgHumor;
+    property HasSgAlcancePreensaoPinca: Boolean read GetHasSgAlcancePreensaoPinca write SetHasSgAlcancePreensaoPinca;
+    property HasSgCapAerobicaMuscular: Boolean read GetHasSgCapAerobicaMuscular write SetHasSgCapAerobicaMuscular;
+    property HasSgMarcha: Boolean read GetHasSgMarcha write SetHasSgMarcha;
+    property HasSgContinencia: Boolean read GetHasSgContinencia write SetHasSgContinencia;
+    property HasSgVisao: Boolean read GetHasSgVisao write SetHasSgVisao;
+    property HasSgAudicao: Boolean read GetHasSgAudicao write SetHasSgAudicao;
+    property HasSgComorbidade: Boolean read GetHasSgComorbidade write SetHasSgComorbidade;
+    property DataResultado: Int64 read GetDataResultado write SetDataResultado;
+
+    function Get__isset_Resultado: Boolean;
+    function Get__isset_HasSgIdade: Boolean;
+    function Get__isset_HasSgPercepcaoSaude: Boolean;
+    function Get__isset_HasSgAvdInstrumental: Boolean;
+    function Get__isset_HasSgAvdBasica: Boolean;
+    function Get__isset_HasSgCognicao: Boolean;
+    function Get__isset_HasSgHumor: Boolean;
+    function Get__isset_HasSgAlcancePreensaoPinca: Boolean;
+    function Get__isset_HasSgCapAerobicaMuscular: Boolean;
+    function Get__isset_HasSgMarcha: Boolean;
+    function Get__isset_HasSgContinencia: Boolean;
+    function Get__isset_HasSgVisao: Boolean;
+    function Get__isset_HasSgAudicao: Boolean;
+    function Get__isset_HasSgComorbidade: Boolean;
+    function Get__isset_DataResultado: Boolean;
+
+    property __isset_Resultado: Boolean read Get__isset_Resultado;
+    property __isset_HasSgIdade: Boolean read Get__isset_HasSgIdade;
+    property __isset_HasSgPercepcaoSaude: Boolean read Get__isset_HasSgPercepcaoSaude;
+    property __isset_HasSgAvdInstrumental: Boolean read Get__isset_HasSgAvdInstrumental;
+    property __isset_HasSgAvdBasica: Boolean read Get__isset_HasSgAvdBasica;
+    property __isset_HasSgCognicao: Boolean read Get__isset_HasSgCognicao;
+    property __isset_HasSgHumor: Boolean read Get__isset_HasSgHumor;
+    property __isset_HasSgAlcancePreensaoPinca: Boolean read Get__isset_HasSgAlcancePreensaoPinca;
+    property __isset_HasSgCapAerobicaMuscular: Boolean read Get__isset_HasSgCapAerobicaMuscular;
+    property __isset_HasSgMarcha: Boolean read Get__isset_HasSgMarcha;
+    property __isset_HasSgContinencia: Boolean read Get__isset_HasSgContinencia;
+    property __isset_HasSgVisao: Boolean read Get__isset_HasSgVisao;
+    property __isset_HasSgAudicao: Boolean read Get__isset_HasSgAudicao;
+    property __isset_HasSgComorbidade: Boolean read Get__isset_HasSgComorbidade;
+    property __isset_DataResultado: Boolean read Get__isset_DataResultado;
+  end;
+
+  TIvcfThriftImpl = class(TInterfacedObject, IBase, IIvcfThrift)
+  private
+    FResultado: Integer;
+    FHasSgIdade: Boolean;
+    FHasSgPercepcaoSaude: Boolean;
+    FHasSgAvdInstrumental: Boolean;
+    FHasSgAvdBasica: Boolean;
+    FHasSgCognicao: Boolean;
+    FHasSgHumor: Boolean;
+    FHasSgAlcancePreensaoPinca: Boolean;
+    FHasSgCapAerobicaMuscular: Boolean;
+    FHasSgMarcha: Boolean;
+    FHasSgContinencia: Boolean;
+    FHasSgVisao: Boolean;
+    FHasSgAudicao: Boolean;
+    FHasSgComorbidade: Boolean;
+    FDataResultado: Int64;
+    
+    F__isset_Resultado: Boolean;
+    F__isset_HasSgIdade: Boolean;
+    F__isset_HasSgPercepcaoSaude: Boolean;
+    F__isset_HasSgAvdInstrumental: Boolean;
+    F__isset_HasSgAvdBasica: Boolean;
+    F__isset_HasSgCognicao: Boolean;
+    F__isset_HasSgHumor: Boolean;
+    F__isset_HasSgAlcancePreensaoPinca: Boolean;
+    F__isset_HasSgCapAerobicaMuscular: Boolean;
+    F__isset_HasSgMarcha: Boolean;
+    F__isset_HasSgContinencia: Boolean;
+    F__isset_HasSgVisao: Boolean;
+    F__isset_HasSgAudicao: Boolean;
+    F__isset_HasSgComorbidade: Boolean;
+    F__isset_DataResultado: Boolean;
+    
+    function GetResultado: Integer;
+    procedure SetResultado( const Value: Integer);
+    function GetHasSgIdade: Boolean;
+    procedure SetHasSgIdade( const Value: Boolean);
+    function GetHasSgPercepcaoSaude: Boolean;
+    procedure SetHasSgPercepcaoSaude( const Value: Boolean);
+    function GetHasSgAvdInstrumental: Boolean;
+    procedure SetHasSgAvdInstrumental( const Value: Boolean);
+    function GetHasSgAvdBasica: Boolean;
+    procedure SetHasSgAvdBasica( const Value: Boolean);
+    function GetHasSgCognicao: Boolean;
+    procedure SetHasSgCognicao( const Value: Boolean);
+    function GetHasSgHumor: Boolean;
+    procedure SetHasSgHumor( const Value: Boolean);
+    function GetHasSgAlcancePreensaoPinca: Boolean;
+    procedure SetHasSgAlcancePreensaoPinca( const Value: Boolean);
+    function GetHasSgCapAerobicaMuscular: Boolean;
+    procedure SetHasSgCapAerobicaMuscular( const Value: Boolean);
+    function GetHasSgMarcha: Boolean;
+    procedure SetHasSgMarcha( const Value: Boolean);
+    function GetHasSgContinencia: Boolean;
+    procedure SetHasSgContinencia( const Value: Boolean);
+    function GetHasSgVisao: Boolean;
+    procedure SetHasSgVisao( const Value: Boolean);
+    function GetHasSgAudicao: Boolean;
+    procedure SetHasSgAudicao( const Value: Boolean);
+    function GetHasSgComorbidade: Boolean;
+    procedure SetHasSgComorbidade( const Value: Boolean);
+    function GetDataResultado: Int64;
+    procedure SetDataResultado( const Value: Int64);
+
+    function Get__isset_Resultado: Boolean;
+    function Get__isset_HasSgIdade: Boolean;
+    function Get__isset_HasSgPercepcaoSaude: Boolean;
+    function Get__isset_HasSgAvdInstrumental: Boolean;
+    function Get__isset_HasSgAvdBasica: Boolean;
+    function Get__isset_HasSgCognicao: Boolean;
+    function Get__isset_HasSgHumor: Boolean;
+    function Get__isset_HasSgAlcancePreensaoPinca: Boolean;
+    function Get__isset_HasSgCapAerobicaMuscular: Boolean;
+    function Get__isset_HasSgMarcha: Boolean;
+    function Get__isset_HasSgContinencia: Boolean;
+    function Get__isset_HasSgVisao: Boolean;
+    function Get__isset_HasSgAudicao: Boolean;
+    function Get__isset_HasSgComorbidade: Boolean;
+    function Get__isset_DataResultado: Boolean;
+  public
+    constructor Create;
+    destructor Destroy; override;
+
+    function ToString: string; override;
+
+    // IBase
+    procedure Read( const iprot: IProtocol);
+    procedure Write( const oprot: IProtocol);
+
+    // Properties
+    property Resultado: Integer read GetResultado write SetResultado;
+    property HasSgIdade: Boolean read GetHasSgIdade write SetHasSgIdade;
+    property HasSgPercepcaoSaude: Boolean read GetHasSgPercepcaoSaude write SetHasSgPercepcaoSaude;
+    property HasSgAvdInstrumental: Boolean read GetHasSgAvdInstrumental write SetHasSgAvdInstrumental;
+    property HasSgAvdBasica: Boolean read GetHasSgAvdBasica write SetHasSgAvdBasica;
+    property HasSgCognicao: Boolean read GetHasSgCognicao write SetHasSgCognicao;
+    property HasSgHumor: Boolean read GetHasSgHumor write SetHasSgHumor;
+    property HasSgAlcancePreensaoPinca: Boolean read GetHasSgAlcancePreensaoPinca write SetHasSgAlcancePreensaoPinca;
+    property HasSgCapAerobicaMuscular: Boolean read GetHasSgCapAerobicaMuscular write SetHasSgCapAerobicaMuscular;
+    property HasSgMarcha: Boolean read GetHasSgMarcha write SetHasSgMarcha;
+    property HasSgContinencia: Boolean read GetHasSgContinencia write SetHasSgContinencia;
+    property HasSgVisao: Boolean read GetHasSgVisao write SetHasSgVisao;
+    property HasSgAudicao: Boolean read GetHasSgAudicao write SetHasSgAudicao;
+    property HasSgComorbidade: Boolean read GetHasSgComorbidade write SetHasSgComorbidade;
+    property DataResultado: Int64 read GetDataResultado write SetDataResultado;
+
+    // isset
+    property __isset_Resultado: Boolean read Get__isset_Resultado;
+    property __isset_HasSgIdade: Boolean read Get__isset_HasSgIdade;
+    property __isset_HasSgPercepcaoSaude: Boolean read Get__isset_HasSgPercepcaoSaude;
+    property __isset_HasSgAvdInstrumental: Boolean read Get__isset_HasSgAvdInstrumental;
+    property __isset_HasSgAvdBasica: Boolean read Get__isset_HasSgAvdBasica;
+    property __isset_HasSgCognicao: Boolean read Get__isset_HasSgCognicao;
+    property __isset_HasSgHumor: Boolean read Get__isset_HasSgHumor;
+    property __isset_HasSgAlcancePreensaoPinca: Boolean read Get__isset_HasSgAlcancePreensaoPinca;
+    property __isset_HasSgCapAerobicaMuscular: Boolean read Get__isset_HasSgCapAerobicaMuscular;
+    property __isset_HasSgMarcha: Boolean read Get__isset_HasSgMarcha;
+    property __isset_HasSgContinencia: Boolean read Get__isset_HasSgContinencia;
+    property __isset_HasSgVisao: Boolean read Get__isset_HasSgVisao;
+    property __isset_HasSgAudicao: Boolean read Get__isset_HasSgAudicao;
+    property __isset_HasSgComorbidade: Boolean read Get__isset_HasSgComorbidade;
+    property __isset_DataResultado: Boolean read Get__isset_DataResultado;
   end;
 
 implementation
@@ -5671,6 +5878,675 @@ begin
     if _first28 then {prevent warning};
   finally
     _sb27.Free;
+  end;
+end;
+
+constructor TIvcfThriftImpl.Create;
+begin
+  inherited;
+end;
+
+destructor TIvcfThriftImpl.Destroy;
+begin
+  inherited;
+end;
+
+function TIvcfThriftImpl.GetResultado: Integer;
+begin
+  Result := FResultado;
+end;
+
+procedure TIvcfThriftImpl.SetResultado( const Value: Integer);
+begin
+  F__isset_Resultado := True;
+  FResultado := Value;
+end;
+
+function TIvcfThriftImpl.Get__isset_Resultado: Boolean;
+begin
+  Result := F__isset_Resultado;
+end;
+
+function TIvcfThriftImpl.GetHasSgIdade: Boolean;
+begin
+  Result := FHasSgIdade;
+end;
+
+procedure TIvcfThriftImpl.SetHasSgIdade( const Value: Boolean);
+begin
+  F__isset_HasSgIdade := True;
+  FHasSgIdade := Value;
+end;
+
+function TIvcfThriftImpl.Get__isset_HasSgIdade: Boolean;
+begin
+  Result := F__isset_HasSgIdade;
+end;
+
+function TIvcfThriftImpl.GetHasSgPercepcaoSaude: Boolean;
+begin
+  Result := FHasSgPercepcaoSaude;
+end;
+
+procedure TIvcfThriftImpl.SetHasSgPercepcaoSaude( const Value: Boolean);
+begin
+  F__isset_HasSgPercepcaoSaude := True;
+  FHasSgPercepcaoSaude := Value;
+end;
+
+function TIvcfThriftImpl.Get__isset_HasSgPercepcaoSaude: Boolean;
+begin
+  Result := F__isset_HasSgPercepcaoSaude;
+end;
+
+function TIvcfThriftImpl.GetHasSgAvdInstrumental: Boolean;
+begin
+  Result := FHasSgAvdInstrumental;
+end;
+
+procedure TIvcfThriftImpl.SetHasSgAvdInstrumental( const Value: Boolean);
+begin
+  F__isset_HasSgAvdInstrumental := True;
+  FHasSgAvdInstrumental := Value;
+end;
+
+function TIvcfThriftImpl.Get__isset_HasSgAvdInstrumental: Boolean;
+begin
+  Result := F__isset_HasSgAvdInstrumental;
+end;
+
+function TIvcfThriftImpl.GetHasSgAvdBasica: Boolean;
+begin
+  Result := FHasSgAvdBasica;
+end;
+
+procedure TIvcfThriftImpl.SetHasSgAvdBasica( const Value: Boolean);
+begin
+  F__isset_HasSgAvdBasica := True;
+  FHasSgAvdBasica := Value;
+end;
+
+function TIvcfThriftImpl.Get__isset_HasSgAvdBasica: Boolean;
+begin
+  Result := F__isset_HasSgAvdBasica;
+end;
+
+function TIvcfThriftImpl.GetHasSgCognicao: Boolean;
+begin
+  Result := FHasSgCognicao;
+end;
+
+procedure TIvcfThriftImpl.SetHasSgCognicao( const Value: Boolean);
+begin
+  F__isset_HasSgCognicao := True;
+  FHasSgCognicao := Value;
+end;
+
+function TIvcfThriftImpl.Get__isset_HasSgCognicao: Boolean;
+begin
+  Result := F__isset_HasSgCognicao;
+end;
+
+function TIvcfThriftImpl.GetHasSgHumor: Boolean;
+begin
+  Result := FHasSgHumor;
+end;
+
+procedure TIvcfThriftImpl.SetHasSgHumor( const Value: Boolean);
+begin
+  F__isset_HasSgHumor := True;
+  FHasSgHumor := Value;
+end;
+
+function TIvcfThriftImpl.Get__isset_HasSgHumor: Boolean;
+begin
+  Result := F__isset_HasSgHumor;
+end;
+
+function TIvcfThriftImpl.GetHasSgAlcancePreensaoPinca: Boolean;
+begin
+  Result := FHasSgAlcancePreensaoPinca;
+end;
+
+procedure TIvcfThriftImpl.SetHasSgAlcancePreensaoPinca( const Value: Boolean);
+begin
+  F__isset_HasSgAlcancePreensaoPinca := True;
+  FHasSgAlcancePreensaoPinca := Value;
+end;
+
+function TIvcfThriftImpl.Get__isset_HasSgAlcancePreensaoPinca: Boolean;
+begin
+  Result := F__isset_HasSgAlcancePreensaoPinca;
+end;
+
+function TIvcfThriftImpl.GetHasSgCapAerobicaMuscular: Boolean;
+begin
+  Result := FHasSgCapAerobicaMuscular;
+end;
+
+procedure TIvcfThriftImpl.SetHasSgCapAerobicaMuscular( const Value: Boolean);
+begin
+  F__isset_HasSgCapAerobicaMuscular := True;
+  FHasSgCapAerobicaMuscular := Value;
+end;
+
+function TIvcfThriftImpl.Get__isset_HasSgCapAerobicaMuscular: Boolean;
+begin
+  Result := F__isset_HasSgCapAerobicaMuscular;
+end;
+
+function TIvcfThriftImpl.GetHasSgMarcha: Boolean;
+begin
+  Result := FHasSgMarcha;
+end;
+
+procedure TIvcfThriftImpl.SetHasSgMarcha( const Value: Boolean);
+begin
+  F__isset_HasSgMarcha := True;
+  FHasSgMarcha := Value;
+end;
+
+function TIvcfThriftImpl.Get__isset_HasSgMarcha: Boolean;
+begin
+  Result := F__isset_HasSgMarcha;
+end;
+
+function TIvcfThriftImpl.GetHasSgContinencia: Boolean;
+begin
+  Result := FHasSgContinencia;
+end;
+
+procedure TIvcfThriftImpl.SetHasSgContinencia( const Value: Boolean);
+begin
+  F__isset_HasSgContinencia := True;
+  FHasSgContinencia := Value;
+end;
+
+function TIvcfThriftImpl.Get__isset_HasSgContinencia: Boolean;
+begin
+  Result := F__isset_HasSgContinencia;
+end;
+
+function TIvcfThriftImpl.GetHasSgVisao: Boolean;
+begin
+  Result := FHasSgVisao;
+end;
+
+procedure TIvcfThriftImpl.SetHasSgVisao( const Value: Boolean);
+begin
+  F__isset_HasSgVisao := True;
+  FHasSgVisao := Value;
+end;
+
+function TIvcfThriftImpl.Get__isset_HasSgVisao: Boolean;
+begin
+  Result := F__isset_HasSgVisao;
+end;
+
+function TIvcfThriftImpl.GetHasSgAudicao: Boolean;
+begin
+  Result := FHasSgAudicao;
+end;
+
+procedure TIvcfThriftImpl.SetHasSgAudicao( const Value: Boolean);
+begin
+  F__isset_HasSgAudicao := True;
+  FHasSgAudicao := Value;
+end;
+
+function TIvcfThriftImpl.Get__isset_HasSgAudicao: Boolean;
+begin
+  Result := F__isset_HasSgAudicao;
+end;
+
+function TIvcfThriftImpl.GetHasSgComorbidade: Boolean;
+begin
+  Result := FHasSgComorbidade;
+end;
+
+procedure TIvcfThriftImpl.SetHasSgComorbidade( const Value: Boolean);
+begin
+  F__isset_HasSgComorbidade := True;
+  FHasSgComorbidade := Value;
+end;
+
+function TIvcfThriftImpl.Get__isset_HasSgComorbidade: Boolean;
+begin
+  Result := F__isset_HasSgComorbidade;
+end;
+
+function TIvcfThriftImpl.GetDataResultado: Int64;
+begin
+  Result := FDataResultado;
+end;
+
+procedure TIvcfThriftImpl.SetDataResultado( const Value: Int64);
+begin
+  F__isset_DataResultado := True;
+  FDataResultado := Value;
+end;
+
+function TIvcfThriftImpl.Get__isset_DataResultado: Boolean;
+begin
+  Result := F__isset_DataResultado;
+end;
+
+procedure TIvcfThriftImpl.Read( const iprot: IProtocol);
+var
+  field_ : IField;
+  struc : IStruct;
+  tracker : IProtocolRecursionTracker;
+
+begin
+  tracker := iprot.NextRecursionLevel;
+  struc := iprot.ReadStructBegin;
+  try
+    while (true) do
+    begin
+      field_ := iprot.ReadFieldBegin();
+      if (field_.Type_ = TType.Stop) then
+      begin
+        Break;
+      end;
+      case field_.ID of
+        1: begin
+          if (field_.Type_ = TType.I32) then
+          begin
+            Resultado := iprot.ReadI32();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        2: begin
+          if (field_.Type_ = TType.Bool_) then
+          begin
+            HasSgIdade := iprot.ReadBool();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        3: begin
+          if (field_.Type_ = TType.Bool_) then
+          begin
+            HasSgPercepcaoSaude := iprot.ReadBool();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        4: begin
+          if (field_.Type_ = TType.Bool_) then
+          begin
+            HasSgAvdInstrumental := iprot.ReadBool();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        5: begin
+          if (field_.Type_ = TType.Bool_) then
+          begin
+            HasSgAvdBasica := iprot.ReadBool();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        6: begin
+          if (field_.Type_ = TType.Bool_) then
+          begin
+            HasSgCognicao := iprot.ReadBool();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        7: begin
+          if (field_.Type_ = TType.Bool_) then
+          begin
+            HasSgHumor := iprot.ReadBool();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        8: begin
+          if (field_.Type_ = TType.Bool_) then
+          begin
+            HasSgAlcancePreensaoPinca := iprot.ReadBool();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        9: begin
+          if (field_.Type_ = TType.Bool_) then
+          begin
+            HasSgCapAerobicaMuscular := iprot.ReadBool();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        10: begin
+          if (field_.Type_ = TType.Bool_) then
+          begin
+            HasSgMarcha := iprot.ReadBool();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        11: begin
+          if (field_.Type_ = TType.Bool_) then
+          begin
+            HasSgContinencia := iprot.ReadBool();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        12: begin
+          if (field_.Type_ = TType.Bool_) then
+          begin
+            HasSgVisao := iprot.ReadBool();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        13: begin
+          if (field_.Type_ = TType.Bool_) then
+          begin
+            HasSgAudicao := iprot.ReadBool();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        14: begin
+          if (field_.Type_ = TType.Bool_) then
+          begin
+            HasSgComorbidade := iprot.ReadBool();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        15: begin
+          if (field_.Type_ = TType.I64) then
+          begin
+            DataResultado := iprot.ReadI64();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end
+        else begin
+          TProtocolUtil.Skip(iprot, field_.Type_);
+        end;
+      end;
+      iprot.ReadFieldEnd;
+    end;
+  finally
+    iprot.ReadStructEnd;
+  end;
+end;
+
+procedure TIvcfThriftImpl.Write( const oprot: IProtocol);
+var
+  struc : IStruct;
+  field_ : IField;
+  tracker : IProtocolRecursionTracker;
+begin
+  tracker := oprot.NextRecursionLevel;
+  struc := TStructImpl.Create('IvcfThrift');
+  oprot.WriteStructBegin(struc);
+  field_ := TFieldImpl.Create;
+  if (__isset_Resultado) then
+  begin
+    field_.Name := 'resultado';
+    field_.Type_  := TType.I32;
+    field_.ID := 1;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteI32(Resultado);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_HasSgIdade) then
+  begin
+    field_.Name := 'hasSgIdade';
+    field_.Type_  := TType.Bool_;
+    field_.ID := 2;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteBool(HasSgIdade);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_HasSgPercepcaoSaude) then
+  begin
+    field_.Name := 'hasSgPercepcaoSaude';
+    field_.Type_  := TType.Bool_;
+    field_.ID := 3;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteBool(HasSgPercepcaoSaude);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_HasSgAvdInstrumental) then
+  begin
+    field_.Name := 'hasSgAvdInstrumental';
+    field_.Type_  := TType.Bool_;
+    field_.ID := 4;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteBool(HasSgAvdInstrumental);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_HasSgAvdBasica) then
+  begin
+    field_.Name := 'hasSgAvdBasica';
+    field_.Type_  := TType.Bool_;
+    field_.ID := 5;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteBool(HasSgAvdBasica);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_HasSgCognicao) then
+  begin
+    field_.Name := 'hasSgCognicao';
+    field_.Type_  := TType.Bool_;
+    field_.ID := 6;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteBool(HasSgCognicao);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_HasSgHumor) then
+  begin
+    field_.Name := 'hasSgHumor';
+    field_.Type_  := TType.Bool_;
+    field_.ID := 7;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteBool(HasSgHumor);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_HasSgAlcancePreensaoPinca) then
+  begin
+    field_.Name := 'hasSgAlcancePreensaoPinca';
+    field_.Type_  := TType.Bool_;
+    field_.ID := 8;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteBool(HasSgAlcancePreensaoPinca);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_HasSgCapAerobicaMuscular) then
+  begin
+    field_.Name := 'hasSgCapAerobicaMuscular';
+    field_.Type_  := TType.Bool_;
+    field_.ID := 9;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteBool(HasSgCapAerobicaMuscular);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_HasSgMarcha) then
+  begin
+    field_.Name := 'hasSgMarcha';
+    field_.Type_  := TType.Bool_;
+    field_.ID := 10;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteBool(HasSgMarcha);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_HasSgContinencia) then
+  begin
+    field_.Name := 'hasSgContinencia';
+    field_.Type_  := TType.Bool_;
+    field_.ID := 11;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteBool(HasSgContinencia);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_HasSgVisao) then
+  begin
+    field_.Name := 'hasSgVisao';
+    field_.Type_  := TType.Bool_;
+    field_.ID := 12;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteBool(HasSgVisao);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_HasSgAudicao) then
+  begin
+    field_.Name := 'hasSgAudicao';
+    field_.Type_  := TType.Bool_;
+    field_.ID := 13;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteBool(HasSgAudicao);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_HasSgComorbidade) then
+  begin
+    field_.Name := 'hasSgComorbidade';
+    field_.Type_  := TType.Bool_;
+    field_.ID := 14;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteBool(HasSgComorbidade);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_DataResultado) then
+  begin
+    field_.Name := 'dataResultado';
+    field_.Type_  := TType.I64;
+    field_.ID := 15;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteI64(DataResultado);
+    oprot.WriteFieldEnd();
+  end;
+  oprot.WriteFieldStop();
+  oprot.WriteStructEnd();
+end;
+
+function TIvcfThriftImpl.ToString: string;
+var
+  _sb29 : TThriftStringBuilder;
+  _first30 : Boolean;
+begin
+  _sb29 := TThriftStringBuilder.Create('(');
+  try
+    _first30 := TRUE;
+    if (__isset_Resultado) then begin
+      if not _first30 then _sb29.Append(',');
+      _first30 := FALSE;
+      _sb29.Append('Resultado: ');
+      _sb29.Append(Resultado);
+    end;
+    if (__isset_HasSgIdade) then begin
+      if not _first30 then _sb29.Append(',');
+      _first30 := FALSE;
+      _sb29.Append('HasSgIdade: ');
+      _sb29.Append(HasSgIdade);
+    end;
+    if (__isset_HasSgPercepcaoSaude) then begin
+      if not _first30 then _sb29.Append(',');
+      _first30 := FALSE;
+      _sb29.Append('HasSgPercepcaoSaude: ');
+      _sb29.Append(HasSgPercepcaoSaude);
+    end;
+    if (__isset_HasSgAvdInstrumental) then begin
+      if not _first30 then _sb29.Append(',');
+      _first30 := FALSE;
+      _sb29.Append('HasSgAvdInstrumental: ');
+      _sb29.Append(HasSgAvdInstrumental);
+    end;
+    if (__isset_HasSgAvdBasica) then begin
+      if not _first30 then _sb29.Append(',');
+      _first30 := FALSE;
+      _sb29.Append('HasSgAvdBasica: ');
+      _sb29.Append(HasSgAvdBasica);
+    end;
+    if (__isset_HasSgCognicao) then begin
+      if not _first30 then _sb29.Append(',');
+      _first30 := FALSE;
+      _sb29.Append('HasSgCognicao: ');
+      _sb29.Append(HasSgCognicao);
+    end;
+    if (__isset_HasSgHumor) then begin
+      if not _first30 then _sb29.Append(',');
+      _first30 := FALSE;
+      _sb29.Append('HasSgHumor: ');
+      _sb29.Append(HasSgHumor);
+    end;
+    if (__isset_HasSgAlcancePreensaoPinca) then begin
+      if not _first30 then _sb29.Append(',');
+      _first30 := FALSE;
+      _sb29.Append('HasSgAlcancePreensaoPinca: ');
+      _sb29.Append(HasSgAlcancePreensaoPinca);
+    end;
+    if (__isset_HasSgCapAerobicaMuscular) then begin
+      if not _first30 then _sb29.Append(',');
+      _first30 := FALSE;
+      _sb29.Append('HasSgCapAerobicaMuscular: ');
+      _sb29.Append(HasSgCapAerobicaMuscular);
+    end;
+    if (__isset_HasSgMarcha) then begin
+      if not _first30 then _sb29.Append(',');
+      _first30 := FALSE;
+      _sb29.Append('HasSgMarcha: ');
+      _sb29.Append(HasSgMarcha);
+    end;
+    if (__isset_HasSgContinencia) then begin
+      if not _first30 then _sb29.Append(',');
+      _first30 := FALSE;
+      _sb29.Append('HasSgContinencia: ');
+      _sb29.Append(HasSgContinencia);
+    end;
+    if (__isset_HasSgVisao) then begin
+      if not _first30 then _sb29.Append(',');
+      _first30 := FALSE;
+      _sb29.Append('HasSgVisao: ');
+      _sb29.Append(HasSgVisao);
+    end;
+    if (__isset_HasSgAudicao) then begin
+      if not _first30 then _sb29.Append(',');
+      _first30 := FALSE;
+      _sb29.Append('HasSgAudicao: ');
+      _sb29.Append(HasSgAudicao);
+    end;
+    if (__isset_HasSgComorbidade) then begin
+      if not _first30 then _sb29.Append(',');
+      _first30 := FALSE;
+      _sb29.Append('HasSgComorbidade: ');
+      _sb29.Append(HasSgComorbidade);
+    end;
+    if (__isset_DataResultado) then begin
+      if not _first30 then _sb29.Append(',');
+      _first30 := FALSE;
+      _sb29.Append('DataResultado: ');
+      _sb29.Append(DataResultado);
+    end;
+    _sb29.Append(')');
+    Result := _sb29.ToString;
+    if _first30 then {prevent warning};
+  finally
+    _sb29.Free;
   end;
 end;
 

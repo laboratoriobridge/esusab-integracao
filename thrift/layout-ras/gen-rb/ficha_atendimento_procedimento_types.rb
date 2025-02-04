@@ -28,6 +28,7 @@ module Br
               DATAHORAFINALATENDIMENTO = 11
               CPFCIDADAO = 12
               MEDICOES = 16
+              IVCF = 17
 
               FIELDS = {
                 NUMPRONTUARIO => {:type => ::Thrift::Types::STRING, :name => 'numProntuario', :optional => true},
@@ -41,7 +42,8 @@ module Br
                 DATAHORAINICIALATENDIMENTO => {:type => ::Thrift::Types::I64, :name => 'dataHoraInicialAtendimento', :optional => true},
                 DATAHORAFINALATENDIMENTO => {:type => ::Thrift::Types::I64, :name => 'dataHoraFinalAtendimento', :optional => true},
                 CPFCIDADAO => {:type => ::Thrift::Types::STRING, :name => 'cpfCidadao', :optional => true},
-                MEDICOES => {:type => ::Thrift::Types::STRUCT, :name => 'medicoes', :class => ::Br::Gov::Saude::Esusab::Ras::Common::MedicoesThrift, :optional => true}
+                MEDICOES => {:type => ::Thrift::Types::STRUCT, :name => 'medicoes', :class => ::Br::Gov::Saude::Esusab::Ras::Common::MedicoesThrift, :optional => true},
+                IVCF => {:type => ::Thrift::Types::STRUCT, :name => 'ivcf', :class => ::Br::Gov::Saude::Esusab::Ras::Common::IvcfThrift, :optional => true}
               }
 
               def struct_fields; FIELDS; end

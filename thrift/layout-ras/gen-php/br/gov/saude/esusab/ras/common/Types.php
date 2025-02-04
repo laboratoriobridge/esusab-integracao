@@ -2657,4 +2657,401 @@ class ProblemaCondicaoThrift {
 
 }
 
+class IvcfThrift {
+  static $_TSPEC;
+
+  /**
+   * @var int
+   */
+  public $resultado = null;
+  /**
+   * @var bool
+   */
+  public $hasSgIdade = null;
+  /**
+   * @var bool
+   */
+  public $hasSgPercepcaoSaude = null;
+  /**
+   * @var bool
+   */
+  public $hasSgAvdInstrumental = null;
+  /**
+   * @var bool
+   */
+  public $hasSgAvdBasica = null;
+  /**
+   * @var bool
+   */
+  public $hasSgCognicao = null;
+  /**
+   * @var bool
+   */
+  public $hasSgHumor = null;
+  /**
+   * @var bool
+   */
+  public $hasSgAlcancePreensaoPinca = null;
+  /**
+   * @var bool
+   */
+  public $hasSgCapAerobicaMuscular = null;
+  /**
+   * @var bool
+   */
+  public $hasSgMarcha = null;
+  /**
+   * @var bool
+   */
+  public $hasSgContinencia = null;
+  /**
+   * @var bool
+   */
+  public $hasSgVisao = null;
+  /**
+   * @var bool
+   */
+  public $hasSgAudicao = null;
+  /**
+   * @var bool
+   */
+  public $hasSgComorbidade = null;
+  /**
+   * @var int
+   */
+  public $dataResultado = null;
+
+  public function __construct($vals=null) {
+    if (!isset(self::$_TSPEC)) {
+      self::$_TSPEC = array(
+        1 => array(
+          'var' => 'resultado',
+          'type' => TType::I32,
+          ),
+        2 => array(
+          'var' => 'hasSgIdade',
+          'type' => TType::BOOL,
+          ),
+        3 => array(
+          'var' => 'hasSgPercepcaoSaude',
+          'type' => TType::BOOL,
+          ),
+        4 => array(
+          'var' => 'hasSgAvdInstrumental',
+          'type' => TType::BOOL,
+          ),
+        5 => array(
+          'var' => 'hasSgAvdBasica',
+          'type' => TType::BOOL,
+          ),
+        6 => array(
+          'var' => 'hasSgCognicao',
+          'type' => TType::BOOL,
+          ),
+        7 => array(
+          'var' => 'hasSgHumor',
+          'type' => TType::BOOL,
+          ),
+        8 => array(
+          'var' => 'hasSgAlcancePreensaoPinca',
+          'type' => TType::BOOL,
+          ),
+        9 => array(
+          'var' => 'hasSgCapAerobicaMuscular',
+          'type' => TType::BOOL,
+          ),
+        10 => array(
+          'var' => 'hasSgMarcha',
+          'type' => TType::BOOL,
+          ),
+        11 => array(
+          'var' => 'hasSgContinencia',
+          'type' => TType::BOOL,
+          ),
+        12 => array(
+          'var' => 'hasSgVisao',
+          'type' => TType::BOOL,
+          ),
+        13 => array(
+          'var' => 'hasSgAudicao',
+          'type' => TType::BOOL,
+          ),
+        14 => array(
+          'var' => 'hasSgComorbidade',
+          'type' => TType::BOOL,
+          ),
+        15 => array(
+          'var' => 'dataResultado',
+          'type' => TType::I64,
+          ),
+        );
+    }
+    if (is_array($vals)) {
+      if (isset($vals['resultado'])) {
+        $this->resultado = $vals['resultado'];
+      }
+      if (isset($vals['hasSgIdade'])) {
+        $this->hasSgIdade = $vals['hasSgIdade'];
+      }
+      if (isset($vals['hasSgPercepcaoSaude'])) {
+        $this->hasSgPercepcaoSaude = $vals['hasSgPercepcaoSaude'];
+      }
+      if (isset($vals['hasSgAvdInstrumental'])) {
+        $this->hasSgAvdInstrumental = $vals['hasSgAvdInstrumental'];
+      }
+      if (isset($vals['hasSgAvdBasica'])) {
+        $this->hasSgAvdBasica = $vals['hasSgAvdBasica'];
+      }
+      if (isset($vals['hasSgCognicao'])) {
+        $this->hasSgCognicao = $vals['hasSgCognicao'];
+      }
+      if (isset($vals['hasSgHumor'])) {
+        $this->hasSgHumor = $vals['hasSgHumor'];
+      }
+      if (isset($vals['hasSgAlcancePreensaoPinca'])) {
+        $this->hasSgAlcancePreensaoPinca = $vals['hasSgAlcancePreensaoPinca'];
+      }
+      if (isset($vals['hasSgCapAerobicaMuscular'])) {
+        $this->hasSgCapAerobicaMuscular = $vals['hasSgCapAerobicaMuscular'];
+      }
+      if (isset($vals['hasSgMarcha'])) {
+        $this->hasSgMarcha = $vals['hasSgMarcha'];
+      }
+      if (isset($vals['hasSgContinencia'])) {
+        $this->hasSgContinencia = $vals['hasSgContinencia'];
+      }
+      if (isset($vals['hasSgVisao'])) {
+        $this->hasSgVisao = $vals['hasSgVisao'];
+      }
+      if (isset($vals['hasSgAudicao'])) {
+        $this->hasSgAudicao = $vals['hasSgAudicao'];
+      }
+      if (isset($vals['hasSgComorbidade'])) {
+        $this->hasSgComorbidade = $vals['hasSgComorbidade'];
+      }
+      if (isset($vals['dataResultado'])) {
+        $this->dataResultado = $vals['dataResultado'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'IvcfThrift';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 1:
+          if ($ftype == TType::I32) {
+            $xfer += $input->readI32($this->resultado);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 2:
+          if ($ftype == TType::BOOL) {
+            $xfer += $input->readBool($this->hasSgIdade);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 3:
+          if ($ftype == TType::BOOL) {
+            $xfer += $input->readBool($this->hasSgPercepcaoSaude);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 4:
+          if ($ftype == TType::BOOL) {
+            $xfer += $input->readBool($this->hasSgAvdInstrumental);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 5:
+          if ($ftype == TType::BOOL) {
+            $xfer += $input->readBool($this->hasSgAvdBasica);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 6:
+          if ($ftype == TType::BOOL) {
+            $xfer += $input->readBool($this->hasSgCognicao);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 7:
+          if ($ftype == TType::BOOL) {
+            $xfer += $input->readBool($this->hasSgHumor);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 8:
+          if ($ftype == TType::BOOL) {
+            $xfer += $input->readBool($this->hasSgAlcancePreensaoPinca);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 9:
+          if ($ftype == TType::BOOL) {
+            $xfer += $input->readBool($this->hasSgCapAerobicaMuscular);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 10:
+          if ($ftype == TType::BOOL) {
+            $xfer += $input->readBool($this->hasSgMarcha);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 11:
+          if ($ftype == TType::BOOL) {
+            $xfer += $input->readBool($this->hasSgContinencia);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 12:
+          if ($ftype == TType::BOOL) {
+            $xfer += $input->readBool($this->hasSgVisao);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 13:
+          if ($ftype == TType::BOOL) {
+            $xfer += $input->readBool($this->hasSgAudicao);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 14:
+          if ($ftype == TType::BOOL) {
+            $xfer += $input->readBool($this->hasSgComorbidade);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 15:
+          if ($ftype == TType::I64) {
+            $xfer += $input->readI64($this->dataResultado);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('IvcfThrift');
+    if ($this->resultado !== null) {
+      $xfer += $output->writeFieldBegin('resultado', TType::I32, 1);
+      $xfer += $output->writeI32($this->resultado);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->hasSgIdade !== null) {
+      $xfer += $output->writeFieldBegin('hasSgIdade', TType::BOOL, 2);
+      $xfer += $output->writeBool($this->hasSgIdade);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->hasSgPercepcaoSaude !== null) {
+      $xfer += $output->writeFieldBegin('hasSgPercepcaoSaude', TType::BOOL, 3);
+      $xfer += $output->writeBool($this->hasSgPercepcaoSaude);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->hasSgAvdInstrumental !== null) {
+      $xfer += $output->writeFieldBegin('hasSgAvdInstrumental', TType::BOOL, 4);
+      $xfer += $output->writeBool($this->hasSgAvdInstrumental);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->hasSgAvdBasica !== null) {
+      $xfer += $output->writeFieldBegin('hasSgAvdBasica', TType::BOOL, 5);
+      $xfer += $output->writeBool($this->hasSgAvdBasica);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->hasSgCognicao !== null) {
+      $xfer += $output->writeFieldBegin('hasSgCognicao', TType::BOOL, 6);
+      $xfer += $output->writeBool($this->hasSgCognicao);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->hasSgHumor !== null) {
+      $xfer += $output->writeFieldBegin('hasSgHumor', TType::BOOL, 7);
+      $xfer += $output->writeBool($this->hasSgHumor);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->hasSgAlcancePreensaoPinca !== null) {
+      $xfer += $output->writeFieldBegin('hasSgAlcancePreensaoPinca', TType::BOOL, 8);
+      $xfer += $output->writeBool($this->hasSgAlcancePreensaoPinca);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->hasSgCapAerobicaMuscular !== null) {
+      $xfer += $output->writeFieldBegin('hasSgCapAerobicaMuscular', TType::BOOL, 9);
+      $xfer += $output->writeBool($this->hasSgCapAerobicaMuscular);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->hasSgMarcha !== null) {
+      $xfer += $output->writeFieldBegin('hasSgMarcha', TType::BOOL, 10);
+      $xfer += $output->writeBool($this->hasSgMarcha);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->hasSgContinencia !== null) {
+      $xfer += $output->writeFieldBegin('hasSgContinencia', TType::BOOL, 11);
+      $xfer += $output->writeBool($this->hasSgContinencia);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->hasSgVisao !== null) {
+      $xfer += $output->writeFieldBegin('hasSgVisao', TType::BOOL, 12);
+      $xfer += $output->writeBool($this->hasSgVisao);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->hasSgAudicao !== null) {
+      $xfer += $output->writeFieldBegin('hasSgAudicao', TType::BOOL, 13);
+      $xfer += $output->writeBool($this->hasSgAudicao);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->hasSgComorbidade !== null) {
+      $xfer += $output->writeFieldBegin('hasSgComorbidade', TType::BOOL, 14);
+      $xfer += $output->writeBool($this->hasSgComorbidade);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->dataResultado !== null) {
+      $xfer += $output->writeFieldBegin('dataResultado', TType::I64, 15);
+      $xfer += $output->writeI64($this->dataResultado);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
 

@@ -2205,6 +2205,9 @@ func (p *EnderecoLocalPermanenciaThrift) String() string {
 //  - DuracaoTratamento
 //  - DuracaoTratamentoMedida
 //  - QuantidadeReceitada
+//  - QtDoseManha
+//  - QtDoseTarde
+//  - QtDoseNoite
 type MedicamentoThrift struct {
 	CodigoCatmat                *string `thrift:"codigoCatmat,1" json:"codigoCatmat,omitempty"`
 	ViaAdministracao            *int64  `thrift:"viaAdministracao,2" json:"viaAdministracao,omitempty"`
@@ -2219,6 +2222,9 @@ type MedicamentoThrift struct {
 	DuracaoTratamento           *int32  `thrift:"duracaoTratamento,11" json:"duracaoTratamento,omitempty"`
 	DuracaoTratamentoMedida     *int64  `thrift:"duracaoTratamentoMedida,12" json:"duracaoTratamentoMedida,omitempty"`
 	QuantidadeReceitada         *int32  `thrift:"quantidadeReceitada,13" json:"quantidadeReceitada,omitempty"`
+	QtDoseManha                 *string `thrift:"qtDoseManha,14" json:"qtDoseManha,omitempty"`
+	QtDoseTarde                 *string `thrift:"qtDoseTarde,15" json:"qtDoseTarde,omitempty"`
+	QtDoseNoite                 *string `thrift:"qtDoseNoite,16" json:"qtDoseNoite,omitempty"`
 }
 
 func NewMedicamentoThrift() *MedicamentoThrift {
@@ -2341,6 +2347,33 @@ func (p *MedicamentoThrift) GetQuantidadeReceitada() int32 {
 	}
 	return *p.QuantidadeReceitada
 }
+
+var MedicamentoThrift_QtDoseManha_DEFAULT string
+
+func (p *MedicamentoThrift) GetQtDoseManha() string {
+	if !p.IsSetQtDoseManha() {
+		return MedicamentoThrift_QtDoseManha_DEFAULT
+	}
+	return *p.QtDoseManha
+}
+
+var MedicamentoThrift_QtDoseTarde_DEFAULT string
+
+func (p *MedicamentoThrift) GetQtDoseTarde() string {
+	if !p.IsSetQtDoseTarde() {
+		return MedicamentoThrift_QtDoseTarde_DEFAULT
+	}
+	return *p.QtDoseTarde
+}
+
+var MedicamentoThrift_QtDoseNoite_DEFAULT string
+
+func (p *MedicamentoThrift) GetQtDoseNoite() string {
+	if !p.IsSetQtDoseNoite() {
+		return MedicamentoThrift_QtDoseNoite_DEFAULT
+	}
+	return *p.QtDoseNoite
+}
 func (p *MedicamentoThrift) IsSetCodigoCatmat() bool {
 	return p.CodigoCatmat != nil
 }
@@ -2391,6 +2424,18 @@ func (p *MedicamentoThrift) IsSetDuracaoTratamentoMedida() bool {
 
 func (p *MedicamentoThrift) IsSetQuantidadeReceitada() bool {
 	return p.QuantidadeReceitada != nil
+}
+
+func (p *MedicamentoThrift) IsSetQtDoseManha() bool {
+	return p.QtDoseManha != nil
+}
+
+func (p *MedicamentoThrift) IsSetQtDoseTarde() bool {
+	return p.QtDoseTarde != nil
+}
+
+func (p *MedicamentoThrift) IsSetQtDoseNoite() bool {
+	return p.QtDoseNoite != nil
 }
 
 func (p *MedicamentoThrift) Read(iprot thrift.TProtocol) error {
@@ -2457,6 +2502,18 @@ func (p *MedicamentoThrift) Read(iprot thrift.TProtocol) error {
 			}
 		case 13:
 			if err := p.readField13(iprot); err != nil {
+				return err
+			}
+		case 14:
+			if err := p.readField14(iprot); err != nil {
+				return err
+			}
+		case 15:
+			if err := p.readField15(iprot); err != nil {
+				return err
+			}
+		case 16:
+			if err := p.readField16(iprot); err != nil {
 				return err
 			}
 		default:
@@ -2591,6 +2648,33 @@ func (p *MedicamentoThrift) readField13(iprot thrift.TProtocol) error {
 	return nil
 }
 
+func (p *MedicamentoThrift) readField14(iprot thrift.TProtocol) error {
+	if v, err := iprot.ReadString(); err != nil {
+		return thrift.PrependError("error reading field 14: ", err)
+	} else {
+		p.QtDoseManha = &v
+	}
+	return nil
+}
+
+func (p *MedicamentoThrift) readField15(iprot thrift.TProtocol) error {
+	if v, err := iprot.ReadString(); err != nil {
+		return thrift.PrependError("error reading field 15: ", err)
+	} else {
+		p.QtDoseTarde = &v
+	}
+	return nil
+}
+
+func (p *MedicamentoThrift) readField16(iprot thrift.TProtocol) error {
+	if v, err := iprot.ReadString(); err != nil {
+		return thrift.PrependError("error reading field 16: ", err)
+	} else {
+		p.QtDoseNoite = &v
+	}
+	return nil
+}
+
 func (p *MedicamentoThrift) Write(oprot thrift.TProtocol) error {
 	if err := oprot.WriteStructBegin("MedicamentoThrift"); err != nil {
 		return thrift.PrependError(fmt.Sprintf("%T write struct begin error: ", p), err)
@@ -2632,6 +2716,15 @@ func (p *MedicamentoThrift) Write(oprot thrift.TProtocol) error {
 		return err
 	}
 	if err := p.writeField13(oprot); err != nil {
+		return err
+	}
+	if err := p.writeField14(oprot); err != nil {
+		return err
+	}
+	if err := p.writeField15(oprot); err != nil {
+		return err
+	}
+	if err := p.writeField16(oprot); err != nil {
 		return err
 	}
 	if err := oprot.WriteFieldStop(); err != nil {
@@ -2833,6 +2926,51 @@ func (p *MedicamentoThrift) writeField13(oprot thrift.TProtocol) (err error) {
 		}
 		if err := oprot.WriteFieldEnd(); err != nil {
 			return thrift.PrependError(fmt.Sprintf("%T write field end error 13:quantidadeReceitada: ", p), err)
+		}
+	}
+	return err
+}
+
+func (p *MedicamentoThrift) writeField14(oprot thrift.TProtocol) (err error) {
+	if p.IsSetQtDoseManha() {
+		if err := oprot.WriteFieldBegin("qtDoseManha", thrift.STRING, 14); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field begin error 14:qtDoseManha: ", p), err)
+		}
+		if err := oprot.WriteString(string(*p.QtDoseManha)); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T.qtDoseManha (14) field write error: ", p), err)
+		}
+		if err := oprot.WriteFieldEnd(); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field end error 14:qtDoseManha: ", p), err)
+		}
+	}
+	return err
+}
+
+func (p *MedicamentoThrift) writeField15(oprot thrift.TProtocol) (err error) {
+	if p.IsSetQtDoseTarde() {
+		if err := oprot.WriteFieldBegin("qtDoseTarde", thrift.STRING, 15); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field begin error 15:qtDoseTarde: ", p), err)
+		}
+		if err := oprot.WriteString(string(*p.QtDoseTarde)); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T.qtDoseTarde (15) field write error: ", p), err)
+		}
+		if err := oprot.WriteFieldEnd(); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field end error 15:qtDoseTarde: ", p), err)
+		}
+	}
+	return err
+}
+
+func (p *MedicamentoThrift) writeField16(oprot thrift.TProtocol) (err error) {
+	if p.IsSetQtDoseNoite() {
+		if err := oprot.WriteFieldBegin("qtDoseNoite", thrift.STRING, 16); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field begin error 16:qtDoseNoite: ", p), err)
+		}
+		if err := oprot.WriteString(string(*p.QtDoseNoite)); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T.qtDoseNoite (16) field write error: ", p), err)
+		}
+		if err := oprot.WriteFieldEnd(); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field end error 16:qtDoseNoite: ", p), err)
 		}
 	}
 	return err

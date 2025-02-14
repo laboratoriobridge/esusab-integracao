@@ -55,6 +55,21 @@
 			<medicamentos>
 				<codigoCatmat>BR0387985</codigoCatmat>
 				<viaAdministracao>11</viaAdministracao>
+				<dose>1 aplicação</dose>
+				<doseUnica>false</doseUnica>
+				<usoContinuo>false</usoContinuo>
+				<doseFrequenciaTipo>1</doseFrequenciaTipo>
+				<doseFrequencia>tarde</doseFrequencia>
+				<doseFrequenciaQuantidade>2</doseFrequenciaQuantidade>
+				<doseFrequenciaUnidadeMedida>3</doseFrequenciaUnidadeMedida>
+				<dtInicioTratamento>1586095200000</dtInicioTratamento>
+				<duracaoTratamento>12</duracaoTratamento>
+				<duracaoTratamentoMedida>3</duracaoTratamentoMedida>
+				<quantidadeReceitada>12</quantidadeReceitada>
+			</medicamentos>
+			<medicamentos>
+				<codigoCatmat>BR0266736</codigoCatmat>
+				<viaAdministracao>10</viaAdministracao>
 				<dose>6 aplicações</dose>
 				<doseUnica>false</doseUnica>
 				<usoContinuo>false</usoContinuo>

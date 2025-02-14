@@ -45,6 +45,7 @@ namespace br.gov.saude.esusab.ras.atendodonto
     private List<br.gov.saude.esusab.ras.common.ResultadosExameThrift> _resultadosExames;
     private br.gov.saude.esusab.ras.common.MedicoesThrift _medicoes;
     private List<br.gov.saude.esusab.ras.common.ProblemaCondicaoThrift> _problemasCondicoes;
+    private br.gov.saude.esusab.ras.common.IvcfThrift _ivcf;
 
     public long DtNascimento
     {
@@ -332,6 +333,19 @@ namespace br.gov.saude.esusab.ras.atendodonto
       }
     }
 
+    public br.gov.saude.esusab.ras.common.IvcfThrift Ivcf
+    {
+      get
+      {
+        return _ivcf;
+      }
+      set
+      {
+        __isset.ivcf = true;
+        this._ivcf = value;
+      }
+    }
+
 
     public Isset __isset;
     #if !SILVERLIGHT
@@ -360,6 +374,7 @@ namespace br.gov.saude.esusab.ras.atendodonto
       public bool resultadosExames;
       public bool medicoes;
       public bool problemasCondicoes;
+      public bool ivcf;
     }
 
     public FichaAtendimentoOdontologicoChildThrift() {
@@ -630,6 +645,14 @@ namespace br.gov.saude.esusab.ras.atendodonto
                 TProtocolUtil.Skip(iprot, field.Type);
               }
               break;
+            case 29:
+              if (field.Type == TType.Struct) {
+                Ivcf = new br.gov.saude.esusab.ras.common.IvcfThrift();
+                Ivcf.Read(iprot);
+              } else { 
+                TProtocolUtil.Skip(iprot, field.Type);
+              }
+              break;
             default: 
               TProtocolUtil.Skip(iprot, field.Type);
               break;
@@ -890,6 +913,14 @@ namespace br.gov.saude.esusab.ras.atendodonto
           }
           oprot.WriteFieldEnd();
         }
+        if (Ivcf != null && __isset.ivcf) {
+          field.Name = "ivcf";
+          field.Type = TType.Struct;
+          field.ID = 29;
+          oprot.WriteFieldBegin(field);
+          Ivcf.Write(oprot);
+          oprot.WriteFieldEnd();
+        }
         oprot.WriteFieldStop();
         oprot.WriteStructEnd();
       }
@@ -1033,6 +1064,12 @@ namespace br.gov.saude.esusab.ras.atendodonto
         __first = false;
         __sb.Append("ProblemasCondicoes: ");
         __sb.Append(ProblemasCondicoes);
+      }
+      if (Ivcf != null && __isset.ivcf) {
+        if(!__first) { __sb.Append(", "); }
+        __first = false;
+        __sb.Append("Ivcf: ");
+        __sb.Append(Ivcf== null ? "<null>" : Ivcf.ToString());
       }
       __sb.Append(")");
       return __sb.ToString();

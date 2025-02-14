@@ -57,6 +57,7 @@ namespace br.gov.saude.esusab.ras.atendindividual
     private List<long> _emultis;
     private br.gov.saude.esusab.ras.common.MedicoesThrift _medicoes;
     private List<br.gov.saude.esusab.ras.common.ProblemaCondicaoThrift> _problemasCondicoes;
+    private br.gov.saude.esusab.ras.common.IvcfThrift _ivcf;
 
     public string NumeroProntuario
     {
@@ -500,6 +501,19 @@ namespace br.gov.saude.esusab.ras.atendindividual
       }
     }
 
+    public br.gov.saude.esusab.ras.common.IvcfThrift Ivcf
+    {
+      get
+      {
+        return _ivcf;
+      }
+      set
+      {
+        __isset.ivcf = true;
+        this._ivcf = value;
+      }
+    }
+
 
     public Isset __isset;
     #if !SILVERLIGHT
@@ -540,6 +554,7 @@ namespace br.gov.saude.esusab.ras.atendindividual
       public bool emultis;
       public bool medicoes;
       public bool problemasCondicoes;
+      public bool ivcf;
     }
 
     public FichaAtendimentoIndividualChildThrift() {
@@ -881,6 +896,14 @@ namespace br.gov.saude.esusab.ras.atendindividual
                   }
                   iprot.ReadListEnd();
                 }
+              } else { 
+                TProtocolUtil.Skip(iprot, field.Type);
+              }
+              break;
+            case 41:
+              if (field.Type == TType.Struct) {
+                Ivcf = new br.gov.saude.esusab.ras.common.IvcfThrift();
+                Ivcf.Read(iprot);
               } else { 
                 TProtocolUtil.Skip(iprot, field.Type);
               }
@@ -1234,6 +1257,14 @@ namespace br.gov.saude.esusab.ras.atendindividual
           }
           oprot.WriteFieldEnd();
         }
+        if (Ivcf != null && __isset.ivcf) {
+          field.Name = "ivcf";
+          field.Type = TType.Struct;
+          field.ID = 41;
+          oprot.WriteFieldBegin(field);
+          Ivcf.Write(oprot);
+          oprot.WriteFieldEnd();
+        }
         oprot.WriteFieldStop();
         oprot.WriteStructEnd();
       }
@@ -1449,6 +1480,12 @@ namespace br.gov.saude.esusab.ras.atendindividual
         __first = false;
         __sb.Append("ProblemasCondicoes: ");
         __sb.Append(ProblemasCondicoes);
+      }
+      if (Ivcf != null && __isset.ivcf) {
+        if(!__first) { __sb.Append(", "); }
+        __first = false;
+        __sb.Append("Ivcf: ");
+        __sb.Append(Ivcf== null ? "<null>" : Ivcf.ToString());
       }
       __sb.Append(")");
       return __sb.ToString();

@@ -7,6 +7,7 @@
 	<ineDadoSerializado>0000471828</ineDadoSerializado>
 	<numLote>62</numLote>
 	<ns4:cadastroDomiciliarTransport>
+		<tipoEndereco>3</tipoEndereco>
 		<enderecoLocalPermanencia>
 			<bairro>ITACORUBI</bairro>
 			<cep>88036400</cep>
@@ -23,6 +24,8 @@
 			<microArea>FA</microArea>
 			<stForaArea>true</stForaArea>
 		</enderecoLocalPermanencia>
+		<latitude>89.12345678</latitude>
+		<longitude>179.12345678</longitude>
 		<fichaAtualizada>false</fichaAtualizada>
 		<statusTermoRecusa>true</statusTermoRecusa>
 		<tpCdsOrigem>3</tpCdsOrigem>
@@ -59,5 +62,5 @@
 		<versaoSistema>5.0.16</versaoSistema>
 		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:originadora>
-	<versao major="4" minor="4" revision="1" />
+	<versao major="6" minor="3" revision="2" />
 </ns3:dadoTransporteTransportXml>

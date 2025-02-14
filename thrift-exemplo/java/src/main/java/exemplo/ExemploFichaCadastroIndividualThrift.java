@@ -1,33 +1,29 @@
 package exemplo;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.UUID;
-import java.util.zip.ZipEntry;
-import java.util.zip.ZipOutputStream;
 
-import br.gov.saude.esusab.ras.cadastroindividual.CondicoesDeSaudeThrift;
-import br.gov.saude.esusab.ras.cadastroindividual.CadastroIndividualThrift;
 import br.gov.saude.esus.transport.common.api.configuracaodestino.VersaoThrift;
 import br.gov.saude.esus.transport.common.generated.thrift.DadoInstalacaoThrift;
 import br.gov.saude.esus.transport.common.generated.thrift.DadoTransporteThrift;
-import br.gov.saude.esusab.ras.common.UnicaLotacaoHeaderThrift;
+import br.gov.saude.esusab.ras.cadastroindividual.CadastroIndividualThrift;
+import br.gov.saude.esusab.ras.cadastroindividual.CondicoesDeSaudeThrift;
+import br.gov.saude.esusab.ras.cadastroindividual.EmSituacaoDeRuaThrift;
+import br.gov.saude.esusab.ras.cadastroindividual.IdentificacaoUsuarioCidadaoThrift;
+import br.gov.saude.esusab.ras.cadastroindividual.InformacoesSocioDemograficasThrift;
 import br.gov.saude.esusab.ras.cadastroindividual.InformacoesSocioEconomicasThrift;
 import br.gov.saude.esusab.ras.cadastroindividual.SaidaCidadaoCadastroThrift;
-import br.gov.saude.esusab.ras.cadastroindividual.InformacoesSocioDemograficasThrift;
-import br.gov.saude.esusab.ras.cadastroindividual.IdentificacaoUsuarioCidadaoThrift;
-import br.gov.saude.esusab.ras.cadastroindividual.EmSituacaoDeRuaThrift;
+import br.gov.saude.esusab.ras.common.UnicaLotacaoHeaderThrift;
+
+import exemplo.common.SerializadorThrift;
 
 public class ExemploFichaCadastroIndividualThrift {
-    private final static String EXTENSAO_EXPORT = ".esus";
 	private static long TIPO_DADO_SERIALIZADO_FICHA_CADASTRO_INDIVIDUAL = 2;
 
-	public static void main(String[] args) {
+	public static DadoTransporteThrift getDadoTransporte() {
 		// Passo 1: Popular a ficha
-		CadastroIndividualThrift thriftFichaCadIndividual= getFicha();
+		CadastroIndividualThrift thriftFichaCadIndividual = getFicha();
 
 		// Passo 2: Popular o DadoTransporte usando os dados da ficha e do software que está enviando.
 		DadoTransporteThrift dadoTransporteThrift = getDadoTransporte(thriftFichaCadIndividual);
@@ -43,30 +39,7 @@ public class ExemploFichaCadastroIndividualThrift {
 		VersaoThrift versaoThrift = new VersaoThrift(5, 4, 0);
 		dadoTransporteThrift.setVersao(versaoThrift);
 
-		try {
-			// Passo 5: Criar um arquivo zip para conter as fichas
-			File zipFile = new File(System.getProperty("user.home") + "/exemploConversaoThrift.zip");
-			ZipOutputStream outputStream = new ZipOutputStream(new FileOutputStream(zipFile));
-
-			// Passo 6: Dar um nome para o arquivo (nesse caso usamos o UUID da ficha) sempre acrescentando a extensão ".esus" ao final
-			String entryName = dadoTransporteThrift.getUuidDadoSerializado() + EXTENSAO_EXPORT;
-
-			// Passo 7: Adicionar uma nova entrada (novo arquivo) dentro do zip com o nome definido
-			outputStream.putNextEntry(new ZipEntry(entryName));
-
-			// Passo 8: serializar o DadoTransporte utilizando o TBinaryProtocol da biblioteca thrift
-			byte[] dadoTransporteSerializado = SerializadorThrift.serializar(dadoTransporteThrift);
-
-			// Passo 9: escrever o dadoTransporteSerializado no arquivo zip
-			outputStream.write(dadoTransporteSerializado);
-
-			// Para adicionar mais fichas no mesmo zip, repetir os passos 6, 7, 8 e 9 com as demais fichas
-
-			// Passo 10: Finalizar o arquivo zip
-			outputStream.close();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		return dadoTransporteThrift;
 	}
 
 	/**

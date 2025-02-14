@@ -262,6 +262,10 @@ class CondicaoMoradiaThrift {
    * @var int
    */
   public $aguaConsumoDomicilio = null;
+  /**
+   * @var int
+   */
+  public $tipoOrigemEnergiaEletrica = null;
 
   public function __construct($vals=null) {
     if (!isset(self::$_TSPEC)) {
@@ -318,6 +322,10 @@ class CondicaoMoradiaThrift {
           'var' => 'aguaConsumoDomicilio',
           'type' => TType::I64,
           ),
+        14 => array(
+          'var' => 'tipoOrigemEnergiaEletrica',
+          'type' => TType::I64,
+          ),
         );
     }
     if (is_array($vals)) {
@@ -359,6 +367,9 @@ class CondicaoMoradiaThrift {
       }
       if (isset($vals['aguaConsumoDomicilio'])) {
         $this->aguaConsumoDomicilio = $vals['aguaConsumoDomicilio'];
+      }
+      if (isset($vals['tipoOrigemEnergiaEletrica'])) {
+        $this->tipoOrigemEnergiaEletrica = $vals['tipoOrigemEnergiaEletrica'];
       }
     }
   }
@@ -473,6 +484,13 @@ class CondicaoMoradiaThrift {
             $xfer += $input->skip($ftype);
           }
           break;
+        case 14:
+          if ($ftype == TType::I64) {
+            $xfer += $input->readI64($this->tipoOrigemEnergiaEletrica);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
         default:
           $xfer += $input->skip($ftype);
           break;
@@ -549,6 +567,11 @@ class CondicaoMoradiaThrift {
     if ($this->aguaConsumoDomicilio !== null) {
       $xfer += $output->writeFieldBegin('aguaConsumoDomicilio', TType::I64, 13);
       $xfer += $output->writeI64($this->aguaConsumoDomicilio);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->tipoOrigemEnergiaEletrica !== null) {
+      $xfer += $output->writeFieldBegin('tipoOrigemEnergiaEletrica', TType::I64, 14);
+      $xfer += $output->writeI64($this->tipoOrigemEnergiaEletrica);
       $xfer += $output->writeFieldEnd();
     }
     $xfer += $output->writeFieldStop();
@@ -861,6 +884,10 @@ class CadastroDomiciliarThrift {
    * @var double
    */
   public $longitude = null;
+  /**
+   * @var int
+   */
+  public $tipoEndereco = null;
 
   public function __construct($vals=null) {
     if (!isset(self::$_TSPEC)) {
@@ -942,6 +969,10 @@ class CadastroDomiciliarThrift {
           'var' => 'longitude',
           'type' => TType::DOUBLE,
           ),
+        20 => array(
+          'var' => 'tipoEndereco',
+          'type' => TType::I64,
+          ),
         );
     }
     if (is_array($vals)) {
@@ -992,6 +1023,9 @@ class CadastroDomiciliarThrift {
       }
       if (isset($vals['longitude'])) {
         $this->longitude = $vals['longitude'];
+      }
+      if (isset($vals['tipoEndereco'])) {
+        $this->tipoEndereco = $vals['tipoEndereco'];
       }
     }
   }
@@ -1152,6 +1186,13 @@ class CadastroDomiciliarThrift {
             $xfer += $input->skip($ftype);
           }
           break;
+        case 20:
+          if ($ftype == TType::I64) {
+            $xfer += $input->readI64($this->tipoEndereco);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
         default:
           $xfer += $input->skip($ftype);
           break;
@@ -1279,6 +1320,11 @@ class CadastroDomiciliarThrift {
     if ($this->longitude !== null) {
       $xfer += $output->writeFieldBegin('longitude', TType::DOUBLE, 18);
       $xfer += $output->writeDouble($this->longitude);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->tipoEndereco !== null) {
+      $xfer += $output->writeFieldBegin('tipoEndereco', TType::I64, 20);
+      $xfer += $output->writeI64($this->tipoEndereco);
       $xfer += $output->writeFieldEnd();
     }
     $xfer += $output->writeFieldStop();

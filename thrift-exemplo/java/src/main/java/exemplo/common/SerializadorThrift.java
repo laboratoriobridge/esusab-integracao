@@ -1,4 +1,4 @@
-package exemplo;
+package exemplo.common;
 
 import java.io.ByteArrayOutputStream;
 
@@ -27,7 +27,6 @@ public class SerializadorThrift {
 		} catch (TException exception) {
 			exception.printStackTrace();
 		}
-
 		return null;
 	}
 

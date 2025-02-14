@@ -55,6 +55,8 @@ type
     procedure SetCpfCidadao( const Value: string);
     function GetMedicoes: IMedicoesThrift;
     procedure SetMedicoes( const Value: IMedicoesThrift);
+    function GetIvcf: IIvcfThrift;
+    procedure SetIvcf( const Value: IIvcfThrift);
 
     property NumProntuario: string read GetNumProntuario write SetNumProntuario;
     property CnsCidadao: string read GetCnsCidadao write SetCnsCidadao;
@@ -68,6 +70,7 @@ type
     property DataHoraFinalAtendimento: Int64 read GetDataHoraFinalAtendimento write SetDataHoraFinalAtendimento;
     property CpfCidadao: string read GetCpfCidadao write SetCpfCidadao;
     property Medicoes: IMedicoesThrift read GetMedicoes write SetMedicoes;
+    property Ivcf: IIvcfThrift read GetIvcf write SetIvcf;
 
     function Get__isset_NumProntuario: Boolean;
     function Get__isset_CnsCidadao: Boolean;
@@ -81,6 +84,7 @@ type
     function Get__isset_DataHoraFinalAtendimento: Boolean;
     function Get__isset_CpfCidadao: Boolean;
     function Get__isset_Medicoes: Boolean;
+    function Get__isset_Ivcf: Boolean;
 
     property __isset_NumProntuario: Boolean read Get__isset_NumProntuario;
     property __isset_CnsCidadao: Boolean read Get__isset_CnsCidadao;
@@ -94,6 +98,7 @@ type
     property __isset_DataHoraFinalAtendimento: Boolean read Get__isset_DataHoraFinalAtendimento;
     property __isset_CpfCidadao: Boolean read Get__isset_CpfCidadao;
     property __isset_Medicoes: Boolean read Get__isset_Medicoes;
+    property __isset_Ivcf: Boolean read Get__isset_Ivcf;
   end;
 
   TFichaProcedimentoChildThriftImpl = class(TInterfacedObject, IBase, IFichaProcedimentoChildThrift)
@@ -110,6 +115,7 @@ type
     FDataHoraFinalAtendimento: Int64;
     FCpfCidadao: string;
     FMedicoes: IMedicoesThrift;
+    FIvcf: IIvcfThrift;
     
     F__isset_NumProntuario: Boolean;
     F__isset_CnsCidadao: Boolean;
@@ -123,6 +129,7 @@ type
     F__isset_DataHoraFinalAtendimento: Boolean;
     F__isset_CpfCidadao: Boolean;
     F__isset_Medicoes: Boolean;
+    F__isset_Ivcf: Boolean;
     
     function GetNumProntuario: string;
     procedure SetNumProntuario( const Value: string);
@@ -148,6 +155,8 @@ type
     procedure SetCpfCidadao( const Value: string);
     function GetMedicoes: IMedicoesThrift;
     procedure SetMedicoes( const Value: IMedicoesThrift);
+    function GetIvcf: IIvcfThrift;
+    procedure SetIvcf( const Value: IIvcfThrift);
 
     function Get__isset_NumProntuario: Boolean;
     function Get__isset_CnsCidadao: Boolean;
@@ -161,6 +170,7 @@ type
     function Get__isset_DataHoraFinalAtendimento: Boolean;
     function Get__isset_CpfCidadao: Boolean;
     function Get__isset_Medicoes: Boolean;
+    function Get__isset_Ivcf: Boolean;
   public
     constructor Create;
     destructor Destroy; override;
@@ -184,6 +194,7 @@ type
     property DataHoraFinalAtendimento: Int64 read GetDataHoraFinalAtendimento write SetDataHoraFinalAtendimento;
     property CpfCidadao: string read GetCpfCidadao write SetCpfCidadao;
     property Medicoes: IMedicoesThrift read GetMedicoes write SetMedicoes;
+    property Ivcf: IIvcfThrift read GetIvcf write SetIvcf;
 
     // isset
     property __isset_NumProntuario: Boolean read Get__isset_NumProntuario;
@@ -198,6 +209,7 @@ type
     property __isset_DataHoraFinalAtendimento: Boolean read Get__isset_DataHoraFinalAtendimento;
     property __isset_CpfCidadao: Boolean read Get__isset_CpfCidadao;
     property __isset_Medicoes: Boolean read Get__isset_Medicoes;
+    property __isset_Ivcf: Boolean read Get__isset_Ivcf;
   end;
 
   IFichaProcedimentoMasterThrift = interface(IBase)
@@ -557,6 +569,22 @@ begin
   Result := F__isset_Medicoes;
 end;
 
+function TFichaProcedimentoChildThriftImpl.GetIvcf: IIvcfThrift;
+begin
+  Result := FIvcf;
+end;
+
+procedure TFichaProcedimentoChildThriftImpl.SetIvcf( const Value: IIvcfThrift);
+begin
+  F__isset_Ivcf := True;
+  FIvcf := Value;
+end;
+
+function TFichaProcedimentoChildThriftImpl.Get__isset_Ivcf: Boolean;
+begin
+  Result := F__isset_Ivcf;
+end;
+
 procedure TFichaProcedimentoChildThriftImpl.Read( const iprot: IProtocol);
 var
   field_ : IField;
@@ -689,6 +717,16 @@ begin
           begin
             Medicoes := TMedicoesThriftImpl.Create;
             Medicoes.Read(iprot);
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        17: begin
+          if (field_.Type_ = TType.Struct) then
+          begin
+            Ivcf := TIvcfThriftImpl.Create;
+            Ivcf.Read(iprot);
           end else
           begin
             TProtocolUtil.Skip(iprot, field_.Type_);
@@ -831,6 +869,15 @@ begin
     Medicoes.Write(oprot);
     oprot.WriteFieldEnd();
   end;
+  if (Ivcf <> nil) and __isset_Ivcf then
+  begin
+    field_.Name := 'ivcf';
+    field_.Type_  := TType.Struct;
+    field_.ID := 17;
+    oprot.WriteFieldBegin(field_);
+    Ivcf.Write(oprot);
+    oprot.WriteFieldEnd();
+  end;
   oprot.WriteFieldStop();
   oprot.WriteStructEnd();
 end;
@@ -914,6 +961,12 @@ begin
       _first6 := FALSE;
       _sb5.Append('Medicoes: ');
       if (Medicoes = nil) then _sb5.Append('<null>') else _sb5.Append(Medicoes.ToString());
+    end;
+    if (Ivcf <> nil) and __isset_Ivcf then begin
+      if not _first6 then _sb5.Append(',');
+      _first6 := FALSE;
+      _sb5.Append('Ivcf: ');
+      if (Ivcf = nil) then _sb5.Append('<null>') else _sb5.Append(Ivcf.ToString());
     end;
     _sb5.Append(')');
     Result := _sb5.ToString;

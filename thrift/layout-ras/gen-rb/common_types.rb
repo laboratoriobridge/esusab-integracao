@@ -358,6 +358,50 @@ module Br
               ::Thrift::Struct.generate_accessors self
             end
 
+            class IvcfThrift
+              include ::Thrift::Struct, ::Thrift::Struct_Union
+              RESULTADO = 1
+              HASSGIDADE = 2
+              HASSGPERCEPCAOSAUDE = 3
+              HASSGAVDINSTRUMENTAL = 4
+              HASSGAVDBASICA = 5
+              HASSGCOGNICAO = 6
+              HASSGHUMOR = 7
+              HASSGALCANCEPREENSAOPINCA = 8
+              HASSGCAPAEROBICAMUSCULAR = 9
+              HASSGMARCHA = 10
+              HASSGCONTINENCIA = 11
+              HASSGVISAO = 12
+              HASSGAUDICAO = 13
+              HASSGCOMORBIDADE = 14
+              DATARESULTADO = 15
+
+              FIELDS = {
+                RESULTADO => {:type => ::Thrift::Types::I32, :name => 'resultado', :optional => true},
+                HASSGIDADE => {:type => ::Thrift::Types::BOOL, :name => 'hasSgIdade', :optional => true},
+                HASSGPERCEPCAOSAUDE => {:type => ::Thrift::Types::BOOL, :name => 'hasSgPercepcaoSaude', :optional => true},
+                HASSGAVDINSTRUMENTAL => {:type => ::Thrift::Types::BOOL, :name => 'hasSgAvdInstrumental', :optional => true},
+                HASSGAVDBASICA => {:type => ::Thrift::Types::BOOL, :name => 'hasSgAvdBasica', :optional => true},
+                HASSGCOGNICAO => {:type => ::Thrift::Types::BOOL, :name => 'hasSgCognicao', :optional => true},
+                HASSGHUMOR => {:type => ::Thrift::Types::BOOL, :name => 'hasSgHumor', :optional => true},
+                HASSGALCANCEPREENSAOPINCA => {:type => ::Thrift::Types::BOOL, :name => 'hasSgAlcancePreensaoPinca', :optional => true},
+                HASSGCAPAEROBICAMUSCULAR => {:type => ::Thrift::Types::BOOL, :name => 'hasSgCapAerobicaMuscular', :optional => true},
+                HASSGMARCHA => {:type => ::Thrift::Types::BOOL, :name => 'hasSgMarcha', :optional => true},
+                HASSGCONTINENCIA => {:type => ::Thrift::Types::BOOL, :name => 'hasSgContinencia', :optional => true},
+                HASSGVISAO => {:type => ::Thrift::Types::BOOL, :name => 'hasSgVisao', :optional => true},
+                HASSGAUDICAO => {:type => ::Thrift::Types::BOOL, :name => 'hasSgAudicao', :optional => true},
+                HASSGCOMORBIDADE => {:type => ::Thrift::Types::BOOL, :name => 'hasSgComorbidade', :optional => true},
+                DATARESULTADO => {:type => ::Thrift::Types::I64, :name => 'dataResultado', :optional => true}
+              }
+
+              def struct_fields; FIELDS; end
+
+              def validate
+              end
+
+              ::Thrift::Struct.generate_accessors self
+            end
+
           end
         end
       end

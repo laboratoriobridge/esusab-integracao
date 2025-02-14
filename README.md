@@ -1,4 +1,4 @@
-![Banner](https://raw.githubusercontent.com/laboratoriobridge/esusab-integracao/master/banner.png?token=ABpXJ3jdFgxnlXYzJMp5hI1wi6RiHdyyks5cj8d7wA%3D%3D)
+![Banner](https://raw.githubusercontent.com/laboratoriobridge/esusab-integracao/master/banner.png)
 # Integração e-SUS APS
 
 O e-SUS AB fornece dois tipos de arquivos para o envio de informações para o PEC Prontuário/Centralizador municipal. São disponibilizados os seguintes formatos:

@@ -38,6 +38,7 @@ namespace br.gov.saude.esusab.ras.cadastrodomiciliar
     private br.gov.saude.esusab.ras.common.UnicaLotacaoHeaderThrift _headerTransport;
     private double _latitude;
     private double _longitude;
+    private long _tipoEndereco;
 
     public List<long> AnimaisNoDomicilio
     {
@@ -236,6 +237,19 @@ namespace br.gov.saude.esusab.ras.cadastrodomiciliar
       }
     }
 
+    public long TipoEndereco
+    {
+      get
+      {
+        return _tipoEndereco;
+      }
+      set
+      {
+        __isset.tipoEndereco = true;
+        this._tipoEndereco = value;
+      }
+    }
+
 
     public Isset __isset;
     #if !SILVERLIGHT
@@ -257,6 +271,7 @@ namespace br.gov.saude.esusab.ras.cadastrodomiciliar
       public bool headerTransport;
       public bool latitude;
       public bool longitude;
+      public bool tipoEndereco;
     }
 
     public CadastroDomiciliarThrift() {
@@ -416,6 +431,13 @@ namespace br.gov.saude.esusab.ras.cadastrodomiciliar
             case 18:
               if (field.Type == TType.Double) {
                 Longitude = iprot.ReadDouble();
+              } else { 
+                TProtocolUtil.Skip(iprot, field.Type);
+              }
+              break;
+            case 20:
+              if (field.Type == TType.I64) {
+                TipoEndereco = iprot.ReadI64();
               } else { 
                 TProtocolUtil.Skip(iprot, field.Type);
               }
@@ -583,6 +605,14 @@ namespace br.gov.saude.esusab.ras.cadastrodomiciliar
           oprot.WriteDouble(Longitude);
           oprot.WriteFieldEnd();
         }
+        if (__isset.tipoEndereco) {
+          field.Name = "tipoEndereco";
+          field.Type = TType.I64;
+          field.ID = 20;
+          oprot.WriteFieldBegin(field);
+          oprot.WriteI64(TipoEndereco);
+          oprot.WriteFieldEnd();
+        }
         oprot.WriteFieldStop();
         oprot.WriteStructEnd();
       }
@@ -675,6 +705,10 @@ namespace br.gov.saude.esusab.ras.cadastrodomiciliar
       if (__isset.longitude) {
         __sb.Append(", Longitude: ");
         __sb.Append(Longitude);
+      }
+      if (__isset.tipoEndereco) {
+        __sb.Append(", TipoEndereco: ");
+        __sb.Append(TipoEndereco);
       }
       __sb.Append(")");
       return __sb.ToString();

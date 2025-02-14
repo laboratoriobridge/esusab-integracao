@@ -523,6 +523,7 @@ func (p *ProblemaCondicaoAvaliacaoAIThrift) String() string {
 //  - Emultis
 //  - Medicoes
 //  - ProblemasCondicoes
+//  - Ivcf
 type FichaAtendimentoIndividualChildThrift struct {
 	NumeroProntuario   *string `thrift:"numeroProntuario,1" json:"numeroProntuario,omitempty"`
 	Cns                *string `thrift:"cns,2" json:"cns,omitempty"`
@@ -561,6 +562,7 @@ type FichaAtendimentoIndividualChildThrift struct {
 	Emultis                               []int64                               `thrift:"emultis,38" json:"emultis,omitempty"`
 	Medicoes                              *common.MedicoesThrift                `thrift:"medicoes,39" json:"medicoes,omitempty"`
 	ProblemasCondicoes                    []*common.ProblemaCondicaoThrift      `thrift:"problemasCondicoes,40" json:"problemasCondicoes,omitempty"`
+	Ivcf                                  *common.IvcfThrift                    `thrift:"ivcf,41" json:"ivcf,omitempty"`
 }
 
 func NewFichaAtendimentoIndividualChildThrift() *FichaAtendimentoIndividualChildThrift {
@@ -848,6 +850,15 @@ var FichaAtendimentoIndividualChildThrift_ProblemasCondicoes_DEFAULT []*common.P
 func (p *FichaAtendimentoIndividualChildThrift) GetProblemasCondicoes() []*common.ProblemaCondicaoThrift {
 	return p.ProblemasCondicoes
 }
+
+var FichaAtendimentoIndividualChildThrift_Ivcf_DEFAULT *common.IvcfThrift
+
+func (p *FichaAtendimentoIndividualChildThrift) GetIvcf() *common.IvcfThrift {
+	if !p.IsSetIvcf() {
+		return FichaAtendimentoIndividualChildThrift_Ivcf_DEFAULT
+	}
+	return p.Ivcf
+}
 func (p *FichaAtendimentoIndividualChildThrift) IsSetNumeroProntuario() bool {
 	return p.NumeroProntuario != nil
 }
@@ -982,6 +993,10 @@ func (p *FichaAtendimentoIndividualChildThrift) IsSetMedicoes() bool {
 
 func (p *FichaAtendimentoIndividualChildThrift) IsSetProblemasCondicoes() bool {
 	return p.ProblemasCondicoes != nil
+}
+
+func (p *FichaAtendimentoIndividualChildThrift) IsSetIvcf() bool {
+	return p.Ivcf != nil
 }
 
 func (p *FichaAtendimentoIndividualChildThrift) Read(iprot thrift.TProtocol) error {
@@ -1132,6 +1147,10 @@ func (p *FichaAtendimentoIndividualChildThrift) Read(iprot thrift.TProtocol) err
 			}
 		case 40:
 			if err := p.readField40(iprot); err != nil {
+				return err
+			}
+		case 41:
+			if err := p.readField41(iprot); err != nil {
 				return err
 			}
 		default:
@@ -1547,6 +1566,14 @@ func (p *FichaAtendimentoIndividualChildThrift) readField40(iprot thrift.TProtoc
 	return nil
 }
 
+func (p *FichaAtendimentoIndividualChildThrift) readField41(iprot thrift.TProtocol) error {
+	p.Ivcf = &common.IvcfThrift{}
+	if err := p.Ivcf.Read(iprot); err != nil {
+		return thrift.PrependError(fmt.Sprintf("%T error reading struct: ", p.Ivcf), err)
+	}
+	return nil
+}
+
 func (p *FichaAtendimentoIndividualChildThrift) Write(oprot thrift.TProtocol) error {
 	if err := oprot.WriteStructBegin("FichaAtendimentoIndividualChildThrift"); err != nil {
 		return thrift.PrependError(fmt.Sprintf("%T write struct begin error: ", p), err)
@@ -1651,6 +1678,9 @@ func (p *FichaAtendimentoIndividualChildThrift) Write(oprot thrift.TProtocol) er
 		return err
 	}
 	if err := p.writeField40(oprot); err != nil {
+		return err
+	}
+	if err := p.writeField41(oprot); err != nil {
 		return err
 	}
 	if err := oprot.WriteFieldStop(); err != nil {
@@ -2231,6 +2261,21 @@ func (p *FichaAtendimentoIndividualChildThrift) writeField40(oprot thrift.TProto
 		}
 		if err := oprot.WriteFieldEnd(); err != nil {
 			return thrift.PrependError(fmt.Sprintf("%T write field end error 40:problemasCondicoes: ", p), err)
+		}
+	}
+	return err
+}
+
+func (p *FichaAtendimentoIndividualChildThrift) writeField41(oprot thrift.TProtocol) (err error) {
+	if p.IsSetIvcf() {
+		if err := oprot.WriteFieldBegin("ivcf", thrift.STRUCT, 41); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field begin error 41:ivcf: ", p), err)
+		}
+		if err := p.Ivcf.Write(oprot); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T error writing struct: ", p.Ivcf), err)
+		}
+		if err := oprot.WriteFieldEnd(); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field end error 41:ivcf: ", p), err)
 		}
 	}
 	return err

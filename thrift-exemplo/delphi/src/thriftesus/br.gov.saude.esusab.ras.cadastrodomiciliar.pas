@@ -157,6 +157,8 @@ type
     procedure SetTipoDomicilio( const Value: Int64);
     function GetAguaConsumoDomicilio: Int64;
     procedure SetAguaConsumoDomicilio( const Value: Int64);
+    function GetTipoOrigemEnergiaEletrica: Int64;
+    procedure SetTipoOrigemEnergiaEletrica( const Value: Int64);
 
     property AbastecimentoAgua: Int64 read GetAbastecimentoAgua write SetAbastecimentoAgua;
     property AreaProducaoRural: Int64 read GetAreaProducaoRural write SetAreaProducaoRural;
@@ -171,6 +173,7 @@ type
     property TipoAcessoDomicilio: Int64 read GetTipoAcessoDomicilio write SetTipoAcessoDomicilio;
     property TipoDomicilio: Int64 read GetTipoDomicilio write SetTipoDomicilio;
     property AguaConsumoDomicilio: Int64 read GetAguaConsumoDomicilio write SetAguaConsumoDomicilio;
+    property TipoOrigemEnergiaEletrica: Int64 read GetTipoOrigemEnergiaEletrica write SetTipoOrigemEnergiaEletrica;
 
     function Get__isset_AbastecimentoAgua: Boolean;
     function Get__isset_AreaProducaoRural: Boolean;
@@ -185,6 +188,7 @@ type
     function Get__isset_TipoAcessoDomicilio: Boolean;
     function Get__isset_TipoDomicilio: Boolean;
     function Get__isset_AguaConsumoDomicilio: Boolean;
+    function Get__isset_TipoOrigemEnergiaEletrica: Boolean;
 
     property __isset_AbastecimentoAgua: Boolean read Get__isset_AbastecimentoAgua;
     property __isset_AreaProducaoRural: Boolean read Get__isset_AreaProducaoRural;
@@ -199,6 +203,7 @@ type
     property __isset_TipoAcessoDomicilio: Boolean read Get__isset_TipoAcessoDomicilio;
     property __isset_TipoDomicilio: Boolean read Get__isset_TipoDomicilio;
     property __isset_AguaConsumoDomicilio: Boolean read Get__isset_AguaConsumoDomicilio;
+    property __isset_TipoOrigemEnergiaEletrica: Boolean read Get__isset_TipoOrigemEnergiaEletrica;
   end;
 
   TCondicaoMoradiaThriftImpl = class(TInterfacedObject, IBase, ICondicaoMoradiaThrift)
@@ -216,6 +221,7 @@ type
     FTipoAcessoDomicilio: Int64;
     FTipoDomicilio: Int64;
     FAguaConsumoDomicilio: Int64;
+    FTipoOrigemEnergiaEletrica: Int64;
     
     F__isset_AbastecimentoAgua: Boolean;
     F__isset_AreaProducaoRural: Boolean;
@@ -230,6 +236,7 @@ type
     F__isset_TipoAcessoDomicilio: Boolean;
     F__isset_TipoDomicilio: Boolean;
     F__isset_AguaConsumoDomicilio: Boolean;
+    F__isset_TipoOrigemEnergiaEletrica: Boolean;
     
     function GetAbastecimentoAgua: Int64;
     procedure SetAbastecimentoAgua( const Value: Int64);
@@ -257,6 +264,8 @@ type
     procedure SetTipoDomicilio( const Value: Int64);
     function GetAguaConsumoDomicilio: Int64;
     procedure SetAguaConsumoDomicilio( const Value: Int64);
+    function GetTipoOrigemEnergiaEletrica: Int64;
+    procedure SetTipoOrigemEnergiaEletrica( const Value: Int64);
 
     function Get__isset_AbastecimentoAgua: Boolean;
     function Get__isset_AreaProducaoRural: Boolean;
@@ -271,6 +280,7 @@ type
     function Get__isset_TipoAcessoDomicilio: Boolean;
     function Get__isset_TipoDomicilio: Boolean;
     function Get__isset_AguaConsumoDomicilio: Boolean;
+    function Get__isset_TipoOrigemEnergiaEletrica: Boolean;
   public
     constructor Create;
     destructor Destroy; override;
@@ -295,6 +305,7 @@ type
     property TipoAcessoDomicilio: Int64 read GetTipoAcessoDomicilio write SetTipoAcessoDomicilio;
     property TipoDomicilio: Int64 read GetTipoDomicilio write SetTipoDomicilio;
     property AguaConsumoDomicilio: Int64 read GetAguaConsumoDomicilio write SetAguaConsumoDomicilio;
+    property TipoOrigemEnergiaEletrica: Int64 read GetTipoOrigemEnergiaEletrica write SetTipoOrigemEnergiaEletrica;
 
     // isset
     property __isset_AbastecimentoAgua: Boolean read Get__isset_AbastecimentoAgua;
@@ -310,6 +321,7 @@ type
     property __isset_TipoAcessoDomicilio: Boolean read Get__isset_TipoAcessoDomicilio;
     property __isset_TipoDomicilio: Boolean read Get__isset_TipoDomicilio;
     property __isset_AguaConsumoDomicilio: Boolean read Get__isset_AguaConsumoDomicilio;
+    property __isset_TipoOrigemEnergiaEletrica: Boolean read Get__isset_TipoOrigemEnergiaEletrica;
   end;
 
   IFamiliaRowThrift = interface(IBase)
@@ -463,12 +475,12 @@ type
     procedure SetInstituicaoPermanencia( const Value: IInstituicaoPermanenciaThrift);
     function GetHeaderTransport: IUnicaLotacaoHeaderThrift;
     procedure SetHeaderTransport( const Value: IUnicaLotacaoHeaderThrift);
-    function GetStatusGeradoAutomaticamente: Boolean;
-    procedure SetStatusGeradoAutomaticamente( const Value: Boolean);
     function GetLatitude: Double;
     procedure SetLatitude( const Value: Double);
     function GetLongitude: Double;
     procedure SetLongitude( const Value: Double);
+    function GetTipoEndereco: Int64;
+    procedure SetTipoEndereco( const Value: Int64);
 
     property AnimaisNoDomicilio: IThriftList<Int64> read GetAnimaisNoDomicilio write SetAnimaisNoDomicilio;
     property CondicaoMoradia: ICondicaoMoradiaThrift read GetCondicaoMoradia write SetCondicaoMoradia;
@@ -484,9 +496,9 @@ type
     property TipoDeImovel: Int64 read GetTipoDeImovel write SetTipoDeImovel;
     property InstituicaoPermanencia: IInstituicaoPermanenciaThrift read GetInstituicaoPermanencia write SetInstituicaoPermanencia;
     property HeaderTransport: IUnicaLotacaoHeaderThrift read GetHeaderTransport write SetHeaderTransport;
-    property StatusGeradoAutomaticamente: Boolean read GetStatusGeradoAutomaticamente write SetStatusGeradoAutomaticamente;
     property Latitude: Double read GetLatitude write SetLatitude;
     property Longitude: Double read GetLongitude write SetLongitude;
+    property TipoEndereco: Int64 read GetTipoEndereco write SetTipoEndereco;
 
     function Get__isset_AnimaisNoDomicilio: Boolean;
     function Get__isset_CondicaoMoradia: Boolean;
@@ -501,9 +513,9 @@ type
     function Get__isset_TipoDeImovel: Boolean;
     function Get__isset_InstituicaoPermanencia: Boolean;
     function Get__isset_HeaderTransport: Boolean;
-    function Get__isset_StatusGeradoAutomaticamente: Boolean;
     function Get__isset_Latitude: Boolean;
     function Get__isset_Longitude: Boolean;
+    function Get__isset_TipoEndereco: Boolean;
 
     property __isset_AnimaisNoDomicilio: Boolean read Get__isset_AnimaisNoDomicilio;
     property __isset_CondicaoMoradia: Boolean read Get__isset_CondicaoMoradia;
@@ -518,9 +530,9 @@ type
     property __isset_TipoDeImovel: Boolean read Get__isset_TipoDeImovel;
     property __isset_InstituicaoPermanencia: Boolean read Get__isset_InstituicaoPermanencia;
     property __isset_HeaderTransport: Boolean read Get__isset_HeaderTransport;
-    property __isset_StatusGeradoAutomaticamente: Boolean read Get__isset_StatusGeradoAutomaticamente;
     property __isset_Latitude: Boolean read Get__isset_Latitude;
     property __isset_Longitude: Boolean read Get__isset_Longitude;
+    property __isset_TipoEndereco: Boolean read Get__isset_TipoEndereco;
   end;
 
   TCadastroDomiciliarThriftImpl = class(TInterfacedObject, IBase, ICadastroDomiciliarThrift)
@@ -539,9 +551,9 @@ type
     FTipoDeImovel: Int64;
     FInstituicaoPermanencia: IInstituicaoPermanenciaThrift;
     FHeaderTransport: IUnicaLotacaoHeaderThrift;
-    FStatusGeradoAutomaticamente: Boolean;
     FLatitude: Double;
     FLongitude: Double;
+    FTipoEndereco: Int64;
     
     F__isset_AnimaisNoDomicilio: Boolean;
     F__isset_CondicaoMoradia: Boolean;
@@ -556,9 +568,9 @@ type
     F__isset_TipoDeImovel: Boolean;
     F__isset_InstituicaoPermanencia: Boolean;
     F__isset_HeaderTransport: Boolean;
-    F__isset_StatusGeradoAutomaticamente: Boolean;
     F__isset_Latitude: Boolean;
     F__isset_Longitude: Boolean;
+    F__isset_TipoEndereco: Boolean;
     
     function GetAnimaisNoDomicilio: IThriftList<Int64>;
     procedure SetAnimaisNoDomicilio( const Value: IThriftList<Int64>);
@@ -588,12 +600,12 @@ type
     procedure SetInstituicaoPermanencia( const Value: IInstituicaoPermanenciaThrift);
     function GetHeaderTransport: IUnicaLotacaoHeaderThrift;
     procedure SetHeaderTransport( const Value: IUnicaLotacaoHeaderThrift);
-    function GetStatusGeradoAutomaticamente: Boolean;
-    procedure SetStatusGeradoAutomaticamente( const Value: Boolean);
     function GetLatitude: Double;
     procedure SetLatitude( const Value: Double);
     function GetLongitude: Double;
     procedure SetLongitude( const Value: Double);
+    function GetTipoEndereco: Int64;
+    procedure SetTipoEndereco( const Value: Int64);
 
     function Get__isset_AnimaisNoDomicilio: Boolean;
     function Get__isset_CondicaoMoradia: Boolean;
@@ -608,9 +620,9 @@ type
     function Get__isset_TipoDeImovel: Boolean;
     function Get__isset_InstituicaoPermanencia: Boolean;
     function Get__isset_HeaderTransport: Boolean;
-    function Get__isset_StatusGeradoAutomaticamente: Boolean;
     function Get__isset_Latitude: Boolean;
     function Get__isset_Longitude: Boolean;
+    function Get__isset_TipoEndereco: Boolean;
   public
     constructor Create;
     destructor Destroy; override;
@@ -636,9 +648,9 @@ type
     property TipoDeImovel: Int64 read GetTipoDeImovel write SetTipoDeImovel;
     property InstituicaoPermanencia: IInstituicaoPermanenciaThrift read GetInstituicaoPermanencia write SetInstituicaoPermanencia;
     property HeaderTransport: IUnicaLotacaoHeaderThrift read GetHeaderTransport write SetHeaderTransport;
-    property StatusGeradoAutomaticamente: Boolean read GetStatusGeradoAutomaticamente write SetStatusGeradoAutomaticamente;
     property Latitude: Double read GetLatitude write SetLatitude;
     property Longitude: Double read GetLongitude write SetLongitude;
+    property TipoEndereco: Int64 read GetTipoEndereco write SetTipoEndereco;
 
     // isset
     property __isset_AnimaisNoDomicilio: Boolean read Get__isset_AnimaisNoDomicilio;
@@ -654,9 +666,9 @@ type
     property __isset_TipoDeImovel: Boolean read Get__isset_TipoDeImovel;
     property __isset_InstituicaoPermanencia: Boolean read Get__isset_InstituicaoPermanencia;
     property __isset_HeaderTransport: Boolean read Get__isset_HeaderTransport;
-    property __isset_StatusGeradoAutomaticamente: Boolean read Get__isset_StatusGeradoAutomaticamente;
     property __isset_Latitude: Boolean read Get__isset_Latitude;
     property __isset_Longitude: Boolean read Get__isset_Longitude;
+    property __isset_TipoEndereco: Boolean read Get__isset_TipoEndereco;
   end;
 
 implementation
@@ -1188,6 +1200,22 @@ begin
   Result := F__isset_AguaConsumoDomicilio;
 end;
 
+function TCondicaoMoradiaThriftImpl.GetTipoOrigemEnergiaEletrica: Int64;
+begin
+  Result := FTipoOrigemEnergiaEletrica;
+end;
+
+procedure TCondicaoMoradiaThriftImpl.SetTipoOrigemEnergiaEletrica( const Value: Int64);
+begin
+  F__isset_TipoOrigemEnergiaEletrica := True;
+  FTipoOrigemEnergiaEletrica := Value;
+end;
+
+function TCondicaoMoradiaThriftImpl.Get__isset_TipoOrigemEnergiaEletrica: Boolean;
+begin
+  Result := F__isset_TipoOrigemEnergiaEletrica;
+end;
+
 procedure TCondicaoMoradiaThriftImpl.Read( const iprot: IProtocol);
 var
   field_ : IField;
@@ -1318,6 +1346,15 @@ begin
           if (field_.Type_ = TType.I64) then
           begin
             AguaConsumoDomicilio := iprot.ReadI64();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        14: begin
+          if (field_.Type_ = TType.I64) then
+          begin
+            TipoOrigemEnergiaEletrica := iprot.ReadI64();
           end else
           begin
             TProtocolUtil.Skip(iprot, field_.Type_);
@@ -1461,6 +1498,15 @@ begin
     oprot.WriteI64(AguaConsumoDomicilio);
     oprot.WriteFieldEnd();
   end;
+  if (__isset_TipoOrigemEnergiaEletrica) then
+  begin
+    field_.Name := 'tipoOrigemEnergiaEletrica';
+    field_.Type_  := TType.I64;
+    field_.ID := 14;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteI64(TipoOrigemEnergiaEletrica);
+    oprot.WriteFieldEnd();
+  end;
   oprot.WriteFieldStop();
   oprot.WriteStructEnd();
 end;
@@ -1550,6 +1596,12 @@ begin
       _first3 := FALSE;
       _sb2.Append('AguaConsumoDomicilio: ');
       _sb2.Append(AguaConsumoDomicilio);
+    end;
+    if (__isset_TipoOrigemEnergiaEletrica) then begin
+      if not _first3 then _sb2.Append(',');
+      _first3 := FALSE;
+      _sb2.Append('TipoOrigemEnergiaEletrica: ');
+      _sb2.Append(TipoOrigemEnergiaEletrica);
     end;
     _sb2.Append(')');
     Result := _sb2.ToString;
@@ -2176,22 +2228,6 @@ begin
   Result := F__isset_HeaderTransport;
 end;
 
-function TCadastroDomiciliarThriftImpl.GetStatusGeradoAutomaticamente: Boolean;
-begin
-  Result := FStatusGeradoAutomaticamente;
-end;
-
-procedure TCadastroDomiciliarThriftImpl.SetStatusGeradoAutomaticamente( const Value: Boolean);
-begin
-  F__isset_StatusGeradoAutomaticamente := True;
-  FStatusGeradoAutomaticamente := Value;
-end;
-
-function TCadastroDomiciliarThriftImpl.Get__isset_StatusGeradoAutomaticamente: Boolean;
-begin
-  Result := F__isset_StatusGeradoAutomaticamente;
-end;
-
 function TCadastroDomiciliarThriftImpl.GetLatitude: Double;
 begin
   Result := FLatitude;
@@ -2222,6 +2258,22 @@ end;
 function TCadastroDomiciliarThriftImpl.Get__isset_Longitude: Boolean;
 begin
   Result := F__isset_Longitude;
+end;
+
+function TCadastroDomiciliarThriftImpl.GetTipoEndereco: Int64;
+begin
+  Result := FTipoEndereco;
+end;
+
+procedure TCadastroDomiciliarThriftImpl.SetTipoEndereco( const Value: Int64);
+begin
+  F__isset_TipoEndereco := True;
+  FTipoEndereco := Value;
+end;
+
+function TCadastroDomiciliarThriftImpl.Get__isset_TipoEndereco: Boolean;
+begin
+  Result := F__isset_TipoEndereco;
 end;
 
 procedure TCadastroDomiciliarThriftImpl.Read( const iprot: IProtocol);
@@ -2396,15 +2448,6 @@ begin
             TProtocolUtil.Skip(iprot, field_.Type_);
           end;
         end;
-        16: begin
-          if (field_.Type_ = TType.Bool_) then
-          begin
-            StatusGeradoAutomaticamente := iprot.ReadBool();
-          end else
-          begin
-            TProtocolUtil.Skip(iprot, field_.Type_);
-          end;
-        end;
         17: begin
           if (field_.Type_ = TType.Double_) then
           begin
@@ -2418,6 +2461,15 @@ begin
           if (field_.Type_ = TType.Double_) then
           begin
             Longitude := iprot.ReadDouble();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        20: begin
+          if (field_.Type_ = TType.I64) then
+          begin
+            TipoEndereco := iprot.ReadI64();
           end else
           begin
             TProtocolUtil.Skip(iprot, field_.Type_);
@@ -2586,15 +2638,6 @@ begin
     HeaderTransport.Write(oprot);
     oprot.WriteFieldEnd();
   end;
-  if (__isset_StatusGeradoAutomaticamente) then
-  begin
-    field_.Name := 'statusGeradoAutomaticamente';
-    field_.Type_  := TType.Bool_;
-    field_.ID := 16;
-    oprot.WriteFieldBegin(field_);
-    oprot.WriteBool(StatusGeradoAutomaticamente);
-    oprot.WriteFieldEnd();
-  end;
   if (__isset_Latitude) then
   begin
     field_.Name := 'latitude';
@@ -2611,6 +2654,15 @@ begin
     field_.ID := 18;
     oprot.WriteFieldBegin(field_);
     oprot.WriteDouble(Longitude);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_TipoEndereco) then
+  begin
+    field_.Name := 'tipoEndereco';
+    field_.Type_  := TType.I64;
+    field_.ID := 20;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteI64(TipoEndereco);
     oprot.WriteFieldEnd();
   end;
   oprot.WriteFieldStop();
@@ -2698,10 +2750,6 @@ begin
       _sb16.Append(', HeaderTransport: ');
       if (HeaderTransport = nil) then _sb16.Append('<null>') else _sb16.Append(HeaderTransport.ToString());
     end;
-    if (__isset_StatusGeradoAutomaticamente) then begin
-      _sb16.Append(', StatusGeradoAutomaticamente: ');
-      _sb16.Append(StatusGeradoAutomaticamente);
-    end;
     if (__isset_Latitude) then begin
       _sb16.Append(', Latitude: ');
       _sb16.Append(Latitude);
@@ -2709,6 +2757,10 @@ begin
     if (__isset_Longitude) then begin
       _sb16.Append(', Longitude: ');
       _sb16.Append(Longitude);
+    end;
+    if (__isset_TipoEndereco) then begin
+      _sb16.Append(', TipoEndereco: ');
+      _sb16.Append(TipoEndereco);
     end;
     _sb16.Append(')');
     Result := _sb16.ToString;

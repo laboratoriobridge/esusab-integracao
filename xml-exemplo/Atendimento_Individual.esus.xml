@@ -311,5 +311,5 @@
 		<versaoSistema>5.2.29</versaoSistema>
 		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:originadora>
-	<versao major="6" minor="3" revision="1"/>
+	<versao major="6" minor="2" revision="0"/>
 </ns3:dadoTransporteTransportXml>

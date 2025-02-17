@@ -381,21 +381,21 @@ namespace br.gov.saude.esusab.ras.common
                 TProtocolUtil.Skip(iprot, field.Type);
               }
               break;
-            case 14:
+            case 15:
               if (field.Type == TType.String) {
                 QtDoseManha = iprot.ReadString();
               } else { 
                 TProtocolUtil.Skip(iprot, field.Type);
               }
               break;
-            case 15:
+            case 16:
               if (field.Type == TType.String) {
                 QtDoseTarde = iprot.ReadString();
               } else { 
                 TProtocolUtil.Skip(iprot, field.Type);
               }
               break;
-            case 16:
+            case 17:
               if (field.Type == TType.String) {
                 QtDoseNoite = iprot.ReadString();
               } else { 
@@ -530,7 +530,7 @@ namespace br.gov.saude.esusab.ras.common
         if (QtDoseManha != null && __isset.qtDoseManha) {
           field.Name = "qtDoseManha";
           field.Type = TType.String;
-          field.ID = 14;
+          field.ID = 15;
           oprot.WriteFieldBegin(field);
           oprot.WriteString(QtDoseManha);
           oprot.WriteFieldEnd();
@@ -538,7 +538,7 @@ namespace br.gov.saude.esusab.ras.common
         if (QtDoseTarde != null && __isset.qtDoseTarde) {
           field.Name = "qtDoseTarde";
           field.Type = TType.String;
-          field.ID = 15;
+          field.ID = 16;
           oprot.WriteFieldBegin(field);
           oprot.WriteString(QtDoseTarde);
           oprot.WriteFieldEnd();
@@ -546,7 +546,7 @@ namespace br.gov.saude.esusab.ras.common
         if (QtDoseNoite != null && __isset.qtDoseNoite) {
           field.Name = "qtDoseNoite";
           field.Type = TType.String;
-          field.ID = 16;
+          field.ID = 17;
           oprot.WriteFieldBegin(field);
           oprot.WriteString(QtDoseNoite);
           oprot.WriteFieldEnd();

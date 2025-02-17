@@ -892,9 +892,10 @@ class MedicamentoThrift:
     (11, TType.I32, 'duracaoTratamento', None, None, ), # 11
     (12, TType.I64, 'duracaoTratamentoMedida', None, None, ), # 12
     (13, TType.I32, 'quantidadeReceitada', None, None, ), # 13
-    (14, TType.STRING, 'qtDoseManha', None, None, ), # 14
-    (15, TType.STRING, 'qtDoseTarde', None, None, ), # 15
-    (16, TType.STRING, 'qtDoseNoite', None, None, ), # 16
+    None, # 14
+    (15, TType.STRING, 'qtDoseManha', None, None, ), # 15
+    (16, TType.STRING, 'qtDoseTarde', None, None, ), # 16
+    (17, TType.STRING, 'qtDoseNoite', None, None, ), # 17
   )
 
   def __init__(self, codigoCatmat=None, viaAdministracao=None, dose=None, doseUnica=None, usoContinuo=None, doseFrequenciaTipo=None, doseFrequencia=None, doseFrequenciaQuantidade=None, doseFrequenciaUnidadeMedida=None, dtInicioTratamento=None, duracaoTratamento=None, duracaoTratamentoMedida=None, quantidadeReceitada=None, qtDoseManha=None, qtDoseTarde=None, qtDoseNoite=None,):
@@ -989,17 +990,17 @@ class MedicamentoThrift:
           self.quantidadeReceitada = iprot.readI32()
         else:
           iprot.skip(ftype)
-      elif fid == 14:
+      elif fid == 15:
         if ftype == TType.STRING:
           self.qtDoseManha = iprot.readString()
         else:
           iprot.skip(ftype)
-      elif fid == 15:
+      elif fid == 16:
         if ftype == TType.STRING:
           self.qtDoseTarde = iprot.readString()
         else:
           iprot.skip(ftype)
-      elif fid == 16:
+      elif fid == 17:
         if ftype == TType.STRING:
           self.qtDoseNoite = iprot.readString()
         else:
@@ -1067,15 +1068,15 @@ class MedicamentoThrift:
       oprot.writeI32(self.quantidadeReceitada)
       oprot.writeFieldEnd()
     if self.qtDoseManha is not None:
-      oprot.writeFieldBegin('qtDoseManha', TType.STRING, 14)
+      oprot.writeFieldBegin('qtDoseManha', TType.STRING, 15)
       oprot.writeString(self.qtDoseManha)
       oprot.writeFieldEnd()
     if self.qtDoseTarde is not None:
-      oprot.writeFieldBegin('qtDoseTarde', TType.STRING, 15)
+      oprot.writeFieldBegin('qtDoseTarde', TType.STRING, 16)
       oprot.writeString(self.qtDoseTarde)
       oprot.writeFieldEnd()
     if self.qtDoseNoite is not None:
-      oprot.writeFieldBegin('qtDoseNoite', TType.STRING, 16)
+      oprot.writeFieldBegin('qtDoseNoite', TType.STRING, 17)
       oprot.writeString(self.qtDoseNoite)
       oprot.writeFieldEnd()
     oprot.writeFieldStop()

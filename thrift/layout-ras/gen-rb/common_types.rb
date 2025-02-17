@@ -191,9 +191,9 @@ module Br
               DURACAOTRATAMENTO = 11
               DURACAOTRATAMENTOMEDIDA = 12
               QUANTIDADERECEITADA = 13
-              QTDOSEMANHA = 14
-              QTDOSETARDE = 15
-              QTDOSENOITE = 16
+              QTDOSEMANHA = 15
+              QTDOSETARDE = 16
+              QTDOSENOITE = 17
 
               FIELDS = {
                 CODIGOCATMAT => {:type => ::Thrift::Types::STRING, :name => 'codigoCatmat', :optional => true},

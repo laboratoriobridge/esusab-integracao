@@ -1028,21 +1028,21 @@ MedicamentoThrift.prototype.read = function(input) {
         input.skip(ftype);
       }
       break;
-      case 14:
+      case 15:
       if (ftype == Thrift.Type.STRING) {
         this.qtDoseManha = input.readString();
       } else {
         input.skip(ftype);
       }
       break;
-      case 15:
+      case 16:
       if (ftype == Thrift.Type.STRING) {
         this.qtDoseTarde = input.readString();
       } else {
         input.skip(ftype);
       }
       break;
-      case 16:
+      case 17:
       if (ftype == Thrift.Type.STRING) {
         this.qtDoseNoite = input.readString();
       } else {
@@ -1126,17 +1126,17 @@ MedicamentoThrift.prototype.write = function(output) {
     output.writeFieldEnd();
   }
   if (this.qtDoseManha !== null && this.qtDoseManha !== undefined) {
-    output.writeFieldBegin('qtDoseManha', Thrift.Type.STRING, 14);
+    output.writeFieldBegin('qtDoseManha', Thrift.Type.STRING, 15);
     output.writeString(this.qtDoseManha);
     output.writeFieldEnd();
   }
   if (this.qtDoseTarde !== null && this.qtDoseTarde !== undefined) {
-    output.writeFieldBegin('qtDoseTarde', Thrift.Type.STRING, 15);
+    output.writeFieldBegin('qtDoseTarde', Thrift.Type.STRING, 16);
     output.writeString(this.qtDoseTarde);
     output.writeFieldEnd();
   }
   if (this.qtDoseNoite !== null && this.qtDoseNoite !== undefined) {
-    output.writeFieldBegin('qtDoseNoite', Thrift.Type.STRING, 16);
+    output.writeFieldBegin('qtDoseNoite', Thrift.Type.STRING, 17);
     output.writeString(this.qtDoseNoite);
     output.writeFieldEnd();
   }

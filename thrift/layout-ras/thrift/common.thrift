@@ -87,9 +87,9 @@ struct MedicamentoThrift {
 	11:optional i32 duracaoTratamento;
 	12:optional i64 duracaoTratamentoMedida;
 	13:optional i32 quantidadeReceitada;
-	14:optional string qtDoseManha;
-	15:optional string qtDoseTarde;
-	16:optional string qtDoseNoite;
+	15:optional string qtDoseManha;
+	16:optional string qtDoseTarde;
+	17:optional string qtDoseNoite;
 }
 
 struct EncaminhamentoExternoThrift {

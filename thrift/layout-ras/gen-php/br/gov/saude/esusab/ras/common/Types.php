@@ -1382,15 +1382,15 @@ class MedicamentoThrift {
           'var' => 'quantidadeReceitada',
           'type' => TType::I32,
           ),
-        14 => array(
+        15 => array(
           'var' => 'qtDoseManha',
           'type' => TType::STRING,
           ),
-        15 => array(
+        16 => array(
           'var' => 'qtDoseTarde',
           'type' => TType::STRING,
           ),
-        16 => array(
+        17 => array(
           'var' => 'qtDoseNoite',
           'type' => TType::STRING,
           ),
@@ -1558,21 +1558,21 @@ class MedicamentoThrift {
             $xfer += $input->skip($ftype);
           }
           break;
-        case 14:
+        case 15:
           if ($ftype == TType::STRING) {
             $xfer += $input->readString($this->qtDoseManha);
           } else {
             $xfer += $input->skip($ftype);
           }
           break;
-        case 15:
+        case 16:
           if ($ftype == TType::STRING) {
             $xfer += $input->readString($this->qtDoseTarde);
           } else {
             $xfer += $input->skip($ftype);
           }
           break;
-        case 16:
+        case 17:
           if ($ftype == TType::STRING) {
             $xfer += $input->readString($this->qtDoseNoite);
           } else {
@@ -1658,17 +1658,17 @@ class MedicamentoThrift {
       $xfer += $output->writeFieldEnd();
     }
     if ($this->qtDoseManha !== null) {
-      $xfer += $output->writeFieldBegin('qtDoseManha', TType::STRING, 14);
+      $xfer += $output->writeFieldBegin('qtDoseManha', TType::STRING, 15);
       $xfer += $output->writeString($this->qtDoseManha);
       $xfer += $output->writeFieldEnd();
     }
     if ($this->qtDoseTarde !== null) {
-      $xfer += $output->writeFieldBegin('qtDoseTarde', TType::STRING, 15);
+      $xfer += $output->writeFieldBegin('qtDoseTarde', TType::STRING, 16);
       $xfer += $output->writeString($this->qtDoseTarde);
       $xfer += $output->writeFieldEnd();
     }
     if ($this->qtDoseNoite !== null) {
-      $xfer += $output->writeFieldBegin('qtDoseNoite', TType::STRING, 16);
+      $xfer += $output->writeFieldBegin('qtDoseNoite', TType::STRING, 17);
       $xfer += $output->writeString($this->qtDoseNoite);
       $xfer += $output->writeFieldEnd();
     }

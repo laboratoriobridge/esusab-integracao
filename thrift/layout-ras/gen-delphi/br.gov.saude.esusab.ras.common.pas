@@ -4045,7 +4045,7 @@ begin
             TProtocolUtil.Skip(iprot, field_.Type_);
           end;
         end;
-        14: begin
+        15: begin
           if (field_.Type_ = TType.String_) then
           begin
             QtDoseManha := iprot.ReadString();
@@ -4054,7 +4054,7 @@ begin
             TProtocolUtil.Skip(iprot, field_.Type_);
           end;
         end;
-        15: begin
+        16: begin
           if (field_.Type_ = TType.String_) then
           begin
             QtDoseTarde := iprot.ReadString();
@@ -4063,7 +4063,7 @@ begin
             TProtocolUtil.Skip(iprot, field_.Type_);
           end;
         end;
-        16: begin
+        17: begin
           if (field_.Type_ = TType.String_) then
           begin
             QtDoseNoite := iprot.ReadString();
@@ -4214,7 +4214,7 @@ begin
   begin
     field_.Name := 'qtDoseManha';
     field_.Type_  := TType.String_;
-    field_.ID := 14;
+    field_.ID := 15;
     oprot.WriteFieldBegin(field_);
     oprot.WriteString(QtDoseManha);
     oprot.WriteFieldEnd();
@@ -4223,7 +4223,7 @@ begin
   begin
     field_.Name := 'qtDoseTarde';
     field_.Type_  := TType.String_;
-    field_.ID := 15;
+    field_.ID := 16;
     oprot.WriteFieldBegin(field_);
     oprot.WriteString(QtDoseTarde);
     oprot.WriteFieldEnd();
@@ -4232,7 +4232,7 @@ begin
   begin
     field_.Name := 'qtDoseNoite';
     field_.Type_  := TType.String_;
-    field_.ID := 16;
+    field_.ID := 17;
     oprot.WriteFieldBegin(field_);
     oprot.WriteString(QtDoseNoite);
     oprot.WriteFieldEnd();

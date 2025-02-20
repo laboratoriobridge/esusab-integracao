@@ -74,16 +74,15 @@
 				<doseUnica>false</doseUnica>
 				<usoContinuo>true</usoContinuo>
 				<doseFrequenciaTipo>4</doseFrequenciaTipo>
-				<doseFrequencia>3</doseFrequencia>
 				<doseFrequenciaQuantidade>1</doseFrequenciaQuantidade>
 				<doseFrequenciaUnidadeMedida>1</doseFrequenciaUnidadeMedida>
 				<dtInicioTratamento>1730257200000</dtInicioTratamento>
 				<duracaoTratamento>7</duracaoTratamento>
 				<duracaoTratamentoMedida>1</duracaoTratamentoMedida>
-				<quantidadeReceitada>8</quantidadeReceitada>
+				<quantidadeReceitada>10</quantidadeReceitada>
 				<qtDoseManha>5</qtDoseManha>
-				<qtDoseTarde>8</qtDoseTarde>
-				<qtDoseNoite>90</qtDoseNoite>
+				<qtDoseTarde>2</qtDoseTarde>
+				<qtDoseNoite>3</qtDoseNoite>
 			</medicamentos>
 			<encaminhamentos>
 				<especialidade>3</especialidade>

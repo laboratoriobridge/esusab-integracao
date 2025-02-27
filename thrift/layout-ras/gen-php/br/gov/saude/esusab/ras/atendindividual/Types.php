@@ -446,10 +446,6 @@ class FichaAtendimentoIndividualChildThrift {
    */
   public $resultadosExames = null;
   /**
-   * @var string
-   */
-  public $uuidRnds = null;
-  /**
    * @var \br\gov\saude\esusab\ras\common\LotacaoHeaderThrift
    */
   public $finalizadorObservacao = null;
@@ -617,10 +613,6 @@ class FichaAtendimentoIndividualChildThrift {
             'class' => '\br\gov\saude\esusab\ras\common\ResultadosExameThrift',
             ),
           ),
-        34 => array(
-          'var' => 'uuidRnds',
-          'type' => TType::STRING,
-          ),
         35 => array(
           'var' => 'finalizadorObservacao',
           'type' => TType::STRUCT,
@@ -744,9 +736,6 @@ class FichaAtendimentoIndividualChildThrift {
       }
       if (isset($vals['resultadosExames'])) {
         $this->resultadosExames = $vals['resultadosExames'];
-      }
-      if (isset($vals['uuidRnds'])) {
-        $this->uuidRnds = $vals['uuidRnds'];
       }
       if (isset($vals['finalizadorObservacao'])) {
         $this->finalizadorObservacao = $vals['finalizadorObservacao'];
@@ -1044,13 +1033,6 @@ class FichaAtendimentoIndividualChildThrift {
             $xfer += $input->skip($ftype);
           }
           break;
-        case 34:
-          if ($ftype == TType::STRING) {
-            $xfer += $input->readString($this->uuidRnds);
-          } else {
-            $xfer += $input->skip($ftype);
-          }
-          break;
         case 35:
           if ($ftype == TType::STRUCT) {
             $this->finalizadorObservacao = new \br\gov\saude\esusab\ras\common\LotacaoHeaderThrift();
@@ -1342,11 +1324,6 @@ class FichaAtendimentoIndividualChildThrift {
         }
         $output->writeListEnd();
       }
-      $xfer += $output->writeFieldEnd();
-    }
-    if ($this->uuidRnds !== null) {
-      $xfer += $output->writeFieldBegin('uuidRnds', TType::STRING, 34);
-      $xfer += $output->writeString($this->uuidRnds);
       $xfer += $output->writeFieldEnd();
     }
     if ($this->finalizadorObservacao !== null) {

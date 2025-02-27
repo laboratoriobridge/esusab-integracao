@@ -36,6 +36,9 @@ namespace br.gov.saude.esusab.ras.common
     private int _duracaoTratamento;
     private long _duracaoTratamentoMedida;
     private int _quantidadeReceitada;
+    private string _qtDoseManha;
+    private string _qtDoseTarde;
+    private string _qtDoseNoite;
 
     public string CodigoCatmat
     {
@@ -206,6 +209,45 @@ namespace br.gov.saude.esusab.ras.common
       }
     }
 
+    public string QtDoseManha
+    {
+      get
+      {
+        return _qtDoseManha;
+      }
+      set
+      {
+        __isset.qtDoseManha = true;
+        this._qtDoseManha = value;
+      }
+    }
+
+    public string QtDoseTarde
+    {
+      get
+      {
+        return _qtDoseTarde;
+      }
+      set
+      {
+        __isset.qtDoseTarde = true;
+        this._qtDoseTarde = value;
+      }
+    }
+
+    public string QtDoseNoite
+    {
+      get
+      {
+        return _qtDoseNoite;
+      }
+      set
+      {
+        __isset.qtDoseNoite = true;
+        this._qtDoseNoite = value;
+      }
+    }
+
 
     public Isset __isset;
     #if !SILVERLIGHT
@@ -225,6 +267,9 @@ namespace br.gov.saude.esusab.ras.common
       public bool duracaoTratamento;
       public bool duracaoTratamentoMedida;
       public bool quantidadeReceitada;
+      public bool qtDoseManha;
+      public bool qtDoseTarde;
+      public bool qtDoseNoite;
     }
 
     public MedicamentoThrift() {
@@ -332,6 +377,27 @@ namespace br.gov.saude.esusab.ras.common
             case 13:
               if (field.Type == TType.I32) {
                 QuantidadeReceitada = iprot.ReadI32();
+              } else { 
+                TProtocolUtil.Skip(iprot, field.Type);
+              }
+              break;
+            case 15:
+              if (field.Type == TType.String) {
+                QtDoseManha = iprot.ReadString();
+              } else { 
+                TProtocolUtil.Skip(iprot, field.Type);
+              }
+              break;
+            case 16:
+              if (field.Type == TType.String) {
+                QtDoseTarde = iprot.ReadString();
+              } else { 
+                TProtocolUtil.Skip(iprot, field.Type);
+              }
+              break;
+            case 17:
+              if (field.Type == TType.String) {
+                QtDoseNoite = iprot.ReadString();
               } else { 
                 TProtocolUtil.Skip(iprot, field.Type);
               }
@@ -461,6 +527,30 @@ namespace br.gov.saude.esusab.ras.common
           oprot.WriteI32(QuantidadeReceitada);
           oprot.WriteFieldEnd();
         }
+        if (QtDoseManha != null && __isset.qtDoseManha) {
+          field.Name = "qtDoseManha";
+          field.Type = TType.String;
+          field.ID = 15;
+          oprot.WriteFieldBegin(field);
+          oprot.WriteString(QtDoseManha);
+          oprot.WriteFieldEnd();
+        }
+        if (QtDoseTarde != null && __isset.qtDoseTarde) {
+          field.Name = "qtDoseTarde";
+          field.Type = TType.String;
+          field.ID = 16;
+          oprot.WriteFieldBegin(field);
+          oprot.WriteString(QtDoseTarde);
+          oprot.WriteFieldEnd();
+        }
+        if (QtDoseNoite != null && __isset.qtDoseNoite) {
+          field.Name = "qtDoseNoite";
+          field.Type = TType.String;
+          field.ID = 17;
+          oprot.WriteFieldBegin(field);
+          oprot.WriteString(QtDoseNoite);
+          oprot.WriteFieldEnd();
+        }
         oprot.WriteFieldStop();
         oprot.WriteStructEnd();
       }
@@ -550,6 +640,24 @@ namespace br.gov.saude.esusab.ras.common
         __first = false;
         __sb.Append("QuantidadeReceitada: ");
         __sb.Append(QuantidadeReceitada);
+      }
+      if (QtDoseManha != null && __isset.qtDoseManha) {
+        if(!__first) { __sb.Append(", "); }
+        __first = false;
+        __sb.Append("QtDoseManha: ");
+        __sb.Append(QtDoseManha);
+      }
+      if (QtDoseTarde != null && __isset.qtDoseTarde) {
+        if(!__first) { __sb.Append(", "); }
+        __first = false;
+        __sb.Append("QtDoseTarde: ");
+        __sb.Append(QtDoseTarde);
+      }
+      if (QtDoseNoite != null && __isset.qtDoseNoite) {
+        if(!__first) { __sb.Append(", "); }
+        __first = false;
+        __sb.Append("QtDoseNoite: ");
+        __sb.Append(QtDoseNoite);
       }
       __sb.Append(")");
       return __sb.ToString();

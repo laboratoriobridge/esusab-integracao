@@ -348,8 +348,8 @@
 				<isAvaliado>1</isAvaliado>
 			</problemasCondicoes>
 			<ivcf>
-				<resultado>40</resultado>
-				<hasSgIdade>false</hasSgIdade>
+				<resultado>1</resultado>
+				<hasSgIdade>true</hasSgIdade>
 				<hasSgPercepcaoSaude>false</hasSgPercepcaoSaude>
 				<hasSgAvdInstrumental>false</hasSgAvdInstrumental>
 				<hasSgAvdBasica>false</hasSgAvdBasica>
@@ -396,5 +396,5 @@
 		<versaoSistema>5.0.16</versaoSistema>
 		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:originadora>
-	<versao major="6" minor="2" revision="0"/>
+	<versao major="6" minor="3" revision="2"/>
 </ns3:dadoTransporteTransportXml>

@@ -703,6 +703,12 @@ type
     procedure SetDuracaoTratamentoMedida( const Value: Int64);
     function GetQuantidadeReceitada: Integer;
     procedure SetQuantidadeReceitada( const Value: Integer);
+    function GetQtDoseManha: string;
+    procedure SetQtDoseManha( const Value: string);
+    function GetQtDoseTarde: string;
+    procedure SetQtDoseTarde( const Value: string);
+    function GetQtDoseNoite: string;
+    procedure SetQtDoseNoite( const Value: string);
 
     property CodigoCatmat: string read GetCodigoCatmat write SetCodigoCatmat;
     property ViaAdministracao: Int64 read GetViaAdministracao write SetViaAdministracao;
@@ -717,6 +723,9 @@ type
     property DuracaoTratamento: Integer read GetDuracaoTratamento write SetDuracaoTratamento;
     property DuracaoTratamentoMedida: Int64 read GetDuracaoTratamentoMedida write SetDuracaoTratamentoMedida;
     property QuantidadeReceitada: Integer read GetQuantidadeReceitada write SetQuantidadeReceitada;
+    property QtDoseManha: string read GetQtDoseManha write SetQtDoseManha;
+    property QtDoseTarde: string read GetQtDoseTarde write SetQtDoseTarde;
+    property QtDoseNoite: string read GetQtDoseNoite write SetQtDoseNoite;
 
     function Get__isset_CodigoCatmat: Boolean;
     function Get__isset_ViaAdministracao: Boolean;
@@ -731,6 +740,9 @@ type
     function Get__isset_DuracaoTratamento: Boolean;
     function Get__isset_DuracaoTratamentoMedida: Boolean;
     function Get__isset_QuantidadeReceitada: Boolean;
+    function Get__isset_QtDoseManha: Boolean;
+    function Get__isset_QtDoseTarde: Boolean;
+    function Get__isset_QtDoseNoite: Boolean;
 
     property __isset_CodigoCatmat: Boolean read Get__isset_CodigoCatmat;
     property __isset_ViaAdministracao: Boolean read Get__isset_ViaAdministracao;
@@ -745,6 +757,9 @@ type
     property __isset_DuracaoTratamento: Boolean read Get__isset_DuracaoTratamento;
     property __isset_DuracaoTratamentoMedida: Boolean read Get__isset_DuracaoTratamentoMedida;
     property __isset_QuantidadeReceitada: Boolean read Get__isset_QuantidadeReceitada;
+    property __isset_QtDoseManha: Boolean read Get__isset_QtDoseManha;
+    property __isset_QtDoseTarde: Boolean read Get__isset_QtDoseTarde;
+    property __isset_QtDoseNoite: Boolean read Get__isset_QtDoseNoite;
   end;
 
   TMedicamentoThriftImpl = class(TInterfacedObject, IBase, IMedicamentoThrift)
@@ -762,6 +777,9 @@ type
     FDuracaoTratamento: Integer;
     FDuracaoTratamentoMedida: Int64;
     FQuantidadeReceitada: Integer;
+    FQtDoseManha: string;
+    FQtDoseTarde: string;
+    FQtDoseNoite: string;
     
     F__isset_CodigoCatmat: Boolean;
     F__isset_ViaAdministracao: Boolean;
@@ -776,6 +794,9 @@ type
     F__isset_DuracaoTratamento: Boolean;
     F__isset_DuracaoTratamentoMedida: Boolean;
     F__isset_QuantidadeReceitada: Boolean;
+    F__isset_QtDoseManha: Boolean;
+    F__isset_QtDoseTarde: Boolean;
+    F__isset_QtDoseNoite: Boolean;
     
     function GetCodigoCatmat: string;
     procedure SetCodigoCatmat( const Value: string);
@@ -803,6 +824,12 @@ type
     procedure SetDuracaoTratamentoMedida( const Value: Int64);
     function GetQuantidadeReceitada: Integer;
     procedure SetQuantidadeReceitada( const Value: Integer);
+    function GetQtDoseManha: string;
+    procedure SetQtDoseManha( const Value: string);
+    function GetQtDoseTarde: string;
+    procedure SetQtDoseTarde( const Value: string);
+    function GetQtDoseNoite: string;
+    procedure SetQtDoseNoite( const Value: string);
 
     function Get__isset_CodigoCatmat: Boolean;
     function Get__isset_ViaAdministracao: Boolean;
@@ -817,6 +844,9 @@ type
     function Get__isset_DuracaoTratamento: Boolean;
     function Get__isset_DuracaoTratamentoMedida: Boolean;
     function Get__isset_QuantidadeReceitada: Boolean;
+    function Get__isset_QtDoseManha: Boolean;
+    function Get__isset_QtDoseTarde: Boolean;
+    function Get__isset_QtDoseNoite: Boolean;
   public
     constructor Create;
     destructor Destroy; override;
@@ -841,6 +871,9 @@ type
     property DuracaoTratamento: Integer read GetDuracaoTratamento write SetDuracaoTratamento;
     property DuracaoTratamentoMedida: Int64 read GetDuracaoTratamentoMedida write SetDuracaoTratamentoMedida;
     property QuantidadeReceitada: Integer read GetQuantidadeReceitada write SetQuantidadeReceitada;
+    property QtDoseManha: string read GetQtDoseManha write SetQtDoseManha;
+    property QtDoseTarde: string read GetQtDoseTarde write SetQtDoseTarde;
+    property QtDoseNoite: string read GetQtDoseNoite write SetQtDoseNoite;
 
     // isset
     property __isset_CodigoCatmat: Boolean read Get__isset_CodigoCatmat;
@@ -856,6 +889,9 @@ type
     property __isset_DuracaoTratamento: Boolean read Get__isset_DuracaoTratamento;
     property __isset_DuracaoTratamentoMedida: Boolean read Get__isset_DuracaoTratamentoMedida;
     property __isset_QuantidadeReceitada: Boolean read Get__isset_QuantidadeReceitada;
+    property __isset_QtDoseManha: Boolean read Get__isset_QtDoseManha;
+    property __isset_QtDoseTarde: Boolean read Get__isset_QtDoseTarde;
+    property __isset_QtDoseNoite: Boolean read Get__isset_QtDoseNoite;
   end;
 
   IEncaminhamentoExternoThrift = interface(IBase)
@@ -3826,6 +3862,54 @@ begin
   Result := F__isset_QuantidadeReceitada;
 end;
 
+function TMedicamentoThriftImpl.GetQtDoseManha: string;
+begin
+  Result := FQtDoseManha;
+end;
+
+procedure TMedicamentoThriftImpl.SetQtDoseManha( const Value: string);
+begin
+  F__isset_QtDoseManha := True;
+  FQtDoseManha := Value;
+end;
+
+function TMedicamentoThriftImpl.Get__isset_QtDoseManha: Boolean;
+begin
+  Result := F__isset_QtDoseManha;
+end;
+
+function TMedicamentoThriftImpl.GetQtDoseTarde: string;
+begin
+  Result := FQtDoseTarde;
+end;
+
+procedure TMedicamentoThriftImpl.SetQtDoseTarde( const Value: string);
+begin
+  F__isset_QtDoseTarde := True;
+  FQtDoseTarde := Value;
+end;
+
+function TMedicamentoThriftImpl.Get__isset_QtDoseTarde: Boolean;
+begin
+  Result := F__isset_QtDoseTarde;
+end;
+
+function TMedicamentoThriftImpl.GetQtDoseNoite: string;
+begin
+  Result := FQtDoseNoite;
+end;
+
+procedure TMedicamentoThriftImpl.SetQtDoseNoite( const Value: string);
+begin
+  F__isset_QtDoseNoite := True;
+  FQtDoseNoite := Value;
+end;
+
+function TMedicamentoThriftImpl.Get__isset_QtDoseNoite: Boolean;
+begin
+  Result := F__isset_QtDoseNoite;
+end;
+
 procedure TMedicamentoThriftImpl.Read( const iprot: IProtocol);
 var
   field_ : IField;
@@ -3956,6 +4040,33 @@ begin
           if (field_.Type_ = TType.I32) then
           begin
             QuantidadeReceitada := iprot.ReadI32();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        15: begin
+          if (field_.Type_ = TType.String_) then
+          begin
+            QtDoseManha := iprot.ReadString();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        16: begin
+          if (field_.Type_ = TType.String_) then
+          begin
+            QtDoseTarde := iprot.ReadString();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        17: begin
+          if (field_.Type_ = TType.String_) then
+          begin
+            QtDoseNoite := iprot.ReadString();
           end else
           begin
             TProtocolUtil.Skip(iprot, field_.Type_);
@@ -4099,6 +4210,33 @@ begin
     oprot.WriteI32(QuantidadeReceitada);
     oprot.WriteFieldEnd();
   end;
+  if (__isset_QtDoseManha) then
+  begin
+    field_.Name := 'qtDoseManha';
+    field_.Type_  := TType.String_;
+    field_.ID := 15;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteString(QtDoseManha);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_QtDoseTarde) then
+  begin
+    field_.Name := 'qtDoseTarde';
+    field_.Type_  := TType.String_;
+    field_.ID := 16;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteString(QtDoseTarde);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_QtDoseNoite) then
+  begin
+    field_.Name := 'qtDoseNoite';
+    field_.Type_  := TType.String_;
+    field_.ID := 17;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteString(QtDoseNoite);
+    oprot.WriteFieldEnd();
+  end;
   oprot.WriteFieldStop();
   oprot.WriteStructEnd();
 end;
@@ -4188,6 +4326,24 @@ begin
       _first13 := FALSE;
       _sb12.Append('QuantidadeReceitada: ');
       _sb12.Append(QuantidadeReceitada);
+    end;
+    if (__isset_QtDoseManha) then begin
+      if not _first13 then _sb12.Append(',');
+      _first13 := FALSE;
+      _sb12.Append('QtDoseManha: ');
+      _sb12.Append(QtDoseManha);
+    end;
+    if (__isset_QtDoseTarde) then begin
+      if not _first13 then _sb12.Append(',');
+      _first13 := FALSE;
+      _sb12.Append('QtDoseTarde: ');
+      _sb12.Append(QtDoseTarde);
+    end;
+    if (__isset_QtDoseNoite) then begin
+      if not _first13 then _sb12.Append(',');
+      _first13 := FALSE;
+      _sb12.Append('QtDoseNoite: ');
+      _sb12.Append(QtDoseNoite);
     end;
     _sb12.Append(')');
     Result := _sb12.ToString;

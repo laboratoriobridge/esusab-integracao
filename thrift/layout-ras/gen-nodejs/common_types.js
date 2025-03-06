@@ -869,6 +869,9 @@ MedicamentoThrift = module.exports.MedicamentoThrift = function(args) {
   this.duracaoTratamento = null;
   this.duracaoTratamentoMedida = null;
   this.quantidadeReceitada = null;
+  this.qtDoseManha = null;
+  this.qtDoseTarde = null;
+  this.qtDoseNoite = null;
   if (args) {
     if (args.codigoCatmat !== undefined && args.codigoCatmat !== null) {
       this.codigoCatmat = args.codigoCatmat;
@@ -908,6 +911,15 @@ MedicamentoThrift = module.exports.MedicamentoThrift = function(args) {
     }
     if (args.quantidadeReceitada !== undefined && args.quantidadeReceitada !== null) {
       this.quantidadeReceitada = args.quantidadeReceitada;
+    }
+    if (args.qtDoseManha !== undefined && args.qtDoseManha !== null) {
+      this.qtDoseManha = args.qtDoseManha;
+    }
+    if (args.qtDoseTarde !== undefined && args.qtDoseTarde !== null) {
+      this.qtDoseTarde = args.qtDoseTarde;
+    }
+    if (args.qtDoseNoite !== undefined && args.qtDoseNoite !== null) {
+      this.qtDoseNoite = args.qtDoseNoite;
     }
   }
 };
@@ -1016,6 +1028,27 @@ MedicamentoThrift.prototype.read = function(input) {
         input.skip(ftype);
       }
       break;
+      case 15:
+      if (ftype == Thrift.Type.STRING) {
+        this.qtDoseManha = input.readString();
+      } else {
+        input.skip(ftype);
+      }
+      break;
+      case 16:
+      if (ftype == Thrift.Type.STRING) {
+        this.qtDoseTarde = input.readString();
+      } else {
+        input.skip(ftype);
+      }
+      break;
+      case 17:
+      if (ftype == Thrift.Type.STRING) {
+        this.qtDoseNoite = input.readString();
+      } else {
+        input.skip(ftype);
+      }
+      break;
       default:
         input.skip(ftype);
     }
@@ -1090,6 +1123,21 @@ MedicamentoThrift.prototype.write = function(output) {
   if (this.quantidadeReceitada !== null && this.quantidadeReceitada !== undefined) {
     output.writeFieldBegin('quantidadeReceitada', Thrift.Type.I32, 13);
     output.writeI32(this.quantidadeReceitada);
+    output.writeFieldEnd();
+  }
+  if (this.qtDoseManha !== null && this.qtDoseManha !== undefined) {
+    output.writeFieldBegin('qtDoseManha', Thrift.Type.STRING, 15);
+    output.writeString(this.qtDoseManha);
+    output.writeFieldEnd();
+  }
+  if (this.qtDoseTarde !== null && this.qtDoseTarde !== undefined) {
+    output.writeFieldBegin('qtDoseTarde', Thrift.Type.STRING, 16);
+    output.writeString(this.qtDoseTarde);
+    output.writeFieldEnd();
+  }
+  if (this.qtDoseNoite !== null && this.qtDoseNoite !== undefined) {
+    output.writeFieldBegin('qtDoseNoite', Thrift.Type.STRING, 17);
+    output.writeString(this.qtDoseNoite);
     output.writeFieldEnd();
   }
   output.writeFieldStop();

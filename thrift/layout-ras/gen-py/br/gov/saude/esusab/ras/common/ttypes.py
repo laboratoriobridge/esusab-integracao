@@ -872,6 +872,9 @@ class MedicamentoThrift:
    - duracaoTratamento
    - duracaoTratamentoMedida
    - quantidadeReceitada
+   - qtDoseManha
+   - qtDoseTarde
+   - qtDoseNoite
   """
 
   thrift_spec = (
@@ -889,9 +892,13 @@ class MedicamentoThrift:
     (11, TType.I32, 'duracaoTratamento', None, None, ), # 11
     (12, TType.I64, 'duracaoTratamentoMedida', None, None, ), # 12
     (13, TType.I32, 'quantidadeReceitada', None, None, ), # 13
+    None, # 14
+    (15, TType.STRING, 'qtDoseManha', None, None, ), # 15
+    (16, TType.STRING, 'qtDoseTarde', None, None, ), # 16
+    (17, TType.STRING, 'qtDoseNoite', None, None, ), # 17
   )
 
-  def __init__(self, codigoCatmat=None, viaAdministracao=None, dose=None, doseUnica=None, usoContinuo=None, doseFrequenciaTipo=None, doseFrequencia=None, doseFrequenciaQuantidade=None, doseFrequenciaUnidadeMedida=None, dtInicioTratamento=None, duracaoTratamento=None, duracaoTratamentoMedida=None, quantidadeReceitada=None,):
+  def __init__(self, codigoCatmat=None, viaAdministracao=None, dose=None, doseUnica=None, usoContinuo=None, doseFrequenciaTipo=None, doseFrequencia=None, doseFrequenciaQuantidade=None, doseFrequenciaUnidadeMedida=None, dtInicioTratamento=None, duracaoTratamento=None, duracaoTratamentoMedida=None, quantidadeReceitada=None, qtDoseManha=None, qtDoseTarde=None, qtDoseNoite=None,):
     self.codigoCatmat = codigoCatmat
     self.viaAdministracao = viaAdministracao
     self.dose = dose
@@ -905,6 +912,9 @@ class MedicamentoThrift:
     self.duracaoTratamento = duracaoTratamento
     self.duracaoTratamentoMedida = duracaoTratamentoMedida
     self.quantidadeReceitada = quantidadeReceitada
+    self.qtDoseManha = qtDoseManha
+    self.qtDoseTarde = qtDoseTarde
+    self.qtDoseNoite = qtDoseNoite
 
   def read(self, iprot):
     if iprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None and fastbinary is not None:
@@ -980,6 +990,21 @@ class MedicamentoThrift:
           self.quantidadeReceitada = iprot.readI32()
         else:
           iprot.skip(ftype)
+      elif fid == 15:
+        if ftype == TType.STRING:
+          self.qtDoseManha = iprot.readString()
+        else:
+          iprot.skip(ftype)
+      elif fid == 16:
+        if ftype == TType.STRING:
+          self.qtDoseTarde = iprot.readString()
+        else:
+          iprot.skip(ftype)
+      elif fid == 17:
+        if ftype == TType.STRING:
+          self.qtDoseNoite = iprot.readString()
+        else:
+          iprot.skip(ftype)
       else:
         iprot.skip(ftype)
       iprot.readFieldEnd()
@@ -1042,6 +1067,18 @@ class MedicamentoThrift:
       oprot.writeFieldBegin('quantidadeReceitada', TType.I32, 13)
       oprot.writeI32(self.quantidadeReceitada)
       oprot.writeFieldEnd()
+    if self.qtDoseManha is not None:
+      oprot.writeFieldBegin('qtDoseManha', TType.STRING, 15)
+      oprot.writeString(self.qtDoseManha)
+      oprot.writeFieldEnd()
+    if self.qtDoseTarde is not None:
+      oprot.writeFieldBegin('qtDoseTarde', TType.STRING, 16)
+      oprot.writeString(self.qtDoseTarde)
+      oprot.writeFieldEnd()
+    if self.qtDoseNoite is not None:
+      oprot.writeFieldBegin('qtDoseNoite', TType.STRING, 17)
+      oprot.writeString(self.qtDoseNoite)
+      oprot.writeFieldEnd()
     oprot.writeFieldStop()
     oprot.writeStructEnd()
 
@@ -1064,6 +1101,9 @@ class MedicamentoThrift:
     value = (value * 31) ^ hash(self.duracaoTratamento)
     value = (value * 31) ^ hash(self.duracaoTratamentoMedida)
     value = (value * 31) ^ hash(self.quantidadeReceitada)
+    value = (value * 31) ^ hash(self.qtDoseManha)
+    value = (value * 31) ^ hash(self.qtDoseTarde)
+    value = (value * 31) ^ hash(self.qtDoseNoite)
     return value
 
   def __repr__(self):

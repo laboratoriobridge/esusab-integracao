@@ -110,6 +110,23 @@
 				<duracaoTratamentoMedida>3</duracaoTratamentoMedida>
 				<quantidadeReceitada>12</quantidadeReceitada>
 			</medicamentos>
+			<medicamentos>
+				<codigoCatmat>BR0293891</codigoCatmat>
+				<viaAdministracao>0</viaAdministracao>
+				<dose>3 doses</dose>
+				<doseUnica>false</doseUnica>
+				<usoContinuo>true</usoContinuo>
+				<doseFrequenciaTipo>4</doseFrequenciaTipo>
+				<doseFrequenciaQuantidade>1</doseFrequenciaQuantidade>
+				<doseFrequenciaUnidadeMedida>1</doseFrequenciaUnidadeMedida>
+				<dtInicioTratamento>1730257200000</dtInicioTratamento>
+				<duracaoTratamento>7</duracaoTratamento>
+				<duracaoTratamentoMedida>1</duracaoTratamentoMedida>
+				<quantidadeReceitada>10</quantidadeReceitada>
+				<qtDoseManha>5</qtDoseManha>
+				<qtDoseTarde>2</qtDoseTarde>
+				<qtDoseNoite>3</qtDoseNoite>
+			</medicamentos>
 			<encaminhamentos>
 				<hipoteseDiagnosticoCid10>B170</hipoteseDiagnosticoCid10>
 				<classificacaoPrioridade>1</classificacaoPrioridade>
@@ -282,7 +299,7 @@
 		<uuidInstalacao>TREINAMENTO</uuidInstalacao>
 		<cpfOuCnpj>01234567890</cpfOuCnpj>
 		<nomeOuRazaoSocial>ADMINISTRADOR INSTALAÇÃO</nomeOuRazaoSocial>
-		<versaoSistema>5.2.26</versaoSistema>
+		<versaoSistema>5.3.19</versaoSistema>
 		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:remetente>
 	<ns2:originadora>
@@ -290,7 +307,7 @@
 		<uuidInstalacao>TREINAMENTO</uuidInstalacao>
 		<cpfOuCnpj>01234567890</cpfOuCnpj>
 		<nomeOuRazaoSocial>ADMINISTRADOR INSTALAÇÃO</nomeOuRazaoSocial>
-		<versaoSistema>5.2.29</versaoSistema>
+		<versaoSistema>5.3.19</versaoSistema>
 		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:originadora>
 	<versao major="6" minor="3" revision="2"/>

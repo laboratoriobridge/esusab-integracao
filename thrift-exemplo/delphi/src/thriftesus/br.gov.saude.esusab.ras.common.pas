@@ -36,6 +36,9 @@ type
   IEncaminhamentoExternoThrift = interface;
   IResultadoExameThrift = interface;
   IResultadosExameThrift = interface;
+  IMedicoesThrift = interface;
+  IProblemaCondicaoThrift = interface;
+  IIvcfThrift = interface;
 
   IHeaderCdsCadastroThrift = interface(IBase)
     function GetCnesUnidadeSaude: string;
@@ -700,6 +703,12 @@ type
     procedure SetDuracaoTratamentoMedida( const Value: Int64);
     function GetQuantidadeReceitada: Integer;
     procedure SetQuantidadeReceitada( const Value: Integer);
+    function GetQtDoseManha: string;
+    procedure SetQtDoseManha( const Value: string);
+    function GetQtDoseTarde: string;
+    procedure SetQtDoseTarde( const Value: string);
+    function GetQtDoseNoite: string;
+    procedure SetQtDoseNoite( const Value: string);
 
     property CodigoCatmat: string read GetCodigoCatmat write SetCodigoCatmat;
     property ViaAdministracao: Int64 read GetViaAdministracao write SetViaAdministracao;
@@ -714,6 +723,9 @@ type
     property DuracaoTratamento: Integer read GetDuracaoTratamento write SetDuracaoTratamento;
     property DuracaoTratamentoMedida: Int64 read GetDuracaoTratamentoMedida write SetDuracaoTratamentoMedida;
     property QuantidadeReceitada: Integer read GetQuantidadeReceitada write SetQuantidadeReceitada;
+    property QtDoseManha: string read GetQtDoseManha write SetQtDoseManha;
+    property QtDoseTarde: string read GetQtDoseTarde write SetQtDoseTarde;
+    property QtDoseNoite: string read GetQtDoseNoite write SetQtDoseNoite;
 
     function Get__isset_CodigoCatmat: Boolean;
     function Get__isset_ViaAdministracao: Boolean;
@@ -728,6 +740,9 @@ type
     function Get__isset_DuracaoTratamento: Boolean;
     function Get__isset_DuracaoTratamentoMedida: Boolean;
     function Get__isset_QuantidadeReceitada: Boolean;
+    function Get__isset_QtDoseManha: Boolean;
+    function Get__isset_QtDoseTarde: Boolean;
+    function Get__isset_QtDoseNoite: Boolean;
 
     property __isset_CodigoCatmat: Boolean read Get__isset_CodigoCatmat;
     property __isset_ViaAdministracao: Boolean read Get__isset_ViaAdministracao;
@@ -742,6 +757,9 @@ type
     property __isset_DuracaoTratamento: Boolean read Get__isset_DuracaoTratamento;
     property __isset_DuracaoTratamentoMedida: Boolean read Get__isset_DuracaoTratamentoMedida;
     property __isset_QuantidadeReceitada: Boolean read Get__isset_QuantidadeReceitada;
+    property __isset_QtDoseManha: Boolean read Get__isset_QtDoseManha;
+    property __isset_QtDoseTarde: Boolean read Get__isset_QtDoseTarde;
+    property __isset_QtDoseNoite: Boolean read Get__isset_QtDoseNoite;
   end;
 
   TMedicamentoThriftImpl = class(TInterfacedObject, IBase, IMedicamentoThrift)
@@ -759,6 +777,9 @@ type
     FDuracaoTratamento: Integer;
     FDuracaoTratamentoMedida: Int64;
     FQuantidadeReceitada: Integer;
+    FQtDoseManha: string;
+    FQtDoseTarde: string;
+    FQtDoseNoite: string;
     
     F__isset_CodigoCatmat: Boolean;
     F__isset_ViaAdministracao: Boolean;
@@ -773,6 +794,9 @@ type
     F__isset_DuracaoTratamento: Boolean;
     F__isset_DuracaoTratamentoMedida: Boolean;
     F__isset_QuantidadeReceitada: Boolean;
+    F__isset_QtDoseManha: Boolean;
+    F__isset_QtDoseTarde: Boolean;
+    F__isset_QtDoseNoite: Boolean;
     
     function GetCodigoCatmat: string;
     procedure SetCodigoCatmat( const Value: string);
@@ -800,6 +824,12 @@ type
     procedure SetDuracaoTratamentoMedida( const Value: Int64);
     function GetQuantidadeReceitada: Integer;
     procedure SetQuantidadeReceitada( const Value: Integer);
+    function GetQtDoseManha: string;
+    procedure SetQtDoseManha( const Value: string);
+    function GetQtDoseTarde: string;
+    procedure SetQtDoseTarde( const Value: string);
+    function GetQtDoseNoite: string;
+    procedure SetQtDoseNoite( const Value: string);
 
     function Get__isset_CodigoCatmat: Boolean;
     function Get__isset_ViaAdministracao: Boolean;
@@ -814,6 +844,9 @@ type
     function Get__isset_DuracaoTratamento: Boolean;
     function Get__isset_DuracaoTratamentoMedida: Boolean;
     function Get__isset_QuantidadeReceitada: Boolean;
+    function Get__isset_QtDoseManha: Boolean;
+    function Get__isset_QtDoseTarde: Boolean;
+    function Get__isset_QtDoseNoite: Boolean;
   public
     constructor Create;
     destructor Destroy; override;
@@ -838,6 +871,9 @@ type
     property DuracaoTratamento: Integer read GetDuracaoTratamento write SetDuracaoTratamento;
     property DuracaoTratamentoMedida: Int64 read GetDuracaoTratamentoMedida write SetDuracaoTratamentoMedida;
     property QuantidadeReceitada: Integer read GetQuantidadeReceitada write SetQuantidadeReceitada;
+    property QtDoseManha: string read GetQtDoseManha write SetQtDoseManha;
+    property QtDoseTarde: string read GetQtDoseTarde write SetQtDoseTarde;
+    property QtDoseNoite: string read GetQtDoseNoite write SetQtDoseNoite;
 
     // isset
     property __isset_CodigoCatmat: Boolean read Get__isset_CodigoCatmat;
@@ -853,6 +889,9 @@ type
     property __isset_DuracaoTratamento: Boolean read Get__isset_DuracaoTratamento;
     property __isset_DuracaoTratamentoMedida: Boolean read Get__isset_DuracaoTratamentoMedida;
     property __isset_QuantidadeReceitada: Boolean read Get__isset_QuantidadeReceitada;
+    property __isset_QtDoseManha: Boolean read Get__isset_QtDoseManha;
+    property __isset_QtDoseTarde: Boolean read Get__isset_QtDoseTarde;
+    property __isset_QtDoseNoite: Boolean read Get__isset_QtDoseNoite;
   end;
 
   IEncaminhamentoExternoThrift = interface(IBase)
@@ -1063,6 +1102,528 @@ type
     property __isset_DataRealizacao: Boolean read Get__isset_DataRealizacao;
     property __isset_DataResultado: Boolean read Get__isset_DataResultado;
     property __isset_ResultadoExame: Boolean read Get__isset_ResultadoExame;
+  end;
+
+  IMedicoesThrift = interface(IBase)
+    function GetCircunferenciaAbdominal: Double;
+    procedure SetCircunferenciaAbdominal( const Value: Double);
+    function GetPerimetroPanturrilha: Double;
+    procedure SetPerimetroPanturrilha( const Value: Double);
+    function GetPressaoArterialSistolica: Integer;
+    procedure SetPressaoArterialSistolica( const Value: Integer);
+    function GetPressaoArterialDiastolica: Integer;
+    procedure SetPressaoArterialDiastolica( const Value: Integer);
+    function GetFrequenciaRespiratoria: Integer;
+    procedure SetFrequenciaRespiratoria( const Value: Integer);
+    function GetFrequenciaCardiaca: Integer;
+    procedure SetFrequenciaCardiaca( const Value: Integer);
+    function GetTemperatura: Double;
+    procedure SetTemperatura( const Value: Double);
+    function GetSaturacaoO2: Integer;
+    procedure SetSaturacaoO2( const Value: Integer);
+    function GetGlicemiaCapilar: Integer;
+    procedure SetGlicemiaCapilar( const Value: Integer);
+    function GetTipoGlicemiaCapilar: Int64;
+    procedure SetTipoGlicemiaCapilar( const Value: Int64);
+    function GetPeso: Double;
+    procedure SetPeso( const Value: Double);
+    function GetAltura: Double;
+    procedure SetAltura( const Value: Double);
+    function GetPerimetroCefalico: Double;
+    procedure SetPerimetroCefalico( const Value: Double);
+
+    property CircunferenciaAbdominal: Double read GetCircunferenciaAbdominal write SetCircunferenciaAbdominal;
+    property PerimetroPanturrilha: Double read GetPerimetroPanturrilha write SetPerimetroPanturrilha;
+    property PressaoArterialSistolica: Integer read GetPressaoArterialSistolica write SetPressaoArterialSistolica;
+    property PressaoArterialDiastolica: Integer read GetPressaoArterialDiastolica write SetPressaoArterialDiastolica;
+    property FrequenciaRespiratoria: Integer read GetFrequenciaRespiratoria write SetFrequenciaRespiratoria;
+    property FrequenciaCardiaca: Integer read GetFrequenciaCardiaca write SetFrequenciaCardiaca;
+    property Temperatura: Double read GetTemperatura write SetTemperatura;
+    property SaturacaoO2: Integer read GetSaturacaoO2 write SetSaturacaoO2;
+    property GlicemiaCapilar: Integer read GetGlicemiaCapilar write SetGlicemiaCapilar;
+    property TipoGlicemiaCapilar: Int64 read GetTipoGlicemiaCapilar write SetTipoGlicemiaCapilar;
+    property Peso: Double read GetPeso write SetPeso;
+    property Altura: Double read GetAltura write SetAltura;
+    property PerimetroCefalico: Double read GetPerimetroCefalico write SetPerimetroCefalico;
+
+    function Get__isset_CircunferenciaAbdominal: Boolean;
+    function Get__isset_PerimetroPanturrilha: Boolean;
+    function Get__isset_PressaoArterialSistolica: Boolean;
+    function Get__isset_PressaoArterialDiastolica: Boolean;
+    function Get__isset_FrequenciaRespiratoria: Boolean;
+    function Get__isset_FrequenciaCardiaca: Boolean;
+    function Get__isset_Temperatura: Boolean;
+    function Get__isset_SaturacaoO2: Boolean;
+    function Get__isset_GlicemiaCapilar: Boolean;
+    function Get__isset_TipoGlicemiaCapilar: Boolean;
+    function Get__isset_Peso: Boolean;
+    function Get__isset_Altura: Boolean;
+    function Get__isset_PerimetroCefalico: Boolean;
+
+    property __isset_CircunferenciaAbdominal: Boolean read Get__isset_CircunferenciaAbdominal;
+    property __isset_PerimetroPanturrilha: Boolean read Get__isset_PerimetroPanturrilha;
+    property __isset_PressaoArterialSistolica: Boolean read Get__isset_PressaoArterialSistolica;
+    property __isset_PressaoArterialDiastolica: Boolean read Get__isset_PressaoArterialDiastolica;
+    property __isset_FrequenciaRespiratoria: Boolean read Get__isset_FrequenciaRespiratoria;
+    property __isset_FrequenciaCardiaca: Boolean read Get__isset_FrequenciaCardiaca;
+    property __isset_Temperatura: Boolean read Get__isset_Temperatura;
+    property __isset_SaturacaoO2: Boolean read Get__isset_SaturacaoO2;
+    property __isset_GlicemiaCapilar: Boolean read Get__isset_GlicemiaCapilar;
+    property __isset_TipoGlicemiaCapilar: Boolean read Get__isset_TipoGlicemiaCapilar;
+    property __isset_Peso: Boolean read Get__isset_Peso;
+    property __isset_Altura: Boolean read Get__isset_Altura;
+    property __isset_PerimetroCefalico: Boolean read Get__isset_PerimetroCefalico;
+  end;
+
+  TMedicoesThriftImpl = class(TInterfacedObject, IBase, IMedicoesThrift)
+  private
+    FCircunferenciaAbdominal: Double;
+    FPerimetroPanturrilha: Double;
+    FPressaoArterialSistolica: Integer;
+    FPressaoArterialDiastolica: Integer;
+    FFrequenciaRespiratoria: Integer;
+    FFrequenciaCardiaca: Integer;
+    FTemperatura: Double;
+    FSaturacaoO2: Integer;
+    FGlicemiaCapilar: Integer;
+    FTipoGlicemiaCapilar: Int64;
+    FPeso: Double;
+    FAltura: Double;
+    FPerimetroCefalico: Double;
+    
+    F__isset_CircunferenciaAbdominal: Boolean;
+    F__isset_PerimetroPanturrilha: Boolean;
+    F__isset_PressaoArterialSistolica: Boolean;
+    F__isset_PressaoArterialDiastolica: Boolean;
+    F__isset_FrequenciaRespiratoria: Boolean;
+    F__isset_FrequenciaCardiaca: Boolean;
+    F__isset_Temperatura: Boolean;
+    F__isset_SaturacaoO2: Boolean;
+    F__isset_GlicemiaCapilar: Boolean;
+    F__isset_TipoGlicemiaCapilar: Boolean;
+    F__isset_Peso: Boolean;
+    F__isset_Altura: Boolean;
+    F__isset_PerimetroCefalico: Boolean;
+    
+    function GetCircunferenciaAbdominal: Double;
+    procedure SetCircunferenciaAbdominal( const Value: Double);
+    function GetPerimetroPanturrilha: Double;
+    procedure SetPerimetroPanturrilha( const Value: Double);
+    function GetPressaoArterialSistolica: Integer;
+    procedure SetPressaoArterialSistolica( const Value: Integer);
+    function GetPressaoArterialDiastolica: Integer;
+    procedure SetPressaoArterialDiastolica( const Value: Integer);
+    function GetFrequenciaRespiratoria: Integer;
+    procedure SetFrequenciaRespiratoria( const Value: Integer);
+    function GetFrequenciaCardiaca: Integer;
+    procedure SetFrequenciaCardiaca( const Value: Integer);
+    function GetTemperatura: Double;
+    procedure SetTemperatura( const Value: Double);
+    function GetSaturacaoO2: Integer;
+    procedure SetSaturacaoO2( const Value: Integer);
+    function GetGlicemiaCapilar: Integer;
+    procedure SetGlicemiaCapilar( const Value: Integer);
+    function GetTipoGlicemiaCapilar: Int64;
+    procedure SetTipoGlicemiaCapilar( const Value: Int64);
+    function GetPeso: Double;
+    procedure SetPeso( const Value: Double);
+    function GetAltura: Double;
+    procedure SetAltura( const Value: Double);
+    function GetPerimetroCefalico: Double;
+    procedure SetPerimetroCefalico( const Value: Double);
+
+    function Get__isset_CircunferenciaAbdominal: Boolean;
+    function Get__isset_PerimetroPanturrilha: Boolean;
+    function Get__isset_PressaoArterialSistolica: Boolean;
+    function Get__isset_PressaoArterialDiastolica: Boolean;
+    function Get__isset_FrequenciaRespiratoria: Boolean;
+    function Get__isset_FrequenciaCardiaca: Boolean;
+    function Get__isset_Temperatura: Boolean;
+    function Get__isset_SaturacaoO2: Boolean;
+    function Get__isset_GlicemiaCapilar: Boolean;
+    function Get__isset_TipoGlicemiaCapilar: Boolean;
+    function Get__isset_Peso: Boolean;
+    function Get__isset_Altura: Boolean;
+    function Get__isset_PerimetroCefalico: Boolean;
+  public
+    constructor Create;
+    destructor Destroy; override;
+
+    function ToString: string; override;
+
+    // IBase
+    procedure Read( const iprot: IProtocol);
+    procedure Write( const oprot: IProtocol);
+
+    // Properties
+    property CircunferenciaAbdominal: Double read GetCircunferenciaAbdominal write SetCircunferenciaAbdominal;
+    property PerimetroPanturrilha: Double read GetPerimetroPanturrilha write SetPerimetroPanturrilha;
+    property PressaoArterialSistolica: Integer read GetPressaoArterialSistolica write SetPressaoArterialSistolica;
+    property PressaoArterialDiastolica: Integer read GetPressaoArterialDiastolica write SetPressaoArterialDiastolica;
+    property FrequenciaRespiratoria: Integer read GetFrequenciaRespiratoria write SetFrequenciaRespiratoria;
+    property FrequenciaCardiaca: Integer read GetFrequenciaCardiaca write SetFrequenciaCardiaca;
+    property Temperatura: Double read GetTemperatura write SetTemperatura;
+    property SaturacaoO2: Integer read GetSaturacaoO2 write SetSaturacaoO2;
+    property GlicemiaCapilar: Integer read GetGlicemiaCapilar write SetGlicemiaCapilar;
+    property TipoGlicemiaCapilar: Int64 read GetTipoGlicemiaCapilar write SetTipoGlicemiaCapilar;
+    property Peso: Double read GetPeso write SetPeso;
+    property Altura: Double read GetAltura write SetAltura;
+    property PerimetroCefalico: Double read GetPerimetroCefalico write SetPerimetroCefalico;
+
+    // isset
+    property __isset_CircunferenciaAbdominal: Boolean read Get__isset_CircunferenciaAbdominal;
+    property __isset_PerimetroPanturrilha: Boolean read Get__isset_PerimetroPanturrilha;
+    property __isset_PressaoArterialSistolica: Boolean read Get__isset_PressaoArterialSistolica;
+    property __isset_PressaoArterialDiastolica: Boolean read Get__isset_PressaoArterialDiastolica;
+    property __isset_FrequenciaRespiratoria: Boolean read Get__isset_FrequenciaRespiratoria;
+    property __isset_FrequenciaCardiaca: Boolean read Get__isset_FrequenciaCardiaca;
+    property __isset_Temperatura: Boolean read Get__isset_Temperatura;
+    property __isset_SaturacaoO2: Boolean read Get__isset_SaturacaoO2;
+    property __isset_GlicemiaCapilar: Boolean read Get__isset_GlicemiaCapilar;
+    property __isset_TipoGlicemiaCapilar: Boolean read Get__isset_TipoGlicemiaCapilar;
+    property __isset_Peso: Boolean read Get__isset_Peso;
+    property __isset_Altura: Boolean read Get__isset_Altura;
+    property __isset_PerimetroCefalico: Boolean read Get__isset_PerimetroCefalico;
+  end;
+
+  IProblemaCondicaoThrift = interface(IBase)
+    function GetUuidProblema: string;
+    procedure SetUuidProblema( const Value: string);
+    function GetUuidEvolucaoProblema: string;
+    procedure SetUuidEvolucaoProblema( const Value: string);
+    function GetCoSequencialEvolucao: Int64;
+    procedure SetCoSequencialEvolucao( const Value: Int64);
+    function GetCiap: string;
+    procedure SetCiap( const Value: string);
+    function GetCid10: string;
+    procedure SetCid10( const Value: string);
+    function GetSituacao: Int64;
+    procedure SetSituacao( const Value: Int64);
+    function GetDataInicioProblema: Int64;
+    procedure SetDataInicioProblema( const Value: Int64);
+    function GetDataFimProblema: Int64;
+    procedure SetDataFimProblema( const Value: Int64);
+    function GetIsAvaliado: Boolean;
+    procedure SetIsAvaliado( const Value: Boolean);
+
+    property UuidProblema: string read GetUuidProblema write SetUuidProblema;
+    property UuidEvolucaoProblema: string read GetUuidEvolucaoProblema write SetUuidEvolucaoProblema;
+    property CoSequencialEvolucao: Int64 read GetCoSequencialEvolucao write SetCoSequencialEvolucao;
+    property Ciap: string read GetCiap write SetCiap;
+    property Cid10: string read GetCid10 write SetCid10;
+    property Situacao: Int64 read GetSituacao write SetSituacao;
+    property DataInicioProblema: Int64 read GetDataInicioProblema write SetDataInicioProblema;
+    property DataFimProblema: Int64 read GetDataFimProblema write SetDataFimProblema;
+    property IsAvaliado: Boolean read GetIsAvaliado write SetIsAvaliado;
+
+    function Get__isset_UuidProblema: Boolean;
+    function Get__isset_UuidEvolucaoProblema: Boolean;
+    function Get__isset_CoSequencialEvolucao: Boolean;
+    function Get__isset_Ciap: Boolean;
+    function Get__isset_Cid10: Boolean;
+    function Get__isset_Situacao: Boolean;
+    function Get__isset_DataInicioProblema: Boolean;
+    function Get__isset_DataFimProblema: Boolean;
+    function Get__isset_IsAvaliado: Boolean;
+
+    property __isset_UuidProblema: Boolean read Get__isset_UuidProblema;
+    property __isset_UuidEvolucaoProblema: Boolean read Get__isset_UuidEvolucaoProblema;
+    property __isset_CoSequencialEvolucao: Boolean read Get__isset_CoSequencialEvolucao;
+    property __isset_Ciap: Boolean read Get__isset_Ciap;
+    property __isset_Cid10: Boolean read Get__isset_Cid10;
+    property __isset_Situacao: Boolean read Get__isset_Situacao;
+    property __isset_DataInicioProblema: Boolean read Get__isset_DataInicioProblema;
+    property __isset_DataFimProblema: Boolean read Get__isset_DataFimProblema;
+    property __isset_IsAvaliado: Boolean read Get__isset_IsAvaliado;
+  end;
+
+  TProblemaCondicaoThriftImpl = class(TInterfacedObject, IBase, IProblemaCondicaoThrift)
+  private
+    FUuidProblema: string;
+    FUuidEvolucaoProblema: string;
+    FCoSequencialEvolucao: Int64;
+    FCiap: string;
+    FCid10: string;
+    FSituacao: Int64;
+    FDataInicioProblema: Int64;
+    FDataFimProblema: Int64;
+    FIsAvaliado: Boolean;
+    
+    F__isset_UuidProblema: Boolean;
+    F__isset_UuidEvolucaoProblema: Boolean;
+    F__isset_CoSequencialEvolucao: Boolean;
+    F__isset_Ciap: Boolean;
+    F__isset_Cid10: Boolean;
+    F__isset_Situacao: Boolean;
+    F__isset_DataInicioProblema: Boolean;
+    F__isset_DataFimProblema: Boolean;
+    F__isset_IsAvaliado: Boolean;
+    
+    function GetUuidProblema: string;
+    procedure SetUuidProblema( const Value: string);
+    function GetUuidEvolucaoProblema: string;
+    procedure SetUuidEvolucaoProblema( const Value: string);
+    function GetCoSequencialEvolucao: Int64;
+    procedure SetCoSequencialEvolucao( const Value: Int64);
+    function GetCiap: string;
+    procedure SetCiap( const Value: string);
+    function GetCid10: string;
+    procedure SetCid10( const Value: string);
+    function GetSituacao: Int64;
+    procedure SetSituacao( const Value: Int64);
+    function GetDataInicioProblema: Int64;
+    procedure SetDataInicioProblema( const Value: Int64);
+    function GetDataFimProblema: Int64;
+    procedure SetDataFimProblema( const Value: Int64);
+    function GetIsAvaliado: Boolean;
+    procedure SetIsAvaliado( const Value: Boolean);
+
+    function Get__isset_UuidProblema: Boolean;
+    function Get__isset_UuidEvolucaoProblema: Boolean;
+    function Get__isset_CoSequencialEvolucao: Boolean;
+    function Get__isset_Ciap: Boolean;
+    function Get__isset_Cid10: Boolean;
+    function Get__isset_Situacao: Boolean;
+    function Get__isset_DataInicioProblema: Boolean;
+    function Get__isset_DataFimProblema: Boolean;
+    function Get__isset_IsAvaliado: Boolean;
+  public
+    constructor Create;
+    destructor Destroy; override;
+
+    function ToString: string; override;
+
+    // IBase
+    procedure Read( const iprot: IProtocol);
+    procedure Write( const oprot: IProtocol);
+
+    // Properties
+    property UuidProblema: string read GetUuidProblema write SetUuidProblema;
+    property UuidEvolucaoProblema: string read GetUuidEvolucaoProblema write SetUuidEvolucaoProblema;
+    property CoSequencialEvolucao: Int64 read GetCoSequencialEvolucao write SetCoSequencialEvolucao;
+    property Ciap: string read GetCiap write SetCiap;
+    property Cid10: string read GetCid10 write SetCid10;
+    property Situacao: Int64 read GetSituacao write SetSituacao;
+    property DataInicioProblema: Int64 read GetDataInicioProblema write SetDataInicioProblema;
+    property DataFimProblema: Int64 read GetDataFimProblema write SetDataFimProblema;
+    property IsAvaliado: Boolean read GetIsAvaliado write SetIsAvaliado;
+
+    // isset
+    property __isset_UuidProblema: Boolean read Get__isset_UuidProblema;
+    property __isset_UuidEvolucaoProblema: Boolean read Get__isset_UuidEvolucaoProblema;
+    property __isset_CoSequencialEvolucao: Boolean read Get__isset_CoSequencialEvolucao;
+    property __isset_Ciap: Boolean read Get__isset_Ciap;
+    property __isset_Cid10: Boolean read Get__isset_Cid10;
+    property __isset_Situacao: Boolean read Get__isset_Situacao;
+    property __isset_DataInicioProblema: Boolean read Get__isset_DataInicioProblema;
+    property __isset_DataFimProblema: Boolean read Get__isset_DataFimProblema;
+    property __isset_IsAvaliado: Boolean read Get__isset_IsAvaliado;
+  end;
+
+  IIvcfThrift = interface(IBase)
+    function GetResultado: Integer;
+    procedure SetResultado( const Value: Integer);
+    function GetHasSgIdade: Boolean;
+    procedure SetHasSgIdade( const Value: Boolean);
+    function GetHasSgPercepcaoSaude: Boolean;
+    procedure SetHasSgPercepcaoSaude( const Value: Boolean);
+    function GetHasSgAvdInstrumental: Boolean;
+    procedure SetHasSgAvdInstrumental( const Value: Boolean);
+    function GetHasSgAvdBasica: Boolean;
+    procedure SetHasSgAvdBasica( const Value: Boolean);
+    function GetHasSgCognicao: Boolean;
+    procedure SetHasSgCognicao( const Value: Boolean);
+    function GetHasSgHumor: Boolean;
+    procedure SetHasSgHumor( const Value: Boolean);
+    function GetHasSgAlcancePreensaoPinca: Boolean;
+    procedure SetHasSgAlcancePreensaoPinca( const Value: Boolean);
+    function GetHasSgCapAerobicaMuscular: Boolean;
+    procedure SetHasSgCapAerobicaMuscular( const Value: Boolean);
+    function GetHasSgMarcha: Boolean;
+    procedure SetHasSgMarcha( const Value: Boolean);
+    function GetHasSgContinencia: Boolean;
+    procedure SetHasSgContinencia( const Value: Boolean);
+    function GetHasSgVisao: Boolean;
+    procedure SetHasSgVisao( const Value: Boolean);
+    function GetHasSgAudicao: Boolean;
+    procedure SetHasSgAudicao( const Value: Boolean);
+    function GetHasSgComorbidade: Boolean;
+    procedure SetHasSgComorbidade( const Value: Boolean);
+    function GetDataResultado: Int64;
+    procedure SetDataResultado( const Value: Int64);
+
+    property Resultado: Integer read GetResultado write SetResultado;
+    property HasSgIdade: Boolean read GetHasSgIdade write SetHasSgIdade;
+    property HasSgPercepcaoSaude: Boolean read GetHasSgPercepcaoSaude write SetHasSgPercepcaoSaude;
+    property HasSgAvdInstrumental: Boolean read GetHasSgAvdInstrumental write SetHasSgAvdInstrumental;
+    property HasSgAvdBasica: Boolean read GetHasSgAvdBasica write SetHasSgAvdBasica;
+    property HasSgCognicao: Boolean read GetHasSgCognicao write SetHasSgCognicao;
+    property HasSgHumor: Boolean read GetHasSgHumor write SetHasSgHumor;
+    property HasSgAlcancePreensaoPinca: Boolean read GetHasSgAlcancePreensaoPinca write SetHasSgAlcancePreensaoPinca;
+    property HasSgCapAerobicaMuscular: Boolean read GetHasSgCapAerobicaMuscular write SetHasSgCapAerobicaMuscular;
+    property HasSgMarcha: Boolean read GetHasSgMarcha write SetHasSgMarcha;
+    property HasSgContinencia: Boolean read GetHasSgContinencia write SetHasSgContinencia;
+    property HasSgVisao: Boolean read GetHasSgVisao write SetHasSgVisao;
+    property HasSgAudicao: Boolean read GetHasSgAudicao write SetHasSgAudicao;
+    property HasSgComorbidade: Boolean read GetHasSgComorbidade write SetHasSgComorbidade;
+    property DataResultado: Int64 read GetDataResultado write SetDataResultado;
+
+    function Get__isset_Resultado: Boolean;
+    function Get__isset_HasSgIdade: Boolean;
+    function Get__isset_HasSgPercepcaoSaude: Boolean;
+    function Get__isset_HasSgAvdInstrumental: Boolean;
+    function Get__isset_HasSgAvdBasica: Boolean;
+    function Get__isset_HasSgCognicao: Boolean;
+    function Get__isset_HasSgHumor: Boolean;
+    function Get__isset_HasSgAlcancePreensaoPinca: Boolean;
+    function Get__isset_HasSgCapAerobicaMuscular: Boolean;
+    function Get__isset_HasSgMarcha: Boolean;
+    function Get__isset_HasSgContinencia: Boolean;
+    function Get__isset_HasSgVisao: Boolean;
+    function Get__isset_HasSgAudicao: Boolean;
+    function Get__isset_HasSgComorbidade: Boolean;
+    function Get__isset_DataResultado: Boolean;
+
+    property __isset_Resultado: Boolean read Get__isset_Resultado;
+    property __isset_HasSgIdade: Boolean read Get__isset_HasSgIdade;
+    property __isset_HasSgPercepcaoSaude: Boolean read Get__isset_HasSgPercepcaoSaude;
+    property __isset_HasSgAvdInstrumental: Boolean read Get__isset_HasSgAvdInstrumental;
+    property __isset_HasSgAvdBasica: Boolean read Get__isset_HasSgAvdBasica;
+    property __isset_HasSgCognicao: Boolean read Get__isset_HasSgCognicao;
+    property __isset_HasSgHumor: Boolean read Get__isset_HasSgHumor;
+    property __isset_HasSgAlcancePreensaoPinca: Boolean read Get__isset_HasSgAlcancePreensaoPinca;
+    property __isset_HasSgCapAerobicaMuscular: Boolean read Get__isset_HasSgCapAerobicaMuscular;
+    property __isset_HasSgMarcha: Boolean read Get__isset_HasSgMarcha;
+    property __isset_HasSgContinencia: Boolean read Get__isset_HasSgContinencia;
+    property __isset_HasSgVisao: Boolean read Get__isset_HasSgVisao;
+    property __isset_HasSgAudicao: Boolean read Get__isset_HasSgAudicao;
+    property __isset_HasSgComorbidade: Boolean read Get__isset_HasSgComorbidade;
+    property __isset_DataResultado: Boolean read Get__isset_DataResultado;
+  end;
+
+  TIvcfThriftImpl = class(TInterfacedObject, IBase, IIvcfThrift)
+  private
+    FResultado: Integer;
+    FHasSgIdade: Boolean;
+    FHasSgPercepcaoSaude: Boolean;
+    FHasSgAvdInstrumental: Boolean;
+    FHasSgAvdBasica: Boolean;
+    FHasSgCognicao: Boolean;
+    FHasSgHumor: Boolean;
+    FHasSgAlcancePreensaoPinca: Boolean;
+    FHasSgCapAerobicaMuscular: Boolean;
+    FHasSgMarcha: Boolean;
+    FHasSgContinencia: Boolean;
+    FHasSgVisao: Boolean;
+    FHasSgAudicao: Boolean;
+    FHasSgComorbidade: Boolean;
+    FDataResultado: Int64;
+    
+    F__isset_Resultado: Boolean;
+    F__isset_HasSgIdade: Boolean;
+    F__isset_HasSgPercepcaoSaude: Boolean;
+    F__isset_HasSgAvdInstrumental: Boolean;
+    F__isset_HasSgAvdBasica: Boolean;
+    F__isset_HasSgCognicao: Boolean;
+    F__isset_HasSgHumor: Boolean;
+    F__isset_HasSgAlcancePreensaoPinca: Boolean;
+    F__isset_HasSgCapAerobicaMuscular: Boolean;
+    F__isset_HasSgMarcha: Boolean;
+    F__isset_HasSgContinencia: Boolean;
+    F__isset_HasSgVisao: Boolean;
+    F__isset_HasSgAudicao: Boolean;
+    F__isset_HasSgComorbidade: Boolean;
+    F__isset_DataResultado: Boolean;
+    
+    function GetResultado: Integer;
+    procedure SetResultado( const Value: Integer);
+    function GetHasSgIdade: Boolean;
+    procedure SetHasSgIdade( const Value: Boolean);
+    function GetHasSgPercepcaoSaude: Boolean;
+    procedure SetHasSgPercepcaoSaude( const Value: Boolean);
+    function GetHasSgAvdInstrumental: Boolean;
+    procedure SetHasSgAvdInstrumental( const Value: Boolean);
+    function GetHasSgAvdBasica: Boolean;
+    procedure SetHasSgAvdBasica( const Value: Boolean);
+    function GetHasSgCognicao: Boolean;
+    procedure SetHasSgCognicao( const Value: Boolean);
+    function GetHasSgHumor: Boolean;
+    procedure SetHasSgHumor( const Value: Boolean);
+    function GetHasSgAlcancePreensaoPinca: Boolean;
+    procedure SetHasSgAlcancePreensaoPinca( const Value: Boolean);
+    function GetHasSgCapAerobicaMuscular: Boolean;
+    procedure SetHasSgCapAerobicaMuscular( const Value: Boolean);
+    function GetHasSgMarcha: Boolean;
+    procedure SetHasSgMarcha( const Value: Boolean);
+    function GetHasSgContinencia: Boolean;
+    procedure SetHasSgContinencia( const Value: Boolean);
+    function GetHasSgVisao: Boolean;
+    procedure SetHasSgVisao( const Value: Boolean);
+    function GetHasSgAudicao: Boolean;
+    procedure SetHasSgAudicao( const Value: Boolean);
+    function GetHasSgComorbidade: Boolean;
+    procedure SetHasSgComorbidade( const Value: Boolean);
+    function GetDataResultado: Int64;
+    procedure SetDataResultado( const Value: Int64);
+
+    function Get__isset_Resultado: Boolean;
+    function Get__isset_HasSgIdade: Boolean;
+    function Get__isset_HasSgPercepcaoSaude: Boolean;
+    function Get__isset_HasSgAvdInstrumental: Boolean;
+    function Get__isset_HasSgAvdBasica: Boolean;
+    function Get__isset_HasSgCognicao: Boolean;
+    function Get__isset_HasSgHumor: Boolean;
+    function Get__isset_HasSgAlcancePreensaoPinca: Boolean;
+    function Get__isset_HasSgCapAerobicaMuscular: Boolean;
+    function Get__isset_HasSgMarcha: Boolean;
+    function Get__isset_HasSgContinencia: Boolean;
+    function Get__isset_HasSgVisao: Boolean;
+    function Get__isset_HasSgAudicao: Boolean;
+    function Get__isset_HasSgComorbidade: Boolean;
+    function Get__isset_DataResultado: Boolean;
+  public
+    constructor Create;
+    destructor Destroy; override;
+
+    function ToString: string; override;
+
+    // IBase
+    procedure Read( const iprot: IProtocol);
+    procedure Write( const oprot: IProtocol);
+
+    // Properties
+    property Resultado: Integer read GetResultado write SetResultado;
+    property HasSgIdade: Boolean read GetHasSgIdade write SetHasSgIdade;
+    property HasSgPercepcaoSaude: Boolean read GetHasSgPercepcaoSaude write SetHasSgPercepcaoSaude;
+    property HasSgAvdInstrumental: Boolean read GetHasSgAvdInstrumental write SetHasSgAvdInstrumental;
+    property HasSgAvdBasica: Boolean read GetHasSgAvdBasica write SetHasSgAvdBasica;
+    property HasSgCognicao: Boolean read GetHasSgCognicao write SetHasSgCognicao;
+    property HasSgHumor: Boolean read GetHasSgHumor write SetHasSgHumor;
+    property HasSgAlcancePreensaoPinca: Boolean read GetHasSgAlcancePreensaoPinca write SetHasSgAlcancePreensaoPinca;
+    property HasSgCapAerobicaMuscular: Boolean read GetHasSgCapAerobicaMuscular write SetHasSgCapAerobicaMuscular;
+    property HasSgMarcha: Boolean read GetHasSgMarcha write SetHasSgMarcha;
+    property HasSgContinencia: Boolean read GetHasSgContinencia write SetHasSgContinencia;
+    property HasSgVisao: Boolean read GetHasSgVisao write SetHasSgVisao;
+    property HasSgAudicao: Boolean read GetHasSgAudicao write SetHasSgAudicao;
+    property HasSgComorbidade: Boolean read GetHasSgComorbidade write SetHasSgComorbidade;
+    property DataResultado: Int64 read GetDataResultado write SetDataResultado;
+
+    // isset
+    property __isset_Resultado: Boolean read Get__isset_Resultado;
+    property __isset_HasSgIdade: Boolean read Get__isset_HasSgIdade;
+    property __isset_HasSgPercepcaoSaude: Boolean read Get__isset_HasSgPercepcaoSaude;
+    property __isset_HasSgAvdInstrumental: Boolean read Get__isset_HasSgAvdInstrumental;
+    property __isset_HasSgAvdBasica: Boolean read Get__isset_HasSgAvdBasica;
+    property __isset_HasSgCognicao: Boolean read Get__isset_HasSgCognicao;
+    property __isset_HasSgHumor: Boolean read Get__isset_HasSgHumor;
+    property __isset_HasSgAlcancePreensaoPinca: Boolean read Get__isset_HasSgAlcancePreensaoPinca;
+    property __isset_HasSgCapAerobicaMuscular: Boolean read Get__isset_HasSgCapAerobicaMuscular;
+    property __isset_HasSgMarcha: Boolean read Get__isset_HasSgMarcha;
+    property __isset_HasSgContinencia: Boolean read Get__isset_HasSgContinencia;
+    property __isset_HasSgVisao: Boolean read Get__isset_HasSgVisao;
+    property __isset_HasSgAudicao: Boolean read Get__isset_HasSgAudicao;
+    property __isset_HasSgComorbidade: Boolean read Get__isset_HasSgComorbidade;
+    property __isset_DataResultado: Boolean read Get__isset_DataResultado;
   end;
 
 implementation
@@ -3301,6 +3862,54 @@ begin
   Result := F__isset_QuantidadeReceitada;
 end;
 
+function TMedicamentoThriftImpl.GetQtDoseManha: string;
+begin
+  Result := FQtDoseManha;
+end;
+
+procedure TMedicamentoThriftImpl.SetQtDoseManha( const Value: string);
+begin
+  F__isset_QtDoseManha := True;
+  FQtDoseManha := Value;
+end;
+
+function TMedicamentoThriftImpl.Get__isset_QtDoseManha: Boolean;
+begin
+  Result := F__isset_QtDoseManha;
+end;
+
+function TMedicamentoThriftImpl.GetQtDoseTarde: string;
+begin
+  Result := FQtDoseTarde;
+end;
+
+procedure TMedicamentoThriftImpl.SetQtDoseTarde( const Value: string);
+begin
+  F__isset_QtDoseTarde := True;
+  FQtDoseTarde := Value;
+end;
+
+function TMedicamentoThriftImpl.Get__isset_QtDoseTarde: Boolean;
+begin
+  Result := F__isset_QtDoseTarde;
+end;
+
+function TMedicamentoThriftImpl.GetQtDoseNoite: string;
+begin
+  Result := FQtDoseNoite;
+end;
+
+procedure TMedicamentoThriftImpl.SetQtDoseNoite( const Value: string);
+begin
+  F__isset_QtDoseNoite := True;
+  FQtDoseNoite := Value;
+end;
+
+function TMedicamentoThriftImpl.Get__isset_QtDoseNoite: Boolean;
+begin
+  Result := F__isset_QtDoseNoite;
+end;
+
 procedure TMedicamentoThriftImpl.Read( const iprot: IProtocol);
 var
   field_ : IField;
@@ -3431,6 +4040,33 @@ begin
           if (field_.Type_ = TType.I32) then
           begin
             QuantidadeReceitada := iprot.ReadI32();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        15: begin
+          if (field_.Type_ = TType.String_) then
+          begin
+            QtDoseManha := iprot.ReadString();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        16: begin
+          if (field_.Type_ = TType.String_) then
+          begin
+            QtDoseTarde := iprot.ReadString();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        17: begin
+          if (field_.Type_ = TType.String_) then
+          begin
+            QtDoseNoite := iprot.ReadString();
           end else
           begin
             TProtocolUtil.Skip(iprot, field_.Type_);
@@ -3574,6 +4210,33 @@ begin
     oprot.WriteI32(QuantidadeReceitada);
     oprot.WriteFieldEnd();
   end;
+  if (__isset_QtDoseManha) then
+  begin
+    field_.Name := 'qtDoseManha';
+    field_.Type_  := TType.String_;
+    field_.ID := 15;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteString(QtDoseManha);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_QtDoseTarde) then
+  begin
+    field_.Name := 'qtDoseTarde';
+    field_.Type_  := TType.String_;
+    field_.ID := 16;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteString(QtDoseTarde);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_QtDoseNoite) then
+  begin
+    field_.Name := 'qtDoseNoite';
+    field_.Type_  := TType.String_;
+    field_.ID := 17;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteString(QtDoseNoite);
+    oprot.WriteFieldEnd();
+  end;
   oprot.WriteFieldStop();
   oprot.WriteStructEnd();
 end;
@@ -3663,6 +4326,24 @@ begin
       _first13 := FALSE;
       _sb12.Append('QuantidadeReceitada: ');
       _sb12.Append(QuantidadeReceitada);
+    end;
+    if (__isset_QtDoseManha) then begin
+      if not _first13 then _sb12.Append(',');
+      _first13 := FALSE;
+      _sb12.Append('QtDoseManha: ');
+      _sb12.Append(QtDoseManha);
+    end;
+    if (__isset_QtDoseTarde) then begin
+      if not _first13 then _sb12.Append(',');
+      _first13 := FALSE;
+      _sb12.Append('QtDoseTarde: ');
+      _sb12.Append(QtDoseTarde);
+    end;
+    if (__isset_QtDoseNoite) then begin
+      if not _first13 then _sb12.Append(',');
+      _first13 := FALSE;
+      _sb12.Append('QtDoseNoite: ');
+      _sb12.Append(QtDoseNoite);
     end;
     _sb12.Append(')');
     Result := _sb12.ToString;
@@ -4335,6 +5016,1693 @@ begin
     if _first24 then {prevent warning};
   finally
     _sb23.Free;
+  end;
+end;
+
+constructor TMedicoesThriftImpl.Create;
+begin
+  inherited;
+end;
+
+destructor TMedicoesThriftImpl.Destroy;
+begin
+  inherited;
+end;
+
+function TMedicoesThriftImpl.GetCircunferenciaAbdominal: Double;
+begin
+  Result := FCircunferenciaAbdominal;
+end;
+
+procedure TMedicoesThriftImpl.SetCircunferenciaAbdominal( const Value: Double);
+begin
+  F__isset_CircunferenciaAbdominal := True;
+  FCircunferenciaAbdominal := Value;
+end;
+
+function TMedicoesThriftImpl.Get__isset_CircunferenciaAbdominal: Boolean;
+begin
+  Result := F__isset_CircunferenciaAbdominal;
+end;
+
+function TMedicoesThriftImpl.GetPerimetroPanturrilha: Double;
+begin
+  Result := FPerimetroPanturrilha;
+end;
+
+procedure TMedicoesThriftImpl.SetPerimetroPanturrilha( const Value: Double);
+begin
+  F__isset_PerimetroPanturrilha := True;
+  FPerimetroPanturrilha := Value;
+end;
+
+function TMedicoesThriftImpl.Get__isset_PerimetroPanturrilha: Boolean;
+begin
+  Result := F__isset_PerimetroPanturrilha;
+end;
+
+function TMedicoesThriftImpl.GetPressaoArterialSistolica: Integer;
+begin
+  Result := FPressaoArterialSistolica;
+end;
+
+procedure TMedicoesThriftImpl.SetPressaoArterialSistolica( const Value: Integer);
+begin
+  F__isset_PressaoArterialSistolica := True;
+  FPressaoArterialSistolica := Value;
+end;
+
+function TMedicoesThriftImpl.Get__isset_PressaoArterialSistolica: Boolean;
+begin
+  Result := F__isset_PressaoArterialSistolica;
+end;
+
+function TMedicoesThriftImpl.GetPressaoArterialDiastolica: Integer;
+begin
+  Result := FPressaoArterialDiastolica;
+end;
+
+procedure TMedicoesThriftImpl.SetPressaoArterialDiastolica( const Value: Integer);
+begin
+  F__isset_PressaoArterialDiastolica := True;
+  FPressaoArterialDiastolica := Value;
+end;
+
+function TMedicoesThriftImpl.Get__isset_PressaoArterialDiastolica: Boolean;
+begin
+  Result := F__isset_PressaoArterialDiastolica;
+end;
+
+function TMedicoesThriftImpl.GetFrequenciaRespiratoria: Integer;
+begin
+  Result := FFrequenciaRespiratoria;
+end;
+
+procedure TMedicoesThriftImpl.SetFrequenciaRespiratoria( const Value: Integer);
+begin
+  F__isset_FrequenciaRespiratoria := True;
+  FFrequenciaRespiratoria := Value;
+end;
+
+function TMedicoesThriftImpl.Get__isset_FrequenciaRespiratoria: Boolean;
+begin
+  Result := F__isset_FrequenciaRespiratoria;
+end;
+
+function TMedicoesThriftImpl.GetFrequenciaCardiaca: Integer;
+begin
+  Result := FFrequenciaCardiaca;
+end;
+
+procedure TMedicoesThriftImpl.SetFrequenciaCardiaca( const Value: Integer);
+begin
+  F__isset_FrequenciaCardiaca := True;
+  FFrequenciaCardiaca := Value;
+end;
+
+function TMedicoesThriftImpl.Get__isset_FrequenciaCardiaca: Boolean;
+begin
+  Result := F__isset_FrequenciaCardiaca;
+end;
+
+function TMedicoesThriftImpl.GetTemperatura: Double;
+begin
+  Result := FTemperatura;
+end;
+
+procedure TMedicoesThriftImpl.SetTemperatura( const Value: Double);
+begin
+  F__isset_Temperatura := True;
+  FTemperatura := Value;
+end;
+
+function TMedicoesThriftImpl.Get__isset_Temperatura: Boolean;
+begin
+  Result := F__isset_Temperatura;
+end;
+
+function TMedicoesThriftImpl.GetSaturacaoO2: Integer;
+begin
+  Result := FSaturacaoO2;
+end;
+
+procedure TMedicoesThriftImpl.SetSaturacaoO2( const Value: Integer);
+begin
+  F__isset_SaturacaoO2 := True;
+  FSaturacaoO2 := Value;
+end;
+
+function TMedicoesThriftImpl.Get__isset_SaturacaoO2: Boolean;
+begin
+  Result := F__isset_SaturacaoO2;
+end;
+
+function TMedicoesThriftImpl.GetGlicemiaCapilar: Integer;
+begin
+  Result := FGlicemiaCapilar;
+end;
+
+procedure TMedicoesThriftImpl.SetGlicemiaCapilar( const Value: Integer);
+begin
+  F__isset_GlicemiaCapilar := True;
+  FGlicemiaCapilar := Value;
+end;
+
+function TMedicoesThriftImpl.Get__isset_GlicemiaCapilar: Boolean;
+begin
+  Result := F__isset_GlicemiaCapilar;
+end;
+
+function TMedicoesThriftImpl.GetTipoGlicemiaCapilar: Int64;
+begin
+  Result := FTipoGlicemiaCapilar;
+end;
+
+procedure TMedicoesThriftImpl.SetTipoGlicemiaCapilar( const Value: Int64);
+begin
+  F__isset_TipoGlicemiaCapilar := True;
+  FTipoGlicemiaCapilar := Value;
+end;
+
+function TMedicoesThriftImpl.Get__isset_TipoGlicemiaCapilar: Boolean;
+begin
+  Result := F__isset_TipoGlicemiaCapilar;
+end;
+
+function TMedicoesThriftImpl.GetPeso: Double;
+begin
+  Result := FPeso;
+end;
+
+procedure TMedicoesThriftImpl.SetPeso( const Value: Double);
+begin
+  F__isset_Peso := True;
+  FPeso := Value;
+end;
+
+function TMedicoesThriftImpl.Get__isset_Peso: Boolean;
+begin
+  Result := F__isset_Peso;
+end;
+
+function TMedicoesThriftImpl.GetAltura: Double;
+begin
+  Result := FAltura;
+end;
+
+procedure TMedicoesThriftImpl.SetAltura( const Value: Double);
+begin
+  F__isset_Altura := True;
+  FAltura := Value;
+end;
+
+function TMedicoesThriftImpl.Get__isset_Altura: Boolean;
+begin
+  Result := F__isset_Altura;
+end;
+
+function TMedicoesThriftImpl.GetPerimetroCefalico: Double;
+begin
+  Result := FPerimetroCefalico;
+end;
+
+procedure TMedicoesThriftImpl.SetPerimetroCefalico( const Value: Double);
+begin
+  F__isset_PerimetroCefalico := True;
+  FPerimetroCefalico := Value;
+end;
+
+function TMedicoesThriftImpl.Get__isset_PerimetroCefalico: Boolean;
+begin
+  Result := F__isset_PerimetroCefalico;
+end;
+
+procedure TMedicoesThriftImpl.Read( const iprot: IProtocol);
+var
+  field_ : IField;
+  struc : IStruct;
+  tracker : IProtocolRecursionTracker;
+
+begin
+  tracker := iprot.NextRecursionLevel;
+  struc := iprot.ReadStructBegin;
+  try
+    while (true) do
+    begin
+      field_ := iprot.ReadFieldBegin();
+      if (field_.Type_ = TType.Stop) then
+      begin
+        Break;
+      end;
+      case field_.ID of
+        1: begin
+          if (field_.Type_ = TType.Double_) then
+          begin
+            CircunferenciaAbdominal := iprot.ReadDouble();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        2: begin
+          if (field_.Type_ = TType.Double_) then
+          begin
+            PerimetroPanturrilha := iprot.ReadDouble();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        3: begin
+          if (field_.Type_ = TType.I32) then
+          begin
+            PressaoArterialSistolica := iprot.ReadI32();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        4: begin
+          if (field_.Type_ = TType.I32) then
+          begin
+            PressaoArterialDiastolica := iprot.ReadI32();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        5: begin
+          if (field_.Type_ = TType.I32) then
+          begin
+            FrequenciaRespiratoria := iprot.ReadI32();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        6: begin
+          if (field_.Type_ = TType.I32) then
+          begin
+            FrequenciaCardiaca := iprot.ReadI32();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        7: begin
+          if (field_.Type_ = TType.Double_) then
+          begin
+            Temperatura := iprot.ReadDouble();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        8: begin
+          if (field_.Type_ = TType.I32) then
+          begin
+            SaturacaoO2 := iprot.ReadI32();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        9: begin
+          if (field_.Type_ = TType.I32) then
+          begin
+            GlicemiaCapilar := iprot.ReadI32();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        10: begin
+          if (field_.Type_ = TType.I64) then
+          begin
+            TipoGlicemiaCapilar := iprot.ReadI64();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        11: begin
+          if (field_.Type_ = TType.Double_) then
+          begin
+            Peso := iprot.ReadDouble();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        12: begin
+          if (field_.Type_ = TType.Double_) then
+          begin
+            Altura := iprot.ReadDouble();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        13: begin
+          if (field_.Type_ = TType.Double_) then
+          begin
+            PerimetroCefalico := iprot.ReadDouble();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end
+        else begin
+          TProtocolUtil.Skip(iprot, field_.Type_);
+        end;
+      end;
+      iprot.ReadFieldEnd;
+    end;
+  finally
+    iprot.ReadStructEnd;
+  end;
+end;
+
+procedure TMedicoesThriftImpl.Write( const oprot: IProtocol);
+var
+  struc : IStruct;
+  field_ : IField;
+  tracker : IProtocolRecursionTracker;
+begin
+  tracker := oprot.NextRecursionLevel;
+  struc := TStructImpl.Create('MedicoesThrift');
+  oprot.WriteStructBegin(struc);
+  field_ := TFieldImpl.Create;
+  if (__isset_CircunferenciaAbdominal) then
+  begin
+    field_.Name := 'circunferenciaAbdominal';
+    field_.Type_  := TType.Double_;
+    field_.ID := 1;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteDouble(CircunferenciaAbdominal);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_PerimetroPanturrilha) then
+  begin
+    field_.Name := 'perimetroPanturrilha';
+    field_.Type_  := TType.Double_;
+    field_.ID := 2;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteDouble(PerimetroPanturrilha);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_PressaoArterialSistolica) then
+  begin
+    field_.Name := 'pressaoArterialSistolica';
+    field_.Type_  := TType.I32;
+    field_.ID := 3;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteI32(PressaoArterialSistolica);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_PressaoArterialDiastolica) then
+  begin
+    field_.Name := 'pressaoArterialDiastolica';
+    field_.Type_  := TType.I32;
+    field_.ID := 4;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteI32(PressaoArterialDiastolica);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_FrequenciaRespiratoria) then
+  begin
+    field_.Name := 'frequenciaRespiratoria';
+    field_.Type_  := TType.I32;
+    field_.ID := 5;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteI32(FrequenciaRespiratoria);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_FrequenciaCardiaca) then
+  begin
+    field_.Name := 'frequenciaCardiaca';
+    field_.Type_  := TType.I32;
+    field_.ID := 6;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteI32(FrequenciaCardiaca);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_Temperatura) then
+  begin
+    field_.Name := 'temperatura';
+    field_.Type_  := TType.Double_;
+    field_.ID := 7;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteDouble(Temperatura);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_SaturacaoO2) then
+  begin
+    field_.Name := 'saturacaoO2';
+    field_.Type_  := TType.I32;
+    field_.ID := 8;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteI32(SaturacaoO2);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_GlicemiaCapilar) then
+  begin
+    field_.Name := 'glicemiaCapilar';
+    field_.Type_  := TType.I32;
+    field_.ID := 9;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteI32(GlicemiaCapilar);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_TipoGlicemiaCapilar) then
+  begin
+    field_.Name := 'tipoGlicemiaCapilar';
+    field_.Type_  := TType.I64;
+    field_.ID := 10;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteI64(TipoGlicemiaCapilar);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_Peso) then
+  begin
+    field_.Name := 'peso';
+    field_.Type_  := TType.Double_;
+    field_.ID := 11;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteDouble(Peso);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_Altura) then
+  begin
+    field_.Name := 'altura';
+    field_.Type_  := TType.Double_;
+    field_.ID := 12;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteDouble(Altura);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_PerimetroCefalico) then
+  begin
+    field_.Name := 'perimetroCefalico';
+    field_.Type_  := TType.Double_;
+    field_.ID := 13;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteDouble(PerimetroCefalico);
+    oprot.WriteFieldEnd();
+  end;
+  oprot.WriteFieldStop();
+  oprot.WriteStructEnd();
+end;
+
+function TMedicoesThriftImpl.ToString: string;
+var
+  _sb25 : TThriftStringBuilder;
+  _first26 : Boolean;
+begin
+  _sb25 := TThriftStringBuilder.Create('(');
+  try
+    _first26 := TRUE;
+    if (__isset_CircunferenciaAbdominal) then begin
+      if not _first26 then _sb25.Append(',');
+      _first26 := FALSE;
+      _sb25.Append('CircunferenciaAbdominal: ');
+      _sb25.Append(CircunferenciaAbdominal);
+    end;
+    if (__isset_PerimetroPanturrilha) then begin
+      if not _first26 then _sb25.Append(',');
+      _first26 := FALSE;
+      _sb25.Append('PerimetroPanturrilha: ');
+      _sb25.Append(PerimetroPanturrilha);
+    end;
+    if (__isset_PressaoArterialSistolica) then begin
+      if not _first26 then _sb25.Append(',');
+      _first26 := FALSE;
+      _sb25.Append('PressaoArterialSistolica: ');
+      _sb25.Append(PressaoArterialSistolica);
+    end;
+    if (__isset_PressaoArterialDiastolica) then begin
+      if not _first26 then _sb25.Append(',');
+      _first26 := FALSE;
+      _sb25.Append('PressaoArterialDiastolica: ');
+      _sb25.Append(PressaoArterialDiastolica);
+    end;
+    if (__isset_FrequenciaRespiratoria) then begin
+      if not _first26 then _sb25.Append(',');
+      _first26 := FALSE;
+      _sb25.Append('FrequenciaRespiratoria: ');
+      _sb25.Append(FrequenciaRespiratoria);
+    end;
+    if (__isset_FrequenciaCardiaca) then begin
+      if not _first26 then _sb25.Append(',');
+      _first26 := FALSE;
+      _sb25.Append('FrequenciaCardiaca: ');
+      _sb25.Append(FrequenciaCardiaca);
+    end;
+    if (__isset_Temperatura) then begin
+      if not _first26 then _sb25.Append(',');
+      _first26 := FALSE;
+      _sb25.Append('Temperatura: ');
+      _sb25.Append(Temperatura);
+    end;
+    if (__isset_SaturacaoO2) then begin
+      if not _first26 then _sb25.Append(',');
+      _first26 := FALSE;
+      _sb25.Append('SaturacaoO2: ');
+      _sb25.Append(SaturacaoO2);
+    end;
+    if (__isset_GlicemiaCapilar) then begin
+      if not _first26 then _sb25.Append(',');
+      _first26 := FALSE;
+      _sb25.Append('GlicemiaCapilar: ');
+      _sb25.Append(GlicemiaCapilar);
+    end;
+    if (__isset_TipoGlicemiaCapilar) then begin
+      if not _first26 then _sb25.Append(',');
+      _first26 := FALSE;
+      _sb25.Append('TipoGlicemiaCapilar: ');
+      _sb25.Append(TipoGlicemiaCapilar);
+    end;
+    if (__isset_Peso) then begin
+      if not _first26 then _sb25.Append(',');
+      _first26 := FALSE;
+      _sb25.Append('Peso: ');
+      _sb25.Append(Peso);
+    end;
+    if (__isset_Altura) then begin
+      if not _first26 then _sb25.Append(',');
+      _first26 := FALSE;
+      _sb25.Append('Altura: ');
+      _sb25.Append(Altura);
+    end;
+    if (__isset_PerimetroCefalico) then begin
+      if not _first26 then _sb25.Append(',');
+      _first26 := FALSE;
+      _sb25.Append('PerimetroCefalico: ');
+      _sb25.Append(PerimetroCefalico);
+    end;
+    _sb25.Append(')');
+    Result := _sb25.ToString;
+    if _first26 then {prevent warning};
+  finally
+    _sb25.Free;
+  end;
+end;
+
+constructor TProblemaCondicaoThriftImpl.Create;
+begin
+  inherited;
+end;
+
+destructor TProblemaCondicaoThriftImpl.Destroy;
+begin
+  inherited;
+end;
+
+function TProblemaCondicaoThriftImpl.GetUuidProblema: string;
+begin
+  Result := FUuidProblema;
+end;
+
+procedure TProblemaCondicaoThriftImpl.SetUuidProblema( const Value: string);
+begin
+  F__isset_UuidProblema := True;
+  FUuidProblema := Value;
+end;
+
+function TProblemaCondicaoThriftImpl.Get__isset_UuidProblema: Boolean;
+begin
+  Result := F__isset_UuidProblema;
+end;
+
+function TProblemaCondicaoThriftImpl.GetUuidEvolucaoProblema: string;
+begin
+  Result := FUuidEvolucaoProblema;
+end;
+
+procedure TProblemaCondicaoThriftImpl.SetUuidEvolucaoProblema( const Value: string);
+begin
+  F__isset_UuidEvolucaoProblema := True;
+  FUuidEvolucaoProblema := Value;
+end;
+
+function TProblemaCondicaoThriftImpl.Get__isset_UuidEvolucaoProblema: Boolean;
+begin
+  Result := F__isset_UuidEvolucaoProblema;
+end;
+
+function TProblemaCondicaoThriftImpl.GetCoSequencialEvolucao: Int64;
+begin
+  Result := FCoSequencialEvolucao;
+end;
+
+procedure TProblemaCondicaoThriftImpl.SetCoSequencialEvolucao( const Value: Int64);
+begin
+  F__isset_CoSequencialEvolucao := True;
+  FCoSequencialEvolucao := Value;
+end;
+
+function TProblemaCondicaoThriftImpl.Get__isset_CoSequencialEvolucao: Boolean;
+begin
+  Result := F__isset_CoSequencialEvolucao;
+end;
+
+function TProblemaCondicaoThriftImpl.GetCiap: string;
+begin
+  Result := FCiap;
+end;
+
+procedure TProblemaCondicaoThriftImpl.SetCiap( const Value: string);
+begin
+  F__isset_Ciap := True;
+  FCiap := Value;
+end;
+
+function TProblemaCondicaoThriftImpl.Get__isset_Ciap: Boolean;
+begin
+  Result := F__isset_Ciap;
+end;
+
+function TProblemaCondicaoThriftImpl.GetCid10: string;
+begin
+  Result := FCid10;
+end;
+
+procedure TProblemaCondicaoThriftImpl.SetCid10( const Value: string);
+begin
+  F__isset_Cid10 := True;
+  FCid10 := Value;
+end;
+
+function TProblemaCondicaoThriftImpl.Get__isset_Cid10: Boolean;
+begin
+  Result := F__isset_Cid10;
+end;
+
+function TProblemaCondicaoThriftImpl.GetSituacao: Int64;
+begin
+  Result := FSituacao;
+end;
+
+procedure TProblemaCondicaoThriftImpl.SetSituacao( const Value: Int64);
+begin
+  F__isset_Situacao := True;
+  FSituacao := Value;
+end;
+
+function TProblemaCondicaoThriftImpl.Get__isset_Situacao: Boolean;
+begin
+  Result := F__isset_Situacao;
+end;
+
+function TProblemaCondicaoThriftImpl.GetDataInicioProblema: Int64;
+begin
+  Result := FDataInicioProblema;
+end;
+
+procedure TProblemaCondicaoThriftImpl.SetDataInicioProblema( const Value: Int64);
+begin
+  F__isset_DataInicioProblema := True;
+  FDataInicioProblema := Value;
+end;
+
+function TProblemaCondicaoThriftImpl.Get__isset_DataInicioProblema: Boolean;
+begin
+  Result := F__isset_DataInicioProblema;
+end;
+
+function TProblemaCondicaoThriftImpl.GetDataFimProblema: Int64;
+begin
+  Result := FDataFimProblema;
+end;
+
+procedure TProblemaCondicaoThriftImpl.SetDataFimProblema( const Value: Int64);
+begin
+  F__isset_DataFimProblema := True;
+  FDataFimProblema := Value;
+end;
+
+function TProblemaCondicaoThriftImpl.Get__isset_DataFimProblema: Boolean;
+begin
+  Result := F__isset_DataFimProblema;
+end;
+
+function TProblemaCondicaoThriftImpl.GetIsAvaliado: Boolean;
+begin
+  Result := FIsAvaliado;
+end;
+
+procedure TProblemaCondicaoThriftImpl.SetIsAvaliado( const Value: Boolean);
+begin
+  F__isset_IsAvaliado := True;
+  FIsAvaliado := Value;
+end;
+
+function TProblemaCondicaoThriftImpl.Get__isset_IsAvaliado: Boolean;
+begin
+  Result := F__isset_IsAvaliado;
+end;
+
+procedure TProblemaCondicaoThriftImpl.Read( const iprot: IProtocol);
+var
+  field_ : IField;
+  struc : IStruct;
+  tracker : IProtocolRecursionTracker;
+
+begin
+  tracker := iprot.NextRecursionLevel;
+  struc := iprot.ReadStructBegin;
+  try
+    while (true) do
+    begin
+      field_ := iprot.ReadFieldBegin();
+      if (field_.Type_ = TType.Stop) then
+      begin
+        Break;
+      end;
+      case field_.ID of
+        1: begin
+          if (field_.Type_ = TType.String_) then
+          begin
+            UuidProblema := iprot.ReadString();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        2: begin
+          if (field_.Type_ = TType.String_) then
+          begin
+            UuidEvolucaoProblema := iprot.ReadString();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        3: begin
+          if (field_.Type_ = TType.I64) then
+          begin
+            CoSequencialEvolucao := iprot.ReadI64();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        4: begin
+          if (field_.Type_ = TType.String_) then
+          begin
+            Ciap := iprot.ReadString();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        5: begin
+          if (field_.Type_ = TType.String_) then
+          begin
+            Cid10 := iprot.ReadString();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        6: begin
+          if (field_.Type_ = TType.I64) then
+          begin
+            Situacao := iprot.ReadI64();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        7: begin
+          if (field_.Type_ = TType.I64) then
+          begin
+            DataInicioProblema := iprot.ReadI64();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        8: begin
+          if (field_.Type_ = TType.I64) then
+          begin
+            DataFimProblema := iprot.ReadI64();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        9: begin
+          if (field_.Type_ = TType.Bool_) then
+          begin
+            IsAvaliado := iprot.ReadBool();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end
+        else begin
+          TProtocolUtil.Skip(iprot, field_.Type_);
+        end;
+      end;
+      iprot.ReadFieldEnd;
+    end;
+  finally
+    iprot.ReadStructEnd;
+  end;
+end;
+
+procedure TProblemaCondicaoThriftImpl.Write( const oprot: IProtocol);
+var
+  struc : IStruct;
+  field_ : IField;
+  tracker : IProtocolRecursionTracker;
+begin
+  tracker := oprot.NextRecursionLevel;
+  struc := TStructImpl.Create('ProblemaCondicaoThrift');
+  oprot.WriteStructBegin(struc);
+  field_ := TFieldImpl.Create;
+  if (__isset_UuidProblema) then
+  begin
+    field_.Name := 'uuidProblema';
+    field_.Type_  := TType.String_;
+    field_.ID := 1;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteString(UuidProblema);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_UuidEvolucaoProblema) then
+  begin
+    field_.Name := 'uuidEvolucaoProblema';
+    field_.Type_  := TType.String_;
+    field_.ID := 2;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteString(UuidEvolucaoProblema);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_CoSequencialEvolucao) then
+  begin
+    field_.Name := 'coSequencialEvolucao';
+    field_.Type_  := TType.I64;
+    field_.ID := 3;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteI64(CoSequencialEvolucao);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_Ciap) then
+  begin
+    field_.Name := 'ciap';
+    field_.Type_  := TType.String_;
+    field_.ID := 4;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteString(Ciap);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_Cid10) then
+  begin
+    field_.Name := 'cid10';
+    field_.Type_  := TType.String_;
+    field_.ID := 5;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteString(Cid10);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_Situacao) then
+  begin
+    field_.Name := 'situacao';
+    field_.Type_  := TType.I64;
+    field_.ID := 6;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteI64(Situacao);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_DataInicioProblema) then
+  begin
+    field_.Name := 'dataInicioProblema';
+    field_.Type_  := TType.I64;
+    field_.ID := 7;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteI64(DataInicioProblema);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_DataFimProblema) then
+  begin
+    field_.Name := 'dataFimProblema';
+    field_.Type_  := TType.I64;
+    field_.ID := 8;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteI64(DataFimProblema);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_IsAvaliado) then
+  begin
+    field_.Name := 'isAvaliado';
+    field_.Type_  := TType.Bool_;
+    field_.ID := 9;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteBool(IsAvaliado);
+    oprot.WriteFieldEnd();
+  end;
+  oprot.WriteFieldStop();
+  oprot.WriteStructEnd();
+end;
+
+function TProblemaCondicaoThriftImpl.ToString: string;
+var
+  _sb27 : TThriftStringBuilder;
+  _first28 : Boolean;
+begin
+  _sb27 := TThriftStringBuilder.Create('(');
+  try
+    _first28 := TRUE;
+    if (__isset_UuidProblema) then begin
+      if not _first28 then _sb27.Append(',');
+      _first28 := FALSE;
+      _sb27.Append('UuidProblema: ');
+      _sb27.Append(UuidProblema);
+    end;
+    if (__isset_UuidEvolucaoProblema) then begin
+      if not _first28 then _sb27.Append(',');
+      _first28 := FALSE;
+      _sb27.Append('UuidEvolucaoProblema: ');
+      _sb27.Append(UuidEvolucaoProblema);
+    end;
+    if (__isset_CoSequencialEvolucao) then begin
+      if not _first28 then _sb27.Append(',');
+      _first28 := FALSE;
+      _sb27.Append('CoSequencialEvolucao: ');
+      _sb27.Append(CoSequencialEvolucao);
+    end;
+    if (__isset_Ciap) then begin
+      if not _first28 then _sb27.Append(',');
+      _first28 := FALSE;
+      _sb27.Append('Ciap: ');
+      _sb27.Append(Ciap);
+    end;
+    if (__isset_Cid10) then begin
+      if not _first28 then _sb27.Append(',');
+      _first28 := FALSE;
+      _sb27.Append('Cid10: ');
+      _sb27.Append(Cid10);
+    end;
+    if (__isset_Situacao) then begin
+      if not _first28 then _sb27.Append(',');
+      _first28 := FALSE;
+      _sb27.Append('Situacao: ');
+      _sb27.Append(Situacao);
+    end;
+    if (__isset_DataInicioProblema) then begin
+      if not _first28 then _sb27.Append(',');
+      _first28 := FALSE;
+      _sb27.Append('DataInicioProblema: ');
+      _sb27.Append(DataInicioProblema);
+    end;
+    if (__isset_DataFimProblema) then begin
+      if not _first28 then _sb27.Append(',');
+      _first28 := FALSE;
+      _sb27.Append('DataFimProblema: ');
+      _sb27.Append(DataFimProblema);
+    end;
+    if (__isset_IsAvaliado) then begin
+      if not _first28 then _sb27.Append(',');
+      _first28 := FALSE;
+      _sb27.Append('IsAvaliado: ');
+      _sb27.Append(IsAvaliado);
+    end;
+    _sb27.Append(')');
+    Result := _sb27.ToString;
+    if _first28 then {prevent warning};
+  finally
+    _sb27.Free;
+  end;
+end;
+
+constructor TIvcfThriftImpl.Create;
+begin
+  inherited;
+end;
+
+destructor TIvcfThriftImpl.Destroy;
+begin
+  inherited;
+end;
+
+function TIvcfThriftImpl.GetResultado: Integer;
+begin
+  Result := FResultado;
+end;
+
+procedure TIvcfThriftImpl.SetResultado( const Value: Integer);
+begin
+  F__isset_Resultado := True;
+  FResultado := Value;
+end;
+
+function TIvcfThriftImpl.Get__isset_Resultado: Boolean;
+begin
+  Result := F__isset_Resultado;
+end;
+
+function TIvcfThriftImpl.GetHasSgIdade: Boolean;
+begin
+  Result := FHasSgIdade;
+end;
+
+procedure TIvcfThriftImpl.SetHasSgIdade( const Value: Boolean);
+begin
+  F__isset_HasSgIdade := True;
+  FHasSgIdade := Value;
+end;
+
+function TIvcfThriftImpl.Get__isset_HasSgIdade: Boolean;
+begin
+  Result := F__isset_HasSgIdade;
+end;
+
+function TIvcfThriftImpl.GetHasSgPercepcaoSaude: Boolean;
+begin
+  Result := FHasSgPercepcaoSaude;
+end;
+
+procedure TIvcfThriftImpl.SetHasSgPercepcaoSaude( const Value: Boolean);
+begin
+  F__isset_HasSgPercepcaoSaude := True;
+  FHasSgPercepcaoSaude := Value;
+end;
+
+function TIvcfThriftImpl.Get__isset_HasSgPercepcaoSaude: Boolean;
+begin
+  Result := F__isset_HasSgPercepcaoSaude;
+end;
+
+function TIvcfThriftImpl.GetHasSgAvdInstrumental: Boolean;
+begin
+  Result := FHasSgAvdInstrumental;
+end;
+
+procedure TIvcfThriftImpl.SetHasSgAvdInstrumental( const Value: Boolean);
+begin
+  F__isset_HasSgAvdInstrumental := True;
+  FHasSgAvdInstrumental := Value;
+end;
+
+function TIvcfThriftImpl.Get__isset_HasSgAvdInstrumental: Boolean;
+begin
+  Result := F__isset_HasSgAvdInstrumental;
+end;
+
+function TIvcfThriftImpl.GetHasSgAvdBasica: Boolean;
+begin
+  Result := FHasSgAvdBasica;
+end;
+
+procedure TIvcfThriftImpl.SetHasSgAvdBasica( const Value: Boolean);
+begin
+  F__isset_HasSgAvdBasica := True;
+  FHasSgAvdBasica := Value;
+end;
+
+function TIvcfThriftImpl.Get__isset_HasSgAvdBasica: Boolean;
+begin
+  Result := F__isset_HasSgAvdBasica;
+end;
+
+function TIvcfThriftImpl.GetHasSgCognicao: Boolean;
+begin
+  Result := FHasSgCognicao;
+end;
+
+procedure TIvcfThriftImpl.SetHasSgCognicao( const Value: Boolean);
+begin
+  F__isset_HasSgCognicao := True;
+  FHasSgCognicao := Value;
+end;
+
+function TIvcfThriftImpl.Get__isset_HasSgCognicao: Boolean;
+begin
+  Result := F__isset_HasSgCognicao;
+end;
+
+function TIvcfThriftImpl.GetHasSgHumor: Boolean;
+begin
+  Result := FHasSgHumor;
+end;
+
+procedure TIvcfThriftImpl.SetHasSgHumor( const Value: Boolean);
+begin
+  F__isset_HasSgHumor := True;
+  FHasSgHumor := Value;
+end;
+
+function TIvcfThriftImpl.Get__isset_HasSgHumor: Boolean;
+begin
+  Result := F__isset_HasSgHumor;
+end;
+
+function TIvcfThriftImpl.GetHasSgAlcancePreensaoPinca: Boolean;
+begin
+  Result := FHasSgAlcancePreensaoPinca;
+end;
+
+procedure TIvcfThriftImpl.SetHasSgAlcancePreensaoPinca( const Value: Boolean);
+begin
+  F__isset_HasSgAlcancePreensaoPinca := True;
+  FHasSgAlcancePreensaoPinca := Value;
+end;
+
+function TIvcfThriftImpl.Get__isset_HasSgAlcancePreensaoPinca: Boolean;
+begin
+  Result := F__isset_HasSgAlcancePreensaoPinca;
+end;
+
+function TIvcfThriftImpl.GetHasSgCapAerobicaMuscular: Boolean;
+begin
+  Result := FHasSgCapAerobicaMuscular;
+end;
+
+procedure TIvcfThriftImpl.SetHasSgCapAerobicaMuscular( const Value: Boolean);
+begin
+  F__isset_HasSgCapAerobicaMuscular := True;
+  FHasSgCapAerobicaMuscular := Value;
+end;
+
+function TIvcfThriftImpl.Get__isset_HasSgCapAerobicaMuscular: Boolean;
+begin
+  Result := F__isset_HasSgCapAerobicaMuscular;
+end;
+
+function TIvcfThriftImpl.GetHasSgMarcha: Boolean;
+begin
+  Result := FHasSgMarcha;
+end;
+
+procedure TIvcfThriftImpl.SetHasSgMarcha( const Value: Boolean);
+begin
+  F__isset_HasSgMarcha := True;
+  FHasSgMarcha := Value;
+end;
+
+function TIvcfThriftImpl.Get__isset_HasSgMarcha: Boolean;
+begin
+  Result := F__isset_HasSgMarcha;
+end;
+
+function TIvcfThriftImpl.GetHasSgContinencia: Boolean;
+begin
+  Result := FHasSgContinencia;
+end;
+
+procedure TIvcfThriftImpl.SetHasSgContinencia( const Value: Boolean);
+begin
+  F__isset_HasSgContinencia := True;
+  FHasSgContinencia := Value;
+end;
+
+function TIvcfThriftImpl.Get__isset_HasSgContinencia: Boolean;
+begin
+  Result := F__isset_HasSgContinencia;
+end;
+
+function TIvcfThriftImpl.GetHasSgVisao: Boolean;
+begin
+  Result := FHasSgVisao;
+end;
+
+procedure TIvcfThriftImpl.SetHasSgVisao( const Value: Boolean);
+begin
+  F__isset_HasSgVisao := True;
+  FHasSgVisao := Value;
+end;
+
+function TIvcfThriftImpl.Get__isset_HasSgVisao: Boolean;
+begin
+  Result := F__isset_HasSgVisao;
+end;
+
+function TIvcfThriftImpl.GetHasSgAudicao: Boolean;
+begin
+  Result := FHasSgAudicao;
+end;
+
+procedure TIvcfThriftImpl.SetHasSgAudicao( const Value: Boolean);
+begin
+  F__isset_HasSgAudicao := True;
+  FHasSgAudicao := Value;
+end;
+
+function TIvcfThriftImpl.Get__isset_HasSgAudicao: Boolean;
+begin
+  Result := F__isset_HasSgAudicao;
+end;
+
+function TIvcfThriftImpl.GetHasSgComorbidade: Boolean;
+begin
+  Result := FHasSgComorbidade;
+end;
+
+procedure TIvcfThriftImpl.SetHasSgComorbidade( const Value: Boolean);
+begin
+  F__isset_HasSgComorbidade := True;
+  FHasSgComorbidade := Value;
+end;
+
+function TIvcfThriftImpl.Get__isset_HasSgComorbidade: Boolean;
+begin
+  Result := F__isset_HasSgComorbidade;
+end;
+
+function TIvcfThriftImpl.GetDataResultado: Int64;
+begin
+  Result := FDataResultado;
+end;
+
+procedure TIvcfThriftImpl.SetDataResultado( const Value: Int64);
+begin
+  F__isset_DataResultado := True;
+  FDataResultado := Value;
+end;
+
+function TIvcfThriftImpl.Get__isset_DataResultado: Boolean;
+begin
+  Result := F__isset_DataResultado;
+end;
+
+procedure TIvcfThriftImpl.Read( const iprot: IProtocol);
+var
+  field_ : IField;
+  struc : IStruct;
+  tracker : IProtocolRecursionTracker;
+
+begin
+  tracker := iprot.NextRecursionLevel;
+  struc := iprot.ReadStructBegin;
+  try
+    while (true) do
+    begin
+      field_ := iprot.ReadFieldBegin();
+      if (field_.Type_ = TType.Stop) then
+      begin
+        Break;
+      end;
+      case field_.ID of
+        1: begin
+          if (field_.Type_ = TType.I32) then
+          begin
+            Resultado := iprot.ReadI32();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        2: begin
+          if (field_.Type_ = TType.Bool_) then
+          begin
+            HasSgIdade := iprot.ReadBool();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        3: begin
+          if (field_.Type_ = TType.Bool_) then
+          begin
+            HasSgPercepcaoSaude := iprot.ReadBool();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        4: begin
+          if (field_.Type_ = TType.Bool_) then
+          begin
+            HasSgAvdInstrumental := iprot.ReadBool();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        5: begin
+          if (field_.Type_ = TType.Bool_) then
+          begin
+            HasSgAvdBasica := iprot.ReadBool();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        6: begin
+          if (field_.Type_ = TType.Bool_) then
+          begin
+            HasSgCognicao := iprot.ReadBool();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        7: begin
+          if (field_.Type_ = TType.Bool_) then
+          begin
+            HasSgHumor := iprot.ReadBool();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        8: begin
+          if (field_.Type_ = TType.Bool_) then
+          begin
+            HasSgAlcancePreensaoPinca := iprot.ReadBool();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        9: begin
+          if (field_.Type_ = TType.Bool_) then
+          begin
+            HasSgCapAerobicaMuscular := iprot.ReadBool();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        10: begin
+          if (field_.Type_ = TType.Bool_) then
+          begin
+            HasSgMarcha := iprot.ReadBool();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        11: begin
+          if (field_.Type_ = TType.Bool_) then
+          begin
+            HasSgContinencia := iprot.ReadBool();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        12: begin
+          if (field_.Type_ = TType.Bool_) then
+          begin
+            HasSgVisao := iprot.ReadBool();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        13: begin
+          if (field_.Type_ = TType.Bool_) then
+          begin
+            HasSgAudicao := iprot.ReadBool();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        14: begin
+          if (field_.Type_ = TType.Bool_) then
+          begin
+            HasSgComorbidade := iprot.ReadBool();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        15: begin
+          if (field_.Type_ = TType.I64) then
+          begin
+            DataResultado := iprot.ReadI64();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end
+        else begin
+          TProtocolUtil.Skip(iprot, field_.Type_);
+        end;
+      end;
+      iprot.ReadFieldEnd;
+    end;
+  finally
+    iprot.ReadStructEnd;
+  end;
+end;
+
+procedure TIvcfThriftImpl.Write( const oprot: IProtocol);
+var
+  struc : IStruct;
+  field_ : IField;
+  tracker : IProtocolRecursionTracker;
+begin
+  tracker := oprot.NextRecursionLevel;
+  struc := TStructImpl.Create('IvcfThrift');
+  oprot.WriteStructBegin(struc);
+  field_ := TFieldImpl.Create;
+  if (__isset_Resultado) then
+  begin
+    field_.Name := 'resultado';
+    field_.Type_  := TType.I32;
+    field_.ID := 1;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteI32(Resultado);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_HasSgIdade) then
+  begin
+    field_.Name := 'hasSgIdade';
+    field_.Type_  := TType.Bool_;
+    field_.ID := 2;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteBool(HasSgIdade);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_HasSgPercepcaoSaude) then
+  begin
+    field_.Name := 'hasSgPercepcaoSaude';
+    field_.Type_  := TType.Bool_;
+    field_.ID := 3;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteBool(HasSgPercepcaoSaude);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_HasSgAvdInstrumental) then
+  begin
+    field_.Name := 'hasSgAvdInstrumental';
+    field_.Type_  := TType.Bool_;
+    field_.ID := 4;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteBool(HasSgAvdInstrumental);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_HasSgAvdBasica) then
+  begin
+    field_.Name := 'hasSgAvdBasica';
+    field_.Type_  := TType.Bool_;
+    field_.ID := 5;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteBool(HasSgAvdBasica);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_HasSgCognicao) then
+  begin
+    field_.Name := 'hasSgCognicao';
+    field_.Type_  := TType.Bool_;
+    field_.ID := 6;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteBool(HasSgCognicao);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_HasSgHumor) then
+  begin
+    field_.Name := 'hasSgHumor';
+    field_.Type_  := TType.Bool_;
+    field_.ID := 7;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteBool(HasSgHumor);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_HasSgAlcancePreensaoPinca) then
+  begin
+    field_.Name := 'hasSgAlcancePreensaoPinca';
+    field_.Type_  := TType.Bool_;
+    field_.ID := 8;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteBool(HasSgAlcancePreensaoPinca);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_HasSgCapAerobicaMuscular) then
+  begin
+    field_.Name := 'hasSgCapAerobicaMuscular';
+    field_.Type_  := TType.Bool_;
+    field_.ID := 9;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteBool(HasSgCapAerobicaMuscular);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_HasSgMarcha) then
+  begin
+    field_.Name := 'hasSgMarcha';
+    field_.Type_  := TType.Bool_;
+    field_.ID := 10;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteBool(HasSgMarcha);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_HasSgContinencia) then
+  begin
+    field_.Name := 'hasSgContinencia';
+    field_.Type_  := TType.Bool_;
+    field_.ID := 11;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteBool(HasSgContinencia);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_HasSgVisao) then
+  begin
+    field_.Name := 'hasSgVisao';
+    field_.Type_  := TType.Bool_;
+    field_.ID := 12;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteBool(HasSgVisao);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_HasSgAudicao) then
+  begin
+    field_.Name := 'hasSgAudicao';
+    field_.Type_  := TType.Bool_;
+    field_.ID := 13;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteBool(HasSgAudicao);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_HasSgComorbidade) then
+  begin
+    field_.Name := 'hasSgComorbidade';
+    field_.Type_  := TType.Bool_;
+    field_.ID := 14;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteBool(HasSgComorbidade);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_DataResultado) then
+  begin
+    field_.Name := 'dataResultado';
+    field_.Type_  := TType.I64;
+    field_.ID := 15;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteI64(DataResultado);
+    oprot.WriteFieldEnd();
+  end;
+  oprot.WriteFieldStop();
+  oprot.WriteStructEnd();
+end;
+
+function TIvcfThriftImpl.ToString: string;
+var
+  _sb29 : TThriftStringBuilder;
+  _first30 : Boolean;
+begin
+  _sb29 := TThriftStringBuilder.Create('(');
+  try
+    _first30 := TRUE;
+    if (__isset_Resultado) then begin
+      if not _first30 then _sb29.Append(',');
+      _first30 := FALSE;
+      _sb29.Append('Resultado: ');
+      _sb29.Append(Resultado);
+    end;
+    if (__isset_HasSgIdade) then begin
+      if not _first30 then _sb29.Append(',');
+      _first30 := FALSE;
+      _sb29.Append('HasSgIdade: ');
+      _sb29.Append(HasSgIdade);
+    end;
+    if (__isset_HasSgPercepcaoSaude) then begin
+      if not _first30 then _sb29.Append(',');
+      _first30 := FALSE;
+      _sb29.Append('HasSgPercepcaoSaude: ');
+      _sb29.Append(HasSgPercepcaoSaude);
+    end;
+    if (__isset_HasSgAvdInstrumental) then begin
+      if not _first30 then _sb29.Append(',');
+      _first30 := FALSE;
+      _sb29.Append('HasSgAvdInstrumental: ');
+      _sb29.Append(HasSgAvdInstrumental);
+    end;
+    if (__isset_HasSgAvdBasica) then begin
+      if not _first30 then _sb29.Append(',');
+      _first30 := FALSE;
+      _sb29.Append('HasSgAvdBasica: ');
+      _sb29.Append(HasSgAvdBasica);
+    end;
+    if (__isset_HasSgCognicao) then begin
+      if not _first30 then _sb29.Append(',');
+      _first30 := FALSE;
+      _sb29.Append('HasSgCognicao: ');
+      _sb29.Append(HasSgCognicao);
+    end;
+    if (__isset_HasSgHumor) then begin
+      if not _first30 then _sb29.Append(',');
+      _first30 := FALSE;
+      _sb29.Append('HasSgHumor: ');
+      _sb29.Append(HasSgHumor);
+    end;
+    if (__isset_HasSgAlcancePreensaoPinca) then begin
+      if not _first30 then _sb29.Append(',');
+      _first30 := FALSE;
+      _sb29.Append('HasSgAlcancePreensaoPinca: ');
+      _sb29.Append(HasSgAlcancePreensaoPinca);
+    end;
+    if (__isset_HasSgCapAerobicaMuscular) then begin
+      if not _first30 then _sb29.Append(',');
+      _first30 := FALSE;
+      _sb29.Append('HasSgCapAerobicaMuscular: ');
+      _sb29.Append(HasSgCapAerobicaMuscular);
+    end;
+    if (__isset_HasSgMarcha) then begin
+      if not _first30 then _sb29.Append(',');
+      _first30 := FALSE;
+      _sb29.Append('HasSgMarcha: ');
+      _sb29.Append(HasSgMarcha);
+    end;
+    if (__isset_HasSgContinencia) then begin
+      if not _first30 then _sb29.Append(',');
+      _first30 := FALSE;
+      _sb29.Append('HasSgContinencia: ');
+      _sb29.Append(HasSgContinencia);
+    end;
+    if (__isset_HasSgVisao) then begin
+      if not _first30 then _sb29.Append(',');
+      _first30 := FALSE;
+      _sb29.Append('HasSgVisao: ');
+      _sb29.Append(HasSgVisao);
+    end;
+    if (__isset_HasSgAudicao) then begin
+      if not _first30 then _sb29.Append(',');
+      _first30 := FALSE;
+      _sb29.Append('HasSgAudicao: ');
+      _sb29.Append(HasSgAudicao);
+    end;
+    if (__isset_HasSgComorbidade) then begin
+      if not _first30 then _sb29.Append(',');
+      _first30 := FALSE;
+      _sb29.Append('HasSgComorbidade: ');
+      _sb29.Append(HasSgComorbidade);
+    end;
+    if (__isset_DataResultado) then begin
+      if not _first30 then _sb29.Append(',');
+      _first30 := FALSE;
+      _sb29.Append('DataResultado: ');
+      _sb29.Append(DataResultado);
+    end;
+    _sb29.Append(')');
+    Result := _sb29.ToString;
+    if _first30 then {prevent warning};
+  finally
+    _sb29.Free;
   end;
 end;
 

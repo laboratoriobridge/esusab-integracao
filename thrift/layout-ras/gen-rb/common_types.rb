@@ -191,6 +191,9 @@ module Br
               DURACAOTRATAMENTO = 11
               DURACAOTRATAMENTOMEDIDA = 12
               QUANTIDADERECEITADA = 13
+              QTDOSEMANHA = 15
+              QTDOSETARDE = 16
+              QTDOSENOITE = 17
 
               FIELDS = {
                 CODIGOCATMAT => {:type => ::Thrift::Types::STRING, :name => 'codigoCatmat', :optional => true},
@@ -205,7 +208,10 @@ module Br
                 DTINICIOTRATAMENTO => {:type => ::Thrift::Types::I64, :name => 'dtInicioTratamento', :optional => true},
                 DURACAOTRATAMENTO => {:type => ::Thrift::Types::I32, :name => 'duracaoTratamento', :optional => true},
                 DURACAOTRATAMENTOMEDIDA => {:type => ::Thrift::Types::I64, :name => 'duracaoTratamentoMedida', :optional => true},
-                QUANTIDADERECEITADA => {:type => ::Thrift::Types::I32, :name => 'quantidadeReceitada', :optional => true}
+                QUANTIDADERECEITADA => {:type => ::Thrift::Types::I32, :name => 'quantidadeReceitada', :optional => true},
+                QTDOSEMANHA => {:type => ::Thrift::Types::STRING, :name => 'qtDoseManha', :optional => true},
+                QTDOSETARDE => {:type => ::Thrift::Types::STRING, :name => 'qtDoseTarde', :optional => true},
+                QTDOSENOITE => {:type => ::Thrift::Types::STRING, :name => 'qtDoseNoite', :optional => true}
               }
 
               def struct_fields; FIELDS; end

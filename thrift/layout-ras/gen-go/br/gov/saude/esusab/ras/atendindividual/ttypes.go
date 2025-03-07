@@ -516,7 +516,6 @@ func (p *ProblemaCondicaoAvaliacaoAIThrift) String() string {
 //  - Medicamentos
 //  - Encaminhamentos
 //  - ResultadosExames
-//  - UuidRnds
 //  - FinalizadorObservacao
 //  - TipoParticipacaoCidadao
 //  - TipoParticipacaoProfissionalConvidado
@@ -549,20 +548,20 @@ type FichaAtendimentoIndividualChildThrift struct {
 	NuPartos            *int32         `thrift:"nuPartos,25" json:"nuPartos,omitempty"`
 	RacionalidadeSaude  *int64         `thrift:"racionalidadeSaude,26" json:"racionalidadeSaude,omitempty"`
 	// unused field # 27
-	DataHoraInicialAtendimento            *int64                                `thrift:"dataHoraInicialAtendimento,28" json:"dataHoraInicialAtendimento,omitempty"`
-	DataHoraFinalAtendimento              *int64                                `thrift:"dataHoraFinalAtendimento,29" json:"dataHoraFinalAtendimento,omitempty"`
-	CpfCidadao                            *string                               `thrift:"cpfCidadao,30" json:"cpfCidadao,omitempty"`
-	Medicamentos                          []*common.MedicamentoThrift           `thrift:"medicamentos,31" json:"medicamentos,omitempty"`
-	Encaminhamentos                       []*common.EncaminhamentoExternoThrift `thrift:"encaminhamentos,32" json:"encaminhamentos,omitempty"`
-	ResultadosExames                      []*common.ResultadosExameThrift       `thrift:"resultadosExames,33" json:"resultadosExames,omitempty"`
-	UuidRnds                              *string                               `thrift:"uuidRnds,34" json:"uuidRnds,omitempty"`
-	FinalizadorObservacao                 *common.LotacaoHeaderThrift           `thrift:"finalizadorObservacao,35" json:"finalizadorObservacao,omitempty"`
-	TipoParticipacaoCidadao               *int64                                `thrift:"tipoParticipacaoCidadao,36" json:"tipoParticipacaoCidadao,omitempty"`
-	TipoParticipacaoProfissionalConvidado *int64                                `thrift:"tipoParticipacaoProfissionalConvidado,37" json:"tipoParticipacaoProfissionalConvidado,omitempty"`
-	Emultis                               []int64                               `thrift:"emultis,38" json:"emultis,omitempty"`
-	Medicoes                              *common.MedicoesThrift                `thrift:"medicoes,39" json:"medicoes,omitempty"`
-	ProblemasCondicoes                    []*common.ProblemaCondicaoThrift      `thrift:"problemasCondicoes,40" json:"problemasCondicoes,omitempty"`
-	Ivcf                                  *common.IvcfThrift                    `thrift:"ivcf,41" json:"ivcf,omitempty"`
+	DataHoraInicialAtendimento *int64                                `thrift:"dataHoraInicialAtendimento,28" json:"dataHoraInicialAtendimento,omitempty"`
+	DataHoraFinalAtendimento   *int64                                `thrift:"dataHoraFinalAtendimento,29" json:"dataHoraFinalAtendimento,omitempty"`
+	CpfCidadao                 *string                               `thrift:"cpfCidadao,30" json:"cpfCidadao,omitempty"`
+	Medicamentos               []*common.MedicamentoThrift           `thrift:"medicamentos,31" json:"medicamentos,omitempty"`
+	Encaminhamentos            []*common.EncaminhamentoExternoThrift `thrift:"encaminhamentos,32" json:"encaminhamentos,omitempty"`
+	ResultadosExames           []*common.ResultadosExameThrift       `thrift:"resultadosExames,33" json:"resultadosExames,omitempty"`
+	// unused field # 34
+	FinalizadorObservacao                 *common.LotacaoHeaderThrift      `thrift:"finalizadorObservacao,35" json:"finalizadorObservacao,omitempty"`
+	TipoParticipacaoCidadao               *int64                           `thrift:"tipoParticipacaoCidadao,36" json:"tipoParticipacaoCidadao,omitempty"`
+	TipoParticipacaoProfissionalConvidado *int64                           `thrift:"tipoParticipacaoProfissionalConvidado,37" json:"tipoParticipacaoProfissionalConvidado,omitempty"`
+	Emultis                               []int64                          `thrift:"emultis,38" json:"emultis,omitempty"`
+	Medicoes                              *common.MedicoesThrift           `thrift:"medicoes,39" json:"medicoes,omitempty"`
+	ProblemasCondicoes                    []*common.ProblemaCondicaoThrift `thrift:"problemasCondicoes,40" json:"problemasCondicoes,omitempty"`
+	Ivcf                                  *common.IvcfThrift               `thrift:"ivcf,41" json:"ivcf,omitempty"`
 }
 
 func NewFichaAtendimentoIndividualChildThrift() *FichaAtendimentoIndividualChildThrift {
@@ -794,15 +793,6 @@ func (p *FichaAtendimentoIndividualChildThrift) GetResultadosExames() []*common.
 	return p.ResultadosExames
 }
 
-var FichaAtendimentoIndividualChildThrift_UuidRnds_DEFAULT string
-
-func (p *FichaAtendimentoIndividualChildThrift) GetUuidRnds() string {
-	if !p.IsSetUuidRnds() {
-		return FichaAtendimentoIndividualChildThrift_UuidRnds_DEFAULT
-	}
-	return *p.UuidRnds
-}
-
 var FichaAtendimentoIndividualChildThrift_FinalizadorObservacao_DEFAULT *common.LotacaoHeaderThrift
 
 func (p *FichaAtendimentoIndividualChildThrift) GetFinalizadorObservacao() *common.LotacaoHeaderThrift {
@@ -967,10 +957,6 @@ func (p *FichaAtendimentoIndividualChildThrift) IsSetResultadosExames() bool {
 	return p.ResultadosExames != nil
 }
 
-func (p *FichaAtendimentoIndividualChildThrift) IsSetUuidRnds() bool {
-	return p.UuidRnds != nil
-}
-
 func (p *FichaAtendimentoIndividualChildThrift) IsSetFinalizadorObservacao() bool {
 	return p.FinalizadorObservacao != nil
 }
@@ -1119,10 +1105,6 @@ func (p *FichaAtendimentoIndividualChildThrift) Read(iprot thrift.TProtocol) err
 			}
 		case 33:
 			if err := p.readField33(iprot); err != nil {
-				return err
-			}
-		case 34:
-			if err := p.readField34(iprot); err != nil {
 				return err
 			}
 		case 35:
@@ -1481,15 +1463,6 @@ func (p *FichaAtendimentoIndividualChildThrift) readField33(iprot thrift.TProtoc
 	return nil
 }
 
-func (p *FichaAtendimentoIndividualChildThrift) readField34(iprot thrift.TProtocol) error {
-	if v, err := iprot.ReadString(); err != nil {
-		return thrift.PrependError("error reading field 34: ", err)
-	} else {
-		p.UuidRnds = &v
-	}
-	return nil
-}
-
 func (p *FichaAtendimentoIndividualChildThrift) readField35(iprot thrift.TProtocol) error {
 	p.FinalizadorObservacao = &common.LotacaoHeaderThrift{}
 	if err := p.FinalizadorObservacao.Read(iprot); err != nil {
@@ -1657,9 +1630,6 @@ func (p *FichaAtendimentoIndividualChildThrift) Write(oprot thrift.TProtocol) er
 		return err
 	}
 	if err := p.writeField33(oprot); err != nil {
-		return err
-	}
-	if err := p.writeField34(oprot); err != nil {
 		return err
 	}
 	if err := p.writeField35(oprot); err != nil {
@@ -2140,21 +2110,6 @@ func (p *FichaAtendimentoIndividualChildThrift) writeField33(oprot thrift.TProto
 		}
 		if err := oprot.WriteFieldEnd(); err != nil {
 			return thrift.PrependError(fmt.Sprintf("%T write field end error 33:resultadosExames: ", p), err)
-		}
-	}
-	return err
-}
-
-func (p *FichaAtendimentoIndividualChildThrift) writeField34(oprot thrift.TProtocol) (err error) {
-	if p.IsSetUuidRnds() {
-		if err := oprot.WriteFieldBegin("uuidRnds", thrift.STRING, 34); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field begin error 34:uuidRnds: ", p), err)
-		}
-		if err := oprot.WriteString(string(*p.UuidRnds)); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T.uuidRnds (34) field write error: ", p), err)
-		}
-		if err := oprot.WriteFieldEnd(); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field end error 34:uuidRnds: ", p), err)
 		}
 	}
 	return err

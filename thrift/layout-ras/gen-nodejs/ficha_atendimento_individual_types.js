@@ -263,7 +263,6 @@ FichaAtendimentoIndividualChildThrift = module.exports.FichaAtendimentoIndividua
   this.medicamentos = null;
   this.encaminhamentos = null;
   this.resultadosExames = null;
-  this.uuidRnds = null;
   this.finalizadorObservacao = null;
   this.tipoParticipacaoCidadao = null;
   this.tipoParticipacaoProfissionalConvidado = null;
@@ -352,9 +351,6 @@ FichaAtendimentoIndividualChildThrift = module.exports.FichaAtendimentoIndividua
     }
     if (args.resultadosExames !== undefined && args.resultadosExames !== null) {
       this.resultadosExames = Thrift.copyList(args.resultadosExames, [common_ttypes.ResultadosExameThrift]);
-    }
-    if (args.uuidRnds !== undefined && args.uuidRnds !== null) {
-      this.uuidRnds = args.uuidRnds;
     }
     if (args.finalizadorObservacao !== undefined && args.finalizadorObservacao !== null) {
       this.finalizadorObservacao = new common_ttypes.LotacaoHeaderThrift(args.finalizadorObservacao);
@@ -664,13 +660,6 @@ FichaAtendimentoIndividualChildThrift.prototype.read = function(input) {
         input.skip(ftype);
       }
       break;
-      case 34:
-      if (ftype == Thrift.Type.STRING) {
-        this.uuidRnds = input.readString();
-      } else {
-        input.skip(ftype);
-      }
-      break;
       case 35:
       if (ftype == Thrift.Type.STRUCT) {
         this.finalizadorObservacao = new common_ttypes.LotacaoHeaderThrift();
@@ -948,11 +937,6 @@ FichaAtendimentoIndividualChildThrift.prototype.write = function(output) {
       }
     }
     output.writeListEnd();
-    output.writeFieldEnd();
-  }
-  if (this.uuidRnds !== null && this.uuidRnds !== undefined) {
-    output.writeFieldBegin('uuidRnds', Thrift.Type.STRING, 34);
-    output.writeString(this.uuidRnds);
     output.writeFieldEnd();
   }
   if (this.finalizadorObservacao !== null && this.finalizadorObservacao !== undefined) {

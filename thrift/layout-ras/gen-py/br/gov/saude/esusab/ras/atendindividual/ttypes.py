@@ -260,7 +260,6 @@ class FichaAtendimentoIndividualChildThrift:
    - medicamentos
    - encaminhamentos
    - resultadosExames
-   - uuidRnds
    - finalizadorObservacao
    - tipoParticipacaoCidadao
    - tipoParticipacaoProfissionalConvidado
@@ -305,7 +304,7 @@ class FichaAtendimentoIndividualChildThrift:
     (31, TType.LIST, 'medicamentos', (TType.STRUCT,(br.gov.saude.esusab.ras.common.ttypes.MedicamentoThrift, br.gov.saude.esusab.ras.common.ttypes.MedicamentoThrift.thrift_spec)), None, ), # 31
     (32, TType.LIST, 'encaminhamentos', (TType.STRUCT,(br.gov.saude.esusab.ras.common.ttypes.EncaminhamentoExternoThrift, br.gov.saude.esusab.ras.common.ttypes.EncaminhamentoExternoThrift.thrift_spec)), None, ), # 32
     (33, TType.LIST, 'resultadosExames', (TType.STRUCT,(br.gov.saude.esusab.ras.common.ttypes.ResultadosExameThrift, br.gov.saude.esusab.ras.common.ttypes.ResultadosExameThrift.thrift_spec)), None, ), # 33
-    (34, TType.STRING, 'uuidRnds', None, None, ), # 34
+    None, # 34
     (35, TType.STRUCT, 'finalizadorObservacao', (br.gov.saude.esusab.ras.common.ttypes.LotacaoHeaderThrift, br.gov.saude.esusab.ras.common.ttypes.LotacaoHeaderThrift.thrift_spec), None, ), # 35
     (36, TType.I64, 'tipoParticipacaoCidadao', None, None, ), # 36
     (37, TType.I64, 'tipoParticipacaoProfissionalConvidado', None, None, ), # 37
@@ -315,7 +314,7 @@ class FichaAtendimentoIndividualChildThrift:
     (41, TType.STRUCT, 'ivcf', (br.gov.saude.esusab.ras.common.ttypes.IvcfThrift, br.gov.saude.esusab.ras.common.ttypes.IvcfThrift.thrift_spec), None, ), # 41
   )
 
-  def __init__(self, numeroProntuario=None, cns=None, dataNascimento=None, localDeAtendimento=None, sexo=None, turno=None, tipoAtendimento=None, aleitamentoMaterno=None, dumDaGestante=None, idadeGestacional=None, atencaoDomiciliarModalidade=None, exame=None, vacinaEmDia=None, pic=None, ficouEmObservacao=None, nasfs=None, condutas=None, stGravidezPlanejada=None, nuGestasPrevias=None, nuPartos=None, racionalidadeSaude=None, dataHoraInicialAtendimento=None, dataHoraFinalAtendimento=None, cpfCidadao=None, medicamentos=None, encaminhamentos=None, resultadosExames=None, uuidRnds=None, finalizadorObservacao=None, tipoParticipacaoCidadao=None, tipoParticipacaoProfissionalConvidado=None, emultis=None, medicoes=None, problemasCondicoes=None, ivcf=None,):
+  def __init__(self, numeroProntuario=None, cns=None, dataNascimento=None, localDeAtendimento=None, sexo=None, turno=None, tipoAtendimento=None, aleitamentoMaterno=None, dumDaGestante=None, idadeGestacional=None, atencaoDomiciliarModalidade=None, exame=None, vacinaEmDia=None, pic=None, ficouEmObservacao=None, nasfs=None, condutas=None, stGravidezPlanejada=None, nuGestasPrevias=None, nuPartos=None, racionalidadeSaude=None, dataHoraInicialAtendimento=None, dataHoraFinalAtendimento=None, cpfCidadao=None, medicamentos=None, encaminhamentos=None, resultadosExames=None, finalizadorObservacao=None, tipoParticipacaoCidadao=None, tipoParticipacaoProfissionalConvidado=None, emultis=None, medicoes=None, problemasCondicoes=None, ivcf=None,):
     self.numeroProntuario = numeroProntuario
     self.cns = cns
     self.dataNascimento = dataNascimento
@@ -343,7 +342,6 @@ class FichaAtendimentoIndividualChildThrift:
     self.medicamentos = medicamentos
     self.encaminhamentos = encaminhamentos
     self.resultadosExames = resultadosExames
-    self.uuidRnds = uuidRnds
     self.finalizadorObservacao = finalizadorObservacao
     self.tipoParticipacaoCidadao = tipoParticipacaoCidadao
     self.tipoParticipacaoProfissionalConvidado = tipoParticipacaoProfissionalConvidado
@@ -528,11 +526,6 @@ class FichaAtendimentoIndividualChildThrift:
             _elem49.read(iprot)
             self.resultadosExames.append(_elem49)
           iprot.readListEnd()
-        else:
-          iprot.skip(ftype)
-      elif fid == 34:
-        if ftype == TType.STRING:
-          self.uuidRnds = iprot.readString()
         else:
           iprot.skip(ftype)
       elif fid == 35:
@@ -720,10 +713,6 @@ class FichaAtendimentoIndividualChildThrift:
         iter67.write(oprot)
       oprot.writeListEnd()
       oprot.writeFieldEnd()
-    if self.uuidRnds is not None:
-      oprot.writeFieldBegin('uuidRnds', TType.STRING, 34)
-      oprot.writeString(self.uuidRnds)
-      oprot.writeFieldEnd()
     if self.finalizadorObservacao is not None:
       oprot.writeFieldBegin('finalizadorObservacao', TType.STRUCT, 35)
       self.finalizadorObservacao.write(oprot)
@@ -794,7 +783,6 @@ class FichaAtendimentoIndividualChildThrift:
     value = (value * 31) ^ hash(self.medicamentos)
     value = (value * 31) ^ hash(self.encaminhamentos)
     value = (value * 31) ^ hash(self.resultadosExames)
-    value = (value * 31) ^ hash(self.uuidRnds)
     value = (value * 31) ^ hash(self.finalizadorObservacao)
     value = (value * 31) ^ hash(self.tipoParticipacaoCidadao)
     value = (value * 31) ^ hash(self.tipoParticipacaoProfissionalConvidado)

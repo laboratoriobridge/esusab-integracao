@@ -29,7 +29,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 6.3.4</span>
+        <span class="label">versão 6.3.5</span>
       
     </a>
 
@@ -141,7 +141,7 @@
 
       <li id="item-layout_ab" data-url="/ledi/documentacao/index.html">
         <label>
-          <input type="checkbox" value="layout_ab" checked="checked"> Layout e-SUS APS de Dados e Interface Versão 6.3.4
+          <input type="checkbox" value="layout_ab" checked="checked"> Layout e-SUS APS de Dados e Interface Versão 6.3.5
           <small>
             <a onclick="checkById('layout_ab', true); return false;">Marcar todos</a> |
             <a onclick="checkById('layout_ab', false); return false;">Desmarcar todos</a>
@@ -2153,7 +2153,7 @@
   
       <!-- Cria a lista de itens[páginas] que foram selecionados  -->
 
-  <li id="summary-layout_ab"><a href="#layout_ab">Layout e-SUS APS de Dados e Interface Versão 6.3.4</a></li>
+  <li id="summary-layout_ab"><a href="#layout_ab">Layout e-SUS APS de Dados e Interface Versão 6.3.5</a></li>
   
       <!-- Cria a lista de itens[páginas] que foram selecionados  -->
 
@@ -3027,13 +3027,18 @@
 </tr>
 </thead><tbody>
 <tr>
+<td>5.3.28 ou superior</td>
+<td><a href="/ledi/documentacao/index.html">LEDI APS 6.3.5</a></td>
+<td>20/03/2025</td>
+</tr>
+<tr>
 <td>5.3.27 ou superior</td>
-<td><a href="/ledi/documentacao/index.html">LEDI APS 6.3.4</a></td>
+<td><a href="https://integracao.esusab.ufsc.br/v634/">LEDI APS 6.3.4</a></td>
 <td>27/02/2025</td>
 </tr>
 <tr>
 <td>5.3.25 ou superior</td>
-<td><a href="https://integracao.esusab.ufsc.br/v632/">LEDI APS 6.3.3</a></td>
+<td><a href="https://integracao.esusab.ufsc.br/v633/">LEDI APS 6.3.3</a></td>
 <td>30/01/2025</td>
 </tr>
 <tr>
@@ -3282,17 +3287,17 @@
         
     <div class="post pdf shown" id="layout_ab" data-url="/ledi/documentacao/index.html">
       <header class="post-header">
-        <h1 class="post-title">Layout e-SUS APS de Dados e Interface Versão 6.3.4</h1>
+        <h1 class="post-title">Layout e-SUS APS de Dados e Interface Versão 6.3.5</h1>
       </header>
 
       
 
       <article class="post-content">
-        <p>Esta documentação descreve as estruturas de dados, seus atributos e regras utilizadas no <strong>LEDI APS</strong> versão 6.3.4</p>
+        <p>Esta documentação descreve as estruturas de dados, seus atributos e regras utilizadas no <strong>LEDI APS</strong> versão 6.3.5</p>
 
-<p>A versão <strong>LEDI APS</strong> 6.3.4 é compatível com o sistema <strong>PEC e-SUS APS</strong> versão 5.3.27 ou superior.</p>
+<p>A versão <strong>LEDI APS</strong> 6.3.5 é compatível com o sistema <strong>PEC e-SUS APS</strong> versão 5.3.28 ou superior.</p>
 
-<p>Confira as principais alterações na versão 6.3.4 <a href="/ledi/documentacao/principais_alteracoes.html">aqui</a>.</p>
+<p>Confira as principais alterações na versão 6.3.5 <a href="/ledi/documentacao/principais_alteracoes.html">aqui</a>.</p>
 
       </article>
 
@@ -13085,7 +13090,7 @@
 <td>String</td>
 <td>Não</td>
 <td>0</td>
-<td>22</td>
+<td>44</td>
 </tr>
 </tbody></table>
 
@@ -13105,7 +13110,7 @@
 <td>String</td>
 <td>Não</td>
 <td>0</td>
-<td>22</td>
+<td>44</td>
 </tr>
 </tbody></table>
 
@@ -13125,7 +13130,7 @@
 <td>Long</td>
 <td>Não</td>
 <td>0</td>
-<td>22</td>
+<td>8</td>
 </tr>
 </tbody></table>
 
@@ -20051,7 +20056,7 @@
 <td>String</td>
 <td>Não</td>
 <td>0</td>
-<td>22</td>
+<td>44</td>
 </tr>
 </tbody></table>
 
@@ -20071,7 +20076,7 @@
 <td>String</td>
 <td>Não</td>
 <td>0</td>
-<td>22</td>
+<td>44</td>
 </tr>
 </tbody></table>
 
@@ -20091,7 +20096,7 @@
 <td>Long</td>
 <td>Não</td>
 <td>0</td>
-<td>22</td>
+<td>8</td>
 </tr>
 </tbody></table>
 
@@ -21683,7 +21688,7 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regra:</strong> Só pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#7-stregistroanterior">stRegistroAnterior</a> = <code>true</code> e o campo <a href="/ledi/documentacao/estrutura_arquivos/#1-imunobiologico">Imunobiológico</a> receber um dos valores <code>85</code>, <code>86</code>, <code>87</code>, <code>88</code>, <code>89</code>, <code>95</code>, <code>96</code>, <code>97</code>, <code>98</code>, <code>99</code>, <code>102</code> ou <code>103</code> pertencentes aos imunobiológicos de COVID-19. Nestas condições, é de preenchimento obrigatório.</p>
+<p><strong>Regra:</strong> Só pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#7-stregistroanterior">stRegistroAnterior</a> = <code>true</code> e o campo <a href="/ledi/documentacao/estrutura_arquivos/#1-imunobiologico">Imunobiológico</a> receber um dos valores <code>85</code>, <code>86</code>, <code>87</code>, <code>88</code>, <code>89</code>, <code>95</code>, <code>96</code>, <code>97</code>, <code>98</code>, <code>99</code>, <code>102</code>, <code>103</code>, <code>105</code> ou <code>112</code> pertencentes aos imunobiológicos de COVID-19. Nestas condições, é de preenchimento obrigatório.</p>
 
       </article>
 
@@ -53038,7 +53043,7 @@
 <td>revision</td>
 <td>Integer</td>
 <td>Sim</td>
-<td>Valor único = 4</td>
+<td>Valor único = 5</td>
 </tr>
 </tbody></table>
 
@@ -66298,9 +66303,14 @@
 <td>-</td>
 </tr>
 <tr>
+<td>38</td>
+<td>Pessoa idosa</td>
+<td>-</td>
+</tr>
+<tr>
 <td>34</td>
 <td>Ação educativa</td>
-<td>#CONTROLE<em>AMBIENTAL</em>E_VETORIAL</td>
+<td>#CONTROLE_AMBIENTAL_E_VETORIAL</td>
 </tr>
 <tr>
 <td>35</td>
@@ -66825,11 +66835,6 @@
 <tr>
 <td>5</td>
 <td>Indígena</td>
-<td>-</td>
-</tr>
-<tr>
-<td>6</td>
-<td>Sem informação</td>
 <td>-</td>
 </tr>
 </tbody></table>
@@ -107387,18 +107392,26 @@
 <tr>
 <td>33</td>
 <td>Vacina influenza trivalente</td>
-<td>2</td>
-<td>Especial</td>
+<td>1</td>
+<td>Rotina</td>
 <td>1</td>
 <td>D1</td>
 </tr>
 <tr>
 <td>33</td>
 <td>Vacina influenza trivalente</td>
-<td>2</td>
-<td>Especial</td>
+<td>1</td>
+<td>Rotina</td>
 <td>2</td>
 <td>D2</td>
+</tr>
+<tr>
+<td>33</td>
+<td>Vacina influenza trivalente</td>
+<td>1</td>
+<td>Rotina</td>
+<td>9</td>
+<td>DU</td>
 </tr>
 <tr>
 <td>33</td>
@@ -110579,6 +110592,20 @@
 
       <article class="post-content">
         <p>Este documento relata as principais alterações entre as últimas versões do LEDI APS:</p>
+
+<h2 id="vers-o-6-3-5">Versão 6.3.5</h2>
+
+<h3 id="1-inclus-o-de-novo-motivo-de-visita">1. Inclusão de novo motivo de visita</h3>
+
+<p>Foi incluída a opção &quot;Pessoa idosa&quot; como um dos motivos de visita da Ficha de Visita Domiciliar e Territorial.</p>
+
+<h3 id="2-remo-o-de-op-o-de-ra-a-cor">2. Remoção de opção de Raça/cor.</h3>
+
+<p>Com o objetivo de qualificar os cadastros de cidadão e considerando a <a href="https://bvsms.saude.gov.br/bvs/saudelegis/gm/2017/prt0344_01_02_2017.html">Portaria Nº 344 de 1º de fevereiro de 2017</a>, foi removida a possibilidade de informar &quot;Sem informação&quot; no campo &quot;Raça/cor&quot; para a Ficha de Cadastro Individual e a Ficha de Avaliação de Elegibilidade.</p>
+
+<h2 id="3-novas-regras-para-aplica-o-do-imunobiol-gico-vacina-influenza-trivalente-33">3. Novas regras para aplicação do imunobiológico Vacina influenza trivalente (33)</h2>
+
+<p>Foram atualizadas as regras para aplicação do imunobiológico Vacina influenza trivalente (código 33), adicionando doses da estratégia &quot;Rotina&quot; e alterando doses disponíveis para as estratégias &quot;Especial&quot;, &quot;Campanha indiscriminada&quot; e &quot;Vacinação escolar&quot;.</p>
 
 <h2 id="vers-o-6-3-4">Versão 6.3.4</h2>
 

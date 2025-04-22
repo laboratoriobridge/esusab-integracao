@@ -618,8 +618,8 @@ end;
 
 procedure TFichaComplementarZikaMicrocefaliaThriftImpl.Read( const iprot: IProtocol);
 var
-  field_ : IField;
-  struc : IStruct;
+  field_ : TThriftField;
+  struc : TThriftStruct;
   tracker : IProtocolRecursionTracker;
   _req_isset_UuidFicha : Boolean;
 
@@ -828,19 +828,18 @@ begin
     iprot.ReadStructEnd;
   end;
   if not _req_isset_UuidFicha
-  then raise TProtocolException.Create( TProtocolException.INVALID_DATA, 'UuidFicha');
+  then raise TProtocolException.Create( TProtocolException.TExceptionType.INVALID_DATA, 'UuidFicha');
 end;
 
 procedure TFichaComplementarZikaMicrocefaliaThriftImpl.Write( const oprot: IProtocol);
 var
-  struc : IStruct;
-  field_ : IField;
+  struc : TThriftStruct;
+  field_ : TThriftField;
   tracker : IProtocolRecursionTracker;
 begin
   tracker := oprot.NextRecursionLevel;
-  struc := TStructImpl.Create('FichaComplementarZikaMicrocefaliaThrift');
+  struc.Name := 'FichaComplementarZikaMicrocefaliaThrift';
   oprot.WriteStructBegin(struc);
-  field_ := TFieldImpl.Create;
   if (HeaderTransport <> nil) and __isset_HeaderTransport then
   begin
     field_.Name := 'headerTransport';

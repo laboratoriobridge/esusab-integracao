@@ -1930,16 +1930,16 @@ end;
 
 procedure TCondicoesDeSaudeThriftImpl.Read( const iprot: IProtocol);
 var
-  field_ : IField;
-  struc : IStruct;
+  field_ : TThriftField;
+  struc : TThriftStruct;
   tracker : IProtocolRecursionTracker;
-  _list0: IList;
+  _list0: TThriftList;
   _i1: Integer;
   _elem2: Int64;
-  _list3: IList;
+  _list3: TThriftList;
   _i4: Integer;
   _elem5: Int64;
-  _list6: IList;
+  _list6: TThriftList;
   _i7: Integer;
   _elem8: Int64;
 
@@ -2259,20 +2259,19 @@ end;
 
 procedure TCondicoesDeSaudeThriftImpl.Write( const oprot: IProtocol);
 var
-  struc : IStruct;
-  field_ : IField;
+  struc : TThriftStruct;
+  field_ : TThriftField;
   tracker : IProtocolRecursionTracker;
-  list_9 : IList;
+  list_9 : TThriftList;
   _iter10: Int64;
-  list_11 : IList;
+  list_11 : TThriftList;
   _iter12: Int64;
-  list_13 : IList;
+  list_13 : TThriftList;
   _iter14: Int64;
 begin
   tracker := oprot.NextRecursionLevel;
-  struc := TStructImpl.Create('CondicoesDeSaudeThrift');
+  struc.Name := 'CondicoesDeSaudeThrift';
   oprot.WriteStructBegin(struc);
-  field_ := TFieldImpl.Create;
   if (__isset_DescricaoCausaInternacaoEm12Meses) then
   begin
     field_.Name := 'descricaoCausaInternacaoEm12Meses';
@@ -2324,7 +2323,8 @@ begin
     field_.Type_  := TType.List;
     field_.ID := 6;
     oprot.WriteFieldBegin(field_);
-    list_9 := TListImpl.Create(TType.I64, DoencaCardiaca.Count);
+    list_9.ElementType := TType.I64;
+    list_9.Count := DoencaCardiaca.Count;
     oprot.WriteListBegin( list_9);
     for _iter10 in DoencaCardiaca do
     begin
@@ -2339,7 +2339,8 @@ begin
     field_.Type_  := TType.List;
     field_.ID := 7;
     oprot.WriteFieldBegin(field_);
-    list_11 := TListImpl.Create(TType.I64, DoencaRespiratoria.Count);
+    list_11.ElementType := TType.I64;
+    list_11.Count := DoencaRespiratoria.Count;
     oprot.WriteListBegin( list_11);
     for _iter12 in DoencaRespiratoria do
     begin
@@ -2354,7 +2355,8 @@ begin
     field_.Type_  := TType.List;
     field_.ID := 8;
     oprot.WriteFieldBegin(field_);
-    list_13 := TListImpl.Create(TType.I64, DoencaRins.Count);
+    list_13.ElementType := TType.I64;
+    list_13.Count := DoencaRins.Count;
     oprot.WriteListBegin( list_13);
     for _iter14 in DoencaRins do
     begin
@@ -2965,13 +2967,13 @@ end;
 
 procedure TEmSituacaoDeRuaThriftImpl.Read( const iprot: IProtocol);
 var
-  field_ : IField;
-  struc : IStruct;
+  field_ : TThriftField;
+  struc : TThriftStruct;
   tracker : IProtocolRecursionTracker;
-  _list17: IList;
+  _list17: TThriftList;
   _i18: Integer;
   _elem19: Int64;
-  _list20: IList;
+  _list20: TThriftList;
   _i21: Integer;
   _elem22: Int64;
 
@@ -3122,18 +3124,17 @@ end;
 
 procedure TEmSituacaoDeRuaThriftImpl.Write( const oprot: IProtocol);
 var
-  struc : IStruct;
-  field_ : IField;
+  struc : TThriftStruct;
+  field_ : TThriftField;
   tracker : IProtocolRecursionTracker;
-  list_23 : IList;
+  list_23 : TThriftList;
   _iter24: Int64;
-  list_25 : IList;
+  list_25 : TThriftList;
   _iter26: Int64;
 begin
   tracker := oprot.NextRecursionLevel;
-  struc := TStructImpl.Create('EmSituacaoDeRuaThrift');
+  struc.Name := 'EmSituacaoDeRuaThrift';
   oprot.WriteStructBegin(struc);
-  field_ := TFieldImpl.Create;
   if (__isset_GrauParentescoFamiliarFrequentado) then
   begin
     field_.Name := 'grauParentescoFamiliarFrequentado';
@@ -3149,7 +3150,8 @@ begin
     field_.Type_  := TType.List;
     field_.ID := 2;
     oprot.WriteFieldBegin(field_);
-    list_23 := TListImpl.Create(TType.I64, HigienePessoalSituacaoRua.Count);
+    list_23.ElementType := TType.I64;
+    list_23.Count := HigienePessoalSituacaoRua.Count;
     oprot.WriteListBegin( list_23);
     for _iter24 in HigienePessoalSituacaoRua do
     begin
@@ -3164,7 +3166,8 @@ begin
     field_.Type_  := TType.List;
     field_.ID := 3;
     oprot.WriteFieldBegin(field_);
-    list_25 := TListImpl.Create(TType.I64, OrigemAlimentoSituacaoRua.Count);
+    list_25.ElementType := TType.I64;
+    list_25.Count := OrigemAlimentoSituacaoRua.Count;
     oprot.WriteListBegin( list_25);
     for _iter26 in OrigemAlimentoSituacaoRua do
     begin
@@ -3774,8 +3777,8 @@ end;
 
 procedure TIdentificacaoUsuarioCidadaoThriftImpl.Read( const iprot: IProtocol);
 var
-  field_ : IField;
-  struc : IStruct;
+  field_ : TThriftField;
+  struc : TThriftStruct;
   tracker : IProtocolRecursionTracker;
 
 begin
@@ -4037,14 +4040,13 @@ end;
 
 procedure TIdentificacaoUsuarioCidadaoThriftImpl.Write( const oprot: IProtocol);
 var
-  struc : IStruct;
-  field_ : IField;
+  struc : TThriftStruct;
+  field_ : TThriftField;
   tracker : IProtocolRecursionTracker;
 begin
   tracker := oprot.NextRecursionLevel;
-  struc := TStructImpl.Create('IdentificacaoUsuarioCidadaoThrift');
+  struc.Name := 'IdentificacaoUsuarioCidadaoThrift';
   oprot.WriteStructBegin(struc);
-  field_ := TFieldImpl.Create;
   if (__isset_NomeSocial) then
   begin
     field_.Name := 'nomeSocial';
@@ -4739,13 +4741,13 @@ end;
 
 procedure TInformacoesSocioDemograficasThriftImpl.Read( const iprot: IProtocol);
 var
-  field_ : IField;
-  struc : IStruct;
+  field_ : TThriftField;
+  struc : TThriftStruct;
   tracker : IProtocolRecursionTracker;
-  _list31: IList;
+  _list31: TThriftList;
   _i32: Integer;
   _elem33: Int64;
-  _list34: IList;
+  _list34: TThriftList;
   _i35: Integer;
   _elem36: Int64;
 
@@ -4941,25 +4943,25 @@ end;
 
 procedure TInformacoesSocioDemograficasThriftImpl.Write( const oprot: IProtocol);
 var
-  struc : IStruct;
-  field_ : IField;
+  struc : TThriftStruct;
+  field_ : TThriftField;
   tracker : IProtocolRecursionTracker;
-  list_37 : IList;
+  list_37 : TThriftList;
   _iter38: Int64;
-  list_39 : IList;
+  list_39 : TThriftList;
   _iter40: Int64;
 begin
   tracker := oprot.NextRecursionLevel;
-  struc := TStructImpl.Create('InformacoesSocioDemograficasThrift');
+  struc.Name := 'InformacoesSocioDemograficasThrift';
   oprot.WriteStructBegin(struc);
-  field_ := TFieldImpl.Create;
   if (DeficienciasCidadao <> nil) and __isset_DeficienciasCidadao then
   begin
     field_.Name := 'deficienciasCidadao';
     field_.Type_  := TType.List;
     field_.ID := 1;
     oprot.WriteFieldBegin(field_);
-    list_37 := TListImpl.Create(TType.I64, DeficienciasCidadao.Count);
+    list_37.ElementType := TType.I64;
+    list_37.Count := DeficienciasCidadao.Count;
     oprot.WriteListBegin( list_37);
     for _iter38 in DeficienciasCidadao do
     begin
@@ -5100,7 +5102,8 @@ begin
     field_.Type_  := TType.List;
     field_.ID := 19;
     oprot.WriteFieldBegin(field_);
-    list_39 := TListImpl.Create(TType.I64, ResponsavelPorCrianca.Count);
+    list_39.ElementType := TType.I64;
+    list_39.Count := ResponsavelPorCrianca.Count;
     oprot.WriteListBegin( list_39);
     for _iter40 in ResponsavelPorCrianca do
     begin
@@ -5284,8 +5287,8 @@ end;
 
 procedure TInformacoesSocioEconomicasThriftImpl.Read( const iprot: IProtocol);
 var
-  field_ : IField;
-  struc : IStruct;
+  field_ : TThriftField;
+  struc : TThriftStruct;
   tracker : IProtocolRecursionTracker;
 
 begin
@@ -5331,14 +5334,13 @@ end;
 
 procedure TInformacoesSocioEconomicasThriftImpl.Write( const oprot: IProtocol);
 var
-  struc : IStruct;
-  field_ : IField;
+  struc : TThriftStruct;
+  field_ : TThriftField;
   tracker : IProtocolRecursionTracker;
 begin
   tracker := oprot.NextRecursionLevel;
-  struc := TStructImpl.Create('InformacoesSocioEconomicasThrift');
+  struc.Name := 'InformacoesSocioEconomicasThrift';
   oprot.WriteStructBegin(struc);
-  field_ := TFieldImpl.Create;
   if (__isset_AlimentosAcabaramAntesTerDinheiroComprarMais) then
   begin
     field_.Name := 'alimentosAcabaramAntesTerDinheiroComprarMais';
@@ -5449,8 +5451,8 @@ end;
 
 procedure TSaidaCidadaoCadastroThriftImpl.Read( const iprot: IProtocol);
 var
-  field_ : IField;
-  struc : IStruct;
+  field_ : TThriftField;
+  struc : TThriftStruct;
   tracker : IProtocolRecursionTracker;
 
 begin
@@ -5505,14 +5507,13 @@ end;
 
 procedure TSaidaCidadaoCadastroThriftImpl.Write( const oprot: IProtocol);
 var
-  struc : IStruct;
-  field_ : IField;
+  struc : TThriftStruct;
+  field_ : TThriftField;
   tracker : IProtocolRecursionTracker;
 begin
   tracker := oprot.NextRecursionLevel;
-  struc := TStructImpl.Create('SaidaCidadaoCadastroThrift');
+  struc.Name := 'SaidaCidadaoCadastroThrift';
   oprot.WriteStructBegin(struc);
-  field_ := TFieldImpl.Create;
   if (__isset_MotivoSaidaCidadao) then
   begin
     field_.Name := 'motivoSaidaCidadao';
@@ -5776,8 +5777,8 @@ end;
 
 procedure TCadastroIndividualThriftImpl.Read( const iprot: IProtocol);
 var
-  field_ : IField;
-  struc : IStruct;
+  field_ : TThriftField;
+  struc : TThriftStruct;
   tracker : IProtocolRecursionTracker;
   _req_isset_Uuid : Boolean;
 
@@ -5920,19 +5921,18 @@ begin
     iprot.ReadStructEnd;
   end;
   if not _req_isset_Uuid
-  then raise TProtocolException.Create( TProtocolException.INVALID_DATA, 'Uuid');
+  then raise TProtocolException.Create( TProtocolException.TExceptionType.INVALID_DATA, 'Uuid');
 end;
 
 procedure TCadastroIndividualThriftImpl.Write( const oprot: IProtocol);
 var
-  struc : IStruct;
-  field_ : IField;
+  struc : TThriftStruct;
+  field_ : TThriftField;
   tracker : IProtocolRecursionTracker;
 begin
   tracker := oprot.NextRecursionLevel;
-  struc := TStructImpl.Create('CadastroIndividualThrift');
+  struc.Name := 'CadastroIndividualThrift';
   oprot.WriteStructBegin(struc);
-  field_ := TFieldImpl.Create;
   if (CondicoesDeSaude <> nil) and __isset_CondicoesDeSaude then
   begin
     field_.Name := 'condicoesDeSaude';

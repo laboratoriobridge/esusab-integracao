@@ -587,10 +587,10 @@ end;
 
 procedure TFichaProcedimentoChildThriftImpl.Read( const iprot: IProtocol);
 var
-  field_ : IField;
-  struc : IStruct;
+  field_ : TThriftField;
+  struc : TThriftStruct;
   tracker : IProtocolRecursionTracker;
-  _list0: IList;
+  _list0: TThriftList;
   _i1: Integer;
   _elem2: string;
 
@@ -745,16 +745,15 @@ end;
 
 procedure TFichaProcedimentoChildThriftImpl.Write( const oprot: IProtocol);
 var
-  struc : IStruct;
-  field_ : IField;
+  struc : TThriftStruct;
+  field_ : TThriftField;
   tracker : IProtocolRecursionTracker;
-  list_3 : IList;
+  list_3 : TThriftList;
   _iter4: string;
 begin
   tracker := oprot.NextRecursionLevel;
-  struc := TStructImpl.Create('FichaProcedimentoChildThrift');
+  struc.Name := 'FichaProcedimentoChildThrift';
   oprot.WriteStructBegin(struc);
-  field_ := TFieldImpl.Create;
   if (__isset_NumProntuario) then
   begin
     field_.Name := 'numProntuario';
@@ -824,7 +823,8 @@ begin
     field_.Type_  := TType.List;
     field_.ID := 8;
     oprot.WriteFieldBegin(field_);
-    list_3 := TListImpl.Create(TType.String_, Procedimentos.Count);
+    list_3.ElementType := TType.String_;
+    list_3.Count := Procedimentos.Count;
     oprot.WriteListBegin( list_3);
     for _iter4 in Procedimentos do
     begin
@@ -1158,11 +1158,11 @@ end;
 
 procedure TFichaProcedimentoMasterThriftImpl.Read( const iprot: IProtocol);
 var
-  field_ : IField;
-  struc : IStruct;
+  field_ : TThriftField;
+  struc : TThriftStruct;
   tracker : IProtocolRecursionTracker;
   _req_isset_UuidFicha : Boolean;
-  _list7: IList;
+  _list7: TThriftList;
   _i8: Integer;
   _elem9: IFichaProcedimentoChildThrift;
 
@@ -1298,21 +1298,20 @@ begin
     iprot.ReadStructEnd;
   end;
   if not _req_isset_UuidFicha
-  then raise TProtocolException.Create( TProtocolException.INVALID_DATA, 'UuidFicha');
+  then raise TProtocolException.Create( TProtocolException.TExceptionType.INVALID_DATA, 'UuidFicha');
 end;
 
 procedure TFichaProcedimentoMasterThriftImpl.Write( const oprot: IProtocol);
 var
-  struc : IStruct;
-  field_ : IField;
+  struc : TThriftStruct;
+  field_ : TThriftField;
   tracker : IProtocolRecursionTracker;
-  list_10 : IList;
+  list_10 : TThriftList;
   _iter11: IFichaProcedimentoChildThrift;
 begin
   tracker := oprot.NextRecursionLevel;
-  struc := TStructImpl.Create('FichaProcedimentoMasterThrift');
+  struc.Name := 'FichaProcedimentoMasterThrift';
   oprot.WriteStructBegin(struc);
-  field_ := TFieldImpl.Create;
   // required field
   field_.Name := 'uuidFicha';
   field_.Type_  := TType.String_;
@@ -1344,7 +1343,8 @@ begin
     field_.Type_  := TType.List;
     field_.ID := 4;
     oprot.WriteFieldBegin(field_);
-    list_10 := TListImpl.Create(TType.Struct, AtendProcedimentos.Count);
+    list_10.ElementType := TType.Struct;
+    list_10.Count := AtendProcedimentos.Count;
     oprot.WriteListBegin( list_10);
     for _iter11 in AtendProcedimentos do
     begin

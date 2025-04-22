@@ -635,8 +635,8 @@ end;
 
 procedure TCuidadoCompartilhadoThriftImpl.Read( const iprot: IProtocol);
 var
-  field_ : IField;
-  struc : IStruct;
+  field_ : TThriftField;
+  struc : TThriftStruct;
   tracker : IProtocolRecursionTracker;
   _req_isset_UuidEvolucao : Boolean;
   _req_isset_UuidCuidadoCompartilhado : Boolean;
@@ -859,19 +859,19 @@ begin
     iprot.ReadStructEnd;
   end;
   if not _req_isset_UuidEvolucao
-  then raise TProtocolException.Create( TProtocolException.INVALID_DATA, 'UuidEvolucao');
+  then raise TProtocolException.Create( TProtocolException.TExceptionType.INVALID_DATA, 'UuidEvolucao');
   if not _req_isset_UuidCuidadoCompartilhado
-  then raise TProtocolException.Create( TProtocolException.INVALID_DATA, 'UuidCuidadoCompartilhado');
+  then raise TProtocolException.Create( TProtocolException.TExceptionType.INVALID_DATA, 'UuidCuidadoCompartilhado');
 end;
 
 procedure TCuidadoCompartilhadoThriftImpl.Write( const oprot: IProtocol);
 var
-  struc : IStruct;
-  field_ : IField;
+  struc : TThriftStruct;
+  field_ : TThriftField;
   tracker : IProtocolRecursionTracker;
 begin
   tracker := oprot.NextRecursionLevel;
-  struc := TStructImpl.Create('CuidadoCompartilhadoThrift');
+  struc.Name := 'CuidadoCompartilhadoThrift');
   oprot.WriteStructBegin(struc);
   field_ := TFieldImpl.Create;
   // required field

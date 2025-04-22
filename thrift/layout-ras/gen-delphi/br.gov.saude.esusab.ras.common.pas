@@ -1736,8 +1736,8 @@ end;
 
 procedure THeaderCdsCadastroThriftImpl.Read( const iprot: IProtocol);
 var
-  field_ : IField;
-  struc : IStruct;
+  field_ : TThriftField;
+  struc : TThriftStruct;
   tracker : IProtocolRecursionTracker;
 
 begin
@@ -1819,14 +1819,13 @@ end;
 
 procedure THeaderCdsCadastroThriftImpl.Write( const oprot: IProtocol);
 var
-  struc : IStruct;
-  field_ : IField;
+  struc : TThriftStruct;
+  field_ : TThriftField;
   tracker : IProtocolRecursionTracker;
 begin
   tracker := oprot.NextRecursionLevel;
-  struc := TStructImpl.Create('HeaderCdsCadastroThrift');
+  struc.Name := 'HeaderCdsCadastroThrift';
   oprot.WriteStructBegin(struc);
-  field_ := TFieldImpl.Create;
   if (__isset_CnesUnidadeSaude) then
   begin
     field_.Name := 'cnesUnidadeSaude';
@@ -2013,8 +2012,8 @@ end;
 
 procedure TLotacaoHeaderThriftImpl.Read( const iprot: IProtocol);
 var
-  field_ : IField;
-  struc : IStruct;
+  field_ : TThriftField;
+  struc : TThriftStruct;
   tracker : IProtocolRecursionTracker;
 
 begin
@@ -2078,14 +2077,13 @@ end;
 
 procedure TLotacaoHeaderThriftImpl.Write( const oprot: IProtocol);
 var
-  struc : IStruct;
-  field_ : IField;
+  struc : TThriftStruct;
+  field_ : TThriftField;
   tracker : IProtocolRecursionTracker;
 begin
   tracker := oprot.NextRecursionLevel;
-  struc := TStructImpl.Create('LotacaoHeaderThrift');
+  struc.Name := 'LotacaoHeaderThrift';
   oprot.WriteStructBegin(struc);
-  field_ := TFieldImpl.Create;
   if (__isset_ProfissionalCNS) then
   begin
     field_.Name := 'profissionalCNS';
@@ -2274,8 +2272,8 @@ end;
 
 procedure TUnicaLotacaoHeaderThriftImpl.Read( const iprot: IProtocol);
 var
-  field_ : IField;
-  struc : IStruct;
+  field_ : TThriftField;
+  struc : TThriftStruct;
   tracker : IProtocolRecursionTracker;
 
 begin
@@ -2357,14 +2355,13 @@ end;
 
 procedure TUnicaLotacaoHeaderThriftImpl.Write( const oprot: IProtocol);
 var
-  struc : IStruct;
-  field_ : IField;
+  struc : TThriftStruct;
+  field_ : TThriftField;
   tracker : IProtocolRecursionTracker;
 begin
   tracker := oprot.NextRecursionLevel;
-  struc := TStructImpl.Create('UnicaLotacaoHeaderThrift');
+  struc.Name := 'UnicaLotacaoHeaderThrift';
   oprot.WriteStructBegin(struc);
-  field_ := TFieldImpl.Create;
   if (__isset_ProfissionalCNS) then
   begin
     field_.Name := 'profissionalCNS';
@@ -2551,8 +2548,8 @@ end;
 
 procedure TVariasLotacoesHeaderThriftImpl.Read( const iprot: IProtocol);
 var
-  field_ : IField;
-  struc : IStruct;
+  field_ : TThriftField;
+  struc : TThriftStruct;
   tracker : IProtocolRecursionTracker;
 
 begin
@@ -2618,14 +2615,13 @@ end;
 
 procedure TVariasLotacoesHeaderThriftImpl.Write( const oprot: IProtocol);
 var
-  struc : IStruct;
-  field_ : IField;
+  struc : TThriftStruct;
+  field_ : TThriftField;
   tracker : IProtocolRecursionTracker;
 begin
   tracker := oprot.NextRecursionLevel;
-  struc := TStructImpl.Create('VariasLotacoesHeaderThrift');
+  struc.Name := 'VariasLotacoesHeaderThrift';
   oprot.WriteStructBegin(struc);
-  field_ := TFieldImpl.Create;
   if (LotacaoFormPrincipal <> nil) and __isset_LotacaoFormPrincipal then
   begin
     field_.Name := 'lotacaoFormPrincipal';
@@ -2814,8 +2810,8 @@ end;
 
 procedure TLotacaoThriftImpl.Read( const iprot: IProtocol);
 var
-  field_ : IField;
-  struc : IStruct;
+  field_ : TThriftField;
+  struc : TThriftStruct;
   tracker : IProtocolRecursionTracker;
 
 begin
@@ -2897,14 +2893,13 @@ end;
 
 procedure TLotacaoThriftImpl.Write( const oprot: IProtocol);
 var
-  struc : IStruct;
-  field_ : IField;
+  struc : TThriftStruct;
+  field_ : TThriftField;
   tracker : IProtocolRecursionTracker;
 begin
   tracker := oprot.NextRecursionLevel;
-  struc := TStructImpl.Create('LotacaoThrift');
+  struc.Name := 'LotacaoThrift';
   oprot.WriteStructBegin(struc);
-  field_ := TFieldImpl.Create;
   if (__isset_Cpf) then
   begin
     field_.Name := 'cpf';
@@ -3251,8 +3246,8 @@ end;
 
 procedure TEnderecoLocalPermanenciaThriftImpl.Read( const iprot: IProtocol);
 var
-  field_ : IField;
-  struc : IStruct;
+  field_ : TThriftField;
+  struc : TThriftStruct;
   tracker : IProtocolRecursionTracker;
 
 begin
@@ -3406,14 +3401,13 @@ end;
 
 procedure TEnderecoLocalPermanenciaThriftImpl.Write( const oprot: IProtocol);
 var
-  struc : IStruct;
-  field_ : IField;
+  struc : TThriftStruct;
+  field_ : TThriftField;
   tracker : IProtocolRecursionTracker;
 begin
   tracker := oprot.NextRecursionLevel;
-  struc := TStructImpl.Create('EnderecoLocalPermanenciaThrift');
+  struc.Name := 'EnderecoLocalPermanenciaThrift';
   oprot.WriteStructBegin(struc);
-  field_ := TFieldImpl.Create;
   if (__isset_Bairro) then
   begin
     field_.Name := 'bairro';
@@ -3912,8 +3906,8 @@ end;
 
 procedure TMedicamentoThriftImpl.Read( const iprot: IProtocol);
 var
-  field_ : IField;
-  struc : IStruct;
+  field_ : TThriftField;
+  struc : TThriftStruct;
   tracker : IProtocolRecursionTracker;
 
 begin
@@ -4085,14 +4079,13 @@ end;
 
 procedure TMedicamentoThriftImpl.Write( const oprot: IProtocol);
 var
-  struc : IStruct;
-  field_ : IField;
+  struc : TThriftStruct;
+  field_ : TThriftField;
   tracker : IProtocolRecursionTracker;
 begin
   tracker := oprot.NextRecursionLevel;
-  struc := TStructImpl.Create('MedicamentoThrift');
+  struc.Name := 'MedicamentoThrift';
   oprot.WriteStructBegin(struc);
-  field_ := TFieldImpl.Create;
   if (__isset_CodigoCatmat) then
   begin
     field_.Name := 'codigoCatmat';
@@ -4429,8 +4422,8 @@ end;
 
 procedure TEncaminhamentoExternoThriftImpl.Read( const iprot: IProtocol);
 var
-  field_ : IField;
-  struc : IStruct;
+  field_ : TThriftField;
+  struc : TThriftStruct;
   tracker : IProtocolRecursionTracker;
 
 begin
@@ -4494,14 +4487,13 @@ end;
 
 procedure TEncaminhamentoExternoThriftImpl.Write( const oprot: IProtocol);
 var
-  struc : IStruct;
-  field_ : IField;
+  struc : TThriftStruct;
+  field_ : TThriftField;
   tracker : IProtocolRecursionTracker;
 begin
   tracker := oprot.NextRecursionLevel;
-  struc := TStructImpl.Create('EncaminhamentoExternoThrift');
+  struc.Name := 'EncaminhamentoExternoThrift';
   oprot.WriteStructBegin(struc);
-  field_ := TFieldImpl.Create;
   if (__isset_Especialidade) then
   begin
     field_.Name := 'especialidade';
@@ -4626,8 +4618,8 @@ end;
 
 procedure TResultadoExameThriftImpl.Read( const iprot: IProtocol);
 var
-  field_ : IField;
-  struc : IStruct;
+  field_ : TThriftField;
+  struc : TThriftStruct;
   tracker : IProtocolRecursionTracker;
 
 begin
@@ -4673,14 +4665,13 @@ end;
 
 procedure TResultadoExameThriftImpl.Write( const oprot: IProtocol);
 var
-  struc : IStruct;
-  field_ : IField;
+  struc : TThriftStruct;
+  field_ : TThriftField;
   tracker : IProtocolRecursionTracker;
 begin
   tracker := oprot.NextRecursionLevel;
-  struc := TStructImpl.Create('ResultadoExameThrift');
+  struc.Name := 'ResultadoExameThrift';
   oprot.WriteStructBegin(struc);
-  field_ := TFieldImpl.Create;
   if (__isset_TipoResultado) then
   begin
     field_.Name := 'tipoResultado';
@@ -4823,10 +4814,10 @@ end;
 
 procedure TResultadosExameThriftImpl.Read( const iprot: IProtocol);
 var
-  field_ : IField;
-  struc : IStruct;
+  field_ : TThriftField;
+  struc : TThriftStruct;
   tracker : IProtocolRecursionTracker;
-  _list18: IList;
+  _list18: TThriftList;
   _i19: Integer;
   _elem20: IResultadoExameThrift;
 
@@ -4908,16 +4899,15 @@ end;
 
 procedure TResultadosExameThriftImpl.Write( const oprot: IProtocol);
 var
-  struc : IStruct;
-  field_ : IField;
+  struc : TThriftStruct;
+  field_ : TThriftField;
   tracker : IProtocolRecursionTracker;
-  list_21 : IList;
+  list_21 : TThriftList;
   _iter22: IResultadoExameThrift;
 begin
   tracker := oprot.NextRecursionLevel;
-  struc := TStructImpl.Create('ResultadosExameThrift');
+  struc.Name := 'ResultadosExameThrift';
   oprot.WriteStructBegin(struc);
-  field_ := TFieldImpl.Create;
   if (__isset_Exame) then
   begin
     field_.Name := 'exame';
@@ -4960,7 +4950,8 @@ begin
     field_.Type_  := TType.List;
     field_.ID := 6;
     oprot.WriteFieldBegin(field_);
-    list_21 := TListImpl.Create(TType.Struct, ResultadoExame.Count);
+    list_21.ElementType := TType.Struct;
+    list_21.Count := ResultadoExame.Count;
     oprot.WriteListBegin( list_21);
     for _iter22 in ResultadoExame do
     begin
@@ -5239,8 +5230,8 @@ end;
 
 procedure TMedicoesThriftImpl.Read( const iprot: IProtocol);
 var
-  field_ : IField;
-  struc : IStruct;
+  field_ : TThriftField;
+  struc : TThriftStruct;
   tracker : IProtocolRecursionTracker;
 
 begin
@@ -5385,14 +5376,13 @@ end;
 
 procedure TMedicoesThriftImpl.Write( const oprot: IProtocol);
 var
-  struc : IStruct;
-  field_ : IField;
+  struc : TThriftStruct;
+  field_ : TThriftField;
   tracker : IProtocolRecursionTracker;
 begin
   tracker := oprot.NextRecursionLevel;
-  struc := TStructImpl.Create('MedicoesThrift');
+  struc.Name := 'MedicoesThrift';
   oprot.WriteStructBegin(struc);
-  field_ := TFieldImpl.Create;
   if (__isset_CircunferenciaAbdominal) then
   begin
     field_.Name := 'circunferenciaAbdominal';
@@ -5764,8 +5754,8 @@ end;
 
 procedure TProblemaCondicaoThriftImpl.Read( const iprot: IProtocol);
 var
-  field_ : IField;
-  struc : IStruct;
+  field_ : TThriftField;
+  struc : TThriftStruct;
   tracker : IProtocolRecursionTracker;
 
 begin
@@ -5874,14 +5864,13 @@ end;
 
 procedure TProblemaCondicaoThriftImpl.Write( const oprot: IProtocol);
 var
-  struc : IStruct;
-  field_ : IField;
+  struc : TThriftStruct;
+  field_ : TThriftField;
   tracker : IProtocolRecursionTracker;
 begin
   tracker := oprot.NextRecursionLevel;
-  struc := TStructImpl.Create('ProblemaCondicaoThrift');
+  struc.Name := 'ProblemaCondicaoThrift';
   oprot.WriteStructBegin(struc);
-  field_ := TFieldImpl.Create;
   if (__isset_UuidProblema) then
   begin
     field_.Name := 'uuidProblema';
@@ -6289,8 +6278,8 @@ end;
 
 procedure TIvcfThriftImpl.Read( const iprot: IProtocol);
 var
-  field_ : IField;
-  struc : IStruct;
+  field_ : TThriftField;
+  struc : TThriftStruct;
   tracker : IProtocolRecursionTracker;
 
 begin
@@ -6453,14 +6442,13 @@ end;
 
 procedure TIvcfThriftImpl.Write( const oprot: IProtocol);
 var
-  struc : IStruct;
-  field_ : IField;
+  struc : TThriftStruct;
+  field_ : TThriftField;
   tracker : IProtocolRecursionTracker;
 begin
   tracker := oprot.NextRecursionLevel;
-  struc := TStructImpl.Create('IvcfThrift');
+  struc.Name := 'IvcfThrift';
   oprot.WriteStructBegin(struc);
-  field_ := TFieldImpl.Create;
   if (__isset_Resultado) then
   begin
     field_.Name := 'resultado';

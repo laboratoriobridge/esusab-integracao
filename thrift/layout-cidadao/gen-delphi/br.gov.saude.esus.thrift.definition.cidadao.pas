@@ -788,8 +788,8 @@ end;
 
 procedure TEnderecoTransportThriftImpl.Read( const iprot: IProtocol);
 var
-  field_ : IField;
-  struc : IStruct;
+  field_ : TThriftField;
+  struc : TThriftStruct;
 
 begin
   struc := iprot.ReadStructBegin;
@@ -941,10 +941,10 @@ end;
 
 procedure TEnderecoTransportThriftImpl.Write( const oprot: IProtocol);
 var
-  struc : IStruct;
-  field_ : IField;
+  struc : TThriftStruct;
+  field_ : TThriftField;
 begin
-  struc := TStructImpl.Create('EnderecoTransportThrift');
+  struc.Name := 'EnderecoTransportThrift');
   oprot.WriteStructBegin(struc);
   field_ := TFieldImpl.Create;
   if (__isset_BairroNome) then
@@ -1518,8 +1518,8 @@ end;
 
 procedure TCidadaoTransportThriftImpl.Read( const iprot: IProtocol);
 var
-  field_ : IField;
-  struc : IStruct;
+  field_ : TThriftField;
+  struc : TThriftStruct;
   _req_isset_NaoPossuiCns : Boolean;
   _req_isset_Cns : Boolean;
   _req_isset_DataNascimento : Boolean;
@@ -1825,33 +1825,33 @@ begin
     iprot.ReadStructEnd;
   end;
   if not _req_isset_NaoPossuiCns
-  then raise TProtocolException.Create( TProtocolException.INVALID_DATA, 'NaoPossuiCns');
+  then raise TProtocolException.Create( TProtocolException.TExceptionType.INVALID_DATA, 'NaoPossuiCns');
   if not _req_isset_Cns
-  then raise TProtocolException.Create( TProtocolException.INVALID_DATA, 'Cns');
+  then raise TProtocolException.Create( TProtocolException.TExceptionType.INVALID_DATA, 'Cns');
   if not _req_isset_DataNascimento
-  then raise TProtocolException.Create( TProtocolException.INVALID_DATA, 'DataNascimento');
+  then raise TProtocolException.Create( TProtocolException.TExceptionType.INVALID_DATA, 'DataNascimento');
   if not _req_isset_DesconheceNomeMae
-  then raise TProtocolException.Create( TProtocolException.INVALID_DATA, 'DesconheceNomeMae');
+  then raise TProtocolException.Create( TProtocolException.TExceptionType.INVALID_DATA, 'DesconheceNomeMae');
   if not _req_isset_Estrangeiro
-  then raise TProtocolException.Create( TProtocolException.INVALID_DATA, 'Estrangeiro');
+  then raise TProtocolException.Create( TProtocolException.TExceptionType.INVALID_DATA, 'Estrangeiro');
   if not _req_isset_MunicipioNascimentoCep
-  then raise TProtocolException.Create( TProtocolException.INVALID_DATA, 'MunicipioNascimentoCep');
+  then raise TProtocolException.Create( TProtocolException.TExceptionType.INVALID_DATA, 'MunicipioNascimentoCep');
   if not _req_isset_MunicipioNascimentoDne
-  then raise TProtocolException.Create( TProtocolException.INVALID_DATA, 'MunicipioNascimentoDne');
+  then raise TProtocolException.Create( TProtocolException.TExceptionType.INVALID_DATA, 'MunicipioNascimentoDne');
   if not _req_isset_NomeCompleto
-  then raise TProtocolException.Create( TProtocolException.INVALID_DATA, 'NomeCompleto');
+  then raise TProtocolException.Create( TProtocolException.TExceptionType.INVALID_DATA, 'NomeCompleto');
   if not _req_isset_RacaCorId
-  then raise TProtocolException.Create( TProtocolException.INVALID_DATA, 'RacaCorId');
+  then raise TProtocolException.Create( TProtocolException.TExceptionType.INVALID_DATA, 'RacaCorId');
   if not _req_isset_Sexo
-  then raise TProtocolException.Create( TProtocolException.INVALID_DATA, 'Sexo');
+  then raise TProtocolException.Create( TProtocolException.TExceptionType.INVALID_DATA, 'Sexo');
 end;
 
 procedure TCidadaoTransportThriftImpl.Write( const oprot: IProtocol);
 var
-  struc : IStruct;
-  field_ : IField;
+  struc : TThriftStruct;
+  field_ : TThriftField;
 begin
-  struc := TStructImpl.Create('CidadaoTransportThrift');
+  struc.Name := 'CidadaoTransportThrift');
   oprot.WriteStructBegin(struc);
   field_ := TFieldImpl.Create;
   // required field

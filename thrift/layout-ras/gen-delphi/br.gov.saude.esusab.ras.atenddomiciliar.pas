@@ -475,16 +475,16 @@ end;
 
 procedure TFichaAtendimentoDomiciliarChildThriftImpl.Read( const iprot: IProtocol);
 var
-  field_ : IField;
-  struc : IStruct;
+  field_ : TThriftField;
+  struc : TThriftStruct;
   tracker : IProtocolRecursionTracker;
-  _list0: IList;
+  _list0: TThriftList;
   _i1: Integer;
   _elem2: Int64;
-  _list3: IList;
+  _list3: TThriftList;
   _i4: Integer;
   _elem5: string;
-  _list6: IList;
+  _list6: TThriftList;
   _i7: Integer;
   _elem8: IProblemaCondicaoThrift;
 
@@ -643,18 +643,18 @@ end;
 
 procedure TFichaAtendimentoDomiciliarChildThriftImpl.Write( const oprot: IProtocol);
 var
-  struc : IStruct;
-  field_ : IField;
+  struc : TThriftStruct;
+  field_ : TThriftField;
   tracker : IProtocolRecursionTracker;
-  list_9 : IList;
+  list_9 : TThriftList;
   _iter10: Int64;
-  list_11 : IList;
+  list_11 : TThriftList;
   _iter12: string;
-  list_13 : IList;
+  list_13 : TThriftList;
   _iter14: IProblemaCondicaoThrift;
 begin
   tracker := oprot.NextRecursionLevel;
-  struc := TStructImpl.Create('FichaAtendimentoDomiciliarChildThrift');
+  struc.Name := 'FichaAtendimentoDomiciliarChildThrift');
   oprot.WriteStructBegin(struc);
   field_ := TFieldImpl.Create;
   if (__isset_Turno) then
@@ -945,11 +945,11 @@ end;
 
 procedure TFichaAtendimentoDomiciliarMasterThriftImpl.Read( const iprot: IProtocol);
 var
-  field_ : IField;
-  struc : IStruct;
+  field_ : TThriftField;
+  struc : TThriftStruct;
   tracker : IProtocolRecursionTracker;
   _req_isset_UuidFicha : Boolean;
-  _list17: IList;
+  _list17: TThriftList;
   _i18: Integer;
   _elem19: IFichaAtendimentoDomiciliarChildThrift;
 
@@ -1022,19 +1022,19 @@ begin
     iprot.ReadStructEnd;
   end;
   if not _req_isset_UuidFicha
-  then raise TProtocolException.Create( TProtocolException.INVALID_DATA, 'UuidFicha');
+  then raise TProtocolException.Create( TProtocolException.TExceptionType.INVALID_DATA, 'UuidFicha');
 end;
 
 procedure TFichaAtendimentoDomiciliarMasterThriftImpl.Write( const oprot: IProtocol);
 var
-  struc : IStruct;
-  field_ : IField;
+  struc : TThriftStruct;
+  field_ : TThriftField;
   tracker : IProtocolRecursionTracker;
-  list_20 : IList;
+  list_20 : TThriftList;
   _iter21: IFichaAtendimentoDomiciliarChildThrift;
 begin
   tracker := oprot.NextRecursionLevel;
-  struc := TStructImpl.Create('FichaAtendimentoDomiciliarMasterThrift');
+  struc.Name := 'FichaAtendimentoDomiciliarMasterThrift');
   oprot.WriteStructBegin(struc);
   field_ := TFieldImpl.Create;
   // required field

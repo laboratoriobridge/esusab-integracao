@@ -498,8 +498,8 @@ end;
 
 procedure TProcedimentoQuantidadeThriftImpl.Read( const iprot: IProtocol);
 var
-  field_ : IField;
-  struc : IStruct;
+  field_ : TThriftField;
+  struc : TThriftStruct;
   tracker : IProtocolRecursionTracker;
 
 begin
@@ -545,14 +545,13 @@ end;
 
 procedure TProcedimentoQuantidadeThriftImpl.Write( const oprot: IProtocol);
 var
-  struc : IStruct;
-  field_ : IField;
+  struc : TThriftStruct;
+  field_ : TThriftField;
   tracker : IProtocolRecursionTracker;
 begin
   tracker := oprot.NextRecursionLevel;
-  struc := TStructImpl.Create('ProcedimentoQuantidadeThrift');
+  struc.Name := 'ProcedimentoQuantidadeThrift';
   oprot.WriteStructBegin(struc);
-  field_ := TFieldImpl.Create;
   if (__isset_CoMsProcedimento) then
   begin
     field_.Name := 'coMsProcedimento';
@@ -983,34 +982,34 @@ end;
 
 procedure TFichaAtendimentoOdontologicoChildThriftImpl.Read( const iprot: IProtocol);
 var
-  field_ : IField;
-  struc : IStruct;
+  field_ : TThriftField;
+  struc : TThriftStruct;
   tracker : IProtocolRecursionTracker;
-  _list2: IList;
+  _list2: TThriftList;
   _i3: Integer;
   _elem4: Int64;
-  _list5: IList;
+  _list5: TThriftList;
   _i6: Integer;
   _elem7: Int64;
-  _list8: IList;
+  _list8: TThriftList;
   _i9: Integer;
   _elem10: Int64;
-  _list11: IList;
+  _list11: TThriftList;
   _i12: Integer;
   _elem13: Int64;
-  _list14: IList;
+  _list14: TThriftList;
   _i15: Integer;
   _elem16: IProcedimentoQuantidadeThrift;
-  _list17: IList;
+  _list17: TThriftList;
   _i18: Integer;
   _elem19: IMedicamentoThrift;
-  _list20: IList;
+  _list20: TThriftList;
   _i21: Integer;
   _elem22: IEncaminhamentoExternoThrift;
-  _list23: IList;
+  _list23: TThriftList;
   _i24: Integer;
   _elem25: IResultadosExameThrift;
-  _list26: IList;
+  _list26: TThriftList;
   _i27: Integer;
   _elem28: IProblemaCondicaoThrift;
 
@@ -1316,32 +1315,31 @@ end;
 
 procedure TFichaAtendimentoOdontologicoChildThriftImpl.Write( const oprot: IProtocol);
 var
-  struc : IStruct;
-  field_ : IField;
+  struc : TThriftStruct;
+  field_ : TThriftField;
   tracker : IProtocolRecursionTracker;
-  list_29 : IList;
+  list_29 : TThriftList;
   _iter30: Int64;
-  list_31 : IList;
+  list_31 : TThriftList;
   _iter32: Int64;
-  list_33 : IList;
+  list_33 : TThriftList;
   _iter34: Int64;
-  list_35 : IList;
+  list_35 : TThriftList;
   _iter36: Int64;
-  list_37 : IList;
+  list_37 : TThriftList;
   _iter38: IProcedimentoQuantidadeThrift;
-  list_39 : IList;
+  list_39 : TThriftList;
   _iter40: IMedicamentoThrift;
-  list_41 : IList;
+  list_41 : TThriftList;
   _iter42: IEncaminhamentoExternoThrift;
-  list_43 : IList;
+  list_43 : TThriftList;
   _iter44: IResultadosExameThrift;
-  list_45 : IList;
+  list_45 : TThriftList;
   _iter46: IProblemaCondicaoThrift;
 begin
   tracker := oprot.NextRecursionLevel;
-  struc := TStructImpl.Create('FichaAtendimentoOdontologicoChildThrift');
+  struc.Name := 'FichaAtendimentoOdontologicoChildThrift';
   oprot.WriteStructBegin(struc);
-  field_ := TFieldImpl.Create;
   if (__isset_DtNascimento) then
   begin
     field_.Name := 'dtNascimento';
@@ -1411,7 +1409,8 @@ begin
     field_.Type_  := TType.List;
     field_.ID := 8;
     oprot.WriteFieldBegin(field_);
-    list_29 := TListImpl.Create(TType.I64, TiposEncamOdonto.Count);
+    list_29.ElementType := TType.I64;
+    list_29.Count := TiposEncamOdonto.Count;
     oprot.WriteListBegin( list_29);
     for _iter30 in TiposEncamOdonto do
     begin
@@ -1426,7 +1425,8 @@ begin
     field_.Type_  := TType.List;
     field_.ID := 9;
     oprot.WriteFieldBegin(field_);
-    list_31 := TListImpl.Create(TType.I64, TiposFornecimOdonto.Count);
+    list_31.ElementType := TType.I64;
+    list_31.Count := TiposFornecimOdonto.Count;
     oprot.WriteListBegin( list_31);
     for _iter32 in TiposFornecimOdonto do
     begin
@@ -1441,7 +1441,8 @@ begin
     field_.Type_  := TType.List;
     field_.ID := 10;
     oprot.WriteFieldBegin(field_);
-    list_33 := TListImpl.Create(TType.I64, TiposVigilanciaSaudeBucal.Count);
+    list_33.ElementType := TType.I64;
+    list_33.Count := TiposVigilanciaSaudeBucal.Count;
     oprot.WriteListBegin( list_33);
     for _iter34 in TiposVigilanciaSaudeBucal do
     begin
@@ -1456,7 +1457,8 @@ begin
     field_.Type_  := TType.List;
     field_.ID := 11;
     oprot.WriteFieldBegin(field_);
-    list_35 := TListImpl.Create(TType.I64, TiposConsultaOdonto.Count);
+    list_35.ElementType := TType.I64;
+    list_35.Count := TiposConsultaOdonto.Count;
     oprot.WriteListBegin( list_35);
     for _iter36 in TiposConsultaOdonto do
     begin
@@ -1471,7 +1473,8 @@ begin
     field_.Type_  := TType.List;
     field_.ID := 12;
     oprot.WriteFieldBegin(field_);
-    list_37 := TListImpl.Create(TType.Struct, ProcedimentosRealizados.Count);
+    list_37.ElementType := TType.Struct;
+    list_37.Count := ProcedimentosRealizados.Count;
     oprot.WriteListBegin( list_37);
     for _iter38 in ProcedimentosRealizados do
     begin
@@ -1531,7 +1534,8 @@ begin
     field_.Type_  := TType.List;
     field_.ID := 19;
     oprot.WriteFieldBegin(field_);
-    list_39 := TListImpl.Create(TType.Struct, Medicamentos.Count);
+    list_39.ElementType := TType.Struct;
+    list_39.Count := Medicamentos.Count;
     oprot.WriteListBegin( list_39);
     for _iter40 in Medicamentos do
     begin
@@ -1546,7 +1550,8 @@ begin
     field_.Type_  := TType.List;
     field_.ID := 20;
     oprot.WriteFieldBegin(field_);
-    list_41 := TListImpl.Create(TType.Struct, Encaminhamentos.Count);
+    list_41.ElementType := TType.Struct;
+    list_41.Count := Encaminhamentos.Count;
     oprot.WriteListBegin( list_41);
     for _iter42 in Encaminhamentos do
     begin
@@ -1561,7 +1566,8 @@ begin
     field_.Type_  := TType.List;
     field_.ID := 21;
     oprot.WriteFieldBegin(field_);
-    list_43 := TListImpl.Create(TType.Struct, ResultadosExames.Count);
+    list_43.ElementType := TType.Struct;
+    list_43.Count := ResultadosExames.Count;
     oprot.WriteListBegin( list_43);
     for _iter44 in ResultadosExames do
     begin
@@ -1585,7 +1591,8 @@ begin
     field_.Type_  := TType.List;
     field_.ID := 28;
     oprot.WriteFieldBegin(field_);
-    list_45 := TListImpl.Create(TType.Struct, ProblemasCondicoes.Count);
+    list_45.ElementType := TType.Struct;
+    list_45.Count := ProblemasCondicoes.Count;
     oprot.WriteListBegin( list_45);
     for _iter46 in ProblemasCondicoes do
     begin
@@ -1831,11 +1838,11 @@ end;
 
 procedure TFichaAtendimentoOdontologicoMasterThriftImpl.Read( const iprot: IProtocol);
 var
-  field_ : IField;
-  struc : IStruct;
+  field_ : TThriftField;
+  struc : TThriftStruct;
   tracker : IProtocolRecursionTracker;
   _req_isset_UuidFicha : Boolean;
-  _list49: IList;
+  _list49: TThriftList;
   _i50: Integer;
   _elem51: IFichaAtendimentoOdontologicoChildThrift;
 
@@ -1908,21 +1915,20 @@ begin
     iprot.ReadStructEnd;
   end;
   if not _req_isset_UuidFicha
-  then raise TProtocolException.Create( TProtocolException.INVALID_DATA, 'UuidFicha');
+  then raise TProtocolException.Create( TProtocolException.TExceptionType.INVALID_DATA, 'UuidFicha');
 end;
 
 procedure TFichaAtendimentoOdontologicoMasterThriftImpl.Write( const oprot: IProtocol);
 var
-  struc : IStruct;
-  field_ : IField;
+  struc : TThriftStruct;
+  field_ : TThriftField;
   tracker : IProtocolRecursionTracker;
-  list_52 : IList;
+  list_52 : TThriftList;
   _iter53: IFichaAtendimentoOdontologicoChildThrift;
 begin
   tracker := oprot.NextRecursionLevel;
-  struc := TStructImpl.Create('FichaAtendimentoOdontologicoMasterThrift');
+  struc.Name := 'FichaAtendimentoOdontologicoMasterThrift';
   oprot.WriteStructBegin(struc);
-  field_ := TFieldImpl.Create;
   // required field
   field_.Name := 'uuidFicha';
   field_.Type_  := TType.String_;
@@ -1945,7 +1951,8 @@ begin
     field_.Type_  := TType.List;
     field_.ID := 3;
     oprot.WriteFieldBegin(field_);
-    list_52 := TListImpl.Create(TType.Struct, AtendimentosOdontologicos.Count);
+    list_52.ElementType := TType.Struct;
+    list_52.Count := AtendimentosOdontologicos.Count;
     oprot.WriteListBegin( list_52);
     for _iter53 in AtendimentosOdontologicos do
     begin

@@ -717,10 +717,10 @@ end;
 
 procedure TExameThriftImpl.Read( const iprot: IProtocol);
 var
-  field_ : IField;
-  struc : IStruct;
+  field_ : TThriftField;
+  struc : TThriftStruct;
   tracker : IProtocolRecursionTracker;
-  _list0: IList;
+  _list0: TThriftList;
   _i1: Integer;
   _elem2: string;
 
@@ -774,16 +774,15 @@ end;
 
 procedure TExameThriftImpl.Write( const oprot: IProtocol);
 var
-  struc : IStruct;
-  field_ : IField;
+  struc : TThriftStruct;
+  field_ : TThriftField;
   tracker : IProtocolRecursionTracker;
-  list_3 : IList;
+  list_3 : TThriftList;
   _iter4: string;
 begin
   tracker := oprot.NextRecursionLevel;
-  struc := TStructImpl.Create('ExameThrift');
+  struc.Name := 'ExameThrift';
   oprot.WriteStructBegin(struc);
-  field_ := TFieldImpl.Create;
   if (__isset_CodigoExame) then
   begin
     field_.Name := 'codigoExame';
@@ -799,7 +798,8 @@ begin
     field_.Type_  := TType.List;
     field_.ID := 2;
     oprot.WriteFieldBegin(field_);
-    list_3 := TListImpl.Create(TType.String_, SolicitadoAvaliado.Count);
+    list_3.ElementType := TType.String_;
+    list_3.Count := SolicitadoAvaliado.Count;
     oprot.WriteListBegin( list_3);
     for _iter4 in SolicitadoAvaliado do
     begin
@@ -932,10 +932,10 @@ end;
 
 procedure TProblemaCondicaoAvaliacaoAIThriftImpl.Read( const iprot: IProtocol);
 var
-  field_ : IField;
-  struc : IStruct;
+  field_ : TThriftField;
+  struc : TThriftStruct;
   tracker : IProtocolRecursionTracker;
-  _list7: IList;
+  _list7: TThriftList;
   _i8: Integer;
   _elem9: string;
 
@@ -1016,23 +1016,23 @@ end;
 
 procedure TProblemaCondicaoAvaliacaoAIThriftImpl.Write( const oprot: IProtocol);
 var
-  struc : IStruct;
-  field_ : IField;
+  struc : TThriftStruct;
+  field_ : TThriftField;
   tracker : IProtocolRecursionTracker;
-  list_10 : IList;
+  list_10 : TThriftList;
   _iter11: string;
 begin
   tracker := oprot.NextRecursionLevel;
-  struc := TStructImpl.Create('ProblemaCondicaoAvaliacaoAIThrift');
+  struc.Name := 'ProblemaCondicaoAvaliacaoAIThrift';
   oprot.WriteStructBegin(struc);
-  field_ := TFieldImpl.Create;
   if (Ciaps <> nil) and __isset_Ciaps then
   begin
     field_.Name := 'ciaps';
     field_.Type_  := TType.List;
     field_.ID := 1;
     oprot.WriteFieldBegin(field_);
-    list_10 := TListImpl.Create(TType.String_, Ciaps.Count);
+    list_10.ElementType := TType.String_;
+    list_10.Count := Ciaps.Count;
     oprot.WriteListBegin( list_10);
     for _iter11 in Ciaps do
     begin
@@ -1683,31 +1683,31 @@ end;
 
 procedure TFichaAtendimentoIndividualChildThriftImpl.Read( const iprot: IProtocol);
 var
-  field_ : IField;
-  struc : IStruct;
+  field_ : TThriftField;
+  struc : TThriftStruct;
   tracker : IProtocolRecursionTracker;
-  _list14: IList;
+  _list14: TThriftList;
   _i15: Integer;
   _elem16: IExameThrift;
-  _list17: IList;
+  _list17: TThriftList;
   _i18: Integer;
   _elem19: Int64;
-  _list20: IList;
+  _list20: TThriftList;
   _i21: Integer;
   _elem22: Int64;
-  _list23: IList;
+  _list23: TThriftList;
   _i24: Integer;
   _elem25: IMedicamentoThrift;
-  _list26: IList;
+  _list26: TThriftList;
   _i27: Integer;
   _elem28: IEncaminhamentoExternoThrift;
-  _list29: IList;
+  _list29: TThriftList;
   _i30: Integer;
   _elem31: IResultadosExameThrift;
-  _list32: IList;
+  _list32: TThriftList;
   _i33: Integer;
   _elem34: Int64;
-  _list35: IList;
+  _list35: TThriftList;
   _i36: Integer;
   _elem37: IProblemaCondicaoThrift;
 
@@ -2106,30 +2106,29 @@ end;
 
 procedure TFichaAtendimentoIndividualChildThriftImpl.Write( const oprot: IProtocol);
 var
-  struc : IStruct;
-  field_ : IField;
+  struc : TThriftStruct;
+  field_ : TThriftField;
   tracker : IProtocolRecursionTracker;
-  list_38 : IList;
+  list_38 : TThriftList;
   _iter39: IExameThrift;
-  list_40 : IList;
+  list_40 : TThriftList;
   _iter41: Int64;
-  list_42 : IList;
+  list_42 : TThriftList;
   _iter43: Int64;
-  list_44 : IList;
+  list_44 : TThriftList;
   _iter45: IMedicamentoThrift;
-  list_46 : IList;
+  list_46 : TThriftList;
   _iter47: IEncaminhamentoExternoThrift;
-  list_48 : IList;
+  list_48 : TThriftList;
   _iter49: IResultadosExameThrift;
-  list_50 : IList;
+  list_50 : TThriftList;
   _iter51: Int64;
-  list_52 : IList;
+  list_52 : TThriftList;
   _iter53: IProblemaCondicaoThrift;
 begin
   tracker := oprot.NextRecursionLevel;
-  struc := TStructImpl.Create('FichaAtendimentoIndividualChildThrift');
+  struc.Name := 'FichaAtendimentoIndividualChildThrift';
   oprot.WriteStructBegin(struc);
-  field_ := TFieldImpl.Create;
   if (__isset_NumeroProntuario) then
   begin
     field_.Name := 'numeroProntuario';
@@ -2235,7 +2234,8 @@ begin
     field_.Type_  := TType.List;
     field_.ID := 17;
     oprot.WriteFieldBegin(field_);
-    list_38 := TListImpl.Create(TType.Struct, Exame.Count);
+    list_38.ElementType := TType.Struct;
+    list_38.Count := Exame.Count;
     oprot.WriteListBegin( list_38);
     for _iter39 in Exame do
     begin
@@ -2277,7 +2277,8 @@ begin
     field_.Type_  := TType.List;
     field_.ID := 21;
     oprot.WriteFieldBegin(field_);
-    list_40 := TListImpl.Create(TType.I64, Nasfs.Count);
+    list_40.ElementType := TType.I64;
+    list_40.Count := Nasfs.Count;
     oprot.WriteListBegin( list_40);
     for _iter41 in Nasfs do
     begin
@@ -2292,7 +2293,8 @@ begin
     field_.Type_  := TType.List;
     field_.ID := 22;
     oprot.WriteFieldBegin(field_);
-    list_42 := TListImpl.Create(TType.I64, Condutas.Count);
+    list_42.ElementType := TType.I64;
+    list_42.Count := Condutas.Count;
     oprot.WriteListBegin( list_42);
     for _iter43 in Condutas do
     begin
@@ -2370,7 +2372,8 @@ begin
     field_.Type_  := TType.List;
     field_.ID := 31;
     oprot.WriteFieldBegin(field_);
-    list_44 := TListImpl.Create(TType.Struct, Medicamentos.Count);
+    list_44.ElementType := TType.Struct;
+    list_44.Count := Medicamentos.Count;
     oprot.WriteListBegin( list_44);
     for _iter45 in Medicamentos do
     begin
@@ -2385,7 +2388,8 @@ begin
     field_.Type_  := TType.List;
     field_.ID := 32;
     oprot.WriteFieldBegin(field_);
-    list_46 := TListImpl.Create(TType.Struct, Encaminhamentos.Count);
+    list_46.ElementType := TType.Struct;
+    list_46.Count := Encaminhamentos.Count;
     oprot.WriteListBegin( list_46);
     for _iter47 in Encaminhamentos do
     begin
@@ -2400,7 +2404,8 @@ begin
     field_.Type_  := TType.List;
     field_.ID := 33;
     oprot.WriteFieldBegin(field_);
-    list_48 := TListImpl.Create(TType.Struct, ResultadosExames.Count);
+    list_48.ElementType := TType.Struct;
+    list_48.Count := ResultadosExames.Count;
     oprot.WriteListBegin( list_48);
     for _iter49 in ResultadosExames do
     begin
@@ -2442,7 +2447,8 @@ begin
     field_.Type_  := TType.List;
     field_.ID := 38;
     oprot.WriteFieldBegin(field_);
-    list_50 := TListImpl.Create(TType.I64, Emultis.Count);
+    list_50.ElementType := TType.I64;
+    list_50.Count := Emultis.Count;
     oprot.WriteListBegin( list_50);
     for _iter51 in Emultis do
     begin
@@ -2466,7 +2472,8 @@ begin
     field_.Type_  := TType.List;
     field_.ID := 40;
     oprot.WriteFieldBegin(field_);
-    list_52 := TListImpl.Create(TType.Struct, ProblemasCondicoes.Count);
+    list_52.ElementType := TType.Struct;
+    list_52.Count := ProblemasCondicoes.Count;
     oprot.WriteListBegin( list_52);
     for _iter53 in ProblemasCondicoes do
     begin
@@ -2778,11 +2785,11 @@ end;
 
 procedure TFichaAtendimentoIndividualMasterThriftImpl.Read( const iprot: IProtocol);
 var
-  field_ : IField;
-  struc : IStruct;
+  field_ : TThriftField;
+  struc : TThriftStruct;
   tracker : IProtocolRecursionTracker;
   _req_isset_UuidFicha : Boolean;
-  _list56: IList;
+  _list56: TThriftList;
   _i57: Integer;
   _elem58: IFichaAtendimentoIndividualChildThrift;
 
@@ -2855,21 +2862,20 @@ begin
     iprot.ReadStructEnd;
   end;
   if not _req_isset_UuidFicha
-  then raise TProtocolException.Create( TProtocolException.INVALID_DATA, 'UuidFicha');
+  then raise TProtocolException.Create( TProtocolException.TExceptionType.INVALID_DATA, 'UuidFicha');
 end;
 
 procedure TFichaAtendimentoIndividualMasterThriftImpl.Write( const oprot: IProtocol);
 var
-  struc : IStruct;
-  field_ : IField;
+  struc : TThriftStruct;
+  field_ : TThriftField;
   tracker : IProtocolRecursionTracker;
-  list_59 : IList;
+  list_59 : TThriftList;
   _iter60: IFichaAtendimentoIndividualChildThrift;
 begin
   tracker := oprot.NextRecursionLevel;
-  struc := TStructImpl.Create('FichaAtendimentoIndividualMasterThrift');
+  struc.Name := 'FichaAtendimentoIndividualMasterThrift';
   oprot.WriteStructBegin(struc);
-  field_ := TFieldImpl.Create;
   if (HeaderTransport <> nil) and __isset_HeaderTransport then
   begin
     field_.Name := 'headerTransport';
@@ -2885,7 +2891,8 @@ begin
     field_.Type_  := TType.List;
     field_.ID := 2;
     oprot.WriteFieldBegin(field_);
-    list_59 := TListImpl.Create(TType.Struct, AtendimentosIndividuais.Count);
+    list_59.ElementType := TType.Struct;
+    list_59.Count := AtendimentosIndividuais.Count;
     oprot.WriteListBegin( list_59);
     for _iter60 in AtendimentosIndividuais do
     begin

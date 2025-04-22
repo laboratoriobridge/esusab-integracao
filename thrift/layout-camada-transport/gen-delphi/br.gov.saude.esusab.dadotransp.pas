@@ -344,8 +344,8 @@ end;
 
 procedure TVersaoThriftImpl.Read( const iprot: IProtocol);
 var
-  field_ : IField;
-  struc : IStruct;
+  field_ : TThriftField;
+  struc : TThriftStruct;
   _req_isset_Major : Boolean;
   _req_isset_Minor : Boolean;
   _req_isset_Revision : Boolean;
@@ -404,21 +404,20 @@ begin
     iprot.ReadStructEnd;
   end;
   if not _req_isset_Major
-  then raise TProtocolException.Create( TProtocolException.INVALID_DATA, 'Major');
+  then raise TProtocolException.Create( TProtocolException.TExceptionType.INVALID_DATA, 'Major');
   if not _req_isset_Minor
-  then raise TProtocolException.Create( TProtocolException.INVALID_DATA, 'Minor');
+  then raise TProtocolException.Create( TProtocolException.TExceptionType.INVALID_DATA, 'Minor');
   if not _req_isset_Revision
-  then raise TProtocolException.Create( TProtocolException.INVALID_DATA, 'Revision');
+  then raise TProtocolException.Create( TProtocolException.TExceptionType.INVALID_DATA, 'Revision');
 end;
 
 procedure TVersaoThriftImpl.Write( const oprot: IProtocol);
 var
-  struc : IStruct;
-  field_ : IField;
+  struc : TThriftStruct;
+  field_ : TThriftField;
 begin
-  struc := TStructImpl.Create('VersaoThrift');
+  struc.Name := 'VersaoThrift';
   oprot.WriteStructBegin(struc);
-  field_ := TFieldImpl.Create;
   // required field
   field_.Name := 'major';
   field_.Type_  := TType.I32;
@@ -585,8 +584,8 @@ end;
 
 procedure TDadoInstalacaoThriftImpl.Read( const iprot: IProtocol);
 var
-  field_ : IField;
-  struc : IStruct;
+  field_ : TThriftField;
+  struc : TThriftStruct;
   _req_isset_ContraChave : Boolean;
   _req_isset_CpfOuCnpj : Boolean;
   _req_isset_NomeOuRazaoSocial : Boolean;
@@ -690,21 +689,20 @@ begin
     iprot.ReadStructEnd;
   end;
   if not _req_isset_ContraChave
-  then raise TProtocolException.Create( TProtocolException.INVALID_DATA, 'ContraChave');
+  then raise TProtocolException.Create( TProtocolException.TExceptionType.INVALID_DATA, 'ContraChave');
   if not _req_isset_CpfOuCnpj
-  then raise TProtocolException.Create( TProtocolException.INVALID_DATA, 'CpfOuCnpj');
+  then raise TProtocolException.Create( TProtocolException.TExceptionType.INVALID_DATA, 'CpfOuCnpj');
   if not _req_isset_NomeOuRazaoSocial
-  then raise TProtocolException.Create( TProtocolException.INVALID_DATA, 'NomeOuRazaoSocial');
+  then raise TProtocolException.Create( TProtocolException.TExceptionType.INVALID_DATA, 'NomeOuRazaoSocial');
 end;
 
 procedure TDadoInstalacaoThriftImpl.Write( const oprot: IProtocol);
 var
-  struc : IStruct;
-  field_ : IField;
+  struc : TThriftStruct;
+  field_ : TThriftField;
 begin
-  struc := TStructImpl.Create('DadoInstalacaoThrift');
+  struc.Name := 'DadoInstalacaoThrift';
   oprot.WriteStructBegin(struc);
-  field_ := TFieldImpl.Create;
   // required field
   field_.Name := 'contraChave';
   field_.Type_  := TType.String_;
@@ -950,8 +948,8 @@ end;
 
 procedure TDadoTransporteThriftImpl.Read( const iprot: IProtocol);
 var
-  field_ : IField;
-  struc : IStruct;
+  field_ : TThriftField;
+  struc : TThriftStruct;
   _req_isset_UuidDadoSerializado : Boolean;
   _req_isset_TipoDadoSerializado : Boolean;
   _req_isset_CnesDadoSerializado : Boolean;
@@ -1085,27 +1083,26 @@ begin
     iprot.ReadStructEnd;
   end;
   if not _req_isset_UuidDadoSerializado
-  then raise TProtocolException.Create( TProtocolException.INVALID_DATA, 'UuidDadoSerializado');
+  then raise TProtocolException.Create( TProtocolException.TExceptionType.INVALID_DATA, 'UuidDadoSerializado');
   if not _req_isset_TipoDadoSerializado
-  then raise TProtocolException.Create( TProtocolException.INVALID_DATA, 'TipoDadoSerializado');
+  then raise TProtocolException.Create( TProtocolException.TExceptionType.INVALID_DATA, 'TipoDadoSerializado');
   if not _req_isset_CnesDadoSerializado
-  then raise TProtocolException.Create( TProtocolException.INVALID_DATA, 'CnesDadoSerializado');
+  then raise TProtocolException.Create( TProtocolException.TExceptionType.INVALID_DATA, 'CnesDadoSerializado');
   if not _req_isset_DadoSerializado
-  then raise TProtocolException.Create( TProtocolException.INVALID_DATA, 'DadoSerializado');
+  then raise TProtocolException.Create( TProtocolException.TExceptionType.INVALID_DATA, 'DadoSerializado');
   if not _req_isset_Remetente
-  then raise TProtocolException.Create( TProtocolException.INVALID_DATA, 'Remetente');
+  then raise TProtocolException.Create( TProtocolException.TExceptionType.INVALID_DATA, 'Remetente');
   if not _req_isset_Originadora
-  then raise TProtocolException.Create( TProtocolException.INVALID_DATA, 'Originadora');
+  then raise TProtocolException.Create( TProtocolException.TExceptionType.INVALID_DATA, 'Originadora');
 end;
 
 procedure TDadoTransporteThriftImpl.Write( const oprot: IProtocol);
 var
-  struc : IStruct;
-  field_ : IField;
+  struc : TThriftStruct;
+  field_ : TThriftField;
 begin
-  struc := TStructImpl.Create('DadoTransporteThrift');
+  struc.Name := 'DadoTransporteThrift';
   oprot.WriteStructBegin(struc);
-  field_ := TFieldImpl.Create;
   // required field
   field_.Name := 'uuidDadoSerializado';
   field_.Type_  := TType.String_;

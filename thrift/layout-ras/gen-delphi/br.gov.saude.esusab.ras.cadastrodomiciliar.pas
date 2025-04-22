@@ -781,8 +781,8 @@ end;
 
 procedure TInstituicaoPermanenciaThriftImpl.Read( const iprot: IProtocol);
 var
-  field_ : IField;
-  struc : IStruct;
+  field_ : TThriftField;
+  struc : TThriftStruct;
   tracker : IProtocolRecursionTracker;
 
 begin
@@ -864,14 +864,13 @@ end;
 
 procedure TInstituicaoPermanenciaThriftImpl.Write( const oprot: IProtocol);
 var
-  struc : IStruct;
-  field_ : IField;
+  struc : TThriftStruct;
+  field_ : TThriftField;
   tracker : IProtocolRecursionTracker;
 begin
   tracker := oprot.NextRecursionLevel;
-  struc := TStructImpl.Create('InstituicaoPermanenciaThrift');
+  struc.Name := 'InstituicaoPermanenciaThrift';
   oprot.WriteStructBegin(struc);
-  field_ := TFieldImpl.Create;
   if (__isset_NomeInstituicaoPermanencia) then
   begin
     field_.Name := 'nomeInstituicaoPermanencia';
@@ -1218,8 +1217,8 @@ end;
 
 procedure TCondicaoMoradiaThriftImpl.Read( const iprot: IProtocol);
 var
-  field_ : IField;
-  struc : IStruct;
+  field_ : TThriftField;
+  struc : TThriftStruct;
   tracker : IProtocolRecursionTracker;
 
 begin
@@ -1373,14 +1372,13 @@ end;
 
 procedure TCondicaoMoradiaThriftImpl.Write( const oprot: IProtocol);
 var
-  struc : IStruct;
-  field_ : IField;
+  struc : TThriftStruct;
+  field_ : TThriftField;
   tracker : IProtocolRecursionTracker;
 begin
   tracker := oprot.NextRecursionLevel;
-  struc := TStructImpl.Create('CondicaoMoradiaThrift');
+  struc.Name := 'CondicaoMoradiaThrift';
   oprot.WriteStructBegin(struc);
-  field_ := TFieldImpl.Create;
   if (__isset_AbastecimentoAgua) then
   begin
     field_.Name := 'abastecimentoAgua';
@@ -1751,8 +1749,8 @@ end;
 
 procedure TFamiliaRowThriftImpl.Read( const iprot: IProtocol);
 var
-  field_ : IField;
-  struc : IStruct;
+  field_ : TThriftField;
+  struc : TThriftStruct;
   tracker : IProtocolRecursionTracker;
 
 begin
@@ -1852,14 +1850,13 @@ end;
 
 procedure TFamiliaRowThriftImpl.Write( const oprot: IProtocol);
 var
-  struc : IStruct;
-  field_ : IField;
+  struc : TThriftStruct;
+  field_ : TThriftField;
   tracker : IProtocolRecursionTracker;
 begin
   tracker := oprot.NextRecursionLevel;
-  struc := TStructImpl.Create('FamiliaRowThrift');
+  struc.Name := 'FamiliaRowThrift';
   oprot.WriteStructBegin(struc);
-  field_ := TFieldImpl.Create;
   if (__isset_DataNascimentoResponsavel) then
   begin
     field_.Name := 'dataNascimentoResponsavel';
@@ -2278,14 +2275,14 @@ end;
 
 procedure TCadastroDomiciliarThriftImpl.Read( const iprot: IProtocol);
 var
-  field_ : IField;
-  struc : IStruct;
+  field_ : TThriftField;
+  struc : TThriftStruct;
   tracker : IProtocolRecursionTracker;
   _req_isset_Uuid : Boolean;
-  _list6: IList;
+  _list6: TThriftList;
   _i7: Integer;
   _elem8: Int64;
-  _list9: IList;
+  _list9: TThriftList;
   _i10: Integer;
   _elem11: IFamiliaRowThrift;
 
@@ -2485,30 +2482,30 @@ begin
     iprot.ReadStructEnd;
   end;
   if not _req_isset_Uuid
-  then raise TProtocolException.Create( TProtocolException.INVALID_DATA, 'Uuid');
+  then raise TProtocolException.Create( TProtocolException.TExceptionType.INVALID_DATA, 'Uuid');
 end;
 
 procedure TCadastroDomiciliarThriftImpl.Write( const oprot: IProtocol);
 var
-  struc : IStruct;
-  field_ : IField;
+  struc : TThriftStruct;
+  field_ : TThriftField;
   tracker : IProtocolRecursionTracker;
-  list_12 : IList;
+  list_12 : TThriftList;
   _iter13: Int64;
-  list_14 : IList;
+  list_14 : TThriftList;
   _iter15: IFamiliaRowThrift;
 begin
   tracker := oprot.NextRecursionLevel;
-  struc := TStructImpl.Create('CadastroDomiciliarThrift');
+  struc.Name := 'CadastroDomiciliarThrift';
   oprot.WriteStructBegin(struc);
-  field_ := TFieldImpl.Create;
   if (AnimaisNoDomicilio <> nil) and __isset_AnimaisNoDomicilio then
   begin
     field_.Name := 'animaisNoDomicilio';
     field_.Type_  := TType.List;
     field_.ID := 1;
     oprot.WriteFieldBegin(field_);
-    list_12 := TListImpl.Create(TType.I64, AnimaisNoDomicilio.Count);
+    list_12.ElementType := TType.I64;
+    list_12.Count := AnimaisNoDomicilio.Count;
     oprot.WriteListBegin( list_12);
     for _iter13 in AnimaisNoDomicilio do
     begin
@@ -2541,7 +2538,8 @@ begin
     field_.Type_  := TType.List;
     field_.ID := 5;
     oprot.WriteFieldBegin(field_);
-    list_14 := TListImpl.Create(TType.Struct, Familias.Count);
+    list_14.ElementType := TType.Struct;
+    list_14.Count := Familias.Count;
     oprot.WriteListBegin( list_14);
     for _iter15 in Familias do
     begin

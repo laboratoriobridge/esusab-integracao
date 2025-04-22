@@ -1066,14 +1066,14 @@ end;
 
 procedure TFichaAvaliacaoElegibilidadeThriftImpl.Read( const iprot: IProtocol);
 var
-  field_ : IField;
-  struc : IStruct;
+  field_ : TThriftField;
+  struc : TThriftStruct;
   tracker : IProtocolRecursionTracker;
   _req_isset_UuidFicha : Boolean;
-  _list0: IList;
+  _list0: TThriftList;
   _i1: Integer;
   _elem2: Int64;
-  _list3: IList;
+  _list3: TThriftList;
   _i4: Integer;
   _elem5: Int64;
 
@@ -1441,23 +1441,22 @@ begin
     iprot.ReadStructEnd;
   end;
   if not _req_isset_UuidFicha
-  then raise TProtocolException.Create( TProtocolException.INVALID_DATA, 'UuidFicha');
+  then raise TProtocolException.Create( TProtocolException.TExceptionType.INVALID_DATA, 'UuidFicha');
 end;
 
 procedure TFichaAvaliacaoElegibilidadeThriftImpl.Write( const oprot: IProtocol);
 var
-  struc : IStruct;
-  field_ : IField;
+  struc : TThriftStruct;
+  field_ : TThriftField;
   tracker : IProtocolRecursionTracker;
-  list_6 : IList;
+  list_6 : TThriftList;
   _iter7: Int64;
-  list_8 : IList;
+  list_8 : TThriftList;
   _iter9: Int64;
 begin
   tracker := oprot.NextRecursionLevel;
-  struc := TStructImpl.Create('FichaAvaliacaoElegibilidadeThrift');
+  struc.Name := 'FichaAvaliacaoElegibilidadeThrift';
   oprot.WriteStructBegin(struc);
-  field_ := TFieldImpl.Create;
   // required field
   field_.Name := 'uuidFicha';
   field_.Type_  := TType.String_;
@@ -1615,7 +1614,8 @@ begin
     field_.Type_  := TType.List;
     field_.ID := 19;
     oprot.WriteFieldBegin(field_);
-    list_6 := TListImpl.Create(TType.I64, CondicoesAvaliadas.Count);
+    list_6.ElementType := TType.I64;
+    list_6.Count := CondicoesAvaliadas.Count;
     oprot.WriteListBegin( list_6);
     for _iter7 in CondicoesAvaliadas do
     begin
@@ -1666,7 +1666,8 @@ begin
     field_.Type_  := TType.List;
     field_.ID := 24;
     oprot.WriteFieldBegin(field_);
-    list_8 := TListImpl.Create(TType.I64, ConclusaoDestinoInelegivel.Count);
+    list_8.ElementType := TType.I64;
+    list_8.Count := ConclusaoDestinoInelegivel.Count;
     oprot.WriteListBegin( list_8);
     for _iter9 in ConclusaoDestinoInelegivel do
     begin

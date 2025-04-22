@@ -468,8 +468,8 @@ end;
 
 procedure TPerguntaQuestionarioCriancasMenoresSeisMesesThriftImpl.Read( const iprot: IProtocol);
 var
-  field_ : IField;
-  struc : IStruct;
+  field_ : TThriftField;
+  struc : TThriftStruct;
   tracker : IProtocolRecursionTracker;
 
 begin
@@ -515,14 +515,13 @@ end;
 
 procedure TPerguntaQuestionarioCriancasMenoresSeisMesesThriftImpl.Write( const oprot: IProtocol);
 var
-  struc : IStruct;
-  field_ : IField;
+  struc : TThriftStruct;
+  field_ : TThriftField;
   tracker : IProtocolRecursionTracker;
 begin
   tracker := oprot.NextRecursionLevel;
-  struc := TStructImpl.Create('PerguntaQuestionarioCriancasMenoresSeisMesesThrift');
+  struc.Name := 'PerguntaQuestionarioCriancasMenoresSeisMesesThrift';
   oprot.WriteStructBegin(struc);
-  field_ := TFieldImpl.Create;
   if (__isset_Pergunta) then
   begin
     field_.Name := 'pergunta';
@@ -617,8 +616,8 @@ end;
 
 procedure TPerguntaQuestionarioCriancasDeSeisVinteTresMesesThriftImpl.Read( const iprot: IProtocol);
 var
-  field_ : IField;
-  struc : IStruct;
+  field_ : TThriftField;
+  struc : TThriftStruct;
   tracker : IProtocolRecursionTracker;
 
 begin
@@ -664,14 +663,13 @@ end;
 
 procedure TPerguntaQuestionarioCriancasDeSeisVinteTresMesesThriftImpl.Write( const oprot: IProtocol);
 var
-  struc : IStruct;
-  field_ : IField;
+  struc : TThriftStruct;
+  field_ : TThriftField;
   tracker : IProtocolRecursionTracker;
 begin
   tracker := oprot.NextRecursionLevel;
-  struc := TStructImpl.Create('PerguntaQuestionarioCriancasDeSeisVinteTresMesesThrift');
+  struc.Name := 'PerguntaQuestionarioCriancasDeSeisVinteTresMesesThrift';
   oprot.WriteStructBegin(struc);
-  field_ := TFieldImpl.Create;
   if (__isset_Pergunta) then
   begin
     field_.Name := 'pergunta';
@@ -782,10 +780,10 @@ end;
 
 procedure TPerguntaQuestionarioCriancasComMaisDoisAnosThriftImpl.Read( const iprot: IProtocol);
 var
-  field_ : IField;
-  struc : IStruct;
+  field_ : TThriftField;
+  struc : TThriftStruct;
   tracker : IProtocolRecursionTracker;
-  _list4: IList;
+  _list4: TThriftList;
   _i5: Integer;
   _elem6: TRespostaMultiplaEscolhaEnumThrift;
 
@@ -848,16 +846,15 @@ end;
 
 procedure TPerguntaQuestionarioCriancasComMaisDoisAnosThriftImpl.Write( const oprot: IProtocol);
 var
-  struc : IStruct;
-  field_ : IField;
+  struc : TThriftStruct;
+  field_ : TThriftField;
   tracker : IProtocolRecursionTracker;
-  list_7 : IList;
+  list_7 : TThriftList;
   _iter8: TRespostaMultiplaEscolhaEnumThrift;
 begin
   tracker := oprot.NextRecursionLevel;
-  struc := TStructImpl.Create('PerguntaQuestionarioCriancasComMaisDoisAnosThrift');
+  struc.Name := 'PerguntaQuestionarioCriancasComMaisDoisAnosThrift';
   oprot.WriteStructBegin(struc);
-  field_ := TFieldImpl.Create;
   if (__isset_Pergunta) then
   begin
     field_.Name := 'pergunta';
@@ -882,7 +879,8 @@ begin
     field_.Type_  := TType.List;
     field_.ID := 3;
     oprot.WriteFieldBegin(field_);
-    list_7 := TListImpl.Create(TType.I32, RespostaMultiplaEscolha.Count);
+    list_7.ElementType := TType.I32;
+    list_7.Count := RespostaMultiplaEscolha.Count;
     oprot.WriteListBegin( list_7);
     for _iter8 in RespostaMultiplaEscolha do
     begin
@@ -1111,17 +1109,17 @@ end;
 
 procedure TFichaConsumoAlimentarThriftImpl.Read( const iprot: IProtocol);
 var
-  field_ : IField;
-  struc : IStruct;
+  field_ : TThriftField;
+  struc : TThriftStruct;
   tracker : IProtocolRecursionTracker;
   _req_isset_UuidFicha : Boolean;
-  _list11: IList;
+  _list11: TThriftList;
   _i12: Integer;
   _elem13: IPerguntaQuestionarioCriancasMenoresSeisMesesThrift;
-  _list14: IList;
+  _list14: TThriftList;
   _i15: Integer;
   _elem16: IPerguntaQuestionarioCriancasDeSeisVinteTresMesesThrift;
-  _list17: IList;
+  _list17: TThriftList;
   _i18: Integer;
   _elem19: IPerguntaQuestionarioCriancasComMaisDoisAnosThrift;
 
@@ -1273,25 +1271,24 @@ begin
     iprot.ReadStructEnd;
   end;
   if not _req_isset_UuidFicha
-  then raise TProtocolException.Create( TProtocolException.INVALID_DATA, 'UuidFicha');
+  then raise TProtocolException.Create( TProtocolException.TExceptionType.INVALID_DATA, 'UuidFicha');
 end;
 
 procedure TFichaConsumoAlimentarThriftImpl.Write( const oprot: IProtocol);
 var
-  struc : IStruct;
-  field_ : IField;
+  struc : TThriftStruct;
+  field_ : TThriftField;
   tracker : IProtocolRecursionTracker;
-  list_20 : IList;
+  list_20 : TThriftList;
   _iter21: IPerguntaQuestionarioCriancasMenoresSeisMesesThrift;
-  list_22 : IList;
+  list_22 : TThriftList;
   _iter23: IPerguntaQuestionarioCriancasDeSeisVinteTresMesesThrift;
-  list_24 : IList;
+  list_24 : TThriftList;
   _iter25: IPerguntaQuestionarioCriancasComMaisDoisAnosThrift;
 begin
   tracker := oprot.NextRecursionLevel;
-  struc := TStructImpl.Create('FichaConsumoAlimentarThrift');
+  struc.Name := 'FichaConsumoAlimentarThrift';
   oprot.WriteStructBegin(struc);
-  field_ := TFieldImpl.Create;
   if (HeaderTransport <> nil) and __isset_HeaderTransport then
   begin
     field_.Name := 'headerTransport';
@@ -1343,7 +1340,8 @@ begin
     field_.Type_  := TType.List;
     field_.ID := 7;
     oprot.WriteFieldBegin(field_);
-    list_20 := TListImpl.Create(TType.Struct, PerguntasQuestionarioCriancasMenoresSeisMeses.Count);
+    list_20.ElementType := TType.Struct;
+    list_20.Count := PerguntasQuestionarioCriancasMenoresSeisMeses.Count;
     oprot.WriteListBegin( list_20);
     for _iter21 in PerguntasQuestionarioCriancasMenoresSeisMeses do
     begin
@@ -1358,7 +1356,8 @@ begin
     field_.Type_  := TType.List;
     field_.ID := 8;
     oprot.WriteFieldBegin(field_);
-    list_22 := TListImpl.Create(TType.Struct, PerguntasQuestionarioCriancasDeSeisVinteTresMeses.Count);
+    list_22.ElementType := TType.Struct;
+    list_22.Count := PerguntasQuestionarioCriancasDeSeisVinteTresMeses.Count;
     oprot.WriteListBegin( list_22);
     for _iter23 in PerguntasQuestionarioCriancasDeSeisVinteTresMeses do
     begin
@@ -1373,7 +1372,8 @@ begin
     field_.Type_  := TType.List;
     field_.ID := 9;
     oprot.WriteFieldBegin(field_);
-    list_24 := TListImpl.Create(TType.Struct, PerguntasQuestionarioCriancasComMaisDoisAnos.Count);
+    list_24.ElementType := TType.Struct;
+    list_24.Count := PerguntasQuestionarioCriancasComMaisDoisAnos.Count;
     oprot.WriteListBegin( list_24);
     for _iter25 in PerguntasQuestionarioCriancasComMaisDoisAnos do
     begin

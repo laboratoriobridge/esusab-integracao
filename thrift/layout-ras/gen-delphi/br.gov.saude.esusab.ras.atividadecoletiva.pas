@@ -622,8 +622,8 @@ end;
 
 procedure TParticipanteRowItemThriftImpl.Read( const iprot: IProtocol);
 var
-  field_ : IField;
-  struc : IStruct;
+  field_ : TThriftField;
+  struc : TThriftStruct;
   tracker : IProtocolRecursionTracker;
 
 begin
@@ -732,14 +732,13 @@ end;
 
 procedure TParticipanteRowItemThriftImpl.Write( const oprot: IProtocol);
 var
-  struc : IStruct;
-  field_ : IField;
+  struc : TThriftStruct;
+  field_ : TThriftField;
   tracker : IProtocolRecursionTracker;
 begin
   tracker := oprot.NextRecursionLevel;
-  struc := TStructImpl.Create('ParticipanteRowItemThrift');
+  struc.Name := 'ParticipanteRowItemThrift';
   oprot.WriteStructBegin(struc);
-  field_ := TFieldImpl.Create;
   if (__isset_CnsParticipante) then
   begin
     field_.Name := 'cnsParticipante';
@@ -939,8 +938,8 @@ end;
 
 procedure TProfissionalCboRowItemThriftImpl.Read( const iprot: IProtocol);
 var
-  field_ : IField;
-  struc : IStruct;
+  field_ : TThriftField;
+  struc : TThriftStruct;
   tracker : IProtocolRecursionTracker;
 
 begin
@@ -986,14 +985,13 @@ end;
 
 procedure TProfissionalCboRowItemThriftImpl.Write( const oprot: IProtocol);
 var
-  struc : IStruct;
-  field_ : IField;
+  struc : TThriftStruct;
+  field_ : TThriftField;
   tracker : IProtocolRecursionTracker;
 begin
   tracker := oprot.NextRecursionLevel;
-  struc := TStructImpl.Create('ProfissionalCboRowItemThrift');
+  struc.Name := 'ProfissionalCboRowItemThrift';
   oprot.WriteStructBegin(struc);
-  field_ := TFieldImpl.Create;
   if (__isset_CnsProfissional) then
   begin
     field_.Name := 'cnsProfissional';
@@ -1354,26 +1352,26 @@ end;
 
 procedure TFichaAtividadeColetivaThriftImpl.Read( const iprot: IProtocol);
 var
-  field_ : IField;
-  struc : IStruct;
+  field_ : TThriftField;
+  struc : TThriftStruct;
   tracker : IProtocolRecursionTracker;
   _req_isset_UuidFicha : Boolean;
-  _list4: IList;
+  _list4: TThriftList;
   _i5: Integer;
   _elem6: IProfissionalCboRowItemThrift;
-  _list7: IList;
+  _list7: TThriftList;
   _i8: Integer;
   _elem9: Int64;
-  _list10: IList;
+  _list10: TThriftList;
   _i11: Integer;
   _elem12: Int64;
-  _list13: IList;
+  _list13: TThriftList;
   _i14: Integer;
   _elem15: IParticipanteRowItemThrift;
-  _list16: IList;
+  _list16: TThriftList;
   _i17: Integer;
   _elem18: Int64;
-  _list19: IList;
+  _list19: TThriftList;
   _i20: Integer;
   _elem21: Int64;
 
@@ -1617,31 +1615,30 @@ begin
     iprot.ReadStructEnd;
   end;
   if not _req_isset_UuidFicha
-  then raise TProtocolException.Create( TProtocolException.INVALID_DATA, 'UuidFicha');
+  then raise TProtocolException.Create( TProtocolException.TExceptionType.INVALID_DATA, 'UuidFicha');
 end;
 
 procedure TFichaAtividadeColetivaThriftImpl.Write( const oprot: IProtocol);
 var
-  struc : IStruct;
-  field_ : IField;
+  struc : TThriftStruct;
+  field_ : TThriftField;
   tracker : IProtocolRecursionTracker;
-  list_22 : IList;
+  list_22 : TThriftList;
   _iter23: IProfissionalCboRowItemThrift;
-  list_24 : IList;
+  list_24 : TThriftList;
   _iter25: Int64;
-  list_26 : IList;
+  list_26 : TThriftList;
   _iter27: Int64;
-  list_28 : IList;
+  list_28 : TThriftList;
   _iter29: IParticipanteRowItemThrift;
-  list_30 : IList;
+  list_30 : TThriftList;
   _iter31: Int64;
-  list_32 : IList;
+  list_32 : TThriftList;
   _iter33: Int64;
 begin
   tracker := oprot.NextRecursionLevel;
-  struc := TStructImpl.Create('FichaAtividadeColetivaThrift');
+  struc.Name := 'FichaAtividadeColetivaThrift';
   oprot.WriteStructBegin(struc);
-  field_ := TFieldImpl.Create;
   // required field
   field_.Name := 'uuidFicha';
   field_.Type_  := TType.String_;
@@ -1691,7 +1688,8 @@ begin
     field_.Type_  := TType.List;
     field_.ID := 13;
     oprot.WriteFieldBegin(field_);
-    list_22 := TListImpl.Create(TType.Struct, Profissionais.Count);
+    list_22.ElementType := TType.Struct;
+    list_22.Count := Profissionais.Count;
     oprot.WriteListBegin( list_22);
     for _iter23 in Profissionais do
     begin
@@ -1715,7 +1713,8 @@ begin
     field_.Type_  := TType.List;
     field_.ID := 15;
     oprot.WriteFieldBegin(field_);
-    list_24 := TListImpl.Create(TType.I64, TemasParaReuniao.Count);
+    list_24.ElementType := TType.I64;
+    list_24.Count := TemasParaReuniao.Count;
     oprot.WriteListBegin( list_24);
     for _iter25 in TemasParaReuniao do
     begin
@@ -1730,7 +1729,8 @@ begin
     field_.Type_  := TType.List;
     field_.ID := 16;
     oprot.WriteFieldBegin(field_);
-    list_26 := TListImpl.Create(TType.I64, PublicoAlvo.Count);
+    list_26.ElementType := TType.I64;
+    list_26.Count := PublicoAlvo.Count;
     oprot.WriteListBegin( list_26);
     for _iter27 in PublicoAlvo do
     begin
@@ -1745,7 +1745,8 @@ begin
     field_.Type_  := TType.List;
     field_.ID := 18;
     oprot.WriteFieldBegin(field_);
-    list_28 := TListImpl.Create(TType.Struct, Participantes.Count);
+    list_28.ElementType := TType.Struct;
+    list_28.Count := Participantes.Count;
     oprot.WriteListBegin( list_28);
     for _iter29 in Participantes do
     begin
@@ -1805,7 +1806,8 @@ begin
     field_.Type_  := TType.List;
     field_.ID := 25;
     oprot.WriteFieldBegin(field_);
-    list_30 := TListImpl.Create(TType.I64, TemasParaSaude.Count);
+    list_30.ElementType := TType.I64;
+    list_30.Count := TemasParaSaude.Count;
     oprot.WriteListBegin( list_30);
     for _iter31 in TemasParaSaude do
     begin
@@ -1820,7 +1822,8 @@ begin
     field_.Type_  := TType.List;
     field_.ID := 26;
     oprot.WriteFieldBegin(field_);
-    list_32 := TListImpl.Create(TType.I64, PraticasEmSaude.Count);
+    list_32.ElementType := TType.I64;
+    list_32.Count := PraticasEmSaude.Count;
     oprot.WriteListBegin( list_32);
     for _iter33 in PraticasEmSaude do
     begin

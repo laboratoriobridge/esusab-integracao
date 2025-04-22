@@ -586,8 +586,8 @@ end;
 
 procedure TVacinaRowThriftImpl.Read( const iprot: IProtocol);
 var
-  field_ : IField;
-  struc : IStruct;
+  field_ : TThriftField;
+  struc : TThriftStruct;
   tracker : IProtocolRecursionTracker;
 
 begin
@@ -696,14 +696,13 @@ end;
 
 procedure TVacinaRowThriftImpl.Write( const oprot: IProtocol);
 var
-  struc : IStruct;
-  field_ : IField;
+  struc : TThriftStruct;
+  field_ : TThriftField;
   tracker : IProtocolRecursionTracker;
 begin
   tracker := oprot.NextRecursionLevel;
-  struc := TStructImpl.Create('VacinaRowThrift');
+  struc.Name := 'VacinaRowThrift';
   oprot.WriteStructBegin(struc);
-  field_ := TFieldImpl.Create;
   if (__isset_Imunobiologico) then
   begin
     field_.Name := 'imunobiologico';
@@ -1095,10 +1094,10 @@ end;
 
 procedure TFichaVacinacaoChildThriftImpl.Read( const iprot: IProtocol);
 var
-  field_ : IField;
-  struc : IStruct;
+  field_ : TThriftField;
+  struc : TThriftStruct;
   tracker : IProtocolRecursionTracker;
-  _list2: IList;
+  _list2: TThriftList;
   _i3: Integer;
   _elem4: IVacinaRowThrift;
 
@@ -1261,16 +1260,15 @@ end;
 
 procedure TFichaVacinacaoChildThriftImpl.Write( const oprot: IProtocol);
 var
-  struc : IStruct;
-  field_ : IField;
+  struc : TThriftStruct;
+  field_ : TThriftField;
   tracker : IProtocolRecursionTracker;
-  list_5 : IList;
+  list_5 : TThriftList;
   _iter6: IVacinaRowThrift;
 begin
   tracker := oprot.NextRecursionLevel;
-  struc := TStructImpl.Create('FichaVacinacaoChildThrift');
+  struc.Name := 'FichaVacinacaoChildThrift';
   oprot.WriteStructBegin(struc);
-  field_ := TFieldImpl.Create;
   if (__isset_Turno) then
   begin
     field_.Name := 'turno';
@@ -1367,7 +1365,8 @@ begin
     field_.Type_  := TType.List;
     field_.ID := 11;
     oprot.WriteFieldBegin(field_);
-    list_5 := TListImpl.Create(TType.Struct, Vacinas.Count);
+    list_5.ElementType := TType.Struct;
+    list_5.Count := Vacinas.Count;
     oprot.WriteListBegin( list_5);
     for _iter6 in Vacinas do
     begin
@@ -1577,11 +1576,11 @@ end;
 
 procedure TFichaVacinacaoMasterThriftImpl.Read( const iprot: IProtocol);
 var
-  field_ : IField;
-  struc : IStruct;
+  field_ : TThriftField;
+  struc : TThriftStruct;
   tracker : IProtocolRecursionTracker;
   _req_isset_UuidFicha : Boolean;
-  _list9: IList;
+  _list9: TThriftList;
   _i10: Integer;
   _elem11: IFichaVacinacaoChildThrift;
 
@@ -1654,21 +1653,20 @@ begin
     iprot.ReadStructEnd;
   end;
   if not _req_isset_UuidFicha
-  then raise TProtocolException.Create( TProtocolException.INVALID_DATA, 'UuidFicha');
+  then raise TProtocolException.Create( TProtocolException.TExceptionType.INVALID_DATA, 'UuidFicha');
 end;
 
 procedure TFichaVacinacaoMasterThriftImpl.Write( const oprot: IProtocol);
 var
-  struc : IStruct;
-  field_ : IField;
+  struc : TThriftStruct;
+  field_ : TThriftField;
   tracker : IProtocolRecursionTracker;
-  list_12 : IList;
+  list_12 : TThriftList;
   _iter13: IFichaVacinacaoChildThrift;
 begin
   tracker := oprot.NextRecursionLevel;
-  struc := TStructImpl.Create('FichaVacinacaoMasterThrift');
+  struc.Name := 'FichaVacinacaoMasterThrift';
   oprot.WriteStructBegin(struc);
-  field_ := TFieldImpl.Create;
   // required field
   field_.Name := 'uuidFicha';
   field_.Type_  := TType.String_;
@@ -1700,7 +1698,8 @@ begin
     field_.Type_  := TType.List;
     field_.ID := 4;
     oprot.WriteFieldBegin(field_);
-    list_12 := TListImpl.Create(TType.Struct, Vacinacoes.Count);
+    list_12.ElementType := TType.Struct;
+    list_12.Count := Vacinacoes.Count;
     oprot.WriteListBegin( list_12);
     for _iter13 in Vacinacoes do
     begin

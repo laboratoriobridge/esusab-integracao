@@ -19,6 +19,8 @@
 
   <xs:import namespace="http://esus.ufsc.br/variaslotacoesheader" schemaLocation="variaslotacoesheader.xsd"/>
 
+  <xs:import namespace="http://esus.ufsc.br/exame" schemaLocation="exame.xsd"/>   
+
   <xs:element name="fichaAtendimentoOdontologicoMasterTransport" type="fichaAtendimentoOdontologicoMaster:fichaAtendimentoOdontologicoMasterTransport"/>
 
   <xs:complexType name="fichaAtendimentoOdontologicoMasterTransport">

@@ -29,7 +29,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 6.3.9</span>
+        <span class="label">versão 7.2.0</span>
       
     </a>
 
@@ -79,7 +79,7 @@
           
         
           
-            <li><a title="Layout e-SUS APS de Dados e Interface Versão 6.3.9" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 6.3.9</a></li>
+            <li><a title="Layout e-SUS APS de Dados e Interface Versão 7.2.0" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 7.2.0</a></li>
           
         
           
@@ -119,9 +119,9 @@
   <ul>
     
       <li>
-        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 6.3.9" href="/ledi/documentacao/index.html" class="back-link">
+        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 7.2.0" href="/ledi/documentacao/index.html" class="back-link">
           <i class="icon icon-back"></i> Voltar
-          <small>(Layout e-SUS APS de Dados e Interface Versão 6.3.9)</small>
+          <small>(Layout e-SUS APS de Dados e Interface Versão 7.2.0)</small>
         </a>
       </li>
     
@@ -254,7 +254,7 @@
     <p class="post-meta">
       <a class="btn" href="/pdf.html?include=/ledi/documentacao/estrutura_arquivos/dicionario-fad.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 24/03/2025</span>
+        <span class="label" title="Data da última modificação">Alterado em 28/06/2025</span>
       
     </p>
   </header>
@@ -672,11 +672,17 @@
 </thead><tbody>
 <tr>
 <td>String</td>
-<td>Não</td>
+<td>Condicional</td>
 <td>0</td>
 <td>44</td>
 </tr>
 </tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Se torna obrigatório caso preenchido <a href="#2-uuidevolucaoproblema">uuidEvolucaoProblema</a>, <a href="#3-cosequencialevolucao">coSequencialEvolucao</a> ou <a href="#6-situacao">situacao</a>.</li>
+</ul>
 
 <h3 id="2-uuidevolucaoproblema">#2 uuidEvolucaoProblema</h3>
 
@@ -692,11 +698,17 @@
 </thead><tbody>
 <tr>
 <td>String</td>
-<td>Não</td>
+<td>Condicional</td>
 <td>0</td>
 <td>44</td>
 </tr>
 </tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Se torna obrigatório caso preenchido <a href="#1-uuidproblema">uuidProblema</a>, <a href="#3-cosequencialevolucao">coSequencialEvolucao</a> ou <a href="#6-situacao">situacao</a>.</li>
+</ul>
 
 <h3 id="3-cosequencialevolucao">#3 coSequencialEvolucao</h3>
 
@@ -712,7 +724,7 @@
 </thead><tbody>
 <tr>
 <td>Long</td>
-<td>Não</td>
+<td>Condicional</td>
 <td>0</td>
 <td>8</td>
 </tr>
@@ -723,7 +735,8 @@
 <ul>
 <li>A primeira evolução do problema ou condição possui o valor 1, as evoluções subsequentes incrementam de 1 em 1;</li>
 <li>Não é recomendado repetir dentro do mesmo problema ou condição;</li>
-<li>É recomendado que o valor seja reiniciado para cada problema ou condição novo.</li>
+<li>É recomendado que o valor do sequencial seja reiniciado para cada problema ou condição novo;</li>
+<li>Se torna obrigatório caso preenchido <a href="#2-uuidevolucaoproblema">uuidEvolucaoProblema</a>, <a href="#1-uuidproblema">uuidProblema</a> ou <a href="#6-situacao">situacao</a>.</li>
 </ul>
 
 <h3 id="4-ciap">#4 ciap</h3>
@@ -800,7 +813,7 @@
 </thead><tbody>
 <tr>
 <td>String</td>
-<td>Não</td>
+<td>Condicional</td>
 <td>-</td>
 <td>-</td>
 </tr>
@@ -810,7 +823,8 @@
 
 <ul>
 <li>Quando a <a href="#4-ciap">ciap</a> informada for &quot;GRAVIDEZ - W78&quot; não é permitido preencher a situação com o valor &quot;1 - Latente&quot;;</li>
-<li>Apenas valores de <code>0</code> a <code>2</code>.</li>
+<li>Apenas valores de <code>0</code> a <code>2</code>;</li>
+<li>Se torna obrigatório caso preenchido <a href="#2-uuidevolucaoproblema">uuidEvolucaoProblema</a>, <a href="#1-uuidproblema">uuidProblema</a> ou <a href="#3-cosequencialevolucao">coSequencialEvolucao</a>.</li>
 </ul>
 
 <p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#situacaoproblemascondicoes">SituacaoProblemasCondicoes</a>.</p>

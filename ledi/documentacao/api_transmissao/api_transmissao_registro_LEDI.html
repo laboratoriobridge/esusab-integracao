@@ -29,7 +29,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 7.2.0</span>
+        <span class="label">versão 6.3.9</span>
       
     </a>
 
@@ -79,7 +79,7 @@
           
         
           
-            <li><a title="Layout e-SUS APS de Dados e Interface Versão 7.2.0" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 7.2.0</a></li>
+            <li><a title="Layout e-SUS APS de Dados e Interface Versão 6.3.9" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 6.3.9</a></li>
           
         
           
@@ -123,7 +123,7 @@
     
 
     <li>
-      <a class="open" title="Layout e-SUS APS de Dados e Interface Versão 7.2.0" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 7.2.0</a>
+      <a class="open" title="Layout e-SUS APS de Dados e Interface Versão 6.3.9" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 6.3.9</a>
       <ul>
         
           <li  class="has-subitems">
@@ -187,7 +187,7 @@
     <p class="post-meta">
       <a class="btn" href="/pdf.html?include=/ledi/documentacao/api_transmissao/api_transmissao_registro_LEDI.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 30/06/2025</span>
+        <span class="label" title="Data da última modificação">Alterado em 04/06/2025</span>
       
     </p>
   </header>
@@ -201,7 +201,7 @@
 
 <p><strong>1. </strong> A geração das credenciais deve estar habilitada somente para as instalações que possuam HTTPS configurado.</p>
 
-<p><strong>2. </strong> A geração da credencial deve ser feita pelo Administrador da Instalação no módulo &quot;Integração &gt; Credenciais de integração&quot;. Sendo necessário informar os seguintes dados dos integradores:</p>
+<p><strong>2. </strong> A geração da credencial deve ser feita pelo Administrador da Instalação no módulo &quot;Transmissão de dados &gt; Configurações&quot;. Sendo necessário informar os seguintes dados dos integradores:</p>
 
 <ul>
 <li>Para cadastro de &quot;Pessoa física&quot; o registro deve conter as seguintes informações da pessoa que será responsável pela integração: Nome, CPF, E-mail e Nome da credencial;</li>
@@ -214,11 +214,7 @@
 
 <p><strong>4. </strong> A API possui dois endpoints disponíveis: &quot;[url_instalacao]/api/recebimento/login&quot; e &quot;[url_instalacao]/api/v1/recebimento/ficha&quot;.</p>
 
-<!-- REGRA OCULTA POIS API NÃO FOI PUBLICADA EM PRODUÇÃO - QUANDO RECOLOCAR - NECESSÁRIO VOLTAR O CONTADOR E LINK -->
-
-<!-- Foi criada uma nova link api_autenticacao_v1. Recomenda-se utilizar o novo endpoint para realizar a autenticação, pois ele permite o uso mais amplo das APIs disponíveis. -->
-
-<p><strong>5. </strong> O endpoint &quot;/api/recebimento/login&quot; deve ser utilizado para realizar a autenticação do envio através da requisição do tipo POST. Sendo aceitas as variáveis &quot;usuario&quot; e &quot;senha&quot;. As respostas possíveis são:</p>
+<p><strong>5. </strong> O endpoint &quot;/api/recebimento/login&quot; deve ser utilziado para realizar a autenticação do envio através da requisição do tipo POST. Sendo aceitas as variáveis &quot;usuario&quot; e &quot;senha&quot;. As respostas possíveis são:</p>
 
 <ul>
 <li>Resposta de sucesso: a API deve retornar um cookie chamado &quot;JSESSIONID&quot;. Esse cookie deve ser enviado em requisições futuras como forma de autenticação;</li>

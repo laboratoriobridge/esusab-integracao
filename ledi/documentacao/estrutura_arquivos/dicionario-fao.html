@@ -29,7 +29,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 7.2.0</span>
+        <span class="label">versão 6.3.9</span>
       
     </a>
 
@@ -79,7 +79,7 @@
           
         
           
-            <li><a title="Layout e-SUS APS de Dados e Interface Versão 7.2.0" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 7.2.0</a></li>
+            <li><a title="Layout e-SUS APS de Dados e Interface Versão 6.3.9" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 6.3.9</a></li>
           
         
           
@@ -119,9 +119,9 @@
   <ul>
     
       <li>
-        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 7.2.0" href="/ledi/documentacao/index.html" class="back-link">
+        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 6.3.9" href="/ledi/documentacao/index.html" class="back-link">
           <i class="icon icon-back"></i> Voltar
-          <small>(Layout e-SUS APS de Dados e Interface Versão 7.2.0)</small>
+          <small>(Layout e-SUS APS de Dados e Interface Versão 6.3.9)</small>
         </a>
       </li>
     
@@ -254,7 +254,7 @@
     <p class="post-meta">
       <a class="btn" href="/pdf.html?include=/ledi/documentacao/estrutura_arquivos/dicionario-fao.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 28/06/2025</span>
+        <span class="label" title="Data da última modificação">Alterado em 05/06/2025</span>
       
     </p>
   </header>
@@ -974,56 +974,6 @@
 
 <p><strong>Referência:</strong> <a href="#ivcf">ivcf</a>.</p>
 
-<h3 id="27-exame">#27 exame</h3>
-
-<p>Lista de exames solicitados e/ou avaliados.</p>
-
-<table><thead>
-<tr>
-<th>Tipo</th>
-<th>Obrigatório</th>
-<th>Mínimo</th>
-<th>Máximo</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>List&lt;exame&gt;</td>
-<td>Não</td>
-<td>0</td>
-<td>100</td>
-</tr>
-</tbody></table>
-
-<p><strong>Referência:</strong> <a href="#exame">Exames</a>.</p>
-
-<h3 id="28-solicitacoesoci">#28 solicitacoesOci</h3>
-
-<p>Lista de procedimentos SIGTAP de Oferta de Cuidado Integrado (OCI) solicitados.</p>
-
-<table><thead>
-<tr>
-<th>Tipo</th>
-<th>Obrigatório</th>
-<th>Mínimo</th>
-<th>Máximo</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>List&lt;solicitacoesOci&gt;</td>
-<td>Não</td>
-<td>-</td>
-<td>-</td>
-</tr>
-</tbody></table>
-
-<p><strong>Regras:</strong></p>
-
-<ul>
-<li>Em um mesmo atendimento, não deve haver duplicidade de itens na lista. Cada procedimento de OCI deve ser registrado apenas uma vez.</li>
-</ul>
-
-<p><strong>Referência:</strong> <a href="#solicitacoesoci">SolicitacoesOci</a>.</p>
-
 <h2 id="procedimentoquantidade">ProcedimentoQuantidade</h2>
 
 <h3 id="1-comsprocedimento">#1 coMsProcedimento</h3>
@@ -1467,48 +1417,6 @@
   - <strong>Vírgula</strong>: Permitidos até 2 caracteres antes e depois (formatos: <code>x,x</code> | <code>xx,x</code> | <code>xx,xx</code> | <code>x,xx</code>).
   - <strong>Barra</strong>: Permitido 1 caractere antes e depois (formato: <code>x/x</code>).
 - A soma das doses dos turnos deve ser igual à quantidade total da dose.</p>
-
-<h2 id="solicitacoesoci">SolicitacoesOci</h2>
-
-<h3 id="1-codigosigtap">#1 codigoSigtap</h3>
-
-<p>Código SIGTAP do procedimento de Oferta de Cuidado Integrado (OCI) solicitado.</p>
-
-<table><thead>
-<tr>
-<th>Tipo</th>
-<th>Obrigatório</th>
-<th>Mínimo</th>
-<th>Máximo</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>String</td>
-<td>Sim</td>
-<td>-</td>
-<td>-</td>
-</tr>
-</tbody></table>
-
-<p><strong>Regras:</strong></p>
-
-<ul>
-<li>Só é possível inserir procedimentos SIGTAP cujo grupo é igual a <code>09 - Procedimentos para Ofertas de Cuidados Integrados</code>.</li>
-<li>Em um mesmo atendimento, não deve haver duplicidade de itens na lista. Cada procedimento de OCI deve ser registrado apenas uma vez.</li>
-<li>O código do procedimento SIGTAP deve ser inserido sem ponto ou hífen, ex: <code>0901010014</code>;</li>
-</ul>
-
-<p><strong>Referências:</strong></p>
-
-<ul>
-<li>Tabela do SIGTAP, competência 01/2025 disponível em: <a href="http://sigtap.datasus.gov.br/tabela-unificada/app/sec/procedimento/publicados/consultar">Tabela Unificada SIGTAP</a>;</li>
-</ul>
-
-<p>Observações:</p>
-
-<ul>
-<li>Embora os Procedimentos para Ofertas de Cuidados Integrados estejam disponíveis a partir da competência 01/2025, a atualização geral dos procedimentos do sistema ainda corresponde à competência 02/2024.</li>
-</ul>
 
 <h2 id="encaminhamentos">Encaminhamentos</h2>
 
@@ -2186,17 +2094,11 @@
 </thead><tbody>
 <tr>
 <td>String</td>
-<td>Condicional</td>
+<td>Não</td>
 <td>0</td>
 <td>44</td>
 </tr>
 </tbody></table>
-
-<p><strong>Regras:</strong></p>
-
-<ul>
-<li>Se torna obrigatório caso preenchido <a href="#2-uuidevolucaoproblema">uuidEvolucaoProblema</a>, <a href="#3-cosequencialevolucao">coSequencialEvolucao</a> ou <a href="#6-situacao">situacao</a>.</li>
-</ul>
 
 <h3 id="2-uuidevolucaoproblema">#2 uuidEvolucaoProblema</h3>
 
@@ -2212,17 +2114,11 @@
 </thead><tbody>
 <tr>
 <td>String</td>
-<td>Condicional</td>
+<td>Não</td>
 <td>0</td>
 <td>44</td>
 </tr>
 </tbody></table>
-
-<p><strong>Regras:</strong></p>
-
-<ul>
-<li>Se torna obrigatório caso preenchido <a href="#1-uuidproblema">uuidProblema</a>, <a href="#3-cosequencialevolucao">coSequencialEvolucao</a> ou <a href="#6-situacao">situacao</a>.</li>
-</ul>
 
 <h3 id="3-cosequencialevolucao">#3 coSequencialEvolucao</h3>
 
@@ -2238,7 +2134,7 @@
 </thead><tbody>
 <tr>
 <td>Long</td>
-<td>Condicional</td>
+<td>Não</td>
 <td>0</td>
 <td>8</td>
 </tr>
@@ -2249,8 +2145,7 @@
 <ul>
 <li>A primeira evolução do problema ou condição possui o valor 1, as evoluções subsequentes incrementam de 1 em 1;</li>
 <li>Não é recomendado repetir dentro do mesmo problema ou condição;</li>
-<li>É recomendado que o valor do sequencial seja reiniciado para cada problema ou condição novo;</li>
-<li>Se torna obrigatório caso preenchido <a href="#2-uuidevolucaoproblema">uuidEvolucaoProblema</a>, <a href="#1-uuidproblema">uuidProblema</a> ou <a href="#6-situacao">situacao</a>.</li>
+<li>É recomendado que o valor seja reiniciado para cada problema ou condição novo.</li>
 </ul>
 
 <h3 id="4-ciap">#4 ciap</h3>
@@ -2327,7 +2222,7 @@
 </thead><tbody>
 <tr>
 <td>String</td>
-<td>Condicional</td>
+<td>Não</td>
 <td>-</td>
 <td>-</td>
 </tr>
@@ -2337,8 +2232,7 @@
 
 <ul>
 <li>Quando a <a href="#4-ciap">ciap</a> informada for &quot;GRAVIDEZ - W78&quot; não é permitido preencher a situação com o valor &quot;1 - Latente&quot;;</li>
-<li>Apenas valores de <code>0</code> a <code>2</code>;</li>
-<li>Se torna obrigatório caso preenchido <a href="#2-uuidevolucaoproblema">uuidEvolucaoProblema</a>, <a href="#1-uuidproblema">uuidProblema</a> ou <a href="#3-cosequencialevolucao">coSequencialEvolucao</a>.</li>
+<li>Apenas valores de <code>0</code> a <code>2</code>.</li>
 </ul>
 
 <p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#situacaoproblemascondicoes">SituacaoProblemasCondicoes</a>.</p>
@@ -2732,71 +2626,6 @@
 </ul>
 
 <p><strong>Referência:</strong> A data deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
-
-<h2 id="exame">Exame</h2>
-
-<h3 id="1-codigoexame">#1 codigoExame</h3>
-
-<p>Código do exame solicitado ou avaliado.</p>
-
-<table><thead>
-<tr>
-<th>Tipo</th>
-<th>Obrigatório</th>
-<th>Mínimo</th>
-<th>Máximo</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>String</td>
-<td>Sim</td>
-<td>-</td>
-<td>-</td>
-</tr>
-</tbody></table>
-
-<p><strong>Regras:</strong></p>
-
-<ul>
-<li>Só é possível inserir exames cujo grupo é igual a <code>02 - Procedimentos com finalidade diagnóstica</code> ou exames que estejam presentes na tabela <a href="#listaexames">ListaExames</a>, neste caso, se o exame não tiver uma referência no SIGTAP, deve ser informado o código <strong>AB</strong> do exame;</li>
-<li>Não pode conter exames repetidos.</li>
-</ul>
-
-<p><strong>Referências:</strong></p>
-
-<ul>
-<li>Tabela do SIGTAP, competência 02/2024 disponível em: <a href="http://sigtap.datasus.gov.br/tabela-unificada/app/sec/procedimento/publicados/consultar">Tabela Unificada SIGTAP</a>;</li>
-<li><a href="#listaexames">ListaExames</a>.</li>
-</ul>
-
-<p>Observações:</p>
-
-<ul>
-<li>Inserir o código do exame SIGTAP sem ponto ou hífen, ex: <code>0214010015</code>;</li>
-<li>Inserir o código do exame AB em caracteres maiúsculos, sem espaços, ex: <code>ABEX022</code>.</li>
-</ul>
-
-<h3 id="2-solicitadoavaliado">#2 solicitadoAvaliado</h3>
-
-<p>Código do indicador se o exame foi <code>Solicitado</code> e / ou <code>Avaliado</code>.</p>
-
-<table><thead>
-<tr>
-<th>Tipo</th>
-<th>Obrigatório</th>
-<th>Mínimo</th>
-<th>Máximo</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>List&lt;String&gt;</td>
-<td>Sim</td>
-<td>1</td>
-<td>2</td>
-</tr>
-</tbody></table>
-
-<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#situacaoexame">SituacaoExame</a>.</p>
 
 <h2 id="listaprocedimentosrealizados">ListaProcedimentosRealizados</h2>
 
@@ -3459,149 +3288,6 @@
 <td><code>11 - Outros</code></td>
 </tr>
 </tbody></table>
-
-<h2 id="listaexames">ListaExames</h2>
-
-<table><thead>
-<tr>
-<th>Código SIGTAP*</th>
-<th>Descrição AB</th>
-<th>Código AB correspondente</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>02.02.01.029-5</td>
-<td>Colesterol total</td>
-<td>ABEX002</td>
-</tr>
-<tr>
-<td>02.02.01.031-7</td>
-<td>Creatinina</td>
-<td>ABEX003</td>
-</tr>
-<tr>
-<td>02.02.05.001-7</td>
-<td>EAS / EQU</td>
-<td>ABEX027</td>
-</tr>
-<tr>
-<td>02.11.02.003-6</td>
-<td>Eletrocardiograma</td>
-<td>ABEX004</td>
-</tr>
-<tr>
-<td>02.02.02.035-5</td>
-<td>Eletroforese de Hemoglobina</td>
-<td>ABEX030</td>
-</tr>
-<tr>
-<td>02.11.08.005-5</td>
-<td>Espirometria</td>
-<td>ABEX005</td>
-</tr>
-<tr>
-<td>02.02.08.011-0</td>
-<td>Exame de escarro</td>
-<td>ABEX006</td>
-</tr>
-<tr>
-<td>02.02.01.047-3</td>
-<td>Glicemia</td>
-<td>ABEX026</td>
-</tr>
-<tr>
-<td>02.02.01.027-9</td>
-<td>HDL</td>
-<td>ABEX007</td>
-</tr>
-<tr>
-<td>02.02.01.050-3</td>
-<td>Hemoglobina glicada</td>
-<td>ABEX008</td>
-</tr>
-<tr>
-<td>02.02.02.038-0</td>
-<td>Hemograma</td>
-<td>ABEX028</td>
-</tr>
-<tr>
-<td>02.02.01.028-7</td>
-<td>LDL</td>
-<td>ABEX009</td>
-</tr>
-<tr>
-<td>Não possui</td>
-<td>Retinografia/Fundo de olho com oftalmologista</td>
-<td>ABEX013</td>
-</tr>
-<tr>
-<td>02.02.03.063-6</td>
-<td>Sorologia de Hepatite B</td>
-<td>-</td>
-</tr>
-<tr>
-<td>02.02.03.067-9</td>
-<td>Sorologia de Hepatite C</td>
-<td>-</td>
-</tr>
-<tr>
-<td>02.02.03.068-7</td>
-<td>Sorologia de Hepatite D</td>
-<td>-</td>
-</tr>
-<tr>
-<td>02.02.03.111-0</td>
-<td>Sorologia de Sífilis (VDRL)</td>
-<td>ABEX019</td>
-</tr>
-<tr>
-<td>02.02.03.090-3</td>
-<td>Sorologia para Dengue</td>
-<td>ABEX016</td>
-</tr>
-<tr>
-<td>02.02.03.030-0</td>
-<td>Sorologia para HIV</td>
-<td>ABEX018</td>
-</tr>
-<tr>
-<td>02.02.12.009-0</td>
-<td>Teste indireto de antiglobulina humana (TIA)</td>
-<td>ABEX031</td>
-</tr>
-<tr>
-<td>02.11.07.014-9</td>
-<td>Teste da orelhinha</td>
-<td>ABEX020</td>
-</tr>
-<tr>
-<td>02.02.06.021-7</td>
-<td>Teste de gravidez</td>
-<td>ABEX023</td>
-</tr>
-<tr>
-<td>Não possui</td>
-<td>Teste do olhinho</td>
-<td>ABEX022</td>
-</tr>
-<tr>
-<td>02.02.11.005-2</td>
-<td>Teste do pezinho</td>
-<td>ABEX021</td>
-</tr>
-<tr>
-<td>02.05.02.014-3</td>
-<td>Ultrassonografia obstétrica</td>
-<td>ABEX024</td>
-</tr>
-<tr>
-<td>02.02.08.008-0</td>
-<td>Urocultura</td>
-<td>ABEX029</td>
-</tr>
-</tbody></table>
-
-<p><em>* Procedimentos pertencentes a competência <strong>09/2020</strong> do SIGTAP.</em></p>
 
   </article>
 

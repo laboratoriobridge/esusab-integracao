@@ -19,92 +19,6 @@ except:
 
 
 
-class ExameThrift:
-  """
-  Attributes:
-   - codigoExame
-   - solicitadoAvaliado
-  """
-
-  thrift_spec = (
-    None, # 0
-    (1, TType.STRING, 'codigoExame', None, None, ), # 1
-    (2, TType.LIST, 'solicitadoAvaliado', (TType.STRING,None), None, ), # 2
-  )
-
-  def __init__(self, codigoExame=None, solicitadoAvaliado=None,):
-    self.codigoExame = codigoExame
-    self.solicitadoAvaliado = solicitadoAvaliado
-
-  def read(self, iprot):
-    if iprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None and fastbinary is not None:
-      fastbinary.decode_binary(self, iprot.trans, (self.__class__, self.thrift_spec))
-      return
-    iprot.readStructBegin()
-    while True:
-      (fname, ftype, fid) = iprot.readFieldBegin()
-      if ftype == TType.STOP:
-        break
-      if fid == 1:
-        if ftype == TType.STRING:
-          self.codigoExame = iprot.readString()
-        else:
-          iprot.skip(ftype)
-      elif fid == 2:
-        if ftype == TType.LIST:
-          self.solicitadoAvaliado = []
-          (_etype3, _size0) = iprot.readListBegin()
-          for _i4 in xrange(_size0):
-            _elem5 = iprot.readString()
-            self.solicitadoAvaliado.append(_elem5)
-          iprot.readListEnd()
-        else:
-          iprot.skip(ftype)
-      else:
-        iprot.skip(ftype)
-      iprot.readFieldEnd()
-    iprot.readStructEnd()
-
-  def write(self, oprot):
-    if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
-      return
-    oprot.writeStructBegin('ExameThrift')
-    if self.codigoExame is not None:
-      oprot.writeFieldBegin('codigoExame', TType.STRING, 1)
-      oprot.writeString(self.codigoExame)
-      oprot.writeFieldEnd()
-    if self.solicitadoAvaliado is not None:
-      oprot.writeFieldBegin('solicitadoAvaliado', TType.LIST, 2)
-      oprot.writeListBegin(TType.STRING, len(self.solicitadoAvaliado))
-      for iter6 in self.solicitadoAvaliado:
-        oprot.writeString(iter6)
-      oprot.writeListEnd()
-      oprot.writeFieldEnd()
-    oprot.writeFieldStop()
-    oprot.writeStructEnd()
-
-  def validate(self):
-    return
-
-
-  def __hash__(self):
-    value = 17
-    value = (value * 31) ^ hash(self.codigoExame)
-    value = (value * 31) ^ hash(self.solicitadoAvaliado)
-    return value
-
-  def __repr__(self):
-    L = ['%s=%r' % (key, value)
-      for key, value in self.__dict__.iteritems()]
-    return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-  def __eq__(self, other):
-    return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-  def __ne__(self, other):
-    return not (self == other)
-
 class ProblemaCondicaoAvaliacaoAIThrift:
   """
   Attributes:
@@ -143,10 +57,10 @@ class ProblemaCondicaoAvaliacaoAIThrift:
       if fid == 1:
         if ftype == TType.LIST:
           self.ciaps = []
-          (_etype10, _size7) = iprot.readListBegin()
-          for _i11 in xrange(_size7):
-            _elem12 = iprot.readString()
-            self.ciaps.append(_elem12)
+          (_etype3, _size0) = iprot.readListBegin()
+          for _i4 in xrange(_size0):
+            _elem5 = iprot.readString()
+            self.ciaps.append(_elem5)
           iprot.readListEnd()
         else:
           iprot.skip(ftype)
@@ -183,8 +97,8 @@ class ProblemaCondicaoAvaliacaoAIThrift:
     if self.ciaps is not None:
       oprot.writeFieldBegin('ciaps', TType.LIST, 1)
       oprot.writeListBegin(TType.STRING, len(self.ciaps))
-      for iter13 in self.ciaps:
-        oprot.writeString(iter13)
+      for iter6 in self.ciaps:
+        oprot.writeString(iter6)
       oprot.writeListEnd()
       oprot.writeFieldEnd()
     if self.outroCiap1 is not None:
@@ -287,7 +201,7 @@ class FichaAtendimentoIndividualChildThrift:
     None, # 14
     None, # 15
     None, # 16
-    (17, TType.LIST, 'exame', (TType.STRUCT,(ExameThrift, ExameThrift.thrift_spec)), None, ), # 17
+    (17, TType.LIST, 'exame', (TType.STRUCT,(br.gov.saude.esusab.ras.common.ttypes.ExameThrift, br.gov.saude.esusab.ras.common.ttypes.ExameThrift.thrift_spec)), None, ), # 17
     (18, TType.BOOL, 'vacinaEmDia', None, None, ), # 18
     (19, TType.I64, 'pic', None, None, ), # 19
     (20, TType.BOOL, 'ficouEmObservacao', None, None, ), # 20
@@ -417,11 +331,11 @@ class FichaAtendimentoIndividualChildThrift:
       elif fid == 17:
         if ftype == TType.LIST:
           self.exame = []
-          (_etype17, _size14) = iprot.readListBegin()
-          for _i18 in xrange(_size14):
-            _elem19 = ExameThrift()
-            _elem19.read(iprot)
-            self.exame.append(_elem19)
+          (_etype10, _size7) = iprot.readListBegin()
+          for _i11 in xrange(_size7):
+            _elem12 = br.gov.saude.esusab.ras.common.ttypes.ExameThrift()
+            _elem12.read(iprot)
+            self.exame.append(_elem12)
           iprot.readListEnd()
         else:
           iprot.skip(ftype)
@@ -443,20 +357,20 @@ class FichaAtendimentoIndividualChildThrift:
       elif fid == 21:
         if ftype == TType.LIST:
           self.nasfs = []
-          (_etype23, _size20) = iprot.readListBegin()
-          for _i24 in xrange(_size20):
-            _elem25 = iprot.readI64()
-            self.nasfs.append(_elem25)
+          (_etype16, _size13) = iprot.readListBegin()
+          for _i17 in xrange(_size13):
+            _elem18 = iprot.readI64()
+            self.nasfs.append(_elem18)
           iprot.readListEnd()
         else:
           iprot.skip(ftype)
       elif fid == 22:
         if ftype == TType.LIST:
           self.condutas = []
-          (_etype29, _size26) = iprot.readListBegin()
-          for _i30 in xrange(_size26):
-            _elem31 = iprot.readI64()
-            self.condutas.append(_elem31)
+          (_etype22, _size19) = iprot.readListBegin()
+          for _i23 in xrange(_size19):
+            _elem24 = iprot.readI64()
+            self.condutas.append(_elem24)
           iprot.readListEnd()
         else:
           iprot.skip(ftype)
@@ -498,33 +412,33 @@ class FichaAtendimentoIndividualChildThrift:
       elif fid == 31:
         if ftype == TType.LIST:
           self.medicamentos = []
-          (_etype35, _size32) = iprot.readListBegin()
-          for _i36 in xrange(_size32):
-            _elem37 = br.gov.saude.esusab.ras.common.ttypes.MedicamentoThrift()
-            _elem37.read(iprot)
-            self.medicamentos.append(_elem37)
+          (_etype28, _size25) = iprot.readListBegin()
+          for _i29 in xrange(_size25):
+            _elem30 = br.gov.saude.esusab.ras.common.ttypes.MedicamentoThrift()
+            _elem30.read(iprot)
+            self.medicamentos.append(_elem30)
           iprot.readListEnd()
         else:
           iprot.skip(ftype)
       elif fid == 32:
         if ftype == TType.LIST:
           self.encaminhamentos = []
-          (_etype41, _size38) = iprot.readListBegin()
-          for _i42 in xrange(_size38):
-            _elem43 = br.gov.saude.esusab.ras.common.ttypes.EncaminhamentoExternoThrift()
-            _elem43.read(iprot)
-            self.encaminhamentos.append(_elem43)
+          (_etype34, _size31) = iprot.readListBegin()
+          for _i35 in xrange(_size31):
+            _elem36 = br.gov.saude.esusab.ras.common.ttypes.EncaminhamentoExternoThrift()
+            _elem36.read(iprot)
+            self.encaminhamentos.append(_elem36)
           iprot.readListEnd()
         else:
           iprot.skip(ftype)
       elif fid == 33:
         if ftype == TType.LIST:
           self.resultadosExames = []
-          (_etype47, _size44) = iprot.readListBegin()
-          for _i48 in xrange(_size44):
-            _elem49 = br.gov.saude.esusab.ras.common.ttypes.ResultadosExameThrift()
-            _elem49.read(iprot)
-            self.resultadosExames.append(_elem49)
+          (_etype40, _size37) = iprot.readListBegin()
+          for _i41 in xrange(_size37):
+            _elem42 = br.gov.saude.esusab.ras.common.ttypes.ResultadosExameThrift()
+            _elem42.read(iprot)
+            self.resultadosExames.append(_elem42)
           iprot.readListEnd()
         else:
           iprot.skip(ftype)
@@ -547,10 +461,10 @@ class FichaAtendimentoIndividualChildThrift:
       elif fid == 38:
         if ftype == TType.LIST:
           self.emultis = []
-          (_etype53, _size50) = iprot.readListBegin()
-          for _i54 in xrange(_size50):
-            _elem55 = iprot.readI64()
-            self.emultis.append(_elem55)
+          (_etype46, _size43) = iprot.readListBegin()
+          for _i47 in xrange(_size43):
+            _elem48 = iprot.readI64()
+            self.emultis.append(_elem48)
           iprot.readListEnd()
         else:
           iprot.skip(ftype)
@@ -563,11 +477,11 @@ class FichaAtendimentoIndividualChildThrift:
       elif fid == 40:
         if ftype == TType.LIST:
           self.problemasCondicoes = []
-          (_etype59, _size56) = iprot.readListBegin()
-          for _i60 in xrange(_size56):
-            _elem61 = br.gov.saude.esusab.ras.common.ttypes.ProblemaCondicaoThrift()
-            _elem61.read(iprot)
-            self.problemasCondicoes.append(_elem61)
+          (_etype52, _size49) = iprot.readListBegin()
+          for _i53 in xrange(_size49):
+            _elem54 = br.gov.saude.esusab.ras.common.ttypes.ProblemaCondicaoThrift()
+            _elem54.read(iprot)
+            self.problemasCondicoes.append(_elem54)
           iprot.readListEnd()
         else:
           iprot.skip(ftype)
@@ -634,8 +548,8 @@ class FichaAtendimentoIndividualChildThrift:
     if self.exame is not None:
       oprot.writeFieldBegin('exame', TType.LIST, 17)
       oprot.writeListBegin(TType.STRUCT, len(self.exame))
-      for iter62 in self.exame:
-        iter62.write(oprot)
+      for iter55 in self.exame:
+        iter55.write(oprot)
       oprot.writeListEnd()
       oprot.writeFieldEnd()
     if self.vacinaEmDia is not None:
@@ -653,15 +567,15 @@ class FichaAtendimentoIndividualChildThrift:
     if self.nasfs is not None:
       oprot.writeFieldBegin('nasfs', TType.LIST, 21)
       oprot.writeListBegin(TType.I64, len(self.nasfs))
-      for iter63 in self.nasfs:
-        oprot.writeI64(iter63)
+      for iter56 in self.nasfs:
+        oprot.writeI64(iter56)
       oprot.writeListEnd()
       oprot.writeFieldEnd()
     if self.condutas is not None:
       oprot.writeFieldBegin('condutas', TType.LIST, 22)
       oprot.writeListBegin(TType.I64, len(self.condutas))
-      for iter64 in self.condutas:
-        oprot.writeI64(iter64)
+      for iter57 in self.condutas:
+        oprot.writeI64(iter57)
       oprot.writeListEnd()
       oprot.writeFieldEnd()
     if self.stGravidezPlanejada is not None:
@@ -695,22 +609,22 @@ class FichaAtendimentoIndividualChildThrift:
     if self.medicamentos is not None:
       oprot.writeFieldBegin('medicamentos', TType.LIST, 31)
       oprot.writeListBegin(TType.STRUCT, len(self.medicamentos))
-      for iter65 in self.medicamentos:
-        iter65.write(oprot)
+      for iter58 in self.medicamentos:
+        iter58.write(oprot)
       oprot.writeListEnd()
       oprot.writeFieldEnd()
     if self.encaminhamentos is not None:
       oprot.writeFieldBegin('encaminhamentos', TType.LIST, 32)
       oprot.writeListBegin(TType.STRUCT, len(self.encaminhamentos))
-      for iter66 in self.encaminhamentos:
-        iter66.write(oprot)
+      for iter59 in self.encaminhamentos:
+        iter59.write(oprot)
       oprot.writeListEnd()
       oprot.writeFieldEnd()
     if self.resultadosExames is not None:
       oprot.writeFieldBegin('resultadosExames', TType.LIST, 33)
       oprot.writeListBegin(TType.STRUCT, len(self.resultadosExames))
-      for iter67 in self.resultadosExames:
-        iter67.write(oprot)
+      for iter60 in self.resultadosExames:
+        iter60.write(oprot)
       oprot.writeListEnd()
       oprot.writeFieldEnd()
     if self.finalizadorObservacao is not None:
@@ -728,8 +642,8 @@ class FichaAtendimentoIndividualChildThrift:
     if self.emultis is not None:
       oprot.writeFieldBegin('emultis', TType.LIST, 38)
       oprot.writeListBegin(TType.I64, len(self.emultis))
-      for iter68 in self.emultis:
-        oprot.writeI64(iter68)
+      for iter61 in self.emultis:
+        oprot.writeI64(iter61)
       oprot.writeListEnd()
       oprot.writeFieldEnd()
     if self.medicoes is not None:
@@ -739,8 +653,8 @@ class FichaAtendimentoIndividualChildThrift:
     if self.problemasCondicoes is not None:
       oprot.writeFieldBegin('problemasCondicoes', TType.LIST, 40)
       oprot.writeListBegin(TType.STRUCT, len(self.problemasCondicoes))
-      for iter69 in self.problemasCondicoes:
-        iter69.write(oprot)
+      for iter62 in self.problemasCondicoes:
+        iter62.write(oprot)
       oprot.writeListEnd()
       oprot.writeFieldEnd()
     if self.ivcf is not None:
@@ -844,11 +758,11 @@ class FichaAtendimentoIndividualMasterThrift:
       elif fid == 2:
         if ftype == TType.LIST:
           self.atendimentosIndividuais = []
-          (_etype73, _size70) = iprot.readListBegin()
-          for _i74 in xrange(_size70):
-            _elem75 = FichaAtendimentoIndividualChildThrift()
-            _elem75.read(iprot)
-            self.atendimentosIndividuais.append(_elem75)
+          (_etype66, _size63) = iprot.readListBegin()
+          for _i67 in xrange(_size63):
+            _elem68 = FichaAtendimentoIndividualChildThrift()
+            _elem68.read(iprot)
+            self.atendimentosIndividuais.append(_elem68)
           iprot.readListEnd()
         else:
           iprot.skip(ftype)
@@ -879,8 +793,8 @@ class FichaAtendimentoIndividualMasterThrift:
     if self.atendimentosIndividuais is not None:
       oprot.writeFieldBegin('atendimentosIndividuais', TType.LIST, 2)
       oprot.writeListBegin(TType.STRUCT, len(self.atendimentosIndividuais))
-      for iter76 in self.atendimentosIndividuais:
-        iter76.write(oprot)
+      for iter69 in self.atendimentosIndividuais:
+        iter69.write(oprot)
       oprot.writeListEnd()
       oprot.writeFieldEnd()
     if self.uuidFicha is not None:

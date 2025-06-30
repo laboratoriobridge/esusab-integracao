@@ -2140,3 +2140,91 @@ IvcfThrift.prototype.write = function(output) {
   return;
 };
 
+ExameThrift = module.exports.ExameThrift = function(args) {
+  this.codigoExame = null;
+  this.solicitadoAvaliado = null;
+  if (args) {
+    if (args.codigoExame !== undefined && args.codigoExame !== null) {
+      this.codigoExame = args.codigoExame;
+    }
+    if (args.solicitadoAvaliado !== undefined && args.solicitadoAvaliado !== null) {
+      this.solicitadoAvaliado = Thrift.copyList(args.solicitadoAvaliado, [null]);
+    }
+  }
+};
+ExameThrift.prototype = {};
+ExameThrift.prototype.read = function(input) {
+  input.readStructBegin();
+  while (true)
+  {
+    var ret = input.readFieldBegin();
+    var fname = ret.fname;
+    var ftype = ret.ftype;
+    var fid = ret.fid;
+    if (ftype == Thrift.Type.STOP) {
+      break;
+    }
+    switch (fid)
+    {
+      case 1:
+      if (ftype == Thrift.Type.STRING) {
+        this.codigoExame = input.readString();
+      } else {
+        input.skip(ftype);
+      }
+      break;
+      case 2:
+      if (ftype == Thrift.Type.LIST) {
+        var _size8 = 0;
+        var _rtmp312;
+        this.solicitadoAvaliado = [];
+        var _etype11 = 0;
+        _rtmp312 = input.readListBegin();
+        _etype11 = _rtmp312.etype;
+        _size8 = _rtmp312.size;
+        for (var _i13 = 0; _i13 < _size8; ++_i13)
+        {
+          var elem14 = null;
+          elem14 = input.readString();
+          this.solicitadoAvaliado.push(elem14);
+        }
+        input.readListEnd();
+      } else {
+        input.skip(ftype);
+      }
+      break;
+      default:
+        input.skip(ftype);
+    }
+    input.readFieldEnd();
+  }
+  input.readStructEnd();
+  return;
+};
+
+ExameThrift.prototype.write = function(output) {
+  output.writeStructBegin('ExameThrift');
+  if (this.codigoExame !== null && this.codigoExame !== undefined) {
+    output.writeFieldBegin('codigoExame', Thrift.Type.STRING, 1);
+    output.writeString(this.codigoExame);
+    output.writeFieldEnd();
+  }
+  if (this.solicitadoAvaliado !== null && this.solicitadoAvaliado !== undefined) {
+    output.writeFieldBegin('solicitadoAvaliado', Thrift.Type.LIST, 2);
+    output.writeListBegin(Thrift.Type.STRING, this.solicitadoAvaliado.length);
+    for (var iter15 in this.solicitadoAvaliado)
+    {
+      if (this.solicitadoAvaliado.hasOwnProperty(iter15))
+      {
+        iter15 = this.solicitadoAvaliado[iter15];
+        output.writeString(iter15);
+      }
+    }
+    output.writeListEnd();
+    output.writeFieldEnd();
+  }
+  output.writeFieldStop();
+  output.writeStructEnd();
+  return;
+};
+

@@ -158,3 +158,8 @@ struct IvcfThrift {
     14:optional bool hasSgComorbidade;
     15:optional i64 dataResultado;
 }
+
+struct ExameThrift {
+	1:optional string codigoExame;
+	2:optional list<string> solicitadoAvaliado;
+}

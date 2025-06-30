@@ -129,12 +129,12 @@ namespace br.gov.saude.esusab.ras.atendindividual
               if (field.Type == TType.List) {
                 {
                   Ciaps = new List<string>();
-                  TList _list4 = iprot.ReadListBegin();
-                  for( int _i5 = 0; _i5 < _list4.Count; ++_i5)
+                  TList _list0 = iprot.ReadListBegin();
+                  for( int _i1 = 0; _i1 < _list0.Count; ++_i1)
                   {
-                    string _elem6;
-                    _elem6 = iprot.ReadString();
-                    Ciaps.Add(_elem6);
+                    string _elem2;
+                    _elem2 = iprot.ReadString();
+                    Ciaps.Add(_elem2);
                   }
                   iprot.ReadListEnd();
                 }
@@ -198,9 +198,9 @@ namespace br.gov.saude.esusab.ras.atendindividual
           oprot.WriteFieldBegin(field);
           {
             oprot.WriteListBegin(new TList(TType.String, Ciaps.Count));
-            foreach (string _iter7 in Ciaps)
+            foreach (string _iter3 in Ciaps)
             {
-              oprot.WriteString(_iter7);
+              oprot.WriteString(_iter3);
             }
             oprot.WriteListEnd();
           }

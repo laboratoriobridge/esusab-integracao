@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:medicoes="http://esus.ufsc.br/medicoes" xmlns:ivcf="http://esus.ufsc.br/ivcf" targetNamespace="http://esus.ufsc.br/fichaprocedimentochild" version="1.0">
   <xs:import namespace="http://esus.ufsc.br/medicoes" schemaLocation="medicoes.xsd"/>
+  <xs:import namespace="http://esus.ufsc.br/ivcf" schemaLocation="ivcf.xsd"/>
   <xs:complexType name="fichaProcedimentoChildTransport">
     <xs:sequence>
       <xs:element minOccurs="0" name="numProntuario" type="xs:string"/>

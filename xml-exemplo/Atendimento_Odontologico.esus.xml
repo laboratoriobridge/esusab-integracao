@@ -37,6 +37,23 @@
 			<sexo>1</sexo>
 			<dataHoraInicialAtendimento>1549378800000</dataHoraInicialAtendimento>
 			<dataHoraFinalAtendimento>1549378800000</dataHoraFinalAtendimento>
+			<exame>
+				<codigoExame>0201010054</codigoExame>
+				<solicitadoAvaliado>A</solicitadoAvaliado>
+				<solicitadoAvaliado>S</solicitadoAvaliado>
+			</exame>
+			<exame>
+				<codigoExame>ABEX007</codigoExame>
+				<solicitadoAvaliado>S</solicitadoAvaliado>
+			</exame>
+			<exame>
+				<codigoExame>ABEX002</codigoExame>
+				<solicitadoAvaliado>S</solicitadoAvaliado>
+			</exame>
+			<exame>
+				<codigoExame>ABEX020</codigoExame>
+				<solicitadoAvaliado>A</solicitadoAvaliado>
+			</exame>
 			<medicamentos>
 				<codigoCatmat>BR0293891</codigoCatmat>
 				<viaAdministracao>0</viaAdministracao>

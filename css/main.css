@@ -516,12 +516,7 @@ li ul {
     display: block;
     text-align: center; }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   font-weight: 400; }
 
 .post-content {
@@ -533,45 +528,37 @@ h6 {
       .post-content h1 {
         font-size: 24px; } }
   .post-content h2 {
-    font-size: 22px; }
+    font-size: 24px; }
     @media screen and (max-width: 800px) {
       .post-content h2 {
-        font-size: 20px; } }
+        font-size: 22px; } }
   .post-content h3 {
-    font-size: 20px; }
+    font-size: 22px; }
     @media screen and (max-width: 800px) {
       .post-content h3 {
-        font-size: 18px; } }
+        font-size: 20px; } }
   .post-content h4 {
-    font-size: 18px; }
+    font-size: 20px; }
     @media screen and (max-width: 800px) {
       .post-content h4 {
-        font-size: 16px; } }
+        font-size: 18px; } }
   .post-content h5 {
-    font-size: 16px; }
+    font-size: 18px; }
     @media screen and (max-width: 800px) {
       .post-content h5 {
-        font-size: 14px; } }
+        font-size: 16px; } }
   .post-content h6 {
-    font-size: 14px; }
+    font-size: 16px; }
     @media screen and (max-width: 800px) {
       .post-content h6 {
-        font-size: 12px; } }
-  .post-content pre {
-    overflow-x: scroll;
-    white-space: pre; }
+        font-size: 14px; } }
 
 /**
 Fix for anchor links with sticky header
 From http://nicolasgallagher.com/jump-links-and-viewport-positioning/
 */
-h1[id]::before,
-h2[id]::before,
-h3[id]::before,
-h4[id]::before,
-h5[id]::before,
-h6[id]::before,
-a[name]::before {
+h1[id]::before, h2[id]::before, h3[id]::before, h4[id]::before, h5[id]::before,
+h6[id]::before, a[name]::before {
   z-index: -1;
   display: block;
   height: 70px;

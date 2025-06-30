@@ -29,7 +29,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 7.2.0</span>
+        <span class="label">versão 6.3.9</span>
       
     </a>
 
@@ -141,7 +141,7 @@
 
       <li id="item-layout_ab" data-url="/ledi/documentacao/index.html">
         <label>
-          <input type="checkbox" value="layout_ab" checked="checked"> Layout e-SUS APS de Dados e Interface Versão 7.2.0
+          <input type="checkbox" value="layout_ab" checked="checked"> Layout e-SUS APS de Dados e Interface Versão 6.3.9
           <small>
             <a onclick="checkById('layout_ab', true); return false;">Marcar todos</a> |
             <a onclick="checkById('layout_ab', false); return false;">Desmarcar todos</a>
@@ -2153,7 +2153,7 @@
   
       <!-- Cria a lista de itens[páginas] que foram selecionados  -->
 
-  <li id="summary-layout_ab"><a href="#layout_ab">Layout e-SUS APS de Dados e Interface Versão 7.2.0</a></li>
+  <li id="summary-layout_ab"><a href="#layout_ab">Layout e-SUS APS de Dados e Interface Versão 6.3.9</a></li>
   
       <!-- Cria a lista de itens[páginas] que foram selecionados  -->
 
@@ -3027,13 +3027,8 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>5.4.7 ou superior</td>
-<td><a href="/ledi/documentacao/index.html">LEDI APS 7.2.0</a></td>
-<td>27/06/2025</td>
-</tr>
-<tr>
 <td>5.3.32 ou superior</td>
-<td><a href="https://integracao.esusab.ufsc.br/v639/">LEDI APS 6.3.9</a></td>
+<td><a href="/ledi/documentacao/index.html">LEDI APS 6.3.9</a></td>
 <td>22/05/2025</td>
 </tr>
 <tr>
@@ -3307,17 +3302,17 @@
         
     <div class="post pdf shown" id="layout_ab" data-url="/ledi/documentacao/index.html">
       <header class="post-header">
-        <h1 class="post-title">Layout e-SUS APS de Dados e Interface Versão 7.2.0</h1>
+        <h1 class="post-title">Layout e-SUS APS de Dados e Interface Versão 6.3.9</h1>
       </header>
 
       
 
       <article class="post-content">
-        <p>Esta documentação descreve as estruturas de dados, seus atributos e regras utilizadas no <strong>LEDI APS</strong> versão 7.2.0.</p>
+        <p>Esta documentação descreve as estruturas de dados, seus atributos e regras utilizadas no <strong>LEDI APS</strong> versão 6.3.9</p>
 
-<p>A versão <strong>LEDI APS</strong> 7.2.0 é compatível com o sistema <strong>PEC e-SUS APS</strong> versão 5.4.7 ou superior.</p>
+<p>A versão <strong>LEDI APS</strong> 6.3.9 é compatível com o sistema <strong>PEC e-SUS APS</strong> versão 5.3.32 ou superior.</p>
 
-<p>Confira as principais alterações na versão 7.2.0 <a href="/ledi/documentacao/principais_alteracoes.html">aqui</a>.</p>
+<p>Confira as principais alterações na versão 6.3.9 <a href="/ledi/documentacao/principais_alteracoes.html">aqui</a>.</p>
 
       </article>
 
@@ -8946,34 +8941,6 @@
 
 <p><strong>Referência:</strong> <a href="/ledi/documentacao/estrutura_arquivos/#ivcf">ivcf</a>.</p>
 
-<h3 id="33-solicitacoesoci">#33 solicitacoesOci</h3>
-
-<p>Lista de procedimentos SIGTAP de Oferta de Cuidado Integrado (OCI) solicitados.</p>
-
-<table><thead>
-<tr>
-<th>Tipo</th>
-<th>Obrigatório</th>
-<th>Mínimo</th>
-<th>Máximo</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>List&lt;solicitacoesOci&gt;</td>
-<td>Não</td>
-<td>-</td>
-<td>-</td>
-</tr>
-</tbody></table>
-
-<p><strong>Regras:</strong></p>
-
-<ul>
-<li>Em um mesmo atendimento, não deve haver duplicidade de itens na lista. Cada procedimento de OCI deve ser registrado apenas uma vez.</li>
-</ul>
-
-<p><strong>Referência:</strong> <a href="/ledi/documentacao/estrutura_arquivos/#solicitacoesoci">SolicitacoesOci</a>.</p>
-
 <h2 id="exame">Exame</h2>
 
 <h3 id="1-codigoexame">#1 codigoExame</h3>
@@ -9039,48 +9006,6 @@
 
 <p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#situacaoexame">SituacaoExame</a>.</p>
 
-<h2 id="solicitacoesoci">SolicitacoesOci</h2>
-
-<h3 id="1-codigosigtap">#1 codigoSigtap</h3>
-
-<p>Código SIGTAP do procedimento de Oferta de Cuidado Integrado (OCI) solicitado.</p>
-
-<table><thead>
-<tr>
-<th>Tipo</th>
-<th>Obrigatório</th>
-<th>Mínimo</th>
-<th>Máximo</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>String</td>
-<td>Sim</td>
-<td>-</td>
-<td>-</td>
-</tr>
-</tbody></table>
-
-<p><strong>Regras:</strong></p>
-
-<ul>
-<li>Só é possível inserir procedimentos SIGTAP cujo grupo é igual a <code>09 - Procedimentos para Ofertas de Cuidados Integrados</code>.</li>
-<li>Em um mesmo atendimento, não deve haver duplicidade de itens na lista. Cada procedimento de OCI deve ser registrado apenas uma vez.</li>
-<li>O código do procedimento SIGTAP deve ser inserido sem ponto ou hífen, ex: <code>0901010014</code>;</li>
-</ul>
-
-<p><strong>Referências:</strong></p>
-
-<ul>
-<li>Tabela do SIGTAP, competência 01/2025 disponível em: <a href="http://sigtap.datasus.gov.br/tabela-unificada/app/sec/procedimento/publicados/consultar">Tabela Unificada SIGTAP</a>;</li>
-</ul>
-
-<p>Observações:</p>
-
-<ul>
-<li>Embora os Procedimentos para Ofertas de Cuidados Integrados estejam disponíveis a partir da competência 01/2025, a atualização geral dos procedimentos do sistema ainda corresponde à competência 02/2024.</li>
-</ul>
-
 <h2 id="problemacondicao">ProblemaCondicao</h2>
 
 <h3 id="1-uuidproblema">#1 uuidProblema</h3>
@@ -9097,7 +9022,7 @@
 </thead><tbody>
 <tr>
 <td>String</td>
-<td>Condicional</td>
+<td>Não</td>
 <td>0</td>
 <td>44</td>
 </tr>
@@ -9106,8 +9031,7 @@
 <p><strong>Regras:</strong></p>
 
 <ul>
-<li>Não é permitido o preenchimento caso seja informado um Código AB no campo <a href="/ledi/documentacao/estrutura_arquivos/#4-ciap">ciap</a>;</li>
-<li>Se torna obrigatório caso preenchido <a href="/ledi/documentacao/estrutura_arquivos/#2-uuidevolucaoproblema">uuidEvolucaoProblema</a>, <a href="/ledi/documentacao/estrutura_arquivos/#3-cosequencialevolucao">coSequencialEvolucao</a> ou <a href="/ledi/documentacao/estrutura_arquivos/#6-situacao">situacao</a>.</li>
+<li>Não é permitido o preenchimento caso seja informado um Código AB no campo <a href="/ledi/documentacao/estrutura_arquivos/#4-ciap">ciap</a>.</li>
 </ul>
 
 <h3 id="2-uuidevolucaoproblema">#2 uuidEvolucaoProblema</h3>
@@ -9124,7 +9048,7 @@
 </thead><tbody>
 <tr>
 <td>String</td>
-<td>Condicional</td>
+<td>Não</td>
 <td>0</td>
 <td>44</td>
 </tr>
@@ -9133,8 +9057,7 @@
 <p><strong>Regras:</strong></p>
 
 <ul>
-<li>Não é permitido o preenchimento caso seja informado um Código AB no campo <a href="/ledi/documentacao/estrutura_arquivos/#4-ciap">ciap</a>;</li>
-<li>Se torna obrigatório caso preenchido <a href="/ledi/documentacao/estrutura_arquivos/#1-uuidproblema">uuidProblema</a>, <a href="/ledi/documentacao/estrutura_arquivos/#3-cosequencialevolucao">coSequencialEvolucao</a> ou <a href="/ledi/documentacao/estrutura_arquivos/#6-situacao">situacao</a>.</li>
+<li>Não é permitido o preenchimento caso seja informado um Código AB no campo <a href="/ledi/documentacao/estrutura_arquivos/#4-ciap">ciap</a>.</li>
 </ul>
 
 <h3 id="3-cosequencialevolucao">#3 coSequencialEvolucao</h3>
@@ -9151,7 +9074,7 @@
 </thead><tbody>
 <tr>
 <td>Long</td>
-<td>Condicional</td>
+<td>Não</td>
 <td>0</td>
 <td>8</td>
 </tr>
@@ -9162,9 +9085,8 @@
 <ul>
 <li>A primeira evolução do problema ou condição possui o valor 1, as evoluções subsequentes incrementam de 1 em 1;</li>
 <li>Não é recomendado repetir dentro do mesmo problema ou condição;</li>
-<li>É recomendado que o valor do sequencial seja reiniciado para cada problema ou condição novo;</li>
-<li>Não é permitido o preenchimento caso seja informado um Código AB no campo <a href="/ledi/documentacao/estrutura_arquivos/#4-ciap">ciap</a>;</li>
-<li>Se torna obrigatório caso preenchido <a href="/ledi/documentacao/estrutura_arquivos/#2-uuidevolucaoproblema">uuidEvolucaoProblema</a>, <a href="/ledi/documentacao/estrutura_arquivos/#1-uuidproblema">uuidProblema</a> ou <a href="/ledi/documentacao/estrutura_arquivos/#6-situacao">situacao</a>.</li>
+<li>É recomendado que o valor seja reiniciado para cada problema ou condição novo;</li>
+<li>Não é permitido o preenchimento caso seja informado um Código AB no campo <a href="/ledi/documentacao/estrutura_arquivos/#4-ciap">ciap</a>.</li>
 </ul>
 
 <h3 id="4-ciap">#4 ciap</h3>
@@ -9242,7 +9164,7 @@
 </thead><tbody>
 <tr>
 <td>String</td>
-<td>Condicional</td>
+<td>Não</td>
 <td>-</td>
 <td>-</td>
 </tr>
@@ -9253,8 +9175,7 @@
 <ul>
 <li>Quando a <a href="/ledi/documentacao/estrutura_arquivos/#4-ciap">ciap</a> informada for &quot;GRAVIDEZ - W78&quot; não é permitido preencher a situação com o valor &quot;1 - Latente&quot;;</li>
 <li>Não é permitido o preenchimento caso seja informado um Código AB no campo <a href="/ledi/documentacao/estrutura_arquivos/#4-ciap">ciap</a>;</li>
-<li>Apenas valores de <code>0</code> a <code>2</code>;</li>
-<li>Se torna obrigatório caso preenchido <a href="/ledi/documentacao/estrutura_arquivos/#2-uuidevolucaoproblema">uuidEvolucaoProblema</a>, <a href="/ledi/documentacao/estrutura_arquivos/#1-uuidproblema">uuidProblema</a> ou <a href="/ledi/documentacao/estrutura_arquivos/#3-cosequencialevolucao">coSequencialEvolucao</a>.</li>
+<li>Apenas valores de <code>0</code> a <code>2</code>.</li>
 </ul>
 
 <p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#situacaoproblemascondicoes">SituacaoProblemasCondicoes</a>.</p>
@@ -12118,56 +12039,6 @@
 
 <p><strong>Referência:</strong> <a href="/ledi/documentacao/estrutura_arquivos/#ivcf">ivcf</a>.</p>
 
-<h3 id="27-exame">#27 exame</h3>
-
-<p>Lista de exames solicitados e/ou avaliados.</p>
-
-<table><thead>
-<tr>
-<th>Tipo</th>
-<th>Obrigatório</th>
-<th>Mínimo</th>
-<th>Máximo</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>List&lt;exame&gt;</td>
-<td>Não</td>
-<td>0</td>
-<td>100</td>
-</tr>
-</tbody></table>
-
-<p><strong>Referência:</strong> <a href="/ledi/documentacao/estrutura_arquivos/#exame">Exames</a>.</p>
-
-<h3 id="28-solicitacoesoci">#28 solicitacoesOci</h3>
-
-<p>Lista de procedimentos SIGTAP de Oferta de Cuidado Integrado (OCI) solicitados.</p>
-
-<table><thead>
-<tr>
-<th>Tipo</th>
-<th>Obrigatório</th>
-<th>Mínimo</th>
-<th>Máximo</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>List&lt;solicitacoesOci&gt;</td>
-<td>Não</td>
-<td>-</td>
-<td>-</td>
-</tr>
-</tbody></table>
-
-<p><strong>Regras:</strong></p>
-
-<ul>
-<li>Em um mesmo atendimento, não deve haver duplicidade de itens na lista. Cada procedimento de OCI deve ser registrado apenas uma vez.</li>
-</ul>
-
-<p><strong>Referência:</strong> <a href="/ledi/documentacao/estrutura_arquivos/#solicitacoesoci">SolicitacoesOci</a>.</p>
-
 <h2 id="procedimentoquantidade">ProcedimentoQuantidade</h2>
 
 <h3 id="1-comsprocedimento">#1 coMsProcedimento</h3>
@@ -12611,48 +12482,6 @@
   - <strong>Vírgula</strong>: Permitidos até 2 caracteres antes e depois (formatos: <code>x,x</code> | <code>xx,x</code> | <code>xx,xx</code> | <code>x,xx</code>).
   - <strong>Barra</strong>: Permitido 1 caractere antes e depois (formato: <code>x/x</code>).
 - A soma das doses dos turnos deve ser igual à quantidade total da dose.</p>
-
-<h2 id="solicitacoesoci">SolicitacoesOci</h2>
-
-<h3 id="1-codigosigtap">#1 codigoSigtap</h3>
-
-<p>Código SIGTAP do procedimento de Oferta de Cuidado Integrado (OCI) solicitado.</p>
-
-<table><thead>
-<tr>
-<th>Tipo</th>
-<th>Obrigatório</th>
-<th>Mínimo</th>
-<th>Máximo</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>String</td>
-<td>Sim</td>
-<td>-</td>
-<td>-</td>
-</tr>
-</tbody></table>
-
-<p><strong>Regras:</strong></p>
-
-<ul>
-<li>Só é possível inserir procedimentos SIGTAP cujo grupo é igual a <code>09 - Procedimentos para Ofertas de Cuidados Integrados</code>.</li>
-<li>Em um mesmo atendimento, não deve haver duplicidade de itens na lista. Cada procedimento de OCI deve ser registrado apenas uma vez.</li>
-<li>O código do procedimento SIGTAP deve ser inserido sem ponto ou hífen, ex: <code>0901010014</code>;</li>
-</ul>
-
-<p><strong>Referências:</strong></p>
-
-<ul>
-<li>Tabela do SIGTAP, competência 01/2025 disponível em: <a href="http://sigtap.datasus.gov.br/tabela-unificada/app/sec/procedimento/publicados/consultar">Tabela Unificada SIGTAP</a>;</li>
-</ul>
-
-<p>Observações:</p>
-
-<ul>
-<li>Embora os Procedimentos para Ofertas de Cuidados Integrados estejam disponíveis a partir da competência 01/2025, a atualização geral dos procedimentos do sistema ainda corresponde à competência 02/2024.</li>
-</ul>
 
 <h2 id="encaminhamentos">Encaminhamentos</h2>
 
@@ -13330,17 +13159,11 @@
 </thead><tbody>
 <tr>
 <td>String</td>
-<td>Condicional</td>
+<td>Não</td>
 <td>0</td>
 <td>44</td>
 </tr>
 </tbody></table>
-
-<p><strong>Regras:</strong></p>
-
-<ul>
-<li>Se torna obrigatório caso preenchido <a href="/ledi/documentacao/estrutura_arquivos/#2-uuidevolucaoproblema">uuidEvolucaoProblema</a>, <a href="/ledi/documentacao/estrutura_arquivos/#3-cosequencialevolucao">coSequencialEvolucao</a> ou <a href="/ledi/documentacao/estrutura_arquivos/#6-situacao">situacao</a>.</li>
-</ul>
 
 <h3 id="2-uuidevolucaoproblema">#2 uuidEvolucaoProblema</h3>
 
@@ -13356,17 +13179,11 @@
 </thead><tbody>
 <tr>
 <td>String</td>
-<td>Condicional</td>
+<td>Não</td>
 <td>0</td>
 <td>44</td>
 </tr>
 </tbody></table>
-
-<p><strong>Regras:</strong></p>
-
-<ul>
-<li>Se torna obrigatório caso preenchido <a href="/ledi/documentacao/estrutura_arquivos/#1-uuidproblema">uuidProblema</a>, <a href="/ledi/documentacao/estrutura_arquivos/#3-cosequencialevolucao">coSequencialEvolucao</a> ou <a href="/ledi/documentacao/estrutura_arquivos/#6-situacao">situacao</a>.</li>
-</ul>
 
 <h3 id="3-cosequencialevolucao">#3 coSequencialEvolucao</h3>
 
@@ -13382,7 +13199,7 @@
 </thead><tbody>
 <tr>
 <td>Long</td>
-<td>Condicional</td>
+<td>Não</td>
 <td>0</td>
 <td>8</td>
 </tr>
@@ -13393,8 +13210,7 @@
 <ul>
 <li>A primeira evolução do problema ou condição possui o valor 1, as evoluções subsequentes incrementam de 1 em 1;</li>
 <li>Não é recomendado repetir dentro do mesmo problema ou condição;</li>
-<li>É recomendado que o valor do sequencial seja reiniciado para cada problema ou condição novo;</li>
-<li>Se torna obrigatório caso preenchido <a href="/ledi/documentacao/estrutura_arquivos/#2-uuidevolucaoproblema">uuidEvolucaoProblema</a>, <a href="/ledi/documentacao/estrutura_arquivos/#1-uuidproblema">uuidProblema</a> ou <a href="/ledi/documentacao/estrutura_arquivos/#6-situacao">situacao</a>.</li>
+<li>É recomendado que o valor seja reiniciado para cada problema ou condição novo.</li>
 </ul>
 
 <h3 id="4-ciap">#4 ciap</h3>
@@ -13471,7 +13287,7 @@
 </thead><tbody>
 <tr>
 <td>String</td>
-<td>Condicional</td>
+<td>Não</td>
 <td>-</td>
 <td>-</td>
 </tr>
@@ -13481,8 +13297,7 @@
 
 <ul>
 <li>Quando a <a href="/ledi/documentacao/estrutura_arquivos/#4-ciap">ciap</a> informada for &quot;GRAVIDEZ - W78&quot; não é permitido preencher a situação com o valor &quot;1 - Latente&quot;;</li>
-<li>Apenas valores de <code>0</code> a <code>2</code>;</li>
-<li>Se torna obrigatório caso preenchido <a href="/ledi/documentacao/estrutura_arquivos/#2-uuidevolucaoproblema">uuidEvolucaoProblema</a>, <a href="/ledi/documentacao/estrutura_arquivos/#1-uuidproblema">uuidProblema</a> ou <a href="/ledi/documentacao/estrutura_arquivos/#3-cosequencialevolucao">coSequencialEvolucao</a>.</li>
+<li>Apenas valores de <code>0</code> a <code>2</code>.</li>
 </ul>
 
 <p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#situacaoproblemascondicoes">SituacaoProblemasCondicoes</a>.</p>
@@ -13876,71 +13691,6 @@
 </ul>
 
 <p><strong>Referência:</strong> A data deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
-
-<h2 id="exame">Exame</h2>
-
-<h3 id="1-codigoexame">#1 codigoExame</h3>
-
-<p>Código do exame solicitado ou avaliado.</p>
-
-<table><thead>
-<tr>
-<th>Tipo</th>
-<th>Obrigatório</th>
-<th>Mínimo</th>
-<th>Máximo</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>String</td>
-<td>Sim</td>
-<td>-</td>
-<td>-</td>
-</tr>
-</tbody></table>
-
-<p><strong>Regras:</strong></p>
-
-<ul>
-<li>Só é possível inserir exames cujo grupo é igual a <code>02 - Procedimentos com finalidade diagnóstica</code> ou exames que estejam presentes na tabela <a href="/ledi/documentacao/estrutura_arquivos/#listaexames">ListaExames</a>, neste caso, se o exame não tiver uma referência no SIGTAP, deve ser informado o código <strong>AB</strong> do exame;</li>
-<li>Não pode conter exames repetidos.</li>
-</ul>
-
-<p><strong>Referências:</strong></p>
-
-<ul>
-<li>Tabela do SIGTAP, competência 02/2024 disponível em: <a href="http://sigtap.datasus.gov.br/tabela-unificada/app/sec/procedimento/publicados/consultar">Tabela Unificada SIGTAP</a>;</li>
-<li><a href="/ledi/documentacao/estrutura_arquivos/#listaexames">ListaExames</a>.</li>
-</ul>
-
-<p>Observações:</p>
-
-<ul>
-<li>Inserir o código do exame SIGTAP sem ponto ou hífen, ex: <code>0214010015</code>;</li>
-<li>Inserir o código do exame AB em caracteres maiúsculos, sem espaços, ex: <code>ABEX022</code>.</li>
-</ul>
-
-<h3 id="2-solicitadoavaliado">#2 solicitadoAvaliado</h3>
-
-<p>Código do indicador se o exame foi <code>Solicitado</code> e / ou <code>Avaliado</code>.</p>
-
-<table><thead>
-<tr>
-<th>Tipo</th>
-<th>Obrigatório</th>
-<th>Mínimo</th>
-<th>Máximo</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>List&lt;String&gt;</td>
-<td>Sim</td>
-<td>1</td>
-<td>2</td>
-</tr>
-</tbody></table>
-
-<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#situacaoexame">SituacaoExame</a>.</p>
 
 <h2 id="listaprocedimentosrealizados">ListaProcedimentosRealizados</h2>
 
@@ -14604,149 +14354,6 @@
 </tr>
 </tbody></table>
 
-<h2 id="listaexames">ListaExames</h2>
-
-<table><thead>
-<tr>
-<th>Código SIGTAP*</th>
-<th>Descrição AB</th>
-<th>Código AB correspondente</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>02.02.01.029-5</td>
-<td>Colesterol total</td>
-<td>ABEX002</td>
-</tr>
-<tr>
-<td>02.02.01.031-7</td>
-<td>Creatinina</td>
-<td>ABEX003</td>
-</tr>
-<tr>
-<td>02.02.05.001-7</td>
-<td>EAS / EQU</td>
-<td>ABEX027</td>
-</tr>
-<tr>
-<td>02.11.02.003-6</td>
-<td>Eletrocardiograma</td>
-<td>ABEX004</td>
-</tr>
-<tr>
-<td>02.02.02.035-5</td>
-<td>Eletroforese de Hemoglobina</td>
-<td>ABEX030</td>
-</tr>
-<tr>
-<td>02.11.08.005-5</td>
-<td>Espirometria</td>
-<td>ABEX005</td>
-</tr>
-<tr>
-<td>02.02.08.011-0</td>
-<td>Exame de escarro</td>
-<td>ABEX006</td>
-</tr>
-<tr>
-<td>02.02.01.047-3</td>
-<td>Glicemia</td>
-<td>ABEX026</td>
-</tr>
-<tr>
-<td>02.02.01.027-9</td>
-<td>HDL</td>
-<td>ABEX007</td>
-</tr>
-<tr>
-<td>02.02.01.050-3</td>
-<td>Hemoglobina glicada</td>
-<td>ABEX008</td>
-</tr>
-<tr>
-<td>02.02.02.038-0</td>
-<td>Hemograma</td>
-<td>ABEX028</td>
-</tr>
-<tr>
-<td>02.02.01.028-7</td>
-<td>LDL</td>
-<td>ABEX009</td>
-</tr>
-<tr>
-<td>Não possui</td>
-<td>Retinografia/Fundo de olho com oftalmologista</td>
-<td>ABEX013</td>
-</tr>
-<tr>
-<td>02.02.03.063-6</td>
-<td>Sorologia de Hepatite B</td>
-<td>-</td>
-</tr>
-<tr>
-<td>02.02.03.067-9</td>
-<td>Sorologia de Hepatite C</td>
-<td>-</td>
-</tr>
-<tr>
-<td>02.02.03.068-7</td>
-<td>Sorologia de Hepatite D</td>
-<td>-</td>
-</tr>
-<tr>
-<td>02.02.03.111-0</td>
-<td>Sorologia de Sífilis (VDRL)</td>
-<td>ABEX019</td>
-</tr>
-<tr>
-<td>02.02.03.090-3</td>
-<td>Sorologia para Dengue</td>
-<td>ABEX016</td>
-</tr>
-<tr>
-<td>02.02.03.030-0</td>
-<td>Sorologia para HIV</td>
-<td>ABEX018</td>
-</tr>
-<tr>
-<td>02.02.12.009-0</td>
-<td>Teste indireto de antiglobulina humana (TIA)</td>
-<td>ABEX031</td>
-</tr>
-<tr>
-<td>02.11.07.014-9</td>
-<td>Teste da orelhinha</td>
-<td>ABEX020</td>
-</tr>
-<tr>
-<td>02.02.06.021-7</td>
-<td>Teste de gravidez</td>
-<td>ABEX023</td>
-</tr>
-<tr>
-<td>Não possui</td>
-<td>Teste do olhinho</td>
-<td>ABEX022</td>
-</tr>
-<tr>
-<td>02.02.11.005-2</td>
-<td>Teste do pezinho</td>
-<td>ABEX021</td>
-</tr>
-<tr>
-<td>02.05.02.014-3</td>
-<td>Ultrassonografia obstétrica</td>
-<td>ABEX024</td>
-</tr>
-<tr>
-<td>02.02.08.008-0</td>
-<td>Urocultura</td>
-<td>ABEX029</td>
-</tr>
-</tbody></table>
-
-<p><em>* Procedimentos pertencentes a competência <strong>09/2020</strong> do SIGTAP.</em></p>
-
       </article>
 
       <div class="pdf-separator"></div>
@@ -15186,7 +14793,7 @@
 <p><strong>Regras:</strong></p>
 
 <ul>
-<li>Não pode ser preenchido se <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#7-atividadetipo">atividadeTipo</a> = <code>1</code>, <code>2</code> ou <code>3</code> e <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#8-temasparareuniao">temasParaReuniao</a> diferente de <code>Educação permanente</code>;</li>
+<li>Não pode ser preenchido se <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#7-atividadetipo">atividadeTipo</a> = <code>1</code>, <code>2</code> ou <code>3</code>;</li>
 <li>É de preenchimento obrigatório se <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#7-atividadetipo">atividadeTipo</a> = <code>4</code>, <code>5</code> ou <code>7</code>;</li>
 <li>Se <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#16-temasparasaude">temasParaSaude</a> = <code>18 - Semana saúde na escola</code>, torna-se obrigatório o preenchimento de <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#18-pseeducacao">pseEducacao</a> ou <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html#19-psesaude">pseSaude</a>.</li>
 </ul>
@@ -20518,17 +20125,11 @@
 </thead><tbody>
 <tr>
 <td>String</td>
-<td>Condicional</td>
+<td>Não</td>
 <td>0</td>
 <td>44</td>
 </tr>
 </tbody></table>
-
-<p><strong>Regras:</strong></p>
-
-<ul>
-<li>Se torna obrigatório caso preenchido <a href="/ledi/documentacao/estrutura_arquivos/#2-uuidevolucaoproblema">uuidEvolucaoProblema</a>, <a href="/ledi/documentacao/estrutura_arquivos/#3-cosequencialevolucao">coSequencialEvolucao</a> ou <a href="/ledi/documentacao/estrutura_arquivos/#6-situacao">situacao</a>.</li>
-</ul>
 
 <h3 id="2-uuidevolucaoproblema">#2 uuidEvolucaoProblema</h3>
 
@@ -20544,17 +20145,11 @@
 </thead><tbody>
 <tr>
 <td>String</td>
-<td>Condicional</td>
+<td>Não</td>
 <td>0</td>
 <td>44</td>
 </tr>
 </tbody></table>
-
-<p><strong>Regras:</strong></p>
-
-<ul>
-<li>Se torna obrigatório caso preenchido <a href="/ledi/documentacao/estrutura_arquivos/#1-uuidproblema">uuidProblema</a>, <a href="/ledi/documentacao/estrutura_arquivos/#3-cosequencialevolucao">coSequencialEvolucao</a> ou <a href="/ledi/documentacao/estrutura_arquivos/#6-situacao">situacao</a>.</li>
-</ul>
 
 <h3 id="3-cosequencialevolucao">#3 coSequencialEvolucao</h3>
 
@@ -20570,7 +20165,7 @@
 </thead><tbody>
 <tr>
 <td>Long</td>
-<td>Condicional</td>
+<td>Não</td>
 <td>0</td>
 <td>8</td>
 </tr>
@@ -20581,8 +20176,7 @@
 <ul>
 <li>A primeira evolução do problema ou condição possui o valor 1, as evoluções subsequentes incrementam de 1 em 1;</li>
 <li>Não é recomendado repetir dentro do mesmo problema ou condição;</li>
-<li>É recomendado que o valor do sequencial seja reiniciado para cada problema ou condição novo;</li>
-<li>Se torna obrigatório caso preenchido <a href="/ledi/documentacao/estrutura_arquivos/#2-uuidevolucaoproblema">uuidEvolucaoProblema</a>, <a href="/ledi/documentacao/estrutura_arquivos/#1-uuidproblema">uuidProblema</a> ou <a href="/ledi/documentacao/estrutura_arquivos/#6-situacao">situacao</a>.</li>
+<li>É recomendado que o valor seja reiniciado para cada problema ou condição novo.</li>
 </ul>
 
 <h3 id="4-ciap">#4 ciap</h3>
@@ -20659,7 +20253,7 @@
 </thead><tbody>
 <tr>
 <td>String</td>
-<td>Condicional</td>
+<td>Não</td>
 <td>-</td>
 <td>-</td>
 </tr>
@@ -20669,8 +20263,7 @@
 
 <ul>
 <li>Quando a <a href="/ledi/documentacao/estrutura_arquivos/#4-ciap">ciap</a> informada for &quot;GRAVIDEZ - W78&quot; não é permitido preencher a situação com o valor &quot;1 - Latente&quot;;</li>
-<li>Apenas valores de <code>0</code> a <code>2</code>;</li>
-<li>Se torna obrigatório caso preenchido <a href="/ledi/documentacao/estrutura_arquivos/#2-uuidevolucaoproblema">uuidEvolucaoProblema</a>, <a href="/ledi/documentacao/estrutura_arquivos/#1-uuidproblema">uuidProblema</a> ou <a href="/ledi/documentacao/estrutura_arquivos/#3-cosequencialevolucao">coSequencialEvolucao</a>.</li>
+<li>Apenas valores de <code>0</code> a <code>2</code>.</li>
 </ul>
 
 <p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#situacaoproblemascondicoes">SituacaoProblemasCondicoes</a>.</p>
@@ -53511,19 +53104,19 @@
 <td>major</td>
 <td>Integer</td>
 <td>Sim</td>
-<td>Valor único = 7</td>
+<td>Valor único = 6</td>
 </tr>
 <tr>
 <td>minor</td>
 <td>Integer</td>
 <td>Sim</td>
-<td>Valor único = 2</td>
+<td>Valor único = 3</td>
 </tr>
 <tr>
 <td>revision</td>
 <td>Integer</td>
 <td>Sim</td>
-<td>Valor único = 0</td>
+<td>Valor único = 9</td>
 </tr>
 </tbody></table>
 
@@ -65642,123 +65235,123 @@
 </tr>
 <tr>
 <td>59</td>
-<td>Profilaxia/Tratamento com 1 frasco-ampola/ampola</td>
-<td>P/T1</td>
+<td>Profilaxia com 1 frasco-ampola/ampola</td>
+<td>P1</td>
 </tr>
 <tr>
 <td>60</td>
-<td>Profilaxia/Tratamento com 2 frascos-ampolas/ampolas</td>
-<td>P/T2</td>
+<td>Profilaxia com 2 frascos-ampolas/ampolas</td>
+<td>P2</td>
 </tr>
 <tr>
 <td>61</td>
-<td>Profilaxia/Tratamento com 3 frascos-ampolas/ampolas</td>
-<td>P/T3</td>
+<td>Profilaxia com 3 frascos-ampolas/ampolas</td>
+<td>P3</td>
 </tr>
 <tr>
 <td>62</td>
-<td>Profilaxia/Tratamento com 4 frascos-ampolas/ampolas</td>
-<td>P/T4</td>
+<td>Profilaxia com 4 frascos-ampolas/ampolas</td>
+<td>P4</td>
 </tr>
 <tr>
 <td>63</td>
-<td>Profilaxia/Tratamento com 5 frascos-ampolas/ampolas</td>
-<td>P/T5</td>
+<td>Profilaxia com 5 frascos-ampolas/ampolas</td>
+<td>P5</td>
 </tr>
 <tr>
 <td>64</td>
-<td>Profilaxia/Tratamento com 6 frascos-ampolas/ampolas</td>
-<td>P/T6</td>
+<td>Profilaxia com 6 frascos-ampolas/ampolas</td>
+<td>P6</td>
 </tr>
 <tr>
 <td>65</td>
-<td>Profilaxia/Tratamento com 7 frascos-ampolas/ampolas</td>
-<td>P/T7</td>
+<td>Profilaxia com 7 frascos-ampolas/ampolas</td>
+<td>P7</td>
 </tr>
 <tr>
 <td>66</td>
-<td>Profilaxia/Tratamento com 8 frascos-ampolas/ampolas</td>
-<td>P/T8</td>
+<td>Profilaxia com 8 frascos-ampolas/ampolas</td>
+<td>P8</td>
 </tr>
 <tr>
 <td>67</td>
-<td>Profilaxia/Tratamento com 9 frascos-ampolas/ampolas</td>
-<td>P/T9</td>
+<td>Profilaxia com 9 frascos-ampolas/ampolas</td>
+<td>P9</td>
 </tr>
 <tr>
 <td>68</td>
-<td>Profilaxia/Tratamento com 10 frascos-ampolas/ampolas</td>
-<td>P/T10</td>
+<td>Profilaxia com 10 frascos-ampolas/ampolas</td>
+<td>P10</td>
 </tr>
 <tr>
 <td>69</td>
-<td>Profilaxia/Tratamento com 11 frascos-ampolas/ampolas</td>
-<td>P/T11</td>
+<td>Profilaxia com 11 frascos-ampolas/ampolas</td>
+<td>P11</td>
 </tr>
 <tr>
 <td>70</td>
-<td>Profilaxia/Tratamento com 12 frascos-ampolas/ampolas</td>
-<td>P/T12</td>
+<td>Profilaxia com 12 frascos-ampolas/ampolas</td>
+<td>P12</td>
 </tr>
 <tr>
 <td>71</td>
-<td>Profilaxia/Tratamento com 13 frascos-ampolas/ampolas</td>
-<td>P/T13</td>
+<td>Profilaxia com 13 frascos-ampolas/ampolas</td>
+<td>P13</td>
 </tr>
 <tr>
 <td>72</td>
-<td>Profilaxia/Tratamento com 14 frascos-ampolas/ampolas</td>
-<td>P/T14</td>
+<td>Profilaxia com 14 frascos-ampolas/ampolas</td>
+<td>P14</td>
 </tr>
 <tr>
 <td>73</td>
-<td>Profilaxia/Tratamento com 15 frascos-ampolas/ampolas</td>
-<td>P/T15</td>
+<td>Profilaxia com 15 frascos-ampolas/ampolas</td>
+<td>P15</td>
 </tr>
 <tr>
 <td>74</td>
-<td>Profilaxia/Tratamento com 16 frascos-ampolas/ampolas</td>
-<td>P/T16</td>
+<td>Profilaxia com 16 frascos-ampolas/ampolas</td>
+<td>P16</td>
 </tr>
 <tr>
 <td>75</td>
-<td>Profilaxia/Tratamento com 17 frascos-ampolas/ampolas</td>
-<td>P/T17</td>
+<td>Profilaxia com 17 frascos-ampolas/ampolas</td>
+<td>P17</td>
 </tr>
 <tr>
 <td>76</td>
-<td>Profilaxia/Tratamento com 18 frascos-ampolas/ampolas</td>
-<td>P/T18</td>
+<td>Profilaxia com 18 frascos-ampolas/ampolas</td>
+<td>P18</td>
 </tr>
 <tr>
 <td>77</td>
-<td>Profilaxia/Tratamento com 19 frascos-ampolas/ampolas</td>
-<td>P/T19</td>
+<td>Profilaxia com 19 frascos-ampolas/ampolas</td>
+<td>P19</td>
 </tr>
 <tr>
 <td>78</td>
-<td>Profilaxia/Tratamento com 20 frascos-ampolas/ampolas</td>
-<td>P/T20</td>
+<td>Profilaxia com 20 frascos-ampolas/ampolas</td>
+<td>P20</td>
 </tr>
 <tr>
 <td>79</td>
-<td>Profilaxia/Tratamento com 21 frascos-ampolas/ampolas</td>
-<td>P/T21</td>
+<td>Profilaxia com 21 frascos-ampolas/ampolas</td>
+<td>P21</td>
 </tr>
 <tr>
 <td>80</td>
-<td>Profilaxia/Tratamento com 22 frascos-ampolas/ampolas</td>
-<td>P/T22</td>
+<td>Profilaxia com 22 frascos-ampolas/ampolas</td>
+<td>P22</td>
 </tr>
 <tr>
 <td>81</td>
-<td>Profilaxia/Tratamento com 23 frascos-ampolas/ampolas</td>
-<td>P/T23</td>
+<td>Profilaxia com 23 frascos-ampolas/ampolas</td>
+<td>P23</td>
 </tr>
 <tr>
 <td>82</td>
-<td>Profilaxia/Tratamento com 24 frascos-ampolas/ampolas</td>
-<td>P/T24</td>
+<td>Profilaxia com 24 frascos-ampolas/ampolas</td>
+<td>P24</td>
 </tr>
 </tbody></table>
 
@@ -65813,7 +65406,7 @@
 </tr>
 <tr>
 <td>9</td>
-<td>Monitoramento das Estratégias de Vacinação</td>
+<td>Monitoramento rápido de cobertura vacinal</td>
 <td>9</td>
 </tr>
 <tr>
@@ -66390,11 +65983,6 @@
 <td>COVID-19 SERUM/ZALIKA</td>
 </tr>
 <tr>
-<td>113</td>
-<td>Vacina chikungunya (recombinante e atenuada)</td>
-<td>CHIK-A</td>
-</tr>
-<tr>
 <td>114</td>
 <td>Vacina Covid-19-inativada, Sinopharm</td>
 <td>COVID-19 SINOPHARM</td>
@@ -66489,7 +66077,7 @@
 </tr>
 <tr>
 <td>18</td>
-<td>Sede de polo base tipo I</td>
+<td>Sede de polobo base tipo I</td>
 <td>-</td>
 </tr>
 <tr>
@@ -67060,16 +66648,6 @@
 <tr>
 <td>18</td>
 <td>Semana saúde na escola</td>
-<td>-</td>
-</tr>
-<tr>
-<td>31</td>
-<td>Amamentação</td>
-<td>-</td>
-</tr>
-<tr>
-<td>32</td>
-<td>Alimentação complementar saudável</td>
 <td>-</td>
 </tr>
 <tr>
@@ -110563,7 +110141,7 @@
 
 <p><strong>1. </strong> A geração das credenciais deve estar habilitada somente para as instalações que possuam HTTPS configurado.</p>
 
-<p><strong>2. </strong> A geração da credencial deve ser feita pelo Administrador da Instalação no módulo &quot;Integração &gt; Credenciais de integração&quot;. Sendo necessário informar os seguintes dados dos integradores:</p>
+<p><strong>2. </strong> A geração da credencial deve ser feita pelo Administrador da Instalação no módulo &quot;Transmissão de dados &gt; Configurações&quot;. Sendo necessário informar os seguintes dados dos integradores:</p>
 
 <ul>
 <li>Para cadastro de &quot;Pessoa física&quot; o registro deve conter as seguintes informações da pessoa que será responsável pela integração: Nome, CPF, E-mail e Nome da credencial;</li>
@@ -110576,11 +110154,7 @@
 
 <p><strong>4. </strong> A API possui dois endpoints disponíveis: &quot;[url_instalacao]/api/recebimento/login&quot; e &quot;[url_instalacao]/api/v1/recebimento/ficha&quot;.</p>
 
-<!-- REGRA OCULTA POIS API NÃO FOI PUBLICADA EM PRODUÇÃO - QUANDO RECOLOCAR - NECESSÁRIO VOLTAR O CONTADOR E LINK -->
-
-<!-- Foi criada uma nova link api_autenticacao_v1. Recomenda-se utilizar o novo endpoint para realizar a autenticação, pois ele permite o uso mais amplo das APIs disponíveis. -->
-
-<p><strong>5. </strong> O endpoint &quot;/api/recebimento/login&quot; deve ser utilizado para realizar a autenticação do envio através da requisição do tipo POST. Sendo aceitas as variáveis &quot;usuario&quot; e &quot;senha&quot;. As respostas possíveis são:</p>
+<p><strong>5. </strong> O endpoint &quot;/api/recebimento/login&quot; deve ser utilziado para realizar a autenticação do envio através da requisição do tipo POST. Sendo aceitas as variáveis &quot;usuario&quot; e &quot;senha&quot;. As respostas possíveis são:</p>
 
 <ul>
 <li>Resposta de sucesso: a API deve retornar um cookie chamado &quot;JSESSIONID&quot;. Esse cookie deve ser enviado em requisições futuras como forma de autenticação;</li>
@@ -111196,35 +110770,6 @@
       <article class="post-content">
         <p>Este documento relata as principais alterações entre as últimas versões do LEDI APS:</p>
 
-<h2 id="vers-o-7-2-0">Versão 7.2.0</h2>
-
-<h3 id="1-atualiza-o-no-modelo-de-dados-para-transmiss-o-de-procedimentos-de-oferta-de-cuidado-integrado">1. Atualização no modelo de dados para transmissão de procedimentos de Oferta de Cuidado Integrado</h3>
-
-<p>Na estrutura dos arquivos da <strong>Ficha de Atendimento Individual</strong> e da <strong>Ficha de Atendimento Odontológico Individual</strong> foi incluído o modelo de dados que permite a <strong>transmissão</strong> de códigos SIGTAP do grupo <strong>09 - Procedimentos para Ofertas de Cuidados Integrados</strong>. </p>
-
-<h3 id="2-ajustes-nas-regras-de-problemas-e-condi-es">2. Ajustes nas regras de problemas e condições</h3>
-
-<p>Na estrutura dos arquivos da <strong>Ficha de Atendimento Individual</strong>, <strong>Ficha de Atendimento Odontológico Individual</strong> e <strong>Ficha de Atendimento Domiciliar</strong> foram ajustadas as regras do modelo de dados ProblemaCondicao para contemplar as regras que estavam sendo aplicadas na validação durante a importação.</p>
-
-<h3 id="3-atualiza-es-em-temas-para-sa-de-de-atividade-coletiva">3.  Atualizações em Temas para saúde de Atividade Coletiva</h3>
-
-<p>Foi permitido o registro de <strong>Temas para saúde</strong> para atividades em reunião, no contexto em que <strong>Educação permanente</strong> é tema exclusivo da reunião. 
-Além disso, foram incluídas duas novas opções de Temas para saúde, disponíveis tanto no registro de atividade em saúde quanto em reunião: <strong>Amamentação</strong> e <strong>Introdução alimentar</strong>.
-Por fim, o tema para saúde <strong>Introdução alimentar</strong> passa a ser descrito e utilizado como <strong>Alimentação complementar saudável</strong>.</p>
-
-<h3 id="4-inclus-o-de-grupo-exame-em-atendimento-odontol-gico">4. Inclusão de grupo &quot;exame&quot; em Atendimento Odontológico</h3>
-
-<p>Foi incluído o grupo &quot;exame&quot; no modelo de dados de Atendimento Odontológico.</p>
-
-<h3 id="5-atualiza-es-de-vacina-o">5. Atualizações de vacinação</h3>
-
-<p>Inclusão do imunobiológico Vacina chikungunya (recombinante e atenuada) (código 113, Sigla &quot;CHIK-A) para transcrição de caderneta. 
-Alterações da nomenclatura da Estratégia de código 9, anteriormente denominada &quot;Monitoramento Rápido de Cobertura Vacinal&quot;, para &quot;Monitoramento das Estratégias de Vacinação&quot; e das does de &quot;Profilaxia&quot;, para &quot;Profilaxia/Tratamento&quot;;</p>
-
-<h3 id="6-atualiza-o-da-base-de-endere-os">6. Atualização da base de endereços</h3>
-
-<p>Foi atualizada a base de endereços utilizada no sistema.</p>
-
 <h2 id="vers-o-6-3-9">Versão 6.3.9</h2>
 
 <h3 id="1-atualiza-es-em-resultados-de-exames-estruturados">1. Atualizações em resultados de exames estruturados</h3>
@@ -111449,21 +110994,9 @@ Alterações da nomenclatura da Estratégia de código 9, anteriormente denomina
       <article class="post-content">
         <p>Este documento relata as principais alterações entre as versões do DW.</p>
 
-<h3 id="1-principais-altera-es-da-v-5-4-0-para-a-v-5-4-1-do-e-sus-aps">1. Principais alterações da v.5.4.0 para a v.5.4.1 do e-SUS APS:</h3>
+<h3 id="1-principais-altera-es-da-v-5-3-25-para-a-v-5-3-26-do-e-sus-aps">1. Principais alterações da v.5.3.25 para a v.5.3.26 do e-SUS APS:</h3>
 
-<p><strong>1. </strong> Inclusão de campos nas <code>tb_fat_atd_ind_procedimentos</code>, <code>tb_fat_atend_odonto_proced</code> e <code>tb_fat_atend_odonto_exames</code>:</p>
-
-<ul>
-<li>co_dim_faixa_etaria: Código da faixa etária. Campo <code>co_seq_dim_faixa_etaria</code> da <code>tb_dim_faixa_etaria</code>;</li>
-<li>dt_inicial_atendimento: Data e hora do início do atendimento no formato &quot;YYYY-MM-DD HH:MM:SS.MMM&quot;;</li>
-<li>co_dim_tipo_atendimento: Código do tipo de atendimento. Campo <code>co_seq_dim_tipo_atendimento</code> da <code>tb_dim_tipo_atendimento</code>;</li>
-<li>co_dim_turno: Código do turno do atendimento. Campo <code>co_seq_dim_turno</code> da <code>tb_dim_turno</code>;</li>
-<li>co_dim_sexo: Código do sexo. Campo <code>co_seq_dim_faixa_sexo</code> da <code>tb_dim_sexo</code>.</li>
-</ul>
-
-<h3 id="2-principais-altera-es-da-v-5-3-25-para-a-v-5-3-26-do-e-sus-aps">2. Principais alterações da v.5.3.25 para a v.5.3.26 do e-SUS APS:</h3>
-
-<p><strong>2. </strong> Inclusão de campos na <code>tb_acomp_cidadaos_vinculados</code>:</p>
+<p><strong>1. </strong> Inclusão de campos na <code>tb_acomp_cidadaos_vinculados</code>:</p>
 
 <ul>
 <li>co_cds_domicilio: Código identificador do domicílio ao qual o cidadão está vinculado;</li>
@@ -111471,9 +111004,9 @@ Alterações da nomenclatura da Estratégia de código 9, anteriormente denomina
 <li>no_raca_cor: Nome da <a href="/ledi/documentacao/referencias/dicionario.html#racacor">Raça/Cor</a> do cidadão.</li>
 </ul>
 
-<h3 id="3-principais-altera-es-da-v-5-3-20-para-a-v-5-3-21-do-e-sus-aps">3. Principais alterações da v.5.3.20 para a v.5.3.21 do e-SUS APS:</h3>
+<h3 id="2-principais-altera-es-da-v-5-3-20-para-a-v-5-3-21-do-e-sus-aps">2. Principais alterações da v.5.3.20 para a v.5.3.21 do e-SUS APS:</h3>
 
-<p><strong>3. </strong> Inclusão da tabela <code>tb_dim_grau_vulnerabilidade</code>:</p>
+<p><strong>2. </strong> Inclusão da tabela <code>tb_dim_grau_vulnerabilidade</code>:</p>
 
 <ul>
 <li>co_seq_dim_grau_vulnerabilidade: Código de identificação sequencial;</li>
@@ -111481,13 +111014,13 @@ Alterações da nomenclatura da Estratégia de código 9, anteriormente denomina
 <li>ds_grau: Descrição do grau de vulnerabilidade.</li>
 </ul>
 
-<h3 id="4-principais-altera-es-da-v-5-3-14-para-a-v-5-3-15-do-e-sus-aps">4. Principais alterações da v.5.3.14 para a v.5.3.15 do e-SUS APS:</h3>
+<h3 id="3-principais-altera-es-da-v-5-3-14-para-a-v-5-3-15-do-e-sus-aps">3. Principais alterações da v.5.3.14 para a v.5.3.15 do e-SUS APS:</h3>
 
-<p><strong>4. </strong> Inclusão da tabela <code>tb_dim_situacao_problema</code>, contendo todas as possíveis situações que podem ser preenchidas na lista de problemas e condições.</p>
+<p><strong>3. </strong> Inclusão da tabela <code>tb_dim_situacao_problema</code>, contendo todas as possíveis situações que podem ser preenchidas na lista de problemas e condições.</p>
 
-<p><strong>5. </strong> Renomeação da tabela <code>tb_fat_atend_dom_condicao_aval</code> para <code>tb_fat_atend_dom_prob_cond</code>.</p>
+<p><strong>4. </strong> Renomeação da tabela <code>tb_fat_atend_dom_condicao_aval</code> para <code>tb_fat_atend_dom_prob_cond</code>.</p>
 
-<p><strong>6. </strong> Inclusão de novos campos nas tabelas de fato <code>tb_fat_atd_ind_problemas</code>, <code>tb_fat_atend_odonto_problemas</code> e <code>tb_fat_atend_dom_prob_cond</code>:</p>
+<p><strong>5. </strong> Inclusão de novos campos nas tabelas de fato <code>tb_fat_atd_ind_problemas</code>, <code>tb_fat_atend_odonto_problemas</code> e <code>tb_fat_atend_dom_prob_cond</code>:</p>
 
 <ul>
 <li>nu_uuid_problema: Código identificador único do problema ou condição;</li>
@@ -111499,7 +111032,7 @@ Alterações da nomenclatura da Estratégia de código 9, anteriormente denomina
 <li>st_avaliado: Indicador se o problema ou condição foi avaliado durante o atendimento.</li>
 </ul>
 
-<p><strong>7. </strong> Inclusão de novos campos nas tabelas de fato <code>tb_fat_atd_ind_medicamentos</code> e <code>tb_fat_atend_odonto_medicamentos</code>:</p>
+<p><strong>6. </strong> Inclusão de novos campos nas tabelas de fato <code>tb_fat_atd_ind_medicamentos</code> e <code>tb_fat_atend_odonto_medicamentos</code>:</p>
 
 <ul>
 <li>qt_dose_manha;</li>
@@ -111507,9 +111040,9 @@ Alterações da nomenclatura da Estratégia de código 9, anteriormente denomina
 <li>qt_dose_noite.</li>
 </ul>
 
-<h3 id="5-principais-altera-es-da-v-5-3-6-para-a-v-5-3-7-do-e-sus-aps">5. Principais alterações da v.5.3.6 para a v.5.3.7 do e-SUS APS:</h3>
+<h3 id="4-principais-altera-es-da-v-5-3-6-para-a-v-5-3-7-do-e-sus-aps">4. Principais alterações da v.5.3.6 para a v.5.3.7 do e-SUS APS:</h3>
 
-<p><strong>8. </strong> Inclusão de novos campos nas tabelas de fato <code>tb_fat_atendimento_individual</code>, <code>tb_fat_proced_atend</code> e <code>tb_fat_atendimento_odonto</code>:</p>
+<p><strong>7. </strong> Inclusão de novos campos nas tabelas de fato <code>tb_fat_atendimento_individual</code>, <code>tb_fat_proced_atend</code> e <code>tb_fat_atendimento_odonto</code>:</p>
 
 <ul>
 <li>nu_medicao_circ_abdominal: Circunferência abdominal do cidadão em centímetros;</li>
@@ -111527,42 +111060,42 @@ Alterações da nomenclatura da Estratégia de código 9, anteriormente denomina
 <li>nu_perimetro_cefalico: Perímetro cefálico do cidadão em centímetros.</li>
 </ul>
 
-<h3 id="6-principais-altera-es-da-v-5-2-36-para-a-v-5-2-37-do-e-sus-aps">6. Principais alterações da v.5.2.36 para a v.5.2.37 do e-SUS APS:</h3>
+<h3 id="5-principais-altera-es-da-v-5-2-36-para-a-v-5-2-37-do-e-sus-aps">5. Principais alterações da v.5.2.36 para a v.5.2.37 do e-SUS APS:</h3>
 
-<p><strong>9. </strong> Inclusão do detalhamento dos fatos:</p>
+<p><strong>8. </strong> Inclusão do detalhamento dos fatos:</p>
 
 <ul>
 <li><a href="/dw/fatos/atendimento_individual/index.html">Atendimento individual</a>;</li>
 <li><a href="/dw/fatos/procedimentos/index.html">Procedimentos</a>.</li>
 </ul>
 
-<h3 id="7-principais-altera-es-da-v5-2-33-para-a-v-5-2-34-do-e-sus-aps">7. Principais alterações da v5.2.33 para a v.5.2.34 do e-SUS APS:</h3>
+<h3 id="6-principais-altera-es-da-v5-2-33-para-a-v-5-2-34-do-e-sus-aps">6. Principais alterações da v5.2.33 para a v.5.2.34 do e-SUS APS:</h3>
 
-<p><strong>10. </strong> Inclusão da seção de <a href="/dw/visualizacoes/index.html">Visualizações</a>, com a nova <a href="/dw/visualizacoes/acompanhamento_cidadaos_vinculados.html">Tabela de acompanhamento de cidadãos vinculados</a>.</p>
+<p><strong>9. </strong> Inclusão da seção de <a href="/dw/visualizacoes/index.html">Visualizações</a>, com a nova <a href="/dw/visualizacoes/acompanhamento_cidadaos_vinculados.html">Tabela de acompanhamento de cidadãos vinculados</a>.</p>
 
-<h3 id="8-principais-altera-es-da-v5-2-16-para-a-v-5-2-17-do-e-sus-aps">8. Principais alterações da v5.2.16 para a v.5.2.17 do e-SUS APS:</h3>
+<h3 id="7-principais-altera-es-da-v5-2-16-para-a-v-5-2-17-do-e-sus-aps">7. Principais alterações da v5.2.16 para a v.5.2.17 do e-SUS APS:</h3>
 
-<p><strong>11. </strong> No contexto de <a href="/dw/fatos/cuidado_compartilhado/index.html">Cuidado compartilhado</a> foram incluídas as estruturas de dados para registro da informação do cuidado compartilhado. Esta informação está armazenada na tabela: <code>tb_fat_cuidado_compartilhado</code>.</p>
+<p><strong>10. </strong> No contexto de <a href="/dw/fatos/cuidado_compartilhado/index.html">Cuidado compartilhado</a> foram incluídas as estruturas de dados para registro da informação do cuidado compartilhado. Esta informação está armazenada na tabela: <code>tb_fat_cuidado_compartilhado</code>.</p>
 
-<p><strong>12. </strong> Para contextualizar as informações da tabela <code>tb_fat_cuidado_compartilhado</code>, foram criadas as seguintes tabelas de dimensão: <code>tb_dim_conduta_cuidado</code>e <code>tb_dim_prioridade_cuidado</code>.</p>
+<p><strong>11. </strong> Para contextualizar as informações da tabela <code>tb_fat_cuidado_compartilhado</code>, foram criadas as seguintes tabelas de dimensão: <code>tb_dim_conduta_cuidado</code>e <code>tb_dim_prioridade_cuidado</code>.</p>
 
-<p><strong>13. </strong> Inclusão do tipo de ficha &quot;ESUS PEC Cuidado compartilhado&quot; na <code>tb_dim_tipo_ficha</code>.</p>
+<p><strong>12. </strong> Inclusão do tipo de ficha &quot;ESUS PEC Cuidado compartilhado&quot; na <code>tb_dim_tipo_ficha</code>.</p>
 
-<h3 id="9-principais-altera-es-da-v5-2-4-para-a-v-5-2-5-do-e-sus-aps">9. Principais alterações da v5.2.4 para a v.5.2.5 do e-SUS APS:</h3>
+<h3 id="8-principais-altera-es-da-v5-2-4-para-a-v-5-2-5-do-e-sus-aps">8. Principais alterações da v5.2.4 para a v.5.2.5 do e-SUS APS:</h3>
 
 <p><strong>1. </strong> Inclusão da tabela de dimensões referente ao vínculo entre equipes: <code>tb_dim_vinculacao_equipes</code>.</p>
 
-<h3 id="10-principais-altera-es-da-v4-2-1-para-a-v4-2-3">10. Principais alterações da v4.2.1 para a v4.2.3:</h3>
+<h3 id="9-principais-altera-es-da-v4-2-1-para-a-v4-2-3">9. Principais alterações da v4.2.1 para a v4.2.3:</h3>
 
 <p><strong>1. </strong> No contexto de <a href="/dw/fatos/procedimentos/index.html">Procedimentos</a> foram incluídos os campos <code>nu_peso</code> e <code>nu_altura</code>.</p>
 
 <p><strong>2. </strong> No contexto de <a href="/dw/fatos/atendimento_odontologico/index.html">Atendimento odontológico</a> foram incluídos os campos <code>nu_peso</code> e <code>nu_altura</code>.</p>
 
-<h3 id="11-principais-altera-es-da-v4-2-0-para-a-v4-2-1">11. Principais alterações da v4.2.0 para a v4.2.1:</h3>
+<h3 id="9-principais-altera-es-da-v4-2-0-para-a-v4-2-1">9. Principais alterações da v4.2.0 para a v4.2.1:</h3>
 
 <p><strong>1. </strong> No contexto de <a href="/dw/fatos/cadastro_individual.html">Cadastro individual</a> foi incluído o campo <code>co_dim_povo_comunidade_tradicional</code>. Além deste campo, também foi criada a tabela de dimensão <a href="/dw/dimensoes/dim_povo_comunidad_trad.html">tb_dim_povo_comunidade_tradicional</a>.</p>
 
-<h3 id="12-principais-altera-es-da-v4-1-4-para-a-v4-2-0">12. Principais alterações da v4.1.4 para a v4.2.0:</h3>
+<h3 id="10-principais-altera-es-da-v4-1-4-para-a-v4-2-0">10. Principais alterações da v4.1.4 para a v4.2.0:</h3>
 
 <p><strong>1. </strong> No contexto de <a href="/dw/fatos/atendimento_individual/index.html">Atendimento individual</a> e <a href="/dw/fatos/atendimento_odontologico/index.html">Atendimento odontológico</a> foram incluídas as estruturas de dados para registro das informações de resultados de exames. Estas informações estão armazenadas nas tabelas:</p>
 
@@ -111577,13 +111110,13 @@ Alterações da nomenclatura da Estratégia de código 9, anteriormente denomina
 
 <p><strong>4. </strong> No contexto de <a href="/dw/fatos/vacinacao.html">Vacinação</a> foram incluídos os campos <code>st_registro_anterior</code> e <code>co_dim_tempo_vacina_aplicada</code>.</p>
 
-<h3 id="13-principais-altera-es-da-v4-1-2-para-a-v4-1-4">13. Principais alterações da v4.1.2 para a v4.1.4:</h3>
+<h3 id="11-principais-altera-es-da-v4-1-2-para-a-v4-1-4">11. Principais alterações da v4.1.2 para a v4.1.4:</h3>
 
 <p><strong>1. </strong> No contexto de <a href="/dw/fatos/vacinacao.html">Vacinação</a> foram incluídas as estruturas de dados para registro da informação de grupo de atendimento. Esta informação está armazenada na tabela: <code>tb_fat_vacinacao_vacina</code>.</p>
 
 <p><strong>2. </strong> Para contextualizar as informações da tabela <code>tb_fat_vacinacao_vacina</code>, foi criada a seguinte tabela de dimensão: <code>tb_dim_grupo_atendimento</code>.</p>
 
-<h3 id="14-principais-altera-es-da-v4-0-0-para-a-v4-1-2">14. Principais alterações da v4.0.0 para a v4.1.2:</h3>
+<h3 id="12-principais-altera-es-da-v4-0-0-para-a-v4-1-2">12. Principais alterações da v4.0.0 para a v4.1.2:</h3>
 
 <p><strong>1. </strong> No contexto de <a href="/dw/fatos/atendimento_individual/index.html">Atendimento individual</a> foram incluídas as estruturas de dados para registro das informações de prescrição de medicamentos e encaminhamentos. Estas informações estão armazenadas nas tabelas:</p>
 
@@ -113538,22 +113071,6 @@ Alterações da nomenclatura da Estratégia de código 9, anteriormente denomina
 </tr>
 </tbody></table>
 
-<h2 id="2-2-m-tricas-dos-fatos">2.2 Métricas dos fatos</h2>
-
-<table><thead>
-<tr>
-<th>Colunas DW</th>
-<th>Referência LEDI</th>
-<th>Referência sistema</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>dt_inicial_atendimento</td>
-<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#23-datahorainicialatendimento">dataHoraInicialAtendimento</a></td>
-<td>Data e hora do início do atendimento no formato &quot;YYYY-MM-DD HH:MM:SS.MMM&quot;</td>
-</tr>
-</tbody></table>
-
 <h1 id="3-dimens-es-da-tabela">3. Dimensões da tabela</h1>
 
 <h2 id="3-1-dimens-es-espec-ficas-dessa-tabela">3.1 Dimensões específicas dessa tabela</h2>
@@ -113571,22 +113088,6 @@ Alterações da nomenclatura da Estratégia de código 9, anteriormente denomina
 <tr>
 <td>co_dim_procedimento_solicitado</td>
 <td>Código SIGTAP do procedimento solicitado. Campo <code>co_seq_dim_procedimento</code> da <code>tb_dim_procedimento</code></td>
-</tr>
-<tr>
-<td>co_dim_sexo</td>
-<td>Código do sexo. Campo <code>co_seq_dim_faixa_sexo</code> da <code>tb_dim_sexo</code></td>
-</tr>
-<tr>
-<td>co_dim_turno</td>
-<td>Código do turno do atendimento. Campo <code>co_seq_dim_turno</code> da <code>tb_dim_turno</code></td>
-</tr>
-<tr>
-<td>co_dim_tipo_atendimento</td>
-<td>Código do tipo de atendimento. Campo <code>co_seq_dim_tipo_atendimento</code> da <code>tb_dim_tipo_atendimento</code></td>
-</tr>
-<tr>
-<td>co_dim_faixa_etaria</td>
-<td>Código da faixa etária. Campo <code>co_seq_dim_faixa_etaria</code> da <code>tb_dim_faixa_etaria</code></td>
 </tr>
 </tbody></table>
 
@@ -114438,11 +113939,6 @@ Alterações da nomenclatura da Estratégia de código 9, anteriormente denomina
 <td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fao.html#5-resultadoexame">resultadoExame</a></td>
 <td>Campo preenchido apenas para resultados de exames que possuem os seguintes códigos SIGTAP: 0205020143, 0205020151 e 0205010059</td>
 </tr>
-<tr>
-<td>dt_inicial_atendimento</td>
-<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fao.html#16-datahorainicialatendimento">dataHoraInicialAtendimento</a></td>
-<td>Data e hora do início do atendimento no formato &quot;YYYY-MM-DD HH:MM:SS.MMM&quot;</td>
-</tr>
 </tbody></table>
 
 <h1 id="4-dimens-es-da-tabela">4. Dimensões da tabela</h1>
@@ -114458,22 +113954,6 @@ Alterações da nomenclatura da Estratégia de código 9, anteriormente denomina
 <tr>
 <td>co_dim_procedimento</td>
 <td>Código SIGTAP dos exames avaliados. Campo <code>co_seq_dim_procedimento</code> da <code>tb_dim_procedimento</code></td>
-</tr>
-<tr>
-<td>co_dim_sexo</td>
-<td>Código do sexo. Campo <code>co_seq_dim_faixa_sexo</code> da <code>tb_dim_sexo</code></td>
-</tr>
-<tr>
-<td>co_dim_turno</td>
-<td>Código do turno do atendimento. Campo <code>co_seq_dim_turno</code> da <code>tb_dim_turno</code></td>
-</tr>
-<tr>
-<td>co_dim_tipo_atendimento</td>
-<td>Código do tipo de atendimento. Campo <code>co_seq_dim_tipo_atendimento</code> da <code>tb_dim_tipo_atendimento</code></td>
-</tr>
-<tr>
-<td>co_dim_faixa_etaria</td>
-<td>Código da faixa etária. Campo <code>co_seq_dim_faixa_etaria</code> da <code>tb_dim_faixa_etaria</code></td>
 </tr>
 </tbody></table>
 
@@ -115038,27 +114518,6 @@ Alterações da nomenclatura da Estratégia de código 9, anteriormente denomina
 </tr>
 </tbody></table>
 
-<h2 id="2-2-m-tricas-dos-fatos">2.2 Métricas dos fatos</h2>
-
-<table><thead>
-<tr>
-<th>Colunas DW</th>
-<th>Referência LEDI</th>
-<th>Referência sistema</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>qt_procedimentos</td>
-<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fao.html#2-quantidade">quantidade</a></td>
-<td>Quantidade de procedimentos realizados.</td>
-</tr>
-<tr>
-<td>dt_inicial_atendimento</td>
-<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fao.html#16-datahorainicialatendimento">dataHoraInicialAtendimento</a></td>
-<td>Data e hora do início do atendimento no formato &quot;YYYY-MM-DD HH:MM:SS.MMM&quot;</td>
-</tr>
-</tbody></table>
-
 <h1 id="3-dimens-es-da-tabela">3. Dimensões da tabela</h1>
 
 <h2 id="3-1-dimens-es-espec-ficas-dessa-tabela">3.1 Dimensões específicas dessa tabela</h2>
@@ -115074,20 +114533,8 @@ Alterações da nomenclatura da Estratégia de código 9, anteriormente denomina
 <td>Código SIGTAP do procedimento realizado. Campo <code>co_seq_dim_procedimento</code> da <code>tb_dim_procedimento</code></td>
 </tr>
 <tr>
-<td>co_dim_sexo</td>
-<td>Código do sexo. Campo <code>co_seq_dim_faixa_sexo</code> da <code>tb_dim_sexo</code></td>
-</tr>
-<tr>
-<td>co_dim_turno</td>
-<td>Código do turno do atendimento. Campo <code>co_seq_dim_turno</code> da <code>tb_dim_turno</code></td>
-</tr>
-<tr>
-<td>co_dim_tipo_atendimento</td>
-<td>Código do tipo de atendimento. Campo <code>co_seq_dim_tipo_atendimento</code> da <code>tb_dim_tipo_atendimento</code></td>
-</tr>
-<tr>
-<td>co_dim_faixa_etaria</td>
-<td>Código da faixa etária. Campo <code>co_seq_dim_faixa_etaria</code> da <code>tb_dim_faixa_etaria</code></td>
+<td>qt_procedimentos</td>
+<td>Quantidade de procedimentos realizados.</td>
 </tr>
 </tbody></table>
 

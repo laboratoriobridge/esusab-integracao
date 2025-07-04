@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ns3:dadoTransporteTransportXml xmlns:ns2="http://esus.ufsc.br/dadoinstalacao" xmlns:ns3="http://esus.ufsc.br/dadotransporte" xmlns:ns4="http://esus.ufsc.br/fichaatendimentoodontologicomaster">
-	<uuidDadoSerializado>0019615-ef3cd1a5-c9fc-4742-835d-a9586b36bf8c</uuidDadoSerializado>
+	<uuidDadoSerializado>0000001-ef3cd1a5-c9fc-4742-835d-a9586b36bf8k</uuidDadoSerializado>
 	<tipoDadoSerializado>5</tipoDadoSerializado>
 	<codIbge>4205407</codIbge>
-	<cnesDadoSerializado>0019615</cnesDadoSerializado>
-	<ineDadoSerializado>0000471828</ineDadoSerializado>
+	<cnesDadoSerializado>0000001</cnesDadoSerializado>
+	<ineDadoSerializado>1010020002</ineDadoSerializado>
 	<numLote>3</numLote>
 	<ns4:fichaAtendimentoOdontologicoMasterTransport>
-		<uuidFicha>0019615-ef3cd1a5-c9fc-4742-835d-a9586b36bf8c</uuidFicha>
+		<uuidFicha>0019615-ef3cd1a5-c9fc-4742-835d-a9586b36bf8k</uuidFicha>
 		<tpCdsOrigem>3</tpCdsOrigem>
 		<atendimentosOdontologicos>
-			<cnsCidadao>119141073230003</cnsCidadao>
+			<cpfCidadao>05888644714</cpfCidadao>
 			<dtNascimento>662742000000</dtNascimento>
 			<localAtendimento>6</localAtendimento>
 			<gestante>false</gestante>
@@ -37,23 +37,6 @@
 			<sexo>1</sexo>
 			<dataHoraInicialAtendimento>1549378800000</dataHoraInicialAtendimento>
 			<dataHoraFinalAtendimento>1549378800000</dataHoraFinalAtendimento>
-			<exame>
-				<codigoExame>0201010054</codigoExame>
-				<solicitadoAvaliado>A</solicitadoAvaliado>
-				<solicitadoAvaliado>S</solicitadoAvaliado>
-			</exame>
-			<exame>
-				<codigoExame>ABEX007</codigoExame>
-				<solicitadoAvaliado>S</solicitadoAvaliado>
-			</exame>
-			<exame>
-				<codigoExame>ABEX002</codigoExame>
-				<solicitadoAvaliado>S</solicitadoAvaliado>
-			</exame>
-			<exame>
-				<codigoExame>ABEX020</codigoExame>
-				<solicitadoAvaliado>A</solicitadoAvaliado>
-			</exame>
 			<medicamentos>
 				<codigoCatmat>BR0293891</codigoCatmat>
 				<viaAdministracao>0</viaAdministracao>
@@ -286,6 +269,23 @@
 			</procedimentosRealizados>
 			<turno>1</turno>
 			<sexo>1</sexo>
+			<exame>
+				<codigoExame>0201010054</codigoExame>
+				<solicitadoAvaliado>A</solicitadoAvaliado>
+				<solicitadoAvaliado>S</solicitadoAvaliado>
+			</exame>
+			<exame>
+				<codigoExame>ABEX007</codigoExame>
+				<solicitadoAvaliado>S</solicitadoAvaliado>
+			</exame>
+			<exame>
+				<codigoExame>ABEX002</codigoExame>
+				<solicitadoAvaliado>S</solicitadoAvaliado>
+			</exame>
+			<exame>
+				<codigoExame>ABEX020</codigoExame>
+				<solicitadoAvaliado>A</solicitadoAvaliado>
+			</exame>
 			<dataHoraInicialAtendimento>1553094000000</dataHoraInicialAtendimento>
 			<dataHoraFinalAtendimento>1553097000000</dataHoraFinalAtendimento>
 			<medicoes>
@@ -316,7 +316,7 @@
 			</problemasCondicoes>
 		</atendimentosOdontologicos>
 		<atendimentosOdontologicos>
-			<dtNascimento>1115305200000</dtNascimento>
+			<dtNascimento>-615191015000</dtNascimento>
 			<localAtendimento>1</localAtendimento>
 			<gestante>false</gestante>
 			<necessidadesEspeciais>false</necessidadesEspeciais>
@@ -341,7 +341,7 @@
 				<exame>0205020143</exame>
 				<dataSolicitacao>1549195200000</dataSolicitacao>
 				<dataRealizacao>1549195200000</dataRealizacao>
-				<dataResultado>1549195200000</dataResultado>
+				<dataResultado>1549195200000</dataResultado> 
 				<resultadoExame>
 					<tipoResultado>4</tipoResultado>
 					<valorResultado>1597287600000</valorResultado>
@@ -396,15 +396,15 @@
 				<hasSgVisao>false</hasSgVisao>
 				<hasSgAudicao>false</hasSgAudicao>
 				<hasSgComorbidade>false</hasSgComorbidade>
-				<dataResultado>1586095200000</dataResultado>
+				<dataResultado>1549195200000</dataResultado> 
 			</ivcf>
 		</atendimentosOdontologicos>
 		<headerTransport>
 			<lotacaoFormPrincipal>
-				<profissionalCNS>700609923387762</profissionalCNS>
-				<cboCodigo_2002>223208</cboCodigo_2002>
-				<cnes>0019615</cnes>
-				<ine>0000471828</ine>
+				<profissionalCNS>972733454440007</profissionalCNS>
+				<cboCodigo_2002>223293</cboCodigo_2002>
+				<cnes>0000001</cnes>
+				<ine>1010020002</ine>
 			</lotacaoFormPrincipal>
 			<dataAtendimento>1549378800000</dataAtendimento>
 			<codigoIbgeMunicipio>4205407</codigoIbgeMunicipio>
@@ -417,7 +417,7 @@
 		<nomeOuRazaoSocial>ADMINISTRADOR INSTALAÇÃO</nomeOuRazaoSocial>
 		<fone>8216756527</fone>
 		<email>prof@esus.br</email>
-		<versaoSistema>5.3.19</versaoSistema>
+		<versaoSistema>5.4.7</versaoSistema>
 		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:remetente>
 	<ns2:originadora>
@@ -427,8 +427,8 @@
 		<nomeOuRazaoSocial>ADMINISTRADOR INSTALAÇÃO</nomeOuRazaoSocial>
 		<fone>8216756527</fone>
 		<email>prof@esus.br</email>
-		<versaoSistema>5.3.19</versaoSistema>
+		<versaoSistema>5.4.7</versaoSistema>
 		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:originadora>
-	<versao major="6" minor="3" revision="2"/>
+	<versao major="7" minor="2" revision="0"/>
 </ns3:dadoTransporteTransportXml>

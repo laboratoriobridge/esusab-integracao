@@ -39,6 +39,7 @@ type
   IMedicoesThrift = interface;
   IProblemaCondicaoThrift = interface;
   IIvcfThrift = interface;
+  IExameThrift = interface;
 
   IHeaderCdsCadastroThrift = interface(IBase)
     function GetCnesUnidadeSaude: string;
@@ -1624,6 +1625,56 @@ type
     property __isset_HasSgAudicao: Boolean read Get__isset_HasSgAudicao;
     property __isset_HasSgComorbidade: Boolean read Get__isset_HasSgComorbidade;
     property __isset_DataResultado: Boolean read Get__isset_DataResultado;
+  end;
+
+  IExameThrift = interface(IBase)
+    function GetCodigoExame: string;
+    procedure SetCodigoExame( const Value: string);
+    function GetSolicitadoAvaliado: IThriftList<string>;
+    procedure SetSolicitadoAvaliado( const Value: IThriftList<string>);
+
+    property CodigoExame: string read GetCodigoExame write SetCodigoExame;
+    property SolicitadoAvaliado: IThriftList<string> read GetSolicitadoAvaliado write SetSolicitadoAvaliado;
+
+    function Get__isset_CodigoExame: Boolean;
+    function Get__isset_SolicitadoAvaliado: Boolean;
+
+    property __isset_CodigoExame: Boolean read Get__isset_CodigoExame;
+    property __isset_SolicitadoAvaliado: Boolean read Get__isset_SolicitadoAvaliado;
+  end;
+
+  TExameThriftImpl = class(TInterfacedObject, IBase, IExameThrift)
+  private
+    FCodigoExame: string;
+    FSolicitadoAvaliado: IThriftList<string>;
+    
+    F__isset_CodigoExame: Boolean;
+    F__isset_SolicitadoAvaliado: Boolean;
+    
+    function GetCodigoExame: string;
+    procedure SetCodigoExame( const Value: string);
+    function GetSolicitadoAvaliado: IThriftList<string>;
+    procedure SetSolicitadoAvaliado( const Value: IThriftList<string>);
+
+    function Get__isset_CodigoExame: Boolean;
+    function Get__isset_SolicitadoAvaliado: Boolean;
+  public
+    constructor Create;
+    destructor Destroy; override;
+
+    function ToString: string; override;
+
+    // IBase
+    procedure Read( const iprot: IProtocol);
+    procedure Write( const oprot: IProtocol);
+
+    // Properties
+    property CodigoExame: string read GetCodigoExame write SetCodigoExame;
+    property SolicitadoAvaliado: IThriftList<string> read GetSolicitadoAvaliado write SetSolicitadoAvaliado;
+
+    // isset
+    property __isset_CodigoExame: Boolean read Get__isset_CodigoExame;
+    property __isset_SolicitadoAvaliado: Boolean read Get__isset_SolicitadoAvaliado;
   end;
 
 implementation
@@ -6703,6 +6754,173 @@ begin
     if _first30 then {prevent warning};
   finally
     _sb29.Free;
+  end;
+end;
+
+constructor TExameThriftImpl.Create;
+begin
+  inherited;
+end;
+
+destructor TExameThriftImpl.Destroy;
+begin
+  inherited;
+end;
+
+function TExameThriftImpl.GetCodigoExame: string;
+begin
+  Result := FCodigoExame;
+end;
+
+procedure TExameThriftImpl.SetCodigoExame( const Value: string);
+begin
+  F__isset_CodigoExame := True;
+  FCodigoExame := Value;
+end;
+
+function TExameThriftImpl.Get__isset_CodigoExame: Boolean;
+begin
+  Result := F__isset_CodigoExame;
+end;
+
+function TExameThriftImpl.GetSolicitadoAvaliado: IThriftList<string>;
+begin
+  Result := FSolicitadoAvaliado;
+end;
+
+procedure TExameThriftImpl.SetSolicitadoAvaliado( const Value: IThriftList<string>);
+begin
+  F__isset_SolicitadoAvaliado := True;
+  FSolicitadoAvaliado := Value;
+end;
+
+function TExameThriftImpl.Get__isset_SolicitadoAvaliado: Boolean;
+begin
+  Result := F__isset_SolicitadoAvaliado;
+end;
+
+procedure TExameThriftImpl.Read( const iprot: IProtocol);
+var
+  field_ : IField;
+  struc : IStruct;
+  tracker : IProtocolRecursionTracker;
+  _list31: IList;
+  _i32: Integer;
+  _elem33: string;
+
+begin
+  tracker := iprot.NextRecursionLevel;
+  struc := iprot.ReadStructBegin;
+  try
+    while (true) do
+    begin
+      field_ := iprot.ReadFieldBegin();
+      if (field_.Type_ = TType.Stop) then
+      begin
+        Break;
+      end;
+      case field_.ID of
+        1: begin
+          if (field_.Type_ = TType.String_) then
+          begin
+            CodigoExame := iprot.ReadString();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        2: begin
+          if (field_.Type_ = TType.List) then
+          begin
+            SolicitadoAvaliado := TThriftListImpl<string>.Create;
+            _list31 := iprot.ReadListBegin();
+            for _i32 := 0 to _list31.Count - 1 do
+            begin
+              _elem33 := iprot.ReadString();
+              SolicitadoAvaliado.Add(_elem33);
+            end;
+            iprot.ReadListEnd();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end
+        else begin
+          TProtocolUtil.Skip(iprot, field_.Type_);
+        end;
+      end;
+      iprot.ReadFieldEnd;
+    end;
+  finally
+    iprot.ReadStructEnd;
+  end;
+end;
+
+procedure TExameThriftImpl.Write( const oprot: IProtocol);
+var
+  struc : IStruct;
+  field_ : IField;
+  tracker : IProtocolRecursionTracker;
+  list_34 : IList;
+  _iter35: string;
+begin
+  tracker := oprot.NextRecursionLevel;
+  struc := TStructImpl.Create('ExameThrift');
+  oprot.WriteStructBegin(struc);
+  field_ := TFieldImpl.Create;
+  if (__isset_CodigoExame) then
+  begin
+    field_.Name := 'codigoExame';
+    field_.Type_  := TType.String_;
+    field_.ID := 1;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteString(CodigoExame);
+    oprot.WriteFieldEnd();
+  end;
+  if (SolicitadoAvaliado <> nil) and __isset_SolicitadoAvaliado then
+  begin
+    field_.Name := 'solicitadoAvaliado';
+    field_.Type_  := TType.List;
+    field_.ID := 2;
+    oprot.WriteFieldBegin(field_);
+    list_34 := TListImpl.Create(TType.String_, SolicitadoAvaliado.Count);
+    oprot.WriteListBegin( list_34);
+    for _iter35 in SolicitadoAvaliado do
+    begin
+      oprot.WriteString(_iter35);
+    end;
+    oprot.WriteListEnd();
+    oprot.WriteFieldEnd();
+  end;
+  oprot.WriteFieldStop();
+  oprot.WriteStructEnd();
+end;
+
+function TExameThriftImpl.ToString: string;
+var
+  _sb36 : TThriftStringBuilder;
+  _first37 : Boolean;
+begin
+  _sb36 := TThriftStringBuilder.Create('(');
+  try
+    _first37 := TRUE;
+    if (__isset_CodigoExame) then begin
+      if not _first37 then _sb36.Append(',');
+      _first37 := FALSE;
+      _sb36.Append('CodigoExame: ');
+      _sb36.Append(CodigoExame);
+    end;
+    if (SolicitadoAvaliado <> nil) and __isset_SolicitadoAvaliado then begin
+      if not _first37 then _sb36.Append(',');
+      _first37 := FALSE;
+      _sb36.Append('SolicitadoAvaliado: ');
+      _sb36.Append(SolicitadoAvaliado);
+    end;
+    _sb36.Append(')');
+    Result := _sb36.ToString;
+    if _first37 then {prevent warning};
+  finally
+    _sb36.Free;
   end;
 end;
 

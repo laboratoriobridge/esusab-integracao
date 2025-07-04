@@ -14,24 +14,6 @@ module Br
       module Esusab
         module Ras
           module Atendindividual
-            class ExameThrift
-              include ::Thrift::Struct, ::Thrift::Struct_Union
-              CODIGOEXAME = 1
-              SOLICITADOAVALIADO = 2
-
-              FIELDS = {
-                CODIGOEXAME => {:type => ::Thrift::Types::STRING, :name => 'codigoExame', :optional => true},
-                SOLICITADOAVALIADO => {:type => ::Thrift::Types::LIST, :name => 'solicitadoAvaliado', :element => {:type => ::Thrift::Types::STRING}, :optional => true}
-              }
-
-              def struct_fields; FIELDS; end
-
-              def validate
-              end
-
-              ::Thrift::Struct.generate_accessors self
-            end
-
             class ProblemaCondicaoAvaliacaoAIThrift
               include ::Thrift::Struct, ::Thrift::Struct_Union
               CIAPS = 1
@@ -105,7 +87,7 @@ module Br
                 DUMDAGESTANTE => {:type => ::Thrift::Types::I64, :name => 'dumDaGestante', :optional => true},
                 IDADEGESTACIONAL => {:type => ::Thrift::Types::I32, :name => 'idadeGestacional', :optional => true},
                 ATENCAODOMICILIARMODALIDADE => {:type => ::Thrift::Types::I64, :name => 'atencaoDomiciliarModalidade', :optional => true},
-                EXAME => {:type => ::Thrift::Types::LIST, :name => 'exame', :element => {:type => ::Thrift::Types::STRUCT, :class => ::Br::Gov::Saude::Esusab::Ras::Atendindividual::ExameThrift}, :optional => true},
+                EXAME => {:type => ::Thrift::Types::LIST, :name => 'exame', :element => {:type => ::Thrift::Types::STRUCT, :class => ::Br::Gov::Saude::Esusab::Ras::Common::ExameThrift}, :optional => true},
                 VACINAEMDIA => {:type => ::Thrift::Types::BOOL, :name => 'vacinaEmDia', :optional => true},
                 PIC => {:type => ::Thrift::Types::I64, :name => 'pic', :optional => true},
                 FICOUEMOBSERVACAO => {:type => ::Thrift::Types::BOOL, :name => 'ficouEmObservacao', :optional => true},

@@ -19,172 +19,6 @@ var _ = common.GoUnusedProtection__
 var GoUnusedProtection__ int
 
 // Attributes:
-//  - CodigoExame
-//  - SolicitadoAvaliado
-type ExameThrift struct {
-	CodigoExame        *string  `thrift:"codigoExame,1" json:"codigoExame,omitempty"`
-	SolicitadoAvaliado []string `thrift:"solicitadoAvaliado,2" json:"solicitadoAvaliado,omitempty"`
-}
-
-func NewExameThrift() *ExameThrift {
-	return &ExameThrift{}
-}
-
-var ExameThrift_CodigoExame_DEFAULT string
-
-func (p *ExameThrift) GetCodigoExame() string {
-	if !p.IsSetCodigoExame() {
-		return ExameThrift_CodigoExame_DEFAULT
-	}
-	return *p.CodigoExame
-}
-
-var ExameThrift_SolicitadoAvaliado_DEFAULT []string
-
-func (p *ExameThrift) GetSolicitadoAvaliado() []string {
-	return p.SolicitadoAvaliado
-}
-func (p *ExameThrift) IsSetCodigoExame() bool {
-	return p.CodigoExame != nil
-}
-
-func (p *ExameThrift) IsSetSolicitadoAvaliado() bool {
-	return p.SolicitadoAvaliado != nil
-}
-
-func (p *ExameThrift) Read(iprot thrift.TProtocol) error {
-	if _, err := iprot.ReadStructBegin(); err != nil {
-		return thrift.PrependError(fmt.Sprintf("%T read error: ", p), err)
-	}
-
-	for {
-		_, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
-		if err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T field %d read error: ", p, fieldId), err)
-		}
-		if fieldTypeId == thrift.STOP {
-			break
-		}
-		switch fieldId {
-		case 1:
-			if err := p.readField1(iprot); err != nil {
-				return err
-			}
-		case 2:
-			if err := p.readField2(iprot); err != nil {
-				return err
-			}
-		default:
-			if err := iprot.Skip(fieldTypeId); err != nil {
-				return err
-			}
-		}
-		if err := iprot.ReadFieldEnd(); err != nil {
-			return err
-		}
-	}
-	if err := iprot.ReadStructEnd(); err != nil {
-		return thrift.PrependError(fmt.Sprintf("%T read struct end error: ", p), err)
-	}
-	return nil
-}
-
-func (p *ExameThrift) readField1(iprot thrift.TProtocol) error {
-	if v, err := iprot.ReadString(); err != nil {
-		return thrift.PrependError("error reading field 1: ", err)
-	} else {
-		p.CodigoExame = &v
-	}
-	return nil
-}
-
-func (p *ExameThrift) readField2(iprot thrift.TProtocol) error {
-	_, size, err := iprot.ReadListBegin()
-	if err != nil {
-		return thrift.PrependError("error reading list begin: ", err)
-	}
-	tSlice := make([]string, 0, size)
-	p.SolicitadoAvaliado = tSlice
-	for i := 0; i < size; i++ {
-		var _elem0 string
-		if v, err := iprot.ReadString(); err != nil {
-			return thrift.PrependError("error reading field 0: ", err)
-		} else {
-			_elem0 = v
-		}
-		p.SolicitadoAvaliado = append(p.SolicitadoAvaliado, _elem0)
-	}
-	if err := iprot.ReadListEnd(); err != nil {
-		return thrift.PrependError("error reading list end: ", err)
-	}
-	return nil
-}
-
-func (p *ExameThrift) Write(oprot thrift.TProtocol) error {
-	if err := oprot.WriteStructBegin("ExameThrift"); err != nil {
-		return thrift.PrependError(fmt.Sprintf("%T write struct begin error: ", p), err)
-	}
-	if err := p.writeField1(oprot); err != nil {
-		return err
-	}
-	if err := p.writeField2(oprot); err != nil {
-		return err
-	}
-	if err := oprot.WriteFieldStop(); err != nil {
-		return thrift.PrependError("write field stop error: ", err)
-	}
-	if err := oprot.WriteStructEnd(); err != nil {
-		return thrift.PrependError("write struct stop error: ", err)
-	}
-	return nil
-}
-
-func (p *ExameThrift) writeField1(oprot thrift.TProtocol) (err error) {
-	if p.IsSetCodigoExame() {
-		if err := oprot.WriteFieldBegin("codigoExame", thrift.STRING, 1); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field begin error 1:codigoExame: ", p), err)
-		}
-		if err := oprot.WriteString(string(*p.CodigoExame)); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T.codigoExame (1) field write error: ", p), err)
-		}
-		if err := oprot.WriteFieldEnd(); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field end error 1:codigoExame: ", p), err)
-		}
-	}
-	return err
-}
-
-func (p *ExameThrift) writeField2(oprot thrift.TProtocol) (err error) {
-	if p.IsSetSolicitadoAvaliado() {
-		if err := oprot.WriteFieldBegin("solicitadoAvaliado", thrift.LIST, 2); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field begin error 2:solicitadoAvaliado: ", p), err)
-		}
-		if err := oprot.WriteListBegin(thrift.STRING, len(p.SolicitadoAvaliado)); err != nil {
-			return thrift.PrependError("error writing list begin: ", err)
-		}
-		for _, v := range p.SolicitadoAvaliado {
-			if err := oprot.WriteString(string(v)); err != nil {
-				return thrift.PrependError(fmt.Sprintf("%T. (0) field write error: ", p), err)
-			}
-		}
-		if err := oprot.WriteListEnd(); err != nil {
-			return thrift.PrependError("error writing list end: ", err)
-		}
-		if err := oprot.WriteFieldEnd(); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field end error 2:solicitadoAvaliado: ", p), err)
-		}
-	}
-	return err
-}
-
-func (p *ExameThrift) String() string {
-	if p == nil {
-		return "<nil>"
-	}
-	return fmt.Sprintf("ExameThrift(%+v)", *p)
-}
-
-// Attributes:
 //  - Ciaps
 //  - OutroCiap1
 //  - OutroCiap2
@@ -320,13 +154,13 @@ func (p *ProblemaCondicaoAvaliacaoAIThrift) readField1(iprot thrift.TProtocol) e
 	tSlice := make([]string, 0, size)
 	p.Ciaps = tSlice
 	for i := 0; i < size; i++ {
-		var _elem1 string
+		var _elem0 string
 		if v, err := iprot.ReadString(); err != nil {
 			return thrift.PrependError("error reading field 0: ", err)
 		} else {
-			_elem1 = v
+			_elem0 = v
 		}
-		p.Ciaps = append(p.Ciaps, _elem1)
+		p.Ciaps = append(p.Ciaps, _elem0)
 	}
 	if err := iprot.ReadListEnd(); err != nil {
 		return thrift.PrependError("error reading list end: ", err)
@@ -537,16 +371,16 @@ type FichaAtendimentoIndividualChildThrift struct {
 	IdadeGestacional            *int32 `thrift:"idadeGestacional,12" json:"idadeGestacional,omitempty"`
 	AtencaoDomiciliarModalidade *int64 `thrift:"atencaoDomiciliarModalidade,13" json:"atencaoDomiciliarModalidade,omitempty"`
 	// unused fields # 14 to 16
-	Exame               []*ExameThrift `thrift:"exame,17" json:"exame,omitempty"`
-	VacinaEmDia         *bool          `thrift:"vacinaEmDia,18" json:"vacinaEmDia,omitempty"`
-	Pic                 *int64         `thrift:"pic,19" json:"pic,omitempty"`
-	FicouEmObservacao   *bool          `thrift:"ficouEmObservacao,20" json:"ficouEmObservacao,omitempty"`
-	Nasfs               []int64        `thrift:"nasfs,21" json:"nasfs,omitempty"`
-	Condutas            []int64        `thrift:"condutas,22" json:"condutas,omitempty"`
-	StGravidezPlanejada *bool          `thrift:"stGravidezPlanejada,23" json:"stGravidezPlanejada,omitempty"`
-	NuGestasPrevias     *int32         `thrift:"nuGestasPrevias,24" json:"nuGestasPrevias,omitempty"`
-	NuPartos            *int32         `thrift:"nuPartos,25" json:"nuPartos,omitempty"`
-	RacionalidadeSaude  *int64         `thrift:"racionalidadeSaude,26" json:"racionalidadeSaude,omitempty"`
+	Exame               []*common.ExameThrift `thrift:"exame,17" json:"exame,omitempty"`
+	VacinaEmDia         *bool                 `thrift:"vacinaEmDia,18" json:"vacinaEmDia,omitempty"`
+	Pic                 *int64                `thrift:"pic,19" json:"pic,omitempty"`
+	FicouEmObservacao   *bool                 `thrift:"ficouEmObservacao,20" json:"ficouEmObservacao,omitempty"`
+	Nasfs               []int64               `thrift:"nasfs,21" json:"nasfs,omitempty"`
+	Condutas            []int64               `thrift:"condutas,22" json:"condutas,omitempty"`
+	StGravidezPlanejada *bool                 `thrift:"stGravidezPlanejada,23" json:"stGravidezPlanejada,omitempty"`
+	NuGestasPrevias     *int32                `thrift:"nuGestasPrevias,24" json:"nuGestasPrevias,omitempty"`
+	NuPartos            *int32                `thrift:"nuPartos,25" json:"nuPartos,omitempty"`
+	RacionalidadeSaude  *int64                `thrift:"racionalidadeSaude,26" json:"racionalidadeSaude,omitempty"`
 	// unused field # 27
 	DataHoraInicialAtendimento *int64                                `thrift:"dataHoraInicialAtendimento,28" json:"dataHoraInicialAtendimento,omitempty"`
 	DataHoraFinalAtendimento   *int64                                `thrift:"dataHoraFinalAtendimento,29" json:"dataHoraFinalAtendimento,omitempty"`
@@ -667,9 +501,9 @@ func (p *FichaAtendimentoIndividualChildThrift) GetAtencaoDomiciliarModalidade()
 	return *p.AtencaoDomiciliarModalidade
 }
 
-var FichaAtendimentoIndividualChildThrift_Exame_DEFAULT []*ExameThrift
+var FichaAtendimentoIndividualChildThrift_Exame_DEFAULT []*common.ExameThrift
 
-func (p *FichaAtendimentoIndividualChildThrift) GetExame() []*ExameThrift {
+func (p *FichaAtendimentoIndividualChildThrift) GetExame() []*common.ExameThrift {
 	return p.Exame
 }
 
@@ -1254,14 +1088,14 @@ func (p *FichaAtendimentoIndividualChildThrift) readField17(iprot thrift.TProtoc
 	if err != nil {
 		return thrift.PrependError("error reading list begin: ", err)
 	}
-	tSlice := make([]*ExameThrift, 0, size)
+	tSlice := make([]*common.ExameThrift, 0, size)
 	p.Exame = tSlice
 	for i := 0; i < size; i++ {
-		_elem2 := &ExameThrift{}
-		if err := _elem2.Read(iprot); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T error reading struct: ", _elem2), err)
+		_elem1 := &common.ExameThrift{}
+		if err := _elem1.Read(iprot); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T error reading struct: ", _elem1), err)
 		}
-		p.Exame = append(p.Exame, _elem2)
+		p.Exame = append(p.Exame, _elem1)
 	}
 	if err := iprot.ReadListEnd(); err != nil {
 		return thrift.PrependError("error reading list end: ", err)
@@ -1304,13 +1138,13 @@ func (p *FichaAtendimentoIndividualChildThrift) readField21(iprot thrift.TProtoc
 	tSlice := make([]int64, 0, size)
 	p.Nasfs = tSlice
 	for i := 0; i < size; i++ {
-		var _elem3 int64
+		var _elem2 int64
 		if v, err := iprot.ReadI64(); err != nil {
 			return thrift.PrependError("error reading field 0: ", err)
 		} else {
-			_elem3 = v
+			_elem2 = v
 		}
-		p.Nasfs = append(p.Nasfs, _elem3)
+		p.Nasfs = append(p.Nasfs, _elem2)
 	}
 	if err := iprot.ReadListEnd(); err != nil {
 		return thrift.PrependError("error reading list end: ", err)
@@ -1326,13 +1160,13 @@ func (p *FichaAtendimentoIndividualChildThrift) readField22(iprot thrift.TProtoc
 	tSlice := make([]int64, 0, size)
 	p.Condutas = tSlice
 	for i := 0; i < size; i++ {
-		var _elem4 int64
+		var _elem3 int64
 		if v, err := iprot.ReadI64(); err != nil {
 			return thrift.PrependError("error reading field 0: ", err)
 		} else {
-			_elem4 = v
+			_elem3 = v
 		}
-		p.Condutas = append(p.Condutas, _elem4)
+		p.Condutas = append(p.Condutas, _elem3)
 	}
 	if err := iprot.ReadListEnd(); err != nil {
 		return thrift.PrependError("error reading list end: ", err)
@@ -1411,11 +1245,11 @@ func (p *FichaAtendimentoIndividualChildThrift) readField31(iprot thrift.TProtoc
 	tSlice := make([]*common.MedicamentoThrift, 0, size)
 	p.Medicamentos = tSlice
 	for i := 0; i < size; i++ {
-		_elem5 := &common.MedicamentoThrift{}
-		if err := _elem5.Read(iprot); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T error reading struct: ", _elem5), err)
+		_elem4 := &common.MedicamentoThrift{}
+		if err := _elem4.Read(iprot); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T error reading struct: ", _elem4), err)
 		}
-		p.Medicamentos = append(p.Medicamentos, _elem5)
+		p.Medicamentos = append(p.Medicamentos, _elem4)
 	}
 	if err := iprot.ReadListEnd(); err != nil {
 		return thrift.PrependError("error reading list end: ", err)
@@ -1431,11 +1265,11 @@ func (p *FichaAtendimentoIndividualChildThrift) readField32(iprot thrift.TProtoc
 	tSlice := make([]*common.EncaminhamentoExternoThrift, 0, size)
 	p.Encaminhamentos = tSlice
 	for i := 0; i < size; i++ {
-		_elem6 := &common.EncaminhamentoExternoThrift{}
-		if err := _elem6.Read(iprot); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T error reading struct: ", _elem6), err)
+		_elem5 := &common.EncaminhamentoExternoThrift{}
+		if err := _elem5.Read(iprot); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T error reading struct: ", _elem5), err)
 		}
-		p.Encaminhamentos = append(p.Encaminhamentos, _elem6)
+		p.Encaminhamentos = append(p.Encaminhamentos, _elem5)
 	}
 	if err := iprot.ReadListEnd(); err != nil {
 		return thrift.PrependError("error reading list end: ", err)
@@ -1451,11 +1285,11 @@ func (p *FichaAtendimentoIndividualChildThrift) readField33(iprot thrift.TProtoc
 	tSlice := make([]*common.ResultadosExameThrift, 0, size)
 	p.ResultadosExames = tSlice
 	for i := 0; i < size; i++ {
-		_elem7 := &common.ResultadosExameThrift{}
-		if err := _elem7.Read(iprot); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T error reading struct: ", _elem7), err)
+		_elem6 := &common.ResultadosExameThrift{}
+		if err := _elem6.Read(iprot); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T error reading struct: ", _elem6), err)
 		}
-		p.ResultadosExames = append(p.ResultadosExames, _elem7)
+		p.ResultadosExames = append(p.ResultadosExames, _elem6)
 	}
 	if err := iprot.ReadListEnd(); err != nil {
 		return thrift.PrependError("error reading list end: ", err)
@@ -1497,13 +1331,13 @@ func (p *FichaAtendimentoIndividualChildThrift) readField38(iprot thrift.TProtoc
 	tSlice := make([]int64, 0, size)
 	p.Emultis = tSlice
 	for i := 0; i < size; i++ {
-		var _elem8 int64
+		var _elem7 int64
 		if v, err := iprot.ReadI64(); err != nil {
 			return thrift.PrependError("error reading field 0: ", err)
 		} else {
-			_elem8 = v
+			_elem7 = v
 		}
-		p.Emultis = append(p.Emultis, _elem8)
+		p.Emultis = append(p.Emultis, _elem7)
 	}
 	if err := iprot.ReadListEnd(); err != nil {
 		return thrift.PrependError("error reading list end: ", err)
@@ -1527,11 +1361,11 @@ func (p *FichaAtendimentoIndividualChildThrift) readField40(iprot thrift.TProtoc
 	tSlice := make([]*common.ProblemaCondicaoThrift, 0, size)
 	p.ProblemasCondicoes = tSlice
 	for i := 0; i < size; i++ {
-		_elem9 := &common.ProblemaCondicaoThrift{}
-		if err := _elem9.Read(iprot); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T error reading struct: ", _elem9), err)
+		_elem8 := &common.ProblemaCondicaoThrift{}
+		if err := _elem8.Read(iprot); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T error reading struct: ", _elem8), err)
 		}
-		p.ProblemasCondicoes = append(p.ProblemasCondicoes, _elem9)
+		p.ProblemasCondicoes = append(p.ProblemasCondicoes, _elem8)
 	}
 	if err := iprot.ReadListEnd(); err != nil {
 		return thrift.PrependError("error reading list end: ", err)
@@ -2365,11 +2199,11 @@ func (p *FichaAtendimentoIndividualMasterThrift) readField2(iprot thrift.TProtoc
 	tSlice := make([]*FichaAtendimentoIndividualChildThrift, 0, size)
 	p.AtendimentosIndividuais = tSlice
 	for i := 0; i < size; i++ {
-		_elem10 := &FichaAtendimentoIndividualChildThrift{}
-		if err := _elem10.Read(iprot); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T error reading struct: ", _elem10), err)
+		_elem9 := &FichaAtendimentoIndividualChildThrift{}
+		if err := _elem9.Read(iprot); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T error reading struct: ", _elem9), err)
 		}
-		p.AtendimentosIndividuais = append(p.AtendimentosIndividuais, _elem10)
+		p.AtendimentosIndividuais = append(p.AtendimentosIndividuais, _elem9)
 	}
 	if err := iprot.ReadListEnd(); err != nil {
 		return thrift.PrependError("error reading list end: ", err)

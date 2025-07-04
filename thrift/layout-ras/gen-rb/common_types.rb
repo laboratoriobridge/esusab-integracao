@@ -402,6 +402,24 @@ module Br
               ::Thrift::Struct.generate_accessors self
             end
 
+            class ExameThrift
+              include ::Thrift::Struct, ::Thrift::Struct_Union
+              CODIGOEXAME = 1
+              SOLICITADOAVALIADO = 2
+
+              FIELDS = {
+                CODIGOEXAME => {:type => ::Thrift::Types::STRING, :name => 'codigoExame', :optional => true},
+                SOLICITADOAVALIADO => {:type => ::Thrift::Types::LIST, :name => 'solicitadoAvaliado', :element => {:type => ::Thrift::Types::STRING}, :optional => true}
+              }
+
+              def struct_fields; FIELDS; end
+
+              def validate
+              end
+
+              ::Thrift::Struct.generate_accessors self
+            end
+
           end
         end
       end

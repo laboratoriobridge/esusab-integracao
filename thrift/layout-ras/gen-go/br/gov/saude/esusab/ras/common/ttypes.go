@@ -5544,3 +5544,169 @@ func (p *IvcfThrift) String() string {
 	}
 	return fmt.Sprintf("IvcfThrift(%+v)", *p)
 }
+
+// Attributes:
+//  - CodigoExame
+//  - SolicitadoAvaliado
+type ExameThrift struct {
+	CodigoExame        *string  `thrift:"codigoExame,1" json:"codigoExame,omitempty"`
+	SolicitadoAvaliado []string `thrift:"solicitadoAvaliado,2" json:"solicitadoAvaliado,omitempty"`
+}
+
+func NewExameThrift() *ExameThrift {
+	return &ExameThrift{}
+}
+
+var ExameThrift_CodigoExame_DEFAULT string
+
+func (p *ExameThrift) GetCodigoExame() string {
+	if !p.IsSetCodigoExame() {
+		return ExameThrift_CodigoExame_DEFAULT
+	}
+	return *p.CodigoExame
+}
+
+var ExameThrift_SolicitadoAvaliado_DEFAULT []string
+
+func (p *ExameThrift) GetSolicitadoAvaliado() []string {
+	return p.SolicitadoAvaliado
+}
+func (p *ExameThrift) IsSetCodigoExame() bool {
+	return p.CodigoExame != nil
+}
+
+func (p *ExameThrift) IsSetSolicitadoAvaliado() bool {
+	return p.SolicitadoAvaliado != nil
+}
+
+func (p *ExameThrift) Read(iprot thrift.TProtocol) error {
+	if _, err := iprot.ReadStructBegin(); err != nil {
+		return thrift.PrependError(fmt.Sprintf("%T read error: ", p), err)
+	}
+
+	for {
+		_, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
+		if err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T field %d read error: ", p, fieldId), err)
+		}
+		if fieldTypeId == thrift.STOP {
+			break
+		}
+		switch fieldId {
+		case 1:
+			if err := p.readField1(iprot); err != nil {
+				return err
+			}
+		case 2:
+			if err := p.readField2(iprot); err != nil {
+				return err
+			}
+		default:
+			if err := iprot.Skip(fieldTypeId); err != nil {
+				return err
+			}
+		}
+		if err := iprot.ReadFieldEnd(); err != nil {
+			return err
+		}
+	}
+	if err := iprot.ReadStructEnd(); err != nil {
+		return thrift.PrependError(fmt.Sprintf("%T read struct end error: ", p), err)
+	}
+	return nil
+}
+
+func (p *ExameThrift) readField1(iprot thrift.TProtocol) error {
+	if v, err := iprot.ReadString(); err != nil {
+		return thrift.PrependError("error reading field 1: ", err)
+	} else {
+		p.CodigoExame = &v
+	}
+	return nil
+}
+
+func (p *ExameThrift) readField2(iprot thrift.TProtocol) error {
+	_, size, err := iprot.ReadListBegin()
+	if err != nil {
+		return thrift.PrependError("error reading list begin: ", err)
+	}
+	tSlice := make([]string, 0, size)
+	p.SolicitadoAvaliado = tSlice
+	for i := 0; i < size; i++ {
+		var _elem1 string
+		if v, err := iprot.ReadString(); err != nil {
+			return thrift.PrependError("error reading field 0: ", err)
+		} else {
+			_elem1 = v
+		}
+		p.SolicitadoAvaliado = append(p.SolicitadoAvaliado, _elem1)
+	}
+	if err := iprot.ReadListEnd(); err != nil {
+		return thrift.PrependError("error reading list end: ", err)
+	}
+	return nil
+}
+
+func (p *ExameThrift) Write(oprot thrift.TProtocol) error {
+	if err := oprot.WriteStructBegin("ExameThrift"); err != nil {
+		return thrift.PrependError(fmt.Sprintf("%T write struct begin error: ", p), err)
+	}
+	if err := p.writeField1(oprot); err != nil {
+		return err
+	}
+	if err := p.writeField2(oprot); err != nil {
+		return err
+	}
+	if err := oprot.WriteFieldStop(); err != nil {
+		return thrift.PrependError("write field stop error: ", err)
+	}
+	if err := oprot.WriteStructEnd(); err != nil {
+		return thrift.PrependError("write struct stop error: ", err)
+	}
+	return nil
+}
+
+func (p *ExameThrift) writeField1(oprot thrift.TProtocol) (err error) {
+	if p.IsSetCodigoExame() {
+		if err := oprot.WriteFieldBegin("codigoExame", thrift.STRING, 1); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field begin error 1:codigoExame: ", p), err)
+		}
+		if err := oprot.WriteString(string(*p.CodigoExame)); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T.codigoExame (1) field write error: ", p), err)
+		}
+		if err := oprot.WriteFieldEnd(); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field end error 1:codigoExame: ", p), err)
+		}
+	}
+	return err
+}
+
+func (p *ExameThrift) writeField2(oprot thrift.TProtocol) (err error) {
+	if p.IsSetSolicitadoAvaliado() {
+		if err := oprot.WriteFieldBegin("solicitadoAvaliado", thrift.LIST, 2); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field begin error 2:solicitadoAvaliado: ", p), err)
+		}
+		if err := oprot.WriteListBegin(thrift.STRING, len(p.SolicitadoAvaliado)); err != nil {
+			return thrift.PrependError("error writing list begin: ", err)
+		}
+		for _, v := range p.SolicitadoAvaliado {
+			if err := oprot.WriteString(string(v)); err != nil {
+				return thrift.PrependError(fmt.Sprintf("%T. (0) field write error: ", p), err)
+			}
+		}
+		if err := oprot.WriteListEnd(); err != nil {
+			return thrift.PrependError("error writing list end: ", err)
+		}
+		if err := oprot.WriteFieldEnd(); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field end error 2:solicitadoAvaliado: ", p), err)
+		}
+	}
+	return err
+}
+
+func (p *ExameThrift) String() string {
+	if p == nil {
+		return "<nil>"
+	}
+	return fmt.Sprintf("ExameThrift(%+v)", *p)
+}

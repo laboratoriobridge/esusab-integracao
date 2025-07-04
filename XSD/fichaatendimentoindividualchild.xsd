@@ -16,6 +16,8 @@
   <xs:import namespace="http://esus.ufsc.br/resultadosexame" schemaLocation="resultadosexame.xsd"/>
 
   <xs:import namespace="http://esus.ufsc.br/problemacondicao" schemaLocation="problemacondicao.xsd"/>
+  
+  <xs:import namespace="http://esus.ufsc.br/ivcf" schemaLocation="ivcf.xsd"/>
 
   <xs:complexType name="fichaAtendimentoIndividualChildTransport">
       <xs:sequence>

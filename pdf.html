@@ -29,7 +29,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 7.2.0</span>
+        <span class="label">versão 7.2.1</span>
       
     </a>
 
@@ -141,7 +141,7 @@
 
       <li id="item-layout_ab" data-url="/ledi/documentacao/index.html">
         <label>
-          <input type="checkbox" value="layout_ab" checked="checked"> Layout e-SUS APS de Dados e Interface Versão 7.2.0
+          <input type="checkbox" value="layout_ab" checked="checked"> Layout e-SUS APS de Dados e Interface Versão 7.2.1
           <small>
             <a onclick="checkById('layout_ab', true); return false;">Marcar todos</a> |
             <a onclick="checkById('layout_ab', false); return false;">Desmarcar todos</a>
@@ -1344,6 +1344,42 @@
         
       </li>
     
+
+      <li id="item-RF-EDW.oci" data-url="/dw/fatos/oci/index.html">
+        <label>
+          <input type="checkbox" value="RF-EDW.oci" checked="checked"> Solicitação de Oferta de Cuidado Integrado
+          <small>
+            <a onclick="checkById('RF-EDW.oci', true); return false;">Marcar todos</a> |
+            <a onclick="checkById('RF-EDW.oci', false); return false;">Desmarcar todos</a>
+          </small>
+        </label>
+
+        
+          
+  <ul>
+    
+
+      <li id="item-RF-EDW.tb_fat_solicitacao_oci" data-url="/dw/fatos/oci/tb_fat_solicitacao_oci.html">
+        <label>
+          <input type="checkbox" value="RF-EDW.tb_fat_solicitacao_oci" checked="checked"> Tabela fato das solicitações de Oferta de Cuidado Integrado
+          <small>
+            <a onclick="checkById('RF-EDW.tb_fat_solicitacao_oci', true); return false;">Marcar todos</a> |
+            <a onclick="checkById('RF-EDW.tb_fat_solicitacao_oci', false); return false;">Desmarcar todos</a>
+          </small>
+        </label>
+
+        
+          
+
+        
+      </li>
+    
+  </ul>
+
+
+        
+      </li>
+    
   </ul>
 
 
@@ -2153,7 +2189,7 @@
   
       <!-- Cria a lista de itens[páginas] que foram selecionados  -->
 
-  <li id="summary-layout_ab"><a href="#layout_ab">Layout e-SUS APS de Dados e Interface Versão 7.2.0</a></li>
+  <li id="summary-layout_ab"><a href="#layout_ab">Layout e-SUS APS de Dados e Interface Versão 7.2.1</a></li>
   
       <!-- Cria a lista de itens[páginas] que foram selecionados  -->
 
@@ -2661,6 +2697,20 @@
 
   
 
+  <li id="summary-RF-EDW.oci"><a href="#RF-EDW.oci">Solicitação de Oferta de Cuidado Integrado</a></li>
+  
+      <!-- Cria a lista de itens[páginas] que foram selecionados  -->
+
+  <li id="summary-RF-EDW.tb_fat_solicitacao_oci"><a href="#RF-EDW.tb_fat_solicitacao_oci">Tabela fato das solicitações de Oferta de Cuidado Integrado</a></li>
+  
+      <!-- Cria a lista de itens[páginas] que foram selecionados  -->
+
+
+  
+
+
+  
+
 
   
 
@@ -3027,8 +3077,13 @@
 </tr>
 </thead><tbody>
 <tr>
+<td>5.4.8 ou superior</td>
+<td><a href="/ledi/documentacao/index.html">LEDI APS 7.2.1</a></td>
+<td>10/07/2025</td>
+</tr>
+<tr>
 <td>5.4.7 ou superior</td>
-<td><a href="/ledi/documentacao/index.html">LEDI APS 7.2.0</a></td>
+<td><a href="https://integracao.esusab.ufsc.br/v720/">LEDI APS 7.2.0</a></td>
 <td>27/06/2025</td>
 </tr>
 <tr>
@@ -3307,17 +3362,17 @@
         
     <div class="post pdf shown" id="layout_ab" data-url="/ledi/documentacao/index.html">
       <header class="post-header">
-        <h1 class="post-title">Layout e-SUS APS de Dados e Interface Versão 7.2.0</h1>
+        <h1 class="post-title">Layout e-SUS APS de Dados e Interface Versão 7.2.1</h1>
       </header>
 
       
 
       <article class="post-content">
-        <p>Esta documentação descreve as estruturas de dados, seus atributos e regras utilizadas no <strong>LEDI APS</strong> versão 7.2.0.</p>
+        <p>Esta documentação descreve as estruturas de dados, seus atributos e regras utilizadas no <strong>LEDI APS</strong> versão 7.2.1.</p>
 
-<p>A versão <strong>LEDI APS</strong> 7.2.0 é compatível com o sistema <strong>PEC e-SUS APS</strong> versão 5.4.7 ou superior.</p>
+<p>A versão <strong>LEDI APS</strong> 7.2.1 é compatível com o sistema <strong>PEC e-SUS APS</strong> versão 5.4.8 ou superior.</p>
 
-<p>Confira as principais alterações na versão 7.2.0 <a href="/ledi/documentacao/principais_alteracoes.html">aqui</a>.</p>
+<p>Confira as principais alterações na versão 7.2.1 <a href="/ledi/documentacao/principais_alteracoes.html">aqui</a>.</p>
 
       </article>
 
@@ -4496,7 +4551,7 @@
 
 <h3 id="12-saidacidadaocadastro">#12 saidaCidadaoCadastro</h3>
 
-<p>Dados referentes ao profissional e a data do cadastro.</p>
+<p>Dados referentes a saída do cidadão do cadastro.</p>
 
 <table><thead>
 <tr>
@@ -8218,7 +8273,7 @@
 
 <ul>
 <li>CNS validado de acordo com o <a href="/ledi/documentacao/regras/algoritmo_CNS.html">algoritmo de validação</a>;</li>
-<li>Não pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#25-cpfcidadao">cpfCidadao</a> for preenchido.</li>
+<li>Não pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#24-cpfcidadao">cpfCidadao</a> for preenchido.</li>
 </ul>
 
 <h3 id="3-datanascimento">#3 dataNascimento</h3>
@@ -8657,35 +8712,7 @@
 
 <p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#racionalidadesaude">racionalidadeSaude</a>.</p>
 
-<h3 id="22-perimetrocefalico">#22 perimetroCefalico</h3>
-
-<p>Perímetro cefálico do cidadão em centímetros.</p>
-
-<table><thead>
-<tr>
-<th>Tipo</th>
-<th>Obrigatório</th>
-<th>Mínimo</th>
-<th>Máximo</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Double</td>
-<td>Não</td>
-<td>0</td>
-<td>6</td>
-</tr>
-</tbody></table>
-
-<p><strong>Regras:</strong></p>
-
-<ul>
-<li>Apenas números e ponto (<code>.</code>);</li>
-<li>Máximo de 2 casas decimais;</li>
-<li>Valor mínimo 10 e máximo 200.</li>
-</ul>
-
-<h3 id="23-datahorainicialatendimento">#23 dataHoraInicialAtendimento</h3>
+<h3 id="22-datahorainicialatendimento">#22 dataHoraInicialAtendimento</h3>
 
 <p>Data e hora do início do atendimento.</p>
 
@@ -8709,12 +8736,12 @@
 
 <ul>
 <li>Não pode ser anterior à <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>;</li>
-<li>Não pode ser posterior à <a href="/ledi/documentacao/estrutura_arquivos/#24-datahorafinalatendimento">dataHoraFinalAtendimento</a> e à data atual.</li>
+<li>Não pode ser posterior à <a href="/ledi/documentacao/estrutura_arquivos/#23-datahorafinalatendimento">dataHoraFinalAtendimento</a> e à data atual.</li>
 </ul>
 
 <p><strong>Referência:</strong> Deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
 
-<h3 id="24-datahorafinalatendimento">#24 dataHoraFinalAtendimento</h3>
+<h3 id="23-datahorafinalatendimento">#23 dataHoraFinalAtendimento</h3>
 
 <p>Data e hora do fim do atendimento.</p>
 
@@ -8737,13 +8764,13 @@
 <p><strong>Regras:</strong></p>
 
 <ul>
-<li>Não pode ser anterior à <a href="/ledi/documentacao/estrutura_arquivos/#23-datahorainicialatendimento">dataHoraInicialAtendimento</a>;</li>
+<li>Não pode ser anterior à <a href="/ledi/documentacao/estrutura_arquivos/#22-datahorainicialatendimento">dataHoraInicialAtendimento</a>;</li>
 <li>Não pode ser posterior à data atual.</li>
 </ul>
 
 <p><strong>Referência:</strong> Deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
 
-<h3 id="25-cpfcidadao">#25 cpfCidadao</h3>
+<h3 id="24-cpfcidadao">#24 cpfCidadao</h3>
 
 <p>CPF do cidadão.</p>
 
@@ -8770,7 +8797,7 @@
 <li>Não pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#2-cnscidadao">cnsCidadao</a> for preenchido.</li>
 </ul>
 
-<h3 id="26-medicamentos">#26 Medicamentos</h3>
+<h3 id="25-medicamentos">#25 Medicamentos</h3>
 
 <p>Lista de medicamentos prescritos durante o atendimento.</p>
 
@@ -8792,7 +8819,7 @@
 
 <p><strong>Referência:</strong> <a href="/ledi/documentacao/estrutura_arquivos/#medicamentos">medicamentos</a>.</p>
 
-<h3 id="27-encaminhamentos">#27 Encaminhamentos</h3>
+<h3 id="26-encaminhamentos">#26 Encaminhamentos</h3>
 
 <p>Lista com os encaminhamentos realizados durante o atendimento.</p>
 
@@ -8822,7 +8849,7 @@
 
 <p><strong>Referência:</strong> <a href="/ledi/documentacao/estrutura_arquivos/#encaminhamentos">encaminhamentos</a>.</p>
 
-<h3 id="28-resultadosexames">#28 resultadosExames</h3>
+<h3 id="27-resultadosexames">#27 resultadosExames</h3>
 
 <p>Lista de exames e seus resultados.</p>
 
@@ -8844,7 +8871,7 @@
 
 <p><strong>Referência:</strong> <a href="/ledi/documentacao/estrutura_arquivos/#resultadosexames">resultadosExames</a>.</p>
 
-<h3 id="29-problemascondicoes">#29 problemasCondicoes</h3>
+<h3 id="28-problemascondicoes">#28 problemasCondicoes</h3>
 
 <p>Situações de saúde avaliadas no atendimento.</p>
 
@@ -8866,7 +8893,7 @@
 
 <p><strong>Referência:</strong> <a href="/ledi/documentacao/estrutura_arquivos/#problemacondicao">problemacondicao</a>.</p>
 
-<h3 id="30-tipoparticipacaocidadao">#30 tipoParticipacaoCidadao</h3>
+<h3 id="29-tipoparticipacaocidadao">#29 tipoParticipacaoCidadao</h3>
 
 <p>Código para identificar se o tipo de participação do cidadão foi síncrono ou assíncrono.</p>
 
@@ -8894,7 +8921,7 @@
 
 <p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#tipoparticipacaoatendimento">Tipo de participação no atendimento</a>.</p>
 
-<h3 id="31-tipoparticipacaoprofissionalconvidado">#31 tipoParticipacaoProfissionalConvidado</h3>
+<h3 id="30-tipoparticipacaoprofissionalconvidado">#30 tipoParticipacaoProfissionalConvidado</h3>
 
 <p>Código para identificar se o tipo de participação do profissional convidado foi síncrono ou assíncrono.</p>
 
@@ -8922,7 +8949,7 @@
 
 <p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#tipoparticipacaoatendimento">Tipo de participação no atendimento</a>.</p>
 
-<h3 id="32-ivcf">#32 ivcf</h3>
+<h3 id="31-ivcf">#31 ivcf</h3>
 
 <p>Registro de IVCF-20 (Índice de Vulnerabilidade Clínico-Funcional).</p>
 
@@ -8946,7 +8973,7 @@
 
 <p><strong>Referência:</strong> <a href="/ledi/documentacao/estrutura_arquivos/#ivcf">ivcf</a>.</p>
 
-<h3 id="33-solicitacoesoci">#33 solicitacoesOci</h3>
+<h3 id="32-solicitacoesoci">#32 solicitacoesOci</h3>
 
 <p>Lista de procedimentos SIGTAP de Oferta de Cuidado Integrado (OCI) solicitados.</p>
 
@@ -10223,7 +10250,7 @@
 <p><strong>Regras:</strong></p>
 
 <ul>
-<li>Não pode ser posterior à <a href="/ledi/documentacao/estrutura_arquivos/#23-datahorainicialatendimento">dataHoraInicialAtendimento</a>;</li>
+<li>Não pode ser posterior à <a href="/ledi/documentacao/estrutura_arquivos/#22-datahorainicialatendimento">dataHoraInicialAtendimento</a>;</li>
 <li>Não pode ser anterior à <a href="/ledi/documentacao/estrutura_arquivos/#3-datanascimento">dataNascimento</a>.</li>
 </ul>
 
@@ -10252,7 +10279,7 @@
 <p><strong>Regras:</strong></p>
 
 <ul>
-<li>Não pode ser posterior à <a href="/ledi/documentacao/estrutura_arquivos/#23-datahorainicialatendimento">dataHoraInicialAtendimento</a>;</li>
+<li>Não pode ser posterior à <a href="/ledi/documentacao/estrutura_arquivos/#22-datahorainicialatendimento">dataHoraInicialAtendimento</a>;</li>
 <li>Não pode ser anterior à <a href="/ledi/documentacao/estrutura_arquivos/#2-datasolicitacao">dataSolicitacao</a>;</li>
 <li>Não pode ser anterior à <a href="/ledi/documentacao/estrutura_arquivos/#3-datanascimento">dataNascimento</a>.</li>
 </ul>
@@ -10282,7 +10309,7 @@
 <p><strong>Regras:</strong></p>
 
 <ul>
-<li>Não pode ser posterior à <a href="/ledi/documentacao/estrutura_arquivos/#23-datahorainicialatendimento">dataHoraInicialAtendimento</a>;</li>
+<li>Não pode ser posterior à <a href="/ledi/documentacao/estrutura_arquivos/#22-datahorainicialatendimento">dataHoraInicialAtendimento</a>;</li>
 <li>Não pode ser anterior à <a href="/ledi/documentacao/estrutura_arquivos/#3-datarealizacao">dataRealizacao</a>;</li>
 <li>Não pode ser anterior à <a href="/ledi/documentacao/estrutura_arquivos/#3-datanascimento">dataNascimento</a>.</li>
 </ul>
@@ -11548,7 +11575,7 @@
 
 <ul>
 <li>CNS validado de acordo com o algoritmo;</li>
-<li>Não pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#18-cpfcidadao">cpfCidadao</a> for preenchido.</li>
+<li>Não pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#19-cpfcidadao">cpfCidadao</a> for preenchido.</li>
 </ul>
 
 <p><strong>Referência:</strong> O algoritmo de validação está presente em <a href="/ledi/documentacao/regras/algoritmo_CNS.html">Validar CNS</a>.</p>
@@ -11836,7 +11863,29 @@
 
 <p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#turno">Turno</a>.</p>
 
-<h3 id="16-datahorainicialatendimento">#16 dataHoraInicialAtendimento</h3>
+<h3 id="16-exame">#16 exame</h3>
+
+<p>Lista de exames solicitados e/ou avaliados.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>List&lt;exame&gt;</td>
+<td>Não</td>
+<td>0</td>
+<td>100</td>
+</tr>
+</tbody></table>
+
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/estrutura_arquivos/#exame">Exames</a>.</p>
+
+<h3 id="17-datahorainicialatendimento">#17 dataHoraInicialAtendimento</h3>
 
 <p>Data e hora do início do atendimento.</p>
 
@@ -11860,12 +11909,12 @@
 
 <ul>
 <li>Não pode ser anterior à <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>;</li>
-<li>Não pode ser posterior à <a href="/ledi/documentacao/estrutura_arquivos/#17-datahorafinalatendimento">dataHoraFinalAtendimento</a> e à data atual.</li>
+<li>Não pode ser posterior à <a href="/ledi/documentacao/estrutura_arquivos/#18-datahorafinalatendimento">dataHoraFinalAtendimento</a> e à data atual.</li>
 </ul>
 
 <p><strong>Referência:</strong> Deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
 
-<h3 id="17-datahorafinalatendimento">#17 dataHoraFinalAtendimento</h3>
+<h3 id="18-datahorafinalatendimento">#18 dataHoraFinalAtendimento</h3>
 
 <p>Data e hora do fim do atendimento.</p>
 
@@ -11888,13 +11937,13 @@
 <p><strong>Regras:</strong></p>
 
 <ul>
-<li>Não pode ser anterior à <a href="/ledi/documentacao/estrutura_arquivos/#16-datahorainicialatendimento">dataHoraInicialAtendimento</a>;</li>
+<li>Não pode ser anterior à <a href="/ledi/documentacao/estrutura_arquivos/#17-datahorainicialatendimento">dataHoraInicialAtendimento</a>;</li>
 <li>Não pode ser posterior à data atual.</li>
 </ul>
 
 <p><strong>Referência:</strong> Deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
 
-<h3 id="18-cpfcidadao">#18 cpfCidadao</h3>
+<h3 id="19-cpfcidadao">#19 cpfCidadao</h3>
 
 <p>CPF do cidadão.</p>
 
@@ -11921,7 +11970,7 @@
 <li>Não pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#2-cnscidadao">cnsCidadao</a> for preenchido.</li>
 </ul>
 
-<h3 id="19-medicamentos">#19 Medicamentos</h3>
+<h3 id="20-medicamentos">#20 Medicamentos</h3>
 
 <p>Lista de medicamentos prescritos durante o atendimento.</p>
 
@@ -11943,7 +11992,7 @@
 
 <p><strong>Referência:</strong> <a href="/ledi/documentacao/estrutura_arquivos/#medicamentos">Medicamentos</a>.</p>
 
-<h3 id="20-encaminhamentos">#20 Encaminhamentos</h3>
+<h3 id="21-encaminhamentos">#21 Encaminhamentos</h3>
 
 <p>Lista com os encaminhamentos realizados durante o atendimento.</p>
 
@@ -11972,7 +12021,7 @@
 
 <p><strong>Referência:</strong> <a href="/ledi/documentacao/estrutura_arquivos/#encaminhamentos">Encaminhamentos</a>.</p>
 
-<h3 id="21-resultadosexames">#21 resultadosExames</h3>
+<h3 id="22-resultadosexames">#22 resultadosExames</h3>
 
 <p>Lista de exames e seus resultados.</p>
 
@@ -11994,7 +12043,7 @@
 
 <p><strong>Referência:</strong> <a href="/ledi/documentacao/estrutura_arquivos/#resultadosexames">resultadosExames</a>.</p>
 
-<h3 id="22-medicoes">#22 medicoes</h3>
+<h3 id="23-medicoes">#23 medicoes</h3>
 
 <p>Lista de medições registradas no atendimento.</p>
 
@@ -12016,7 +12065,7 @@
 
 <p><strong>Referência:</strong> <a href="/ledi/documentacao/estrutura_arquivos/#medicoes">medicoes</a>.</p>
 
-<h3 id="23-tipoparticipacaocidadao">#23 tipoParticipacaoCidadao</h3>
+<h3 id="24-tipoparticipacaocidadao">#24 tipoParticipacaoCidadao</h3>
 
 <p>Código para identificar se o tipo de participação do cidadão foi síncrono ou assíncrono.</p>
 
@@ -12044,7 +12093,7 @@
 
 <p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#tipoparticipacaoatendimento">Tipo de participação no atendimento</a>.</p>
 
-<h3 id="24-tipoparticipacaoprofissionalconvidado">#24 tipoParticipacaoProfissionalConvidado</h3>
+<h3 id="25-tipoparticipacaoprofissionalconvidado">#25 tipoParticipacaoProfissionalConvidado</h3>
 
 <p>Código para identificar se o tipo de participação do profissional convidado foi síncrono ou assíncrono.</p>
 
@@ -12072,7 +12121,7 @@
 
 <p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#tipoparticipacaoatendimento">Tipo de participação no atendimento</a>.</p>
 
-<h3 id="25-problemascondicoes">#25 problemasCondicoes</h3>
+<h3 id="26-problemascondicoes">#26 problemasCondicoes</h3>
 
 <p>Situações de saúde avaliadas no atendimento.</p>
 
@@ -12094,7 +12143,7 @@
 
 <p><strong>Referência:</strong> <a href="/ledi/documentacao/estrutura_arquivos/#problemacondicao">problemacondicao</a>.</p>
 
-<h3 id="26-ivcf">#26 ivcf</h3>
+<h3 id="27-ivcf">#27 ivcf</h3>
 
 <p>Registro de IVCF-20 (Índice de Vulnerabilidade Clínico-Funcional).</p>
 
@@ -12117,28 +12166,6 @@
 <p><strong>Regra:</strong> Só pode ser preenchido se a idade do cidadão na data do atendimento for 60 anos ou mais.</p>
 
 <p><strong>Referência:</strong> <a href="/ledi/documentacao/estrutura_arquivos/#ivcf">ivcf</a>.</p>
-
-<h3 id="27-exame">#27 exame</h3>
-
-<p>Lista de exames solicitados e/ou avaliados.</p>
-
-<table><thead>
-<tr>
-<th>Tipo</th>
-<th>Obrigatório</th>
-<th>Mínimo</th>
-<th>Máximo</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>List&lt;exame&gt;</td>
-<td>Não</td>
-<td>0</td>
-<td>100</td>
-</tr>
-</tbody></table>
-
-<p><strong>Referência:</strong> <a href="/ledi/documentacao/estrutura_arquivos/#exame">Exames</a>.</p>
 
 <h3 id="28-solicitacoesoci">#28 solicitacoesOci</h3>
 
@@ -12207,7 +12234,14 @@
 <li>07.01.07.012-9 - PROTESE TOTAL MANDIBULAR;</li>
 <li>07.01.07.013-7 - PROTESE TOTAL MAXILAR;</li>
 <li>07.01.07.005-6 - COROA PROVISORIA;</li>
-<li>07.01.07.014-5 - PROTESES CORONARIAS / INTRA-RADICULARES FIXAS / ADESIVAS (POR ELEMENTO).</li>
+<li>07.01.07.014-5 - PROTESES CORONARIAS / INTRA-RADICULARES FIXAS / ADESIVAS (POR ELEMENTO);</li>
+<li>07.01.07.001-3 - APARELHO FIXO BILATERAL PARA FECHAMENTO DE DIASTEMA;</li>
+<li>07.01.07.002-1 - APARELHO ORTOPÉDICO E ORTODÔNTICO REMOVÍVEL;</li>
+<li>07.01.07.003-0 - APARELHO P/ BLOQUEIO MAXILO-MANDIBULAR;</li>
+<li>07.01.07.017-0 - APARELHO ORTODÔNTICO FIXO;</li>
+<li>07.01.07.016-1 - APARELHO ORTOPÉDICO FIXO;</li>
+<li>07.01.07.015-3 - PRÓTESE DENTÁRIA SOBRE IMPLANTE;</li>
+<li>07.01.07.004-8 - COROA DE ACO E POLICARBOXILATO.</li>
 </ul></li>
 <li><p>Não pode ser preenchido com o procedimento &quot;03.01.04.007-9 - Escuta inicial / orientação (acolhimento a demanda espontânea)&quot;. Esta informação deve ser registrada através do campo <a href="/ledi/documentacao/estrutura_arquivos/#7-tipoatendimento">#7 tipoAtendimento</a>, opção <code>4 (escuta inicial ou orientação)</code>.</p></li>
 </ul>
@@ -12785,7 +12819,7 @@
 <p><strong>Regras:</strong></p>
 
 <ul>
-<li>Não pode ser posterior à <a href="/ledi/documentacao/estrutura_arquivos/#16-datahorainicialatendimento">dataHoraInicialAtendimento</a>;</li>
+<li>Não pode ser posterior à <a href="/ledi/documentacao/estrutura_arquivos/#17-datahorainicialatendimento">dataHoraInicialAtendimento</a>;</li>
 <li>Não pode ser anterior à <a href="/ledi/documentacao/estrutura_arquivos/#1-dtnascimento">dtNascimento</a>.</li>
 </ul>
 
@@ -12814,7 +12848,7 @@
 <p><strong>Regras:</strong></p>
 
 <ul>
-<li>Não pode ser posterior à <a href="/ledi/documentacao/estrutura_arquivos/#16-datahorainicialatendimento">dataHoraInicialAtendimento</a>;</li>
+<li>Não pode ser posterior à <a href="/ledi/documentacao/estrutura_arquivos/#17-datahorainicialatendimento">dataHoraInicialAtendimento</a>;</li>
 <li>Não pode ser anterior à <a href="/ledi/documentacao/estrutura_arquivos/#2-datasolicitacao">dataSolicitacao</a>;</li>
 <li>Não pode ser anterior à <a href="/ledi/documentacao/estrutura_arquivos/#1-dtnascimento">dtNascimento</a>.</li>
 </ul>
@@ -12844,7 +12878,7 @@
 <p><strong>Regras:</strong></p>
 
 <ul>
-<li>Não pode ser posterior à <a href="/ledi/documentacao/estrutura_arquivos/#16-datahorainicialatendimento">dataHoraInicialAtendimento</a>;</li>
+<li>Não pode ser posterior à <a href="/ledi/documentacao/estrutura_arquivos/#17-datahorainicialatendimento">dataHoraInicialAtendimento</a>;</li>
 <li>Não pode ser anterior à <a href="/ledi/documentacao/estrutura_arquivos/#3-datarealizacao">dataRealizacao</a>;</li>
 <li>Não pode ser anterior à <a href="/ledi/documentacao/estrutura_arquivos/#1-dtnascimento">dtNascimento</a>.</li>
 </ul>
@@ -14206,6 +14240,36 @@
 <td>2</td>
 </tr>
 <tr>
+<td>07.01.07.001-3</td>
+<td>APARELHO FIXO BILATERAL PARA FECHAMENTO DE DIASTEMA</td>
+<td>Arcada</td>
+<td>2</td>
+</tr>
+<tr>
+<td>07.01.07.017-0</td>
+<td>APARELHO ORTODÔNTICO FIXO</td>
+<td>Arcada</td>
+<td>2</td>
+</tr>
+<tr>
+<td>07.01.07.002-1</td>
+<td>APARELHO ORTOPÉDICO E ORTODÔNTICO REMOVÍVEL</td>
+<td>Arcada</td>
+<td>2</td>
+</tr>
+<tr>
+<td>07.01.07.016-1</td>
+<td>APARELHO ORTOPÉDICO FIXO</td>
+<td>Arcada</td>
+<td>2</td>
+</tr>
+<tr>
+<td>07.01.07.003-0</td>
+<td>APARELHO P/ BLOQUEIO MAXILO-MANDIBULAR</td>
+<td>Arcada</td>
+<td>2</td>
+</tr>
+<tr>
 <td>01.01.02.005-8</td>
 <td>APLICAÇÃO DE CARIOSTÁTICO (POR DENTE)</td>
 <td>Dente</td>
@@ -14466,6 +14530,18 @@
 <tr>
 <td>07.01.07.014-5</td>
 <td>PROTESES CORONARIAS / INTRA-RADICULARES FIXAS / ADESIVAS (POR ELEMENTO)</td>
+<td>Dente</td>
+<td>32</td>
+</tr>
+<tr>
+<td>07.01.07.004-8</td>
+<td>COROA DE ACO E POLICARBOXILATO</td>
+<td>Dente</td>
+<td>32</td>
+</tr>
+<tr>
+<td>07.01.07.015-3</td>
+<td>PRÓTESE DENTÁRIA SOBRE IMPLANTE</td>
 <td>Dente</td>
 <td>32</td>
 </tr>
@@ -25995,6 +26071,11 @@
 <td>BOA ESPERANÇA DO IGUAÇU</td>
 <td>PR</td>
 <td>4103024</td>
+</tr>
+<tr>
+<td>BOA ESPERANÇA DO NORTE</td>
+<td>MT</td>
+<td>5101837</td>
 </tr>
 <tr>
 <td>BOA ESPERANÇA DO SUL</td>
@@ -53477,6 +53558,218 @@
 <td>783</td>
 <td>3º ACESSO</td>
 </tr>
+<tr>
+<td>811</td>
+<td>PRACINHA</td>
+</tr>
+<tr>
+<td>812</td>
+<td>CENTRO COMERCIAL</td>
+</tr>
+<tr>
+<td>813</td>
+<td>RUA PEDESTRE</td>
+</tr>
+<tr>
+<td>814</td>
+<td>PRAÇA E CAMPO</td>
+</tr>
+<tr>
+<td>815</td>
+<td>RODOVIA VICINAL</td>
+</tr>
+<tr>
+<td>816</td>
+<td>RUA TRANSVERSAL</td>
+</tr>
+<tr>
+<td>817</td>
+<td>CALÇADINHO</td>
+</tr>
+<tr>
+<td>818</td>
+<td>TRAVESSIA</td>
+</tr>
+<tr>
+<td>819</td>
+<td>AVENIDA NORTE-SUL</td>
+</tr>
+<tr>
+<td>820</td>
+<td>FOLHA</td>
+</tr>
+<tr>
+<td>821</td>
+<td>VIA MUNICIPAL</td>
+</tr>
+<tr>
+<td>822</td>
+<td>VIA CULTURAL</td>
+</tr>
+<tr>
+<td>824</td>
+<td>OCUPAÇÃO</td>
+</tr>
+<tr>
+<td>825</td>
+<td>PRAÇA GIRATÓRIA</td>
+</tr>
+<tr>
+<td>826</td>
+<td>FAIXA</td>
+</tr>
+<tr>
+<td>827</td>
+<td>ZONA RURAL</td>
+</tr>
+<tr>
+<td>828</td>
+<td>POVOADO</td>
+</tr>
+<tr>
+<td>829</td>
+<td>AVENIDA CENTRAL</td>
+</tr>
+<tr>
+<td>830</td>
+<td>PRAÇA DA MATRIZ</td>
+</tr>
+<tr>
+<td>831</td>
+<td>PRAÇA ROTATÓRIA</td>
+</tr>
+<tr>
+<td>832</td>
+<td>1ª ESCADARIA</td>
+</tr>
+<tr>
+<td>833</td>
+<td>2ª ESCADARIA</td>
+</tr>
+<tr>
+<td>834</td>
+<td>3ª ESCADARIA</td>
+</tr>
+<tr>
+<td>835</td>
+<td>4ª ESCADARIA</td>
+</tr>
+<tr>
+<td>836</td>
+<td>5ª ESCADARIA</td>
+</tr>
+<tr>
+<td>837</td>
+<td>6ª ESCADARIA</td>
+</tr>
+<tr>
+<td>838</td>
+<td>7ª ESCADARIA</td>
+</tr>
+<tr>
+<td>839</td>
+<td>8ª ESCADARIA</td>
+</tr>
+<tr>
+<td>840</td>
+<td>9ª ESCADARIA</td>
+</tr>
+<tr>
+<td>841</td>
+<td>10ª ESCADARIA</td>
+</tr>
+<tr>
+<td>842</td>
+<td>EXPANSÃO</td>
+</tr>
+<tr>
+<td>843</td>
+<td>LOCALIDADE</td>
+</tr>
+<tr>
+<td>844</td>
+<td>RODOVIA DE ACESSO</td>
+</tr>
+<tr>
+<td>845</td>
+<td>SISTEMA VIÁRIO</td>
+</tr>
+<tr>
+<td>846</td>
+<td>ESTRADA MARGINAL</td>
+</tr>
+<tr>
+<td>847</td>
+<td>1ª ESCADA</td>
+</tr>
+<tr>
+<td>848</td>
+<td>2ª ESCADA</td>
+</tr>
+<tr>
+<td>849</td>
+<td>ENTRADA</td>
+</tr>
+<tr>
+<td>850</td>
+<td>VICINAL MUNICIPAL</td>
+</tr>
+<tr>
+<td>851</td>
+<td>RODOVIA ESTADUAL</td>
+</tr>
+<tr>
+<td>852</td>
+<td>1ª TRAVESSA DA RUA</td>
+</tr>
+<tr>
+<td>853</td>
+<td>2ª TRAVESSA DA RUA</td>
+</tr>
+<tr>
+<td>854</td>
+<td>3ª TRAVESSA DA RUA</td>
+</tr>
+<tr>
+<td>855</td>
+<td>4ª TRAVESSA DA RUA</td>
+</tr>
+<tr>
+<td>856</td>
+<td>5ª TRAVESSA DA RUA</td>
+</tr>
+<tr>
+<td>857</td>
+<td>TRAVESSA DA RUA</td>
+</tr>
+<tr>
+<td>858</td>
+<td>VIELA DA RUA</td>
+</tr>
+<tr>
+<td>859</td>
+<td>TRAVESSA PROJETADA</td>
+</tr>
+<tr>
+<td>860</td>
+<td>BAIRRO</td>
+</tr>
+<tr>
+<td>861</td>
+<td>1ª VIA COLETORA</td>
+</tr>
+<tr>
+<td>862</td>
+<td>2ª VIA COLETORA</td>
+</tr>
+<tr>
+<td>863</td>
+<td>CENTRO ADMINISTRATIVO</td>
+</tr>
+<tr>
+<td>864</td>
+<td>RUA CONTORNO</td>
+</tr>
 </tbody></table>
 
       </article>
@@ -53523,7 +53816,7 @@
 <td>revision</td>
 <td>Integer</td>
 <td>Sim</td>
-<td>Valor único = 0</td>
+<td>Valor único = 1</td>
 </tr>
 </tbody></table>
 
@@ -66096,7 +66389,7 @@
 </tr>
 <tr>
 <td>37</td>
-<td>Vacina raiva em cultivo celular vero</td>
+<td>Vacina raiva</td>
 <td>Vero</td>
 </tr>
 <tr>
@@ -66308,6 +66601,11 @@
 <td>89</td>
 <td>Vacina COVID-19-recombinante, AstraZeneca/Covax (ChAdOx1-S)</td>
 <td>COVID-19 ASTRAZENECA - ChAdOx1-S</td>
+</tr>
+<tr>
+<td>93</td>
+<td>Vacina HPV nonavalente</td>
+<td>HPV9</td>
 </tr>
 <tr>
 <td>97</td>
@@ -99318,7 +99616,7 @@
       
 
       <article class="post-content">
-        <p>Este documento apresenta a lista de exames que possuem resultados estruturados. Esta lista é utilizado na <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#28-resultadosexames">Ficha de Atendimento Individual</a> e na <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fao.html#21-resultadosexames">Ficha de Atendimento Odontológico Individual</a>.</p>
+        <p>Este documento apresenta a lista de exames que possuem resultados estruturados. Esta lista é utilizado na <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#27-resultadosexames">Ficha de Atendimento Individual</a> e na <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fao.html#22-resultadosexames">Ficha de Atendimento Odontológico Individual</a>.</p>
 
 <h2 id="tabela-de-exames-com-resultado-estruturado">Tabela de exames com resultado estruturado</h2>
 
@@ -103722,7 +104020,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>59</td>
-<td>P1</td>
+<td>P/T1</td>
 </tr>
 <tr>
 <td>1</td>
@@ -103730,7 +104028,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>60</td>
-<td>P2</td>
+<td>P/T2</td>
 </tr>
 <tr>
 <td>1</td>
@@ -103738,7 +104036,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>61</td>
-<td>P3</td>
+<td>P/T3</td>
 </tr>
 <tr>
 <td>1</td>
@@ -103746,7 +104044,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>62</td>
-<td>P4</td>
+<td>P/T4</td>
 </tr>
 <tr>
 <td>1</td>
@@ -103754,7 +104052,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>63</td>
-<td>P5</td>
+<td>P/T5</td>
 </tr>
 <tr>
 <td>1</td>
@@ -103762,7 +104060,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>64</td>
-<td>P6</td>
+<td>P/T6</td>
 </tr>
 <tr>
 <td>1</td>
@@ -103770,7 +104068,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>65</td>
-<td>P7</td>
+<td>P/T7</td>
 </tr>
 <tr>
 <td>1</td>
@@ -103778,7 +104076,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>66</td>
-<td>P8</td>
+<td>P/T8</td>
 </tr>
 <tr>
 <td>1</td>
@@ -103786,7 +104084,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>67</td>
-<td>P9</td>
+<td>P/T9</td>
 </tr>
 <tr>
 <td>1</td>
@@ -103794,7 +104092,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>68</td>
-<td>P10</td>
+<td>P/T10</td>
 </tr>
 <tr>
 <td>1</td>
@@ -103802,7 +104100,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>69</td>
-<td>P11</td>
+<td>P/T11</td>
 </tr>
 <tr>
 <td>1</td>
@@ -103810,7 +104108,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>70</td>
-<td>P12</td>
+<td>P/T12</td>
 </tr>
 <tr>
 <td>1</td>
@@ -103818,7 +104116,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>71</td>
-<td>P13</td>
+<td>P/T13</td>
 </tr>
 <tr>
 <td>1</td>
@@ -103826,7 +104124,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>72</td>
-<td>P14</td>
+<td>P/T14</td>
 </tr>
 <tr>
 <td>1</td>
@@ -103834,7 +104132,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>73</td>
-<td>P15</td>
+<td>P/T15</td>
 </tr>
 <tr>
 <td>1</td>
@@ -103842,7 +104140,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>74</td>
-<td>P16</td>
+<td>P/T16</td>
 </tr>
 <tr>
 <td>1</td>
@@ -103850,7 +104148,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>75</td>
-<td>P17</td>
+<td>P/T17</td>
 </tr>
 <tr>
 <td>1</td>
@@ -103858,7 +104156,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>76</td>
-<td>P18</td>
+<td>P/T18</td>
 </tr>
 <tr>
 <td>1</td>
@@ -103866,7 +104164,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>77</td>
-<td>P19</td>
+<td>P/T19</td>
 </tr>
 <tr>
 <td>1</td>
@@ -103874,7 +104172,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>78</td>
-<td>P20</td>
+<td>P/T20</td>
 </tr>
 <tr>
 <td>1</td>
@@ -103882,7 +104180,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>79</td>
-<td>P21</td>
+<td>P/T21</td>
 </tr>
 <tr>
 <td>1</td>
@@ -103890,7 +104188,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>80</td>
-<td>P22</td>
+<td>P/T22</td>
 </tr>
 <tr>
 <td>1</td>
@@ -103898,7 +104196,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>81</td>
-<td>P23</td>
+<td>P/T23</td>
 </tr>
 <tr>
 <td>1</td>
@@ -103906,7 +104204,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>82</td>
-<td>P24</td>
+<td>P/T24</td>
 </tr>
 <tr>
 <td>2</td>
@@ -103914,7 +104212,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>59</td>
-<td>P1</td>
+<td>P/T1</td>
 </tr>
 <tr>
 <td>2</td>
@@ -103922,7 +104220,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>60</td>
-<td>P2</td>
+<td>P/T2</td>
 </tr>
 <tr>
 <td>2</td>
@@ -103930,7 +104228,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>61</td>
-<td>P3</td>
+<td>P/T3</td>
 </tr>
 <tr>
 <td>2</td>
@@ -103938,7 +104236,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>62</td>
-<td>P4</td>
+<td>P/T4</td>
 </tr>
 <tr>
 <td>2</td>
@@ -103946,7 +104244,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>63</td>
-<td>P5</td>
+<td>P/T5</td>
 </tr>
 <tr>
 <td>2</td>
@@ -103954,7 +104252,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>64</td>
-<td>P6</td>
+<td>P/T6</td>
 </tr>
 <tr>
 <td>2</td>
@@ -103962,7 +104260,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>65</td>
-<td>P7</td>
+<td>P/T7</td>
 </tr>
 <tr>
 <td>2</td>
@@ -103970,7 +104268,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>66</td>
-<td>P8</td>
+<td>P/T8</td>
 </tr>
 <tr>
 <td>2</td>
@@ -103978,7 +104276,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>67</td>
-<td>P9</td>
+<td>P/T9</td>
 </tr>
 <tr>
 <td>2</td>
@@ -103986,7 +104284,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>68</td>
-<td>P10</td>
+<td>P/T10</td>
 </tr>
 <tr>
 <td>2</td>
@@ -103994,7 +104292,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>69</td>
-<td>P11</td>
+<td>P/T11</td>
 </tr>
 <tr>
 <td>2</td>
@@ -104002,7 +104300,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>70</td>
-<td>P12</td>
+<td>P/T12</td>
 </tr>
 <tr>
 <td>2</td>
@@ -104010,7 +104308,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>71</td>
-<td>P13</td>
+<td>P/T13</td>
 </tr>
 <tr>
 <td>2</td>
@@ -104018,7 +104316,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>72</td>
-<td>P14</td>
+<td>P/T14</td>
 </tr>
 <tr>
 <td>2</td>
@@ -104026,7 +104324,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>73</td>
-<td>P15</td>
+<td>P/T15</td>
 </tr>
 <tr>
 <td>2</td>
@@ -104034,7 +104332,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>74</td>
-<td>P16</td>
+<td>P/T16</td>
 </tr>
 <tr>
 <td>2</td>
@@ -104042,7 +104340,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>75</td>
-<td>P17</td>
+<td>P/T17</td>
 </tr>
 <tr>
 <td>2</td>
@@ -104050,7 +104348,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>76</td>
-<td>P18</td>
+<td>P/T18</td>
 </tr>
 <tr>
 <td>2</td>
@@ -104058,7 +104356,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>77</td>
-<td>P19</td>
+<td>P/T19</td>
 </tr>
 <tr>
 <td>2</td>
@@ -104066,7 +104364,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>78</td>
-<td>P20</td>
+<td>P/T20</td>
 </tr>
 <tr>
 <td>2</td>
@@ -104074,7 +104372,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>79</td>
-<td>P21</td>
+<td>P/T21</td>
 </tr>
 <tr>
 <td>2</td>
@@ -104082,7 +104380,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>80</td>
-<td>P22</td>
+<td>P/T22</td>
 </tr>
 <tr>
 <td>2</td>
@@ -104090,7 +104388,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>81</td>
-<td>P23</td>
+<td>P/T23</td>
 </tr>
 <tr>
 <td>2</td>
@@ -104098,7 +104396,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>82</td>
-<td>P24</td>
+<td>P/T24</td>
 </tr>
 <tr>
 <td>3</td>
@@ -104106,7 +104404,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>59</td>
-<td>P1</td>
+<td>P/T1</td>
 </tr>
 <tr>
 <td>3</td>
@@ -104114,7 +104412,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>60</td>
-<td>P2</td>
+<td>P/T2</td>
 </tr>
 <tr>
 <td>3</td>
@@ -104122,7 +104420,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>61</td>
-<td>P3</td>
+<td>P/T3</td>
 </tr>
 <tr>
 <td>3</td>
@@ -104130,7 +104428,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>62</td>
-<td>P4</td>
+<td>P/T4</td>
 </tr>
 <tr>
 <td>3</td>
@@ -104138,7 +104436,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>63</td>
-<td>P5</td>
+<td>P/T5</td>
 </tr>
 <tr>
 <td>3</td>
@@ -104146,7 +104444,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>64</td>
-<td>P6</td>
+<td>P/T6</td>
 </tr>
 <tr>
 <td>3</td>
@@ -104154,7 +104452,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>65</td>
-<td>P7</td>
+<td>P/T7</td>
 </tr>
 <tr>
 <td>3</td>
@@ -104162,7 +104460,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>66</td>
-<td>P8</td>
+<td>P/T8</td>
 </tr>
 <tr>
 <td>3</td>
@@ -104170,7 +104468,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>67</td>
-<td>P9</td>
+<td>P/T9</td>
 </tr>
 <tr>
 <td>3</td>
@@ -104178,7 +104476,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>68</td>
-<td>P10</td>
+<td>P/T10</td>
 </tr>
 <tr>
 <td>3</td>
@@ -104186,7 +104484,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>69</td>
-<td>P11</td>
+<td>P/T11</td>
 </tr>
 <tr>
 <td>3</td>
@@ -104194,7 +104492,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>70</td>
-<td>P12</td>
+<td>P/T12</td>
 </tr>
 <tr>
 <td>3</td>
@@ -104202,7 +104500,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>71</td>
-<td>P13</td>
+<td>P/T13</td>
 </tr>
 <tr>
 <td>3</td>
@@ -104210,7 +104508,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>72</td>
-<td>P14</td>
+<td>P/T14</td>
 </tr>
 <tr>
 <td>3</td>
@@ -104218,7 +104516,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>73</td>
-<td>P15</td>
+<td>P/T15</td>
 </tr>
 <tr>
 <td>3</td>
@@ -104226,7 +104524,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>74</td>
-<td>P16</td>
+<td>P/T16</td>
 </tr>
 <tr>
 <td>3</td>
@@ -104234,7 +104532,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>75</td>
-<td>P17</td>
+<td>P/T17</td>
 </tr>
 <tr>
 <td>3</td>
@@ -104242,7 +104540,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>76</td>
-<td>P18</td>
+<td>P/T18</td>
 </tr>
 <tr>
 <td>3</td>
@@ -104250,7 +104548,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>77</td>
-<td>P19</td>
+<td>P/T19</td>
 </tr>
 <tr>
 <td>3</td>
@@ -104258,7 +104556,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>78</td>
-<td>P20</td>
+<td>P/T20</td>
 </tr>
 <tr>
 <td>3</td>
@@ -104266,7 +104564,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>79</td>
-<td>P21</td>
+<td>P/T21</td>
 </tr>
 <tr>
 <td>3</td>
@@ -104274,7 +104572,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>80</td>
-<td>P22</td>
+<td>P/T22</td>
 </tr>
 <tr>
 <td>3</td>
@@ -104282,7 +104580,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>81</td>
-<td>P23</td>
+<td>P/T23</td>
 </tr>
 <tr>
 <td>3</td>
@@ -104290,7 +104588,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>82</td>
-<td>P24</td>
+<td>P/T24</td>
 </tr>
 <tr>
 <td>4</td>
@@ -104298,7 +104596,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>59</td>
-<td>P1</td>
+<td>P/T1</td>
 </tr>
 <tr>
 <td>4</td>
@@ -104306,7 +104604,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>60</td>
-<td>P2</td>
+<td>P/T2</td>
 </tr>
 <tr>
 <td>4</td>
@@ -104314,7 +104612,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>61</td>
-<td>P3</td>
+<td>P/T3</td>
 </tr>
 <tr>
 <td>4</td>
@@ -104322,7 +104620,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>62</td>
-<td>P4</td>
+<td>P/T4</td>
 </tr>
 <tr>
 <td>4</td>
@@ -104330,7 +104628,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>63</td>
-<td>P5</td>
+<td>P/T5</td>
 </tr>
 <tr>
 <td>4</td>
@@ -104338,7 +104636,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>64</td>
-<td>P6</td>
+<td>P/T6</td>
 </tr>
 <tr>
 <td>4</td>
@@ -104346,7 +104644,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>65</td>
-<td>P7</td>
+<td>P/T7</td>
 </tr>
 <tr>
 <td>4</td>
@@ -104354,7 +104652,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>66</td>
-<td>P8</td>
+<td>P/T8</td>
 </tr>
 <tr>
 <td>4</td>
@@ -104362,7 +104660,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>67</td>
-<td>P9</td>
+<td>P/T9</td>
 </tr>
 <tr>
 <td>4</td>
@@ -104370,7 +104668,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>68</td>
-<td>P10</td>
+<td>P/T10</td>
 </tr>
 <tr>
 <td>4</td>
@@ -104378,7 +104676,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>69</td>
-<td>P11</td>
+<td>P/T11</td>
 </tr>
 <tr>
 <td>4</td>
@@ -104386,7 +104684,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>70</td>
-<td>P12</td>
+<td>P/T12</td>
 </tr>
 <tr>
 <td>4</td>
@@ -104394,7 +104692,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>71</td>
-<td>P13</td>
+<td>P/T13</td>
 </tr>
 <tr>
 <td>4</td>
@@ -104402,7 +104700,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>72</td>
-<td>P14</td>
+<td>P/T14</td>
 </tr>
 <tr>
 <td>4</td>
@@ -104410,7 +104708,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>73</td>
-<td>P15</td>
+<td>P/T15</td>
 </tr>
 <tr>
 <td>4</td>
@@ -104418,7 +104716,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>74</td>
-<td>P16</td>
+<td>P/T16</td>
 </tr>
 <tr>
 <td>4</td>
@@ -104426,7 +104724,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>75</td>
-<td>P17</td>
+<td>P/T17</td>
 </tr>
 <tr>
 <td>4</td>
@@ -104434,7 +104732,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>76</td>
-<td>P18</td>
+<td>P/T18</td>
 </tr>
 <tr>
 <td>4</td>
@@ -104442,7 +104740,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>77</td>
-<td>P19</td>
+<td>P/T19</td>
 </tr>
 <tr>
 <td>4</td>
@@ -104450,7 +104748,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>78</td>
-<td>P20</td>
+<td>P/T20</td>
 </tr>
 <tr>
 <td>4</td>
@@ -104458,7 +104756,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>79</td>
-<td>P21</td>
+<td>P/T21</td>
 </tr>
 <tr>
 <td>4</td>
@@ -104466,7 +104764,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>80</td>
-<td>P22</td>
+<td>P/T22</td>
 </tr>
 <tr>
 <td>4</td>
@@ -104474,7 +104772,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>81</td>
-<td>P23</td>
+<td>P/T23</td>
 </tr>
 <tr>
 <td>4</td>
@@ -104482,7 +104780,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>82</td>
-<td>P24</td>
+<td>P/T24</td>
 </tr>
 <tr>
 <td>5</td>
@@ -104522,7 +104820,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>59</td>
-<td>P1</td>
+<td>P/T1</td>
 </tr>
 <tr>
 <td>6</td>
@@ -104530,7 +104828,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>60</td>
-<td>P2</td>
+<td>P/T2</td>
 </tr>
 <tr>
 <td>6</td>
@@ -104538,7 +104836,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>61</td>
-<td>P3</td>
+<td>P/T3</td>
 </tr>
 <tr>
 <td>6</td>
@@ -104546,7 +104844,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>62</td>
-<td>P4</td>
+<td>P/T4</td>
 </tr>
 <tr>
 <td>6</td>
@@ -104554,7 +104852,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>63</td>
-<td>P5</td>
+<td>P/T5</td>
 </tr>
 <tr>
 <td>6</td>
@@ -104562,7 +104860,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>64</td>
-<td>P6</td>
+<td>P/T6</td>
 </tr>
 <tr>
 <td>6</td>
@@ -104570,7 +104868,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>65</td>
-<td>P7</td>
+<td>P/T7</td>
 </tr>
 <tr>
 <td>6</td>
@@ -104578,7 +104876,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>66</td>
-<td>P8</td>
+<td>P/T8</td>
 </tr>
 <tr>
 <td>6</td>
@@ -104586,7 +104884,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>67</td>
-<td>P9</td>
+<td>P/T9</td>
 </tr>
 <tr>
 <td>6</td>
@@ -104594,7 +104892,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>68</td>
-<td>P10</td>
+<td>P/T10</td>
 </tr>
 <tr>
 <td>6</td>
@@ -104602,7 +104900,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>69</td>
-<td>P11</td>
+<td>P/T11</td>
 </tr>
 <tr>
 <td>6</td>
@@ -104610,7 +104908,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>70</td>
-<td>P12</td>
+<td>P/T12</td>
 </tr>
 <tr>
 <td>6</td>
@@ -104618,7 +104916,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>71</td>
-<td>P13</td>
+<td>P/T13</td>
 </tr>
 <tr>
 <td>6</td>
@@ -104626,7 +104924,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>72</td>
-<td>P14</td>
+<td>P/T14</td>
 </tr>
 <tr>
 <td>6</td>
@@ -104634,7 +104932,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>73</td>
-<td>P15</td>
+<td>P/T15</td>
 </tr>
 <tr>
 <td>6</td>
@@ -104642,7 +104940,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>74</td>
-<td>P16</td>
+<td>P/T16</td>
 </tr>
 <tr>
 <td>6</td>
@@ -104650,7 +104948,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>75</td>
-<td>P17</td>
+<td>P/T17</td>
 </tr>
 <tr>
 <td>6</td>
@@ -104658,7 +104956,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>76</td>
-<td>P18</td>
+<td>P/T18</td>
 </tr>
 <tr>
 <td>6</td>
@@ -104666,7 +104964,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>77</td>
-<td>P19</td>
+<td>P/T19</td>
 </tr>
 <tr>
 <td>6</td>
@@ -104674,7 +104972,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>78</td>
-<td>P20</td>
+<td>P/T20</td>
 </tr>
 <tr>
 <td>6</td>
@@ -104682,7 +104980,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>79</td>
-<td>P21</td>
+<td>P/T21</td>
 </tr>
 <tr>
 <td>6</td>
@@ -104690,7 +104988,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>80</td>
-<td>P22</td>
+<td>P/T22</td>
 </tr>
 <tr>
 <td>6</td>
@@ -104698,7 +104996,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>81</td>
-<td>P23</td>
+<td>P/T23</td>
 </tr>
 <tr>
 <td>6</td>
@@ -104706,7 +105004,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>82</td>
-<td>P24</td>
+<td>P/T24</td>
 </tr>
 <tr>
 <td>7</td>
@@ -104714,7 +105012,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>59</td>
-<td>P1</td>
+<td>P/T1</td>
 </tr>
 <tr>
 <td>7</td>
@@ -104722,7 +105020,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>60</td>
-<td>P2</td>
+<td>P/T2</td>
 </tr>
 <tr>
 <td>7</td>
@@ -104730,7 +105028,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>61</td>
-<td>P3</td>
+<td>P/T3</td>
 </tr>
 <tr>
 <td>7</td>
@@ -104738,7 +105036,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>62</td>
-<td>P4</td>
+<td>P/T4</td>
 </tr>
 <tr>
 <td>7</td>
@@ -104746,7 +105044,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>63</td>
-<td>P5</td>
+<td>P/T5</td>
 </tr>
 <tr>
 <td>7</td>
@@ -104754,7 +105052,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>64</td>
-<td>P6</td>
+<td>P/T6</td>
 </tr>
 <tr>
 <td>7</td>
@@ -104762,7 +105060,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>65</td>
-<td>P7</td>
+<td>P/T7</td>
 </tr>
 <tr>
 <td>7</td>
@@ -104770,7 +105068,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>66</td>
-<td>P8</td>
+<td>P/T8</td>
 </tr>
 <tr>
 <td>7</td>
@@ -104778,7 +105076,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>67</td>
-<td>P9</td>
+<td>P/T9</td>
 </tr>
 <tr>
 <td>7</td>
@@ -104786,7 +105084,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>68</td>
-<td>P10</td>
+<td>P/T10</td>
 </tr>
 <tr>
 <td>7</td>
@@ -104794,7 +105092,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>69</td>
-<td>P11</td>
+<td>P/T11</td>
 </tr>
 <tr>
 <td>7</td>
@@ -104802,7 +105100,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>70</td>
-<td>P12</td>
+<td>P/T12</td>
 </tr>
 <tr>
 <td>7</td>
@@ -104810,7 +105108,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>71</td>
-<td>P13</td>
+<td>P/T13</td>
 </tr>
 <tr>
 <td>7</td>
@@ -104818,7 +105116,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>72</td>
-<td>P14</td>
+<td>P/T14</td>
 </tr>
 <tr>
 <td>7</td>
@@ -104826,7 +105124,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>73</td>
-<td>P15</td>
+<td>P/T15</td>
 </tr>
 <tr>
 <td>7</td>
@@ -104834,7 +105132,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>74</td>
-<td>P16</td>
+<td>P/T16</td>
 </tr>
 <tr>
 <td>7</td>
@@ -104842,7 +105140,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>75</td>
-<td>P17</td>
+<td>P/T17</td>
 </tr>
 <tr>
 <td>7</td>
@@ -104850,7 +105148,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>76</td>
-<td>P18</td>
+<td>P/T18</td>
 </tr>
 <tr>
 <td>7</td>
@@ -104858,7 +105156,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>77</td>
-<td>P19</td>
+<td>P/T19</td>
 </tr>
 <tr>
 <td>7</td>
@@ -104866,7 +105164,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>78</td>
-<td>P20</td>
+<td>P/T20</td>
 </tr>
 <tr>
 <td>7</td>
@@ -104874,7 +105172,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>79</td>
-<td>P21</td>
+<td>P/T21</td>
 </tr>
 <tr>
 <td>7</td>
@@ -104882,7 +105180,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>80</td>
-<td>P22</td>
+<td>P/T22</td>
 </tr>
 <tr>
 <td>7</td>
@@ -104890,7 +105188,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>81</td>
-<td>P23</td>
+<td>P/T23</td>
 </tr>
 <tr>
 <td>7</td>
@@ -104898,7 +105196,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>82</td>
-<td>P24</td>
+<td>P/T24</td>
 </tr>
 <tr>
 <td>8</td>
@@ -104906,7 +105204,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>59</td>
-<td>P1</td>
+<td>P/T1</td>
 </tr>
 <tr>
 <td>8</td>
@@ -104914,7 +105212,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>60</td>
-<td>P2</td>
+<td>P/T2</td>
 </tr>
 <tr>
 <td>8</td>
@@ -104922,7 +105220,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>61</td>
-<td>P3</td>
+<td>P/T3</td>
 </tr>
 <tr>
 <td>8</td>
@@ -104930,7 +105228,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>62</td>
-<td>P4</td>
+<td>P/T4</td>
 </tr>
 <tr>
 <td>8</td>
@@ -104938,7 +105236,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>63</td>
-<td>P5</td>
+<td>P/T5</td>
 </tr>
 <tr>
 <td>8</td>
@@ -104946,7 +105244,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>64</td>
-<td>P6</td>
+<td>P/T6</td>
 </tr>
 <tr>
 <td>8</td>
@@ -104954,7 +105252,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>65</td>
-<td>P7</td>
+<td>P/T7</td>
 </tr>
 <tr>
 <td>8</td>
@@ -104962,7 +105260,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>66</td>
-<td>P8</td>
+<td>P/T8</td>
 </tr>
 <tr>
 <td>8</td>
@@ -104970,7 +105268,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>67</td>
-<td>P9</td>
+<td>P/T9</td>
 </tr>
 <tr>
 <td>8</td>
@@ -104978,7 +105276,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>68</td>
-<td>P10</td>
+<td>P/T10</td>
 </tr>
 <tr>
 <td>8</td>
@@ -104986,7 +105284,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>69</td>
-<td>P11</td>
+<td>P/T11</td>
 </tr>
 <tr>
 <td>8</td>
@@ -104994,7 +105292,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>70</td>
-<td>P12</td>
+<td>P/T12</td>
 </tr>
 <tr>
 <td>8</td>
@@ -105002,7 +105300,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>71</td>
-<td>P13</td>
+<td>P/T13</td>
 </tr>
 <tr>
 <td>8</td>
@@ -105010,7 +105308,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>72</td>
-<td>P14</td>
+<td>P/T14</td>
 </tr>
 <tr>
 <td>8</td>
@@ -105018,7 +105316,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>73</td>
-<td>P15</td>
+<td>P/T15</td>
 </tr>
 <tr>
 <td>8</td>
@@ -105026,7 +105324,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>74</td>
-<td>P16</td>
+<td>P/T16</td>
 </tr>
 <tr>
 <td>8</td>
@@ -105034,7 +105332,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>75</td>
-<td>P17</td>
+<td>P/T17</td>
 </tr>
 <tr>
 <td>8</td>
@@ -105042,7 +105340,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>76</td>
-<td>P18</td>
+<td>P/T18</td>
 </tr>
 <tr>
 <td>8</td>
@@ -105050,7 +105348,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>77</td>
-<td>P19</td>
+<td>P/T19</td>
 </tr>
 <tr>
 <td>8</td>
@@ -105058,7 +105356,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>78</td>
-<td>P20</td>
+<td>P/T20</td>
 </tr>
 <tr>
 <td>8</td>
@@ -105066,7 +105364,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>79</td>
-<td>P21</td>
+<td>P/T21</td>
 </tr>
 <tr>
 <td>8</td>
@@ -105074,7 +105372,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>80</td>
-<td>P22</td>
+<td>P/T22</td>
 </tr>
 <tr>
 <td>8</td>
@@ -105082,7 +105380,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>81</td>
-<td>P23</td>
+<td>P/T23</td>
 </tr>
 <tr>
 <td>8</td>
@@ -105090,7 +105388,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>82</td>
-<td>P24</td>
+<td>P/T24</td>
 </tr>
 <tr>
 <td>9</td>
@@ -105274,7 +105572,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>59</td>
-<td>P1</td>
+<td>P/T1</td>
 </tr>
 <tr>
 <td>10</td>
@@ -105282,7 +105580,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>60</td>
-<td>P2</td>
+<td>P/T2</td>
 </tr>
 <tr>
 <td>10</td>
@@ -105290,7 +105588,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>61</td>
-<td>P3</td>
+<td>P/T3</td>
 </tr>
 <tr>
 <td>10</td>
@@ -105298,7 +105596,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>62</td>
-<td>P4</td>
+<td>P/T4</td>
 </tr>
 <tr>
 <td>10</td>
@@ -105306,7 +105604,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>63</td>
-<td>P5</td>
+<td>P/T5</td>
 </tr>
 <tr>
 <td>10</td>
@@ -105314,7 +105612,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>64</td>
-<td>P6</td>
+<td>P/T6</td>
 </tr>
 <tr>
 <td>10</td>
@@ -105322,7 +105620,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>65</td>
-<td>P7</td>
+<td>P/T7</td>
 </tr>
 <tr>
 <td>10</td>
@@ -105330,7 +105628,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>66</td>
-<td>P8</td>
+<td>P/T8</td>
 </tr>
 <tr>
 <td>10</td>
@@ -105338,7 +105636,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>67</td>
-<td>P9</td>
+<td>P/T9</td>
 </tr>
 <tr>
 <td>10</td>
@@ -105346,7 +105644,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>68</td>
-<td>P10</td>
+<td>P/T10</td>
 </tr>
 <tr>
 <td>10</td>
@@ -105354,7 +105652,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>69</td>
-<td>P11</td>
+<td>P/T11</td>
 </tr>
 <tr>
 <td>10</td>
@@ -105362,7 +105660,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>70</td>
-<td>P12</td>
+<td>P/T12</td>
 </tr>
 <tr>
 <td>10</td>
@@ -105370,7 +105668,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>71</td>
-<td>P13</td>
+<td>P/T13</td>
 </tr>
 <tr>
 <td>10</td>
@@ -105378,7 +105676,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>72</td>
-<td>P14</td>
+<td>P/T14</td>
 </tr>
 <tr>
 <td>10</td>
@@ -105386,7 +105684,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>73</td>
-<td>P15</td>
+<td>P/T15</td>
 </tr>
 <tr>
 <td>10</td>
@@ -105394,7 +105692,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>74</td>
-<td>P16</td>
+<td>P/T16</td>
 </tr>
 <tr>
 <td>10</td>
@@ -105402,7 +105700,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>75</td>
-<td>P17</td>
+<td>P/T17</td>
 </tr>
 <tr>
 <td>10</td>
@@ -105410,7 +105708,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>76</td>
-<td>P18</td>
+<td>P/T18</td>
 </tr>
 <tr>
 <td>10</td>
@@ -105418,7 +105716,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>77</td>
-<td>P19</td>
+<td>P/T19</td>
 </tr>
 <tr>
 <td>10</td>
@@ -105426,7 +105724,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>78</td>
-<td>P20</td>
+<td>P/T20</td>
 </tr>
 <tr>
 <td>10</td>
@@ -105434,7 +105732,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>79</td>
-<td>P21</td>
+<td>P/T21</td>
 </tr>
 <tr>
 <td>10</td>
@@ -105442,7 +105740,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>80</td>
-<td>P22</td>
+<td>P/T22</td>
 </tr>
 <tr>
 <td>10</td>
@@ -105450,7 +105748,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>81</td>
-<td>P23</td>
+<td>P/T23</td>
 </tr>
 <tr>
 <td>10</td>
@@ -105458,7 +105756,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>82</td>
-<td>P24</td>
+<td>P/T24</td>
 </tr>
 <tr>
 <td>11</td>
@@ -105466,7 +105764,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>59</td>
-<td>P1</td>
+<td>P/T1</td>
 </tr>
 <tr>
 <td>11</td>
@@ -105474,7 +105772,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>60</td>
-<td>P2</td>
+<td>P/T2</td>
 </tr>
 <tr>
 <td>11</td>
@@ -105482,7 +105780,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>61</td>
-<td>P3</td>
+<td>P/T3</td>
 </tr>
 <tr>
 <td>11</td>
@@ -105490,7 +105788,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>62</td>
-<td>P4</td>
+<td>P/T4</td>
 </tr>
 <tr>
 <td>11</td>
@@ -105498,7 +105796,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>63</td>
-<td>P5</td>
+<td>P/T5</td>
 </tr>
 <tr>
 <td>11</td>
@@ -105506,7 +105804,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>64</td>
-<td>P6</td>
+<td>P/T6</td>
 </tr>
 <tr>
 <td>11</td>
@@ -105514,7 +105812,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>65</td>
-<td>P7</td>
+<td>P/T7</td>
 </tr>
 <tr>
 <td>11</td>
@@ -105522,7 +105820,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>66</td>
-<td>P8</td>
+<td>P/T8</td>
 </tr>
 <tr>
 <td>11</td>
@@ -105530,7 +105828,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>67</td>
-<td>P9</td>
+<td>P/T9</td>
 </tr>
 <tr>
 <td>11</td>
@@ -105538,7 +105836,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>68</td>
-<td>P10</td>
+<td>P/T10</td>
 </tr>
 <tr>
 <td>11</td>
@@ -105546,7 +105844,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>69</td>
-<td>P11</td>
+<td>P/T11</td>
 </tr>
 <tr>
 <td>11</td>
@@ -105554,7 +105852,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>70</td>
-<td>P12</td>
+<td>P/T12</td>
 </tr>
 <tr>
 <td>11</td>
@@ -105562,7 +105860,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>71</td>
-<td>P13</td>
+<td>P/T13</td>
 </tr>
 <tr>
 <td>11</td>
@@ -105570,7 +105868,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>72</td>
-<td>P14</td>
+<td>P/T14</td>
 </tr>
 <tr>
 <td>11</td>
@@ -105578,7 +105876,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>73</td>
-<td>P15</td>
+<td>P/T15</td>
 </tr>
 <tr>
 <td>11</td>
@@ -105586,7 +105884,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>74</td>
-<td>P16</td>
+<td>P/T16</td>
 </tr>
 <tr>
 <td>11</td>
@@ -105594,7 +105892,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>75</td>
-<td>P17</td>
+<td>P/T17</td>
 </tr>
 <tr>
 <td>11</td>
@@ -105602,7 +105900,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>76</td>
-<td>P18</td>
+<td>P/T18</td>
 </tr>
 <tr>
 <td>11</td>
@@ -105610,7 +105908,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>77</td>
-<td>P19</td>
+<td>P/T19</td>
 </tr>
 <tr>
 <td>11</td>
@@ -105618,7 +105916,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>78</td>
-<td>P20</td>
+<td>P/T20</td>
 </tr>
 <tr>
 <td>11</td>
@@ -105626,7 +105924,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>79</td>
-<td>P21</td>
+<td>P/T21</td>
 </tr>
 <tr>
 <td>11</td>
@@ -105634,7 +105932,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>80</td>
-<td>P22</td>
+<td>P/T22</td>
 </tr>
 <tr>
 <td>11</td>
@@ -105642,7 +105940,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>81</td>
-<td>P23</td>
+<td>P/T23</td>
 </tr>
 <tr>
 <td>11</td>
@@ -105650,7 +105948,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>82</td>
-<td>P24</td>
+<td>P/T24</td>
 </tr>
 <tr>
 <td>12</td>
@@ -105658,7 +105956,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>59</td>
-<td>P1</td>
+<td>P/T1</td>
 </tr>
 <tr>
 <td>12</td>
@@ -105666,7 +105964,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>60</td>
-<td>P2</td>
+<td>P/T2</td>
 </tr>
 <tr>
 <td>12</td>
@@ -105674,7 +105972,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>61</td>
-<td>P3</td>
+<td>P/T3</td>
 </tr>
 <tr>
 <td>12</td>
@@ -105682,7 +105980,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>62</td>
-<td>P4</td>
+<td>P/T4</td>
 </tr>
 <tr>
 <td>12</td>
@@ -105690,7 +105988,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>63</td>
-<td>P5</td>
+<td>P/T5</td>
 </tr>
 <tr>
 <td>12</td>
@@ -105698,7 +105996,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>64</td>
-<td>P6</td>
+<td>P/T6</td>
 </tr>
 <tr>
 <td>12</td>
@@ -105706,7 +106004,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>65</td>
-<td>P7</td>
+<td>P/T7</td>
 </tr>
 <tr>
 <td>12</td>
@@ -105714,7 +106012,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>66</td>
-<td>P8</td>
+<td>P/T8</td>
 </tr>
 <tr>
 <td>12</td>
@@ -105722,7 +106020,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>67</td>
-<td>P9</td>
+<td>P/T9</td>
 </tr>
 <tr>
 <td>12</td>
@@ -105730,7 +106028,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>68</td>
-<td>P10</td>
+<td>P/T10</td>
 </tr>
 <tr>
 <td>12</td>
@@ -105738,7 +106036,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>69</td>
-<td>P11</td>
+<td>P/T11</td>
 </tr>
 <tr>
 <td>12</td>
@@ -105746,7 +106044,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>70</td>
-<td>P12</td>
+<td>P/T12</td>
 </tr>
 <tr>
 <td>12</td>
@@ -105754,7 +106052,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>71</td>
-<td>P13</td>
+<td>P/T13</td>
 </tr>
 <tr>
 <td>12</td>
@@ -105762,7 +106060,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>72</td>
-<td>P14</td>
+<td>P/T14</td>
 </tr>
 <tr>
 <td>12</td>
@@ -105770,7 +106068,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>73</td>
-<td>P15</td>
+<td>P/T15</td>
 </tr>
 <tr>
 <td>12</td>
@@ -105778,7 +106076,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>74</td>
-<td>P16</td>
+<td>P/T16</td>
 </tr>
 <tr>
 <td>12</td>
@@ -105786,7 +106084,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>75</td>
-<td>P17</td>
+<td>P/T17</td>
 </tr>
 <tr>
 <td>12</td>
@@ -105794,7 +106092,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>76</td>
-<td>P18</td>
+<td>P/T18</td>
 </tr>
 <tr>
 <td>12</td>
@@ -105802,7 +106100,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>77</td>
-<td>P19</td>
+<td>P/T19</td>
 </tr>
 <tr>
 <td>12</td>
@@ -105810,7 +106108,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>78</td>
-<td>P20</td>
+<td>P/T20</td>
 </tr>
 <tr>
 <td>12</td>
@@ -105818,7 +106116,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>79</td>
-<td>P21</td>
+<td>P/T21</td>
 </tr>
 <tr>
 <td>12</td>
@@ -105826,7 +106124,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>80</td>
-<td>P22</td>
+<td>P/T22</td>
 </tr>
 <tr>
 <td>12</td>
@@ -105834,7 +106132,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>81</td>
-<td>P23</td>
+<td>P/T23</td>
 </tr>
 <tr>
 <td>12</td>
@@ -105842,7 +106140,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>82</td>
-<td>P24</td>
+<td>P/T24</td>
 </tr>
 <tr>
 <td>14</td>
@@ -105937,6 +106235,30 @@
 <td>Vacina febre amarela</td>
 <td>14</td>
 <td>Vacinação escolar</td>
+<td>38</td>
+<td>REF</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Vacina febre amarela</td>
+<td>9</td>
+<td>Monitoramento das Estratégias de Vacinação</td>
+<td>8</td>
+<td>D</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Vacina febre amarela</td>
+<td>9</td>
+<td>Monitoramento das Estratégias de Vacinação</td>
+<td>9</td>
+<td>DU</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Vacina febre amarela</td>
+<td>9</td>
+<td>Monitoramento das Estratégias de Vacinação</td>
 <td>38</td>
 <td>REF</td>
 </tr>
@@ -106002,7 +106324,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>59</td>
-<td>P1</td>
+<td>P/T1</td>
 </tr>
 <tr>
 <td>16</td>
@@ -106010,7 +106332,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>60</td>
-<td>P2</td>
+<td>P/T2</td>
 </tr>
 <tr>
 <td>16</td>
@@ -106018,7 +106340,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>61</td>
-<td>P3</td>
+<td>P/T3</td>
 </tr>
 <tr>
 <td>16</td>
@@ -106026,7 +106348,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>62</td>
-<td>P4</td>
+<td>P/T4</td>
 </tr>
 <tr>
 <td>16</td>
@@ -106034,7 +106356,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>63</td>
-<td>P5</td>
+<td>P/T5</td>
 </tr>
 <tr>
 <td>16</td>
@@ -106042,7 +106364,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>64</td>
-<td>P6</td>
+<td>P/T6</td>
 </tr>
 <tr>
 <td>16</td>
@@ -106050,7 +106372,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>65</td>
-<td>P7</td>
+<td>P/T7</td>
 </tr>
 <tr>
 <td>16</td>
@@ -106058,7 +106380,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>66</td>
-<td>P8</td>
+<td>P/T8</td>
 </tr>
 <tr>
 <td>16</td>
@@ -106066,7 +106388,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>67</td>
-<td>P9</td>
+<td>P/T9</td>
 </tr>
 <tr>
 <td>16</td>
@@ -106074,7 +106396,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>68</td>
-<td>P10</td>
+<td>P/T10</td>
 </tr>
 <tr>
 <td>16</td>
@@ -106082,7 +106404,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>69</td>
-<td>P11</td>
+<td>P/T11</td>
 </tr>
 <tr>
 <td>16</td>
@@ -106090,7 +106412,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>70</td>
-<td>P12</td>
+<td>P/T12</td>
 </tr>
 <tr>
 <td>16</td>
@@ -106098,7 +106420,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>71</td>
-<td>P13</td>
+<td>P/T13</td>
 </tr>
 <tr>
 <td>16</td>
@@ -106106,7 +106428,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>72</td>
-<td>P14</td>
+<td>P/T14</td>
 </tr>
 <tr>
 <td>16</td>
@@ -106114,7 +106436,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>73</td>
-<td>P15</td>
+<td>P/T15</td>
 </tr>
 <tr>
 <td>16</td>
@@ -106122,7 +106444,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>74</td>
-<td>P16</td>
+<td>P/T16</td>
 </tr>
 <tr>
 <td>16</td>
@@ -106130,7 +106452,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>75</td>
-<td>P17</td>
+<td>P/T17</td>
 </tr>
 <tr>
 <td>16</td>
@@ -106138,7 +106460,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>76</td>
-<td>P18</td>
+<td>P/T18</td>
 </tr>
 <tr>
 <td>16</td>
@@ -106146,7 +106468,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>77</td>
-<td>P19</td>
+<td>P/T19</td>
 </tr>
 <tr>
 <td>16</td>
@@ -106154,7 +106476,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>78</td>
-<td>P20</td>
+<td>P/T20</td>
 </tr>
 <tr>
 <td>16</td>
@@ -106162,7 +106484,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>79</td>
-<td>P21</td>
+<td>P/T21</td>
 </tr>
 <tr>
 <td>16</td>
@@ -106170,7 +106492,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>80</td>
-<td>P22</td>
+<td>P/T22</td>
 </tr>
 <tr>
 <td>16</td>
@@ -106178,7 +106500,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>81</td>
-<td>P23</td>
+<td>P/T23</td>
 </tr>
 <tr>
 <td>16</td>
@@ -106186,7 +106508,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>82</td>
-<td>P24</td>
+<td>P/T24</td>
 </tr>
 <tr>
 <td>17</td>
@@ -106242,7 +106564,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>59</td>
-<td>P1</td>
+<td>P/T1</td>
 </tr>
 <tr>
 <td>19</td>
@@ -106250,7 +106572,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>60</td>
-<td>P2</td>
+<td>P/T2</td>
 </tr>
 <tr>
 <td>19</td>
@@ -106258,7 +106580,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>61</td>
-<td>P3</td>
+<td>P/T3</td>
 </tr>
 <tr>
 <td>19</td>
@@ -106266,7 +106588,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>62</td>
-<td>P4</td>
+<td>P/T4</td>
 </tr>
 <tr>
 <td>19</td>
@@ -106274,7 +106596,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>63</td>
-<td>P5</td>
+<td>P/T5</td>
 </tr>
 <tr>
 <td>19</td>
@@ -106282,7 +106604,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>64</td>
-<td>P6</td>
+<td>P/T6</td>
 </tr>
 <tr>
 <td>19</td>
@@ -106290,7 +106612,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>65</td>
-<td>P7</td>
+<td>P/T7</td>
 </tr>
 <tr>
 <td>19</td>
@@ -106298,7 +106620,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>66</td>
-<td>P8</td>
+<td>P/T8</td>
 </tr>
 <tr>
 <td>19</td>
@@ -106306,7 +106628,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>67</td>
-<td>P9</td>
+<td>P/T9</td>
 </tr>
 <tr>
 <td>19</td>
@@ -106314,7 +106636,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>68</td>
-<td>P10</td>
+<td>P/T10</td>
 </tr>
 <tr>
 <td>19</td>
@@ -106322,7 +106644,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>69</td>
-<td>P11</td>
+<td>P/T11</td>
 </tr>
 <tr>
 <td>19</td>
@@ -106330,7 +106652,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>70</td>
-<td>P12</td>
+<td>P/T12</td>
 </tr>
 <tr>
 <td>19</td>
@@ -106338,7 +106660,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>71</td>
-<td>P13</td>
+<td>P/T13</td>
 </tr>
 <tr>
 <td>19</td>
@@ -106346,7 +106668,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>72</td>
-<td>P14</td>
+<td>P/T14</td>
 </tr>
 <tr>
 <td>19</td>
@@ -106354,7 +106676,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>73</td>
-<td>P15</td>
+<td>P/T15</td>
 </tr>
 <tr>
 <td>19</td>
@@ -106362,7 +106684,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>74</td>
-<td>P16</td>
+<td>P/T16</td>
 </tr>
 <tr>
 <td>19</td>
@@ -106370,7 +106692,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>75</td>
-<td>P17</td>
+<td>P/T17</td>
 </tr>
 <tr>
 <td>19</td>
@@ -106378,7 +106700,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>76</td>
-<td>P18</td>
+<td>P/T18</td>
 </tr>
 <tr>
 <td>19</td>
@@ -106386,7 +106708,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>77</td>
-<td>P19</td>
+<td>P/T19</td>
 </tr>
 <tr>
 <td>19</td>
@@ -106394,7 +106716,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>78</td>
-<td>P20</td>
+<td>P/T20</td>
 </tr>
 <tr>
 <td>19</td>
@@ -106402,7 +106724,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>79</td>
-<td>P21</td>
+<td>P/T21</td>
 </tr>
 <tr>
 <td>19</td>
@@ -106410,7 +106732,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>80</td>
-<td>P22</td>
+<td>P/T22</td>
 </tr>
 <tr>
 <td>19</td>
@@ -106418,7 +106740,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>81</td>
-<td>P23</td>
+<td>P/T23</td>
 </tr>
 <tr>
 <td>19</td>
@@ -106426,7 +106748,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>82</td>
-<td>P24</td>
+<td>P/T24</td>
 </tr>
 <tr>
 <td>20</td>
@@ -106434,7 +106756,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>59</td>
-<td>P1</td>
+<td>P/T1</td>
 </tr>
 <tr>
 <td>20</td>
@@ -106442,7 +106764,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>60</td>
-<td>P2</td>
+<td>P/T2</td>
 </tr>
 <tr>
 <td>20</td>
@@ -106450,7 +106772,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>61</td>
-<td>P3</td>
+<td>P/T3</td>
 </tr>
 <tr>
 <td>20</td>
@@ -106458,7 +106780,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>62</td>
-<td>P4</td>
+<td>P/T4</td>
 </tr>
 <tr>
 <td>20</td>
@@ -106466,7 +106788,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>63</td>
-<td>P5</td>
+<td>P/T5</td>
 </tr>
 <tr>
 <td>20</td>
@@ -106474,7 +106796,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>64</td>
-<td>P6</td>
+<td>P/T6</td>
 </tr>
 <tr>
 <td>20</td>
@@ -106482,7 +106804,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>65</td>
-<td>P7</td>
+<td>P/T7</td>
 </tr>
 <tr>
 <td>20</td>
@@ -106490,7 +106812,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>66</td>
-<td>P8</td>
+<td>P/T8</td>
 </tr>
 <tr>
 <td>20</td>
@@ -106498,7 +106820,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>67</td>
-<td>P9</td>
+<td>P/T9</td>
 </tr>
 <tr>
 <td>20</td>
@@ -106506,7 +106828,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>68</td>
-<td>P10</td>
+<td>P/T10</td>
 </tr>
 <tr>
 <td>20</td>
@@ -106514,7 +106836,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>69</td>
-<td>P11</td>
+<td>P/T11</td>
 </tr>
 <tr>
 <td>20</td>
@@ -106522,7 +106844,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>70</td>
-<td>P12</td>
+<td>P/T12</td>
 </tr>
 <tr>
 <td>20</td>
@@ -106530,7 +106852,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>71</td>
-<td>P13</td>
+<td>P/T13</td>
 </tr>
 <tr>
 <td>20</td>
@@ -106538,7 +106860,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>72</td>
-<td>P14</td>
+<td>P/T14</td>
 </tr>
 <tr>
 <td>20</td>
@@ -106546,7 +106868,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>73</td>
-<td>P15</td>
+<td>P/T15</td>
 </tr>
 <tr>
 <td>20</td>
@@ -106554,7 +106876,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>74</td>
-<td>P16</td>
+<td>P/T16</td>
 </tr>
 <tr>
 <td>20</td>
@@ -106562,7 +106884,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>75</td>
-<td>P17</td>
+<td>P/T17</td>
 </tr>
 <tr>
 <td>20</td>
@@ -106570,7 +106892,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>76</td>
-<td>P18</td>
+<td>P/T18</td>
 </tr>
 <tr>
 <td>20</td>
@@ -106578,7 +106900,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>77</td>
-<td>P19</td>
+<td>P/T19</td>
 </tr>
 <tr>
 <td>20</td>
@@ -106586,7 +106908,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>78</td>
-<td>P20</td>
+<td>P/T20</td>
 </tr>
 <tr>
 <td>20</td>
@@ -106594,7 +106916,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>79</td>
-<td>P21</td>
+<td>P/T21</td>
 </tr>
 <tr>
 <td>20</td>
@@ -106602,7 +106924,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>80</td>
-<td>P22</td>
+<td>P/T22</td>
 </tr>
 <tr>
 <td>20</td>
@@ -106610,7 +106932,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>81</td>
-<td>P23</td>
+<td>P/T23</td>
 </tr>
 <tr>
 <td>20</td>
@@ -106618,7 +106940,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>82</td>
-<td>P24</td>
+<td>P/T24</td>
 </tr>
 <tr>
 <td>21</td>
@@ -106784,7 +107106,7 @@
 <td>22</td>
 <td>Vacina polio injetável</td>
 <td>9</td>
-<td>Monitoramento Rápido de Cobertura Vacinal</td>
+<td>Monitoramento das Estratégias de Vacinação</td>
 <td>1</td>
 <td>D1</td>
 </tr>
@@ -106792,7 +107114,7 @@
 <td>22</td>
 <td>Vacina polio injetável</td>
 <td>9</td>
-<td>Monitoramento Rápido de Cobertura Vacinal</td>
+<td>Monitoramento das Estratégias de Vacinação</td>
 <td>2</td>
 <td>D2</td>
 </tr>
@@ -106800,7 +107122,7 @@
 <td>22</td>
 <td>Vacina polio injetável</td>
 <td>9</td>
-<td>Monitoramento Rápido de Cobertura Vacinal</td>
+<td>Monitoramento das Estratégias de Vacinação</td>
 <td>3</td>
 <td>D3</td>
 </tr>
@@ -106808,7 +107130,7 @@
 <td>22</td>
 <td>Vacina polio injetável</td>
 <td>9</td>
-<td>Monitoramento Rápido de Cobertura Vacinal</td>
+<td>Monitoramento das Estratégias de Vacinação</td>
 <td>8</td>
 <td>D</td>
 </tr>
@@ -106816,7 +107138,7 @@
 <td>22</td>
 <td>Vacina polio injetável</td>
 <td>9</td>
-<td>Monitoramento Rápido de Cobertura Vacinal</td>
+<td>Monitoramento das Estratégias de Vacinação</td>
 <td>38</td>
 <td>REF</td>
 </tr>
@@ -106858,7 +107180,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>59</td>
-<td>P1</td>
+<td>P/T1</td>
 </tr>
 <tr>
 <td>23</td>
@@ -106866,7 +107188,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>60</td>
-<td>P2</td>
+<td>P/T2</td>
 </tr>
 <tr>
 <td>23</td>
@@ -106874,7 +107196,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>61</td>
-<td>P3</td>
+<td>P/T3</td>
 </tr>
 <tr>
 <td>23</td>
@@ -106882,7 +107204,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>62</td>
-<td>P4</td>
+<td>P/T4</td>
 </tr>
 <tr>
 <td>23</td>
@@ -106890,7 +107212,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>63</td>
-<td>P5</td>
+<td>P/T5</td>
 </tr>
 <tr>
 <td>23</td>
@@ -106898,7 +107220,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>64</td>
-<td>P6</td>
+<td>P/T6</td>
 </tr>
 <tr>
 <td>23</td>
@@ -106906,7 +107228,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>65</td>
-<td>P7</td>
+<td>P/T7</td>
 </tr>
 <tr>
 <td>23</td>
@@ -106914,7 +107236,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>66</td>
-<td>P8</td>
+<td>P/T8</td>
 </tr>
 <tr>
 <td>23</td>
@@ -106922,7 +107244,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>67</td>
-<td>P9</td>
+<td>P/T9</td>
 </tr>
 <tr>
 <td>23</td>
@@ -106930,7 +107252,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>68</td>
-<td>P10</td>
+<td>P/T10</td>
 </tr>
 <tr>
 <td>23</td>
@@ -106938,7 +107260,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>69</td>
-<td>P11</td>
+<td>P/T11</td>
 </tr>
 <tr>
 <td>23</td>
@@ -106946,7 +107268,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>70</td>
-<td>P12</td>
+<td>P/T12</td>
 </tr>
 <tr>
 <td>23</td>
@@ -106954,7 +107276,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>71</td>
-<td>P13</td>
+<td>P/T13</td>
 </tr>
 <tr>
 <td>23</td>
@@ -106962,7 +107284,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>72</td>
-<td>P14</td>
+<td>P/T14</td>
 </tr>
 <tr>
 <td>23</td>
@@ -106970,7 +107292,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>73</td>
-<td>P15</td>
+<td>P/T15</td>
 </tr>
 <tr>
 <td>23</td>
@@ -106978,7 +107300,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>74</td>
-<td>P16</td>
+<td>P/T16</td>
 </tr>
 <tr>
 <td>23</td>
@@ -106986,7 +107308,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>75</td>
-<td>P17</td>
+<td>P/T17</td>
 </tr>
 <tr>
 <td>23</td>
@@ -106994,7 +107316,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>76</td>
-<td>P18</td>
+<td>P/T18</td>
 </tr>
 <tr>
 <td>23</td>
@@ -107002,7 +107324,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>77</td>
-<td>P19</td>
+<td>P/T19</td>
 </tr>
 <tr>
 <td>23</td>
@@ -107010,7 +107332,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>78</td>
-<td>P20</td>
+<td>P/T20</td>
 </tr>
 <tr>
 <td>23</td>
@@ -107018,7 +107340,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>79</td>
-<td>P21</td>
+<td>P/T21</td>
 </tr>
 <tr>
 <td>23</td>
@@ -107026,7 +107348,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>80</td>
-<td>P22</td>
+<td>P/T22</td>
 </tr>
 <tr>
 <td>23</td>
@@ -107034,7 +107356,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>81</td>
-<td>P23</td>
+<td>P/T23</td>
 </tr>
 <tr>
 <td>23</td>
@@ -107042,7 +107364,7 @@
 <td>2</td>
 <td>Especial</td>
 <td>82</td>
-<td>P24</td>
+<td>P/T24</td>
 </tr>
 <tr>
 <td>24</td>
@@ -107160,7 +107482,7 @@
 <td>24</td>
 <td>Vacina sarampo, caxumba, rubéola</td>
 <td>9</td>
-<td>Monitoramento Rápido de Cobertura Vacinal</td>
+<td>Monitoramento das Estratégias de Vacinação</td>
 <td>1</td>
 <td>D1</td>
 </tr>
@@ -107168,7 +107490,7 @@
 <td>24</td>
 <td>Vacina sarampo, caxumba, rubéola</td>
 <td>9</td>
-<td>Monitoramento Rápido de Cobertura Vacinal</td>
+<td>Monitoramento das Estratégias de Vacinação</td>
 <td>2</td>
 <td>D2</td>
 </tr>
@@ -107176,7 +107498,7 @@
 <td>24</td>
 <td>Vacina sarampo, caxumba, rubéola</td>
 <td>9</td>
-<td>Monitoramento Rápido de Cobertura Vacinal</td>
+<td>Monitoramento das Estratégias de Vacinação</td>
 <td>8</td>
 <td>D</td>
 </tr>
@@ -107184,7 +107506,7 @@
 <td>24</td>
 <td>Vacina sarampo, caxumba, rubéola</td>
 <td>9</td>
-<td>Monitoramento Rápido de Cobertura Vacinal</td>
+<td>Monitoramento das Estratégias de Vacinação</td>
 <td>57</td>
 <td>D0</td>
 </tr>
@@ -107477,6 +107799,38 @@
 <td>REF</td>
 </tr>
 <tr>
+<td>26</td>
+<td>Vacina pneumo 10</td>
+<td>9</td>
+<td>Monitoramento das Estratégias de Vacinação</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>26</td>
+<td>Vacina pneumo 10</td>
+<td>9</td>
+<td>Monitoramento das Estratégias de Vacinação</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>26</td>
+<td>Vacina pneumo 10</td>
+<td>9</td>
+<td>Monitoramento das Estratégias de Vacinação</td>
+<td>3</td>
+<td>D3</td>
+</tr>
+<tr>
+<td>26</td>
+<td>Vacina pneumo 10</td>
+<td>9</td>
+<td>Monitoramento das Estratégias de Vacinação</td>
+<td>38</td>
+<td>REF</td>
+</tr>
+<tr>
 <td>28</td>
 <td>Vacina polio oral</td>
 <td>5</td>
@@ -107488,7 +107842,7 @@
 <td>28</td>
 <td>Vacina polio oral</td>
 <td>9</td>
-<td>Monitoramento Rápido de Cobertura Vacinal</td>
+<td>Monitoramento das Estratégias de Vacinação</td>
 <td>8</td>
 <td>D</td>
 </tr>
@@ -107546,7 +107900,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>59</td>
-<td>P1</td>
+<td>P/T1</td>
 </tr>
 <tr>
 <td>31</td>
@@ -107554,7 +107908,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>60</td>
-<td>P2</td>
+<td>P/T2</td>
 </tr>
 <tr>
 <td>31</td>
@@ -107562,7 +107916,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>61</td>
-<td>P3</td>
+<td>P/T3</td>
 </tr>
 <tr>
 <td>31</td>
@@ -107570,7 +107924,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>62</td>
-<td>P4</td>
+<td>P/T4</td>
 </tr>
 <tr>
 <td>31</td>
@@ -107578,7 +107932,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>63</td>
-<td>P5</td>
+<td>P/T5</td>
 </tr>
 <tr>
 <td>31</td>
@@ -107586,7 +107940,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>64</td>
-<td>P6</td>
+<td>P/T6</td>
 </tr>
 <tr>
 <td>31</td>
@@ -107594,7 +107948,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>65</td>
-<td>P7</td>
+<td>P/T7</td>
 </tr>
 <tr>
 <td>31</td>
@@ -107602,7 +107956,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>66</td>
-<td>P8</td>
+<td>P/T8</td>
 </tr>
 <tr>
 <td>31</td>
@@ -107610,7 +107964,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>67</td>
-<td>P9</td>
+<td>P/T9</td>
 </tr>
 <tr>
 <td>31</td>
@@ -107618,7 +107972,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>68</td>
-<td>P10</td>
+<td>P/T10</td>
 </tr>
 <tr>
 <td>31</td>
@@ -107626,7 +107980,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>69</td>
-<td>P11</td>
+<td>P/T11</td>
 </tr>
 <tr>
 <td>31</td>
@@ -107634,7 +107988,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>70</td>
-<td>P12</td>
+<td>P/T12</td>
 </tr>
 <tr>
 <td>31</td>
@@ -107642,7 +107996,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>71</td>
-<td>P13</td>
+<td>P/T13</td>
 </tr>
 <tr>
 <td>31</td>
@@ -107650,7 +108004,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>72</td>
-<td>P14</td>
+<td>P/T14</td>
 </tr>
 <tr>
 <td>31</td>
@@ -107658,7 +108012,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>73</td>
-<td>P15</td>
+<td>P/T15</td>
 </tr>
 <tr>
 <td>31</td>
@@ -107666,7 +108020,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>74</td>
-<td>P16</td>
+<td>P/T16</td>
 </tr>
 <tr>
 <td>31</td>
@@ -107674,7 +108028,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>75</td>
-<td>P17</td>
+<td>P/T17</td>
 </tr>
 <tr>
 <td>31</td>
@@ -107682,7 +108036,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>76</td>
-<td>P18</td>
+<td>P/T18</td>
 </tr>
 <tr>
 <td>31</td>
@@ -107690,7 +108044,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>77</td>
-<td>P19</td>
+<td>P/T19</td>
 </tr>
 <tr>
 <td>31</td>
@@ -107698,7 +108052,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>78</td>
-<td>P20</td>
+<td>P/T20</td>
 </tr>
 <tr>
 <td>31</td>
@@ -107706,7 +108060,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>79</td>
-<td>P21</td>
+<td>P/T21</td>
 </tr>
 <tr>
 <td>31</td>
@@ -107714,7 +108068,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>80</td>
-<td>P22</td>
+<td>P/T22</td>
 </tr>
 <tr>
 <td>31</td>
@@ -107722,7 +108076,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>81</td>
-<td>P23</td>
+<td>P/T23</td>
 </tr>
 <tr>
 <td>31</td>
@@ -107730,7 +108084,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>82</td>
-<td>P24</td>
+<td>P/T24</td>
 </tr>
 <tr>
 <td>32</td>
@@ -107738,7 +108092,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>59</td>
-<td>P1</td>
+<td>P/T1</td>
 </tr>
 <tr>
 <td>32</td>
@@ -107746,7 +108100,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>60</td>
-<td>P2</td>
+<td>P/T2</td>
 </tr>
 <tr>
 <td>32</td>
@@ -107754,7 +108108,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>61</td>
-<td>P3</td>
+<td>P/T3</td>
 </tr>
 <tr>
 <td>32</td>
@@ -107762,7 +108116,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>62</td>
-<td>P4</td>
+<td>P/T4</td>
 </tr>
 <tr>
 <td>32</td>
@@ -107770,7 +108124,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>63</td>
-<td>P5</td>
+<td>P/T5</td>
 </tr>
 <tr>
 <td>32</td>
@@ -107778,7 +108132,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>64</td>
-<td>P6</td>
+<td>P/T6</td>
 </tr>
 <tr>
 <td>32</td>
@@ -107786,7 +108140,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>65</td>
-<td>P7</td>
+<td>P/T7</td>
 </tr>
 <tr>
 <td>32</td>
@@ -107794,7 +108148,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>66</td>
-<td>P8</td>
+<td>P/T8</td>
 </tr>
 <tr>
 <td>32</td>
@@ -107802,7 +108156,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>67</td>
-<td>P9</td>
+<td>P/T9</td>
 </tr>
 <tr>
 <td>32</td>
@@ -107810,7 +108164,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>68</td>
-<td>P10</td>
+<td>P/T10</td>
 </tr>
 <tr>
 <td>32</td>
@@ -107818,7 +108172,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>69</td>
-<td>P11</td>
+<td>P/T11</td>
 </tr>
 <tr>
 <td>32</td>
@@ -107826,7 +108180,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>70</td>
-<td>P12</td>
+<td>P/T12</td>
 </tr>
 <tr>
 <td>32</td>
@@ -107834,7 +108188,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>71</td>
-<td>P13</td>
+<td>P/T13</td>
 </tr>
 <tr>
 <td>32</td>
@@ -107842,7 +108196,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>72</td>
-<td>P14</td>
+<td>P/T14</td>
 </tr>
 <tr>
 <td>32</td>
@@ -107850,7 +108204,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>73</td>
-<td>P15</td>
+<td>P/T15</td>
 </tr>
 <tr>
 <td>32</td>
@@ -107858,7 +108212,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>74</td>
-<td>P16</td>
+<td>P/T16</td>
 </tr>
 <tr>
 <td>32</td>
@@ -107866,7 +108220,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>75</td>
-<td>P17</td>
+<td>P/T17</td>
 </tr>
 <tr>
 <td>32</td>
@@ -107874,7 +108228,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>76</td>
-<td>P18</td>
+<td>P/T18</td>
 </tr>
 <tr>
 <td>32</td>
@@ -107882,7 +108236,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>77</td>
-<td>P19</td>
+<td>P/T19</td>
 </tr>
 <tr>
 <td>32</td>
@@ -107890,7 +108244,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>78</td>
-<td>P20</td>
+<td>P/T20</td>
 </tr>
 <tr>
 <td>32</td>
@@ -107898,7 +108252,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>79</td>
-<td>P21</td>
+<td>P/T21</td>
 </tr>
 <tr>
 <td>32</td>
@@ -107906,7 +108260,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>80</td>
-<td>P22</td>
+<td>P/T22</td>
 </tr>
 <tr>
 <td>32</td>
@@ -107914,7 +108268,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>81</td>
-<td>P23</td>
+<td>P/T23</td>
 </tr>
 <tr>
 <td>32</td>
@@ -107922,7 +108276,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>82</td>
-<td>P24</td>
+<td>P/T24</td>
 </tr>
 <tr>
 <td>33</td>
@@ -108158,7 +108512,7 @@
 </tr>
 <tr>
 <td>37</td>
-<td>Vacina raiva em cultivo celular vero</td>
+<td>Vacina raiva</td>
 <td>11</td>
 <td>Pré-exposição</td>
 <td>1</td>
@@ -108166,7 +108520,7 @@
 </tr>
 <tr>
 <td>37</td>
-<td>Vacina raiva em cultivo celular vero</td>
+<td>Vacina raiva</td>
 <td>11</td>
 <td>Pré-exposição</td>
 <td>2</td>
@@ -108174,7 +108528,15 @@
 </tr>
 <tr>
 <td>37</td>
-<td>Vacina raiva em cultivo celular vero</td>
+<td>Vacina raiva</td>
+<td>11</td>
+<td>Pré-exposição</td>
+<td>38</td>
+<td>REF</td>
+</tr>
+<tr>
+<td>37</td>
+<td>Vacina raiva</td>
 <td>12</td>
 <td>Pós-exposição</td>
 <td>1</td>
@@ -108182,7 +108544,7 @@
 </tr>
 <tr>
 <td>37</td>
-<td>Vacina raiva em cultivo celular vero</td>
+<td>Vacina raiva</td>
 <td>12</td>
 <td>Pós-exposição</td>
 <td>2</td>
@@ -108190,7 +108552,7 @@
 </tr>
 <tr>
 <td>37</td>
-<td>Vacina raiva em cultivo celular vero</td>
+<td>Vacina raiva</td>
 <td>12</td>
 <td>Pós-exposição</td>
 <td>3</td>
@@ -108198,7 +108560,7 @@
 </tr>
 <tr>
 <td>37</td>
-<td>Vacina raiva em cultivo celular vero</td>
+<td>Vacina raiva</td>
 <td>12</td>
 <td>Pós-exposição</td>
 <td>4</td>
@@ -108206,7 +108568,7 @@
 </tr>
 <tr>
 <td>37</td>
-<td>Vacina raiva em cultivo celular vero</td>
+<td>Vacina raiva</td>
 <td>13</td>
 <td>Reexposição</td>
 <td>1</td>
@@ -108214,7 +108576,7 @@
 </tr>
 <tr>
 <td>37</td>
-<td>Vacina raiva em cultivo celular vero</td>
+<td>Vacina raiva</td>
 <td>13</td>
 <td>Reexposição</td>
 <td>2</td>
@@ -108222,7 +108584,7 @@
 </tr>
 <tr>
 <td>37</td>
-<td>Vacina raiva em cultivo celular vero</td>
+<td>Vacina raiva</td>
 <td>13</td>
 <td>Reexposição</td>
 <td>3</td>
@@ -108230,7 +108592,7 @@
 </tr>
 <tr>
 <td>37</td>
-<td>Vacina raiva em cultivo celular vero</td>
+<td>Vacina raiva</td>
 <td>13</td>
 <td>Reexposição</td>
 <td>4</td>
@@ -108421,6 +108783,46 @@
 <td>REF</td>
 </tr>
 <tr>
+<td>41</td>
+<td>Vacina meningo C</td>
+<td>9</td>
+<td>Monitoramento das Estratégias de Vacinação</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>41</td>
+<td>Vacina meningo C</td>
+<td>9</td>
+<td>Monitoramento das Estratégias de Vacinação</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>41</td>
+<td>Vacina meningo C</td>
+<td>9</td>
+<td>Monitoramento das Estratégias de Vacinação</td>
+<td>8</td>
+<td>D</td>
+</tr>
+<tr>
+<td>41</td>
+<td>Vacina meningo C</td>
+<td>9</td>
+<td>Monitoramento das Estratégias de Vacinação</td>
+<td>9</td>
+<td>DU</td>
+</tr>
+<tr>
+<td>41</td>
+<td>Vacina meningo C</td>
+<td>9</td>
+<td>Monitoramento das Estratégias de Vacinação</td>
+<td>38</td>
+<td>REF</td>
+</tr>
+<tr>
 <td>42</td>
 <td>Vacina penta (DTP/HepB/Hib)</td>
 <td>1</td>
@@ -108496,7 +108898,7 @@
 <td>42</td>
 <td>Vacina penta (DTP/HepB/Hib)</td>
 <td>9</td>
-<td>Monitoramento Rápido de Cobertura Vacinal</td>
+<td>Monitoramento das Estratégias de Vacinação</td>
 <td>1</td>
 <td>D1</td>
 </tr>
@@ -108504,7 +108906,7 @@
 <td>42</td>
 <td>Vacina penta (DTP/HepB/Hib)</td>
 <td>9</td>
-<td>Monitoramento Rápido de Cobertura Vacinal</td>
+<td>Monitoramento das Estratégias de Vacinação</td>
 <td>2</td>
 <td>D2</td>
 </tr>
@@ -108512,7 +108914,7 @@
 <td>42</td>
 <td>Vacina penta (DTP/HepB/Hib)</td>
 <td>9</td>
-<td>Monitoramento Rápido de Cobertura Vacinal</td>
+<td>Monitoramento das Estratégias de Vacinação</td>
 <td>3</td>
 <td>D3</td>
 </tr>
@@ -108664,7 +109066,7 @@
 <td>45</td>
 <td>Vacina rotavírus</td>
 <td>9</td>
-<td>Monitoramento Rápido de Cobertura Vacinal</td>
+<td>Monitoramento das Estratégias de Vacinação</td>
 <td>1</td>
 <td>D1</td>
 </tr>
@@ -108672,7 +109074,7 @@
 <td>45</td>
 <td>Vacina rotavírus</td>
 <td>9</td>
-<td>Monitoramento Rápido de Cobertura Vacinal</td>
+<td>Monitoramento das Estratégias de Vacinação</td>
 <td>2</td>
 <td>D2</td>
 </tr>
@@ -108753,6 +109155,22 @@
 <td>Vacina DTP</td>
 <td>14</td>
 <td>Vacinação escolar</td>
+<td>7</td>
+<td>R2</td>
+</tr>
+<tr>
+<td>46</td>
+<td>Vacina DTP</td>
+<td>9</td>
+<td>Monitoramento das Estratégias de Vacinação</td>
+<td>6</td>
+<td>R1</td>
+</tr>
+<tr>
+<td>46</td>
+<td>Vacina DTP</td>
+<td>9</td>
+<td>Monitoramento das Estratégias de Vacinação</td>
 <td>7</td>
 <td>R2</td>
 </tr>
@@ -108864,7 +109282,7 @@
 <td>56</td>
 <td>Vacina sarampo, caxumba, rubéola e varicela</td>
 <td>9</td>
-<td>Monitoramento Rápido de Cobertura Vacinal</td>
+<td>Monitoramento das Estratégias de Vacinação</td>
 <td>1</td>
 <td>D1</td>
 </tr>
@@ -108872,7 +109290,7 @@
 <td>56</td>
 <td>Vacina sarampo, caxumba, rubéola e varicela</td>
 <td>9</td>
-<td>Monitoramento Rápido de Cobertura Vacinal</td>
+<td>Monitoramento das Estratégias de Vacinação</td>
 <td>2</td>
 <td>D2</td>
 </tr>
@@ -108880,7 +109298,7 @@
 <td>56</td>
 <td>Vacina sarampo, caxumba, rubéola e varicela</td>
 <td>9</td>
-<td>Monitoramento Rápido de Cobertura Vacinal</td>
+<td>Monitoramento das Estratégias de Vacinação</td>
 <td>9</td>
 <td>DU</td>
 </tr>
@@ -109138,7 +109556,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>59</td>
-<td>P1</td>
+<td>P/T1</td>
 </tr>
 <tr>
 <td>69</td>
@@ -109146,7 +109564,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>60</td>
-<td>P2</td>
+<td>P/T2</td>
 </tr>
 <tr>
 <td>69</td>
@@ -109154,7 +109572,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>61</td>
-<td>P3</td>
+<td>P/T3</td>
 </tr>
 <tr>
 <td>69</td>
@@ -109162,7 +109580,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>62</td>
-<td>P4</td>
+<td>P/T4</td>
 </tr>
 <tr>
 <td>69</td>
@@ -109170,7 +109588,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>63</td>
-<td>P5</td>
+<td>P/T5</td>
 </tr>
 <tr>
 <td>69</td>
@@ -109178,7 +109596,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>64</td>
-<td>P6</td>
+<td>P/T6</td>
 </tr>
 <tr>
 <td>69</td>
@@ -109186,7 +109604,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>65</td>
-<td>P7</td>
+<td>P/T7</td>
 </tr>
 <tr>
 <td>69</td>
@@ -109194,7 +109612,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>66</td>
-<td>P8</td>
+<td>P/T8</td>
 </tr>
 <tr>
 <td>69</td>
@@ -109202,7 +109620,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>67</td>
-<td>P9</td>
+<td>P/T9</td>
 </tr>
 <tr>
 <td>69</td>
@@ -109210,7 +109628,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>68</td>
-<td>P10</td>
+<td>P/T10</td>
 </tr>
 <tr>
 <td>69</td>
@@ -109218,7 +109636,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>69</td>
-<td>P11</td>
+<td>P/T11</td>
 </tr>
 <tr>
 <td>69</td>
@@ -109226,7 +109644,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>70</td>
-<td>P12</td>
+<td>P/T12</td>
 </tr>
 <tr>
 <td>69</td>
@@ -109234,7 +109652,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>71</td>
-<td>P13</td>
+<td>P/T13</td>
 </tr>
 <tr>
 <td>69</td>
@@ -109242,7 +109660,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>72</td>
-<td>P14</td>
+<td>P/T14</td>
 </tr>
 <tr>
 <td>69</td>
@@ -109250,7 +109668,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>73</td>
-<td>P15</td>
+<td>P/T15</td>
 </tr>
 <tr>
 <td>69</td>
@@ -109258,7 +109676,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>74</td>
-<td>P16</td>
+<td>P/T16</td>
 </tr>
 <tr>
 <td>69</td>
@@ -109266,7 +109684,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>75</td>
-<td>P17</td>
+<td>P/T17</td>
 </tr>
 <tr>
 <td>69</td>
@@ -109274,7 +109692,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>76</td>
-<td>P18</td>
+<td>P/T18</td>
 </tr>
 <tr>
 <td>69</td>
@@ -109282,7 +109700,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>77</td>
-<td>P19</td>
+<td>P/T19</td>
 </tr>
 <tr>
 <td>69</td>
@@ -109290,7 +109708,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>78</td>
-<td>P20</td>
+<td>P/T20</td>
 </tr>
 <tr>
 <td>69</td>
@@ -109298,7 +109716,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>79</td>
-<td>P21</td>
+<td>P/T21</td>
 </tr>
 <tr>
 <td>69</td>
@@ -109306,7 +109724,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>80</td>
-<td>P22</td>
+<td>P/T22</td>
 </tr>
 <tr>
 <td>69</td>
@@ -109314,7 +109732,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>81</td>
-<td>P23</td>
+<td>P/T23</td>
 </tr>
 <tr>
 <td>69</td>
@@ -109322,7 +109740,7 @@
 <td>7</td>
 <td>Soroterapia</td>
 <td>82</td>
-<td>P24</td>
+<td>P/T24</td>
 </tr>
 <tr>
 <td>74</td>
@@ -109505,6 +109923,46 @@
 <td>Vacina meningo ACWY</td>
 <td>14</td>
 <td>Vacinação escolar</td>
+<td>38</td>
+<td>REF</td>
+</tr>
+<tr>
+<td>74</td>
+<td>Vacina meningo ACWY</td>
+<td>9</td>
+<td>Monitoramento das Estratégias de Vacinação</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>74</td>
+<td>Vacina meningo ACWY</td>
+<td>9</td>
+<td>Monitoramento das Estratégias de Vacinação</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>74</td>
+<td>Vacina meningo ACWY</td>
+<td>9</td>
+<td>Monitoramento das Estratégias de Vacinação</td>
+<td>8</td>
+<td>D</td>
+</tr>
+<tr>
+<td>74</td>
+<td>Vacina meningo ACWY</td>
+<td>9</td>
+<td>Monitoramento das Estratégias de Vacinação</td>
+<td>9</td>
+<td>DU</td>
+</tr>
+<tr>
+<td>74</td>
+<td>Vacina meningo ACWY</td>
+<td>9</td>
+<td>Monitoramento das Estratégias de Vacinação</td>
 <td>38</td>
 <td>REF</td>
 </tr>
@@ -109533,118 +109991,6 @@
 <td>D2</td>
 </tr>
 <tr>
-<td>86</td>
-<td>Vacina COVID-19-inativada, Sinovac/Butantan (Coronavac)</td>
-<td>1</td>
-<td>Rotina</td>
-<td>1</td>
-<td>D1</td>
-</tr>
-<tr>
-<td>86</td>
-<td>Vacina COVID-19-inativada, Sinovac/Butantan (Coronavac)</td>
-<td>1</td>
-<td>Rotina</td>
-<td>2</td>
-<td>D2</td>
-</tr>
-<tr>
-<td>86</td>
-<td>Vacina COVID-19-inativada, Sinovac/Butantan (Coronavac)</td>
-<td>1</td>
-<td>Rotina</td>
-<td>6</td>
-<td>R1</td>
-</tr>
-<tr>
-<td>86</td>
-<td>Vacina COVID-19-inativada, Sinovac/Butantan (Coronavac)</td>
-<td>6</td>
-<td>Campanha seletiva</td>
-<td>1</td>
-<td>D1</td>
-</tr>
-<tr>
-<td>86</td>
-<td>Vacina COVID-19-inativada, Sinovac/Butantan (Coronavac)</td>
-<td>6</td>
-<td>Campanha seletiva</td>
-<td>2</td>
-<td>D2</td>
-</tr>
-<tr>
-<td>86</td>
-<td>Vacina COVID-19-inativada, Sinovac/Butantan (Coronavac)</td>
-<td>6</td>
-<td>Campanha seletiva</td>
-<td>3</td>
-<td>D3</td>
-</tr>
-<tr>
-<td>86</td>
-<td>Vacina COVID-19-inativada, Sinovac/Butantan (Coronavac)</td>
-<td>6</td>
-<td>Campanha seletiva</td>
-<td>6</td>
-<td>R1</td>
-</tr>
-<tr>
-<td>86</td>
-<td>Vacina COVID-19-inativada, Sinovac/Butantan (Coronavac)</td>
-<td>6</td>
-<td>Campanha seletiva</td>
-<td>7</td>
-<td>R2</td>
-</tr>
-<tr>
-<td>86</td>
-<td>Vacina COVID-19-inativada, Sinovac/Butantan (Coronavac)</td>
-<td>6</td>
-<td>Campanha seletiva</td>
-<td>10</td>
-<td>REV</td>
-</tr>
-<tr>
-<td>86</td>
-<td>Vacina COVID-19-inativada, Sinovac/Butantan (Coronavac)</td>
-<td>6</td>
-<td>Campanha seletiva</td>
-<td>32</td>
-<td>D1REV</td>
-</tr>
-<tr>
-<td>86</td>
-<td>Vacina COVID-19-inativada, Sinovac/Butantan (Coronavac)</td>
-<td>6</td>
-<td>Campanha seletiva</td>
-<td>33</td>
-<td>D2REV</td>
-</tr>
-<tr>
-<td>86</td>
-<td>Vacina COVID-19-inativada, Sinovac/Butantan (Coronavac)</td>
-<td>6</td>
-<td>Campanha seletiva</td>
-<td>34</td>
-<td>D3REV</td>
-</tr>
-<tr>
-<td>86</td>
-<td>Vacina COVID-19-inativada, Sinovac/Butantan (Coronavac)</td>
-<td>6</td>
-<td>Campanha seletiva</td>
-<td>35</td>
-<td>D4REV</td>
-</tr>
-<tr>
-<td>86</td>
-<td>Vacina COVID-19-inativada, Sinovac/Butantan (Coronavac)</td>
-<td>6</td>
-<td>Campanha seletiva</td>
-<td>43</td>
-<td>D5REV</td>
-</tr>
-<tr>
 <td>87</td>
 <td>Vacina COVID-19-RNAm, Pfizer (Comirnaty)</td>
 <td>1</td>
@@ -109915,94 +110261,6 @@
 <td>Vacinação escolar</td>
 <td>2</td>
 <td>D2</td>
-</tr>
-<tr>
-<td>98</td>
-<td>Vacina COVID-19-inativada, Sinovac (Coronavac)</td>
-<td>6</td>
-<td>Campanha seletiva</td>
-<td>1</td>
-<td>D1</td>
-</tr>
-<tr>
-<td>98</td>
-<td>Vacina COVID-19-inativada, Sinovac (Coronavac)</td>
-<td>6</td>
-<td>Campanha seletiva</td>
-<td>2</td>
-<td>D2</td>
-</tr>
-<tr>
-<td>98</td>
-<td>Vacina COVID-19-inativada, Sinovac (Coronavac)</td>
-<td>6</td>
-<td>Campanha seletiva</td>
-<td>3</td>
-<td>D3</td>
-</tr>
-<tr>
-<td>98</td>
-<td>Vacina COVID-19-inativada, Sinovac (Coronavac)</td>
-<td>6</td>
-<td>Campanha seletiva</td>
-<td>6</td>
-<td>R1</td>
-</tr>
-<tr>
-<td>98</td>
-<td>Vacina COVID-19-inativada, Sinovac (Coronavac)</td>
-<td>6</td>
-<td>Campanha seletiva</td>
-<td>7</td>
-<td>R2</td>
-</tr>
-<tr>
-<td>98</td>
-<td>Vacina COVID-19-inativada, Sinovac (Coronavac)</td>
-<td>6</td>
-<td>Campanha seletiva</td>
-<td>10</td>
-<td>REV</td>
-</tr>
-<tr>
-<td>98</td>
-<td>Vacina COVID-19-inativada, Sinovac (Coronavac)</td>
-<td>6</td>
-<td>Campanha seletiva</td>
-<td>32</td>
-<td>D1REV</td>
-</tr>
-<tr>
-<td>98</td>
-<td>Vacina COVID-19-inativada, Sinovac (Coronavac)</td>
-<td>6</td>
-<td>Campanha seletiva</td>
-<td>33</td>
-<td>D2REV</td>
-</tr>
-<tr>
-<td>98</td>
-<td>Vacina COVID-19-inativada, Sinovac (Coronavac)</td>
-<td>6</td>
-<td>Campanha seletiva</td>
-<td>34</td>
-<td>D3REV</td>
-</tr>
-<tr>
-<td>98</td>
-<td>Vacina COVID-19-inativada, Sinovac (Coronavac)</td>
-<td>6</td>
-<td>Campanha seletiva</td>
-<td>35</td>
-<td>D4REV</td>
-</tr>
-<tr>
-<td>98</td>
-<td>Vacina COVID-19-inativada, Sinovac (Coronavac)</td>
-<td>6</td>
-<td>Campanha seletiva</td>
-<td>43</td>
-<td>D5REV</td>
 </tr>
 <tr>
 <td>99</td>
@@ -110323,62 +110581,6 @@
 <td>Vacinação escolar</td>
 <td>3</td>
 <td>D3</td>
-</tr>
-<tr>
-<td>103</td>
-<td>Vacina COVID-19-RNAm, Pfizer (Comirnaty) bivalente</td>
-<td>6</td>
-<td>Campanha seletiva</td>
-<td>1</td>
-<td>D1</td>
-</tr>
-<tr>
-<td>103</td>
-<td>Vacina COVID-19-RNAm, Pfizer (Comirnaty) bivalente</td>
-<td>6</td>
-<td>Campanha seletiva</td>
-<td>2</td>
-<td>D2</td>
-</tr>
-<tr>
-<td>103</td>
-<td>Vacina COVID-19-RNAm, Pfizer (Comirnaty) bivalente</td>
-<td>6</td>
-<td>Campanha seletiva</td>
-<td>3</td>
-<td>D3</td>
-</tr>
-<tr>
-<td>103</td>
-<td>Vacina COVID-19-RNAm, Pfizer (Comirnaty) bivalente</td>
-<td>6</td>
-<td>Campanha seletiva</td>
-<td>32</td>
-<td>D1REV</td>
-</tr>
-<tr>
-<td>103</td>
-<td>Vacina COVID-19-RNAm, Pfizer (Comirnaty) bivalente</td>
-<td>6</td>
-<td>Campanha seletiva</td>
-<td>33</td>
-<td>D2REV</td>
-</tr>
-<tr>
-<td>103</td>
-<td>Vacina COVID-19-RNAm, Pfizer (Comirnaty) bivalente</td>
-<td>6</td>
-<td>Campanha seletiva</td>
-<td>34</td>
-<td>D3REV</td>
-</tr>
-<tr>
-<td>103</td>
-<td>Vacina COVID-19-RNAm, Pfizer (Comirnaty) bivalente</td>
-<td>6</td>
-<td>Campanha seletiva</td>
-<td>38</td>
-<td>REF</td>
 </tr>
 <tr>
 <td>104</td>
@@ -111196,6 +111398,43 @@
       <article class="post-content">
         <p>Este documento relata as principais alterações entre as últimas versões do LEDI APS:</p>
 
+<h2 id="vers-o-7-2-1">Versão 7.2.1</h2>
+
+<h3 id="1-atualiza-es-de-vacina-o">1. Atualizações de vacinação</h3>
+
+<p>Atualização de regras dos seguintes imunobiológicos:</p>
+
+<ul>
+<li>Vacina pneumo 10 (código 26);</li>
+<li>Vacina raiva (código 37);</li>
+<li>Vacina penta (DTP/HepB/Hib) (código 42);</li>
+<li>Vacina DTP (código 46);</li>
+<li>Vacina dengue (atenuada) (código 104);</li>
+<li>Vacina febre amarela (código 14);</li>
+<li>Vacina pneumo 10 (código 26);</li>
+<li>Vacina raiva (código 37);</li>
+<li>Vacina meningo C (código 41);</li>
+<li>Vacina DTP (código 46);</li>
+<li>Vacina meningo ACWY (código 74);</li>
+<li>Vacina COVID-19-inativada, Sinovac/Butantan (Coronavac) (código 86);</li>
+<li>Vacina COVID-19-inativada, Sinovac (Coronavac) (código 98);</li>
+<li>Vacina COVID-19-RNAm, Pfizer (Comirnaty) bivalente (código 103).</li>
+</ul>
+
+<h3 id="2-atualiza-es-em-procedimentos-de-evolu-o-odontol-gica">2. Atualizações em procedimentos de evolução odontológica</h3>
+
+<p>Disponibilização dos seguintes procedimentos do grupo <code>07 - Órteses, próteses e materiais especiais</code> para registro na Ficha de atendimento odontológico individual:</p>
+
+<ul>
+<li>07.01.07.001-3 - APARELHO FIXO BILATERAL PARA FECHAMENTO DE DIASTEMA;</li>
+<li>07.01.07.002-1 - APARELHO ORTOPÉDICO E ORTODÔNTICO REMOVÍVEL;</li>
+<li>07.01.07.003-0 - APARELHO P/ BLOQUEIO MAXILO-MANDIBULAR;</li>
+<li>07.01.07.017-0 - APARELHO ORTODÔNTICO FIXO;</li>
+<li>07.01.07.016-1 - APARELHO ORTOPÉDICO FIXO;</li>
+<li>07.01.07.015-3 - PRÓTESE DENTÁRIA SOBRE IMPLANTE;</li>
+<li>07.01.07.004-8 - COROA DE ACO E POLICARBOXILATO.</li>
+</ul>
+
 <h2 id="vers-o-7-2-0">Versão 7.2.0</h2>
 
 <h3 id="1-atualiza-o-no-modelo-de-dados-para-transmiss-o-de-procedimentos-de-oferta-de-cuidado-integrado">1. Atualização no modelo de dados para transmissão de procedimentos de Oferta de Cuidado Integrado</h3>
@@ -111449,9 +111688,17 @@ Alterações da nomenclatura da Estratégia de código 9, anteriormente denomina
       <article class="post-content">
         <p>Este documento relata as principais alterações entre as versões do DW.</p>
 
-<h3 id="1-principais-altera-es-da-v-5-4-0-para-a-v-5-4-1-do-e-sus-aps">1. Principais alterações da v.5.4.0 para a v.5.4.1 do e-SUS APS:</h3>
+<h3 id="principais-altera-es-da-v-5-4-7-para-a-v-5-4-8-do-e-sus-aps">Principais alterações da v.5.4.7 para a v.5.4.8 do e-SUS APS:</h3>
 
-<p><strong>1. </strong> Inclusão de campos nas <code>tb_fat_atd_ind_procedimentos</code>, <code>tb_fat_atend_odonto_proced</code> e <code>tb_fat_atend_odonto_exames</code>:</p>
+<p><strong>1. </strong> Inclusão da coluna <code>co_fat_cidadao_pec</code> na <code>tb_acomp_cidadaos_vinculados</code>.</p>
+
+<h3 id="principais-altera-es-da-v-5-4-6-para-a-v-5-4-7-do-e-sus-aps">Principais alterações da v.5.4.6 para a v.5.4.7 do e-SUS APS:</h3>
+
+<p><strong>2. </strong> Inclusão da tabela <code>tb_fat_solicitacao_oci</code>, populada sempre que atendimentos individuais e odontológicos com algum registro de procedimentos do grupo <code>09 - Procedimento para Oferta de Cuidado Integrado</code> são processados.</p>
+
+<h3 id="principais-altera-es-da-v-5-4-0-para-a-v-5-4-1-do-e-sus-aps">Principais alterações da v.5.4.0 para a v.5.4.1 do e-SUS APS:</h3>
+
+<p><strong>3. </strong> Inclusão de campos nas <code>tb_fat_atd_ind_procedimentos</code>, <code>tb_fat_atend_odonto_proced</code> e <code>tb_fat_atend_odonto_exames</code>:</p>
 
 <ul>
 <li>co_dim_faixa_etaria: Código da faixa etária. Campo <code>co_seq_dim_faixa_etaria</code> da <code>tb_dim_faixa_etaria</code>;</li>
@@ -111461,9 +111708,9 @@ Alterações da nomenclatura da Estratégia de código 9, anteriormente denomina
 <li>co_dim_sexo: Código do sexo. Campo <code>co_seq_dim_faixa_sexo</code> da <code>tb_dim_sexo</code>.</li>
 </ul>
 
-<h3 id="2-principais-altera-es-da-v-5-3-25-para-a-v-5-3-26-do-e-sus-aps">2. Principais alterações da v.5.3.25 para a v.5.3.26 do e-SUS APS:</h3>
+<h3 id="principais-altera-es-da-v-5-3-25-para-a-v-5-3-26-do-e-sus-aps">Principais alterações da v.5.3.25 para a v.5.3.26 do e-SUS APS:</h3>
 
-<p><strong>2. </strong> Inclusão de campos na <code>tb_acomp_cidadaos_vinculados</code>:</p>
+<p><strong>4. </strong> Inclusão de campos na <code>tb_acomp_cidadaos_vinculados</code>:</p>
 
 <ul>
 <li>co_cds_domicilio: Código identificador do domicílio ao qual o cidadão está vinculado;</li>
@@ -111471,9 +111718,9 @@ Alterações da nomenclatura da Estratégia de código 9, anteriormente denomina
 <li>no_raca_cor: Nome da <a href="/ledi/documentacao/referencias/dicionario.html#racacor">Raça/Cor</a> do cidadão.</li>
 </ul>
 
-<h3 id="3-principais-altera-es-da-v-5-3-20-para-a-v-5-3-21-do-e-sus-aps">3. Principais alterações da v.5.3.20 para a v.5.3.21 do e-SUS APS:</h3>
+<h3 id="principais-altera-es-da-v-5-3-20-para-a-v-5-3-21-do-e-sus-aps">Principais alterações da v.5.3.20 para a v.5.3.21 do e-SUS APS:</h3>
 
-<p><strong>3. </strong> Inclusão da tabela <code>tb_dim_grau_vulnerabilidade</code>:</p>
+<p><strong>5. </strong> Inclusão da tabela <code>tb_dim_grau_vulnerabilidade</code>:</p>
 
 <ul>
 <li>co_seq_dim_grau_vulnerabilidade: Código de identificação sequencial;</li>
@@ -111481,13 +111728,13 @@ Alterações da nomenclatura da Estratégia de código 9, anteriormente denomina
 <li>ds_grau: Descrição do grau de vulnerabilidade.</li>
 </ul>
 
-<h3 id="4-principais-altera-es-da-v-5-3-14-para-a-v-5-3-15-do-e-sus-aps">4. Principais alterações da v.5.3.14 para a v.5.3.15 do e-SUS APS:</h3>
+<h3 id="principais-altera-es-da-v-5-3-14-para-a-v-5-3-15-do-e-sus-aps">Principais alterações da v.5.3.14 para a v.5.3.15 do e-SUS APS:</h3>
 
-<p><strong>4. </strong> Inclusão da tabela <code>tb_dim_situacao_problema</code>, contendo todas as possíveis situações que podem ser preenchidas na lista de problemas e condições.</p>
+<p><strong>6. </strong> Inclusão da tabela <code>tb_dim_situacao_problema</code>, contendo todas as possíveis situações que podem ser preenchidas na lista de problemas e condições.</p>
 
-<p><strong>5. </strong> Renomeação da tabela <code>tb_fat_atend_dom_condicao_aval</code> para <code>tb_fat_atend_dom_prob_cond</code>.</p>
+<p><strong>7. </strong> Renomeação da tabela <code>tb_fat_atend_dom_condicao_aval</code> para <code>tb_fat_atend_dom_prob_cond</code>.</p>
 
-<p><strong>6. </strong> Inclusão de novos campos nas tabelas de fato <code>tb_fat_atd_ind_problemas</code>, <code>tb_fat_atend_odonto_problemas</code> e <code>tb_fat_atend_dom_prob_cond</code>:</p>
+<p><strong>8. </strong> Inclusão de novos campos nas tabelas de fato <code>tb_fat_atd_ind_problemas</code>, <code>tb_fat_atend_odonto_problemas</code> e <code>tb_fat_atend_dom_prob_cond</code>:</p>
 
 <ul>
 <li>nu_uuid_problema: Código identificador único do problema ou condição;</li>
@@ -111499,7 +111746,7 @@ Alterações da nomenclatura da Estratégia de código 9, anteriormente denomina
 <li>st_avaliado: Indicador se o problema ou condição foi avaliado durante o atendimento.</li>
 </ul>
 
-<p><strong>7. </strong> Inclusão de novos campos nas tabelas de fato <code>tb_fat_atd_ind_medicamentos</code> e <code>tb_fat_atend_odonto_medicamentos</code>:</p>
+<p><strong>9. </strong> Inclusão de novos campos nas tabelas de fato <code>tb_fat_atd_ind_medicamentos</code> e <code>tb_fat_atend_odonto_medicamentos</code>:</p>
 
 <ul>
 <li>qt_dose_manha;</li>
@@ -111507,9 +111754,9 @@ Alterações da nomenclatura da Estratégia de código 9, anteriormente denomina
 <li>qt_dose_noite.</li>
 </ul>
 
-<h3 id="5-principais-altera-es-da-v-5-3-6-para-a-v-5-3-7-do-e-sus-aps">5. Principais alterações da v.5.3.6 para a v.5.3.7 do e-SUS APS:</h3>
+<h3 id="principais-altera-es-da-v-5-3-6-para-a-v-5-3-7-do-e-sus-aps">Principais alterações da v.5.3.6 para a v.5.3.7 do e-SUS APS:</h3>
 
-<p><strong>8. </strong> Inclusão de novos campos nas tabelas de fato <code>tb_fat_atendimento_individual</code>, <code>tb_fat_proced_atend</code> e <code>tb_fat_atendimento_odonto</code>:</p>
+<p><strong>10. </strong> Inclusão de novos campos nas tabelas de fato <code>tb_fat_atendimento_individual</code>, <code>tb_fat_proced_atend</code> e <code>tb_fat_atendimento_odonto</code>:</p>
 
 <ul>
 <li>nu_medicao_circ_abdominal: Circunferência abdominal do cidadão em centímetros;</li>
@@ -111527,42 +111774,42 @@ Alterações da nomenclatura da Estratégia de código 9, anteriormente denomina
 <li>nu_perimetro_cefalico: Perímetro cefálico do cidadão em centímetros.</li>
 </ul>
 
-<h3 id="6-principais-altera-es-da-v-5-2-36-para-a-v-5-2-37-do-e-sus-aps">6. Principais alterações da v.5.2.36 para a v.5.2.37 do e-SUS APS:</h3>
+<h3 id="principais-altera-es-da-v-5-2-36-para-a-v-5-2-37-do-e-sus-aps">Principais alterações da v.5.2.36 para a v.5.2.37 do e-SUS APS:</h3>
 
-<p><strong>9. </strong> Inclusão do detalhamento dos fatos:</p>
+<p><strong>11. </strong> Inclusão do detalhamento dos fatos:</p>
 
 <ul>
 <li><a href="/dw/fatos/atendimento_individual/index.html">Atendimento individual</a>;</li>
 <li><a href="/dw/fatos/procedimentos/index.html">Procedimentos</a>.</li>
 </ul>
 
-<h3 id="7-principais-altera-es-da-v5-2-33-para-a-v-5-2-34-do-e-sus-aps">7. Principais alterações da v5.2.33 para a v.5.2.34 do e-SUS APS:</h3>
+<h3 id="principais-altera-es-da-v5-2-33-para-a-v-5-2-34-do-e-sus-aps">Principais alterações da v5.2.33 para a v.5.2.34 do e-SUS APS:</h3>
 
-<p><strong>10. </strong> Inclusão da seção de <a href="/dw/visualizacoes/index.html">Visualizações</a>, com a nova <a href="/dw/visualizacoes/acompanhamento_cidadaos_vinculados.html">Tabela de acompanhamento de cidadãos vinculados</a>.</p>
+<p><strong>12. </strong> Inclusão da seção de <a href="/dw/visualizacoes/index.html">Visualizações</a>, com a nova <a href="/dw/visualizacoes/acompanhamento_cidadaos_vinculados.html">Tabela de acompanhamento de cidadãos vinculados</a>.</p>
 
-<h3 id="8-principais-altera-es-da-v5-2-16-para-a-v-5-2-17-do-e-sus-aps">8. Principais alterações da v5.2.16 para a v.5.2.17 do e-SUS APS:</h3>
+<h3 id="principais-altera-es-da-v5-2-16-para-a-v-5-2-17-do-e-sus-aps">Principais alterações da v5.2.16 para a v.5.2.17 do e-SUS APS:</h3>
 
-<p><strong>11. </strong> No contexto de <a href="/dw/fatos/cuidado_compartilhado/index.html">Cuidado compartilhado</a> foram incluídas as estruturas de dados para registro da informação do cuidado compartilhado. Esta informação está armazenada na tabela: <code>tb_fat_cuidado_compartilhado</code>.</p>
+<p><strong>13. </strong> No contexto de <a href="/dw/fatos/cuidado_compartilhado/index.html">Cuidado compartilhado</a> foram incluídas as estruturas de dados para registro da informação do cuidado compartilhado. Esta informação está armazenada na tabela: <code>tb_fat_cuidado_compartilhado</code>.</p>
 
-<p><strong>12. </strong> Para contextualizar as informações da tabela <code>tb_fat_cuidado_compartilhado</code>, foram criadas as seguintes tabelas de dimensão: <code>tb_dim_conduta_cuidado</code>e <code>tb_dim_prioridade_cuidado</code>.</p>
+<p><strong>14. </strong> Para contextualizar as informações da tabela <code>tb_fat_cuidado_compartilhado</code>, foram criadas as seguintes tabelas de dimensão: <code>tb_dim_conduta_cuidado</code>e <code>tb_dim_prioridade_cuidado</code>.</p>
 
-<p><strong>13. </strong> Inclusão do tipo de ficha &quot;ESUS PEC Cuidado compartilhado&quot; na <code>tb_dim_tipo_ficha</code>.</p>
+<p><strong>15. </strong> Inclusão do tipo de ficha &quot;ESUS PEC Cuidado compartilhado&quot; na <code>tb_dim_tipo_ficha</code>.</p>
 
-<h3 id="9-principais-altera-es-da-v5-2-4-para-a-v-5-2-5-do-e-sus-aps">9. Principais alterações da v5.2.4 para a v.5.2.5 do e-SUS APS:</h3>
+<h3 id="principais-altera-es-da-v5-2-4-para-a-v-5-2-5-do-e-sus-aps">Principais alterações da v5.2.4 para a v.5.2.5 do e-SUS APS:</h3>
 
 <p><strong>1. </strong> Inclusão da tabela de dimensões referente ao vínculo entre equipes: <code>tb_dim_vinculacao_equipes</code>.</p>
 
-<h3 id="10-principais-altera-es-da-v4-2-1-para-a-v4-2-3">10. Principais alterações da v4.2.1 para a v4.2.3:</h3>
+<h3 id="principais-altera-es-da-v4-2-1-para-a-v4-2-3">Principais alterações da v4.2.1 para a v4.2.3:</h3>
 
 <p><strong>1. </strong> No contexto de <a href="/dw/fatos/procedimentos/index.html">Procedimentos</a> foram incluídos os campos <code>nu_peso</code> e <code>nu_altura</code>.</p>
 
 <p><strong>2. </strong> No contexto de <a href="/dw/fatos/atendimento_odontologico/index.html">Atendimento odontológico</a> foram incluídos os campos <code>nu_peso</code> e <code>nu_altura</code>.</p>
 
-<h3 id="11-principais-altera-es-da-v4-2-0-para-a-v4-2-1">11. Principais alterações da v4.2.0 para a v4.2.1:</h3>
+<h3 id="principais-altera-es-da-v4-2-0-para-a-v4-2-1">Principais alterações da v4.2.0 para a v4.2.1:</h3>
 
 <p><strong>1. </strong> No contexto de <a href="/dw/fatos/cadastro_individual.html">Cadastro individual</a> foi incluído o campo <code>co_dim_povo_comunidade_tradicional</code>. Além deste campo, também foi criada a tabela de dimensão <a href="/dw/dimensoes/dim_povo_comunidad_trad.html">tb_dim_povo_comunidade_tradicional</a>.</p>
 
-<h3 id="12-principais-altera-es-da-v4-1-4-para-a-v4-2-0">12. Principais alterações da v4.1.4 para a v4.2.0:</h3>
+<h3 id="principais-altera-es-da-v4-1-4-para-a-v4-2-0">Principais alterações da v4.1.4 para a v4.2.0:</h3>
 
 <p><strong>1. </strong> No contexto de <a href="/dw/fatos/atendimento_individual/index.html">Atendimento individual</a> e <a href="/dw/fatos/atendimento_odontologico/index.html">Atendimento odontológico</a> foram incluídas as estruturas de dados para registro das informações de resultados de exames. Estas informações estão armazenadas nas tabelas:</p>
 
@@ -111577,7 +111824,7 @@ Alterações da nomenclatura da Estratégia de código 9, anteriormente denomina
 
 <p><strong>4. </strong> No contexto de <a href="/dw/fatos/vacinacao.html">Vacinação</a> foram incluídos os campos <code>st_registro_anterior</code> e <code>co_dim_tempo_vacina_aplicada</code>.</p>
 
-<h3 id="13-principais-altera-es-da-v4-1-2-para-a-v4-1-4">13. Principais alterações da v4.1.2 para a v4.1.4:</h3>
+<h3 id="principais-altera-es-da-v4-1-2-para-a-v4-1-4">Principais alterações da v4.1.2 para a v4.1.4:</h3>
 
 <p><strong>1. </strong> No contexto de <a href="/dw/fatos/vacinacao.html">Vacinação</a> foram incluídas as estruturas de dados para registro da informação de grupo de atendimento. Esta informação está armazenada na tabela: <code>tb_fat_vacinacao_vacina</code>.</p>
 
@@ -112282,7 +112529,7 @@ Alterações da nomenclatura da Estratégia de código 9, anteriormente denomina
 </tr>
 <tr>
 <td>nu_cpf_cidadao</td>
-<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#25-cpfcidadao">cpfCidadao</a></td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#24-cpfcidadao">cpfCidadao</a></td>
 <td>CPF do cidadão</td>
 </tr>
 <tr>
@@ -112428,37 +112675,37 @@ Alterações da nomenclatura da Estratégia de código 9, anteriormente denomina
 </tr>
 <tr>
 <td>st_encaminhamento_serv_special</td>
-<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#27-encaminhamentos">Encaminhamentos</a></td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#26-encaminhamentos">Encaminhamentos</a></td>
 <td>Status que indica o encaminhamento para &quot;Serviço especializado&quot;</td>
 </tr>
 <tr>
 <td>st_encaminhamento_caps</td>
-<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#27-encaminhamentos">Encaminhamentos</a></td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#26-encaminhamentos">Encaminhamentos</a></td>
 <td>Status que indica o encaminhamento para &quot;CAPS&quot;</td>
 </tr>
 <tr>
 <td>st_encaminhamento_intern_hospi</td>
-<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#27-encaminhamentos">Encaminhamentos</a></td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#26-encaminhamentos">Encaminhamentos</a></td>
 <td>Status que indica o encaminhamento para &quot;Internação hospitalar&quot;</td>
 </tr>
 <tr>
 <td>st_encaminhamento_urgencia</td>
-<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#27-encaminhamentos">Encaminhamentos</a></td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#26-encaminhamentos">Encaminhamentos</a></td>
 <td>Status que indica o encaminhamento para &quot;Urgência&quot;</td>
 </tr>
 <tr>
 <td>st_encaminhamento_servico_ad</td>
-<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#27-encaminhamentos">Encaminhamentos</a></td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#26-encaminhamentos">Encaminhamentos</a></td>
 <td>Status que indica o encaminhamento para &quot;Serviço de Atenção Domiciliar&quot;</td>
 </tr>
 <tr>
 <td>st_encaminhamento_intersetoria</td>
-<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#27-encaminhamentos">Encaminhamentos</a></td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#26-encaminhamentos">Encaminhamentos</a></td>
 <td>Status que indica o encaminhamento para &quot;Intersetorial&quot;</td>
 </tr>
 <tr>
 <td>st_encaminhamento_interno_dia</td>
-<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#27-encaminhamentos">Encaminhamentos</a></td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#26-encaminhamentos">Encaminhamentos</a></td>
 <td>Status que indica o encaminhamento onde cidadão foi reinserido na lista de atendimento</td>
 </tr>
 <tr>
@@ -112483,12 +112730,12 @@ Alterações da nomenclatura da Estratégia de código 9, anteriormente denomina
 </tr>
 <tr>
 <td>dt_inicial_atendimento</td>
-<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#23-datahorainicialatendimento">dataHoraInicialAtendimento</a></td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#22-datahorainicialatendimento">dataHoraInicialAtendimento</a></td>
 <td>Data e hora do início do atendimento no formato &quot;YYYY-MM-DD HH:MM:SS.MMM&quot;</td>
 </tr>
 <tr>
 <td>dt_final_atendimento</td>
-<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#24-datahorafinalatendimento">dataHoraFinalAtendimento</a></td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#23-datahorafinalatendimento">dataHoraFinalAtendimento</a></td>
 <td>Data e hora do fim do atendimento no formato &quot;YYYY-MM-DD HH:MM:SS.MMM&quot;</td>
 </tr>
 <tr>
@@ -112721,7 +112968,7 @@ Alterações da nomenclatura da Estratégia de código 9, anteriormente denomina
 </tr>
 <tr>
 <td>nu_cpf_cidadao</td>
-<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#25-cpfcidadao">cpfCidadao</a></td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#24-cpfcidadao">cpfCidadao</a></td>
 <td>CPF do cidadão</td>
 </tr>
 <tr>
@@ -112845,7 +113092,7 @@ Alterações da nomenclatura da Estratégia de código 9, anteriormente denomina
 
 <h1 id="2-regras">2. Regras</h1>
 
-<p><strong>1. </strong> A <code>tb_fat_atd_ind_exames</code> é preenchida de acordo com as <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#28-resultadosexames">regras</a>.</p>
+<p><strong>1. </strong> A <code>tb_fat_atd_ind_exames</code> é preenchida de acordo com as <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#27-resultadosexames">regras</a>.</p>
 
 <h1 id="3-fatos">3. Fatos</h1>
 
@@ -112890,7 +113137,7 @@ Alterações da nomenclatura da Estratégia de código 9, anteriormente denomina
 </tr>
 <tr>
 <td>nu_cpf_cidadao</td>
-<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#25-cpfcidadao">cpfCidadao</a></td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#24-cpfcidadao">cpfCidadao</a></td>
 <td>CPF do cidadão</td>
 </tr>
 <tr>
@@ -113074,7 +113321,7 @@ Alterações da nomenclatura da Estratégia de código 9, anteriormente denomina
 </tr>
 <tr>
 <td>nu_cpf_cidadao</td>
-<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#25-cpfcidadao">cpfCidadao</a></td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#24-cpfcidadao">cpfCidadao</a></td>
 <td>CPF do cidadão</td>
 </tr>
 <tr>
@@ -113309,7 +113556,7 @@ Alterações da nomenclatura da Estratégia de código 9, anteriormente denomina
 </tr>
 <tr>
 <td>nu_cpf_cidadao</td>
-<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#25-cpfcidadao">cpfCidadao</a></td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#24-cpfcidadao">cpfCidadao</a></td>
 <td>CPF do cidadão</td>
 </tr>
 <tr>
@@ -113528,7 +113775,7 @@ Alterações da nomenclatura da Estratégia de código 9, anteriormente denomina
 </tr>
 <tr>
 <td>nu_cpf_cidadao</td>
-<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#25-cpfcidadao">cpfCidadao</a></td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#24-cpfcidadao">cpfCidadao</a></td>
 <td>CPF do cidadão</td>
 </tr>
 <tr>
@@ -113549,7 +113796,7 @@ Alterações da nomenclatura da Estratégia de código 9, anteriormente denomina
 </thead><tbody>
 <tr>
 <td>dt_inicial_atendimento</td>
-<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#23-datahorainicialatendimento">dataHoraInicialAtendimento</a></td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#22-datahorainicialatendimento">dataHoraInicialAtendimento</a></td>
 <td>Data e hora do início do atendimento no formato &quot;YYYY-MM-DD HH:MM:SS.MMM&quot;</td>
 </tr>
 </tbody></table>
@@ -113765,7 +114012,7 @@ Alterações da nomenclatura da Estratégia de código 9, anteriormente denomina
 </tr>
 <tr>
 <td>nu_cpf_cidadao</td>
-<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fao.html#18-cpfcidadao">cpfCidadao</a></td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fao.html#19-cpfcidadao">cpfCidadao</a></td>
 <td>CPF do cidadão</td>
 </tr>
 <tr>
@@ -113966,12 +114213,12 @@ Alterações da nomenclatura da Estratégia de código 9, anteriormente denomina
 </tr>
 <tr>
 <td>dt_inicial_atendimento</td>
-<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fao.html#16-datahorainicialatendimento">dataHoraInicialAtendimento</a></td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fao.html#17-datahorainicialatendimento">dataHoraInicialAtendimento</a></td>
 <td>Data e hora do início do atendimento no formato &quot;YYYY-MM-DD HH:MM:SS.MMM&quot;</td>
 </tr>
 <tr>
 <td>dt_final_atendimento</td>
-<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fao.html#17-datahorafinalatendimento">dataHoraFinalAtendimento</a></td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fao.html#18-datahorafinalatendimento">dataHoraFinalAtendimento</a></td>
 <td>Data e hora do fim do atendimento no formato &quot;YYYY-MM-DD HH:MM:SS.MMM&quot;</td>
 </tr>
 <tr>
@@ -114215,7 +114462,7 @@ Alterações da nomenclatura da Estratégia de código 9, anteriormente denomina
 </tr>
 <tr>
 <td>nu_cpf_cidadao</td>
-<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fao.html#18-cpfcidadao">cpfCidadao</a></td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fao.html#19-cpfcidadao">cpfCidadao</a></td>
 <td>CPF do cidadão</td>
 </tr>
 <tr>
@@ -114339,7 +114586,7 @@ Alterações da nomenclatura da Estratégia de código 9, anteriormente denomina
 
 <h1 id="2-regras">2. Regras</h1>
 
-<p><strong>1. </strong> A <code>tb_fat_atend_odonto_exames</code> é preenchida de acordo com as <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fao.html#21-resultadosexames">regras</a>.</p>
+<p><strong>1. </strong> A <code>tb_fat_atend_odonto_exames</code> é preenchida de acordo com as <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fao.html#22-resultadosexames">regras</a>.</p>
 
 <h1 id="3-fatos">3. Fatos</h1>
 
@@ -114384,7 +114631,7 @@ Alterações da nomenclatura da Estratégia de código 9, anteriormente denomina
 </tr>
 <tr>
 <td>nu_cpf_cidadao</td>
-<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fao.html#18-cpfcidadao">cpfCidadao</a></td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fao.html#19-cpfcidadao">cpfCidadao</a></td>
 <td>CPF do cidadão</td>
 </tr>
 <tr>
@@ -114440,7 +114687,7 @@ Alterações da nomenclatura da Estratégia de código 9, anteriormente denomina
 </tr>
 <tr>
 <td>dt_inicial_atendimento</td>
-<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fao.html#16-datahorainicialatendimento">dataHoraInicialAtendimento</a></td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fao.html#17-datahorainicialatendimento">dataHoraInicialAtendimento</a></td>
 <td>Data e hora do início do atendimento no formato &quot;YYYY-MM-DD HH:MM:SS.MMM&quot;</td>
 </tr>
 </tbody></table>
@@ -114604,7 +114851,7 @@ Alterações da nomenclatura da Estratégia de código 9, anteriormente denomina
 </tr>
 <tr>
 <td>nu_cpf_cidadao</td>
-<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fao.html#18-cpfcidadao">cpfCidadao</a></td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fao.html#19-cpfcidadao">cpfCidadao</a></td>
 <td>CPF do cidadão</td>
 </tr>
 <tr>
@@ -114824,7 +115071,7 @@ Alterações da nomenclatura da Estratégia de código 9, anteriormente denomina
 </tr>
 <tr>
 <td>nu_cpf_cidadao</td>
-<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fao.html#18-cpfcidadao">cpfCidadao</a></td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fao.html#19-cpfcidadao">cpfCidadao</a></td>
 <td>CPF do cidadão</td>
 </tr>
 <tr>
@@ -115028,7 +115275,7 @@ Alterações da nomenclatura da Estratégia de código 9, anteriormente denomina
 </tr>
 <tr>
 <td>nu_cpf_cidadao</td>
-<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fao.html#18-cpfcidadao">cpfCidadao</a></td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fao.html#19-cpfcidadao">cpfCidadao</a></td>
 <td>CPF do cidadão</td>
 </tr>
 <tr>
@@ -115054,7 +115301,7 @@ Alterações da nomenclatura da Estratégia de código 9, anteriormente denomina
 </tr>
 <tr>
 <td>dt_inicial_atendimento</td>
-<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fao.html#16-datahorainicialatendimento">dataHoraInicialAtendimento</a></td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fao.html#17-datahorainicialatendimento">dataHoraInicialAtendimento</a></td>
 <td>Data e hora do início do atendimento no formato &quot;YYYY-MM-DD HH:MM:SS.MMM&quot;</td>
 </tr>
 </tbody></table>
@@ -116974,6 +117221,168 @@ Alterações da nomenclatura da Estratégia de código 9, anteriormente denomina
 <tr>
 <td>co_dim_tempo</td>
 <td>Responsável por armazenar as datas de maneira estruturada. Campo <code>co_seq_dim_tempo</code> da <code>tb_dim_tempo</code></td>
+</tr>
+</tbody></table>
+
+      </article>
+
+      <div class="pdf-separator"></div>
+    </div>
+
+    
+        
+
+    
+
+
+    
+
+    <div class="post pdf shown" id="RF-EDW.oci" data-url="/dw/fatos/oci/index.html">
+      <header class="post-header">
+        <h1 class="post-title">Solicitação de Oferta de Cuidado Integrado</h1>
+      </header>
+
+      
+
+      <article class="post-content">
+        <h1 id="1-objetivo">1. Objetivo</h1>
+
+<p>A Solicitação de Oferta de Cuidado Integrado (OCI) é composta por uma única tabela fato. Essa documentação tem como objetivo detalhar a estrutura do fato da Solicitação de OCI a seguir:</p>
+
+<ul>
+<li><a href="/dw/fatos/oci/tb_fat_solicitacao_oci.html">Tabela fato das solicitações de Oferta de Cuidado Integrado</a>;</li>
+</ul>
+
+      </article>
+
+      <div class="pdf-separator"></div>
+    </div>
+
+    
+        
+    <div class="post pdf shown" id="RF-EDW.tb_fat_solicitacao_oci" data-url="/dw/fatos/oci/tb_fat_solicitacao_oci.html">
+      <header class="post-header">
+        <h1 class="post-title">Tabela fato das solicitações de Oferta de Cuidado Integrado</h1>
+      </header>
+
+      
+
+      <article class="post-content">
+        <h1 id="1-objetivo">1. Objetivo</h1>
+
+<p>A tabela <code>tb_fat_solicitacao_oci</code> é populada sempre que atendimentos individuais e odontológicos com algum registro de procedimentos do grupo <code>09 - Procedimento para Oferta de Cuidado Integrado</code> são processados.</p>
+
+<h1 id="2-regras">2. Regras</h1>
+
+<p><strong>1. </strong> A <code>tb_fat_solicitacao_oci</code> é preenchida quando:</p>
+
+<ul>
+<li>É registrado um código SIGTAP pertencente ao grupo <code>09 - Procedimento para Oferta de Cuidado Integrado</code> em um atendimento individual;</li>
+<li>É registrado um código SIGTAP pertencente ao grupo <code>09 - Procedimento para Oferta de Cuidado Integrado</code> em um atendimento odontológico individual;</li>
+</ul>
+
+<h1 id="3-fatos">3. Fatos</h1>
+
+<h1 id="3-1-metadados-dos-fatos">3.1 Metadados dos fatos</h1>
+
+<table><thead>
+<tr>
+<th>Colunas DW</th>
+<th>Referência LEDI</th>
+<th>Referência sistema</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>co_seq_fat_oci</td>
+<td>-</td>
+<td>Identificador sequencial da tabela</td>
+</tr>
+<tr>
+<td>co_fat_cidadao_pec</td>
+<td>-</td>
+<td>Código de identificação do cidadão. Campo <code>co_seq_fat_cidadao_pec</code> da <code>tb_fat_cidadao_pec</code></td>
+</tr>
+<tr>
+<td>nu_uuid_ficha</td>
+<td>uuidFicha</td>
+<td>Identificador do modelo de informação</td>
+</tr>
+<tr>
+<td>nu_uuid_dado_transp</td>
+<td>-</td>
+<td>Identificador universalmente único da camada de transporte de dados</td>
+</tr>
+<tr>
+<td>nu_cpf_cidadao</td>
+<td>cpfCidadao</td>
+<td>CPF do cidadão</td>
+</tr>
+<tr>
+<td>nu_cns_cidadao</td>
+<td>cnsCidadao</td>
+<td>CNS do cidadão</td>
+</tr>
+</tbody></table>
+
+<h1 id="4-dimens-es-da-tabela">4. Dimensões da tabela</h1>
+
+<table><thead>
+<tr>
+<th>Coluna DW</th>
+<th>Dimensão referência</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>co_dim_procedimento</td>
+<td>Código de identificação do procedimento. Campo <code>co_seq_dim_procedimento</code> da <code>tb_dim_procedimento</code></td>
+</tr>
+<tr>
+<td>co_dim_municipio</td>
+<td>Código de identificação do município. Campo <code>co_seq_dim_municipio</code> da <code>tb_dim_municipio</code></td>
+</tr>
+<tr>
+<td>co_dim_tipo_ficha</td>
+<td>Código de identificação do tipo de modelo de informação. Campo <code>co_seq_dim_tipo_ficha</code> da <code>tb_dim_tipo_ficha</code></td>
+</tr>
+<tr>
+<td>co_dim_profissional_1</td>
+<td>Código de identificação do profissional principal. Campo <code>co_seq_dim_profissional</code> da <code>tb_dim_profissional</code></td>
+</tr>
+<tr>
+<td>co_dim_profissional_2</td>
+<td>Código de identificação do profissional secundário. Campo <code>co_seq_dim_profissional</code> da <code>tb_dim_profissional</code></td>
+</tr>
+<tr>
+<td>co_dim_cbo_1</td>
+<td>Código de identificação do CBO profissional principal. Campo <code>co_seq_dim_cbo</code> da <code>tb_dim_cbo</code></td>
+</tr>
+<tr>
+<td>co_dim_cbo_2</td>
+<td>Código de identificação do CBO profissional secundário. Campo <code>co_seq_dim_cbo</code> da <code>tb_dim_cbo</code></td>
+</tr>
+<tr>
+<td>co_dim_unidade_saude_1</td>
+<td>Código de identificação da unidade de saúde do profissional principal. Campo <code>co_seq_dim_unidade_saude</code> da <code>tb_dim_unidade_saude</code></td>
+</tr>
+<tr>
+<td>co_dim_unidade_saude_2</td>
+<td>Código de identificação da unidade de saúde do profissional secundário. Campo <code>co_seq_dim_unidade_saude</code> da <code>tb_dim_unidade_saude</code></td>
+</tr>
+<tr>
+<td>co_dim_equipe_1</td>
+<td>Código de identificação da equipe do profissional principal. Campo <code>co_seq_dim_equipe</code> da <code>tb_dim_equipe</code></td>
+</tr>
+<tr>
+<td>co_dim_equipe_2</td>
+<td>Código de identificação da equipe do profissional secundário. Campo <code>co_seq_dim_equipe</code> da <code>tb_dim_equipe</code></td>
+</tr>
+<tr>
+<td>co_dim_tempo</td>
+<td>Responsável por armazenar as datas de maneira estruturada. Campo <code>co_seq_dim_tempo</code> da <code>tb_dim_tempo</code></td>
+</tr>
+<tr>
+<td>co_dim_turno</td>
+<td>Código de identificação do turno. Campo <code>co_seq_dim_turno</code> da <code>tb_dim_turno</code></td>
 </tr>
 </tbody></table>
 
@@ -120077,6 +120486,11 @@ Alterações da nomenclatura da Estratégia de código 9, anteriormente denomina
 <td>no_raca_cor</td>
 <td>texto</td>
 <td>Nome da <a href="/ledi/documentacao/referencias/dicionario.html#racacor">Raça/Cor</a> do cidadão.</td>
+</tr>
+<tr>
+<td>co_fat_cidadao_pec</td>
+<td>inteiro</td>
+<td>Código identificador do cidadão nas tabelas fato, relacionado a outras tabelas de fato, como <code>tb_fat_atendimento_individual</code></td>
 </tr>
 </tbody></table>
 

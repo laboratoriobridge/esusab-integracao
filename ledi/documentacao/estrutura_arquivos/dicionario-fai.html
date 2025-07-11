@@ -29,7 +29,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 7.2.0</span>
+        <span class="label">versão 7.2.1</span>
       
     </a>
 
@@ -79,7 +79,7 @@
           
         
           
-            <li><a title="Layout e-SUS APS de Dados e Interface Versão 7.2.0" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 7.2.0</a></li>
+            <li><a title="Layout e-SUS APS de Dados e Interface Versão 7.2.1" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 7.2.1</a></li>
           
         
           
@@ -119,9 +119,9 @@
   <ul>
     
       <li>
-        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 7.2.0" href="/ledi/documentacao/index.html" class="back-link">
+        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 7.2.1" href="/ledi/documentacao/index.html" class="back-link">
           <i class="icon icon-back"></i> Voltar
-          <small>(Layout e-SUS APS de Dados e Interface Versão 7.2.0)</small>
+          <small>(Layout e-SUS APS de Dados e Interface Versão 7.2.1)</small>
         </a>
       </li>
     
@@ -254,7 +254,7 @@
     <p class="post-meta">
       <a class="btn" href="/pdf.html?include=/ledi/documentacao/estrutura_arquivos/dicionario-fai.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 28/06/2025</span>
+        <span class="label" title="Data da última modificação">Alterado em 11/07/2025</span>
       
     </p>
   </header>
@@ -402,7 +402,7 @@
 
 <ul>
 <li>CNS validado de acordo com o <a href="/ledi/documentacao/regras/algoritmo_CNS.html">algoritmo de validação</a>;</li>
-<li>Não pode ser preenchido se o campo <a href="#25-cpfcidadao">cpfCidadao</a> for preenchido.</li>
+<li>Não pode ser preenchido se o campo <a href="#24-cpfcidadao">cpfCidadao</a> for preenchido.</li>
 </ul>
 
 <h3 id="3-datanascimento">#3 dataNascimento</h3>
@@ -841,35 +841,7 @@
 
 <p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#racionalidadesaude">racionalidadeSaude</a>.</p>
 
-<h3 id="22-perimetrocefalico">#22 perimetroCefalico</h3>
-
-<p>Perímetro cefálico do cidadão em centímetros.</p>
-
-<table><thead>
-<tr>
-<th>Tipo</th>
-<th>Obrigatório</th>
-<th>Mínimo</th>
-<th>Máximo</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Double</td>
-<td>Não</td>
-<td>0</td>
-<td>6</td>
-</tr>
-</tbody></table>
-
-<p><strong>Regras:</strong></p>
-
-<ul>
-<li>Apenas números e ponto (<code>.</code>);</li>
-<li>Máximo de 2 casas decimais;</li>
-<li>Valor mínimo 10 e máximo 200.</li>
-</ul>
-
-<h3 id="23-datahorainicialatendimento">#23 dataHoraInicialAtendimento</h3>
+<h3 id="22-datahorainicialatendimento">#22 dataHoraInicialAtendimento</h3>
 
 <p>Data e hora do início do atendimento.</p>
 
@@ -893,12 +865,12 @@
 
 <ul>
 <li>Não pode ser anterior à <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>;</li>
-<li>Não pode ser posterior à <a href="#24-datahorafinalatendimento">dataHoraFinalAtendimento</a> e à data atual.</li>
+<li>Não pode ser posterior à <a href="#23-datahorafinalatendimento">dataHoraFinalAtendimento</a> e à data atual.</li>
 </ul>
 
 <p><strong>Referência:</strong> Deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
 
-<h3 id="24-datahorafinalatendimento">#24 dataHoraFinalAtendimento</h3>
+<h3 id="23-datahorafinalatendimento">#23 dataHoraFinalAtendimento</h3>
 
 <p>Data e hora do fim do atendimento.</p>
 
@@ -921,13 +893,13 @@
 <p><strong>Regras:</strong></p>
 
 <ul>
-<li>Não pode ser anterior à <a href="#23-datahorainicialatendimento">dataHoraInicialAtendimento</a>;</li>
+<li>Não pode ser anterior à <a href="#22-datahorainicialatendimento">dataHoraInicialAtendimento</a>;</li>
 <li>Não pode ser posterior à data atual.</li>
 </ul>
 
 <p><strong>Referência:</strong> Deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
 
-<h3 id="25-cpfcidadao">#25 cpfCidadao</h3>
+<h3 id="24-cpfcidadao">#24 cpfCidadao</h3>
 
 <p>CPF do cidadão.</p>
 
@@ -954,7 +926,7 @@
 <li>Não pode ser preenchido se o campo <a href="#2-cnscidadao">cnsCidadao</a> for preenchido.</li>
 </ul>
 
-<h3 id="26-medicamentos">#26 Medicamentos</h3>
+<h3 id="25-medicamentos">#25 Medicamentos</h3>
 
 <p>Lista de medicamentos prescritos durante o atendimento.</p>
 
@@ -976,7 +948,7 @@
 
 <p><strong>Referência:</strong> <a href="#medicamentos">medicamentos</a>.</p>
 
-<h3 id="27-encaminhamentos">#27 Encaminhamentos</h3>
+<h3 id="26-encaminhamentos">#26 Encaminhamentos</h3>
 
 <p>Lista com os encaminhamentos realizados durante o atendimento.</p>
 
@@ -1006,7 +978,7 @@
 
 <p><strong>Referência:</strong> <a href="#encaminhamentos">encaminhamentos</a>.</p>
 
-<h3 id="28-resultadosexames">#28 resultadosExames</h3>
+<h3 id="27-resultadosexames">#27 resultadosExames</h3>
 
 <p>Lista de exames e seus resultados.</p>
 
@@ -1028,7 +1000,7 @@
 
 <p><strong>Referência:</strong> <a href="#resultadosexames">resultadosExames</a>.</p>
 
-<h3 id="29-problemascondicoes">#29 problemasCondicoes</h3>
+<h3 id="28-problemascondicoes">#28 problemasCondicoes</h3>
 
 <p>Situações de saúde avaliadas no atendimento.</p>
 
@@ -1050,7 +1022,7 @@
 
 <p><strong>Referência:</strong> <a href="#problemacondicao">problemacondicao</a>.</p>
 
-<h3 id="30-tipoparticipacaocidadao">#30 tipoParticipacaoCidadao</h3>
+<h3 id="29-tipoparticipacaocidadao">#29 tipoParticipacaoCidadao</h3>
 
 <p>Código para identificar se o tipo de participação do cidadão foi síncrono ou assíncrono.</p>
 
@@ -1078,7 +1050,7 @@
 
 <p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#tipoparticipacaoatendimento">Tipo de participação no atendimento</a>.</p>
 
-<h3 id="31-tipoparticipacaoprofissionalconvidado">#31 tipoParticipacaoProfissionalConvidado</h3>
+<h3 id="30-tipoparticipacaoprofissionalconvidado">#30 tipoParticipacaoProfissionalConvidado</h3>
 
 <p>Código para identificar se o tipo de participação do profissional convidado foi síncrono ou assíncrono.</p>
 
@@ -1106,7 +1078,7 @@
 
 <p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#tipoparticipacaoatendimento">Tipo de participação no atendimento</a>.</p>
 
-<h3 id="32-ivcf">#32 ivcf</h3>
+<h3 id="31-ivcf">#31 ivcf</h3>
 
 <p>Registro de IVCF-20 (Índice de Vulnerabilidade Clínico-Funcional).</p>
 
@@ -1130,7 +1102,7 @@
 
 <p><strong>Referência:</strong> <a href="#ivcf">ivcf</a>.</p>
 
-<h3 id="33-solicitacoesoci">#33 solicitacoesOci</h3>
+<h3 id="32-solicitacoesoci">#32 solicitacoesOci</h3>
 
 <p>Lista de procedimentos SIGTAP de Oferta de Cuidado Integrado (OCI) solicitados.</p>
 
@@ -2407,7 +2379,7 @@
 <p><strong>Regras:</strong></p>
 
 <ul>
-<li>Não pode ser posterior à <a href="#23-datahorainicialatendimento">dataHoraInicialAtendimento</a>;</li>
+<li>Não pode ser posterior à <a href="#22-datahorainicialatendimento">dataHoraInicialAtendimento</a>;</li>
 <li>Não pode ser anterior à <a href="#3-datanascimento">dataNascimento</a>.</li>
 </ul>
 
@@ -2436,7 +2408,7 @@
 <p><strong>Regras:</strong></p>
 
 <ul>
-<li>Não pode ser posterior à <a href="#23-datahorainicialatendimento">dataHoraInicialAtendimento</a>;</li>
+<li>Não pode ser posterior à <a href="#22-datahorainicialatendimento">dataHoraInicialAtendimento</a>;</li>
 <li>Não pode ser anterior à <a href="#2-datasolicitacao">dataSolicitacao</a>;</li>
 <li>Não pode ser anterior à <a href="#3-datanascimento">dataNascimento</a>.</li>
 </ul>
@@ -2466,7 +2438,7 @@
 <p><strong>Regras:</strong></p>
 
 <ul>
-<li>Não pode ser posterior à <a href="#23-datahorainicialatendimento">dataHoraInicialAtendimento</a>;</li>
+<li>Não pode ser posterior à <a href="#22-datahorainicialatendimento">dataHoraInicialAtendimento</a>;</li>
 <li>Não pode ser anterior à <a href="#3-datarealizacao">dataRealizacao</a>;</li>
 <li>Não pode ser anterior à <a href="#3-datanascimento">dataNascimento</a>.</li>
 </ul>

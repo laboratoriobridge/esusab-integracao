@@ -29,7 +29,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 7.2.0</span>
+        <span class="label">versão 7.2.1</span>
       
     </a>
 
@@ -79,7 +79,7 @@
           
         
           
-            <li><a title="Layout e-SUS APS de Dados e Interface Versão 7.2.0" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 7.2.0</a></li>
+            <li><a title="Layout e-SUS APS de Dados e Interface Versão 7.2.1" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 7.2.1</a></li>
           
         
           
@@ -119,9 +119,9 @@
   <ul>
     
       <li>
-        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 7.2.0" href="/ledi/documentacao/index.html" class="back-link">
+        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 7.2.1" href="/ledi/documentacao/index.html" class="back-link">
           <i class="icon icon-back"></i> Voltar
-          <small>(Layout e-SUS APS de Dados e Interface Versão 7.2.0)</small>
+          <small>(Layout e-SUS APS de Dados e Interface Versão 7.2.1)</small>
         </a>
       </li>
     
@@ -254,7 +254,7 @@
     <p class="post-meta">
       <a class="btn" href="/pdf.html?include=/ledi/documentacao/estrutura_arquivos/dicionario-fao.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 28/06/2025</span>
+        <span class="label" title="Data da última modificação">Alterado em 11/07/2025</span>
       
     </p>
   </header>
@@ -404,7 +404,7 @@
 
 <ul>
 <li>CNS validado de acordo com o algoritmo;</li>
-<li>Não pode ser preenchido se o campo <a href="#18-cpfcidadao">cpfCidadao</a> for preenchido.</li>
+<li>Não pode ser preenchido se o campo <a href="#19-cpfcidadao">cpfCidadao</a> for preenchido.</li>
 </ul>
 
 <p><strong>Referência:</strong> O algoritmo de validação está presente em <a href="/ledi/documentacao/regras/algoritmo_CNS.html">Validar CNS</a>.</p>
@@ -692,7 +692,29 @@
 
 <p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#turno">Turno</a>.</p>
 
-<h3 id="16-datahorainicialatendimento">#16 dataHoraInicialAtendimento</h3>
+<h3 id="16-exame">#16 exame</h3>
+
+<p>Lista de exames solicitados e/ou avaliados.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>List&lt;exame&gt;</td>
+<td>Não</td>
+<td>0</td>
+<td>100</td>
+</tr>
+</tbody></table>
+
+<p><strong>Referência:</strong> <a href="#exame">Exames</a>.</p>
+
+<h3 id="17-datahorainicialatendimento">#17 dataHoraInicialAtendimento</h3>
 
 <p>Data e hora do início do atendimento.</p>
 
@@ -716,12 +738,12 @@
 
 <ul>
 <li>Não pode ser anterior à <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>;</li>
-<li>Não pode ser posterior à <a href="#17-datahorafinalatendimento">dataHoraFinalAtendimento</a> e à data atual.</li>
+<li>Não pode ser posterior à <a href="#18-datahorafinalatendimento">dataHoraFinalAtendimento</a> e à data atual.</li>
 </ul>
 
 <p><strong>Referência:</strong> Deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
 
-<h3 id="17-datahorafinalatendimento">#17 dataHoraFinalAtendimento</h3>
+<h3 id="18-datahorafinalatendimento">#18 dataHoraFinalAtendimento</h3>
 
 <p>Data e hora do fim do atendimento.</p>
 
@@ -744,13 +766,13 @@
 <p><strong>Regras:</strong></p>
 
 <ul>
-<li>Não pode ser anterior à <a href="#16-datahorainicialatendimento">dataHoraInicialAtendimento</a>;</li>
+<li>Não pode ser anterior à <a href="#17-datahorainicialatendimento">dataHoraInicialAtendimento</a>;</li>
 <li>Não pode ser posterior à data atual.</li>
 </ul>
 
 <p><strong>Referência:</strong> Deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
 
-<h3 id="18-cpfcidadao">#18 cpfCidadao</h3>
+<h3 id="19-cpfcidadao">#19 cpfCidadao</h3>
 
 <p>CPF do cidadão.</p>
 
@@ -777,7 +799,7 @@
 <li>Não pode ser preenchido se o campo <a href="#2-cnscidadao">cnsCidadao</a> for preenchido.</li>
 </ul>
 
-<h3 id="19-medicamentos">#19 Medicamentos</h3>
+<h3 id="20-medicamentos">#20 Medicamentos</h3>
 
 <p>Lista de medicamentos prescritos durante o atendimento.</p>
 
@@ -799,7 +821,7 @@
 
 <p><strong>Referência:</strong> <a href="#medicamentos">Medicamentos</a>.</p>
 
-<h3 id="20-encaminhamentos">#20 Encaminhamentos</h3>
+<h3 id="21-encaminhamentos">#21 Encaminhamentos</h3>
 
 <p>Lista com os encaminhamentos realizados durante o atendimento.</p>
 
@@ -828,7 +850,7 @@
 
 <p><strong>Referência:</strong> <a href="#encaminhamentos">Encaminhamentos</a>.</p>
 
-<h3 id="21-resultadosexames">#21 resultadosExames</h3>
+<h3 id="22-resultadosexames">#22 resultadosExames</h3>
 
 <p>Lista de exames e seus resultados.</p>
 
@@ -850,7 +872,7 @@
 
 <p><strong>Referência:</strong> <a href="#resultadosexames">resultadosExames</a>.</p>
 
-<h3 id="22-medicoes">#22 medicoes</h3>
+<h3 id="23-medicoes">#23 medicoes</h3>
 
 <p>Lista de medições registradas no atendimento.</p>
 
@@ -872,7 +894,7 @@
 
 <p><strong>Referência:</strong> <a href="#medicoes">medicoes</a>.</p>
 
-<h3 id="23-tipoparticipacaocidadao">#23 tipoParticipacaoCidadao</h3>
+<h3 id="24-tipoparticipacaocidadao">#24 tipoParticipacaoCidadao</h3>
 
 <p>Código para identificar se o tipo de participação do cidadão foi síncrono ou assíncrono.</p>
 
@@ -900,7 +922,7 @@
 
 <p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#tipoparticipacaoatendimento">Tipo de participação no atendimento</a>.</p>
 
-<h3 id="24-tipoparticipacaoprofissionalconvidado">#24 tipoParticipacaoProfissionalConvidado</h3>
+<h3 id="25-tipoparticipacaoprofissionalconvidado">#25 tipoParticipacaoProfissionalConvidado</h3>
 
 <p>Código para identificar se o tipo de participação do profissional convidado foi síncrono ou assíncrono.</p>
 
@@ -928,7 +950,7 @@
 
 <p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#tipoparticipacaoatendimento">Tipo de participação no atendimento</a>.</p>
 
-<h3 id="25-problemascondicoes">#25 problemasCondicoes</h3>
+<h3 id="26-problemascondicoes">#26 problemasCondicoes</h3>
 
 <p>Situações de saúde avaliadas no atendimento.</p>
 
@@ -950,7 +972,7 @@
 
 <p><strong>Referência:</strong> <a href="#problemacondicao">problemacondicao</a>.</p>
 
-<h3 id="26-ivcf">#26 ivcf</h3>
+<h3 id="27-ivcf">#27 ivcf</h3>
 
 <p>Registro de IVCF-20 (Índice de Vulnerabilidade Clínico-Funcional).</p>
 
@@ -973,28 +995,6 @@
 <p><strong>Regra:</strong> Só pode ser preenchido se a idade do cidadão na data do atendimento for 60 anos ou mais.</p>
 
 <p><strong>Referência:</strong> <a href="#ivcf">ivcf</a>.</p>
-
-<h3 id="27-exame">#27 exame</h3>
-
-<p>Lista de exames solicitados e/ou avaliados.</p>
-
-<table><thead>
-<tr>
-<th>Tipo</th>
-<th>Obrigatório</th>
-<th>Mínimo</th>
-<th>Máximo</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>List&lt;exame&gt;</td>
-<td>Não</td>
-<td>0</td>
-<td>100</td>
-</tr>
-</tbody></table>
-
-<p><strong>Referência:</strong> <a href="#exame">Exames</a>.</p>
 
 <h3 id="28-solicitacoesoci">#28 solicitacoesOci</h3>
 
@@ -1063,7 +1063,14 @@
 <li>07.01.07.012-9 - PROTESE TOTAL MANDIBULAR;</li>
 <li>07.01.07.013-7 - PROTESE TOTAL MAXILAR;</li>
 <li>07.01.07.005-6 - COROA PROVISORIA;</li>
-<li>07.01.07.014-5 - PROTESES CORONARIAS / INTRA-RADICULARES FIXAS / ADESIVAS (POR ELEMENTO).</li>
+<li>07.01.07.014-5 - PROTESES CORONARIAS / INTRA-RADICULARES FIXAS / ADESIVAS (POR ELEMENTO);</li>
+<li>07.01.07.001-3 - APARELHO FIXO BILATERAL PARA FECHAMENTO DE DIASTEMA;</li>
+<li>07.01.07.002-1 - APARELHO ORTOPÉDICO E ORTODÔNTICO REMOVÍVEL;</li>
+<li>07.01.07.003-0 - APARELHO P/ BLOQUEIO MAXILO-MANDIBULAR;</li>
+<li>07.01.07.017-0 - APARELHO ORTODÔNTICO FIXO;</li>
+<li>07.01.07.016-1 - APARELHO ORTOPÉDICO FIXO;</li>
+<li>07.01.07.015-3 - PRÓTESE DENTÁRIA SOBRE IMPLANTE;</li>
+<li>07.01.07.004-8 - COROA DE ACO E POLICARBOXILATO.</li>
 </ul></li>
 <li><p>Não pode ser preenchido com o procedimento &quot;03.01.04.007-9 - Escuta inicial / orientação (acolhimento a demanda espontânea)&quot;. Esta informação deve ser registrada através do campo <a href="#7-tipoatendimento">#7 tipoAtendimento</a>, opção <code>4 (escuta inicial ou orientação)</code>.</p></li>
 </ul>
@@ -1641,7 +1648,7 @@
 <p><strong>Regras:</strong></p>
 
 <ul>
-<li>Não pode ser posterior à <a href="#16-datahorainicialatendimento">dataHoraInicialAtendimento</a>;</li>
+<li>Não pode ser posterior à <a href="#17-datahorainicialatendimento">dataHoraInicialAtendimento</a>;</li>
 <li>Não pode ser anterior à <a href="#1-dtnascimento">dtNascimento</a>.</li>
 </ul>
 
@@ -1670,7 +1677,7 @@
 <p><strong>Regras:</strong></p>
 
 <ul>
-<li>Não pode ser posterior à <a href="#16-datahorainicialatendimento">dataHoraInicialAtendimento</a>;</li>
+<li>Não pode ser posterior à <a href="#17-datahorainicialatendimento">dataHoraInicialAtendimento</a>;</li>
 <li>Não pode ser anterior à <a href="#2-datasolicitacao">dataSolicitacao</a>;</li>
 <li>Não pode ser anterior à <a href="#1-dtnascimento">dtNascimento</a>.</li>
 </ul>
@@ -1700,7 +1707,7 @@
 <p><strong>Regras:</strong></p>
 
 <ul>
-<li>Não pode ser posterior à <a href="#16-datahorainicialatendimento">dataHoraInicialAtendimento</a>;</li>
+<li>Não pode ser posterior à <a href="#17-datahorainicialatendimento">dataHoraInicialAtendimento</a>;</li>
 <li>Não pode ser anterior à <a href="#3-datarealizacao">dataRealizacao</a>;</li>
 <li>Não pode ser anterior à <a href="#1-dtnascimento">dtNascimento</a>.</li>
 </ul>
@@ -3062,6 +3069,36 @@
 <td>2</td>
 </tr>
 <tr>
+<td>07.01.07.001-3</td>
+<td>APARELHO FIXO BILATERAL PARA FECHAMENTO DE DIASTEMA</td>
+<td>Arcada</td>
+<td>2</td>
+</tr>
+<tr>
+<td>07.01.07.017-0</td>
+<td>APARELHO ORTODÔNTICO FIXO</td>
+<td>Arcada</td>
+<td>2</td>
+</tr>
+<tr>
+<td>07.01.07.002-1</td>
+<td>APARELHO ORTOPÉDICO E ORTODÔNTICO REMOVÍVEL</td>
+<td>Arcada</td>
+<td>2</td>
+</tr>
+<tr>
+<td>07.01.07.016-1</td>
+<td>APARELHO ORTOPÉDICO FIXO</td>
+<td>Arcada</td>
+<td>2</td>
+</tr>
+<tr>
+<td>07.01.07.003-0</td>
+<td>APARELHO P/ BLOQUEIO MAXILO-MANDIBULAR</td>
+<td>Arcada</td>
+<td>2</td>
+</tr>
+<tr>
 <td>01.01.02.005-8</td>
 <td>APLICAÇÃO DE CARIOSTÁTICO (POR DENTE)</td>
 <td>Dente</td>
@@ -3322,6 +3359,18 @@
 <tr>
 <td>07.01.07.014-5</td>
 <td>PROTESES CORONARIAS / INTRA-RADICULARES FIXAS / ADESIVAS (POR ELEMENTO)</td>
+<td>Dente</td>
+<td>32</td>
+</tr>
+<tr>
+<td>07.01.07.004-8</td>
+<td>COROA DE ACO E POLICARBOXILATO</td>
+<td>Dente</td>
+<td>32</td>
+</tr>
+<tr>
+<td>07.01.07.015-3</td>
+<td>PRÓTESE DENTÁRIA SOBRE IMPLANTE</td>
 <td>Dente</td>
 <td>32</td>
 </tr>

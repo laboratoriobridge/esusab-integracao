@@ -131,7 +131,7 @@
 				<especialidade>3</especialidade>
 				<hipoteseDiagnosticoCid10>B170</hipoteseDiagnosticoCid10>
 				<classificacaoRisco>3</classificacaoRisco>
-				</encaminhamentos>
+			</encaminhamentos>
 			<encaminhamentos>
 				<especialidade>10</especialidade>
 				<hipoteseDiagnosticoCid10>O03</hipoteseDiagnosticoCid10>

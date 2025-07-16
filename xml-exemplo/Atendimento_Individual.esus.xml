@@ -128,14 +128,14 @@
 				<qtDoseNoite>3</qtDoseNoite>
 			</medicamentos>
 			<encaminhamentos>
+				<especialidade>3</especialidade>
 				<hipoteseDiagnosticoCid10>B170</hipoteseDiagnosticoCid10>
-				<classificacaoPrioridade>1</classificacaoPrioridade>
-                <cboCodigo_2002>225142</cboCodigo_2002>
-			</encaminhamentos>
+				<classificacaoRisco>3</classificacaoRisco>
+				</encaminhamentos>
 			<encaminhamentos>
+				<especialidade>10</especialidade>
 				<hipoteseDiagnosticoCid10>O03</hipoteseDiagnosticoCid10>
-				<classificacaoPrioridade>1</classificacaoPrioridade>
-                <cboCodigo_2002>225142</cboCodigo_2002>
+				<classificacaoRisco>1</classificacaoRisco>
 			</encaminhamentos>
 			<problemasCondicoes>
 				<uuidProblema>b0dc457d-8468-49d7-bd82-d37cc96d2326</uuidProblema>

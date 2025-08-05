@@ -148,12 +148,6 @@
                 <dataFimProblema>1586102300000</dataFimProblema>
 				<isAvaliado>1</isAvaliado>
 			</problemasCondicoes>
-			<solicitacoesOci>
-				<codigoSigtap>0903010011</codigoSigtap>
-			</solicitacoesOci>
-			<solicitacoesOci>
-				<codigoSigtap>0901010014</codigoSigtap>
-			</solicitacoesOci>
 		</atendimentosIndividuais>
 		<atendimentosIndividuais>
 			<numeroProntuario>1234</numeroProntuario>
@@ -216,7 +210,7 @@
             </problemasCondicoes>
 		</atendimentosIndividuais>
 		<atendimentosIndividuais>
-			<dataNascimento>1046703600000</dataNascimento>
+			<dataNascimento>-360018000000</dataNascimento>
 			<localDeAtendimento>1</localDeAtendimento>
 			<sexo>0</sexo>
 			<turno>2</turno>
@@ -296,6 +290,12 @@
 				<hasSgComorbidade>false</hasSgComorbidade>
 				<dataResultado>1586095200000</dataResultado>
 			</ivcf>
+			<solicitacoesOci>
+				<codigoSigtap>0903010011</codigoSigtap>
+			</solicitacoesOci>
+			<solicitacoesOci>
+				<codigoSigtap>0901010014</codigoSigtap>
+			</solicitacoesOci>
 		</atendimentosIndividuais>
 		<tpCdsOrigem>3</tpCdsOrigem>
 		<uuidFicha>0019615-edee6500-bf76-4691-b9c7-f7b1d550bc7a</uuidFicha>
@@ -305,7 +305,7 @@
 		<uuidInstalacao>TREINAMENTO</uuidInstalacao>
 		<cpfOuCnpj>01234567890</cpfOuCnpj>
 		<nomeOuRazaoSocial>ADMINISTRADOR INSTALAÇÃO</nomeOuRazaoSocial>
-		<versaoSistema>5.3.19</versaoSistema>
+		<versaoSistema>5.4.8</versaoSistema>
 		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:remetente>
 	<ns2:originadora>
@@ -313,8 +313,8 @@
 		<uuidInstalacao>TREINAMENTO</uuidInstalacao>
 		<cpfOuCnpj>01234567890</cpfOuCnpj>
 		<nomeOuRazaoSocial>ADMINISTRADOR INSTALAÇÃO</nomeOuRazaoSocial>
-		<versaoSistema>5.3.19</versaoSistema>
+		<versaoSistema>5.4.8</versaoSistema>
 		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:originadora>
-	<versao major="6" minor="3" revision="2"/>
+	<versao major="7" minor="2" revision="1"/>
 </ns3:dadoTransporteTransportXml>

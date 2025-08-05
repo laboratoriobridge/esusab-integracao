@@ -420,6 +420,22 @@ module Br
               ::Thrift::Struct.generate_accessors self
             end
 
+            class SolicitacaoOciThrift
+              include ::Thrift::Struct, ::Thrift::Struct_Union
+              CODIGOSIGTAP = 1
+
+              FIELDS = {
+                CODIGOSIGTAP => {:type => ::Thrift::Types::STRING, :name => 'codigoSigtap', :optional => true}
+              }
+
+              def struct_fields; FIELDS; end
+
+              def validate
+              end
+
+              ::Thrift::Struct.generate_accessors self
+            end
+
           end
         end
       end

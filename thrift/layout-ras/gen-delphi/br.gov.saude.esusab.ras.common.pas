@@ -40,6 +40,7 @@ type
   IProblemaCondicaoThrift = interface;
   IIvcfThrift = interface;
   IExameThrift = interface;
+  ISolicitacaoOciThrift = interface;
 
   IHeaderCdsCadastroThrift = interface(IBase)
     function GetCnesUnidadeSaude: string;
@@ -1675,6 +1676,44 @@ type
     // isset
     property __isset_CodigoExame: Boolean read Get__isset_CodigoExame;
     property __isset_SolicitadoAvaliado: Boolean read Get__isset_SolicitadoAvaliado;
+  end;
+
+  ISolicitacaoOciThrift = interface(IBase)
+    function GetCodigoSigtap: string;
+    procedure SetCodigoSigtap( const Value: string);
+
+    property CodigoSigtap: string read GetCodigoSigtap write SetCodigoSigtap;
+
+    function Get__isset_CodigoSigtap: Boolean;
+
+    property __isset_CodigoSigtap: Boolean read Get__isset_CodigoSigtap;
+  end;
+
+  TSolicitacaoOciThriftImpl = class(TInterfacedObject, IBase, ISolicitacaoOciThrift)
+  private
+    FCodigoSigtap: string;
+    
+    F__isset_CodigoSigtap: Boolean;
+    
+    function GetCodigoSigtap: string;
+    procedure SetCodigoSigtap( const Value: string);
+
+    function Get__isset_CodigoSigtap: Boolean;
+  public
+    constructor Create;
+    destructor Destroy; override;
+
+    function ToString: string; override;
+
+    // IBase
+    procedure Read( const iprot: IProtocol);
+    procedure Write( const oprot: IProtocol);
+
+    // Properties
+    property CodigoSigtap: string read GetCodigoSigtap write SetCodigoSigtap;
+
+    // isset
+    property __isset_CodigoSigtap: Boolean read Get__isset_CodigoSigtap;
   end;
 
 implementation
@@ -6921,6 +6960,115 @@ begin
     if _first37 then {prevent warning};
   finally
     _sb36.Free;
+  end;
+end;
+
+constructor TSolicitacaoOciThriftImpl.Create;
+begin
+  inherited;
+end;
+
+destructor TSolicitacaoOciThriftImpl.Destroy;
+begin
+  inherited;
+end;
+
+function TSolicitacaoOciThriftImpl.GetCodigoSigtap: string;
+begin
+  Result := FCodigoSigtap;
+end;
+
+procedure TSolicitacaoOciThriftImpl.SetCodigoSigtap( const Value: string);
+begin
+  F__isset_CodigoSigtap := True;
+  FCodigoSigtap := Value;
+end;
+
+function TSolicitacaoOciThriftImpl.Get__isset_CodigoSigtap: Boolean;
+begin
+  Result := F__isset_CodigoSigtap;
+end;
+
+procedure TSolicitacaoOciThriftImpl.Read( const iprot: IProtocol);
+var
+  field_ : IField;
+  struc : IStruct;
+  tracker : IProtocolRecursionTracker;
+
+begin
+  tracker := iprot.NextRecursionLevel;
+  struc := iprot.ReadStructBegin;
+  try
+    while (true) do
+    begin
+      field_ := iprot.ReadFieldBegin();
+      if (field_.Type_ = TType.Stop) then
+      begin
+        Break;
+      end;
+      case field_.ID of
+        1: begin
+          if (field_.Type_ = TType.String_) then
+          begin
+            CodigoSigtap := iprot.ReadString();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end
+        else begin
+          TProtocolUtil.Skip(iprot, field_.Type_);
+        end;
+      end;
+      iprot.ReadFieldEnd;
+    end;
+  finally
+    iprot.ReadStructEnd;
+  end;
+end;
+
+procedure TSolicitacaoOciThriftImpl.Write( const oprot: IProtocol);
+var
+  struc : IStruct;
+  field_ : IField;
+  tracker : IProtocolRecursionTracker;
+begin
+  tracker := oprot.NextRecursionLevel;
+  struc := TStructImpl.Create('SolicitacaoOciThrift');
+  oprot.WriteStructBegin(struc);
+  field_ := TFieldImpl.Create;
+  if (__isset_CodigoSigtap) then
+  begin
+    field_.Name := 'codigoSigtap';
+    field_.Type_  := TType.String_;
+    field_.ID := 1;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteString(CodigoSigtap);
+    oprot.WriteFieldEnd();
+  end;
+  oprot.WriteFieldStop();
+  oprot.WriteStructEnd();
+end;
+
+function TSolicitacaoOciThriftImpl.ToString: string;
+var
+  _sb38 : TThriftStringBuilder;
+  _first39 : Boolean;
+begin
+  _sb38 := TThriftStringBuilder.Create('(');
+  try
+    _first39 := TRUE;
+    if (__isset_CodigoSigtap) then begin
+      if not _first39 then _sb38.Append(',');
+      _first39 := FALSE;
+      _sb38.Append('CodigoSigtap: ');
+      _sb38.Append(CodigoSigtap);
+    end;
+    _sb38.Append(')');
+    Result := _sb38.ToString;
+    if _first39 then {prevent warning};
+  finally
+    _sb38.Free;
   end;
 end;
 

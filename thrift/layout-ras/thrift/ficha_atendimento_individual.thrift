@@ -51,6 +51,7 @@ struct FichaAtendimentoIndividualChildThrift {
 	39:optional common.MedicoesThrift medicoes;
 	40:optional list<common.ProblemaCondicaoThrift> problemasCondicoes;
 	41:optional common.IvcfThrift ivcf;
+	42:optional list<common.SolicitacaoOciThrift> solicitacoesOci;
 }
 
 struct FichaAtendimentoIndividualMasterThrift {

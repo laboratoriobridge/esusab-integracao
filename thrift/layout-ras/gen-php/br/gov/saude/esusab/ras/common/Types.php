@@ -3247,4 +3247,79 @@ class ExameThrift {
 
 }
 
+class SolicitacaoOciThrift {
+  static $_TSPEC;
+
+  /**
+   * @var string
+   */
+  public $codigoSigtap = null;
+
+  public function __construct($vals=null) {
+    if (!isset(self::$_TSPEC)) {
+      self::$_TSPEC = array(
+        1 => array(
+          'var' => 'codigoSigtap',
+          'type' => TType::STRING,
+          ),
+        );
+    }
+    if (is_array($vals)) {
+      if (isset($vals['codigoSigtap'])) {
+        $this->codigoSigtap = $vals['codigoSigtap'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'SolicitacaoOciThrift';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 1:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->codigoSigtap);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('SolicitacaoOciThrift');
+    if ($this->codigoSigtap !== null) {
+      $xfer += $output->writeFieldBegin('codigoSigtap', TType::STRING, 1);
+      $xfer += $output->writeString($this->codigoSigtap);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
 

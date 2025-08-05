@@ -148,6 +148,12 @@
                 <dataFimProblema>1586102300000</dataFimProblema>
 				<isAvaliado>1</isAvaliado>
 			</problemasCondicoes>
+			<solicitacoesOci>
+				<codigoSigtap>0903010011</codigoSigtap>
+			</solicitacoesOci>
+			<solicitacoesOci>
+				<codigoSigtap>0901010014</codigoSigtap>
+			</solicitacoesOci>
 		</atendimentosIndividuais>
 		<atendimentosIndividuais>
 			<numeroProntuario>1234</numeroProntuario>

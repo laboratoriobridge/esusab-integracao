@@ -22,7 +22,7 @@
 
     <xs:import namespace="http://esus.ufsc.br/ivcf" schemaLocation="ivcf.xsd"/>
 
-    <xs:import namespace="http://esus.ufsc.br/solicitacoesoci" schemaLocation="solicitacaooci.xsd"/>
+    <xs:import namespace="http://esus.ufsc.br/solicitacaooci" schemaLocation="solicitacaooci.xsd"/>
 
     <xs:complexType name="fichaAtendimentoIndividualChildTransport">
         <xs:sequence>

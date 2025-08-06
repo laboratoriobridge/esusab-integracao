@@ -2,7 +2,7 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:encaminhamentoExterno="http://esus.ufsc.br/encaminhamentoexterno" xmlns:medicamento="http://esus.ufsc.br/medicamento"
            xmlns:medicoes="http://esus.ufsc.br/medicoes" xmlns:problemacondicao="http://esus.ufsc.br/problemacondicao"
            xmlns:procedimentoQuantidade="http://esus.ufsc.br/procedimentoquantidade" xmlns:resultadosExame="http://esus.ufsc.br/resultadosexame"
-           xmlns:ivcf="http://esus.ufsc.br/ivcf" xmlns:exame="http://esus.ufsc.br/exame" xmlns:solicitacaooci="http://esus.ufsc.br/solicitacaooci"
+           xmlns:ivcf="http://esus.ufsc.br/ivcf" xmlns:exame="http://esus.ufsc.br/exame" xmlns:solicitacoesoci="http://esus.ufsc.br/solicitacoesoci"
            targetNamespace="http://esus.ufsc.br/fichaatendimentoodontologicochild" version="1.0">
 
     <xs:import namespace="http://esus.ufsc.br/procedimentoquantidade" schemaLocation="procedimentoquantidade.xsd"/>
@@ -23,7 +23,7 @@
 
     <xs:import namespace="http://esus.ufsc.br/ivcf" schemaLocation="ivcf.xsd"/>
 
-    <xs:import namespace="http://esus.ufsc.br/solicitacaooci" schemaLocation="solicitacaooci.xsd"/>
+    <xs:import namespace="http://esus.ufsc.br/solicitacoesoci" schemaLocation="solicitacoesoci.xsd"/>
 
     <xs:complexType name="fichaAtendimentoOdontologicoChildTransport">
         <xs:sequence>
@@ -53,7 +53,7 @@
             <xs:element minOccurs="0" name="tipoParticipacaoProfissionalConvidado" type="xs:long"/>
             <xs:element maxOccurs="unbounded" minOccurs="0" name="problemasCondicoes" type="problemacondicao:problemaCondicaoTransport"/>
             <xs:element minOccurs="0" name="ivcf" type="ivcf:ivcfTransport"/>
-            <xs:element maxOccurs="unbounded" minOccurs="0" name="solicitacoesOci" type="solicitacaooci:solicitacaoOciTransport"/>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="solicitacoesOci" type="solicitacoesoci:solicitacoesOciTransport"/>
         </xs:sequence>
     </xs:complexType>
 </xs:schema>

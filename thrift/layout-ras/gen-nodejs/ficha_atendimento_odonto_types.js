@@ -8,6 +8,7 @@ var Thrift = thrift.Thrift;
 var Q = thrift.Q;
 
 var common_ttypes = require('./common_types')
+var solicitacao_oci_ttypes = require('./solicitacao_oci_types')
 
 
 var ttypes = module.exports = {};
@@ -177,7 +178,7 @@ FichaAtendimentoOdontologicoChildThrift = module.exports.FichaAtendimentoOdontol
       this.exame = Thrift.copyList(args.exame, [common_ttypes.ExameThrift]);
     }
     if (args.solicitacoesOci !== undefined && args.solicitacoesOci !== null) {
-      this.solicitacoesOci = Thrift.copyList(args.solicitacoesOci, [common_ttypes.SolicitacaoOciThrift]);
+      this.solicitacoesOci = Thrift.copyList(args.solicitacoesOci, [solicitacao_oci_ttypes.SolicitacaoOciThrift]);
     }
   }
 };
@@ -513,7 +514,7 @@ FichaAtendimentoOdontologicoChildThrift.prototype.read = function(input) {
         for (var _i75 = 0; _i75 < _size70; ++_i75)
         {
           var elem76 = null;
-          elem76 = new common_ttypes.SolicitacaoOciThrift();
+          elem76 = new solicitacao_oci_ttypes.SolicitacaoOciThrift();
           elem76.read(input);
           this.solicitacoesOci.push(elem76);
         }

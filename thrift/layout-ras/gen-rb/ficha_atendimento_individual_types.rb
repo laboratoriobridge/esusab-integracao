@@ -6,6 +6,7 @@
 
 require 'thrift'
 require 'common_types'
+require 'solicitacao_oci_types'
 
 
 module Br

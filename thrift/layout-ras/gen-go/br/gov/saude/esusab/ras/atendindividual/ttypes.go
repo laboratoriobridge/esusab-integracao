@@ -16,6 +16,7 @@ var _ = fmt.Printf
 var _ = bytes.Equal
 
 var _ = common.GoUnusedProtection__
+var _ = common.GoUnusedProtection__
 var GoUnusedProtection__ int
 
 // Attributes:

@@ -163,7 +163,3 @@ struct ExameThrift {
 	1:optional string codigoExame;
 	2:optional list<string> solicitadoAvaliado;
 }
-
-struct SolicitacaoOciThrift {
-    1:optional string codigoSigtap;
-}

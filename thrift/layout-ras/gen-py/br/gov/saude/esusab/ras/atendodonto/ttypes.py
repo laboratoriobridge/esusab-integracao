@@ -8,6 +8,7 @@
 
 from thrift.Thrift import TType, TMessageType, TException, TApplicationException
 import br.gov.saude.esusab.ras.common.ttypes
+import br.gov.saude.esusab.ras.common.ttypes
 
 
 from thrift.transport import TTransport

@@ -8,6 +8,7 @@ var Thrift = thrift.Thrift;
 var Q = thrift.Q;
 
 var common_ttypes = require('./common_types')
+var solicitacao_oci_ttypes = require('./solicitacao_oci_types')
 
 
 var ttypes = module.exports = {};
@@ -287,7 +288,7 @@ FichaAtendimentoIndividualChildThrift = module.exports.FichaAtendimentoIndividua
       this.ivcf = new common_ttypes.IvcfThrift(args.ivcf);
     }
     if (args.solicitacoesOci !== undefined && args.solicitacoesOci !== null) {
-      this.solicitacoesOci = Thrift.copyList(args.solicitacoesOci, [common_ttypes.SolicitacaoOciThrift]);
+      this.solicitacoesOci = Thrift.copyList(args.solicitacoesOci, [solicitacao_oci_ttypes.SolicitacaoOciThrift]);
     }
   }
 };
@@ -667,7 +668,7 @@ FichaAtendimentoIndividualChildThrift.prototype.read = function(input) {
         for (var _i69 = 0; _i69 < _size64; ++_i69)
         {
           var elem70 = null;
-          elem70 = new common_ttypes.SolicitacaoOciThrift();
+          elem70 = new solicitacao_oci_ttypes.SolicitacaoOciThrift();
           elem70.read(input);
           this.solicitacoesOci.push(elem70);
         }

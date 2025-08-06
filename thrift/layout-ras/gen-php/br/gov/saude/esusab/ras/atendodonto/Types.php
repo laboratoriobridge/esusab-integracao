@@ -366,7 +366,7 @@ class FichaAtendimentoOdontologicoChildThrift {
             'class' => '\br\gov\saude\esusab\ras\common\ExameThrift',
             ),
           ),
-        42 => array(
+        31 => array(
           'var' => 'solicitacoesOci',
           'type' => TType::LST,
           'etype' => TType::STRUCT,
@@ -751,7 +751,7 @@ class FichaAtendimentoOdontologicoChildThrift {
             $xfer += $input->skip($ftype);
           }
           break;
-        case 42:
+        case 31:
           if ($ftype == TType::LST) {
             $this->solicitacoesOci = array();
             $_size60 = 0;
@@ -1032,7 +1032,7 @@ class FichaAtendimentoOdontologicoChildThrift {
       if (!is_array($this->solicitacoesOci)) {
         throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
       }
-      $xfer += $output->writeFieldBegin('solicitacoesOci', TType::LST, 42);
+      $xfer += $output->writeFieldBegin('solicitacoesOci', TType::LST, 31);
       {
         $output->writeListBegin(TType::STRUCT, count($this->solicitacoesOci));
         {

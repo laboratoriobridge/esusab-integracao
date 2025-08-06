@@ -58,7 +58,7 @@ module Br
               PROBLEMASCONDICOES = 28
               IVCF = 29
               EXAME = 30
-              SOLICITACOESOCI = 42
+              SOLICITACOESOCI = 31
 
               FIELDS = {
                 DTNASCIMENTO => {:type => ::Thrift::Types::I64, :name => 'dtNascimento', :optional => true},

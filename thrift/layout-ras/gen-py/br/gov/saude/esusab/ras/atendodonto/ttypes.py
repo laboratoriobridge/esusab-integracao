@@ -159,18 +159,7 @@ class FichaAtendimentoOdontologicoChildThrift:
     (28, TType.LIST, 'problemasCondicoes', (TType.STRUCT,(br.gov.saude.esusab.ras.common.ttypes.ProblemaCondicaoThrift, br.gov.saude.esusab.ras.common.ttypes.ProblemaCondicaoThrift.thrift_spec)), None, ), # 28
     (29, TType.STRUCT, 'ivcf', (br.gov.saude.esusab.ras.common.ttypes.IvcfThrift, br.gov.saude.esusab.ras.common.ttypes.IvcfThrift.thrift_spec), None, ), # 29
     (30, TType.LIST, 'exame', (TType.STRUCT,(br.gov.saude.esusab.ras.common.ttypes.ExameThrift, br.gov.saude.esusab.ras.common.ttypes.ExameThrift.thrift_spec)), None, ), # 30
-    None, # 31
-    None, # 32
-    None, # 33
-    None, # 34
-    None, # 35
-    None, # 36
-    None, # 37
-    None, # 38
-    None, # 39
-    None, # 40
-    None, # 41
-    (42, TType.LIST, 'solicitacoesOci', (TType.STRUCT,(br.gov.saude.esusab.ras.common.ttypes.SolicitacaoOciThrift, br.gov.saude.esusab.ras.common.ttypes.SolicitacaoOciThrift.thrift_spec)), None, ), # 42
+    (31, TType.LIST, 'solicitacoesOci', (TType.STRUCT,(br.gov.saude.esusab.ras.common.ttypes.SolicitacaoOciThrift, br.gov.saude.esusab.ras.common.ttypes.SolicitacaoOciThrift.thrift_spec)), None, ), # 31
   )
 
   def __init__(self, dtNascimento=None, cnsCidadao=None, numProntuario=None, gestante=None, necessidadesEspeciais=None, localAtendimento=None, tipoAtendimento=None, tiposEncamOdonto=None, tiposFornecimOdonto=None, tiposVigilanciaSaudeBucal=None, tiposConsultaOdonto=None, procedimentosRealizados=None, sexo=None, turno=None, dataHoraInicialAtendimento=None, dataHoraFinalAtendimento=None, cpfCidadao=None, medicamentos=None, encaminhamentos=None, resultadosExames=None, medicoes=None, problemasCondicoes=None, ivcf=None, exame=None, solicitacoesOci=None,):
@@ -387,7 +376,7 @@ class FichaAtendimentoOdontologicoChildThrift:
           iprot.readListEnd()
         else:
           iprot.skip(ftype)
-      elif fid == 42:
+      elif fid == 31:
         if ftype == TType.LIST:
           self.solicitacoesOci = []
           (_etype63, _size60) = iprot.readListBegin()
@@ -535,7 +524,7 @@ class FichaAtendimentoOdontologicoChildThrift:
       oprot.writeListEnd()
       oprot.writeFieldEnd()
     if self.solicitacoesOci is not None:
-      oprot.writeFieldBegin('solicitacoesOci', TType.LIST, 42)
+      oprot.writeFieldBegin('solicitacoesOci', TType.LIST, 31)
       oprot.writeListBegin(TType.STRUCT, len(self.solicitacoesOci))
       for iter76 in self.solicitacoesOci:
         iter76.write(oprot)

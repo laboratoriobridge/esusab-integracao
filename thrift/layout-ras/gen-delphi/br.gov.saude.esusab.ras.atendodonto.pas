@@ -1382,7 +1382,7 @@ begin
             TProtocolUtil.Skip(iprot, field_.Type_);
           end;
         end;
-        42: begin
+        31: begin
           if (field_.Type_ = TType.List) then
           begin
             SolicitacoesOci := TThriftListImpl<ISolicitacaoOciThrift>.Create;
@@ -1722,7 +1722,7 @@ begin
   begin
     field_.Name := 'solicitacoesOci';
     field_.Type_  := TType.List;
-    field_.ID := 42;
+    field_.ID := 31;
     oprot.WriteFieldBegin(field_);
     list_55 := TListImpl.Create(TType.Struct, SolicitacoesOci.Count);
     oprot.WriteListBegin( list_55);

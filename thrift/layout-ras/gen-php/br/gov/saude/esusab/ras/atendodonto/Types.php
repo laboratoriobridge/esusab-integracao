@@ -215,7 +215,7 @@ class FichaAtendimentoOdontologicoChildThrift {
    */
   public $exame = null;
   /**
-   * @var \br\gov\saude\esusab\ras\common\SolicitacaoOciThrift[]
+   * @var \br\gov\saude\esusab\ras\solicitacaooci\SolicitacaoOciThrift[]
    */
   public $solicitacoesOci = null;
 
@@ -372,7 +372,7 @@ class FichaAtendimentoOdontologicoChildThrift {
           'etype' => TType::STRUCT,
           'elem' => array(
             'type' => TType::STRUCT,
-            'class' => '\br\gov\saude\esusab\ras\common\SolicitacaoOciThrift',
+            'class' => '\br\gov\saude\esusab\ras\solicitacaooci\SolicitacaoOciThrift',
             ),
           ),
         );
@@ -760,7 +760,7 @@ class FichaAtendimentoOdontologicoChildThrift {
             for ($_i64 = 0; $_i64 < $_size60; ++$_i64)
             {
               $elem65 = null;
-              $elem65 = new \br\gov\saude\esusab\ras\common\SolicitacaoOciThrift();
+              $elem65 = new \br\gov\saude\esusab\ras\solicitacaooci\SolicitacaoOciThrift();
               $xfer += $elem65->read($input);
               $this->solicitacoesOci []= $elem65;
             }

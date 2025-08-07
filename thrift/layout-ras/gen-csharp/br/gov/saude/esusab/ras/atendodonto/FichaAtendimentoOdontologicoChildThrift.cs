@@ -47,7 +47,7 @@ namespace br.gov.saude.esusab.ras.atendodonto
     private List<br.gov.saude.esusab.ras.common.ProblemaCondicaoThrift> _problemasCondicoes;
     private br.gov.saude.esusab.ras.common.IvcfThrift _ivcf;
     private List<br.gov.saude.esusab.ras.common.ExameThrift> _exame;
-    private List<br.gov.saude.esusab.ras.common.SolicitacaoOciThrift> _solicitacoesOci;
+    private List<br.gov.saude.esusab.ras.solicitacaooci.SolicitacaoOciThrift> _solicitacoesOci;
 
     public long DtNascimento
     {
@@ -361,7 +361,7 @@ namespace br.gov.saude.esusab.ras.atendodonto
       }
     }
 
-    public List<br.gov.saude.esusab.ras.common.SolicitacaoOciThrift> SolicitacoesOci
+    public List<br.gov.saude.esusab.ras.solicitacaooci.SolicitacaoOciThrift> SolicitacoesOci
     {
       get
       {
@@ -704,12 +704,12 @@ namespace br.gov.saude.esusab.ras.atendodonto
             case 31:
               if (field.Type == TType.List) {
                 {
-                  SolicitacoesOci = new List<br.gov.saude.esusab.ras.common.SolicitacaoOciThrift>();
+                  SolicitacoesOci = new List<br.gov.saude.esusab.ras.solicitacaooci.SolicitacaoOciThrift>();
                   TList _list30 = iprot.ReadListBegin();
                   for( int _i31 = 0; _i31 < _list30.Count; ++_i31)
                   {
-                    br.gov.saude.esusab.ras.common.SolicitacaoOciThrift _elem32;
-                    _elem32 = new br.gov.saude.esusab.ras.common.SolicitacaoOciThrift();
+                    br.gov.saude.esusab.ras.solicitacaooci.SolicitacaoOciThrift _elem32;
+                    _elem32 = new br.gov.saude.esusab.ras.solicitacaooci.SolicitacaoOciThrift();
                     _elem32.Read(iprot);
                     SolicitacoesOci.Add(_elem32);
                   }
@@ -1009,7 +1009,7 @@ namespace br.gov.saude.esusab.ras.atendodonto
           oprot.WriteFieldBegin(field);
           {
             oprot.WriteListBegin(new TList(TType.Struct, SolicitacoesOci.Count));
-            foreach (br.gov.saude.esusab.ras.common.SolicitacaoOciThrift _iter43 in SolicitacoesOci)
+            foreach (br.gov.saude.esusab.ras.solicitacaooci.SolicitacaoOciThrift _iter43 in SolicitacoesOci)
             {
               _iter43.Write(oprot);
             }

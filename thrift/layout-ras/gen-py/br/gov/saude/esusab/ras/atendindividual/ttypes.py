@@ -8,7 +8,7 @@
 
 from thrift.Thrift import TType, TMessageType, TException, TApplicationException
 import br.gov.saude.esusab.ras.common.ttypes
-import br.gov.saude.esusab.ras.common.ttypes
+import br.gov.saude.esusab.ras.solicitacaooci.ttypes
 
 
 from thrift.transport import TTransport
@@ -228,7 +228,7 @@ class FichaAtendimentoIndividualChildThrift:
     (39, TType.STRUCT, 'medicoes', (br.gov.saude.esusab.ras.common.ttypes.MedicoesThrift, br.gov.saude.esusab.ras.common.ttypes.MedicoesThrift.thrift_spec), None, ), # 39
     (40, TType.LIST, 'problemasCondicoes', (TType.STRUCT,(br.gov.saude.esusab.ras.common.ttypes.ProblemaCondicaoThrift, br.gov.saude.esusab.ras.common.ttypes.ProblemaCondicaoThrift.thrift_spec)), None, ), # 40
     (41, TType.STRUCT, 'ivcf', (br.gov.saude.esusab.ras.common.ttypes.IvcfThrift, br.gov.saude.esusab.ras.common.ttypes.IvcfThrift.thrift_spec), None, ), # 41
-    (42, TType.LIST, 'solicitacoesOci', (TType.STRUCT,(br.gov.saude.esusab.ras.common.ttypes.SolicitacaoOciThrift, br.gov.saude.esusab.ras.common.ttypes.SolicitacaoOciThrift.thrift_spec)), None, ), # 42
+    (42, TType.LIST, 'solicitacoesOci', (TType.STRUCT,(br.gov.saude.esusab.ras.solicitacaooci.ttypes.SolicitacaoOciThrift, br.gov.saude.esusab.ras.solicitacaooci.ttypes.SolicitacaoOciThrift.thrift_spec)), None, ), # 42
   )
 
   def __init__(self, numeroProntuario=None, cns=None, dataNascimento=None, localDeAtendimento=None, sexo=None, turno=None, tipoAtendimento=None, aleitamentoMaterno=None, dumDaGestante=None, idadeGestacional=None, atencaoDomiciliarModalidade=None, exame=None, vacinaEmDia=None, pic=None, ficouEmObservacao=None, nasfs=None, condutas=None, stGravidezPlanejada=None, nuGestasPrevias=None, nuPartos=None, racionalidadeSaude=None, dataHoraInicialAtendimento=None, dataHoraFinalAtendimento=None, cpfCidadao=None, medicamentos=None, encaminhamentos=None, resultadosExames=None, finalizadorObservacao=None, tipoParticipacaoCidadao=None, tipoParticipacaoProfissionalConvidado=None, emultis=None, medicoes=None, problemasCondicoes=None, ivcf=None, solicitacoesOci=None,):
@@ -500,7 +500,7 @@ class FichaAtendimentoIndividualChildThrift:
           self.solicitacoesOci = []
           (_etype58, _size55) = iprot.readListBegin()
           for _i59 in xrange(_size55):
-            _elem60 = br.gov.saude.esusab.ras.common.ttypes.SolicitacaoOciThrift()
+            _elem60 = br.gov.saude.esusab.ras.solicitacaooci.ttypes.SolicitacaoOciThrift()
             _elem60.read(iprot)
             self.solicitacoesOci.append(_elem60)
           iprot.readListEnd()

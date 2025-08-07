@@ -112,7 +112,7 @@ module Br
                 MEDICOES => {:type => ::Thrift::Types::STRUCT, :name => 'medicoes', :class => ::Br::Gov::Saude::Esusab::Ras::Common::MedicoesThrift, :optional => true},
                 PROBLEMASCONDICOES => {:type => ::Thrift::Types::LIST, :name => 'problemasCondicoes', :element => {:type => ::Thrift::Types::STRUCT, :class => ::Br::Gov::Saude::Esusab::Ras::Common::ProblemaCondicaoThrift}, :optional => true},
                 IVCF => {:type => ::Thrift::Types::STRUCT, :name => 'ivcf', :class => ::Br::Gov::Saude::Esusab::Ras::Common::IvcfThrift, :optional => true},
-                SOLICITACOESOCI => {:type => ::Thrift::Types::LIST, :name => 'solicitacoesOci', :element => {:type => ::Thrift::Types::STRUCT, :class => ::Br::Gov::Saude::Esusab::Ras::Common::SolicitacaoOciThrift}, :optional => true}
+                SOLICITACOESOCI => {:type => ::Thrift::Types::LIST, :name => 'solicitacoesOci', :element => {:type => ::Thrift::Types::STRUCT, :class => ::Br::Gov::Saude::Esusab::Ras::Solicitacaooci::SolicitacaoOciThrift}, :optional => true}
               }
 
               def struct_fields; FIELDS; end

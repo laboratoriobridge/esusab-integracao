@@ -17,7 +17,8 @@ uses
   Thrift.Collections,
   Thrift.Protocol,
   Thrift.Transport,
-  br.gov.saude.esusab.ras.common;
+  br.gov.saude.esusab.ras.common,
+  br.gov.saude.esusab.ras.solicitacaooci;
 
 const
   cbr_gov_saude_esusab_ras_atendodonto_Option_AnsiStr_Binary = False;

@@ -17,32 +17,87 @@ use Thrift\Protocol\TBinaryProtocolAccelerated;
 use Thrift\Exception\TApplicationException;
 
 
-class SolicitacaoOciThrift {
+class HeaderCdsCadastroThrift {
   static $_TSPEC;
 
   /**
    * @var string
    */
-  public $codigoSigtap = null;
+  public $cnesUnidadeSaude = null;
+  /**
+   * @var string
+   */
+  public $cnsProfissional = null;
+  /**
+   * @var string
+   */
+  public $codigoIbgeMunicipio = null;
+  /**
+   * @var int
+   */
+  public $dataAtendimento = null;
+  /**
+   * @var string
+   */
+  public $ineEquipe = null;
+  /**
+   * @var int
+   */
+  public $microarea = null;
 
   public function __construct($vals=null) {
     if (!isset(self::$_TSPEC)) {
       self::$_TSPEC = array(
         1 => array(
-          'var' => 'codigoSigtap',
+          'var' => 'cnesUnidadeSaude',
           'type' => TType::STRING,
+          ),
+        2 => array(
+          'var' => 'cnsProfissional',
+          'type' => TType::STRING,
+          ),
+        3 => array(
+          'var' => 'codigoIbgeMunicipio',
+          'type' => TType::STRING,
+          ),
+        4 => array(
+          'var' => 'dataAtendimento',
+          'type' => TType::I64,
+          ),
+        5 => array(
+          'var' => 'ineEquipe',
+          'type' => TType::STRING,
+          ),
+        6 => array(
+          'var' => 'microarea',
+          'type' => TType::I64,
           ),
         );
     }
     if (is_array($vals)) {
-      if (isset($vals['codigoSigtap'])) {
-        $this->codigoSigtap = $vals['codigoSigtap'];
+      if (isset($vals['cnesUnidadeSaude'])) {
+        $this->cnesUnidadeSaude = $vals['cnesUnidadeSaude'];
+      }
+      if (isset($vals['cnsProfissional'])) {
+        $this->cnsProfissional = $vals['cnsProfissional'];
+      }
+      if (isset($vals['codigoIbgeMunicipio'])) {
+        $this->codigoIbgeMunicipio = $vals['codigoIbgeMunicipio'];
+      }
+      if (isset($vals['dataAtendimento'])) {
+        $this->dataAtendimento = $vals['dataAtendimento'];
+      }
+      if (isset($vals['ineEquipe'])) {
+        $this->ineEquipe = $vals['ineEquipe'];
+      }
+      if (isset($vals['microarea'])) {
+        $this->microarea = $vals['microarea'];
       }
     }
   }
 
   public function getName() {
-    return 'SolicitacaoOciThrift';
+    return 'HeaderCdsCadastroThrift';
   }
 
   public function read($input)
@@ -62,7 +117,42 @@ class SolicitacaoOciThrift {
       {
         case 1:
           if ($ftype == TType::STRING) {
-            $xfer += $input->readString($this->codigoSigtap);
+            $xfer += $input->readString($this->cnesUnidadeSaude);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 2:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->cnsProfissional);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 3:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->codigoIbgeMunicipio);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 4:
+          if ($ftype == TType::I64) {
+            $xfer += $input->readI64($this->dataAtendimento);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 5:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->ineEquipe);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 6:
+          if ($ftype == TType::I64) {
+            $xfer += $input->readI64($this->microarea);
           } else {
             $xfer += $input->skip($ftype);
           }
@@ -79,10 +169,3075 @@ class SolicitacaoOciThrift {
 
   public function write($output) {
     $xfer = 0;
-    $xfer += $output->writeStructBegin('SolicitacaoOciThrift');
-    if ($this->codigoSigtap !== null) {
-      $xfer += $output->writeFieldBegin('codigoSigtap', TType::STRING, 1);
-      $xfer += $output->writeString($this->codigoSigtap);
+    $xfer += $output->writeStructBegin('HeaderCdsCadastroThrift');
+    if ($this->cnesUnidadeSaude !== null) {
+      $xfer += $output->writeFieldBegin('cnesUnidadeSaude', TType::STRING, 1);
+      $xfer += $output->writeString($this->cnesUnidadeSaude);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->cnsProfissional !== null) {
+      $xfer += $output->writeFieldBegin('cnsProfissional', TType::STRING, 2);
+      $xfer += $output->writeString($this->cnsProfissional);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->codigoIbgeMunicipio !== null) {
+      $xfer += $output->writeFieldBegin('codigoIbgeMunicipio', TType::STRING, 3);
+      $xfer += $output->writeString($this->codigoIbgeMunicipio);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->dataAtendimento !== null) {
+      $xfer += $output->writeFieldBegin('dataAtendimento', TType::I64, 4);
+      $xfer += $output->writeI64($this->dataAtendimento);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->ineEquipe !== null) {
+      $xfer += $output->writeFieldBegin('ineEquipe', TType::STRING, 5);
+      $xfer += $output->writeString($this->ineEquipe);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->microarea !== null) {
+      $xfer += $output->writeFieldBegin('microarea', TType::I64, 6);
+      $xfer += $output->writeI64($this->microarea);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class LotacaoHeaderThrift {
+  static $_TSPEC;
+
+  /**
+   * @var string
+   */
+  public $profissionalCNS = null;
+  /**
+   * @var string
+   */
+  public $cboCodigo_2002 = null;
+  /**
+   * @var string
+   */
+  public $cnes = null;
+  /**
+   * @var string
+   */
+  public $ine = null;
+
+  public function __construct($vals=null) {
+    if (!isset(self::$_TSPEC)) {
+      self::$_TSPEC = array(
+        1 => array(
+          'var' => 'profissionalCNS',
+          'type' => TType::STRING,
+          ),
+        2 => array(
+          'var' => 'cboCodigo_2002',
+          'type' => TType::STRING,
+          ),
+        3 => array(
+          'var' => 'cnes',
+          'type' => TType::STRING,
+          ),
+        4 => array(
+          'var' => 'ine',
+          'type' => TType::STRING,
+          ),
+        );
+    }
+    if (is_array($vals)) {
+      if (isset($vals['profissionalCNS'])) {
+        $this->profissionalCNS = $vals['profissionalCNS'];
+      }
+      if (isset($vals['cboCodigo_2002'])) {
+        $this->cboCodigo_2002 = $vals['cboCodigo_2002'];
+      }
+      if (isset($vals['cnes'])) {
+        $this->cnes = $vals['cnes'];
+      }
+      if (isset($vals['ine'])) {
+        $this->ine = $vals['ine'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'LotacaoHeaderThrift';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 1:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->profissionalCNS);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 2:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->cboCodigo_2002);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 3:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->cnes);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 4:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->ine);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('LotacaoHeaderThrift');
+    if ($this->profissionalCNS !== null) {
+      $xfer += $output->writeFieldBegin('profissionalCNS', TType::STRING, 1);
+      $xfer += $output->writeString($this->profissionalCNS);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->cboCodigo_2002 !== null) {
+      $xfer += $output->writeFieldBegin('cboCodigo_2002', TType::STRING, 2);
+      $xfer += $output->writeString($this->cboCodigo_2002);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->cnes !== null) {
+      $xfer += $output->writeFieldBegin('cnes', TType::STRING, 3);
+      $xfer += $output->writeString($this->cnes);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->ine !== null) {
+      $xfer += $output->writeFieldBegin('ine', TType::STRING, 4);
+      $xfer += $output->writeString($this->ine);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class UnicaLotacaoHeaderThrift {
+  static $_TSPEC;
+
+  /**
+   * @var string
+   */
+  public $profissionalCNS = null;
+  /**
+   * @var string
+   */
+  public $cboCodigo_2002 = null;
+  /**
+   * @var string
+   */
+  public $cnes = null;
+  /**
+   * @var string
+   */
+  public $ine = null;
+  /**
+   * @var int
+   */
+  public $dataAtendimento = null;
+  /**
+   * @var string
+   */
+  public $codigoIbgeMunicipio = null;
+
+  public function __construct($vals=null) {
+    if (!isset(self::$_TSPEC)) {
+      self::$_TSPEC = array(
+        1 => array(
+          'var' => 'profissionalCNS',
+          'type' => TType::STRING,
+          ),
+        2 => array(
+          'var' => 'cboCodigo_2002',
+          'type' => TType::STRING,
+          ),
+        3 => array(
+          'var' => 'cnes',
+          'type' => TType::STRING,
+          ),
+        4 => array(
+          'var' => 'ine',
+          'type' => TType::STRING,
+          ),
+        5 => array(
+          'var' => 'dataAtendimento',
+          'type' => TType::I64,
+          ),
+        6 => array(
+          'var' => 'codigoIbgeMunicipio',
+          'type' => TType::STRING,
+          ),
+        );
+    }
+    if (is_array($vals)) {
+      if (isset($vals['profissionalCNS'])) {
+        $this->profissionalCNS = $vals['profissionalCNS'];
+      }
+      if (isset($vals['cboCodigo_2002'])) {
+        $this->cboCodigo_2002 = $vals['cboCodigo_2002'];
+      }
+      if (isset($vals['cnes'])) {
+        $this->cnes = $vals['cnes'];
+      }
+      if (isset($vals['ine'])) {
+        $this->ine = $vals['ine'];
+      }
+      if (isset($vals['dataAtendimento'])) {
+        $this->dataAtendimento = $vals['dataAtendimento'];
+      }
+      if (isset($vals['codigoIbgeMunicipio'])) {
+        $this->codigoIbgeMunicipio = $vals['codigoIbgeMunicipio'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'UnicaLotacaoHeaderThrift';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 1:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->profissionalCNS);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 2:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->cboCodigo_2002);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 3:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->cnes);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 4:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->ine);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 5:
+          if ($ftype == TType::I64) {
+            $xfer += $input->readI64($this->dataAtendimento);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 6:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->codigoIbgeMunicipio);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('UnicaLotacaoHeaderThrift');
+    if ($this->profissionalCNS !== null) {
+      $xfer += $output->writeFieldBegin('profissionalCNS', TType::STRING, 1);
+      $xfer += $output->writeString($this->profissionalCNS);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->cboCodigo_2002 !== null) {
+      $xfer += $output->writeFieldBegin('cboCodigo_2002', TType::STRING, 2);
+      $xfer += $output->writeString($this->cboCodigo_2002);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->cnes !== null) {
+      $xfer += $output->writeFieldBegin('cnes', TType::STRING, 3);
+      $xfer += $output->writeString($this->cnes);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->ine !== null) {
+      $xfer += $output->writeFieldBegin('ine', TType::STRING, 4);
+      $xfer += $output->writeString($this->ine);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->dataAtendimento !== null) {
+      $xfer += $output->writeFieldBegin('dataAtendimento', TType::I64, 5);
+      $xfer += $output->writeI64($this->dataAtendimento);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->codigoIbgeMunicipio !== null) {
+      $xfer += $output->writeFieldBegin('codigoIbgeMunicipio', TType::STRING, 6);
+      $xfer += $output->writeString($this->codigoIbgeMunicipio);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class VariasLotacoesHeaderThrift {
+  static $_TSPEC;
+
+  /**
+   * @var \br\gov\saude\esusab\ras\common\LotacaoHeaderThrift
+   */
+  public $lotacaoFormPrincipal = null;
+  /**
+   * @var \br\gov\saude\esusab\ras\common\LotacaoHeaderThrift
+   */
+  public $lotacaoFormAtendimentoCompartilhado = null;
+  /**
+   * @var int
+   */
+  public $dataAtendimento = null;
+  /**
+   * @var string
+   */
+  public $codigoIbgeMunicipio = null;
+
+  public function __construct($vals=null) {
+    if (!isset(self::$_TSPEC)) {
+      self::$_TSPEC = array(
+        6 => array(
+          'var' => 'lotacaoFormPrincipal',
+          'type' => TType::STRUCT,
+          'class' => '\br\gov\saude\esusab\ras\common\LotacaoHeaderThrift',
+          ),
+        7 => array(
+          'var' => 'lotacaoFormAtendimentoCompartilhado',
+          'type' => TType::STRUCT,
+          'class' => '\br\gov\saude\esusab\ras\common\LotacaoHeaderThrift',
+          ),
+        8 => array(
+          'var' => 'dataAtendimento',
+          'type' => TType::I64,
+          ),
+        9 => array(
+          'var' => 'codigoIbgeMunicipio',
+          'type' => TType::STRING,
+          ),
+        );
+    }
+    if (is_array($vals)) {
+      if (isset($vals['lotacaoFormPrincipal'])) {
+        $this->lotacaoFormPrincipal = $vals['lotacaoFormPrincipal'];
+      }
+      if (isset($vals['lotacaoFormAtendimentoCompartilhado'])) {
+        $this->lotacaoFormAtendimentoCompartilhado = $vals['lotacaoFormAtendimentoCompartilhado'];
+      }
+      if (isset($vals['dataAtendimento'])) {
+        $this->dataAtendimento = $vals['dataAtendimento'];
+      }
+      if (isset($vals['codigoIbgeMunicipio'])) {
+        $this->codigoIbgeMunicipio = $vals['codigoIbgeMunicipio'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'VariasLotacoesHeaderThrift';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 6:
+          if ($ftype == TType::STRUCT) {
+            $this->lotacaoFormPrincipal = new \br\gov\saude\esusab\ras\common\LotacaoHeaderThrift();
+            $xfer += $this->lotacaoFormPrincipal->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 7:
+          if ($ftype == TType::STRUCT) {
+            $this->lotacaoFormAtendimentoCompartilhado = new \br\gov\saude\esusab\ras\common\LotacaoHeaderThrift();
+            $xfer += $this->lotacaoFormAtendimentoCompartilhado->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 8:
+          if ($ftype == TType::I64) {
+            $xfer += $input->readI64($this->dataAtendimento);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 9:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->codigoIbgeMunicipio);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('VariasLotacoesHeaderThrift');
+    if ($this->lotacaoFormPrincipal !== null) {
+      if (!is_object($this->lotacaoFormPrincipal)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('lotacaoFormPrincipal', TType::STRUCT, 6);
+      $xfer += $this->lotacaoFormPrincipal->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->lotacaoFormAtendimentoCompartilhado !== null) {
+      if (!is_object($this->lotacaoFormAtendimentoCompartilhado)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('lotacaoFormAtendimentoCompartilhado', TType::STRUCT, 7);
+      $xfer += $this->lotacaoFormAtendimentoCompartilhado->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->dataAtendimento !== null) {
+      $xfer += $output->writeFieldBegin('dataAtendimento', TType::I64, 8);
+      $xfer += $output->writeI64($this->dataAtendimento);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->codigoIbgeMunicipio !== null) {
+      $xfer += $output->writeFieldBegin('codigoIbgeMunicipio', TType::STRING, 9);
+      $xfer += $output->writeString($this->codigoIbgeMunicipio);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class LotacaoThrift {
+  static $_TSPEC;
+
+  /**
+   * @var string
+   */
+  public $cpf = null;
+  /**
+   * @var string
+   */
+  public $cns = null;
+  /**
+   * @var string
+   */
+  public $cboCodigo_2002 = null;
+  /**
+   * @var string
+   */
+  public $ine = null;
+  /**
+   * @var string
+   */
+  public $cnes = null;
+  /**
+   * @var string
+   */
+  public $codigoIbgeMunicipio = null;
+
+  public function __construct($vals=null) {
+    if (!isset(self::$_TSPEC)) {
+      self::$_TSPEC = array(
+        1 => array(
+          'var' => 'cpf',
+          'type' => TType::STRING,
+          ),
+        2 => array(
+          'var' => 'cns',
+          'type' => TType::STRING,
+          ),
+        3 => array(
+          'var' => 'cboCodigo_2002',
+          'type' => TType::STRING,
+          ),
+        4 => array(
+          'var' => 'ine',
+          'type' => TType::STRING,
+          ),
+        5 => array(
+          'var' => 'cnes',
+          'type' => TType::STRING,
+          ),
+        6 => array(
+          'var' => 'codigoIbgeMunicipio',
+          'type' => TType::STRING,
+          ),
+        );
+    }
+    if (is_array($vals)) {
+      if (isset($vals['cpf'])) {
+        $this->cpf = $vals['cpf'];
+      }
+      if (isset($vals['cns'])) {
+        $this->cns = $vals['cns'];
+      }
+      if (isset($vals['cboCodigo_2002'])) {
+        $this->cboCodigo_2002 = $vals['cboCodigo_2002'];
+      }
+      if (isset($vals['ine'])) {
+        $this->ine = $vals['ine'];
+      }
+      if (isset($vals['cnes'])) {
+        $this->cnes = $vals['cnes'];
+      }
+      if (isset($vals['codigoIbgeMunicipio'])) {
+        $this->codigoIbgeMunicipio = $vals['codigoIbgeMunicipio'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'LotacaoThrift';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 1:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->cpf);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 2:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->cns);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 3:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->cboCodigo_2002);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 4:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->ine);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 5:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->cnes);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 6:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->codigoIbgeMunicipio);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('LotacaoThrift');
+    if ($this->cpf !== null) {
+      $xfer += $output->writeFieldBegin('cpf', TType::STRING, 1);
+      $xfer += $output->writeString($this->cpf);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->cns !== null) {
+      $xfer += $output->writeFieldBegin('cns', TType::STRING, 2);
+      $xfer += $output->writeString($this->cns);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->cboCodigo_2002 !== null) {
+      $xfer += $output->writeFieldBegin('cboCodigo_2002', TType::STRING, 3);
+      $xfer += $output->writeString($this->cboCodigo_2002);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->ine !== null) {
+      $xfer += $output->writeFieldBegin('ine', TType::STRING, 4);
+      $xfer += $output->writeString($this->ine);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->cnes !== null) {
+      $xfer += $output->writeFieldBegin('cnes', TType::STRING, 5);
+      $xfer += $output->writeString($this->cnes);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->codigoIbgeMunicipio !== null) {
+      $xfer += $output->writeFieldBegin('codigoIbgeMunicipio', TType::STRING, 6);
+      $xfer += $output->writeString($this->codigoIbgeMunicipio);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class EnderecoLocalPermanenciaThrift {
+  static $_TSPEC;
+
+  /**
+   * @var string
+   */
+  public $bairro = null;
+  /**
+   * @var string
+   */
+  public $cep = null;
+  /**
+   * @var string
+   */
+  public $codigoIbgeMunicipio = null;
+  /**
+   * @var string
+   */
+  public $complemento = null;
+  /**
+   * @var string
+   */
+  public $nomeLogradouro = null;
+  /**
+   * @var string
+   */
+  public $numero = null;
+  /**
+   * @var string
+   */
+  public $numeroDneUf = null;
+  /**
+   * @var string
+   */
+  public $telefoneContato = null;
+  /**
+   * @var string
+   */
+  public $telefoneResidencia = null;
+  /**
+   * @var string
+   */
+  public $tipoLogradouroNumeroDne = null;
+  /**
+   * @var bool
+   */
+  public $stSemNumero = null;
+  /**
+   * @var string
+   */
+  public $pontoReferencia = null;
+  /**
+   * @var string
+   */
+  public $microArea = null;
+  /**
+   * @var bool
+   */
+  public $stForaArea = null;
+
+  public function __construct($vals=null) {
+    if (!isset(self::$_TSPEC)) {
+      self::$_TSPEC = array(
+        1 => array(
+          'var' => 'bairro',
+          'type' => TType::STRING,
+          ),
+        2 => array(
+          'var' => 'cep',
+          'type' => TType::STRING,
+          ),
+        3 => array(
+          'var' => 'codigoIbgeMunicipio',
+          'type' => TType::STRING,
+          ),
+        4 => array(
+          'var' => 'complemento',
+          'type' => TType::STRING,
+          ),
+        5 => array(
+          'var' => 'nomeLogradouro',
+          'type' => TType::STRING,
+          ),
+        6 => array(
+          'var' => 'numero',
+          'type' => TType::STRING,
+          ),
+        7 => array(
+          'var' => 'numeroDneUf',
+          'type' => TType::STRING,
+          ),
+        8 => array(
+          'var' => 'telefoneContato',
+          'type' => TType::STRING,
+          ),
+        9 => array(
+          'var' => 'telefoneResidencia',
+          'type' => TType::STRING,
+          ),
+        10 => array(
+          'var' => 'tipoLogradouroNumeroDne',
+          'type' => TType::STRING,
+          ),
+        11 => array(
+          'var' => 'stSemNumero',
+          'type' => TType::BOOL,
+          ),
+        12 => array(
+          'var' => 'pontoReferencia',
+          'type' => TType::STRING,
+          ),
+        13 => array(
+          'var' => 'microArea',
+          'type' => TType::STRING,
+          ),
+        14 => array(
+          'var' => 'stForaArea',
+          'type' => TType::BOOL,
+          ),
+        );
+    }
+    if (is_array($vals)) {
+      if (isset($vals['bairro'])) {
+        $this->bairro = $vals['bairro'];
+      }
+      if (isset($vals['cep'])) {
+        $this->cep = $vals['cep'];
+      }
+      if (isset($vals['codigoIbgeMunicipio'])) {
+        $this->codigoIbgeMunicipio = $vals['codigoIbgeMunicipio'];
+      }
+      if (isset($vals['complemento'])) {
+        $this->complemento = $vals['complemento'];
+      }
+      if (isset($vals['nomeLogradouro'])) {
+        $this->nomeLogradouro = $vals['nomeLogradouro'];
+      }
+      if (isset($vals['numero'])) {
+        $this->numero = $vals['numero'];
+      }
+      if (isset($vals['numeroDneUf'])) {
+        $this->numeroDneUf = $vals['numeroDneUf'];
+      }
+      if (isset($vals['telefoneContato'])) {
+        $this->telefoneContato = $vals['telefoneContato'];
+      }
+      if (isset($vals['telefoneResidencia'])) {
+        $this->telefoneResidencia = $vals['telefoneResidencia'];
+      }
+      if (isset($vals['tipoLogradouroNumeroDne'])) {
+        $this->tipoLogradouroNumeroDne = $vals['tipoLogradouroNumeroDne'];
+      }
+      if (isset($vals['stSemNumero'])) {
+        $this->stSemNumero = $vals['stSemNumero'];
+      }
+      if (isset($vals['pontoReferencia'])) {
+        $this->pontoReferencia = $vals['pontoReferencia'];
+      }
+      if (isset($vals['microArea'])) {
+        $this->microArea = $vals['microArea'];
+      }
+      if (isset($vals['stForaArea'])) {
+        $this->stForaArea = $vals['stForaArea'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'EnderecoLocalPermanenciaThrift';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 1:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->bairro);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 2:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->cep);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 3:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->codigoIbgeMunicipio);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 4:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->complemento);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 5:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->nomeLogradouro);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 6:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->numero);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 7:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->numeroDneUf);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 8:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->telefoneContato);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 9:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->telefoneResidencia);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 10:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->tipoLogradouroNumeroDne);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 11:
+          if ($ftype == TType::BOOL) {
+            $xfer += $input->readBool($this->stSemNumero);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 12:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->pontoReferencia);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 13:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->microArea);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 14:
+          if ($ftype == TType::BOOL) {
+            $xfer += $input->readBool($this->stForaArea);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('EnderecoLocalPermanenciaThrift');
+    if ($this->bairro !== null) {
+      $xfer += $output->writeFieldBegin('bairro', TType::STRING, 1);
+      $xfer += $output->writeString($this->bairro);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->cep !== null) {
+      $xfer += $output->writeFieldBegin('cep', TType::STRING, 2);
+      $xfer += $output->writeString($this->cep);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->codigoIbgeMunicipio !== null) {
+      $xfer += $output->writeFieldBegin('codigoIbgeMunicipio', TType::STRING, 3);
+      $xfer += $output->writeString($this->codigoIbgeMunicipio);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->complemento !== null) {
+      $xfer += $output->writeFieldBegin('complemento', TType::STRING, 4);
+      $xfer += $output->writeString($this->complemento);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->nomeLogradouro !== null) {
+      $xfer += $output->writeFieldBegin('nomeLogradouro', TType::STRING, 5);
+      $xfer += $output->writeString($this->nomeLogradouro);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->numero !== null) {
+      $xfer += $output->writeFieldBegin('numero', TType::STRING, 6);
+      $xfer += $output->writeString($this->numero);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->numeroDneUf !== null) {
+      $xfer += $output->writeFieldBegin('numeroDneUf', TType::STRING, 7);
+      $xfer += $output->writeString($this->numeroDneUf);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->telefoneContato !== null) {
+      $xfer += $output->writeFieldBegin('telefoneContato', TType::STRING, 8);
+      $xfer += $output->writeString($this->telefoneContato);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->telefoneResidencia !== null) {
+      $xfer += $output->writeFieldBegin('telefoneResidencia', TType::STRING, 9);
+      $xfer += $output->writeString($this->telefoneResidencia);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->tipoLogradouroNumeroDne !== null) {
+      $xfer += $output->writeFieldBegin('tipoLogradouroNumeroDne', TType::STRING, 10);
+      $xfer += $output->writeString($this->tipoLogradouroNumeroDne);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->stSemNumero !== null) {
+      $xfer += $output->writeFieldBegin('stSemNumero', TType::BOOL, 11);
+      $xfer += $output->writeBool($this->stSemNumero);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->pontoReferencia !== null) {
+      $xfer += $output->writeFieldBegin('pontoReferencia', TType::STRING, 12);
+      $xfer += $output->writeString($this->pontoReferencia);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->microArea !== null) {
+      $xfer += $output->writeFieldBegin('microArea', TType::STRING, 13);
+      $xfer += $output->writeString($this->microArea);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->stForaArea !== null) {
+      $xfer += $output->writeFieldBegin('stForaArea', TType::BOOL, 14);
+      $xfer += $output->writeBool($this->stForaArea);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class MedicamentoThrift {
+  static $_TSPEC;
+
+  /**
+   * @var string
+   */
+  public $codigoCatmat = null;
+  /**
+   * @var int
+   */
+  public $viaAdministracao = null;
+  /**
+   * @var string
+   */
+  public $dose = null;
+  /**
+   * @var bool
+   */
+  public $doseUnica = null;
+  /**
+   * @var bool
+   */
+  public $usoContinuo = null;
+  /**
+   * @var int
+   */
+  public $doseFrequenciaTipo = null;
+  /**
+   * @var string
+   */
+  public $doseFrequencia = null;
+  /**
+   * @var int
+   */
+  public $doseFrequenciaQuantidade = null;
+  /**
+   * @var int
+   */
+  public $doseFrequenciaUnidadeMedida = null;
+  /**
+   * @var int
+   */
+  public $dtInicioTratamento = null;
+  /**
+   * @var int
+   */
+  public $duracaoTratamento = null;
+  /**
+   * @var int
+   */
+  public $duracaoTratamentoMedida = null;
+  /**
+   * @var int
+   */
+  public $quantidadeReceitada = null;
+  /**
+   * @var string
+   */
+  public $qtDoseManha = null;
+  /**
+   * @var string
+   */
+  public $qtDoseTarde = null;
+  /**
+   * @var string
+   */
+  public $qtDoseNoite = null;
+
+  public function __construct($vals=null) {
+    if (!isset(self::$_TSPEC)) {
+      self::$_TSPEC = array(
+        1 => array(
+          'var' => 'codigoCatmat',
+          'type' => TType::STRING,
+          ),
+        2 => array(
+          'var' => 'viaAdministracao',
+          'type' => TType::I64,
+          ),
+        3 => array(
+          'var' => 'dose',
+          'type' => TType::STRING,
+          ),
+        4 => array(
+          'var' => 'doseUnica',
+          'type' => TType::BOOL,
+          ),
+        5 => array(
+          'var' => 'usoContinuo',
+          'type' => TType::BOOL,
+          ),
+        6 => array(
+          'var' => 'doseFrequenciaTipo',
+          'type' => TType::I64,
+          ),
+        7 => array(
+          'var' => 'doseFrequencia',
+          'type' => TType::STRING,
+          ),
+        8 => array(
+          'var' => 'doseFrequenciaQuantidade',
+          'type' => TType::I32,
+          ),
+        9 => array(
+          'var' => 'doseFrequenciaUnidadeMedida',
+          'type' => TType::I64,
+          ),
+        10 => array(
+          'var' => 'dtInicioTratamento',
+          'type' => TType::I64,
+          ),
+        11 => array(
+          'var' => 'duracaoTratamento',
+          'type' => TType::I32,
+          ),
+        12 => array(
+          'var' => 'duracaoTratamentoMedida',
+          'type' => TType::I64,
+          ),
+        13 => array(
+          'var' => 'quantidadeReceitada',
+          'type' => TType::I32,
+          ),
+        15 => array(
+          'var' => 'qtDoseManha',
+          'type' => TType::STRING,
+          ),
+        16 => array(
+          'var' => 'qtDoseTarde',
+          'type' => TType::STRING,
+          ),
+        17 => array(
+          'var' => 'qtDoseNoite',
+          'type' => TType::STRING,
+          ),
+        );
+    }
+    if (is_array($vals)) {
+      if (isset($vals['codigoCatmat'])) {
+        $this->codigoCatmat = $vals['codigoCatmat'];
+      }
+      if (isset($vals['viaAdministracao'])) {
+        $this->viaAdministracao = $vals['viaAdministracao'];
+      }
+      if (isset($vals['dose'])) {
+        $this->dose = $vals['dose'];
+      }
+      if (isset($vals['doseUnica'])) {
+        $this->doseUnica = $vals['doseUnica'];
+      }
+      if (isset($vals['usoContinuo'])) {
+        $this->usoContinuo = $vals['usoContinuo'];
+      }
+      if (isset($vals['doseFrequenciaTipo'])) {
+        $this->doseFrequenciaTipo = $vals['doseFrequenciaTipo'];
+      }
+      if (isset($vals['doseFrequencia'])) {
+        $this->doseFrequencia = $vals['doseFrequencia'];
+      }
+      if (isset($vals['doseFrequenciaQuantidade'])) {
+        $this->doseFrequenciaQuantidade = $vals['doseFrequenciaQuantidade'];
+      }
+      if (isset($vals['doseFrequenciaUnidadeMedida'])) {
+        $this->doseFrequenciaUnidadeMedida = $vals['doseFrequenciaUnidadeMedida'];
+      }
+      if (isset($vals['dtInicioTratamento'])) {
+        $this->dtInicioTratamento = $vals['dtInicioTratamento'];
+      }
+      if (isset($vals['duracaoTratamento'])) {
+        $this->duracaoTratamento = $vals['duracaoTratamento'];
+      }
+      if (isset($vals['duracaoTratamentoMedida'])) {
+        $this->duracaoTratamentoMedida = $vals['duracaoTratamentoMedida'];
+      }
+      if (isset($vals['quantidadeReceitada'])) {
+        $this->quantidadeReceitada = $vals['quantidadeReceitada'];
+      }
+      if (isset($vals['qtDoseManha'])) {
+        $this->qtDoseManha = $vals['qtDoseManha'];
+      }
+      if (isset($vals['qtDoseTarde'])) {
+        $this->qtDoseTarde = $vals['qtDoseTarde'];
+      }
+      if (isset($vals['qtDoseNoite'])) {
+        $this->qtDoseNoite = $vals['qtDoseNoite'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'MedicamentoThrift';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 1:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->codigoCatmat);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 2:
+          if ($ftype == TType::I64) {
+            $xfer += $input->readI64($this->viaAdministracao);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 3:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->dose);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 4:
+          if ($ftype == TType::BOOL) {
+            $xfer += $input->readBool($this->doseUnica);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 5:
+          if ($ftype == TType::BOOL) {
+            $xfer += $input->readBool($this->usoContinuo);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 6:
+          if ($ftype == TType::I64) {
+            $xfer += $input->readI64($this->doseFrequenciaTipo);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 7:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->doseFrequencia);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 8:
+          if ($ftype == TType::I32) {
+            $xfer += $input->readI32($this->doseFrequenciaQuantidade);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 9:
+          if ($ftype == TType::I64) {
+            $xfer += $input->readI64($this->doseFrequenciaUnidadeMedida);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 10:
+          if ($ftype == TType::I64) {
+            $xfer += $input->readI64($this->dtInicioTratamento);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 11:
+          if ($ftype == TType::I32) {
+            $xfer += $input->readI32($this->duracaoTratamento);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 12:
+          if ($ftype == TType::I64) {
+            $xfer += $input->readI64($this->duracaoTratamentoMedida);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 13:
+          if ($ftype == TType::I32) {
+            $xfer += $input->readI32($this->quantidadeReceitada);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 15:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->qtDoseManha);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 16:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->qtDoseTarde);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 17:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->qtDoseNoite);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('MedicamentoThrift');
+    if ($this->codigoCatmat !== null) {
+      $xfer += $output->writeFieldBegin('codigoCatmat', TType::STRING, 1);
+      $xfer += $output->writeString($this->codigoCatmat);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->viaAdministracao !== null) {
+      $xfer += $output->writeFieldBegin('viaAdministracao', TType::I64, 2);
+      $xfer += $output->writeI64($this->viaAdministracao);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->dose !== null) {
+      $xfer += $output->writeFieldBegin('dose', TType::STRING, 3);
+      $xfer += $output->writeString($this->dose);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->doseUnica !== null) {
+      $xfer += $output->writeFieldBegin('doseUnica', TType::BOOL, 4);
+      $xfer += $output->writeBool($this->doseUnica);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->usoContinuo !== null) {
+      $xfer += $output->writeFieldBegin('usoContinuo', TType::BOOL, 5);
+      $xfer += $output->writeBool($this->usoContinuo);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->doseFrequenciaTipo !== null) {
+      $xfer += $output->writeFieldBegin('doseFrequenciaTipo', TType::I64, 6);
+      $xfer += $output->writeI64($this->doseFrequenciaTipo);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->doseFrequencia !== null) {
+      $xfer += $output->writeFieldBegin('doseFrequencia', TType::STRING, 7);
+      $xfer += $output->writeString($this->doseFrequencia);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->doseFrequenciaQuantidade !== null) {
+      $xfer += $output->writeFieldBegin('doseFrequenciaQuantidade', TType::I32, 8);
+      $xfer += $output->writeI32($this->doseFrequenciaQuantidade);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->doseFrequenciaUnidadeMedida !== null) {
+      $xfer += $output->writeFieldBegin('doseFrequenciaUnidadeMedida', TType::I64, 9);
+      $xfer += $output->writeI64($this->doseFrequenciaUnidadeMedida);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->dtInicioTratamento !== null) {
+      $xfer += $output->writeFieldBegin('dtInicioTratamento', TType::I64, 10);
+      $xfer += $output->writeI64($this->dtInicioTratamento);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->duracaoTratamento !== null) {
+      $xfer += $output->writeFieldBegin('duracaoTratamento', TType::I32, 11);
+      $xfer += $output->writeI32($this->duracaoTratamento);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->duracaoTratamentoMedida !== null) {
+      $xfer += $output->writeFieldBegin('duracaoTratamentoMedida', TType::I64, 12);
+      $xfer += $output->writeI64($this->duracaoTratamentoMedida);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->quantidadeReceitada !== null) {
+      $xfer += $output->writeFieldBegin('quantidadeReceitada', TType::I32, 13);
+      $xfer += $output->writeI32($this->quantidadeReceitada);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->qtDoseManha !== null) {
+      $xfer += $output->writeFieldBegin('qtDoseManha', TType::STRING, 15);
+      $xfer += $output->writeString($this->qtDoseManha);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->qtDoseTarde !== null) {
+      $xfer += $output->writeFieldBegin('qtDoseTarde', TType::STRING, 16);
+      $xfer += $output->writeString($this->qtDoseTarde);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->qtDoseNoite !== null) {
+      $xfer += $output->writeFieldBegin('qtDoseNoite', TType::STRING, 17);
+      $xfer += $output->writeString($this->qtDoseNoite);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class EncaminhamentoExternoThrift {
+  static $_TSPEC;
+
+  /**
+   * @var int
+   */
+  public $especialidade = null;
+  /**
+   * @var string
+   */
+  public $hipoteseDiagnosticoCid10 = null;
+  /**
+   * @var string
+   */
+  public $hipoteseDiagnosticoCiap2 = null;
+  /**
+   * @var int
+   */
+  public $classificacaoRisco = null;
+
+  public function __construct($vals=null) {
+    if (!isset(self::$_TSPEC)) {
+      self::$_TSPEC = array(
+        1 => array(
+          'var' => 'especialidade',
+          'type' => TType::I64,
+          ),
+        2 => array(
+          'var' => 'hipoteseDiagnosticoCid10',
+          'type' => TType::STRING,
+          ),
+        3 => array(
+          'var' => 'hipoteseDiagnosticoCiap2',
+          'type' => TType::STRING,
+          ),
+        4 => array(
+          'var' => 'classificacaoRisco',
+          'type' => TType::I64,
+          ),
+        );
+    }
+    if (is_array($vals)) {
+      if (isset($vals['especialidade'])) {
+        $this->especialidade = $vals['especialidade'];
+      }
+      if (isset($vals['hipoteseDiagnosticoCid10'])) {
+        $this->hipoteseDiagnosticoCid10 = $vals['hipoteseDiagnosticoCid10'];
+      }
+      if (isset($vals['hipoteseDiagnosticoCiap2'])) {
+        $this->hipoteseDiagnosticoCiap2 = $vals['hipoteseDiagnosticoCiap2'];
+      }
+      if (isset($vals['classificacaoRisco'])) {
+        $this->classificacaoRisco = $vals['classificacaoRisco'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'EncaminhamentoExternoThrift';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 1:
+          if ($ftype == TType::I64) {
+            $xfer += $input->readI64($this->especialidade);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 2:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->hipoteseDiagnosticoCid10);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 3:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->hipoteseDiagnosticoCiap2);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 4:
+          if ($ftype == TType::I64) {
+            $xfer += $input->readI64($this->classificacaoRisco);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('EncaminhamentoExternoThrift');
+    if ($this->especialidade !== null) {
+      $xfer += $output->writeFieldBegin('especialidade', TType::I64, 1);
+      $xfer += $output->writeI64($this->especialidade);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->hipoteseDiagnosticoCid10 !== null) {
+      $xfer += $output->writeFieldBegin('hipoteseDiagnosticoCid10', TType::STRING, 2);
+      $xfer += $output->writeString($this->hipoteseDiagnosticoCid10);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->hipoteseDiagnosticoCiap2 !== null) {
+      $xfer += $output->writeFieldBegin('hipoteseDiagnosticoCiap2', TType::STRING, 3);
+      $xfer += $output->writeString($this->hipoteseDiagnosticoCiap2);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->classificacaoRisco !== null) {
+      $xfer += $output->writeFieldBegin('classificacaoRisco', TType::I64, 4);
+      $xfer += $output->writeI64($this->classificacaoRisco);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class ResultadoExameThrift {
+  static $_TSPEC;
+
+  /**
+   * @var int
+   */
+  public $tipoResultado = null;
+  /**
+   * @var string
+   */
+  public $valorResultado = null;
+
+  public function __construct($vals=null) {
+    if (!isset(self::$_TSPEC)) {
+      self::$_TSPEC = array(
+        1 => array(
+          'var' => 'tipoResultado',
+          'type' => TType::I32,
+          ),
+        2 => array(
+          'var' => 'valorResultado',
+          'type' => TType::STRING,
+          ),
+        );
+    }
+    if (is_array($vals)) {
+      if (isset($vals['tipoResultado'])) {
+        $this->tipoResultado = $vals['tipoResultado'];
+      }
+      if (isset($vals['valorResultado'])) {
+        $this->valorResultado = $vals['valorResultado'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'ResultadoExameThrift';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 1:
+          if ($ftype == TType::I32) {
+            $xfer += $input->readI32($this->tipoResultado);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 2:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->valorResultado);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('ResultadoExameThrift');
+    if ($this->tipoResultado !== null) {
+      $xfer += $output->writeFieldBegin('tipoResultado', TType::I32, 1);
+      $xfer += $output->writeI32($this->tipoResultado);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->valorResultado !== null) {
+      $xfer += $output->writeFieldBegin('valorResultado', TType::STRING, 2);
+      $xfer += $output->writeString($this->valorResultado);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class ResultadosExameThrift {
+  static $_TSPEC;
+
+  /**
+   * @var string
+   */
+  public $exame = null;
+  /**
+   * @var int
+   */
+  public $dataSolicitacao = null;
+  /**
+   * @var int
+   */
+  public $dataRealizacao = null;
+  /**
+   * @var int
+   */
+  public $dataResultado = null;
+  /**
+   * @var \br\gov\saude\esusab\ras\common\ResultadoExameThrift[]
+   */
+  public $resultadoExame = null;
+
+  public function __construct($vals=null) {
+    if (!isset(self::$_TSPEC)) {
+      self::$_TSPEC = array(
+        1 => array(
+          'var' => 'exame',
+          'type' => TType::STRING,
+          ),
+        2 => array(
+          'var' => 'dataSolicitacao',
+          'type' => TType::I64,
+          ),
+        3 => array(
+          'var' => 'dataRealizacao',
+          'type' => TType::I64,
+          ),
+        4 => array(
+          'var' => 'dataResultado',
+          'type' => TType::I64,
+          ),
+        6 => array(
+          'var' => 'resultadoExame',
+          'type' => TType::LST,
+          'etype' => TType::STRUCT,
+          'elem' => array(
+            'type' => TType::STRUCT,
+            'class' => '\br\gov\saude\esusab\ras\common\ResultadoExameThrift',
+            ),
+          ),
+        );
+    }
+    if (is_array($vals)) {
+      if (isset($vals['exame'])) {
+        $this->exame = $vals['exame'];
+      }
+      if (isset($vals['dataSolicitacao'])) {
+        $this->dataSolicitacao = $vals['dataSolicitacao'];
+      }
+      if (isset($vals['dataRealizacao'])) {
+        $this->dataRealizacao = $vals['dataRealizacao'];
+      }
+      if (isset($vals['dataResultado'])) {
+        $this->dataResultado = $vals['dataResultado'];
+      }
+      if (isset($vals['resultadoExame'])) {
+        $this->resultadoExame = $vals['resultadoExame'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'ResultadosExameThrift';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 1:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->exame);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 2:
+          if ($ftype == TType::I64) {
+            $xfer += $input->readI64($this->dataSolicitacao);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 3:
+          if ($ftype == TType::I64) {
+            $xfer += $input->readI64($this->dataRealizacao);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 4:
+          if ($ftype == TType::I64) {
+            $xfer += $input->readI64($this->dataResultado);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 6:
+          if ($ftype == TType::LST) {
+            $this->resultadoExame = array();
+            $_size0 = 0;
+            $_etype3 = 0;
+            $xfer += $input->readListBegin($_etype3, $_size0);
+            for ($_i4 = 0; $_i4 < $_size0; ++$_i4)
+            {
+              $elem5 = null;
+              $elem5 = new \br\gov\saude\esusab\ras\common\ResultadoExameThrift();
+              $xfer += $elem5->read($input);
+              $this->resultadoExame []= $elem5;
+            }
+            $xfer += $input->readListEnd();
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('ResultadosExameThrift');
+    if ($this->exame !== null) {
+      $xfer += $output->writeFieldBegin('exame', TType::STRING, 1);
+      $xfer += $output->writeString($this->exame);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->dataSolicitacao !== null) {
+      $xfer += $output->writeFieldBegin('dataSolicitacao', TType::I64, 2);
+      $xfer += $output->writeI64($this->dataSolicitacao);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->dataRealizacao !== null) {
+      $xfer += $output->writeFieldBegin('dataRealizacao', TType::I64, 3);
+      $xfer += $output->writeI64($this->dataRealizacao);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->dataResultado !== null) {
+      $xfer += $output->writeFieldBegin('dataResultado', TType::I64, 4);
+      $xfer += $output->writeI64($this->dataResultado);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->resultadoExame !== null) {
+      if (!is_array($this->resultadoExame)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('resultadoExame', TType::LST, 6);
+      {
+        $output->writeListBegin(TType::STRUCT, count($this->resultadoExame));
+        {
+          foreach ($this->resultadoExame as $iter6)
+          {
+            $xfer += $iter6->write($output);
+          }
+        }
+        $output->writeListEnd();
+      }
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class MedicoesThrift {
+  static $_TSPEC;
+
+  /**
+   * @var double
+   */
+  public $circunferenciaAbdominal = null;
+  /**
+   * @var double
+   */
+  public $perimetroPanturrilha = null;
+  /**
+   * @var int
+   */
+  public $pressaoArterialSistolica = null;
+  /**
+   * @var int
+   */
+  public $pressaoArterialDiastolica = null;
+  /**
+   * @var int
+   */
+  public $frequenciaRespiratoria = null;
+  /**
+   * @var int
+   */
+  public $frequenciaCardiaca = null;
+  /**
+   * @var double
+   */
+  public $temperatura = null;
+  /**
+   * @var int
+   */
+  public $saturacaoO2 = null;
+  /**
+   * @var int
+   */
+  public $glicemiaCapilar = null;
+  /**
+   * @var int
+   */
+  public $tipoGlicemiaCapilar = null;
+  /**
+   * @var double
+   */
+  public $peso = null;
+  /**
+   * @var double
+   */
+  public $altura = null;
+  /**
+   * @var double
+   */
+  public $perimetroCefalico = null;
+
+  public function __construct($vals=null) {
+    if (!isset(self::$_TSPEC)) {
+      self::$_TSPEC = array(
+        1 => array(
+          'var' => 'circunferenciaAbdominal',
+          'type' => TType::DOUBLE,
+          ),
+        2 => array(
+          'var' => 'perimetroPanturrilha',
+          'type' => TType::DOUBLE,
+          ),
+        3 => array(
+          'var' => 'pressaoArterialSistolica',
+          'type' => TType::I32,
+          ),
+        4 => array(
+          'var' => 'pressaoArterialDiastolica',
+          'type' => TType::I32,
+          ),
+        5 => array(
+          'var' => 'frequenciaRespiratoria',
+          'type' => TType::I32,
+          ),
+        6 => array(
+          'var' => 'frequenciaCardiaca',
+          'type' => TType::I32,
+          ),
+        7 => array(
+          'var' => 'temperatura',
+          'type' => TType::DOUBLE,
+          ),
+        8 => array(
+          'var' => 'saturacaoO2',
+          'type' => TType::I32,
+          ),
+        9 => array(
+          'var' => 'glicemiaCapilar',
+          'type' => TType::I32,
+          ),
+        10 => array(
+          'var' => 'tipoGlicemiaCapilar',
+          'type' => TType::I64,
+          ),
+        11 => array(
+          'var' => 'peso',
+          'type' => TType::DOUBLE,
+          ),
+        12 => array(
+          'var' => 'altura',
+          'type' => TType::DOUBLE,
+          ),
+        13 => array(
+          'var' => 'perimetroCefalico',
+          'type' => TType::DOUBLE,
+          ),
+        );
+    }
+    if (is_array($vals)) {
+      if (isset($vals['circunferenciaAbdominal'])) {
+        $this->circunferenciaAbdominal = $vals['circunferenciaAbdominal'];
+      }
+      if (isset($vals['perimetroPanturrilha'])) {
+        $this->perimetroPanturrilha = $vals['perimetroPanturrilha'];
+      }
+      if (isset($vals['pressaoArterialSistolica'])) {
+        $this->pressaoArterialSistolica = $vals['pressaoArterialSistolica'];
+      }
+      if (isset($vals['pressaoArterialDiastolica'])) {
+        $this->pressaoArterialDiastolica = $vals['pressaoArterialDiastolica'];
+      }
+      if (isset($vals['frequenciaRespiratoria'])) {
+        $this->frequenciaRespiratoria = $vals['frequenciaRespiratoria'];
+      }
+      if (isset($vals['frequenciaCardiaca'])) {
+        $this->frequenciaCardiaca = $vals['frequenciaCardiaca'];
+      }
+      if (isset($vals['temperatura'])) {
+        $this->temperatura = $vals['temperatura'];
+      }
+      if (isset($vals['saturacaoO2'])) {
+        $this->saturacaoO2 = $vals['saturacaoO2'];
+      }
+      if (isset($vals['glicemiaCapilar'])) {
+        $this->glicemiaCapilar = $vals['glicemiaCapilar'];
+      }
+      if (isset($vals['tipoGlicemiaCapilar'])) {
+        $this->tipoGlicemiaCapilar = $vals['tipoGlicemiaCapilar'];
+      }
+      if (isset($vals['peso'])) {
+        $this->peso = $vals['peso'];
+      }
+      if (isset($vals['altura'])) {
+        $this->altura = $vals['altura'];
+      }
+      if (isset($vals['perimetroCefalico'])) {
+        $this->perimetroCefalico = $vals['perimetroCefalico'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'MedicoesThrift';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 1:
+          if ($ftype == TType::DOUBLE) {
+            $xfer += $input->readDouble($this->circunferenciaAbdominal);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 2:
+          if ($ftype == TType::DOUBLE) {
+            $xfer += $input->readDouble($this->perimetroPanturrilha);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 3:
+          if ($ftype == TType::I32) {
+            $xfer += $input->readI32($this->pressaoArterialSistolica);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 4:
+          if ($ftype == TType::I32) {
+            $xfer += $input->readI32($this->pressaoArterialDiastolica);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 5:
+          if ($ftype == TType::I32) {
+            $xfer += $input->readI32($this->frequenciaRespiratoria);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 6:
+          if ($ftype == TType::I32) {
+            $xfer += $input->readI32($this->frequenciaCardiaca);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 7:
+          if ($ftype == TType::DOUBLE) {
+            $xfer += $input->readDouble($this->temperatura);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 8:
+          if ($ftype == TType::I32) {
+            $xfer += $input->readI32($this->saturacaoO2);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 9:
+          if ($ftype == TType::I32) {
+            $xfer += $input->readI32($this->glicemiaCapilar);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 10:
+          if ($ftype == TType::I64) {
+            $xfer += $input->readI64($this->tipoGlicemiaCapilar);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 11:
+          if ($ftype == TType::DOUBLE) {
+            $xfer += $input->readDouble($this->peso);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 12:
+          if ($ftype == TType::DOUBLE) {
+            $xfer += $input->readDouble($this->altura);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 13:
+          if ($ftype == TType::DOUBLE) {
+            $xfer += $input->readDouble($this->perimetroCefalico);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('MedicoesThrift');
+    if ($this->circunferenciaAbdominal !== null) {
+      $xfer += $output->writeFieldBegin('circunferenciaAbdominal', TType::DOUBLE, 1);
+      $xfer += $output->writeDouble($this->circunferenciaAbdominal);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->perimetroPanturrilha !== null) {
+      $xfer += $output->writeFieldBegin('perimetroPanturrilha', TType::DOUBLE, 2);
+      $xfer += $output->writeDouble($this->perimetroPanturrilha);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->pressaoArterialSistolica !== null) {
+      $xfer += $output->writeFieldBegin('pressaoArterialSistolica', TType::I32, 3);
+      $xfer += $output->writeI32($this->pressaoArterialSistolica);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->pressaoArterialDiastolica !== null) {
+      $xfer += $output->writeFieldBegin('pressaoArterialDiastolica', TType::I32, 4);
+      $xfer += $output->writeI32($this->pressaoArterialDiastolica);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->frequenciaRespiratoria !== null) {
+      $xfer += $output->writeFieldBegin('frequenciaRespiratoria', TType::I32, 5);
+      $xfer += $output->writeI32($this->frequenciaRespiratoria);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->frequenciaCardiaca !== null) {
+      $xfer += $output->writeFieldBegin('frequenciaCardiaca', TType::I32, 6);
+      $xfer += $output->writeI32($this->frequenciaCardiaca);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->temperatura !== null) {
+      $xfer += $output->writeFieldBegin('temperatura', TType::DOUBLE, 7);
+      $xfer += $output->writeDouble($this->temperatura);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->saturacaoO2 !== null) {
+      $xfer += $output->writeFieldBegin('saturacaoO2', TType::I32, 8);
+      $xfer += $output->writeI32($this->saturacaoO2);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->glicemiaCapilar !== null) {
+      $xfer += $output->writeFieldBegin('glicemiaCapilar', TType::I32, 9);
+      $xfer += $output->writeI32($this->glicemiaCapilar);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->tipoGlicemiaCapilar !== null) {
+      $xfer += $output->writeFieldBegin('tipoGlicemiaCapilar', TType::I64, 10);
+      $xfer += $output->writeI64($this->tipoGlicemiaCapilar);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->peso !== null) {
+      $xfer += $output->writeFieldBegin('peso', TType::DOUBLE, 11);
+      $xfer += $output->writeDouble($this->peso);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->altura !== null) {
+      $xfer += $output->writeFieldBegin('altura', TType::DOUBLE, 12);
+      $xfer += $output->writeDouble($this->altura);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->perimetroCefalico !== null) {
+      $xfer += $output->writeFieldBegin('perimetroCefalico', TType::DOUBLE, 13);
+      $xfer += $output->writeDouble($this->perimetroCefalico);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class ProblemaCondicaoThrift {
+  static $_TSPEC;
+
+  /**
+   * @var string
+   */
+  public $uuidProblema = null;
+  /**
+   * @var string
+   */
+  public $uuidEvolucaoProblema = null;
+  /**
+   * @var int
+   */
+  public $coSequencialEvolucao = null;
+  /**
+   * @var string
+   */
+  public $ciap = null;
+  /**
+   * @var string
+   */
+  public $cid10 = null;
+  /**
+   * @var int
+   */
+  public $situacao = null;
+  /**
+   * @var int
+   */
+  public $dataInicioProblema = null;
+  /**
+   * @var int
+   */
+  public $dataFimProblema = null;
+  /**
+   * @var bool
+   */
+  public $isAvaliado = null;
+
+  public function __construct($vals=null) {
+    if (!isset(self::$_TSPEC)) {
+      self::$_TSPEC = array(
+        1 => array(
+          'var' => 'uuidProblema',
+          'type' => TType::STRING,
+          ),
+        2 => array(
+          'var' => 'uuidEvolucaoProblema',
+          'type' => TType::STRING,
+          ),
+        3 => array(
+          'var' => 'coSequencialEvolucao',
+          'type' => TType::I64,
+          ),
+        4 => array(
+          'var' => 'ciap',
+          'type' => TType::STRING,
+          ),
+        5 => array(
+          'var' => 'cid10',
+          'type' => TType::STRING,
+          ),
+        6 => array(
+          'var' => 'situacao',
+          'type' => TType::I64,
+          ),
+        7 => array(
+          'var' => 'dataInicioProblema',
+          'type' => TType::I64,
+          ),
+        8 => array(
+          'var' => 'dataFimProblema',
+          'type' => TType::I64,
+          ),
+        9 => array(
+          'var' => 'isAvaliado',
+          'type' => TType::BOOL,
+          ),
+        );
+    }
+    if (is_array($vals)) {
+      if (isset($vals['uuidProblema'])) {
+        $this->uuidProblema = $vals['uuidProblema'];
+      }
+      if (isset($vals['uuidEvolucaoProblema'])) {
+        $this->uuidEvolucaoProblema = $vals['uuidEvolucaoProblema'];
+      }
+      if (isset($vals['coSequencialEvolucao'])) {
+        $this->coSequencialEvolucao = $vals['coSequencialEvolucao'];
+      }
+      if (isset($vals['ciap'])) {
+        $this->ciap = $vals['ciap'];
+      }
+      if (isset($vals['cid10'])) {
+        $this->cid10 = $vals['cid10'];
+      }
+      if (isset($vals['situacao'])) {
+        $this->situacao = $vals['situacao'];
+      }
+      if (isset($vals['dataInicioProblema'])) {
+        $this->dataInicioProblema = $vals['dataInicioProblema'];
+      }
+      if (isset($vals['dataFimProblema'])) {
+        $this->dataFimProblema = $vals['dataFimProblema'];
+      }
+      if (isset($vals['isAvaliado'])) {
+        $this->isAvaliado = $vals['isAvaliado'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'ProblemaCondicaoThrift';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 1:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->uuidProblema);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 2:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->uuidEvolucaoProblema);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 3:
+          if ($ftype == TType::I64) {
+            $xfer += $input->readI64($this->coSequencialEvolucao);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 4:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->ciap);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 5:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->cid10);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 6:
+          if ($ftype == TType::I64) {
+            $xfer += $input->readI64($this->situacao);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 7:
+          if ($ftype == TType::I64) {
+            $xfer += $input->readI64($this->dataInicioProblema);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 8:
+          if ($ftype == TType::I64) {
+            $xfer += $input->readI64($this->dataFimProblema);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 9:
+          if ($ftype == TType::BOOL) {
+            $xfer += $input->readBool($this->isAvaliado);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('ProblemaCondicaoThrift');
+    if ($this->uuidProblema !== null) {
+      $xfer += $output->writeFieldBegin('uuidProblema', TType::STRING, 1);
+      $xfer += $output->writeString($this->uuidProblema);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->uuidEvolucaoProblema !== null) {
+      $xfer += $output->writeFieldBegin('uuidEvolucaoProblema', TType::STRING, 2);
+      $xfer += $output->writeString($this->uuidEvolucaoProblema);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->coSequencialEvolucao !== null) {
+      $xfer += $output->writeFieldBegin('coSequencialEvolucao', TType::I64, 3);
+      $xfer += $output->writeI64($this->coSequencialEvolucao);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->ciap !== null) {
+      $xfer += $output->writeFieldBegin('ciap', TType::STRING, 4);
+      $xfer += $output->writeString($this->ciap);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->cid10 !== null) {
+      $xfer += $output->writeFieldBegin('cid10', TType::STRING, 5);
+      $xfer += $output->writeString($this->cid10);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->situacao !== null) {
+      $xfer += $output->writeFieldBegin('situacao', TType::I64, 6);
+      $xfer += $output->writeI64($this->situacao);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->dataInicioProblema !== null) {
+      $xfer += $output->writeFieldBegin('dataInicioProblema', TType::I64, 7);
+      $xfer += $output->writeI64($this->dataInicioProblema);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->dataFimProblema !== null) {
+      $xfer += $output->writeFieldBegin('dataFimProblema', TType::I64, 8);
+      $xfer += $output->writeI64($this->dataFimProblema);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->isAvaliado !== null) {
+      $xfer += $output->writeFieldBegin('isAvaliado', TType::BOOL, 9);
+      $xfer += $output->writeBool($this->isAvaliado);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class IvcfThrift {
+  static $_TSPEC;
+
+  /**
+   * @var int
+   */
+  public $resultado = null;
+  /**
+   * @var bool
+   */
+  public $hasSgIdade = null;
+  /**
+   * @var bool
+   */
+  public $hasSgPercepcaoSaude = null;
+  /**
+   * @var bool
+   */
+  public $hasSgAvdInstrumental = null;
+  /**
+   * @var bool
+   */
+  public $hasSgAvdBasica = null;
+  /**
+   * @var bool
+   */
+  public $hasSgCognicao = null;
+  /**
+   * @var bool
+   */
+  public $hasSgHumor = null;
+  /**
+   * @var bool
+   */
+  public $hasSgAlcancePreensaoPinca = null;
+  /**
+   * @var bool
+   */
+  public $hasSgCapAerobicaMuscular = null;
+  /**
+   * @var bool
+   */
+  public $hasSgMarcha = null;
+  /**
+   * @var bool
+   */
+  public $hasSgContinencia = null;
+  /**
+   * @var bool
+   */
+  public $hasSgVisao = null;
+  /**
+   * @var bool
+   */
+  public $hasSgAudicao = null;
+  /**
+   * @var bool
+   */
+  public $hasSgComorbidade = null;
+  /**
+   * @var int
+   */
+  public $dataResultado = null;
+
+  public function __construct($vals=null) {
+    if (!isset(self::$_TSPEC)) {
+      self::$_TSPEC = array(
+        1 => array(
+          'var' => 'resultado',
+          'type' => TType::I32,
+          ),
+        2 => array(
+          'var' => 'hasSgIdade',
+          'type' => TType::BOOL,
+          ),
+        3 => array(
+          'var' => 'hasSgPercepcaoSaude',
+          'type' => TType::BOOL,
+          ),
+        4 => array(
+          'var' => 'hasSgAvdInstrumental',
+          'type' => TType::BOOL,
+          ),
+        5 => array(
+          'var' => 'hasSgAvdBasica',
+          'type' => TType::BOOL,
+          ),
+        6 => array(
+          'var' => 'hasSgCognicao',
+          'type' => TType::BOOL,
+          ),
+        7 => array(
+          'var' => 'hasSgHumor',
+          'type' => TType::BOOL,
+          ),
+        8 => array(
+          'var' => 'hasSgAlcancePreensaoPinca',
+          'type' => TType::BOOL,
+          ),
+        9 => array(
+          'var' => 'hasSgCapAerobicaMuscular',
+          'type' => TType::BOOL,
+          ),
+        10 => array(
+          'var' => 'hasSgMarcha',
+          'type' => TType::BOOL,
+          ),
+        11 => array(
+          'var' => 'hasSgContinencia',
+          'type' => TType::BOOL,
+          ),
+        12 => array(
+          'var' => 'hasSgVisao',
+          'type' => TType::BOOL,
+          ),
+        13 => array(
+          'var' => 'hasSgAudicao',
+          'type' => TType::BOOL,
+          ),
+        14 => array(
+          'var' => 'hasSgComorbidade',
+          'type' => TType::BOOL,
+          ),
+        15 => array(
+          'var' => 'dataResultado',
+          'type' => TType::I64,
+          ),
+        );
+    }
+    if (is_array($vals)) {
+      if (isset($vals['resultado'])) {
+        $this->resultado = $vals['resultado'];
+      }
+      if (isset($vals['hasSgIdade'])) {
+        $this->hasSgIdade = $vals['hasSgIdade'];
+      }
+      if (isset($vals['hasSgPercepcaoSaude'])) {
+        $this->hasSgPercepcaoSaude = $vals['hasSgPercepcaoSaude'];
+      }
+      if (isset($vals['hasSgAvdInstrumental'])) {
+        $this->hasSgAvdInstrumental = $vals['hasSgAvdInstrumental'];
+      }
+      if (isset($vals['hasSgAvdBasica'])) {
+        $this->hasSgAvdBasica = $vals['hasSgAvdBasica'];
+      }
+      if (isset($vals['hasSgCognicao'])) {
+        $this->hasSgCognicao = $vals['hasSgCognicao'];
+      }
+      if (isset($vals['hasSgHumor'])) {
+        $this->hasSgHumor = $vals['hasSgHumor'];
+      }
+      if (isset($vals['hasSgAlcancePreensaoPinca'])) {
+        $this->hasSgAlcancePreensaoPinca = $vals['hasSgAlcancePreensaoPinca'];
+      }
+      if (isset($vals['hasSgCapAerobicaMuscular'])) {
+        $this->hasSgCapAerobicaMuscular = $vals['hasSgCapAerobicaMuscular'];
+      }
+      if (isset($vals['hasSgMarcha'])) {
+        $this->hasSgMarcha = $vals['hasSgMarcha'];
+      }
+      if (isset($vals['hasSgContinencia'])) {
+        $this->hasSgContinencia = $vals['hasSgContinencia'];
+      }
+      if (isset($vals['hasSgVisao'])) {
+        $this->hasSgVisao = $vals['hasSgVisao'];
+      }
+      if (isset($vals['hasSgAudicao'])) {
+        $this->hasSgAudicao = $vals['hasSgAudicao'];
+      }
+      if (isset($vals['hasSgComorbidade'])) {
+        $this->hasSgComorbidade = $vals['hasSgComorbidade'];
+      }
+      if (isset($vals['dataResultado'])) {
+        $this->dataResultado = $vals['dataResultado'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'IvcfThrift';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 1:
+          if ($ftype == TType::I32) {
+            $xfer += $input->readI32($this->resultado);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 2:
+          if ($ftype == TType::BOOL) {
+            $xfer += $input->readBool($this->hasSgIdade);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 3:
+          if ($ftype == TType::BOOL) {
+            $xfer += $input->readBool($this->hasSgPercepcaoSaude);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 4:
+          if ($ftype == TType::BOOL) {
+            $xfer += $input->readBool($this->hasSgAvdInstrumental);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 5:
+          if ($ftype == TType::BOOL) {
+            $xfer += $input->readBool($this->hasSgAvdBasica);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 6:
+          if ($ftype == TType::BOOL) {
+            $xfer += $input->readBool($this->hasSgCognicao);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 7:
+          if ($ftype == TType::BOOL) {
+            $xfer += $input->readBool($this->hasSgHumor);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 8:
+          if ($ftype == TType::BOOL) {
+            $xfer += $input->readBool($this->hasSgAlcancePreensaoPinca);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 9:
+          if ($ftype == TType::BOOL) {
+            $xfer += $input->readBool($this->hasSgCapAerobicaMuscular);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 10:
+          if ($ftype == TType::BOOL) {
+            $xfer += $input->readBool($this->hasSgMarcha);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 11:
+          if ($ftype == TType::BOOL) {
+            $xfer += $input->readBool($this->hasSgContinencia);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 12:
+          if ($ftype == TType::BOOL) {
+            $xfer += $input->readBool($this->hasSgVisao);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 13:
+          if ($ftype == TType::BOOL) {
+            $xfer += $input->readBool($this->hasSgAudicao);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 14:
+          if ($ftype == TType::BOOL) {
+            $xfer += $input->readBool($this->hasSgComorbidade);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 15:
+          if ($ftype == TType::I64) {
+            $xfer += $input->readI64($this->dataResultado);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('IvcfThrift');
+    if ($this->resultado !== null) {
+      $xfer += $output->writeFieldBegin('resultado', TType::I32, 1);
+      $xfer += $output->writeI32($this->resultado);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->hasSgIdade !== null) {
+      $xfer += $output->writeFieldBegin('hasSgIdade', TType::BOOL, 2);
+      $xfer += $output->writeBool($this->hasSgIdade);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->hasSgPercepcaoSaude !== null) {
+      $xfer += $output->writeFieldBegin('hasSgPercepcaoSaude', TType::BOOL, 3);
+      $xfer += $output->writeBool($this->hasSgPercepcaoSaude);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->hasSgAvdInstrumental !== null) {
+      $xfer += $output->writeFieldBegin('hasSgAvdInstrumental', TType::BOOL, 4);
+      $xfer += $output->writeBool($this->hasSgAvdInstrumental);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->hasSgAvdBasica !== null) {
+      $xfer += $output->writeFieldBegin('hasSgAvdBasica', TType::BOOL, 5);
+      $xfer += $output->writeBool($this->hasSgAvdBasica);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->hasSgCognicao !== null) {
+      $xfer += $output->writeFieldBegin('hasSgCognicao', TType::BOOL, 6);
+      $xfer += $output->writeBool($this->hasSgCognicao);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->hasSgHumor !== null) {
+      $xfer += $output->writeFieldBegin('hasSgHumor', TType::BOOL, 7);
+      $xfer += $output->writeBool($this->hasSgHumor);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->hasSgAlcancePreensaoPinca !== null) {
+      $xfer += $output->writeFieldBegin('hasSgAlcancePreensaoPinca', TType::BOOL, 8);
+      $xfer += $output->writeBool($this->hasSgAlcancePreensaoPinca);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->hasSgCapAerobicaMuscular !== null) {
+      $xfer += $output->writeFieldBegin('hasSgCapAerobicaMuscular', TType::BOOL, 9);
+      $xfer += $output->writeBool($this->hasSgCapAerobicaMuscular);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->hasSgMarcha !== null) {
+      $xfer += $output->writeFieldBegin('hasSgMarcha', TType::BOOL, 10);
+      $xfer += $output->writeBool($this->hasSgMarcha);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->hasSgContinencia !== null) {
+      $xfer += $output->writeFieldBegin('hasSgContinencia', TType::BOOL, 11);
+      $xfer += $output->writeBool($this->hasSgContinencia);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->hasSgVisao !== null) {
+      $xfer += $output->writeFieldBegin('hasSgVisao', TType::BOOL, 12);
+      $xfer += $output->writeBool($this->hasSgVisao);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->hasSgAudicao !== null) {
+      $xfer += $output->writeFieldBegin('hasSgAudicao', TType::BOOL, 13);
+      $xfer += $output->writeBool($this->hasSgAudicao);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->hasSgComorbidade !== null) {
+      $xfer += $output->writeFieldBegin('hasSgComorbidade', TType::BOOL, 14);
+      $xfer += $output->writeBool($this->hasSgComorbidade);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->dataResultado !== null) {
+      $xfer += $output->writeFieldBegin('dataResultado', TType::I64, 15);
+      $xfer += $output->writeI64($this->dataResultado);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class ExameThrift {
+  static $_TSPEC;
+
+  /**
+   * @var string
+   */
+  public $codigoExame = null;
+  /**
+   * @var string[]
+   */
+  public $solicitadoAvaliado = null;
+
+  public function __construct($vals=null) {
+    if (!isset(self::$_TSPEC)) {
+      self::$_TSPEC = array(
+        1 => array(
+          'var' => 'codigoExame',
+          'type' => TType::STRING,
+          ),
+        2 => array(
+          'var' => 'solicitadoAvaliado',
+          'type' => TType::LST,
+          'etype' => TType::STRING,
+          'elem' => array(
+            'type' => TType::STRING,
+            ),
+          ),
+        );
+    }
+    if (is_array($vals)) {
+      if (isset($vals['codigoExame'])) {
+        $this->codigoExame = $vals['codigoExame'];
+      }
+      if (isset($vals['solicitadoAvaliado'])) {
+        $this->solicitadoAvaliado = $vals['solicitadoAvaliado'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'ExameThrift';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 1:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->codigoExame);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 2:
+          if ($ftype == TType::LST) {
+            $this->solicitadoAvaliado = array();
+            $_size7 = 0;
+            $_etype10 = 0;
+            $xfer += $input->readListBegin($_etype10, $_size7);
+            for ($_i11 = 0; $_i11 < $_size7; ++$_i11)
+            {
+              $elem12 = null;
+              $xfer += $input->readString($elem12);
+              $this->solicitadoAvaliado []= $elem12;
+            }
+            $xfer += $input->readListEnd();
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('ExameThrift');
+    if ($this->codigoExame !== null) {
+      $xfer += $output->writeFieldBegin('codigoExame', TType::STRING, 1);
+      $xfer += $output->writeString($this->codigoExame);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->solicitadoAvaliado !== null) {
+      if (!is_array($this->solicitadoAvaliado)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('solicitadoAvaliado', TType::LST, 2);
+      {
+        $output->writeListBegin(TType::STRING, count($this->solicitadoAvaliado));
+        {
+          foreach ($this->solicitadoAvaliado as $iter13)
+          {
+            $xfer += $output->writeString($iter13);
+          }
+        }
+        $output->writeListEnd();
+      }
       $xfer += $output->writeFieldEnd();
     }
     $xfer += $output->writeFieldStop();

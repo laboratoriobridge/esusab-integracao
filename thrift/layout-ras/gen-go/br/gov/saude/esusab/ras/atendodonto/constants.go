@@ -5,6 +5,7 @@ package atendodonto
 
 import (
 	"br/gov/saude/esusab/ras/common"
+	"br/gov/saude/esusab/ras/solicitacaooci"
 	"bytes"
 	"fmt"
 	"git.apache.org/thrift.git/lib/go/thrift"
@@ -16,7 +17,7 @@ var _ = fmt.Printf
 var _ = bytes.Equal
 
 var _ = common.GoUnusedProtection__
-var _ = common.GoUnusedProtection__
+var _ = solicitacaooci.GoUnusedProtection__
 
 func init() {
 }

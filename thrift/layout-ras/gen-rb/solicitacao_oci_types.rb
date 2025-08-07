@@ -11,7 +11,7 @@ module Br
     module Saude
       module Esusab
         module Ras
-          module Common
+          module Solicitacaooci
             class SolicitacaoOciThrift
               include ::Thrift::Struct, ::Thrift::Struct_Union
               CODIGOSIGTAP = 1

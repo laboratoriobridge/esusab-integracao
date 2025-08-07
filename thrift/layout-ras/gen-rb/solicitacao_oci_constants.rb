@@ -12,7 +12,7 @@ module Br
     module Saude
       module Esusab
         module Ras
-          module Common
+          module Solicitacaooci
           end
         end
       end

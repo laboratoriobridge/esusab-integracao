@@ -5,6 +5,7 @@ package atendindividual
 
 import (
 	"br/gov/saude/esusab/ras/common"
+	"br/gov/saude/esusab/ras/solicitacaooci"
 	"bytes"
 	"fmt"
 	"git.apache.org/thrift.git/lib/go/thrift"
@@ -16,7 +17,7 @@ var _ = fmt.Printf
 var _ = bytes.Equal
 
 var _ = common.GoUnusedProtection__
-var _ = common.GoUnusedProtection__
+var _ = solicitacaooci.GoUnusedProtection__
 var GoUnusedProtection__ int
 
 // Attributes:
@@ -391,14 +392,14 @@ type FichaAtendimentoIndividualChildThrift struct {
 	Encaminhamentos            []*common.EncaminhamentoExternoThrift `thrift:"encaminhamentos,32" json:"encaminhamentos,omitempty"`
 	ResultadosExames           []*common.ResultadosExameThrift       `thrift:"resultadosExames,33" json:"resultadosExames,omitempty"`
 	// unused field # 34
-	FinalizadorObservacao                 *common.LotacaoHeaderThrift      `thrift:"finalizadorObservacao,35" json:"finalizadorObservacao,omitempty"`
-	TipoParticipacaoCidadao               *int64                           `thrift:"tipoParticipacaoCidadao,36" json:"tipoParticipacaoCidadao,omitempty"`
-	TipoParticipacaoProfissionalConvidado *int64                           `thrift:"tipoParticipacaoProfissionalConvidado,37" json:"tipoParticipacaoProfissionalConvidado,omitempty"`
-	Emultis                               []int64                          `thrift:"emultis,38" json:"emultis,omitempty"`
-	Medicoes                              *common.MedicoesThrift           `thrift:"medicoes,39" json:"medicoes,omitempty"`
-	ProblemasCondicoes                    []*common.ProblemaCondicaoThrift `thrift:"problemasCondicoes,40" json:"problemasCondicoes,omitempty"`
-	Ivcf                                  *common.IvcfThrift               `thrift:"ivcf,41" json:"ivcf,omitempty"`
-	SolicitacoesOci                       []*common.SolicitacaoOciThrift   `thrift:"solicitacoesOci,42" json:"solicitacoesOci,omitempty"`
+	FinalizadorObservacao                 *common.LotacaoHeaderThrift            `thrift:"finalizadorObservacao,35" json:"finalizadorObservacao,omitempty"`
+	TipoParticipacaoCidadao               *int64                                 `thrift:"tipoParticipacaoCidadao,36" json:"tipoParticipacaoCidadao,omitempty"`
+	TipoParticipacaoProfissionalConvidado *int64                                 `thrift:"tipoParticipacaoProfissionalConvidado,37" json:"tipoParticipacaoProfissionalConvidado,omitempty"`
+	Emultis                               []int64                                `thrift:"emultis,38" json:"emultis,omitempty"`
+	Medicoes                              *common.MedicoesThrift                 `thrift:"medicoes,39" json:"medicoes,omitempty"`
+	ProblemasCondicoes                    []*common.ProblemaCondicaoThrift       `thrift:"problemasCondicoes,40" json:"problemasCondicoes,omitempty"`
+	Ivcf                                  *common.IvcfThrift                     `thrift:"ivcf,41" json:"ivcf,omitempty"`
+	SolicitacoesOci                       []*solicitacaooci.SolicitacaoOciThrift `thrift:"solicitacoesOci,42" json:"solicitacoesOci,omitempty"`
 }
 
 func NewFichaAtendimentoIndividualChildThrift() *FichaAtendimentoIndividualChildThrift {
@@ -687,9 +688,9 @@ func (p *FichaAtendimentoIndividualChildThrift) GetIvcf() *common.IvcfThrift {
 	return p.Ivcf
 }
 
-var FichaAtendimentoIndividualChildThrift_SolicitacoesOci_DEFAULT []*common.SolicitacaoOciThrift
+var FichaAtendimentoIndividualChildThrift_SolicitacoesOci_DEFAULT []*solicitacaooci.SolicitacaoOciThrift
 
-func (p *FichaAtendimentoIndividualChildThrift) GetSolicitacoesOci() []*common.SolicitacaoOciThrift {
+func (p *FichaAtendimentoIndividualChildThrift) GetSolicitacoesOci() []*solicitacaooci.SolicitacaoOciThrift {
 	return p.SolicitacoesOci
 }
 func (p *FichaAtendimentoIndividualChildThrift) IsSetNumeroProntuario() bool {
@@ -1403,10 +1404,10 @@ func (p *FichaAtendimentoIndividualChildThrift) readField42(iprot thrift.TProtoc
 	if err != nil {
 		return thrift.PrependError("error reading list begin: ", err)
 	}
-	tSlice := make([]*common.SolicitacaoOciThrift, 0, size)
+	tSlice := make([]*solicitacaooci.SolicitacaoOciThrift, 0, size)
 	p.SolicitacoesOci = tSlice
 	for i := 0; i < size; i++ {
-		_elem9 := &common.SolicitacaoOciThrift{}
+		_elem9 := &solicitacaooci.SolicitacaoOciThrift{}
 		if err := _elem9.Read(iprot); err != nil {
 			return thrift.PrependError(fmt.Sprintf("%T error reading struct: ", _elem9), err)
 		}

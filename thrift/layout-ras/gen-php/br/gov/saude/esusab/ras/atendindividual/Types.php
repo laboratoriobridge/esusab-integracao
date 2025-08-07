@@ -350,7 +350,7 @@ class FichaAtendimentoIndividualChildThrift {
    */
   public $ivcf = null;
   /**
-   * @var \br\gov\saude\esusab\ras\common\SolicitacaoOciThrift[]
+   * @var \br\gov\saude\esusab\ras\solicitacaooci\SolicitacaoOciThrift[]
    */
   public $solicitacoesOci = null;
 
@@ -539,7 +539,7 @@ class FichaAtendimentoIndividualChildThrift {
           'etype' => TType::STRUCT,
           'elem' => array(
             'type' => TType::STRUCT,
-            'class' => '\br\gov\saude\esusab\ras\common\SolicitacaoOciThrift',
+            'class' => '\br\gov\saude\esusab\ras\solicitacaooci\SolicitacaoOciThrift',
             ),
           ),
         );
@@ -1007,7 +1007,7 @@ class FichaAtendimentoIndividualChildThrift {
             for ($_i59 = 0; $_i59 < $_size55; ++$_i59)
             {
               $elem60 = null;
-              $elem60 = new \br\gov\saude\esusab\ras\common\SolicitacaoOciThrift();
+              $elem60 = new \br\gov\saude\esusab\ras\solicitacaooci\SolicitacaoOciThrift();
               $xfer += $elem60->read($input);
               $this->solicitacoesOci []= $elem60;
             }

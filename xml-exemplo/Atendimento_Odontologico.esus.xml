@@ -398,6 +398,12 @@
 				<hasSgComorbidade>false</hasSgComorbidade>
 				<dataResultado>1549195200000</dataResultado> 
 			</ivcf>
+			<solicitacoesOci>
+				<codigoSigtap>0903010011</codigoSigtap>
+			</solicitacoesOci>
+			<solicitacoesOci>
+				<codigoSigtap>0901010014</codigoSigtap>
+			</solicitacoesOci>
 		</atendimentosOdontologicos>
 		<headerTransport>
 			<lotacaoFormPrincipal>
@@ -417,7 +423,7 @@
 		<nomeOuRazaoSocial>ADMINISTRADOR INSTALAÇÃO</nomeOuRazaoSocial>
 		<fone>8216756527</fone>
 		<email>prof@esus.br</email>
-		<versaoSistema>5.4.7</versaoSistema>
+		<versaoSistema>5.4.8</versaoSistema>
 		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:remetente>
 	<ns2:originadora>
@@ -427,8 +433,8 @@
 		<nomeOuRazaoSocial>ADMINISTRADOR INSTALAÇÃO</nomeOuRazaoSocial>
 		<fone>8216756527</fone>
 		<email>prof@esus.br</email>
-		<versaoSistema>5.4.7</versaoSistema>
+		<versaoSistema>5.4.8</versaoSistema>
 		<nomeBancoDados>Oracle</nomeBancoDados>
 	</ns2:originadora>
-	<versao major="7" minor="2" revision="0"/>
+	<versao major="7" minor="2" revision="1"/>
 </ns3:dadoTransporteTransportXml>

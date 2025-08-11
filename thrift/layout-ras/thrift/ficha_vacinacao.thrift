@@ -10,7 +10,7 @@ namespace go br.gov.saude.esusab.ras.vacinacao
 namespace py br.gov.saude.esusab.ras.vacinacao
 
 struct VacinaRowThrift {
-	1:optional i64 imunobiologico;
+1:optional i64 imunobiologico;
 	2:optional i64 estrategiaVacinacao;
 	3:optional i64 dose;
 	4:optional string lote;
@@ -38,14 +38,12 @@ struct FichaVacinacaoChildThrift {
 	7:optional bool viajante;
 	8:optional bool comunicanteHanseniase;
 	9:optional bool gestante;
-	10:optional bool puerpera;	
+	10:optional bool puerpera;
 	11:optional list<VacinaRowThrift> vacinas;
 	12:optional i64 dataHoraInicialAtendimento;
 	13:optional i64 dataHoraFinalAtendimento;
 	14:optional string cpfCidadao;
 	15:optional i64 condicaoMaternal;
-
-
 }
 
 struct FichaVacinacaoMasterThrift {
@@ -53,4 +51,5 @@ struct FichaVacinacaoMasterThrift {
 	2:optional i32 tpCdsOrigem;
 	3:optional common.UnicaLotacaoHeaderThrift headerTransport;
 	4:optional list<FichaVacinacaoChildThrift> vacinacoes;
+	5:optional string uuidFichaCancelada;
 }

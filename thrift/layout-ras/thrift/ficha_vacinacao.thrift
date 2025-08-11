@@ -1,3 +1,4 @@
+
 include "./common.thrift"
 
 namespace java br.gov.saude.esusab.ras.vacinacao
@@ -18,6 +19,13 @@ struct VacinaRowThrift {
 	7:optional bool stRegistroAnterior
 	8:optional i64 dataRegistroAnterior
 	9:optional bool stAplicadoExterior
+	10:optional string uuidRnds;
+	11:optional string cboPrescritorCodigo2002;
+	12:optional string cid10MotivoIndicacao;
+	13:optional bool stPesquisaClinica;
+	14:optional string anvisaProtocoloEstudo;
+	15:optional string anvisaProtocoloVersao;
+	16:optional string anvisaNumeroRegistro;
 }
 
 struct FichaVacinacaoChildThrift {
@@ -35,6 +43,9 @@ struct FichaVacinacaoChildThrift {
 	12:optional i64 dataHoraInicialAtendimento;
 	13:optional i64 dataHoraFinalAtendimento;
 	14:optional string cpfCidadao;
+	15:optional i64 condicaoMaternal;
+
+
 }
 
 struct FichaVacinacaoMasterThrift {

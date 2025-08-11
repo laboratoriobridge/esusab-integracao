@@ -25,6 +25,13 @@ module Br
               STREGISTROANTERIOR = 7
               DATAREGISTROANTERIOR = 8
               STAPLICADOEXTERIOR = 9
+              UUIDRNDS = 10
+              CBOPRESCRITORCODIGO2002 = 11
+              CID10MOTIVOINDICACAO = 12
+              STPESQUISACLINICA = 13
+              ANVISAPROTOCOLOESTUDO = 14
+              ANVISAPROTOCOLOVERSAO = 15
+              ANVISANUMEROREGISTRO = 16
 
               FIELDS = {
                 IMUNOBIOLOGICO => {:type => ::Thrift::Types::I64, :name => 'imunobiologico', :optional => true},
@@ -35,7 +42,14 @@ module Br
                 GRUPOATENDIMENTO => {:type => ::Thrift::Types::I64, :name => 'grupoAtendimento', :optional => true},
                 STREGISTROANTERIOR => {:type => ::Thrift::Types::BOOL, :name => 'stRegistroAnterior', :optional => true},
                 DATAREGISTROANTERIOR => {:type => ::Thrift::Types::I64, :name => 'dataRegistroAnterior', :optional => true},
-                STAPLICADOEXTERIOR => {:type => ::Thrift::Types::BOOL, :name => 'stAplicadoExterior', :optional => true}
+                STAPLICADOEXTERIOR => {:type => ::Thrift::Types::BOOL, :name => 'stAplicadoExterior', :optional => true},
+                UUIDRNDS => {:type => ::Thrift::Types::STRING, :name => 'uuidRnds', :optional => true},
+                CBOPRESCRITORCODIGO2002 => {:type => ::Thrift::Types::STRING, :name => 'cboPrescritorCodigo2002', :optional => true},
+                CID10MOTIVOINDICACAO => {:type => ::Thrift::Types::STRING, :name => 'cid10MotivoIndicacao', :optional => true},
+                STPESQUISACLINICA => {:type => ::Thrift::Types::BOOL, :name => 'stPesquisaClinica', :optional => true},
+                ANVISAPROTOCOLOESTUDO => {:type => ::Thrift::Types::STRING, :name => 'anvisaProtocoloEstudo', :optional => true},
+                ANVISAPROTOCOLOVERSAO => {:type => ::Thrift::Types::STRING, :name => 'anvisaProtocoloVersao', :optional => true},
+                ANVISANUMEROREGISTRO => {:type => ::Thrift::Types::STRING, :name => 'anvisaNumeroRegistro', :optional => true}
               }
 
               def struct_fields; FIELDS; end
@@ -62,6 +76,7 @@ module Br
               DATAHORAINICIALATENDIMENTO = 12
               DATAHORAFINALATENDIMENTO = 13
               CPFCIDADAO = 14
+              CONDICAOMATERNAL = 15
 
               FIELDS = {
                 TURNO => {:type => ::Thrift::Types::I64, :name => 'turno', :optional => true},
@@ -77,7 +92,8 @@ module Br
                 VACINAS => {:type => ::Thrift::Types::LIST, :name => 'vacinas', :element => {:type => ::Thrift::Types::STRUCT, :class => ::Br::Gov::Saude::Esusab::Ras::Vacinacao::VacinaRowThrift}, :optional => true},
                 DATAHORAINICIALATENDIMENTO => {:type => ::Thrift::Types::I64, :name => 'dataHoraInicialAtendimento', :optional => true},
                 DATAHORAFINALATENDIMENTO => {:type => ::Thrift::Types::I64, :name => 'dataHoraFinalAtendimento', :optional => true},
-                CPFCIDADAO => {:type => ::Thrift::Types::STRING, :name => 'cpfCidadao', :optional => true}
+                CPFCIDADAO => {:type => ::Thrift::Types::STRING, :name => 'cpfCidadao', :optional => true},
+                CONDICAOMATERNAL => {:type => ::Thrift::Types::I64, :name => 'condicaoMaternal', :optional => true}
               }
 
               def struct_fields; FIELDS; end
@@ -94,12 +110,14 @@ module Br
               TPCDSORIGEM = 2
               HEADERTRANSPORT = 3
               VACINACOES = 4
+              UUIDFICHACANCELADA = 5
 
               FIELDS = {
                 UUIDFICHA => {:type => ::Thrift::Types::STRING, :name => 'uuidFicha'},
                 TPCDSORIGEM => {:type => ::Thrift::Types::I32, :name => 'tpCdsOrigem', :optional => true},
                 HEADERTRANSPORT => {:type => ::Thrift::Types::STRUCT, :name => 'headerTransport', :class => ::Br::Gov::Saude::Esusab::Ras::Common::UnicaLotacaoHeaderThrift, :optional => true},
-                VACINACOES => {:type => ::Thrift::Types::LIST, :name => 'vacinacoes', :element => {:type => ::Thrift::Types::STRUCT, :class => ::Br::Gov::Saude::Esusab::Ras::Vacinacao::FichaVacinacaoChildThrift}, :optional => true}
+                VACINACOES => {:type => ::Thrift::Types::LIST, :name => 'vacinacoes', :element => {:type => ::Thrift::Types::STRUCT, :class => ::Br::Gov::Saude::Esusab::Ras::Vacinacao::FichaVacinacaoChildThrift}, :optional => true},
+                UUIDFICHACANCELADA => {:type => ::Thrift::Types::STRING, :name => 'uuidFichaCancelada', :optional => true}
               }
 
               def struct_fields; FIELDS; end

@@ -32,6 +32,13 @@ namespace br.gov.saude.esusab.ras.vacinacao
     private bool _stRegistroAnterior;
     private long _dataRegistroAnterior;
     private bool _stAplicadoExterior;
+    private string _uuidRnds;
+    private string _cboPrescritorCodigo2002;
+    private string _cid10MotivoIndicacao;
+    private bool _stPesquisaClinica;
+    private string _anvisaProtocoloEstudo;
+    private string _anvisaProtocoloVersao;
+    private string _anvisaNumeroRegistro;
 
     public long Imunobiologico
     {
@@ -150,6 +157,97 @@ namespace br.gov.saude.esusab.ras.vacinacao
       }
     }
 
+    public string UuidRnds
+    {
+      get
+      {
+        return _uuidRnds;
+      }
+      set
+      {
+        __isset.uuidRnds = true;
+        this._uuidRnds = value;
+      }
+    }
+
+    public string CboPrescritorCodigo2002
+    {
+      get
+      {
+        return _cboPrescritorCodigo2002;
+      }
+      set
+      {
+        __isset.cboPrescritorCodigo2002 = true;
+        this._cboPrescritorCodigo2002 = value;
+      }
+    }
+
+    public string Cid10MotivoIndicacao
+    {
+      get
+      {
+        return _cid10MotivoIndicacao;
+      }
+      set
+      {
+        __isset.cid10MotivoIndicacao = true;
+        this._cid10MotivoIndicacao = value;
+      }
+    }
+
+    public bool StPesquisaClinica
+    {
+      get
+      {
+        return _stPesquisaClinica;
+      }
+      set
+      {
+        __isset.stPesquisaClinica = true;
+        this._stPesquisaClinica = value;
+      }
+    }
+
+    public string AnvisaProtocoloEstudo
+    {
+      get
+      {
+        return _anvisaProtocoloEstudo;
+      }
+      set
+      {
+        __isset.anvisaProtocoloEstudo = true;
+        this._anvisaProtocoloEstudo = value;
+      }
+    }
+
+    public string AnvisaProtocoloVersao
+    {
+      get
+      {
+        return _anvisaProtocoloVersao;
+      }
+      set
+      {
+        __isset.anvisaProtocoloVersao = true;
+        this._anvisaProtocoloVersao = value;
+      }
+    }
+
+    public string AnvisaNumeroRegistro
+    {
+      get
+      {
+        return _anvisaNumeroRegistro;
+      }
+      set
+      {
+        __isset.anvisaNumeroRegistro = true;
+        this._anvisaNumeroRegistro = value;
+      }
+    }
+
 
     public Isset __isset;
     #if !SILVERLIGHT
@@ -165,6 +263,13 @@ namespace br.gov.saude.esusab.ras.vacinacao
       public bool stRegistroAnterior;
       public bool dataRegistroAnterior;
       public bool stAplicadoExterior;
+      public bool uuidRnds;
+      public bool cboPrescritorCodigo2002;
+      public bool cid10MotivoIndicacao;
+      public bool stPesquisaClinica;
+      public bool anvisaProtocoloEstudo;
+      public bool anvisaProtocoloVersao;
+      public bool anvisaNumeroRegistro;
     }
 
     public VacinaRowThrift() {
@@ -244,6 +349,55 @@ namespace br.gov.saude.esusab.ras.vacinacao
             case 9:
               if (field.Type == TType.Bool) {
                 StAplicadoExterior = iprot.ReadBool();
+              } else { 
+                TProtocolUtil.Skip(iprot, field.Type);
+              }
+              break;
+            case 10:
+              if (field.Type == TType.String) {
+                UuidRnds = iprot.ReadString();
+              } else { 
+                TProtocolUtil.Skip(iprot, field.Type);
+              }
+              break;
+            case 11:
+              if (field.Type == TType.String) {
+                CboPrescritorCodigo2002 = iprot.ReadString();
+              } else { 
+                TProtocolUtil.Skip(iprot, field.Type);
+              }
+              break;
+            case 12:
+              if (field.Type == TType.String) {
+                Cid10MotivoIndicacao = iprot.ReadString();
+              } else { 
+                TProtocolUtil.Skip(iprot, field.Type);
+              }
+              break;
+            case 13:
+              if (field.Type == TType.Bool) {
+                StPesquisaClinica = iprot.ReadBool();
+              } else { 
+                TProtocolUtil.Skip(iprot, field.Type);
+              }
+              break;
+            case 14:
+              if (field.Type == TType.String) {
+                AnvisaProtocoloEstudo = iprot.ReadString();
+              } else { 
+                TProtocolUtil.Skip(iprot, field.Type);
+              }
+              break;
+            case 15:
+              if (field.Type == TType.String) {
+                AnvisaProtocoloVersao = iprot.ReadString();
+              } else { 
+                TProtocolUtil.Skip(iprot, field.Type);
+              }
+              break;
+            case 16:
+              if (field.Type == TType.String) {
+                AnvisaNumeroRegistro = iprot.ReadString();
               } else { 
                 TProtocolUtil.Skip(iprot, field.Type);
               }
@@ -341,6 +495,62 @@ namespace br.gov.saude.esusab.ras.vacinacao
           oprot.WriteBool(StAplicadoExterior);
           oprot.WriteFieldEnd();
         }
+        if (UuidRnds != null && __isset.uuidRnds) {
+          field.Name = "uuidRnds";
+          field.Type = TType.String;
+          field.ID = 10;
+          oprot.WriteFieldBegin(field);
+          oprot.WriteString(UuidRnds);
+          oprot.WriteFieldEnd();
+        }
+        if (CboPrescritorCodigo2002 != null && __isset.cboPrescritorCodigo2002) {
+          field.Name = "cboPrescritorCodigo2002";
+          field.Type = TType.String;
+          field.ID = 11;
+          oprot.WriteFieldBegin(field);
+          oprot.WriteString(CboPrescritorCodigo2002);
+          oprot.WriteFieldEnd();
+        }
+        if (Cid10MotivoIndicacao != null && __isset.cid10MotivoIndicacao) {
+          field.Name = "cid10MotivoIndicacao";
+          field.Type = TType.String;
+          field.ID = 12;
+          oprot.WriteFieldBegin(field);
+          oprot.WriteString(Cid10MotivoIndicacao);
+          oprot.WriteFieldEnd();
+        }
+        if (__isset.stPesquisaClinica) {
+          field.Name = "stPesquisaClinica";
+          field.Type = TType.Bool;
+          field.ID = 13;
+          oprot.WriteFieldBegin(field);
+          oprot.WriteBool(StPesquisaClinica);
+          oprot.WriteFieldEnd();
+        }
+        if (AnvisaProtocoloEstudo != null && __isset.anvisaProtocoloEstudo) {
+          field.Name = "anvisaProtocoloEstudo";
+          field.Type = TType.String;
+          field.ID = 14;
+          oprot.WriteFieldBegin(field);
+          oprot.WriteString(AnvisaProtocoloEstudo);
+          oprot.WriteFieldEnd();
+        }
+        if (AnvisaProtocoloVersao != null && __isset.anvisaProtocoloVersao) {
+          field.Name = "anvisaProtocoloVersao";
+          field.Type = TType.String;
+          field.ID = 15;
+          oprot.WriteFieldBegin(field);
+          oprot.WriteString(AnvisaProtocoloVersao);
+          oprot.WriteFieldEnd();
+        }
+        if (AnvisaNumeroRegistro != null && __isset.anvisaNumeroRegistro) {
+          field.Name = "anvisaNumeroRegistro";
+          field.Type = TType.String;
+          field.ID = 16;
+          oprot.WriteFieldBegin(field);
+          oprot.WriteString(AnvisaNumeroRegistro);
+          oprot.WriteFieldEnd();
+        }
         oprot.WriteFieldStop();
         oprot.WriteStructEnd();
       }
@@ -406,6 +616,48 @@ namespace br.gov.saude.esusab.ras.vacinacao
         __first = false;
         __sb.Append("StAplicadoExterior: ");
         __sb.Append(StAplicadoExterior);
+      }
+      if (UuidRnds != null && __isset.uuidRnds) {
+        if(!__first) { __sb.Append(", "); }
+        __first = false;
+        __sb.Append("UuidRnds: ");
+        __sb.Append(UuidRnds);
+      }
+      if (CboPrescritorCodigo2002 != null && __isset.cboPrescritorCodigo2002) {
+        if(!__first) { __sb.Append(", "); }
+        __first = false;
+        __sb.Append("CboPrescritorCodigo2002: ");
+        __sb.Append(CboPrescritorCodigo2002);
+      }
+      if (Cid10MotivoIndicacao != null && __isset.cid10MotivoIndicacao) {
+        if(!__first) { __sb.Append(", "); }
+        __first = false;
+        __sb.Append("Cid10MotivoIndicacao: ");
+        __sb.Append(Cid10MotivoIndicacao);
+      }
+      if (__isset.stPesquisaClinica) {
+        if(!__first) { __sb.Append(", "); }
+        __first = false;
+        __sb.Append("StPesquisaClinica: ");
+        __sb.Append(StPesquisaClinica);
+      }
+      if (AnvisaProtocoloEstudo != null && __isset.anvisaProtocoloEstudo) {
+        if(!__first) { __sb.Append(", "); }
+        __first = false;
+        __sb.Append("AnvisaProtocoloEstudo: ");
+        __sb.Append(AnvisaProtocoloEstudo);
+      }
+      if (AnvisaProtocoloVersao != null && __isset.anvisaProtocoloVersao) {
+        if(!__first) { __sb.Append(", "); }
+        __first = false;
+        __sb.Append("AnvisaProtocoloVersao: ");
+        __sb.Append(AnvisaProtocoloVersao);
+      }
+      if (AnvisaNumeroRegistro != null && __isset.anvisaNumeroRegistro) {
+        if(!__first) { __sb.Append(", "); }
+        __first = false;
+        __sb.Append("AnvisaNumeroRegistro: ");
+        __sb.Append(AnvisaNumeroRegistro);
       }
       __sb.Append(")");
       return __sb.ToString();

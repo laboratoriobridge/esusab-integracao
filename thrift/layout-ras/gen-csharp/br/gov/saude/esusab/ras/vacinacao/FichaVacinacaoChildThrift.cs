@@ -37,6 +37,7 @@ namespace br.gov.saude.esusab.ras.vacinacao
     private long _dataHoraInicialAtendimento;
     private long _dataHoraFinalAtendimento;
     private string _cpfCidadao;
+    private long _condicaoMaternal;
 
     public long Turno
     {
@@ -220,6 +221,19 @@ namespace br.gov.saude.esusab.ras.vacinacao
       }
     }
 
+    public long CondicaoMaternal
+    {
+      get
+      {
+        return _condicaoMaternal;
+      }
+      set
+      {
+        __isset.condicaoMaternal = true;
+        this._condicaoMaternal = value;
+      }
+    }
+
 
     public Isset __isset;
     #if !SILVERLIGHT
@@ -240,6 +254,7 @@ namespace br.gov.saude.esusab.ras.vacinacao
       public bool dataHoraInicialAtendimento;
       public bool dataHoraFinalAtendimento;
       public bool cpfCidadao;
+      public bool condicaoMaternal;
     }
 
     public FichaVacinacaoChildThrift() {
@@ -365,6 +380,13 @@ namespace br.gov.saude.esusab.ras.vacinacao
             case 14:
               if (field.Type == TType.String) {
                 CpfCidadao = iprot.ReadString();
+              } else { 
+                TProtocolUtil.Skip(iprot, field.Type);
+              }
+              break;
+            case 15:
+              if (field.Type == TType.I64) {
+                CondicaoMaternal = iprot.ReadI64();
               } else { 
                 TProtocolUtil.Skip(iprot, field.Type);
               }
@@ -509,6 +531,14 @@ namespace br.gov.saude.esusab.ras.vacinacao
           oprot.WriteString(CpfCidadao);
           oprot.WriteFieldEnd();
         }
+        if (__isset.condicaoMaternal) {
+          field.Name = "condicaoMaternal";
+          field.Type = TType.I64;
+          field.ID = 15;
+          oprot.WriteFieldBegin(field);
+          oprot.WriteI64(CondicaoMaternal);
+          oprot.WriteFieldEnd();
+        }
         oprot.WriteFieldStop();
         oprot.WriteStructEnd();
       }
@@ -604,6 +634,12 @@ namespace br.gov.saude.esusab.ras.vacinacao
         __first = false;
         __sb.Append("CpfCidadao: ");
         __sb.Append(CpfCidadao);
+      }
+      if (__isset.condicaoMaternal) {
+        if(!__first) { __sb.Append(", "); }
+        __first = false;
+        __sb.Append("CondicaoMaternal: ");
+        __sb.Append(CondicaoMaternal);
       }
       __sb.Append(")");
       return __sb.ToString();

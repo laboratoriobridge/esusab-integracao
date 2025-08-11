@@ -1,5 +1,7 @@
 LANGS="java:beans php delphi csharp rb go py js:node"
 
+rm -r gen-*
+
 for LANG in $LANGS
 do
     for FILE in thrift/*.thrift

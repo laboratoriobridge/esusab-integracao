@@ -656,7 +656,7 @@ FichaAtendimentoIndividualChildThrift.prototype.read = function(input) {
         input.skip(ftype);
       }
       break;
-      case 42:
+      case 43:
       if (ftype == Thrift.Type.LIST) {
         var _size64 = 0;
         var _rtmp368;
@@ -931,7 +931,7 @@ FichaAtendimentoIndividualChildThrift.prototype.write = function(output) {
     output.writeFieldEnd();
   }
   if (this.solicitacoesOci !== null && this.solicitacoesOci !== undefined) {
-    output.writeFieldBegin('solicitacoesOci', Thrift.Type.LIST, 42);
+    output.writeFieldBegin('solicitacoesOci', Thrift.Type.LIST, 43);
     output.writeListBegin(Thrift.Type.STRUCT, this.solicitacoesOci.length);
     for (var iter79 in this.solicitacoesOci)
     {

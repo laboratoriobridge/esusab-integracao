@@ -75,7 +75,7 @@ module Br
               MEDICOES = 39
               PROBLEMASCONDICOES = 40
               IVCF = 41
-              SOLICITACOESOCI = 42
+              SOLICITACOESOCI = 43
 
               FIELDS = {
                 NUMEROPRONTUARIO => {:type => ::Thrift::Types::STRING, :name => 'numeroProntuario', :optional => true},

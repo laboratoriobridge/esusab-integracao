@@ -901,7 +901,7 @@ namespace br.gov.saude.esusab.ras.atendindividual
                 TProtocolUtil.Skip(iprot, field.Type);
               }
               break;
-            case 42:
+            case 43:
               if (field.Type == TType.List) {
                 {
                   SolicitacoesOci = new List<br.gov.saude.esusab.ras.solicitacaooci.SolicitacaoOciThrift>();
@@ -1271,7 +1271,7 @@ namespace br.gov.saude.esusab.ras.atendindividual
         if (SolicitacoesOci != null && __isset.solicitacoesOci) {
           field.Name = "solicitacoesOci";
           field.Type = TType.List;
-          field.ID = 42;
+          field.ID = 43;
           oprot.WriteFieldBegin(field);
           {
             oprot.WriteListBegin(new TList(TType.Struct, SolicitacoesOci.Count));

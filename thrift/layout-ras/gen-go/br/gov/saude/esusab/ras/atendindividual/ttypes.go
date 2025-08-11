@@ -392,14 +392,15 @@ type FichaAtendimentoIndividualChildThrift struct {
 	Encaminhamentos            []*common.EncaminhamentoExternoThrift `thrift:"encaminhamentos,32" json:"encaminhamentos,omitempty"`
 	ResultadosExames           []*common.ResultadosExameThrift       `thrift:"resultadosExames,33" json:"resultadosExames,omitempty"`
 	// unused field # 34
-	FinalizadorObservacao                 *common.LotacaoHeaderThrift            `thrift:"finalizadorObservacao,35" json:"finalizadorObservacao,omitempty"`
-	TipoParticipacaoCidadao               *int64                                 `thrift:"tipoParticipacaoCidadao,36" json:"tipoParticipacaoCidadao,omitempty"`
-	TipoParticipacaoProfissionalConvidado *int64                                 `thrift:"tipoParticipacaoProfissionalConvidado,37" json:"tipoParticipacaoProfissionalConvidado,omitempty"`
-	Emultis                               []int64                                `thrift:"emultis,38" json:"emultis,omitempty"`
-	Medicoes                              *common.MedicoesThrift                 `thrift:"medicoes,39" json:"medicoes,omitempty"`
-	ProblemasCondicoes                    []*common.ProblemaCondicaoThrift       `thrift:"problemasCondicoes,40" json:"problemasCondicoes,omitempty"`
-	Ivcf                                  *common.IvcfThrift                     `thrift:"ivcf,41" json:"ivcf,omitempty"`
-	SolicitacoesOci                       []*solicitacaooci.SolicitacaoOciThrift `thrift:"solicitacoesOci,42" json:"solicitacoesOci,omitempty"`
+	FinalizadorObservacao                 *common.LotacaoHeaderThrift      `thrift:"finalizadorObservacao,35" json:"finalizadorObservacao,omitempty"`
+	TipoParticipacaoCidadao               *int64                           `thrift:"tipoParticipacaoCidadao,36" json:"tipoParticipacaoCidadao,omitempty"`
+	TipoParticipacaoProfissionalConvidado *int64                           `thrift:"tipoParticipacaoProfissionalConvidado,37" json:"tipoParticipacaoProfissionalConvidado,omitempty"`
+	Emultis                               []int64                          `thrift:"emultis,38" json:"emultis,omitempty"`
+	Medicoes                              *common.MedicoesThrift           `thrift:"medicoes,39" json:"medicoes,omitempty"`
+	ProblemasCondicoes                    []*common.ProblemaCondicaoThrift `thrift:"problemasCondicoes,40" json:"problemasCondicoes,omitempty"`
+	Ivcf                                  *common.IvcfThrift               `thrift:"ivcf,41" json:"ivcf,omitempty"`
+	// unused field # 42
+	SolicitacoesOci []*solicitacaooci.SolicitacaoOciThrift `thrift:"solicitacoesOci,43" json:"solicitacoesOci,omitempty"`
 }
 
 func NewFichaAtendimentoIndividualChildThrift() *FichaAtendimentoIndividualChildThrift {
@@ -983,8 +984,8 @@ func (p *FichaAtendimentoIndividualChildThrift) Read(iprot thrift.TProtocol) err
 			if err := p.readField41(iprot); err != nil {
 				return err
 			}
-		case 42:
-			if err := p.readField42(iprot); err != nil {
+		case 43:
+			if err := p.readField43(iprot); err != nil {
 				return err
 			}
 		default:
@@ -1399,7 +1400,7 @@ func (p *FichaAtendimentoIndividualChildThrift) readField41(iprot thrift.TProtoc
 	return nil
 }
 
-func (p *FichaAtendimentoIndividualChildThrift) readField42(iprot thrift.TProtocol) error {
+func (p *FichaAtendimentoIndividualChildThrift) readField43(iprot thrift.TProtocol) error {
 	_, size, err := iprot.ReadListBegin()
 	if err != nil {
 		return thrift.PrependError("error reading list begin: ", err)
@@ -1525,7 +1526,7 @@ func (p *FichaAtendimentoIndividualChildThrift) Write(oprot thrift.TProtocol) er
 	if err := p.writeField41(oprot); err != nil {
 		return err
 	}
-	if err := p.writeField42(oprot); err != nil {
+	if err := p.writeField43(oprot); err != nil {
 		return err
 	}
 	if err := oprot.WriteFieldStop(); err != nil {
@@ -2111,10 +2112,10 @@ func (p *FichaAtendimentoIndividualChildThrift) writeField41(oprot thrift.TProto
 	return err
 }
 
-func (p *FichaAtendimentoIndividualChildThrift) writeField42(oprot thrift.TProtocol) (err error) {
+func (p *FichaAtendimentoIndividualChildThrift) writeField43(oprot thrift.TProtocol) (err error) {
 	if p.IsSetSolicitacoesOci() {
-		if err := oprot.WriteFieldBegin("solicitacoesOci", thrift.LIST, 42); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field begin error 42:solicitacoesOci: ", p), err)
+		if err := oprot.WriteFieldBegin("solicitacoesOci", thrift.LIST, 43); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field begin error 43:solicitacoesOci: ", p), err)
 		}
 		if err := oprot.WriteListBegin(thrift.STRUCT, len(p.SolicitacoesOci)); err != nil {
 			return thrift.PrependError("error writing list begin: ", err)
@@ -2128,7 +2129,7 @@ func (p *FichaAtendimentoIndividualChildThrift) writeField42(oprot thrift.TProto
 			return thrift.PrependError("error writing list end: ", err)
 		}
 		if err := oprot.WriteFieldEnd(); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field end error 42:solicitacoesOci: ", p), err)
+			return thrift.PrependError(fmt.Sprintf("%T write field end error 43:solicitacoesOci: ", p), err)
 		}
 	}
 	return err

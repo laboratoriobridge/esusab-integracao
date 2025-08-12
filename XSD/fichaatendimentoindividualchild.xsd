@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:encaminhamentoExterno="http://esus.ufsc.br/encaminhamentoexterno" xmlns:exame="http://esus.ufsc.br/exame"
-           xmlns:lotacaoHeader="http://esus.ufsc.br/lotacaoheader" xmlns:medicamento="http://esus.ufsc.br/medicamento" xmlns:medicoes="http://esus.ufsc.br/medicoes"
-           xmlns:problemacondicao="http://esus.ufsc.br/problemacondicao" xmlns:resultadosExame="http://esus.ufsc.br/resultadosexame" xmlns:ivcf="http://esus.ufsc.br/ivcf"
-           xmlns:solicitacoesoci="http://esus.ufsc.br/solicitacoesoci" targetNamespace="http://esus.ufsc.br/fichaatendimentoindividualchild" version="1.0">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+           xmlns:encaminhamentoExterno="http://esus.ufsc.br/encaminhamentoexterno"
+           xmlns:exame="http://esus.ufsc.br/exame"
+           xmlns:lotacaoHeader="http://esus.ufsc.br/lotacaoheader"
+           xmlns:medicamento="http://esus.ufsc.br/medicamento"
+           xmlns:medicoes="http://esus.ufsc.br/medicoes"
+           xmlns:problemacondicao="http://esus.ufsc.br/problemacondicao"
+           xmlns:resultadosExame="http://esus.ufsc.br/resultadosexame"
+           xmlns:ivcf="http://esus.ufsc.br/ivcf"
+           xmlns:solicitacaooci="http://esus.ufsc.br/solicitacaooci"
+           targetNamespace="http://esus.ufsc.br/fichaatendimentoindividualchild" version="1.0">
 
     <xs:import namespace="http://esus.ufsc.br/medicoes" schemaLocation="medicoes.xsd"/>
 
@@ -22,7 +29,7 @@
 
     <xs:import namespace="http://esus.ufsc.br/ivcf" schemaLocation="ivcf.xsd"/>
 
-    <xs:import namespace="http://esus.ufsc.br/solicitacoesoci" schemaLocation="solicitacoesoci.xsd"/>
+    <xs:import namespace="http://esus.ufsc.br/solicitacaooci" schemaLocation="solicitacaooci.xsd"/>
 
     <xs:complexType name="fichaAtendimentoIndividualChildTransport">
         <xs:sequence>
@@ -59,7 +66,7 @@
             <xs:element minOccurs="0" name="tipoParticipacaoCidadao" type="xs:long"/>
             <xs:element minOccurs="0" name="tipoParticipacaoProfissionalConvidado" type="xs:long"/>
             <xs:element minOccurs="0" name="ivcf" type="ivcf:ivcfTransport"/>
-            <xs:element maxOccurs="unbounded" minOccurs="0" name="solicitacoesOci" type="solicitacoesoci:solicitacoesOciTransport"/>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="solicitacoesOci" type="solicitacaooci:solicitacaoOciTransport"/>
         </xs:sequence>
     </xs:complexType>
 </xs:schema>

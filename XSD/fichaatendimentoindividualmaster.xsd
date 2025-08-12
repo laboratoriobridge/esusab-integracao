@@ -1,31 +1,48 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:encaminhamentoExterno="http://esus.ufsc.br/encaminhamentoexterno" xmlns:exame="http://esus.ufsc.br/exame" xmlns:fichaAtendimentoIndividualChild="http://esus.ufsc.br/fichaatendimentoindividualchild" xmlns:fichaAtendimentoIndividualMaster="http://esus.ufsc.br/fichaatendimentoindividualmaster" xmlns:lotacaoHeader="http://esus.ufsc.br/lotacaoheader" xmlns:medicamento="http://esus.ufsc.br/medicamento" xmlns:medicoes="http://esus.ufsc.br/medicoes" xmlns:problemacondicao="http://esus.ufsc.br/problemacondicao" xmlns:resultadosExame="http://esus.ufsc.br/resultadosexame" xmlns:variasLotacoesHeader="http://esus.ufsc.br/variaslotacoesheader" targetNamespace="http://esus.ufsc.br/fichaatendimentoindividualmaster" version="1.0">    
-  
-  <xs:import namespace="http://esus.ufsc.br/lotacaoheader" schemaLocation="lotacaoheader.xsd"/>        
-    
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+           xmlns:encaminhamentoExterno="http://esus.ufsc.br/encaminhamentoexterno" 
+           xmlns:exame="http://esus.ufsc.br/exame"
+           xmlns:fichaAtendimentoIndividualChild="http://esus.ufsc.br/fichaatendimentoindividualchild"
+           xmlns:fichaAtendimentoIndividualMaster="http://esus.ufsc.br/fichaatendimentoindividualmaster"
+           xmlns:ivcf="http://esus.ufsc.br/ivcf"
+           xmlns:lotacaoHeader="http://esus.ufsc.br/lotacaoheader"
+           xmlns:medicamento="http://esus.ufsc.br/medicamento"
+           xmlns:medicoes="http://esus.ufsc.br/medicoes"
+           xmlns:problemacondicao="http://esus.ufsc.br/problemacondicao"
+           xmlns:resultadosExame="http://esus.ufsc.br/resultadosexame"
+           xmlns:solicitacaooci="http://esus.ufsc.br/solicitacaooci"
+           xmlns:variasLotacoesHeader="http://esus.ufsc.br/variaslotacoesheader"
+           targetNamespace="http://esus.ufsc.br/fichaatendimentoindividualmaster" version="1.0">
+
+  <xs:import namespace="http://esus.ufsc.br/lotacaoheader" schemaLocation="lotacaoheader.xsd"/>
+
   <xs:import namespace="http://esus.ufsc.br/variaslotacoesheader" schemaLocation="variaslotacoesheader.xsd"/>
-            
-  <xs:import namespace="http://esus.ufsc.br/medicoes" schemaLocation="medicoes.xsd"/>        
-    
-  <xs:import namespace="http://esus.ufsc.br/exame" schemaLocation="exame.xsd"/>         
-  
-  <xs:import namespace="http://esus.ufsc.br/medicamento" schemaLocation="medicamento.xsd"/>        
-   
+
+  <xs:import namespace="http://esus.ufsc.br/medicoes" schemaLocation="medicoes.xsd"/>
+
+  <xs:import namespace="http://esus.ufsc.br/exame" schemaLocation="exame.xsd"/>
+
+  <xs:import namespace="http://esus.ufsc.br/medicamento" schemaLocation="medicamento.xsd"/>
+
   <xs:import namespace="http://esus.ufsc.br/encaminhamentoexterno" schemaLocation="encaminhamentoexterno.xsd"/>
-         
+
   <xs:import namespace="http://esus.ufsc.br/resultadosexame" schemaLocation="resultadosexame.xsd"/>
-           
+
   <xs:import namespace="http://esus.ufsc.br/problemacondicao" schemaLocation="problemacondicao.xsd"/>
-           
+
+  <xs:import namespace="http://esus.ufsc.br/ivcf" schemaLocation="ivcf.xsd"/>
+
+  <xs:import namespace="http://esus.ufsc.br/solicitacaooci" schemaLocation="solicitacaooci.xsd"/>
+
   <xs:import namespace="http://esus.ufsc.br/fichaatendimentoindividualchild" schemaLocation="fichaatendimentoindividualchild.xsd"/>
-           
+
   <xs:element name="fichaAtendimentoIndividualMasterTransport" type="fichaAtendimentoIndividualMaster:fichaAtendimentoIndividualMasterTransport"/>
-           
-  <xs:complexType name="fichaAtendimentoIndividualMasterTransport">                  
-    <xs:sequence>                               
-      <xs:element minOccurs="0" name="headerTransport" type="variasLotacoesHeader:variasLotacoesHeaderTransport"/>                                    
-      <xs:element maxOccurs="unbounded" minOccurs="0" name="atendimentosIndividuais" type="fichaAtendimentoIndividualChild:fichaAtendimentoIndividualChildTransport"/>                                   
-      <xs:element minOccurs="0" name="tpCdsOrigem" type="xs:int"/>                        
+
+  <xs:complexType name="fichaAtendimentoIndividualMasterTransport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="headerTransport" type="variasLotacoesHeader:variasLotacoesHeaderTransport"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="atendimentosIndividuais" type="fichaAtendimentoIndividualChild:fichaAtendimentoIndividualChildTransport"/>
+      <xs:element minOccurs="0" name="tpCdsOrigem" type="xs:int"/>
       <xs:element name="uuidFicha" type="xs:string"/>
     </xs:sequence>
   </xs:complexType>

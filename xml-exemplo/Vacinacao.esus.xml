@@ -113,7 +113,7 @@
         <nomeOuRazaoSocial>ADMINISTRADOR INSTALAÇÃO</nomeOuRazaoSocial>
         <fone>8216756527</fone>
         <email>prof@esus.br</email>
-        <versaoSistema>5.0.16</versaoSistema>
+        <versaoSistema>5.4.10</versaoSistema>
         <nomeBancoDados>Oracle</nomeBancoDados>
     </ns2:originadora>
     <versao major="4" minor="4" revision="1"/>

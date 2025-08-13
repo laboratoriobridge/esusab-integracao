@@ -29,7 +29,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 7.2.1</span>
+        <span class="label">versão 7.2.2</span>
       
     </a>
 
@@ -79,7 +79,7 @@
           
         
           
-            <li><a title="Layout e-SUS APS de Dados e Interface Versão 7.2.1" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 7.2.1</a></li>
+            <li><a title="Layout e-SUS APS de Dados e Interface Versão 7.2.2" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 7.2.2</a></li>
           
         
           
@@ -119,9 +119,9 @@
   <ul>
     
       <li>
-        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 7.2.1" href="/ledi/documentacao/index.html" class="back-link">
+        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 7.2.2" href="/ledi/documentacao/index.html" class="back-link">
           <i class="icon icon-back"></i> Voltar
-          <small>(Layout e-SUS APS de Dados e Interface Versão 7.2.1)</small>
+          <small>(Layout e-SUS APS de Dados e Interface Versão 7.2.2)</small>
         </a>
       </li>
     
@@ -254,7 +254,7 @@
     <p class="post-meta">
       <a class="btn" href="/pdf.html?include=/ledi/documentacao/estrutura_arquivos/dicionario-fv.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 05/06/2025</span>
+        <span class="label" title="Data da última modificação">Alterado em 13/08/2025</span>
       
     </p>
   </header>
@@ -422,8 +422,8 @@
 
 <ul>
 <li>Validado por algoritmo;</li>
-<li>Deixa de ser obrigatório se o campo <a href="#14-cpfcidadao">cpfCidadao</a> for preenchido.</li>
-<li>Não pode ser preenchido se o campo <a href="#14-cpfcidadao">cpfCidadao</a> for preenchido.</li>
+<li>Deixa de ser obrigatório se o campo <a href="#12-cpfcidadao">cpfCidadao</a> for preenchido.</li>
+<li>Não pode ser preenchido se o campo <a href="#12-cpfcidadao">cpfCidadao</a> for preenchido.</li>
 </ul>
 
 <p><strong>Referência:</strong> O algoritmo de validação está presente em <a href="/ledi/documentacao/regras/algoritmo_CNS.html">Validar CNS</a>.</p>
@@ -545,65 +545,7 @@
 <li>O campo é de preenchimento obrigatório quando for registrada uma vacinação com o imunobiológico <code>15 - BCG</code>.</li>
 </ul>
 
-<h3 id="9-gestante">#9 gestante</h3>
-
-<p>Marcador que indica se a cidadã está gestante.</p>
-
-<table><thead>
-<tr>
-<th>Tipo</th>
-<th>Obrigatório</th>
-<th>Mínimo</th>
-<th>Máximo</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Boolean</td>
-<td>Sim</td>
-<td>-</td>
-<td>-</td>
-</tr>
-</tbody></table>
-
-<p><strong>Regras:</strong></p>
-
-<ul>
-<li>Quando o <a href="#5-sexo">Sexo</a> = <code>0 (masculino)</code> o campo deve receber o valor 0 (false);</li>
-<li>Quando o <a href="#5-sexo">Sexo</a> = <code>1 (feminino)</code> o campo pode receber o valor 0 (false) ou 1 (true);</li>
-<li>Não pode ser preenchido com valor 1 (true) se o campo <a href="#10-puerpera">puerpera</a> for marcado;</li>
-<li>Este campo não pode ser enviado como NULL.</li>
-</ul>
-
-<h3 id="10-puerpera">#10 puerpera</h3>
-
-<p>Marcador que indica se a cidadã está puérpera.</p>
-
-<table><thead>
-<tr>
-<th>Tipo</th>
-<th>Obrigatório</th>
-<th>Mínimo</th>
-<th>Máximo</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Boolean</td>
-<td>Sim</td>
-<td>-</td>
-<td>-</td>
-</tr>
-</tbody></table>
-
-<p><strong>Regras:</strong></p>
-
-<ul>
-<li>Quando o <a href="#5-sexo">Sexo</a> = <code>0 (masculino)</code> o campo deve receber o valor 0 (false);</li>
-<li>Quando o <a href="#5-sexo">Sexo</a> = <code>1 (feminino)</code> o campo pode receber o valor 0 (false) ou 1 (true);</li>
-<li>Não pode ser preenchido com valor 1 (true) se o campo <a href="#9-gestante">gestante</a> for marcado;</li>
-<li>Este campo não pode ser enviado como NULL.</li>
-</ul>
-
-<h3 id="11-vacinas">#11 vacinas</h3>
+<h3 id="9-vacinas">#9 vacinas</h3>
 
 <p>Registro das vacinas aplicadas.</p>
 
@@ -633,7 +575,7 @@
 
 <p><strong>Referência:</strong> <a href="#vacinarowthrift">VacinaRowThrift</a>.</p>
 
-<h3 id="12-datahorainicialatendimento">#12 dataHoraInicialAtendimento</h3>
+<h3 id="10-datahorainicialatendimento">#10 dataHoraInicialAtendimento</h3>
 
 <p>Data e hora do início do atendimento.</p>
 
@@ -657,12 +599,12 @@
 
 <ul>
 <li>Não pode ser anterior à <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>;</li>
-<li>Não pode ser posterior à <a href="#13-datahorafinalatendimento">dataHoraFinalAtendimento</a> e à data atual.</li>
+<li>Não pode ser posterior à <a href="#11-datahorafinalatendimento">dataHoraFinalAtendimento</a> e à data atual.</li>
 </ul>
 
 <p><strong>Referência:</strong> Deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
 
-<h3 id="13-datahorafinalatendimento">#13 dataHoraFinalAtendimento</h3>
+<h3 id="11-datahorafinalatendimento">#11 dataHoraFinalAtendimento</h3>
 
 <p>Data e hora do fim do atendimento.</p>
 
@@ -685,13 +627,13 @@
 <p><strong>Regras:</strong></p>
 
 <ul>
-<li>Não pode ser anterior à <a href="#12-datahorainicialatendimento">dataHoraInicialAtendimento</a>;</li>
+<li>Não pode ser anterior à <a href="#10-datahorainicialatendimento">dataHoraInicialAtendimento</a>;</li>
 <li>Não pode ser posterior à data atual.</li>
 </ul>
 
 <p><strong>Referência:</strong> Deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
 
-<h3 id="14-cpfcidadao">#14 cpfCidadao</h3>
+<h3 id="12-cpfcidadao">#12 cpfCidadao</h3>
 
 <p>CPF do cidadão.</p>
 
@@ -717,6 +659,33 @@
 <li>Somente CPF válido será aceito;</li>
 <li>Deixa de ser obrigatório se o campo <a href="#3-cnscidadao">cnsCidadao</a> for preenchido.</li>
 <li>Não pode ser preenchido se o campo <a href="#3-cnscidadao">cnsCidadao</a> for preenchido.</li>
+</ul>
+
+<h3 id="13-condicaomaternal">#13 condicaoMaternal</h3>
+
+<p>Código que indica o tipo de condição maternal.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Condicional</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Quando o Sexo = 0 (masculino) o campo não deve ser preenchido;</li>
+<li>Quando o <a href="#5-sexo">Sexo</a> = <code>1 (Feminino)</code> ou <a href="#5-sexo">Sexo</a> = <code>5 (Indeterminado)</code> o campo passa a ser obrigatório e pode receber o valor <code>1</code> (Nenhuma), <code>2</code> (Gestante) ou <code>3</code> (Puérpera);</li>
 </ul>
 
 <h2 id="vacinarowthrift">VacinaRowThrift</h2>
@@ -856,8 +825,8 @@
 <li>Se o campo <a href="#1-imunobiologico">Imunobiológico</a> = <code>96</code>, o campo deve ser preenchido com o valor = <code>BHARAT-COVAXIN</code>;</li>
 <li>Se o campo <a href="#1-imunobiologico">Imunobiológico</a> = <code>97</code>, o campo deve ser preenchido com o valor = <code>MODERNA</code>;</li>
 <li>Se o campo <a href="#1-imunobiologico">Imunobiológico</a> = <code>98</code>, o campo deve ser preenchido com o valor = <code>SINOVAC-CORONAVAC</code>;</li>
-<li>Se o campo <a href="#1-imunobiologico">Imunobiológico</a> = <code>99</code> o campo deve ser preenchido com o valor = <code>BIONTECH</code>;</li>
-<li>Se o campo <a href="#1-imunobiologico">Imunobiológico</a> = <code>102</code> ou <code>103</code> o campo deve ser preenchido com o valor = <code>COMIRNATY-PFIZER/BIONTECH</code>;</li>
+<li>Se o campo <a href="#1-imunobiologico">Imunobiológico</a> = <code>99</code> ou <code>102</code> o campo deve ser preenchido com o valor = <code>BIONTECH</code>;</li>
+<li>Se o campo <a href="#1-imunobiologico">Imunobiológico</a> = <code>103</code> o campo deve ser preenchido com o valor = <code>COMIRNATY-PFIZER/BIONTECH</code>;</li>
 <li>Se o campo <a href="#1-imunobiologico">Imunobiológico</a> = <code>112</code> o campo deve ser preenchido com o valor = <code>SERUM-INDIA</code>;</li>
 <li>Se o campo <a href="#1-imunobiologico">Imunobiológico</a> = <code>114</code> o campo deve ser preenchido com o valor = <code>BEIJING</code>.</li>
 </ul>
@@ -962,6 +931,143 @@
 </tbody></table>
 
 <p><strong>Regra:</strong> Só pode ser preenchido se o campo <a href="#7-stregistroanterior">stRegistroAnterior</a> = <code>true</code> e o campo <a href="#1-imunobiologico">Imunobiológico</a> receber um dos valores <code>85</code>, <code>86</code>, <code>87</code>, <code>88</code>, <code>89</code>, <code>95</code>, <code>96</code>, <code>97</code>, <code>98</code>, <code>99</code>, <code>102</code>, <code>103</code>, <code>105</code> ou <code>112</code> pertencentes aos imunobiológicos de COVID-19. Nestas condições, é de preenchimento obrigatório.</p>
+
+<h3 id="10-cboprescritorcodigo2002">#10 cboPrescritorCodigo2002</h3>
+
+<p>Código que indica o CBO do profissional prescritor.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Não</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p>Referência: CBOs prescritores.</p>
+
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#cboprescritor">CBOs específicos</a>.</p>
+
+<h3 id="11-cid10motivoindicacao">#11 cid10MotivoIndicacao</h3>
+
+<p>Código que indica o CID10 do motivo da prescrição. </p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p>Regra: </p>
+
+<ul>
+<li>Obrigatório se <a href="#2-estrategiavacinacao">estrategiaVacinacao</a> = <code>02- Especial</code>;</li>
+<li>Preencher o campo de string com o código CID10.</li>
+</ul>
+
+<h3 id="12-stpesquisaclinica">#12 stPesquisaClinica</h3>
+
+<p>Código que indica se a aplicação foi feita no contexto de pesquisa clínica. </p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h3 id="13-anvisaprotocoloestudo">#13 anvisaProtocoloEstudo</h3>
+
+<p>Número do protocolo de estudo da ANVISA. </p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Condicional</td>
+<td>-</td>
+<td>10</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> Só pode ser preenchido e se torna obrigatório se <a href="#12-stpesquisaclinica">stPesquisaClinica</a> = <code>true</code>;</p>
+
+<h3 id="14-anvisaprotocoloversao">#14 anvisaProtocoloVersao</h3>
+
+<p>Número da versão do protocolo da ANVISA. </p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Condicional</td>
+<td>-</td>
+<td>10</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong>  Só pode ser preenchido e se torna obrigatório se <a href="#12-stpesquisaclinica">stPesquisaClinica</a> = <code>true</code>;</p>
+
+<h3 id="15-anvisanumeroregistro">#15 anvisaNumeroRegistro</h3>
+
+<p>Número do registro da ANVISA. </p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Condicional</td>
+<td>-</td>
+<td>10</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> Só pode ser preenchido e se torna obrigatório se <a href="#12-stpesquisaclinica">stPesquisaClinica</a> = <code>true</code>;</p>
 
   </article>
 

@@ -29,7 +29,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 7.2.1</span>
+        <span class="label">versão 7.2.2</span>
       
     </a>
 
@@ -141,7 +141,7 @@
 
       <li id="item-layout_ab" data-url="/ledi/documentacao/index.html">
         <label>
-          <input type="checkbox" value="layout_ab" checked="checked"> Layout e-SUS APS de Dados e Interface Versão 7.2.1
+          <input type="checkbox" value="layout_ab" checked="checked"> Layout e-SUS APS de Dados e Interface Versão 7.2.2
           <small>
             <a onclick="checkById('layout_ab', true); return false;">Marcar todos</a> |
             <a onclick="checkById('layout_ab', false); return false;">Desmarcar todos</a>
@@ -2189,7 +2189,7 @@
   
       <!-- Cria a lista de itens[páginas] que foram selecionados  -->
 
-  <li id="summary-layout_ab"><a href="#layout_ab">Layout e-SUS APS de Dados e Interface Versão 7.2.1</a></li>
+  <li id="summary-layout_ab"><a href="#layout_ab">Layout e-SUS APS de Dados e Interface Versão 7.2.2</a></li>
   
       <!-- Cria a lista de itens[páginas] que foram selecionados  -->
 
@@ -3077,8 +3077,13 @@
 </tr>
 </thead><tbody>
 <tr>
+<td>5.4.10 ou superior</td>
+<td><a href="/ledi/documentacao/index.html">LEDI APS 7.2.2</a></td>
+<td>12/08/2025</td>
+</tr>
+<tr>
 <td>5.4.8 ou superior</td>
-<td><a href="/ledi/documentacao/index.html">LEDI APS 7.2.1</a></td>
+<td><a href="https://integracao.esusab.ufsc.br/v721/">LEDI APS 7.2.1</a></td>
 <td>10/07/2025</td>
 </tr>
 <tr>
@@ -3362,17 +3367,17 @@
         
     <div class="post pdf shown" id="layout_ab" data-url="/ledi/documentacao/index.html">
       <header class="post-header">
-        <h1 class="post-title">Layout e-SUS APS de Dados e Interface Versão 7.2.1</h1>
+        <h1 class="post-title">Layout e-SUS APS de Dados e Interface Versão 7.2.2</h1>
       </header>
 
       
 
       <article class="post-content">
-        <p>Esta documentação descreve as estruturas de dados, seus atributos e regras utilizadas no <strong>LEDI APS</strong> versão 7.2.1.</p>
+        <p>Esta documentação descreve as estruturas de dados, seus atributos e regras utilizadas no <strong>LEDI APS</strong> versão 7.2.2.</p>
 
-<p>A versão <strong>LEDI APS</strong> 7.2.1 é compatível com o sistema <strong>PEC e-SUS APS</strong> versão 5.4.8 ou superior.</p>
+<p>A versão <strong>LEDI APS</strong> 7.2.2 é compatível com o sistema <strong>PEC e-SUS APS</strong> versão 5.4.10 ou superior.</p>
 
-<p>Confira as principais alterações na versão 7.2.1 <a href="/ledi/documentacao/principais_alteracoes.html">aqui</a>.</p>
+<p>Confira as principais alterações na versão 7.2.2 <a href="/ledi/documentacao/principais_alteracoes.html">aqui</a>.</p>
 
       </article>
 
@@ -7502,7 +7507,7 @@
 
 <ul>
 <li>Não deve ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#12-tipodeimovel">tipoDeImovel</a> = <code>07</code> Abrigo, <code>08</code> Instituição de longa permanência para idosos, <code>09</code> Unidade prisional, <code>10</code> Unidade de medida socioeducativa, <code>11</code> Delegacia ou <code>13</code> CASAI;</li>
-<li>Não deve ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#5-localizacao">localizacao</a> = <code>83 - Urbana</code>.</li>
+<li>Não deve ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#5-localizacao">localizacao</a> = <code>83 - Urbana</code> ou <code>205 - Periurbana</code>.</li>
 </ul>
 
 <p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#condicaodeposseeusodaterra">CondicaoDePosseEUsoDaTerra</a>.</p>
@@ -10397,20 +10402,20 @@
 <li>Se o campo <a href="/ledi/documentacao/estrutura_arquivos/#1-tiporesultado">tipoResultado</a> for igual a <code>1 - Valor</code> e o valor do campo <a href="/ledi/documentacao/estrutura_arquivos/#1-exame">exame</a> for:
 
 <ul>
-<li><code>0202010503 ou ABEX008</code>, então preencher com os valores de <code>0,00 a 100</code>;</li>
-<li><code>0211070270, 0211070149 ou ABEX020</code>, então preencher com os valores da tabela <a href="/ledi/documentacao/referencias/dicionario.html#testeorelhinha">testeOrelhinha</a>;</li>
+<li><code>0211070270</code>, <code>0211070149</code> ou <code>ABEX020</code>, então preencher com os valores da tabela <a href="/ledi/documentacao/referencias/dicionario.html#testeorelhinha">testeOrelhinha</a>;</li>
 <li><code>0205020178</code>, então preencher com os valores da tabela <a href="/ledi/documentacao/referencias/dicionario.html#ustransfontanela">usTransfontanela</a>;</li>
 <li><code>0206010079</code>, então preencher com os valores da tabela <a href="/ledi/documentacao/referencias/dicionario.html#tomografiacomputadorizada">tomografiaComputadorizada</a>;</li>
 <li><code>0207010064</code>, então preencher com os valores da tabela <a href="/ledi/documentacao/referencias/dicionario.html#ressonanciamagnetica">ressonanciaMagnetica</a>;</li>
-<li><code>0211060100 ou ABPG013</code>, então preencher com os valores da tabela <a href="/ledi/documentacao/referencias/dicionario.html#examefundoolho">exameFundoOlho</a>;</li>
+<li><code>0211060100</code> ou <code>ABPG013</code>, então preencher com os valores da tabela <a href="/ledi/documentacao/referencias/dicionario.html#examefundoolho">exameFundoOlho</a>;</li>
 <li><code>ABEX022</code>, então preencher com os valores da tabela <a href="/ledi/documentacao/referencias/dicionario.html#testeolhinho">testeOlhinho</a>;</li>
 <li><code>0202020509</code>, então preencher com os valores da tabela <a href="/ledi/documentacao/referencias/dicionario.html#provalaco">provaLaco</a>;</li>
-<li><code>0202010295 ou ABEX002</code>, então preencher com os valores de <code>1 a 10000</code>;</li>
-<li><code>0202010279 ou ABEX007</code>, então preencher com os valores de <code>1 a 10000</code>;</li>
-<li><code>0202010287 ou ABEX009</code>, então preencher com os valores de <code>1 a 10000</code>;</li>
-<li><code>0202010678</code>, então preencher com os valores de <code>1 a 10000</code>;</li>
-<li><code>0202010317 ou ABEX003</code>, então preencher com os valores de <code>0,1 a 500,0</code>;</li>
-<li><code>0202050025</code>, então preencher com os valores de <code>0,001 a 1000</code>.</li>
+<li><code>0202010503</code> ou <code>ABEX008</code>, então preencher com os valores de <code>0,00</code> a <code>100,00</code>;</li>
+<li><code>0202010295</code> ou <code>ABEX002</code>, então preencher com os valores de <code>1,00</code> a <code>10000,00</code>;</li>
+<li><code>0202010279</code> ou <code>ABEX007</code>, então preencher com os valores de <code>1,00</code> a <code>10000,00</code>;</li>
+<li><code>0202010287</code> ou <code>ABEX009</code>, então preencher com os valores de <code>1,00</code> a <code>10000,00</code>;</li>
+<li><code>0202010678</code>, então preencher com os valores de <code>1,00</code> a <code>10000,00</code>;</li>
+<li><code>0202010317</code> ou <code>ABEX003</code>, então preencher com os valores de <code>0,10</code> a <code>500,00</code>;</li>
+<li><code>0202050025</code>, então preencher com os valores de <code>0,001</code> a <code>1000,000</code>.</li>
 </ul></li>
 <li>Se o campo <a href="/ledi/documentacao/estrutura_arquivos/#1-tiporesultado">tipoResultado</a> for igual a <code>2 - Dias</code> e o valor do campo <a href="/ledi/documentacao/estrutura_arquivos/#1-exame">exame</a> for <code>02.05.02.014-3 (ABEX024)</code>, <code>02.05.02.015-1</code> ou <code>02.05.01.005-9</code>, este campo deve ser preenchido com valores de <code>0 a 6</code>;</li>
 <li>Se o campo <a href="/ledi/documentacao/estrutura_arquivos/#1-tiporesultado">tipoResultado</a> for igual a <code>3 - Semanas</code> e o valor do campo <a href="/ledi/documentacao/estrutura_arquivos/#1-exame">exame</a> for <code>02.05.02.014-3 (ABEX024)</code>, <code>02.05.02.015-1</code> ou <code>02.05.01.005-9</code>, este campo deve ser preenchido com valores de <code>0 a 42</code>; </li>
@@ -12966,20 +12971,20 @@
 <li>Se o campo <a href="/ledi/documentacao/estrutura_arquivos/#1-tiporesultado">tipoResultado</a> for igual a <code>1 - Valor</code> e o valor do campo <a href="/ledi/documentacao/estrutura_arquivos/#1-exame">exame</a> for:
 
 <ul>
-<li><code>0202010503 ou ABEX008</code>, então preencher com os valores de <code>0,00 a 100</code>;</li>
-<li><code>0211070270, 0211070149 ou ABEX020</code>, então preencher com os valores da tabela <a href="/ledi/documentacao/referencias/dicionario.html#testeorelhinha">testeOrelhinha</a>;</li>
+<li><code>0211070270</code>, <code>0211070149</code> ou <code>ABEX020</code>, então preencher com os valores da tabela <a href="/ledi/documentacao/referencias/dicionario.html#testeorelhinha">testeOrelhinha</a>;</li>
 <li><code>0205020178</code>, então preencher com os valores da tabela <a href="/ledi/documentacao/referencias/dicionario.html#ustransfontanela">usTransfontanela</a>;</li>
 <li><code>0206010079</code>, então preencher com os valores da tabela <a href="/ledi/documentacao/referencias/dicionario.html#tomografiacomputadorizada">tomografiaComputadorizada</a>;</li>
 <li><code>0207010064</code>, então preencher com os valores da tabela <a href="/ledi/documentacao/referencias/dicionario.html#ressonanciamagnetica">ressonanciaMagnetica</a>;</li>
-<li><code>0211060100 ou ABPG013</code>, então preencher com os valores da tabela <a href="/ledi/documentacao/referencias/dicionario.html#examefundoolho">exameFundoOlho</a>;</li>
+<li><code>0211060100</code> ou <code>ABPG013</code>, então preencher com os valores da tabela <a href="/ledi/documentacao/referencias/dicionario.html#examefundoolho">exameFundoOlho</a>;</li>
 <li><code>ABEX022</code>, então preencher com os valores da tabela <a href="/ledi/documentacao/referencias/dicionario.html#testeolhinho">testeOlhinho</a>;</li>
 <li><code>0202020509</code>, então preencher com os valores da tabela <a href="/ledi/documentacao/referencias/dicionario.html#provalaco">provaLaco</a>;</li>
-<li><code>0202010295 ou ABEX002</code>, então preencher com os valores de <code>1 a 10000</code>;</li>
-<li><code>0202010279 ou ABEX007</code>, então preencher com os valores de <code>1 a 10000</code>;</li>
-<li><code>0202010287 ou ABEX009</code>, então preencher com os valores de <code>1 a 10000</code>;</li>
-<li><code>0202010678</code>, então preencher com os valores de <code>1 a 10000</code>;</li>
-<li><code>0202010317 ou ABEX003</code>, então preencher com os valores de <code>0,1 a 500,0</code>;</li>
-<li><code>0202050025</code>, então preencher com os valores de <code>0,001 a 1000</code>.</li>
+<li><code>0202010503</code> ou <code>ABEX008</code>, então preencher com os valores de <code>0,00</code> a <code>100,00</code>;</li>
+<li><code>0202010295</code> ou <code>ABEX002</code>, então preencher com os valores de <code>1,00</code> a <code>10000,00</code>;</li>
+<li><code>0202010279</code> ou <code>ABEX007</code>, então preencher com os valores de <code>1,00</code> a <code>10000,00</code>;</li>
+<li><code>0202010287</code> ou <code>ABEX009</code>, então preencher com os valores de <code>1,00</code> a <code>10000,00</code>;</li>
+<li><code>0202010678</code>, então preencher com os valores de <code>1,00</code> a <code>10000,00</code>;</li>
+<li><code>0202010317</code> ou <code>ABEX003</code>, então preencher com os valores de <code>0,10</code> a <code>500,00</code>;</li>
+<li><code>0202050025</code>, então preencher com os valores de <code>0,001</code> a <code>1000,000</code>.</li>
 </ul></li>
 <li>Se o campo <a href="/ledi/documentacao/estrutura_arquivos/#1-tiporesultado">tipoResultado</a> for igual a <code>2 - Dias</code> e o valor do campo <a href="/ledi/documentacao/estrutura_arquivos/#1-exame">exame</a> for <code>02.05.02.014-3 (ABEX024)</code>, <code>02.05.02.015-1</code> ou <code>02.05.01.005-9</code>, este campo deve ser preenchido com valores de <code>0 a 6</code>;</li>
 <li>Se o campo <a href="/ledi/documentacao/estrutura_arquivos/#1-tiporesultado">tipoResultado</a> for igual a <code>3 - Semanas</code> e o valor do campo <a href="/ledi/documentacao/estrutura_arquivos/#1-exame">exame</a> for <code>02.05.02.014-3 (ABEX024)</code>, <code>02.05.02.015-1</code> ou <code>02.05.01.005-9</code>, este campo deve ser preenchido com valores de <code>0 a 42</code>; </li>
@@ -18050,6 +18055,344 @@
 
 <p><strong>Referência:</strong> Para ver a referência sobre o UUID, acesse: <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">UUID Wikipedia</a>.</p>
 
+<h3 id="23-ivcf">#23 ivcf</h3>
+
+<p>Registro de IVCF-20 (Índice de Vulnerabilidade Clínico-Funcional).</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Ivcf</td>
+<td>Não</td>
+<td>0</td>
+<td>1</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> Só pode ser preenchido se a idade do cidadão na data do atendimento for 60 anos ou mais.</p>
+
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/estrutura_arquivos/#ivcf">ivcf</a>.</p>
+
+<h2 id="ivcf">IVCF</h2>
+
+<h3 id="1-resultado">#1 resultado</h3>
+
+<p>Resultado em pontos do registro.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Integer</td>
+<td>Sim</td>
+<td>0</td>
+<td>2</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> Valor mínimo 0 e máximo 40.</p>
+
+<h3 id="2-hassgidade">#2 hasSgIdade</h3>
+
+<p>Indicador de alteração na dimensão &quot;Idade&quot;.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h3 id="3-hassgpercepcaosaude">#3 hasSgPercepcaoSaude</h3>
+
+<p>Indicador de alteração na dimensão &quot;Percepção da saúde&quot;.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h3 id="4-hassgavdinstrumental">#4 hasSgAvdInstrumental</h3>
+
+<p>Indicador de alteração na dimensão &quot;AVD Instrumental&quot;.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h3 id="5-hassgavdbasica">#5 hasSgAvdBasica</h3>
+
+<p>Indicador de alteração na dimensão &quot;AVD Básica&quot;.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h3 id="6-hassgcognicao">#6 hasSgCognicao</h3>
+
+<p>Indicador de alteração na dimensão &quot;Cognição&quot;.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h3 id="7-hassghumor">#7 hasSgHumor</h3>
+
+<p>Indicador de alteração na dimensão &quot;Humor&quot;.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h3 id="8-hassgalcancepreensaopinca">#8 hasSgAlcancePreensaoPinca</h3>
+
+<p>Indicador de alteração na dimensão &quot;Alcance, preensão e pinça&quot;, do grupo &quot;Mobilidade&quot;.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h3 id="9-hassgcapaerobicamuscular">#9 hasSgCapAerobicaMuscular</h3>
+
+<p>Indicador de alteração na dimensão &quot;Capacidade aeróbica e/ou muscular&quot;, do grupo &quot;Mobilidade&quot;.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h3 id="10-hassgmarcha">#10 hasSgMarcha</h3>
+
+<p>Indicador de alteração na dimensão &quot;Marcha&quot;, do grupo &quot;Mobilidade&quot;.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h3 id="11-hassgcontinencia">#11 hasSgContinencia</h3>
+
+<p>Indicador de alteração na dimensão &quot;Continência esfincteriana&quot;, do grupo &quot;Mobilidade&quot;.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h3 id="12-hassgvisao">#12 hasSgVisao</h3>
+
+<p>Indicador de alteração na dimensão &quot;Visão&quot;, do grupo &quot;Comunicação&quot;.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h3 id="13-hassgaudicao">#13 hasSgAudicao</h3>
+
+<p>Indicador de alteração na dimensão &quot;Audição&quot;, do grupo &quot;Comunicação&quot;.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h3 id="14-hassgcomorbidade">#14 hasSgComorbidade</h3>
+
+<p>Indicador de alteração na dimensão &quot;Comorbidade múltipla&quot;.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h3 id="15-dataresultado">#15 dataResultado</h3>
+
+<p>Data do registro do IVCF-20.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Não pode ser posterior à data atual;</li>
+<li>Não pode ser posterior à dataHoraFinalAtendimento.</li>
+<li>A diferença entre a dataAtendimento e a dataNascimento deve ser maior ou igual a 60 anos. </li>
+</ul>
+
+<p><strong>Referência:</strong> A data deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
+
       </article>
 
       <div class="pdf-separator"></div>
@@ -21705,8 +22048,8 @@
 
 <ul>
 <li>Validado por algoritmo;</li>
-<li>Deixa de ser obrigatório se o campo <a href="/ledi/documentacao/estrutura_arquivos/#14-cpfcidadao">cpfCidadao</a> for preenchido.</li>
-<li>Não pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#14-cpfcidadao">cpfCidadao</a> for preenchido.</li>
+<li>Deixa de ser obrigatório se o campo <a href="/ledi/documentacao/estrutura_arquivos/#12-cpfcidadao">cpfCidadao</a> for preenchido.</li>
+<li>Não pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#12-cpfcidadao">cpfCidadao</a> for preenchido.</li>
 </ul>
 
 <p><strong>Referência:</strong> O algoritmo de validação está presente em <a href="/ledi/documentacao/regras/algoritmo_CNS.html">Validar CNS</a>.</p>
@@ -21828,65 +22171,7 @@
 <li>O campo é de preenchimento obrigatório quando for registrada uma vacinação com o imunobiológico <code>15 - BCG</code>.</li>
 </ul>
 
-<h3 id="9-gestante">#9 gestante</h3>
-
-<p>Marcador que indica se a cidadã está gestante.</p>
-
-<table><thead>
-<tr>
-<th>Tipo</th>
-<th>Obrigatório</th>
-<th>Mínimo</th>
-<th>Máximo</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Boolean</td>
-<td>Sim</td>
-<td>-</td>
-<td>-</td>
-</tr>
-</tbody></table>
-
-<p><strong>Regras:</strong></p>
-
-<ul>
-<li>Quando o <a href="/ledi/documentacao/estrutura_arquivos/#5-sexo">Sexo</a> = <code>0 (masculino)</code> o campo deve receber o valor 0 (false);</li>
-<li>Quando o <a href="/ledi/documentacao/estrutura_arquivos/#5-sexo">Sexo</a> = <code>1 (feminino)</code> o campo pode receber o valor 0 (false) ou 1 (true);</li>
-<li>Não pode ser preenchido com valor 1 (true) se o campo <a href="/ledi/documentacao/estrutura_arquivos/#10-puerpera">puerpera</a> for marcado;</li>
-<li>Este campo não pode ser enviado como NULL.</li>
-</ul>
-
-<h3 id="10-puerpera">#10 puerpera</h3>
-
-<p>Marcador que indica se a cidadã está puérpera.</p>
-
-<table><thead>
-<tr>
-<th>Tipo</th>
-<th>Obrigatório</th>
-<th>Mínimo</th>
-<th>Máximo</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Boolean</td>
-<td>Sim</td>
-<td>-</td>
-<td>-</td>
-</tr>
-</tbody></table>
-
-<p><strong>Regras:</strong></p>
-
-<ul>
-<li>Quando o <a href="/ledi/documentacao/estrutura_arquivos/#5-sexo">Sexo</a> = <code>0 (masculino)</code> o campo deve receber o valor 0 (false);</li>
-<li>Quando o <a href="/ledi/documentacao/estrutura_arquivos/#5-sexo">Sexo</a> = <code>1 (feminino)</code> o campo pode receber o valor 0 (false) ou 1 (true);</li>
-<li>Não pode ser preenchido com valor 1 (true) se o campo <a href="/ledi/documentacao/estrutura_arquivos/#9-gestante">gestante</a> for marcado;</li>
-<li>Este campo não pode ser enviado como NULL.</li>
-</ul>
-
-<h3 id="11-vacinas">#11 vacinas</h3>
+<h3 id="9-vacinas">#9 vacinas</h3>
 
 <p>Registro das vacinas aplicadas.</p>
 
@@ -21916,7 +22201,7 @@
 
 <p><strong>Referência:</strong> <a href="/ledi/documentacao/estrutura_arquivos/#vacinarowthrift">VacinaRowThrift</a>.</p>
 
-<h3 id="12-datahorainicialatendimento">#12 dataHoraInicialAtendimento</h3>
+<h3 id="10-datahorainicialatendimento">#10 dataHoraInicialAtendimento</h3>
 
 <p>Data e hora do início do atendimento.</p>
 
@@ -21940,12 +22225,12 @@
 
 <ul>
 <li>Não pode ser anterior à <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>;</li>
-<li>Não pode ser posterior à <a href="/ledi/documentacao/estrutura_arquivos/#13-datahorafinalatendimento">dataHoraFinalAtendimento</a> e à data atual.</li>
+<li>Não pode ser posterior à <a href="/ledi/documentacao/estrutura_arquivos/#11-datahorafinalatendimento">dataHoraFinalAtendimento</a> e à data atual.</li>
 </ul>
 
 <p><strong>Referência:</strong> Deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
 
-<h3 id="13-datahorafinalatendimento">#13 dataHoraFinalAtendimento</h3>
+<h3 id="11-datahorafinalatendimento">#11 dataHoraFinalAtendimento</h3>
 
 <p>Data e hora do fim do atendimento.</p>
 
@@ -21968,13 +22253,13 @@
 <p><strong>Regras:</strong></p>
 
 <ul>
-<li>Não pode ser anterior à <a href="/ledi/documentacao/estrutura_arquivos/#12-datahorainicialatendimento">dataHoraInicialAtendimento</a>;</li>
+<li>Não pode ser anterior à <a href="/ledi/documentacao/estrutura_arquivos/#10-datahorainicialatendimento">dataHoraInicialAtendimento</a>;</li>
 <li>Não pode ser posterior à data atual.</li>
 </ul>
 
 <p><strong>Referência:</strong> Deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
 
-<h3 id="14-cpfcidadao">#14 cpfCidadao</h3>
+<h3 id="12-cpfcidadao">#12 cpfCidadao</h3>
 
 <p>CPF do cidadão.</p>
 
@@ -22000,6 +22285,33 @@
 <li>Somente CPF válido será aceito;</li>
 <li>Deixa de ser obrigatório se o campo <a href="/ledi/documentacao/estrutura_arquivos/#3-cnscidadao">cnsCidadao</a> for preenchido.</li>
 <li>Não pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#3-cnscidadao">cnsCidadao</a> for preenchido.</li>
+</ul>
+
+<h3 id="13-condicaomaternal">#13 condicaoMaternal</h3>
+
+<p>Código que indica o tipo de condição maternal.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Condicional</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Quando o Sexo = 0 (masculino) o campo não deve ser preenchido;</li>
+<li>Quando o <a href="/ledi/documentacao/estrutura_arquivos/#5-sexo">Sexo</a> = <code>1 (Feminino)</code> ou <a href="/ledi/documentacao/estrutura_arquivos/#5-sexo">Sexo</a> = <code>5 (Indeterminado)</code> o campo passa a ser obrigatório e pode receber o valor <code>1</code> (Nenhuma), <code>2</code> (Gestante) ou <code>3</code> (Puérpera);</li>
 </ul>
 
 <h2 id="vacinarowthrift">VacinaRowThrift</h2>
@@ -22139,8 +22451,8 @@
 <li>Se o campo <a href="/ledi/documentacao/estrutura_arquivos/#1-imunobiologico">Imunobiológico</a> = <code>96</code>, o campo deve ser preenchido com o valor = <code>BHARAT-COVAXIN</code>;</li>
 <li>Se o campo <a href="/ledi/documentacao/estrutura_arquivos/#1-imunobiologico">Imunobiológico</a> = <code>97</code>, o campo deve ser preenchido com o valor = <code>MODERNA</code>;</li>
 <li>Se o campo <a href="/ledi/documentacao/estrutura_arquivos/#1-imunobiologico">Imunobiológico</a> = <code>98</code>, o campo deve ser preenchido com o valor = <code>SINOVAC-CORONAVAC</code>;</li>
-<li>Se o campo <a href="/ledi/documentacao/estrutura_arquivos/#1-imunobiologico">Imunobiológico</a> = <code>99</code> o campo deve ser preenchido com o valor = <code>BIONTECH</code>;</li>
-<li>Se o campo <a href="/ledi/documentacao/estrutura_arquivos/#1-imunobiologico">Imunobiológico</a> = <code>102</code> ou <code>103</code> o campo deve ser preenchido com o valor = <code>COMIRNATY-PFIZER/BIONTECH</code>;</li>
+<li>Se o campo <a href="/ledi/documentacao/estrutura_arquivos/#1-imunobiologico">Imunobiológico</a> = <code>99</code> ou <code>102</code> o campo deve ser preenchido com o valor = <code>BIONTECH</code>;</li>
+<li>Se o campo <a href="/ledi/documentacao/estrutura_arquivos/#1-imunobiologico">Imunobiológico</a> = <code>103</code> o campo deve ser preenchido com o valor = <code>COMIRNATY-PFIZER/BIONTECH</code>;</li>
 <li>Se o campo <a href="/ledi/documentacao/estrutura_arquivos/#1-imunobiologico">Imunobiológico</a> = <code>112</code> o campo deve ser preenchido com o valor = <code>SERUM-INDIA</code>;</li>
 <li>Se o campo <a href="/ledi/documentacao/estrutura_arquivos/#1-imunobiologico">Imunobiológico</a> = <code>114</code> o campo deve ser preenchido com o valor = <code>BEIJING</code>.</li>
 </ul>
@@ -22245,6 +22557,143 @@
 </tbody></table>
 
 <p><strong>Regra:</strong> Só pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#7-stregistroanterior">stRegistroAnterior</a> = <code>true</code> e o campo <a href="/ledi/documentacao/estrutura_arquivos/#1-imunobiologico">Imunobiológico</a> receber um dos valores <code>85</code>, <code>86</code>, <code>87</code>, <code>88</code>, <code>89</code>, <code>95</code>, <code>96</code>, <code>97</code>, <code>98</code>, <code>99</code>, <code>102</code>, <code>103</code>, <code>105</code> ou <code>112</code> pertencentes aos imunobiológicos de COVID-19. Nestas condições, é de preenchimento obrigatório.</p>
+
+<h3 id="10-cboprescritorcodigo2002">#10 cboPrescritorCodigo2002</h3>
+
+<p>Código que indica o CBO do profissional prescritor.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Não</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p>Referência: CBOs prescritores.</p>
+
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#cboprescritor">CBOs específicos</a>.</p>
+
+<h3 id="11-cid10motivoindicacao">#11 cid10MotivoIndicacao</h3>
+
+<p>Código que indica o CID10 do motivo da prescrição. </p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p>Regra: </p>
+
+<ul>
+<li>Obrigatório se <a href="/ledi/documentacao/estrutura_arquivos/#2-estrategiavacinacao">estrategiaVacinacao</a> = <code>02- Especial</code>;</li>
+<li>Preencher o campo de string com o código CID10.</li>
+</ul>
+
+<h3 id="12-stpesquisaclinica">#12 stPesquisaClinica</h3>
+
+<p>Código que indica se a aplicação foi feita no contexto de pesquisa clínica. </p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h3 id="13-anvisaprotocoloestudo">#13 anvisaProtocoloEstudo</h3>
+
+<p>Número do protocolo de estudo da ANVISA. </p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Condicional</td>
+<td>-</td>
+<td>10</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> Só pode ser preenchido e se torna obrigatório se <a href="/ledi/documentacao/estrutura_arquivos/#12-stpesquisaclinica">stPesquisaClinica</a> = <code>true</code>;</p>
+
+<h3 id="14-anvisaprotocoloversao">#14 anvisaProtocoloVersao</h3>
+
+<p>Número da versão do protocolo da ANVISA. </p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Condicional</td>
+<td>-</td>
+<td>10</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong>  Só pode ser preenchido e se torna obrigatório se <a href="/ledi/documentacao/estrutura_arquivos/#12-stpesquisaclinica">stPesquisaClinica</a> = <code>true</code>;</p>
+
+<h3 id="15-anvisanumeroregistro">#15 anvisaNumeroRegistro</h3>
+
+<p>Número do registro da ANVISA. </p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Condicional</td>
+<td>-</td>
+<td>10</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> Só pode ser preenchido e se torna obrigatório se <a href="/ledi/documentacao/estrutura_arquivos/#12-stpesquisaclinica">stPesquisaClinica</a> = <code>true</code>;</p>
 
       </article>
 
@@ -53816,7 +54265,7 @@
 <td>revision</td>
 <td>Integer</td>
 <td>Sim</td>
-<td>Valor único = 1</td>
+<td>Valor único = 2</td>
 </tr>
 </tbody></table>
 
@@ -66697,9 +67146,17 @@
 <td>Vacina Covid-19-inativada, Sinopharm</td>
 <td>COVID-19 SINOPHARM</td>
 </tr>
+<tr>
+<td>115</td>
+<td>Nirsevimabe 50mg</td>
+<td>NIRSEVIMABE 50mg</td>
+</tr>
+<tr>
+<td>116</td>
+<td>Nirsevimabe 100mg</td>
+<td>NIRSEVIMABE 100mg</td>
+</tr>
 </tbody></table>
-
-<p><strong>Observação</strong>: O imunobiológico &quot;111 - Vacina Tetra Acelular - dTpa/VIP&quot; só é suportado para versões 5.2.42 ou superiores do e-SUS APS PEC.</p>
 
 <h2 id="localdeatendimento">LocalDeAtendimento</h2>
 
@@ -72080,6 +72537,380 @@
 <td>3</td>
 <td>Não especificado</td>
 <td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="cboprescritor">cboPrescritor</h2>
+
+<table><thead>
+<tr>
+<th>CBO</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>111325</td>
+<td>Juízo de direito</td>
+</tr>
+<tr>
+<td>111330</td>
+<td>Juízo Federal</td>
+</tr>
+<tr>
+<td>111335</td>
+<td>Auditor Federal de Juiz - Justiça Militar</td>
+</tr>
+<tr>
+<td>111340</td>
+<td>Juiz auditor estadual - Justiça Militar</td>
+</tr>
+<tr>
+<td>111345</td>
+<td>Juiz do trabalho</td>
+</tr>
+<tr>
+<td>223204</td>
+<td>Cirurgia dentista - auditor</td>
+</tr>
+<tr>
+<td>223208</td>
+<td>Cirurgião dentista - clínica geral</td>
+</tr>
+<tr>
+<td>223212</td>
+<td>Cirurgião dentista - endodontista</td>
+</tr>
+<tr>
+<td>223216</td>
+<td>Cirurgião Dentista - Epidemiologista</td>
+</tr>
+<tr>
+<td>223220</td>
+<td>Cirurgião dentista - estomatologista</td>
+</tr>
+<tr>
+<td>223224</td>
+<td>Cirurgião dentista - implantodontista</td>
+</tr>
+<tr>
+<td>223228</td>
+<td>Cirurgião dentista - odontogeriatra</td>
+</tr>
+<tr>
+<td>223232</td>
+<td>Cirurgião dentista - odontologista legal</td>
+</tr>
+<tr>
+<td>223236</td>
+<td>Cirurgião dentista - odontopediatra</td>
+</tr>
+<tr>
+<td>223240</td>
+<td>Cirurgião dentista - ortopedista e ortodontista</td>
+</tr>
+<tr>
+<td>223244</td>
+<td>Cirurgião dentista - patologista bucal</td>
+</tr>
+<tr>
+<td>223248</td>
+<td>Cirurgião dentista - periodontista</td>
+</tr>
+<tr>
+<td>223268</td>
+<td>Cirurgião dentista - traumatologista bucomaxilofacial</td>
+</tr>
+<tr>
+<td>223256</td>
+<td>Cirurgião dentista - protesista</td>
+</tr>
+<tr>
+<td>223260</td>
+<td>Cirurgião dentista - radiologista</td>
+</tr>
+<tr>
+<td>223264</td>
+<td>Cirurgião dentista - reabilitador oral</td>
+</tr>
+<tr>
+<td>223272</td>
+<td>Cirurgião Dentista de Saúde Coletiva</td>
+</tr>
+<tr>
+<td>223276</td>
+<td>Cirurgião dentista - odontologia do trabalho</td>
+</tr>
+<tr>
+<td>223280</td>
+<td>Cirurgião dentista - odontologia</td>
+</tr>
+<tr>
+<td>223284</td>
+<td>Cirurgião deficiente - disfunção temporomandibular e dor orofacial</td>
+</tr>
+<tr>
+<td>223288</td>
+<td>Cirurgião dentista - odontologia para pacientes com necessidades especiais</td>
+</tr>
+<tr>
+<td>223293</td>
+<td>Cirurgião-dentista da estratégia de saúde da família</td>
+</tr>
+<tr>
+<td>223505</td>
+<td>Enfermeiro</td>
+</tr>
+<tr>
+<td>223252</td>
+<td>Cirurgião dentista - protesiólogo bucomaxilofacial</td>
+</tr>
+<tr>
+<td>223540</td>
+<td>Enfermeiro neonatologista</td>
+</tr>
+<tr>
+<td>225103</td>
+<td>Médico infectologista</td>
+</tr>
+<tr>
+<td>225106</td>
+<td>Médico legista</td>
+</tr>
+<tr>
+<td>225109</td>
+<td>Médico nefrologista</td>
+</tr>
+<tr>
+<td>225110</td>
+<td>Médico alergista e imunologista</td>
+</tr>
+<tr>
+<td>225112</td>
+<td>Médico neurologista</td>
+</tr>
+<tr>
+<td>225115</td>
+<td>Médico angiologista</td>
+</tr>
+<tr>
+<td>225118</td>
+<td>Médico nutrologista</td>
+</tr>
+<tr>
+<td>225120</td>
+<td>Médico cardiologista</td>
+</tr>
+<tr>
+<td>225121</td>
+<td>Médico oncologista clínico</td>
+</tr>
+<tr>
+<td>225122</td>
+<td>Médico cancerologista pediátrico</td>
+</tr>
+<tr>
+<td>225124</td>
+<td>Médico pediatra</td>
+</tr>
+<tr>
+<td>225125</td>
+<td>Médico clínico</td>
+</tr>
+<tr>
+<td>225127</td>
+<td>Médico pneumologista</td>
+</tr>
+<tr>
+<td>225130</td>
+<td>Médico de família e comunidade</td>
+</tr>
+<tr>
+<td>225133</td>
+<td>Médico psiquiatra</td>
+</tr>
+<tr>
+<td>225135</td>
+<td>Médico dermatologista</td>
+</tr>
+<tr>
+<td>225136</td>
+<td>Médico reumatologista</td>
+</tr>
+<tr>
+<td>225139</td>
+<td>Médico sanitarista</td>
+</tr>
+<tr>
+<td>225140</td>
+<td>Médico do trabalho</td>
+</tr>
+<tr>
+<td>225142</td>
+<td>Médico da estratégia de saúde da família</td>
+</tr>
+<tr>
+<td>225145</td>
+<td>Médico em medicina de trânsito</td>
+</tr>
+<tr>
+<td>225148</td>
+<td>Médico anatomopatologista</td>
+</tr>
+<tr>
+<td>225150</td>
+<td>Médico em medicina intensiva</td>
+</tr>
+<tr>
+<td>225151</td>
+<td>Médico anestesista</td>
+</tr>
+<tr>
+<td>225154</td>
+<td>Médico Antroposófico</td>
+</tr>
+<tr>
+<td>225155</td>
+<td>Médico endocrinologista e metabologista</td>
+</tr>
+<tr>
+<td>225160</td>
+<td>Médico fisioterapeuta</td>
+</tr>
+<tr>
+<td>225165</td>
+<td>Médico gastroenterologista</td>
+</tr>
+<tr>
+<td>225170</td>
+<td>Médico generalista</td>
+</tr>
+<tr>
+<td>225175</td>
+<td>Médico geneticista</td>
+</tr>
+<tr>
+<td>225180</td>
+<td>Médico geriatra</td>
+</tr>
+<tr>
+<td>225185</td>
+<td>Médico hematologista</td>
+</tr>
+<tr>
+<td>225195</td>
+<td>Médico homeopata</td>
+</tr>
+<tr>
+<td>225203</td>
+<td>Médico em cirurgia vascular</td>
+</tr>
+<tr>
+<td>225210</td>
+<td>Médico com uso cardiovascular</td>
+</tr>
+<tr>
+<td>225215</td>
+<td>Médico massageador de cabeça e pescoço</td>
+</tr>
+<tr>
+<td>225220</td>
+<td>Médico usa aparelho digestivo</td>
+</tr>
+<tr>
+<td>225225</td>
+<td>Médico médico geral</td>
+</tr>
+<tr>
+<td>225230</td>
+<td>Médico usando pediátrico</td>
+</tr>
+<tr>
+<td>225235</td>
+<td>Médico usando plástico</td>
+</tr>
+<tr>
+<td>225240</td>
+<td>Médico usando torácico</td>
+</tr>
+<tr>
+<td>225250</td>
+<td>Médico ginecologista e obstetra</td>
+</tr>
+<tr>
+<td>225255</td>
+<td>Médico mastologista</td>
+</tr>
+<tr>
+<td>225260</td>
+<td>Médico neurocirurgião</td>
+</tr>
+<tr>
+<td>225265</td>
+<td>Médico oftalmologista</td>
+</tr>
+<tr>
+<td>225270</td>
+<td>Médico ortopedista e traumatologista</td>
+</tr>
+<tr>
+<td>225275</td>
+<td>Médico otorrinolaringologista</td>
+</tr>
+<tr>
+<td>225280</td>
+<td>Médico coloproctologista</td>
+</tr>
+<tr>
+<td>225285</td>
+<td>Médico urologista</td>
+</tr>
+<tr>
+<td>225290</td>
+<td>Médico cancerologista cirurgicamente</td>
+</tr>
+<tr>
+<td>225295</td>
+<td>Médico da mão</td>
+</tr>
+<tr>
+<td>225305</td>
+<td>Médico citopatologista</td>
+</tr>
+<tr>
+<td>225310</td>
+<td>Médico em endoscopia</td>
+</tr>
+<tr>
+<td>225315</td>
+<td>Médico em medicina nuclear</td>
+</tr>
+<tr>
+<td>225320</td>
+<td>Médico em radiologia e diagnóstico por imagem</td>
+</tr>
+<tr>
+<td>225325</td>
+<td>Médico patologista</td>
+</tr>
+<tr>
+<td>225330</td>
+<td>Médico radioterapeuta</td>
+</tr>
+<tr>
+<td>225335</td>
+<td>Médico patologista clínico / medicina laboratorial</td>
+</tr>
+<tr>
+<td>225340</td>
+<td>Médico hemoterapeuta</td>
+</tr>
+<tr>
+<td>225345</td>
+<td>Médico hiperbarista</td>
+</tr>
+<tr>
+<td>225350</td>
+<td>Médico neurofisiologista clínico</td>
 </tr>
 </tbody></table>
 
@@ -110734,6 +111565,22 @@
 <td>10</td>
 <td>REV</td>
 </tr>
+<tr>
+<td>115</td>
+<td>Nirsevimabe 50mg</td>
+<td>2</td>
+<td>Especial</td>
+<td>9</td>
+<td>DU</td>
+</tr>
+<tr>
+<td>116</td>
+<td>Nirsevimabe 100mg</td>
+<td>2</td>
+<td>Especial</td>
+<td>9</td>
+<td>DU</td>
+</tr>
 </tbody></table>
 
       </article>
@@ -111397,6 +112244,37 @@
 
       <article class="post-content">
         <p>Este documento relata as principais alterações entre as últimas versões do LEDI APS:</p>
+
+<h2 id="vers-o-7-2-2">Versão 7.2.2</h2>
+
+<h3 id="1-atualiza-o-dos-resultados-quantitativos-de-exames-estruturados">1. Atualização dos resultados quantitativos de exames estruturados</h3>
+
+<p>Os exames estruturados do tipo quantitativo <strong>Colesterol total</strong>, <strong>HDL</strong>, <strong>LDL</strong>, <strong>Triglicerídeos</strong> e <strong>Creatinina</strong> passaram a ter seus resultados com <strong>duas casas decimais após a vírgula</strong>.  Os intervalos de preenchimento desses exames foram atualizados, por exemplo, de <code>1 a 10000</code> para <code>1,00 a 10000,00</code> e de <code>0,1 a 500,0</code> para <code>0,10 a 500,00</code>.  </p>
+
+<h3 id="2-atualiza-es-em-regras-vacinais">2. Atualizações em regras vacinais</h3>
+
+<p>Foram atualizadas as regras para aplicação do imunobiológico &quot;Nirsevimabe 50mg (cód. 115)&quot;, &quot;Nirsevimabe 100mg (cód. 116)&quot; e &quot;Vacina pneumo 23 (cód. 21)&quot; e para o fabricante do imunobiológico &quot;Vacina COVID-19-RNAm, Pfizer (Comirnaty) pediátrica menor de 5 anos (cód. 102)&quot;.</p>
+
+<h3 id="3-adi-o-do-ivcf-20-na-ficha-de-visita-domiciliar-e-territorial">3. Adição do IVCF-20 na Ficha de Visita Domiciliar e Territorial</h3>
+
+<p>Foram adicionadas as regras para a inclusão do IVCF-20(Índice de Vulnerabilidade Clínico-Funcional) na Ficha de Visita Domiciliar e Territorial.</p>
+
+<h3 id="4-inclus-o-de-campos-na-ficha-de-vacina-o">4. Inclusão de campos na Ficha de Vacinação</h3>
+
+<p>Foram incluídos novos campos na ficha de vacinação:</p>
+
+<ul>
+<li>Campo &quot;Condição maternal&quot; que serve para agrupar os antigos campos “Gestante” e “Puérpera”;</li>
+<li>Campo &quot;Especialidade do profissional prescritor&quot; que serve para o usuário informar o CBO do profissional que prescreveu a vacina. Este campo possui uma lista de <a href="/ledi/documentacao/referencias/dicionario.html#cboprescritor">CBOs específicos</a>;</li>
+<li>Campo &quot;Motivo de indicação&quot; que serve para indicar o CID10 que motivou a indicação da vacina. Este campo possui uma lista de CID10 específicos;</li>
+<li>Grupo de campos relacionados à &quot;Pesquisa Clínica&quot;, com os campos:
+
+<ul>
+<li>&quot;Anvisa Protocolo Estudo&quot;;</li>
+<li>&quot;Anvisa Protocolo Versão&quot;;</li>
+<li>&quot;Anvisa Número de Registro&quot;.</li>
+</ul></li>
+</ul>
 
 <h2 id="vers-o-7-2-1">Versão 7.2.1</h2>
 

@@ -58,7 +58,7 @@
             <localAtendimento>1</localAtendimento>
             <viajante>true</viajante>
             <comunicanteHanseniase>false</comunicanteHanseniase>
-            <condicaoMaternal>2</condicaoMaternal>  <!-- 2 = Puerpera -->
+            <condicaoMaternal>3</condicaoMaternal>  <!-- 3 = Puerpera -->
             <vacinas>
                 <imunobiologico>5</imunobiologico>
                 <estrategiaVacinacao>2</estrategiaVacinacao>

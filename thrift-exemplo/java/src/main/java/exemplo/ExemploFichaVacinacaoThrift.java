@@ -155,7 +155,7 @@ public class ExemploFichaVacinacaoThrift {
 		vacinacao2.setTurno(1);
 		vacinacao2.setComunicanteHanseniase(false);
 		vacinacao2.setViajante(false);
-		vacinacao2.setCondicaoMaternal(0L);
+		vacinacao2.setCondicaoMaternal(1L); // Nenhuma
 
 		vacinacao2.setVacinas(getVacinas2());
 

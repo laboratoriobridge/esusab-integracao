@@ -33,10 +33,10 @@
             <vacinas>
                 <imunobiologico>5</imunobiologico>
                 <estrategiaVacinacao>2</estrategiaVacinacao>
-                <dose>1</dose>
+                <dose></dose>
                 <lote>DEF01</lote>
                 <fabricante>BUILD SUSTAINABILITY</fabricante>
-                <grupoAtendimento>1</grupoAtendimento>
+                <grupoAtendimento>84</grupoAtendimento>
                 <stRegistroAnterior>false</stRegistroAnterior>
                 <dataRegistroAnterior>1495542619000</dataRegistroAnterior>
                 <cboPrescritorCodigo2002>223505</cboPrescritorCodigo2002>
@@ -58,14 +58,14 @@
             <localAtendimento>1</localAtendimento>
             <viajante>true</viajante>
             <comunicanteHanseniase>false</comunicanteHanseniase>
-            <condicaoMaternal>3</condicaoMaternal>  <!-- 3 = Puerpera -->
+            <condicaoMaternal>2</condicaoMaternal>  <!-- 2 = Gestante -->
             <vacinas>
                 <imunobiologico>5</imunobiologico>
                 <estrategiaVacinacao>2</estrategiaVacinacao>
                 <dose>1</dose>
                 <lote>DEF01</lote>
                 <fabricante>BUILD SUSTAINABILITY</fabricante>
-                <grupoAtendimento>3</grupoAtendimento>
+                <grupoAtendimento>99</grupoAtendimento>
                 <stRegistroAnterior>false</stRegistroAnterior>
                 <dataRegistroAnterior>1495542619000</dataRegistroAnterior>
                 <cboPrescritorCodigo2002>223505</cboPrescritorCodigo2002>
@@ -80,12 +80,12 @@
                 <dose>1</dose>
                 <lote>ABC</lote>
                 <fabricante>PFIZER/BIONTECH</fabricante>
-                <grupoAtendimento>6</grupoAtendimento>
+                <grupoAtendimento>112</grupoAtendimento>
                 <stRegistroAnterior>true</stRegistroAnterior>
                 <dataRegistroAnterior>1495542619000</dataRegistroAnterior>
                 <cboPrescritorCodigo2002>223505</cboPrescritorCodigo2002>
                 <cid10MotivoIndicacao>Z23</cid10MotivoIndicacao>
-                <stPesquisaClinica>false</stPesquisaClinica>
+                <stPesquisaClinica>true</stPesquisaClinica>
                 <anvisaProtocoloEstudo>PROT-123</anvisaProtocoloEstudo>
                 <anvisaProtocoloVersao>1.0</anvisaProtocoloVersao>
                 <anvisaNumeroRegistro>REG-456</anvisaNumeroRegistro>

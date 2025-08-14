@@ -21,6 +21,13 @@ VacinaRowThrift = module.exports.VacinaRowThrift = function(args) {
   this.stRegistroAnterior = null;
   this.dataRegistroAnterior = null;
   this.stAplicadoExterior = null;
+  this.uuidRnds = null;
+  this.cboPrescritorCodigo2002 = null;
+  this.cid10MotivoIndicacao = null;
+  this.stPesquisaClinica = null;
+  this.anvisaProtocoloEstudo = null;
+  this.anvisaProtocoloVersao = null;
+  this.anvisaNumeroRegistro = null;
   if (args) {
     if (args.imunobiologico !== undefined && args.imunobiologico !== null) {
       this.imunobiologico = args.imunobiologico;
@@ -48,6 +55,27 @@ VacinaRowThrift = module.exports.VacinaRowThrift = function(args) {
     }
     if (args.stAplicadoExterior !== undefined && args.stAplicadoExterior !== null) {
       this.stAplicadoExterior = args.stAplicadoExterior;
+    }
+    if (args.uuidRnds !== undefined && args.uuidRnds !== null) {
+      this.uuidRnds = args.uuidRnds;
+    }
+    if (args.cboPrescritorCodigo2002 !== undefined && args.cboPrescritorCodigo2002 !== null) {
+      this.cboPrescritorCodigo2002 = args.cboPrescritorCodigo2002;
+    }
+    if (args.cid10MotivoIndicacao !== undefined && args.cid10MotivoIndicacao !== null) {
+      this.cid10MotivoIndicacao = args.cid10MotivoIndicacao;
+    }
+    if (args.stPesquisaClinica !== undefined && args.stPesquisaClinica !== null) {
+      this.stPesquisaClinica = args.stPesquisaClinica;
+    }
+    if (args.anvisaProtocoloEstudo !== undefined && args.anvisaProtocoloEstudo !== null) {
+      this.anvisaProtocoloEstudo = args.anvisaProtocoloEstudo;
+    }
+    if (args.anvisaProtocoloVersao !== undefined && args.anvisaProtocoloVersao !== null) {
+      this.anvisaProtocoloVersao = args.anvisaProtocoloVersao;
+    }
+    if (args.anvisaNumeroRegistro !== undefined && args.anvisaNumeroRegistro !== null) {
+      this.anvisaNumeroRegistro = args.anvisaNumeroRegistro;
     }
   }
 };
@@ -128,6 +156,55 @@ VacinaRowThrift.prototype.read = function(input) {
         input.skip(ftype);
       }
       break;
+      case 10:
+      if (ftype == Thrift.Type.STRING) {
+        this.uuidRnds = input.readString();
+      } else {
+        input.skip(ftype);
+      }
+      break;
+      case 11:
+      if (ftype == Thrift.Type.STRING) {
+        this.cboPrescritorCodigo2002 = input.readString();
+      } else {
+        input.skip(ftype);
+      }
+      break;
+      case 12:
+      if (ftype == Thrift.Type.STRING) {
+        this.cid10MotivoIndicacao = input.readString();
+      } else {
+        input.skip(ftype);
+      }
+      break;
+      case 13:
+      if (ftype == Thrift.Type.BOOL) {
+        this.stPesquisaClinica = input.readBool();
+      } else {
+        input.skip(ftype);
+      }
+      break;
+      case 14:
+      if (ftype == Thrift.Type.STRING) {
+        this.anvisaProtocoloEstudo = input.readString();
+      } else {
+        input.skip(ftype);
+      }
+      break;
+      case 15:
+      if (ftype == Thrift.Type.STRING) {
+        this.anvisaProtocoloVersao = input.readString();
+      } else {
+        input.skip(ftype);
+      }
+      break;
+      case 16:
+      if (ftype == Thrift.Type.STRING) {
+        this.anvisaNumeroRegistro = input.readString();
+      } else {
+        input.skip(ftype);
+      }
+      break;
       default:
         input.skip(ftype);
     }
@@ -184,6 +261,41 @@ VacinaRowThrift.prototype.write = function(output) {
     output.writeBool(this.stAplicadoExterior);
     output.writeFieldEnd();
   }
+  if (this.uuidRnds !== null && this.uuidRnds !== undefined) {
+    output.writeFieldBegin('uuidRnds', Thrift.Type.STRING, 10);
+    output.writeString(this.uuidRnds);
+    output.writeFieldEnd();
+  }
+  if (this.cboPrescritorCodigo2002 !== null && this.cboPrescritorCodigo2002 !== undefined) {
+    output.writeFieldBegin('cboPrescritorCodigo2002', Thrift.Type.STRING, 11);
+    output.writeString(this.cboPrescritorCodigo2002);
+    output.writeFieldEnd();
+  }
+  if (this.cid10MotivoIndicacao !== null && this.cid10MotivoIndicacao !== undefined) {
+    output.writeFieldBegin('cid10MotivoIndicacao', Thrift.Type.STRING, 12);
+    output.writeString(this.cid10MotivoIndicacao);
+    output.writeFieldEnd();
+  }
+  if (this.stPesquisaClinica !== null && this.stPesquisaClinica !== undefined) {
+    output.writeFieldBegin('stPesquisaClinica', Thrift.Type.BOOL, 13);
+    output.writeBool(this.stPesquisaClinica);
+    output.writeFieldEnd();
+  }
+  if (this.anvisaProtocoloEstudo !== null && this.anvisaProtocoloEstudo !== undefined) {
+    output.writeFieldBegin('anvisaProtocoloEstudo', Thrift.Type.STRING, 14);
+    output.writeString(this.anvisaProtocoloEstudo);
+    output.writeFieldEnd();
+  }
+  if (this.anvisaProtocoloVersao !== null && this.anvisaProtocoloVersao !== undefined) {
+    output.writeFieldBegin('anvisaProtocoloVersao', Thrift.Type.STRING, 15);
+    output.writeString(this.anvisaProtocoloVersao);
+    output.writeFieldEnd();
+  }
+  if (this.anvisaNumeroRegistro !== null && this.anvisaNumeroRegistro !== undefined) {
+    output.writeFieldBegin('anvisaNumeroRegistro', Thrift.Type.STRING, 16);
+    output.writeString(this.anvisaNumeroRegistro);
+    output.writeFieldEnd();
+  }
   output.writeFieldStop();
   output.writeStructEnd();
   return;
@@ -204,6 +316,7 @@ FichaVacinacaoChildThrift = module.exports.FichaVacinacaoChildThrift = function(
   this.dataHoraInicialAtendimento = null;
   this.dataHoraFinalAtendimento = null;
   this.cpfCidadao = null;
+  this.condicaoMaternal = null;
   if (args) {
     if (args.turno !== undefined && args.turno !== null) {
       this.turno = args.turno;
@@ -246,6 +359,9 @@ FichaVacinacaoChildThrift = module.exports.FichaVacinacaoChildThrift = function(
     }
     if (args.cpfCidadao !== undefined && args.cpfCidadao !== null) {
       this.cpfCidadao = args.cpfCidadao;
+    }
+    if (args.condicaoMaternal !== undefined && args.condicaoMaternal !== null) {
+      this.condicaoMaternal = args.condicaoMaternal;
     }
   }
 };
@@ -375,6 +491,13 @@ FichaVacinacaoChildThrift.prototype.read = function(input) {
         input.skip(ftype);
       }
       break;
+      case 15:
+      if (ftype == Thrift.Type.I64) {
+        this.condicaoMaternal = input.readI64();
+      } else {
+        input.skip(ftype);
+      }
+      break;
       default:
         input.skip(ftype);
     }
@@ -465,6 +588,11 @@ FichaVacinacaoChildThrift.prototype.write = function(output) {
     output.writeString(this.cpfCidadao);
     output.writeFieldEnd();
   }
+  if (this.condicaoMaternal !== null && this.condicaoMaternal !== undefined) {
+    output.writeFieldBegin('condicaoMaternal', Thrift.Type.I64, 15);
+    output.writeI64(this.condicaoMaternal);
+    output.writeFieldEnd();
+  }
   output.writeFieldStop();
   output.writeStructEnd();
   return;
@@ -475,6 +603,7 @@ FichaVacinacaoMasterThrift = module.exports.FichaVacinacaoMasterThrift = functio
   this.tpCdsOrigem = null;
   this.headerTransport = null;
   this.vacinacoes = null;
+  this.uuidFichaCancelada = null;
   if (args) {
     if (args.uuidFicha !== undefined && args.uuidFicha !== null) {
       this.uuidFicha = args.uuidFicha;
@@ -489,6 +618,9 @@ FichaVacinacaoMasterThrift = module.exports.FichaVacinacaoMasterThrift = functio
     }
     if (args.vacinacoes !== undefined && args.vacinacoes !== null) {
       this.vacinacoes = Thrift.copyList(args.vacinacoes, [ttypes.FichaVacinacaoChildThrift]);
+    }
+    if (args.uuidFichaCancelada !== undefined && args.uuidFichaCancelada !== null) {
+      this.uuidFichaCancelada = args.uuidFichaCancelada;
     }
   }
 };
@@ -549,6 +681,13 @@ FichaVacinacaoMasterThrift.prototype.read = function(input) {
         input.skip(ftype);
       }
       break;
+      case 5:
+      if (ftype == Thrift.Type.STRING) {
+        this.uuidFichaCancelada = input.readString();
+      } else {
+        input.skip(ftype);
+      }
+      break;
       default:
         input.skip(ftype);
     }
@@ -587,6 +726,11 @@ FichaVacinacaoMasterThrift.prototype.write = function(output) {
       }
     }
     output.writeListEnd();
+    output.writeFieldEnd();
+  }
+  if (this.uuidFichaCancelada !== null && this.uuidFichaCancelada !== undefined) {
+    output.writeFieldBegin('uuidFichaCancelada', Thrift.Type.STRING, 5);
+    output.writeString(this.uuidFichaCancelada);
     output.writeFieldEnd();
   }
   output.writeFieldStop();

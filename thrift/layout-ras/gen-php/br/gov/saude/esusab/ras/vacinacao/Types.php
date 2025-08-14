@@ -56,6 +56,34 @@ class VacinaRowThrift {
    * @var bool
    */
   public $stAplicadoExterior = null;
+  /**
+   * @var string
+   */
+  public $uuidRnds = null;
+  /**
+   * @var string
+   */
+  public $cboPrescritorCodigo2002 = null;
+  /**
+   * @var string
+   */
+  public $cid10MotivoIndicacao = null;
+  /**
+   * @var bool
+   */
+  public $stPesquisaClinica = null;
+  /**
+   * @var string
+   */
+  public $anvisaProtocoloEstudo = null;
+  /**
+   * @var string
+   */
+  public $anvisaProtocoloVersao = null;
+  /**
+   * @var string
+   */
+  public $anvisaNumeroRegistro = null;
 
   public function __construct($vals=null) {
     if (!isset(self::$_TSPEC)) {
@@ -96,6 +124,34 @@ class VacinaRowThrift {
           'var' => 'stAplicadoExterior',
           'type' => TType::BOOL,
           ),
+        10 => array(
+          'var' => 'uuidRnds',
+          'type' => TType::STRING,
+          ),
+        11 => array(
+          'var' => 'cboPrescritorCodigo2002',
+          'type' => TType::STRING,
+          ),
+        12 => array(
+          'var' => 'cid10MotivoIndicacao',
+          'type' => TType::STRING,
+          ),
+        13 => array(
+          'var' => 'stPesquisaClinica',
+          'type' => TType::BOOL,
+          ),
+        14 => array(
+          'var' => 'anvisaProtocoloEstudo',
+          'type' => TType::STRING,
+          ),
+        15 => array(
+          'var' => 'anvisaProtocoloVersao',
+          'type' => TType::STRING,
+          ),
+        16 => array(
+          'var' => 'anvisaNumeroRegistro',
+          'type' => TType::STRING,
+          ),
         );
     }
     if (is_array($vals)) {
@@ -125,6 +181,27 @@ class VacinaRowThrift {
       }
       if (isset($vals['stAplicadoExterior'])) {
         $this->stAplicadoExterior = $vals['stAplicadoExterior'];
+      }
+      if (isset($vals['uuidRnds'])) {
+        $this->uuidRnds = $vals['uuidRnds'];
+      }
+      if (isset($vals['cboPrescritorCodigo2002'])) {
+        $this->cboPrescritorCodigo2002 = $vals['cboPrescritorCodigo2002'];
+      }
+      if (isset($vals['cid10MotivoIndicacao'])) {
+        $this->cid10MotivoIndicacao = $vals['cid10MotivoIndicacao'];
+      }
+      if (isset($vals['stPesquisaClinica'])) {
+        $this->stPesquisaClinica = $vals['stPesquisaClinica'];
+      }
+      if (isset($vals['anvisaProtocoloEstudo'])) {
+        $this->anvisaProtocoloEstudo = $vals['anvisaProtocoloEstudo'];
+      }
+      if (isset($vals['anvisaProtocoloVersao'])) {
+        $this->anvisaProtocoloVersao = $vals['anvisaProtocoloVersao'];
+      }
+      if (isset($vals['anvisaNumeroRegistro'])) {
+        $this->anvisaNumeroRegistro = $vals['anvisaNumeroRegistro'];
       }
     }
   }
@@ -211,6 +288,55 @@ class VacinaRowThrift {
             $xfer += $input->skip($ftype);
           }
           break;
+        case 10:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->uuidRnds);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 11:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->cboPrescritorCodigo2002);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 12:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->cid10MotivoIndicacao);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 13:
+          if ($ftype == TType::BOOL) {
+            $xfer += $input->readBool($this->stPesquisaClinica);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 14:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->anvisaProtocoloEstudo);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 15:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->anvisaProtocoloVersao);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 16:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->anvisaNumeroRegistro);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
         default:
           $xfer += $input->skip($ftype);
           break;
@@ -267,6 +393,41 @@ class VacinaRowThrift {
     if ($this->stAplicadoExterior !== null) {
       $xfer += $output->writeFieldBegin('stAplicadoExterior', TType::BOOL, 9);
       $xfer += $output->writeBool($this->stAplicadoExterior);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->uuidRnds !== null) {
+      $xfer += $output->writeFieldBegin('uuidRnds', TType::STRING, 10);
+      $xfer += $output->writeString($this->uuidRnds);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->cboPrescritorCodigo2002 !== null) {
+      $xfer += $output->writeFieldBegin('cboPrescritorCodigo2002', TType::STRING, 11);
+      $xfer += $output->writeString($this->cboPrescritorCodigo2002);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->cid10MotivoIndicacao !== null) {
+      $xfer += $output->writeFieldBegin('cid10MotivoIndicacao', TType::STRING, 12);
+      $xfer += $output->writeString($this->cid10MotivoIndicacao);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->stPesquisaClinica !== null) {
+      $xfer += $output->writeFieldBegin('stPesquisaClinica', TType::BOOL, 13);
+      $xfer += $output->writeBool($this->stPesquisaClinica);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->anvisaProtocoloEstudo !== null) {
+      $xfer += $output->writeFieldBegin('anvisaProtocoloEstudo', TType::STRING, 14);
+      $xfer += $output->writeString($this->anvisaProtocoloEstudo);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->anvisaProtocoloVersao !== null) {
+      $xfer += $output->writeFieldBegin('anvisaProtocoloVersao', TType::STRING, 15);
+      $xfer += $output->writeString($this->anvisaProtocoloVersao);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->anvisaNumeroRegistro !== null) {
+      $xfer += $output->writeFieldBegin('anvisaNumeroRegistro', TType::STRING, 16);
+      $xfer += $output->writeString($this->anvisaNumeroRegistro);
       $xfer += $output->writeFieldEnd();
     }
     $xfer += $output->writeFieldStop();
@@ -335,6 +496,10 @@ class FichaVacinacaoChildThrift {
    * @var string
    */
   public $cpfCidadao = null;
+  /**
+   * @var int
+   */
+  public $condicaoMaternal = null;
 
   public function __construct($vals=null) {
     if (!isset(self::$_TSPEC)) {
@@ -400,6 +565,10 @@ class FichaVacinacaoChildThrift {
           'var' => 'cpfCidadao',
           'type' => TType::STRING,
           ),
+        15 => array(
+          'var' => 'condicaoMaternal',
+          'type' => TType::I64,
+          ),
         );
     }
     if (is_array($vals)) {
@@ -444,6 +613,9 @@ class FichaVacinacaoChildThrift {
       }
       if (isset($vals['cpfCidadao'])) {
         $this->cpfCidadao = $vals['cpfCidadao'];
+      }
+      if (isset($vals['condicaoMaternal'])) {
+        $this->condicaoMaternal = $vals['condicaoMaternal'];
       }
     }
   }
@@ -576,6 +748,13 @@ class FichaVacinacaoChildThrift {
             $xfer += $input->skip($ftype);
           }
           break;
+        case 15:
+          if ($ftype == TType::I64) {
+            $xfer += $input->readI64($this->condicaoMaternal);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
         default:
           $xfer += $input->skip($ftype);
           break;
@@ -671,6 +850,11 @@ class FichaVacinacaoChildThrift {
       $xfer += $output->writeString($this->cpfCidadao);
       $xfer += $output->writeFieldEnd();
     }
+    if ($this->condicaoMaternal !== null) {
+      $xfer += $output->writeFieldBegin('condicaoMaternal', TType::I64, 15);
+      $xfer += $output->writeI64($this->condicaoMaternal);
+      $xfer += $output->writeFieldEnd();
+    }
     $xfer += $output->writeFieldStop();
     $xfer += $output->writeStructEnd();
     return $xfer;
@@ -697,6 +881,10 @@ class FichaVacinacaoMasterThrift {
    * @var \br\gov\saude\esusab\ras\vacinacao\FichaVacinacaoChildThrift[]
    */
   public $vacinacoes = null;
+  /**
+   * @var string
+   */
+  public $uuidFichaCancelada = null;
 
   public function __construct($vals=null) {
     if (!isset(self::$_TSPEC)) {
@@ -723,6 +911,10 @@ class FichaVacinacaoMasterThrift {
             'class' => '\br\gov\saude\esusab\ras\vacinacao\FichaVacinacaoChildThrift',
             ),
           ),
+        5 => array(
+          'var' => 'uuidFichaCancelada',
+          'type' => TType::STRING,
+          ),
         );
     }
     if (is_array($vals)) {
@@ -737,6 +929,9 @@ class FichaVacinacaoMasterThrift {
       }
       if (isset($vals['vacinacoes'])) {
         $this->vacinacoes = $vals['vacinacoes'];
+      }
+      if (isset($vals['uuidFichaCancelada'])) {
+        $this->uuidFichaCancelada = $vals['uuidFichaCancelada'];
       }
     }
   }
@@ -800,6 +995,13 @@ class FichaVacinacaoMasterThrift {
             $xfer += $input->skip($ftype);
           }
           break;
+        case 5:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->uuidFichaCancelada);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
         default:
           $xfer += $input->skip($ftype);
           break;
@@ -846,6 +1048,11 @@ class FichaVacinacaoMasterThrift {
         }
         $output->writeListEnd();
       }
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->uuidFichaCancelada !== null) {
+      $xfer += $output->writeFieldBegin('uuidFichaCancelada', TType::STRING, 5);
+      $xfer += $output->writeString($this->uuidFichaCancelada);
       $xfer += $output->writeFieldEnd();
     }
     $xfer += $output->writeFieldStop();

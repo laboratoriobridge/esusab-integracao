@@ -50,6 +50,20 @@ type
     procedure SetDataRegistroAnterior( const Value: Int64);
     function GetStAplicadoExterior: Boolean;
     procedure SetStAplicadoExterior( const Value: Boolean);
+    function GetUuidRnds: string;
+    procedure SetUuidRnds( const Value: string);
+    function GetCboPrescritorCodigo2002: string;
+    procedure SetCboPrescritorCodigo2002( const Value: string);
+    function GetCid10MotivoIndicacao: string;
+    procedure SetCid10MotivoIndicacao( const Value: string);
+    function GetStPesquisaClinica: Boolean;
+    procedure SetStPesquisaClinica( const Value: Boolean);
+    function GetAnvisaProtocoloEstudo: string;
+    procedure SetAnvisaProtocoloEstudo( const Value: string);
+    function GetAnvisaProtocoloVersao: string;
+    procedure SetAnvisaProtocoloVersao( const Value: string);
+    function GetAnvisaNumeroRegistro: string;
+    procedure SetAnvisaNumeroRegistro( const Value: string);
 
     property Imunobiologico: Int64 read GetImunobiologico write SetImunobiologico;
     property EstrategiaVacinacao: Int64 read GetEstrategiaVacinacao write SetEstrategiaVacinacao;
@@ -60,6 +74,13 @@ type
     property StRegistroAnterior: Boolean read GetStRegistroAnterior write SetStRegistroAnterior;
     property DataRegistroAnterior: Int64 read GetDataRegistroAnterior write SetDataRegistroAnterior;
     property StAplicadoExterior: Boolean read GetStAplicadoExterior write SetStAplicadoExterior;
+    property UuidRnds: string read GetUuidRnds write SetUuidRnds;
+    property CboPrescritorCodigo2002: string read GetCboPrescritorCodigo2002 write SetCboPrescritorCodigo2002;
+    property Cid10MotivoIndicacao: string read GetCid10MotivoIndicacao write SetCid10MotivoIndicacao;
+    property StPesquisaClinica: Boolean read GetStPesquisaClinica write SetStPesquisaClinica;
+    property AnvisaProtocoloEstudo: string read GetAnvisaProtocoloEstudo write SetAnvisaProtocoloEstudo;
+    property AnvisaProtocoloVersao: string read GetAnvisaProtocoloVersao write SetAnvisaProtocoloVersao;
+    property AnvisaNumeroRegistro: string read GetAnvisaNumeroRegistro write SetAnvisaNumeroRegistro;
 
     function Get__isset_Imunobiologico: Boolean;
     function Get__isset_EstrategiaVacinacao: Boolean;
@@ -70,6 +91,13 @@ type
     function Get__isset_StRegistroAnterior: Boolean;
     function Get__isset_DataRegistroAnterior: Boolean;
     function Get__isset_StAplicadoExterior: Boolean;
+    function Get__isset_UuidRnds: Boolean;
+    function Get__isset_CboPrescritorCodigo2002: Boolean;
+    function Get__isset_Cid10MotivoIndicacao: Boolean;
+    function Get__isset_StPesquisaClinica: Boolean;
+    function Get__isset_AnvisaProtocoloEstudo: Boolean;
+    function Get__isset_AnvisaProtocoloVersao: Boolean;
+    function Get__isset_AnvisaNumeroRegistro: Boolean;
 
     property __isset_Imunobiologico: Boolean read Get__isset_Imunobiologico;
     property __isset_EstrategiaVacinacao: Boolean read Get__isset_EstrategiaVacinacao;
@@ -80,6 +108,13 @@ type
     property __isset_StRegistroAnterior: Boolean read Get__isset_StRegistroAnterior;
     property __isset_DataRegistroAnterior: Boolean read Get__isset_DataRegistroAnterior;
     property __isset_StAplicadoExterior: Boolean read Get__isset_StAplicadoExterior;
+    property __isset_UuidRnds: Boolean read Get__isset_UuidRnds;
+    property __isset_CboPrescritorCodigo2002: Boolean read Get__isset_CboPrescritorCodigo2002;
+    property __isset_Cid10MotivoIndicacao: Boolean read Get__isset_Cid10MotivoIndicacao;
+    property __isset_StPesquisaClinica: Boolean read Get__isset_StPesquisaClinica;
+    property __isset_AnvisaProtocoloEstudo: Boolean read Get__isset_AnvisaProtocoloEstudo;
+    property __isset_AnvisaProtocoloVersao: Boolean read Get__isset_AnvisaProtocoloVersao;
+    property __isset_AnvisaNumeroRegistro: Boolean read Get__isset_AnvisaNumeroRegistro;
   end;
 
   TVacinaRowThriftImpl = class(TInterfacedObject, IBase, IVacinaRowThrift)
@@ -93,6 +128,13 @@ type
     FStRegistroAnterior: Boolean;
     FDataRegistroAnterior: Int64;
     FStAplicadoExterior: Boolean;
+    FUuidRnds: string;
+    FCboPrescritorCodigo2002: string;
+    FCid10MotivoIndicacao: string;
+    FStPesquisaClinica: Boolean;
+    FAnvisaProtocoloEstudo: string;
+    FAnvisaProtocoloVersao: string;
+    FAnvisaNumeroRegistro: string;
     
     F__isset_Imunobiologico: Boolean;
     F__isset_EstrategiaVacinacao: Boolean;
@@ -103,6 +145,13 @@ type
     F__isset_StRegistroAnterior: Boolean;
     F__isset_DataRegistroAnterior: Boolean;
     F__isset_StAplicadoExterior: Boolean;
+    F__isset_UuidRnds: Boolean;
+    F__isset_CboPrescritorCodigo2002: Boolean;
+    F__isset_Cid10MotivoIndicacao: Boolean;
+    F__isset_StPesquisaClinica: Boolean;
+    F__isset_AnvisaProtocoloEstudo: Boolean;
+    F__isset_AnvisaProtocoloVersao: Boolean;
+    F__isset_AnvisaNumeroRegistro: Boolean;
     
     function GetImunobiologico: Int64;
     procedure SetImunobiologico( const Value: Int64);
@@ -122,6 +171,20 @@ type
     procedure SetDataRegistroAnterior( const Value: Int64);
     function GetStAplicadoExterior: Boolean;
     procedure SetStAplicadoExterior( const Value: Boolean);
+    function GetUuidRnds: string;
+    procedure SetUuidRnds( const Value: string);
+    function GetCboPrescritorCodigo2002: string;
+    procedure SetCboPrescritorCodigo2002( const Value: string);
+    function GetCid10MotivoIndicacao: string;
+    procedure SetCid10MotivoIndicacao( const Value: string);
+    function GetStPesquisaClinica: Boolean;
+    procedure SetStPesquisaClinica( const Value: Boolean);
+    function GetAnvisaProtocoloEstudo: string;
+    procedure SetAnvisaProtocoloEstudo( const Value: string);
+    function GetAnvisaProtocoloVersao: string;
+    procedure SetAnvisaProtocoloVersao( const Value: string);
+    function GetAnvisaNumeroRegistro: string;
+    procedure SetAnvisaNumeroRegistro( const Value: string);
 
     function Get__isset_Imunobiologico: Boolean;
     function Get__isset_EstrategiaVacinacao: Boolean;
@@ -132,6 +195,13 @@ type
     function Get__isset_StRegistroAnterior: Boolean;
     function Get__isset_DataRegistroAnterior: Boolean;
     function Get__isset_StAplicadoExterior: Boolean;
+    function Get__isset_UuidRnds: Boolean;
+    function Get__isset_CboPrescritorCodigo2002: Boolean;
+    function Get__isset_Cid10MotivoIndicacao: Boolean;
+    function Get__isset_StPesquisaClinica: Boolean;
+    function Get__isset_AnvisaProtocoloEstudo: Boolean;
+    function Get__isset_AnvisaProtocoloVersao: Boolean;
+    function Get__isset_AnvisaNumeroRegistro: Boolean;
   public
     constructor Create;
     destructor Destroy; override;
@@ -152,6 +222,13 @@ type
     property StRegistroAnterior: Boolean read GetStRegistroAnterior write SetStRegistroAnterior;
     property DataRegistroAnterior: Int64 read GetDataRegistroAnterior write SetDataRegistroAnterior;
     property StAplicadoExterior: Boolean read GetStAplicadoExterior write SetStAplicadoExterior;
+    property UuidRnds: string read GetUuidRnds write SetUuidRnds;
+    property CboPrescritorCodigo2002: string read GetCboPrescritorCodigo2002 write SetCboPrescritorCodigo2002;
+    property Cid10MotivoIndicacao: string read GetCid10MotivoIndicacao write SetCid10MotivoIndicacao;
+    property StPesquisaClinica: Boolean read GetStPesquisaClinica write SetStPesquisaClinica;
+    property AnvisaProtocoloEstudo: string read GetAnvisaProtocoloEstudo write SetAnvisaProtocoloEstudo;
+    property AnvisaProtocoloVersao: string read GetAnvisaProtocoloVersao write SetAnvisaProtocoloVersao;
+    property AnvisaNumeroRegistro: string read GetAnvisaNumeroRegistro write SetAnvisaNumeroRegistro;
 
     // isset
     property __isset_Imunobiologico: Boolean read Get__isset_Imunobiologico;
@@ -163,6 +240,13 @@ type
     property __isset_StRegistroAnterior: Boolean read Get__isset_StRegistroAnterior;
     property __isset_DataRegistroAnterior: Boolean read Get__isset_DataRegistroAnterior;
     property __isset_StAplicadoExterior: Boolean read Get__isset_StAplicadoExterior;
+    property __isset_UuidRnds: Boolean read Get__isset_UuidRnds;
+    property __isset_CboPrescritorCodigo2002: Boolean read Get__isset_CboPrescritorCodigo2002;
+    property __isset_Cid10MotivoIndicacao: Boolean read Get__isset_Cid10MotivoIndicacao;
+    property __isset_StPesquisaClinica: Boolean read Get__isset_StPesquisaClinica;
+    property __isset_AnvisaProtocoloEstudo: Boolean read Get__isset_AnvisaProtocoloEstudo;
+    property __isset_AnvisaProtocoloVersao: Boolean read Get__isset_AnvisaProtocoloVersao;
+    property __isset_AnvisaNumeroRegistro: Boolean read Get__isset_AnvisaNumeroRegistro;
   end;
 
   IFichaVacinacaoChildThrift = interface(IBase)
@@ -194,6 +278,8 @@ type
     procedure SetDataHoraFinalAtendimento( const Value: Int64);
     function GetCpfCidadao: string;
     procedure SetCpfCidadao( const Value: string);
+    function GetCondicaoMaternal: Int64;
+    procedure SetCondicaoMaternal( const Value: Int64);
 
     property Turno: Int64 read GetTurno write SetTurno;
     property NumProntuario: string read GetNumProntuario write SetNumProntuario;
@@ -209,6 +295,7 @@ type
     property DataHoraInicialAtendimento: Int64 read GetDataHoraInicialAtendimento write SetDataHoraInicialAtendimento;
     property DataHoraFinalAtendimento: Int64 read GetDataHoraFinalAtendimento write SetDataHoraFinalAtendimento;
     property CpfCidadao: string read GetCpfCidadao write SetCpfCidadao;
+    property CondicaoMaternal: Int64 read GetCondicaoMaternal write SetCondicaoMaternal;
 
     function Get__isset_Turno: Boolean;
     function Get__isset_NumProntuario: Boolean;
@@ -224,6 +311,7 @@ type
     function Get__isset_DataHoraInicialAtendimento: Boolean;
     function Get__isset_DataHoraFinalAtendimento: Boolean;
     function Get__isset_CpfCidadao: Boolean;
+    function Get__isset_CondicaoMaternal: Boolean;
 
     property __isset_Turno: Boolean read Get__isset_Turno;
     property __isset_NumProntuario: Boolean read Get__isset_NumProntuario;
@@ -239,6 +327,7 @@ type
     property __isset_DataHoraInicialAtendimento: Boolean read Get__isset_DataHoraInicialAtendimento;
     property __isset_DataHoraFinalAtendimento: Boolean read Get__isset_DataHoraFinalAtendimento;
     property __isset_CpfCidadao: Boolean read Get__isset_CpfCidadao;
+    property __isset_CondicaoMaternal: Boolean read Get__isset_CondicaoMaternal;
   end;
 
   TFichaVacinacaoChildThriftImpl = class(TInterfacedObject, IBase, IFichaVacinacaoChildThrift)
@@ -257,6 +346,7 @@ type
     FDataHoraInicialAtendimento: Int64;
     FDataHoraFinalAtendimento: Int64;
     FCpfCidadao: string;
+    FCondicaoMaternal: Int64;
     
     F__isset_Turno: Boolean;
     F__isset_NumProntuario: Boolean;
@@ -272,6 +362,7 @@ type
     F__isset_DataHoraInicialAtendimento: Boolean;
     F__isset_DataHoraFinalAtendimento: Boolean;
     F__isset_CpfCidadao: Boolean;
+    F__isset_CondicaoMaternal: Boolean;
     
     function GetTurno: Int64;
     procedure SetTurno( const Value: Int64);
@@ -301,6 +392,8 @@ type
     procedure SetDataHoraFinalAtendimento( const Value: Int64);
     function GetCpfCidadao: string;
     procedure SetCpfCidadao( const Value: string);
+    function GetCondicaoMaternal: Int64;
+    procedure SetCondicaoMaternal( const Value: Int64);
 
     function Get__isset_Turno: Boolean;
     function Get__isset_NumProntuario: Boolean;
@@ -316,6 +409,7 @@ type
     function Get__isset_DataHoraInicialAtendimento: Boolean;
     function Get__isset_DataHoraFinalAtendimento: Boolean;
     function Get__isset_CpfCidadao: Boolean;
+    function Get__isset_CondicaoMaternal: Boolean;
   public
     constructor Create;
     destructor Destroy; override;
@@ -341,6 +435,7 @@ type
     property DataHoraInicialAtendimento: Int64 read GetDataHoraInicialAtendimento write SetDataHoraInicialAtendimento;
     property DataHoraFinalAtendimento: Int64 read GetDataHoraFinalAtendimento write SetDataHoraFinalAtendimento;
     property CpfCidadao: string read GetCpfCidadao write SetCpfCidadao;
+    property CondicaoMaternal: Int64 read GetCondicaoMaternal write SetCondicaoMaternal;
 
     // isset
     property __isset_Turno: Boolean read Get__isset_Turno;
@@ -357,6 +452,7 @@ type
     property __isset_DataHoraInicialAtendimento: Boolean read Get__isset_DataHoraInicialAtendimento;
     property __isset_DataHoraFinalAtendimento: Boolean read Get__isset_DataHoraFinalAtendimento;
     property __isset_CpfCidadao: Boolean read Get__isset_CpfCidadao;
+    property __isset_CondicaoMaternal: Boolean read Get__isset_CondicaoMaternal;
   end;
 
   IFichaVacinacaoMasterThrift = interface(IBase)
@@ -368,19 +464,24 @@ type
     procedure SetHeaderTransport( const Value: IUnicaLotacaoHeaderThrift);
     function GetVacinacoes: IThriftList<IFichaVacinacaoChildThrift>;
     procedure SetVacinacoes( const Value: IThriftList<IFichaVacinacaoChildThrift>);
+    function GetUuidFichaCancelada: string;
+    procedure SetUuidFichaCancelada( const Value: string);
 
     property UuidFicha: string read GetUuidFicha write SetUuidFicha;
     property TpCdsOrigem: Integer read GetTpCdsOrigem write SetTpCdsOrigem;
     property HeaderTransport: IUnicaLotacaoHeaderThrift read GetHeaderTransport write SetHeaderTransport;
     property Vacinacoes: IThriftList<IFichaVacinacaoChildThrift> read GetVacinacoes write SetVacinacoes;
+    property UuidFichaCancelada: string read GetUuidFichaCancelada write SetUuidFichaCancelada;
 
     function Get__isset_TpCdsOrigem: Boolean;
     function Get__isset_HeaderTransport: Boolean;
     function Get__isset_Vacinacoes: Boolean;
+    function Get__isset_UuidFichaCancelada: Boolean;
 
     property __isset_TpCdsOrigem: Boolean read Get__isset_TpCdsOrigem;
     property __isset_HeaderTransport: Boolean read Get__isset_HeaderTransport;
     property __isset_Vacinacoes: Boolean read Get__isset_Vacinacoes;
+    property __isset_UuidFichaCancelada: Boolean read Get__isset_UuidFichaCancelada;
   end;
 
   TFichaVacinacaoMasterThriftImpl = class(TInterfacedObject, IBase, IFichaVacinacaoMasterThrift)
@@ -389,10 +490,12 @@ type
     FTpCdsOrigem: Integer;
     FHeaderTransport: IUnicaLotacaoHeaderThrift;
     FVacinacoes: IThriftList<IFichaVacinacaoChildThrift>;
+    FUuidFichaCancelada: string;
     
     F__isset_TpCdsOrigem: Boolean;
     F__isset_HeaderTransport: Boolean;
     F__isset_Vacinacoes: Boolean;
+    F__isset_UuidFichaCancelada: Boolean;
     
     function GetUuidFicha: string;
     procedure SetUuidFicha( const Value: string);
@@ -402,10 +505,13 @@ type
     procedure SetHeaderTransport( const Value: IUnicaLotacaoHeaderThrift);
     function GetVacinacoes: IThriftList<IFichaVacinacaoChildThrift>;
     procedure SetVacinacoes( const Value: IThriftList<IFichaVacinacaoChildThrift>);
+    function GetUuidFichaCancelada: string;
+    procedure SetUuidFichaCancelada( const Value: string);
 
     function Get__isset_TpCdsOrigem: Boolean;
     function Get__isset_HeaderTransport: Boolean;
     function Get__isset_Vacinacoes: Boolean;
+    function Get__isset_UuidFichaCancelada: Boolean;
   public
     constructor Create;
     destructor Destroy; override;
@@ -421,11 +527,13 @@ type
     property TpCdsOrigem: Integer read GetTpCdsOrigem write SetTpCdsOrigem;
     property HeaderTransport: IUnicaLotacaoHeaderThrift read GetHeaderTransport write SetHeaderTransport;
     property Vacinacoes: IThriftList<IFichaVacinacaoChildThrift> read GetVacinacoes write SetVacinacoes;
+    property UuidFichaCancelada: string read GetUuidFichaCancelada write SetUuidFichaCancelada;
 
     // isset
     property __isset_TpCdsOrigem: Boolean read Get__isset_TpCdsOrigem;
     property __isset_HeaderTransport: Boolean read Get__isset_HeaderTransport;
     property __isset_Vacinacoes: Boolean read Get__isset_Vacinacoes;
+    property __isset_UuidFichaCancelada: Boolean read Get__isset_UuidFichaCancelada;
   end;
 
 implementation
@@ -584,6 +692,118 @@ begin
   Result := F__isset_StAplicadoExterior;
 end;
 
+function TVacinaRowThriftImpl.GetUuidRnds: string;
+begin
+  Result := FUuidRnds;
+end;
+
+procedure TVacinaRowThriftImpl.SetUuidRnds( const Value: string);
+begin
+  F__isset_UuidRnds := True;
+  FUuidRnds := Value;
+end;
+
+function TVacinaRowThriftImpl.Get__isset_UuidRnds: Boolean;
+begin
+  Result := F__isset_UuidRnds;
+end;
+
+function TVacinaRowThriftImpl.GetCboPrescritorCodigo2002: string;
+begin
+  Result := FCboPrescritorCodigo2002;
+end;
+
+procedure TVacinaRowThriftImpl.SetCboPrescritorCodigo2002( const Value: string);
+begin
+  F__isset_CboPrescritorCodigo2002 := True;
+  FCboPrescritorCodigo2002 := Value;
+end;
+
+function TVacinaRowThriftImpl.Get__isset_CboPrescritorCodigo2002: Boolean;
+begin
+  Result := F__isset_CboPrescritorCodigo2002;
+end;
+
+function TVacinaRowThriftImpl.GetCid10MotivoIndicacao: string;
+begin
+  Result := FCid10MotivoIndicacao;
+end;
+
+procedure TVacinaRowThriftImpl.SetCid10MotivoIndicacao( const Value: string);
+begin
+  F__isset_Cid10MotivoIndicacao := True;
+  FCid10MotivoIndicacao := Value;
+end;
+
+function TVacinaRowThriftImpl.Get__isset_Cid10MotivoIndicacao: Boolean;
+begin
+  Result := F__isset_Cid10MotivoIndicacao;
+end;
+
+function TVacinaRowThriftImpl.GetStPesquisaClinica: Boolean;
+begin
+  Result := FStPesquisaClinica;
+end;
+
+procedure TVacinaRowThriftImpl.SetStPesquisaClinica( const Value: Boolean);
+begin
+  F__isset_StPesquisaClinica := True;
+  FStPesquisaClinica := Value;
+end;
+
+function TVacinaRowThriftImpl.Get__isset_StPesquisaClinica: Boolean;
+begin
+  Result := F__isset_StPesquisaClinica;
+end;
+
+function TVacinaRowThriftImpl.GetAnvisaProtocoloEstudo: string;
+begin
+  Result := FAnvisaProtocoloEstudo;
+end;
+
+procedure TVacinaRowThriftImpl.SetAnvisaProtocoloEstudo( const Value: string);
+begin
+  F__isset_AnvisaProtocoloEstudo := True;
+  FAnvisaProtocoloEstudo := Value;
+end;
+
+function TVacinaRowThriftImpl.Get__isset_AnvisaProtocoloEstudo: Boolean;
+begin
+  Result := F__isset_AnvisaProtocoloEstudo;
+end;
+
+function TVacinaRowThriftImpl.GetAnvisaProtocoloVersao: string;
+begin
+  Result := FAnvisaProtocoloVersao;
+end;
+
+procedure TVacinaRowThriftImpl.SetAnvisaProtocoloVersao( const Value: string);
+begin
+  F__isset_AnvisaProtocoloVersao := True;
+  FAnvisaProtocoloVersao := Value;
+end;
+
+function TVacinaRowThriftImpl.Get__isset_AnvisaProtocoloVersao: Boolean;
+begin
+  Result := F__isset_AnvisaProtocoloVersao;
+end;
+
+function TVacinaRowThriftImpl.GetAnvisaNumeroRegistro: string;
+begin
+  Result := FAnvisaNumeroRegistro;
+end;
+
+procedure TVacinaRowThriftImpl.SetAnvisaNumeroRegistro( const Value: string);
+begin
+  F__isset_AnvisaNumeroRegistro := True;
+  FAnvisaNumeroRegistro := Value;
+end;
+
+function TVacinaRowThriftImpl.Get__isset_AnvisaNumeroRegistro: Boolean;
+begin
+  Result := F__isset_AnvisaNumeroRegistro;
+end;
+
 procedure TVacinaRowThriftImpl.Read( const iprot: IProtocol);
 var
   field_ : IField;
@@ -678,6 +898,69 @@ begin
           if (field_.Type_ = TType.Bool_) then
           begin
             StAplicadoExterior := iprot.ReadBool();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        10: begin
+          if (field_.Type_ = TType.String_) then
+          begin
+            UuidRnds := iprot.ReadString();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        11: begin
+          if (field_.Type_ = TType.String_) then
+          begin
+            CboPrescritorCodigo2002 := iprot.ReadString();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        12: begin
+          if (field_.Type_ = TType.String_) then
+          begin
+            Cid10MotivoIndicacao := iprot.ReadString();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        13: begin
+          if (field_.Type_ = TType.Bool_) then
+          begin
+            StPesquisaClinica := iprot.ReadBool();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        14: begin
+          if (field_.Type_ = TType.String_) then
+          begin
+            AnvisaProtocoloEstudo := iprot.ReadString();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        15: begin
+          if (field_.Type_ = TType.String_) then
+          begin
+            AnvisaProtocoloVersao := iprot.ReadString();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        16: begin
+          if (field_.Type_ = TType.String_) then
+          begin
+            AnvisaNumeroRegistro := iprot.ReadString();
           end else
           begin
             TProtocolUtil.Skip(iprot, field_.Type_);
@@ -785,6 +1068,69 @@ begin
     oprot.WriteBool(StAplicadoExterior);
     oprot.WriteFieldEnd();
   end;
+  if (__isset_UuidRnds) then
+  begin
+    field_.Name := 'uuidRnds';
+    field_.Type_  := TType.String_;
+    field_.ID := 10;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteString(UuidRnds);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_CboPrescritorCodigo2002) then
+  begin
+    field_.Name := 'cboPrescritorCodigo2002';
+    field_.Type_  := TType.String_;
+    field_.ID := 11;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteString(CboPrescritorCodigo2002);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_Cid10MotivoIndicacao) then
+  begin
+    field_.Name := 'cid10MotivoIndicacao';
+    field_.Type_  := TType.String_;
+    field_.ID := 12;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteString(Cid10MotivoIndicacao);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_StPesquisaClinica) then
+  begin
+    field_.Name := 'stPesquisaClinica';
+    field_.Type_  := TType.Bool_;
+    field_.ID := 13;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteBool(StPesquisaClinica);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_AnvisaProtocoloEstudo) then
+  begin
+    field_.Name := 'anvisaProtocoloEstudo';
+    field_.Type_  := TType.String_;
+    field_.ID := 14;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteString(AnvisaProtocoloEstudo);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_AnvisaProtocoloVersao) then
+  begin
+    field_.Name := 'anvisaProtocoloVersao';
+    field_.Type_  := TType.String_;
+    field_.ID := 15;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteString(AnvisaProtocoloVersao);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_AnvisaNumeroRegistro) then
+  begin
+    field_.Name := 'anvisaNumeroRegistro';
+    field_.Type_  := TType.String_;
+    field_.ID := 16;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteString(AnvisaNumeroRegistro);
+    oprot.WriteFieldEnd();
+  end;
   oprot.WriteFieldStop();
   oprot.WriteStructEnd();
 end;
@@ -850,6 +1196,48 @@ begin
       _first1 := FALSE;
       _sb0.Append('StAplicadoExterior: ');
       _sb0.Append(StAplicadoExterior);
+    end;
+    if (__isset_UuidRnds) then begin
+      if not _first1 then _sb0.Append(',');
+      _first1 := FALSE;
+      _sb0.Append('UuidRnds: ');
+      _sb0.Append(UuidRnds);
+    end;
+    if (__isset_CboPrescritorCodigo2002) then begin
+      if not _first1 then _sb0.Append(',');
+      _first1 := FALSE;
+      _sb0.Append('CboPrescritorCodigo2002: ');
+      _sb0.Append(CboPrescritorCodigo2002);
+    end;
+    if (__isset_Cid10MotivoIndicacao) then begin
+      if not _first1 then _sb0.Append(',');
+      _first1 := FALSE;
+      _sb0.Append('Cid10MotivoIndicacao: ');
+      _sb0.Append(Cid10MotivoIndicacao);
+    end;
+    if (__isset_StPesquisaClinica) then begin
+      if not _first1 then _sb0.Append(',');
+      _first1 := FALSE;
+      _sb0.Append('StPesquisaClinica: ');
+      _sb0.Append(StPesquisaClinica);
+    end;
+    if (__isset_AnvisaProtocoloEstudo) then begin
+      if not _first1 then _sb0.Append(',');
+      _first1 := FALSE;
+      _sb0.Append('AnvisaProtocoloEstudo: ');
+      _sb0.Append(AnvisaProtocoloEstudo);
+    end;
+    if (__isset_AnvisaProtocoloVersao) then begin
+      if not _first1 then _sb0.Append(',');
+      _first1 := FALSE;
+      _sb0.Append('AnvisaProtocoloVersao: ');
+      _sb0.Append(AnvisaProtocoloVersao);
+    end;
+    if (__isset_AnvisaNumeroRegistro) then begin
+      if not _first1 then _sb0.Append(',');
+      _first1 := FALSE;
+      _sb0.Append('AnvisaNumeroRegistro: ');
+      _sb0.Append(AnvisaNumeroRegistro);
     end;
     _sb0.Append(')');
     Result := _sb0.ToString;
@@ -1093,6 +1481,22 @@ begin
   Result := F__isset_CpfCidadao;
 end;
 
+function TFichaVacinacaoChildThriftImpl.GetCondicaoMaternal: Int64;
+begin
+  Result := FCondicaoMaternal;
+end;
+
+procedure TFichaVacinacaoChildThriftImpl.SetCondicaoMaternal( const Value: Int64);
+begin
+  F__isset_CondicaoMaternal := True;
+  FCondicaoMaternal := Value;
+end;
+
+function TFichaVacinacaoChildThriftImpl.Get__isset_CondicaoMaternal: Boolean;
+begin
+  Result := F__isset_CondicaoMaternal;
+end;
+
 procedure TFichaVacinacaoChildThriftImpl.Read( const iprot: IProtocol);
 var
   field_ : IField;
@@ -1243,6 +1647,15 @@ begin
           if (field_.Type_ = TType.String_) then
           begin
             CpfCidadao := iprot.ReadString();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        15: begin
+          if (field_.Type_ = TType.I64) then
+          begin
+            CondicaoMaternal := iprot.ReadI64();
           end else
           begin
             TProtocolUtil.Skip(iprot, field_.Type_);
@@ -1403,6 +1816,15 @@ begin
     oprot.WriteString(CpfCidadao);
     oprot.WriteFieldEnd();
   end;
+  if (__isset_CondicaoMaternal) then
+  begin
+    field_.Name := 'condicaoMaternal';
+    field_.Type_  := TType.I64;
+    field_.ID := 15;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteI64(CondicaoMaternal);
+    oprot.WriteFieldEnd();
+  end;
   oprot.WriteFieldStop();
   oprot.WriteStructEnd();
 end;
@@ -1499,6 +1921,12 @@ begin
       _sb7.Append('CpfCidadao: ');
       _sb7.Append(CpfCidadao);
     end;
+    if (__isset_CondicaoMaternal) then begin
+      if not _first8 then _sb7.Append(',');
+      _first8 := FALSE;
+      _sb7.Append('CondicaoMaternal: ');
+      _sb7.Append(CondicaoMaternal);
+    end;
     _sb7.Append(')');
     Result := _sb7.ToString;
     if _first8 then {prevent warning};
@@ -1575,6 +2003,22 @@ begin
   Result := F__isset_Vacinacoes;
 end;
 
+function TFichaVacinacaoMasterThriftImpl.GetUuidFichaCancelada: string;
+begin
+  Result := FUuidFichaCancelada;
+end;
+
+procedure TFichaVacinacaoMasterThriftImpl.SetUuidFichaCancelada( const Value: string);
+begin
+  F__isset_UuidFichaCancelada := True;
+  FUuidFichaCancelada := Value;
+end;
+
+function TFichaVacinacaoMasterThriftImpl.Get__isset_UuidFichaCancelada: Boolean;
+begin
+  Result := F__isset_UuidFichaCancelada;
+end;
+
 procedure TFichaVacinacaoMasterThriftImpl.Read( const iprot: IProtocol);
 var
   field_ : IField;
@@ -1639,6 +2083,15 @@ begin
               Vacinacoes.Add(_elem11);
             end;
             iprot.ReadListEnd();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        5: begin
+          if (field_.Type_ = TType.String_) then
+          begin
+            UuidFichaCancelada := iprot.ReadString();
           end else
           begin
             TProtocolUtil.Skip(iprot, field_.Type_);
@@ -1709,6 +2162,15 @@ begin
     oprot.WriteListEnd();
     oprot.WriteFieldEnd();
   end;
+  if (__isset_UuidFichaCancelada) then
+  begin
+    field_.Name := 'uuidFichaCancelada';
+    field_.Type_  := TType.String_;
+    field_.ID := 5;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteString(UuidFichaCancelada);
+    oprot.WriteFieldEnd();
+  end;
   oprot.WriteFieldStop();
   oprot.WriteStructEnd();
 end;
@@ -1732,6 +2194,10 @@ begin
     if (Vacinacoes <> nil) and __isset_Vacinacoes then begin
       _sb14.Append(', Vacinacoes: ');
       _sb14.Append(Vacinacoes);
+    end;
+    if (__isset_UuidFichaCancelada) then begin
+      _sb14.Append(', UuidFichaCancelada: ');
+      _sb14.Append(UuidFichaCancelada);
     end;
     _sb14.Append(')');
     Result := _sb14.ToString;

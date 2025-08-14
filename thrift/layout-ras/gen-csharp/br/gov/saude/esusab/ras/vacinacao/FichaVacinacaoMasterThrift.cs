@@ -26,6 +26,7 @@ namespace br.gov.saude.esusab.ras.vacinacao
     private int _tpCdsOrigem;
     private br.gov.saude.esusab.ras.common.UnicaLotacaoHeaderThrift _headerTransport;
     private List<FichaVacinacaoChildThrift> _vacinacoes;
+    private string _uuidFichaCancelada;
 
     public string UuidFicha { get; set; }
 
@@ -68,6 +69,19 @@ namespace br.gov.saude.esusab.ras.vacinacao
       }
     }
 
+    public string UuidFichaCancelada
+    {
+      get
+      {
+        return _uuidFichaCancelada;
+      }
+      set
+      {
+        __isset.uuidFichaCancelada = true;
+        this._uuidFichaCancelada = value;
+      }
+    }
+
 
     public Isset __isset;
     #if !SILVERLIGHT
@@ -77,6 +91,7 @@ namespace br.gov.saude.esusab.ras.vacinacao
       public bool tpCdsOrigem;
       public bool headerTransport;
       public bool vacinacoes;
+      public bool uuidFichaCancelada;
     }
 
     public FichaVacinacaoMasterThrift() {
@@ -143,6 +158,13 @@ namespace br.gov.saude.esusab.ras.vacinacao
                 TProtocolUtil.Skip(iprot, field.Type);
               }
               break;
+            case 5:
+              if (field.Type == TType.String) {
+                UuidFichaCancelada = iprot.ReadString();
+              } else { 
+                TProtocolUtil.Skip(iprot, field.Type);
+              }
+              break;
             default: 
               TProtocolUtil.Skip(iprot, field.Type);
               break;
@@ -203,6 +225,14 @@ namespace br.gov.saude.esusab.ras.vacinacao
           }
           oprot.WriteFieldEnd();
         }
+        if (UuidFichaCancelada != null && __isset.uuidFichaCancelada) {
+          field.Name = "uuidFichaCancelada";
+          field.Type = TType.String;
+          field.ID = 5;
+          oprot.WriteFieldBegin(field);
+          oprot.WriteString(UuidFichaCancelada);
+          oprot.WriteFieldEnd();
+        }
         oprot.WriteFieldStop();
         oprot.WriteStructEnd();
       }
@@ -227,6 +257,10 @@ namespace br.gov.saude.esusab.ras.vacinacao
       if (Vacinacoes != null && __isset.vacinacoes) {
         __sb.Append(", Vacinacoes: ");
         __sb.Append(Vacinacoes);
+      }
+      if (UuidFichaCancelada != null && __isset.uuidFichaCancelada) {
+        __sb.Append(", UuidFichaCancelada: ");
+        __sb.Append(UuidFichaCancelada);
       }
       __sb.Append(")");
       return __sb.ToString();

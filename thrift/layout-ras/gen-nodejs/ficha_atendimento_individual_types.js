@@ -8,6 +8,7 @@ var Thrift = thrift.Thrift;
 var Q = thrift.Q;
 
 var common_ttypes = require('./common_types')
+var solicitacao_oci_ttypes = require('./solicitacao_oci_types')
 
 
 var ttypes = module.exports = {};
@@ -182,6 +183,7 @@ FichaAtendimentoIndividualChildThrift = module.exports.FichaAtendimentoIndividua
   this.medicoes = null;
   this.problemasCondicoes = null;
   this.ivcf = null;
+  this.solicitacoesOci = null;
   if (args) {
     if (args.numeroProntuario !== undefined && args.numeroProntuario !== null) {
       this.numeroProntuario = args.numeroProntuario;
@@ -284,6 +286,9 @@ FichaAtendimentoIndividualChildThrift = module.exports.FichaAtendimentoIndividua
     }
     if (args.ivcf !== undefined && args.ivcf !== null) {
       this.ivcf = new common_ttypes.IvcfThrift(args.ivcf);
+    }
+    if (args.solicitacoesOci !== undefined && args.solicitacoesOci !== null) {
+      this.solicitacoesOci = Thrift.copyList(args.solicitacoesOci, [solicitacao_oci_ttypes.SolicitacaoOciThrift]);
     }
   }
 };
@@ -651,6 +656,27 @@ FichaAtendimentoIndividualChildThrift.prototype.read = function(input) {
         input.skip(ftype);
       }
       break;
+      case 43:
+      if (ftype == Thrift.Type.LIST) {
+        var _size64 = 0;
+        var _rtmp368;
+        this.solicitacoesOci = [];
+        var _etype67 = 0;
+        _rtmp368 = input.readListBegin();
+        _etype67 = _rtmp368.etype;
+        _size64 = _rtmp368.size;
+        for (var _i69 = 0; _i69 < _size64; ++_i69)
+        {
+          var elem70 = null;
+          elem70 = new solicitacao_oci_ttypes.SolicitacaoOciThrift();
+          elem70.read(input);
+          this.solicitacoesOci.push(elem70);
+        }
+        input.readListEnd();
+      } else {
+        input.skip(ftype);
+      }
+      break;
       default:
         input.skip(ftype);
     }
@@ -720,12 +746,12 @@ FichaAtendimentoIndividualChildThrift.prototype.write = function(output) {
   if (this.exame !== null && this.exame !== undefined) {
     output.writeFieldBegin('exame', Thrift.Type.LIST, 17);
     output.writeListBegin(Thrift.Type.STRUCT, this.exame.length);
-    for (var iter64 in this.exame)
+    for (var iter71 in this.exame)
     {
-      if (this.exame.hasOwnProperty(iter64))
+      if (this.exame.hasOwnProperty(iter71))
       {
-        iter64 = this.exame[iter64];
-        iter64.write(output);
+        iter71 = this.exame[iter71];
+        iter71.write(output);
       }
     }
     output.writeListEnd();
@@ -749,12 +775,12 @@ FichaAtendimentoIndividualChildThrift.prototype.write = function(output) {
   if (this.nasfs !== null && this.nasfs !== undefined) {
     output.writeFieldBegin('nasfs', Thrift.Type.LIST, 21);
     output.writeListBegin(Thrift.Type.I64, this.nasfs.length);
-    for (var iter65 in this.nasfs)
+    for (var iter72 in this.nasfs)
     {
-      if (this.nasfs.hasOwnProperty(iter65))
+      if (this.nasfs.hasOwnProperty(iter72))
       {
-        iter65 = this.nasfs[iter65];
-        output.writeI64(iter65);
+        iter72 = this.nasfs[iter72];
+        output.writeI64(iter72);
       }
     }
     output.writeListEnd();
@@ -763,12 +789,12 @@ FichaAtendimentoIndividualChildThrift.prototype.write = function(output) {
   if (this.condutas !== null && this.condutas !== undefined) {
     output.writeFieldBegin('condutas', Thrift.Type.LIST, 22);
     output.writeListBegin(Thrift.Type.I64, this.condutas.length);
-    for (var iter66 in this.condutas)
+    for (var iter73 in this.condutas)
     {
-      if (this.condutas.hasOwnProperty(iter66))
+      if (this.condutas.hasOwnProperty(iter73))
       {
-        iter66 = this.condutas[iter66];
-        output.writeI64(iter66);
+        iter73 = this.condutas[iter73];
+        output.writeI64(iter73);
       }
     }
     output.writeListEnd();
@@ -812,12 +838,12 @@ FichaAtendimentoIndividualChildThrift.prototype.write = function(output) {
   if (this.medicamentos !== null && this.medicamentos !== undefined) {
     output.writeFieldBegin('medicamentos', Thrift.Type.LIST, 31);
     output.writeListBegin(Thrift.Type.STRUCT, this.medicamentos.length);
-    for (var iter67 in this.medicamentos)
+    for (var iter74 in this.medicamentos)
     {
-      if (this.medicamentos.hasOwnProperty(iter67))
+      if (this.medicamentos.hasOwnProperty(iter74))
       {
-        iter67 = this.medicamentos[iter67];
-        iter67.write(output);
+        iter74 = this.medicamentos[iter74];
+        iter74.write(output);
       }
     }
     output.writeListEnd();
@@ -826,12 +852,12 @@ FichaAtendimentoIndividualChildThrift.prototype.write = function(output) {
   if (this.encaminhamentos !== null && this.encaminhamentos !== undefined) {
     output.writeFieldBegin('encaminhamentos', Thrift.Type.LIST, 32);
     output.writeListBegin(Thrift.Type.STRUCT, this.encaminhamentos.length);
-    for (var iter68 in this.encaminhamentos)
+    for (var iter75 in this.encaminhamentos)
     {
-      if (this.encaminhamentos.hasOwnProperty(iter68))
+      if (this.encaminhamentos.hasOwnProperty(iter75))
       {
-        iter68 = this.encaminhamentos[iter68];
-        iter68.write(output);
+        iter75 = this.encaminhamentos[iter75];
+        iter75.write(output);
       }
     }
     output.writeListEnd();
@@ -840,12 +866,12 @@ FichaAtendimentoIndividualChildThrift.prototype.write = function(output) {
   if (this.resultadosExames !== null && this.resultadosExames !== undefined) {
     output.writeFieldBegin('resultadosExames', Thrift.Type.LIST, 33);
     output.writeListBegin(Thrift.Type.STRUCT, this.resultadosExames.length);
-    for (var iter69 in this.resultadosExames)
+    for (var iter76 in this.resultadosExames)
     {
-      if (this.resultadosExames.hasOwnProperty(iter69))
+      if (this.resultadosExames.hasOwnProperty(iter76))
       {
-        iter69 = this.resultadosExames[iter69];
-        iter69.write(output);
+        iter76 = this.resultadosExames[iter76];
+        iter76.write(output);
       }
     }
     output.writeListEnd();
@@ -869,12 +895,12 @@ FichaAtendimentoIndividualChildThrift.prototype.write = function(output) {
   if (this.emultis !== null && this.emultis !== undefined) {
     output.writeFieldBegin('emultis', Thrift.Type.LIST, 38);
     output.writeListBegin(Thrift.Type.I64, this.emultis.length);
-    for (var iter70 in this.emultis)
+    for (var iter77 in this.emultis)
     {
-      if (this.emultis.hasOwnProperty(iter70))
+      if (this.emultis.hasOwnProperty(iter77))
       {
-        iter70 = this.emultis[iter70];
-        output.writeI64(iter70);
+        iter77 = this.emultis[iter77];
+        output.writeI64(iter77);
       }
     }
     output.writeListEnd();
@@ -888,12 +914,12 @@ FichaAtendimentoIndividualChildThrift.prototype.write = function(output) {
   if (this.problemasCondicoes !== null && this.problemasCondicoes !== undefined) {
     output.writeFieldBegin('problemasCondicoes', Thrift.Type.LIST, 40);
     output.writeListBegin(Thrift.Type.STRUCT, this.problemasCondicoes.length);
-    for (var iter71 in this.problemasCondicoes)
+    for (var iter78 in this.problemasCondicoes)
     {
-      if (this.problemasCondicoes.hasOwnProperty(iter71))
+      if (this.problemasCondicoes.hasOwnProperty(iter78))
       {
-        iter71 = this.problemasCondicoes[iter71];
-        iter71.write(output);
+        iter78 = this.problemasCondicoes[iter78];
+        iter78.write(output);
       }
     }
     output.writeListEnd();
@@ -902,6 +928,20 @@ FichaAtendimentoIndividualChildThrift.prototype.write = function(output) {
   if (this.ivcf !== null && this.ivcf !== undefined) {
     output.writeFieldBegin('ivcf', Thrift.Type.STRUCT, 41);
     this.ivcf.write(output);
+    output.writeFieldEnd();
+  }
+  if (this.solicitacoesOci !== null && this.solicitacoesOci !== undefined) {
+    output.writeFieldBegin('solicitacoesOci', Thrift.Type.LIST, 43);
+    output.writeListBegin(Thrift.Type.STRUCT, this.solicitacoesOci.length);
+    for (var iter79 in this.solicitacoesOci)
+    {
+      if (this.solicitacoesOci.hasOwnProperty(iter79))
+      {
+        iter79 = this.solicitacoesOci[iter79];
+        iter79.write(output);
+      }
+    }
+    output.writeListEnd();
     output.writeFieldEnd();
   }
   output.writeFieldStop();
@@ -955,19 +995,19 @@ FichaAtendimentoIndividualMasterThrift.prototype.read = function(input) {
       break;
       case 2:
       if (ftype == Thrift.Type.LIST) {
-        var _size72 = 0;
-        var _rtmp376;
+        var _size80 = 0;
+        var _rtmp384;
         this.atendimentosIndividuais = [];
-        var _etype75 = 0;
-        _rtmp376 = input.readListBegin();
-        _etype75 = _rtmp376.etype;
-        _size72 = _rtmp376.size;
-        for (var _i77 = 0; _i77 < _size72; ++_i77)
+        var _etype83 = 0;
+        _rtmp384 = input.readListBegin();
+        _etype83 = _rtmp384.etype;
+        _size80 = _rtmp384.size;
+        for (var _i85 = 0; _i85 < _size80; ++_i85)
         {
-          var elem78 = null;
-          elem78 = new ttypes.FichaAtendimentoIndividualChildThrift();
-          elem78.read(input);
-          this.atendimentosIndividuais.push(elem78);
+          var elem86 = null;
+          elem86 = new ttypes.FichaAtendimentoIndividualChildThrift();
+          elem86.read(input);
+          this.atendimentosIndividuais.push(elem86);
         }
         input.readListEnd();
       } else {
@@ -1007,12 +1047,12 @@ FichaAtendimentoIndividualMasterThrift.prototype.write = function(output) {
   if (this.atendimentosIndividuais !== null && this.atendimentosIndividuais !== undefined) {
     output.writeFieldBegin('atendimentosIndividuais', Thrift.Type.LIST, 2);
     output.writeListBegin(Thrift.Type.STRUCT, this.atendimentosIndividuais.length);
-    for (var iter79 in this.atendimentosIndividuais)
+    for (var iter87 in this.atendimentosIndividuais)
     {
-      if (this.atendimentosIndividuais.hasOwnProperty(iter79))
+      if (this.atendimentosIndividuais.hasOwnProperty(iter87))
       {
-        iter79 = this.atendimentosIndividuais[iter79];
-        iter79.write(output);
+        iter87 = this.atendimentosIndividuais[iter87];
+        iter87.write(output);
       }
     }
     output.writeListEnd();

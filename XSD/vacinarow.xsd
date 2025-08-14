@@ -1,65 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://esus.ufsc.br/vacinarow" version="1.0">
-      
-  
   <xs:complexType name="vacinaRowTransport">
-            
-    
     <xs:sequence>
-                  
-      
       <xs:element minOccurs="0" name="imunobiologico" type="xs:long"/>
-                  
-      
       <xs:element minOccurs="0" name="estrategiaVacinacao" type="xs:long"/>
-                  
-      
       <xs:element minOccurs="0" name="dose" type="xs:long"/>
-                  
-      
       <xs:element minOccurs="0" name="lote" type="xs:string"/>
-                  
-      
       <xs:element minOccurs="0" name="fabricante" type="xs:string"/>
-                  
-      
       <xs:element minOccurs="0" name="grupoAtendimento" type="xs:long"/>
-                  
-      
       <xs:element minOccurs="0" name="stRegistroAnterior" type="xs:boolean"/>
-                  
-      
       <xs:element minOccurs="0" name="dataRegistroAnterior" type="xs:long"/>
-                  
-      
       <xs:element minOccurs="0" name="cboPrescritorCodigo2002" type="xs:string"/>
-                  
-      
       <xs:element minOccurs="0" name="cid10MotivoIndicacao" type="xs:string"/>
-                  
-      
       <xs:element minOccurs="0" name="stPesquisaClinica" type="xs:boolean"/>
-                  
-      
       <xs:element minOccurs="0" name="anvisaProtocoloEstudo" type="xs:string"/>
-                  
-      
       <xs:element minOccurs="0" name="anvisaProtocoloVersao" type="xs:string"/>
-                  
-      
       <xs:element minOccurs="0" name="anvisaNumeroRegistro" type="xs:string"/>
-                  
-      
       <xs:element minOccurs="0" name="stAplicadoExterior" type="xs:boolean"/>
-                  
-      
       <xs:element minOccurs="0" name="uuidRnds" type="xs:string"/>
-                
-    
     </xs:sequence>
-          
-  
   </xs:complexType>
-    
-
 </xs:schema>

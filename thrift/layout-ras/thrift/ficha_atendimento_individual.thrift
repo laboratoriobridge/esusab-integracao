@@ -1,4 +1,5 @@
 include "./common.thrift"
+include "./solicitacao_oci.thrift"
 
 namespace java br.gov.saude.esusab.ras.atendindividual
 namespace php br.gov.saude.esusab.ras.atendindividual
@@ -51,6 +52,7 @@ struct FichaAtendimentoIndividualChildThrift {
 	39:optional common.MedicoesThrift medicoes;
 	40:optional list<common.ProblemaCondicaoThrift> problemasCondicoes;
 	41:optional common.IvcfThrift ivcf;
+	43:optional list<solicitacao_oci.SolicitacaoOciThrift> solicitacoesOci;
 }
 
 struct FichaAtendimentoIndividualMasterThrift {

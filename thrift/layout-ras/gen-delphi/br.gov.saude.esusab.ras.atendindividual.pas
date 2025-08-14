@@ -17,7 +17,8 @@ uses
   Thrift.Collections,
   Thrift.Protocol,
   Thrift.Transport,
-  br.gov.saude.esusab.ras.common;
+  br.gov.saude.esusab.ras.common,
+  br.gov.saude.esusab.ras.solicitacaooci;
 
 const
   cbr_gov_saude_esusab_ras_atendindividual_Option_AnsiStr_Binary = False;
@@ -186,6 +187,8 @@ type
     procedure SetProblemasCondicoes( const Value: IThriftList<IProblemaCondicaoThrift>);
     function GetIvcf: IIvcfThrift;
     procedure SetIvcf( const Value: IIvcfThrift);
+    function GetSolicitacoesOci: IThriftList<ISolicitacaoOciThrift>;
+    procedure SetSolicitacoesOci( const Value: IThriftList<ISolicitacaoOciThrift>);
 
     property NumeroProntuario: string read GetNumeroProntuario write SetNumeroProntuario;
     property Cns: string read GetCns write SetCns;
@@ -221,6 +224,7 @@ type
     property Medicoes: IMedicoesThrift read GetMedicoes write SetMedicoes;
     property ProblemasCondicoes: IThriftList<IProblemaCondicaoThrift> read GetProblemasCondicoes write SetProblemasCondicoes;
     property Ivcf: IIvcfThrift read GetIvcf write SetIvcf;
+    property SolicitacoesOci: IThriftList<ISolicitacaoOciThrift> read GetSolicitacoesOci write SetSolicitacoesOci;
 
     function Get__isset_NumeroProntuario: Boolean;
     function Get__isset_Cns: Boolean;
@@ -256,6 +260,7 @@ type
     function Get__isset_Medicoes: Boolean;
     function Get__isset_ProblemasCondicoes: Boolean;
     function Get__isset_Ivcf: Boolean;
+    function Get__isset_SolicitacoesOci: Boolean;
 
     property __isset_NumeroProntuario: Boolean read Get__isset_NumeroProntuario;
     property __isset_Cns: Boolean read Get__isset_Cns;
@@ -291,6 +296,7 @@ type
     property __isset_Medicoes: Boolean read Get__isset_Medicoes;
     property __isset_ProblemasCondicoes: Boolean read Get__isset_ProblemasCondicoes;
     property __isset_Ivcf: Boolean read Get__isset_Ivcf;
+    property __isset_SolicitacoesOci: Boolean read Get__isset_SolicitacoesOci;
   end;
 
   TFichaAtendimentoIndividualChildThriftImpl = class(TInterfacedObject, IBase, IFichaAtendimentoIndividualChildThrift)
@@ -329,6 +335,7 @@ type
     FMedicoes: IMedicoesThrift;
     FProblemasCondicoes: IThriftList<IProblemaCondicaoThrift>;
     FIvcf: IIvcfThrift;
+    FSolicitacoesOci: IThriftList<ISolicitacaoOciThrift>;
     
     F__isset_NumeroProntuario: Boolean;
     F__isset_Cns: Boolean;
@@ -364,6 +371,7 @@ type
     F__isset_Medicoes: Boolean;
     F__isset_ProblemasCondicoes: Boolean;
     F__isset_Ivcf: Boolean;
+    F__isset_SolicitacoesOci: Boolean;
     
     function GetNumeroProntuario: string;
     procedure SetNumeroProntuario( const Value: string);
@@ -433,6 +441,8 @@ type
     procedure SetProblemasCondicoes( const Value: IThriftList<IProblemaCondicaoThrift>);
     function GetIvcf: IIvcfThrift;
     procedure SetIvcf( const Value: IIvcfThrift);
+    function GetSolicitacoesOci: IThriftList<ISolicitacaoOciThrift>;
+    procedure SetSolicitacoesOci( const Value: IThriftList<ISolicitacaoOciThrift>);
 
     function Get__isset_NumeroProntuario: Boolean;
     function Get__isset_Cns: Boolean;
@@ -468,6 +478,7 @@ type
     function Get__isset_Medicoes: Boolean;
     function Get__isset_ProblemasCondicoes: Boolean;
     function Get__isset_Ivcf: Boolean;
+    function Get__isset_SolicitacoesOci: Boolean;
   public
     constructor Create;
     destructor Destroy; override;
@@ -513,6 +524,7 @@ type
     property Medicoes: IMedicoesThrift read GetMedicoes write SetMedicoes;
     property ProblemasCondicoes: IThriftList<IProblemaCondicaoThrift> read GetProblemasCondicoes write SetProblemasCondicoes;
     property Ivcf: IIvcfThrift read GetIvcf write SetIvcf;
+    property SolicitacoesOci: IThriftList<ISolicitacaoOciThrift> read GetSolicitacoesOci write SetSolicitacoesOci;
 
     // isset
     property __isset_NumeroProntuario: Boolean read Get__isset_NumeroProntuario;
@@ -549,6 +561,7 @@ type
     property __isset_Medicoes: Boolean read Get__isset_Medicoes;
     property __isset_ProblemasCondicoes: Boolean read Get__isset_ProblemasCondicoes;
     property __isset_Ivcf: Boolean read Get__isset_Ivcf;
+    property __isset_SolicitacoesOci: Boolean read Get__isset_SolicitacoesOci;
   end;
 
   IFichaAtendimentoIndividualMasterThrift = interface(IBase)
@@ -1463,6 +1476,22 @@ begin
   Result := F__isset_Ivcf;
 end;
 
+function TFichaAtendimentoIndividualChildThriftImpl.GetSolicitacoesOci: IThriftList<ISolicitacaoOciThrift>;
+begin
+  Result := FSolicitacoesOci;
+end;
+
+procedure TFichaAtendimentoIndividualChildThriftImpl.SetSolicitacoesOci( const Value: IThriftList<ISolicitacaoOciThrift>);
+begin
+  F__isset_SolicitacoesOci := True;
+  FSolicitacoesOci := Value;
+end;
+
+function TFichaAtendimentoIndividualChildThriftImpl.Get__isset_SolicitacoesOci: Boolean;
+begin
+  Result := F__isset_SolicitacoesOci;
+end;
+
 procedure TFichaAtendimentoIndividualChildThriftImpl.Read( const iprot: IProtocol);
 var
   field_ : IField;
@@ -1492,6 +1521,9 @@ var
   _list28: IList;
   _i29: Integer;
   _elem30: IProblemaCondicaoThrift;
+  _list31: IList;
+  _i32: Integer;
+  _elem33: ISolicitacaoOciThrift;
 
 begin
   tracker := iprot.NextRecursionLevel;
@@ -1874,6 +1906,23 @@ begin
           begin
             TProtocolUtil.Skip(iprot, field_.Type_);
           end;
+        end;
+        43: begin
+          if (field_.Type_ = TType.List) then
+          begin
+            SolicitacoesOci := TThriftListImpl<ISolicitacaoOciThrift>.Create;
+            _list31 := iprot.ReadListBegin();
+            for _i32 := 0 to _list31.Count - 1 do
+            begin
+              _elem33 := TSolicitacaoOciThriftImpl.Create;
+              _elem33.Read(iprot);
+              SolicitacoesOci.Add(_elem33);
+            end;
+            iprot.ReadListEnd();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
         end
         else begin
           TProtocolUtil.Skip(iprot, field_.Type_);
@@ -1891,22 +1940,24 @@ var
   struc : IStruct;
   field_ : IField;
   tracker : IProtocolRecursionTracker;
-  list_31 : IList;
-  _iter32: IExameThrift;
-  list_33 : IList;
-  _iter34: Int64;
-  list_35 : IList;
-  _iter36: Int64;
-  list_37 : IList;
-  _iter38: IMedicamentoThrift;
-  list_39 : IList;
-  _iter40: IEncaminhamentoExternoThrift;
-  list_41 : IList;
-  _iter42: IResultadosExameThrift;
-  list_43 : IList;
-  _iter44: Int64;
-  list_45 : IList;
-  _iter46: IProblemaCondicaoThrift;
+  list_34 : IList;
+  _iter35: IExameThrift;
+  list_36 : IList;
+  _iter37: Int64;
+  list_38 : IList;
+  _iter39: Int64;
+  list_40 : IList;
+  _iter41: IMedicamentoThrift;
+  list_42 : IList;
+  _iter43: IEncaminhamentoExternoThrift;
+  list_44 : IList;
+  _iter45: IResultadosExameThrift;
+  list_46 : IList;
+  _iter47: Int64;
+  list_48 : IList;
+  _iter49: IProblemaCondicaoThrift;
+  list_50 : IList;
+  _iter51: ISolicitacaoOciThrift;
 begin
   tracker := oprot.NextRecursionLevel;
   struc := TStructImpl.Create('FichaAtendimentoIndividualChildThrift');
@@ -2017,11 +2068,11 @@ begin
     field_.Type_  := TType.List;
     field_.ID := 17;
     oprot.WriteFieldBegin(field_);
-    list_31 := TListImpl.Create(TType.Struct, Exame.Count);
-    oprot.WriteListBegin( list_31);
-    for _iter32 in Exame do
+    list_34 := TListImpl.Create(TType.Struct, Exame.Count);
+    oprot.WriteListBegin( list_34);
+    for _iter35 in Exame do
     begin
-      _iter32.Write(oprot);
+      _iter35.Write(oprot);
     end;
     oprot.WriteListEnd();
     oprot.WriteFieldEnd();
@@ -2059,11 +2110,11 @@ begin
     field_.Type_  := TType.List;
     field_.ID := 21;
     oprot.WriteFieldBegin(field_);
-    list_33 := TListImpl.Create(TType.I64, Nasfs.Count);
-    oprot.WriteListBegin( list_33);
-    for _iter34 in Nasfs do
+    list_36 := TListImpl.Create(TType.I64, Nasfs.Count);
+    oprot.WriteListBegin( list_36);
+    for _iter37 in Nasfs do
     begin
-      oprot.WriteI64(_iter34);
+      oprot.WriteI64(_iter37);
     end;
     oprot.WriteListEnd();
     oprot.WriteFieldEnd();
@@ -2074,11 +2125,11 @@ begin
     field_.Type_  := TType.List;
     field_.ID := 22;
     oprot.WriteFieldBegin(field_);
-    list_35 := TListImpl.Create(TType.I64, Condutas.Count);
-    oprot.WriteListBegin( list_35);
-    for _iter36 in Condutas do
+    list_38 := TListImpl.Create(TType.I64, Condutas.Count);
+    oprot.WriteListBegin( list_38);
+    for _iter39 in Condutas do
     begin
-      oprot.WriteI64(_iter36);
+      oprot.WriteI64(_iter39);
     end;
     oprot.WriteListEnd();
     oprot.WriteFieldEnd();
@@ -2152,11 +2203,11 @@ begin
     field_.Type_  := TType.List;
     field_.ID := 31;
     oprot.WriteFieldBegin(field_);
-    list_37 := TListImpl.Create(TType.Struct, Medicamentos.Count);
-    oprot.WriteListBegin( list_37);
-    for _iter38 in Medicamentos do
+    list_40 := TListImpl.Create(TType.Struct, Medicamentos.Count);
+    oprot.WriteListBegin( list_40);
+    for _iter41 in Medicamentos do
     begin
-      _iter38.Write(oprot);
+      _iter41.Write(oprot);
     end;
     oprot.WriteListEnd();
     oprot.WriteFieldEnd();
@@ -2167,11 +2218,11 @@ begin
     field_.Type_  := TType.List;
     field_.ID := 32;
     oprot.WriteFieldBegin(field_);
-    list_39 := TListImpl.Create(TType.Struct, Encaminhamentos.Count);
-    oprot.WriteListBegin( list_39);
-    for _iter40 in Encaminhamentos do
+    list_42 := TListImpl.Create(TType.Struct, Encaminhamentos.Count);
+    oprot.WriteListBegin( list_42);
+    for _iter43 in Encaminhamentos do
     begin
-      _iter40.Write(oprot);
+      _iter43.Write(oprot);
     end;
     oprot.WriteListEnd();
     oprot.WriteFieldEnd();
@@ -2182,11 +2233,11 @@ begin
     field_.Type_  := TType.List;
     field_.ID := 33;
     oprot.WriteFieldBegin(field_);
-    list_41 := TListImpl.Create(TType.Struct, ResultadosExames.Count);
-    oprot.WriteListBegin( list_41);
-    for _iter42 in ResultadosExames do
+    list_44 := TListImpl.Create(TType.Struct, ResultadosExames.Count);
+    oprot.WriteListBegin( list_44);
+    for _iter45 in ResultadosExames do
     begin
-      _iter42.Write(oprot);
+      _iter45.Write(oprot);
     end;
     oprot.WriteListEnd();
     oprot.WriteFieldEnd();
@@ -2224,11 +2275,11 @@ begin
     field_.Type_  := TType.List;
     field_.ID := 38;
     oprot.WriteFieldBegin(field_);
-    list_43 := TListImpl.Create(TType.I64, Emultis.Count);
-    oprot.WriteListBegin( list_43);
-    for _iter44 in Emultis do
+    list_46 := TListImpl.Create(TType.I64, Emultis.Count);
+    oprot.WriteListBegin( list_46);
+    for _iter47 in Emultis do
     begin
-      oprot.WriteI64(_iter44);
+      oprot.WriteI64(_iter47);
     end;
     oprot.WriteListEnd();
     oprot.WriteFieldEnd();
@@ -2248,11 +2299,11 @@ begin
     field_.Type_  := TType.List;
     field_.ID := 40;
     oprot.WriteFieldBegin(field_);
-    list_45 := TListImpl.Create(TType.Struct, ProblemasCondicoes.Count);
-    oprot.WriteListBegin( list_45);
-    for _iter46 in ProblemasCondicoes do
+    list_48 := TListImpl.Create(TType.Struct, ProblemasCondicoes.Count);
+    oprot.WriteListBegin( list_48);
+    for _iter49 in ProblemasCondicoes do
     begin
-      _iter46.Write(oprot);
+      _iter49.Write(oprot);
     end;
     oprot.WriteListEnd();
     oprot.WriteFieldEnd();
@@ -2266,227 +2317,248 @@ begin
     Ivcf.Write(oprot);
     oprot.WriteFieldEnd();
   end;
+  if (SolicitacoesOci <> nil) and __isset_SolicitacoesOci then
+  begin
+    field_.Name := 'solicitacoesOci';
+    field_.Type_  := TType.List;
+    field_.ID := 43;
+    oprot.WriteFieldBegin(field_);
+    list_50 := TListImpl.Create(TType.Struct, SolicitacoesOci.Count);
+    oprot.WriteListBegin( list_50);
+    for _iter51 in SolicitacoesOci do
+    begin
+      _iter51.Write(oprot);
+    end;
+    oprot.WriteListEnd();
+    oprot.WriteFieldEnd();
+  end;
   oprot.WriteFieldStop();
   oprot.WriteStructEnd();
 end;
 
 function TFichaAtendimentoIndividualChildThriftImpl.ToString: string;
 var
-  _sb47 : TThriftStringBuilder;
-  _first48 : Boolean;
+  _sb52 : TThriftStringBuilder;
+  _first53 : Boolean;
 begin
-  _sb47 := TThriftStringBuilder.Create('(');
+  _sb52 := TThriftStringBuilder.Create('(');
   try
-    _first48 := TRUE;
+    _first53 := TRUE;
     if (__isset_NumeroProntuario) then begin
-      if not _first48 then _sb47.Append(',');
-      _first48 := FALSE;
-      _sb47.Append('NumeroProntuario: ');
-      _sb47.Append(NumeroProntuario);
+      if not _first53 then _sb52.Append(',');
+      _first53 := FALSE;
+      _sb52.Append('NumeroProntuario: ');
+      _sb52.Append(NumeroProntuario);
     end;
     if (__isset_Cns) then begin
-      if not _first48 then _sb47.Append(',');
-      _first48 := FALSE;
-      _sb47.Append('Cns: ');
-      _sb47.Append(Cns);
+      if not _first53 then _sb52.Append(',');
+      _first53 := FALSE;
+      _sb52.Append('Cns: ');
+      _sb52.Append(Cns);
     end;
     if (__isset_DataNascimento) then begin
-      if not _first48 then _sb47.Append(',');
-      _first48 := FALSE;
-      _sb47.Append('DataNascimento: ');
-      _sb47.Append(DataNascimento);
+      if not _first53 then _sb52.Append(',');
+      _first53 := FALSE;
+      _sb52.Append('DataNascimento: ');
+      _sb52.Append(DataNascimento);
     end;
     if (__isset_LocalDeAtendimento) then begin
-      if not _first48 then _sb47.Append(',');
-      _first48 := FALSE;
-      _sb47.Append('LocalDeAtendimento: ');
-      _sb47.Append(LocalDeAtendimento);
+      if not _first53 then _sb52.Append(',');
+      _first53 := FALSE;
+      _sb52.Append('LocalDeAtendimento: ');
+      _sb52.Append(LocalDeAtendimento);
     end;
     if (__isset_Sexo) then begin
-      if not _first48 then _sb47.Append(',');
-      _first48 := FALSE;
-      _sb47.Append('Sexo: ');
-      _sb47.Append(Sexo);
+      if not _first53 then _sb52.Append(',');
+      _first53 := FALSE;
+      _sb52.Append('Sexo: ');
+      _sb52.Append(Sexo);
     end;
     if (__isset_Turno) then begin
-      if not _first48 then _sb47.Append(',');
-      _first48 := FALSE;
-      _sb47.Append('Turno: ');
-      _sb47.Append(Turno);
+      if not _first53 then _sb52.Append(',');
+      _first53 := FALSE;
+      _sb52.Append('Turno: ');
+      _sb52.Append(Turno);
     end;
     if (__isset_TipoAtendimento) then begin
-      if not _first48 then _sb47.Append(',');
-      _first48 := FALSE;
-      _sb47.Append('TipoAtendimento: ');
-      _sb47.Append(TipoAtendimento);
+      if not _first53 then _sb52.Append(',');
+      _first53 := FALSE;
+      _sb52.Append('TipoAtendimento: ');
+      _sb52.Append(TipoAtendimento);
     end;
     if (__isset_AleitamentoMaterno) then begin
-      if not _first48 then _sb47.Append(',');
-      _first48 := FALSE;
-      _sb47.Append('AleitamentoMaterno: ');
-      _sb47.Append(AleitamentoMaterno);
+      if not _first53 then _sb52.Append(',');
+      _first53 := FALSE;
+      _sb52.Append('AleitamentoMaterno: ');
+      _sb52.Append(AleitamentoMaterno);
     end;
     if (__isset_DumDaGestante) then begin
-      if not _first48 then _sb47.Append(',');
-      _first48 := FALSE;
-      _sb47.Append('DumDaGestante: ');
-      _sb47.Append(DumDaGestante);
+      if not _first53 then _sb52.Append(',');
+      _first53 := FALSE;
+      _sb52.Append('DumDaGestante: ');
+      _sb52.Append(DumDaGestante);
     end;
     if (__isset_IdadeGestacional) then begin
-      if not _first48 then _sb47.Append(',');
-      _first48 := FALSE;
-      _sb47.Append('IdadeGestacional: ');
-      _sb47.Append(IdadeGestacional);
+      if not _first53 then _sb52.Append(',');
+      _first53 := FALSE;
+      _sb52.Append('IdadeGestacional: ');
+      _sb52.Append(IdadeGestacional);
     end;
     if (__isset_AtencaoDomiciliarModalidade) then begin
-      if not _first48 then _sb47.Append(',');
-      _first48 := FALSE;
-      _sb47.Append('AtencaoDomiciliarModalidade: ');
-      _sb47.Append(AtencaoDomiciliarModalidade);
+      if not _first53 then _sb52.Append(',');
+      _first53 := FALSE;
+      _sb52.Append('AtencaoDomiciliarModalidade: ');
+      _sb52.Append(AtencaoDomiciliarModalidade);
     end;
     if (Exame <> nil) and __isset_Exame then begin
-      if not _first48 then _sb47.Append(',');
-      _first48 := FALSE;
-      _sb47.Append('Exame: ');
-      _sb47.Append(Exame);
+      if not _first53 then _sb52.Append(',');
+      _first53 := FALSE;
+      _sb52.Append('Exame: ');
+      _sb52.Append(Exame);
     end;
     if (__isset_VacinaEmDia) then begin
-      if not _first48 then _sb47.Append(',');
-      _first48 := FALSE;
-      _sb47.Append('VacinaEmDia: ');
-      _sb47.Append(VacinaEmDia);
+      if not _first53 then _sb52.Append(',');
+      _first53 := FALSE;
+      _sb52.Append('VacinaEmDia: ');
+      _sb52.Append(VacinaEmDia);
     end;
     if (__isset_Pic) then begin
-      if not _first48 then _sb47.Append(',');
-      _first48 := FALSE;
-      _sb47.Append('Pic: ');
-      _sb47.Append(Pic);
+      if not _first53 then _sb52.Append(',');
+      _first53 := FALSE;
+      _sb52.Append('Pic: ');
+      _sb52.Append(Pic);
     end;
     if (__isset_FicouEmObservacao) then begin
-      if not _first48 then _sb47.Append(',');
-      _first48 := FALSE;
-      _sb47.Append('FicouEmObservacao: ');
-      _sb47.Append(FicouEmObservacao);
+      if not _first53 then _sb52.Append(',');
+      _first53 := FALSE;
+      _sb52.Append('FicouEmObservacao: ');
+      _sb52.Append(FicouEmObservacao);
     end;
     if (Nasfs <> nil) and __isset_Nasfs then begin
-      if not _first48 then _sb47.Append(',');
-      _first48 := FALSE;
-      _sb47.Append('Nasfs: ');
-      _sb47.Append(Nasfs);
+      if not _first53 then _sb52.Append(',');
+      _first53 := FALSE;
+      _sb52.Append('Nasfs: ');
+      _sb52.Append(Nasfs);
     end;
     if (Condutas <> nil) and __isset_Condutas then begin
-      if not _first48 then _sb47.Append(',');
-      _first48 := FALSE;
-      _sb47.Append('Condutas: ');
-      _sb47.Append(Condutas);
+      if not _first53 then _sb52.Append(',');
+      _first53 := FALSE;
+      _sb52.Append('Condutas: ');
+      _sb52.Append(Condutas);
     end;
     if (__isset_StGravidezPlanejada) then begin
-      if not _first48 then _sb47.Append(',');
-      _first48 := FALSE;
-      _sb47.Append('StGravidezPlanejada: ');
-      _sb47.Append(StGravidezPlanejada);
+      if not _first53 then _sb52.Append(',');
+      _first53 := FALSE;
+      _sb52.Append('StGravidezPlanejada: ');
+      _sb52.Append(StGravidezPlanejada);
     end;
     if (__isset_NuGestasPrevias) then begin
-      if not _first48 then _sb47.Append(',');
-      _first48 := FALSE;
-      _sb47.Append('NuGestasPrevias: ');
-      _sb47.Append(NuGestasPrevias);
+      if not _first53 then _sb52.Append(',');
+      _first53 := FALSE;
+      _sb52.Append('NuGestasPrevias: ');
+      _sb52.Append(NuGestasPrevias);
     end;
     if (__isset_NuPartos) then begin
-      if not _first48 then _sb47.Append(',');
-      _first48 := FALSE;
-      _sb47.Append('NuPartos: ');
-      _sb47.Append(NuPartos);
+      if not _first53 then _sb52.Append(',');
+      _first53 := FALSE;
+      _sb52.Append('NuPartos: ');
+      _sb52.Append(NuPartos);
     end;
     if (__isset_RacionalidadeSaude) then begin
-      if not _first48 then _sb47.Append(',');
-      _first48 := FALSE;
-      _sb47.Append('RacionalidadeSaude: ');
-      _sb47.Append(RacionalidadeSaude);
+      if not _first53 then _sb52.Append(',');
+      _first53 := FALSE;
+      _sb52.Append('RacionalidadeSaude: ');
+      _sb52.Append(RacionalidadeSaude);
     end;
     if (__isset_DataHoraInicialAtendimento) then begin
-      if not _first48 then _sb47.Append(',');
-      _first48 := FALSE;
-      _sb47.Append('DataHoraInicialAtendimento: ');
-      _sb47.Append(DataHoraInicialAtendimento);
+      if not _first53 then _sb52.Append(',');
+      _first53 := FALSE;
+      _sb52.Append('DataHoraInicialAtendimento: ');
+      _sb52.Append(DataHoraInicialAtendimento);
     end;
     if (__isset_DataHoraFinalAtendimento) then begin
-      if not _first48 then _sb47.Append(',');
-      _first48 := FALSE;
-      _sb47.Append('DataHoraFinalAtendimento: ');
-      _sb47.Append(DataHoraFinalAtendimento);
+      if not _first53 then _sb52.Append(',');
+      _first53 := FALSE;
+      _sb52.Append('DataHoraFinalAtendimento: ');
+      _sb52.Append(DataHoraFinalAtendimento);
     end;
     if (__isset_CpfCidadao) then begin
-      if not _first48 then _sb47.Append(',');
-      _first48 := FALSE;
-      _sb47.Append('CpfCidadao: ');
-      _sb47.Append(CpfCidadao);
+      if not _first53 then _sb52.Append(',');
+      _first53 := FALSE;
+      _sb52.Append('CpfCidadao: ');
+      _sb52.Append(CpfCidadao);
     end;
     if (Medicamentos <> nil) and __isset_Medicamentos then begin
-      if not _first48 then _sb47.Append(',');
-      _first48 := FALSE;
-      _sb47.Append('Medicamentos: ');
-      _sb47.Append(Medicamentos);
+      if not _first53 then _sb52.Append(',');
+      _first53 := FALSE;
+      _sb52.Append('Medicamentos: ');
+      _sb52.Append(Medicamentos);
     end;
     if (Encaminhamentos <> nil) and __isset_Encaminhamentos then begin
-      if not _first48 then _sb47.Append(',');
-      _first48 := FALSE;
-      _sb47.Append('Encaminhamentos: ');
-      _sb47.Append(Encaminhamentos);
+      if not _first53 then _sb52.Append(',');
+      _first53 := FALSE;
+      _sb52.Append('Encaminhamentos: ');
+      _sb52.Append(Encaminhamentos);
     end;
     if (ResultadosExames <> nil) and __isset_ResultadosExames then begin
-      if not _first48 then _sb47.Append(',');
-      _first48 := FALSE;
-      _sb47.Append('ResultadosExames: ');
-      _sb47.Append(ResultadosExames);
+      if not _first53 then _sb52.Append(',');
+      _first53 := FALSE;
+      _sb52.Append('ResultadosExames: ');
+      _sb52.Append(ResultadosExames);
     end;
     if (FinalizadorObservacao <> nil) and __isset_FinalizadorObservacao then begin
-      if not _first48 then _sb47.Append(',');
-      _first48 := FALSE;
-      _sb47.Append('FinalizadorObservacao: ');
-      if (FinalizadorObservacao = nil) then _sb47.Append('<null>') else _sb47.Append(FinalizadorObservacao.ToString());
+      if not _first53 then _sb52.Append(',');
+      _first53 := FALSE;
+      _sb52.Append('FinalizadorObservacao: ');
+      if (FinalizadorObservacao = nil) then _sb52.Append('<null>') else _sb52.Append(FinalizadorObservacao.ToString());
     end;
     if (__isset_TipoParticipacaoCidadao) then begin
-      if not _first48 then _sb47.Append(',');
-      _first48 := FALSE;
-      _sb47.Append('TipoParticipacaoCidadao: ');
-      _sb47.Append(TipoParticipacaoCidadao);
+      if not _first53 then _sb52.Append(',');
+      _first53 := FALSE;
+      _sb52.Append('TipoParticipacaoCidadao: ');
+      _sb52.Append(TipoParticipacaoCidadao);
     end;
     if (__isset_TipoParticipacaoProfissionalConvidado) then begin
-      if not _first48 then _sb47.Append(',');
-      _first48 := FALSE;
-      _sb47.Append('TipoParticipacaoProfissionalConvidado: ');
-      _sb47.Append(TipoParticipacaoProfissionalConvidado);
+      if not _first53 then _sb52.Append(',');
+      _first53 := FALSE;
+      _sb52.Append('TipoParticipacaoProfissionalConvidado: ');
+      _sb52.Append(TipoParticipacaoProfissionalConvidado);
     end;
     if (Emultis <> nil) and __isset_Emultis then begin
-      if not _first48 then _sb47.Append(',');
-      _first48 := FALSE;
-      _sb47.Append('Emultis: ');
-      _sb47.Append(Emultis);
+      if not _first53 then _sb52.Append(',');
+      _first53 := FALSE;
+      _sb52.Append('Emultis: ');
+      _sb52.Append(Emultis);
     end;
     if (Medicoes <> nil) and __isset_Medicoes then begin
-      if not _first48 then _sb47.Append(',');
-      _first48 := FALSE;
-      _sb47.Append('Medicoes: ');
-      if (Medicoes = nil) then _sb47.Append('<null>') else _sb47.Append(Medicoes.ToString());
+      if not _first53 then _sb52.Append(',');
+      _first53 := FALSE;
+      _sb52.Append('Medicoes: ');
+      if (Medicoes = nil) then _sb52.Append('<null>') else _sb52.Append(Medicoes.ToString());
     end;
     if (ProblemasCondicoes <> nil) and __isset_ProblemasCondicoes then begin
-      if not _first48 then _sb47.Append(',');
-      _first48 := FALSE;
-      _sb47.Append('ProblemasCondicoes: ');
-      _sb47.Append(ProblemasCondicoes);
+      if not _first53 then _sb52.Append(',');
+      _first53 := FALSE;
+      _sb52.Append('ProblemasCondicoes: ');
+      _sb52.Append(ProblemasCondicoes);
     end;
     if (Ivcf <> nil) and __isset_Ivcf then begin
-      if not _first48 then _sb47.Append(',');
-      _first48 := FALSE;
-      _sb47.Append('Ivcf: ');
-      if (Ivcf = nil) then _sb47.Append('<null>') else _sb47.Append(Ivcf.ToString());
+      if not _first53 then _sb52.Append(',');
+      _first53 := FALSE;
+      _sb52.Append('Ivcf: ');
+      if (Ivcf = nil) then _sb52.Append('<null>') else _sb52.Append(Ivcf.ToString());
     end;
-    _sb47.Append(')');
-    Result := _sb47.ToString;
-    if _first48 then {prevent warning};
+    if (SolicitacoesOci <> nil) and __isset_SolicitacoesOci then begin
+      if not _first53 then _sb52.Append(',');
+      _first53 := FALSE;
+      _sb52.Append('SolicitacoesOci: ');
+      _sb52.Append(SolicitacoesOci);
+    end;
+    _sb52.Append(')');
+    Result := _sb52.ToString;
+    if _first53 then {prevent warning};
   finally
-    _sb47.Free;
+    _sb52.Free;
   end;
 end;
 
@@ -2564,9 +2636,9 @@ var
   struc : IStruct;
   tracker : IProtocolRecursionTracker;
   _req_isset_UuidFicha : Boolean;
-  _list49: IList;
-  _i50: Integer;
-  _elem51: IFichaAtendimentoIndividualChildThrift;
+  _list54: IList;
+  _i55: Integer;
+  _elem56: IFichaAtendimentoIndividualChildThrift;
 
 begin
   tracker := iprot.NextRecursionLevel;
@@ -2595,12 +2667,12 @@ begin
           if (field_.Type_ = TType.List) then
           begin
             AtendimentosIndividuais := TThriftListImpl<IFichaAtendimentoIndividualChildThrift>.Create;
-            _list49 := iprot.ReadListBegin();
-            for _i50 := 0 to _list49.Count - 1 do
+            _list54 := iprot.ReadListBegin();
+            for _i55 := 0 to _list54.Count - 1 do
             begin
-              _elem51 := TFichaAtendimentoIndividualChildThriftImpl.Create;
-              _elem51.Read(iprot);
-              AtendimentosIndividuais.Add(_elem51);
+              _elem56 := TFichaAtendimentoIndividualChildThriftImpl.Create;
+              _elem56.Read(iprot);
+              AtendimentosIndividuais.Add(_elem56);
             end;
             iprot.ReadListEnd();
           end else
@@ -2645,8 +2717,8 @@ var
   struc : IStruct;
   field_ : IField;
   tracker : IProtocolRecursionTracker;
-  list_52 : IList;
-  _iter53: IFichaAtendimentoIndividualChildThrift;
+  list_57 : IList;
+  _iter58: IFichaAtendimentoIndividualChildThrift;
 begin
   tracker := oprot.NextRecursionLevel;
   struc := TStructImpl.Create('FichaAtendimentoIndividualMasterThrift');
@@ -2667,11 +2739,11 @@ begin
     field_.Type_  := TType.List;
     field_.ID := 2;
     oprot.WriteFieldBegin(field_);
-    list_52 := TListImpl.Create(TType.Struct, AtendimentosIndividuais.Count);
-    oprot.WriteListBegin( list_52);
-    for _iter53 in AtendimentosIndividuais do
+    list_57 := TListImpl.Create(TType.Struct, AtendimentosIndividuais.Count);
+    oprot.WriteListBegin( list_57);
+    for _iter58 in AtendimentosIndividuais do
     begin
-      _iter53.Write(oprot);
+      _iter58.Write(oprot);
     end;
     oprot.WriteListEnd();
     oprot.WriteFieldEnd();
@@ -2698,36 +2770,36 @@ end;
 
 function TFichaAtendimentoIndividualMasterThriftImpl.ToString: string;
 var
-  _sb54 : TThriftStringBuilder;
-  _first55 : Boolean;
+  _sb59 : TThriftStringBuilder;
+  _first60 : Boolean;
 begin
-  _sb54 := TThriftStringBuilder.Create('(');
+  _sb59 := TThriftStringBuilder.Create('(');
   try
-    _first55 := TRUE;
+    _first60 := TRUE;
     if (HeaderTransport <> nil) and __isset_HeaderTransport then begin
-      if not _first55 then _sb54.Append(',');
-      _first55 := FALSE;
-      _sb54.Append('HeaderTransport: ');
-      if (HeaderTransport = nil) then _sb54.Append('<null>') else _sb54.Append(HeaderTransport.ToString());
+      if not _first60 then _sb59.Append(',');
+      _first60 := FALSE;
+      _sb59.Append('HeaderTransport: ');
+      if (HeaderTransport = nil) then _sb59.Append('<null>') else _sb59.Append(HeaderTransport.ToString());
     end;
     if (AtendimentosIndividuais <> nil) and __isset_AtendimentosIndividuais then begin
-      if not _first55 then _sb54.Append(',');
-      _first55 := FALSE;
-      _sb54.Append('AtendimentosIndividuais: ');
-      _sb54.Append(AtendimentosIndividuais);
+      if not _first60 then _sb59.Append(',');
+      _first60 := FALSE;
+      _sb59.Append('AtendimentosIndividuais: ');
+      _sb59.Append(AtendimentosIndividuais);
     end;
-    if not _first55 then _sb54.Append(',');
-    _sb54.Append('UuidFicha: ');
-    _sb54.Append(UuidFicha);
+    if not _first60 then _sb59.Append(',');
+    _sb59.Append('UuidFicha: ');
+    _sb59.Append(UuidFicha);
     if (__isset_TpCdsOrigem) then begin
-      _sb54.Append(', TpCdsOrigem: ');
-      _sb54.Append(TpCdsOrigem);
+      _sb59.Append(', TpCdsOrigem: ');
+      _sb59.Append(TpCdsOrigem);
     end;
-    _sb54.Append(')');
-    Result := _sb54.ToString;
-    if _first55 then {prevent warning};
+    _sb59.Append(')');
+    Result := _sb59.ToString;
+    if _first60 then {prevent warning};
   finally
-    _sb54.Free;
+    _sb59.Free;
   end;
 end;
 

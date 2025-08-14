@@ -1,4 +1,5 @@
 include "./common.thrift"
+include "./solicitacao_oci.thrift"
 
 namespace java br.gov.saude.esusab.ras.atendodonto
 namespace php br.gov.saude.esusab.ras.atendodonto
@@ -38,6 +39,7 @@ struct FichaAtendimentoOdontologicoChildThrift {
 	28:optional list<common.ProblemaCondicaoThrift> problemasCondicoes;
 	29:optional common.IvcfThrift ivcf;
 	30:optional list<common.ExameThrift> exame;
+	31:optional list<solicitacao_oci.SolicitacaoOciThrift> solicitacoesOci;
 }
 
 struct FichaAtendimentoOdontologicoMasterThrift {

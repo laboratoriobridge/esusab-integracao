@@ -29,7 +29,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 7.2.1</span>
+        <span class="label">versão 7.2.2</span>
       
     </a>
 
@@ -79,7 +79,7 @@
           
         
           
-            <li><a title="Layout e-SUS APS de Dados e Interface Versão 7.2.1" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 7.2.1</a></li>
+            <li><a title="Layout e-SUS APS de Dados e Interface Versão 7.2.2" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 7.2.2</a></li>
           
         
           
@@ -119,9 +119,9 @@
   <ul>
     
       <li>
-        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 7.2.1" href="/ledi/documentacao/index.html" class="back-link">
+        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 7.2.2" href="/ledi/documentacao/index.html" class="back-link">
           <i class="icon icon-back"></i> Voltar
-          <small>(Layout e-SUS APS de Dados e Interface Versão 7.2.1)</small>
+          <small>(Layout e-SUS APS de Dados e Interface Versão 7.2.2)</small>
         </a>
       </li>
     
@@ -254,7 +254,7 @@
     <p class="post-meta">
       <a class="btn" href="/pdf.html?include=/ledi/documentacao/estrutura_arquivos/dicionario-fvd.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 06/12/2024</span>
+        <span class="label" title="Data da última modificação">Alterado em 13/08/2025</span>
       
     </p>
   </header>
@@ -970,6 +970,344 @@
 <p><strong>Regra:</strong> Quando preenchido, deverá ser informado o valor do campo <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fcd.html#11-uuidfichaoriginadora">UUID origem da ficha de cadastro domiciliar</a> pertencente à <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fcd.html">Ficha de Cadastro Domiciliar e Territorial</a>.</p>
 
 <p><strong>Referência:</strong> Para ver a referência sobre o UUID, acesse: <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">UUID Wikipedia</a>.</p>
+
+<h3 id="23-ivcf">#23 ivcf</h3>
+
+<p>Registro de IVCF-20 (Índice de Vulnerabilidade Clínico-Funcional).</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Ivcf</td>
+<td>Não</td>
+<td>0</td>
+<td>1</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> Só pode ser preenchido se a idade do cidadão na data do atendimento for 60 anos ou mais.</p>
+
+<p><strong>Referência:</strong> <a href="#ivcf">ivcf</a>.</p>
+
+<h2 id="ivcf">IVCF</h2>
+
+<h3 id="1-resultado">#1 resultado</h3>
+
+<p>Resultado em pontos do registro.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Integer</td>
+<td>Sim</td>
+<td>0</td>
+<td>2</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> Valor mínimo 0 e máximo 40.</p>
+
+<h3 id="2-hassgidade">#2 hasSgIdade</h3>
+
+<p>Indicador de alteração na dimensão &quot;Idade&quot;.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h3 id="3-hassgpercepcaosaude">#3 hasSgPercepcaoSaude</h3>
+
+<p>Indicador de alteração na dimensão &quot;Percepção da saúde&quot;.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h3 id="4-hassgavdinstrumental">#4 hasSgAvdInstrumental</h3>
+
+<p>Indicador de alteração na dimensão &quot;AVD Instrumental&quot;.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h3 id="5-hassgavdbasica">#5 hasSgAvdBasica</h3>
+
+<p>Indicador de alteração na dimensão &quot;AVD Básica&quot;.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h3 id="6-hassgcognicao">#6 hasSgCognicao</h3>
+
+<p>Indicador de alteração na dimensão &quot;Cognição&quot;.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h3 id="7-hassghumor">#7 hasSgHumor</h3>
+
+<p>Indicador de alteração na dimensão &quot;Humor&quot;.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h3 id="8-hassgalcancepreensaopinca">#8 hasSgAlcancePreensaoPinca</h3>
+
+<p>Indicador de alteração na dimensão &quot;Alcance, preensão e pinça&quot;, do grupo &quot;Mobilidade&quot;.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h3 id="9-hassgcapaerobicamuscular">#9 hasSgCapAerobicaMuscular</h3>
+
+<p>Indicador de alteração na dimensão &quot;Capacidade aeróbica e/ou muscular&quot;, do grupo &quot;Mobilidade&quot;.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h3 id="10-hassgmarcha">#10 hasSgMarcha</h3>
+
+<p>Indicador de alteração na dimensão &quot;Marcha&quot;, do grupo &quot;Mobilidade&quot;.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h3 id="11-hassgcontinencia">#11 hasSgContinencia</h3>
+
+<p>Indicador de alteração na dimensão &quot;Continência esfincteriana&quot;, do grupo &quot;Mobilidade&quot;.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h3 id="12-hassgvisao">#12 hasSgVisao</h3>
+
+<p>Indicador de alteração na dimensão &quot;Visão&quot;, do grupo &quot;Comunicação&quot;.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h3 id="13-hassgaudicao">#13 hasSgAudicao</h3>
+
+<p>Indicador de alteração na dimensão &quot;Audição&quot;, do grupo &quot;Comunicação&quot;.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h3 id="14-hassgcomorbidade">#14 hasSgComorbidade</h3>
+
+<p>Indicador de alteração na dimensão &quot;Comorbidade múltipla&quot;.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h3 id="15-dataresultado">#15 dataResultado</h3>
+
+<p>Data do registro do IVCF-20.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Não pode ser posterior à data atual;</li>
+<li>Não pode ser posterior à dataHoraFinalAtendimento.</li>
+<li>A diferença entre a dataAtendimento e a dataNascimento deve ser maior ou igual a 60 anos. </li>
+</ul>
+
+<p><strong>Referência:</strong> A data deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
 
   </article>
 

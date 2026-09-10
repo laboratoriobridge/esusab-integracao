@@ -18,8 +18,8 @@
 		<uuidFicha>0019615-f4718f9b-2d1d-4072-b94c-77c6b78c5218</uuidFicha>
 		<tpCdsOrigem>3</tpCdsOrigem>
 		<turno>1</turno>
-		<cpfCidadao>31422733521</cpfCidadao>
-		<stNaoPossuiCpf>false</stNaoPossuiCpf>
+		<stNaoPossuiCpf>true</stNaoPossuiCpf>
+		<justificativaNaoPossuiCpf>3</justificativaNaoPossuiCpf>
 		<cpfResponsavelFamiliar>68688625042</cpfResponsavelFamiliar>
 		<dataRealizacaoTesteOlhinho>1551106800000</dataRealizacaoTesteOlhinho>
 		<coResultadoTesteOlhinho>1</coResultadoTesteOlhinho>

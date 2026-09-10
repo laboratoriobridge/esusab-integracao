@@ -158,8 +158,8 @@ public class ExemploFichaProcedimentoThrift {
 		atendimentoProcedimentoThrift2.setDtNascimento(dataNascimento1.getTimeInMillis());
 
 		atendimentoProcedimentoThrift2.setLocalAtendimento(1);
-		atendimentoProcedimentoThrift2.setCpfCidadao("61228957096");
-		atendimentoProcedimentoThrift2.setStNaoPossuiCpf(false);
+		atendimentoProcedimentoThrift2.setStNaoPossuiCpf(true);
+		atendimentoProcedimentoThrift2.setJustificativaNaoPossuiCpf(5);
 		atendimentoProcedimentoThrift2.setNumProntuario("43143");
 		atendimentoProcedimentoThrift2.setSexo(1);
 		atendimentoProcedimentoThrift2.setTurno(1);

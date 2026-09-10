@@ -55,6 +55,10 @@ type
     procedure SetCpfCidadao( const Value: string);
     function GetProblemasCondicoes: IThriftList<IProblemaCondicaoThrift>;
     procedure SetProblemasCondicoes( const Value: IThriftList<IProblemaCondicaoThrift>);
+    function GetStNaoPossuiCpf: Boolean;
+    procedure SetStNaoPossuiCpf( const Value: Boolean);
+    function GetJustificativaNaoPossuiCpf: Int64;
+    procedure SetJustificativaNaoPossuiCpf( const Value: Int64);
 
     property Turno: Int64 read GetTurno write SetTurno;
     property CnsCidadao: string read GetCnsCidadao write SetCnsCidadao;
@@ -68,6 +72,8 @@ type
     property CondutaDesfecho: Int64 read GetCondutaDesfecho write SetCondutaDesfecho;
     property CpfCidadao: string read GetCpfCidadao write SetCpfCidadao;
     property ProblemasCondicoes: IThriftList<IProblemaCondicaoThrift> read GetProblemasCondicoes write SetProblemasCondicoes;
+    property StNaoPossuiCpf: Boolean read GetStNaoPossuiCpf write SetStNaoPossuiCpf;
+    property JustificativaNaoPossuiCpf: Int64 read GetJustificativaNaoPossuiCpf write SetJustificativaNaoPossuiCpf;
 
     function Get__isset_Turno: Boolean;
     function Get__isset_CnsCidadao: Boolean;
@@ -81,6 +87,8 @@ type
     function Get__isset_CondutaDesfecho: Boolean;
     function Get__isset_CpfCidadao: Boolean;
     function Get__isset_ProblemasCondicoes: Boolean;
+    function Get__isset_StNaoPossuiCpf: Boolean;
+    function Get__isset_JustificativaNaoPossuiCpf: Boolean;
 
     property __isset_Turno: Boolean read Get__isset_Turno;
     property __isset_CnsCidadao: Boolean read Get__isset_CnsCidadao;
@@ -94,6 +102,8 @@ type
     property __isset_CondutaDesfecho: Boolean read Get__isset_CondutaDesfecho;
     property __isset_CpfCidadao: Boolean read Get__isset_CpfCidadao;
     property __isset_ProblemasCondicoes: Boolean read Get__isset_ProblemasCondicoes;
+    property __isset_StNaoPossuiCpf: Boolean read Get__isset_StNaoPossuiCpf;
+    property __isset_JustificativaNaoPossuiCpf: Boolean read Get__isset_JustificativaNaoPossuiCpf;
   end;
 
   TFichaAtendimentoDomiciliarChildThriftImpl = class(TInterfacedObject, IBase, IFichaAtendimentoDomiciliarChildThrift)
@@ -110,6 +120,8 @@ type
     FCondutaDesfecho: Int64;
     FCpfCidadao: string;
     FProblemasCondicoes: IThriftList<IProblemaCondicaoThrift>;
+    FStNaoPossuiCpf: Boolean;
+    FJustificativaNaoPossuiCpf: Int64;
     
     F__isset_Turno: Boolean;
     F__isset_CnsCidadao: Boolean;
@@ -123,6 +135,8 @@ type
     F__isset_CondutaDesfecho: Boolean;
     F__isset_CpfCidadao: Boolean;
     F__isset_ProblemasCondicoes: Boolean;
+    F__isset_StNaoPossuiCpf: Boolean;
+    F__isset_JustificativaNaoPossuiCpf: Boolean;
     
     function GetTurno: Int64;
     procedure SetTurno( const Value: Int64);
@@ -148,6 +162,10 @@ type
     procedure SetCpfCidadao( const Value: string);
     function GetProblemasCondicoes: IThriftList<IProblemaCondicaoThrift>;
     procedure SetProblemasCondicoes( const Value: IThriftList<IProblemaCondicaoThrift>);
+    function GetStNaoPossuiCpf: Boolean;
+    procedure SetStNaoPossuiCpf( const Value: Boolean);
+    function GetJustificativaNaoPossuiCpf: Int64;
+    procedure SetJustificativaNaoPossuiCpf( const Value: Int64);
 
     function Get__isset_Turno: Boolean;
     function Get__isset_CnsCidadao: Boolean;
@@ -161,6 +179,8 @@ type
     function Get__isset_CondutaDesfecho: Boolean;
     function Get__isset_CpfCidadao: Boolean;
     function Get__isset_ProblemasCondicoes: Boolean;
+    function Get__isset_StNaoPossuiCpf: Boolean;
+    function Get__isset_JustificativaNaoPossuiCpf: Boolean;
   public
     constructor Create;
     destructor Destroy; override;
@@ -184,6 +204,8 @@ type
     property CondutaDesfecho: Int64 read GetCondutaDesfecho write SetCondutaDesfecho;
     property CpfCidadao: string read GetCpfCidadao write SetCpfCidadao;
     property ProblemasCondicoes: IThriftList<IProblemaCondicaoThrift> read GetProblemasCondicoes write SetProblemasCondicoes;
+    property StNaoPossuiCpf: Boolean read GetStNaoPossuiCpf write SetStNaoPossuiCpf;
+    property JustificativaNaoPossuiCpf: Int64 read GetJustificativaNaoPossuiCpf write SetJustificativaNaoPossuiCpf;
 
     // isset
     property __isset_Turno: Boolean read Get__isset_Turno;
@@ -198,6 +220,8 @@ type
     property __isset_CondutaDesfecho: Boolean read Get__isset_CondutaDesfecho;
     property __isset_CpfCidadao: Boolean read Get__isset_CpfCidadao;
     property __isset_ProblemasCondicoes: Boolean read Get__isset_ProblemasCondicoes;
+    property __isset_StNaoPossuiCpf: Boolean read Get__isset_StNaoPossuiCpf;
+    property __isset_JustificativaNaoPossuiCpf: Boolean read Get__isset_JustificativaNaoPossuiCpf;
   end;
 
   IFichaAtendimentoDomiciliarMasterThrift = interface(IBase)
@@ -473,6 +497,38 @@ begin
   Result := F__isset_ProblemasCondicoes;
 end;
 
+function TFichaAtendimentoDomiciliarChildThriftImpl.GetStNaoPossuiCpf: Boolean;
+begin
+  Result := FStNaoPossuiCpf;
+end;
+
+procedure TFichaAtendimentoDomiciliarChildThriftImpl.SetStNaoPossuiCpf( const Value: Boolean);
+begin
+  F__isset_StNaoPossuiCpf := True;
+  FStNaoPossuiCpf := Value;
+end;
+
+function TFichaAtendimentoDomiciliarChildThriftImpl.Get__isset_StNaoPossuiCpf: Boolean;
+begin
+  Result := F__isset_StNaoPossuiCpf;
+end;
+
+function TFichaAtendimentoDomiciliarChildThriftImpl.GetJustificativaNaoPossuiCpf: Int64;
+begin
+  Result := FJustificativaNaoPossuiCpf;
+end;
+
+procedure TFichaAtendimentoDomiciliarChildThriftImpl.SetJustificativaNaoPossuiCpf( const Value: Int64);
+begin
+  F__isset_JustificativaNaoPossuiCpf := True;
+  FJustificativaNaoPossuiCpf := Value;
+end;
+
+function TFichaAtendimentoDomiciliarChildThriftImpl.Get__isset_JustificativaNaoPossuiCpf: Boolean;
+begin
+  Result := F__isset_JustificativaNaoPossuiCpf;
+end;
+
 procedure TFichaAtendimentoDomiciliarChildThriftImpl.Read( const iprot: IProtocol);
 var
   field_ : IField;
@@ -625,6 +681,24 @@ begin
               ProblemasCondicoes.Add(_elem8);
             end;
             iprot.ReadListEnd();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        17: begin
+          if (field_.Type_ = TType.Bool_) then
+          begin
+            StNaoPossuiCpf := iprot.ReadBool();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        18: begin
+          if (field_.Type_ = TType.I64) then
+          begin
+            JustificativaNaoPossuiCpf := iprot.ReadI64();
           end else
           begin
             TProtocolUtil.Skip(iprot, field_.Type_);
@@ -783,6 +857,24 @@ begin
     oprot.WriteListEnd();
     oprot.WriteFieldEnd();
   end;
+  if (__isset_StNaoPossuiCpf) then
+  begin
+    field_.Name := 'stNaoPossuiCpf';
+    field_.Type_  := TType.Bool_;
+    field_.ID := 17;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteBool(StNaoPossuiCpf);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_JustificativaNaoPossuiCpf) then
+  begin
+    field_.Name := 'justificativaNaoPossuiCpf';
+    field_.Type_  := TType.I64;
+    field_.ID := 18;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteI64(JustificativaNaoPossuiCpf);
+    oprot.WriteFieldEnd();
+  end;
   oprot.WriteFieldStop();
   oprot.WriteStructEnd();
 end;
@@ -866,6 +958,18 @@ begin
       _first16 := FALSE;
       _sb15.Append('ProblemasCondicoes: ');
       _sb15.Append(ProblemasCondicoes);
+    end;
+    if (__isset_StNaoPossuiCpf) then begin
+      if not _first16 then _sb15.Append(',');
+      _first16 := FALSE;
+      _sb15.Append('StNaoPossuiCpf: ');
+      _sb15.Append(StNaoPossuiCpf);
+    end;
+    if (__isset_JustificativaNaoPossuiCpf) then begin
+      if not _first16 then _sb15.Append(',');
+      _first16 := FALSE;
+      _sb15.Append('JustificativaNaoPossuiCpf: ');
+      _sb15.Append(JustificativaNaoPossuiCpf);
     end;
     _sb15.Append(')');
     Result := _sb15.ToString;

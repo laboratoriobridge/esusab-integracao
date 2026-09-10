@@ -28,6 +28,8 @@ module Br
               CONDUTADESFECHO = 13
               CPFCIDADAO = 15
               PROBLEMASCONDICOES = 16
+              STNAOPOSSUICPF = 17
+              JUSTIFICATIVANAOPOSSUICPF = 18
 
               FIELDS = {
                 TURNO => {:type => ::Thrift::Types::I64, :name => 'turno', :optional => true},
@@ -41,7 +43,9 @@ module Br
                 PROCEDIMENTOS => {:type => ::Thrift::Types::LIST, :name => 'procedimentos', :element => {:type => ::Thrift::Types::STRING}, :optional => true},
                 CONDUTADESFECHO => {:type => ::Thrift::Types::I64, :name => 'condutaDesfecho', :optional => true},
                 CPFCIDADAO => {:type => ::Thrift::Types::STRING, :name => 'cpfCidadao', :optional => true},
-                PROBLEMASCONDICOES => {:type => ::Thrift::Types::LIST, :name => 'problemasCondicoes', :element => {:type => ::Thrift::Types::STRUCT, :class => ::Br::Gov::Saude::Esusab::Ras::Common::ProblemaCondicaoThrift}, :optional => true}
+                PROBLEMASCONDICOES => {:type => ::Thrift::Types::LIST, :name => 'problemasCondicoes', :element => {:type => ::Thrift::Types::STRUCT, :class => ::Br::Gov::Saude::Esusab::Ras::Common::ProblemaCondicaoThrift}, :optional => true},
+                STNAOPOSSUICPF => {:type => ::Thrift::Types::BOOL, :name => 'stNaoPossuiCpf', :optional => true},
+                JUSTIFICATIVANAOPOSSUICPF => {:type => ::Thrift::Types::I64, :name => 'justificativaNaoPossuiCpf', :optional => true}
               }
 
               def struct_fields; FIELDS; end

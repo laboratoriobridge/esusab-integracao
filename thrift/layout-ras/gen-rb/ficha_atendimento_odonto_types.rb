@@ -60,8 +60,8 @@ module Br
               IVCF = 29
               EXAME = 30
               SOLICITACOESOCI = 31
-              STNAOPOSSUICPF = 32
-              JUSTIFICATIVANAOPOSSUICPF = 33
+              STCIDADAONAOPOSSUICPF = 32
+              JUSTIFICATIVACIDADAONAOPOSSUICPF = 33
 
               FIELDS = {
                 DTNASCIMENTO => {:type => ::Thrift::Types::I64, :name => 'dtNascimento', :optional => true},
@@ -89,8 +89,8 @@ module Br
                 IVCF => {:type => ::Thrift::Types::STRUCT, :name => 'ivcf', :class => ::Br::Gov::Saude::Esusab::Ras::Common::IvcfThrift, :optional => true},
                 EXAME => {:type => ::Thrift::Types::LIST, :name => 'exame', :element => {:type => ::Thrift::Types::STRUCT, :class => ::Br::Gov::Saude::Esusab::Ras::Common::ExameThrift}, :optional => true},
                 SOLICITACOESOCI => {:type => ::Thrift::Types::LIST, :name => 'solicitacoesOci', :element => {:type => ::Thrift::Types::STRUCT, :class => ::Br::Gov::Saude::Esusab::Ras::Solicitacaooci::SolicitacaoOciThrift}, :optional => true},
-                STNAOPOSSUICPF => {:type => ::Thrift::Types::BOOL, :name => 'stNaoPossuiCpf', :optional => true},
-                JUSTIFICATIVANAOPOSSUICPF => {:type => ::Thrift::Types::I64, :name => 'justificativaNaoPossuiCpf', :optional => true}
+                STCIDADAONAOPOSSUICPF => {:type => ::Thrift::Types::BOOL, :name => 'stCidadaoNaoPossuiCpf', :optional => true},
+                JUSTIFICATIVACIDADAONAOPOSSUICPF => {:type => ::Thrift::Types::I64, :name => 'justificativaCidadaoNaoPossuiCpf', :optional => true}
               }
 
               def struct_fields; FIELDS; end

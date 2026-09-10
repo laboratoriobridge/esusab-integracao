@@ -58,8 +58,8 @@ class FichaAvaliacaoElegibilidadeThrift:
    - cnsCuidador
    - cpfCidadao
    - cpfCuidador
-   - stNaoPossuiCpf
-   - justificativaNaoPossuiCpf
+   - stCidadaoNaoPossuiCpf
+   - justificativaCidadaoNaoPossuiCpf
   """
 
   thrift_spec = (
@@ -101,11 +101,11 @@ class FichaAvaliacaoElegibilidadeThrift:
     (35, TType.STRING, 'cnsCuidador', None, None, ), # 35
     (36, TType.STRING, 'cpfCidadao', None, None, ), # 36
     (37, TType.STRING, 'cpfCuidador', None, None, ), # 37
-    (38, TType.BOOL, 'stNaoPossuiCpf', None, None, ), # 38
-    (39, TType.I64, 'justificativaNaoPossuiCpf', None, None, ), # 39
+    (38, TType.BOOL, 'stCidadaoNaoPossuiCpf', None, None, ), # 38
+    (39, TType.I64, 'justificativaCidadaoNaoPossuiCpf', None, None, ), # 39
   )
 
-  def __init__(self, uuidFicha=None, tpCdsOrigem=None, cnsCidadao=None, nomeCidadao=None, nomeSocialCidadao=None, dataNascimentoCidadao=None, sexoCidadao=None, racaCorCidadao=None, nomeMaeCidadao=None, desconheceNomeMae=None, codigoIbgeMunicipioNascimento=None, nacionalidadeCidadao=None, emailCidadao=None, numeroNisPisPasep=None, endereco=None, atencaoDomiciliarProcedencia=None, atencaoDomiciliarModalidade=None, condicoesAvaliadas=None, cid10Principal=None, cid10SecundarioUm=None, cid10SecundarioDois=None, conclusaoDestinoElegivel=None, conclusaoDestinoInelegivel=None, cuidadorCidadao=None, turno=None, headerTransport=None, nomePaiCidadao=None, desconheceNomePai=None, dtNaturalizacao=None, portariaNaturalizacao=None, dtEntradaBrasil=None, paisNascimento=None, etnia=None, cnsCuidador=None, cpfCidadao=None, cpfCuidador=None, stNaoPossuiCpf=None, justificativaNaoPossuiCpf=None,):
+  def __init__(self, uuidFicha=None, tpCdsOrigem=None, cnsCidadao=None, nomeCidadao=None, nomeSocialCidadao=None, dataNascimentoCidadao=None, sexoCidadao=None, racaCorCidadao=None, nomeMaeCidadao=None, desconheceNomeMae=None, codigoIbgeMunicipioNascimento=None, nacionalidadeCidadao=None, emailCidadao=None, numeroNisPisPasep=None, endereco=None, atencaoDomiciliarProcedencia=None, atencaoDomiciliarModalidade=None, condicoesAvaliadas=None, cid10Principal=None, cid10SecundarioUm=None, cid10SecundarioDois=None, conclusaoDestinoElegivel=None, conclusaoDestinoInelegivel=None, cuidadorCidadao=None, turno=None, headerTransport=None, nomePaiCidadao=None, desconheceNomePai=None, dtNaturalizacao=None, portariaNaturalizacao=None, dtEntradaBrasil=None, paisNascimento=None, etnia=None, cnsCuidador=None, cpfCidadao=None, cpfCuidador=None, stCidadaoNaoPossuiCpf=None, justificativaCidadaoNaoPossuiCpf=None,):
     self.uuidFicha = uuidFicha
     self.tpCdsOrigem = tpCdsOrigem
     self.cnsCidadao = cnsCidadao
@@ -142,8 +142,8 @@ class FichaAvaliacaoElegibilidadeThrift:
     self.cnsCuidador = cnsCuidador
     self.cpfCidadao = cpfCidadao
     self.cpfCuidador = cpfCuidador
-    self.stNaoPossuiCpf = stNaoPossuiCpf
-    self.justificativaNaoPossuiCpf = justificativaNaoPossuiCpf
+    self.stCidadaoNaoPossuiCpf = stCidadaoNaoPossuiCpf
+    self.justificativaCidadaoNaoPossuiCpf = justificativaCidadaoNaoPossuiCpf
 
   def read(self, iprot):
     if iprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None and fastbinary is not None:
@@ -348,12 +348,12 @@ class FichaAvaliacaoElegibilidadeThrift:
           iprot.skip(ftype)
       elif fid == 38:
         if ftype == TType.BOOL:
-          self.stNaoPossuiCpf = iprot.readBool()
+          self.stCidadaoNaoPossuiCpf = iprot.readBool()
         else:
           iprot.skip(ftype)
       elif fid == 39:
         if ftype == TType.I64:
-          self.justificativaNaoPossuiCpf = iprot.readI64()
+          self.justificativaCidadaoNaoPossuiCpf = iprot.readI64()
         else:
           iprot.skip(ftype)
       else:
@@ -516,13 +516,13 @@ class FichaAvaliacaoElegibilidadeThrift:
       oprot.writeFieldBegin('cpfCuidador', TType.STRING, 37)
       oprot.writeString(self.cpfCuidador)
       oprot.writeFieldEnd()
-    if self.stNaoPossuiCpf is not None:
-      oprot.writeFieldBegin('stNaoPossuiCpf', TType.BOOL, 38)
-      oprot.writeBool(self.stNaoPossuiCpf)
+    if self.stCidadaoNaoPossuiCpf is not None:
+      oprot.writeFieldBegin('stCidadaoNaoPossuiCpf', TType.BOOL, 38)
+      oprot.writeBool(self.stCidadaoNaoPossuiCpf)
       oprot.writeFieldEnd()
-    if self.justificativaNaoPossuiCpf is not None:
-      oprot.writeFieldBegin('justificativaNaoPossuiCpf', TType.I64, 39)
-      oprot.writeI64(self.justificativaNaoPossuiCpf)
+    if self.justificativaCidadaoNaoPossuiCpf is not None:
+      oprot.writeFieldBegin('justificativaCidadaoNaoPossuiCpf', TType.I64, 39)
+      oprot.writeI64(self.justificativaCidadaoNaoPossuiCpf)
       oprot.writeFieldEnd()
     oprot.writeFieldStop()
     oprot.writeStructEnd()
@@ -571,8 +571,8 @@ class FichaAvaliacaoElegibilidadeThrift:
     value = (value * 31) ^ hash(self.cnsCuidador)
     value = (value * 31) ^ hash(self.cpfCidadao)
     value = (value * 31) ^ hash(self.cpfCuidador)
-    value = (value * 31) ^ hash(self.stNaoPossuiCpf)
-    value = (value * 31) ^ hash(self.justificativaNaoPossuiCpf)
+    value = (value * 31) ^ hash(self.stCidadaoNaoPossuiCpf)
+    value = (value * 31) ^ hash(self.justificativaCidadaoNaoPossuiCpf)
     return value
 
   def __repr__(self):

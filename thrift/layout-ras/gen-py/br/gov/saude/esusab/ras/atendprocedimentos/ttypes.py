@@ -35,8 +35,8 @@ class FichaProcedimentoChildThrift:
    - cpfCidadao
    - medicoes
    - ivcf
-   - stNaoPossuiCpf
-   - justificativaNaoPossuiCpf
+   - stCidadaoNaoPossuiCpf
+   - justificativaCidadaoNaoPossuiCpf
   """
 
   thrift_spec = (
@@ -58,11 +58,13 @@ class FichaProcedimentoChildThrift:
     None, # 15
     (16, TType.STRUCT, 'medicoes', (br.gov.saude.esusab.ras.common.ttypes.MedicoesThrift, br.gov.saude.esusab.ras.common.ttypes.MedicoesThrift.thrift_spec), None, ), # 16
     (17, TType.STRUCT, 'ivcf', (br.gov.saude.esusab.ras.common.ttypes.IvcfThrift, br.gov.saude.esusab.ras.common.ttypes.IvcfThrift.thrift_spec), None, ), # 17
-    (18, TType.BOOL, 'stNaoPossuiCpf', None, None, ), # 18
-    (19, TType.I64, 'justificativaNaoPossuiCpf', None, None, ), # 19
+    None, # 18
+    None, # 19
+    (20, TType.BOOL, 'stCidadaoNaoPossuiCpf', None, None, ), # 20
+    (21, TType.I64, 'justificativaCidadaoNaoPossuiCpf', None, None, ), # 21
   )
 
-  def __init__(self, numProntuario=None, cnsCidadao=None, dtNascimento=None, sexo=None, localAtendimento=None, turno=None, statusEscutaInicialOrientacao=None, procedimentos=None, dataHoraInicialAtendimento=None, dataHoraFinalAtendimento=None, cpfCidadao=None, medicoes=None, ivcf=None, stNaoPossuiCpf=None, justificativaNaoPossuiCpf=None,):
+  def __init__(self, numProntuario=None, cnsCidadao=None, dtNascimento=None, sexo=None, localAtendimento=None, turno=None, statusEscutaInicialOrientacao=None, procedimentos=None, dataHoraInicialAtendimento=None, dataHoraFinalAtendimento=None, cpfCidadao=None, medicoes=None, ivcf=None, stCidadaoNaoPossuiCpf=None, justificativaCidadaoNaoPossuiCpf=None,):
     self.numProntuario = numProntuario
     self.cnsCidadao = cnsCidadao
     self.dtNascimento = dtNascimento
@@ -76,8 +78,8 @@ class FichaProcedimentoChildThrift:
     self.cpfCidadao = cpfCidadao
     self.medicoes = medicoes
     self.ivcf = ivcf
-    self.stNaoPossuiCpf = stNaoPossuiCpf
-    self.justificativaNaoPossuiCpf = justificativaNaoPossuiCpf
+    self.stCidadaoNaoPossuiCpf = stCidadaoNaoPossuiCpf
+    self.justificativaCidadaoNaoPossuiCpf = justificativaCidadaoNaoPossuiCpf
 
   def read(self, iprot):
     if iprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None and fastbinary is not None:
@@ -160,14 +162,14 @@ class FichaProcedimentoChildThrift:
           self.ivcf.read(iprot)
         else:
           iprot.skip(ftype)
-      elif fid == 18:
+      elif fid == 20:
         if ftype == TType.BOOL:
-          self.stNaoPossuiCpf = iprot.readBool()
+          self.stCidadaoNaoPossuiCpf = iprot.readBool()
         else:
           iprot.skip(ftype)
-      elif fid == 19:
+      elif fid == 21:
         if ftype == TType.I64:
-          self.justificativaNaoPossuiCpf = iprot.readI64()
+          self.justificativaCidadaoNaoPossuiCpf = iprot.readI64()
         else:
           iprot.skip(ftype)
       else:
@@ -235,13 +237,13 @@ class FichaProcedimentoChildThrift:
       oprot.writeFieldBegin('ivcf', TType.STRUCT, 17)
       self.ivcf.write(oprot)
       oprot.writeFieldEnd()
-    if self.stNaoPossuiCpf is not None:
-      oprot.writeFieldBegin('stNaoPossuiCpf', TType.BOOL, 18)
-      oprot.writeBool(self.stNaoPossuiCpf)
+    if self.stCidadaoNaoPossuiCpf is not None:
+      oprot.writeFieldBegin('stCidadaoNaoPossuiCpf', TType.BOOL, 20)
+      oprot.writeBool(self.stCidadaoNaoPossuiCpf)
       oprot.writeFieldEnd()
-    if self.justificativaNaoPossuiCpf is not None:
-      oprot.writeFieldBegin('justificativaNaoPossuiCpf', TType.I64, 19)
-      oprot.writeI64(self.justificativaNaoPossuiCpf)
+    if self.justificativaCidadaoNaoPossuiCpf is not None:
+      oprot.writeFieldBegin('justificativaCidadaoNaoPossuiCpf', TType.I64, 21)
+      oprot.writeI64(self.justificativaCidadaoNaoPossuiCpf)
       oprot.writeFieldEnd()
     oprot.writeFieldStop()
     oprot.writeStructEnd()
@@ -265,8 +267,8 @@ class FichaProcedimentoChildThrift:
     value = (value * 31) ^ hash(self.cpfCidadao)
     value = (value * 31) ^ hash(self.medicoes)
     value = (value * 31) ^ hash(self.ivcf)
-    value = (value * 31) ^ hash(self.stNaoPossuiCpf)
-    value = (value * 31) ^ hash(self.justificativaNaoPossuiCpf)
+    value = (value * 31) ^ hash(self.stCidadaoNaoPossuiCpf)
+    value = (value * 31) ^ hash(self.justificativaCidadaoNaoPossuiCpf)
     return value
 
   def __repr__(self):

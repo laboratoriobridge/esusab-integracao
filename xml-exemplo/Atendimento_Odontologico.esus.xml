@@ -11,7 +11,7 @@
 		<tpCdsOrigem>3</tpCdsOrigem>
 		<atendimentosOdontologicos>
 			<cpfCidadao>05888644714</cpfCidadao>
-			<stNaoPossuiCpf>false</stNaoPossuiCpf>
+			<stCidadaoNaoPossuiCpf>false</stCidadaoNaoPossuiCpf>
 			<dtNascimento>662742000000</dtNascimento>
 			<localAtendimento>6</localAtendimento>
 			<gestante>false</gestante>
@@ -125,7 +125,7 @@
 		<atendimentosOdontologicos>
 			<numProntuario>4321</numProntuario>
 			<cpfCidadao>68688625042</cpfCidadao>
-			<stNaoPossuiCpf>false</stNaoPossuiCpf>
+			<stCidadaoNaoPossuiCpf>false</stCidadaoNaoPossuiCpf>
 			<dtNascimento>799686000000</dtNascimento>
 			<localAtendimento>3</localAtendimento>
 			<gestante>true</gestante>
@@ -202,8 +202,8 @@
 		<atendimentosOdontologicos>
 			<numProntuario>123</numProntuario>
 			<cnsCidadao>279573698530018</cnsCidadao>
-			<stNaoPossuiCpf>true</stNaoPossuiCpf>
-			<justificativaNaoPossuiCpf>5</justificativaNaoPossuiCpf>
+			<stCidadaoNaoPossuiCpf>true</stCidadaoNaoPossuiCpf>
+			<justificativaCidadaoNaoPossuiCpf>5</justificativaCidadaoNaoPossuiCpf>
 			<dtNascimento>1081090800000</dtNascimento>
 			<localAtendimento>1</localAtendimento>
 			<gestante>true</gestante>
@@ -251,7 +251,7 @@
 		<atendimentosOdontologicos>
 			<numProntuario>123</numProntuario>
 			<cpfCidadao>68688625042</cpfCidadao>
-			<stNaoPossuiCpf>false</stNaoPossuiCpf>
+			<stCidadaoNaoPossuiCpf>false</stCidadaoNaoPossuiCpf>
 			<dtNascimento>1081090800000</dtNascimento>
 			<localAtendimento>1</localAtendimento>
 			<gestante>true</gestante>

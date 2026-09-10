@@ -184,8 +184,8 @@ FichaAtendimentoIndividualChildThrift = module.exports.FichaAtendimentoIndividua
   this.problemasCondicoes = null;
   this.ivcf = null;
   this.solicitacoesOci = null;
-  this.stNaoPossuiCpf = null;
-  this.justificativaNaoPossuiCpf = null;
+  this.stCidadaoNaoPossuiCpf = null;
+  this.justificativaCidadaoNaoPossuiCpf = null;
   if (args) {
     if (args.numeroProntuario !== undefined && args.numeroProntuario !== null) {
       this.numeroProntuario = args.numeroProntuario;
@@ -292,11 +292,11 @@ FichaAtendimentoIndividualChildThrift = module.exports.FichaAtendimentoIndividua
     if (args.solicitacoesOci !== undefined && args.solicitacoesOci !== null) {
       this.solicitacoesOci = Thrift.copyList(args.solicitacoesOci, [solicitacao_oci_ttypes.SolicitacaoOciThrift]);
     }
-    if (args.stNaoPossuiCpf !== undefined && args.stNaoPossuiCpf !== null) {
-      this.stNaoPossuiCpf = args.stNaoPossuiCpf;
+    if (args.stCidadaoNaoPossuiCpf !== undefined && args.stCidadaoNaoPossuiCpf !== null) {
+      this.stCidadaoNaoPossuiCpf = args.stCidadaoNaoPossuiCpf;
     }
-    if (args.justificativaNaoPossuiCpf !== undefined && args.justificativaNaoPossuiCpf !== null) {
-      this.justificativaNaoPossuiCpf = args.justificativaNaoPossuiCpf;
+    if (args.justificativaCidadaoNaoPossuiCpf !== undefined && args.justificativaCidadaoNaoPossuiCpf !== null) {
+      this.justificativaCidadaoNaoPossuiCpf = args.justificativaCidadaoNaoPossuiCpf;
     }
   }
 };
@@ -685,16 +685,16 @@ FichaAtendimentoIndividualChildThrift.prototype.read = function(input) {
         input.skip(ftype);
       }
       break;
-      case 44:
+      case 47:
       if (ftype == Thrift.Type.BOOL) {
-        this.stNaoPossuiCpf = input.readBool();
+        this.stCidadaoNaoPossuiCpf = input.readBool();
       } else {
         input.skip(ftype);
       }
       break;
-      case 45:
+      case 48:
       if (ftype == Thrift.Type.I64) {
-        this.justificativaNaoPossuiCpf = input.readI64();
+        this.justificativaCidadaoNaoPossuiCpf = input.readI64();
       } else {
         input.skip(ftype);
       }
@@ -966,14 +966,14 @@ FichaAtendimentoIndividualChildThrift.prototype.write = function(output) {
     output.writeListEnd();
     output.writeFieldEnd();
   }
-  if (this.stNaoPossuiCpf !== null && this.stNaoPossuiCpf !== undefined) {
-    output.writeFieldBegin('stNaoPossuiCpf', Thrift.Type.BOOL, 44);
-    output.writeBool(this.stNaoPossuiCpf);
+  if (this.stCidadaoNaoPossuiCpf !== null && this.stCidadaoNaoPossuiCpf !== undefined) {
+    output.writeFieldBegin('stCidadaoNaoPossuiCpf', Thrift.Type.BOOL, 47);
+    output.writeBool(this.stCidadaoNaoPossuiCpf);
     output.writeFieldEnd();
   }
-  if (this.justificativaNaoPossuiCpf !== null && this.justificativaNaoPossuiCpf !== undefined) {
-    output.writeFieldBegin('justificativaNaoPossuiCpf', Thrift.Type.I64, 45);
-    output.writeI64(this.justificativaNaoPossuiCpf);
+  if (this.justificativaCidadaoNaoPossuiCpf !== null && this.justificativaCidadaoNaoPossuiCpf !== undefined) {
+    output.writeFieldBegin('justificativaCidadaoNaoPossuiCpf', Thrift.Type.I64, 48);
+    output.writeI64(this.justificativaCidadaoNaoPossuiCpf);
     output.writeFieldEnd();
   }
   output.writeFieldStop();

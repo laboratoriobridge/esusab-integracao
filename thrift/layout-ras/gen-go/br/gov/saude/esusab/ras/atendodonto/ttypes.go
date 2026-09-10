@@ -194,8 +194,8 @@ func (p *ProcedimentoQuantidadeThrift) String() string {
 //  - Ivcf
 //  - Exame
 //  - SolicitacoesOci
-//  - StNaoPossuiCpf
-//  - JustificativaNaoPossuiCpf
+//  - StCidadaoNaoPossuiCpf
+//  - JustificativaCidadaoNaoPossuiCpf
 type FichaAtendimentoOdontologicoChildThrift struct {
 	DtNascimento              *int64                          `thrift:"dtNascimento,1" json:"dtNascimento,omitempty"`
 	CnsCidadao                *string                         `thrift:"cnsCidadao,2" json:"cnsCidadao,omitempty"`
@@ -219,13 +219,13 @@ type FichaAtendimentoOdontologicoChildThrift struct {
 	Encaminhamentos            []*common.EncaminhamentoExternoThrift `thrift:"encaminhamentos,20" json:"encaminhamentos,omitempty"`
 	ResultadosExames           []*common.ResultadosExameThrift       `thrift:"resultadosExames,21" json:"resultadosExames,omitempty"`
 	// unused fields # 22 to 26
-	Medicoes                  *common.MedicoesThrift                 `thrift:"medicoes,27" json:"medicoes,omitempty"`
-	ProblemasCondicoes        []*common.ProblemaCondicaoThrift       `thrift:"problemasCondicoes,28" json:"problemasCondicoes,omitempty"`
-	Ivcf                      *common.IvcfThrift                     `thrift:"ivcf,29" json:"ivcf,omitempty"`
-	Exame                     []*common.ExameThrift                  `thrift:"exame,30" json:"exame,omitempty"`
-	SolicitacoesOci           []*solicitacaooci.SolicitacaoOciThrift `thrift:"solicitacoesOci,31" json:"solicitacoesOci,omitempty"`
-	StNaoPossuiCpf            *bool                                  `thrift:"stNaoPossuiCpf,32" json:"stNaoPossuiCpf,omitempty"`
-	JustificativaNaoPossuiCpf *int64                                 `thrift:"justificativaNaoPossuiCpf,33" json:"justificativaNaoPossuiCpf,omitempty"`
+	Medicoes                         *common.MedicoesThrift                 `thrift:"medicoes,27" json:"medicoes,omitempty"`
+	ProblemasCondicoes               []*common.ProblemaCondicaoThrift       `thrift:"problemasCondicoes,28" json:"problemasCondicoes,omitempty"`
+	Ivcf                             *common.IvcfThrift                     `thrift:"ivcf,29" json:"ivcf,omitempty"`
+	Exame                            []*common.ExameThrift                  `thrift:"exame,30" json:"exame,omitempty"`
+	SolicitacoesOci                  []*solicitacaooci.SolicitacaoOciThrift `thrift:"solicitacoesOci,31" json:"solicitacoesOci,omitempty"`
+	StCidadaoNaoPossuiCpf            *bool                                  `thrift:"stCidadaoNaoPossuiCpf,32" json:"stCidadaoNaoPossuiCpf,omitempty"`
+	JustificativaCidadaoNaoPossuiCpf *int64                                 `thrift:"justificativaCidadaoNaoPossuiCpf,33" json:"justificativaCidadaoNaoPossuiCpf,omitempty"`
 }
 
 func NewFichaAtendimentoOdontologicoChildThrift() *FichaAtendimentoOdontologicoChildThrift {
@@ -424,22 +424,22 @@ func (p *FichaAtendimentoOdontologicoChildThrift) GetSolicitacoesOci() []*solici
 	return p.SolicitacoesOci
 }
 
-var FichaAtendimentoOdontologicoChildThrift_StNaoPossuiCpf_DEFAULT bool
+var FichaAtendimentoOdontologicoChildThrift_StCidadaoNaoPossuiCpf_DEFAULT bool
 
-func (p *FichaAtendimentoOdontologicoChildThrift) GetStNaoPossuiCpf() bool {
-	if !p.IsSetStNaoPossuiCpf() {
-		return FichaAtendimentoOdontologicoChildThrift_StNaoPossuiCpf_DEFAULT
+func (p *FichaAtendimentoOdontologicoChildThrift) GetStCidadaoNaoPossuiCpf() bool {
+	if !p.IsSetStCidadaoNaoPossuiCpf() {
+		return FichaAtendimentoOdontologicoChildThrift_StCidadaoNaoPossuiCpf_DEFAULT
 	}
-	return *p.StNaoPossuiCpf
+	return *p.StCidadaoNaoPossuiCpf
 }
 
-var FichaAtendimentoOdontologicoChildThrift_JustificativaNaoPossuiCpf_DEFAULT int64
+var FichaAtendimentoOdontologicoChildThrift_JustificativaCidadaoNaoPossuiCpf_DEFAULT int64
 
-func (p *FichaAtendimentoOdontologicoChildThrift) GetJustificativaNaoPossuiCpf() int64 {
-	if !p.IsSetJustificativaNaoPossuiCpf() {
-		return FichaAtendimentoOdontologicoChildThrift_JustificativaNaoPossuiCpf_DEFAULT
+func (p *FichaAtendimentoOdontologicoChildThrift) GetJustificativaCidadaoNaoPossuiCpf() int64 {
+	if !p.IsSetJustificativaCidadaoNaoPossuiCpf() {
+		return FichaAtendimentoOdontologicoChildThrift_JustificativaCidadaoNaoPossuiCpf_DEFAULT
 	}
-	return *p.JustificativaNaoPossuiCpf
+	return *p.JustificativaCidadaoNaoPossuiCpf
 }
 func (p *FichaAtendimentoOdontologicoChildThrift) IsSetDtNascimento() bool {
 	return p.DtNascimento != nil
@@ -541,12 +541,12 @@ func (p *FichaAtendimentoOdontologicoChildThrift) IsSetSolicitacoesOci() bool {
 	return p.SolicitacoesOci != nil
 }
 
-func (p *FichaAtendimentoOdontologicoChildThrift) IsSetStNaoPossuiCpf() bool {
-	return p.StNaoPossuiCpf != nil
+func (p *FichaAtendimentoOdontologicoChildThrift) IsSetStCidadaoNaoPossuiCpf() bool {
+	return p.StCidadaoNaoPossuiCpf != nil
 }
 
-func (p *FichaAtendimentoOdontologicoChildThrift) IsSetJustificativaNaoPossuiCpf() bool {
-	return p.JustificativaNaoPossuiCpf != nil
+func (p *FichaAtendimentoOdontologicoChildThrift) IsSetJustificativaCidadaoNaoPossuiCpf() bool {
+	return p.JustificativaCidadaoNaoPossuiCpf != nil
 }
 
 func (p *FichaAtendimentoOdontologicoChildThrift) Read(iprot thrift.TProtocol) error {
@@ -1042,7 +1042,7 @@ func (p *FichaAtendimentoOdontologicoChildThrift) readField32(iprot thrift.TProt
 	if v, err := iprot.ReadBool(); err != nil {
 		return thrift.PrependError("error reading field 32: ", err)
 	} else {
-		p.StNaoPossuiCpf = &v
+		p.StCidadaoNaoPossuiCpf = &v
 	}
 	return nil
 }
@@ -1051,7 +1051,7 @@ func (p *FichaAtendimentoOdontologicoChildThrift) readField33(iprot thrift.TProt
 	if v, err := iprot.ReadI64(); err != nil {
 		return thrift.PrependError("error reading field 33: ", err)
 	} else {
-		p.JustificativaNaoPossuiCpf = &v
+		p.JustificativaCidadaoNaoPossuiCpf = &v
 	}
 	return nil
 }
@@ -1614,30 +1614,30 @@ func (p *FichaAtendimentoOdontologicoChildThrift) writeField31(oprot thrift.TPro
 }
 
 func (p *FichaAtendimentoOdontologicoChildThrift) writeField32(oprot thrift.TProtocol) (err error) {
-	if p.IsSetStNaoPossuiCpf() {
-		if err := oprot.WriteFieldBegin("stNaoPossuiCpf", thrift.BOOL, 32); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field begin error 32:stNaoPossuiCpf: ", p), err)
+	if p.IsSetStCidadaoNaoPossuiCpf() {
+		if err := oprot.WriteFieldBegin("stCidadaoNaoPossuiCpf", thrift.BOOL, 32); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field begin error 32:stCidadaoNaoPossuiCpf: ", p), err)
 		}
-		if err := oprot.WriteBool(bool(*p.StNaoPossuiCpf)); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T.stNaoPossuiCpf (32) field write error: ", p), err)
+		if err := oprot.WriteBool(bool(*p.StCidadaoNaoPossuiCpf)); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T.stCidadaoNaoPossuiCpf (32) field write error: ", p), err)
 		}
 		if err := oprot.WriteFieldEnd(); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field end error 32:stNaoPossuiCpf: ", p), err)
+			return thrift.PrependError(fmt.Sprintf("%T write field end error 32:stCidadaoNaoPossuiCpf: ", p), err)
 		}
 	}
 	return err
 }
 
 func (p *FichaAtendimentoOdontologicoChildThrift) writeField33(oprot thrift.TProtocol) (err error) {
-	if p.IsSetJustificativaNaoPossuiCpf() {
-		if err := oprot.WriteFieldBegin("justificativaNaoPossuiCpf", thrift.I64, 33); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field begin error 33:justificativaNaoPossuiCpf: ", p), err)
+	if p.IsSetJustificativaCidadaoNaoPossuiCpf() {
+		if err := oprot.WriteFieldBegin("justificativaCidadaoNaoPossuiCpf", thrift.I64, 33); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field begin error 33:justificativaCidadaoNaoPossuiCpf: ", p), err)
 		}
-		if err := oprot.WriteI64(int64(*p.JustificativaNaoPossuiCpf)); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T.justificativaNaoPossuiCpf (33) field write error: ", p), err)
+		if err := oprot.WriteI64(int64(*p.JustificativaCidadaoNaoPossuiCpf)); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T.justificativaCidadaoNaoPossuiCpf (33) field write error: ", p), err)
 		}
 		if err := oprot.WriteFieldEnd(); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field end error 33:justificativaNaoPossuiCpf: ", p), err)
+			return thrift.PrependError(fmt.Sprintf("%T write field end error 33:justificativaCidadaoNaoPossuiCpf: ", p), err)
 		}
 	}
 	return err

@@ -24,8 +24,8 @@ FichaAtendimentoDomiciliarChildThrift = module.exports.FichaAtendimentoDomicilia
   this.condutaDesfecho = null;
   this.cpfCidadao = null;
   this.problemasCondicoes = null;
-  this.stNaoPossuiCpf = null;
-  this.justificativaNaoPossuiCpf = null;
+  this.stCidadaoNaoPossuiCpf = null;
+  this.justificativaCidadaoNaoPossuiCpf = null;
   if (args) {
     if (args.turno !== undefined && args.turno !== null) {
       this.turno = args.turno;
@@ -63,11 +63,11 @@ FichaAtendimentoDomiciliarChildThrift = module.exports.FichaAtendimentoDomicilia
     if (args.problemasCondicoes !== undefined && args.problemasCondicoes !== null) {
       this.problemasCondicoes = Thrift.copyList(args.problemasCondicoes, [common_ttypes.ProblemaCondicaoThrift]);
     }
-    if (args.stNaoPossuiCpf !== undefined && args.stNaoPossuiCpf !== null) {
-      this.stNaoPossuiCpf = args.stNaoPossuiCpf;
+    if (args.stCidadaoNaoPossuiCpf !== undefined && args.stCidadaoNaoPossuiCpf !== null) {
+      this.stCidadaoNaoPossuiCpf = args.stCidadaoNaoPossuiCpf;
     }
-    if (args.justificativaNaoPossuiCpf !== undefined && args.justificativaNaoPossuiCpf !== null) {
-      this.justificativaNaoPossuiCpf = args.justificativaNaoPossuiCpf;
+    if (args.justificativaCidadaoNaoPossuiCpf !== undefined && args.justificativaCidadaoNaoPossuiCpf !== null) {
+      this.justificativaCidadaoNaoPossuiCpf = args.justificativaCidadaoNaoPossuiCpf;
     }
   }
 };
@@ -211,14 +211,14 @@ FichaAtendimentoDomiciliarChildThrift.prototype.read = function(input) {
       break;
       case 17:
       if (ftype == Thrift.Type.BOOL) {
-        this.stNaoPossuiCpf = input.readBool();
+        this.stCidadaoNaoPossuiCpf = input.readBool();
       } else {
         input.skip(ftype);
       }
       break;
       case 18:
       if (ftype == Thrift.Type.I64) {
-        this.justificativaNaoPossuiCpf = input.readI64();
+        this.justificativaCidadaoNaoPossuiCpf = input.readI64();
       } else {
         input.skip(ftype);
       }
@@ -321,14 +321,14 @@ FichaAtendimentoDomiciliarChildThrift.prototype.write = function(output) {
     output.writeListEnd();
     output.writeFieldEnd();
   }
-  if (this.stNaoPossuiCpf !== null && this.stNaoPossuiCpf !== undefined) {
-    output.writeFieldBegin('stNaoPossuiCpf', Thrift.Type.BOOL, 17);
-    output.writeBool(this.stNaoPossuiCpf);
+  if (this.stCidadaoNaoPossuiCpf !== null && this.stCidadaoNaoPossuiCpf !== undefined) {
+    output.writeFieldBegin('stCidadaoNaoPossuiCpf', Thrift.Type.BOOL, 17);
+    output.writeBool(this.stCidadaoNaoPossuiCpf);
     output.writeFieldEnd();
   }
-  if (this.justificativaNaoPossuiCpf !== null && this.justificativaNaoPossuiCpf !== undefined) {
-    output.writeFieldBegin('justificativaNaoPossuiCpf', Thrift.Type.I64, 18);
-    output.writeI64(this.justificativaNaoPossuiCpf);
+  if (this.justificativaCidadaoNaoPossuiCpf !== null && this.justificativaCidadaoNaoPossuiCpf !== undefined) {
+    output.writeFieldBegin('justificativaCidadaoNaoPossuiCpf', Thrift.Type.I64, 18);
+    output.writeI64(this.justificativaCidadaoNaoPossuiCpf);
     output.writeFieldEnd();
   }
   output.writeFieldStop();

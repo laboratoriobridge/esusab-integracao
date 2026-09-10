@@ -39,8 +39,8 @@ var GoUnusedProtection__ int
 //  - CoResultadoRessonanciaMagnetica
 //  - CpfCidadao
 //  - CpfResponsavelFamiliar
-//  - StNaoPossuiCpf
-//  - JustificativaNaoPossuiCpf
+//  - StCidadaoNaoPossuiCpf
+//  - JustificativaCidadaoNaoPossuiCpf
 type FichaComplementarZikaMicrocefaliaThrift struct {
 	HeaderTransport                         *common.UnicaLotacaoHeaderThrift `thrift:"headerTransport,1" json:"headerTransport,omitempty"`
 	UuidFicha                               string                           `thrift:"uuidFicha,2,required" json:"uuidFicha"`
@@ -62,8 +62,8 @@ type FichaComplementarZikaMicrocefaliaThrift struct {
 	CoResultadoRessonanciaMagnetica         *int64                           `thrift:"coResultadoRessonanciaMagnetica,18" json:"coResultadoRessonanciaMagnetica,omitempty"`
 	CpfCidadao                              *string                          `thrift:"cpfCidadao,19" json:"cpfCidadao,omitempty"`
 	CpfResponsavelFamiliar                  *string                          `thrift:"cpfResponsavelFamiliar,20" json:"cpfResponsavelFamiliar,omitempty"`
-	StNaoPossuiCpf                          *bool                            `thrift:"stNaoPossuiCpf,21" json:"stNaoPossuiCpf,omitempty"`
-	JustificativaNaoPossuiCpf               *int64                           `thrift:"justificativaNaoPossuiCpf,22" json:"justificativaNaoPossuiCpf,omitempty"`
+	StCidadaoNaoPossuiCpf                   *bool                            `thrift:"stCidadaoNaoPossuiCpf,21" json:"stCidadaoNaoPossuiCpf,omitempty"`
+	JustificativaCidadaoNaoPossuiCpf        *int64                           `thrift:"justificativaCidadaoNaoPossuiCpf,22" json:"justificativaCidadaoNaoPossuiCpf,omitempty"`
 }
 
 func NewFichaComplementarZikaMicrocefaliaThrift() *FichaComplementarZikaMicrocefaliaThrift {
@@ -245,22 +245,22 @@ func (p *FichaComplementarZikaMicrocefaliaThrift) GetCpfResponsavelFamiliar() st
 	return *p.CpfResponsavelFamiliar
 }
 
-var FichaComplementarZikaMicrocefaliaThrift_StNaoPossuiCpf_DEFAULT bool
+var FichaComplementarZikaMicrocefaliaThrift_StCidadaoNaoPossuiCpf_DEFAULT bool
 
-func (p *FichaComplementarZikaMicrocefaliaThrift) GetStNaoPossuiCpf() bool {
-	if !p.IsSetStNaoPossuiCpf() {
-		return FichaComplementarZikaMicrocefaliaThrift_StNaoPossuiCpf_DEFAULT
+func (p *FichaComplementarZikaMicrocefaliaThrift) GetStCidadaoNaoPossuiCpf() bool {
+	if !p.IsSetStCidadaoNaoPossuiCpf() {
+		return FichaComplementarZikaMicrocefaliaThrift_StCidadaoNaoPossuiCpf_DEFAULT
 	}
-	return *p.StNaoPossuiCpf
+	return *p.StCidadaoNaoPossuiCpf
 }
 
-var FichaComplementarZikaMicrocefaliaThrift_JustificativaNaoPossuiCpf_DEFAULT int64
+var FichaComplementarZikaMicrocefaliaThrift_JustificativaCidadaoNaoPossuiCpf_DEFAULT int64
 
-func (p *FichaComplementarZikaMicrocefaliaThrift) GetJustificativaNaoPossuiCpf() int64 {
-	if !p.IsSetJustificativaNaoPossuiCpf() {
-		return FichaComplementarZikaMicrocefaliaThrift_JustificativaNaoPossuiCpf_DEFAULT
+func (p *FichaComplementarZikaMicrocefaliaThrift) GetJustificativaCidadaoNaoPossuiCpf() int64 {
+	if !p.IsSetJustificativaCidadaoNaoPossuiCpf() {
+		return FichaComplementarZikaMicrocefaliaThrift_JustificativaCidadaoNaoPossuiCpf_DEFAULT
 	}
-	return *p.JustificativaNaoPossuiCpf
+	return *p.JustificativaCidadaoNaoPossuiCpf
 }
 func (p *FichaComplementarZikaMicrocefaliaThrift) IsSetHeaderTransport() bool {
 	return p.HeaderTransport != nil
@@ -338,12 +338,12 @@ func (p *FichaComplementarZikaMicrocefaliaThrift) IsSetCpfResponsavelFamiliar() 
 	return p.CpfResponsavelFamiliar != nil
 }
 
-func (p *FichaComplementarZikaMicrocefaliaThrift) IsSetStNaoPossuiCpf() bool {
-	return p.StNaoPossuiCpf != nil
+func (p *FichaComplementarZikaMicrocefaliaThrift) IsSetStCidadaoNaoPossuiCpf() bool {
+	return p.StCidadaoNaoPossuiCpf != nil
 }
 
-func (p *FichaComplementarZikaMicrocefaliaThrift) IsSetJustificativaNaoPossuiCpf() bool {
-	return p.JustificativaNaoPossuiCpf != nil
+func (p *FichaComplementarZikaMicrocefaliaThrift) IsSetJustificativaCidadaoNaoPossuiCpf() bool {
+	return p.JustificativaCidadaoNaoPossuiCpf != nil
 }
 
 func (p *FichaComplementarZikaMicrocefaliaThrift) Read(iprot thrift.TProtocol) error {
@@ -652,7 +652,7 @@ func (p *FichaComplementarZikaMicrocefaliaThrift) readField21(iprot thrift.TProt
 	if v, err := iprot.ReadBool(); err != nil {
 		return thrift.PrependError("error reading field 21: ", err)
 	} else {
-		p.StNaoPossuiCpf = &v
+		p.StCidadaoNaoPossuiCpf = &v
 	}
 	return nil
 }
@@ -661,7 +661,7 @@ func (p *FichaComplementarZikaMicrocefaliaThrift) readField22(iprot thrift.TProt
 	if v, err := iprot.ReadI64(); err != nil {
 		return thrift.PrependError("error reading field 22: ", err)
 	} else {
-		p.JustificativaNaoPossuiCpf = &v
+		p.JustificativaCidadaoNaoPossuiCpf = &v
 	}
 	return nil
 }
@@ -1044,30 +1044,30 @@ func (p *FichaComplementarZikaMicrocefaliaThrift) writeField20(oprot thrift.TPro
 }
 
 func (p *FichaComplementarZikaMicrocefaliaThrift) writeField21(oprot thrift.TProtocol) (err error) {
-	if p.IsSetStNaoPossuiCpf() {
-		if err := oprot.WriteFieldBegin("stNaoPossuiCpf", thrift.BOOL, 21); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field begin error 21:stNaoPossuiCpf: ", p), err)
+	if p.IsSetStCidadaoNaoPossuiCpf() {
+		if err := oprot.WriteFieldBegin("stCidadaoNaoPossuiCpf", thrift.BOOL, 21); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field begin error 21:stCidadaoNaoPossuiCpf: ", p), err)
 		}
-		if err := oprot.WriteBool(bool(*p.StNaoPossuiCpf)); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T.stNaoPossuiCpf (21) field write error: ", p), err)
+		if err := oprot.WriteBool(bool(*p.StCidadaoNaoPossuiCpf)); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T.stCidadaoNaoPossuiCpf (21) field write error: ", p), err)
 		}
 		if err := oprot.WriteFieldEnd(); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field end error 21:stNaoPossuiCpf: ", p), err)
+			return thrift.PrependError(fmt.Sprintf("%T write field end error 21:stCidadaoNaoPossuiCpf: ", p), err)
 		}
 	}
 	return err
 }
 
 func (p *FichaComplementarZikaMicrocefaliaThrift) writeField22(oprot thrift.TProtocol) (err error) {
-	if p.IsSetJustificativaNaoPossuiCpf() {
-		if err := oprot.WriteFieldBegin("justificativaNaoPossuiCpf", thrift.I64, 22); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field begin error 22:justificativaNaoPossuiCpf: ", p), err)
+	if p.IsSetJustificativaCidadaoNaoPossuiCpf() {
+		if err := oprot.WriteFieldBegin("justificativaCidadaoNaoPossuiCpf", thrift.I64, 22); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field begin error 22:justificativaCidadaoNaoPossuiCpf: ", p), err)
 		}
-		if err := oprot.WriteI64(int64(*p.JustificativaNaoPossuiCpf)); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T.justificativaNaoPossuiCpf (22) field write error: ", p), err)
+		if err := oprot.WriteI64(int64(*p.JustificativaCidadaoNaoPossuiCpf)); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T.justificativaCidadaoNaoPossuiCpf (22) field write error: ", p), err)
 		}
 		if err := oprot.WriteFieldEnd(); err != nil {
-			return thrift.PrependError(fmt.Sprintf("%T write field end error 22:justificativaNaoPossuiCpf: ", p), err)
+			return thrift.PrependError(fmt.Sprintf("%T write field end error 22:justificativaCidadaoNaoPossuiCpf: ", p), err)
 		}
 	}
 	return err

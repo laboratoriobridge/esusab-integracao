@@ -31,8 +31,8 @@ class ParticipanteRowItemThrift:
    - abandonouGrupo
    - sexo
    - cpfParticipante
-   - stNaoPossuiCpf
-   - justificativaNaoPossuiCpf
+   - stCidadaoNaoPossuiCpf
+   - justificativaCidadaoNaoPossuiCpf
   """
 
   thrift_spec = (
@@ -46,11 +46,11 @@ class ParticipanteRowItemThrift:
     (7, TType.BOOL, 'abandonouGrupo', None, None, ), # 7
     (8, TType.I64, 'sexo', None, None, ), # 8
     (9, TType.STRING, 'cpfParticipante', None, None, ), # 9
-    (10, TType.BOOL, 'stNaoPossuiCpf', None, None, ), # 10
-    (11, TType.I64, 'justificativaNaoPossuiCpf', None, None, ), # 11
+    (10, TType.BOOL, 'stCidadaoNaoPossuiCpf', None, None, ), # 10
+    (11, TType.I64, 'justificativaCidadaoNaoPossuiCpf', None, None, ), # 11
   )
 
-  def __init__(self, cnsParticipante=None, dataNascimento=None, avaliacaoAlterada=None, peso=None, altura=None, cessouHabitoFumar=None, abandonouGrupo=None, sexo=None, cpfParticipante=None, stNaoPossuiCpf=None, justificativaNaoPossuiCpf=None,):
+  def __init__(self, cnsParticipante=None, dataNascimento=None, avaliacaoAlterada=None, peso=None, altura=None, cessouHabitoFumar=None, abandonouGrupo=None, sexo=None, cpfParticipante=None, stCidadaoNaoPossuiCpf=None, justificativaCidadaoNaoPossuiCpf=None,):
     self.cnsParticipante = cnsParticipante
     self.dataNascimento = dataNascimento
     self.avaliacaoAlterada = avaliacaoAlterada
@@ -60,8 +60,8 @@ class ParticipanteRowItemThrift:
     self.abandonouGrupo = abandonouGrupo
     self.sexo = sexo
     self.cpfParticipante = cpfParticipante
-    self.stNaoPossuiCpf = stNaoPossuiCpf
-    self.justificativaNaoPossuiCpf = justificativaNaoPossuiCpf
+    self.stCidadaoNaoPossuiCpf = stCidadaoNaoPossuiCpf
+    self.justificativaCidadaoNaoPossuiCpf = justificativaCidadaoNaoPossuiCpf
 
   def read(self, iprot):
     if iprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None and fastbinary is not None:
@@ -119,12 +119,12 @@ class ParticipanteRowItemThrift:
           iprot.skip(ftype)
       elif fid == 10:
         if ftype == TType.BOOL:
-          self.stNaoPossuiCpf = iprot.readBool()
+          self.stCidadaoNaoPossuiCpf = iprot.readBool()
         else:
           iprot.skip(ftype)
       elif fid == 11:
         if ftype == TType.I64:
-          self.justificativaNaoPossuiCpf = iprot.readI64()
+          self.justificativaCidadaoNaoPossuiCpf = iprot.readI64()
         else:
           iprot.skip(ftype)
       else:
@@ -173,13 +173,13 @@ class ParticipanteRowItemThrift:
       oprot.writeFieldBegin('cpfParticipante', TType.STRING, 9)
       oprot.writeString(self.cpfParticipante)
       oprot.writeFieldEnd()
-    if self.stNaoPossuiCpf is not None:
-      oprot.writeFieldBegin('stNaoPossuiCpf', TType.BOOL, 10)
-      oprot.writeBool(self.stNaoPossuiCpf)
+    if self.stCidadaoNaoPossuiCpf is not None:
+      oprot.writeFieldBegin('stCidadaoNaoPossuiCpf', TType.BOOL, 10)
+      oprot.writeBool(self.stCidadaoNaoPossuiCpf)
       oprot.writeFieldEnd()
-    if self.justificativaNaoPossuiCpf is not None:
-      oprot.writeFieldBegin('justificativaNaoPossuiCpf', TType.I64, 11)
-      oprot.writeI64(self.justificativaNaoPossuiCpf)
+    if self.justificativaCidadaoNaoPossuiCpf is not None:
+      oprot.writeFieldBegin('justificativaCidadaoNaoPossuiCpf', TType.I64, 11)
+      oprot.writeI64(self.justificativaCidadaoNaoPossuiCpf)
       oprot.writeFieldEnd()
     oprot.writeFieldStop()
     oprot.writeStructEnd()
@@ -199,8 +199,8 @@ class ParticipanteRowItemThrift:
     value = (value * 31) ^ hash(self.abandonouGrupo)
     value = (value * 31) ^ hash(self.sexo)
     value = (value * 31) ^ hash(self.cpfParticipante)
-    value = (value * 31) ^ hash(self.stNaoPossuiCpf)
-    value = (value * 31) ^ hash(self.justificativaNaoPossuiCpf)
+    value = (value * 31) ^ hash(self.stCidadaoNaoPossuiCpf)
+    value = (value * 31) ^ hash(self.justificativaCidadaoNaoPossuiCpf)
     return value
 
   def __repr__(self):

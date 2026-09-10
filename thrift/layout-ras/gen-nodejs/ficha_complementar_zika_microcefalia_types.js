@@ -32,8 +32,8 @@ FichaComplementarZikaMicrocefaliaThrift = module.exports.FichaComplementarZikaMi
   this.coResultadoRessonanciaMagnetica = null;
   this.cpfCidadao = null;
   this.cpfResponsavelFamiliar = null;
-  this.stNaoPossuiCpf = null;
-  this.justificativaNaoPossuiCpf = null;
+  this.stCidadaoNaoPossuiCpf = null;
+  this.justificativaCidadaoNaoPossuiCpf = null;
   if (args) {
     if (args.headerTransport !== undefined && args.headerTransport !== null) {
       this.headerTransport = new common_ttypes.UnicaLotacaoHeaderThrift(args.headerTransport);
@@ -97,11 +97,11 @@ FichaComplementarZikaMicrocefaliaThrift = module.exports.FichaComplementarZikaMi
     if (args.cpfResponsavelFamiliar !== undefined && args.cpfResponsavelFamiliar !== null) {
       this.cpfResponsavelFamiliar = args.cpfResponsavelFamiliar;
     }
-    if (args.stNaoPossuiCpf !== undefined && args.stNaoPossuiCpf !== null) {
-      this.stNaoPossuiCpf = args.stNaoPossuiCpf;
+    if (args.stCidadaoNaoPossuiCpf !== undefined && args.stCidadaoNaoPossuiCpf !== null) {
+      this.stCidadaoNaoPossuiCpf = args.stCidadaoNaoPossuiCpf;
     }
-    if (args.justificativaNaoPossuiCpf !== undefined && args.justificativaNaoPossuiCpf !== null) {
-      this.justificativaNaoPossuiCpf = args.justificativaNaoPossuiCpf;
+    if (args.justificativaCidadaoNaoPossuiCpf !== undefined && args.justificativaCidadaoNaoPossuiCpf !== null) {
+      this.justificativaCidadaoNaoPossuiCpf = args.justificativaCidadaoNaoPossuiCpf;
     }
   }
 };
@@ -262,14 +262,14 @@ FichaComplementarZikaMicrocefaliaThrift.prototype.read = function(input) {
       break;
       case 21:
       if (ftype == Thrift.Type.BOOL) {
-        this.stNaoPossuiCpf = input.readBool();
+        this.stCidadaoNaoPossuiCpf = input.readBool();
       } else {
         input.skip(ftype);
       }
       break;
       case 22:
       if (ftype == Thrift.Type.I64) {
-        this.justificativaNaoPossuiCpf = input.readI64();
+        this.justificativaCidadaoNaoPossuiCpf = input.readI64();
       } else {
         input.skip(ftype);
       }
@@ -385,14 +385,14 @@ FichaComplementarZikaMicrocefaliaThrift.prototype.write = function(output) {
     output.writeString(this.cpfResponsavelFamiliar);
     output.writeFieldEnd();
   }
-  if (this.stNaoPossuiCpf !== null && this.stNaoPossuiCpf !== undefined) {
-    output.writeFieldBegin('stNaoPossuiCpf', Thrift.Type.BOOL, 21);
-    output.writeBool(this.stNaoPossuiCpf);
+  if (this.stCidadaoNaoPossuiCpf !== null && this.stCidadaoNaoPossuiCpf !== undefined) {
+    output.writeFieldBegin('stCidadaoNaoPossuiCpf', Thrift.Type.BOOL, 21);
+    output.writeBool(this.stCidadaoNaoPossuiCpf);
     output.writeFieldEnd();
   }
-  if (this.justificativaNaoPossuiCpf !== null && this.justificativaNaoPossuiCpf !== undefined) {
-    output.writeFieldBegin('justificativaNaoPossuiCpf', Thrift.Type.I64, 22);
-    output.writeI64(this.justificativaNaoPossuiCpf);
+  if (this.justificativaCidadaoNaoPossuiCpf !== null && this.justificativaCidadaoNaoPossuiCpf !== undefined) {
+    output.writeFieldBegin('justificativaCidadaoNaoPossuiCpf', Thrift.Type.I64, 22);
+    output.writeI64(this.justificativaCidadaoNaoPossuiCpf);
     output.writeFieldEnd();
   }
   output.writeFieldStop();

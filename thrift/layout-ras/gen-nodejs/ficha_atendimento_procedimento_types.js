@@ -25,8 +25,8 @@ FichaProcedimentoChildThrift = module.exports.FichaProcedimentoChildThrift = fun
   this.cpfCidadao = null;
   this.medicoes = null;
   this.ivcf = null;
-  this.stNaoPossuiCpf = null;
-  this.justificativaNaoPossuiCpf = null;
+  this.stCidadaoNaoPossuiCpf = null;
+  this.justificativaCidadaoNaoPossuiCpf = null;
   if (args) {
     if (args.numProntuario !== undefined && args.numProntuario !== null) {
       this.numProntuario = args.numProntuario;
@@ -67,11 +67,11 @@ FichaProcedimentoChildThrift = module.exports.FichaProcedimentoChildThrift = fun
     if (args.ivcf !== undefined && args.ivcf !== null) {
       this.ivcf = new common_ttypes.IvcfThrift(args.ivcf);
     }
-    if (args.stNaoPossuiCpf !== undefined && args.stNaoPossuiCpf !== null) {
-      this.stNaoPossuiCpf = args.stNaoPossuiCpf;
+    if (args.stCidadaoNaoPossuiCpf !== undefined && args.stCidadaoNaoPossuiCpf !== null) {
+      this.stCidadaoNaoPossuiCpf = args.stCidadaoNaoPossuiCpf;
     }
-    if (args.justificativaNaoPossuiCpf !== undefined && args.justificativaNaoPossuiCpf !== null) {
-      this.justificativaNaoPossuiCpf = args.justificativaNaoPossuiCpf;
+    if (args.justificativaCidadaoNaoPossuiCpf !== undefined && args.justificativaCidadaoNaoPossuiCpf !== null) {
+      this.justificativaCidadaoNaoPossuiCpf = args.justificativaCidadaoNaoPossuiCpf;
     }
   }
 };
@@ -195,16 +195,16 @@ FichaProcedimentoChildThrift.prototype.read = function(input) {
         input.skip(ftype);
       }
       break;
-      case 18:
+      case 20:
       if (ftype == Thrift.Type.BOOL) {
-        this.stNaoPossuiCpf = input.readBool();
+        this.stCidadaoNaoPossuiCpf = input.readBool();
       } else {
         input.skip(ftype);
       }
       break;
-      case 19:
+      case 21:
       if (ftype == Thrift.Type.I64) {
-        this.justificativaNaoPossuiCpf = input.readI64();
+        this.justificativaCidadaoNaoPossuiCpf = input.readI64();
       } else {
         input.skip(ftype);
       }
@@ -294,14 +294,14 @@ FichaProcedimentoChildThrift.prototype.write = function(output) {
     this.ivcf.write(output);
     output.writeFieldEnd();
   }
-  if (this.stNaoPossuiCpf !== null && this.stNaoPossuiCpf !== undefined) {
-    output.writeFieldBegin('stNaoPossuiCpf', Thrift.Type.BOOL, 18);
-    output.writeBool(this.stNaoPossuiCpf);
+  if (this.stCidadaoNaoPossuiCpf !== null && this.stCidadaoNaoPossuiCpf !== undefined) {
+    output.writeFieldBegin('stCidadaoNaoPossuiCpf', Thrift.Type.BOOL, 20);
+    output.writeBool(this.stCidadaoNaoPossuiCpf);
     output.writeFieldEnd();
   }
-  if (this.justificativaNaoPossuiCpf !== null && this.justificativaNaoPossuiCpf !== undefined) {
-    output.writeFieldBegin('justificativaNaoPossuiCpf', Thrift.Type.I64, 19);
-    output.writeI64(this.justificativaNaoPossuiCpf);
+  if (this.justificativaCidadaoNaoPossuiCpf !== null && this.justificativaCidadaoNaoPossuiCpf !== undefined) {
+    output.writeFieldBegin('justificativaCidadaoNaoPossuiCpf', Thrift.Type.I64, 21);
+    output.writeI64(this.justificativaCidadaoNaoPossuiCpf);
     output.writeFieldEnd();
   }
   output.writeFieldStop();

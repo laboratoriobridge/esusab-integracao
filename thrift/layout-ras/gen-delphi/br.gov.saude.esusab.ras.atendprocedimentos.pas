@@ -57,10 +57,10 @@ type
     procedure SetMedicoes( const Value: IMedicoesThrift);
     function GetIvcf: IIvcfThrift;
     procedure SetIvcf( const Value: IIvcfThrift);
-    function GetStNaoPossuiCpf: Boolean;
-    procedure SetStNaoPossuiCpf( const Value: Boolean);
-    function GetJustificativaNaoPossuiCpf: Int64;
-    procedure SetJustificativaNaoPossuiCpf( const Value: Int64);
+    function GetStCidadaoNaoPossuiCpf: Boolean;
+    procedure SetStCidadaoNaoPossuiCpf( const Value: Boolean);
+    function GetJustificativaCidadaoNaoPossuiCpf: Int64;
+    procedure SetJustificativaCidadaoNaoPossuiCpf( const Value: Int64);
 
     property NumProntuario: string read GetNumProntuario write SetNumProntuario;
     property CnsCidadao: string read GetCnsCidadao write SetCnsCidadao;
@@ -75,8 +75,8 @@ type
     property CpfCidadao: string read GetCpfCidadao write SetCpfCidadao;
     property Medicoes: IMedicoesThrift read GetMedicoes write SetMedicoes;
     property Ivcf: IIvcfThrift read GetIvcf write SetIvcf;
-    property StNaoPossuiCpf: Boolean read GetStNaoPossuiCpf write SetStNaoPossuiCpf;
-    property JustificativaNaoPossuiCpf: Int64 read GetJustificativaNaoPossuiCpf write SetJustificativaNaoPossuiCpf;
+    property StCidadaoNaoPossuiCpf: Boolean read GetStCidadaoNaoPossuiCpf write SetStCidadaoNaoPossuiCpf;
+    property JustificativaCidadaoNaoPossuiCpf: Int64 read GetJustificativaCidadaoNaoPossuiCpf write SetJustificativaCidadaoNaoPossuiCpf;
 
     function Get__isset_NumProntuario: Boolean;
     function Get__isset_CnsCidadao: Boolean;
@@ -91,8 +91,8 @@ type
     function Get__isset_CpfCidadao: Boolean;
     function Get__isset_Medicoes: Boolean;
     function Get__isset_Ivcf: Boolean;
-    function Get__isset_StNaoPossuiCpf: Boolean;
-    function Get__isset_JustificativaNaoPossuiCpf: Boolean;
+    function Get__isset_StCidadaoNaoPossuiCpf: Boolean;
+    function Get__isset_JustificativaCidadaoNaoPossuiCpf: Boolean;
 
     property __isset_NumProntuario: Boolean read Get__isset_NumProntuario;
     property __isset_CnsCidadao: Boolean read Get__isset_CnsCidadao;
@@ -107,8 +107,8 @@ type
     property __isset_CpfCidadao: Boolean read Get__isset_CpfCidadao;
     property __isset_Medicoes: Boolean read Get__isset_Medicoes;
     property __isset_Ivcf: Boolean read Get__isset_Ivcf;
-    property __isset_StNaoPossuiCpf: Boolean read Get__isset_StNaoPossuiCpf;
-    property __isset_JustificativaNaoPossuiCpf: Boolean read Get__isset_JustificativaNaoPossuiCpf;
+    property __isset_StCidadaoNaoPossuiCpf: Boolean read Get__isset_StCidadaoNaoPossuiCpf;
+    property __isset_JustificativaCidadaoNaoPossuiCpf: Boolean read Get__isset_JustificativaCidadaoNaoPossuiCpf;
   end;
 
   TFichaProcedimentoChildThriftImpl = class(TInterfacedObject, IBase, IFichaProcedimentoChildThrift)
@@ -126,8 +126,8 @@ type
     FCpfCidadao: string;
     FMedicoes: IMedicoesThrift;
     FIvcf: IIvcfThrift;
-    FStNaoPossuiCpf: Boolean;
-    FJustificativaNaoPossuiCpf: Int64;
+    FStCidadaoNaoPossuiCpf: Boolean;
+    FJustificativaCidadaoNaoPossuiCpf: Int64;
     
     F__isset_NumProntuario: Boolean;
     F__isset_CnsCidadao: Boolean;
@@ -142,8 +142,8 @@ type
     F__isset_CpfCidadao: Boolean;
     F__isset_Medicoes: Boolean;
     F__isset_Ivcf: Boolean;
-    F__isset_StNaoPossuiCpf: Boolean;
-    F__isset_JustificativaNaoPossuiCpf: Boolean;
+    F__isset_StCidadaoNaoPossuiCpf: Boolean;
+    F__isset_JustificativaCidadaoNaoPossuiCpf: Boolean;
     
     function GetNumProntuario: string;
     procedure SetNumProntuario( const Value: string);
@@ -171,10 +171,10 @@ type
     procedure SetMedicoes( const Value: IMedicoesThrift);
     function GetIvcf: IIvcfThrift;
     procedure SetIvcf( const Value: IIvcfThrift);
-    function GetStNaoPossuiCpf: Boolean;
-    procedure SetStNaoPossuiCpf( const Value: Boolean);
-    function GetJustificativaNaoPossuiCpf: Int64;
-    procedure SetJustificativaNaoPossuiCpf( const Value: Int64);
+    function GetStCidadaoNaoPossuiCpf: Boolean;
+    procedure SetStCidadaoNaoPossuiCpf( const Value: Boolean);
+    function GetJustificativaCidadaoNaoPossuiCpf: Int64;
+    procedure SetJustificativaCidadaoNaoPossuiCpf( const Value: Int64);
 
     function Get__isset_NumProntuario: Boolean;
     function Get__isset_CnsCidadao: Boolean;
@@ -189,8 +189,8 @@ type
     function Get__isset_CpfCidadao: Boolean;
     function Get__isset_Medicoes: Boolean;
     function Get__isset_Ivcf: Boolean;
-    function Get__isset_StNaoPossuiCpf: Boolean;
-    function Get__isset_JustificativaNaoPossuiCpf: Boolean;
+    function Get__isset_StCidadaoNaoPossuiCpf: Boolean;
+    function Get__isset_JustificativaCidadaoNaoPossuiCpf: Boolean;
   public
     constructor Create;
     destructor Destroy; override;
@@ -215,8 +215,8 @@ type
     property CpfCidadao: string read GetCpfCidadao write SetCpfCidadao;
     property Medicoes: IMedicoesThrift read GetMedicoes write SetMedicoes;
     property Ivcf: IIvcfThrift read GetIvcf write SetIvcf;
-    property StNaoPossuiCpf: Boolean read GetStNaoPossuiCpf write SetStNaoPossuiCpf;
-    property JustificativaNaoPossuiCpf: Int64 read GetJustificativaNaoPossuiCpf write SetJustificativaNaoPossuiCpf;
+    property StCidadaoNaoPossuiCpf: Boolean read GetStCidadaoNaoPossuiCpf write SetStCidadaoNaoPossuiCpf;
+    property JustificativaCidadaoNaoPossuiCpf: Int64 read GetJustificativaCidadaoNaoPossuiCpf write SetJustificativaCidadaoNaoPossuiCpf;
 
     // isset
     property __isset_NumProntuario: Boolean read Get__isset_NumProntuario;
@@ -232,8 +232,8 @@ type
     property __isset_CpfCidadao: Boolean read Get__isset_CpfCidadao;
     property __isset_Medicoes: Boolean read Get__isset_Medicoes;
     property __isset_Ivcf: Boolean read Get__isset_Ivcf;
-    property __isset_StNaoPossuiCpf: Boolean read Get__isset_StNaoPossuiCpf;
-    property __isset_JustificativaNaoPossuiCpf: Boolean read Get__isset_JustificativaNaoPossuiCpf;
+    property __isset_StCidadaoNaoPossuiCpf: Boolean read Get__isset_StCidadaoNaoPossuiCpf;
+    property __isset_JustificativaCidadaoNaoPossuiCpf: Boolean read Get__isset_JustificativaCidadaoNaoPossuiCpf;
   end;
 
   IFichaProcedimentoMasterThrift = interface(IBase)
@@ -609,36 +609,36 @@ begin
   Result := F__isset_Ivcf;
 end;
 
-function TFichaProcedimentoChildThriftImpl.GetStNaoPossuiCpf: Boolean;
+function TFichaProcedimentoChildThriftImpl.GetStCidadaoNaoPossuiCpf: Boolean;
 begin
-  Result := FStNaoPossuiCpf;
+  Result := FStCidadaoNaoPossuiCpf;
 end;
 
-procedure TFichaProcedimentoChildThriftImpl.SetStNaoPossuiCpf( const Value: Boolean);
+procedure TFichaProcedimentoChildThriftImpl.SetStCidadaoNaoPossuiCpf( const Value: Boolean);
 begin
-  F__isset_StNaoPossuiCpf := True;
-  FStNaoPossuiCpf := Value;
+  F__isset_StCidadaoNaoPossuiCpf := True;
+  FStCidadaoNaoPossuiCpf := Value;
 end;
 
-function TFichaProcedimentoChildThriftImpl.Get__isset_StNaoPossuiCpf: Boolean;
+function TFichaProcedimentoChildThriftImpl.Get__isset_StCidadaoNaoPossuiCpf: Boolean;
 begin
-  Result := F__isset_StNaoPossuiCpf;
+  Result := F__isset_StCidadaoNaoPossuiCpf;
 end;
 
-function TFichaProcedimentoChildThriftImpl.GetJustificativaNaoPossuiCpf: Int64;
+function TFichaProcedimentoChildThriftImpl.GetJustificativaCidadaoNaoPossuiCpf: Int64;
 begin
-  Result := FJustificativaNaoPossuiCpf;
+  Result := FJustificativaCidadaoNaoPossuiCpf;
 end;
 
-procedure TFichaProcedimentoChildThriftImpl.SetJustificativaNaoPossuiCpf( const Value: Int64);
+procedure TFichaProcedimentoChildThriftImpl.SetJustificativaCidadaoNaoPossuiCpf( const Value: Int64);
 begin
-  F__isset_JustificativaNaoPossuiCpf := True;
-  FJustificativaNaoPossuiCpf := Value;
+  F__isset_JustificativaCidadaoNaoPossuiCpf := True;
+  FJustificativaCidadaoNaoPossuiCpf := Value;
 end;
 
-function TFichaProcedimentoChildThriftImpl.Get__isset_JustificativaNaoPossuiCpf: Boolean;
+function TFichaProcedimentoChildThriftImpl.Get__isset_JustificativaCidadaoNaoPossuiCpf: Boolean;
 begin
-  Result := F__isset_JustificativaNaoPossuiCpf;
+  Result := F__isset_JustificativaCidadaoNaoPossuiCpf;
 end;
 
 procedure TFichaProcedimentoChildThriftImpl.Read( const iprot: IProtocol);
@@ -788,19 +788,19 @@ begin
             TProtocolUtil.Skip(iprot, field_.Type_);
           end;
         end;
-        18: begin
+        20: begin
           if (field_.Type_ = TType.Bool_) then
           begin
-            StNaoPossuiCpf := iprot.ReadBool();
+            StCidadaoNaoPossuiCpf := iprot.ReadBool();
           end else
           begin
             TProtocolUtil.Skip(iprot, field_.Type_);
           end;
         end;
-        19: begin
+        21: begin
           if (field_.Type_ = TType.I64) then
           begin
-            JustificativaNaoPossuiCpf := iprot.ReadI64();
+            JustificativaCidadaoNaoPossuiCpf := iprot.ReadI64();
           end else
           begin
             TProtocolUtil.Skip(iprot, field_.Type_);
@@ -952,22 +952,22 @@ begin
     Ivcf.Write(oprot);
     oprot.WriteFieldEnd();
   end;
-  if (__isset_StNaoPossuiCpf) then
+  if (__isset_StCidadaoNaoPossuiCpf) then
   begin
-    field_.Name := 'stNaoPossuiCpf';
+    field_.Name := 'stCidadaoNaoPossuiCpf';
     field_.Type_  := TType.Bool_;
-    field_.ID := 18;
+    field_.ID := 20;
     oprot.WriteFieldBegin(field_);
-    oprot.WriteBool(StNaoPossuiCpf);
+    oprot.WriteBool(StCidadaoNaoPossuiCpf);
     oprot.WriteFieldEnd();
   end;
-  if (__isset_JustificativaNaoPossuiCpf) then
+  if (__isset_JustificativaCidadaoNaoPossuiCpf) then
   begin
-    field_.Name := 'justificativaNaoPossuiCpf';
+    field_.Name := 'justificativaCidadaoNaoPossuiCpf';
     field_.Type_  := TType.I64;
-    field_.ID := 19;
+    field_.ID := 21;
     oprot.WriteFieldBegin(field_);
-    oprot.WriteI64(JustificativaNaoPossuiCpf);
+    oprot.WriteI64(JustificativaCidadaoNaoPossuiCpf);
     oprot.WriteFieldEnd();
   end;
   oprot.WriteFieldStop();
@@ -1060,17 +1060,17 @@ begin
       _sb5.Append('Ivcf: ');
       if (Ivcf = nil) then _sb5.Append('<null>') else _sb5.Append(Ivcf.ToString());
     end;
-    if (__isset_StNaoPossuiCpf) then begin
+    if (__isset_StCidadaoNaoPossuiCpf) then begin
       if not _first6 then _sb5.Append(',');
       _first6 := FALSE;
-      _sb5.Append('StNaoPossuiCpf: ');
-      _sb5.Append(StNaoPossuiCpf);
+      _sb5.Append('StCidadaoNaoPossuiCpf: ');
+      _sb5.Append(StCidadaoNaoPossuiCpf);
     end;
-    if (__isset_JustificativaNaoPossuiCpf) then begin
+    if (__isset_JustificativaCidadaoNaoPossuiCpf) then begin
       if not _first6 then _sb5.Append(',');
       _first6 := FALSE;
-      _sb5.Append('JustificativaNaoPossuiCpf: ');
-      _sb5.Append(JustificativaNaoPossuiCpf);
+      _sb5.Append('JustificativaCidadaoNaoPossuiCpf: ');
+      _sb5.Append(JustificativaCidadaoNaoPossuiCpf);
     end;
     _sb5.Append(')');
     Result := _sb5.ToString;

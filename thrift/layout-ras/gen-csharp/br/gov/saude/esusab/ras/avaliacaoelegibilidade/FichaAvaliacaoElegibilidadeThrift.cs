@@ -58,8 +58,8 @@ namespace br.gov.saude.esusab.ras.avaliacaoelegibilidade
     private string _cnsCuidador;
     private string _cpfCidadao;
     private string _cpfCuidador;
-    private bool _stNaoPossuiCpf;
-    private long _justificativaNaoPossuiCpf;
+    private bool _stCidadaoNaoPossuiCpf;
+    private long _justificativaCidadaoNaoPossuiCpf;
 
     public string UuidFicha { get; set; }
 
@@ -518,29 +518,29 @@ namespace br.gov.saude.esusab.ras.avaliacaoelegibilidade
       }
     }
 
-    public bool StNaoPossuiCpf
+    public bool StCidadaoNaoPossuiCpf
     {
       get
       {
-        return _stNaoPossuiCpf;
+        return _stCidadaoNaoPossuiCpf;
       }
       set
       {
-        __isset.stNaoPossuiCpf = true;
-        this._stNaoPossuiCpf = value;
+        __isset.stCidadaoNaoPossuiCpf = true;
+        this._stCidadaoNaoPossuiCpf = value;
       }
     }
 
-    public long JustificativaNaoPossuiCpf
+    public long JustificativaCidadaoNaoPossuiCpf
     {
       get
       {
-        return _justificativaNaoPossuiCpf;
+        return _justificativaCidadaoNaoPossuiCpf;
       }
       set
       {
-        __isset.justificativaNaoPossuiCpf = true;
-        this._justificativaNaoPossuiCpf = value;
+        __isset.justificativaCidadaoNaoPossuiCpf = true;
+        this._justificativaCidadaoNaoPossuiCpf = value;
       }
     }
 
@@ -585,8 +585,8 @@ namespace br.gov.saude.esusab.ras.avaliacaoelegibilidade
       public bool cnsCuidador;
       public bool cpfCidadao;
       public bool cpfCuidador;
-      public bool stNaoPossuiCpf;
-      public bool justificativaNaoPossuiCpf;
+      public bool stCidadaoNaoPossuiCpf;
+      public bool justificativaCidadaoNaoPossuiCpf;
     }
 
     public FichaAvaliacaoElegibilidadeThrift() {
@@ -889,14 +889,14 @@ namespace br.gov.saude.esusab.ras.avaliacaoelegibilidade
               break;
             case 38:
               if (field.Type == TType.Bool) {
-                StNaoPossuiCpf = iprot.ReadBool();
+                StCidadaoNaoPossuiCpf = iprot.ReadBool();
               } else { 
                 TProtocolUtil.Skip(iprot, field.Type);
               }
               break;
             case 39:
               if (field.Type == TType.I64) {
-                JustificativaNaoPossuiCpf = iprot.ReadI64();
+                JustificativaCidadaoNaoPossuiCpf = iprot.ReadI64();
               } else { 
                 TProtocolUtil.Skip(iprot, field.Type);
               }
@@ -1224,20 +1224,20 @@ namespace br.gov.saude.esusab.ras.avaliacaoelegibilidade
           oprot.WriteString(CpfCuidador);
           oprot.WriteFieldEnd();
         }
-        if (__isset.stNaoPossuiCpf) {
-          field.Name = "stNaoPossuiCpf";
+        if (__isset.stCidadaoNaoPossuiCpf) {
+          field.Name = "stCidadaoNaoPossuiCpf";
           field.Type = TType.Bool;
           field.ID = 38;
           oprot.WriteFieldBegin(field);
-          oprot.WriteBool(StNaoPossuiCpf);
+          oprot.WriteBool(StCidadaoNaoPossuiCpf);
           oprot.WriteFieldEnd();
         }
-        if (__isset.justificativaNaoPossuiCpf) {
-          field.Name = "justificativaNaoPossuiCpf";
+        if (__isset.justificativaCidadaoNaoPossuiCpf) {
+          field.Name = "justificativaCidadaoNaoPossuiCpf";
           field.Type = TType.I64;
           field.ID = 39;
           oprot.WriteFieldBegin(field);
-          oprot.WriteI64(JustificativaNaoPossuiCpf);
+          oprot.WriteI64(JustificativaCidadaoNaoPossuiCpf);
           oprot.WriteFieldEnd();
         }
         oprot.WriteFieldStop();
@@ -1393,13 +1393,13 @@ namespace br.gov.saude.esusab.ras.avaliacaoelegibilidade
         __sb.Append(", CpfCuidador: ");
         __sb.Append(CpfCuidador);
       }
-      if (__isset.stNaoPossuiCpf) {
-        __sb.Append(", StNaoPossuiCpf: ");
-        __sb.Append(StNaoPossuiCpf);
+      if (__isset.stCidadaoNaoPossuiCpf) {
+        __sb.Append(", StCidadaoNaoPossuiCpf: ");
+        __sb.Append(StCidadaoNaoPossuiCpf);
       }
-      if (__isset.justificativaNaoPossuiCpf) {
-        __sb.Append(", JustificativaNaoPossuiCpf: ");
-        __sb.Append(JustificativaNaoPossuiCpf);
+      if (__isset.justificativaCidadaoNaoPossuiCpf) {
+        __sb.Append(", JustificativaCidadaoNaoPossuiCpf: ");
+        __sb.Append(JustificativaCidadaoNaoPossuiCpf);
       }
       __sb.Append(")");
       return __sb.ToString();

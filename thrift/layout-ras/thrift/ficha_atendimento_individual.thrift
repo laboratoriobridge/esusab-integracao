@@ -53,8 +53,8 @@ struct FichaAtendimentoIndividualChildThrift {
 	40:optional list<common.ProblemaCondicaoThrift> problemasCondicoes;
 	41:optional common.IvcfThrift ivcf;
 	43:optional list<solicitacao_oci.SolicitacaoOciThrift> solicitacoesOci;
-	44:optional bool stNaoPossuiCpf;
-	45:optional i64 justificativaNaoPossuiCpf;
+	47:optional bool stCidadaoNaoPossuiCpf;
+	48:optional i64 justificativaCidadaoNaoPossuiCpf;
 }
 
 struct FichaAtendimentoIndividualMasterThrift {

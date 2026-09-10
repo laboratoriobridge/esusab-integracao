@@ -106,6 +106,6 @@ struct FichaConsumoAlimentarThrift {
 	10:required string uuidFicha;
 	11:optional i32 tpCdsOrigem;
 	12:optional string cpfCidadao;
-	13:optional bool stNaoPossuiCpf;
-	14:optional i64 justificativaNaoPossuiCpf;
+	13:optional bool stCidadaoNaoPossuiCpf;
+	14:optional i64 justificativaCidadaoNaoPossuiCpf;
 }

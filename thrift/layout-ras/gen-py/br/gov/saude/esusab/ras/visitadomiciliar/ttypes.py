@@ -45,8 +45,8 @@ class FichaVisitaDomiciliarChildThrift:
    - longitude
    - uuidOrigemCadastroDomiciliar
    - ivcf
-   - stNaoPossuiCpf
-   - justificativaNaoPossuiCpf
+   - stCidadaoNaoPossuiCpf
+   - justificativaCidadaoNaoPossuiCpf
   """
 
   thrift_spec = (
@@ -74,11 +74,11 @@ class FichaVisitaDomiciliarChildThrift:
     (21, TType.DOUBLE, 'longitude', None, None, ), # 21
     (22, TType.STRING, 'uuidOrigemCadastroDomiciliar', None, None, ), # 22
     (23, TType.STRUCT, 'ivcf', (br.gov.saude.esusab.ras.common.ttypes.IvcfThrift, br.gov.saude.esusab.ras.common.ttypes.IvcfThrift.thrift_spec), None, ), # 23
-    (24, TType.BOOL, 'stNaoPossuiCpf', None, None, ), # 24
-    (25, TType.I64, 'justificativaNaoPossuiCpf', None, None, ), # 25
+    (24, TType.BOOL, 'stCidadaoNaoPossuiCpf', None, None, ), # 24
+    (25, TType.I64, 'justificativaCidadaoNaoPossuiCpf', None, None, ), # 25
   )
 
-  def __init__(self, turno=None, numProntuario=None, cnsCidadao=None, dtNascimento=None, sexo=None, statusVisitaCompartilhadaOutroProfissional=None, motivosVisita=None, desfecho=None, microArea=None, stForaArea=None, tipoDeImovel=None, pesoAcompanhamentoNutricional=None, alturaAcompanhamentoNutricional=None, cpfCidadao=None, pressaoSistolica=None, pressaoDiastolica=None, temperatura=None, tipoGlicemia=None, glicemia=None, latitude=None, longitude=None, uuidOrigemCadastroDomiciliar=None, ivcf=None, stNaoPossuiCpf=None, justificativaNaoPossuiCpf=None,):
+  def __init__(self, turno=None, numProntuario=None, cnsCidadao=None, dtNascimento=None, sexo=None, statusVisitaCompartilhadaOutroProfissional=None, motivosVisita=None, desfecho=None, microArea=None, stForaArea=None, tipoDeImovel=None, pesoAcompanhamentoNutricional=None, alturaAcompanhamentoNutricional=None, cpfCidadao=None, pressaoSistolica=None, pressaoDiastolica=None, temperatura=None, tipoGlicemia=None, glicemia=None, latitude=None, longitude=None, uuidOrigemCadastroDomiciliar=None, ivcf=None, stCidadaoNaoPossuiCpf=None, justificativaCidadaoNaoPossuiCpf=None,):
     self.turno = turno
     self.numProntuario = numProntuario
     self.cnsCidadao = cnsCidadao
@@ -102,8 +102,8 @@ class FichaVisitaDomiciliarChildThrift:
     self.longitude = longitude
     self.uuidOrigemCadastroDomiciliar = uuidOrigemCadastroDomiciliar
     self.ivcf = ivcf
-    self.stNaoPossuiCpf = stNaoPossuiCpf
-    self.justificativaNaoPossuiCpf = justificativaNaoPossuiCpf
+    self.stCidadaoNaoPossuiCpf = stCidadaoNaoPossuiCpf
+    self.justificativaCidadaoNaoPossuiCpf = justificativaCidadaoNaoPossuiCpf
 
   def read(self, iprot):
     if iprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None and fastbinary is not None:
@@ -237,12 +237,12 @@ class FichaVisitaDomiciliarChildThrift:
           iprot.skip(ftype)
       elif fid == 24:
         if ftype == TType.BOOL:
-          self.stNaoPossuiCpf = iprot.readBool()
+          self.stCidadaoNaoPossuiCpf = iprot.readBool()
         else:
           iprot.skip(ftype)
       elif fid == 25:
         if ftype == TType.I64:
-          self.justificativaNaoPossuiCpf = iprot.readI64()
+          self.justificativaCidadaoNaoPossuiCpf = iprot.readI64()
         else:
           iprot.skip(ftype)
       else:
@@ -350,13 +350,13 @@ class FichaVisitaDomiciliarChildThrift:
       oprot.writeFieldBegin('ivcf', TType.STRUCT, 23)
       self.ivcf.write(oprot)
       oprot.writeFieldEnd()
-    if self.stNaoPossuiCpf is not None:
-      oprot.writeFieldBegin('stNaoPossuiCpf', TType.BOOL, 24)
-      oprot.writeBool(self.stNaoPossuiCpf)
+    if self.stCidadaoNaoPossuiCpf is not None:
+      oprot.writeFieldBegin('stCidadaoNaoPossuiCpf', TType.BOOL, 24)
+      oprot.writeBool(self.stCidadaoNaoPossuiCpf)
       oprot.writeFieldEnd()
-    if self.justificativaNaoPossuiCpf is not None:
-      oprot.writeFieldBegin('justificativaNaoPossuiCpf', TType.I64, 25)
-      oprot.writeI64(self.justificativaNaoPossuiCpf)
+    if self.justificativaCidadaoNaoPossuiCpf is not None:
+      oprot.writeFieldBegin('justificativaCidadaoNaoPossuiCpf', TType.I64, 25)
+      oprot.writeI64(self.justificativaCidadaoNaoPossuiCpf)
       oprot.writeFieldEnd()
     oprot.writeFieldStop()
     oprot.writeStructEnd()
@@ -390,8 +390,8 @@ class FichaVisitaDomiciliarChildThrift:
     value = (value * 31) ^ hash(self.longitude)
     value = (value * 31) ^ hash(self.uuidOrigemCadastroDomiciliar)
     value = (value * 31) ^ hash(self.ivcf)
-    value = (value * 31) ^ hash(self.stNaoPossuiCpf)
-    value = (value * 31) ^ hash(self.justificativaNaoPossuiCpf)
+    value = (value * 31) ^ hash(self.stCidadaoNaoPossuiCpf)
+    value = (value * 31) ^ hash(self.justificativaCidadaoNaoPossuiCpf)
     return value
 
   def __repr__(self):

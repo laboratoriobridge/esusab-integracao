@@ -42,8 +42,8 @@ class FichaComplementarZikaMicrocefaliaThrift:
    - coResultadoRessonanciaMagnetica
    - cpfCidadao
    - cpfResponsavelFamiliar
-   - stNaoPossuiCpf
-   - justificativaNaoPossuiCpf
+   - stCidadaoNaoPossuiCpf
+   - justificativaCidadaoNaoPossuiCpf
   """
 
   thrift_spec = (
@@ -68,11 +68,11 @@ class FichaComplementarZikaMicrocefaliaThrift:
     (18, TType.I64, 'coResultadoRessonanciaMagnetica', None, None, ), # 18
     (19, TType.STRING, 'cpfCidadao', None, None, ), # 19
     (20, TType.STRING, 'cpfResponsavelFamiliar', None, None, ), # 20
-    (21, TType.BOOL, 'stNaoPossuiCpf', None, None, ), # 21
-    (22, TType.I64, 'justificativaNaoPossuiCpf', None, None, ), # 22
+    (21, TType.BOOL, 'stCidadaoNaoPossuiCpf', None, None, ), # 21
+    (22, TType.I64, 'justificativaCidadaoNaoPossuiCpf', None, None, ), # 22
   )
 
-  def __init__(self, headerTransport=None, uuidFicha=None, tpCdsOrigem=None, turno=None, cnsCidadao=None, cnsResponsavelFamiliar=None, dataRealizacaoTesteOlhinho=None, coResultadoTesteOlhinho=None, dataRealizacaoExameFundoOlho=None, coResultadoExameFundoOlho=None, dataRealizacaoTesteOrelhinha=None, coResultadoTesteOrelhinha=None, dataRealizacaoUSTransfontanela=None, coResultadoUsTransfontanela=None, dataRealizacaoTomografiaComputadorizada=None, coResultadoTomografiaComputadorizada=None, dataRealizacaoRessonanciaMagnetica=None, coResultadoRessonanciaMagnetica=None, cpfCidadao=None, cpfResponsavelFamiliar=None, stNaoPossuiCpf=None, justificativaNaoPossuiCpf=None,):
+  def __init__(self, headerTransport=None, uuidFicha=None, tpCdsOrigem=None, turno=None, cnsCidadao=None, cnsResponsavelFamiliar=None, dataRealizacaoTesteOlhinho=None, coResultadoTesteOlhinho=None, dataRealizacaoExameFundoOlho=None, coResultadoExameFundoOlho=None, dataRealizacaoTesteOrelhinha=None, coResultadoTesteOrelhinha=None, dataRealizacaoUSTransfontanela=None, coResultadoUsTransfontanela=None, dataRealizacaoTomografiaComputadorizada=None, coResultadoTomografiaComputadorizada=None, dataRealizacaoRessonanciaMagnetica=None, coResultadoRessonanciaMagnetica=None, cpfCidadao=None, cpfResponsavelFamiliar=None, stCidadaoNaoPossuiCpf=None, justificativaCidadaoNaoPossuiCpf=None,):
     self.headerTransport = headerTransport
     self.uuidFicha = uuidFicha
     self.tpCdsOrigem = tpCdsOrigem
@@ -93,8 +93,8 @@ class FichaComplementarZikaMicrocefaliaThrift:
     self.coResultadoRessonanciaMagnetica = coResultadoRessonanciaMagnetica
     self.cpfCidadao = cpfCidadao
     self.cpfResponsavelFamiliar = cpfResponsavelFamiliar
-    self.stNaoPossuiCpf = stNaoPossuiCpf
-    self.justificativaNaoPossuiCpf = justificativaNaoPossuiCpf
+    self.stCidadaoNaoPossuiCpf = stCidadaoNaoPossuiCpf
+    self.justificativaCidadaoNaoPossuiCpf = justificativaCidadaoNaoPossuiCpf
 
   def read(self, iprot):
     if iprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None and fastbinary is not None:
@@ -208,12 +208,12 @@ class FichaComplementarZikaMicrocefaliaThrift:
           iprot.skip(ftype)
       elif fid == 21:
         if ftype == TType.BOOL:
-          self.stNaoPossuiCpf = iprot.readBool()
+          self.stCidadaoNaoPossuiCpf = iprot.readBool()
         else:
           iprot.skip(ftype)
       elif fid == 22:
         if ftype == TType.I64:
-          self.justificativaNaoPossuiCpf = iprot.readI64()
+          self.justificativaCidadaoNaoPossuiCpf = iprot.readI64()
         else:
           iprot.skip(ftype)
       else:
@@ -306,13 +306,13 @@ class FichaComplementarZikaMicrocefaliaThrift:
       oprot.writeFieldBegin('cpfResponsavelFamiliar', TType.STRING, 20)
       oprot.writeString(self.cpfResponsavelFamiliar)
       oprot.writeFieldEnd()
-    if self.stNaoPossuiCpf is not None:
-      oprot.writeFieldBegin('stNaoPossuiCpf', TType.BOOL, 21)
-      oprot.writeBool(self.stNaoPossuiCpf)
+    if self.stCidadaoNaoPossuiCpf is not None:
+      oprot.writeFieldBegin('stCidadaoNaoPossuiCpf', TType.BOOL, 21)
+      oprot.writeBool(self.stCidadaoNaoPossuiCpf)
       oprot.writeFieldEnd()
-    if self.justificativaNaoPossuiCpf is not None:
-      oprot.writeFieldBegin('justificativaNaoPossuiCpf', TType.I64, 22)
-      oprot.writeI64(self.justificativaNaoPossuiCpf)
+    if self.justificativaCidadaoNaoPossuiCpf is not None:
+      oprot.writeFieldBegin('justificativaCidadaoNaoPossuiCpf', TType.I64, 22)
+      oprot.writeI64(self.justificativaCidadaoNaoPossuiCpf)
       oprot.writeFieldEnd()
     oprot.writeFieldStop()
     oprot.writeStructEnd()
@@ -345,8 +345,8 @@ class FichaComplementarZikaMicrocefaliaThrift:
     value = (value * 31) ^ hash(self.coResultadoRessonanciaMagnetica)
     value = (value * 31) ^ hash(self.cpfCidadao)
     value = (value * 31) ^ hash(self.cpfResponsavelFamiliar)
-    value = (value * 31) ^ hash(self.stNaoPossuiCpf)
-    value = (value * 31) ^ hash(self.justificativaNaoPossuiCpf)
+    value = (value * 31) ^ hash(self.stCidadaoNaoPossuiCpf)
+    value = (value * 31) ^ hash(self.justificativaCidadaoNaoPossuiCpf)
     return value
 
   def __repr__(self):

@@ -36,8 +36,8 @@ module Br
               CORESULTADORESSONANCIAMAGNETICA = 18
               CPFCIDADAO = 19
               CPFRESPONSAVELFAMILIAR = 20
-              STNAOPOSSUICPF = 21
-              JUSTIFICATIVANAOPOSSUICPF = 22
+              STCIDADAONAOPOSSUICPF = 21
+              JUSTIFICATIVACIDADAONAOPOSSUICPF = 22
 
               FIELDS = {
                 HEADERTRANSPORT => {:type => ::Thrift::Types::STRUCT, :name => 'headerTransport', :class => ::Br::Gov::Saude::Esusab::Ras::Common::UnicaLotacaoHeaderThrift, :optional => true},
@@ -60,8 +60,8 @@ module Br
                 CORESULTADORESSONANCIAMAGNETICA => {:type => ::Thrift::Types::I64, :name => 'coResultadoRessonanciaMagnetica', :optional => true},
                 CPFCIDADAO => {:type => ::Thrift::Types::STRING, :name => 'cpfCidadao', :optional => true},
                 CPFRESPONSAVELFAMILIAR => {:type => ::Thrift::Types::STRING, :name => 'cpfResponsavelFamiliar', :optional => true},
-                STNAOPOSSUICPF => {:type => ::Thrift::Types::BOOL, :name => 'stNaoPossuiCpf', :optional => true},
-                JUSTIFICATIVANAOPOSSUICPF => {:type => ::Thrift::Types::I64, :name => 'justificativaNaoPossuiCpf', :optional => true}
+                STCIDADAONAOPOSSUICPF => {:type => ::Thrift::Types::BOOL, :name => 'stCidadaoNaoPossuiCpf', :optional => true},
+                JUSTIFICATIVACIDADAONAOPOSSUICPF => {:type => ::Thrift::Types::I64, :name => 'justificativaCidadaoNaoPossuiCpf', :optional => true}
               }
 
               def struct_fields; FIELDS; end

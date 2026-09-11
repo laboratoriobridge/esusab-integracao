@@ -31,6 +31,8 @@ var GoUnusedProtection__ int
 //  - CondutaDesfecho
 //  - CpfCidadao
 //  - ProblemasCondicoes
+//  - StCidadaoNaoPossuiCpf
+//  - JustificativaCidadaoNaoPossuiCpf
 type FichaAtendimentoDomiciliarChildThrift struct {
 	Turno                       *int64  `thrift:"turno,1" json:"turno,omitempty"`
 	CnsCidadao                  *string `thrift:"cnsCidadao,2" json:"cnsCidadao,omitempty"`
@@ -45,8 +47,10 @@ type FichaAtendimentoDomiciliarChildThrift struct {
 	// unused field # 12
 	CondutaDesfecho *int64 `thrift:"condutaDesfecho,13" json:"condutaDesfecho,omitempty"`
 	// unused field # 14
-	CpfCidadao         *string                          `thrift:"cpfCidadao,15" json:"cpfCidadao,omitempty"`
-	ProblemasCondicoes []*common.ProblemaCondicaoThrift `thrift:"problemasCondicoes,16" json:"problemasCondicoes,omitempty"`
+	CpfCidadao                       *string                          `thrift:"cpfCidadao,15" json:"cpfCidadao,omitempty"`
+	ProblemasCondicoes               []*common.ProblemaCondicaoThrift `thrift:"problemasCondicoes,16" json:"problemasCondicoes,omitempty"`
+	StCidadaoNaoPossuiCpf            *bool                            `thrift:"stCidadaoNaoPossuiCpf,17" json:"stCidadaoNaoPossuiCpf,omitempty"`
+	JustificativaCidadaoNaoPossuiCpf *int64                           `thrift:"justificativaCidadaoNaoPossuiCpf,18" json:"justificativaCidadaoNaoPossuiCpf,omitempty"`
 }
 
 func NewFichaAtendimentoDomiciliarChildThrift() *FichaAtendimentoDomiciliarChildThrift {
@@ -151,6 +155,24 @@ var FichaAtendimentoDomiciliarChildThrift_ProblemasCondicoes_DEFAULT []*common.P
 func (p *FichaAtendimentoDomiciliarChildThrift) GetProblemasCondicoes() []*common.ProblemaCondicaoThrift {
 	return p.ProblemasCondicoes
 }
+
+var FichaAtendimentoDomiciliarChildThrift_StCidadaoNaoPossuiCpf_DEFAULT bool
+
+func (p *FichaAtendimentoDomiciliarChildThrift) GetStCidadaoNaoPossuiCpf() bool {
+	if !p.IsSetStCidadaoNaoPossuiCpf() {
+		return FichaAtendimentoDomiciliarChildThrift_StCidadaoNaoPossuiCpf_DEFAULT
+	}
+	return *p.StCidadaoNaoPossuiCpf
+}
+
+var FichaAtendimentoDomiciliarChildThrift_JustificativaCidadaoNaoPossuiCpf_DEFAULT int64
+
+func (p *FichaAtendimentoDomiciliarChildThrift) GetJustificativaCidadaoNaoPossuiCpf() int64 {
+	if !p.IsSetJustificativaCidadaoNaoPossuiCpf() {
+		return FichaAtendimentoDomiciliarChildThrift_JustificativaCidadaoNaoPossuiCpf_DEFAULT
+	}
+	return *p.JustificativaCidadaoNaoPossuiCpf
+}
 func (p *FichaAtendimentoDomiciliarChildThrift) IsSetTurno() bool {
 	return p.Turno != nil
 }
@@ -197,6 +219,14 @@ func (p *FichaAtendimentoDomiciliarChildThrift) IsSetCpfCidadao() bool {
 
 func (p *FichaAtendimentoDomiciliarChildThrift) IsSetProblemasCondicoes() bool {
 	return p.ProblemasCondicoes != nil
+}
+
+func (p *FichaAtendimentoDomiciliarChildThrift) IsSetStCidadaoNaoPossuiCpf() bool {
+	return p.StCidadaoNaoPossuiCpf != nil
+}
+
+func (p *FichaAtendimentoDomiciliarChildThrift) IsSetJustificativaCidadaoNaoPossuiCpf() bool {
+	return p.JustificativaCidadaoNaoPossuiCpf != nil
 }
 
 func (p *FichaAtendimentoDomiciliarChildThrift) Read(iprot thrift.TProtocol) error {
@@ -259,6 +289,14 @@ func (p *FichaAtendimentoDomiciliarChildThrift) Read(iprot thrift.TProtocol) err
 			}
 		case 16:
 			if err := p.readField16(iprot); err != nil {
+				return err
+			}
+		case 17:
+			if err := p.readField17(iprot); err != nil {
+				return err
+			}
+		case 18:
+			if err := p.readField18(iprot); err != nil {
 				return err
 			}
 		default:
@@ -421,6 +459,24 @@ func (p *FichaAtendimentoDomiciliarChildThrift) readField16(iprot thrift.TProtoc
 	return nil
 }
 
+func (p *FichaAtendimentoDomiciliarChildThrift) readField17(iprot thrift.TProtocol) error {
+	if v, err := iprot.ReadBool(); err != nil {
+		return thrift.PrependError("error reading field 17: ", err)
+	} else {
+		p.StCidadaoNaoPossuiCpf = &v
+	}
+	return nil
+}
+
+func (p *FichaAtendimentoDomiciliarChildThrift) readField18(iprot thrift.TProtocol) error {
+	if v, err := iprot.ReadI64(); err != nil {
+		return thrift.PrependError("error reading field 18: ", err)
+	} else {
+		p.JustificativaCidadaoNaoPossuiCpf = &v
+	}
+	return nil
+}
+
 func (p *FichaAtendimentoDomiciliarChildThrift) Write(oprot thrift.TProtocol) error {
 	if err := oprot.WriteStructBegin("FichaAtendimentoDomiciliarChildThrift"); err != nil {
 		return thrift.PrependError(fmt.Sprintf("%T write struct begin error: ", p), err)
@@ -459,6 +515,12 @@ func (p *FichaAtendimentoDomiciliarChildThrift) Write(oprot thrift.TProtocol) er
 		return err
 	}
 	if err := p.writeField16(oprot); err != nil {
+		return err
+	}
+	if err := p.writeField17(oprot); err != nil {
+		return err
+	}
+	if err := p.writeField18(oprot); err != nil {
 		return err
 	}
 	if err := oprot.WriteFieldStop(); err != nil {
@@ -669,6 +731,36 @@ func (p *FichaAtendimentoDomiciliarChildThrift) writeField16(oprot thrift.TProto
 		}
 		if err := oprot.WriteFieldEnd(); err != nil {
 			return thrift.PrependError(fmt.Sprintf("%T write field end error 16:problemasCondicoes: ", p), err)
+		}
+	}
+	return err
+}
+
+func (p *FichaAtendimentoDomiciliarChildThrift) writeField17(oprot thrift.TProtocol) (err error) {
+	if p.IsSetStCidadaoNaoPossuiCpf() {
+		if err := oprot.WriteFieldBegin("stCidadaoNaoPossuiCpf", thrift.BOOL, 17); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field begin error 17:stCidadaoNaoPossuiCpf: ", p), err)
+		}
+		if err := oprot.WriteBool(bool(*p.StCidadaoNaoPossuiCpf)); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T.stCidadaoNaoPossuiCpf (17) field write error: ", p), err)
+		}
+		if err := oprot.WriteFieldEnd(); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field end error 17:stCidadaoNaoPossuiCpf: ", p), err)
+		}
+	}
+	return err
+}
+
+func (p *FichaAtendimentoDomiciliarChildThrift) writeField18(oprot thrift.TProtocol) (err error) {
+	if p.IsSetJustificativaCidadaoNaoPossuiCpf() {
+		if err := oprot.WriteFieldBegin("justificativaCidadaoNaoPossuiCpf", thrift.I64, 18); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field begin error 18:justificativaCidadaoNaoPossuiCpf: ", p), err)
+		}
+		if err := oprot.WriteI64(int64(*p.JustificativaCidadaoNaoPossuiCpf)); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T.justificativaCidadaoNaoPossuiCpf (18) field write error: ", p), err)
+		}
+		if err := oprot.WriteFieldEnd(); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field end error 18:justificativaCidadaoNaoPossuiCpf: ", p), err)
 		}
 	}
 	return err

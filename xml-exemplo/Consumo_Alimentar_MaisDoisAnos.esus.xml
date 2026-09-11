@@ -15,7 +15,8 @@
 			<dataAtendimento>1517234400000</dataAtendimento>
 			<codigoIbgeMunicipio>4205407</codigoIbgeMunicipio>
 		</headerTransport>
-		<cpfCidadao>31422733521</cpfCidadao>
+		<stCidadaoNaoPossuiCpf>true</stCidadaoNaoPossuiCpf>
+		<justificativaCidadaoNaoPossuiCpf>9</justificativaCidadaoNaoPossuiCpf>
 		<dataNascimento>1012658400000</dataNascimento>
 		<sexo>0</sexo>
 		<localAtendimento>2</localAtendimento>

@@ -55,44 +55,48 @@ var GoUnusedProtection__ int
 //  - CnsCuidador
 //  - CpfCidadao
 //  - CpfCuidador
+//  - StCidadaoNaoPossuiCpf
+//  - JustificativaCidadaoNaoPossuiCpf
 type FichaAvaliacaoElegibilidadeThrift struct {
 	UuidFicha   string `thrift:"uuidFicha,1,required" json:"uuidFicha"`
 	TpCdsOrigem *int32 `thrift:"tpCdsOrigem,2" json:"tpCdsOrigem,omitempty"`
 	// unused field # 3
-	CnsCidadao                    *string                                `thrift:"cnsCidadao,4" json:"cnsCidadao,omitempty"`
-	NomeCidadao                   *string                                `thrift:"nomeCidadao,5" json:"nomeCidadao,omitempty"`
-	NomeSocialCidadao             *string                                `thrift:"nomeSocialCidadao,6" json:"nomeSocialCidadao,omitempty"`
-	DataNascimentoCidadao         *int64                                 `thrift:"dataNascimentoCidadao,7" json:"dataNascimentoCidadao,omitempty"`
-	SexoCidadao                   *int64                                 `thrift:"sexoCidadao,8" json:"sexoCidadao,omitempty"`
-	RacaCorCidadao                *int64                                 `thrift:"racaCorCidadao,9" json:"racaCorCidadao,omitempty"`
-	NomeMaeCidadao                *string                                `thrift:"nomeMaeCidadao,10" json:"nomeMaeCidadao,omitempty"`
-	DesconheceNomeMae             *bool                                  `thrift:"desconheceNomeMae,11" json:"desconheceNomeMae,omitempty"`
-	CodigoIbgeMunicipioNascimento *string                                `thrift:"codigoIbgeMunicipioNascimento,12" json:"codigoIbgeMunicipioNascimento,omitempty"`
-	NacionalidadeCidadao          *int64                                 `thrift:"nacionalidadeCidadao,13" json:"nacionalidadeCidadao,omitempty"`
-	EmailCidadao                  *string                                `thrift:"emailCidadao,14" json:"emailCidadao,omitempty"`
-	NumeroNisPisPasep             *string                                `thrift:"numeroNisPisPasep,15" json:"numeroNisPisPasep,omitempty"`
-	Endereco                      *common.EnderecoLocalPermanenciaThrift `thrift:"endereco,16" json:"endereco,omitempty"`
-	AtencaoDomiciliarProcedencia  *int64                                 `thrift:"atencaoDomiciliarProcedencia,17" json:"atencaoDomiciliarProcedencia,omitempty"`
-	AtencaoDomiciliarModalidade   *int64                                 `thrift:"atencaoDomiciliarModalidade,18" json:"atencaoDomiciliarModalidade,omitempty"`
-	CondicoesAvaliadas            []int64                                `thrift:"condicoesAvaliadas,19" json:"condicoesAvaliadas,omitempty"`
-	Cid10Principal                *string                                `thrift:"cid10Principal,20" json:"cid10Principal,omitempty"`
-	Cid10SecundarioUm             *string                                `thrift:"cid10SecundarioUm,21" json:"cid10SecundarioUm,omitempty"`
-	Cid10SecundarioDois           *string                                `thrift:"cid10SecundarioDois,22" json:"cid10SecundarioDois,omitempty"`
-	ConclusaoDestinoElegivel      *int64                                 `thrift:"conclusaoDestinoElegivel,23" json:"conclusaoDestinoElegivel,omitempty"`
-	ConclusaoDestinoInelegivel    []int64                                `thrift:"conclusaoDestinoInelegivel,24" json:"conclusaoDestinoInelegivel,omitempty"`
-	CuidadorCidadao               *int64                                 `thrift:"cuidadorCidadao,25" json:"cuidadorCidadao,omitempty"`
-	Turno                         *int64                                 `thrift:"turno,26" json:"turno,omitempty"`
-	HeaderTransport               *common.VariasLotacoesHeaderThrift     `thrift:"headerTransport,27" json:"headerTransport,omitempty"`
-	NomePaiCidadao                *string                                `thrift:"nomePaiCidadao,28" json:"nomePaiCidadao,omitempty"`
-	DesconheceNomePai             *bool                                  `thrift:"desconheceNomePai,29" json:"desconheceNomePai,omitempty"`
-	DtNaturalizacao               *int64                                 `thrift:"dtNaturalizacao,30" json:"dtNaturalizacao,omitempty"`
-	PortariaNaturalizacao         *string                                `thrift:"portariaNaturalizacao,31" json:"portariaNaturalizacao,omitempty"`
-	DtEntradaBrasil               *int64                                 `thrift:"dtEntradaBrasil,32" json:"dtEntradaBrasil,omitempty"`
-	PaisNascimento                *int64                                 `thrift:"paisNascimento,33" json:"paisNascimento,omitempty"`
-	Etnia                         *int64                                 `thrift:"etnia,34" json:"etnia,omitempty"`
-	CnsCuidador                   *string                                `thrift:"cnsCuidador,35" json:"cnsCuidador,omitempty"`
-	CpfCidadao                    *string                                `thrift:"cpfCidadao,36" json:"cpfCidadao,omitempty"`
-	CpfCuidador                   *string                                `thrift:"cpfCuidador,37" json:"cpfCuidador,omitempty"`
+	CnsCidadao                       *string                                `thrift:"cnsCidadao,4" json:"cnsCidadao,omitempty"`
+	NomeCidadao                      *string                                `thrift:"nomeCidadao,5" json:"nomeCidadao,omitempty"`
+	NomeSocialCidadao                *string                                `thrift:"nomeSocialCidadao,6" json:"nomeSocialCidadao,omitempty"`
+	DataNascimentoCidadao            *int64                                 `thrift:"dataNascimentoCidadao,7" json:"dataNascimentoCidadao,omitempty"`
+	SexoCidadao                      *int64                                 `thrift:"sexoCidadao,8" json:"sexoCidadao,omitempty"`
+	RacaCorCidadao                   *int64                                 `thrift:"racaCorCidadao,9" json:"racaCorCidadao,omitempty"`
+	NomeMaeCidadao                   *string                                `thrift:"nomeMaeCidadao,10" json:"nomeMaeCidadao,omitempty"`
+	DesconheceNomeMae                *bool                                  `thrift:"desconheceNomeMae,11" json:"desconheceNomeMae,omitempty"`
+	CodigoIbgeMunicipioNascimento    *string                                `thrift:"codigoIbgeMunicipioNascimento,12" json:"codigoIbgeMunicipioNascimento,omitempty"`
+	NacionalidadeCidadao             *int64                                 `thrift:"nacionalidadeCidadao,13" json:"nacionalidadeCidadao,omitempty"`
+	EmailCidadao                     *string                                `thrift:"emailCidadao,14" json:"emailCidadao,omitempty"`
+	NumeroNisPisPasep                *string                                `thrift:"numeroNisPisPasep,15" json:"numeroNisPisPasep,omitempty"`
+	Endereco                         *common.EnderecoLocalPermanenciaThrift `thrift:"endereco,16" json:"endereco,omitempty"`
+	AtencaoDomiciliarProcedencia     *int64                                 `thrift:"atencaoDomiciliarProcedencia,17" json:"atencaoDomiciliarProcedencia,omitempty"`
+	AtencaoDomiciliarModalidade      *int64                                 `thrift:"atencaoDomiciliarModalidade,18" json:"atencaoDomiciliarModalidade,omitempty"`
+	CondicoesAvaliadas               []int64                                `thrift:"condicoesAvaliadas,19" json:"condicoesAvaliadas,omitempty"`
+	Cid10Principal                   *string                                `thrift:"cid10Principal,20" json:"cid10Principal,omitempty"`
+	Cid10SecundarioUm                *string                                `thrift:"cid10SecundarioUm,21" json:"cid10SecundarioUm,omitempty"`
+	Cid10SecundarioDois              *string                                `thrift:"cid10SecundarioDois,22" json:"cid10SecundarioDois,omitempty"`
+	ConclusaoDestinoElegivel         *int64                                 `thrift:"conclusaoDestinoElegivel,23" json:"conclusaoDestinoElegivel,omitempty"`
+	ConclusaoDestinoInelegivel       []int64                                `thrift:"conclusaoDestinoInelegivel,24" json:"conclusaoDestinoInelegivel,omitempty"`
+	CuidadorCidadao                  *int64                                 `thrift:"cuidadorCidadao,25" json:"cuidadorCidadao,omitempty"`
+	Turno                            *int64                                 `thrift:"turno,26" json:"turno,omitempty"`
+	HeaderTransport                  *common.VariasLotacoesHeaderThrift     `thrift:"headerTransport,27" json:"headerTransport,omitempty"`
+	NomePaiCidadao                   *string                                `thrift:"nomePaiCidadao,28" json:"nomePaiCidadao,omitempty"`
+	DesconheceNomePai                *bool                                  `thrift:"desconheceNomePai,29" json:"desconheceNomePai,omitempty"`
+	DtNaturalizacao                  *int64                                 `thrift:"dtNaturalizacao,30" json:"dtNaturalizacao,omitempty"`
+	PortariaNaturalizacao            *string                                `thrift:"portariaNaturalizacao,31" json:"portariaNaturalizacao,omitempty"`
+	DtEntradaBrasil                  *int64                                 `thrift:"dtEntradaBrasil,32" json:"dtEntradaBrasil,omitempty"`
+	PaisNascimento                   *int64                                 `thrift:"paisNascimento,33" json:"paisNascimento,omitempty"`
+	Etnia                            *int64                                 `thrift:"etnia,34" json:"etnia,omitempty"`
+	CnsCuidador                      *string                                `thrift:"cnsCuidador,35" json:"cnsCuidador,omitempty"`
+	CpfCidadao                       *string                                `thrift:"cpfCidadao,36" json:"cpfCidadao,omitempty"`
+	CpfCuidador                      *string                                `thrift:"cpfCuidador,37" json:"cpfCuidador,omitempty"`
+	StCidadaoNaoPossuiCpf            *bool                                  `thrift:"stCidadaoNaoPossuiCpf,38" json:"stCidadaoNaoPossuiCpf,omitempty"`
+	JustificativaCidadaoNaoPossuiCpf *int64                                 `thrift:"justificativaCidadaoNaoPossuiCpf,39" json:"justificativaCidadaoNaoPossuiCpf,omitempty"`
 }
 
 func NewFichaAvaliacaoElegibilidadeThrift() *FichaAvaliacaoElegibilidadeThrift {
@@ -411,6 +415,24 @@ func (p *FichaAvaliacaoElegibilidadeThrift) GetCpfCuidador() string {
 	}
 	return *p.CpfCuidador
 }
+
+var FichaAvaliacaoElegibilidadeThrift_StCidadaoNaoPossuiCpf_DEFAULT bool
+
+func (p *FichaAvaliacaoElegibilidadeThrift) GetStCidadaoNaoPossuiCpf() bool {
+	if !p.IsSetStCidadaoNaoPossuiCpf() {
+		return FichaAvaliacaoElegibilidadeThrift_StCidadaoNaoPossuiCpf_DEFAULT
+	}
+	return *p.StCidadaoNaoPossuiCpf
+}
+
+var FichaAvaliacaoElegibilidadeThrift_JustificativaCidadaoNaoPossuiCpf_DEFAULT int64
+
+func (p *FichaAvaliacaoElegibilidadeThrift) GetJustificativaCidadaoNaoPossuiCpf() int64 {
+	if !p.IsSetJustificativaCidadaoNaoPossuiCpf() {
+		return FichaAvaliacaoElegibilidadeThrift_JustificativaCidadaoNaoPossuiCpf_DEFAULT
+	}
+	return *p.JustificativaCidadaoNaoPossuiCpf
+}
 func (p *FichaAvaliacaoElegibilidadeThrift) IsSetTpCdsOrigem() bool {
 	return p.TpCdsOrigem != nil
 }
@@ -549,6 +571,14 @@ func (p *FichaAvaliacaoElegibilidadeThrift) IsSetCpfCidadao() bool {
 
 func (p *FichaAvaliacaoElegibilidadeThrift) IsSetCpfCuidador() bool {
 	return p.CpfCuidador != nil
+}
+
+func (p *FichaAvaliacaoElegibilidadeThrift) IsSetStCidadaoNaoPossuiCpf() bool {
+	return p.StCidadaoNaoPossuiCpf != nil
+}
+
+func (p *FichaAvaliacaoElegibilidadeThrift) IsSetJustificativaCidadaoNaoPossuiCpf() bool {
+	return p.JustificativaCidadaoNaoPossuiCpf != nil
 }
 
 func (p *FichaAvaliacaoElegibilidadeThrift) Read(iprot thrift.TProtocol) error {
@@ -710,6 +740,14 @@ func (p *FichaAvaliacaoElegibilidadeThrift) Read(iprot thrift.TProtocol) error {
 			}
 		case 37:
 			if err := p.readField37(iprot); err != nil {
+				return err
+			}
+		case 38:
+			if err := p.readField38(iprot); err != nil {
+				return err
+			}
+		case 39:
+			if err := p.readField39(iprot); err != nil {
 				return err
 			}
 		default:
@@ -1078,6 +1116,24 @@ func (p *FichaAvaliacaoElegibilidadeThrift) readField37(iprot thrift.TProtocol) 
 	return nil
 }
 
+func (p *FichaAvaliacaoElegibilidadeThrift) readField38(iprot thrift.TProtocol) error {
+	if v, err := iprot.ReadBool(); err != nil {
+		return thrift.PrependError("error reading field 38: ", err)
+	} else {
+		p.StCidadaoNaoPossuiCpf = &v
+	}
+	return nil
+}
+
+func (p *FichaAvaliacaoElegibilidadeThrift) readField39(iprot thrift.TProtocol) error {
+	if v, err := iprot.ReadI64(); err != nil {
+		return thrift.PrependError("error reading field 39: ", err)
+	} else {
+		p.JustificativaCidadaoNaoPossuiCpf = &v
+	}
+	return nil
+}
+
 func (p *FichaAvaliacaoElegibilidadeThrift) Write(oprot thrift.TProtocol) error {
 	if err := oprot.WriteStructBegin("FichaAvaliacaoElegibilidadeThrift"); err != nil {
 		return thrift.PrependError(fmt.Sprintf("%T write struct begin error: ", p), err)
@@ -1188,6 +1244,12 @@ func (p *FichaAvaliacaoElegibilidadeThrift) Write(oprot thrift.TProtocol) error 
 		return err
 	}
 	if err := p.writeField37(oprot); err != nil {
+		return err
+	}
+	if err := p.writeField38(oprot); err != nil {
+		return err
+	}
+	if err := p.writeField39(oprot); err != nil {
 		return err
 	}
 	if err := oprot.WriteFieldStop(); err != nil {
@@ -1748,6 +1810,36 @@ func (p *FichaAvaliacaoElegibilidadeThrift) writeField37(oprot thrift.TProtocol)
 		}
 		if err := oprot.WriteFieldEnd(); err != nil {
 			return thrift.PrependError(fmt.Sprintf("%T write field end error 37:cpfCuidador: ", p), err)
+		}
+	}
+	return err
+}
+
+func (p *FichaAvaliacaoElegibilidadeThrift) writeField38(oprot thrift.TProtocol) (err error) {
+	if p.IsSetStCidadaoNaoPossuiCpf() {
+		if err := oprot.WriteFieldBegin("stCidadaoNaoPossuiCpf", thrift.BOOL, 38); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field begin error 38:stCidadaoNaoPossuiCpf: ", p), err)
+		}
+		if err := oprot.WriteBool(bool(*p.StCidadaoNaoPossuiCpf)); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T.stCidadaoNaoPossuiCpf (38) field write error: ", p), err)
+		}
+		if err := oprot.WriteFieldEnd(); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field end error 38:stCidadaoNaoPossuiCpf: ", p), err)
+		}
+	}
+	return err
+}
+
+func (p *FichaAvaliacaoElegibilidadeThrift) writeField39(oprot thrift.TProtocol) (err error) {
+	if p.IsSetJustificativaCidadaoNaoPossuiCpf() {
+		if err := oprot.WriteFieldBegin("justificativaCidadaoNaoPossuiCpf", thrift.I64, 39); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field begin error 39:justificativaCidadaoNaoPossuiCpf: ", p), err)
+		}
+		if err := oprot.WriteI64(int64(*p.JustificativaCidadaoNaoPossuiCpf)); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T.justificativaCidadaoNaoPossuiCpf (39) field write error: ", p), err)
+		}
+		if err := oprot.WriteFieldEnd(); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field end error 39:justificativaCidadaoNaoPossuiCpf: ", p), err)
 		}
 	}
 	return err

@@ -33,6 +33,8 @@ namespace br.gov.saude.esusab.ras.consumoalimentar
     private List<PerguntaQuestionarioCriancasComMaisDoisAnosThrift> _perguntasQuestionarioCriancasComMaisDoisAnos;
     private int _tpCdsOrigem;
     private string _cpfCidadao;
+    private bool _stCidadaoNaoPossuiCpf;
+    private long _justificativaCidadaoNaoPossuiCpf;
 
     public br.gov.saude.esusab.ras.common.UnicaLotacaoHeaderThrift HeaderTransport
     {
@@ -166,6 +168,32 @@ namespace br.gov.saude.esusab.ras.consumoalimentar
       }
     }
 
+    public bool StCidadaoNaoPossuiCpf
+    {
+      get
+      {
+        return _stCidadaoNaoPossuiCpf;
+      }
+      set
+      {
+        __isset.stCidadaoNaoPossuiCpf = true;
+        this._stCidadaoNaoPossuiCpf = value;
+      }
+    }
+
+    public long JustificativaCidadaoNaoPossuiCpf
+    {
+      get
+      {
+        return _justificativaCidadaoNaoPossuiCpf;
+      }
+      set
+      {
+        __isset.justificativaCidadaoNaoPossuiCpf = true;
+        this._justificativaCidadaoNaoPossuiCpf = value;
+      }
+    }
+
 
     public Isset __isset;
     #if !SILVERLIGHT
@@ -182,6 +210,8 @@ namespace br.gov.saude.esusab.ras.consumoalimentar
       public bool perguntasQuestionarioCriancasComMaisDoisAnos;
       public bool tpCdsOrigem;
       public bool cpfCidadao;
+      public bool stCidadaoNaoPossuiCpf;
+      public bool justificativaCidadaoNaoPossuiCpf;
     }
 
     public FichaConsumoAlimentarThrift() {
@@ -319,6 +349,20 @@ namespace br.gov.saude.esusab.ras.consumoalimentar
                 TProtocolUtil.Skip(iprot, field.Type);
               }
               break;
+            case 13:
+              if (field.Type == TType.Bool) {
+                StCidadaoNaoPossuiCpf = iprot.ReadBool();
+              } else { 
+                TProtocolUtil.Skip(iprot, field.Type);
+              }
+              break;
+            case 14:
+              if (field.Type == TType.I64) {
+                JustificativaCidadaoNaoPossuiCpf = iprot.ReadI64();
+              } else { 
+                TProtocolUtil.Skip(iprot, field.Type);
+              }
+              break;
             default: 
               TProtocolUtil.Skip(iprot, field.Type);
               break;
@@ -449,6 +493,22 @@ namespace br.gov.saude.esusab.ras.consumoalimentar
           oprot.WriteString(CpfCidadao);
           oprot.WriteFieldEnd();
         }
+        if (__isset.stCidadaoNaoPossuiCpf) {
+          field.Name = "stCidadaoNaoPossuiCpf";
+          field.Type = TType.Bool;
+          field.ID = 13;
+          oprot.WriteFieldBegin(field);
+          oprot.WriteBool(StCidadaoNaoPossuiCpf);
+          oprot.WriteFieldEnd();
+        }
+        if (__isset.justificativaCidadaoNaoPossuiCpf) {
+          field.Name = "justificativaCidadaoNaoPossuiCpf";
+          field.Type = TType.I64;
+          field.ID = 14;
+          oprot.WriteFieldBegin(field);
+          oprot.WriteI64(JustificativaCidadaoNaoPossuiCpf);
+          oprot.WriteFieldEnd();
+        }
         oprot.WriteFieldStop();
         oprot.WriteStructEnd();
       }
@@ -519,6 +579,14 @@ namespace br.gov.saude.esusab.ras.consumoalimentar
       if (CpfCidadao != null && __isset.cpfCidadao) {
         __sb.Append(", CpfCidadao: ");
         __sb.Append(CpfCidadao);
+      }
+      if (__isset.stCidadaoNaoPossuiCpf) {
+        __sb.Append(", StCidadaoNaoPossuiCpf: ");
+        __sb.Append(StCidadaoNaoPossuiCpf);
+      }
+      if (__isset.justificativaCidadaoNaoPossuiCpf) {
+        __sb.Append(", JustificativaCidadaoNaoPossuiCpf: ");
+        __sb.Append(JustificativaCidadaoNaoPossuiCpf);
       }
       __sb.Append(")");
       return __sb.ToString();

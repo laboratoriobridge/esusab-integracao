@@ -21,6 +21,8 @@ ParticipanteRowItemThrift = module.exports.ParticipanteRowItemThrift = function(
   this.abandonouGrupo = null;
   this.sexo = null;
   this.cpfParticipante = null;
+  this.stCidadaoNaoPossuiCpf = null;
+  this.justificativaCidadaoNaoPossuiCpf = null;
   if (args) {
     if (args.cnsParticipante !== undefined && args.cnsParticipante !== null) {
       this.cnsParticipante = args.cnsParticipante;
@@ -48,6 +50,12 @@ ParticipanteRowItemThrift = module.exports.ParticipanteRowItemThrift = function(
     }
     if (args.cpfParticipante !== undefined && args.cpfParticipante !== null) {
       this.cpfParticipante = args.cpfParticipante;
+    }
+    if (args.stCidadaoNaoPossuiCpf !== undefined && args.stCidadaoNaoPossuiCpf !== null) {
+      this.stCidadaoNaoPossuiCpf = args.stCidadaoNaoPossuiCpf;
+    }
+    if (args.justificativaCidadaoNaoPossuiCpf !== undefined && args.justificativaCidadaoNaoPossuiCpf !== null) {
+      this.justificativaCidadaoNaoPossuiCpf = args.justificativaCidadaoNaoPossuiCpf;
     }
   }
 };
@@ -128,6 +136,20 @@ ParticipanteRowItemThrift.prototype.read = function(input) {
         input.skip(ftype);
       }
       break;
+      case 10:
+      if (ftype == Thrift.Type.BOOL) {
+        this.stCidadaoNaoPossuiCpf = input.readBool();
+      } else {
+        input.skip(ftype);
+      }
+      break;
+      case 11:
+      if (ftype == Thrift.Type.I64) {
+        this.justificativaCidadaoNaoPossuiCpf = input.readI64();
+      } else {
+        input.skip(ftype);
+      }
+      break;
       default:
         input.skip(ftype);
     }
@@ -182,6 +204,16 @@ ParticipanteRowItemThrift.prototype.write = function(output) {
   if (this.cpfParticipante !== null && this.cpfParticipante !== undefined) {
     output.writeFieldBegin('cpfParticipante', Thrift.Type.STRING, 9);
     output.writeString(this.cpfParticipante);
+    output.writeFieldEnd();
+  }
+  if (this.stCidadaoNaoPossuiCpf !== null && this.stCidadaoNaoPossuiCpf !== undefined) {
+    output.writeFieldBegin('stCidadaoNaoPossuiCpf', Thrift.Type.BOOL, 10);
+    output.writeBool(this.stCidadaoNaoPossuiCpf);
+    output.writeFieldEnd();
+  }
+  if (this.justificativaCidadaoNaoPossuiCpf !== null && this.justificativaCidadaoNaoPossuiCpf !== undefined) {
+    output.writeFieldBegin('justificativaCidadaoNaoPossuiCpf', Thrift.Type.I64, 11);
+    output.writeI64(this.justificativaCidadaoNaoPossuiCpf);
     output.writeFieldEnd();
   }
   output.writeFieldStop();

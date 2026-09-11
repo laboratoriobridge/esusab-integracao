@@ -46,6 +46,8 @@ namespace br.gov.saude.esusab.ras.visitadomiciliar
     private double _longitude;
     private string _uuidOrigemCadastroDomiciliar;
     private br.gov.saude.esusab.ras.common.IvcfThrift _ivcf;
+    private bool _stCidadaoNaoPossuiCpf;
+    private long _justificativaCidadaoNaoPossuiCpf;
 
     public long Turno
     {
@@ -346,6 +348,32 @@ namespace br.gov.saude.esusab.ras.visitadomiciliar
       }
     }
 
+    public bool StCidadaoNaoPossuiCpf
+    {
+      get
+      {
+        return _stCidadaoNaoPossuiCpf;
+      }
+      set
+      {
+        __isset.stCidadaoNaoPossuiCpf = true;
+        this._stCidadaoNaoPossuiCpf = value;
+      }
+    }
+
+    public long JustificativaCidadaoNaoPossuiCpf
+    {
+      get
+      {
+        return _justificativaCidadaoNaoPossuiCpf;
+      }
+      set
+      {
+        __isset.justificativaCidadaoNaoPossuiCpf = true;
+        this._justificativaCidadaoNaoPossuiCpf = value;
+      }
+    }
+
 
     public Isset __isset;
     #if !SILVERLIGHT
@@ -375,6 +403,8 @@ namespace br.gov.saude.esusab.ras.visitadomiciliar
       public bool longitude;
       public bool uuidOrigemCadastroDomiciliar;
       public bool ivcf;
+      public bool stCidadaoNaoPossuiCpf;
+      public bool justificativaCidadaoNaoPossuiCpf;
     }
 
     public FichaVisitaDomiciliarChildThrift() {
@@ -563,6 +593,20 @@ namespace br.gov.saude.esusab.ras.visitadomiciliar
               if (field.Type == TType.Struct) {
                 Ivcf = new br.gov.saude.esusab.ras.common.IvcfThrift();
                 Ivcf.Read(iprot);
+              } else { 
+                TProtocolUtil.Skip(iprot, field.Type);
+              }
+              break;
+            case 24:
+              if (field.Type == TType.Bool) {
+                StCidadaoNaoPossuiCpf = iprot.ReadBool();
+              } else { 
+                TProtocolUtil.Skip(iprot, field.Type);
+              }
+              break;
+            case 25:
+              if (field.Type == TType.I64) {
+                JustificativaCidadaoNaoPossuiCpf = iprot.ReadI64();
               } else { 
                 TProtocolUtil.Skip(iprot, field.Type);
               }
@@ -779,6 +823,22 @@ namespace br.gov.saude.esusab.ras.visitadomiciliar
           Ivcf.Write(oprot);
           oprot.WriteFieldEnd();
         }
+        if (__isset.stCidadaoNaoPossuiCpf) {
+          field.Name = "stCidadaoNaoPossuiCpf";
+          field.Type = TType.Bool;
+          field.ID = 24;
+          oprot.WriteFieldBegin(field);
+          oprot.WriteBool(StCidadaoNaoPossuiCpf);
+          oprot.WriteFieldEnd();
+        }
+        if (__isset.justificativaCidadaoNaoPossuiCpf) {
+          field.Name = "justificativaCidadaoNaoPossuiCpf";
+          field.Type = TType.I64;
+          field.ID = 25;
+          oprot.WriteFieldBegin(field);
+          oprot.WriteI64(JustificativaCidadaoNaoPossuiCpf);
+          oprot.WriteFieldEnd();
+        }
         oprot.WriteFieldStop();
         oprot.WriteStructEnd();
       }
@@ -928,6 +988,18 @@ namespace br.gov.saude.esusab.ras.visitadomiciliar
         __first = false;
         __sb.Append("Ivcf: ");
         __sb.Append(Ivcf== null ? "<null>" : Ivcf.ToString());
+      }
+      if (__isset.stCidadaoNaoPossuiCpf) {
+        if(!__first) { __sb.Append(", "); }
+        __first = false;
+        __sb.Append("StCidadaoNaoPossuiCpf: ");
+        __sb.Append(StCidadaoNaoPossuiCpf);
+      }
+      if (__isset.justificativaCidadaoNaoPossuiCpf) {
+        if(!__first) { __sb.Append(", "); }
+        __first = false;
+        __sb.Append("JustificativaCidadaoNaoPossuiCpf: ");
+        __sb.Append(JustificativaCidadaoNaoPossuiCpf);
       }
       __sb.Append(")");
       return __sb.ToString();

@@ -133,6 +133,10 @@ type
     procedure SetExame( const Value: IThriftList<IExameThrift>);
     function GetSolicitacoesOci: IThriftList<ISolicitacaoOciThrift>;
     procedure SetSolicitacoesOci( const Value: IThriftList<ISolicitacaoOciThrift>);
+    function GetStCidadaoNaoPossuiCpf: Boolean;
+    procedure SetStCidadaoNaoPossuiCpf( const Value: Boolean);
+    function GetJustificativaCidadaoNaoPossuiCpf: Int64;
+    procedure SetJustificativaCidadaoNaoPossuiCpf( const Value: Int64);
 
     property DtNascimento: Int64 read GetDtNascimento write SetDtNascimento;
     property CnsCidadao: string read GetCnsCidadao write SetCnsCidadao;
@@ -159,6 +163,8 @@ type
     property Ivcf: IIvcfThrift read GetIvcf write SetIvcf;
     property Exame: IThriftList<IExameThrift> read GetExame write SetExame;
     property SolicitacoesOci: IThriftList<ISolicitacaoOciThrift> read GetSolicitacoesOci write SetSolicitacoesOci;
+    property StCidadaoNaoPossuiCpf: Boolean read GetStCidadaoNaoPossuiCpf write SetStCidadaoNaoPossuiCpf;
+    property JustificativaCidadaoNaoPossuiCpf: Int64 read GetJustificativaCidadaoNaoPossuiCpf write SetJustificativaCidadaoNaoPossuiCpf;
 
     function Get__isset_DtNascimento: Boolean;
     function Get__isset_CnsCidadao: Boolean;
@@ -185,6 +191,8 @@ type
     function Get__isset_Ivcf: Boolean;
     function Get__isset_Exame: Boolean;
     function Get__isset_SolicitacoesOci: Boolean;
+    function Get__isset_StCidadaoNaoPossuiCpf: Boolean;
+    function Get__isset_JustificativaCidadaoNaoPossuiCpf: Boolean;
 
     property __isset_DtNascimento: Boolean read Get__isset_DtNascimento;
     property __isset_CnsCidadao: Boolean read Get__isset_CnsCidadao;
@@ -211,6 +219,8 @@ type
     property __isset_Ivcf: Boolean read Get__isset_Ivcf;
     property __isset_Exame: Boolean read Get__isset_Exame;
     property __isset_SolicitacoesOci: Boolean read Get__isset_SolicitacoesOci;
+    property __isset_StCidadaoNaoPossuiCpf: Boolean read Get__isset_StCidadaoNaoPossuiCpf;
+    property __isset_JustificativaCidadaoNaoPossuiCpf: Boolean read Get__isset_JustificativaCidadaoNaoPossuiCpf;
   end;
 
   TFichaAtendimentoOdontologicoChildThriftImpl = class(TInterfacedObject, IBase, IFichaAtendimentoOdontologicoChildThrift)
@@ -240,6 +250,8 @@ type
     FIvcf: IIvcfThrift;
     FExame: IThriftList<IExameThrift>;
     FSolicitacoesOci: IThriftList<ISolicitacaoOciThrift>;
+    FStCidadaoNaoPossuiCpf: Boolean;
+    FJustificativaCidadaoNaoPossuiCpf: Int64;
     
     F__isset_DtNascimento: Boolean;
     F__isset_CnsCidadao: Boolean;
@@ -266,6 +278,8 @@ type
     F__isset_Ivcf: Boolean;
     F__isset_Exame: Boolean;
     F__isset_SolicitacoesOci: Boolean;
+    F__isset_StCidadaoNaoPossuiCpf: Boolean;
+    F__isset_JustificativaCidadaoNaoPossuiCpf: Boolean;
     
     function GetDtNascimento: Int64;
     procedure SetDtNascimento( const Value: Int64);
@@ -317,6 +331,10 @@ type
     procedure SetExame( const Value: IThriftList<IExameThrift>);
     function GetSolicitacoesOci: IThriftList<ISolicitacaoOciThrift>;
     procedure SetSolicitacoesOci( const Value: IThriftList<ISolicitacaoOciThrift>);
+    function GetStCidadaoNaoPossuiCpf: Boolean;
+    procedure SetStCidadaoNaoPossuiCpf( const Value: Boolean);
+    function GetJustificativaCidadaoNaoPossuiCpf: Int64;
+    procedure SetJustificativaCidadaoNaoPossuiCpf( const Value: Int64);
 
     function Get__isset_DtNascimento: Boolean;
     function Get__isset_CnsCidadao: Boolean;
@@ -343,6 +361,8 @@ type
     function Get__isset_Ivcf: Boolean;
     function Get__isset_Exame: Boolean;
     function Get__isset_SolicitacoesOci: Boolean;
+    function Get__isset_StCidadaoNaoPossuiCpf: Boolean;
+    function Get__isset_JustificativaCidadaoNaoPossuiCpf: Boolean;
   public
     constructor Create;
     destructor Destroy; override;
@@ -379,6 +399,8 @@ type
     property Ivcf: IIvcfThrift read GetIvcf write SetIvcf;
     property Exame: IThriftList<IExameThrift> read GetExame write SetExame;
     property SolicitacoesOci: IThriftList<ISolicitacaoOciThrift> read GetSolicitacoesOci write SetSolicitacoesOci;
+    property StCidadaoNaoPossuiCpf: Boolean read GetStCidadaoNaoPossuiCpf write SetStCidadaoNaoPossuiCpf;
+    property JustificativaCidadaoNaoPossuiCpf: Int64 read GetJustificativaCidadaoNaoPossuiCpf write SetJustificativaCidadaoNaoPossuiCpf;
 
     // isset
     property __isset_DtNascimento: Boolean read Get__isset_DtNascimento;
@@ -406,6 +428,8 @@ type
     property __isset_Ivcf: Boolean read Get__isset_Ivcf;
     property __isset_Exame: Boolean read Get__isset_Exame;
     property __isset_SolicitacoesOci: Boolean read Get__isset_SolicitacoesOci;
+    property __isset_StCidadaoNaoPossuiCpf: Boolean read Get__isset_StCidadaoNaoPossuiCpf;
+    property __isset_JustificativaCidadaoNaoPossuiCpf: Boolean read Get__isset_JustificativaCidadaoNaoPossuiCpf;
   end;
 
   IFichaAtendimentoOdontologicoMasterThrift = interface(IBase)
@@ -1038,6 +1062,38 @@ begin
   Result := F__isset_SolicitacoesOci;
 end;
 
+function TFichaAtendimentoOdontologicoChildThriftImpl.GetStCidadaoNaoPossuiCpf: Boolean;
+begin
+  Result := FStCidadaoNaoPossuiCpf;
+end;
+
+procedure TFichaAtendimentoOdontologicoChildThriftImpl.SetStCidadaoNaoPossuiCpf( const Value: Boolean);
+begin
+  F__isset_StCidadaoNaoPossuiCpf := True;
+  FStCidadaoNaoPossuiCpf := Value;
+end;
+
+function TFichaAtendimentoOdontologicoChildThriftImpl.Get__isset_StCidadaoNaoPossuiCpf: Boolean;
+begin
+  Result := F__isset_StCidadaoNaoPossuiCpf;
+end;
+
+function TFichaAtendimentoOdontologicoChildThriftImpl.GetJustificativaCidadaoNaoPossuiCpf: Int64;
+begin
+  Result := FJustificativaCidadaoNaoPossuiCpf;
+end;
+
+procedure TFichaAtendimentoOdontologicoChildThriftImpl.SetJustificativaCidadaoNaoPossuiCpf( const Value: Int64);
+begin
+  F__isset_JustificativaCidadaoNaoPossuiCpf := True;
+  FJustificativaCidadaoNaoPossuiCpf := Value;
+end;
+
+function TFichaAtendimentoOdontologicoChildThriftImpl.Get__isset_JustificativaCidadaoNaoPossuiCpf: Boolean;
+begin
+  Result := F__isset_JustificativaCidadaoNaoPossuiCpf;
+end;
+
 procedure TFichaAtendimentoOdontologicoChildThriftImpl.Read( const iprot: IProtocol);
 var
   field_ : IField;
@@ -1399,6 +1455,24 @@ begin
           begin
             TProtocolUtil.Skip(iprot, field_.Type_);
           end;
+        end;
+        32: begin
+          if (field_.Type_ = TType.Bool_) then
+          begin
+            StCidadaoNaoPossuiCpf := iprot.ReadBool();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        33: begin
+          if (field_.Type_ = TType.I64) then
+          begin
+            JustificativaCidadaoNaoPossuiCpf := iprot.ReadI64();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
         end
         else begin
           TProtocolUtil.Skip(iprot, field_.Type_);
@@ -1734,6 +1808,24 @@ begin
     oprot.WriteListEnd();
     oprot.WriteFieldEnd();
   end;
+  if (__isset_StCidadaoNaoPossuiCpf) then
+  begin
+    field_.Name := 'stCidadaoNaoPossuiCpf';
+    field_.Type_  := TType.Bool_;
+    field_.ID := 32;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteBool(StCidadaoNaoPossuiCpf);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_JustificativaCidadaoNaoPossuiCpf) then
+  begin
+    field_.Name := 'justificativaCidadaoNaoPossuiCpf';
+    field_.Type_  := TType.I64;
+    field_.ID := 33;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteI64(JustificativaCidadaoNaoPossuiCpf);
+    oprot.WriteFieldEnd();
+  end;
   oprot.WriteFieldStop();
   oprot.WriteStructEnd();
 end;
@@ -1895,6 +1987,18 @@ begin
       _first58 := FALSE;
       _sb57.Append('SolicitacoesOci: ');
       _sb57.Append(SolicitacoesOci);
+    end;
+    if (__isset_StCidadaoNaoPossuiCpf) then begin
+      if not _first58 then _sb57.Append(',');
+      _first58 := FALSE;
+      _sb57.Append('StCidadaoNaoPossuiCpf: ');
+      _sb57.Append(StCidadaoNaoPossuiCpf);
+    end;
+    if (__isset_JustificativaCidadaoNaoPossuiCpf) then begin
+      if not _first58 then _sb57.Append(',');
+      _first58 := FALSE;
+      _sb57.Append('JustificativaCidadaoNaoPossuiCpf: ');
+      _sb57.Append(JustificativaCidadaoNaoPossuiCpf);
     end;
     _sb57.Append(')');
     Result := _sb57.ToString;

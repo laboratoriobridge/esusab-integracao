@@ -58,6 +58,8 @@ namespace br.gov.saude.esusab.ras.atendindividual
     private List<br.gov.saude.esusab.ras.common.ProblemaCondicaoThrift> _problemasCondicoes;
     private br.gov.saude.esusab.ras.common.IvcfThrift _ivcf;
     private List<br.gov.saude.esusab.ras.solicitacaooci.SolicitacaoOciThrift> _solicitacoesOci;
+    private bool _stCidadaoNaoPossuiCpf;
+    private long _justificativaCidadaoNaoPossuiCpf;
 
     public string NumeroProntuario
     {
@@ -514,6 +516,32 @@ namespace br.gov.saude.esusab.ras.atendindividual
       }
     }
 
+    public bool StCidadaoNaoPossuiCpf
+    {
+      get
+      {
+        return _stCidadaoNaoPossuiCpf;
+      }
+      set
+      {
+        __isset.stCidadaoNaoPossuiCpf = true;
+        this._stCidadaoNaoPossuiCpf = value;
+      }
+    }
+
+    public long JustificativaCidadaoNaoPossuiCpf
+    {
+      get
+      {
+        return _justificativaCidadaoNaoPossuiCpf;
+      }
+      set
+      {
+        __isset.justificativaCidadaoNaoPossuiCpf = true;
+        this._justificativaCidadaoNaoPossuiCpf = value;
+      }
+    }
+
 
     public Isset __isset;
     #if !SILVERLIGHT
@@ -555,6 +583,8 @@ namespace br.gov.saude.esusab.ras.atendindividual
       public bool problemasCondicoes;
       public bool ivcf;
       public bool solicitacoesOci;
+      public bool stCidadaoNaoPossuiCpf;
+      public bool justificativaCidadaoNaoPossuiCpf;
     }
 
     public FichaAtendimentoIndividualChildThrift() {
@@ -915,6 +945,20 @@ namespace br.gov.saude.esusab.ras.atendindividual
                   }
                   iprot.ReadListEnd();
                 }
+              } else { 
+                TProtocolUtil.Skip(iprot, field.Type);
+              }
+              break;
+            case 47:
+              if (field.Type == TType.Bool) {
+                StCidadaoNaoPossuiCpf = iprot.ReadBool();
+              } else { 
+                TProtocolUtil.Skip(iprot, field.Type);
+              }
+              break;
+            case 48:
+              if (field.Type == TType.I64) {
+                JustificativaCidadaoNaoPossuiCpf = iprot.ReadI64();
               } else { 
                 TProtocolUtil.Skip(iprot, field.Type);
               }
@@ -1283,6 +1327,22 @@ namespace br.gov.saude.esusab.ras.atendindividual
           }
           oprot.WriteFieldEnd();
         }
+        if (__isset.stCidadaoNaoPossuiCpf) {
+          field.Name = "stCidadaoNaoPossuiCpf";
+          field.Type = TType.Bool;
+          field.ID = 47;
+          oprot.WriteFieldBegin(field);
+          oprot.WriteBool(StCidadaoNaoPossuiCpf);
+          oprot.WriteFieldEnd();
+        }
+        if (__isset.justificativaCidadaoNaoPossuiCpf) {
+          field.Name = "justificativaCidadaoNaoPossuiCpf";
+          field.Type = TType.I64;
+          field.ID = 48;
+          oprot.WriteFieldBegin(field);
+          oprot.WriteI64(JustificativaCidadaoNaoPossuiCpf);
+          oprot.WriteFieldEnd();
+        }
         oprot.WriteFieldStop();
         oprot.WriteStructEnd();
       }
@@ -1504,6 +1564,18 @@ namespace br.gov.saude.esusab.ras.atendindividual
         __first = false;
         __sb.Append("SolicitacoesOci: ");
         __sb.Append(SolicitacoesOci);
+      }
+      if (__isset.stCidadaoNaoPossuiCpf) {
+        if(!__first) { __sb.Append(", "); }
+        __first = false;
+        __sb.Append("StCidadaoNaoPossuiCpf: ");
+        __sb.Append(StCidadaoNaoPossuiCpf);
+      }
+      if (__isset.justificativaCidadaoNaoPossuiCpf) {
+        if(!__first) { __sb.Append(", "); }
+        __first = false;
+        __sb.Append("JustificativaCidadaoNaoPossuiCpf: ");
+        __sb.Append(JustificativaCidadaoNaoPossuiCpf);
       }
       __sb.Append(")");
       return __sb.ToString();

@@ -181,6 +181,8 @@ module Br
               UUIDFICHA = 10
               TPCDSORIGEM = 11
               CPFCIDADAO = 12
+              STCIDADAONAOPOSSUICPF = 13
+              JUSTIFICATIVACIDADAONAOPOSSUICPF = 14
 
               FIELDS = {
                 HEADERTRANSPORT => {:type => ::Thrift::Types::STRUCT, :name => 'headerTransport', :class => ::Br::Gov::Saude::Esusab::Ras::Common::UnicaLotacaoHeaderThrift, :optional => true},
@@ -193,7 +195,9 @@ module Br
                 PERGUNTASQUESTIONARIOCRIANCASCOMMAISDOISANOS => {:type => ::Thrift::Types::LIST, :name => 'perguntasQuestionarioCriancasComMaisDoisAnos', :element => {:type => ::Thrift::Types::STRUCT, :class => ::Br::Gov::Saude::Esusab::Ras::Consumoalimentar::PerguntaQuestionarioCriancasComMaisDoisAnosThrift}, :optional => true},
                 UUIDFICHA => {:type => ::Thrift::Types::STRING, :name => 'uuidFicha'},
                 TPCDSORIGEM => {:type => ::Thrift::Types::I32, :name => 'tpCdsOrigem', :optional => true},
-                CPFCIDADAO => {:type => ::Thrift::Types::STRING, :name => 'cpfCidadao', :optional => true}
+                CPFCIDADAO => {:type => ::Thrift::Types::STRING, :name => 'cpfCidadao', :optional => true},
+                STCIDADAONAOPOSSUICPF => {:type => ::Thrift::Types::BOOL, :name => 'stCidadaoNaoPossuiCpf', :optional => true},
+                JUSTIFICATIVACIDADAONAOPOSSUICPF => {:type => ::Thrift::Types::I64, :name => 'justificativaCidadaoNaoPossuiCpf', :optional => true}
               }
 
               def struct_fields; FIELDS; end

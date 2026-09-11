@@ -218,6 +218,14 @@ class FichaAtendimentoOdontologicoChildThrift {
    * @var \br\gov\saude\esusab\ras\solicitacaooci\SolicitacaoOciThrift[]
    */
   public $solicitacoesOci = null;
+  /**
+   * @var bool
+   */
+  public $stCidadaoNaoPossuiCpf = null;
+  /**
+   * @var int
+   */
+  public $justificativaCidadaoNaoPossuiCpf = null;
 
   public function __construct($vals=null) {
     if (!isset(self::$_TSPEC)) {
@@ -375,6 +383,14 @@ class FichaAtendimentoOdontologicoChildThrift {
             'class' => '\br\gov\saude\esusab\ras\solicitacaooci\SolicitacaoOciThrift',
             ),
           ),
+        32 => array(
+          'var' => 'stCidadaoNaoPossuiCpf',
+          'type' => TType::BOOL,
+          ),
+        33 => array(
+          'var' => 'justificativaCidadaoNaoPossuiCpf',
+          'type' => TType::I64,
+          ),
         );
     }
     if (is_array($vals)) {
@@ -452,6 +468,12 @@ class FichaAtendimentoOdontologicoChildThrift {
       }
       if (isset($vals['solicitacoesOci'])) {
         $this->solicitacoesOci = $vals['solicitacoesOci'];
+      }
+      if (isset($vals['stCidadaoNaoPossuiCpf'])) {
+        $this->stCidadaoNaoPossuiCpf = $vals['stCidadaoNaoPossuiCpf'];
+      }
+      if (isset($vals['justificativaCidadaoNaoPossuiCpf'])) {
+        $this->justificativaCidadaoNaoPossuiCpf = $vals['justificativaCidadaoNaoPossuiCpf'];
       }
     }
   }
@@ -769,6 +791,20 @@ class FichaAtendimentoOdontologicoChildThrift {
             $xfer += $input->skip($ftype);
           }
           break;
+        case 32:
+          if ($ftype == TType::BOOL) {
+            $xfer += $input->readBool($this->stCidadaoNaoPossuiCpf);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 33:
+          if ($ftype == TType::I64) {
+            $xfer += $input->readI64($this->justificativaCidadaoNaoPossuiCpf);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
         default:
           $xfer += $input->skip($ftype);
           break;
@@ -1043,6 +1079,16 @@ class FichaAtendimentoOdontologicoChildThrift {
         }
         $output->writeListEnd();
       }
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->stCidadaoNaoPossuiCpf !== null) {
+      $xfer += $output->writeFieldBegin('stCidadaoNaoPossuiCpf', TType::BOOL, 32);
+      $xfer += $output->writeBool($this->stCidadaoNaoPossuiCpf);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->justificativaCidadaoNaoPossuiCpf !== null) {
+      $xfer += $output->writeFieldBegin('justificativaCidadaoNaoPossuiCpf', TType::I64, 33);
+      $xfer += $output->writeI64($this->justificativaCidadaoNaoPossuiCpf);
       $xfer += $output->writeFieldEnd();
     }
     $xfer += $output->writeFieldStop();

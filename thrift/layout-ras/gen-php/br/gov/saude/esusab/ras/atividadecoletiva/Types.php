@@ -56,6 +56,14 @@ class ParticipanteRowItemThrift {
    * @var string
    */
   public $cpfParticipante = null;
+  /**
+   * @var bool
+   */
+  public $stCidadaoNaoPossuiCpf = null;
+  /**
+   * @var int
+   */
+  public $justificativaCidadaoNaoPossuiCpf = null;
 
   public function __construct($vals=null) {
     if (!isset(self::$_TSPEC)) {
@@ -96,6 +104,14 @@ class ParticipanteRowItemThrift {
           'var' => 'cpfParticipante',
           'type' => TType::STRING,
           ),
+        10 => array(
+          'var' => 'stCidadaoNaoPossuiCpf',
+          'type' => TType::BOOL,
+          ),
+        11 => array(
+          'var' => 'justificativaCidadaoNaoPossuiCpf',
+          'type' => TType::I64,
+          ),
         );
     }
     if (is_array($vals)) {
@@ -125,6 +141,12 @@ class ParticipanteRowItemThrift {
       }
       if (isset($vals['cpfParticipante'])) {
         $this->cpfParticipante = $vals['cpfParticipante'];
+      }
+      if (isset($vals['stCidadaoNaoPossuiCpf'])) {
+        $this->stCidadaoNaoPossuiCpf = $vals['stCidadaoNaoPossuiCpf'];
+      }
+      if (isset($vals['justificativaCidadaoNaoPossuiCpf'])) {
+        $this->justificativaCidadaoNaoPossuiCpf = $vals['justificativaCidadaoNaoPossuiCpf'];
       }
     }
   }
@@ -211,6 +233,20 @@ class ParticipanteRowItemThrift {
             $xfer += $input->skip($ftype);
           }
           break;
+        case 10:
+          if ($ftype == TType::BOOL) {
+            $xfer += $input->readBool($this->stCidadaoNaoPossuiCpf);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 11:
+          if ($ftype == TType::I64) {
+            $xfer += $input->readI64($this->justificativaCidadaoNaoPossuiCpf);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
         default:
           $xfer += $input->skip($ftype);
           break;
@@ -267,6 +303,16 @@ class ParticipanteRowItemThrift {
     if ($this->cpfParticipante !== null) {
       $xfer += $output->writeFieldBegin('cpfParticipante', TType::STRING, 9);
       $xfer += $output->writeString($this->cpfParticipante);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->stCidadaoNaoPossuiCpf !== null) {
+      $xfer += $output->writeFieldBegin('stCidadaoNaoPossuiCpf', TType::BOOL, 10);
+      $xfer += $output->writeBool($this->stCidadaoNaoPossuiCpf);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->justificativaCidadaoNaoPossuiCpf !== null) {
+      $xfer += $output->writeFieldBegin('justificativaCidadaoNaoPossuiCpf', TType::I64, 11);
+      $xfer += $output->writeI64($this->justificativaCidadaoNaoPossuiCpf);
       $xfer += $output->writeFieldEnd();
     }
     $xfer += $output->writeFieldStop();

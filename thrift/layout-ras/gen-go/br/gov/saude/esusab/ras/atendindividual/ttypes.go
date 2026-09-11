@@ -360,6 +360,8 @@ func (p *ProblemaCondicaoAvaliacaoAIThrift) String() string {
 //  - ProblemasCondicoes
 //  - Ivcf
 //  - SolicitacoesOci
+//  - StCidadaoNaoPossuiCpf
+//  - JustificativaCidadaoNaoPossuiCpf
 type FichaAtendimentoIndividualChildThrift struct {
 	NumeroProntuario   *string `thrift:"numeroProntuario,1" json:"numeroProntuario,omitempty"`
 	Cns                *string `thrift:"cns,2" json:"cns,omitempty"`
@@ -401,6 +403,9 @@ type FichaAtendimentoIndividualChildThrift struct {
 	Ivcf                                  *common.IvcfThrift               `thrift:"ivcf,41" json:"ivcf,omitempty"`
 	// unused field # 42
 	SolicitacoesOci []*solicitacaooci.SolicitacaoOciThrift `thrift:"solicitacoesOci,43" json:"solicitacoesOci,omitempty"`
+	// unused fields # 44 to 46
+	StCidadaoNaoPossuiCpf            *bool  `thrift:"stCidadaoNaoPossuiCpf,47" json:"stCidadaoNaoPossuiCpf,omitempty"`
+	JustificativaCidadaoNaoPossuiCpf *int64 `thrift:"justificativaCidadaoNaoPossuiCpf,48" json:"justificativaCidadaoNaoPossuiCpf,omitempty"`
 }
 
 func NewFichaAtendimentoIndividualChildThrift() *FichaAtendimentoIndividualChildThrift {
@@ -694,6 +699,24 @@ var FichaAtendimentoIndividualChildThrift_SolicitacoesOci_DEFAULT []*solicitacao
 func (p *FichaAtendimentoIndividualChildThrift) GetSolicitacoesOci() []*solicitacaooci.SolicitacaoOciThrift {
 	return p.SolicitacoesOci
 }
+
+var FichaAtendimentoIndividualChildThrift_StCidadaoNaoPossuiCpf_DEFAULT bool
+
+func (p *FichaAtendimentoIndividualChildThrift) GetStCidadaoNaoPossuiCpf() bool {
+	if !p.IsSetStCidadaoNaoPossuiCpf() {
+		return FichaAtendimentoIndividualChildThrift_StCidadaoNaoPossuiCpf_DEFAULT
+	}
+	return *p.StCidadaoNaoPossuiCpf
+}
+
+var FichaAtendimentoIndividualChildThrift_JustificativaCidadaoNaoPossuiCpf_DEFAULT int64
+
+func (p *FichaAtendimentoIndividualChildThrift) GetJustificativaCidadaoNaoPossuiCpf() int64 {
+	if !p.IsSetJustificativaCidadaoNaoPossuiCpf() {
+		return FichaAtendimentoIndividualChildThrift_JustificativaCidadaoNaoPossuiCpf_DEFAULT
+	}
+	return *p.JustificativaCidadaoNaoPossuiCpf
+}
 func (p *FichaAtendimentoIndividualChildThrift) IsSetNumeroProntuario() bool {
 	return p.NumeroProntuario != nil
 }
@@ -832,6 +855,14 @@ func (p *FichaAtendimentoIndividualChildThrift) IsSetIvcf() bool {
 
 func (p *FichaAtendimentoIndividualChildThrift) IsSetSolicitacoesOci() bool {
 	return p.SolicitacoesOci != nil
+}
+
+func (p *FichaAtendimentoIndividualChildThrift) IsSetStCidadaoNaoPossuiCpf() bool {
+	return p.StCidadaoNaoPossuiCpf != nil
+}
+
+func (p *FichaAtendimentoIndividualChildThrift) IsSetJustificativaCidadaoNaoPossuiCpf() bool {
+	return p.JustificativaCidadaoNaoPossuiCpf != nil
 }
 
 func (p *FichaAtendimentoIndividualChildThrift) Read(iprot thrift.TProtocol) error {
@@ -986,6 +1017,14 @@ func (p *FichaAtendimentoIndividualChildThrift) Read(iprot thrift.TProtocol) err
 			}
 		case 43:
 			if err := p.readField43(iprot); err != nil {
+				return err
+			}
+		case 47:
+			if err := p.readField47(iprot); err != nil {
+				return err
+			}
+		case 48:
+			if err := p.readField48(iprot); err != nil {
 				return err
 			}
 		default:
@@ -1420,6 +1459,24 @@ func (p *FichaAtendimentoIndividualChildThrift) readField43(iprot thrift.TProtoc
 	return nil
 }
 
+func (p *FichaAtendimentoIndividualChildThrift) readField47(iprot thrift.TProtocol) error {
+	if v, err := iprot.ReadBool(); err != nil {
+		return thrift.PrependError("error reading field 47: ", err)
+	} else {
+		p.StCidadaoNaoPossuiCpf = &v
+	}
+	return nil
+}
+
+func (p *FichaAtendimentoIndividualChildThrift) readField48(iprot thrift.TProtocol) error {
+	if v, err := iprot.ReadI64(); err != nil {
+		return thrift.PrependError("error reading field 48: ", err)
+	} else {
+		p.JustificativaCidadaoNaoPossuiCpf = &v
+	}
+	return nil
+}
+
 func (p *FichaAtendimentoIndividualChildThrift) Write(oprot thrift.TProtocol) error {
 	if err := oprot.WriteStructBegin("FichaAtendimentoIndividualChildThrift"); err != nil {
 		return thrift.PrependError(fmt.Sprintf("%T write struct begin error: ", p), err)
@@ -1527,6 +1584,12 @@ func (p *FichaAtendimentoIndividualChildThrift) Write(oprot thrift.TProtocol) er
 		return err
 	}
 	if err := p.writeField43(oprot); err != nil {
+		return err
+	}
+	if err := p.writeField47(oprot); err != nil {
+		return err
+	}
+	if err := p.writeField48(oprot); err != nil {
 		return err
 	}
 	if err := oprot.WriteFieldStop(); err != nil {
@@ -2130,6 +2193,36 @@ func (p *FichaAtendimentoIndividualChildThrift) writeField43(oprot thrift.TProto
 		}
 		if err := oprot.WriteFieldEnd(); err != nil {
 			return thrift.PrependError(fmt.Sprintf("%T write field end error 43:solicitacoesOci: ", p), err)
+		}
+	}
+	return err
+}
+
+func (p *FichaAtendimentoIndividualChildThrift) writeField47(oprot thrift.TProtocol) (err error) {
+	if p.IsSetStCidadaoNaoPossuiCpf() {
+		if err := oprot.WriteFieldBegin("stCidadaoNaoPossuiCpf", thrift.BOOL, 47); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field begin error 47:stCidadaoNaoPossuiCpf: ", p), err)
+		}
+		if err := oprot.WriteBool(bool(*p.StCidadaoNaoPossuiCpf)); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T.stCidadaoNaoPossuiCpf (47) field write error: ", p), err)
+		}
+		if err := oprot.WriteFieldEnd(); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field end error 47:stCidadaoNaoPossuiCpf: ", p), err)
+		}
+	}
+	return err
+}
+
+func (p *FichaAtendimentoIndividualChildThrift) writeField48(oprot thrift.TProtocol) (err error) {
+	if p.IsSetJustificativaCidadaoNaoPossuiCpf() {
+		if err := oprot.WriteFieldBegin("justificativaCidadaoNaoPossuiCpf", thrift.I64, 48); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field begin error 48:justificativaCidadaoNaoPossuiCpf: ", p), err)
+		}
+		if err := oprot.WriteI64(int64(*p.JustificativaCidadaoNaoPossuiCpf)); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T.justificativaCidadaoNaoPossuiCpf (48) field write error: ", p), err)
+		}
+		if err := oprot.WriteFieldEnd(); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field end error 48:justificativaCidadaoNaoPossuiCpf: ", p), err)
 		}
 	}
 	return err

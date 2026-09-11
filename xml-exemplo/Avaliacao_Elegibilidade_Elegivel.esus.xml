@@ -26,7 +26,8 @@
 		<uuidFicha>0019615-0ff12f9f-90ad-4be8-83c5-2153f9829405</uuidFicha>
 		<tpCdsOrigem>3</tpCdsOrigem>
 		<turno>1</turno>
-		<cpfCidadao>68688625042</cpfCidadao>
+		<stCidadaoNaoPossuiCpf>true</stCidadaoNaoPossuiCpf>
+		<justificativaCidadaoNaoPossuiCpf>2</justificativaCidadaoNaoPossuiCpf>
 		<dataNascimentoCidadao>662742000000</dataNascimentoCidadao>
 		<sexoCidadao>0</sexoCidadao>
 		<nomeCidadao>CIDADÃO VALIDAÇÃO LEDI</nomeCidadao>

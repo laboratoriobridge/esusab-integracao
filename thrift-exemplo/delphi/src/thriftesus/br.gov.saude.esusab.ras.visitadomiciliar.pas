@@ -75,6 +75,10 @@ type
     procedure SetLongitude( const Value: Double);
     function GetUuidOrigemCadastroDomiciliar: string;
     procedure SetUuidOrigemCadastroDomiciliar( const Value: string);
+    function GetStCidadaoNaoPossuiCpf: Boolean;
+    procedure SetStCidadaoNaoPossuiCpf( const Value: Boolean);
+    function GetJustificativaCidadaoNaoPossuiCpf: Int64;
+    procedure SetJustificativaCidadaoNaoPossuiCpf( const Value: Int64);
 
     property Turno: Int64 read GetTurno write SetTurno;
     property NumProntuario: string read GetNumProntuario write SetNumProntuario;
@@ -98,6 +102,8 @@ type
     property Latitude: Double read GetLatitude write SetLatitude;
     property Longitude: Double read GetLongitude write SetLongitude;
     property UuidOrigemCadastroDomiciliar: string read GetUuidOrigemCadastroDomiciliar write SetUuidOrigemCadastroDomiciliar;
+    property StCidadaoNaoPossuiCpf: Boolean read GetStCidadaoNaoPossuiCpf write SetStCidadaoNaoPossuiCpf;
+    property JustificativaCidadaoNaoPossuiCpf: Int64 read GetJustificativaCidadaoNaoPossuiCpf write SetJustificativaCidadaoNaoPossuiCpf;
 
     function Get__isset_Turno: Boolean;
     function Get__isset_NumProntuario: Boolean;
@@ -121,6 +127,8 @@ type
     function Get__isset_Latitude: Boolean;
     function Get__isset_Longitude: Boolean;
     function Get__isset_UuidOrigemCadastroDomiciliar: Boolean;
+    function Get__isset_StCidadaoNaoPossuiCpf: Boolean;
+    function Get__isset_JustificativaCidadaoNaoPossuiCpf: Boolean;
 
     property __isset_Turno: Boolean read Get__isset_Turno;
     property __isset_NumProntuario: Boolean read Get__isset_NumProntuario;
@@ -144,6 +152,8 @@ type
     property __isset_Latitude: Boolean read Get__isset_Latitude;
     property __isset_Longitude: Boolean read Get__isset_Longitude;
     property __isset_UuidOrigemCadastroDomiciliar: Boolean read Get__isset_UuidOrigemCadastroDomiciliar;
+    property __isset_StCidadaoNaoPossuiCpf: Boolean read Get__isset_StCidadaoNaoPossuiCpf;
+    property __isset_JustificativaCidadaoNaoPossuiCpf: Boolean read Get__isset_JustificativaCidadaoNaoPossuiCpf;
   end;
 
   TFichaVisitaDomiciliarChildThriftImpl = class(TInterfacedObject, IBase, IFichaVisitaDomiciliarChildThrift)
@@ -170,7 +180,9 @@ type
     FLatitude: Double;
     FLongitude: Double;
     FUuidOrigemCadastroDomiciliar: string;
-    
+    FStCidadaoNaoPossuiCpf: Boolean;
+    FJustificativaCidadaoNaoPossuiCpf: Int64;
+
     F__isset_Turno: Boolean;
     F__isset_NumProntuario: Boolean;
     F__isset_CnsCidadao: Boolean;
@@ -193,7 +205,9 @@ type
     F__isset_Latitude: Boolean;
     F__isset_Longitude: Boolean;
     F__isset_UuidOrigemCadastroDomiciliar: Boolean;
-    
+    F__isset_StCidadaoNaoPossuiCpf: Boolean;
+    F__isset_JustificativaCidadaoNaoPossuiCpf: Boolean;
+
     function GetTurno: Int64;
     procedure SetTurno( const Value: Int64);
     function GetNumProntuario: string;
@@ -238,6 +252,10 @@ type
     procedure SetLongitude( const Value: Double);
     function GetUuidOrigemCadastroDomiciliar: string;
     procedure SetUuidOrigemCadastroDomiciliar( const Value: string);
+    function GetStCidadaoNaoPossuiCpf: Boolean;
+    procedure SetStCidadaoNaoPossuiCpf( const Value: Boolean);
+    function GetJustificativaCidadaoNaoPossuiCpf: Int64;
+    procedure SetJustificativaCidadaoNaoPossuiCpf( const Value: Int64);
 
     function Get__isset_Turno: Boolean;
     function Get__isset_NumProntuario: Boolean;
@@ -261,6 +279,8 @@ type
     function Get__isset_Latitude: Boolean;
     function Get__isset_Longitude: Boolean;
     function Get__isset_UuidOrigemCadastroDomiciliar: Boolean;
+    function Get__isset_StCidadaoNaoPossuiCpf: Boolean;
+    function Get__isset_JustificativaCidadaoNaoPossuiCpf: Boolean;
   public
     constructor Create;
     destructor Destroy; override;
@@ -294,6 +314,8 @@ type
     property Latitude: Double read GetLatitude write SetLatitude;
     property Longitude: Double read GetLongitude write SetLongitude;
     property UuidOrigemCadastroDomiciliar: string read GetUuidOrigemCadastroDomiciliar write SetUuidOrigemCadastroDomiciliar;
+    property StCidadaoNaoPossuiCpf: Boolean read GetStCidadaoNaoPossuiCpf write SetStCidadaoNaoPossuiCpf;
+    property JustificativaCidadaoNaoPossuiCpf: Int64 read GetJustificativaCidadaoNaoPossuiCpf write SetJustificativaCidadaoNaoPossuiCpf;
 
     // isset
     property __isset_Turno: Boolean read Get__isset_Turno;
@@ -318,6 +340,8 @@ type
     property __isset_Latitude: Boolean read Get__isset_Latitude;
     property __isset_Longitude: Boolean read Get__isset_Longitude;
     property __isset_UuidOrigemCadastroDomiciliar: Boolean read Get__isset_UuidOrigemCadastroDomiciliar;
+    property __isset_StCidadaoNaoPossuiCpf: Boolean read Get__isset_StCidadaoNaoPossuiCpf;
+    property __isset_JustificativaCidadaoNaoPossuiCpf: Boolean read Get__isset_JustificativaCidadaoNaoPossuiCpf;
   end;
 
   IFichaVisitaDomiciliarMasterThrift = interface(IBase)
@@ -753,6 +777,38 @@ begin
   Result := F__isset_UuidOrigemCadastroDomiciliar;
 end;
 
+function TFichaVisitaDomiciliarChildThriftImpl.GetStCidadaoNaoPossuiCpf: Boolean;
+begin
+  Result := FStCidadaoNaoPossuiCpf;
+end;
+
+procedure TFichaVisitaDomiciliarChildThriftImpl.SetStCidadaoNaoPossuiCpf( const Value: Boolean);
+begin
+  F__isset_StCidadaoNaoPossuiCpf := True;
+  FStCidadaoNaoPossuiCpf := Value;
+end;
+
+function TFichaVisitaDomiciliarChildThriftImpl.Get__isset_StCidadaoNaoPossuiCpf: Boolean;
+begin
+  Result := F__isset_StCidadaoNaoPossuiCpf;
+end;
+
+function TFichaVisitaDomiciliarChildThriftImpl.GetJustificativaCidadaoNaoPossuiCpf: Int64;
+begin
+  Result := FJustificativaCidadaoNaoPossuiCpf;
+end;
+
+procedure TFichaVisitaDomiciliarChildThriftImpl.SetJustificativaCidadaoNaoPossuiCpf( const Value: Int64);
+begin
+  F__isset_JustificativaCidadaoNaoPossuiCpf := True;
+  FJustificativaCidadaoNaoPossuiCpf := Value;
+end;
+
+function TFichaVisitaDomiciliarChildThriftImpl.Get__isset_JustificativaCidadaoNaoPossuiCpf: Boolean;
+begin
+  Result := F__isset_JustificativaCidadaoNaoPossuiCpf;
+end;
+
 procedure TFichaVisitaDomiciliarChildThriftImpl.Read( const iprot: IProtocol);
 var
   field_ : IField;
@@ -974,6 +1030,24 @@ begin
           if (field_.Type_ = TType.String_) then
           begin
             UuidOrigemCadastroDomiciliar := iprot.ReadString();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        24: begin
+          if (field_.Type_ = TType.Bool_) then
+          begin
+            StCidadaoNaoPossuiCpf := iprot.ReadBool();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        25: begin
+          if (field_.Type_ = TType.I64) then
+          begin
+            JustificativaCidadaoNaoPossuiCpf := iprot.ReadI64();
           end else
           begin
             TProtocolUtil.Skip(iprot, field_.Type_);
@@ -1206,6 +1280,24 @@ begin
     oprot.WriteString(UuidOrigemCadastroDomiciliar);
     oprot.WriteFieldEnd();
   end;
+  if (__isset_StCidadaoNaoPossuiCpf) then
+  begin
+    field_.Name := 'stCidadaoNaoPossuiCpf';
+    field_.Type_  := TType.Bool_;
+    field_.ID := 24;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteBool(StCidadaoNaoPossuiCpf);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_JustificativaCidadaoNaoPossuiCpf) then
+  begin
+    field_.Name := 'justificativaCidadaoNaoPossuiCpf';
+    field_.Type_  := TType.I64;
+    field_.ID := 25;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteI64(JustificativaCidadaoNaoPossuiCpf);
+    oprot.WriteFieldEnd();
+  end;
   oprot.WriteFieldStop();
   oprot.WriteStructEnd();
 end;
@@ -1349,6 +1441,18 @@ begin
       _first6 := FALSE;
       _sb5.Append('UuidOrigemCadastroDomiciliar: ');
       _sb5.Append(UuidOrigemCadastroDomiciliar);
+    end;
+    if (__isset_StCidadaoNaoPossuiCpf) then begin
+      if not _first6 then _sb5.Append(',');
+      _first6 := FALSE;
+      _sb5.Append('StCidadaoNaoPossuiCpf: ');
+      _sb5.Append(StCidadaoNaoPossuiCpf);
+    end;
+    if (__isset_JustificativaCidadaoNaoPossuiCpf) then begin
+      if not _first6 then _sb5.Append(',');
+      _first6 := FALSE;
+      _sb5.Append('JustificativaCidadaoNaoPossuiCpf: ');
+      _sb5.Append(JustificativaCidadaoNaoPossuiCpf);
     end;
     _sb5.Append(')');
     Result := _sb5.ToString;

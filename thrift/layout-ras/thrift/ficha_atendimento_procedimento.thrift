@@ -22,6 +22,8 @@ struct FichaProcedimentoChildThrift {
 	12:optional string cpfCidadao;
 	16:optional common.MedicoesThrift medicoes;
 	17:optional common.IvcfThrift ivcf;
+	20:optional bool stCidadaoNaoPossuiCpf;
+	21:optional i64 justificativaCidadaoNaoPossuiCpf;
 }
 
 struct FichaProcedimentoMasterThrift {

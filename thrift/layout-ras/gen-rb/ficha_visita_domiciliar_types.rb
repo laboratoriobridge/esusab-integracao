@@ -39,6 +39,8 @@ module Br
               LONGITUDE = 21
               UUIDORIGEMCADASTRODOMICILIAR = 22
               IVCF = 23
+              STCIDADAONAOPOSSUICPF = 24
+              JUSTIFICATIVACIDADAONAOPOSSUICPF = 25
 
               FIELDS = {
                 TURNO => {:type => ::Thrift::Types::I64, :name => 'turno', :optional => true},
@@ -63,7 +65,9 @@ module Br
                 LATITUDE => {:type => ::Thrift::Types::DOUBLE, :name => 'latitude', :optional => true},
                 LONGITUDE => {:type => ::Thrift::Types::DOUBLE, :name => 'longitude', :optional => true},
                 UUIDORIGEMCADASTRODOMICILIAR => {:type => ::Thrift::Types::STRING, :name => 'uuidOrigemCadastroDomiciliar', :optional => true},
-                IVCF => {:type => ::Thrift::Types::STRUCT, :name => 'ivcf', :class => ::Br::Gov::Saude::Esusab::Ras::Common::IvcfThrift, :optional => true}
+                IVCF => {:type => ::Thrift::Types::STRUCT, :name => 'ivcf', :class => ::Br::Gov::Saude::Esusab::Ras::Common::IvcfThrift, :optional => true},
+                STCIDADAONAOPOSSUICPF => {:type => ::Thrift::Types::BOOL, :name => 'stCidadaoNaoPossuiCpf', :optional => true},
+                JUSTIFICATIVACIDADAONAOPOSSUICPF => {:type => ::Thrift::Types::I64, :name => 'justificativaCidadaoNaoPossuiCpf', :optional => true}
               }
 
               def struct_fields; FIELDS; end

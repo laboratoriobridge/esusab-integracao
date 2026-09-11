@@ -52,6 +52,8 @@ module Br
               CNSCUIDADOR = 35
               CPFCIDADAO = 36
               CPFCUIDADOR = 37
+              STCIDADAONAOPOSSUICPF = 38
+              JUSTIFICATIVACIDADAONAOPOSSUICPF = 39
 
               FIELDS = {
                 UUIDFICHA => {:type => ::Thrift::Types::STRING, :name => 'uuidFicha'},
@@ -89,7 +91,9 @@ module Br
                 ETNIA => {:type => ::Thrift::Types::I64, :name => 'etnia', :optional => true},
                 CNSCUIDADOR => {:type => ::Thrift::Types::STRING, :name => 'cnsCuidador', :optional => true},
                 CPFCIDADAO => {:type => ::Thrift::Types::STRING, :name => 'cpfCidadao', :optional => true},
-                CPFCUIDADOR => {:type => ::Thrift::Types::STRING, :name => 'cpfCuidador', :optional => true}
+                CPFCUIDADOR => {:type => ::Thrift::Types::STRING, :name => 'cpfCuidador', :optional => true},
+                STCIDADAONAOPOSSUICPF => {:type => ::Thrift::Types::BOOL, :name => 'stCidadaoNaoPossuiCpf', :optional => true},
+                JUSTIFICATIVACIDADAONAOPOSSUICPF => {:type => ::Thrift::Types::I64, :name => 'justificativaCidadaoNaoPossuiCpf', :optional => true}
               }
 
               def struct_fields; FIELDS; end

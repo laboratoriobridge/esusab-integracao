@@ -990,6 +990,8 @@ func (p *PerguntaQuestionarioCriancasComMaisDoisAnosThrift) String() string {
 //  - UuidFicha
 //  - TpCdsOrigem
 //  - CpfCidadao
+//  - StCidadaoNaoPossuiCpf
+//  - JustificativaCidadaoNaoPossuiCpf
 type FichaConsumoAlimentarThrift struct {
 	HeaderTransport *common.UnicaLotacaoHeaderThrift `thrift:"headerTransport,1" json:"headerTransport,omitempty"`
 	CnsCidadao      *string                          `thrift:"cnsCidadao,2" json:"cnsCidadao,omitempty"`
@@ -1003,6 +1005,8 @@ type FichaConsumoAlimentarThrift struct {
 	UuidFicha                                         string                                                    `thrift:"uuidFicha,10,required" json:"uuidFicha"`
 	TpCdsOrigem                                       *int32                                                    `thrift:"tpCdsOrigem,11" json:"tpCdsOrigem,omitempty"`
 	CpfCidadao                                        *string                                                   `thrift:"cpfCidadao,12" json:"cpfCidadao,omitempty"`
+	StCidadaoNaoPossuiCpf                             *bool                                                     `thrift:"stCidadaoNaoPossuiCpf,13" json:"stCidadaoNaoPossuiCpf,omitempty"`
+	JustificativaCidadaoNaoPossuiCpf                  *int64                                                    `thrift:"justificativaCidadaoNaoPossuiCpf,14" json:"justificativaCidadaoNaoPossuiCpf,omitempty"`
 }
 
 func NewFichaConsumoAlimentarThrift() *FichaConsumoAlimentarThrift {
@@ -1093,6 +1097,24 @@ func (p *FichaConsumoAlimentarThrift) GetCpfCidadao() string {
 	}
 	return *p.CpfCidadao
 }
+
+var FichaConsumoAlimentarThrift_StCidadaoNaoPossuiCpf_DEFAULT bool
+
+func (p *FichaConsumoAlimentarThrift) GetStCidadaoNaoPossuiCpf() bool {
+	if !p.IsSetStCidadaoNaoPossuiCpf() {
+		return FichaConsumoAlimentarThrift_StCidadaoNaoPossuiCpf_DEFAULT
+	}
+	return *p.StCidadaoNaoPossuiCpf
+}
+
+var FichaConsumoAlimentarThrift_JustificativaCidadaoNaoPossuiCpf_DEFAULT int64
+
+func (p *FichaConsumoAlimentarThrift) GetJustificativaCidadaoNaoPossuiCpf() int64 {
+	if !p.IsSetJustificativaCidadaoNaoPossuiCpf() {
+		return FichaConsumoAlimentarThrift_JustificativaCidadaoNaoPossuiCpf_DEFAULT
+	}
+	return *p.JustificativaCidadaoNaoPossuiCpf
+}
 func (p *FichaConsumoAlimentarThrift) IsSetHeaderTransport() bool {
 	return p.HeaderTransport != nil
 }
@@ -1131,6 +1153,14 @@ func (p *FichaConsumoAlimentarThrift) IsSetTpCdsOrigem() bool {
 
 func (p *FichaConsumoAlimentarThrift) IsSetCpfCidadao() bool {
 	return p.CpfCidadao != nil
+}
+
+func (p *FichaConsumoAlimentarThrift) IsSetStCidadaoNaoPossuiCpf() bool {
+	return p.StCidadaoNaoPossuiCpf != nil
+}
+
+func (p *FichaConsumoAlimentarThrift) IsSetJustificativaCidadaoNaoPossuiCpf() bool {
+	return p.JustificativaCidadaoNaoPossuiCpf != nil
 }
 
 func (p *FichaConsumoAlimentarThrift) Read(iprot thrift.TProtocol) error {
@@ -1192,6 +1222,14 @@ func (p *FichaConsumoAlimentarThrift) Read(iprot thrift.TProtocol) error {
 			}
 		case 12:
 			if err := p.readField12(iprot); err != nil {
+				return err
+			}
+		case 13:
+			if err := p.readField13(iprot); err != nil {
+				return err
+			}
+		case 14:
+			if err := p.readField14(iprot); err != nil {
 				return err
 			}
 		default:
@@ -1343,6 +1381,24 @@ func (p *FichaConsumoAlimentarThrift) readField12(iprot thrift.TProtocol) error 
 	return nil
 }
 
+func (p *FichaConsumoAlimentarThrift) readField13(iprot thrift.TProtocol) error {
+	if v, err := iprot.ReadBool(); err != nil {
+		return thrift.PrependError("error reading field 13: ", err)
+	} else {
+		p.StCidadaoNaoPossuiCpf = &v
+	}
+	return nil
+}
+
+func (p *FichaConsumoAlimentarThrift) readField14(iprot thrift.TProtocol) error {
+	if v, err := iprot.ReadI64(); err != nil {
+		return thrift.PrependError("error reading field 14: ", err)
+	} else {
+		p.JustificativaCidadaoNaoPossuiCpf = &v
+	}
+	return nil
+}
+
 func (p *FichaConsumoAlimentarThrift) Write(oprot thrift.TProtocol) error {
 	if err := oprot.WriteStructBegin("FichaConsumoAlimentarThrift"); err != nil {
 		return thrift.PrependError(fmt.Sprintf("%T write struct begin error: ", p), err)
@@ -1378,6 +1434,12 @@ func (p *FichaConsumoAlimentarThrift) Write(oprot thrift.TProtocol) error {
 		return err
 	}
 	if err := p.writeField12(oprot); err != nil {
+		return err
+	}
+	if err := p.writeField13(oprot); err != nil {
+		return err
+	}
+	if err := p.writeField14(oprot); err != nil {
 		return err
 	}
 	if err := oprot.WriteFieldStop(); err != nil {
@@ -1571,6 +1633,36 @@ func (p *FichaConsumoAlimentarThrift) writeField12(oprot thrift.TProtocol) (err 
 		}
 		if err := oprot.WriteFieldEnd(); err != nil {
 			return thrift.PrependError(fmt.Sprintf("%T write field end error 12:cpfCidadao: ", p), err)
+		}
+	}
+	return err
+}
+
+func (p *FichaConsumoAlimentarThrift) writeField13(oprot thrift.TProtocol) (err error) {
+	if p.IsSetStCidadaoNaoPossuiCpf() {
+		if err := oprot.WriteFieldBegin("stCidadaoNaoPossuiCpf", thrift.BOOL, 13); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field begin error 13:stCidadaoNaoPossuiCpf: ", p), err)
+		}
+		if err := oprot.WriteBool(bool(*p.StCidadaoNaoPossuiCpf)); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T.stCidadaoNaoPossuiCpf (13) field write error: ", p), err)
+		}
+		if err := oprot.WriteFieldEnd(); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field end error 13:stCidadaoNaoPossuiCpf: ", p), err)
+		}
+	}
+	return err
+}
+
+func (p *FichaConsumoAlimentarThrift) writeField14(oprot thrift.TProtocol) (err error) {
+	if p.IsSetJustificativaCidadaoNaoPossuiCpf() {
+		if err := oprot.WriteFieldBegin("justificativaCidadaoNaoPossuiCpf", thrift.I64, 14); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field begin error 14:justificativaCidadaoNaoPossuiCpf: ", p), err)
+		}
+		if err := oprot.WriteI64(int64(*p.JustificativaCidadaoNaoPossuiCpf)); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T.justificativaCidadaoNaoPossuiCpf (14) field write error: ", p), err)
+		}
+		if err := oprot.WriteFieldEnd(); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field end error 14:justificativaCidadaoNaoPossuiCpf: ", p), err)
 		}
 	}
 	return err

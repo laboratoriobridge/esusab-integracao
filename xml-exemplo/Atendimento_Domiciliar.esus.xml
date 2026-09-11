@@ -21,7 +21,9 @@
 		</headerTransport>
 		<atendimentosDomiciliares>
 			<turno>2</turno>
-			<cnsCidadao>898050047989752</cnsCidadao>			
+			<cnsCidadao>898050047989752</cnsCidadao>
+			<stCidadaoNaoPossuiCpf>true</stCidadaoNaoPossuiCpf>
+			<justificativaCidadaoNaoPossuiCpf>5</justificativaCidadaoNaoPossuiCpf>
 			<dataNascimento>1012658400000</dataNascimento>
 			<sexo>0</sexo>
 			<localAtendimento>1</localAtendimento>
@@ -47,7 +49,8 @@
 		</atendimentosDomiciliares>
 		<atendimentosDomiciliares>
 			<turno>2</turno>
-			<cpfCidadao>68688625042</cpfCidadao>			
+			<cpfCidadao>68688625042</cpfCidadao>
+			<stCidadaoNaoPossuiCpf>false</stCidadaoNaoPossuiCpf>
 			<dataNascimento>1012658400000</dataNascimento>
 			<sexo>0</sexo>
 			<localAtendimento>1</localAtendimento>

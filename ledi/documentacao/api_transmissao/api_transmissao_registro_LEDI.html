@@ -29,7 +29,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 8.5.0</span>
+        <span class="label">versão 8.7.0</span>
       
     </a>
 
@@ -79,7 +79,7 @@
           
         
           
-            <li><a title="Layout e-SUS APS de Dados e Interface Versão 8.5.0" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 8.5.0</a></li>
+            <li><a title="Layout e-SUS APS de Dados e Interface Versão 8.7.0" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 8.7.0</a></li>
           
         
           
@@ -123,7 +123,7 @@
     
 
     <li>
-      <a class="open" title="Layout e-SUS APS de Dados e Interface Versão 8.5.0" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 8.5.0</a>
+      <a class="open" title="Layout e-SUS APS de Dados e Interface Versão 8.7.0" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 8.7.0</a>
       <ul>
         
           <li  class="has-subitems">
@@ -156,8 +156,8 @@
         
           <li >
           
-            <a title="Registros Thrift / XSD por ficha" href="/ledi/documentacao/thrift-xsd.html">
-              Registros Thrift / XSD por ficha
+            <a title="Registros Thrift / XSD por Modelo de Informação" href="/ledi/documentacao/thrift-xsd.html">
+              Registros Thrift / XSD por Modelo de Informação
             </a>
           </li>
         
@@ -187,7 +187,7 @@
     <p class="post-meta">
       <a class="btn" href="/pdf.html?include=/ledi/documentacao/api_transmissao/api_transmissao_registro_LEDI.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 12/08/2026</span>
+        <span class="label" title="Data da última modificação">Alterado em 10/09/2026</span>
       
     </p>
   </header>
@@ -225,13 +225,13 @@
 <li>Resposta de erro: deve ser retornado um código e mensagem do erro.</li>
 </ul>
 
-<p><strong>6. </strong> O endpoint &quot;/api/v1/recebimento/ficha&quot; deve ser utilizado para realizar o envio dos registros no formato LEDI através da requisição do tipo POST. Sendo aceito a variável ficha. O valor da variável deve ser um arquivo serializado em binário e o nome desse arquivo deve ser &quot;uuid do registro eletrônico no formato LEDI&quot; + &quot;.esus&quot;. Segue um exemplo de ficha nomeada corretamente: &quot;0000007-cfdd9b1b-2c4d-4759-b254-76564ec219f3.esus&quot;.</p>
+<p><strong>6. </strong> O endpoint &quot;/api/v1/recebimento/ficha&quot; deve ser utilizado para realizar o envio dos registros no formato LEDI através da requisição do tipo POST. Sendo aceito a variável ficha. O valor da variável deve ser um arquivo serializado em binário e o nome desse arquivo deve ser &quot;uuid do registro eletrônico no formato LEDI&quot; + &quot;.esus&quot;. Segue um exemplo de registro nomeado corretamente: &quot;0000007-cfdd9b1b-2c4d-4759-b254-76564ec219f3.esus&quot;.</p>
 
 <p><strong>7. </strong> As respostas possíveis para o endpoint &quot;/api/v1/recebimento/ficha&quot; são:</p>
 
 <ul>
 <li>Respostas de sucesso: deve ser retornado o status 200;</li>
-<li>Resposta de erro: deve ser retornado um código e uma mensagem do erro. Informando quais informações devem ser corrigidas para que a ficha seja aceita.</li>
+<li>Resposta de erro: deve ser retornado um código e uma mensagem do erro. Informando quais informações devem ser corrigidas para que o registro seja aceito.</li>
 </ul>
 
 <p><strong>8. </strong> Sugere-se que o erro retornado pela API seja armazenado pelo próprio integrador. Possibilitando assim correção de registros no formato LEDI que foram enviadas com erro.</p>
@@ -327,7 +327,7 @@
 <tr>
 <td>400</td>
 <td>Erro de validação</td>
-<td>Ocorre quando a ficha possui erros de validação em relação ao LEDI</td>
+<td>Ocorre quando o registro possui erros de validação em relação ao LEDI</td>
 </tr>
 <tr>
 <td>400</td>
@@ -336,17 +336,17 @@
 </tr>
 <tr>
 <td>500</td>
-<td>Erro ao desserializar ficha</td>
+<td>Erro ao desserializar registro</td>
 <td>Ocorre quando acontece um erro inesperado na deserialização de um arquivo thrift</td>
 </tr>
 <tr>
 <td>500</td>
-<td>Erro ao ler ficha</td>
-<td>Ocorre quando acontece um erro ao tentar ler bytes recebidos da ficha</td>
+<td>Erro ao ler registro</td>
+<td>Ocorre quando acontece um erro ao tentar ler bytes recebidos do registro</td>
 </tr>
 <tr>
 <td>500</td>
-<td>Erro inesperado ao receber ficha</td>
+<td>Erro inesperado ao receber registro</td>
 <td>Ocorre em quaisquer outros erros não mapeados acima</td>
 </tr>
 </tbody></table>
